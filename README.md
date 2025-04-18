@@ -1,15 +1,19 @@
-# win9x-symbol-docs
+>This project is in a very early stage. The main idea is having a single comprehensive index of w9x internals, which currently requires going through obscure corners of the Internet, in tribute to 30th anniversary of Windows 95's release. 
 
-Reverse-engineered documentation of the Windows 95/98/Me source tree, built from publicly available debug symbols.
+# Windows 9x Internals Documentation Project
+
+Reverse-engineered documentation of the Windows 95/98/Me internals, built from publicly available debug symbols.
 
 This is **not** a leak, dump, or decompilation of any proprietary code. It’s a clean-room effort to map out the internal structure of Windows 9x using legal and publicly released symbol data from MSDN and SDKs.
 
 ## What’s in here
 
+- **Internals explorer**: An interface to explore the Windows 9x components.
+- **Source tree**: Source tree of core components recreated from symbols.
+- **Toolchain**: A kit of tools to work on w9x components.  
 - **Module layout**: Overview of core components like `KRNL386.EXE`, `VMM32.VXD`, and userland modules (`USER.EXE`, `GDI.EXE`, etc.)
 - **Function listings**: Indexed exports, internal entry points, and thunk layers with context where available.
-- **Segment mapping**: Code and data segment structure with annotation (especially for 16-bit modules).
-- **Naming conventions**: Observed naming patterns from debug info, useful for cross-referencing with system binaries and existing documentation.
+
 
 ## Goals
 

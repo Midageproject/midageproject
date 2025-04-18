@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Usage: ./script.sh path/to/file.sym [extract]
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 <symbol_file> [extract]"
+    exit 1
+fi
+
+FILE="$1"
+EXTRACT="$2"
+
+if [ ! -f "$FILE" ]; then
+    echo "File not found: $FILE"
+    exit 1
+fi
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASENAME="$(basename "$FILE" | cut -d. -f1)"
+WORKDIR="$SCRIPT_DIR/../work/$BASENAME"
+
+strings "$FILE" \
+  | grep -Ei '[./\\]{1,2}[a-z0-9_./\\-]{2,}\.(c|cpp|asm|h|inc)' \
+  | sed -e 's|\\|/|g' -e 's|^[.]/||' -e 's|^\.\./||' \
+  | sort -u \
+  | while read -r path; do
+      echo "$path"
+      if [ "$EXTRACT" = "1" ]; then
+          fullpath="$WORKDIR/$path"
+          mkdir -p "$(dirname "$fullpath")"
+          touch "$fullpath"
+      fi
+  done
