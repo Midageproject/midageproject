@@ -5,6 +5,7 @@
 
 FILE *csv = NULL;
 uint16_t current_segment = 0;
+uint32_t current_segment_offset = 0;
 char current_segname[256] = "";
 
 void read_string(FILE *f, char *buf, uint8_t len) {
@@ -29,9 +30,16 @@ void parse_symbols(FILE *f, uint16_t count, int offset32) {
         fread(&name_len, sizeof(uint8_t), 1, f);
         read_string(f, name, name_len);
 
-        printf("  Symbol: offset=0x%04X name=%s\n", offset, name);
+        uint32_t absolute_addr = current_segment_offset + offset;
+
+        printf("  Symbol: offset=0x%08X address=0x%08X name=%s\n", offset, absolute_addr, name);
         if (csv) {
-            fprintf(csv, "%u,%s,0x%04X,%s\n", current_segment, current_segname, offset, name);
+            fprintf(csv, "%u,0x%08X,%s,0x%08X,%s\n",
+                    current_segment,
+                    current_segment_offset,
+                    current_segname,
+                    offset,
+                    name);
         }
     }
 
@@ -50,6 +58,8 @@ void parse_segment(FILE *f) {
     uint8_t name_len;
     char name[256];
 
+    //long seg_start = ftell(f);
+
     fread(&unknown, sizeof(uint16_t), 1, f);
     fread(&symbol_count, sizeof(uint16_t), 1, f);
     fread(&sym_data_size, sizeof(uint16_t), 1, f);
@@ -67,8 +77,14 @@ void parse_segment(FILE *f) {
     strncpy(current_segname, name, sizeof(current_segname) - 1);
     current_segname[sizeof(current_segname) - 1] = '\0';
 
-    printf("Segment #%u (%s): %u symbols %s\n", seg_number, name, symbol_count, (flags & 2) ? "(sorted alphabetically)" : "");
-    parse_symbols(f, symbol_count, flags & 1);
+    current_segment_offset = unknown << 4;
+
+    printf("\nSegment #%u (%s): offset=0x%08X, %u symbols %s\n",
+        seg_number,
+        name,
+        current_segment_offset,
+        symbol_count,
+        (flags & 2) ? "(sorted alphabetically)" : "");    parse_symbols(f, symbol_count, flags & 1);
 
     fseek(f, unknown << 4, SEEK_SET);
 }
@@ -103,12 +119,12 @@ int main(int argc, char **argv) {
             fclose(f);
             return 1;
         }
-        fprintf(csv, "SegmentNumber,SegmentName,SymbolOffset,SymbolName\n");
+        fprintf(csv, "SegmentNumber,SegmentOffset,SegmentName,SymbolOffset,SymbolName\n");
     }
 
     uint16_t total_syms, reserved0, unknown0, const_count, first_seg_offset, seg_count, seg_offs;
     uint8_t unknown2, name_len;
-    char name[256];
+    char filename[256];
 
     fread(&total_syms, sizeof(uint16_t), 1, f);
     fread(&reserved0, sizeof(uint16_t), 1, f);
@@ -119,14 +135,14 @@ int main(int argc, char **argv) {
     fread(&seg_offs, sizeof(uint16_t), 1, f);
     fread(&unknown2, sizeof(uint8_t), 1, f);
     fread(&name_len, sizeof(uint8_t), 1, f);
-    read_string(f, name, name_len);
+    read_string(f, filename, name_len);
 
     printf("Filename: %s\n", input_path);
     printf("SYM Header:\n");
     printf("  Total Symbols: %u\n", total_syms);
     printf("  Const Entries: %u\n", const_count);
     printf("  Segment Count: %u\n", seg_count);
-    printf("  Binary Name: %s\n\n", name);
+    printf("  Binary Name: %s\n", filename);
 
     fseek(f, seg_offs << 4, SEEK_SET);
 
