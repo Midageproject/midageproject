@@ -32,9 +32,9 @@ void parse_symbols(FILE *f, uint16_t count, int offset32) {
 
         uint32_t absolute_addr = current_segment_offset + offset;
 
-        printf("  Symbol: offset=0x%08X address=0x%08X name=%s\n", offset, absolute_addr, name);
+        printf("  Symbol: offset=%08X address=%08X name=%s\n", offset, absolute_addr, name);
         if (csv) {
-            fprintf(csv, "%u,0x%08X,%s,0x%08X,%s\n",
+            fprintf(csv, "%u,%08X,%s,%08X,%s\n",
                     current_segment,
                     current_segment_offset,
                     current_segname,
