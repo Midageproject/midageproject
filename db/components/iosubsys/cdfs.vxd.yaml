@@ -1,0 +1,839 @@
+filename: "iosubsys/cdfs.vxd"
+#TODO: bring up more details from symdeb
+binary: "iosubsys/cdfs.vxd"
+description: ""
+note: ""
+appearances:
+  - version: "system"
+    tree: []
+    segments:
+      - num: "1"
+        name: "_LGROUP"
+        offset: "00000AF0"
+        symbols:
+          - name: '_CDFS_Int2FHook'
+            offset: "00000000"            
+          - name: 'CDFS_Control'
+            offset: "000000A0"            
+          - name: '_CDFS_Control_Dispatch_Ext'
+            offset: "000000B4"            
+          - name: '_DebPrintf'
+            offset: "000000C2"            
+          - name: '_DebPrintfStep'
+            offset: "000000DC"            
+          - name: '_VMM_BlockOnID'
+            offset: "00000101"            
+          - name: '_VMM_SignalID'
+            offset: "00000107"            
+          - name: '_CDFS_CDQuery'
+            offset: "0000010D"            
+          - name: '_CDFS_Flush'
+            offset: "00000120"            
+          - name: '_CDFS_Disconnect'
+            offset: "00000140"            
+          - name: '_CDFS_Close'
+            offset: "00000170"            
+          - name: '_CDFS_FindClose'
+            offset: "000001A0"            
+          - name: '_CDFSBeginLockedAccess'
+            offset: "000001D0"            
+          - name: '_CDFSEndLockedAccess'
+            offset: "00000410"            
+          - name: '_CDFSBeginNestedLockedAccess'
+            offset: "00000450"            
+          - name: '_CDFSLazyUnlockTick'
+            offset: "00000480"            
+          - name: '_CDFSLazyUnlockEvent'
+            offset: "00000500"            
+          - name: '_CDFSAsyncEvent'
+            offset: "000007F0"            
+          - name: '_cdfsSetFirstDriveLetter'
+            offset: "00000AF0"            
+          - name: '_CMDumpLRU'
+            offset: "00000B30"            
+          - name: '_MY_CallWhenNotCritical'
+            offset: "00000DA0"            
+          - name: 'CDFS_DDB'
+            offset: "00000DD0"            
+          - name: '_pcdcVerifyHead'
+            offset: "00000ED4"            
+          - name: '_SubUnitNext'
+            offset: "00000ED8"            
+          - name: '_DefaultSvdSense'
+            offset: "00000EDC"            
+          - name: '_fTearDown'
+            offset: "00000EE0"            
+          - name: '_fShowVersions'
+            offset: "00000EE4"            
+          - name: '_fCDFSMisc'
+            offset: "00000EE8"            
+          - name: '_pSysDevVCD'
+            offset: "00000EEC"            
+          - name: '_fpVCD'
+            offset: "00000EF0"            
+          - name: '_pcdfsinfo'
+            offset: "00000EF4"            
+          - name: '_hUnlockEvent'
+            offset: "00000EF8"            
+          - name: '_hsemLocking'
+            offset: "00000EFC"            
+          - name: '_cLockCDFS'
+            offset: "00000F00"            
+          - name: '_cLockWait'
+            offset: "00000F04"            
+          - name: '_fLockFlags'
+            offset: "00000F08"            
+          - name: '_strAssertFailure'
+            offset: "00000F0C"            
+          - name: '_strWarnBadMaster'
+            offset: "00000F48"            
+          - name: '_strWarnMemory'
+            offset: "00000F88"            
+          - name: '_ilbCDFS'
+            offset: "00000FC8"            
+          - name: '_cddispCDFS'
+            offset: "00000FFC"            
+          - name: '_hmDispMisc'
+            offset: "0000101C"            
+          - name: '_hmDispFind'
+            offset: "00001040"            
+          - name: '_volDispVolume'
+            offset: "00001064"            
+          - name: '_cdfsDev_GetFunction'
+            offset: "00001490"            
+          - name: '_PAEP_rpm_inquiry'
+            offset: "000015F0"            
+          - name: '_PAEP_rpm_change'
+            offset: "000015F4"            
+          - name: '_PAEP_3mode_config'
+            offset: "000015F8"            
+      - num: "2"
+        name: "_IGROUP"
+        offset: "000010C0"
+        symbols:
+          - name: 'CDFS_Dynamic_Device_Init'
+            offset: "000000AD"            
+          - name: '_cdfsGetRegistry'
+            offset: "0000020C"            
+          - name: '_cdfsSetRegDefaults'
+            offset: "000005E0"            
+          - name: '_CDPrefPreInit'
+            offset: "000006D0"            
+          - name: '_drpCDFS'
+            offset: "0000073C"            
+      - num: "3"
+        name: "_PGROUP"
+        offset: "00008230"
+        symbols:
+          - name: '_cdfsTearDown'
+            offset: "00000000"            
+          - name: '_CMInitCache'
+            offset: "000000E0"            
+          - name: '_CMFreeCache'
+            offset: "000004B0"            
+          - name: '_MY_PageAllocate'
+            offset: "00000540"            
+          - name: '_CDFS_Query'
+            offset: "00000580"            
+          - name: '_cdfsDevIO_RdDevHdr'
+            offset: "00000630"            
+          - name: '_cdfsDevIO_RdErrorStat'
+            offset: "00000650"            
+          - name: '_cdfsDevIO_RdAudChanInfo'
+            offset: "00000680"            
+          - name: '_cdfsDevIO_RdDriveBytes'
+            offset: "00000710"            
+          - name: '_cdfsDevIO_RdSectSize'
+            offset: "00000740"            
+          - name: '_cdfsDevIO_RdVolSize'
+            offset: "000007A0"            
+          - name: '_cdfsDevIO_RdMedChanged'
+            offset: "00000820"            
+          - name: '_cdfsDevIO_RdAudDiskInfo'
+            offset: "00000880"            
+          - name: '_cdfsDevIO_RdAudTrackInfo'
+            offset: "000008E0"            
+          - name: '_cdfsDevIO_RdAudSubInfo'
+            offset: "00000940"            
+          - name: '_cdfsDevIO_RdAudQUPC'
+            offset: "000009B0"            
+          - name: '_cdfsDevIO_WtEject'
+            offset: "00000A10"            
+          - name: '_cdfsDevIO_WtLockUnlock'
+            offset: "00000A40"            
+          - name: '_cdfsDevIO_WtReset'
+            offset: "00000A80"            
+          - name: '_cdfsDevIO_WtAudChanCtrl'
+            offset: "00000AC0"            
+          - name: '_cdfsDevIO_WtDevCtrlStr'
+            offset: "00000B50"            
+          - name: '_cdfsDevIO_WtCloseTray'
+            offset: "00000B80"            
+          - name: '_cdfsDevIFL'
+            offset: "00000BB0"            
+          - name: '_cdfsDevOPN'
+            offset: "00000BF0"            
+          - name: '_cdfsDevCDReadLongPre'
+            offset: "00000C30"            
+          - name: '_cdfsDevCDSeek'
+            offset: "00000C50"            
+          - name: '_cdfsDevCDPlayAudio'
+            offset: "00000CA0"            
+          - name: '_cdfsDevCDStopAudio'
+            offset: "00000E10"            
+          - name: '_cdfsDevCDResumeAudio'
+            offset: "00000E40"            
+          - name: '_cdfsAbsReadCall'
+            offset: "00000E70"            
+          - name: '_cdfsAbsReadRet'
+            offset: "00000F20"            
+          - name: '_upcs'
+            offset: "00001000"            
+          - name: '_CDFS2f_GetVTOCFileName'
+            offset: "00001030"            
+          - name: '_CDFS2f_ReadVTOC'
+            offset: "00001160"            
+          - name: '_CDFS2f_Dbg'
+            offset: "000012A0"            
+          - name: '_CDFS2f_AbsDiskRead'
+            offset: "000012B0"            
+          - name: '_CDFS2f_AbsDiskWrite'
+            offset: "000013D0"            
+          - name: '_CDFS2f_Unload'
+            offset: "000013F0"            
+          - name: '_CDFS2f_VDSPreference'
+            offset: "00001400"            
+          - name: '_CDFS2f_GetDirEntry'
+            offset: "00001530"            
+          - name: '_cdfsGetVTOCNameStart'
+            offset: "000016B0"            
+          - name: '_cdfsGetVTOCNameDone'
+            offset: "000016D0"            
+          - name: '_cdfsGetDirEntStart'
+            offset: "000017C0"            
+          - name: '_cdfsGetDirEntDone'
+            offset: "00001930"            
+          - name: '_CDFS_MountVolume'
+            offset: "00001AD0"            
+          - name: '_cdfsTryVerifyFromMount'
+            offset: "00001B60"            
+          - name: '_CDFS_Delete'
+            offset: "00001C10"            
+          - name: '_CDFS_IOCTL16Drive'
+            offset: "00001C30"            
+          - name: '_CDFS_Commit'
+            offset: "00001C40"            
+          - name: '_CDFS_FileLocks'
+            offset: "00001C50"            
+          - name: '_cdfsCDDATest'
+            offset: "00001C60"            
+          - name: '_cdfsUnmount'
+            offset: "00001CD0"            
+          - name: '_cdfsVerifyStart'
+            offset: "00001D20"            
+          - name: '_cdfsVerifyDone'
+            offset: "00001DE0"            
+          - name: '_diskFree'
+            offset: "00001F60"            
+          - name: '_GetISO2022CPID'
+            offset: "00001FC0"            
+          - name: '_cdfsDiskAlloc'
+            offset: "00002010"            
+          - name: '_cdfsDiskAllocEndTag'
+            offset: "00002190"            
+          - name: '_cdfsSesInfoStart'
+            offset: "000021A0"            
+          - name: '_cdfsSesInfoDone'
+            offset: "00002260"            
+          - name: '_cdfsVRSSampCall'
+            offset: "000023A0"            
+          - name: '_cdfsVRSSampStart'
+            offset: "00002440"            
+          - name: '_cdfsVRSSampDone'
+            offset: "00002460"            
+          - name: '_cdfsVRSSampRet'
+            offset: "000027B0"            
+          - name: '_cdfsVolAlloc'
+            offset: "000028A0"            
+          - name: '_cdfsPTInitCall'
+            offset: "00002D10"            
+          - name: '_cdfsPTInitStart'
+            offset: "00002E20"            
+          - name: '_cdfsPTInitDone'
+            offset: "00002F90"            
+          - name: '_cdfsPTInitRet'
+            offset: "000036A0"            
+          - name: '_cdfsRootInitCall'
+            offset: "000036C0"            
+          - name: '_cdfsRootInitStart'
+            offset: "000036E0"            
+          - name: '_cdfsRootInitDone'
+            offset: "00003710"            
+          - name: '_cdfsRootInitRet'
+            offset: "00003760"            
+          - name: '_cdfsMountDone'
+            offset: "00003790"            
+          - name: '_cdfsMountDoneEndTag'
+            offset: "000038B0"            
+          - name: '_cdfsMountFail'
+            offset: "000038C0"            
+          - name: '_cdfsSendIOCTL'
+            offset: "00003920"            
+          - name: '_cdfsSetBusyStatus'
+            offset: "000039D0"            
+          - name: '_IFS_CDROM_Attach'
+            offset: "00003A50"            
+          - name: '_IFS_CDROM_Detach'
+            offset: "00003A56"            
+          - name: '_CDFS_VCDStrategy'
+            offset: "00003A5C"            
+          - name: '_CDFS_VCDInterrupt'
+            offset: "00003A67"            
+          - name: '_CDFS2f_SendDriveRequest'
+            offset: "00003A70"            
+          - name: '_CDFSVCD_Strategy'
+            offset: "00003B00"            
+          - name: '_cdfsDevIO_RdHeadLoc'
+            offset: "00003B80"            
+          - name: '_cdfsDevIO_RdDevStatus'
+            offset: "00003BE0"            
+          - name: '_cdfsDevIO_RdAudQInfo'
+            offset: "00003C30"            
+          - name: '_cdfsDevIO_RdAudStatus'
+            offset: "00003CC0"            
+          - name: '_cdfsDevCDReadLong'
+            offset: "00003D20"            
+          - name: '_cdfsAttachDrive'
+            offset: "00003EA0"            
+          - name: '_cdfsDetachDrive'
+            offset: "00003ED0"            
+          - name: '_cdfsDevIO_Init'
+            offset: "00003EF0"            
+          - name: '_cdfsDevIO_UnInit'
+            offset: "00003F70"            
+          - name: '_cdfsIORAllocIOCTL'
+            offset: "00003F90"            
+          - name: '_cdfsIORFreeIOCTL'
+            offset: "00004030"            
+          - name: '_cdfsSubmitIOCTL'
+            offset: "00004060"            
+          - name: '_cdfsSetDevError'
+            offset: "000040D0"            
+          - name: '_cdfsMapToNotReady'
+            offset: "000041B0"            
+          - name: '_cdfsUnitToDrive'
+            offset: "000041D0"            
+          - name: '_CDFS2f_GetNumDrives'
+            offset: "00004210"            
+          - name: '_CDFS2f_GetDevList'
+            offset: "00004260"            
+          - name: '_CDFS2f_DriveCheck'
+            offset: "000042B0"            
+          - name: '_CDFS2f_GetVersion'
+            offset: "000042F0"            
+          - name: '_CDFS2f_GetDriveLetters'
+            offset: "00004310"            
+          - name: '_CDFS_Dir'
+            offset: "00004360"            
+          - name: '_CDFS_FileAttrib'
+            offset: "00004390"            
+          - name: '_CDFS_Open'
+            offset: "000043C0"            
+          - name: '_CDFS_ReadFile'
+            offset: "00004410"            
+          - name: '_CDFS_Seek'
+            offset: "00004440"            
+          - name: '_CDFS_FileTimes'
+            offset: "00004460"            
+          - name: '_CDFS_EnumHandle'
+            offset: "000044D0"            
+          - name: '_CDFS_ReturnError'
+            offset: "00004500"            
+          - name: '_cdfsChDirStart'
+            offset: "00004520"            
+          - name: '_cdfsChDirDone'
+            offset: "00004590"            
+          - name: '_cdfsGetAttrStart'
+            offset: "00004650"            
+          - name: '_cdfsGetAttrDone'
+            offset: "000046B0"            
+          - name: '_cdfsFlush'
+            offset: "000046F0"            
+          - name: '_cdfsOpenStart'
+            offset: "00004740"            
+          - name: '_cdfsReadFileStart'
+            offset: "000047A0"            
+          - name: '_cdfsReadFileDone'
+            offset: "00004A80"            
+          - name: '_cdfsSeekFile'
+            offset: "00004AE0"            
+          - name: '_cdfsCloseFile'
+            offset: "00004B50"            
+          - name: '_cdfsFileTime'
+            offset: "00004B80"            
+          - name: '_cdfsHandleInfo'
+            offset: "00004C70"            
+          - name: '_MY_HeapAllocate'
+            offset: "00004D40"            
+          - name: '_cdmftAllocInit'
+            offset: "00004D60"            
+          - name: '_cdmftActivate'
+            offset: "00004F40"            
+          - name: '_cdmftActivateEndTag'
+            offset: "00004F70"            
+          - name: '_cdmftFindFromIndex'
+            offset: "00004F80"            
+          - name: '_cdmftFindFromIndexEndTag'
+            offset: "00004FE0"            
+          - name: '_cdsftAllocInit'
+            offset: "00004FF0"            
+          - name: '_cdsftActivate'
+            offset: "000050B0"            
+          - name: '_cdsftActivateEndTag'
+            offset: "00005100"            
+          - name: '_cdvFree'
+            offset: "00005110"            
+          - name: '_cdvFreeEndTag'
+            offset: "000051F0"            
+          - name: '_cdmftFree'
+            offset: "00005200"            
+          - name: '_cdmftFreeEndTag'
+            offset: "000052D0"            
+          - name: '_cdsftFree'
+            offset: "000052E0"            
+          - name: '_cdsftFreeEndTag'
+            offset: "00005390"            
+          - name: '_IFS_Win32ToDosTime'
+            offset: "000053A0"            
+          - name: '_cdfsLocalToGMTTime'
+            offset: "000053BB"            
+          - name: '_DirTimeToDOSTime'
+            offset: "000053DD"            
+          - name: '_IFS_CreateBasis'
+            offset: "000053FF"            
+          - name: '_IFS_AppendBasisTail'
+            offset: "0000544E"            
+          - name: '_IFS_FcbToShort'
+            offset: "00005454"            
+          - name: '_IFS_MetaMatch'
+            offset: "0000545A"            
+          - name: '_IFS_BCSToUni'
+            offset: "00005460"            
+          - name: '_IFS_UniToBCS'
+            offset: "00005466"            
+          - name: '_IFS_ShortToFcb'
+            offset: "0000546C"            
+          - name: '_cdfsAttrMatch'
+            offset: "000054BE"            
+          - name: '_CDFS_GetDiskInfo'
+            offset: "000054E0"            
+          - name: '_CDFS_Search'
+            offset: "00005590"            
+          - name: '_CDFS_FindOpen'
+            offset: "000055B0"            
+          - name: '_CDFS_FindNextFile'
+            offset: "000055D0"            
+          - name: '_cdfsFindOpenStart'
+            offset: "000055F0"            
+          - name: '_cdfsSearchStart'
+            offset: "00005610"            
+          - name: '_cdfsSearchDone'
+            offset: "00005780"            
+          - name: '_cdfsFindNextStart'
+            offset: "000058C0"            
+          - name: '_cdfsFindNextDone'
+            offset: "00005A90"            
+          - name: '_MY_LinPageLock'
+            offset: "00005DA0"            
+          - name: '_MY_LinPageUnLock'
+            offset: "00005DD0"            
+          - name: '_MY_LinToPhys'
+            offset: "00005E00"            
+          - name: '_TwoDigits'
+            offset: "00005E70"            
+          - name: '_ISOToWin32Time'
+            offset: "00005E90"            
+          - name: '_DirToWin32Time'
+            offset: "00005F70"            
+          - name: '_Win32TimeWorker'
+            offset: "00006010"            
+          - name: '_cdfsInPathGet'
+            offset: "00006110"            
+          - name: '_cdfsFreePaths'
+            offset: "00006240"            
+          - name: '_cdfsRunAPI'
+            offset: "00006290"            
+          - name: '_cdcInit'
+            offset: "00006320"            
+          - name: '_cdfsLockSec'
+            offset: "000064A0"            
+          - name: '_pPLTextStart'
+            offset: "00006560"            
+          - name: '_MY_IOS_SendCommand'
+            offset: "00006560"            
+          - name: '_MY_IOSMapIORSToI21'
+            offset: "0000658F"            
+          - name: '_MY_Meet_Criteria_Stub'
+            offset: "00006599"            
+          - name: '_MY_Map_Flat'
+            offset: "000065C2"            
+          - name: '_MY_PageFree'
+            offset: "000065CC"            
+          - name: '_MY_Simulate_Far_Call'
+            offset: "000065D2"            
+          - name: '_MY_Simulate_Far_Ret'
+            offset: "000065E2"            
+          - name: '_cdfsIOCTLPassThrough'
+            offset: "000065E8"            
+          - name: '_MapV86Flat'
+            offset: "0000671B"            
+          - name: '_cdfsSemRequest'
+            offset: "00006734"            
+          - name: '_cdfsSemRelease'
+            offset: "0000679B"            
+          - name: '_SafeMemCpyC'
+            offset: "000067CD"            
+          - name: '_cdfsAudioS1611025'
+            offset: "000067E3"            
+          - name: '_cdfsAudioS1622050'
+            offset: "000067E6"            
+          - name: '_cdfsAudioS1644100'
+            offset: "000067E9"            
+          - name: '_cdfsAudioS811025'
+            offset: "000067ED"            
+          - name: '_cdfsAudioS822050'
+            offset: "000067F0"            
+          - name: '_cdfsAudioS844100'
+            offset: "000067F3"            
+          - name: '_cdfsAudioM1611025'
+            offset: "00006808"            
+          - name: '_cdfsAudioM1622050'
+            offset: "0000680B"            
+          - name: '_cdfsAudioM1644100'
+            offset: "0000680E"            
+          - name: '_cdfsAudioM811025'
+            offset: "00006820"            
+          - name: '_cdfsAudioM822050'
+            offset: "00006823"            
+          - name: '_cdfsAudioM844100'
+            offset: "00006826"            
+          - name: '_cdfsLockSecCall'
+            offset: "00006840"            
+          - name: '_cdfsLockSecRet'
+            offset: "000068C0"            
+          - name: '_cdfsLockSecNB'
+            offset: "00006930"            
+          - name: '_cdfsReadSecStart'
+            offset: "00006A00"            
+          - name: '_cdfsReadSecDone'
+            offset: "00006B30"            
+          - name: '_cdfsReadStart'
+            offset: "00006BE0"            
+          - name: '_cdfsReadFast'
+            offset: "00006F70"            
+          - name: '_cdfsReadDone'
+            offset: "00007230"            
+          - name: '_cdfsSGReadStart'
+            offset: "000072B0"            
+          - name: '_cdfsSGReadDone'
+            offset: "00007590"            
+          - name: '_cdfsMoveData'
+            offset: "00007690"            
+          - name: '_cdfsAbsReadStart'
+            offset: "000078D0"            
+          - name: '_cdfsAbsReadDone'
+            offset: "00007930"            
+          - name: '_IORCheck'
+            offset: "000079C0"            
+          - name: '_IORAlloc'
+            offset: "00007A00"            
+          - name: '_IORFree'
+            offset: "00007B20"            
+          - name: '_LogBase2'
+            offset: "00007B60"            
+          - name: '_cdfsSerial'
+            offset: "00007BB0"            
+          - name: '_CDPrefPreLock'
+            offset: "00007C30"            
+          - name: '_CDPrefSectorHit'
+            offset: "00007D30"            
+          - name: '_CDBeginPrefetch'
+            offset: "000080F0"            
+          - name: '_cdfsPrefStart'
+            offset: "00008160"            
+          - name: '_cdfsPrefDone'
+            offset: "000083A0"            
+          - name: '_CDPrefLockEvent'
+            offset: "00008540"            
+          - name: '_CMFindBlock'
+            offset: "000086B0"            
+          - name: '_CMLockBlock'
+            offset: "00008720"            
+          - name: '_cdfsClearSector'
+            offset: "00008C20"            
+          - name: '_CMValidateBlock'
+            offset: "00008D00"            
+          - name: '_CMInvalidateBlock'
+            offset: "00008D90"            
+          - name: '_CMUnLockBlock'
+            offset: "00008DB0"            
+          - name: '_CMAllocVolume'
+            offset: "00008ED0"            
+          - name: '_CMFlushVolume'
+            offset: "00008EE0"            
+          - name: '_CMAddNewVolume'
+            offset: "00008FB0"            
+          - name: '_CMRemoveVolume'
+            offset: "00009020"            
+          - name: '_CMChDir'
+            offset: "00009080"            
+          - name: '_cmHashRemove'
+            offset: "00009110"            
+          - name: '_CMDowngradePref'
+            offset: "00009160"            
+          - name: '_cmLRUReclaim'
+            offset: "00009220"            
+          - name: '_cmLRURemove'
+            offset: "000092E0"            
+          - name: '_cmLRUAdd'
+            offset: "000093F0"            
+          - name: '_cmSubtractCount'
+            offset: "00009850"            
+          - name: '_cmAddCount'
+            offset: "00009970"            
+          - name: '_cmPrefAgressRaise'
+            offset: "00009A40"            
+          - name: '_cmGetCMCH'
+            offset: "00009B20"            
+          - name: '_cmBlockToCE'
+            offset: "00009B40"            
+          - name: '_cmEmergencyUnlock'
+            offset: "00009B70"            
+          - name: '_CMAssertLocked'
+            offset: "00009C70"            
+          - name: '_cdfsOpenDone'
+            offset: "00009D40"            
+          - name: '_CallState'
+            offset: "0000A210"            
+          - name: '_RetState'
+            offset: "0000A240"            
+          - name: '_RunTaskStates'
+            offset: "0000A280"            
+          - name: '_RunGEHStates'
+            offset: "0000A330"            
+          - name: '_SetGEHWait'
+            offset: "0000A430"            
+          - name: '_RemoveCdc'
+            offset: "0000A450"            
+          - name: '_MainGEH'
+            offset: "0000A490"            
+          - name: '_DevCallback'
+            offset: "0000A4C0"            
+          - name: '_cdfsSemReq'
+            offset: "0000A540"            
+          - name: '_cdfsSemReqRetry'
+            offset: "0000A5A0"            
+          - name: '_cdfsSleep'
+            offset: "0000A5E0"            
+          - name: '_cdfsWakeAll'
+            offset: "0000A600"            
+          - name: '_MY_Create_Semaphore'
+            offset: "0000A640"            
+          - name: '_MY_Destroy_Semaphore'
+            offset: "0000A660"            
+          - name: '_MY_Signal_Semaphore'
+            offset: "0000A670"            
+          - name: '_MY_Wait_Semaphore'
+            offset: "0000A680"            
+          - name: '_MY_Schedule_Global_Event'
+            offset: "0000A6A0"            
+          - name: '_MY_HeapFree'
+            offset: "0000A6C0"            
+          - name: '_cdfsDone'
+            offset: "0000A730"            
+          - name: '_cdfsPanic'
+            offset: "0000A740"            
+          - name: '_cdfsNotImp'
+            offset: "0000A750"            
+          - name: '_cdfsErrorRet'
+            offset: "0000A780"            
+          - name: '_cdfsGetNamesFromRDE'
+            offset: "0000A7A0"            
+          - name: '_cdfsGetNamesFromRPTE'
+            offset: "0000A820"            
+          - name: '_cdfsGetNamesFromCDV'
+            offset: "0000A890"            
+          - name: '_cdfsGetLFNName'
+            offset: "0000A8C0"            
+          - name: '_cdfsGetOEMName'
+            offset: "0000AA80"            
+          - name: '_cdfsMetaCompare'
+            offset: "0000AC30"            
+          - name: '_cdfsCheckSemi'
+            offset: "0000AD70"            
+          - name: '_cdfsDirScanCall'
+            offset: "0000AE00"            
+          - name: '_cdfsDirScanStart'
+            offset: "0000B0D0"            
+          - name: '_cdfsDirScanDone'
+            offset: "0000B120"            
+          - name: '_cdfsDirScanRet'
+            offset: "0000B5F0"            
+          - name: '_cdfsGetAttrFromRDE'
+            offset: "0000B690"            
+          - name: '_GetAttrFromISOFlags'
+            offset: "0000B6C0"            
+          - name: '_cdfsAccumFileSize'
+            offset: "0000B6E0"            
+          - name: '_cdfsGetXASysUseArea'
+            offset: "0000B7E0"            
+          - name: '_cdfsGetExtentSize'
+            offset: "0000B820"            
+          - name: '_cdfsLocateExtentVolume'
+            offset: "0000B890"            
+          - name: '_cdfsPTScanCall'
+            offset: "0000B8D0"            
+          - name: '_cdfsPTScanStart'
+            offset: "0000BA00"            
+          - name: '_cdfsPTScanDone'
+            offset: "0000BA50"            
+          - name: '_cdfsPreInitIOREQ'
+            offset: "0000BDF0"            
+          - name: '_cdfsAttachResource'
+            offset: "0000BE70"            
+          - name: '_cdfsDetachResource'
+            offset: "0000BED0"            
+          - name: '_pcdcHead'
+            offset: "0000BF10"            
+          - name: '_pPLDataStart'
+            offset: "0000BF10"            
+          - name: '_pPLTextEnd'
+            offset: "0000BF10"            
+          - name: '_pcdcSleepHead'
+            offset: "0000BF14"            
+          - name: '_smsCDFS'
+            offset: "0000BF18"            
+          - name: '_pcdvHead'
+            offset: "0000BF20"            
+          - name: '_GEHHandle'
+            offset: "0000BF24"            
+          - name: '_pcmchCooked'
+            offset: "0000BF28"            
+          - name: '_pcmchRaw'
+            offset: "0000BF2C"            
+          - name: '_pcmchRawTmp'
+            offset: "0000BF30"            
+          - name: '_NextVolumeID'
+            offset: "0000BF34"            
+          - name: '_ExtendedErrors'
+            offset: "0000BF38"            
+          - name: '_CDXCompatNames'
+            offset: "0000BF3C"            
+          - name: '_In_Mctrl'
+            offset: "0000BF40"            
+          - name: '_afCdMediaChgd'
+            offset: "0000BF44"            
+          - name: '_fNoPreLockNeeded'
+            offset: "0000BF48"            
+          - name: '_MSCDEXVersion'
+            offset: "0000BF4C"            
+          - name: '_CDFSCacheSize'
+            offset: "0000BF50"            
+          - name: '_CDFSPrefetch'
+            offset: "0000BF54"            
+          - name: '_CDFSPrefetchTail'
+            offset: "0000BF58"            
+          - name: '_CDFSRawCache'
+            offset: "0000BF5C"            
+          - name: '_cpidOEM'
+            offset: "0000BF60"            
+          - name: '_pcdpiCache'
+            offset: "0000BF64"            
+          - name: '_pMountDispSave'
+            offset: "0000BF68"            
+          - name: '_pSystemClock'
+            offset: "0000BF6C"            
+          - name: '_cdperf'
+            offset: "0000BF70"            
+          - name: '_pcdperf'
+            offset: "0000BFC4"            
+          - name: '_PrefClock'
+            offset: "0000BFC8"            
+          - name: '_SectorPrefNext'
+            offset: "0000BFCC"            
+          - name: '_pcdvPrefNext'
+            offset: "0000BFD0"            
+          - name: '_SectorPrefLast'
+            offset: "0000BFD4"            
+          - name: '_PrefFlags'
+            offset: "0000BFD8"            
+          - name: '_cdcPref'
+            offset: "0000BFDC"            
+          - name: '_sgiPref'
+            offset: "0000C0A0"            
+          - name: '_apfnMSCDEXInt2f'
+            offset: "0000C130"            
+          - name: '_apfnCdRdIoctl'
+            offset: "0000C174"            
+          - name: '_apfnCdWtIoctl'
+            offset: "0000C1B4"            
+          - name: '_apfnCdDev128'
+            offset: "0000C1CC"            
+          - name: '_VolIdPattern'
+            offset: "0000C1F0"            
+          - name: '_wchDot'
+            offset: "0000C210"            
+          - name: '_wchDotDot'
+            offset: "0000C214"            
+          - name: '_MonDays'
+            offset: "0000C218"            
+          - name: '_achForeignLabel'
+            offset: "0000C230"            
+          - name: '_achAudioLabel'
+            offset: "0000C250"            
+          - name: '_AudioRootDe'
+            offset: "0000C270"            
+          - name: '_AudioPhile'
+            offset: "0000C294"            
+          - name: '_AudioPhileHeader'
+            offset: "0000C2CC"            
+          - name: '_AudioPlayHeader'
+            offset: "0000C2F8"            
+          - name: '_XAFileHeader'
+            offset: "0000C324"            
+          - name: '_AudioPhilePathTable'
+            offset: "0000C350"            
+          - name: '_acdptiForeign'
+            offset: "0000C35C"            
+          - name: '_acdptiAudioPhile'
+            offset: "0000C380"            
+          - name: '_aapreCopyAudio'
+            offset: "0000C3A4"            
+          - name: '_aste'
+            offset: "0000CB24"            
+          - name: '_pPLDataEnd'
+            offset: "0000CF3C"            
+      - num: "4"
+        name: "_SGROUP"
+        offset: "00000000"
+        symbols:
+          - name: '_pHeapFreeHead'
+            offset: "00000000"            
+          - name: '_CDFSLoaded'
+            offset: "00000004"            
+          - name: '_SafeMemCpyEH'
+            offset: "00000008"            
+          - name: '_pfnCDPrefLockEvent'
+            offset: "00000018"            
+          - name: '_pfnCDFSLazyUnlockEvent'
+            offset: "0000001C"            
+          - name: '_CDPrefLockEventStatic'
+            offset: "00000020"            
+          - name: '_HeapFreeEventStatic'
+            offset: "00000046"            
+          - name: '_CDFSLazyUnlockEventStatic'
+            offset: "00000078"            
+          - name: '_SafeMemCpyAsm'
+            offset: "000000A1"            
+          - name: 'WARN_CD_App_Bad_Read_Address'
+            offset: "000000D6"            

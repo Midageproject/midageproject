@@ -1,0 +1,491 @@
+filename: "vjoyd.vxd"
+#TODO: bring up more details from symdeb
+binary: "vjoyd.vxd"
+description: ""
+note: ""
+appearances:
+  - version: "system"
+    tree: []
+    segments:
+      - num: "1"
+        name: ".bss"
+        offset: "00000420"
+        symbols:
+          - name: '_pRegnDrv'
+            offset: "00000000"            
+          - name: '_LoadDrv'
+            offset: "00000010"            
+          - name: '_EmptyPollInst'
+            offset: "000001F0"            
+          - name: '_PollDrv'
+            offset: "00000300"            
+          - name: '_g_LoadIdx'
+            offset: "00000440"            
+          - name: '_dwCfgChgMsg'
+            offset: "00000444"            
+          - name: '_szGlobalDriver'
+            offset: "00000448"            
+          - name: '_dwNumLocalized'
+            offset: "0000044C"            
+          - name: '_dwSizeLocalized'
+            offset: "00000450"            
+          - name: '_UserRanges'
+            offset: "00000460"            
+          - name: '_UserValues'
+            offset: "00000480"            
+          - name: '_ppszLocalized'
+            offset: "000004E4"            
+          - name: '_VJOYD_Register_Device_Driver'
+            offset: "000004E8"            
+          - name: '_VJOYD_GetPosEx_Service'
+            offset: "000004EC"            
+          - name: '_VJOYD_GetInitParams_Service'
+            offset: "000004F0"            
+          - name: '_VJOYD_Poll_Service'
+            offset: "000004F4"            
+          - name: '_VJOYD_Escape_Service'
+            offset: "000004F8"            
+          - name: '_VJOYD_CtrlMsg_Service'
+            offset: "000004FC"            
+          - name: '_VJOYD_SetGain_Service'
+            offset: "00000500"            
+          - name: '_VJOYD_SendFFCommand_Service'
+            offset: "00000504"            
+          - name: '_VJOYD_GetFFState_Service'
+            offset: "00000508"            
+          - name: '_VJOYD_DownloadEffect_Service'
+            offset: "0000050C"            
+          - name: '_VJOYD_DestroyEffect_Service'
+            offset: "00000510"            
+          - name: '_VJOYD_StartEffect_Service'
+            offset: "00000514"            
+          - name: '_VJOYD_StopEffect_Service'
+            offset: "00000518"            
+          - name: '_VJOYD_GetEffectStatus_Service'
+            offset: "0000051C"            
+          - name: '_VJOYD_DeviceUpdateNotify_Service'
+            offset: "00000520"            
+          - name: '_VJOYD_JoystickActivity_Service'
+            offset: "00000524"            
+          - name: '_VJOYD_OpenTypeKey_Service'
+            offset: "00000528"            
+          - name: '_VJOYD_OpenConfigKey_Service'
+            offset: "0000052C"            
+          - name: '_VJOYD_NewGameportDevNode'
+            offset: "00000530"            
+          - name: 'vjoyd_DDB'
+            offset: "00000534"            
+          - name: '_DevnodeLock'
+            offset: "00000584"            
+          - name: '_RegistryLock'
+            offset: "00000588"            
+          - name: 'VJOYD_Control'
+            offset: "0000058C"            
+          - name: '_EnterLock@4'
+            offset: "000005B7"            
+          - name: '__EnterLock@4@0'
+            offset: "000005B7"            
+          - name: '_LeaveLock@4'
+            offset: "000005C9"            
+          - name: '__LeaveLock@4@0'
+            offset: "000005C9"            
+          - name: 'VJOYD_DeviceExit'
+            offset: "000005DB"            
+          - name: 'VJOYD_DeviceUpdateNotify_Service'
+            offset: "00000600"            
+      - num: "2"
+        name: "RARE"
+        offset: "000004C0"
+        symbols:
+          - name: '_RegCopyValue'
+            offset: "00000000"            
+          - name: '_RegCopyTree'
+            offset: "0000007B"            
+          - name: '_OpenSettingsByDevnode'
+            offset: "00000281"            
+          - name: '_OpenSettingsByEnum'
+            offset: "00000334"            
+          - name: '_CopyMigratedDevnode'
+            offset: "000003C2"            
+          - name: '_CopyOldSettings'
+            offset: "000004BC"            
+      - num: "3"
+        name: "PNP"
+        offset: "00000780"
+        symbols:
+          - name: '_CCODE__HeapFree'
+            offset: "00000000"            
+          - name: '_CCODE__RegCreateKey'
+            offset: "00000008"            
+          - name: '_CCODE__HeapAllocate'
+            offset: "00000010"            
+          - name: '_CCODE__RegCloseKey'
+            offset: "00000018"            
+          - name: '_CCODE__RegSetValueEx'
+            offset: "00000020"            
+          - name: '_CCODE__RegQueryValueEx'
+            offset: "00000028"            
+          - name: '_CCODE__RegOpenKey'
+            offset: "00000030"            
+          - name: '_CCODE_VMM_GetSystemInitState'
+            offset: "00000038"            
+          - name: '_CCODE__Sprintf'
+            offset: "00000040"            
+          - name: '_CCODE__SHELL_CallAtAppyTime'
+            offset: "00000048"            
+          - name: '_CCODE__RegDeleteValue'
+            offset: "00000050"            
+          - name: '_CCODE__RegEnumKey'
+            offset: "00000058"            
+          - name: '_CCODE__RegQueryInfoKey'
+            offset: "00000060"            
+          - name: '_CCODE__RegEnumValue'
+            offset: "00000068"            
+          - name: '_CCODE_VXDLDR_UnloadDevice@8'
+            offset: "00000070"            
+          - name: '_CCODE_Directed_Sys_Control@24'
+            offset: "00000084"            
+          - name: '_CCODE_VXDLDR_LoadDevice@16'
+            offset: "000000B0"            
+          - name: '_CCODE__lmemcpy'
+            offset: "000000D4"            
+          - name: '_CCODE__CONFIGMG_Read_Registry_Value'
+            offset: "000000DC"            
+          - name: '_CCODE__lstrcpyn'
+            offset: "000000E4"            
+          - name: '_CCODE__lstrlen'
+            offset: "000000EC"            
+          - name: '_CCODE__CONFIGMG_Get_Alloc_Log_Conf'
+            offset: "000000F4"            
+          - name: '_CCODE__CONFIGMG_Get_Device_ID'
+            offset: "000000FC"            
+          - name: '_CCODE__CONFIGMG_Get_Device_ID_Size'
+            offset: "00000104"            
+      - num: "4"
+        name: "_PTEXT"
+        offset: "00001260"
+        symbols:
+          - name: '__ReadFile@4@4'
+            offset: "00000000"            
+          - name: '_ReadFile@4'
+            offset: "00000000"            
+          - name: '_VJOYD_PNPNewDevNode'
+            offset: "000000EB"            
+          - name: 'VJOYD_NewGameportDevNode'
+            offset: "0000010B"            
+          - name: 'VJOYD_Register_Device_Driver'
+            offset: "00000112"            
+          - name: 'VJOYD_OpenTypeKey_Service'
+            offset: "0000011D"            
+          - name: 'VJOYD_OpenConfigKey_Service'
+            offset: "00000164"            
+          - name: 'VJOYD_GetPosEx_Service'
+            offset: "00000182"            
+          - name: 'VJOYD_Poll_Service'
+            offset: "0000018B"            
+          - name: 'VJOYD_GetInitParams_Service'
+            offset: "00000195"            
+          - name: 'VJOYD_Escape_Service'
+            offset: "00000264"            
+          - name: 'VJOYD_CtrlMsg_Service'
+            offset: "0000027B"            
+          - name: 'VJOYD_SetGain_Service'
+            offset: "00000292"            
+          - name: 'VJOYD_GetFFState_Service'
+            offset: "000002A7"            
+          - name: 'VJOYD_SendFFCommand_Service'
+            offset: "000002BD"            
+          - name: 'VJOYD_DownloadEffect_Service'
+            offset: "000002D3"            
+          - name: 'VJOYD_DestroyEffect_Service'
+            offset: "000002EC"            
+          - name: 'VJOYD_StartEffect_Service'
+            offset: "00000302"            
+          - name: 'VJOYD_StopEffect_Service'
+            offset: "0000031A"            
+          - name: 'VJOYD_GetEffectStatus_Service'
+            offset: "00000330"            
+          - name: 'VJOYD_JoystickActivity_Service'
+            offset: "00000347"            
+          - name: 'VJOYDAPI_DeviceIOControl'
+            offset: "00000348"            
+          - name: 'VJOYDAPI_IOCTL_Get_Version_Handler'
+            offset: "0000035F"            
+          - name: 'VJOYDAPI_IOCTL_GetPosEx_Handler'
+            offset: "0000037A"            
+          - name: 'VJOYDAPI_IOCTL_GetPos_Handler'
+            offset: "0000038B"            
+          - name: 'VJOYD_PM_API_Handler'
+            offset: "000003A0"            
+          - name: 'VJOYDAPI_Get_Version_Handler'
+            offset: "000003B9"            
+          - name: 'VJOYDAPI_GetPosEx_Handler'
+            offset: "000003C2"            
+          - name: 'VJOYDAPI_GetHWCaps_Handler'
+            offset: "000003E7"            
+          - name: 'VJOYDAPI_GetPos_Handler'
+            offset: "00000409"            
+          - name: 'VJOYDAPI_SetData_Handler'
+            offset: "0000042B"            
+          - name: 'VJOYDAPI_GetDevCaps_Handler'
+            offset: "00000443"            
+          - name: 'VJOYDAPI_Init_Handler'
+            offset: "00000465"            
+          - name: 'VJOYDAPI_ConfigChanged_Handler'
+            offset: "0000047B"            
+          - name: '_ActivateFixedDevnode'
+            offset: "00000498"            
+          - name: '_ActivateSiblingDevnode'
+            offset: "00000596"            
+          - name: '_ActivateMatchedDevnode'
+            offset: "00000686"            
+          - name: '_ActivateGameportDevnode'
+            offset: "000007F8"            
+          - name: '_ActivateWithoutDevnode'
+            offset: "00000990"            
+          - name: '_FirstPassPollingDrivers'
+            offset: "00000A39"            
+          - name: '_SecondPassPollingDrivers'
+            offset: "00000CD4"            
+          - name: '_GlobalYouPoll'
+            offset: "00000DEE"            
+          - name: '_UpdateFixedKeyDevnode'
+            offset: "00001010"            
+          - name: '_VJOYD_ConfigChanged@4'
+            offset: "000010D4"            
+          - name: '_VJOYD_SetData@4'
+            offset: "0000117B"            
+          - name: '_VJOYD_RcvMSJData@4'
+            offset: "00001185"            
+          - name: '_DeviceExit@0'
+            offset: "00001231"            
+          - name: '_RecreateHWCfgFromInst'
+            offset: "000012BD"            
+          - name: '_SetAutoLoadConfigAndActivate'
+            offset: "00001358"            
+          - name: '_AppyHotPlug'
+            offset: "00001571"            
+          - name: '_AppyHotUnplug'
+            offset: "00001905"            
+          - name: '_DeleteSettings'
+            offset: "000019C2"            
+          - name: '_HouseKeepRegistry'
+            offset: "00001ABB"            
+          - name: '_ReadValueFromId'
+            offset: "00001ABC"            
+          - name: '_GetDriverHWCfg'
+            offset: "00001AFB"            
+          - name: '_GetNewDriverInfo'
+            offset: "00001B43"            
+          - name: '_UpdateGlobalDriverName'
+            offset: "00001C27"            
+          - name: '_SetButtonPOVCalib'
+            offset: "00001D33"            
+          - name: '_CalibratePolledPOV'
+            offset: "00001D59"            
+          - name: '_CalculateDeadZone'
+            offset: "00001E37"            
+          - name: '_CalculateAxisData'
+            offset: "00001EB4"            
+          - name: '_RefreshUserRanges'
+            offset: "00001F22"            
+          - name: '_RefreshUserValues'
+            offset: "00001FD1"            
+          - name: '_TwoParmCallback@8'
+            offset: "00002062"            
+          - name: '_ThreeParmCallback@12'
+            offset: "0000206A"            
+          - name: '_FourParmCallback@16'
+            offset: "00002072"            
+          - name: '_FiveParmCallback@20'
+            offset: "0000207A"            
+          - name: '_EmptyPoll@12'
+            offset: "00002082"            
+          - name: '_EmptyCfg'
+            offset: "00002094"            
+          - name: '_EmptyEscape@12'
+            offset: "0000209A"            
+          - name: '_EmptyCtrlMsg@12'
+            offset: "000020A2"            
+          - name: '_CalculateCalibParams'
+            offset: "000020AA"            
+          - name: '_CalculatePollParams'
+            offset: "000020E6"            
+          - name: '_SetOldParamsFromCaps'
+            offset: "0000236D"            
+          - name: '_FindEmptyLoadDriver'
+            offset: "000024AC"            
+          - name: '_FindMatchingLoadedDriver'
+            offset: "000024C2"            
+          - name: '_CopyVTables'
+            offset: "000024EF"            
+          - name: '_DriverRegister'
+            offset: "000026AA"            
+          - name: '_StripTypeName'
+            offset: "000027AC"            
+          - name: '_CreatePollInst'
+            offset: "00002800"            
+          - name: '_DestroyPollInst'
+            offset: "00002A46"            
+          - name: '_RemoveLoadDrv'
+            offset: "00002A86"            
+          - name: '_DeRefDrvFrom'
+            offset: "00002AFD"            
+          - name: '_DoPlug'
+            offset: "00002B38"            
+          - name: '_DoUnplug'
+            offset: "00002D63"            
+          - name: '_UpdatePollInstHWCaps'
+            offset: "00002E4E"            
+          - name: '_DoOldStyleRegister'
+            offset: "00002E8C"            
+          - name: '_RegisterDeviceDriver@16'
+            offset: "00002F82"            
+          - name: '_SucceedJoyId@8'
+            offset: "00003231"            
+          - name: '_AddRefDrvTo'
+            offset: "00003251"            
+          - name: '_UnloadUnusedVxDs'
+            offset: "00003502"            
+          - name: '_Deactivate'
+            offset: "00003533"            
+          - name: '_strEqual'
+            offset: "0000369C"            
+          - name: '_ReadINF'
+            offset: "000036EA"            
+          - name: '_ReadDevnodeINF'
+            offset: "00003794"            
+          - name: '_FindiStr'
+            offset: "0000396C"            
+          - name: '_FindNextLine'
+            offset: "000039FD"            
+          - name: '_AddFile'
+            offset: "00003A5F"            
+          - name: '_PassWhiteSpace'
+            offset: "00003AF2"            
+          - name: '_BuildCheckList'
+            offset: "00003B18"            
+          - name: '_FreeNameList'
+            offset: "00003CAA"            
+          - name: '_UpperNameList'
+            offset: "00003CC8"            
+          - name: '_BuildDriverList'
+            offset: "00003CF1"            
+          - name: '_ProcessNewDevnodes'
+            offset: "00003E51"            
+          - name: '_Config_Handler'
+            offset: "00003FC2"            
+          - name: '_DeRefDevnode'
+            offset: "000040E9"            
+          - name: '_NewDevnodeLink'
+            offset: "00004144"            
+          - name: '_DecodeAxisPOV'
+            offset: "00004247"            
+          - name: '_DecodeButtonPOV'
+            offset: "000042AC"            
+          - name: '_VJOYD_Poll@12'
+            offset: "000042F5"            
+          - name: '_VJOYD_GetPosEx@8'
+            offset: "000044BE"            
+          - name: '_VJOYD_GetPos@8'
+            offset: "0000550E"            
+          - name: '_VJOYD_GetHWCaps@8'
+            offset: "0000572A"            
+          - name: '_VJOYD_GetDevCaps@8'
+            offset: "000057B9"            
+      - num: "5"
+        name: "_PDATA"
+        offset: "00001720"
+        symbols:
+          - name: '??_C@_0BC@KBPE@Joystick?$CFdOEMName?$AA@'
+            offset: "00000088"            
+          - name: '??_C@_0DJ@FIAC@System?2CurrentControlSet?2Control@'
+            offset: "0000009C"            
+          - name: '_szDefaultGlobal'
+            offset: "000000D8"            
+          - name: '_szSpaceBall'
+            offset: "000000E8"            
+          - name: '_szFortePuck'
+            offset: "000000F8"            
+          - name: '_szForteVFX1'
+            offset: "00000108"            
+          - name: '_szSidewinderV1'
+            offset: "00000118"            
+          - name: '_szMSGame'
+            offset: "00000128"            
+          - name: '_szGravisGrIP'
+            offset: "00000138"            
+          - name: '_szLogitech'
+            offset: "00000148"            
+          - name: '_szFixedKey'
+            offset: "00000158"            
+          - name: '_szRegCfgPath'
+            offset: "00000168"            
+          - name: '_szCurrCfgKey'
+            offset: "000001B0"            
+          - name: '_szRegCurrCfgPath'
+            offset: "000001C8"            
+          - name: '_szSettingsKey'
+            offset: "00000228"            
+          - name: '??_C@_0BI@CGJO@Joystick?$CFdConfiguration?$AA@'
+            offset: "0000023C"            
+          - name: '??_C@_0BF@KFMJ@Joystick?$CFdOEMCallout?$AA@'
+            offset: "00000254"            
+          - name: '??_C@_07NOBC@OEMName?$AA@'
+            offset: "0000026C"            
+          - name: '??_C@_0L@EMDF@OEMCallout?$AA@'
+            offset: "00000274"            
+          - name: '??_C@_07NNCN@OEMData?$AA@'
+            offset: "00000280"            
+          - name: '??_C@_0FA@OOAJ@System?2CurrentControlSet?2Control@'
+            offset: "00000288"            
+          - name: '??_C@_0BK@NPAC@Joystick?$CFdFFConfiguration?$AA@'
+            offset: "000002D8"            
+          - name: '??_C@_0BD@EBPM@JoystickUserValues?$AA@'
+            offset: "000002F4"            
+          - name: '??_C@_07FFID@DevNode?$AA@'
+            offset: "00000308"            
+          - name: '??_C@_0L@PKH@?$DMFixedKey?$DO?$AA@'
+            offset: "00000310"            
+          - name: '_EmptyPollVt'
+            offset: "00000340"            
+          - name: '_EmptyGetPosVt'
+            offset: "00000358"            
+          - name: '_EmptyForceVt'
+            offset: "00000370"            
+          - name: '_szVJoyD'
+            offset: "00000390"            
+          - name: '_szMSJStick'
+            offset: "000003A0"            
+          - name: '??_C@_0BA@PMMB@OtherDevicePath?$AA@'
+            offset: "000003B0"            
+          - name: '??_C@_0L@PJGC@DevicePath?$AA@'
+            offset: "000003C0"            
+          - name: '??_C@_0CK@NMAM@Software?2Microsoft?2Windows?2Curre@'
+            offset: "000003CC"            
+          - name: '??_C@_07EGBM@InfPath?$AA@'
+            offset: "000003F8"            
+          - name: '??_C@_0L@PKHD@InfSection?$AA@'
+            offset: "00000400"            
+          - name: '??_C@_0CI@JMIN@System?2CurrentControlSet?2Service@'
+            offset: "0000040C"            
+          - name: '??_C@_06LCIG@Driver?$AA@'
+            offset: "00000434"            
+          - name: '??_C@_09PGDB@CopyFiles?$AA@'
+            offset: "0000043C"            
+          - name: '_iNumNewDevnodes'
+            offset: "00000448"            
+          - name: '_DevnodeListRoot'
+            offset: "0000044C"            
+      - num: "6"
+        name: "_ITEXT"
+        offset: "00000000"
+        symbols:
+          - name: 'VJOYD_DeviceInit'
+            offset: "00000000"            
+          - name: '_DeviceInit@0'
+            offset: "0000002D"            
+          - name: '_VJOYD_InitComplete@0'
+            offset: "00000110"            
+          - name: '_DoRegistryInit'
+            offset: "00000115"            

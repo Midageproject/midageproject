@@ -1,0 +1,385 @@
+filename: "vmm32/vxdldr.vxd"
+#TODO: bring up more details from symdeb
+binary: "vmm32/vxdldr.vxd"
+description: ""
+note: ""
+appearances:
+  - version: "system"
+    tree: []
+    segments:
+      - num: "1"
+        name: "_LGROUP"
+        offset: "000003A0"
+        symbols:
+          - name: 'VXDLDR_Control'
+            offset: "00000000"            
+          - name: 'VXDLDR_CheckDeviceList'
+            offset: "00000044"            
+          - name: 'VXDLDR_PrintDeviceName'
+            offset: "00000069"            
+          - name: 'VXDLDR_GetVersion'
+            offset: "00000095"            
+          - name: 'VXDLDR_GetDeviceList'
+            offset: "000000A2"            
+          - name: '_VXDLDR_GetVersion'
+            offset: "000000B0"            
+          - name: '_VXDLDR_LoadDevice'
+            offset: "000000B4"            
+          - name: '_VXDLDR_UnloadDevice'
+            offset: "000000B8"            
+          - name: '_VXDLDR_DevInitSucceeded'
+            offset: "000000BC"            
+          - name: '_VXDLDR_DevInitFailed'
+            offset: "000000C0"            
+          - name: '_VXDLDR_GetDeviceList'
+            offset: "000000C4"            
+          - name: '_VXDLDR_UnloadMe'
+            offset: "000000C8"            
+          - name: '__PELDR_LoadModule'
+            offset: "000000CC"            
+          - name: '__PELDR_GetModuleHandle'
+            offset: "000000D0"            
+          - name: '__PELDR_GetModuleUsage'
+            offset: "000000D4"            
+          - name: '__PELDR_GetEntryPoint'
+            offset: "000000D8"            
+          - name: '__PELDR_GetProcAddress'
+            offset: "000000DC"            
+          - name: '__PELDR_AddExportTable'
+            offset: "000000E0"            
+          - name: '__PELDR_RemoveExportTable'
+            offset: "000000E4"            
+          - name: '__PELDR_FreeModule'
+            offset: "000000E8"            
+          - name: '_VXDLDR_Notify'
+            offset: "000000EC"            
+          - name: '__PELDR_InitCompleted'
+            offset: "000000F0"            
+          - name: '__PELDR_LoadModuleEx'
+            offset: "000000F4"            
+          - name: '__PELDR_LoadModule2'
+            offset: "000000F8"            
+          - name: 'VXDLDR_DDB'
+            offset: "000000FC"            
+          - name: 'DeviceListHead'
+            offset: "0000014C"            
+          - name: '_InitCompleted'
+            offset: "00000150"            
+      - num: "2"
+        name: "_LMGROUP"
+        offset: "000003E0"
+        symbols:
+          - name: '@MSG_LAB'
+            offset: "00000000"            
+          - name: '@MSG_LDATA'
+            offset: "00000030"            
+      - num: "3"
+        name: "_IGROUP"
+        offset: "000006F0"
+        symbols:
+          - name: 'VXDLDR_Sys_Critical_Init'
+            offset: "00000000"            
+          - name: 'VXDLDR_Device_Init'
+            offset: "0000003C"            
+          - name: 'VXDLDR_Init_Complete'
+            offset: "0000005E"            
+          - name: 'VXDLDR_set_up_v86_area'
+            offset: "00000067"            
+          - name: 'VXDLDR_free_v86_area'
+            offset: "000000B9"            
+          - name: '_SetV86Buffer@8'
+            offset: "000000F0"            
+          - name: '_ResetV86Buffer@8'
+            offset: "00000170"            
+          - name: 'ExportNTFunctions'
+            offset: "000001A0"            
+          - name: '_ICODE__Allocate_Temp_V86_Data_Area'
+            offset: "000001E8"            
+          - name: '_ICODE__Free_Temp_V86_Data_Area'
+            offset: "000001F0"            
+      - num: "4"
+        name: "_PTEXT"
+        offset: "00001A90"
+        symbols:
+          - name: '_ValidateProcAddress@8'
+            offset: "00000030"            
+          - name: '_PELDR_GetModuleHandle'
+            offset: "00000070"            
+          - name: '_PELDR_LoadModule2'
+            offset: "000000A0"            
+          - name: '_PELDR_LoadModuleEx'
+            offset: "00000640"            
+          - name: '_PELDR_LoadModule'
+            offset: "00000670"            
+          - name: '_PELDR_GetModuleUsage'
+            offset: "00000690"            
+          - name: '_PELDR_GetEntryPoint'
+            offset: "000006B0"            
+          - name: '_PELDR_GetProcAddress'
+            offset: "000006D0"            
+          - name: '_PELDR_AddExportTable'
+            offset: "00000750"            
+          - name: '_PELDR_RemoveExportTable'
+            offset: "000007F0"            
+          - name: '_PELDR_FreeModule'
+            offset: "00000850"            
+          - name: '_PELDR_InitCompleted'
+            offset: "00000890"            
+          - name: '_StrICmp'
+            offset: "000008D0"            
+          - name: '_fileOpen'
+            offset: "00000920"            
+          - name: '_fileClose'
+            offset: "00000940"            
+          - name: '_fileSeek'
+            offset: "00000962"            
+          - name: '_fileRead'
+            offset: "0000099D"            
+          - name: '_StrNCpy'
+            offset: "000009EC"            
+          - name: '_SplitPath'
+            offset: "00000A20"            
+          - name: '_V86MMGR_Get_Xlat_Buff_State'
+            offset: "00000B80"            
+          - name: '_V86MMGR_Set_Xlat_Buff_State'
+            offset: "00000BA8"            
+          - name: '_PrefixCompare@8'
+            offset: "00000BD0"            
+          - name: '_SetModuleName@8'
+            offset: "00000C10"            
+          - name: '_RVAToData@8'
+            offset: "00000C40"            
+          - name: '_DirectoryEntryToData@12'
+            offset: "00000D00"            
+          - name: '_LoadPEHeaders@4'
+            offset: "00000D50"            
+          - name: '_RemoveSectionSymbols@8'
+            offset: "00000F60"            
+          - name: '_FreeSection@8'
+            offset: "00000FC0"            
+          - name: '_FreeModule@4'
+            offset: "00001080"            
+          - name: '_AddSectionSymbols@8'
+            offset: "00001140"            
+          - name: '_LoadPESections@4'
+            offset: "00001200"            
+          - name: '_FindExportFunction@24'
+            offset: "00001410"            
+          - name: '_ProcessPERelocation@4'
+            offset: "00001610"            
+          - name: '_ProcessPEExports@4'
+            offset: "000017D0"            
+          - name: '_ProcessPEImports@4'
+            offset: "00001920"            
+          - name: '_FreeDriverInitialization@4'
+            offset: "00001AC0"            
+          - name: '_MmLockPagableSectionByHandle@4'
+            offset: "00001B20"            
+          - name: '_GetPeHdrSection@12'
+            offset: "00001B80"            
+          - name: '_MmLockPagableDataSection@4'
+            offset: "00001C00"            
+          - name: '_MmUnlockPagableImageSection@4'
+            offset: "00001C30"            
+          - name: '_MmResetDriverPaging@4'
+            offset: "00001C90"            
+          - name: '_MmPageEntireDriver@4'
+            offset: "00001D00"            
+          - name: '_PCODE__PELDR_AddExportTable'
+            offset: "00001D80"            
+          - name: '_PCODE__PELDR_RemoveExportTable'
+            offset: "00001D88"            
+          - name: '_PCODE__HeapAllocate'
+            offset: "00001D90"            
+          - name: '_PCODE__HeapFree'
+            offset: "00001D98"            
+          - name: '_PCODE__HeapReAllocate'
+            offset: "00001DA0"            
+          - name: '_PCODE__HeapGetSize'
+            offset: "00001DA8"            
+          - name: '_PCODE__Debug_Printf_Service'
+            offset: "00001DB0"            
+          - name: '_PCODE_Get_Cur_VM_Handle'
+            offset: "00001DC4"            
+          - name: '_PCODE__LinPageLock'
+            offset: "00001DD0"            
+          - name: '_PCODE__LinPageUnLock'
+            offset: "00001DD8"            
+      - num: "5"
+        name: "_PDATA"
+        offset: "00001B30"
+        symbols:
+          - name: 'fBootlog'
+            offset: "00000004"            
+          - name: '_GlobalExportTableList'
+            offset: "00000BCC"            
+          - name: '_GlobalModuleList'
+            offset: "00000BD0"            
+          - name: '_gszExecPath'
+            offset: "00000BD4"            
+          - name: '_fVerboseDebug'
+            offset: "00000DD8"            
+          - name: '_fPrintName'
+            offset: "00000DDC"            
+          - name: '_fPrintRecord'
+            offset: "00000DE0"            
+      - num: "6"
+        name: "_DBOGROUP"
+        offset: "00001C50"
+        symbols:
+          - name: 'VXDLDR_Debug_Query'
+            offset: "00000000"            
+      - num: "7"
+        name: "_RARE"
+        offset: "00001CE0"
+        symbols:
+          - name: 'UnExportNTFunctions'
+            offset: "00000000"            
+      - num: "8"
+        name: "_VMDESTROY"
+        offset: "00000000"
+        symbols:
+          - name: 'VXDLDR_Sys_VM_Init'
+            offset: "00000000"            
+          - name: 'VXDLDR_LoadDevice'
+            offset: "00000016"            
+          - name: 'VXDLDR_UnloadDevice'
+            offset: "00000100"            
+          - name: 'ValidateDeviceHandle'
+            offset: "0000010E"            
+          - name: 'VXDLDR_DevInitSucceeded'
+            offset: "0000012C"            
+          - name: 'VXDLDR_DevInitFailed'
+            offset: "000001D5"            
+          - name: 'VXDLDR_Enter_Device_List'
+            offset: "0000025C"            
+          - name: 'VXDLDR_Exit_Device_List'
+            offset: "00000278"            
+          - name: 'VXDLDR_UnloadMe'
+            offset: "00000298"            
+          - name: '_FindDeviceInList@8'
+            offset: "000002A6"            
+          - name: '_AddDeviceToList@4'
+            offset: "000002EE"            
+          - name: 'DeviceAlreadyInList'
+            offset: "0000031A"            
+          - name: 'VXDLDR_API_Handler'
+            offset: "00000354"            
+          - name: 'VXDLDR_API_Get_Version'
+            offset: "0000038A"            
+          - name: 'VXDLDR_API_Load_Device'
+            offset: "0000039A"            
+          - name: 'VXDLDR_API_Unload_Device'
+            offset: "000003B9"            
+          - name: 'VXDLDR_W32API_Handler'
+            offset: "000003D7"            
+          - name: 'VXDLDR_W32API_Get_Version'
+            offset: "00000428"            
+          - name: 'VXDLDR_W32API_Load_Device'
+            offset: "00000438"            
+          - name: 'VXDLDR_W32API_Unload_Device'
+            offset: "0000049D"            
+          - name: 'LoadDevice'
+            offset: "000004C7"            
+          - name: 'InitLoading'
+            offset: "0000051F"            
+          - name: 'OpenDeviceFile'
+            offset: "00000557"            
+          - name: 'CloseDeviceFile'
+            offset: "00000583"            
+          - name: 'ReadLEHeader'
+            offset: "000005A1"            
+          - name: 'ReadLoadSection'
+            offset: "0000086D"            
+          - name: 'CheckForDuplicate'
+            offset: "00000987"            
+          - name: 'PreScanObjects'
+            offset: "000009A2"            
+          - name: 'GetObjType'
+            offset: "00000AA1"            
+          - name: 'ProcImpModNameTable'
+            offset: "00000AC8"            
+          - name: 'LoadObjects'
+            offset: "00000AFA"            
+          - name: 'ChkForBadVxD'
+            offset: "00000B9A"            
+          - name: 'LoadObject'
+            offset: "00000BCB"            
+          - name: 'ReadObject'
+            offset: "00000C06"            
+          - name: 'FixupObject'
+            offset: "00000C78"            
+          - name: 'ReadContiguousPages'
+            offset: "00000CB6"            
+          - name: 'GetPageNumber'
+            offset: "00000D57"            
+          - name: 'FixupPage'
+            offset: "00000D6F"            
+          - name: 'GetInternalFixupData'
+            offset: "00000E0A"            
+          - name: 'GetImpOrdFixupData'
+            offset: "00000E27"            
+          - name: 'DoFixup'
+            offset: "00000E92"            
+          - name: 'FreeMemory'
+            offset: "00000F40"            
+          - name: 'SaveDeviceDetails'
+            offset: "00000F79"            
+          - name: 'AllocateObjInfoMemory'
+            offset: "000010AE"            
+          - name: 'FreeObjInfoMemory'
+            offset: "000010F0"            
+          - name: 'InitDevice'
+            offset: "00001122"            
+          - name: 'CheckDuplicateOfStatic'
+            offset: "0000118A"            
+          - name: 'UnloadDevice'
+            offset: "000011AC"            
+          - name: 'GetDeviceInfoPtr'
+            offset: "00001277"            
+          - name: 'CompareID'
+            offset: "000012D4"            
+          - name: 'CompareName'
+            offset: "000012E1"            
+          - name: 'FreeDeviceMemoryAndDdb'
+            offset: "000012F5"            
+          - name: 'FreeDeviceMemory'
+            offset: "00001306"            
+          - name: 'FreeDeviceInfo'
+            offset: "00001381"            
+          - name: 'AllocateObjectMemory'
+            offset: "000013C7"            
+          - name: 'GetObjectAddress'
+            offset: "00001437"            
+          - name: 'GetDIPtr'
+            offset: "0000146D"            
+          - name: 'DebugLoadObjects'
+            offset: "000014C0"            
+          - name: 'UnloadMe'
+            offset: "00001545"            
+          - name: 'FreeDeviceMemoryEvent'
+            offset: "000015B6"            
+          - name: 'VXDLDR_V86_API_Dispatcher'
+            offset: "000015C8"            
+          - name: 'VXDLDR_PM_API_Dispatcher'
+            offset: "0000160E"            
+          - name: 'FileOpen'
+            offset: "00001649"            
+          - name: 'FileRead'
+            offset: "00001660"            
+          - name: 'FileSeek'
+            offset: "00001677"            
+          - name: 'FileClose'
+            offset: "00001694"            
+          - name: 'VXDLDR_Notify'
+            offset: "000016AD"            
+          - name: 'LogPreLoad'
+            offset: "000016B8"            
+          - name: 'LogPostLoad'
+            offset: "000016F6"            
+          - name: 'LogPreInit'
+            offset: "00001776"            
+          - name: 'LogPostInit'
+            offset: "000017A6"            
+          - name: 'WriteLogString'
+            offset: "000017E5"            

@@ -1,0 +1,331 @@
+filename: "mmsystem.dll"
+#TODO: bring up more details from symdeb
+binary: "mmsystem.dll"
+description: ""
+note: ""
+appearances:
+  - version: "system"
+    tree: []
+    segments:
+      - num: "1"
+        name: "FIX"
+        offset: "00000100"
+        symbols:
+          - name: 'MMTASKSIGNAL'
+            offset: "000001D0"            
+          - name: 'MCIDRIVERNOTIFY'
+            offset: "000001E1"            
+          - name: 'TIMEGETTIME'
+            offset: "000001F8"            
+          - name: 'TIMEGETSYSTEMTIME'
+            offset: "00000206"            
+          - name: 'TIMESETEVENT'
+            offset: "00000230"            
+          - name: 'TIMEBEGINPERIOD'
+            offset: "000002BC"            
+          - name: 'TIMEENDPERIOD'
+            offset: "000002C1"            
+          - name: 'TIMEKILLEVENT'
+            offset: "000002C6"            
+          - name: 'STACKLEAVE'
+            offset: "00000552"            
+          - name: 'STACKENTER'
+            offset: "00000552"            
+          - name: 'DRIVERCALLBACK'
+            offset: "00000554"            
+      - num: "2"
+        name: "FIXMIDI"
+        offset: "00000170"
+        symbols:
+          - name: 'MIDIOUTMESSAGE'
+            offset: "000000F0"            
+          - name: 'MIDIOUTSHORTMSG'
+            offset: "000001D2"            
+          - name: 'MIDIOUTLONGMSG'
+            offset: "0000022A"            
+          - name: 'MIDIOUTRESET'
+            offset: "000002C4"            
+      - num: "4"
+        name: "WAVE"
+        offset: "00000450"
+        symbols:
+          - name: 'WAVEOUTGETNUMDEVS'
+            offset: "0000165E"            
+          - name: 'WAVEOUTMESSAGE'
+            offset: "0000166E"            
+          - name: 'WAVEOUTGETDEVCAPS'
+            offset: "0000170C"            
+          - name: 'WAVEOUTGETVOLUME'
+            offset: "000017B2"            
+          - name: 'WAVEOUTSETVOLUME'
+            offset: "0000181C"            
+          - name: 'WAVEOUTGETERRORTEXT'
+            offset: "0000191C"            
+          - name: 'WAVEOUTOPEN'
+            offset: "00001958"            
+          - name: 'WAVEOUTCLOSE'
+            offset: "00001B3C"            
+          - name: 'WAVEOUTPREPAREHEADER'
+            offset: "00001B8A"            
+          - name: 'WAVEOUTUNPREPAREHEADER'
+            offset: "00001C3E"            
+          - name: 'WAVEOUTWRITE'
+            offset: "00001D08"            
+          - name: 'WAVEOUTPAUSE'
+            offset: "00001DB6"            
+          - name: 'WAVEOUTRESTART'
+            offset: "00001DE8"            
+          - name: 'WAVEOUTRESET'
+            offset: "00001E1A"            
+          - name: 'WAVEOUTBREAKLOOP'
+            offset: "00001E4C"            
+          - name: 'WAVEOUTGETPOSITION'
+            offset: "00001E7E"            
+          - name: 'WAVEOUTGETPITCH'
+            offset: "00001ECC"            
+          - name: 'WAVEOUTSETPITCH'
+            offset: "00001F12"            
+          - name: 'WAVEOUTGETPLAYBACKRATE'
+            offset: "00001F44"            
+          - name: 'WAVEOUTSETPLAYBACKRATE'
+            offset: "00001F8A"            
+          - name: 'WAVEINGETNUMDEVS'
+            offset: "00001FBC"            
+          - name: 'WAVEINMESSAGE'
+            offset: "00001FCC"            
+          - name: 'WAVEINGETDEVCAPS'
+            offset: "0000203E"            
+          - name: 'WAVEINGETERRORTEXT'
+            offset: "000020E4"            
+          - name: 'WAVEINOPEN'
+            offset: "00002120"            
+          - name: 'WAVEINCLOSE'
+            offset: "0000230A"            
+          - name: 'WAVEINPREPAREHEADER'
+            offset: "00002354"            
+          - name: 'WAVEINUNPREPAREHEADER'
+            offset: "00002402"            
+          - name: 'WAVEINADDBUFFER'
+            offset: "000024C6"            
+          - name: 'WAVEINSTART'
+            offset: "00002578"            
+          - name: 'WAVEINSTOP'
+            offset: "000025AA"            
+          - name: 'WAVEINRESET'
+            offset: "000025DC"            
+          - name: 'WAVEINGETPOSITION'
+            offset: "0000260E"            
+          - name: 'WAVEINGETID'
+            offset: "0000265C"            
+          - name: 'WAVEOUTGETID'
+            offset: "000026BC"            
+      - num: "5"
+        name: "_TEXT"
+        offset: "000004D0"
+        symbols:
+          - name: 'MMTASKYIELD'
+            offset: "0000034C"            
+          - name: 'MMGETCURRENTTASK'
+            offset: "0000036D"            
+          - name: 'MMTASKBLOCK'
+            offset: "00000372"            
+          - name: 'PLAYSOUND'
+            offset: "00000700"            
+          - name: 'SNDPLAYSOUND'
+            offset: "0000072A"            
+          - name: 'MMTASKCREATE'
+            offset: "00000748"            
+      - num: "6"
+        name: "MCI"
+        offset: "00000620"
+        symbols:
+          - name: 'MCISENDCOMMAND'
+            offset: "00000BB8"            
+          - name: 'MCISENDSTRING'
+            offset: "000018C6"            
+          - name: 'MCIEXECUTE'
+            offset: "000018FC"            
+          - name: 'MCIGETERRORSTRING'
+            offset: "000019EC"            
+          - name: 'MCIGETDEVICEIDFROMELEMENTID'
+            offset: "00001D8A"            
+          - name: 'MCIGETDEVICEID'
+            offset: "00001EBA"            
+          - name: 'MCIGETCREATORTASK'
+            offset: "00001ED6"            
+          - name: 'MCIGETDRIVERDATA'
+            offset: "000031C4"            
+          - name: 'MCISETDRIVERDATA'
+            offset: "0000320C"            
+          - name: 'MCIDRIVERYIELD'
+            offset: "00003258"            
+          - name: 'MCISETYIELDPROC'
+            offset: "000032B4"            
+          - name: 'MCIGETYIELDPROC'
+            offset: "00003330"            
+          - name: 'MCILOADCOMMANDRESOURCE'
+            offset: "000038A2"            
+          - name: 'MCIFREECOMMANDRESOURCE'
+            offset: "00003B0A"            
+      - num: "7"
+        name: "MIDI"
+        offset: "000008D0"
+        symbols:
+          - name: 'MIDISTREAMOPEN'
+            offset: "000001D8"            
+          - name: 'MIDISTREAMCLOSE'
+            offset: "0000059E"            
+          - name: 'MIDISTREAMPROPERTY'
+            offset: "000005F6"            
+          - name: 'MIDISTREAMPOSITION'
+            offset: "00000680"            
+          - name: 'MIDIINGETNUMDEVS'
+            offset: "000008F0"            
+          - name: 'MIDIINMESSAGE'
+            offset: "00000900"            
+          - name: 'MIDIINGETID'
+            offset: "00000960"            
+          - name: 'MIDIINGETDEVCAPS'
+            offset: "000009C0"            
+          - name: 'MIDIINGETERRORTEXT'
+            offset: "00000A7A"            
+          - name: 'MIDIINOPEN'
+            offset: "00000AB6"            
+          - name: 'MIDIINCLOSE'
+            offset: "00000BE0"            
+          - name: 'MIDIINPREPAREHEADER'
+            offset: "00000C42"            
+          - name: 'MIDIINUNPREPAREHEADER'
+            offset: "00000CDE"            
+          - name: 'MIDIINADDBUFFER'
+            offset: "00000D8E"            
+          - name: 'MIDIINSTART'
+            offset: "00000E1E"            
+          - name: 'MIDIINSTOP'
+            offset: "00000E52"            
+          - name: 'MIDIINRESET'
+            offset: "00000E86"            
+          - name: 'MIDIOUTGETNUMDEVS'
+            offset: "00000EBA"            
+          - name: 'MIDIOUTGETID'
+            offset: "0000103E"            
+          - name: 'MIDIOUTGETDEVCAPS'
+            offset: "0000109E"            
+          - name: 'MIDIOUTGETVOLUME'
+            offset: "0000113A"            
+          - name: 'MIDIOUTSETVOLUME'
+            offset: "000011CE"            
+          - name: 'MIDIOUTGETERRORTEXT'
+            offset: "00001244"            
+          - name: 'MIDIOUTOPEN'
+            offset: "00001280"            
+          - name: 'MIDIOUTCLOSE'
+            offset: "000013B6"            
+          - name: 'MIDIOUTPREPAREHEADER'
+            offset: "0000141A"            
+          - name: 'MIDIOUTUNPREPAREHEADER'
+            offset: "00001684"            
+          - name: 'MIDISTREAMSTOP'
+            offset: "00001856"            
+          - name: 'MIDIOUTCACHEPATCHES'
+            offset: "0000188A"            
+          - name: 'MIDIOUTCACHEDRUMPATCHES'
+            offset: "00001916"            
+          - name: 'MIDISTREAMRESTART'
+            offset: "000019D6"            
+          - name: 'MIDISTREAMOUT'
+            offset: "00001A8A"            
+      - num: "8"
+        name: "MMIO"
+        offset: "00000A00"
+        symbols:
+          - name: 'MMIORENAME'
+            offset: "0000027C"            
+          - name: 'MMIOOPEN'
+            offset: "00000340"            
+          - name: 'MMIOCLOSE'
+            offset: "00000516"            
+          - name: 'MMIOREAD'
+            offset: "00000580"            
+          - name: 'MMIOWRITE'
+            offset: "000006B6"            
+          - name: 'MMIOSEEK'
+            offset: "00000820"            
+          - name: 'MMIOGETINFO'
+            offset: "0000095A"            
+          - name: 'MMIOSETINFO'
+            offset: "000009C8"            
+          - name: 'MMIOSETBUFFER'
+            offset: "00000A8E"            
+          - name: 'MMIOFLUSH'
+            offset: "00000C9A"            
+          - name: 'MMIOADVANCE'
+            offset: "00000D54"            
+          - name: 'MMIOSTRINGTOFOURCC'
+            offset: "00000E6A"            
+          - name: 'MMIOINSTALLIOPROC'
+            offset: "000010F0"            
+          - name: 'MMIOSENDMESSAGE'
+            offset: "000011E0"            
+          - name: 'MMIODESCEND'
+            offset: "0000156C"            
+          - name: 'MMIOASCEND'
+            offset: "0000174E"            
+          - name: 'MMIOCREATECHUNK'
+            offset: "000018BC"            
+      - num: "9"
+        name: "MIXER"
+        offset: "00000AF0"
+        symbols:
+          - name: 'MIXERGETNUMDEVS'
+            offset: "000001F4"            
+          - name: 'MIXERGETDEVCAPS'
+            offset: "00000204"            
+          - name: 'MIXERGETID'
+            offset: "00000260"            
+          - name: 'MIXEROPEN'
+            offset: "00000640"            
+          - name: 'MIXERCLOSE'
+            offset: "00000868"            
+          - name: 'MIXERMESSAGE'
+            offset: "0000091A"            
+          - name: 'MIXERGETLINEINFO'
+            offset: "00000980"            
+          - name: 'MIXERGETLINECONTROLS'
+            offset: "00000D36"            
+          - name: 'MIXERGETCONTROLDETAILS'
+            offset: "00000EBE"            
+          - name: 'MIXERSETCONTROLDETAILS'
+            offset: "0000108A"            
+      - num: "10"
+        name: "RARE"
+        offset: "00000000"
+        symbols:
+          - name: 'TIMEGETDEVCAPS'
+            offset: "00000000"            
+          - name: 'MMSYSTEMGETVERSION'
+            offset: "00000496"            
+          - name: 'JOYGETNUMDEVS'
+            offset: "0000077E"            
+          - name: 'JOYGETDEVCAPS'
+            offset: "00000796"            
+          - name: 'JOYGETPOS'
+            offset: "000007E2"            
+          - name: 'JOYGETTHRESHOLD'
+            offset: "0000085C"            
+          - name: 'JOYRELEASECAPTURE'
+            offset: "000008A0"            
+          - name: 'JOYSETCAPTURE'
+            offset: "00000914"            
+          - name: 'JOYSETTHRESHOLD'
+            offset: "00000A12"            
+          - name: 'AUXOUTMESSAGE'
+            offset: "00000B0A"            
+          - name: 'AUXGETNUMDEVS'
+            offset: "00000BC0"            
+          - name: 'AUXGETDEVCAPS'
+            offset: "00000BD0"            
+          - name: 'AUXGETVOLUME'
+            offset: "00000C14"            
+          - name: 'AUXSETVOLUME'
+            offset: "00000C4C"            

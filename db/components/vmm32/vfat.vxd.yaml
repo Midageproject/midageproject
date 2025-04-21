@@ -1,0 +1,1567 @@
+filename: "vmm32/vfat.vxd"
+#TODO: bring up more details from symdeb
+binary: "vmm32/vfat.vxd"
+description: ""
+note: ""
+appearances:
+  - version: "system"
+    tree: []
+    segments:
+      - num: "1"
+        name: "_LDATA"
+        offset: "0001B5C0"
+        symbols:
+          - name: 'RdAhead_Active'
+            offset: "00000008"            
+          - name: 'cpgLoaderRAMax'
+            offset: "0000000C"            
+          - name: 'RdbFActive'
+            offset: "00000188"            
+          - name: 'RdbFBuffHdr'
+            offset: "0000018C"            
+          - name: 'RdbFDesc'
+            offset: "00000190"            
+          - name: 'NABActive'
+            offset: "00000194"            
+          - name: 'NABDesc'
+            offset: "00000198"            
+          - name: 'Flw_Desc'
+            offset: "0000019C"            
+          - name: 'vfatcBufCleaned'
+            offset: "000001A0"            
+          - name: 'NABActiveThreadID'
+            offset: "000001A4"            
+          - name: 'cachecattab'
+            offset: "00000254"            
+          - name: 'oldcachecat'
+            offset: "0000025D"            
+          - name: 'vfatSecDebug'
+            offset: "0000025E"            
+          - name: 'VbsCount'
+            offset: "00000294"            
+          - name: 'VbsCall'
+            offset: "00000295"            
+          - name: 'VbsFull'
+            offset: "00000299"            
+          - name: 'vfat_vcsh_relqpage'
+            offset: "00000370"            
+          - name: 'vfat_mustUnzap'
+            offset: "00000374"            
+          - name: 'BugTyp'
+            offset: "000003BC"            
+          - name: 'BugLev'
+            offset: "000003BE"            
+          - name: 'DebKey'
+            offset: "000003E0"            
+          - name: 'DebWait'
+            offset: "000003E4"            
+          - name: 'DebBrk'
+            offset: "000003E8"            
+          - name: 'DebClr'
+            offset: "000003E9"            
+          - name: 'FastFOld'
+            offset: "00000478"            
+          - name: 'Dir_Hash_Time'
+            offset: "000004FC"            
+          - name: 'Dir_Hash_Tab'
+            offset: "00000500"            
+          - name: 'UniToUpperDelta'
+            offset: "00000504"            
+          - name: 'UniToUpperTable'
+            offset: "00000508"            
+          - name: 'cIosPending'
+            offset: "00000B74"            
+          - name: 'ForceWriteErr'
+            offset: "00000B78"            
+          - name: 'BadSec_List'
+            offset: "00000BA4"            
+          - name: 'pk_buf'
+            offset: "00000C60"            
+          - name: 'pk_secwanted'
+            offset: "00000C64"            
+          - name: 'pk_secbuf'
+            offset: "00000C68"            
+          - name: 'pk_addr'
+            offset: "00000C6C"            
+          - name: 'upk_buf'
+            offset: "00000C70"            
+          - name: 'upk_secwanted'
+            offset: "00000C74"            
+          - name: 'upk_secbuf'
+            offset: "00000C78"            
+          - name: 'upk_addr'
+            offset: "00000C7C"            
+          - name: 'FATOpWait'
+            offset: "00000C80"            
+          - name: 'fWalkChain'
+            offset: "00000F38"            
+          - name: 'vfatWaitIOR'
+            offset: "00000F80"            
+          - name: 'TagWait'
+            offset: "0000123C"            
+          - name: 'VFAT_CacheID'
+            offset: "0000148C"            
+          - name: 'LWHead'
+            offset: "00001490"            
+          - name: 'OftHead'
+            offset: "000014B4"            
+          - name: 'DirtBits'
+            offset: "000014C8"            
+          - name: 'DirtBits2'
+            offset: "000014CC"            
+          - name: 'DirtOrd'
+            offset: "000014D0"            
+          - name: 'VolChain'
+            offset: "000014E0"            
+          - name: 'cbufDirty'
+            offset: "000014E8"            
+          - name: 'pDPB'
+            offset: "000014EC"            
+          - name: 'pPageFileSFT'
+            offset: "000014F0"            
+          - name: 'MMSwapCB'
+            offset: "000014F4"            
+          - name: 'VfatStats'
+            offset: "000014F8"            
+          - name: 'vfatfDebug'
+            offset: "00001A04"            
+          - name: 'FastFile'
+            offset: "00001A08"            
+          - name: 'VFATMounting'
+            offset: "00001A23"            
+          - name: 'MemMgrMutex'
+            offset: "00001A27"            
+          - name: 'NAMECACHECOUNT2'
+            offset: "00001A2B"            
+          - name: 'FatEntryBadChild'
+            offset: "00001C30"            
+          - name: 'RWCnt'
+            offset: "000024A0"            
+          - name: 'GoftLock'
+            offset: "000024C0"            
+          - name: 'GoftWait'
+            offset: "000024C4"            
+          - name: 'LazyTime'
+            offset: "000024EC"            
+          - name: 'IntrTime'
+            offset: "000024F0"            
+          - name: 'DIdleTime'
+            offset: "000024F4"            
+          - name: 'Lazy_IO_Active'
+            offset: "000024F8"            
+          - name: 'LazyIdleTime'
+            offset: "000024FC"            
+          - name: 'Lazy_Pending'
+            offset: "00002510"            
+          - name: 'ScaleShifts'
+            offset: "00002514"            
+          - name: 'LWShift'
+            offset: "00002525"            
+          - name: 'LTO_Handle'
+            offset: "00002526"            
+          - name: 'LTO_ID'
+            offset: "0000252A"            
+          - name: 'LTO_nID'
+            offset: "0000252E"            
+          - name: 'ITPPageOuts'
+            offset: "0000253A"            
+          - name: 'ITPFlags'
+            offset: "0000253E"            
+          - name: 'FtoVolF'
+            offset: "00002544"            
+          - name: 'FtoLock'
+            offset: "00002545"            
+          - name: 'wltime'
+            offset: "00002548"            
+          - name: 'wlmutex'
+            offset: "0000254C"            
+          - name: 'wlactive'
+            offset: "00002554"            
+          - name: 'pLfnInfoCache'
+            offset: "000025D4"            
+          - name: 'LNLenOffsetTable'
+            offset: "000025D8"            
+          - name: 'CompatFileSysFlags'
+            offset: "00002B58"            
+          - name: 'DriveWriteBehindFlags'
+            offset: "00002B5C"            
+          - name: 'TunnelAuth'
+            offset: "00002B60"            
+          - name: 'VolIdleTimeout'
+            offset: "00002B64"            
+          - name: 'BuffIdleTimeout'
+            offset: "00002B68"            
+          - name: 'BuffAgeTimeout'
+            offset: "00002B6C"            
+          - name: 'PathCacheCount'
+            offset: "00002B70"            
+          - name: 'NameCacheCount'
+            offset: "00002B74"            
+          - name: 'ContigFileAllocSize'
+            offset: "00002B78"            
+          - name: 'NameNumericTail'
+            offset: "00002B7C"            
+          - name: 'ReadAheadThreshold'
+            offset: "00002B80"            
+          - name: 'pNoVolTrackPatRecTable'
+            offset: "00002B84"            
+          - name: 'MaxFAT32TotalSpace'
+            offset: "00002B88"            
+          - name: 'MaxFAT32FreeSpace'
+            offset: "00002B8C"            
+          - name: 'MaxFAT32TotalClust'
+            offset: "00002B90"            
+          - name: 'MaxFAT32FreeClust'
+            offset: "00002B94"            
+          - name: 'fShutdownStatus'
+            offset: "00002B98"            
+          - name: 'DriveLDSBdcastDisableFlags'
+            offset: "00002B9C"            
+          - name: 'LogFlag'
+            offset: "00002BA0"            
+          - name: 'FullHold'
+            offset: "00002BD0"            
+          - name: 'FullLock'
+            offset: "00002BD4"            
+          - name: 'VfatFullLockThrdID'
+            offset: "00002BD8"            
+          - name: 'SwapperActive'
+            offset: "00002BDC"            
+          - name: 'FullLockSem'
+            offset: "00002BE0"            
+          - name: 'FullHoldSem'
+            offset: "00002BE4"            
+          - name: 'VFAT_ilb'
+            offset: "00002C78"            
+          - name: 'IOPSpareState'
+            offset: "00002CAC"            
+          - name: 'IOPSpareAddr'
+            offset: "00002CB0"            
+          - name: 'IOPSparePhysAddr'
+            offset: "00002CB4"            
+          - name: 'IOPSpareDesc'
+            offset: "00002CB8"            
+          - name: 'VolDrive'
+            offset: "00002D00"            
+          - name: 'hfindHead'
+            offset: "00002D04"            
+          - name: 'FindVectors'
+            offset: "00002D0C"            
+          - name: 'SpareLNInfoState'
+            offset: "00003130"            
+          - name: 'SpareLNInfoDesc'
+            offset: "00003134"            
+          - name: 'SpareLNInfo'
+            offset: "00003138"            
+          - name: 'VFAT_DDB'
+            offset: "00003614"            
+          - name: 'VFAT_SystemExit'
+            offset: "00003664"            
+          - name: 'RmmDefault_Vol_Flags'
+            offset: "0000366C"            
+          - name: 'VFAT_CacheBlockMapped'
+            offset: "00003670"            
+          - name: 'fVfatInitComplete'
+            offset: "00003674"            
+          - name: 'APITable'
+            offset: "00003675"            
+          - name: 'OffsetThrInVfatCount'
+            offset: "000036A0"            
+          - name: 'STATSDesc'
+            offset: "000037F8"            
+          - name: 'LogPtr'
+            offset: "00004318"            
+          - name: 'LogFWA'
+            offset: "0000431C"            
+          - name: 'LogEnd'
+            offset: "0000E31C"            
+          - name: 'VFAT_Discard'
+            offset: "0000E320"            
+          - name: 'UnlockBufferValid'
+            offset: "0000E3E1"            
+          - name: 'UnlockBuffer'
+            offset: "0000E3E5"            
+          - name: 'fdb30'
+            offset: "0000E3FB"            
+          - name: 'Find_Buffer'
+            offset: "0000E408"            
+          - name: 'fdb20'
+            offset: "0000E432"            
+          - name: 'VFAT_FindBlockAlign'
+            offset: "0000E433"            
+          - name: 'VFAT_FindBlock'
+            offset: "0000E450"            
+          - name: 'VFAT_FindBlockSub'
+            offset: "0000E477"            
+          - name: 'Test_Buffer'
+            offset: "0000E594"            
+          - name: 'tdb20'
+            offset: "0000E5C3"            
+          - name: 'WL_Test_Buffer'
+            offset: "0000E5D4"            
+          - name: 'RdBuf'
+            offset: "0000E634"            
+          - name: 'RdBufB'
+            offset: "0000E8FC"            
+          - name: 'NABWait'
+            offset: "0000E9A8"            
+          - name: 'NeedABuf'
+            offset: "0000E9C8"            
+          - name: 'mkba'
+            offset: "0000EA8D"            
+          - name: 'mkb10'
+            offset: "0000EA95"            
+          - name: 'MakeBuf'
+            offset: "0000EAB4"            
+          - name: 'mkb60'
+            offset: "0000EAF7"            
+          - name: 'mkb70'
+            offset: "0000EB0C"            
+          - name: 'mkb100'
+            offset: "0000EB9C"            
+          - name: 'mkb180'
+            offset: "0000EBD4"            
+          - name: 'BufferToDirtyChain'
+            offset: "0000EBE9"            
+          - name: 'BufferToDirtyChainNoTag'
+            offset: "0000EC0A"            
+          - name: 'SetDirt'
+            offset: "0000ECE5"            
+          - name: 'SetDirtySector'
+            offset: "0000ED08"            
+          - name: 'SetMRWMask'
+            offset: "0000ED9F"            
+          - name: 'SetDirtySectors'
+            offset: "0000EDC2"            
+          - name: 'WriteSectorNow'
+            offset: "0000EE3A"            
+          - name: 'WriteSectorsNow'
+            offset: "0000EE96"            
+          - name: 'ChkDirt'
+            offset: "0000EFB8"            
+          - name: 'WBUlk'
+            offset: "0000EFD0"            
+          - name: 'wbu2'
+            offset: "0000EFFD"            
+          - name: 'FlushBuf_Async'
+            offset: "0000F005"            
+          - name: 'FlushBufTag_Async'
+            offset: "0000F017"            
+          - name: 'flb1'
+            offset: "0000F034"            
+          - name: 'flb5'
+            offset: "0000F03B"            
+          - name: 'flb10'
+            offset: "0000F064"            
+          - name: 'flb15'
+            offset: "0000F06B"            
+          - name: 'FlushBuf_Sync'
+            offset: "0000F07F"            
+          - name: 'FlushBufTag_Sync'
+            offset: "0000F08C"            
+          - name: 'flb55'
+            offset: "0000F098"            
+          - name: 'flb57'
+            offset: "0000F0A9"            
+          - name: 'flb90'
+            offset: "0000F0D5"            
+          - name: 'FlushTag'
+            offset: "0000F0D7"            
+          - name: 'GetDirtyBufCount'
+            offset: "0000F120"            
+          - name: 'VBS'
+            offset: "0000F13C"            
+          - name: 'vbsx22'
+            offset: "0000F182"            
+          - name: 'vbsx25'
+            offset: "0000F190"            
+          - name: 'vbsx27'
+            offset: "0000F195"            
+          - name: 'vbsx60'
+            offset: "0000F1AA"            
+          - name: 'VBS_Check'
+            offset: "0000F1B9"            
+          - name: 'VFAT_CleanZappedPage'
+            offset: "0000F2C4"            
+          - name: 'ProgRdAhead'
+            offset: "0000F2EB"            
+          - name: 'DoZap'
+            offset: "0000F48C"            
+          - name: 'rdbz12'
+            offset: "0000F4E1"            
+          - name: 'dozapx'
+            offset: "0000F4F7"            
+          - name: 'ZapFunc'
+            offset: "0000F4F9"            
+          - name: 'DoLogHcnt'
+            offset: "0000F587"            
+          - name: 'TestBuffHold'
+            offset: "0000F59E"            
+          - name: 'UniQueryDirCache'
+            offset: "0000F5DC"            
+          - name: 'UniInsertDirCache'
+            offset: "0000F6FD"            
+          - name: 'UniRemoveDirCache'
+            offset: "0000F846"            
+          - name: 'UniQueryNameCache'
+            offset: "0000F90C"            
+          - name: 'QueryNameCache'
+            offset: "0000F97B"            
+          - name: 'InsertNameCache'
+            offset: "0000FA07"            
+          - name: '_UniRemoveNameCache@16'
+            offset: "0000FB2E"            
+          - name: '_RemoveNameCache@16'
+            offset: "0000FB7E"            
+          - name: 'HashStr'
+            offset: "0000FC33"            
+          - name: 'HashiStr'
+            offset: "0000FC58"            
+          - name: 'QueryDirFATCache'
+            offset: "0000FC9C"            
+          - name: 'GetEntry'
+            offset: "0000FD6D"            
+          - name: 'GetEnt'
+            offset: "0000FD70"            
+          - name: 'GetEntrySub'
+            offset: "0000FDFB"            
+          - name: 'ge10'
+            offset: "0000FE34"            
+          - name: 'FreeEnt'
+            offset: "0000FE4D"            
+          - name: 'NextEntry'
+            offset: "0000FEB7"            
+          - name: 'LNNewEntrys'
+            offset: "0000FF62"            
+          - name: 'NewDir'
+            offset: "0001053F"            
+          - name: 'ndi5'
+            offset: "0001061B"            
+          - name: 'ndi10'
+            offset: "00010637"            
+          - name: 'IsCompressedClusterClean'
+            offset: "00010647"            
+          - name: 'SetRootSrch'
+            offset: "0001068E"            
+          - name: 'SetDirSrchFromDirent'
+            offset: "000106CA"            
+          - name: 'SetDirSrch'
+            offset: "000106EA"            
+          - name: 'CommitDirent'
+            offset: "00010714"            
+          - name: 'cmd90'
+            offset: "000107D4"            
+          - name: 'cmd91'
+            offset: "000107D5"            
+          - name: 'cmd92'
+            offset: "000107DF"            
+          - name: 'DirFromOft'
+            offset: "000107E1"            
+          - name: 'dfsx'
+            offset: "00010823"            
+          - name: 'FillDirDateFields'
+            offset: "00010824"            
+          - name: 'ValidateAccessDate'
+            offset: "000108FD"            
+          - name: 'ValidateCreateDateTime'
+            offset: "00010919"            
+          - name: 'Win32DateTimetoDosDateTime'
+            offset: "00010965"            
+          - name: 'DskRead'
+            offset: "000109AC"            
+          - name: 'DskReadLocked'
+            offset: "000109B5"            
+          - name: 'drf15'
+            offset: "00010A36"            
+          - name: 'drd20'
+            offset: "00010A48"            
+          - name: 'drd25'
+            offset: "00010A57"            
+          - name: 'VolLock'
+            offset: "00010A6C"            
+          - name: 'VolUnlock'
+            offset: "00010A7B"            
+          - name: 'Qlck_Note'
+            offset: "00010AEA"            
+          - name: 'Qras_Note'
+            offset: "00010AF9"            
+          - name: 'qwn5'
+            offset: "00010B13"            
+          - name: 'qwn30'
+            offset: "00010B1F"            
+          - name: 'Debug_Force_Error'
+            offset: "00010B37"            
+          - name: 'dfe10'
+            offset: "00010B4A"            
+          - name: 'dfe20'
+            offset: "00010B50"            
+          - name: 'dfe90'
+            offset: "00010B67"            
+          - name: 'DskWrite'
+            offset: "00010B6C"            
+          - name: 'DskWriteLocked'
+            offset: "00010B7B"            
+          - name: 'dwd20'
+            offset: "00010C7C"            
+          - name: 'dwd25'
+            offset: "00010C8A"            
+          - name: 'SyncRead'
+            offset: "00010CA8"            
+          - name: 'SyncReadSub'
+            offset: "00010D38"            
+          - name: 'SCR_Note'
+            offset: "00010E85"            
+          - name: 'AsyncRead'
+            offset: "00010EAC"            
+          - name: 'acr0'
+            offset: "00010F26"            
+          - name: 'acr99'
+            offset: "00010F6C"            
+          - name: 'AsyncReadNotify'
+            offset: "00010F6D"            
+          - name: 'CallStrat2'
+            offset: "00011006"            
+          - name: 'cwdx'
+            offset: "000110FE"            
+          - name: 'CheckWriteData'
+            offset: "000110FF"            
+          - name: 'cwd10'
+            offset: "00011114"            
+          - name: 'cwd50'
+            offset: "00011129"            
+          - name: 'cwd55'
+            offset: "0001112F"            
+          - name: 'cwd60'
+            offset: "00011139"            
+          - name: 'cwd100'
+            offset: "0001114D"            
+          - name: 'RegeneratePath'
+            offset: "00011154"            
+          - name: 'rep10'
+            offset: "000111BB"            
+          - name: 'rep90'
+            offset: "00011261"            
+          - name: 'rep91'
+            offset: "0001126E"            
+          - name: 'rep95'
+            offset: "00011273"            
+          - name: 'rep96'
+            offset: "00011280"            
+          - name: 'EnumPathNames'
+            offset: "00011285"            
+          - name: 'epn10'
+            offset: "000112CD"            
+          - name: 'epn90'
+            offset: "00011309"            
+          - name: 'epn99'
+            offset: "0001130E"            
+          - name: 'BackwalkDir'
+            offset: "00011313"            
+          - name: 'UpdateShutdownFlags'
+            offset: "00011428"            
+          - name: 'MarkVolumeDirty'
+            offset: "000114AA"            
+          - name: 'MarkVolumeClean'
+            offset: "000114D5"            
+          - name: 'MarkVolumeBroken'
+            offset: "00011502"            
+          - name: 'vfatClusDebug'
+            offset: "0001152D"            
+          - name: 'Pack'
+            offset: "00011531"            
+          - name: 'UnPack'
+            offset: "00011788"            
+          - name: 'IsEof'
+            offset: "000119F2"            
+          - name: 'DetectCycle'
+            offset: "00011A22"            
+          - name: 'GrowFatCache'
+            offset: "00011A72"            
+          - name: 'Extend_Cache_Mem'
+            offset: "00011B32"            
+          - name: 'GetPhysCluster'
+            offset: "00011BED"            
+          - name: 'SFTesiCheck'
+            offset: "00011C10"            
+          - name: 'DoInitIOSTK'
+            offset: "00011C17"            
+          - name: 'SftCheck'
+            offset: "00011C30"            
+          - name: 'DirEntChk'
+            offset: "00011C70"            
+          - name: 'OftCheck'
+            offset: "00011CC4"            
+          - name: 'StkChkRW'
+            offset: "00011DE7"            
+          - name: 'StkChkOC'
+            offset: "00011DEE"            
+          - name: 'StkCheck'
+            offset: "00011DF5"            
+          - name: 'A_VOLTAB'
+            offset: "00011E32"            
+          - name: 'A_VOLTABedi'
+            offset: "00011E63"            
+          - name: 'A_BUF'
+            offset: "00011E6B"            
+          - name: 'A_BUF_esi'
+            offset: "00011F78"            
+          - name: 'FatEntry'
+            offset: "00011F84"            
+          - name: 'NetVectors'
+            offset: "00011FC4"            
+          - name: 'abMediaErrors'
+            offset: "00011FE8"            
+          - name: 'VFAT_Dir'
+            offset: "00011FEC"            
+          - name: 'ndir10'
+            offset: "00012048"            
+          - name: 'ndir20'
+            offset: "00012063"            
+          - name: 'mkd900'
+            offset: "00012081"            
+          - name: 'Fat_QueryDir'
+            offset: "00012088"            
+          - name: 'Fat_Chdir'
+            offset: "000120B7"            
+          - name: 'fch90'
+            offset: "000120E3"            
+          - name: 'fch95'
+            offset: "000120E5"            
+          - name: 'Fat_Mkdir'
+            offset: "000120EA"            
+          - name: 'Fat_Rmdir'
+            offset: "000122AA"            
+          - name: 'frd5'
+            offset: "0001239E"            
+          - name: 'frd10'
+            offset: "00012480"            
+          - name: 'VFAT_OpenFile'
+            offset: "000124A1"            
+          - name: 'ope2'
+            offset: "00012561"            
+          - name: 'ope3'
+            offset: "000125AE"            
+          - name: 'ope4'
+            offset: "000125DB"            
+          - name: 'ope5'
+            offset: "000125F7"            
+          - name: 'Fat_Open'
+            offset: "0001276A"            
+          - name: 'fop12'
+            offset: "000128B4"            
+          - name: 'Fat_Create'
+            offset: "000128BC"            
+          - name: 'VFAT_DeleteFile'
+            offset: "00012B50"            
+          - name: 'fdel10'
+            offset: "00012C00"            
+          - name: 'fdel11'
+            offset: "00012C1A"            
+          - name: 'fdel13'
+            offset: "00012CAE"            
+          - name: 'fdel15'
+            offset: "00012CB0"            
+          - name: 'fdel16'
+            offset: "00012CC5"            
+          - name: 'fdel17'
+            offset: "00012CDD"            
+          - name: 'fdel20'
+            offset: "00012CE9"            
+          - name: 'fdel40'
+            offset: "00012D25"            
+          - name: 'fdel50'
+            offset: "00012D38"            
+          - name: 'fdel60'
+            offset: "00012D59"            
+          - name: 'fdel70'
+            offset: "00012D7C"            
+          - name: 'fdel95'
+            offset: "00012DD8"            
+          - name: 'VFAT_FileAttributes'
+            offset: "00012DF1"            
+          - name: 'GetCompressedSize'
+            offset: "00013067"            
+          - name: 'NetExtAttrib'
+            offset: "000130D5"            
+          - name: 'nea75'
+            offset: "00013269"            
+          - name: 'NetSearch'
+            offset: "0001330A"            
+          - name: 'Fat_Find_First'
+            offset: "000133A5"            
+          - name: 'FindFirstSub'
+            offset: "000133DD"            
+          - name: 'Fat_Find_Next'
+            offset: "00013524"            
+          - name: 'VFAT_RenameFile'
+            offset: "00013684"            
+          - name: 'RenameMove'
+            offset: "00013715"            
+          - name: 'RenameMeta'
+            offset: "00013CD7"            
+          - name: 'RenameInPlace'
+            offset: "00014152"            
+          - name: 'VFAT_Unmount'
+            offset: "000143C4"            
+          - name: 'vun21'
+            offset: "00014673"            
+          - name: 'UnmountSub'
+            offset: "0001475F"            
+          - name: 'VFAT_DiskInfo'
+            offset: "000147A6"            
+          - name: 'UpdateFSInfo'
+            offset: "00014927"            
+          - name: 'AllFileSizesOkay'
+            offset: "00014980"            
+          - name: 'VFAT_FlushFile'
+            offset: "000149BA"            
+          - name: 'NetFlush'
+            offset: "000149BA"            
+          - name: 'SetPathFlags'
+            offset: "00014A63"            
+          - name: 'IsShortNameLossy'
+            offset: "00014AC8"            
+          - name: 'ReinitOFTPosInfo'
+            offset: "00014AFE"            
+          - name: 'CompressIOCTL'
+            offset: "00014B63"            
+          - name: 'IOSSend'
+            offset: "00014B74"            
+          - name: 'VFAT_IORDone'
+            offset: "00014C0B"            
+          - name: 'PRet_OK'
+            offset: "00014C1C"            
+          - name: 'PRet_Err'
+            offset: "00014C1E"            
+          - name: 'Ret_BadHandMem'
+            offset: "00014C71"            
+          - name: 'Ret_BadHand'
+            offset: "00014C76"            
+          - name: 'Ret_OK'
+            offset: "00014C7C"            
+          - name: 'Ret_Err'
+            offset: "00014C7E"            
+          - name: 'Ret_Errax'
+            offset: "00014C81"            
+          - name: 'Ret_Err_NoCleanup'
+            offset: "00014DAE"            
+          - name: 'DoTrap'
+            offset: "00014E62"            
+          - name: 'VFAT_LockFile'
+            offset: "00014E6C"            
+          - name: 'NetFileLocks'
+            offset: "00014E6C"            
+          - name: 'nfl100'
+            offset: "00014F3A"            
+          - name: 'VFAT_FileTime'
+            offset: "00014F56"            
+          - name: 'vfatPosDebug'
+            offset: "00015122"            
+          - name: 'VFAT_ReadFile'
+            offset: "00015126"            
+          - name: 'NetRead'
+            offset: "00015126"            
+          - name: 'drf70'
+            offset: "00015205"            
+          - name: 'drf180'
+            offset: "00015326"            
+          - name: 'VFAT_WriteFile'
+            offset: "00015360"            
+          - name: 'VFAT_CloseFile'
+            offset: "000159C4"            
+          - name: 'ncl5'
+            offset: "00015AD7"            
+          - name: 'ncl10'
+            offset: "00015B07"            
+          - name: 'ncl20'
+            offset: "00015B36"            
+          - name: 'ncl25'
+            offset: "00015B42"            
+          - name: 'ncl30'
+            offset: "00015B4C"            
+          - name: 'ncl40'
+            offset: "00015B89"            
+          - name: 'ncl45'
+            offset: "00015BAA"            
+          - name: 'ncl50'
+            offset: "00015BD8"            
+          - name: 'ncl60'
+            offset: "00015BDE"            
+          - name: 'VFAT_CommitFile'
+            offset: "00015BE8"            
+          - name: 'NetCommit'
+            offset: "00015BE8"            
+          - name: 'NetSeek'
+            offset: "00015C9A"            
+          - name: 'sek10'
+            offset: "00015D2F"            
+          - name: 'sek20'
+            offset: "00015D32"            
+          - name: 'VFAT_DasdIO'
+            offset: "00015D3D"            
+          - name: 'VFAT_EnterLeaveVolLock'
+            offset: "00015DAF"            
+          - name: 'VFAT_FormatHelpers'
+            offset: "00015ECF"            
+          - name: 'VFHSetAllocInfo'
+            offset: "00015F0C"            
+          - name: 'VFHForceMediaChng'
+            offset: "00015F75"            
+          - name: 'VFHSetDPBFrmBPB'
+            offset: "00015F75"            
+          - name: 'VFHGetSetActFATandMirr'
+            offset: "00015F7C"            
+          - name: 'VFHGetSetRootDirClus'
+            offset: "000160C5"            
+          - name: 'CopyFAT'
+            offset: "00016188"            
+          - name: 'UpdateBoot'
+            offset: "0001620C"            
+          - name: 'VFAT_ReadSectors'
+            offset: "0001625E"            
+          - name: 'VFAT_WriteSectors'
+            offset: "00016335"            
+          - name: 'WriteExtent'
+            offset: "000164ED"            
+          - name: 'FindDPB'
+            offset: "00016661"            
+          - name: 'MakeExtDPB'
+            offset: "00016695"            
+          - name: 'VFAT_GetDPB'
+            offset: "000167A4"            
+          - name: 'MapI25Error'
+            offset: "000168CB"            
+          - name: 'GetFreeEstimate'
+            offset: "000168E6"            
+          - name: 'GuaranteeOneCluster'
+            offset: "00016986"            
+          - name: 'GetFreeGuarantee'
+            offset: "0001698E"            
+          - name: 'InvalidateFreeCounts'
+            offset: "00016A13"            
+          - name: 'ZeroFreeCounts'
+            offset: "00016A18"            
+          - name: 'GetFreeCount'
+            offset: "00016A39"            
+          - name: 'DirtySector'
+            offset: "00016AE0"            
+          - name: 'DirtyBuffer'
+            offset: "00016AFC"            
+          - name: 'SetWriteThrough'
+            offset: "00016B2C"            
+          - name: 'CheckWriteThrough'
+            offset: "00016B9A"            
+          - name: 'WriteAsyncSwapPage'
+            offset: "00016BCB"            
+          - name: 'InvalidateFAT2Sectors'
+            offset: "00016D29"            
+          - name: 'VFAT_IOCtl'
+            offset: "00016E6C"            
+          - name: 'passioctl_down'
+            offset: "00016EB6"            
+          - name: 'VFAT_SetMediaID'
+            offset: "00016F9B"            
+          - name: 'VFAT_GetMediaID'
+            offset: "0001705F"            
+          - name: 'VFAT_GetDiskFreeSpaceRatio'
+            offset: "000170DF"            
+          - name: 'VFAT_SetDiskFreeSpaceRatio'
+            offset: "00017104"            
+          - name: 'pioc_440d_rw_track'
+            offset: "00017175"            
+          - name: 'VFAT_CVMIOCTL'
+            offset: "0001719B"            
+          - name: 'VFATMountTab'
+            offset: "00017258"            
+          - name: 'Mount_Fat'
+            offset: "00017274"            
+          - name: 'mount10'
+            offset: "000172B6"            
+          - name: 'mountx'
+            offset: "000172FD"            
+          - name: 'mount20'
+            offset: "00017306"            
+          - name: 'mount30'
+            offset: "0001730D"            
+          - name: 'MFS'
+            offset: "00017398"            
+          - name: 'mfs5'
+            offset: "000174F2"            
+          - name: 'mfs9'
+            offset: "00017571"            
+          - name: 'mfs10'
+            offset: "00017584"            
+          - name: 'AllocNameHashTable'
+            offset: "000175F6"            
+          - name: 'AllocCountArray'
+            offset: "00017676"            
+          - name: 'VFS'
+            offset: "000176B6"            
+          - name: 'MountChild'
+            offset: "00017818"            
+          - name: 'VFAT_FailOp'
+            offset: "000179E2"            
+          - name: 'VFAT_UnmountBadChild'
+            offset: "000179FB"            
+          - name: 'CmpVol'
+            offset: "00017A1E"            
+          - name: 'MakeVol'
+            offset: "00017AB6"            
+          - name: 'IsCompressedVol'
+            offset: "000180B6"            
+          - name: 'UpdateBootVolLabel'
+            offset: "00018129"            
+          - name: 'VolLabelLen'
+            offset: "000181BF"            
+          - name: 'ValidateVolGeometry'
+            offset: "000181D6"            
+          - name: 'SetDiskFreeSpaceThreshold'
+            offset: "00018464"            
+          - name: 'DoRead'
+            offset: "000184D0"            
+          - name: 'drd3'
+            offset: "000184EA"            
+          - name: 'drd4'
+            offset: "00018504"            
+          - name: 'drd5'
+            offset: "00018535"            
+          - name: 'drd7'
+            offset: "0001853E"            
+          - name: 'drd40'
+            offset: "0001853E"            
+          - name: 'drd44'
+            offset: "00018562"            
+          - name: 'drd390'
+            offset: "00018590"            
+          - name: 'drd400'
+            offset: "00018591"            
+          - name: 'SwapperReadExtent'
+            offset: "00018593"            
+          - name: 'sre20'
+            offset: "0001861B"            
+          - name: 'SwapperWrite'
+            offset: "00018666"            
+          - name: 'SwapperWriteExtent'
+            offset: "000186F4"            
+          - name: 'ReadExtent'
+            offset: "00018725"            
+          - name: 'rx5'
+            offset: "000187BD"            
+          - name: 'ReadExtentSub'
+            offset: "000187F2"            
+          - name: 'rx10'
+            offset: "00018874"            
+          - name: 'ExtentCached'
+            offset: "00018C00"            
+          - name: 'ReadCB'
+            offset: "00018C2D"            
+          - name: 'RxAllocBfr'
+            offset: "00018DC3"            
+          - name: 'BufWrt'
+            offset: "00018DEA"            
+          - name: 'bwr3'
+            offset: "00018E24"            
+          - name: 'bwr4'
+            offset: "00018E29"            
+          - name: 'bwr5'
+            offset: "00018E48"            
+          - name: 'bwr20'
+            offset: "00018E98"            
+          - name: 'bwr25'
+            offset: "00018E9B"            
+          - name: 'CompRunLen'
+            offset: "00018E9D"            
+          - name: 'BreakDown'
+            offset: "00018F81"            
+          - name: 'bdwn10'
+            offset: "00018FAD"            
+          - name: 'Fat_IO_Setup_Async'
+            offset: "00018FDA"            
+          - name: 'Fat_IO_Setup'
+            offset: "00018FDE"            
+          - name: 'fisx'
+            offset: "00019039"            
+          - name: 'FreeHint'
+            offset: "0001903E"            
+          - name: 'Allocate'
+            offset: "0001911A"            
+          - name: 'AllocateContig'
+            offset: "000196AC"            
+          - name: 'AddToFATCache'
+            offset: "0001977A"            
+          - name: 'ResetFATCache'
+            offset: "000197B4"            
+          - name: 'ResetFATCacheNoCheck'
+            offset: "000197C5"            
+          - name: 'IsLastCluster'
+            offset: "000197FF"            
+          - name: 'Release'
+            offset: "00019852"            
+          - name: 'Truncate'
+            offset: "00019854"            
+          - name: 'FigRec'
+            offset: "000199F8"            
+          - name: 'fig90'
+            offset: "00019A1B"            
+          - name: 'FillSft'
+            offset: "00019A1D"            
+          - name: 'fsf10'
+            offset: "00019A62"            
+          - name: 'fsf90'
+            offset: "00019AAC"            
+          - name: 'FileMapped'
+            offset: "00019AAD"            
+          - name: 'FndClus'
+            offset: "00019B70"            
+          - name: 'EnumSFT'
+            offset: "00019BD2"            
+          - name: 'FindOFT'
+            offset: "00019C08"            
+          - name: 'GOFT'
+            offset: "00019C8E"            
+          - name: 'beginDoOpMove'
+            offset: "00019F2F"            
+          - name: 'DoOpMove'
+            offset: "00019F2F"            
+          - name: 'dom01'
+            offset: "00019F6A"            
+          - name: 'DoOpMovePage'
+            offset: "00019F89"            
+          - name: 'dom15'
+            offset: "00019FBA"            
+          - name: 'dom20'
+            offset: "00019FD0"            
+          - name: 'endDoOpMove'
+            offset: "00019FDB"            
+          - name: 'DoOpMoveExcept'
+            offset: "00019FDB"            
+          - name: 'MarkOFTInvalid'
+            offset: "00019FE6"            
+          - name: 'ftox'
+            offset: "0001A004"            
+          - name: 'Flush_Timed_Out'
+            offset: "0001A005"            
+          - name: 'fto1'
+            offset: "0001A026"            
+          - name: 'fto2'
+            offset: "0001A035"            
+          - name: 'fto3'
+            offset: "0001A04B"            
+          - name: 'fto5'
+            offset: "0001A094"            
+          - name: 'fto10'
+            offset: "0001A097"            
+          - name: 'fto15'
+            offset: "0001A0CD"            
+          - name: 'fto20'
+            offset: "0001A155"            
+          - name: 'fto22'
+            offset: "0001A160"            
+          - name: 'fto30'
+            offset: "0001A18F"            
+          - name: 'fto40'
+            offset: "0001A1A0"            
+          - name: 'fto50'
+            offset: "0001A1AF"            
+          - name: 'fto100'
+            offset: "0001A1C2"            
+          - name: 'fto110'
+            offset: "0001A1CF"            
+          - name: 'fto120'
+            offset: "0001A200"            
+          - name: 'wlmask'
+            offset: "0001A202"            
+          - name: 'Write_List'
+            offset: "0001A20A"            
+          - name: 'Write_List_Int'
+            offset: "0001A25C"            
+          - name: 'NeedPopup'
+            offset: "0001A690"            
+          - name: 'wln105'
+            offset: "0001A6D9"            
+          - name: 'WL_Note'
+            offset: "0001A74B"            
+          - name: 'wln0'
+            offset: "0001A77C"            
+          - name: 'wln5'
+            offset: "0001A7A5"            
+          - name: 'wln10'
+            offset: "0001A7FD"            
+          - name: 'wln20'
+            offset: "0001A891"            
+          - name: 'wln30'
+            offset: "0001A8C7"            
+          - name: 'wln50'
+            offset: "0001A905"            
+          - name: 'wln60'
+            offset: "0001A91A"            
+          - name: 'wln200'
+            offset: "0001A98B"            
+          - name: 'WriteMore'
+            offset: "0001AA0E"            
+          - name: 'Call_Write_List'
+            offset: "0001AA80"            
+          - name: 'Call_Write_List_Int'
+            offset: "0001AA85"            
+          - name: 'CleanBuf'
+            offset: "0001AAA9"            
+          - name: 'clb10'
+            offset: "0001AAE2"            
+          - name: 'clb20'
+            offset: "0001AAEE"            
+          - name: 'clb30'
+            offset: "0001AAF7"            
+          - name: 'clb40'
+            offset: "0001AB1C"            
+          - name: 'IncWrite'
+            offset: "0001AB29"            
+          - name: 'DecWrite'
+            offset: "0001AB64"            
+          - name: 'CheckUnlock'
+            offset: "0001AB8A"            
+          - name: 'ScaleEvent'
+            offset: "0001ABDC"            
+          - name: 'Lazy_Idle'
+            offset: "0001AC4B"            
+          - name: 'lid5'
+            offset: "0001AD3B"            
+          - name: 'lid10'
+            offset: "0001ADCB"            
+          - name: 'Observe_Lazy_Idle'
+            offset: "0001ADFE"            
+          - name: 'Write_Lazy'
+            offset: "0001AE38"            
+          - name: 'wlz10'
+            offset: "0001AE88"            
+          - name: 'wlz15'
+            offset: "0001AED8"            
+          - name: 'wlz20'
+            offset: "0001AF02"            
+          - name: 'wlz25'
+            offset: "0001AF28"            
+          - name: 'wlz30'
+            offset: "0001AF2B"            
+          - name: 'wlz190'
+            offset: "0001B06B"            
+          - name: 'wlz200'
+            offset: "0001B079"            
+          - name: 'Lazy_New_Thread'
+            offset: "0001B085"            
+          - name: 'Force_Write_Lazy'
+            offset: "0001B0C3"            
+          - name: 'fwlx'
+            offset: "0001B0F0"            
+          - name: 'FcbChecksum'
+            offset: "0001B0F4"            
+          - name: 'LNInitLNInfo'
+            offset: "0001B10C"            
+          - name: 'LNUpdateColl'
+            offset: "0001B241"            
+          - name: 'luc01'
+            offset: "0001B28A"            
+          - name: 'luc02'
+            offset: "0001B292"            
+          - name: 'LNScanColl'
+            offset: "0001B293"            
+          - name: 'lsc01'
+            offset: "0001B2E3"            
+          - name: 'lsc02'
+            offset: "0001B307"            
+          - name: 'lsc90'
+            offset: "0001B30C"            
+          - name: 'lsc99'
+            offset: "0001B32F"            
+          - name: 'PackOemUniNames'
+            offset: "0001B331"            
+          - name: 'TunnelCreationDateTime'
+            offset: "0001B5C8"            
+          - name: 'SelectShortName'
+            offset: "0001B5EC"            
+          - name: 'GetNumTailHint'
+            offset: "0001B662"            
+          - name: 'UniFatGetPath'
+            offset: "0001B6B4"            
+          - name: 'UniFindEntry'
+            offset: "0001B8BE"            
+          - name: 'ReturnPathElem'
+            offset: "0001C187"            
+          - name: 'UpdateFreeDirOrds'
+            offset: "0001C258"            
+          - name: 'LNFreeEntrys'
+            offset: "0001C2B9"            
+          - name: 'AutoGenerateBasisName'
+            offset: "0001C381"            
+          - name: 'VerifyNameAssoc'
+            offset: "0001C4C5"            
+          - name: 'DirentNameToUniFcbAndShortName'
+            offset: "0001C571"            
+          - name: 'CheckFileLock'
+            offset: "0001C61C"            
+          - name: 'CreateSFT'
+            offset: "0001C660"            
+          - name: 'csftx'
+            offset: "0001C687"            
+          - name: 'Date32'
+            offset: "0001C688"            
+          - name: 'MemPageLock'
+            offset: "0001C694"            
+          - name: 'mp10'
+            offset: "0001C6E8"            
+          - name: 'mp20'
+            offset: "0001C703"            
+          - name: 'mpl90'
+            offset: "0001C792"            
+          - name: 'LogMPL'
+            offset: "0001C804"            
+          - name: 'MemPageUnlock'
+            offset: "0001C86D"            
+          - name: 'mpux'
+            offset: "0001C8E9"            
+          - name: 'PackName'
+            offset: "0001C8EA"            
+          - name: 'pakn5'
+            offset: "0001C8F7"            
+          - name: 'pakn15'
+            offset: "0001C907"            
+          - name: 'pakn20'
+            offset: "0001C90D"            
+          - name: 'pakn25'
+            offset: "0001C913"            
+          - name: 'SetTimes'
+            offset: "0001C917"            
+          - name: 'RelOFToc'
+            offset: "0001C974"            
+          - name: 'RelOftFatCache'
+            offset: "0001CA1D"            
+          - name: 'RelOFT'
+            offset: "0001CA5A"            
+          - name: 'RelOftNoChk'
+            offset: "0001CA79"            
+          - name: 'vfatcclusMin'
+            offset: "0001CB00"            
+          - name: 'ComputeExtents'
+            offset: "0001CB04"            
+          - name: 'loft0'
+            offset: "0001CB5A"            
+          - name: 'loft01'
+            offset: "0001CB6E"            
+          - name: 'LockOFT'
+            offset: "0001CB92"            
+          - name: 'loft10'
+            offset: "0001CBC1"            
+          - name: 'loft20'
+            offset: "0001CC10"            
+          - name: 'UnLockOFT'
+            offset: "0001CC11"            
+          - name: 'UnLockOFT2'
+            offset: "0001CC17"            
+          - name: 'ulck2'
+            offset: "0001CC3D"            
+          - name: 'HoldOFT'
+            offset: "0001CC47"            
+          - name: 'hof3'
+            offset: "0001CC6F"            
+          - name: 'UnHoldOFT'
+            offset: "0001CC97"            
+          - name: 'ChkHoldOFT'
+            offset: "0001CCC4"            
+          - name: 'cho10'
+            offset: "0001CCFA"            
+          - name: 'cho11'
+            offset: "0001CCFB"            
+          - name: 'CommitFileData'
+            offset: "0001CCFC"            
+          - name: 'CAS'
+            offset: "0001CE64"            
+          - name: 'CCS'
+            offset: "0001CE8C"            
+          - name: 'A_HEAP'
+            offset: "0001CEAA"            
+          - name: 'MarkHeapPerm'
+            offset: "0001CEAB"            
+          - name: 'UMFSHeapChk'
+            offset: "0001CEAC"            
+          - name: 'AGHSD'
+            offset: "0001CEAD"            
+          - name: 'APGHS'
+            offset: "0001CF08"            
+          - name: 'FHS'
+            offset: "0001CF68"            
+          - name: 'DoLogRec'
+            offset: "0001CF90"            
+          - name: 'dlr4'
+            offset: "0001CFB6"            
+          - name: 'dlr20'
+            offset: "0001CFE9"            
+          - name: 'Block'
+            offset: "0001CFF0"            
+          - name: 'Wakeup'
+            offset: "0001D08C"            
+          - name: 'Wakeupi'
+            offset: "0001D08C"            
+          - name: 'Yield'
+            offset: "0001D0BC"            
+          - name: 'Yield_Wake'
+            offset: "0001D107"            
+          - name: 'FullCrit'
+            offset: "0001D126"            
+          - name: 'ffc10'
+            offset: "0001D1EC"            
+          - name: 'ffc20'
+            offset: "0001D226"            
+          - name: 'ffc30'
+            offset: "0001D232"            
+          - name: 'RelFullCrit'
+            offset: "0001D2A2"            
+          - name: 'rfc10'
+            offset: "0001D37F"            
+          - name: 'rfc20'
+            offset: "0001D3A3"            
+          - name: 'DoFFHold'
+            offset: "0001D3E0"            
+          - name: 'UnHoldFF'
+            offset: "0001D493"            
+          - name: 'uhff10'
+            offset: "0001D523"            
+          - name: 'VFAT_async_event'
+            offset: "0001D524"            
+          - name: 'GetSGIOHdrEvtTime'
+            offset: "0001D530"            
+          - name: 'GetIOHdrEvtTime'
+            offset: "0001D544"            
+          - name: 'GetIOHdr'
+            offset: "0001D54E"            
+          - name: 'AllocIOHdr'
+            offset: "0001D5D5"            
+          - name: 'RetIOHdr'
+            offset: "0001D648"            
+          - name: 'CreateIOR'
+            offset: "0001D685"            
+          - name: 'AIH'
+            offset: "0001D6BA"            
+          - name: 'DIH'
+            offset: "0001D6E2"            
+          - name: 'SatisfyDevDmds'
+            offset: "0001D6FC"            
+          - name: 'GetSerial'
+            offset: "0001D718"            
+          - name: 'PutSerial'
+            offset: "0001D73D"            
+          - name: 'GetVolLabel'
+            offset: "0001D75B"            
+          - name: 'InvalidateCache'
+            offset: "0001D939"            
+          - name: 'InvalidateCacheSub'
+            offset: "0001D9B1"            
+          - name: 'IsVolTrackExempt'
+            offset: "0001DA03"            
+          - name: 'VFAT_FindOpen'
+            offset: "0001DA4C"            
+          - name: 'VFAT_FindNext'
+            offset: "0001DBD8"            
+          - name: 'VFAT_FindClose'
+            offset: "0001DCF2"            
+          - name: 'FindComplete'
+            offset: "0001DD79"            
+          - name: 'TerminateHFind'
+            offset: "0001DEFF"            
+          - name: 'VFAT_GetVolInfo'
+            offset: "0001DF2A"            
+          - name: 'VFAT_GetInfoByHandle'
+            offset: "0001DFFC"            
+          - name: 'GetPathNameByFileHandle'
+            offset: "0001E138"            
+          - name: 'ResyncHandle'
+            offset: "0001E2E8"            
+          - name: 'reh1'
+            offset: "0001E3A4"            
+          - name: 'reh2'
+            offset: "0001E3AF"            
+          - name: 'reh9'
+            offset: "0001E45D"            
+          - name: 'reh90'
+            offset: "0001E499"            
+          - name: 'reh91'
+            offset: "0001E4C1"            
+          - name: 'reh95'
+            offset: "0001E4C7"            
+          - name: 'reh96'
+            offset: "0001E4D9"            
+          - name: 'reh97'
+            offset: "0001E4EB"            
+          - name: 'reh98'
+            offset: "0001E506"            
+          - name: 'reh99'
+            offset: "0001E526"            
+          - name: 'VFAT_MapCacheBlock'
+            offset: "0001E53D"            
+          - name: 'VFAT_UnmapCacheBlock'
+            offset: "0001E668"            
+          - name: 'AllocLNInfo'
+            offset: "0001E6DC"            
+          - name: 'FreeLNInfo'
+            offset: "0001E71A"            
+          - name: 'OpenOpenFile'
+            offset: "0001E764"            
+          - name: 'RemountVol'
+            offset: "0001E7A3"            
+          - name: 'VFAT_Control'
+            offset: "0001E924"            
+          - name: 'VFAT_DevIOControl'
+            offset: "0001E95A"            
+          - name: 'VFAT_SignalSystemExit'
+            offset: "0001E971"            
+          - name: 'VFAT_Dump_Debug'
+            offset: "0001E979"            
+          - name: 'Clear_Stats'
+            offset: "0001E991"            
+          - name: 'VFAT_VM_Terminate'
+            offset: "0001E9A1"            
+          - name: 'VFAT_Query_Destroy'
+            offset: "0001E9A3"            
+          - name: 'VFAT_API_Proc'
+            offset: "0001E9A5"            
+          - name: 'VFAT_API_GetInfo'
+            offset: "0001E9DE"            
+          - name: 'VFAT_API_GetTimers'
+            offset: "0001EA00"            
+          - name: 'VFAT_API_SetTimers'
+            offset: "0001EA4B"            
+          - name: 'VFAT_API_GetStats'
+            offset: "0001EA73"            
+          - name: 'VFAT_API_SetStats'
+            offset: "0001EAF0"            
+          - name: 'VFAT_API_GetDrives'
+            offset: "0001EB3B"            
+          - name: 'VFATStatsIOCTL'
+            offset: "0001EB70"            
+          - name: 'VFATDumpStats'
+            offset: "0001EBCF"            
+          - name: 'SchedDiskSpaceBroadcast'
+            offset: "0001EC18"            
+          - name: '_AppyBroadcastLowDiskSpace'
+            offset: "0001EC41"            
+      - num: "2"
+        name: "_LMSG$1"
+        offset: "0001B600"
+        symbols:
+          - name: '@MSG_LAB'
+            offset: "00000000"            
+          - name: '@MSG_LDATA'
+            offset: "00000064"            
+      - num: "3"
+        name: "_DB1CODE"
+        offset: "0001C240"
+        symbols:
+          - name: 'Dump_OFT'
+            offset: "00000000"            
+          - name: 'doft10'
+            offset: "00000013"            
+          - name: 'doft20'
+            offset: "00000083"            
+          - name: 'doft900'
+            offset: "000000A1"            
+          - name: 'VFAT_Printf'
+            offset: "00000259"            
+          - name: 'VFAT_Dump_Debug2'
+            offset: "0000027A"            
+          - name: 'Toggle_Zero_Suppress'
+            offset: "00000353"            
+          - name: 'Dump_Log'
+            offset: "00000373"            
+          - name: 'Flush_Log'
+            offset: "00000568"            
+          - name: 'Set_Log_Mask'
+            offset: "0000057D"            
+          - name: 'Dump_Threads'
+            offset: "000005AE"            
+          - name: 'VolTabDesc'
+            offset: "00000667"            
+          - name: 'BUFNODEDesc'
+            offset: "00000A90"            
+          - name: 'BUFSHORTDesc'
+            offset: "00000B68"            
+          - name: 'DIR_CACHEDesc'
+            offset: "00000BDA"            
+          - name: 'FCHDesc'
+            offset: "00000C49"            
+          - name: 'IOREQDesc'
+            offset: "00000CAF"            
+          - name: 'IOSTKDesc'
+            offset: "00000D7D"            
+          - name: 'fdRWDesc'
+            offset: "00000DD3"            
+          - name: 'fdOCDesc'
+            offset: "00000EDA"            
+          - name: 'OFTDesc'
+            offset: "00000FF6"            
+          - name: 'SFTDesc'
+            offset: "000011B5"            
+          - name: 'Dump_Vol'
+            offset: "000013F5"            
+          - name: 'Dump_Dir_Cache'
+            offset: "000014B0"            
+          - name: 'Dump_BufNode'
+            offset: "00001505"            
+          - name: 'Dump_BufChain'
+            offset: "00001517"            
+          - name: 'w_BufChain'
+            offset: "00001529"            
+          - name: 'Dump_BufDirty'
+            offset: "00001538"            
+          - name: 'w_BufDirty'
+            offset: "0000154A"            
+          - name: 'Dump_IOREQ'
+            offset: "00001561"            
+          - name: 'Dump_OFTChain'
+            offset: "00001628"            
+          - name: 'Dump_SFT'
+            offset: "00001665"            
+          - name: 'Dump_Stats'
+            offset: "000016BF"            
+          - name: 'SFTToPackedName'
+            offset: "000016CF"            
+      - num: "4"
+        name: "_RCODE"
+        offset: "0001C2B0"
+        symbols:
+          - name: 'RealmodeInit'
+            offset: "00000000"            
+      - num: "5"
+        name: "_IDATA"
+        offset: "00000000"
+        symbols:
+          - name: 'Init_CompatFileSysFlags'
+            offset: "000000E4"            
+          - name: 'Drv_Reg_Pkt'
+            offset: "00000450"            
+          - name: 'IFSMGRVER'
+            offset: "000005E0"            
+          - name: 'FSInit'
+            offset: "000005F2"            
+          - name: 'ReadVFATRegistry'
+            offset: "00000724"            
+          - name: 'ReadVFATNoVolTrackPatterns'
+            offset: "000007FB"            
+          - name: 'ReadVFATIni'
+            offset: "00000949"            
+          - name: 'TaskInit'
+            offset: "00000974"            
+          - name: 'VFAT_Sys_Critical_Init'
+            offset: "00000978"            
+          - name: 'VFAT_Device_Init'
+            offset: "0000097A"            
+          - name: 'vdi11'
+            offset: "00000A0F"            
+          - name: 'vdi12'
+            offset: "00000A20"            
+          - name: 'vdix'
+            offset: "00000B82"            
+          - name: 'VFAT_Init_Complete'
+            offset: "00000BAF"            
+          - name: 'Vfat_IOS_Reg'
+            offset: "00000E00"            
+          - name: 'VFAT_Register_MMCallBack'
+            offset: "00000E2E"            
+          - name: 'VFAT_Install_Async_Manager'
+            offset: "00000E4A"            

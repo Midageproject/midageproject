@@ -1,0 +1,175 @@
+filename: "battc.sys"
+#TODO: bring up more details from symdeb
+binary: "battc.sys"
+description: ""
+note: ""
+appearances:
+  - version: "system"
+    tree: []
+    segments:
+      - num: "1"
+        name: ".text"
+        offset: "000004B0"
+        symbols:
+          - name: '_BattCWorkerDpc@16'
+            offset: "00000000"            
+          - name: '_BattCTagDpc@16'
+            offset: "00000020"            
+          - name: '_BattCCancelStatus@8'
+            offset: "00000050"            
+          - name: '_BattCCancelTag@8'
+            offset: "00000090"            
+          - name: '_BattCQueueWorker@8'
+            offset: "000000E0"            
+          - name: '_IoSetDeviceInterfaceState@8'
+            offset: "00000142"            
+          - name: '_IoRegisterDeviceInterface@16'
+            offset: "00000148"            
+          - name: '_KeInitializeEvent@12'
+            offset: "0000014E"            
+          - name: '_KeInitializeDpc@12'
+            offset: "00000154"            
+          - name: '_KeInitializeTimer@4'
+            offset: "0000015A"            
+          - name: '_ExFreePool@4'
+            offset: "00000160"            
+          - name: '_ExAllocatePoolWithTag@12'
+            offset: "00000166"            
+          - name: '_RtlAssert@16'
+            offset: "0000016C"            
+          - name: '_DbgPrint'
+            offset: "00000172"            
+          - name: '_KeGetCurrentIrql@0'
+            offset: "00000178"            
+          - name: '_DbgBreakPoint@0'
+            offset: "0000017E"            
+          - name: '@ExReleaseFastMutex@4'
+            offset: "00000184"            
+          - name: '@ExAcquireFastMutex@4'
+            offset: "0000018A"            
+          - name: '@InterlockedExchange@8'
+            offset: "00000190"            
+          - name: '_IoReleaseCancelSpinLock@4'
+            offset: "00000196"            
+          - name: '_ExQueueWorkItem@8'
+            offset: "0000019C"            
+          - name: '@InterlockedIncrement@4'
+            offset: "000001A2"            
+          - name: '@InterlockedDecrement@4'
+            offset: "000001A8"            
+          - name: '@IofCompleteRequest@8'
+            offset: "000001AE"            
+          - name: '_KeSetTimer@16'
+            offset: "000001B4"            
+          - name: '_KeQueryTimeIncrement@0'
+            offset: "000001BA"            
+          - name: '__aulldiv'
+            offset: "000001C0"            
+          - name: '__allmul'
+            offset: "00000230"            
+      - num: "2"
+        name: ".rdata"
+        offset: "00000550"
+        symbols:
+          - name: '_GUID_DEVICE_BATTERY'
+            offset: "00000058"            
+          - name: '_GUID_DEVICE_SYS_BUTTON'
+            offset: "00000068"            
+          - name: '_GUID_DEVICE_LID'
+            offset: "00000078"            
+          - name: '_GUID_DEVICE_THERMAL_ZONE'
+            offset: "00000088"            
+          - name: '_GUID_CLASS_INPUT'
+            offset: "00000098"            
+      - num: "4"
+        name: ".idata$2"
+        offset: "000008C0"
+        symbols:
+          - name: '__IMPORT_DESCRIPTOR_NTOSKRNL'
+            offset: "00000000"            
+          - name: '__IMPORT_DESCRIPTOR_HAL'
+            offset: "00000014"            
+          - name: '__NULL_IMPORT_DESCRIPTOR'
+            offset: "00000028"            
+          - name: '__imp_@ExAcquireFastMutex@4'
+            offset: "0000009C"            
+          - name: '__imp_@ExReleaseFastMutex@4'
+            offset: "000000A0"            
+          - name: '__imp__KeGetCurrentIrql@0'
+            offset: "000000A4"            
+          - name: '\177HAL_NULL_THUNK_DATA'
+            offset: "000000A8"            
+          - name: '__imp__ExFreePool@4'
+            offset: "000000AC"            
+          - name: '__imp__KeInitializeEvent@12'
+            offset: "000000B0"            
+          - name: '__imp__RtlAssert@16'
+            offset: "000000B4"            
+          - name: '__imp__DbgPrint'
+            offset: "000000B8"            
+          - name: '__imp__KeInitializeTimer@4'
+            offset: "000000BC"            
+          - name: '__imp__DbgBreakPoint@0'
+            offset: "000000C0"            
+          - name: '__imp__KeInitializeDpc@12'
+            offset: "000000C4"            
+          - name: '__imp__ExAllocatePoolWithTag@12'
+            offset: "000000C8"            
+          - name: '__imp__IoRegisterDeviceInterface@16'
+            offset: "000000CC"            
+          - name: '__imp_@InterlockedExchange@8'
+            offset: "000000D0"            
+          - name: '__imp__IoReleaseCancelSpinLock@4'
+            offset: "000000D4"            
+          - name: '__imp__ExQueueWorkItem@8'
+            offset: "000000D8"            
+          - name: '__imp_@InterlockedIncrement@4'
+            offset: "000000DC"            
+          - name: '__imp_@InterlockedDecrement@4'
+            offset: "000000E0"            
+          - name: '__imp_@IofCompleteRequest@8'
+            offset: "000000E4"            
+          - name: '__imp__KeSetTimer@16'
+            offset: "000000E8"            
+          - name: '_KeTickCount'
+            offset: "000000EC"            
+          - name: '__imp__KeTickCount'
+            offset: "000000EC"            
+          - name: '__imp__KeQueryTimeIncrement@0'
+            offset: "000000F0"            
+          - name: '__imp__IoSetDeviceInterfaceState@8'
+            offset: "000000F4"            
+          - name: '\177NTOSKRNL_NULL_THUNK_DATA'
+            offset: "000000F8"            
+      - num: "5"
+        name: "PAGE"
+        offset: "00000FD0"
+        symbols:
+          - name: '_DriverEntry@8'
+            offset: "00000000"            
+          - name: '_BatteryClassInitializeDevice@8'
+            offset: "00000010"            
+          - name: '_BatteryClassUnload@4'
+            offset: "000002B0"            
+          - name: '_BatteryClassIoctl@8'
+            offset: "00000350"            
+          - name: '_BatteryClassStatusNotify@4'
+            offset: "000004C0"            
+          - name: '_BattCWorkerThread@4'
+            offset: "00000500"            
+          - name: '_BattCIoctl@12'
+            offset: "00000900"            
+          - name: '_BattCCheckStatusQueue@8'
+            offset: "00000A70"            
+          - name: '_BattCCheckTagQueue@8'
+            offset: "000011A0"            
+          - name: '_BattCMiniportStatus@8'
+            offset: "00001580"            
+          - name: '_BattCCompleteStatusQueue@8'
+            offset: "00001630"            
+      - num: "7"
+        name: "PAGE"
+        offset: "00000000"
+        symbols:
+          - name: '_BattDebug'
+            offset: "00000000"            

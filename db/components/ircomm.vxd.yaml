@@ -1,0 +1,453 @@
+filename: "ircomm.vxd"
+#TODO: bring up more details from symdeb
+binary: "ircomm.vxd"
+description: ""
+note: ""
+appearances:
+  - version: "system"
+    tree: []
+    segments:
+      - num: "1"
+        name: ".bss"
+        offset: "000041C0"
+        symbols:
+          - name: '_DbgBuf'
+            offset: "00000010"            
+          - name: '_fThreadEnable'
+            offset: "00000414"            
+          - name: '_pDbgBuf'
+            offset: "00000418"            
+          - name: '_pDbgBufEnd'
+            offset: "0000041C"            
+          - name: '_DbgHexChars'
+            offset: "00000420"            
+          - name: '@DbgPutc@4'
+            offset: "00000440"            
+          - name: '_putl'
+            offset: "00000650"            
+          - name: '_DbgPrint'
+            offset: "000006C0"            
+          - name: '_nBuffers'
+            offset: "00000A5C"            
+          - name: '_PagingThroughDOS'
+            offset: "00000A60"            
+          - name: '_pDataElementList'
+            offset: "00000A64"            
+          - name: '_pBufferList'
+            offset: "00000A68"            
+          - name: '_ConnectionMutex'
+            offset: "00001A64"            
+          - name: '_allListsMutex'
+            offset: "00001A68"            
+          - name: '_CmdArg'
+            offset: "00001A6C"            
+          - name: '_QueryDispatch'
+            offset: "00001A8C"            
+          - name: '_DebugQueryCmdStr'
+            offset: "00001AA4"            
+          - name: '_DebugQueryCmdStrLen'
+            offset: "00001B0C"            
+          - name: 'IRCOMM_DDB'
+            offset: "00001D14"            
+          - name: 'IR_Functions'
+            offset: "00001D74"            
+          - name: 'SysVMHandle'
+            offset: "00001DD0"            
+          - name: 'TimeOutHandle'
+            offset: "00001DD4"            
+          - name: '_PortInfoList'
+            offset: "00001DD8"            
+          - name: 'fPrintf'
+            offset: "00001DDC"            
+          - name: '_checkPacket'
+            offset: "00001E80"            
+          - name: '_memCopy'
+            offset: "00002040"            
+          - name: '_irdaAllocMem'
+            offset: "00002060"            
+          - name: '_irdaFreeMem'
+            offset: "000020D0"            
+          - name: '_ProcessDevInfo'
+            offset: "000023E0"            
+          - name: '_IrCOMM_Parms_Callback'
+            offset: "000024C0"            
+          - name: '_IrCOMM_Lsap_Callback'
+            offset: "000027B0"            
+          - name: '_IrLPT_Lsap_Callback'
+            offset: "00002870"            
+          - name: '_IrLPT_Lsap2_Callback'
+            offset: "00002970"            
+          - name: '_MakeSelectedConnection'
+            offset: "00002AA0"            
+          - name: '_MakeSelection'
+            offset: "00002B50"            
+          - name: '_PE_ConnectReq'
+            offset: "00002B60"            
+          - name: '_DiscoveryFailed'
+            offset: "00002C80"            
+          - name: '_DiscoverIndic'
+            offset: "00002CC0"            
+          - name: '_StatusIndic'
+            offset: "00002DE0"            
+          - name: '_DoDiscovery'
+            offset: "00002F50"            
+          - name: '_FreeDOSPagingResources'
+            offset: "00002FA0"            
+          - name: '_CheckDosPaging'
+            offset: "00002FF0"            
+          - name: '_GetDataElement'
+            offset: "00003080"            
+          - name: '_ReturnDataElement'
+            offset: "000030B0"            
+          - name: '_GetDataBuffer'
+            offset: "000030E0"            
+          - name: '_ReturnDataBuffer'
+            offset: "00003120"            
+          - name: '_InitConnectionBuffers'
+            offset: "00003150"            
+          - name: '_ConnectConf'
+            offset: "00003210"            
+          - name: '_RejectConfirmedConnection'
+            offset: "000032C0"            
+          - name: '_ConnectIndic'
+            offset: "00003330"            
+          - name: '_RejectIndicatedConnection'
+            offset: "000034A0"            
+          - name: '_DisconnectIndic'
+            offset: "000034F0"            
+          - name: '_DataIndic'
+            offset: "00003700"            
+          - name: '_DPacketHandled'
+            offset: "000039D0"            
+          - name: '_CacheChange'
+            offset: "00003AA0"            
+          - name: '_ErrorHandler'
+            offset: "00003B20"            
+          - name: '_OpenIRPort'
+            offset: "00003BA0"            
+          - name: '_CloseIRPort'
+            offset: "00003E20"            
+          - name: '_IRCloseReady'
+            offset: "00004190"            
+          - name: '_PurgeRxBuffers'
+            offset: "00004220"            
+          - name: '_RxBufferAvail'
+            offset: "00004270"            
+          - name: '_ResetIRPort'
+            offset: "000042A0"            
+          - name: '_RxBufToRxQ'
+            offset: "000042B0"            
+          - name: '_SendIRPackets'
+            offset: "00004390"            
+          - name: '_GetNewPacket'
+            offset: "000044D0"            
+          - name: '_GetCurrentPacket'
+            offset: "00004590"            
+          - name: '_PutCurrentPacket'
+            offset: "000045F0"            
+          - name: '_FreeCurrentPacket'
+            offset: "00004640"            
+          - name: '_Tx3WireRaw'
+            offset: "00004690"            
+          - name: '_Tx9Wire'
+            offset: "000046F0"            
+          - name: '_Tx9WireCredit'
+            offset: "00004810"            
+          - name: '_Tx9WireControl'
+            offset: "000048B0"            
+          - name: '_Tx9WireData'
+            offset: "00004990"            
+          - name: '_Tx9WireSend'
+            offset: "00004AF0"            
+          - name: '_ProcessTTPConnectParms'
+            offset: "00004CA0"            
+          - name: '_SetControlParms'
+            offset: "00004D30"            
+          - name: '_ProcessControlChannel'
+            offset: "00004FA0"            
+          - name: '_SetPortType'
+            offset: "00005250"            
+          - name: '_NullModem'
+            offset: "000052B0"            
+          - name: '_nstrMatch'
+            offset: "000052E0"            
+          - name: '_InitConnectionMutex'
+            offset: "00005340"            
+          - name: '_FreeConnectionMutex'
+            offset: "00005360"            
+          - name: '_EnterConnectionMutex'
+            offset: "00005380"            
+          - name: '_ExitConnectionMutex'
+            offset: "000053A0"            
+          - name: '_AcquireListsMutex'
+            offset: "000053B0"            
+          - name: '_InitListData'
+            offset: "000053E0"            
+          - name: '_FreeListData'
+            offset: "00005400"            
+          - name: '_InitListHead'
+            offset: "00005420"            
+          - name: '_InsertTailList'
+            offset: "00005430"            
+          - name: '_RemoveHeadList'
+            offset: "00005460"            
+          - name: '_RemoveEntryList'
+            offset: "000054A0"            
+          - name: '_InsertHeadList'
+            offset: "000054E0"            
+          - name: '_IsNodeOnList'
+            offset: "00005510"            
+          - name: '_IsListCircular_LockHeld'
+            offset: "00005550"            
+          - name: '_IsListCircular'
+            offset: "00005580"            
+          - name: '_GetArg'
+            offset: "000055B0"            
+          - name: '_AtoI'
+            offset: "00005660"            
+          - name: '_GetNumericArg'
+            offset: "00005730"            
+          - name: '_GetDecimalArg'
+            offset: "00005780"            
+          - name: '_GetHexArg'
+            offset: "000057A0"            
+          - name: '_DQDataElement'
+            offset: "000057C0"            
+          - name: '_DQListElement'
+            offset: "00005840"            
+          - name: '_QDMatch'
+            offset: "000058C0"            
+          - name: '_LookUpQD'
+            offset: "00005920"            
+          - name: '_DQparse'
+            offset: "00005970"            
+          - name: '_Debug_Query'
+            offset: "000059D0"            
+          - name: 'Control'
+            offset: "000059F0"            
+          - name: 'IRCOMM_Debug_Query'
+            offset: "00005A09"            
+          - name: '_VMM_Out_Debug_String'
+            offset: "00005A3C"            
+          - name: '_VMM_Out_Debug_Code_Label'
+            offset: "00005A49"            
+          - name: '_VMM_Out_Debug_Data_Label'
+            offset: "00005A5C"            
+          - name: 'IR_Device_Exit'
+            offset: "00005A70"            
+          - name: '_PortPurge'
+            offset: "00005A88"            
+          - name: '_PortGetQueueStatus'
+            offset: "00005AEE"            
+          - name: 'PortSetCommState'
+            offset: "00005B0A"            
+          - name: '_PortSetCommState'
+            offset: "00005B0A"            
+          - name: '_PortSetup'
+            offset: "00005C6F"            
+          - name: 'PortSetup'
+            offset: "00005C6F"            
+          - name: '_PortTransmitChar'
+            offset: "00005DEF"            
+          - name: '_PortClearError'
+            offset: "00005E54"            
+          - name: '_PortEscapeFunction'
+            offset: "00005E79"            
+          - name: '_PortGetEventMask'
+            offset: "00005F12"            
+          - name: '_PortWrite'
+            offset: "00005F3B"            
+          - name: '_PortRead'
+            offset: "00005FED"            
+          - name: '_WriteToRxQ'
+            offset: "000060CE"            
+          - name: '_COMWriteToRxQ'
+            offset: "00006171"            
+          - name: '_ReadFromTxQ'
+            offset: "0000635C"            
+          - name: '_COMReadFromTxQ'
+            offset: "000063B6"            
+          - name: '_RemoveTxQData'
+            offset: "00006447"            
+          - name: '_COMRemoveTxQData'
+            offset: "00006490"            
+          - name: '_GetBaudRate'
+            offset: "00006514"            
+          - name: '_List_Get_First'
+            offset: "0000654E"            
+          - name: '_List_Get_Next'
+            offset: "0000655E"            
+          - name: '_DebugPrintf'
+            offset: "00006571"            
+          - name: 'Notify_Owner'
+            offset: "0000658E"            
+          - name: '_NotifyPError'
+            offset: "000065DD"            
+          - name: '_YieldToVMM'
+            offset: "00006616"            
+          - name: 'StringOut'
+            offset: "00006649"            
+          - name: 'GetCommStatus'
+            offset: "000066CD"            
+          - name: 'AcceptRemoteData?'
+            offset: "00006719"            
+          - name: 'CopyDCB'
+            offset: "00006769"            
+          - name: 'CheckBaudRate'
+            offset: "0000687F"            
+          - name: 'CheckLineConfig'
+            offset: "000068C0"            
+          - name: '_ModemStatusConnected'
+            offset: "00006913"            
+          - name: '_ModemStatusDisconnected'
+            offset: "00006980"            
+          - name: '_ModemStatusUpdate'
+            offset: "000069BD"            
+          - name: 'UpdateMCReg'
+            offset: "000069D7"            
+          - name: 'ModemStatusChange'
+            offset: "00006A91"            
+          - name: '_LineBreak'
+            offset: "00006B27"            
+          - name: '_LineStatError'
+            offset: "00006B7B"            
+          - name: '_COMOutBlocked?'
+            offset: "00006BC8"            
+          - name: 'ManageTimer'
+            offset: "00006C00"            
+          - name: 'TimerProc'
+            offset: "00006C5A"            
+          - name: 'ExtnFcn'
+            offset: "00006CC9"            
+          - name: 'ExtCom_FN1'
+            offset: "00006CD9"            
+          - name: 'ExtComDummy'
+            offset: "00006CE0"            
+          - name: 'ExtCom_FN2'
+            offset: "00006CE2"            
+          - name: 'ExtCom_FN3'
+            offset: "00006CEB"            
+          - name: 'ExtCom_FN4'
+            offset: "00006D19"            
+          - name: 'ExtCom_FN5'
+            offset: "00006D47"            
+          - name: 'ExtCom_FN6'
+            offset: "00006D75"            
+          - name: 'ExtCom_FN7'
+            offset: "00006DA3"            
+          - name: 'ExtCom_FN12'
+            offset: "00006DAE"            
+          - name: 'ExtCom_FN13'
+            offset: "00006DB5"            
+          - name: '_VxdAllocMem'
+            offset: "00006DF0"            
+          - name: '_VxdFreeMem'
+            offset: "00006E10"            
+          - name: '_VxdRefillMem'
+            offset: "00006E1E"            
+          - name: '_IRENUM_GetVersion'
+            offset: "00006E24"            
+          - name: '_LM_Startup'
+            offset: "00006E33"            
+          - name: '_LM_InitClient'
+            offset: "00006E39"            
+          - name: '_LM_AddIncoming'
+            offset: "00006E3F"            
+          - name: '_LM_RemoveIncoming'
+            offset: "00006E45"            
+          - name: '_LM_BindClient'
+            offset: "00006E4B"            
+          - name: '_LM_UnBindClient'
+            offset: "00006E51"            
+          - name: '_LM_DiscoveryReq'
+            offset: "00006E57"            
+          - name: '_LM_ConnectReq'
+            offset: "00006E5D"            
+          - name: '_LM_ConnectRsp'
+            offset: "00006E63"            
+          - name: '_LM_DisconnectReq'
+            offset: "00006E69"            
+          - name: '_LM_DataReq'
+            offset: "00006E6F"            
+          - name: '_LM_ReceiveData'
+            offset: "00006E75"            
+          - name: '_LM_LocalBusy'
+            offset: "00006E7B"            
+          - name: '_LMIAS_RegisterObject'
+            offset: "00006E81"            
+          - name: '_LMIAS_DeregisterObject'
+            offset: "00006E87"            
+          - name: '_LMIAS_ClientRequest'
+            offset: "00006E8D"            
+          - name: '_LM_AbortConnection'
+            offset: "00006E93"            
+          - name: '_LCODE_List_Get_Next@8'
+            offset: "00006E9C"            
+          - name: '_LCODE_List_Get_First@4'
+            offset: "00006EAC"            
+          - name: '_LCODE__SignalID'
+            offset: "00006EBC"            
+          - name: '_LCODE__BlockOnID'
+            offset: "00006EC4"            
+      - num: "2"
+        name: "PNP"
+        offset: "00004240"
+        symbols:
+          - name: '_CCODE__CreateMutex'
+            offset: "00000000"            
+          - name: '_CCODE__DestroyMutex'
+            offset: "00000008"            
+          - name: '_CCODE__EnterMutex'
+            offset: "00000010"            
+          - name: '_CCODE__LeaveMutex'
+            offset: "00000018"            
+      - num: "3"
+        name: "_PTEXT"
+        offset: "00004C20"
+        symbols:
+          - name: '_DriverControl'
+            offset: "00000000"            
+          - name: '_InitFunction'
+            offset: "00000012"            
+          - name: 'DeAllocData'
+            offset: "0000012C"            
+          - name: '_PortOpen'
+            offset: "00000168"            
+          - name: '_PortGetCommState'
+            offset: "00000311"            
+          - name: '_PortClose'
+            offset: "0000033E"            
+          - name: '_PortSetModemStatusShadow'
+            offset: "000003CB"            
+          - name: '_PortGetProperties'
+            offset: "000003F2"            
+          - name: '_PortSetEventMask'
+            offset: "0000043A"            
+          - name: '_PortEnableNotification'
+            offset: "00000464"            
+          - name: '_PortSetReadCallBack'
+            offset: "000004BD"            
+          - name: '_PortSetWriteCallBack'
+            offset: "00000528"            
+          - name: '_PortGetModemStatus'
+            offset: "00000584"            
+          - name: '_PortGetCommConfig'
+            offset: "000005A4"            
+          - name: '_PortSetCommConfig'
+            offset: "00000609"            
+          - name: '_PortGetWin32Error'
+            offset: "00000659"            
+          - name: '_PortNameMatch'
+            offset: "00000694"            
+          - name: 'StrCmp'
+            offset: "000006BA"            
+          - name: 'MyLower'
+            offset: "000006ED"            
+      - num: "5"
+        name: "_IDATA"
+        offset: "00000000"
+        symbols:
+          - name: 'IR_Device_Init'
+            offset: "0000001C"            
+          - name: '_PageSwap_Get_Version'
+            offset: "00000088"            

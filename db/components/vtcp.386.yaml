@@ -1,0 +1,793 @@
+filename: "vtcp.386"
+#TODO: bring up more details from symdeb
+binary: "vtcp.386"
+description: ""
+note: ""
+appearances:
+  - version: "system"
+    tree: []
+    segments:
+      - num: "1"
+        name: "_LGROUP"
+        offset: "00009740"
+        symbols:
+          - name: '_CTEStartTimer'
+            offset: "00000000"            
+          - name: '_CTEStopTimer'
+            offset: "00000006"            
+          - name: '_CTESystemUpTime'
+            offset: "0000000C"            
+          - name: '__ICTEGetLock'
+            offset: "00000012"            
+          - name: '__ICTEFreeLock'
+            offset: "00000018"            
+          - name: '_CTEScheduleEvent'
+            offset: "0000001E"            
+          - name: '_CTEScheduleEvent_N'
+            offset: "00000024"            
+          - name: '_CTECancelEvent'
+            offset: "0000002A"            
+          - name: '_CTEAllocMem'
+            offset: "00000030"            
+          - name: '_CTEFreeMem'
+            offset: "00000074"            
+          - name: '_CTERefillMem'
+            offset: "0000008C"            
+          - name: '_CTEBlock'
+            offset: "00000092"            
+          - name: '_CTEBlock1'
+            offset: "00000098"            
+          - name: '_CTESignal'
+            offset: "0000009E"            
+          - name: '__CTECheckMem'
+            offset: "000000A4"            
+          - name: '_CTEPrint'
+            offset: "000000AA"            
+          - name: '_CTEPrintNum'
+            offset: "000000BC"            
+          - name: '_CTEPrintCRLF'
+            offset: "00000105"            
+          - name: '_CTEUnload'
+            offset: "00000115"            
+          - name: '_CTESetLoadNotifyProc'
+            offset: "00000120"            
+          - name: '_CTESetUnloadNotifyProc'
+            offset: "0000012B"            
+          - name: '_TLRegisterProtocol'
+            offset: "00000138"            
+          - name: '_TLRegisterDispatch'
+            offset: "0000013E"            
+          - name: '_RegisterAddrChangeHndlr'
+            offset: "00000144"            
+          - name: '_RegisterAddrChangeHndlrEx'
+            offset: "0000014A"            
+          - name: 'MSTCP_Get_Version'
+            offset: "00000156"            
+          - name: 'VTCP_Control'
+            offset: "00000164"            
+          - name: 'VTCP_DeviceIoControl'
+            offset: "0000017D"            
+          - name: 'VTCP_V86_API'
+            offset: "00000183"            
+          - name: '_ConvertPtr'
+            offset: "000001B2"            
+          - name: '_VxDQueryInfo'
+            offset: "000001F4"            
+          - name: '_VxDSetInfo'
+            offset: "0000029C"            
+          - name: '_AddrChange'
+            offset: "0000031C"            
+          - name: '_GetIndexedAO'
+            offset: "00000394"            
+          - name: '_GetAOIndex'
+            offset: "000003C4"            
+          - name: '_ReadNextAO'
+            offset: "000004A8"            
+          - name: '_ValidateAOContext'
+            offset: "000005B0"            
+          - name: '_GetNextBestAddrObj'
+            offset: "000006C0"            
+          - name: '_GetAddrObj'
+            offset: "00000790"            
+          - name: '_GetNextAddrObj'
+            offset: "000008C0"            
+          - name: '_GetFirstAddrObj'
+            offset: "0000091C"            
+          - name: '_InsertAddrObj'
+            offset: "00000974"            
+          - name: '_RemoveAddrObj'
+            offset: "00000AA4"            
+          - name: '_FindAnyAddrObj'
+            offset: "00000B84"            
+          - name: '_GetAddress'
+            offset: "00000C0C"            
+          - name: '_InvalidateAddrs'
+            offset: "00000C58"            
+          - name: '_RequestEventProc'
+            offset: "00000FE0"            
+          - name: '_GetAddrOptions'
+            offset: "0000104C"            
+          - name: '_TdiOpenAddress'
+            offset: "00001084"            
+          - name: '_DeleteAO'
+            offset: "00001420"            
+          - name: '_GetAORequest'
+            offset: "000018AC"            
+          - name: '_FreeAORequest'
+            offset: "00001920"            
+          - name: '_TdiCloseAddress'
+            offset: "0000198C"            
+          - name: '_FindAOMCastAddr'
+            offset: "00001AE4"            
+          - name: '_MCastAddrOnAO'
+            offset: "00001B1C"            
+          - name: '_SetAOOptions'
+            offset: "00001B44"            
+          - name: '_SetAddrOptions'
+            offset: "00001E5C"            
+          - name: '_TdiSetEvent'
+            offset: "00001FE4"            
+          - name: '_ProcessAORequests'
+            offset: "00002130"            
+          - name: '_DelayDerefAO'
+            offset: "000023D4"            
+          - name: '_DerefAO'
+            offset: "00002444"            
+          - name: '_UDPSend'
+            offset: "000024B4"            
+          - name: '_UDPDeliver'
+            offset: "000027F4"            
+          - name: '_UDPRcv'
+            offset: "00002B54"            
+          - name: '_UDPStatus'
+            offset: "00002D98"            
+          - name: '_XsumSendChain'
+            offset: "00002DCC"            
+          - name: '_XsumRcvBuf'
+            offset: "00002E4C"            
+          - name: '_CopyRcvToNdis'
+            offset: "00002EC0"            
+          - name: '_CopyRcvToBuffer'
+            offset: "00002FE4"            
+          - name: '_CopyFlatToNdis'
+            offset: "00003148"            
+          - name: '_BuildTDIAddress'
+            offset: "00003268"            
+          - name: '_UpdateConnInfo'
+            offset: "00003294"            
+          - name: '_AdjustRcvWin'
+            offset: "0000331C"            
+          - name: '_CompleteRcvs'
+            offset: "000034A8"            
+          - name: '_ProcessTCBDelayQ'
+            offset: "000038D8"            
+          - name: '_DelayAction'
+            offset: "00003B14"            
+          - name: '_TCPRcvComplete'
+            offset: "00003B80"            
+          - name: '_CompleteConnReq'
+            offset: "00003DB0"            
+          - name: '_FindListenConn'
+            offset: "00003E70"            
+          - name: '_FindMSS'
+            offset: "00004438"            
+          - name: '_FindMSSAndOptions'
+            offset: "0000449C"            
+          - name: '_ACKAndDrop'
+            offset: "00004670"            
+          - name: '_ACKData'
+            offset: "000046DC"            
+          - name: '_TrimRcvBuf'
+            offset: "00004DC4"            
+          - name: '_FreeRBChain'
+            offset: "00004E54"            
+          - name: '_PullFromRAQ'
+            offset: "00004E80"            
+          - name: '_CreateTRH'
+            offset: "00005120"            
+          - name: '_SendSackInACK'
+            offset: "00005200"            
+          - name: '_PutOnRAQ'
+            offset: "00005460"            
+          - name: '_TCPRcv'
+            offset: "00005870"            
+          - name: '_FreeRcvReq'
+            offset: "00007A08"            
+          - name: '_GetRcvReq'
+            offset: "00007A4C"            
+          - name: '_FindLastBuffer'
+            offset: "00007A90"            
+          - name: '_FreePartialRB'
+            offset: "00007ADC"            
+          - name: '_CopyRBChain'
+            offset: "00007B78"            
+          - name: '_PendData'
+            offset: "00007D74"            
+          - name: '_BufferData'
+            offset: "00007F40"            
+          - name: '_IndicateData'
+            offset: "000083D4"            
+          - name: '_IndicatePendingData'
+            offset: "00008930"            
+          - name: '_DeliverUrgent'
+            offset: "00008F14"            
+          - name: '_PushData'
+            offset: "00009604"            
+          - name: '_SplitRcvBuf'
+            offset: "00009704"            
+          - name: '_HandleUrgent'
+            offset: "00009858"            
+          - name: '_TdiReceive'
+            offset: "00009BDC"            
+          - name: '_ReadNextTCB'
+            offset: "00009F68"            
+          - name: '_ValidateTCBContext'
+            offset: "0000A07C"            
+          - name: '_FindNextTCB'
+            offset: "0000A15C"            
+          - name: '_ResetSendNext'
+            offset: "0000A1AC"            
+          - name: '_TCBTimeout'
+            offset: "0000A43C"            
+          - name: '_SetTCBMTU'
+            offset: "0000ABA8"            
+          - name: '_DeleteTCBWithSrc'
+            offset: "0000AC98"            
+          - name: '_TCBWalk'
+            offset: "0000ACF4"            
+          - name: '_FindTCB'
+            offset: "0000AE18"            
+          - name: '_InsertTCB'
+            offset: "0000AF60"            
+          - name: '_RemoveTCB'
+            offset: "0000B138"            
+          - name: '_ScavengeTCB'
+            offset: "0000B2AC"            
+          - name: '_AllocTCB'
+            offset: "0000B478"            
+          - name: '_FreeTCB'
+            offset: "0000B594"            
+          - name: '_DummyDone'
+            offset: "0000B638"            
+          - name: '_DummyCmplt'
+            offset: "0000B64C"            
+          - name: '_CloseDone'
+            offset: "0000B650"            
+          - name: '_DisassocDone'
+            offset: "0000B768"            
+          - name: '_FreeConnReq'
+            offset: "0000B908"            
+          - name: '_GetConnReq'
+            offset: "0000B950"            
+          - name: '_GetConnFromConnID'
+            offset: "0000B998"            
+          - name: '_GetConnID'
+            offset: "0000BA18"            
+          - name: '_FreeConnID'
+            offset: "0000BB28"            
+          - name: '_MapIPError'
+            offset: "0000BBDC"            
+          - name: '_FinishRemoveTCBFromConn'
+            offset: "0000BC24"            
+          - name: '_RemoveTCBFromConn'
+            offset: "0000BD64"            
+          - name: '_RemoveConnFromTCB'
+            offset: "0000BDCC"            
+          - name: '_CloseTCB'
+            offset: "0000BE98"            
+          - name: '_TryToCloseTCB'
+            offset: "0000C4BC"            
+          - name: '_DerefTCB'
+            offset: "0000C58C"            
+          - name: '_TdiOpenConnection'
+            offset: "0000C62C"            
+          - name: '_RemoveConnFromAO'
+            offset: "0000C724"            
+          - name: '_TdiCloseConnection'
+            offset: "0000C7A0"            
+          - name: '_TdiAssociateAddress'
+            offset: "0000C978"            
+          - name: '_TdiDisAssociateAddress'
+            offset: "0000CAD0"            
+          - name: '_ProcessUserOptions'
+            offset: "0000CC4C"            
+          - name: '_InitTCBFromConn'
+            offset: "0000CC9C"            
+          - name: '_TdiConnect'
+            offset: "0000CE80"            
+          - name: '_TdiListen'
+            offset: "0000D3C0"            
+          - name: '_InitRCE'
+            offset: "0000D604"            
+          - name: '_AcceptConn'
+            offset: "0000D764"            
+          - name: '_TdiAccept'
+            offset: "0000D818"            
+          - name: '_TdiDisconnect'
+            offset: "0000D9C8"            
+          - name: '_OKToNotify'
+            offset: "0000DD10"            
+          - name: '_NotifyOfDisc'
+            offset: "0000DD7C"            
+          - name: '_GracefulClose'
+            offset: "0000E024"            
+          - name: '_ConnCheckPassed'
+            offset: "0000E270"            
+          - name: '_InitAddrChecks'
+            offset: "0000E278"            
+          - name: '_EnumerateConnectionList'
+            offset: "0000E27C"            
+          - name: '_TdiQueryInformation'
+            offset: "0000E294"            
+          - name: '_TdiSetInformation'
+            offset: "0000E85C"            
+          - name: '_TdiAction'
+            offset: "0000E864"            
+          - name: '_CopyAO_TCPConn'
+            offset: "0000E86C"            
+          - name: '_TdiQueryInformationEx'
+            offset: "0000E8B0"            
+          - name: '_TdiSetInformationEx'
+            offset: "0000EE68"            
+          - name: '_GrowTCPHeaderList'
+            offset: "0000F3C4"            
+          - name: '_GetTCPHeader'
+            offset: "0000F57C"            
+          - name: '_FreeTCPHeader'
+            offset: "0000F598"            
+          - name: '_FreeSendReq'
+            offset: "0000F5E0"            
+          - name: '_GetSendReq'
+            offset: "0000F628"            
+          - name: '_TCPSendComplete'
+            offset: "0000F670"            
+          - name: '_RcvWin'
+            offset: "0000F884"            
+          - name: '_SendSYN'
+            offset: "0000F990"            
+          - name: '_SendKA'
+            offset: "0000FD38"            
+          - name: '_SendACK'
+            offset: "0000FEE0"            
+          - name: '_SendRSTFromTCB'
+            offset: "00010384"            
+          - name: '_SendRSTFromHeader'
+            offset: "000104CC"            
+          - name: '_GoToEstab'
+            offset: "00010654"            
+          - name: '_InitSendState'
+            offset: "00010690"            
+          - name: '_TCPStatus'
+            offset: "000107B4"            
+          - name: '_FillTCPHeader'
+            offset: "00010B48"            
+          - name: '_TCPSend'
+            offset: "00010C7C"            
+          - name: '_ResetAndFastSend'
+            offset: "000117C8"            
+          - name: '_TCPFastSend'
+            offset: "00011B40"            
+          - name: '_TdiSend'
+            offset: "0001224C"            
+          - name: '_FreeTCPHeaderList'
+            offset: "000124E0"            
+          - name: '_CheckRBList'
+            offset: "00012570"            
+          - name: '_CheckTCBRcv'
+            offset: "000125B0"            
+          - name: '_CheckTCBSends'
+            offset: "00012764"            
+          - name: '_tcpxsum'
+            offset: "00012A71"            
+          - name: '_GrowDGHeaderList'
+            offset: "00012B30"            
+          - name: '_FreeDGHeader'
+            offset: "00012C6C"            
+          - name: '_PutPendingQ'
+            offset: "00012C80"            
+          - name: '_GetDGSendReq'
+            offset: "00012CF4"            
+          - name: '_FreeDGSendReq'
+            offset: "00012D78"            
+          - name: '_GetDGRcvReq'
+            offset: "00012DE4"            
+          - name: '_FreeDGRcvReq'
+            offset: "00012E5C"            
+          - name: '_DGDelayedEventProc'
+            offset: "00012EA4"            
+          - name: '_DGSendComplete'
+            offset: "0001307C"            
+          - name: '_TdiSendDatagram'
+            offset: "00013218"            
+          - name: '_TdiReceiveDatagram'
+            offset: "00013440"            
+          - name: '_RawSend'
+            offset: "000135B0"            
+          - name: '_RawDeliver'
+            offset: "000138D8"            
+          - name: '_RawRcv'
+            offset: "00013C4C"            
+          - name: '_RawStatus'
+            offset: "00013D28"            
+          - name: '_TCPGetConfigInfo'
+            offset: "00013D5C"            
+          - name: '_NdisRegisterProtocol@16'
+            offset: "00013ED0"            
+          - name: '_NdisDeregisterProtocol@8'
+            offset: "00013ED6"            
+          - name: '_NdisOpenAdapter@44'
+            offset: "00013EDC"            
+          - name: '_NdisCloseAdapter@8'
+            offset: "00013EE2"            
+          - name: '_NdisSend@12'
+            offset: "00013EE8"            
+          - name: '_NdisTransferData@28'
+            offset: "00013EEE"            
+          - name: '_NdisReset@8'
+            offset: "00013EF4"            
+          - name: '_NdisRequest@12'
+            offset: "00013EFA"            
+          - name: '_NdisQueryGlobalStatistics@16'
+            offset: "00013F00"            
+          - name: '_NdisOpenProtocolConfiguration@12'
+            offset: "00013F06"            
+          - name: '_NdisCompleteBindAdapter@12'
+            offset: "00013F0C"            
+          - name: '_NdisCompleteUnbindAdapter@8'
+            offset: "00013F12"            
+          - name: '_NdisGetVersion@0'
+            offset: "00013F18"            
+          - name: '_NdisSetTimer@8'
+            offset: "00013F1E"            
+          - name: '_NdisCancelTimer@8'
+            offset: "00013F24"            
+          - name: '_NdisInitializeInterrupt@40'
+            offset: "00013F2A"            
+          - name: '_NdisRemoveInterrupt@4'
+            offset: "00013F30"            
+          - name: '_NdisSynchronizeWithInterrupt@12'
+            offset: "00013F36"            
+          - name: '_NdisStallExecution@4'
+            offset: "00013F3C"            
+          - name: '_NdisAllocateMemory@16'
+            offset: "00013F42"            
+          - name: '_NdisFreeMemory@12'
+            offset: "00013F48"            
+          - name: '_NdisAllocatePacketPool@16'
+            offset: "00013F4E"            
+          - name: '_NdisFreePacketPool@4'
+            offset: "00013F54"            
+          - name: '_NdisAllocatePacket@12'
+            offset: "00013F5A"            
+          - name: '_NdisReinitializePacket@4'
+            offset: "00013F60"            
+          - name: '_NdisFreePacket@4'
+            offset: "00013F66"            
+          - name: '_NdisQueryPacket@20'
+            offset: "00013F6C"            
+          - name: '_NdisAllocateBufferPool@12'
+            offset: "00013F72"            
+          - name: '_NdisFreeBufferPool@4'
+            offset: "00013F78"            
+          - name: '_NdisAllocateBuffer@20'
+            offset: "00013F7E"            
+          - name: '_NdisCopyBuffer@24'
+            offset: "00013F84"            
+          - name: '_NdisFreeBuffer@4'
+            offset: "00013F8A"            
+          - name: '_NdisQueryBuffer@12'
+            offset: "00013F90"            
+          - name: '_NdisGetBufferPhysicalAddress@12'
+            offset: "00013F96"            
+          - name: '_NdisChainBufferAtFront@8'
+            offset: "00013F9C"            
+          - name: '_NdisChainBufferAtBack@8'
+            offset: "00013FA2"            
+          - name: '_NdisUnchainBufferAtFront@8'
+            offset: "00013FA8"            
+          - name: '_NdisUnchainBufferAtBack@8'
+            offset: "00013FAE"            
+          - name: '_NdisGetNextBuffer@8'
+            offset: "00013FB4"            
+          - name: '_NdisCopyFromPacketToPacket@24'
+            offset: "00013FBA"            
+          - name: '_NdisOpenConfiguration@12'
+            offset: "00013FC0"            
+          - name: '_NdisReadConfiguration@20'
+            offset: "00013FC6"            
+          - name: '_NdisCloseConfiguration@4'
+            offset: "00013FCC"            
+          - name: '_NdisEqualString@12'
+            offset: "00013FD2"            
+          - name: '_NdisOpenFile@20'
+            offset: "00013FD8"            
+          - name: '_NdisMapFile@12'
+            offset: "00013FDE"            
+          - name: '_NdisUnmapFile@4'
+            offset: "00013FE4"            
+          - name: '_NdisCloseFile@4'
+            offset: "00013FEA"            
+          - name: '_NdisAllocateDmaChannel@20'
+            offset: "00013FF0"            
+          - name: '_NdisSetupDmaTransfer@24'
+            offset: "00013FF6"            
+          - name: '_NdisCompleteDmaTransfer@24'
+            offset: "00013FFC"            
+          - name: '_NdisReadDmaCounter@4'
+            offset: "00014002"            
+          - name: '_NdisFreeDmaChannel@4'
+            offset: "00014008"            
+          - name: '_NdisMapIoSpace@20'
+            offset: "0001400E"            
+          - name: '_NdisWriteErrorLogEntry'
+            offset: "00014014"            
+          - name: '_NdisRegAdaptShutdown@12'
+            offset: "0001401A"            
+          - name: '_NdisDeregAdaptShutdown@4'
+            offset: "00014020"            
+          - name: '_GetDGHeader'
+            offset: "00014028"            
+          - name: 'CTETotalMem'
+            offset: "00014044"            
+          - name: '__vxdhandle__'
+            offset: "00014064"            
+          - name: '_MSTCP_Get_Version'
+            offset: "000140C4"            
+          - name: 'MSTCP_DDB'
+            offset: "000140C8"            
+          - name: '_MaxConnectResponseRexmitCount'
+            offset: "0001411C"            
+          - name: '_GlobalMaxRcvWin'
+            offset: "00014120"            
+          - name: '_TcpHostOpts'
+            offset: "00014124"            
+          - name: '_TransportName'
+            offset: "00014128"            
+          - name: '_dbgmc'
+            offset: "000141F8"            
+          - name: '_NextUserPort'
+            offset: "000141FC"            
+          - name: '_UDPProtInfo'
+            offset: "00015288"            
+          - name: '_MaxRcvWin'
+            offset: "00015A3C"            
+          - name: '_TCPRcvReqFree'
+            offset: "00017740"            
+          - name: '_NumTCPRcvReq'
+            offset: "00017744"            
+          - name: '_MaxRcvReq'
+            offset: "00017748"            
+          - name: '_FreeTCBList'
+            offset: "000192EC"            
+          - name: '_CurrentTCBs'
+            offset: "000192F0"            
+          - name: '_MaxTCBs'
+            offset: "000192F4"            
+          - name: '_MaxFreeTCBs'
+            offset: "000192F8"            
+          - name: '_MaxConnReq'
+            offset: "00019E50"            
+          - name: '_ConnTable'
+            offset: "00019E54"            
+          - name: '_AddrCheckTable'
+            offset: "00019E58"            
+          - name: '_ReadAOTable'
+            offset: "0001B778"            
+          - name: '_ReadTCBTable'
+            offset: "0001B780"            
+          - name: '_TCPMaxSendFree'
+            offset: "0001BCD8"            
+          - name: '_MaxSendReq'
+            offset: "0001BCDC"            
+          - name: '_SendInited'
+            offset: "0001BCE0"            
+          - name: '_DGCurrentSendFree'
+            offset: "0001DBA8"            
+          - name: '_DGMaxSendFree'
+            offset: "0001DBAC"            
+          - name: '_NumSendReq'
+            offset: "0001DBB0"            
+          - name: '_NumRcvReq'
+            offset: "0001DBB4"            
+          - name: '_DGHdrBPoolList'
+            offset: "0001DBB8"            
+          - name: '_RawProtInfo'
+            offset: "0001E0D4"            
+          - name: '_Tcp1323Opts'
+            offset: "0001E538"            
+          - name: '_SackOpts'
+            offset: "0001E53C"            
+          - name: '_ConfigTable'
+            offset: "0001E65C"            
+          - name: '_StartTime'
+            offset: "0001E76C"            
+          - name: '_TCBTable'
+            offset: "0001E770"            
+          - name: '_DeadmanTicks'
+            offset: "0001E870"            
+          - name: '_TStats'
+            offset: "0001E874"            
+          - name: '_AORequestLock'
+            offset: "0001E8B0"            
+          - name: '_UStats'
+            offset: "0001E8B8"            
+          - name: '_DGRcvReqFree'
+            offset: "0001E8CC"            
+          - name: '_TCBWalkCount'
+            offset: "0001E8D0"            
+          - name: '_LastAO'
+            offset: "0001E8D4"            
+          - name: '_LocalNetInfo'
+            offset: "0001E8D8"            
+          - name: '_TCPProtInfo'
+            offset: "0001E928"            
+          - name: '_TCBDelayQ'
+            offset: "0001E92C"            
+          - name: '_DGSendReqLock'
+            offset: "0001E934"            
+          - name: '_NTWMaxConnectCount'
+            offset: "0001E93C"            
+          - name: '_MaxUserPort'
+            offset: "0001E940"            
+          - name: '_MaxConnections'
+            offset: "0001E944"            
+          - name: '_FinWait2TO'
+            offset: "0001E948"            
+          - name: '_NumConnReq'
+            offset: "0001E94C"            
+          - name: '_AOIndexSize'
+            offset: "0001E950"            
+          - name: '_KAInterval'
+            offset: "0001E954"            
+          - name: '_PMTUDiscovery'
+            offset: "0001E958"            
+          - name: '_PreloadCount'
+            offset: "0001E95C"            
+          - name: '_ConnTableLock'
+            offset: "0001E960"            
+          - name: '_TCPCurrentSendFree'
+            offset: "0001E968"            
+          - name: '_AddrObjTableLock'
+            offset: "0001E96C"            
+          - name: '_DGHeaderList'
+            offset: "0001E974"            
+          - name: '_DGHeaderSize'
+            offset: "0001E978"            
+          - name: '_DGDelayedEvent'
+            offset: "0001E97C"            
+          - name: '_FreeTCBListLock'
+            offset: "0001E990"            
+          - name: '_PendingFreeList'
+            offset: "0001E998"            
+          - name: '_SendCompleteQ'
+            offset: "0001E99C"            
+          - name: '_LastTCB'
+            offset: "0001E9A4"            
+          - name: '_TCBTableLock'
+            offset: "0001E9A8"            
+          - name: '_KeepAliveTime'
+            offset: "0001E9B0"            
+          - name: '_TCBDelayRtnLimit'
+            offset: "0001E9B4"            
+          - name: '_DGRcvReqFreeLock'
+            offset: "0001E9B8"            
+          - name: '_AOIndex'
+            offset: "0001E9C0"            
+          - name: '_BSDUrgent'
+            offset: "0001E9C4"            
+          - name: '_DGDelayed'
+            offset: "0001E9C8"            
+          - name: '_ConnTableSize'
+            offset: "0001E9D0"            
+          - name: '_TCPSendReqCompleteLock'
+            offset: "0001E9D4"            
+          - name: '_DGHeaderPending'
+            offset: "0001E9DC"            
+          - name: '_TCBTimer'
+            offset: "0001E9E4"            
+          - name: '_EntityList'
+            offset: "0001E9FC"            
+          - name: '_MaxConnectRexmitCount'
+            offset: "0001EA00"            
+          - name: '_RequestCompleteFlags'
+            offset: "0001EA04"            
+          - name: '_MaxDataRexmitCount'
+            offset: "0001EA08"            
+          - name: '_AOInstance'
+            offset: "0001EA0C"            
+          - name: '_DeadGWDetect'
+            offset: "0001EA10"            
+          - name: '_DefaultRcvWin'
+            offset: "0001EA14"            
+          - name: '_TCPTime'
+            offset: "0001EA18"            
+          - name: '_TCPSendReqFree'
+            offset: "0001EA1C"            
+          - name: '_DummyBuf'
+            offset: "0001EA20"            
+          - name: '_NextAOIndex'
+            offset: "0001EA30"            
+          - name: '_NextConnIndex'
+            offset: "0001EA34"            
+          - name: '_TCBDelayRtnCount'
+            offset: "0001EA38"            
+          - name: '_TCPHdrBPoolList'
+            offset: "0001EA3C"            
+          - name: '_ConnInst'
+            offset: "0001EA40"            
+          - name: '_MaxDupAcks'
+            offset: "0001EA44"            
+          - name: '_TCBDelayLock'
+            offset: "0001EA48"            
+          - name: '_TCPRcvReqFreeLock'
+            offset: "0001EA50"            
+          - name: '_PMTUBHDetect'
+            offset: "0001EA58"            
+          - name: '_AORequestFree'
+            offset: "0001EA5C"            
+          - name: '_TLDispatch'
+            offset: "0001EA60"            
+          - name: '_TCPSendFree'
+            offset: "0001EAB0"            
+          - name: '_NTWMaxConnectTime'
+            offset: "0001EAB4"            
+          - name: '_ConnReqFree'
+            offset: "0001EAB8"            
+          - name: '_RequestCompleteLock'
+            offset: "0001EABC"            
+          - name: '_AddrObjTable'
+            offset: "0001EAC4"            
+          - name: '_NumTCPSendReq'
+            offset: "0001EB04"            
+          - name: '_EntityCount'
+            offset: "0001EB08"            
+          - name: '_DGSendReqFree'
+            offset: "0001EB0C"            
+          - name: '_TCPSendReqFreeLock'
+            offset: "0001EB10"            
+          - name: '_TCPSendFreeLock'
+            offset: "0001EB18"            
+          - name: '_TCPSendBufferPool'
+            offset: "0001EB20"            
+          - name: '_ConnReqFreeLock'
+            offset: "0001EB24"            
+          - name: '_ConnRequestCompleteQ'
+            offset: "0001EB2C"            
+          - name: '_BSSDataEnd'
+            offset: "0001EB34"            
+          - name: '_BSSBegin'
+            offset: "0001EB34"            
+      - num: "2"
+        name: "_IGROUP"
+        offset: "00000000"
+        symbols:
+          - name: '_CTEInitialize'
+            offset: "00000000"            
+          - name: 'VTCP_Device_Init'
+            offset: "00000020"            
+          - name: '_IPPresent'
+            offset: "00000045"            
+          - name: '_TLGetIPInfo'
+            offset: "00000050"            
+          - name: '_tlinit'
+            offset: "00000058"            
+          - name: '_InitAddr'
+            offset: "0000046C"            
+          - name: '_InitTCPRcv'
+            offset: "00000524"            
+          - name: '_UnInitTCPRcv'
+            offset: "000005CC"            
+          - name: '_InitTCB'
+            offset: "000005D0"            
+          - name: '_UnInitTCB'
+            offset: "00000634"            
+          - name: '_InitTCPConn'
+            offset: "00000644"            
+          - name: '_UnInitTCPConn'
+            offset: "00000654"            
+          - name: '_InitTCPSend'
+            offset: "00000658"            
+          - name: '_UnInitTCPSend'
+            offset: "0000071C"            
+          - name: '_InitDG'
+            offset: "00000748"            

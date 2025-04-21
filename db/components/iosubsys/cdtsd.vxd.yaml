@@ -1,0 +1,51 @@
+filename: "iosubsys/cdtsd.vxd"
+#TODO: bring up more details from symdeb
+binary: "iosubsys/cdtsd.vxd"
+description: ""
+note: ""
+appearances:
+  - version: "system"
+    tree: []
+    segments:
+      - num: "1"
+        name: "_LGROUP"
+        offset: "000001B0"
+        symbols:
+          - name: 'tsd_async_event'
+            offset: "0000000C"            
+          - name: 'tsd_ilb'
+            offset: "00000044"            
+          - name: 'tsd_request'
+            offset: "00000078"            
+          - name: 'GetDCB'
+            offset: "00000098"            
+          - name: 'CDTSD_DDB'
+            offset: "000000BC"            
+      - num: "2"
+        name: "_IGROUP"
+        offset: "00000240"
+        symbols:
+          - name: 'CDTSD_Device_Init'
+            offset: "00000000"            
+          - name: 'Drv_Reg_Pkt'
+            offset: "00000044"            
+      - num: "3"
+        name: "_PTEXT"
+        offset: "000004C0"
+        symbols:
+          - name: 'config_dcb'
+            offset: "00000000"            
+          - name: 'unconfig_dcb'
+            offset: "0000011C"            
+          - name: 'CDTSD_init_complete'
+            offset: "0000012C"            
+          - name: 'GetCDSPtrs'
+            offset: "00000144"            
+          - name: 'TSD_pick_drive_letter'
+            offset: "000001C4"            
+      - num: "4"
+        name: "_PDATA"
+        offset: "00000000"
+        symbols:
+          - name: 'CDTSD_num_devices'
+            offset: "00000098"            

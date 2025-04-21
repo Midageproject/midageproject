@@ -1,0 +1,1069 @@
+filename: "vmm32/ios.vxd"
+#TODO: bring up more details from symdeb
+binary: "vmm32/ios.vxd"
+description: ""
+note: ""
+appearances:
+  - version: "system"
+    tree: []
+    segments:
+      - num: "1"
+        name: "_LGROUP"
+        offset: "00006120"
+        symbols:
+          - name: 'IOS_Control'
+            offset: "00000000"            
+          - name: 'IOS_Get_Version'
+            offset: "00000048"            
+          - name: 'IOS_System_Exit'
+            offset: "00000057"            
+          - name: 'IOS_Reboot_Notify'
+            offset: "000000AE"            
+          - name: 'BlockDev_Virt_EOI'
+            offset: "000000C8"            
+          - name: 'IOS_serialize'
+            offset: "000000D4"            
+          - name: 'IOS_serialize_callback'
+            offset: "0000013C"            
+          - name: 'IOS_bd_send_next_command'
+            offset: "000001E2"            
+          - name: 'IOS_BD_Async_Request'
+            offset: "0000025E"            
+          - name: 'IOS_BD_VxD_Int_15_Hook'
+            offset: "00000298"            
+          - name: 'IOS_BD_Hw_Int'
+            offset: "000002C0"            
+          - name: 'IOS_BD_Set_Flag_Event'
+            offset: "00000316"            
+          - name: 'IOS_BD_Command_Complete'
+            offset: "00000338"            
+          - name: 'IOS_BD_IOP_Timeout'
+            offset: "0000034B"            
+          - name: 'IOS_BD_Request'
+            offset: "00000350"            
+          - name: 'IOS_BD_BCB2IOP'
+            offset: "00000385"            
+          - name: 'IOS_BD_BCB_Complete'
+            offset: "0000047F"            
+          - name: 'IOSAssertHeap'
+            offset: "000004B8"            
+          - name: 'IOS_register_dot_command'
+            offset: "00000528"            
+          - name: 'IOS_dot_command_handler'
+            offset: "0000054A"            
+          - name: 'IOS_parse_params'
+            offset: "0000058A"            
+          - name: 'IOS_process_keyword'
+            offset: "000005FA"            
+          - name: 'IOS_dump_iop'
+            offset: "00000660"            
+          - name: 'IOS_dump_med'
+            offset: "00000772"            
+          - name: 'IOS_dump_help'
+            offset: "0000082E"            
+          - name: '_IOS_get_command_line_char@0'
+            offset: "00000841"            
+          - name: 'PrintLog'
+            offset: "0000086A"            
+          - name: 'dprintf'
+            offset: "00000885"            
+          - name: 'IOS_BD_V86_Int_13h_Chain'
+            offset: "00000DA0"            
+          - name: 'IOSInt13DoFlush'
+            offset: "00000F92"            
+          - name: 'IOS_BD_Int13_Iret'
+            offset: "00000FBE"            
+          - name: 'IOS_Hook_BIOS_Int_13h'
+            offset: "00001055"            
+          - name: 'IOS_Set_BIOS_Hook'
+            offset: "000010A3"            
+          - name: 'IOS_BD_Unhook_BIOS_Int_13h'
+            offset: "000010C6"            
+          - name: 'IOS_BD_Int13_BIOS_Hook'
+            offset: "000010F1"            
+          - name: 'IOS_Int13_BIOS_Hook'
+            offset: "00001110"            
+          - name: 'IOS_System_Critical_Exit'
+            offset: "00001134"            
+          - name: 'ios_mem_alloc'
+            offset: "0000118C"            
+          - name: 'IOSFastPktAlloc'
+            offset: "000011D7"            
+          - name: 'IOSPktDeAlloc'
+            offset: "000014B8"            
+          - name: 'IOSFastPktDeAlloc'
+            offset: "00001527"            
+          - name: 'IOS_ResetStandby'
+            offset: "000015D8"            
+          - name: 'IOS_SendCommand'
+            offset: "00001628"            
+          - name: 'IOS_sc_prepare_request'
+            offset: "00001713"            
+          - name: 'IOS_fix_split_sgds'
+            offset: "0000200B"            
+          - name: 'IOS_restore_iop'
+            offset: "0000203A"            
+          - name: 'IOS_Synchronous_Command'
+            offset: "00002064"            
+          - name: 'IOS_iop_callback'
+            offset: "0000206E"            
+          - name: 'IOS_double_buf_xfer'
+            offset: "000020FD"            
+          - name: 'IOS_do_buffer_breakup'
+            offset: "00002240"            
+          - name: 'IOS_CallDown_Request'
+            offset: "0000234E"            
+          - name: 'find_dcb'
+            offset: "00002397"            
+          - name: 'IOS_Send_Next_Command'
+            offset: "0000244B"            
+          - name: 'iosservice'
+            offset: "000024B9"            
+          - name: 'alloc_iop'
+            offset: "00002538"            
+          - name: 'get_dcb'
+            offset: "000025F9"            
+          - name: 'get_f_n_dcb'
+            offset: "00002626"            
+          - name: 'wait_10th_sec'
+            offset: "00002679"            
+          - name: 'ios_internal_request'
+            offset: "00002689"            
+          - name: 'ios_int_meet_io_criteria'
+            offset: "000026C2"            
+          - name: 'ios_meet_io_criteria'
+            offset: "000026D0"            
+          - name: '_IOS_CallAllAers'
+            offset: "00002998"            
+          - name: 'IOS_call_all_aers'
+            offset: "000029A4"            
+          - name: 'InsertVrp'
+            offset: "000029E5"            
+          - name: 'DeleteVrp'
+            offset: "000029F8"            
+          - name: 'WaitForPendingIO'
+            offset: "00002A2D"            
+          - name: 'IOSIdleStatus'
+            offset: "00002AA4"            
+          - name: 'IOS_Signal_Semaphore_No_Switch'
+            offset: "00002B7C"            
+          - name: 'IOS_Set_Async_Time_Out'
+            offset: "00002B94"            
+          - name: 'IOS_Exclusive_Access'
+            offset: "00002BA9"            
+          - name: 'IOS_dequeue_iop'
+            offset: "00002C2E"            
+          - name: 'IOS_enqueue_iop'
+            offset: "00002E07"            
+          - name: 'IOS_abort_queue'
+            offset: "00003089"            
+          - name: 'IOS_issue_request'
+            offset: "000030D9"            
+          - name: 'IOS_issue_request_sync'
+            offset: "000030DD"            
+          - name: 'IOS_request_callback'
+            offset: "000031B2"            
+          - name: 'IOSShellBroadcastHook'
+            offset: "00003206"            
+          - name: 'IOS_wait'
+            offset: "0000328C"            
+          - name: '_IOS_query_cd_activity'
+            offset: "000032C3"            
+          - name: '_IOS_query_udf_mount'
+            offset: "000032F9"            
+          - name: 'IOSTimer'
+            offset: "000033EC"            
+          - name: 'ios_timeout'
+            offset: "000035AE"            
+          - name: '_IOS_issue_drive_spindown_sync'
+            offset: "0000360E"            
+          - name: '_IOS_issue_drive_spindown'
+            offset: "0000361A"            
+          - name: 'IOS_issue_drive_spindown_sync'
+            offset: "00003626"            
+          - name: 'IOS_issue_drive_spindown'
+            offset: "00003642"            
+          - name: 'IOS_dealloc_Panic'
+            offset: "0000365E"            
+          - name: 'IsIndosSafe'
+            offset: "000036C0"            
+          - name: 'IOSDumpDCB'
+            offset: "00003738"            
+          - name: 'IOS_PnP_Device_Driver'
+            offset: "00003990"            
+          - name: 'ValidateRMMVols'
+            offset: "0000402B"            
+          - name: 'IOS_query_dev_remove'
+            offset: "00004068"            
+          - name: 'IOS_broadcast_remove_state'
+            offset: "00004114"            
+          - name: 'IOS_get_fn_logical_unit'
+            offset: "0000416F"            
+          - name: 'IOS_send_shell_broadcast'
+            offset: "000041CD"            
+          - name: 'IOS_dev_remove'
+            offset: "0000421E"            
+          - name: 'IOS_reenumerate_devices'
+            offset: "00004257"            
+          - name: 'IOS_update_reg_peripheral_data'
+            offset: "00004687"            
+          - name: 'IOS_make_devdesc_str'
+            offset: "000048DB"            
+          - name: 'IOS_read_registry'
+            offset: "00004936"            
+          - name: 'IOS_bin_to_ascii'
+            offset: "0000497C"            
+          - name: 'IOS_check_ACPI'
+            offset: "00004987"            
+          - name: 'IOS_create_child_devnode'
+            offset: "00004A2A"            
+          - name: 'IOSDoBootLog'
+            offset: "00004C8F"            
+          - name: 'IOS_check_io_pending'
+            offset: "00004D33"            
+          - name: 'IOSMapIORSToI24'
+            offset: "00004E06"            
+          - name: 'IOSMapIORSToI21'
+            offset: "00004E39"            
+          - name: '_IOS_SpinDownDrives'
+            offset: "00004E60"            
+          - name: '_IOS_PowerHandler'
+            offset: "00004F51"            
+          - name: '_IOS_CmApmPowerOff'
+            offset: "00005009"            
+          - name: '_IOS_CmApmPowerOn'
+            offset: "0000561C"            
+          - name: '_IOS_CmApmResumeStandby'
+            offset: "00005AF4"            
+          - name: '_IOS_CmApmResumePowerOff'
+            offset: "00005C00"            
+          - name: '_IOS_HandleCmApmMessage'
+            offset: "00005D39"            
+          - name: '_IOS_DumpDvtList'
+            offset: "00005ED9"            
+          - name: '_IOS_DumpDcbList'
+            offset: "00005FFD"            
+          - name: '__ACPI_SetTimingModeEx'
+            offset: "00006168"            
+          - name: '__ACPI_GetTimingModeEx'
+            offset: "00006170"            
+          - name: '__ACPI_GetIDEPMComplianceLevel'
+            offset: "00006178"            
+          - name: '__ACPI_FreeTaskFileBuffer'
+            offset: "00006180"            
+          - name: '_LCODE__ACPI_SetTimingMode'
+            offset: "00006188"            
+          - name: '_LCODE__ACPI_GetTimingMode'
+            offset: "00006190"            
+          - name: '_LCODE__ACPI_GetTaskFile'
+            offset: "00006198"            
+          - name: '_LCODE__HeapAllocate'
+            offset: "000061A0"            
+          - name: '_LCODE__Debug_Printf_Service'
+            offset: "000061A8"            
+          - name: '_LCODE_Schedule_Global_Event@8'
+            offset: "000061BC"            
+          - name: '_LCODE_Get_Boot_Flags'
+            offset: "000061D4"            
+          - name: '_LCODE__LinRegionLock'
+            offset: "000061DC"            
+          - name: '_LCODE__LinRegionUnLock'
+            offset: "000061E4"            
+          - name: '_LCODE__CONFIGMG_Get_Parent'
+            offset: "000061EC"            
+          - name: '_LCODE__CONFIGMG_Get_Private_DWord'
+            offset: "000061F4"            
+          - name: '_LCODE__CONFIGMG_Set_Private_DWord'
+            offset: "000061FC"            
+          - name: '_LCODE__CONFIGMG_Set_DevNode_PowerState'
+            offset: "00006204"            
+          - name: '_LCODE__CONFIGMG_Register_DevNode_For_Idle_Detection'
+            offset: "0000620C"            
+          - name: '__imp__ZwPowerInformation@20'
+            offset: "00006214"            
+          - name: 'WDMZwPowerInformation'
+            offset: "00006218"            
+          - name: '_BeginLockable_Debug_Flags'
+            offset: "00006224"            
+          - name: '_IOS_Get_Version'
+            offset: "00006228"            
+          - name: '_IOS_BD_Register_Device'
+            offset: "0000622C"            
+          - name: '_IOS_Find_Int13_Drive'
+            offset: "00006230"            
+          - name: '_IOS_Get_Device_List'
+            offset: "00006234"            
+          - name: '_IOS_SendCommand'
+            offset: "00006238"            
+          - name: '_IOS_BD_Command_Complete'
+            offset: "0000623C"            
+          - name: '_IOS_Synchronous_Command'
+            offset: "00006240"            
+          - name: '_IOS_Register'
+            offset: "00006244"            
+          - name: '_IOS_Requestor_Service'
+            offset: "00006248"            
+          - name: '_IOS_Exclusive_Access'
+            offset: "0000624C"            
+          - name: '_IOS_Send_Next_Command'
+            offset: "00006250"            
+          - name: '_IOS_Set_Async_Time_Out'
+            offset: "00006254"            
+          - name: '_IOS_Signal_Semaphore_No_Switch'
+            offset: "00006258"            
+          - name: '_IOSIdleStatus'
+            offset: "0000625C"            
+          - name: '_IOSMapIORSToI24'
+            offset: "00006260"            
+          - name: '_IOSMapIORSToI21'
+            offset: "00006264"            
+          - name: '_PrintLog'
+            offset: "00006268"            
+          - name: '_IOS_deregister'
+            offset: "0000626C"            
+          - name: '_IOS_wait'
+            offset: "00006270"            
+          - name: '__IOS_SpinDownDrives'
+            offset: "00006274"            
+          - name: '__IOS_query_udf_mount'
+            offset: "00006278"            
+          - name: 'IOS_DDB'
+            offset: "0000627C"            
+          - name: 'Current_BDD'
+            offset: "00006338"            
+          - name: '_vt'
+            offset: "00006588"            
+          - name: 'quick_mem_table'
+            offset: "00006594"            
+          - name: 'logical_drive_table'
+            offset: "00006698"            
+          - name: 'physical_drive_table'
+            offset: "00006700"            
+          - name: 'physical_floppy_table'
+            offset: "00006760"            
+          - name: 'SemTabInd'
+            offset: "00006780"            
+          - name: 'SemTab'
+            offset: "00006782"            
+          - name: 'SemTabSem'
+            offset: "000067A2"            
+          - name: 'MemSem'
+            offset: "000067A6"            
+          - name: 'MemBlockers'
+            offset: "000067AA"            
+          - name: 'IOSPanicHead'
+            offset: "000067AB"            
+          - name: 'CurrentDevNode'
+            offset: "000067AF"            
+          - name: 'I13Entry'
+            offset: "000067B3"            
+          - name: 'DblDriveMap'
+            offset: "000067B7"            
+          - name: 'ProtModeDblDrvMap'
+            offset: "000067BB"            
+          - name: 'mpDblHost'
+            offset: "000067BF"            
+          - name: 'mpStacHost'
+            offset: "000067D9"            
+          - name: 'IOS_Int13_Device_Chain'
+            offset: "000067F3"            
+          - name: 'IOS_CD_ENTRY'
+            offset: "000067F7"            
+          - name: 'IOSInitFlags'
+            offset: "0000680B"            
+          - name: 'LogFile'
+            offset: "0000680F"            
+          - name: 'IOSSpindownTimer'
+            offset: "00006810"            
+          - name: 'NumHardFiles'
+            offset: "00006814"            
+          - name: 'pDOSData'
+            offset: "00006815"            
+          - name: 'IOS_rm_flags'
+            offset: "00006FE0"            
+          - name: 'IOS_RM_Data'
+            offset: "00006FE4"            
+          - name: 'I13_Call_Back'
+            offset: "00006FE8"            
+          - name: 'I13_Orig_DOS_BIOS_13'
+            offset: "00006FEC"            
+          - name: 'IOS_Orig_V86_Int_15_Vec'
+            offset: "00006FF4"            
+          - name: 'I13_Hook_State'
+            offset: "00006FF8"            
+          - name: 'IOS_VHDIRQ_On'
+            offset: "00006FF9"            
+          - name: 'DCBMsg1'
+            offset: "000086A8"            
+          - name: 'DCBVendMsg'
+            offset: "00008EEF"            
+          - name: 'DCBPIDMsg'
+            offset: "00008F02"            
+          - name: 'DCBPNameMsg'
+            offset: "00008F16"            
+          - name: 'DCBMsg3'
+            offset: "00008F29"            
+          - name: 'DCBMsg3A'
+            offset: "00008F4B"            
+          - name: 'DRPStrTbl'
+            offset: "00008F82"            
+          - name: '_fIosCmApmTrace'
+            offset: "00009DE0"            
+          - name: '_PAEP_rpm_inquiry'
+            offset: "0000B618"            
+          - name: '_PAEP_rpm_change'
+            offset: "0000B61C"            
+          - name: '_PAEP_3mode_config'
+            offset: "0000B620"            
+      - num: "2"
+        name: "_LMGROUP"
+        offset: "00006160"
+        symbols:
+          - name: '@MSG_LAB'
+            offset: "00000000"            
+          - name: '@MSG_LDATA'
+            offset: "00000014"            
+      - num: "3"
+        name: "_IGROUP"
+        offset: "0000A390"
+        symbols:
+          - name: 'IOS_BD_Initialize'
+            offset: "00000000"            
+          - name: 'IOS_BD_Device_Inquiry'
+            offset: "00000021"            
+          - name: 'IOS_BD_Config_Phys_DCB'
+            offset: "00000052"            
+          - name: 'IOS_BD_Set_IRQ_Handler'
+            offset: "00000131"            
+          - name: 'IOS_Sys_Critical_Init'
+            offset: "000001A9"            
+          - name: 'IOS_Device_Init'
+            offset: "000004A0"            
+          - name: 'IOS_Set_RMPM'
+            offset: "000005DD"            
+          - name: 'IOS_Init_Complete'
+            offset: "00000736"            
+          - name: 'IOS_grow_shrink_heap'
+            offset: "0000083C"            
+          - name: 'UpdateI13Entry'
+            offset: "000008F8"            
+          - name: 'InitIniFile'
+            offset: "0000092C"            
+          - name: 'FreeIniFile'
+            offset: "000009F1"            
+          - name: 'SetupIniFile'
+            offset: "00000A26"            
+          - name: 'IsDriverSafe'
+            offset: "00000A3B"            
+          - name: 'CheckSafTbl'
+            offset: "00000A90"            
+          - name: 'GetCDInfo'
+            offset: "00000AB6"            
+          - name: 'IsNameInSec'
+            offset: "00000AD4"            
+          - name: 'GetAdapterInfo'
+            offset: "00000B1E"            
+          - name: 'GetSection'
+            offset: "00000B8E"            
+          - name: 'GetLine'
+            offset: "00000BD7"            
+          - name: 'Match'
+            offset: "00000CBE"            
+          - name: 'Normalize'
+            offset: "00000D0F"            
+          - name: 'IsTSRSafe'
+            offset: "00000D40"            
+          - name: 'IniTst'
+            offset: "00000D88"            
+          - name: 'IOS_GetSetLastBootFlag'
+            offset: "00000DA0"            
+          - name: 'IOS_LogUnsafeDriver'
+            offset: "00000E2D"            
+          - name: 'IOS_get_int13_vector'
+            offset: "00000E70"            
+          - name: 'GetIOSYSPtrs'
+            offset: "00000E7D"            
+          - name: 'IsDmDriverSafe'
+            offset: "00000F26"            
+          - name: 'IsEZDriveSafe'
+            offset: "00001037"            
+          - name: 'CheckMBRInt13'
+            offset: "000010F1"            
+          - name: 'ExamineInt13Chain'
+            offset: "0000118D"            
+          - name: 'CheckForBrokenInt13Drivers'
+            offset: "0000131E"            
+          - name: 'ExamineRmBlockList'
+            offset: "000013AD"            
+          - name: 'ExamineDblSpacedrvs'
+            offset: "0000158E"            
+          - name: 'ExamineRmBlockHooks'
+            offset: "000015EF"            
+          - name: 'SetHookState'
+            offset: "00001695"            
+          - name: 'GetCDSPtrs'
+            offset: "000016E3"            
+          - name: 'IOS_Get_System_Info'
+            offset: "00001759"            
+          - name: 'IOS_build_rm_dev_map'
+            offset: "0000180A"            
+          - name: 'IOS_process_late_int13_drives'
+            offset: "00001D0D"            
+          - name: 'IOS_do_int_25'
+            offset: "00001EBB"            
+          - name: 'IOS_find_cdrom_devices'
+            offset: "00001FE1"            
+          - name: 'IOS_build_aspi_cam_rmds'
+            offset: "0000203F"            
+          - name: 'IOS_hook_aspi'
+            offset: "00002BA1"            
+          - name: 'IOS_unhook_aspi'
+            offset: "00002BD9"            
+          - name: 'IOS_issue_aspi_adp_inq'
+            offset: "00002C0A"            
+          - name: 'IOS_issue_cam_path_inq'
+            offset: "00002C61"            
+          - name: 'IOS_aspi_map_hook'
+            offset: "00002CAA"            
+          - name: 'IOS_CAM_map_hook'
+            offset: "00002D02"            
+          - name: 'IOS_NCR_CAM_map_hook'
+            offset: "00002D63"            
+          - name: 'IOS_CAM_chain_hook'
+            offset: "00002DDA"            
+          - name: 'IOS_segoff_to_lin'
+            offset: "00002E20"            
+          - name: 'IOS_find_api_entry'
+            offset: "00002E3A"            
+          - name: 'IOSInt2AHook'
+            offset: "00002EAC"            
+          - name: 'IOS_int13_test_hook'
+            offset: "00002EDA"            
+          - name: 'IOS_aspi_test_hook'
+            offset: "00002F8E"            
+          - name: 'IOS_CAM_test_hook'
+            offset: "00002FFF"            
+          - name: 'HookOutMono'
+            offset: "00003068"            
+          - name: 'LoadInitDrivers'
+            offset: "000030F4"            
+          - name: 'SetupIOPath'
+            offset: "000031C9"            
+          - name: 'UpdateStacHostMap'
+            offset: "000031EC"            
+          - name: 'IOS_set_up_v86_area'
+            offset: "00003303"            
+          - name: 'IOS_free_v86_area'
+            offset: "0000337A"            
+          - name: 'RegisterInt13'
+            offset: "000033C8"            
+          - name: 'GetRMIRQs'
+            offset: "00003446"            
+          - name: 'GetTsrRMIRQs'
+            offset: "00003474"            
+          - name: 'InitLogFile'
+            offset: "000034A8"            
+          - name: 'FreeLogFile'
+            offset: "0000350D"            
+          - name: 'DelLogFile'
+            offset: "00003535"            
+          - name: 'DumpRMInfo'
+            offset: "0000356E"            
+          - name: 'PrintStr'
+            offset: "000037BC"            
+          - name: 'IOS_BD_Drv_Reg_Pkt'
+            offset: "00003824"            
+          - name: 'IOS_BD_fake_ice'
+            offset: "0000385C"            
+          - name: 'BD_VHIRQ_String'
+            offset: "000038E4"            
+          - name: 'HackSysIniName'
+            offset: "000038F1"            
+          - name: 'IOS_DMA_Buff_String'
+            offset: "000038FC"            
+          - name: 'IOS_force_pm_string'
+            offset: "0000390E"            
+          - name: 'IOS_big_mem_string'
+            offset: "0000391E"            
+          - name: 'IOS_Heap_Size_String'
+            offset: "0000392F"            
+          - name: 'IOS_Spindown_String'
+            offset: "0000393B"            
+          - name: 'ASPIName'
+            offset: "00003949"            
+          - name: 'ASPIEntry'
+            offset: "00003952"            
+          - name: 'ASPIHooked'
+            offset: "00003956"            
+          - name: 'SysVMhandle'
+            offset: "00003957"            
+          - name: 'BufferPointer'
+            offset: "0000395B"            
+          - name: 'BufSegOff'
+            offset: "0000395F"            
+          - name: 'SRBPointer'
+            offset: "00003963"            
+          - name: 'CAMEntry'
+            offset: "00003967"            
+          - name: 'IOSYSRmd'
+            offset: "0000396B"            
+          - name: 'CurrentUnitSpec'
+            offset: "0000396F"            
+          - name: 'CurRMDType'
+            offset: "00003973"            
+          - name: 'SCSITarget'
+            offset: "00003977"            
+          - name: 'SCSILun'
+            offset: "00003978"            
+          - name: 'CurHba'
+            offset: "00003979"            
+          - name: 'CurHbaID'
+            offset: "0000397A"            
+          - name: 'RelHba'
+            offset: "0000397B"            
+          - name: 'LowestHBA'
+            offset: "0000397C"            
+          - name: 'MaxHba'
+            offset: "0000397D"            
+          - name: 'RMDDriverEntries'
+            offset: "0000397E"            
+          - name: 'CurRMDInfoBlock'
+            offset: "0000397F"            
+          - name: 'PrevInfoBlock'
+            offset: "00003983"            
+          - name: 'CurIOSYSDriver'
+            offset: "00003987"            
+          - name: 'CAMExcludeMap'
+            offset: "0000398B"            
+          - name: 'IDMPointer'
+            offset: "0000398F"            
+          - name: 'LDMPointer'
+            offset: "00003993"            
+          - name: 'NextASPIEntry'
+            offset: "00003997"            
+          - name: 'IOSV86Alloc'
+            offset: "0000399B"            
+          - name: 'IOSINFInited'
+            offset: "0000399C"            
+          - name: 'IOSBadDriver'
+            offset: "0000399E"            
+          - name: 'QualifierMap'
+            offset: "0000399F"            
+          - name: 'ReadBias'
+            offset: "000039A3"            
+          - name: 'xlateVMHandle'
+            offset: "000039A7"            
+          - name: 'xlateV86seg'
+            offset: "000039AB"            
+          - name: 'xlateNonusedBytes'
+            offset: "000039AF"            
+          - name: 'xlateTotalSize'
+            offset: "000039B3"            
+          - name: 'RetryCount'
+            offset: "000039B7"            
+          - name: 'IOSDDB'
+            offset: "000039B8"            
+          - name: 'DblSpaceStr'
+            offset: "000039BC"            
+          - name: 'IOSYSTSR'
+            offset: "000039C8"            
+          - name: 'MBRint13'
+            offset: "000039CC"            
+          - name: 'MBRHookStart'
+            offset: "000039D5"            
+          - name: 'FileSysString'
+            offset: "000039D9"            
+          - name: 'ForceRMIOString'
+            offset: "00003A05"            
+          - name: 'ForcePMIOString'
+            offset: "00003A0F"            
+          - name: 'szLastBootPM'
+            offset: "00003A19"            
+          - name: 'BatDriveSpinDownString'
+            offset: "00003A28"            
+          - name: 'ACDriveSpinDownString'
+            offset: "00003A39"            
+          - name: 'szSysIniRMWarn'
+            offset: "00003A49"            
+          - name: 'SrcStr1'
+            offset: "00003E63"            
+          - name: 'CurrentBufPtr'
+            offset: "00003E7C"            
+      - num: "4"
+        name: "_PTEXT"
+        offset: "0000DF20"
+        symbols:
+          - name: 'IOS_BD_Register_Device'
+            offset: "0000003A"            
+          - name: 'IOS_Get_Device_List'
+            offset: "000000C7"            
+          - name: 'IOS_Find_Int13_Drive'
+            offset: "000000DD"            
+          - name: 'IOS_PM_API_Handler'
+            offset: "00000118"            
+          - name: 'IOS_Register'
+            offset: "00000190"            
+          - name: 'IOS_port_register'
+            offset: "00000440"            
+          - name: 'IOS_enumerate_scsi'
+            offset: "0000066D"            
+          - name: 'IOS_enumerate_linear'
+            offset: "00000805"            
+          - name: 'IOS_process_device'
+            offset: "00000903"            
+          - name: 'IOS_port_config'
+            offset: "00000A42"            
+          - name: 'IOS_call_aer'
+            offset: "00000B5C"            
+          - name: 'remove_dvt_from_chain'
+            offset: "00000B78"            
+          - name: 'IOS_init_inquiry_dcb'
+            offset: "00000BA5"            
+          - name: 'IOS_deregister'
+            offset: "00000BF2"            
+          - name: 'IOSIoctlTab'
+            offset: "00000C68"            
+          - name: 'IOS_sc_gen_ioctl'
+            offset: "00000CB8"            
+          - name: 'IOS_sc_is_removeable'
+            offset: "00000CFE"            
+          - name: 'IOS_sc_query_devnode'
+            offset: "00000D32"            
+          - name: 'IOS_sc_get_drv_map'
+            offset: "00000DB5"            
+          - name: 'IOS_sc_set_drv_map'
+            offset: "00000DDD"            
+          - name: 'IOS_sc_chk_Ioctl'
+            offset: "00000E73"            
+          - name: 'ios_get_drive_map_info'
+            offset: "00000F81"            
+          - name: 'IOS_sc_chk_query'
+            offset: "000010CC"            
+          - name: 'create_ddb'
+            offset: "00001110"            
+          - name: 'create_dcb'
+            offset: "000011E3"            
+          - name: 'IOS_destroy_ddb'
+            offset: "00001276"            
+          - name: 'IOS_destroy_ddb_internal'
+            offset: "00001283"            
+          - name: 'IOS_destroy_dcb'
+            offset: "0000139E"            
+          - name: 'IOS_destroy_device'
+            offset: "000013AB"            
+          - name: 'IOS_destroy_dcb_worker'
+            offset: "00001494"            
+          - name: 'IOS_delete_calldown_nodes'
+            offset: "000015DE"            
+          - name: 'IOS_unlink_dcb'
+            offset: "0000160D"            
+          - name: 'IOS_query_matches'
+            offset: "00001765"            
+          - name: 'insert_calldown'
+            offset: "000017C3"            
+          - name: 'associate_dcb'
+            offset: "0000186E"            
+          - name: 'IOS_query_remove'
+            offset: "00001935"            
+          - name: 'disassociate_dcb'
+            offset: "00001961"            
+          - name: 'IOS_device_removed'
+            offset: "000019BF"            
+          - name: 'IOS_device_arrived'
+            offset: "000019F0"            
+          - name: 'IOS_notify_drive_arrival'
+            offset: "00001A37"            
+          - name: 'IOS_notify_drive_removal'
+            offset: "00001A7B"            
+          - name: 'IOS_pick_drive_letter'
+            offset: "00001A9C"            
+          - name: 'IOS_find_ldm_ent'
+            offset: "00001BF0"            
+          - name: 'IOS_delete_ldm_ent'
+            offset: "00001C10"            
+          - name: 'IOS_broadcast_isp'
+            offset: "00001C52"            
+          - name: 'IOS_issue_init_complete'
+            offset: "00001C63"            
+          - name: 'IOS_Requestor_Service'
+            offset: "00001CF7"            
+          - name: 'IRS_Get_Caps'
+            offset: "00001DF1"            
+          - name: 'IRS_Delete_Restore_VRP'
+            offset: "00001F72"            
+          - name: 'IRS_Signal_RM_Handoff'
+            offset: "0000218C"            
+          - name: 'IRS_Query_Vol_Lock'
+            offset: "000021CA"            
+          - name: 'CheckHostDrives'
+            offset: "00002266"            
+          - name: 'IRS_Signal_Mount'
+            offset: "00002285"            
+          - name: 'IRS_Get_LogicalDrives'
+            offset: "000022CA"            
+          - name: 'IRS_get_f_n_char'
+            offset: "0000237A"            
+          - name: 'IRS_Is_Drv_Comp'
+            offset: "000023F2"            
+          - name: 'IOS_V86_API_Handler'
+            offset: "0000249C"            
+          - name: 'IOSV86GetDrvInf'
+            offset: "000024CE"            
+          - name: 'GetOrigI13'
+            offset: "00002519"            
+          - name: 'FindLDMEntry'
+            offset: "00002534"            
+          - name: 'IOSMonoHook'
+            offset: "00002555"            
+          - name: 'LoadCleanUp'
+            offset: "00002574"            
+          - name: 'IOSUnLoadDrivers'
+            offset: "000025C4"            
+          - name: 'IOSNewDevNode'
+            offset: "00002624"            
+          - name: 'IOSLoadDrivers'
+            offset: "000026AC"            
+          - name: 'APIX_hack'
+            offset: "000027AC"            
+          - name: 'LoadDriver'
+            offset: "00002875"            
+          - name: 'IOSInitDrivers'
+            offset: "00002965"            
+          - name: 'IOSLoadInitPD'
+            offset: "00002A2F"            
+          - name: 'CheckForceLoad'
+            offset: "00002BBC"            
+          - name: 'UnMarkExistingDCBs'
+            offset: "00002C14"            
+          - name: 'ConfigDriver'
+            offset: "00002C31"            
+          - name: 'ReleaseLoadBuf'
+            offset: "00002C7B"            
+          - name: 'LoadInitIOSDrivers'
+            offset: "00002CC0"            
+          - name: 'CheckDup'
+            offset: "00002CE4"            
+          - name: 'IOS_strcmp'
+            offset: "00002D24"            
+          - name: 'IOS_strcpy'
+            offset: "00002D3F"            
+          - name: 'ToLower'
+            offset: "00002D53"            
+          - name: 'IOS_mem_error'
+            offset: "00002D72"            
+          - name: 'il_file_err'
+            offset: "00002D8D"            
+          - name: 'il_load_err'
+            offset: "00002DA9"            
+          - name: 'FindDblDrives'
+            offset: "00002DC5"            
+          - name: 'IOS_Devioctl_Handler'
+            offset: "00002F04"            
+          - name: 'IOSDIOCTL_GetSpinDownThresholds'
+            offset: "00002F38"            
+          - name: 'IOSDIOCTL_SetSpinDownThresholds'
+            offset: "00002F84"            
+          - name: '_IOS_fPowerPolicy'
+            offset: "00002FD0"            
+          - name: '_IOS_SetPowerCapabilitiesSpindown'
+            offset: "00003057"            
+          - name: '_IOS_GetSpindownTimeoutFromPolicy'
+            offset: "0000312B"            
+          - name: '_IOS_SetDdbAcpiBlock'
+            offset: "000032AC"            
+          - name: '_IOS_OnConfigLock'
+            offset: "0000346B"            
+          - name: '_IOS_OnConfigUnlock'
+            offset: "000034E7"            
+          - name: '_IOS_CmApmStandby'
+            offset: "00003563"            
+          - name: '_IOS_RecordpDcbInDevnode'
+            offset: "0000380F"            
+          - name: '_IOS_RegisterIdleDetection'
+            offset: "00003920"            
+          - name: '_IOS_UpdateSpindownTimers'
+            offset: "00003ACE"            
+          - name: '_IOS_OnPowerBroadcast'
+            offset: "00003B59"            
+          - name: '_IOS_FreeTaskFileBuffer'
+            offset: "00003BF9"            
+      - num: "5"
+        name: "_PDATA"
+        offset: "0000E450"
+        symbols:
+          - name: '_BatDriveSpinDownThreshold'
+            offset: "00000000"            
+          - name: '_ACDriveSpinDownThreshold'
+            offset: "00000004"            
+          - name: 'PowerStatus'
+            offset: "00000008"            
+          - name: 'Novpowerd'
+            offset: "0000000E"            
+          - name: 'APIX_string'
+            offset: "0000000F"            
+          - name: 'TargetString'
+            offset: "00000018"            
+          - name: 'LUNString'
+            offset: "00000025"            
+          - name: 'RevlevelString'
+            offset: "0000002D"            
+          - name: 'ProductIdString'
+            offset: "0000003B"            
+          - name: 'VendorIdString'
+            offset: "00000045"            
+          - name: 'DeviceTypeString'
+            offset: "00000052"            
+          - name: 'DeviceDescString'
+            offset: "0000005D"            
+          - name: 'RemovableString'
+            offset: "00000068"            
+          - name: 'LetterString'
+            offset: "00000072"            
+          - name: 'Int13String'
+            offset: "0000008F"            
+          - name: 'PModeInt13Str'
+            offset: "00000095"            
+          - name: 'UserLetterString'
+            offset: "000000A0"            
+          - name: 'ForceLoadString'
+            offset: "000000BA"            
+          - name: 'SetupFlagsString'
+            offset: "000000C6"            
+          - name: 'SetupPathString'
+            offset: "000000D1"            
+          - name: 'CDSTab'
+            offset: "000000FB"            
+          - name: 'DriveNumber'
+            offset: "0000017B"            
+          - name: 'RegDataCnt'
+            offset: "0000017C"            
+          - name: 'RegData'
+            offset: "00000180"            
+          - name: 'current_dvt'
+            offset: "00000182"            
+          - name: 'current_ddb'
+            offset: "00000186"            
+          - name: 'current_bi_flags'
+            offset: "0000018A"            
+          - name: 'current_lgb'
+            offset: "0000018B"            
+          - name: 'current_lgn'
+            offset: "0000018F"            
+          - name: 'PassCnt'
+            offset: "00000190"            
+          - name: 'BL_Initing'
+            offset: "00000191"            
+          - name: 'BL_InitSuccess'
+            offset: "0000019A"            
+          - name: 'BL_InitFailure'
+            offset: "000001A8"            
+          - name: 'IoDirFullPath'
+            offset: "000001B6"            
+          - name: 'IoDirFullPathEndPtr'
+            offset: "00000236"            
+          - name: 'DTAbuffer'
+            offset: "0000023A"            
+          - name: 'IoSubdir'
+            offset: "0000033A"            
+          - name: 'FileSpec'
+            offset: "00000343"            
+          - name: 'MiniPortSpec'
+            offset: "00000349"            
+          - name: 'DriverNameBuf'
+            offset: "0000034F"            
+          - name: 'IOSMiniportsInited'
+            offset: "00000358"            
+          - name: 'LoadBufPtr'
+            offset: "00000359"            
+          - name: 'IOSPortVector'
+            offset: "0000035D"            
+          - name: 'IOSPortDDB'
+            offset: "00000361"            
+          - name: 'IOSPortHandle'
+            offset: "00000365"            
+          - name: 'base_logical_drive'
+            offset: "00000369"            
+          - name: 'next_logical_drive'
+            offset: "0000036A"            
+          - name: 'disk_count'
+            offset: "0000036B"            
+          - name: 'floppy_count'
+            offset: "0000036C"            
+          - name: 'tape_count'
+            offset: "0000036D"            
+          - name: 'prnt_count'
+            offset: "0000036E"            
+          - name: 'proc_count'
+            offset: "0000036F"            
+          - name: 'worm_count'
+            offset: "00000370"            
+          - name: 'cdrm_count'
+            offset: "00000371"            
+          - name: 'scan_count'
+            offset: "00000372"            
+          - name: 'omem_count'
+            offset: "00000373"            
+          - name: 'juke_count'
+            offset: "00000374"            
+          - name: 'comm_count'
+            offset: "00000375"            
+          - name: 'unkn_count'
+            offset: "00000376"            
+          - name: 'current_adapter_node'
+            offset: "00000377"            
+          - name: 'inquiry_dcb'
+            offset: "0000037B"            
+          - name: 'LastDrive'
+            offset: "0000037F"            
+          - name: 'g_bDoRMDriverWarn'
+            offset: "00000380"            
+          - name: 'MPDLoadNode'
+            offset: "00000381"            
+          - name: 'CurrentLoadNode'
+            offset: "000003A5"            
+          - name: 'MonoHookTable'
+            offset: "000003A9"            
+          - name: 'IosLogPath'
+            offset: "00000411"            
+          - name: 'IosLogName'
+            offset: "00000491"            
+          - name: 'IosLogHandle'
+            offset: "00000499"            
+          - name: 'inquiry_type_table'
+            offset: "00000500"            
+          - name: 'IOSUnsafeType'
+            offset: "0000138C"            
+          - name: 'IOSUnsafeName'
+            offset: "0000138D"            
+          - name: 'IOSReadyForDevnode'
+            offset: "000013AB"            
+      - num: "6"
+        name: "_DBOGROUP"
+        offset: "0000EAD0"
+        symbols:
+          - name: 'IOS_Real_Mode_Init'
+            offset: "00000000"            
+          - name: 'SetNoExtInt13Flag'
+            offset: "00000109"            
+          - name: 'GetIOSYSNumFlop'
+            offset: "00000169"            
+          - name: 'IOS_get_device_info'
+            offset: "00000184"            
+          - name: 'IOS_build_i13_dev_map'
+            offset: "00000342"            
+      - num: "7"
+        name: "_RARE"
+        offset: "00000000"
+        symbols:
+          - name: 'IsStacPresent'
+            offset: "00000000"            
+          - name: '_BeginLockable'
+            offset: "00000000"            
+          - name: '_EndLockable'
+            offset: "00000000"            
+          - name: 'GetVolCompressInfo'
+            offset: "00000018"            
+          - name: 'GetBadDriverInfo'
+            offset: "00000050"            
+          - name: 'DoDriveRecompute'
+            offset: "00000079"            

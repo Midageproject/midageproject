@@ -1,0 +1,595 @@
+filename: "vmm32/vmouse.vxd"
+#TODO: bring up more details from symdeb
+binary: "vmm32/vmouse.vxd"
+description: ""
+note: ""
+appearances:
+  - version: "system"
+    tree: []
+    segments:
+      - num: "1"
+        name: "_LGROUP"
+        offset: "00001400"
+        symbols:
+          - name: 'VMD_Control'
+            offset: "00000000"            
+          - name: 'VMDDEBUG_Debug_Query'
+            offset: "00000070"            
+          - name: 'VMDDEBUG_Dump_VM_Info'
+            offset: "000001EC"            
+          - name: 'VMD_Slave_Mask_Change_Proc'
+            offset: "000002F0"            
+          - name: 'VMD_Mask_Change_Proc'
+            offset: "00000304"            
+          - name: 'MakeQueueReady'
+            offset: "00000324"            
+          - name: 'VMD_Post_Absolute_Pointer_Message'
+            offset: "0000033C"            
+          - name: 'VMD_Post_Pointer_Message'
+            offset: "0000039C"            
+          - name: 'BUSMOUSE_Hw_Int_Proc'
+            offset: "0000042C"            
+          - name: 'VAD_PM_Int_15_Emulation'
+            offset: "000004C0"            
+          - name: 'VAD_Int_15_Emulation'
+            offset: "000004E4"            
+          - name: 'VAD_INT'
+            offset: "000005F8"            
+          - name: 'VKD_Send_Data'
+            offset: "000008CB"            
+          - name: 'INPORT_Hw_Int_Proc_Secondary_Base'
+            offset: "00000928"            
+          - name: 'INPORT_Hw_Int_Proc_Primary_Base'
+            offset: "00000930"            
+          - name: 'INPORT_Hw_Int_Proc'
+            offset: "00000936"            
+          - name: 'Serial_Hw_Int_Proc'
+            offset: "00000998"            
+          - name: 'My_Install_Mult_IO_Handlers'
+            offset: "00000AC0"            
+          - name: 'VKD_Send_Cmd'
+            offset: "00000B34"            
+          - name: '_VMD_Get_Version'
+            offset: "00000B64"            
+          - name: '_VMD_Set_Mouse_Type'
+            offset: "00000B68"            
+          - name: '_VMD_Get_Mouse_Owner'
+            offset: "00000B6C"            
+          - name: '_VMD_Post_Pointer_Message'
+            offset: "00000B70"            
+          - name: '_VMD_Set_Cursor_Proc'
+            offset: "00000B74"            
+          - name: '_VMD_Call_Cursor_Proc'
+            offset: "00000B78"            
+          - name: '_VMD_Set_Mouse_Data'
+            offset: "00000B7C"            
+          - name: '_VMD_Get_Mouse_Data'
+            offset: "00000B80"            
+          - name: '_VMD_Manipulate_Pointer_Message'
+            offset: "00000B84"            
+          - name: '_VMD_Set_Middle_Button'
+            offset: "00000B88"            
+          - name: '_VMD_Enable_Disable_Mouse_Events'
+            offset: "00000B8C"            
+          - name: '_VMD_Post_Absolute_Pointer_Message'
+            offset: "00000B90"            
+          - name: 'VMOUSE_DDB'
+            offset: "00000B94"            
+          - name: 'VMD_CB_Offset'
+            offset: "00000BE4"            
+          - name: 'VMD_Owner'
+            offset: "00000BE8"            
+          - name: 'VMD_Mouse_Type'
+            offset: "00000BEC"            
+          - name: 'VMD_Mouse_IRQ'
+            offset: "00000BED"            
+          - name: 'VMD_Button_Count'
+            offset: "00000BEE"            
+          - name: 'VMD_PortNumber'
+            offset: "00000BEF"            
+          - name: 'NewShell'
+            offset: "00000BF0"            
+          - name: 'VMD_Wheel_Present'
+            offset: "00000BF1"            
+          - name: 'VKD_IRQ_Handle'
+            offset: "00000BF2"            
+          - name: 'VMDMESSG_EasyBall_Ports'
+            offset: "00001120"            
+          - name: 'VMDMESSG_EasyBall_Active'
+            offset: "00001122"            
+          - name: 'VKD_VerOK'
+            offset: "00001134"            
+          - name: 'VAD_Next_I15_CS'
+            offset: "0000113C"            
+          - name: 'VAD_Next_I15_EIP'
+            offset: "00001140"            
+          - name: 'VAD_IRQ_Handle'
+            offset: "00001144"            
+          - name: 'VAD_Ballpoint_ID'
+            offset: "00001148"            
+          - name: 'VAD_Z_Mode'
+            offset: "0000114A"            
+          - name: 'VAD_BytesInPacket'
+            offset: "0000114C"            
+          - name: 'LastPowerEventTime'
+            offset: "0000114E"            
+          - name: 'VAD_Reset_Pending'
+            offset: "00001152"            
+          - name: 'PS2_PWR_RESUME_SSYNC'
+            offset: "00001154"            
+          - name: 'V_710_Status'
+            offset: "00001156"            
+          - name: 'VAD_Exists'
+            offset: "0000115B"            
+          - name: 'VADHotPlug'
+            offset: "0000115C"            
+          - name: 'VAD_CB_Offset'
+            offset: "00001164"            
+          - name: 'VAD_Initialized'
+            offset: "00001169"            
+          - name: 'VAD_Internal_Int_15'
+            offset: "0000116A"            
+          - name: 'VAD_Exiting'
+            offset: "0000116B"            
+          - name: 'VAD_exit_init'
+            offset: "0000116C"            
+          - name: 'VAD_Packet_Count'
+            offset: "0000116D"            
+          - name: 'VAD_Data'
+            offset: "0000116E"            
+          - name: 'VK_D_QFlag'
+            offset: "00001172"            
+          - name: 'Vid_I10_OldVector'
+            offset: "00001250"            
+          - name: 'Vid_Stub_I10_Vector'
+            offset: "00001254"            
+          - name: 'INPORT_Chip_Version'
+            offset: "00001258"            
+          - name: 'ZoomMouse_Ports'
+            offset: "0000125C"            
+          - name: 'Real_IMIH'
+            offset: "00001298"            
+          - name: 'Handler_3c4'
+            offset: "0000129C"            
+          - name: 'Handler_3c5'
+            offset: "000012A0"            
+          - name: 'Handler_3ce'
+            offset: "000012A4"            
+          - name: 'Handler_3cf'
+            offset: "000012A8"            
+          - name: 'Handler_6845'
+            offset: "000012AC"            
+          - name: 'Addr_6845'
+            offset: "000012B0"            
+      - num: "2"
+        name: "_IGROUP"
+        offset: "00001A40"
+        symbols:
+          - name: 'VMD_Sys_Critical_Init'
+            offset: "00000000"            
+          - name: 'My_Virtualize_IRQ'
+            offset: "0000006A"            
+          - name: 'My_Hook_V86_Int_Chain'
+            offset: "00000098"            
+          - name: 'VMD_Int_11h_Emulation'
+            offset: "000000D8"            
+          - name: 'VMD_Device_Init'
+            offset: "000000F4"            
+          - name: 'VMD_Init_Complete'
+            offset: "00000192"            
+          - name: 'VMDINT33_Sys_Critical_Init'
+            offset: "000001A8"            
+          - name: 'VMDINI_Device_Init'
+            offset: "0000024C"            
+          - name: 'VMDINI_Post_Init'
+            offset: "000003D2"            
+          - name: 'VMDCURSR_Device_Init'
+            offset: "0000045B"            
+          - name: 'Cursor_Device_Init'
+            offset: "0000050C"            
+          - name: 'VAD_exit_init_Ini'
+            offset: "000006EC"            
+      - num: "3"
+        name: "_PTEXT"
+        offset: "000073C0"
+        symbols:
+          - name: 'VMD_Set_Device_Focus'
+            offset: "00000000"            
+          - name: 'VMD_Set_Device_Focus_Event'
+            offset: "0000006F"            
+          - name: 'VMD_Destroy_VM'
+            offset: "000000BD"            
+          - name: 'VMD_Get_Version'
+            offset: "000000E9"            
+          - name: 'VMD_Set_Mouse_Type'
+            offset: "000000FE"            
+          - name: 'VMD_Get_Mouse_Owner'
+            offset: "0000011B"            
+          - name: 'VMDINT33_Sys_Critical_Exit'
+            offset: "0000012C"            
+          - name: 'VMDINT33_Int_33h'
+            offset: "00000140"            
+          - name: 'VMDINT33_Service_Not_Implemented'
+            offset: "00000175"            
+          - name: 'MouseIRQReset'
+            offset: "00000189"            
+          - name: 'VMDINT33_Mouse_Reset_And_Status'
+            offset: "000001C4"            
+          - name: 'VMDINT33_Show_Cursor'
+            offset: "000001F0"            
+          - name: 'VMDINT33_Hide_Cursor'
+            offset: "00000224"            
+          - name: 'VMDINT33_Get_Mouse_Position_Status'
+            offset: "00000249"            
+          - name: 'VMDINT33_Set_Mouse_Position'
+            offset: "00000268"            
+          - name: 'VMDINT33_Get_Button_Press_Information'
+            offset: "000002A2"            
+          - name: 'VMDINT33_Get_Button_Release_Information'
+            offset: "000002E8"            
+          - name: 'VMDINT33_Set_Horizontal_Cursor_Range'
+            offset: "0000032F"            
+          - name: 'VMDINT33_Set_Vertical_Cursor_Range'
+            offset: "00000356"            
+          - name: 'VMDINT33_Read_Motion_Counters'
+            offset: "0000037D"            
+          - name: 'VMDINT33_Set_Interrupt_Subroutine'
+            offset: "00000396"            
+          - name: 'VMDINT33_Enable_Lightpen_Emulation'
+            offset: "000003CE"            
+          - name: 'VMDINT33_Disable_Lightpen_Emulation'
+            offset: "000003DA"            
+          - name: 'VMDINT33_Set_Mickey_Pixel_Ratio'
+            offset: "000003E6"            
+          - name: 'VMDINT33_Set_Conditional_Off'
+            offset: "00000408"            
+          - name: 'VMDINT33_Set_DoubleSpeed_Threshold'
+            offset: "0000043E"            
+          - name: 'VMDINT33_Swap_Interrupt_Subroutines'
+            offset: "00000447"            
+          - name: 'VMDINT33_Get_Driver_Storage_Requirements'
+            offset: "00000474"            
+          - name: 'VMDINT33_Save_Driver_State'
+            offset: "00000490"            
+          - name: 'VMDINT33_Restore_Driver_State'
+            offset: "000004B6"            
+          - name: 'VMDINT33_Set_Alternate_User_Handler'
+            offset: "000004DE"            
+          - name: 'VMDINT33_Get_Alternate_User_Handler'
+            offset: "00000514"            
+          - name: 'VMDINT33_Set_Mouse_Sensitivity'
+            offset: "00000551"            
+          - name: 'VMDINT33_Get_Mouse_Sensitivity'
+            offset: "0000059B"            
+          - name: 'VMDINT33_Set_Mouse_Interrupt_Rate'
+            offset: "000005BA"            
+          - name: 'VMDINT33_Set_CRT_Page_Number'
+            offset: "000005C3"            
+          - name: 'VMDINT33_Get_CRT_Page_Number'
+            offset: "000005DE"            
+          - name: 'VMDINT33_Disable_Mouse_Driver'
+            offset: "000005F3"            
+          - name: 'VMDINT33_Enable_Mouse_Driver'
+            offset: "00000612"            
+          - name: 'VMDINT33_Software_Reset'
+            offset: "0000062C"            
+          - name: 'VMDINT33_Set_Language_Number'
+            offset: "0000064D"            
+          - name: 'VMDINT33_Get_Language_Number'
+            offset: "00000662"            
+          - name: 'VMDINT33_Get_Driver_Information'
+            offset: "00000673"            
+          - name: 'VMDINT33_Get_Mouse_Information'
+            offset: "00000699"            
+          - name: 'VMDINT33_Get_Maximum_Virtual_Coordinates'
+            offset: "000006CC"            
+          - name: 'VMDINT33_Get_Text_Masks_And_Raw_Mickeys'
+            offset: "000006ED"            
+          - name: 'VMDINT33_Set_Video_Mode'
+            offset: "00000717"            
+          - name: 'VMDINT33_Enumerate_Video_Modes'
+            offset: "00000772"            
+          - name: 'VMDINT33_Get_Cursor_Hot_Spot'
+            offset: "000007AD"            
+          - name: 'VMDINT33_Bound_Virtual_Screen'
+            offset: "000007D7"            
+          - name: 'VMDINT33_Granularize_Virtual_Coordinate'
+            offset: "0000081A"            
+          - name: 'VMDINT33_Find_Alternate_User_Handler'
+            offset: "00000867"            
+          - name: 'VMDINT33_Compute_Sensitivity_Factor'
+            offset: "000008A8"            
+          - name: 'VMDINT33_VM_Init'
+            offset: "000008D2"            
+          - name: 'VMD_Reset_Control_Block'
+            offset: "00000908"            
+          - name: 'VMD_Set_Mouse_Data'
+            offset: "000009C2"            
+          - name: 'VMD_API_Proc'
+            offset: "000009FA"            
+          - name: 'VMD_Update_Mouse_State_API'
+            offset: "00000B24"            
+          - name: 'VMD_UMSA_Event'
+            offset: "00000BCC"            
+          - name: 'VMD_Manipulate_Pointer_Message'
+            offset: "00000BF6"            
+          - name: 'VMDMESSG_Post_Pointer_Message_Event'
+            offset: "00000C00"            
+          - name: 'VMD_Convert_Absolute_To_Pixels'
+            offset: "00000D7A"            
+          - name: 'VMD_Convert_Abs_Pixels_Mickeys'
+            offset: "00000DE7"            
+          - name: 'VMD_Absolute_Mouse_Message'
+            offset: "00000E14"            
+          - name: 'VMD_Set_Middle_Button'
+            offset: "00000F4C"            
+          - name: 'VMD_Enable_Disable_Mouse_Events'
+            offset: "00000F55"            
+          - name: 'VMDMESSG_Set_Button_Status'
+            offset: "00000F7C"            
+          - name: 'VMDMESSG_Test_Button_Status_Change'
+            offset: "00000FB0"            
+          - name: 'VMDMESSG_Scale_Counts'
+            offset: "00001024"            
+          - name: 'VMD_Convert_Mickeys_Pixels'
+            offset: "00001080"            
+          - name: 'VMD_Convert_Pixels_Mickeys'
+            offset: "000010CC"            
+          - name: 'VMDMESSG_Call_User_Callback'
+            offset: "00001104"            
+          - name: 'VMDMESSG_Call_USER_Mouse_Event'
+            offset: "0000117C"            
+          - name: 'VMDMESSG_Reset_Message_State'
+            offset: "00001221"            
+          - name: 'VMD_Get_Mouse_Data'
+            offset: "0000123D"            
+          - name: 'PS2_Create_VM'
+            offset: "00001264"            
+          - name: 'PS2_System_Exit'
+            offset: "00001289"            
+          - name: 'VAD_Do_Reset'
+            offset: "0000136B"            
+          - name: 'VAD_BIOS_Far_Call'
+            offset: "000013C8"            
+          - name: 'VMDINI_VM_Init'
+            offset: "00001488"            
+          - name: 'ParseMouseType'
+            offset: "000014BB"            
+          - name: 'VMDCURSR_System_Exit'
+            offset: "0000154C"            
+          - name: 'VideoOldSetTextCursor'
+            offset: "00001571"            
+          - name: 'VideoOldSetGraphicsCursor'
+            offset: "000015CF"            
+          - name: 'VMD_Set_Cursor_Proc'
+            offset: "00001648"            
+          - name: 'VMD_Call_Cursor_Proc'
+            offset: "000016B3"            
+          - name: 'VMDCURSR_Int_10h'
+            offset: "000016E9"            
+          - name: 'VMD_Int_10_Mode_Switch'
+            offset: "0000175C"            
+          - name: 'VMD_Int_10_Mode_Change_Start'
+            offset: "0000177C"            
+          - name: 'VMD_Int_10_Mode_Sw_Done'
+            offset: "00001796"            
+          - name: 'CheckInt10Notifications'
+            offset: "00001821"            
+          - name: 'ConfigureVideoSupport'
+            offset: "0000182B"            
+          - name: 'UpdateDMI'
+            offset: "000018FC"            
+          - name: 'SetDefaultPointer'
+            offset: "00001936"            
+          - name: 'VMDCURSR_SetTextCur'
+            offset: "0000196F"            
+          - name: 'VMDCURSR_SetGraphicsCur'
+            offset: "000019A9"            
+          - name: 'VerifyGraphicsCursor'
+            offset: "000019F5"            
+          - name: 'Call10'
+            offset: "00001A60"            
+          - name: 'VerifyTextCursor'
+            offset: "00001AAC"            
+          - name: 'PerformLCDText'
+            offset: "00001AB6"            
+          - name: 'PerformLCDGraphics'
+            offset: "00001ABF"            
+          - name: 'RemoveCursorTrail'
+            offset: "00001AC8"            
+          - name: 'SetTrailLength'
+            offset: "00001AD1"            
+          - name: 'CursorProc'
+            offset: "00001ADC"            
+          - name: 'QueryDisplayModeProc'
+            offset: "00001B0A"            
+          - name: 'SetConditionalReg'
+            offset: "00001B1E"            
+          - name: 'SetDisplayModeProc'
+            offset: "00001B55"            
+          - name: 'SDM_Special'
+            offset: "00001B87"            
+          - name: 'SetCurrentdmi'
+            offset: "00001BB1"            
+          - name: 'scd_graphics'
+            offset: "00001CD0"            
+          - name: 'scd_skip10'
+            offset: "00001DC5"            
+          - name: 'GetDisplayModeInfoProc'
+            offset: "00001F2B"            
+          - name: 'SetTextCur'
+            offset: "00001F6D"            
+          - name: 'SetGraphicsCur'
+            offset: "00001FC2"            
+          - name: 'CheckInverse'
+            offset: "00002004"            
+          - name: 'MoveMask'
+            offset: "00002044"            
+          - name: 'RemoveCur'
+            offset: "0000208A"            
+          - name: 'draw_graphics'
+            offset: "000020D1"            
+          - name: 'Erase_GraphicsCursor'
+            offset: "0000214F"            
+          - name: 'EraseOldPointer'
+            offset: "0000217A"            
+          - name: 'CopyScreenToScrSave'
+            offset: "000021B4"            
+          - name: 'CopyScreenToScrSave1'
+            offset: "000021F8"            
+          - name: 'CopyPtrSaveToScreen'
+            offset: "000022DC"            
+          - name: 'CopyPtrSaveToScreen1'
+            offset: "00002328"            
+          - name: 'CopyPtrSaveToScrSave'
+            offset: "00002360"            
+          - name: 'CopyPtrSaveToScrSave1'
+            offset: "000023AC"            
+          - name: 'CopyScrSaveToScreen'
+            offset: "000023F0"            
+          - name: 'CopyScrSaveToScreen1'
+            offset: "0000243C"            
+          - name: 'CopyScrSaveToPtrSave'
+            offset: "00002478"            
+          - name: 'CopyScrSaveToPtrSave1'
+            offset: "000024C4"            
+          - name: 'GetScrBuffOffset'
+            offset: "00002510"            
+          - name: 'GetScreenOffset'
+            offset: "000025A0"            
+          - name: 'PutNormal'
+            offset: "000025D4"            
+          - name: 'PutEGA'
+            offset: "000025F4"            
+          - name: 'PutVga'
+            offset: "000026B8"            
+          - name: 'PutPointerInScrSave'
+            offset: "000026EB"            
+          - name: 'PutPointerInScrSave1'
+            offset: "00002738"            
+          - name: 'GetOffsetIntoScrSave'
+            offset: "00002774"            
+          - name: 'CopyBufferToScreen'
+            offset: "000027C0"            
+          - name: 'SetState'
+            offset: "00002895"            
+          - name: 'RestoreState'
+            offset: "00002928"            
+          - name: 'RotateMasks'
+            offset: "000029B1"            
+          - name: 'rotLeft'
+            offset: "00002A03"            
+          - name: 'rotRight'
+            offset: "00002A30"            
+          - name: 'MoveCur'
+            offset: "00002A57"            
+          - name: 'BuildDrawData'
+            offset: "00002C0A"            
+          - name: 'ResetCurDriver'
+            offset: "00002C89"            
+          - name: 'SaveRestoreStateProc'
+            offset: "00002E32"            
+          - name: 'SetDisplayPageProc'
+            offset: "00002E52"            
+          - name: 'GetTextAddress'
+            offset: "00002E71"            
+          - name: 'QueryMemoryProc'
+            offset: "00002E83"            
+          - name: 'SetCurTrail'
+            offset: "00002E97"            
+          - name: 'Serial_Device_Init'
+            offset: "00002EAC"            
+          - name: 'Inform_VCD_About_Mouse'
+            offset: "00002FF7"            
+          - name: 'Install_Mouse_Handler'
+            offset: "0000307D"            
+          - name: 'SearchForSerialMouse'
+            offset: "00003143"            
+          - name: 'SERMOUSE_Test_IO_Base'
+            offset: "00003169"            
+          - name: 'Serial_TestLoop'
+            offset: "0000321F"            
+          - name: 'Serial_Reset_Hardware'
+            offset: "00003455"            
+          - name: 'Serial_Disable'
+            offset: "00003487"            
+          - name: 'INPORT_Device_Init'
+            offset: "000034C8"            
+          - name: 'INPORT_Hardware_Detect'
+            offset: "00003579"            
+          - name: 'INPORT_Hardware_Detect_Base_Address'
+            offset: "00003618"            
+          - name: 'INPORT_Hardware_Detect_IRQ_Number'
+            offset: "0000364C"            
+          - name: 'INPORT_Reset_Hardware'
+            offset: "000036BC"            
+          - name: 'Inport_Disable'
+            offset: "000036D8"            
+          - name: 'Release_IRQ'
+            offset: "000036E9"            
+          - name: 'BUSMOUSE_Device_Init'
+            offset: "00003701"            
+          - name: 'BUSMOUSE_Hardware_Detect'
+            offset: "000037A8"            
+          - name: 'BUSMOUSE_Disable'
+            offset: "00003817"            
+          - name: 'PS2_Device_Init'
+            offset: "0000382D"            
+          - name: 'PS2_Reset'
+            offset: "00003D60"            
+          - name: 'PS2_Disable'
+            offset: "00003DA0"            
+          - name: 'VMD_Enable_Keyboard'
+            offset: "00003E45"            
+          - name: 'VMD_Disable_Keyboard'
+            offset: "00003E90"            
+          - name: 'VMD_Hardware_Init'
+            offset: "00003EE9"            
+          - name: 'VMD_New_DevNode'
+            offset: "00003FBD"            
+          - name: 'VMD_NextInstance'
+            offset: "000040FD"            
+          - name: 'GetEntryFromReg'
+            offset: "0000415F"            
+          - name: '_VMD_PnP_Driver'
+            offset: "00004191"            
+      - num: "4"
+        name: "_PDATA"
+        offset: "00007540"
+        symbols:
+          - name: 'BallPoint_ID'
+            offset: "00000000"            
+          - name: 'GlobalFlags'
+            offset: "00000002"            
+          - name: 'VMDINT33_Profile_Count'
+            offset: "00000038"            
+          - name: 'VMDINT33_Profile_Table'
+            offset: "0000003C"            
+          - name: 'MouseButtons'
+            offset: "000000E5"            
+          - name: 'Int33_Standard_TextCursor'
+            offset: "000001FC"            
+          - name: 'Int33_Standard_GraphicsCursor'
+            offset: "0000020C"            
+          - name: 'VMD_Primary_Button_Mask'
+            offset: "0000025E"            
+          - name: 'VMD_Secondary_Button_Mask'
+            offset: "0000025F"            
+          - name: 'SearchMouseType'
+            offset: "00000260"            
+          - name: 'pVideoModeTable'
+            offset: "000002D2"            
+          - name: 'NumSupportedModes'
+            offset: "000002D6"            
+          - name: 'VMD_InstanceList'
+            offset: "00000428"            
+          - name: 'VMD_Mouse_Port'
+            offset: "00000461"            
+          - name: 'InternalCalls'
+            offset: "000004A9"            
+      - num: "5"
+        name: "_DBOGROUP"
+        offset: "00000000"
+        symbols:
+          - name: 'VMD_Real_Init'
+            offset: "00000000"            
