@@ -1,0 +1,21 @@
+filename: "{{ data.filename }}"
+#TODO: bring up more details from symdeb
+binary: "{{ data.filename }}"
+description: "{{ data.description | default('') }}"
+note: "{{ data.note | default('') }}"
+appearances:
+{% for appearance in data.appearances %}
+  - version: "{{ appearance.version }}"
+    tree: {{ appearance.source_tree | default([]) }}
+    segments:
+    {% for segment in appearance.segments %}
+      - num: "{{ segment.num }}"
+        name: "{{ segment.name }}"
+        offset: "{{ segment.offset }}"
+        symbols:
+        {% for symbol in segment.symbols %}
+          - name: '{{ symbol.name }}'
+            offset: "{{ symbol.offset }}"            
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
