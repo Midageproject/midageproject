@@ -1,8 +1,7 @@
 filename: "{{ data.filename }}"
 #TODO: bring up more details from symdeb
-binary: "{{ data.filename }}"
+binary: "{{ data.binary }}"
 description: "{{ data.description | default('') }}"
-note: "{{ data.note | default('') }}"
 appearances:
 {% for appearance in data.appearances %}
   - version: "{{ appearance.version }}"
@@ -15,6 +14,7 @@ appearances:
         symbols:
         {% for symbol in segment.symbols %}
           - name: '{{ symbol.name }}'
+            processed: "{{ symbol.demangled }}"
             offset: "{{ symbol.offset }}"            
         {% endfor %}
     {% endfor %}

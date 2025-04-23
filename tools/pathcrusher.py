@@ -4,11 +4,12 @@ import sys
 import re
 from ruamel.yaml import YAML
 import csv
+import subprocess
 from pathlib import Path
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python script.py <csv directory>")
+        print("Usage: python script.py <sym directory>")
         sys.exit(1)
 
     yaml = YAML(typ='rt')
@@ -21,31 +22,39 @@ def main():
     db_path = Path(__file__).parent.parent / "db" / "components"
 
     # Compile regex pattern for matching file paths
-    pattern = re.compile(r'[./\\]{1,2}[a-z0-9_./\\-]{2,}\.(c|cpp|asm|h|inc)', re.IGNORECASE)
-
     for component in config.get('include', []):
         comp_name = Path(component).with_suffix('')
         sym_file = input_dir / f"{comp_name}.sym"
         yaml_file = db_path / f"{Path(component)}.yaml"
+        bin_file = input_dir / f"{component}"
+        
+        
+        # Read and process symbol file
+        paths = set()
 
-        if not sym_file.is_file():
+        cmd_fmt = (
+       'strings {} | '
+        'grep -Ei "[./\\\\]{{0,2}}[a-z0-9_./\\\\-]{{2,}}\\.(c|cpp|asm|h|inc)" | '
+        "sed -e 's|\\\\|/|g' -e 's|^[.]/||' -e 's|^\\.\\./||' | "
+        'sort -u'
+        )
+               
+        if sym_file.is_file():
+            exec = subprocess.run(cmd_fmt.format(sym_file), shell=True, stdout=subprocess.PIPE, text=True)
+            paths = exec.stdout.strip().splitlines()
+        else:
             print(f"Missing: {sym_file}")
             continue
 
-        # Read and process symbol file
-        paths = set()
-        with sym_file.open('rb') as f:
-            data = f.read()
-            data = data.decode('latin1', errors='ignore')
-            for line in data:
-                if pattern.search(line):
-                    cleaned = line.strip().replace('\\', '/')
-                    if cleaned.startswith('./'):
-                        cleaned = cleaned[2:]
-                    elif cleaned.startswith('../'):
-                        cleaned = cleaned[3:]
-                    paths.add(cleaned)
-                    print(cleaned)
+        if bin_file.is_file():
+            print(f"Binary found for {component}, will try extracting paths")
+            exec = subprocess.run(cmd_fmt.format(bin_file), shell=True, stdout=subprocess.PIPE, text=True)
+            new_paths = exec.stdout.strip().splitlines()
+            old_set = set(paths)
+            for p in new_paths:
+             if p not in old_set:
+                paths.append(p)
+                old_set.add(p)
 
         if not yaml_file.is_file():
             print(f"Missing YAML file: {yaml_file}")
@@ -55,7 +64,7 @@ def main():
             data = yaml.load(f)
 
         # Update appearances
-        current_version = input_dir.stem
+        current_version = input_dir.stem.split('-', 1)[0]
         updated = False
         for appearance in data.get('appearances', []):
             if appearance.get('version') == current_version:
@@ -64,8 +73,8 @@ def main():
                     # Avoid duplicates
                     new_paths = [p for p in paths if p not in tree]
                     if new_paths:
-                        tree.extend(new_paths)
-                        appearance['tree'] = tree
+                        tree.extend = new_paths
+                        appearance['tree'].append(new_paths)
                         updated = True
                 else:
                     print(f"Warning: 'tree' is not a list in {yaml_file}")

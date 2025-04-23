@@ -3,7 +3,7 @@
 import sys
 import subprocess
 from jinja2 import Environment
-import ruamel.yaml as YAML
+from ruamel.yaml import YAML
 import csv
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -12,6 +12,7 @@ from collections import defaultdict
 @dataclass
 class Symbol:
     name: str
+    demangled: str
     offset: str
 
 @dataclass
@@ -40,7 +41,7 @@ def main():
         print("Usage: python script.py <csv directory>")
         sys.exit(1)
 
-    yaml = YAML.YAML(typ='rt')
+    yaml = YAML(typ='rt')
     with (Path(__file__).parent.parent / "db" / "pipeline.yaml").open('r', encoding='utf-8') as f:
         config = yaml.load(f)
 
@@ -60,7 +61,9 @@ def main():
             print(f"Missing: {csv_file}")
             continue
 
-        data = Entry(filename=file, binary=str(name).upper())
+        binname = Path(file).stem.upper()
+
+        data = Entry(filename=file, binary=binname)
         appearance = Appearance(version=input_dir.stem.split('-', 1)[0])
 
         with csv_file.open('r', encoding='utf-8') as f:
@@ -73,9 +76,16 @@ def main():
                 for seg_offset, rows in offsets.items():
                     segment = Segment(num=seg_num, name=rows[0]['SegmentName'], offset=seg_offset)
                     for row in rows:
-                        segment.symbols.append(Symbol(name=row['SymbolName'], offset=row['SymbolOffset']))
+                        cmd = ["work/undname", row['SymbolName']]
+                        demangled = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+                        stdout, _ = demangled.communicate()
+                        processed_name = stdout.decode().strip()
+                        segment.symbols.append(Symbol(
+                            name=row['SymbolName'],
+                            demangled=processed_name if processed_name != row['SymbolName'] else "",
+                            offset=row['SymbolOffset']
+                        ))
                     appearance.segments.append(segment)
-
         data.appearances.append(appearance)
 
         rendered = template.render(data=data)
