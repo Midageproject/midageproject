@@ -1,145 +1,209 @@
-filename: "mouhid.vxd"
+filename: mouhid.vxd
 #TODO: bring up more details from symdeb
-binary: "mouhid.vxd"
-description: ""
-note: ""
+binary: MOUHID
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_LGROUP"
-        offset: "00000240"
-        symbols:
-          - name: 'MOUHID_Control'
-            offset: "00000000"            
-          - name: '_LCODE__NtKernCreateFile@44'
-            offset: "00000034"            
-          - name: '_LCODE__NtKernClose@4'
-            offset: "0000003C"            
-          - name: '_LCODE__NtKernReadFile@36'
-            offset: "00000044"            
-          - name: '_LCODE__NtKernDeviceIoControl@40'
-            offset: "0000004C"            
-          - name: '_LCODE__NtKernQueueWorkItem@8'
-            offset: "00000054"            
-          - name: '_LCODE__PELDR_GetProcAddress'
-            offset: "0000005C"            
-          - name: '_LCODE__HeapAllocate'
-            offset: "00000064"            
-          - name: '_LCODE__HeapFree'
-            offset: "0000006C"            
-          - name: '_LCODE__Debug_Printf_Service'
-            offset: "00000074"            
-          - name: '__imp__ExFreePool@4'
-            offset: "00000088"            
-          - name: 'WDMExFreePool'
-            offset: "0000008C"            
-          - name: '__imp__KeGetCurrentIrql@0'
-            offset: "00000098"            
-          - name: 'WDMKeGetCurrentIrql'
-            offset: "0000009C"            
-          - name: 'MOUHID_DDB'
-            offset: "000000A8"            
-          - name: '_GUID_CLASS_INPUT'
-            offset: "00000100"            
-          - name: '_GUID_DEVICE_SYS_BUTTON'
-            offset: "00000110"            
-      - num: "3"
-        name: "_PTEXT"
-        offset: "00000DE0"
-        symbols:
-          - name: 'MOUHID_Initialize'
-            offset: "00000000"            
-          - name: 'MOUHID_NewDevNode'
-            offset: "00000038"            
-          - name: 'NewDevnode_Callback'
-            offset: "00000060"            
-          - name: 'MOUHID_Shutdown'
-            offset: "00000074"            
-          - name: 'MOUHID_Kernel32Shutdown'
-            offset: "0000008B"            
-          - name: '_MOUHID_Set_VMD_Mouse_Data'
-            offset: "0000009A"            
-          - name: '_IsVMOUSEPresent'
-            offset: "000000B7"            
-          - name: 'ScheduleOpen_Callback'
-            offset: "000000D2"            
-          - name: 'MOUHID_Schedule_Open'
-            offset: "000000E5"            
-          - name: '_VMDPostPointerMessage@16'
-            offset: "00000123"            
-          - name: '_VMDPostAbsolutePointerMessage@12'
-            offset: "0000015B"            
-          - name: '_CallRestrictedEvent@16'
-            offset: "00000187"            
-          - name: 'MyCallAtAppyTime'
-            offset: "000001C1"            
-          - name: '_CheckMouseContext@4'
-            offset: "00000200"            
-          - name: '_DbgCheckForReversedIntelliMouse@4'
-            offset: "0000022B"            
-          - name: '_GetImportFunctionPtrs@0'
-            offset: "000002E1"            
-          - name: '_UnicodeStringLength@4'
-            offset: "000003EC"            
-          - name: '_NewMouse@20'
-            offset: "0000040E"            
-          - name: '_EnqueueMouse@4'
-            offset: "00000857"            
-          - name: '_DequeueMouse@4'
-            offset: "0000088E"            
-          - name: '_DestroyMouse@4'
-            offset: "000008FB"            
-          - name: '_WorkItemCallback_Close@4'
-            offset: "0000098A"            
-          - name: '_TryDestroyAll@0'
-            offset: "00000A58"            
-          - name: '_WorkItemCallback_Read@4'
-            offset: "00000AE8"            
-          - name: '_DispatchNtReadFile'
-            offset: "00000BFD"            
-          - name: '_ReadCompletion@12'
-            offset: "00000C75"            
-          - name: '_DeviceHasBeenOpened@8'
-            offset: "00001207"            
-          - name: '_RegisterWithVMOUSE@0'
-            offset: "00001258"            
-          - name: '_OpenNewDevices@0'
-            offset: "00001272"            
-          - name: '_WorkItemCallback_Open@4'
-            offset: "00001351"            
-          - name: '_IncPendingActionCount@0'
-            offset: "00001930"            
-          - name: '_DecPendingActionCount@0'
-            offset: "0000193C"            
-          - name: '_HandleShutdown'
-            offset: "00001A3B"            
-      - num: "4"
-        name: "_PDATA"
-        offset: "00000000"
-        symbols:
-          - name: '_firstMouse'
-            offset: "00000004"            
-          - name: '_lastMouse'
-            offset: "00000008"            
-          - name: '_pHidP_GetUsageValue'
-            offset: "0000000C"            
-          - name: '_pHidP_GetScaledUsageValue'
-            offset: "00000010"            
-          - name: '_pHidP_GetUsages'
-            offset: "00000014"            
-          - name: '_pHidP_MaxUsageListLength'
-            offset: "00000018"            
-          - name: '_pIoGetDeviceInterfaces'
-            offset: "0000001C"            
-          - name: '_pHidP_GetCaps'
-            offset: "00000020"            
-          - name: '_pHidP_GetValueCaps'
-            offset: "00000024"            
-          - name: '_dbgOpt'
-            offset: "00000028"            
-          - name: '_shuttingDown'
-            offset: "00001264"            
-          - name: '_pendingActionCount'
-            offset: "00001268"            
+- version: system
+  tree:
+  - - connect.c
+    - mouhid.asm
+    - shutdown.c
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00000240'
+    symbols:
+    - name: MOUHID_Control
+      processed: ''
+      offset: '00000000'
+    - name: _LCODE__NtKernCreateFile@44
+      processed: ''
+      offset: '00000034'
+    - name: _LCODE__NtKernClose@4
+      processed: ''
+      offset: 0000003C
+    - name: _LCODE__NtKernReadFile@36
+      processed: ''
+      offset: '00000044'
+    - name: _LCODE__NtKernDeviceIoControl@40
+      processed: ''
+      offset: 0000004C
+    - name: _LCODE__NtKernQueueWorkItem@8
+      processed: ''
+      offset: '00000054'
+    - name: _LCODE__PELDR_GetProcAddress
+      processed: ''
+      offset: 0000005C
+    - name: _LCODE__HeapAllocate
+      processed: ''
+      offset: '00000064'
+    - name: _LCODE__HeapFree
+      processed: ''
+      offset: 0000006C
+    - name: _LCODE__Debug_Printf_Service
+      processed: ''
+      offset: '00000074'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000088'
+    - name: WDMExFreePool
+      processed: ''
+      offset: 0000008C
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: '00000098'
+    - name: WDMKeGetCurrentIrql
+      processed: ''
+      offset: 0000009C
+    - name: MOUHID_DDB
+      processed: ''
+      offset: 000000A8
+    - name: _GUID_CLASS_INPUT
+      processed: ''
+      offset: '00000100'
+    - name: _GUID_DEVICE_SYS_BUTTON
+      processed: ''
+      offset: '00000110'
+  - num: '3'
+    name: _PTEXT
+    offset: 00000DE0
+    symbols:
+    - name: MOUHID_Initialize
+      processed: ''
+      offset: '00000000'
+    - name: MOUHID_NewDevNode
+      processed: ''
+      offset: '00000038'
+    - name: NewDevnode_Callback
+      processed: ''
+      offset: '00000060'
+    - name: MOUHID_Shutdown
+      processed: ''
+      offset: '00000074'
+    - name: MOUHID_Kernel32Shutdown
+      processed: ''
+      offset: 0000008B
+    - name: _MOUHID_Set_VMD_Mouse_Data
+      processed: ''
+      offset: 0000009A
+    - name: _IsVMOUSEPresent
+      processed: ''
+      offset: 000000B7
+    - name: ScheduleOpen_Callback
+      processed: ''
+      offset: 000000D2
+    - name: MOUHID_Schedule_Open
+      processed: ''
+      offset: '000000E5'
+    - name: _VMDPostPointerMessage@16
+      processed: ''
+      offset: '00000123'
+    - name: _VMDPostAbsolutePointerMessage@12
+      processed: ''
+      offset: 0000015B
+    - name: _CallRestrictedEvent@16
+      processed: ''
+      offset: '00000187'
+    - name: MyCallAtAppyTime
+      processed: ''
+      offset: 000001C1
+    - name: _CheckMouseContext@4
+      processed: ''
+      offset: '00000200'
+    - name: _DbgCheckForReversedIntelliMouse@4
+      processed: ''
+      offset: 0000022B
+    - name: _GetImportFunctionPtrs@0
+      processed: ''
+      offset: '000002E1'
+    - name: _UnicodeStringLength@4
+      processed: ''
+      offset: 000003EC
+    - name: _NewMouse@20
+      processed: ''
+      offset: 0000040E
+    - name: _EnqueueMouse@4
+      processed: ''
+      offset: '00000857'
+    - name: _DequeueMouse@4
+      processed: ''
+      offset: 0000088E
+    - name: _DestroyMouse@4
+      processed: ''
+      offset: 000008FB
+    - name: _WorkItemCallback_Close@4
+      processed: ''
+      offset: 0000098A
+    - name: _TryDestroyAll@0
+      processed: ''
+      offset: 00000A58
+    - name: _WorkItemCallback_Read@4
+      processed: ''
+      offset: 00000AE8
+    - name: _DispatchNtReadFile
+      processed: ''
+      offset: 00000BFD
+    - name: _ReadCompletion@12
+      processed: ''
+      offset: 00000C75
+    - name: _DeviceHasBeenOpened@8
+      processed: ''
+      offset: '00001207'
+    - name: _RegisterWithVMOUSE@0
+      processed: ''
+      offset: '00001258'
+    - name: _OpenNewDevices@0
+      processed: ''
+      offset: '00001272'
+    - name: _WorkItemCallback_Open@4
+      processed: ''
+      offset: '00001351'
+    - name: _IncPendingActionCount@0
+      processed: ''
+      offset: '00001930'
+    - name: _DecPendingActionCount@0
+      processed: ''
+      offset: 0000193C
+    - name: _HandleShutdown
+      processed: ''
+      offset: 00001A3B
+  - num: '4'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: _firstMouse
+      processed: ''
+      offset: '00000004'
+    - name: _lastMouse
+      processed: ''
+      offset: '00000008'
+    - name: _pHidP_GetUsageValue
+      processed: ''
+      offset: 0000000C
+    - name: _pHidP_GetScaledUsageValue
+      processed: ''
+      offset: '00000010'
+    - name: _pHidP_GetUsages
+      processed: ''
+      offset: '00000014'
+    - name: _pHidP_MaxUsageListLength
+      processed: ''
+      offset: '00000018'
+    - name: _pIoGetDeviceInterfaces
+      processed: ''
+      offset: 0000001C
+    - name: _pHidP_GetCaps
+      processed: ''
+      offset: '00000020'
+    - name: _pHidP_GetValueCaps
+      processed: ''
+      offset: '00000024'
+    - name: _dbgOpt
+      processed: ''
+      offset: '00000028'
+    - name: _shuttingDown
+      processed: ''
+      offset: '00001264'
+    - name: _pendingActionCount
+      processed: ''
+      offset: '00001268'

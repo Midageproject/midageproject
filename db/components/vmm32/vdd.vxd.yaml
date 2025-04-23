@@ -1,2065 +1,3085 @@
-filename: "vmm32/vdd.vxd"
+filename: vmm32/vdd.vxd
 #TODO: bring up more details from symdeb
-binary: "vmm32/vdd.vxd"
-description: ""
-note: ""
+binary: VDD
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_LGROUP"
-        offset: "00001E70"
-        symbols:
-          - name: 'VDD_Control'
-            offset: "00000000"            
-          - name: '_VDD_Device_Control'
-            offset: "000000B1"            
-          - name: 'VDD_Device_DIOC'
-            offset: "000000B8"            
-          - name: 'VDD_DIOC'
-            offset: "000000C7"            
-          - name: 'VDD_Do_Physical_IO'
-            offset: "000000D6"            
-          - name: 'VDPIWordInput'
-            offset: "000000E6"            
-          - name: 'VDPIByteInput'
-            offset: "000000F2"            
-          - name: 'VDPIDWordInput'
-            offset: "000000FD"            
-          - name: 'VDPIWordOutput'
-            offset: "00000108"            
-          - name: 'VDPIByteOutput'
-            offset: "00000114"            
-          - name: 'VDPIDWordOutput'
-            offset: "0000011F"            
-          - name: 'VDPIHandleStringIO'
-            offset: "0000012E"            
-          - name: 'VDPI32BitOUTS'
-            offset: "0000013C"            
-          - name: 'VDPI32BitINSW'
-            offset: "000001A0"            
-          - name: 'VDPI32BitINSD'
-            offset: "000001B1"            
-          - name: 'VDPI32BitINSB'
-            offset: "000001C2"            
-          - name: 'VDPI32BitOUTSW'
-            offset: "000001D0"            
-          - name: 'VDPI32BitOUTSD'
-            offset: "000001DF"            
-          - name: 'VDPI32BitOUTSB'
-            offset: "000001EE"            
-          - name: 'VDPI16BitStringIO'
-            offset: "000001FA"            
-          - name: 'VDPI16BitINSW'
-            offset: "00000250"            
-          - name: 'VDPI16BitINSD'
-            offset: "0000025F"            
-          - name: 'VDPI16BitINSB'
-            offset: "0000026E"            
-          - name: 'VDPI16BitOUTSW'
-            offset: "0000027A"            
-          - name: 'VDPI16BitOUTSD'
-            offset: "00000287"            
-          - name: 'VDPI16BitOUTSB'
-            offset: "00000294"            
-          - name: 'AmIHiResMode'
-            offset: "0000029E"            
-          - name: 'AHRMCheckNonVESAHiRes'
-            offset: "000002C6"            
-          - name: 'AHRMHiResVM'
-            offset: "000002F3"            
-          - name: 'AHRMNotHiResVM'
-            offset: "000002F6"            
-          - name: 'CloseDownVESAVM'
-            offset: "000002FA"            
-          - name: 'VDD_State_Chk_MemC'
-            offset: "0000030C"            
-          - name: 'VDD_State_Schedule_Debug_Event'
-            offset: "000003F5"            
-          - name: 'VDD_Queue_Debug_String'
-            offset: "0000042C"            
-          - name: 'VDD_Debug_Dump_Flags'
-            offset: "00000441"            
-          - name: 'VDD_DebugQuery'
-            offset: "00000463"            
-          - name: 'VDD_Reg_Dump'
-            offset: "0000092F"            
-          - name: 'VDD_Start_Of_VESA_Call'
-            offset: "00000A30"            
-          - name: 'SOVCGetMode'
-            offset: "00000A94"            
-          - name: 'SOVCDontCallVESA'
-            offset: "00000AA8"            
-          - name: 'SOVCExit'
-            offset: "00000AAE"            
-          - name: 'VDD_End_Of_VESA_Call'
-            offset: "00000AAF"            
-          - name: 'VDD_Int_2F_PM'
-            offset: "00000AFC"            
-          - name: 'VDD_Int_2F'
-            offset: "00000B1B"            
-          - name: 'VDD_Int_Set_CanRestore'
-            offset: "00000BD1"            
-          - name: 'VDD_Bell'
-            offset: "00000D11"            
-          - name: 'VDD_PH_Mem_Debug_Validate_PH'
-            offset: "00000D58"            
-          - name: 'VDD_PH_Mem_Debug_Dump_Pages'
-            offset: "00000D9E"            
-          - name: 'VDDSetBusyFlagAddr'
-            offset: "00000ED8"            
-          - name: 'VDD_VM_Mem_Chk_Bank_DEBUG'
-            offset: "00000F18"            
-          - name: 'VDD_VM_Mem_Debug_Dump_Pages'
-            offset: "00000F3B"            
-          - name: '_VDD_SimulateBeep'
-            offset: "00001030"            
-          - name: '_VDD_CancelSimulatedBeeps'
-            offset: "00001068"            
-          - name: '_FindDevice'
-            offset: "00001090"            
-          - name: '_FindDeviceFromDevNode'
-            offset: "0000110E"            
-          - name: '_VDDNotify'
-            offset: "00001133"            
-          - name: '__imp_@IofCompleteRequest@8'
-            offset: "00001170"            
-          - name: 'WDMIofCompleteRequest'
-            offset: "00001174"            
-          - name: '_VDD_Get_Version'
-            offset: "00001180"            
-          - name: '_VDD_PIF_State'
-            offset: "00001184"            
-          - name: '_VDD_Get_GrabRtn'
-            offset: "00001188"            
-          - name: '_VDD_Hide_Cursor'
-            offset: "0000118C"            
-          - name: '_VDD_Set_VMType'
-            offset: "00001190"            
-          - name: '_VDD_Get_ModTime'
-            offset: "00001194"            
-          - name: '_VDD_Set_HCurTrk'
-            offset: "00001198"            
-          - name: '_VDD_Msg_ClrScrn'
-            offset: "0000119C"            
-          - name: '_VDD_Msg_ForColor'
-            offset: "000011A0"            
-          - name: '_VDD_Msg_BakColor'
-            offset: "000011A4"            
-          - name: '_VDD_Msg_TextOut'
-            offset: "000011A8"            
-          - name: '_VDD_Msg_SetCursPos'
-            offset: "000011AC"            
-          - name: '_VDD_Query_Access'
-            offset: "000011B0"            
-          - name: '_VDD_Check_Update_Soon'
-            offset: "000011B4"            
-          - name: '_VDD_Get_Mini_Dispatch_Table'
-            offset: "000011B8"            
-          - name: '_VDD_Register_Virtual_Port'
-            offset: "000011BC"            
-          - name: '_VDD_Get_VM_Info'
-            offset: "000011C0"            
-          - name: '_VDD_Get_Special_VM_IDs'
-            offset: "000011C4"            
-          - name: '_VDD_Register_Extra_Screen_Selector'
-            offset: "000011C8"            
-          - name: '_VDD_Takeover_VGA_Port'
-            offset: "000011CC"            
-          - name: '_VDD_Get_DISPLAYINFO'
-            offset: "000011D0"            
-          - name: '_VDD_Do_Physical_IO'
-            offset: "000011D4"            
-          - name: '_VDD_Set_Sleep_Flag_Addr'
-            offset: "000011D8"            
-          - name: '_VDD_EnableDevice'
-            offset: "000011DC"            
-          - name: 'VDD_DDB'
-            offset: "000011E0"            
-          - name: '_VDD_DDB'
-            offset: "000011E0"            
-          - name: 'Vid_Flags'
-            offset: "00001230"            
-          - name: 'VT_Flags'
-            offset: "00001234"            
-          - name: 'Vid_CB_Off'
-            offset: "00001238"            
-          - name: '_MiniVDDDispatchTable'
-            offset: "0000123C"            
-          - name: 'MiniVDDDispatchTable'
-            offset: "0000123C"            
-          - name: 'DOSVMCount'
-            offset: "00001334"            
-          - name: 'CheckHiResChainAddr'
-            offset: "00001338"            
-          - name: 'HiResSaveBlockID'
-            offset: "0000133C"            
-          - name: 'ModeChangeFlags'
-            offset: "00001340"            
-          - name: 'MemoryDisabledFlag'
-            offset: "00001341"            
-          - name: 'ScreenSwitchSemaphores'
-            offset: "00001342"            
-          - name: 'GetVESAMemSizeReentryFlag'
-            offset: "00001343"            
-          - name: 'Vid_Focus_VM'
-            offset: "00001344"            
-          - name: '_Vid_Focus_VM'
-            offset: "00001344"            
-          - name: '_Vid_CRTC_VM'
-            offset: "00001348"            
-          - name: 'Vid_CRTC_VM'
-            offset: "00001348"            
-          - name: '_Vid_MemC_VM'
-            offset: "0000134C"            
-          - name: 'Vid_MemC_VM'
-            offset: "0000134C"            
-          - name: 'Vid_Msg_Pseudo_VM'
-            offset: "00001358"            
-          - name: 'Vid_Msg_Pseudo_CB'
-            offset: "0000135C"            
-          - name: 'Vid_Msg_DAC'
-            offset: "000013FC"            
-          - name: 'Vid_Planar_Pseudo_CB'
-            offset: "00001998"            
-          - name: 'Vid_Initial_Text_Rows'
-            offset: "00001A38"            
-          - name: 'Vid_Msg_Pages'
-            offset: "00001A39"            
-          - name: 'VDD_State_MemC_Debug_Event'
-            offset: "00001A44"            
-          - name: 'VDD_State_MemC_Debug_TS'
-            offset: "00001A48"            
-          - name: 'VDD_NoSR'
-            offset: "00001A74"            
-          - name: 'fVT_NameTable'
-            offset: "00001F00"            
-          - name: 'Vid_I10_OldVector'
-            offset: "000026B0"            
-          - name: 'Vid_Stub_I10_Vector'
-            offset: "000026B4"            
-          - name: 'Vid_I10_Next_CS'
-            offset: "000026B8"            
-          - name: 'Vid_I10_Next_EIP'
-            offset: "000026BC"            
-          - name: 'Vid_I2F_Next_CS'
-            offset: "000026C0"            
-          - name: 'Vid_I2F_Next_EIP'
-            offset: "000026C4"            
-          - name: 'Vid_PhysA0000'
-            offset: "000026FC"            
-          - name: '_Vid_PhysA0000'
-            offset: "000026FC"            
-          - name: 'Vid_Sys_Visible_Pages'
-            offset: "00002700"            
-          - name: 'Vid_Sys_First_Visible'
-            offset: "00002704"            
-          - name: 'Video_Pages'
-            offset: "00002706"            
-          - name: 'Video_Page_Table'
-            offset: "0000270A"            
-          - name: 'VDD_DPD'
-            offset: "00002714"            
-          - name: 'Vid_Msg_VM'
-            offset: "00002844"            
-          - name: 'Vid_MsgMode_Text_Rows'
-            offset: "00002848"            
-          - name: 'Vid_MsgMode_Text_Cols'
-            offset: "0000284C"            
-          - name: 'Vid_Scrn_Attr'
-            offset: "00002850"            
-          - name: 'PIF_Save'
-            offset: "00002852"            
-          - name: 'WindowsVMHandle'
-            offset: "00002854"            
-          - name: 'SleepFlagAddr'
-            offset: "00002858"            
-          - name: '_UserExeFlagsAddr'
-            offset: "0000285C"            
-          - name: 'UserExeFlagsAddr'
-            offset: "0000285C"            
-          - name: 'BusyBitAddr'
-            offset: "00002860"            
-          - name: 'SetHiResModeCallback'
-            offset: "00002864"            
-          - name: 'OriginalVideoPages'
-            offset: "00002868"            
-          - name: 'VGAShadowMemStatusAddr'
-            offset: "0000286C"            
-          - name: 'ExtraSelectorArray'
-            offset: "00002870"            
-          - name: 'VFlatDFlag'
-            offset: "00002918"            
-          - name: 'SelectorDisabledFlag'
-            offset: "00002919"            
-          - name: 'BusyBitBitmask'
-            offset: "0000291A"            
-          - name: 'Vid_Win_Update_Time'
-            offset: "00002A80"            
-          - name: 'Vid_Mode_Update_Time'
-            offset: "00002A84"            
-          - name: 'Vid_Scroll_Freq'
-            offset: "00002A88"            
-          - name: 'Vid_VM_Idle_Chain'
-            offset: "00002A8C"            
-          - name: 'VDD_Force_Trapping'
-            offset: "00002AC0"            
-          - name: 'VIOT_Dispatch'
-            offset: "00002AC8"            
-          - name: 'MiniVDDSpecialPortFlags'
-            offset: "00002B4C"            
-          - name: '_BiosPostCodeBegin_Debug_Flags'
-            offset: "00002B78"            
-          - name: '_linLowROM'
-            offset: "00002EB8"            
-          - name: '_EstTimeTable'
-            offset: "00003428"            
-          - name: '_Invalid_MiniVDD2_Calls'
-            offset: "00003580"            
-          - name: '_LastVgaOwner'
-            offset: "00003B10"            
-          - name: '_fVESA'
-            offset: "00003B14"            
-          - name: '_RomOwner'
-            offset: "00003B18"            
-          - name: '_DeviceList'
-            offset: "00003B1C"            
-          - name: '_fInitSomethingDangerous'
-            offset: "00003B20"            
-          - name: '_asdFail'
-            offset: "00003B24"            
-          - name: '_vgaDevNode'
-            offset: "00003BF0"            
-          - name: '_dnPCI'
-            offset: "00003BF4"            
-          - name: '_VgaOwner'
-            offset: "00003BF8"            
-          - name: '_fAPM'
-            offset: "00003BFC"            
-      - num: "2"
-        name: "_IMGROUP"
-        offset: "00001EB0"
-        symbols:
-          - name: '@MSG_IAB'
-            offset: "00000000"            
-          - name: '@MSG_IDATA'
-            offset: "00000014"            
-      - num: "3"
-        name: "_PMGROUP"
-        offset: "00001EF0"
-        symbols:
-          - name: '@MSG_PAB'
-            offset: "00000000"            
-          - name: '@MSG_PDATA'
-            offset: "0000001C"            
-      - num: "4"
-        name: "_IGROUP"
-        offset: "00003070"
-        symbols:
-          - name: 'VDD_Sys_Critical_Init'
-            offset: "00000000"            
-          - name: 'VDD_Device_Init'
-            offset: "0000007A"            
-          - name: 'VDD_State_Sys_Critical_Init'
-            offset: "00000168"            
-          - name: 'VDD_State_Device_Init'
-            offset: "0000018C"            
-          - name: 'VDD_State_Get_Initial_Lines'
-            offset: "000001DE"            
-          - name: 'VDD_State_Init_MemC_Planar'
-            offset: "0000021E"            
-          - name: 'VDD_State_Init_Message_Mode'
-            offset: "000002A5"            
-          - name: 'VDD_State_Set_Mode'
-            offset: "000003EA"            
-          - name: 'VDD_Get_Special_VM_IDs'
-            offset: "00000459"            
-          - name: 'VDD_Debug_Init'
-            offset: "00000470"            
-          - name: 'VDD_Int_Device_Init'
-            offset: "000004B0"            
-          - name: 'InstallVESAStub'
-            offset: "0000054D"            
-          - name: 'InstallBellStub'
-            offset: "00000574"            
-          - name: 'VDD_PH_Mem_Sys_Critical_Init'
-            offset: "00000638"            
-          - name: 'VDD_VM_Mem_Device_Init'
-            offset: "000006C4"            
-          - name: 'VDD_VM_Mem_Init_Complete'
-            offset: "00000A03"            
-          - name: 'VDD_Font_Setup_Msg_Mode_Init'
-            offset: "00000A24"            
-          - name: 'VDD_Font_Save_Msg_Font'
-            offset: "00000AA0"            
-          - name: 'VDD_Font_Init_Complete'
-            offset: "00000D4C"            
-          - name: 'VDD_Proc_Device_Init'
-            offset: "00000DA8"            
-          - name: 'VDD_TIO_Sys_Critical_Init'
-            offset: "00000E04"            
-          - name: 'VDD_TIO_Device_Init'
-            offset: "00000E06"            
-          - name: 'VDD_PNP_Init_Complete'
-            offset: "00000EB8"            
-          - name: 'VMPagesBuf'
-            offset: "00001070"            
-          - name: 'VDD_Time_Ini'
-            offset: "00001300"            
-          - name: 'VDD_SuspMsg_Ini'
-            offset: "00001311"            
-          - name: 'VDD_NoSusp_Ini'
-            offset: "00001324"            
-          - name: 'Vid_Text_Rows_Ini'
-            offset: "00001338"            
-          - name: 'Vid_Text_Rows_Sect'
-            offset: "00001344"            
-          - name: 'VDD_2nd_Ini'
-            offset: "00001352"            
-          - name: 'VDD_Mono_Text_Ini'
-            offset: "0000135E"            
-          - name: 'VDD_Rsrv_C6C7_Ini'
-            offset: "0000136A"            
-          - name: 'VDD_VM_SaveRes_Ini'
-            offset: "0000137A"            
-          - name: 'VDD_VM_Scroll_Freq_Ini'
-            offset: "0000138C"            
-          - name: 'VDD_Use_ROM_Font_Ini'
-            offset: "0000139C"            
-          - name: 'Vid_Mono_IO_Table'
-            offset: "000013A8"            
-          - name: 'Vid_IO_Table'
-            offset: "000013BC"            
-      - num: "5"
-        name: "_PTEXT"
-        offset: "00003D00"
-        symbols:
-          - name: '_VDD_BeepCallback'
-            offset: "00000000"            
-          - name: '_ReadPCI'
-            offset: "00000090"            
-          - name: '_WritePCI'
-            offset: "000000B5"            
-          - name: '_ReadPCIW'
-            offset: "000000D1"            
-          - name: '_WritePCIW'
-            offset: "000000F7"            
-          - name: '__EnablePCI'
-            offset: "00000113"            
-          - name: '_EnablePCI'
-            offset: "00000148"            
-          - name: '_GetRootPCI'
-            offset: "0000015C"            
-          - name: '__EnableVGA'
-            offset: "000001DF"            
-          - name: '_BeginVGA'
-            offset: "00000265"            
-          - name: '_EndVGA'
-            offset: "00000345"            
-          - name: '_CanDisableVGA'
-            offset: "0000042B"            
-          - name: '_ReadPhysDWORD'
-            offset: "00000478"            
-          - name: '_TestVGA'
-            offset: "000004DC"            
-          - name: '_AreAllDevicesPCI'
-            offset: "0000053D"            
-          - name: '_EnableVGA'
-            offset: "000005AD"            
-          - name: '_GetROMData'
-            offset: "000007C0"            
-          - name: '_GetROMFilename'
-            offset: "000007E3"            
-          - name: '_SaveROM'
-            offset: "000008CB"            
-          - name: '_LoadROM'
-            offset: "0000096A"            
-          - name: '_GetDeviceROM'
-            offset: "00000A61"            
-          - name: '_AreWePagingThroughDOS'
-            offset: "00000B4F"            
-          - name: '_VDDEnumIODevices'
-            offset: "00000B80"            
-          - name: '_VDDWriteEDID'
-            offset: "00000CB3"            
-          - name: '_VDDSetupMonitor'
-            offset: "00000D2F"            
-          - name: '_VDDEnumMonitor'
-            offset: "00000FB2"            
-          - name: '_VDDEnumInitComplete'
-            offset: "000011D0"            
-          - name: '_VDDEnumPowerUpMonitors'
-            offset: "000011FD"            
-          - name: '_VDD_Enum_Handler'
-            offset: "0000126C"            
-          - name: '_SetSomethingDangerous'
-            offset: "000013D0"            
-          - name: '_GetSomethingDangerous'
-            offset: "00001406"            
-          - name: '_BeginSomethingDangerous'
-            offset: "0000144B"            
-          - name: '_EndSomethingDangerous'
-            offset: "000014D3"            
-          - name: 'FileOpen'
-            offset: "00001540"            
-          - name: 'FileRead'
-            offset: "00001557"            
-          - name: 'FileWrite'
-            offset: "0000156E"            
-          - name: 'FileClose'
-            offset: "00001585"            
-          - name: '_FileSetAttributes'
-            offset: "00001598"            
-          - name: '_FileOpen'
-            offset: "000015BC"            
-          - name: '_FileClose'
-            offset: "000015F2"            
-          - name: '_FileRead'
-            offset: "00001614"            
-          - name: '_FileWrite'
-            offset: "00001663"            
-      - num: "6"
-        name: "_PDATA"
-        offset: "00003DC0"
-        symbols:
-          - name: '_szPnPMonitor'
-            offset: "000012F8"            
-          - name: '_NumDevices'
-            offset: "000014A8"            
-          - name: '_NumDevicesVGA'
-            offset: "000014AC"            
-          - name: '_NumUnits'
-            offset: "000014B0"            
-          - name: '_FailReasonString'
-            offset: "000016A4"            
-          - name: '_szFailReason'
-            offset: "000016E0"            
-          - name: '_szDEFAULT'
-            offset: "000016F8"            
-          - name: '_asd_key'
-            offset: "00001718"            
-          - name: '_asd_def'
-            offset: "00001728"            
-          - name: '_asd_guid'
-            offset: "0000172C"            
-      - num: "7"
-        name: "_DBOGROUP"
-        offset: "00003E20"
-        symbols:
-          - name: 'VDD_Real_init'
-            offset: "00000000"            
-      - num: "8"
-        name: "_LOCKABLE"
-        offset: "00004520"
-        symbols:
-          - name: '_BiosPostCodeBegin'
-            offset: "00000000"            
-          - name: 'DrawTextLogo'
-            offset: "00000000"            
-          - name: 'VDD_Int_1A'
-            offset: "00000030"            
-          - name: '_BeginPOST'
-            offset: "00000056"            
-          - name: 'BeginPOST'
-            offset: "00000056"            
-          - name: 'EndPOST'
-            offset: "000000A7"            
-          - name: '_EndPOST'
-            offset: "000000A7"            
-          - name: 'PostROM'
-            offset: "000000E1"            
-          - name: '_PostROM'
-            offset: "000000E1"            
-          - name: 'Disable_MiniVDD'
-            offset: "00000267"            
-          - name: '_Disable_MiniVDD'
-            offset: "00000267"            
-          - name: '_Enable_MiniVDD'
-            offset: "000002E4"            
-          - name: 'Enable_MiniVDD'
-            offset: "000002E4"            
-          - name: '_EnableROM'
-            offset: "00000360"            
-          - name: '_IsPhysMem'
-            offset: "00000953"            
-          - name: '_InitROM'
-            offset: "000009B0"            
-          - name: '_ReInitROM'
-            offset: "00000CED"            
-          - name: '_BiosPostCodeEnd'
-            offset: "00000F3C"            
-      - num: "9"
-        name: "_RARE"
-        offset: "00007580"
-        symbols:
-          - name: 'VDD_System_Exit'
-            offset: "00000000"            
-          - name: 'VDD_Sys_Critical_Exit'
-            offset: "0000000A"            
-          - name: 'VDD_State_Set_Message_Mode'
-            offset: "0000003C"            
-          - name: 'VDD_Int_Sys_Critical_Exit'
-            offset: "0000011C"            
-          - name: 'VDD_PH_Mem_Set_Sys_Latch_Addr'
-            offset: "00000144"            
-          - name: 'VDD_PH_Mem_Save_Sys_Latch_Addr'
-            offset: "0000015F"            
-          - name: 'VDD_PH_Mem_Set_Latch_Addr'
-            offset: "00000168"            
-          - name: 'VDD_Get_Mini_Dispatch_Table'
-            offset: "0000017A"            
-          - name: 'VDD_Register_Virtual_Port'
-            offset: "000001B7"            
-          - name: 'VRVPRegisterGCRPort'
-            offset: "000001C7"            
-          - name: 'VDD_Takeover_VGA_Port'
-            offset: "00000203"            
-          - name: 'VDD_Get_Version'
-            offset: "0000022D"            
-          - name: 'VDD_EnableDevice'
-            offset: "0000024D"            
-          - name: 'VDD_Set_Sleep_Flag_Addr'
-            offset: "00000260"            
-          - name: 'VDD_Begin_Msg_Mode'
-            offset: "0000026E"            
-          - name: 'VDD_End_Msg_Mode'
-            offset: "000002A4"            
-          - name: 'VDD_Msg_ClrScrn'
-            offset: "00000338"            
-          - name: 'VDD_Msg_ForColor'
-            offset: "000003DA"            
-          - name: 'VDD_Msg_BakColor'
-            offset: "0000042D"            
-          - name: 'VDD_Msg_TextOut'
-            offset: "00000483"            
-          - name: 'VDD_Msg_SetCursPos'
-            offset: "00000530"            
-          - name: 'VDD_Set_HCurTrk'
-            offset: "000005A5"            
-          - name: 'VDD_Get_GrabRtn'
-            offset: "000005C0"            
-          - name: 'VDD_Grab'
-            offset: "000005CE"            
-          - name: 'VDD_Register_Extra_Screen_Selector'
-            offset: "00000616"            
-          - name: 'VESSCheckDupLoop'
-            offset: "00000637"            
-          - name: 'VESSCheckNext'
-            offset: "0000063B"            
-          - name: 'VESSSearchForOpenEntry'
-            offset: "00000641"            
-          - name: 'VESSSearchLoop'
-            offset: "0000064B"            
-          - name: 'VESSMakeEntry'
-            offset: "00000659"            
-          - name: 'VESSGoodExit'
-            offset: "000006AB"            
-          - name: 'VDDDriverRegister'
-            offset: "000006AD"            
-          - name: 'VDRNo4PlaneVirtualization'
-            offset: "00000741"            
-          - name: 'VDRCallMiniVDD'
-            offset: "0000074D"            
-          - name: 'VDRSetupVirtualization'
-            offset: "00000764"            
-          - name: 'VDRCalcTotalMemoryUsage'
-            offset: "00000775"            
-          - name: 'VDRGoodExit'
-            offset: "0000077C"            
-          - name: 'VDDDriverRegister2'
-            offset: "00000785"            
-          - name: 'VDDDriverUnRegister'
-            offset: "00000794"            
-          - name: 'VDDDriverUnRegister2'
-            offset: "00000816"            
-          - name: 'VDDSaveDriverState'
-            offset: "0000082B"            
-          - name: 'VDDRegisterDisplayDriverInfo'
-            offset: "00000876"            
-          - name: 'VDDRegisterDisplayDriverInfo2'
-            offset: "00000892"            
-          - name: 'VDDRegisterSSBFlags'
-            offset: "000008A8"            
-          - name: 'VDDPreModeChange'
-            offset: "000008C0"            
-          - name: 'VDDPostModeChange'
-            offset: "000008E5"            
-          - name: 'VDDSetUserFlags'
-            offset: "0000094A"            
-          - name: 'VDD_Error_Cvt_FullScrn'
-            offset: "00000977"            
-          - name: 'VDD_Error_NoPagesAvail'
-            offset: "0000099B"            
-          - name: 'VDD_Error_NoFGrnd'
-            offset: "000009B4"            
-          - name: 'VDD_Error_NoMainMem'
-            offset: "000009D9"            
-          - name: 'VDD_Error_Message'
-            offset: "000009F0"            
-          - name: 'VDD_Message'
-            offset: "000009FD"            
-          - name: 'VDD_VM_Mem_Alloc_Msg_Mode_Mem'
-            offset: "00000A2C"            
-          - name: 'VDD_Font_Restore_Msg_Font'
-            offset: "00000A7C"            
-          - name: 'VDD_Font_Expand_Msg_Font'
-            offset: "00000AE5"            
-          - name: 'VIOST_Trap_Mono'
-            offset: "00000B18"            
-          - name: '_CurrentDevNode'
-            offset: "00000B64"            
-          - name: '_CurrentDevice'
-            offset: "00000B68"            
-          - name: '_CurrentUnit'
-            offset: "00000B6C"            
-          - name: 'ValueTypeReturn'
-            offset: "00000B70"            
-          - name: 'BufferSizeReturn'
-            offset: "00000B74"            
-          - name: 'DisplaySettingsHandle'
-            offset: "00000B78"            
-          - name: 'BPPReturnValue'
-            offset: "00000B7C"            
-          - name: 'BPPDataBufferSize'
-            offset: "00000B8C"            
-          - name: 'DPIReturnValue'
-            offset: "00000B90"            
-          - name: 'DPIDataBufferSize'
-            offset: "00000BA0"            
-          - name: 'ResReturnValue'
-            offset: "00000BA4"            
-          - name: 'ResDataBufferSize'
-            offset: "00000BC4"            
-          - name: 'RefreshRateReturnValue'
-            offset: "00000BC8"            
-          - name: 'RefreshRateDataSize'
-            offset: "00000BE8"            
-          - name: 'DDCReturnValue'
-            offset: "00000BEC"            
-          - name: 'DDCDataBufferSize'
-            offset: "00000BF4"            
-          - name: 'ExtModeReturnValue'
-            offset: "00000BF8"            
-          - name: 'ExtModeDataBufferSize'
-            offset: "00000C00"            
-          - name: 'DesktopPosReturnValue'
-            offset: "00000C24"            
-          - name: 'DesktopSizeReturnValue'
-            offset: "00000C44"            
-          - name: 'DisplayDriverName'
-            offset: "00000C84"            
-          - name: 'DisplayDriverNameLen'
-            offset: "00000CA4"            
-          - name: 'MiniVDDName'
-            offset: "00000CA8"            
-          - name: 'MiniVDDNameLen'
-            offset: "00000CC8"            
-          - name: 'CardVDDName'
-            offset: "00000CCC"            
-          - name: 'CardVDDNameLen'
-            offset: "00000CEC"            
-          - name: 'ScratchBuffer'
-            offset: "00000CF0"            
-          - name: 'ScratchBufferSize'
-            offset: "00000D70"            
-          - name: 'RefreshRateStr'
-            offset: "00000D74"            
-          - name: 'LowHorz'
-            offset: "00000DF4"            
-          - name: 'HighHorz'
-            offset: "00000DF8"            
-          - name: 'LowVert'
-            offset: "00000DFC"            
-          - name: 'HighVert'
-            offset: "00000E00"            
-          - name: 'RefreshRateMax'
-            offset: "00000E04"            
-          - name: 'RefreshRateMin'
-            offset: "00000E08"            
-          - name: 'DisplaySettingsString'
-            offset: "00000E14"            
-          - name: 'BPPString'
-            offset: "00000E25"            
-          - name: 'ResString'
-            offset: "00000E32"            
-          - name: 'DPIString'
-            offset: "00000E3D"            
-          - name: 'ExtModeString'
-            offset: "00000E49"            
-          - name: 'DrvString'
-            offset: "00000E8C"            
-          - name: 'DrvString2'
-            offset: "00000E90"            
-          - name: 'MiniVDDString'
-            offset: "00000E95"            
-          - name: 'CardVDDString'
-            offset: "00000EA6"            
-          - name: 'ChipIDString'
-            offset: "00000EB7"            
-          - name: 'ChipIDLength'
-            offset: "00000EBE"            
-          - name: 'MODESString'
-            offset: "00000EC2"            
-          - name: 'DEFAULTString'
-            offset: "00000EC9"            
-          - name: 'Negative1String'
-            offset: "00000ED1"            
-          - name: 'MonitorDevNodeKeyHandle'
-            offset: "00000ED4"            
-          - name: 'MonitorModeString'
-            offset: "00000ED8"            
-          - name: 'MonitorModesString'
-            offset: "00000EDD"            
-          - name: 'MonitorModeNumber'
-            offset: "00000EE3"            
-          - name: 'MonitorModeASCII'
-            offset: "00000EE4"            
-          - name: 'MonitorDevNodeKey'
-            offset: "00000EE8"            
-          - name: 'MonitorSubKeyBuffer'
-            offset: "00000FE8"            
-          - name: 'MonitorBestMatchDelta'
-            offset: "00001008"            
-          - name: 'MonitorBestMatchSubkey'
-            offset: "0000100C"            
-          - name: 'NONEString'
-            offset: "0000103E"            
-          - name: 'Fallback640x480Str'
-            offset: "00001043"            
-          - name: '_VDDPNPFlags'
-            offset: "0000104B"            
-          - name: 'IgnoreRegistryFlag'
-            offset: "0000104D"            
-          - name: 'GetDisplayConfigFlags'
-            offset: "0000104E"            
-          - name: 'HorizontalSyncPolarity'
-            offset: "00001050"            
-          - name: 'VerticalSyncPolarity'
-            offset: "00001051"            
-          - name: 'DisplayStr'
-            offset: "00001052"            
-          - name: 'IgnoreRegistryStr'
-            offset: "0000105A"            
-          - name: 'RefreshRateString'
-            offset: "00001069"            
-          - name: 'RefreshRateFudge'
-            offset: "00001086"            
-          - name: 'VDD_VPICD_Hook'
-            offset: "00001096"            
-          - name: '_VDD_Begin_Load_MiniVDD'
-            offset: "000010AA"            
-          - name: 'VDD_Begin_Load_MiniVDD'
-            offset: "000010AA"            
-          - name: 'VDD_End_Load_MiniVDD'
-            offset: "000010CD"            
-          - name: '_VDD_End_Load_MiniVDD'
-            offset: "000010CD"            
-          - name: 'VDD_PNP_Load_MiniVDD'
-            offset: "000010EB"            
-          - name: '_VDD_PNP_Load_MiniVDD'
-            offset: "000010EB"            
-          - name: 'VPLM_CheckRegistryIgnore'
-            offset: "00001175"            
-          - name: 'VPLM_CheckForNoneEntry'
-            offset: "0000118D"            
-          - name: 'VPLM_LoadMiniVDD'
-            offset: "000011B1"            
-          - name: 'VPLM_GetChipIDFromRegistry'
-            offset: "000011F0"            
-          - name: 'VPLM_CompareChipID'
-            offset: "00001242"            
-          - name: 'VPLM_WriteChipIDToRegistry'
-            offset: "00001291"            
-          - name: 'VPLM_LoadCardVDD'
-            offset: "000012D6"            
-          - name: 'VPLM_Good_Exit'
-            offset: "00001317"            
-          - name: 'VPLM_Error_Exit'
-            offset: "0000131C"            
-          - name: 'VDD_PNP_Get_Display_Info'
-            offset: "00001321"            
-          - name: 'VPGI_GetOperationFlags'
-            offset: "000015EA"            
-          - name: 'get_refresh_rate'
-            offset: "00001645"            
-          - name: 'get_mode_specifig_refresh_rate'
-            offset: "0000165E"            
-          - name: 'get_default_refresh_rate'
-            offset: "000016C2"            
-          - name: 'got_refresh_rate'
-            offset: "00001707"            
-          - name: 'VPGI_GetDriverName'
-            offset: "00001747"            
-          - name: 'VPGI_GetDefaultDisplayDriver'
-            offset: "00001880"            
-          - name: 'VPGI_GetDefaultMiniVDD'
-            offset: "000018E4"            
-          - name: 'VPGI_GetDefaultCardVDD'
-            offset: "0000193A"            
-          - name: 'VPGI_GetRefreshRateData'
-            offset: "00001992"            
-          - name: 'VPGI_ErrorExit'
-            offset: "000019EB"            
-          - name: 'VDD_PNP_Get_Monitor_Info'
-            offset: "000019ED"            
-          - name: 'VGMIEnumKeysLoop'
-            offset: "00001AC1"            
-          - name: 'VGMIEndEnumKeysLoop'
-            offset: "00001B18"            
-          - name: 'VGMIEndofKeyEnumeration'
-            offset: "00001B21"            
-          - name: 'VGMICloseKey'
-            offset: "00001B46"            
-          - name: 'VGMISetupRefreshRateLoop'
-            offset: "00001B62"            
-          - name: 'VGMIGetRefreshRateLoop'
-            offset: "00001B7D"            
-          - name: 'VGMICrackString'
-            offset: "00001BFA"            
-          - name: 'VGMICalcRefreshRateMax'
-            offset: "00001C86"            
-          - name: 'VGMICalcRefreshRateMin'
-            offset: "00001CD2"            
-          - name: 'VGMINextMonitorMode'
-            offset: "00001CF9"            
-          - name: 'VGMIDoneGettingRefreshRate'
-            offset: "00001D15"            
-          - name: 'VGMIGoodExit'
-            offset: "00001D78"            
-          - name: 'VGMIUseEDID'
-            offset: "00001D99"            
-          - name: 'VGMIErrorExit'
-            offset: "00001E2C"            
-          - name: 'VDD_PNP_GetDisplayConfig'
-            offset: "00001E37"            
-          - name: 'VPFD_GoodExit'
-            offset: "00001EA8"            
-          - name: 'VPFD_ErrorExit'
-            offset: "00001EB1"            
-          - name: 'VDD_Get_DISPLAYINFO'
-            offset: "00001EC8"            
-          - name: 'VGDI_GoodExit'
-            offset: "00001F37"            
-          - name: 'VGDI_ErrorExit'
-            offset: "00001F3B"            
-          - name: 'VDD_PNP_FillDISPLAYINFO'
-            offset: "00001F41"            
-          - name: 'VFDI_FillDesktopData'
-            offset: "00002009"            
-          - name: 'VFDI_FillMonitorData'
-            offset: "0000208D"            
-          - name: 'VFDI_DetermineReturnCode'
-            offset: "00002141"            
-          - name: 'Exec_VESA_Int'
-            offset: "000021AA"            
-          - name: 'VESA_Timeout'
-            offset: "00002210"            
-          - name: 'VDD_PNP_GetVESAEDID'
-            offset: "00002279"            
-          - name: '_VDD_PNP_GetVESAEDID'
-            offset: "00002279"            
-          - name: 'VGVEAllocAlternate'
-            offset: "00002324"            
-          - name: 'VGVEPrepareForBIOSCall'
-            offset: "00002350"            
-          - name: 'VGVEDeallocTempScheme'
-            offset: "000023AA"            
-          - name: 'VGVEDeallocV86MMGRScheme'
-            offset: "000023C0"            
-          - name: 'VGVECheckVESAReturnCode'
-            offset: "000023D8"            
-          - name: 'VGVEValidateEDIDHeader'
-            offset: "000023E2"            
-          - name: 'VGVEGoodExit'
-            offset: "000023F9"            
-          - name: 'VGVEFailExit'
-            offset: "00002408"            
-          - name: 'VGVEErrorExit1'
-            offset: "0000240F"            
-          - name: 'VGVEErrorExit2'
-            offset: "00002416"            
-          - name: 'VGVEErrorExit3'
-            offset: "0000241D"            
-          - name: 'VGVEErrorExit4'
-            offset: "00002424"            
-          - name: 'VGVEErrorExit5'
-            offset: "0000242B"            
-          - name: 'VGVEErrorExit6'
-            offset: "00002432"            
-          - name: 'VGVEErrorExit7'
-            offset: "00002439"            
-          - name: 'VGVEErrorExit8'
-            offset: "00002440"            
-          - name: 'VGVEErrorExit'
-            offset: "00002447"            
-          - name: 'VDD_VESA_CALL'
-            offset: "00002451"            
-          - name: '_VDD_VESA_CALL'
-            offset: "00002451"            
-          - name: 'StringConcat'
-            offset: "000024CE"            
-          - name: 'SC_DoneCopyingFirstString'
-            offset: "000024EA"            
-          - name: 'SC_DoneConcatenating'
-            offset: "000024F7"            
-          - name: 'StringCompare'
-            offset: "000024FC"            
-          - name: 'SCmp_Loop'
-            offset: "00002508"            
-          - name: 'SCmp_DoneWithCompare'
-            offset: "0000252D"            
-          - name: 'IsStringNumeric'
-            offset: "00002531"            
-          - name: 'ISN_Loop'
-            offset: "0000253C"            
-          - name: 'ISN_StringIsntNumeric'
-            offset: "0000254B"            
-          - name: 'ISN_StringIsNumeric'
-            offset: "0000254E"            
-          - name: 'ConvertStringToInteger'
-            offset: "00002552"            
-          - name: 'CSTIGotStringLength'
-            offset: "0000256C"            
-          - name: 'CSTIConvertLoop'
-            offset: "00002576"            
-          - name: 'ConvertXYString'
-            offset: "00002591"            
-          - name: 'ConvertHexToString'
-            offset: "000025AF"            
-          - name: 'CHTSLoop'
-            offset: "000025C6"            
-          - name: 'CHTSDoneConverting'
-            offset: "000025EF"            
-          - name: 'BreakUpString'
-            offset: "000025F4"            
-          - name: 'BUSFoundDelimitor'
-            offset: "0000260B"            
-          - name: 'SearchForDelimitor'
-            offset: "00002613"            
-          - name: 'SFDFoundDelimitor'
-            offset: "00002628"            
-          - name: 'SFDDelimitorNotFound'
-            offset: "0000262B"            
-      - num: "10"
-        name: "_VMCREATE"
-        offset: "00007A20"
-        symbols:
-          - name: 'VDD_Create_VM'
-            offset: "00000000"            
-          - name: 'VDD_Sys_VM_Init'
-            offset: "00000066"            
-          - name: 'VDD_VM_Init'
-            offset: "0000007B"            
-          - name: 'VDD_VM_Critical_Init'
-            offset: "000000AD"            
-          - name: 'VDD_State_Create_VM'
-            offset: "000000E0"            
-          - name: 'VDD_State_VM_Init'
-            offset: "0000018B"            
-          - name: 'VDD_PIF_State'
-            offset: "0000028A"            
-          - name: 'VDD_Grb_Version'
-            offset: "000002DC"            
-          - name: 'VDD_VM_Mem_Create_VM'
-            offset: "0000031C"            
-      - num: "11"
-        name: "_VMDESTROY"
-        offset: "00007C10"
-        symbols:
-          - name: 'VDD_Destroy_VM'
-            offset: "00000000"            
-          - name: 'VDD_End_PM_App'
-            offset: "00000059"            
-          - name: 'VDD_State_Destroy_VM'
-            offset: "00000080"            
-          - name: 'VDD_VM_Mem_Destroy_VM'
-            offset: "00000104"            
-      - num: "12"
-        name: "_THCREATE"
-        offset: "00007D20"
-        symbols:
-          - name: 'VDD_VM_Suspend'
-            offset: "00000000"            
-          - name: 'VDD_VM_Mem_VM_Suspend'
-            offset: "00000038"            
-          - name: 'VDD_VM_Mem_Unlock_Save_Mem'
-            offset: "00000045"            
-      - num: "13"
-        name: "_VMRESUME"
-        offset: "00007E40"
-        symbols:
-          - name: 'VDD_VM_Resume'
-            offset: "00000000"            
-          - name: 'VDD_VM_Mem_VM_Resume'
-            offset: "0000003C"            
-      - num: "14"
-        name: "_PNP"
-        offset: "00009BE0"
-        symbols:
-          - name: '_GetBIOSData'
-            offset: "00000000"            
-          - name: 'GetBIOSData'
-            offset: "00000000"            
-          - name: 'SetBIOSData'
-            offset: "00000071"            
-          - name: '_SetBIOSData'
-            offset: "00000071"            
-          - name: '_DetTimeRATE'
-            offset: "000000F0"            
-          - name: '_GetRefreshRatesFromEDID'
-            offset: "0000015D"            
-          - name: '_IsValidEDID'
-            offset: "0000039E"            
-          - name: '_GetDeviceIDFromEDID'
-            offset: "000003D6"            
-          - name: '_GetStringFromEDID'
-            offset: "00000463"            
-          - name: '_VDD_SetDeviceBusyBit'
-            offset: "000004B0"            
-          - name: '_IsThisDevNodeTheVGA'
-            offset: "00000508"            
-          - name: '_GetMemoryBaseAndSize'
-            offset: "000005A7"            
-          - name: '_GetMemBase'
-            offset: "00000634"            
-          - name: '_WriteBootLog'
-            offset: "00000647"            
-          - name: '_FailReason'
-            offset: "00000664"            
-          - name: '_MakeDeviceName'
-            offset: "00000723"            
-          - name: '_FreeDeviceName'
-            offset: "000007A8"            
-          - name: '_GetDeviceName'
-            offset: "000007FD"            
-          - name: '_OpenDevice'
-            offset: "00000854"            
-          - name: '_CloseDevice'
-            offset: "0000098F"            
-          - name: '_GetDeviceID'
-            offset: "000009E2"            
-          - name: '_VDD_Get_Monitor'
-            offset: "00000A15"            
-          - name: '_PerUserProfilesOn'
-            offset: "00000A40"            
-          - name: '_IsDefaultUser'
-            offset: "00000AA0"            
-          - name: '_OpenDeviceKey'
-            offset: "00000B64"            
-          - name: '_VDD_EnableDevice_Error'
-            offset: "00000CBD"            
-          - name: '_EnableDevice'
-            offset: "00000D03"            
-          - name: '__EnableDevice'
-            offset: "00000D4B"            
-          - name: '_AddDeviceToList'
-            offset: "00001023"            
-          - name: '_RemoveDeviceFromList'
-            offset: "00001059"            
-          - name: '_CallMiniVDD2'
-            offset: "0000108E"            
-          - name: '_GetDeviceIntStatus'
-            offset: "00001112"            
-          - name: '_LoadMiniVDD'
-            offset: "0000116C"            
-          - name: '_StartDevice'
-            offset: "0000146C"            
-          - name: '_CanStopDevice'
-            offset: "000018F6"            
-          - name: '_StopDevice'
-            offset: "0000198A"            
-          - name: '_VDD_PnP_Handler'
-            offset: "00001A54"            
-          - name: '_VDD_Register_DevLoader'
-            offset: "00001C09"            
-          - name: '_VDD_New_DevNode@12'
-            offset: "00001C19"            
-          - name: '_CreateDeviceDDB'
-            offset: "00001C86"            
-          - name: '_VESA_CALL'
-            offset: "00001D20"            
-          - name: '_GetSystemPowerMgmtType'
-            offset: "00001DD4"            
-          - name: '_InitAdapterPowerState'
-            offset: "00001E16"            
-          - name: '_InitPowerOverrides'
-            offset: "00001ED6"            
-          - name: '_InitMonitorPowerState'
-            offset: "00001F3A"            
-          - name: '_SMPSviaAPM'
-            offset: "00002010"            
-          - name: '_CallPowerStateFunc'
-            offset: "000020F5"            
-          - name: '_SetAdapterPowerState'
-            offset: "00002191"            
-          - name: '_SetMonitorPowerState'
-            offset: "00002230"            
-          - name: '_SetDevicePowerState'
-            offset: "000022E8"            
-          - name: '__SetDevicePowerState'
-            offset: "0000233D"            
-          - name: '_GetDevicePowerState'
-            offset: "000023B9"            
-          - name: '_VDD_IOCTL@4'
-            offset: "00002430"            
-          - name: '_VDD_Device_IOCTL@8'
-            offset: "0000244D"            
-          - name: '_CCODE__VPOWERD_Set_Device_Power_State'
-            offset: "0000253C"            
-          - name: '_CCODE__SHELL_CallAtAppyTime'
-            offset: "00002544"            
-          - name: '_CCODE__SHELL_CallDll'
-            offset: "0000254C"            
-          - name: '_CCODE__SHELL_CancelAppyTimeEvent'
-            offset: "00002554"            
-          - name: '_CCODE__SHELL_LoadLibrary'
-            offset: "0000255C"            
-          - name: '_CCODE__SHELL_GetProcAddress'
-            offset: "00002564"            
-          - name: '_CCODE__RegOpenKey'
-            offset: "0000256C"            
-          - name: '_CCODE__RegCloseKey'
-            offset: "00002574"            
-          - name: '_CCODE__RegCreateKey'
-            offset: "0000257C"            
-          - name: '_CCODE__RegEnumKey'
-            offset: "00002584"            
-          - name: '_CCODE__RegDeleteValue'
-            offset: "0000258C"            
-          - name: '_CCODE__RegQueryValueEx'
-            offset: "00002594"            
-          - name: '_CCODE__RegSetValueEx'
-            offset: "0000259C"            
-          - name: '_CCODE__HeapAllocate'
-            offset: "000025A4"            
-          - name: '_CCODE__HeapFree'
-            offset: "000025AC"            
-          - name: '_CCODE__Debug_Printf_Service'
-            offset: "000025B4"            
-          - name: '_CCODE_Get_Sys_VM_Handle'
-            offset: "000025C8"            
-          - name: '_CCODE_Directed_Sys_Control@24'
-            offset: "000025D4"            
-          - name: '_CCODE__Sprintf'
-            offset: "00002600"            
-          - name: '_CCODE__PageAllocate'
-            offset: "00002608"            
-          - name: '_CCODE_VMM_GetSystemInitState'
-            offset: "00002610"            
-          - name: '_CCODE__PageFree'
-            offset: "00002618"            
-          - name: '_CCODE_Get_Cur_VM_Handle'
-            offset: "00002620"            
-          - name: '_CCODE_Get_Cur_Thread_Handle'
-            offset: "0000262C"            
-          - name: '_CCODE__LinPageLock'
-            offset: "00002638"            
-          - name: '_CCODE__LinPageUnLock'
-            offset: "00002640"            
-          - name: '_CCODE__AttemptingSomethingDangerous'
-            offset: "00002648"            
-          - name: '_CCODE_Open_Boot_Log'
-            offset: "00002650"            
-          - name: '_CCODE_Write_Boot_Log@8'
-            offset: "00002658"            
-          - name: '_CCODE_Close_Boot_Log'
-            offset: "00002664"            
-          - name: '_CCODE__CopyPageTable'
-            offset: "0000266C"            
-          - name: '_CCODE__PhysIntoV86'
-            offset: "00002674"            
-          - name: '_CCODE__LinMapIntoV86'
-            offset: "0000267C"            
-          - name: '_CCODE__PageReAllocate'
-            offset: "00002684"            
-          - name: '_CCODE_VMM_Add_DDB@4'
-            offset: "0000268C"            
-          - name: '_CCODE_VMM_Remove_DDB@4'
-            offset: "000026A0"            
-          - name: '_CCODE__Allocate_Temp_V86_Data_Area'
-            offset: "000026B4"            
-          - name: '_CCODE__Free_Temp_V86_Data_Area'
-            offset: "000026BC"            
-          - name: '_CCODE__CONFIGMG_Locate_DevNode'
-            offset: "000026C4"            
-          - name: '_CCODE__CONFIGMG_Get_Parent'
-            offset: "000026CC"            
-          - name: '_CCODE__CONFIGMG_Get_Child'
-            offset: "000026D4"            
-          - name: '_CCODE__CONFIGMG_Get_Sibling'
-            offset: "000026DC"            
-          - name: '_CCODE__CONFIGMG_Get_Device_ID'
-            offset: "000026E4"            
-          - name: '_CCODE__CONFIGMG_Create_DevNode'
-            offset: "000026EC"            
-          - name: '_CCODE__CONFIGMG_Register_Device_Driver'
-            offset: "000026F4"            
-          - name: '_CCODE__CONFIGMG_Register_Enumerator'
-            offset: "000026FC"            
-          - name: '_CCODE__CONFIGMG_Get_First_Log_Conf'
-            offset: "00002704"            
-          - name: '_CCODE__CONFIGMG_Get_Next_Res_Des'
-            offset: "0000270C"            
-          - name: '_CCODE__CONFIGMG_Load_DLVxDs'
-            offset: "00002714"            
-          - name: '_CCODE__CONFIGMG_Get_DDBs'
-            offset: "0000271C"            
-          - name: '_CCODE__CONFIGMG_Register_DevLoader'
-            offset: "00002724"            
-          - name: '_CCODE__CONFIGMG_Reenumerate_DevNode'
-            offset: "0000272C"            
-          - name: '_CCODE__CONFIGMG_Reset_Children_Marks'
-            offset: "00002734"            
-          - name: '_CCODE__CONFIGMG_Remove_Unmarked_Children'
-            offset: "0000273C"            
-          - name: '_CCODE__CONFIGMG_Get_Alloc_Log_Conf'
-            offset: "00002744"            
-          - name: '_CCODE__CONFIGMG_Get_DevNode_Key'
-            offset: "0000274C"            
-          - name: '_CCODE__CONFIGMG_Read_Registry_Value'
-            offset: "00002754"            
-          - name: '_CCODE__CONFIGMG_Write_Registry_Value'
-            offset: "0000275C"            
-          - name: '_CCODE__CONFIGMG_Get_Bus_Info'
-            offset: "00002764"            
-          - name: '_CCODE__CONFIGMG_Get_Device_Driver_Private_DWord'
-            offset: "0000276C"            
-          - name: '_CCODE__CONFIGMG_Set_Device_Driver_Private_DWord'
-            offset: "00002774"            
-          - name: '_CCODE__CONFIGMG_Get_Hardware_Profile_Info'
-            offset: "0000277C"            
-          - name: '_CCODE__CONFIGMG_Call_Enumerator_Function'
-            offset: "00002784"            
-          - name: '_CCODE__CONFIGMG_Get_Global_State'
-            offset: "0000278C"            
-          - name: '_CCODE__CONFIGMG_Discard_Boot_Log_Conf'
-            offset: "00002794"            
-          - name: '_CCODE__CONFIGMG_Set_Dependent_DevNode'
-            offset: "0000279C"            
-          - name: '_CCODE__CONFIGMG_Set_DevNode_PowerState'
-            offset: "000027A4"            
-          - name: '_CCODE__CONFIGMG_Get_DevNode_PowerState'
-            offset: "000027AC"            
-          - name: '_CCODE__CONFIGMG_Set_DevNode_PowerCapabilities'
-            offset: "000027B4"            
-          - name: '_CCODE__CONFIGMG_Get_DevNode_PowerCapabilities'
-            offset: "000027BC"            
-          - name: '_CCODE__CONFIGMG_Get_DevNode_Handler'
-            offset: "000027C4"            
-          - name: '_CCODE__CONFIGMG_System_Device_Power_State_Mapping'
-            offset: "000027CC"            
-      - num: "15"
-        name: "_DOSVM"
-        offset: "000127F0"
-        symbols:
-          - name: 'VDD_Set_Device_Focus'
-            offset: "00000000"            
-          - name: 'VDD_Ctl_Set_Focus'
-            offset: "00000068"            
-          - name: 'VDD_Ctl_End_Dsp_Crit'
-            offset: "00000090"            
-          - name: 'VDD_Grab_DoGrab'
-            offset: "000000B0"            
-          - name: 'VDD_Grab_ACopy'
-            offset: "000001B0"            
-          - name: 'VDD_Grab_DCopy'
-            offset: "000001F8"            
-          - name: 'VDD_Grab_Get_Text_Copy_Buf'
-            offset: "00000238"            
-          - name: 'VDD_Grab_Delete_Text_Copy_Buf'
-            offset: "000002A3"            
-          - name: 'VDD_Grab_Change_Query'
-            offset: "0000030D"            
-          - name: 'VDD_Grab_Clear_Mod_State'
-            offset: "000003A5"            
-          - name: 'VDD_Grab_Save_Dirty_Pages'
-            offset: "000003EC"            
-          - name: 'VDD_Grab_Get_Chgs'
-            offset: "000004D6"            
-          - name: 'VDD_OEM_CRTC_Enable'
-            offset: "00000584"            
-          - name: 'GoToWindowsMode'
-            offset: "00000598"            
-          - name: 'GRWMRescheduleThis'
-            offset: "000005D7"            
-          - name: 'GRWMOKToContinue'
-            offset: "000005EE"            
-          - name: 'GRWMFoolBIOSMode'
-            offset: "00000627"            
-          - name: 'GRWMSetToHiResMode'
-            offset: "0000062E"            
-          - name: 'GRWMReenableTraps'
-            offset: "00000694"            
-          - name: 'DoneGoingToWindows'
-            offset: "000006BE"            
-          - name: 'GoToVGAMode'
-            offset: "000006C0"            
-          - name: 'GRWMGoingToHiResVM'
-            offset: "00000723"            
-          - name: 'GRWMCheckVGAToVGA'
-            offset: "0000073C"            
-          - name: 'HiResToVGAMode'
-            offset: "0000075A"            
-          - name: 'GRWMSaveBIOSStates'
-            offset: "00000777"            
-          - name: 'GRWMSaveInt43H'
-            offset: "000007C0"            
-          - name: 'GRWMDoneWithBIOSModeChange'
-            offset: "00000838"            
-          - name: 'DisableVGAPortTraps'
-            offset: "0000085E"            
-          - name: 'EnableVGAPortTraps'
-            offset: "0000089C"            
-          - name: 'VDD_LinearModeRemap'
-            offset: "000008DA"            
-          - name: 'SLMRSetMemoryEnabled'
-            offset: "00000955"            
-          - name: 'BLTerDrawRegTrap'
-            offset: "0000095F"            
-          - name: 'SDRTSetOwnerToWindows'
-            offset: "000009D7"            
-          - name: 'SDRTPerformPhysicalIO'
-            offset: "00000A39"            
-          - name: 'BLTerDrawVGARegTrap'
-            offset: "00000A5E"            
-          - name: 'BDVTSetOwnerToWindows'
-            offset: "00000AC4"            
-          - name: 'SaveOurPages'
-            offset: "00000B21"            
-          - name: 'SOPSaveLoop'
-            offset: "00000B32"            
-          - name: 'SOPEndLoop'
-            offset: "00000B48"            
-          - name: 'UnmapOffScreenPages'
-            offset: "00000B50"            
-          - name: 'UOSPUnmapLoop'
-            offset: "00000B6F"            
-          - name: 'UOSPEndLoop'
-            offset: "00000BCC"            
-          - name: 'CheckHiResSwitchAllowed'
-            offset: "00000BE2"            
-          - name: 'CHSAGetSaveBufferSize'
-            offset: "00000C76"            
-          - name: 'CHSAAllocHiResSaveBuffer'
-            offset: "00000C9C"            
-          - name: 'CHSAForceSaveToHappenNow'
-            offset: "00000D24"            
-          - name: 'CHSAJumpToNextHandler'
-            offset: "00000D44"            
-          - name: 'CHSAFail'
-            offset: "00000D4B"            
-          - name: 'GetVESAMemory'
-            offset: "00000D4E"            
-          - name: 'GVMPrepareForBIOSCall'
-            offset: "00000DB1"            
-          - name: 'GVMGotAnAnswer'
-            offset: "00000E16"            
-          - name: 'GVMGoodExit'
-            offset: "00000E24"            
-          - name: 'GVMErrorDealloc'
-            offset: "00000E2D"            
-          - name: 'GVMError'
-            offset: "00000E34"            
-          - name: 'SaveHiResScreen'
-            offset: "00000E44"            
-          - name: 'SHRSGetBankSize'
-            offset: "00000F32"            
-          - name: 'SHRSGetLinearVRAMAddr'
-            offset: "00000F68"            
-          - name: 'SHRSBankSizeFailure'
-            offset: "0000101E"            
-          - name: 'SHRSBankSizeSuccess'
-            offset: "0000102A"            
-          - name: 'SHRSSaveDisplayStartData'
-            offset: "0000103D"            
-          - name: 'SHRSSetupVRAMCopy'
-            offset: "0000107F"            
-          - name: 'SHRSSaveLoop'
-            offset: "0000111A"            
-          - name: 'SHRSDoneSaving'
-            offset: "00001170"            
-          - name: 'RestoreHiResScreen'
-            offset: "000011AF"            
-          - name: 'RHRSNoSaveWasDone'
-            offset: "000011ED"            
-          - name: 'RHRSSaveWasOK'
-            offset: "00001213"            
-          - name: 'RHRSRestoreVESA'
-            offset: "0000122F"            
-          - name: 'RHRSSetupRestoreLoop'
-            offset: "0000127F"            
-          - name: 'RHRSRestoreLoop'
-            offset: "00001303"            
-          - name: 'RHRSRestoreState'
-            offset: "00001359"            
-          - name: 'RHRSRestoreDisplayStartData'
-            offset: "0000136A"            
-          - name: 'RHRSRestoreBank'
-            offset: "00001397"            
-          - name: 'RHRSFreeSaveBuffer'
-            offset: "000013ED"            
-          - name: 'RHRSRestoreTrappingState'
-            offset: "0000141D"            
-          - name: 'RHRSExit'
-            offset: "0000147F"            
-          - name: 'VDD_State_Begin_SR_Section'
-            offset: "00001488"            
-          - name: 'VDD_State_End_SR_Section'
-            offset: "000014B7"            
-          - name: 'VDD_State_Set_Latches_Owner'
-            offset: "00001518"            
-          - name: 'VDD_State_Clear_MemC_Owner'
-            offset: "0000158B"            
-          - name: 'VDD_State_Set_MemC_Owner'
-            offset: "000015A9"            
-          - name: 'VDD_State_DisableLinearMemory'
-            offset: "000015F8"            
-          - name: 'VDD_State_Set_CRTC_Owner'
-            offset: "00001752"            
-          - name: 'VSSCO_SuspendLoop'
-            offset: "0000178A"            
-          - name: 'VSSCO_SuspendVM'
-            offset: "000017C1"            
-          - name: 'VSSCO_DoSuspend'
-            offset: "0000182D"            
-          - name: 'VSSCO_NoSuspendNeeded'
-            offset: "00001837"            
-          - name: 'VSSCO_DoneSuspending'
-            offset: "00001849"            
-          - name: 'VSSCO_ResumeVMs'
-            offset: "000018C4"            
-          - name: 'VSSCO_ResumeLoop'
-            offset: "000018D6"            
-          - name: 'VSSCO_ResumeVM'
-            offset: "00001908"            
-          - name: 'VSSCO_NoResumeNeeded'
-            offset: "0000190E"            
-          - name: 'VDD_State_Get_CRTC_Index_Port'
-            offset: "000019A2"            
-          - name: 'VDD_State_Restore_Regs'
-            offset: "000019BB"            
-          - name: 'VSRRRestoreAttribute'
-            offset: "00001A4A"            
-          - name: 'VSRRRestoreDAC'
-            offset: "00001A8F"            
-          - name: 'VDD_State_Restore_MemC'
-            offset: "00001AA8"            
-          - name: 'VSRRRestoreMisc'
-            offset: "00001B20"            
-          - name: 'VSRRCheckForPhonyA0Mapping'
-            offset: "00001B43"            
-          - name: 'MiniVDD_Restore'
-            offset: "00001B5C"            
-          - name: 'VSRR_Exit'
-            offset: "00001B82"            
-          - name: 'VDD_State_Restore_CRTC'
-            offset: "00001B84"            
-          - name: 'VDD_State_Restore_DAC'
-            offset: "00001BAA"            
-          - name: 'VDD_State_Get_Screen_Start'
-            offset: "00001BEA"            
-          - name: 'VDD_State_Get_Display_Dimensions'
-            offset: "00001C10"            
-          - name: 'VDD_State_Get_Dimensions'
-            offset: "00001C2E"            
-          - name: 'gvp_graphics'
-            offset: "00001C90"            
-          - name: 'GVPWeAreModeX'
-            offset: "00001CC5"            
-          - name: 'VDD_State_Scrn_On'
-            offset: "00001D27"            
-          - name: 'VDD_State_Scrn_Off'
-            offset: "00001D98"            
-          - name: 'VDD_State_Restore_Index'
-            offset: "00001E10"            
-          - name: 'VDD_State_Modify_VMs_MemC'
-            offset: "00001E6A"            
-          - name: 'VDD_State_Set_MemC_Planar'
-            offset: "00001EB4"            
-          - name: 'VDD_State_Internal_Set_MemC_Planar'
-            offset: "00001F7A"            
-          - name: 'VDD_State_Save_CRTC_Owner'
-            offset: "00001FD4"            
-          - name: 'VDD_State_Restore_Latches'
-            offset: "0000204B"            
-          - name: 'VSRLCheckLatchOwner'
-            offset: "00002098"            
-          - name: 'VSRLSetupForLatchRestore'
-            offset: "000020AC"            
-          - name: 'VDD_State_Save_Latches'
-            offset: "0000213B"            
-          - name: 'VSSLSetupForLatchSave'
-            offset: "00002189"            
-          - name: 'MiniVDD_LatchSave'
-            offset: "0000218E"            
-          - name: 'VDD_State_Get_Mode'
-            offset: "000021FC"            
-          - name: 'VDD_State_Get_Mem_Mapping'
-            offset: "0000231B"            
-          - name: 'VDD_State_Change_Query'
-            offset: "0000233F"            
-          - name: 'VDD_State_Get_Chgs'
-            offset: "00002369"            
-          - name: 'VDD_State_Chk_CRTC'
-            offset: "000023F7"            
-          - name: 'VDD_State_Clear_Mod_State'
-            offset: "0000248A"            
-          - name: 'VDD_State_Chk_Cursor'
-            offset: "000024A1"            
-          - name: 'VDD_State_Get_State'
-            offset: "000024EE"            
-          - name: 'VDD_State_Get_Cursor_Posn'
-            offset: "000025DD"            
-          - name: 'VDD_State_Copy_Ctlr_State'
-            offset: "00002609"            
-          - name: 'VDD_VGA_Save_Regs'
-            offset: "00002658"            
-          - name: 'VDD_VGA_Save_Attr'
-            offset: "000026EB"            
-          - name: 'VDD_VGA_Save_Misc'
-            offset: "0000279C"            
-          - name: 'VDD_VGA_Save_CRTC'
-            offset: "000027BD"            
-          - name: 'VDD_VGA_Save_Grp'
-            offset: "000027F6"            
-          - name: 'VDD_VGA_Save_Seq'
-            offset: "00002825"            
-          - name: 'VDD_VGA_Save_DAC'
-            offset: "00002854"            
-          - name: 'VDD_Int_Can_Emulate'
-            offset: "00002890"            
-          - name: 'VDD_Int_9'
-            offset: "00002901"            
-          - name: 'VDD_Int_16'
-            offset: "00002922"            
-          - name: 'UpdateModRect'
-            offset: "00002989"            
-          - name: 'VDD_Int_10'
-            offset: "000029EA"            
-          - name: 'VI10VESA'
-            offset: "00002E77"            
-          - name: 'VESA_NotHandledByMiniVDD'
-            offset: "00002EAA"            
-          - name: 'VESA_GetMode'
-            offset: "00002ED2"            
-          - name: 'VESA_ModeSetDone'
-            offset: "00002EE7"            
-          - name: 'VMSDModeSet'
-            offset: "00002F30"            
-          - name: 'ScrollWinUp'
-            offset: "00002F6A"            
-          - name: 'ScrollWinDown'
-            offset: "00002FB3"            
-          - name: 'VDD_Dspy_SetPosn'
-            offset: "0000300B"            
-          - name: 'VDD_Int_10_Mode_Switch'
-            offset: "00003064"            
-          - name: 'VDD_Int_10_Mode_Change_Start'
-            offset: "000030A9"            
-          - name: 'VDD_Int_10_Mode_Sw_Done'
-            offset: "00003173"            
-          - name: 'VDD_Int_10_Mode_Change_End'
-            offset: "00003185"            
-          - name: 'VDD_Int_10_PM'
-            offset: "000031EA"            
-          - name: 'VDD_PH_Mem_Access_Latch_Page'
-            offset: "00003248"            
-          - name: 'VDD_PH_Mem_End_Access_Latch_Page'
-            offset: "0000327E"            
-          - name: 'VDD_PH_Mem_Shared_Page'
-            offset: "00003297"            
-          - name: 'VDD_PH_Mem_Get_PPD_Ptr'
-            offset: "00003301"            
-          - name: 'VDD_PH_Mem_VM_Using_All'
-            offset: "00003336"            
-          - name: 'VDD_PH_Mem_CalcPagePhys'
-            offset: "00003380"            
-          - name: 'cpp_SetToVDDBank'
-            offset: "00003396"            
-          - name: 'cpp_SetToWindowsBank'
-            offset: "000033A8"            
-          - name: 'cpp_CalcBanking'
-            offset: "000033B8"            
-          - name: 'VDD_PH_Mem_Mapped_Phys'
-            offset: "000033CD"            
-          - name: 'VDD_PH_Mem_Get_Visible_Pages'
-            offset: "00003421"            
-          - name: 'VGVPHiResVM'
-            offset: "00003453"            
-          - name: 'VGVPLieAboutScreenSize'
-            offset: "0000347F"            
-          - name: 'VDD_PH_Mem_Page_Visible'
-            offset: "00003514"            
-          - name: 'VDD_PH_Mem_CalcPageId'
-            offset: "0000353A"            
-          - name: 'VDD_PH_Mem_CalcPageAddr'
-            offset: "00003590"            
-          - name: 'VDD_PH_Mem_Alloc_Video_Page'
-            offset: "000035DB"            
-          - name: 'find_page'
-            offset: "0000365C"            
-          - name: 'MiniVDDPageAdjust'
-            offset: "0000366E"            
-          - name: 'MiniVDDPageAdjustDone'
-            offset: "00003690"            
-          - name: 'alloc_page_free'
-            offset: "000036E7"            
-          - name: 'no_page_free'
-            offset: "000036FF"            
-          - name: 'alloc_page'
-            offset: "0000373E"            
-          - name: 'VDD_PH_Mem_LRU_Sweep'
-            offset: "000037E8"            
-          - name: 'VDD_PH_Mem_update_LRU'
-            offset: "0000385E"            
-          - name: 'VDD_PH_Mem_Change_Page'
-            offset: "000038CF"            
-          - name: 'VDD_PH_Mem_Get_Page_Owner'
-            offset: "0000392F"            
-          - name: 'VDD_PH_Mem_Free_Page'
-            offset: "00003979"            
-          - name: 'VDD_PH_Mem_Restore_Mapping'
-            offset: "00003A2D"            
-          - name: 'VDD_PH_Mem_Set_A0_Mapping'
-            offset: "00003A3F"            
-          - name: 'VDD_PH_Mem_Modify_VMs_MemC'
-            offset: "00003A62"            
-          - name: 'VDD_PH_Mem_Clear_MemC_mods'
-            offset: "00003AA5"            
-          - name: 'VDD_PH_Mem_Access_Page'
-            offset: "00003AC6"            
-          - name: 'VDD_PH_Mem_Page_Accessible'
-            offset: "00003B9A"            
-          - name: 'VDD_PH_Mem_Release_Page'
-            offset: "00003BCB"            
-          - name: 'VDD_Get_VM_Info'
-            offset: "00003BEA"            
-          - name: 'VDD_Hide_Cursor'
-            offset: "00003C05"            
-          - name: 'VDD_Query_Access'
-            offset: "00003C5F"            
-          - name: 'VQA_CheckSuspended'
-            offset: "00003CB3"            
-          - name: 'VQA_AllowAccess'
-            offset: "00003CBE"            
-          - name: 'VQA_DontAllowAccess'
-            offset: "00003CC1"            
-          - name: 'VDD_Set_VMType'
-            offset: "00003CCB"            
-          - name: 'VDD_Check_Update_Soon'
-            offset: "00003D66"            
-          - name: 'VDD_Get_ModTime'
-            offset: "00003DD6"            
-          - name: 'VDD_InvalidateSelector'
-            offset: "00003E27"            
-          - name: 'VISInvalidateLoop'
-            offset: "00003E4B"            
-          - name: 'VISEndInvalidateLoop'
-            offset: "00003E71"            
-          - name: 'VISBadness'
-            offset: "00003E81"            
-          - name: 'VDD_ValidateSelector'
-            offset: "00003E84"            
-          - name: 'VVSSearchLoop'
-            offset: "00003EB5"            
-          - name: 'VVSEndSearchLoop'
-            offset: "00003EE3"            
-          - name: 'VVSCheckInstruction'
-            offset: "00003EEB"            
-          - name: 'VVSOurGPFault'
-            offset: "00003F11"            
-          - name: 'VVSValidateLoop'
-            offset: "00003F1B"            
-          - name: 'VVSEndValidateLoop'
-            offset: "00003F3B"            
-          - name: 'VVSBadness'
-            offset: "00003F50"            
-          - name: 'VVSChain'
-            offset: "00003F53"            
-          - name: 'VVSChain0C'
-            offset: "00003F60"            
-          - name: 'VDD_PM_API'
-            offset: "00003F6A"            
-          - name: 'VPAItsAMiniVDDCall'
-            offset: "00003F97"            
-          - name: 'VPA_IOCTL'
-            offset: "00003FBF"            
-          - name: 'VPAItsAGrabberCall'
-            offset: "00003FEB"            
-          - name: 'VDD_Get_GrbState'
-            offset: "000040AB"            
-          - name: 'VDD_Get_State'
-            offset: "000040B8"            
-          - name: 'VDD_Get_Mod'
-            offset: "00004119"            
-          - name: 'VDD_Clear_Mod'
-            offset: "000041A4"            
-          - name: 'VDD_Get_Mem'
-            offset: "000041B9"            
-          - name: 'VDD_Get_GrbMem'
-            offset: "000041FC"            
-          - name: 'VGMm_Set_Struc'
-            offset: "00004218"            
-          - name: 'VDD_Suspend_NormSch'
-            offset: "00004307"            
-          - name: 'VDD_Free_Grab'
-            offset: "0000432F"            
-          - name: 'VDD_Free_Mem'
-            offset: "00004343"            
-          - name: 'VDD_Unlock_APP'
-            offset: "0000435A"            
-          - name: 'VDD_VM_Mem_Alloc_PageMaps'
-            offset: "000043A8"            
-          - name: 'VDD_VM_Mem_Grow_PageMaps'
-            offset: "00004434"            
-          - name: 'VDD_VM_Mem_VM_Critical_Init'
-            offset: "000044D1"            
-          - name: 'VDD_VM_Mem_alloc_visible_page'
-            offset: "00004512"            
-          - name: 'VDD_VM_Mem_Chk_VideoPages'
-            offset: "00004612"            
-          - name: 'VDD_VM_Mem_Set_Device_Focus'
-            offset: "00004669"            
-          - name: 'VDD_VM_Mem_Dealloc'
-            offset: "00004743"            
-          - name: 'VDD_VM_Mem_DMain'
-            offset: "000047A7"            
-          - name: 'VDD_VM_Mem_Adjust_Plane_Sizes'
-            offset: "000047BD"            
-          - name: 'mr_mod_plane_size'
-            offset: "00004870"            
-          - name: 'VDD_VM_Mem_Realloc_Plane'
-            offset: "00004889"            
-          - name: 'VDD_VM_Mem_Realloc'
-            offset: "000048F3"            
-          - name: 'VDD_VM_Mem_Font_Page'
-            offset: "000049BC"            
-          - name: 'VDD_VM_Mem_End_Mode_Chg'
-            offset: "000049D6"            
-          - name: 'VDD_VM_Mem_Change_SaveMem'
-            offset: "00004B13"            
-          - name: 'VDD_VM_Mem_Adjust_Visible_Pages'
-            offset: "00004B67"            
-          - name: 'VDD_VM_Mem_Chk_Alloc'
-            offset: "00004BDA"            
-          - name: 'VDD_VM_Mem_MemC_about_to_change'
-            offset: "00004C80"            
-          - name: 'VDD_VM_Mem_Disable'
-            offset: "00004CD4"            
-          - name: 'VDD_VM_Mem_VM_can_use_savemem'
-            offset: "00004D6C"            
-          - name: 'VDD_PFault'
-            offset: "00004D92"            
-          - name: 'VPFSleepLoop'
-            offset: "00004DDD"            
-          - name: 'VPFNoSleepNeeded'
-            offset: "00004DF1"            
-          - name: 'pf_pgmp_ok'
-            offset: "00004E51"            
-          - name: 'pf_try_using_VRAM'
-            offset: "00004EB2"            
-          - name: 'pf_alloc_page'
-            offset: "00004EE9"            
-          - name: 'pf_exit'
-            offset: "00004FAF"            
-          - name: 'VDD_VM_Mem_Map_SaveMem'
-            offset: "00004FE7"            
-          - name: 'msm_map_null'
-            offset: "00005047"            
-          - name: 'msm_map_vram'
-            offset: "00005063"            
-          - name: 'VDD_VM_Mem_Unmap_SaveMem'
-            offset: "000050FE"            
-          - name: 'VDD_VM_Mem_MapNull'
-            offset: "000051BF"            
-          - name: 'VDD_VM_Mem_Disable_Null'
-            offset: "0000521F"            
-          - name: 'VDD_VM_Mem_Page_Handler'
-            offset: "0000528D"            
-          - name: 'VPHTrashShadow'
-            offset: "00005363"            
-          - name: 'unmap_page'
-            offset: "00005376"            
-          - name: 'VDD_VM_Mem_Msg_Page_Handler'
-            offset: "0000537B"            
-          - name: 'VDD_VM_Mem_Unmap_Page'
-            offset: "00005385"            
-          - name: 'VDD_VM_Mem_Get_PTE'
-            offset: "000053F6"            
-          - name: 'VDD_VM_Mem_Is_Page_Dirty'
-            offset: "00005421"            
-          - name: 'VDD_VM_Mem_Chk_SaveMem'
-            offset: "00005450"            
-          - name: 'VDD_VM_Mem_Chk_MemC_State'
-            offset: "00005486"            
-          - name: 'VDD_VM_Mem_Save_Page'
-            offset: "00005506"            
-          - name: 'VDD_VM_Mem_Restore_Page'
-            offset: "000056D8"            
-          - name: 'rp_text'
-            offset: "000057BB"            
-          - name: 'rp_chain4'
-            offset: "00005854"            
-          - name: 'rp_exit'
-            offset: "000058C1"            
-          - name: 'VDD_VM_Mem_Select_Plane'
-            offset: "000058D9"            
-          - name: 'VDD_VM_Mem_Chk_Plane_Size'
-            offset: "0000591B"            
-          - name: 'VDD_VM_Mem_Lock_SaveMem_Page'
-            offset: "00005941"            
-          - name: 'VDD_VM_Mem_copy_from_plane'
-            offset: "00005970"            
-          - name: 'VDD_VM_Mem_save_attribute_page'
-            offset: "000059B8"            
-          - name: 'VDD_VM_Mem_restore_attribute_page'
-            offset: "00005A03"            
-          - name: 'VDD_VM_Mem_copy_to_plane'
-            offset: "00005A35"            
-          - name: 'VDD_VM_Mem_zero_page'
-            offset: "00005A82"            
-          - name: 'VDD_VM_Mem_zero_page_no_pushad'
-            offset: "00005A90"            
-          - name: 'VDD_VM_Mem_init_text'
-            offset: "00005ABD"            
-          - name: 'VDD_VM_Mem_Save_Dirty_State'
-            offset: "00005AF0"            
-          - name: 'VDD_VM_Mem_Free_Pages'
-            offset: "00005B80"            
-          - name: 'VDD_VM_Mem_Record_VRAM_Mod'
-            offset: "00005BF8"            
-          - name: 'VDD_Font_save_font'
-            offset: "00005C44"            
-          - name: 'VDD_Font_restore_font'
-            offset: "00005CD2"            
-          - name: 'VDD_VMIdle'
-            offset: "00005D4C"            
-          - name: 'VDD_VMTimeOut'
-            offset: "00005D9C"            
-          - name: 'VDD_Update_Window'
-            offset: "00005DDC"            
-          - name: 'VDD_Set_VM_Time_Out'
-            offset: "00005E48"            
-          - name: 'VDD_Clr_VM_Time_Out'
-            offset: "00005E90"            
-          - name: 'VDD_Update_Event'
-            offset: "00005EAA"            
-          - name: 'VDD_Upd_CallBack'
-            offset: "00005EE5"            
-          - name: 'VDD_VMDA_Grab'
-            offset: "00005F13"            
-          - name: 'VDD_Grab_Event'
-            offset: "00005F6D"            
-          - name: 'VDD_Grab_CallBack'
-            offset: "00005FAA"            
-          - name: 'VDD_Proc_VM_Resume'
-            offset: "00005FC5"            
-          - name: 'VDD_Proc_VM_Suspend'
-            offset: "00005FFB"            
-          - name: 'VDD_Proc_BGrnd_INT2F'
-            offset: "0000600F"            
-          - name: 'VDD_Proc_FGrnd_INT2F'
-            offset: "000060C7"            
-          - name: 'SYONG'
-            offset: "00006103"            
-          - name: 'VDD_Proc_BGrnd_Notify'
-            offset: "0000618B"            
-          - name: 'VDD_Proc_Notify_Bkgnd_VMs'
-            offset: "000061E3"            
-          - name: 'VDD_Proc_Chk_Bkgnd_Usage'
-            offset: "00006240"            
-          - name: 'VDD_Proc_Suspend_Bkgnd_VMs'
-            offset: "00006292"            
-          - name: 'VDD_Proc_Resume_Bkgnd_VMs'
-            offset: "0000633D"            
-          - name: 'rbv_call_resume'
-            offset: "000063E8"            
-          - name: 'VDD_Proc_Force_Cur_VM_Fgrnd'
-            offset: "0000641C"            
-          - name: 'VDD_Proc_Set_Device_Focus'
-            offset: "00006451"            
-          - name: 'VSDFCheckSuspendParams'
-            offset: "000064A5"            
-          - name: 'VDD_TIO_Set_Trap'
-            offset: "000064F4"            
-          - name: 'VIOST_EnableTrap'
-            offset: "00006620"            
-          - name: 'VIOT_Disp'
-            offset: "00006658"            
-          - name: 'VIOT_Disp0'
-            offset: "000066BB"            
-          - name: 'VIOT_Dispatch_Jump'
-            offset: "000066CB"            
-          - name: 'VIOT_Disp_Ignore'
-            offset: "000066FF"            
-          - name: 'VIOT_CRTC'
-            offset: "00006711"            
-          - name: 'VIOT_In_Undef'
-            offset: "00006744"            
-          - name: 'VIOT_Ignore'
-            offset: "00006750"            
-          - name: 'VIOT_3C0'
-            offset: "0000675C"            
-          - name: 'VIOT_In_3C0'
-            offset: "0000677F"            
-          - name: 'VIOT_3C1'
-            offset: "00006788"            
-          - name: 'VIOT_In_3C1'
-            offset: "000067C9"            
-          - name: 'VIOT_3C2'
-            offset: "000067DC"            
-          - name: 'VIOT_3C4'
-            offset: "00006850"            
-          - name: 'VIOT_3C5'
-            offset: "00006888"            
-          - name: 'VIOT_VO_Seq'
-            offset: "000068C9"            
-          - name: 'VIOT_3C6'
-            offset: "00006964"            
-          - name: 'VIOT_In_3C6'
-            offset: "0000699B"            
-          - name: 'VIOT_3C7'
-            offset: "000069B8"            
-          - name: 'VIOT_3C8'
-            offset: "00006A44"            
-          - name: 'VIOT_3C9'
-            offset: "00006ADC"            
-          - name: 'VIOT_3CA'
-            offset: "00006B9C"            
-          - name: 'VIOT_3CC'
-            offset: "00006BB0"            
-          - name: 'VIOT_3CE'
-            offset: "00006BCC"            
-          - name: 'VIOT_3CENoSpecialHandling'
-            offset: "00006BFA"            
-          - name: 'VIOT_3CF'
-            offset: "00006C2C"            
-          - name: 'VIOT_3CFNoSpecialHandling'
-            offset: "00006C5A"            
-          - name: 'VIOT_3D4'
-            offset: "00006D88"            
-          - name: 'VIOT_3D5'
-            offset: "00006DA4"            
-          - name: 'VIOT_In_CRT'
-            offset: "00006E0F"            
-          - name: 'VIOT_VI_CRT'
-            offset: "00006E13"            
-          - name: 'VIOT_3DA'
-            offset: "00006E44"            
-          - name: 'VIOT_3DB'
-            offset: "00006EA4"            
-      - num: "16"
-        name: "_TEXT"
-        offset: "00012A20"
-        symbols:
-          - name: '_VDD_Irp_ProcessIrp'
-            offset: "000001BC"            
-      - num: "18"
-        name: "CONST"
-        offset: "00000000"
-        symbols:
-          - name: '_GUID_I2C_INTERFACE'
-            offset: "00000000"            
-          - name: '_GUID_GPIO_INTERFACE'
-            offset: "00000010"            
+- version: system
+  tree:
+  - - fileio.asm
+    - mainvdd.h
+    - vddasd.c
+    - vddbeep.c
+    - vddctl.asm
+    - vdddebug.asm
+    - vdddev.c
+    - vddedid.c
+    - vddenum.c
+    - vddfonts.asm
+    - vddgrab.asm
+    - vddint.asm
+    - vddioctl.c
+    - vddoem.asm
+    - vddpci.c
+    - vddphmem.asm
+    - vddpnp.asm
+    - vddproc.asm
+    - vddpwr.c
+    - vddrom.c
+    - vddstate.asm
+    - vddsvc.asm
+    - vddtio.asm
+    - vddvga.asm
+    - vddvmmem.asm
+    - " !\"#%&'(*+,-.../vdddev.c"
+    - vddirp.c
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00001E70'
+    symbols:
+    - name: VDD_Control
+      processed: ''
+      offset: '00000000'
+    - name: _VDD_Device_Control
+      processed: ''
+      offset: 000000B1
+    - name: VDD_Device_DIOC
+      processed: ''
+      offset: 000000B8
+    - name: VDD_DIOC
+      processed: ''
+      offset: 000000C7
+    - name: VDD_Do_Physical_IO
+      processed: ''
+      offset: 000000D6
+    - name: VDPIWordInput
+      processed: ''
+      offset: '000000E6'
+    - name: VDPIByteInput
+      processed: ''
+      offset: 000000F2
+    - name: VDPIDWordInput
+      processed: ''
+      offset: 000000FD
+    - name: VDPIWordOutput
+      processed: ''
+      offset: '00000108'
+    - name: VDPIByteOutput
+      processed: ''
+      offset: '00000114'
+    - name: VDPIDWordOutput
+      processed: ''
+      offset: 0000011F
+    - name: VDPIHandleStringIO
+      processed: ''
+      offset: 0000012E
+    - name: VDPI32BitOUTS
+      processed: ''
+      offset: 0000013C
+    - name: VDPI32BitINSW
+      processed: ''
+      offset: 000001A0
+    - name: VDPI32BitINSD
+      processed: ''
+      offset: 000001B1
+    - name: VDPI32BitINSB
+      processed: ''
+      offset: 000001C2
+    - name: VDPI32BitOUTSW
+      processed: ''
+      offset: 000001D0
+    - name: VDPI32BitOUTSD
+      processed: ''
+      offset: 000001DF
+    - name: VDPI32BitOUTSB
+      processed: ''
+      offset: 000001EE
+    - name: VDPI16BitStringIO
+      processed: ''
+      offset: 000001FA
+    - name: VDPI16BitINSW
+      processed: ''
+      offset: '00000250'
+    - name: VDPI16BitINSD
+      processed: ''
+      offset: 0000025F
+    - name: VDPI16BitINSB
+      processed: ''
+      offset: 0000026E
+    - name: VDPI16BitOUTSW
+      processed: ''
+      offset: 0000027A
+    - name: VDPI16BitOUTSD
+      processed: ''
+      offset: '00000287'
+    - name: VDPI16BitOUTSB
+      processed: ''
+      offset: '00000294'
+    - name: AmIHiResMode
+      processed: ''
+      offset: 0000029E
+    - name: AHRMCheckNonVESAHiRes
+      processed: ''
+      offset: 000002C6
+    - name: AHRMHiResVM
+      processed: ''
+      offset: 000002F3
+    - name: AHRMNotHiResVM
+      processed: ''
+      offset: 000002F6
+    - name: CloseDownVESAVM
+      processed: ''
+      offset: 000002FA
+    - name: VDD_State_Chk_MemC
+      processed: ''
+      offset: 0000030C
+    - name: VDD_State_Schedule_Debug_Event
+      processed: ''
+      offset: 000003F5
+    - name: VDD_Queue_Debug_String
+      processed: ''
+      offset: 0000042C
+    - name: VDD_Debug_Dump_Flags
+      processed: ''
+      offset: '00000441'
+    - name: VDD_DebugQuery
+      processed: ''
+      offset: '00000463'
+    - name: VDD_Reg_Dump
+      processed: ''
+      offset: 0000092F
+    - name: VDD_Start_Of_VESA_Call
+      processed: ''
+      offset: 00000A30
+    - name: SOVCGetMode
+      processed: ''
+      offset: 00000A94
+    - name: SOVCDontCallVESA
+      processed: ''
+      offset: 00000AA8
+    - name: SOVCExit
+      processed: ''
+      offset: 00000AAE
+    - name: VDD_End_Of_VESA_Call
+      processed: ''
+      offset: 00000AAF
+    - name: VDD_Int_2F_PM
+      processed: ''
+      offset: 00000AFC
+    - name: VDD_Int_2F
+      processed: ''
+      offset: 00000B1B
+    - name: VDD_Int_Set_CanRestore
+      processed: ''
+      offset: 00000BD1
+    - name: VDD_Bell
+      processed: ''
+      offset: 00000D11
+    - name: VDD_PH_Mem_Debug_Validate_PH
+      processed: ''
+      offset: 00000D58
+    - name: VDD_PH_Mem_Debug_Dump_Pages
+      processed: ''
+      offset: 00000D9E
+    - name: VDDSetBusyFlagAddr
+      processed: ''
+      offset: 00000ED8
+    - name: VDD_VM_Mem_Chk_Bank_DEBUG
+      processed: ''
+      offset: 00000F18
+    - name: VDD_VM_Mem_Debug_Dump_Pages
+      processed: ''
+      offset: 00000F3B
+    - name: _VDD_SimulateBeep
+      processed: ''
+      offset: '00001030'
+    - name: _VDD_CancelSimulatedBeeps
+      processed: ''
+      offset: '00001068'
+    - name: _FindDevice
+      processed: ''
+      offset: '00001090'
+    - name: _FindDeviceFromDevNode
+      processed: ''
+      offset: 0000110E
+    - name: _VDDNotify
+      processed: ''
+      offset: '00001133'
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: '00001170'
+    - name: WDMIofCompleteRequest
+      processed: ''
+      offset: '00001174'
+    - name: _VDD_Get_Version
+      processed: ''
+      offset: '00001180'
+    - name: _VDD_PIF_State
+      processed: ''
+      offset: '00001184'
+    - name: _VDD_Get_GrabRtn
+      processed: ''
+      offset: '00001188'
+    - name: _VDD_Hide_Cursor
+      processed: ''
+      offset: 0000118C
+    - name: _VDD_Set_VMType
+      processed: ''
+      offset: '00001190'
+    - name: _VDD_Get_ModTime
+      processed: ''
+      offset: '00001194'
+    - name: _VDD_Set_HCurTrk
+      processed: ''
+      offset: '00001198'
+    - name: _VDD_Msg_ClrScrn
+      processed: ''
+      offset: 0000119C
+    - name: _VDD_Msg_ForColor
+      processed: ''
+      offset: 000011A0
+    - name: _VDD_Msg_BakColor
+      processed: ''
+      offset: 000011A4
+    - name: _VDD_Msg_TextOut
+      processed: ''
+      offset: 000011A8
+    - name: _VDD_Msg_SetCursPos
+      processed: ''
+      offset: 000011AC
+    - name: _VDD_Query_Access
+      processed: ''
+      offset: 000011B0
+    - name: _VDD_Check_Update_Soon
+      processed: ''
+      offset: 000011B4
+    - name: _VDD_Get_Mini_Dispatch_Table
+      processed: ''
+      offset: 000011B8
+    - name: _VDD_Register_Virtual_Port
+      processed: ''
+      offset: 000011BC
+    - name: _VDD_Get_VM_Info
+      processed: ''
+      offset: 000011C0
+    - name: _VDD_Get_Special_VM_IDs
+      processed: ''
+      offset: 000011C4
+    - name: _VDD_Register_Extra_Screen_Selector
+      processed: ''
+      offset: 000011C8
+    - name: _VDD_Takeover_VGA_Port
+      processed: ''
+      offset: 000011CC
+    - name: _VDD_Get_DISPLAYINFO
+      processed: ''
+      offset: 000011D0
+    - name: _VDD_Do_Physical_IO
+      processed: ''
+      offset: 000011D4
+    - name: _VDD_Set_Sleep_Flag_Addr
+      processed: ''
+      offset: 000011D8
+    - name: _VDD_EnableDevice
+      processed: ''
+      offset: 000011DC
+    - name: VDD_DDB
+      processed: ''
+      offset: '000011E0'
+    - name: _VDD_DDB
+      processed: ''
+      offset: '000011E0'
+    - name: Vid_Flags
+      processed: ''
+      offset: '00001230'
+    - name: VT_Flags
+      processed: ''
+      offset: '00001234'
+    - name: Vid_CB_Off
+      processed: ''
+      offset: '00001238'
+    - name: _MiniVDDDispatchTable
+      processed: ''
+      offset: 0000123C
+    - name: MiniVDDDispatchTable
+      processed: ''
+      offset: 0000123C
+    - name: DOSVMCount
+      processed: ''
+      offset: '00001334'
+    - name: CheckHiResChainAddr
+      processed: ''
+      offset: '00001338'
+    - name: HiResSaveBlockID
+      processed: ''
+      offset: 0000133C
+    - name: ModeChangeFlags
+      processed: ''
+      offset: '00001340'
+    - name: MemoryDisabledFlag
+      processed: ''
+      offset: '00001341'
+    - name: ScreenSwitchSemaphores
+      processed: ''
+      offset: '00001342'
+    - name: GetVESAMemSizeReentryFlag
+      processed: ''
+      offset: '00001343'
+    - name: Vid_Focus_VM
+      processed: ''
+      offset: '00001344'
+    - name: _Vid_Focus_VM
+      processed: ''
+      offset: '00001344'
+    - name: _Vid_CRTC_VM
+      processed: ''
+      offset: '00001348'
+    - name: Vid_CRTC_VM
+      processed: ''
+      offset: '00001348'
+    - name: _Vid_MemC_VM
+      processed: ''
+      offset: 0000134C
+    - name: Vid_MemC_VM
+      processed: ''
+      offset: 0000134C
+    - name: Vid_Msg_Pseudo_VM
+      processed: ''
+      offset: '00001358'
+    - name: Vid_Msg_Pseudo_CB
+      processed: ''
+      offset: 0000135C
+    - name: Vid_Msg_DAC
+      processed: ''
+      offset: 000013FC
+    - name: Vid_Planar_Pseudo_CB
+      processed: ''
+      offset: '00001998'
+    - name: Vid_Initial_Text_Rows
+      processed: ''
+      offset: 00001A38
+    - name: Vid_Msg_Pages
+      processed: ''
+      offset: 00001A39
+    - name: VDD_State_MemC_Debug_Event
+      processed: ''
+      offset: 00001A44
+    - name: VDD_State_MemC_Debug_TS
+      processed: ''
+      offset: 00001A48
+    - name: VDD_NoSR
+      processed: ''
+      offset: 00001A74
+    - name: fVT_NameTable
+      processed: ''
+      offset: 00001F00
+    - name: Vid_I10_OldVector
+      processed: ''
+      offset: 000026B0
+    - name: Vid_Stub_I10_Vector
+      processed: ''
+      offset: 000026B4
+    - name: Vid_I10_Next_CS
+      processed: ''
+      offset: 000026B8
+    - name: Vid_I10_Next_EIP
+      processed: ''
+      offset: 000026BC
+    - name: Vid_I2F_Next_CS
+      processed: ''
+      offset: 000026C0
+    - name: Vid_I2F_Next_EIP
+      processed: ''
+      offset: 000026C4
+    - name: Vid_PhysA0000
+      processed: ''
+      offset: 000026FC
+    - name: _Vid_PhysA0000
+      processed: ''
+      offset: 000026FC
+    - name: Vid_Sys_Visible_Pages
+      processed: ''
+      offset: '00002700'
+    - name: Vid_Sys_First_Visible
+      processed: ''
+      offset: '00002704'
+    - name: Video_Pages
+      processed: ''
+      offset: '00002706'
+    - name: Video_Page_Table
+      processed: ''
+      offset: 0000270A
+    - name: VDD_DPD
+      processed: ''
+      offset: '00002714'
+    - name: Vid_Msg_VM
+      processed: ''
+      offset: '00002844'
+    - name: Vid_MsgMode_Text_Rows
+      processed: ''
+      offset: '00002848'
+    - name: Vid_MsgMode_Text_Cols
+      processed: ''
+      offset: 0000284C
+    - name: Vid_Scrn_Attr
+      processed: ''
+      offset: '00002850'
+    - name: PIF_Save
+      processed: ''
+      offset: '00002852'
+    - name: WindowsVMHandle
+      processed: ''
+      offset: '00002854'
+    - name: SleepFlagAddr
+      processed: ''
+      offset: '00002858'
+    - name: _UserExeFlagsAddr
+      processed: ''
+      offset: 0000285C
+    - name: UserExeFlagsAddr
+      processed: ''
+      offset: 0000285C
+    - name: BusyBitAddr
+      processed: ''
+      offset: '00002860'
+    - name: SetHiResModeCallback
+      processed: ''
+      offset: '00002864'
+    - name: OriginalVideoPages
+      processed: ''
+      offset: '00002868'
+    - name: VGAShadowMemStatusAddr
+      processed: ''
+      offset: 0000286C
+    - name: ExtraSelectorArray
+      processed: ''
+      offset: '00002870'
+    - name: VFlatDFlag
+      processed: ''
+      offset: '00002918'
+    - name: SelectorDisabledFlag
+      processed: ''
+      offset: '00002919'
+    - name: BusyBitBitmask
+      processed: ''
+      offset: 0000291A
+    - name: Vid_Win_Update_Time
+      processed: ''
+      offset: 00002A80
+    - name: Vid_Mode_Update_Time
+      processed: ''
+      offset: 00002A84
+    - name: Vid_Scroll_Freq
+      processed: ''
+      offset: 00002A88
+    - name: Vid_VM_Idle_Chain
+      processed: ''
+      offset: 00002A8C
+    - name: VDD_Force_Trapping
+      processed: ''
+      offset: 00002AC0
+    - name: VIOT_Dispatch
+      processed: ''
+      offset: 00002AC8
+    - name: MiniVDDSpecialPortFlags
+      processed: ''
+      offset: 00002B4C
+    - name: _BiosPostCodeBegin_Debug_Flags
+      processed: ''
+      offset: 00002B78
+    - name: _linLowROM
+      processed: ''
+      offset: 00002EB8
+    - name: _EstTimeTable
+      processed: ''
+      offset: '00003428'
+    - name: _Invalid_MiniVDD2_Calls
+      processed: ''
+      offset: '00003580'
+    - name: _LastVgaOwner
+      processed: ''
+      offset: 00003B10
+    - name: _fVESA
+      processed: ''
+      offset: 00003B14
+    - name: _RomOwner
+      processed: ''
+      offset: 00003B18
+    - name: _DeviceList
+      processed: ''
+      offset: 00003B1C
+    - name: _fInitSomethingDangerous
+      processed: ''
+      offset: 00003B20
+    - name: _asdFail
+      processed: ''
+      offset: 00003B24
+    - name: _vgaDevNode
+      processed: ''
+      offset: 00003BF0
+    - name: _dnPCI
+      processed: ''
+      offset: 00003BF4
+    - name: _VgaOwner
+      processed: ''
+      offset: 00003BF8
+    - name: _fAPM
+      processed: ''
+      offset: 00003BFC
+  - num: '2'
+    name: _IMGROUP
+    offset: 00001EB0
+    symbols:
+    - name: '@MSG_IAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_IDATA'
+      processed: ''
+      offset: '00000014'
+  - num: '3'
+    name: _PMGROUP
+    offset: 00001EF0
+    symbols:
+    - name: '@MSG_PAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_PDATA'
+      processed: ''
+      offset: 0000001C
+  - num: '4'
+    name: _IGROUP
+    offset: '00003070'
+    symbols:
+    - name: VDD_Sys_Critical_Init
+      processed: ''
+      offset: '00000000'
+    - name: VDD_Device_Init
+      processed: ''
+      offset: 0000007A
+    - name: VDD_State_Sys_Critical_Init
+      processed: ''
+      offset: '00000168'
+    - name: VDD_State_Device_Init
+      processed: ''
+      offset: 0000018C
+    - name: VDD_State_Get_Initial_Lines
+      processed: ''
+      offset: 000001DE
+    - name: VDD_State_Init_MemC_Planar
+      processed: ''
+      offset: 0000021E
+    - name: VDD_State_Init_Message_Mode
+      processed: ''
+      offset: 000002A5
+    - name: VDD_State_Set_Mode
+      processed: ''
+      offset: 000003EA
+    - name: VDD_Get_Special_VM_IDs
+      processed: ''
+      offset: '00000459'
+    - name: VDD_Debug_Init
+      processed: ''
+      offset: '00000470'
+    - name: VDD_Int_Device_Init
+      processed: ''
+      offset: 000004B0
+    - name: InstallVESAStub
+      processed: ''
+      offset: 0000054D
+    - name: InstallBellStub
+      processed: ''
+      offset: '00000574'
+    - name: VDD_PH_Mem_Sys_Critical_Init
+      processed: ''
+      offset: '00000638'
+    - name: VDD_VM_Mem_Device_Init
+      processed: ''
+      offset: 000006C4
+    - name: VDD_VM_Mem_Init_Complete
+      processed: ''
+      offset: 00000A03
+    - name: VDD_Font_Setup_Msg_Mode_Init
+      processed: ''
+      offset: 00000A24
+    - name: VDD_Font_Save_Msg_Font
+      processed: ''
+      offset: 00000AA0
+    - name: VDD_Font_Init_Complete
+      processed: ''
+      offset: 00000D4C
+    - name: VDD_Proc_Device_Init
+      processed: ''
+      offset: 00000DA8
+    - name: VDD_TIO_Sys_Critical_Init
+      processed: ''
+      offset: '00000E04'
+    - name: VDD_TIO_Device_Init
+      processed: ''
+      offset: '00000E06'
+    - name: VDD_PNP_Init_Complete
+      processed: ''
+      offset: 00000EB8
+    - name: VMPagesBuf
+      processed: ''
+      offset: '00001070'
+    - name: VDD_Time_Ini
+      processed: ''
+      offset: '00001300'
+    - name: VDD_SuspMsg_Ini
+      processed: ''
+      offset: '00001311'
+    - name: VDD_NoSusp_Ini
+      processed: ''
+      offset: '00001324'
+    - name: Vid_Text_Rows_Ini
+      processed: ''
+      offset: '00001338'
+    - name: Vid_Text_Rows_Sect
+      processed: ''
+      offset: '00001344'
+    - name: VDD_2nd_Ini
+      processed: ''
+      offset: '00001352'
+    - name: VDD_Mono_Text_Ini
+      processed: ''
+      offset: 0000135E
+    - name: VDD_Rsrv_C6C7_Ini
+      processed: ''
+      offset: 0000136A
+    - name: VDD_VM_SaveRes_Ini
+      processed: ''
+      offset: 0000137A
+    - name: VDD_VM_Scroll_Freq_Ini
+      processed: ''
+      offset: 0000138C
+    - name: VDD_Use_ROM_Font_Ini
+      processed: ''
+      offset: 0000139C
+    - name: Vid_Mono_IO_Table
+      processed: ''
+      offset: 000013A8
+    - name: Vid_IO_Table
+      processed: ''
+      offset: 000013BC
+  - num: '5'
+    name: _PTEXT
+    offset: 00003D00
+    symbols:
+    - name: _VDD_BeepCallback
+      processed: ''
+      offset: '00000000'
+    - name: _ReadPCI
+      processed: ''
+      offset: '00000090'
+    - name: _WritePCI
+      processed: ''
+      offset: 000000B5
+    - name: _ReadPCIW
+      processed: ''
+      offset: 000000D1
+    - name: _WritePCIW
+      processed: ''
+      offset: 000000F7
+    - name: __EnablePCI
+      processed: ''
+      offset: '00000113'
+    - name: _EnablePCI
+      processed: ''
+      offset: '00000148'
+    - name: _GetRootPCI
+      processed: ''
+      offset: 0000015C
+    - name: __EnableVGA
+      processed: ''
+      offset: 000001DF
+    - name: _BeginVGA
+      processed: ''
+      offset: '00000265'
+    - name: _EndVGA
+      processed: ''
+      offset: '00000345'
+    - name: _CanDisableVGA
+      processed: ''
+      offset: 0000042B
+    - name: _ReadPhysDWORD
+      processed: ''
+      offset: '00000478'
+    - name: _TestVGA
+      processed: ''
+      offset: 000004DC
+    - name: _AreAllDevicesPCI
+      processed: ''
+      offset: 0000053D
+    - name: _EnableVGA
+      processed: ''
+      offset: 000005AD
+    - name: _GetROMData
+      processed: ''
+      offset: 000007C0
+    - name: _GetROMFilename
+      processed: ''
+      offset: '000007E3'
+    - name: _SaveROM
+      processed: ''
+      offset: 000008CB
+    - name: _LoadROM
+      processed: ''
+      offset: 0000096A
+    - name: _GetDeviceROM
+      processed: ''
+      offset: 00000A61
+    - name: _AreWePagingThroughDOS
+      processed: ''
+      offset: 00000B4F
+    - name: _VDDEnumIODevices
+      processed: ''
+      offset: 00000B80
+    - name: _VDDWriteEDID
+      processed: ''
+      offset: 00000CB3
+    - name: _VDDSetupMonitor
+      processed: ''
+      offset: 00000D2F
+    - name: _VDDEnumMonitor
+      processed: ''
+      offset: 00000FB2
+    - name: _VDDEnumInitComplete
+      processed: ''
+      offset: 000011D0
+    - name: _VDDEnumPowerUpMonitors
+      processed: ''
+      offset: 000011FD
+    - name: _VDD_Enum_Handler
+      processed: ''
+      offset: 0000126C
+    - name: _SetSomethingDangerous
+      processed: ''
+      offset: 000013D0
+    - name: _GetSomethingDangerous
+      processed: ''
+      offset: '00001406'
+    - name: _BeginSomethingDangerous
+      processed: ''
+      offset: 0000144B
+    - name: _EndSomethingDangerous
+      processed: ''
+      offset: 000014D3
+    - name: FileOpen
+      processed: ''
+      offset: '00001540'
+    - name: FileRead
+      processed: ''
+      offset: '00001557'
+    - name: FileWrite
+      processed: ''
+      offset: 0000156E
+    - name: FileClose
+      processed: ''
+      offset: '00001585'
+    - name: _FileSetAttributes
+      processed: ''
+      offset: '00001598'
+    - name: _FileOpen
+      processed: ''
+      offset: 000015BC
+    - name: _FileClose
+      processed: ''
+      offset: 000015F2
+    - name: _FileRead
+      processed: ''
+      offset: '00001614'
+    - name: _FileWrite
+      processed: ''
+      offset: '00001663'
+  - num: '6'
+    name: _PDATA
+    offset: 00003DC0
+    symbols:
+    - name: _szPnPMonitor
+      processed: ''
+      offset: 000012F8
+    - name: _NumDevices
+      processed: ''
+      offset: 000014A8
+    - name: _NumDevicesVGA
+      processed: ''
+      offset: 000014AC
+    - name: _NumUnits
+      processed: ''
+      offset: 000014B0
+    - name: _FailReasonString
+      processed: ''
+      offset: 000016A4
+    - name: _szFailReason
+      processed: ''
+      offset: '000016E0'
+    - name: _szDEFAULT
+      processed: ''
+      offset: 000016F8
+    - name: _asd_key
+      processed: ''
+      offset: '00001718'
+    - name: _asd_def
+      processed: ''
+      offset: '00001728'
+    - name: _asd_guid
+      processed: ''
+      offset: 0000172C
+  - num: '7'
+    name: _DBOGROUP
+    offset: '00003E20'
+    symbols:
+    - name: VDD_Real_init
+      processed: ''
+      offset: '00000000'
+  - num: '8'
+    name: _LOCKABLE
+    offset: '00004520'
+    symbols:
+    - name: _BiosPostCodeBegin
+      processed: ''
+      offset: '00000000'
+    - name: DrawTextLogo
+      processed: ''
+      offset: '00000000'
+    - name: VDD_Int_1A
+      processed: ''
+      offset: '00000030'
+    - name: _BeginPOST
+      processed: ''
+      offset: '00000056'
+    - name: BeginPOST
+      processed: ''
+      offset: '00000056'
+    - name: EndPOST
+      processed: ''
+      offset: 000000A7
+    - name: _EndPOST
+      processed: ''
+      offset: 000000A7
+    - name: PostROM
+      processed: ''
+      offset: '000000E1'
+    - name: _PostROM
+      processed: ''
+      offset: '000000E1'
+    - name: Disable_MiniVDD
+      processed: ''
+      offset: '00000267'
+    - name: _Disable_MiniVDD
+      processed: ''
+      offset: '00000267'
+    - name: _Enable_MiniVDD
+      processed: ''
+      offset: '000002E4'
+    - name: Enable_MiniVDD
+      processed: ''
+      offset: '000002E4'
+    - name: _EnableROM
+      processed: ''
+      offset: '00000360'
+    - name: _IsPhysMem
+      processed: ''
+      offset: '00000953'
+    - name: _InitROM
+      processed: ''
+      offset: 000009B0
+    - name: _ReInitROM
+      processed: ''
+      offset: 00000CED
+    - name: _BiosPostCodeEnd
+      processed: ''
+      offset: 00000F3C
+  - num: '9'
+    name: _RARE
+    offset: '00007580'
+    symbols:
+    - name: VDD_System_Exit
+      processed: ''
+      offset: '00000000'
+    - name: VDD_Sys_Critical_Exit
+      processed: ''
+      offset: 0000000A
+    - name: VDD_State_Set_Message_Mode
+      processed: ''
+      offset: 0000003C
+    - name: VDD_Int_Sys_Critical_Exit
+      processed: ''
+      offset: 0000011C
+    - name: VDD_PH_Mem_Set_Sys_Latch_Addr
+      processed: ''
+      offset: '00000144'
+    - name: VDD_PH_Mem_Save_Sys_Latch_Addr
+      processed: ''
+      offset: 0000015F
+    - name: VDD_PH_Mem_Set_Latch_Addr
+      processed: ''
+      offset: '00000168'
+    - name: VDD_Get_Mini_Dispatch_Table
+      processed: ''
+      offset: 0000017A
+    - name: VDD_Register_Virtual_Port
+      processed: ''
+      offset: 000001B7
+    - name: VRVPRegisterGCRPort
+      processed: ''
+      offset: 000001C7
+    - name: VDD_Takeover_VGA_Port
+      processed: ''
+      offset: '00000203'
+    - name: VDD_Get_Version
+      processed: ''
+      offset: 0000022D
+    - name: VDD_EnableDevice
+      processed: ''
+      offset: 0000024D
+    - name: VDD_Set_Sleep_Flag_Addr
+      processed: ''
+      offset: '00000260'
+    - name: VDD_Begin_Msg_Mode
+      processed: ''
+      offset: 0000026E
+    - name: VDD_End_Msg_Mode
+      processed: ''
+      offset: 000002A4
+    - name: VDD_Msg_ClrScrn
+      processed: ''
+      offset: '00000338'
+    - name: VDD_Msg_ForColor
+      processed: ''
+      offset: 000003DA
+    - name: VDD_Msg_BakColor
+      processed: ''
+      offset: 0000042D
+    - name: VDD_Msg_TextOut
+      processed: ''
+      offset: '00000483'
+    - name: VDD_Msg_SetCursPos
+      processed: ''
+      offset: '00000530'
+    - name: VDD_Set_HCurTrk
+      processed: ''
+      offset: 000005A5
+    - name: VDD_Get_GrabRtn
+      processed: ''
+      offset: 000005C0
+    - name: VDD_Grab
+      processed: ''
+      offset: 000005CE
+    - name: VDD_Register_Extra_Screen_Selector
+      processed: ''
+      offset: '00000616'
+    - name: VESSCheckDupLoop
+      processed: ''
+      offset: '00000637'
+    - name: VESSCheckNext
+      processed: ''
+      offset: 0000063B
+    - name: VESSSearchForOpenEntry
+      processed: ''
+      offset: '00000641'
+    - name: VESSSearchLoop
+      processed: ''
+      offset: 0000064B
+    - name: VESSMakeEntry
+      processed: ''
+      offset: '00000659'
+    - name: VESSGoodExit
+      processed: ''
+      offset: 000006AB
+    - name: VDDDriverRegister
+      processed: ''
+      offset: 000006AD
+    - name: VDRNo4PlaneVirtualization
+      processed: ''
+      offset: '00000741'
+    - name: VDRCallMiniVDD
+      processed: ''
+      offset: 0000074D
+    - name: VDRSetupVirtualization
+      processed: ''
+      offset: '00000764'
+    - name: VDRCalcTotalMemoryUsage
+      processed: ''
+      offset: '00000775'
+    - name: VDRGoodExit
+      processed: ''
+      offset: 0000077C
+    - name: VDDDriverRegister2
+      processed: ''
+      offset: '00000785'
+    - name: VDDDriverUnRegister
+      processed: ''
+      offset: '00000794'
+    - name: VDDDriverUnRegister2
+      processed: ''
+      offset: '00000816'
+    - name: VDDSaveDriverState
+      processed: ''
+      offset: 0000082B
+    - name: VDDRegisterDisplayDriverInfo
+      processed: ''
+      offset: '00000876'
+    - name: VDDRegisterDisplayDriverInfo2
+      processed: ''
+      offset: '00000892'
+    - name: VDDRegisterSSBFlags
+      processed: ''
+      offset: 000008A8
+    - name: VDDPreModeChange
+      processed: ''
+      offset: 000008C0
+    - name: VDDPostModeChange
+      processed: ''
+      offset: '000008E5'
+    - name: VDDSetUserFlags
+      processed: ''
+      offset: 0000094A
+    - name: VDD_Error_Cvt_FullScrn
+      processed: ''
+      offset: '00000977'
+    - name: VDD_Error_NoPagesAvail
+      processed: ''
+      offset: 0000099B
+    - name: VDD_Error_NoFGrnd
+      processed: ''
+      offset: 000009B4
+    - name: VDD_Error_NoMainMem
+      processed: ''
+      offset: 000009D9
+    - name: VDD_Error_Message
+      processed: ''
+      offset: 000009F0
+    - name: VDD_Message
+      processed: ''
+      offset: 000009FD
+    - name: VDD_VM_Mem_Alloc_Msg_Mode_Mem
+      processed: ''
+      offset: 00000A2C
+    - name: VDD_Font_Restore_Msg_Font
+      processed: ''
+      offset: 00000A7C
+    - name: VDD_Font_Expand_Msg_Font
+      processed: ''
+      offset: 00000AE5
+    - name: VIOST_Trap_Mono
+      processed: ''
+      offset: 00000B18
+    - name: _CurrentDevNode
+      processed: ''
+      offset: 00000B64
+    - name: _CurrentDevice
+      processed: ''
+      offset: 00000B68
+    - name: _CurrentUnit
+      processed: ''
+      offset: 00000B6C
+    - name: ValueTypeReturn
+      processed: ''
+      offset: 00000B70
+    - name: BufferSizeReturn
+      processed: ''
+      offset: 00000B74
+    - name: DisplaySettingsHandle
+      processed: ''
+      offset: 00000B78
+    - name: BPPReturnValue
+      processed: ''
+      offset: 00000B7C
+    - name: BPPDataBufferSize
+      processed: ''
+      offset: 00000B8C
+    - name: DPIReturnValue
+      processed: ''
+      offset: 00000B90
+    - name: DPIDataBufferSize
+      processed: ''
+      offset: 00000BA0
+    - name: ResReturnValue
+      processed: ''
+      offset: 00000BA4
+    - name: ResDataBufferSize
+      processed: ''
+      offset: 00000BC4
+    - name: RefreshRateReturnValue
+      processed: ''
+      offset: 00000BC8
+    - name: RefreshRateDataSize
+      processed: ''
+      offset: 00000BE8
+    - name: DDCReturnValue
+      processed: ''
+      offset: 00000BEC
+    - name: DDCDataBufferSize
+      processed: ''
+      offset: 00000BF4
+    - name: ExtModeReturnValue
+      processed: ''
+      offset: 00000BF8
+    - name: ExtModeDataBufferSize
+      processed: ''
+      offset: 00000C00
+    - name: DesktopPosReturnValue
+      processed: ''
+      offset: 00000C24
+    - name: DesktopSizeReturnValue
+      processed: ''
+      offset: 00000C44
+    - name: DisplayDriverName
+      processed: ''
+      offset: 00000C84
+    - name: DisplayDriverNameLen
+      processed: ''
+      offset: 00000CA4
+    - name: MiniVDDName
+      processed: ''
+      offset: 00000CA8
+    - name: MiniVDDNameLen
+      processed: ''
+      offset: 00000CC8
+    - name: CardVDDName
+      processed: ''
+      offset: 00000CCC
+    - name: CardVDDNameLen
+      processed: ''
+      offset: 00000CEC
+    - name: ScratchBuffer
+      processed: ''
+      offset: 00000CF0
+    - name: ScratchBufferSize
+      processed: ''
+      offset: 00000D70
+    - name: RefreshRateStr
+      processed: ''
+      offset: 00000D74
+    - name: LowHorz
+      processed: ''
+      offset: 00000DF4
+    - name: HighHorz
+      processed: ''
+      offset: 00000DF8
+    - name: LowVert
+      processed: ''
+      offset: 00000DFC
+    - name: HighVert
+      processed: ''
+      offset: '00000E00'
+    - name: RefreshRateMax
+      processed: ''
+      offset: '00000E04'
+    - name: RefreshRateMin
+      processed: ''
+      offset: '00000E08'
+    - name: DisplaySettingsString
+      processed: ''
+      offset: '00000E14'
+    - name: BPPString
+      processed: ''
+      offset: '00000E25'
+    - name: ResString
+      processed: ''
+      offset: '00000E32'
+    - name: DPIString
+      processed: ''
+      offset: 00000E3D
+    - name: ExtModeString
+      processed: ''
+      offset: '00000E49'
+    - name: DrvString
+      processed: ''
+      offset: 00000E8C
+    - name: DrvString2
+      processed: ''
+      offset: '00000E90'
+    - name: MiniVDDString
+      processed: ''
+      offset: '00000E95'
+    - name: CardVDDString
+      processed: ''
+      offset: 00000EA6
+    - name: ChipIDString
+      processed: ''
+      offset: 00000EB7
+    - name: ChipIDLength
+      processed: ''
+      offset: 00000EBE
+    - name: MODESString
+      processed: ''
+      offset: 00000EC2
+    - name: DEFAULTString
+      processed: ''
+      offset: 00000EC9
+    - name: Negative1String
+      processed: ''
+      offset: 00000ED1
+    - name: MonitorDevNodeKeyHandle
+      processed: ''
+      offset: 00000ED4
+    - name: MonitorModeString
+      processed: ''
+      offset: 00000ED8
+    - name: MonitorModesString
+      processed: ''
+      offset: 00000EDD
+    - name: MonitorModeNumber
+      processed: ''
+      offset: 00000EE3
+    - name: MonitorModeASCII
+      processed: ''
+      offset: 00000EE4
+    - name: MonitorDevNodeKey
+      processed: ''
+      offset: 00000EE8
+    - name: MonitorSubKeyBuffer
+      processed: ''
+      offset: 00000FE8
+    - name: MonitorBestMatchDelta
+      processed: ''
+      offset: '00001008'
+    - name: MonitorBestMatchSubkey
+      processed: ''
+      offset: 0000100C
+    - name: NONEString
+      processed: ''
+      offset: 0000103E
+    - name: Fallback640x480Str
+      processed: ''
+      offset: '00001043'
+    - name: _VDDPNPFlags
+      processed: ''
+      offset: 0000104B
+    - name: IgnoreRegistryFlag
+      processed: ''
+      offset: 0000104D
+    - name: GetDisplayConfigFlags
+      processed: ''
+      offset: 0000104E
+    - name: HorizontalSyncPolarity
+      processed: ''
+      offset: '00001050'
+    - name: VerticalSyncPolarity
+      processed: ''
+      offset: '00001051'
+    - name: DisplayStr
+      processed: ''
+      offset: '00001052'
+    - name: IgnoreRegistryStr
+      processed: ''
+      offset: 0000105A
+    - name: RefreshRateString
+      processed: ''
+      offset: '00001069'
+    - name: RefreshRateFudge
+      processed: ''
+      offset: '00001086'
+    - name: VDD_VPICD_Hook
+      processed: ''
+      offset: '00001096'
+    - name: _VDD_Begin_Load_MiniVDD
+      processed: ''
+      offset: 000010AA
+    - name: VDD_Begin_Load_MiniVDD
+      processed: ''
+      offset: 000010AA
+    - name: VDD_End_Load_MiniVDD
+      processed: ''
+      offset: 000010CD
+    - name: _VDD_End_Load_MiniVDD
+      processed: ''
+      offset: 000010CD
+    - name: VDD_PNP_Load_MiniVDD
+      processed: ''
+      offset: 000010EB
+    - name: _VDD_PNP_Load_MiniVDD
+      processed: ''
+      offset: 000010EB
+    - name: VPLM_CheckRegistryIgnore
+      processed: ''
+      offset: '00001175'
+    - name: VPLM_CheckForNoneEntry
+      processed: ''
+      offset: 0000118D
+    - name: VPLM_LoadMiniVDD
+      processed: ''
+      offset: 000011B1
+    - name: VPLM_GetChipIDFromRegistry
+      processed: ''
+      offset: 000011F0
+    - name: VPLM_CompareChipID
+      processed: ''
+      offset: '00001242'
+    - name: VPLM_WriteChipIDToRegistry
+      processed: ''
+      offset: '00001291'
+    - name: VPLM_LoadCardVDD
+      processed: ''
+      offset: 000012D6
+    - name: VPLM_Good_Exit
+      processed: ''
+      offset: '00001317'
+    - name: VPLM_Error_Exit
+      processed: ''
+      offset: 0000131C
+    - name: VDD_PNP_Get_Display_Info
+      processed: ''
+      offset: '00001321'
+    - name: VPGI_GetOperationFlags
+      processed: ''
+      offset: 000015EA
+    - name: get_refresh_rate
+      processed: ''
+      offset: '00001645'
+    - name: get_mode_specifig_refresh_rate
+      processed: ''
+      offset: 0000165E
+    - name: get_default_refresh_rate
+      processed: ''
+      offset: 000016C2
+    - name: got_refresh_rate
+      processed: ''
+      offset: '00001707'
+    - name: VPGI_GetDriverName
+      processed: ''
+      offset: '00001747'
+    - name: VPGI_GetDefaultDisplayDriver
+      processed: ''
+      offset: '00001880'
+    - name: VPGI_GetDefaultMiniVDD
+      processed: ''
+      offset: '000018E4'
+    - name: VPGI_GetDefaultCardVDD
+      processed: ''
+      offset: 0000193A
+    - name: VPGI_GetRefreshRateData
+      processed: ''
+      offset: '00001992'
+    - name: VPGI_ErrorExit
+      processed: ''
+      offset: 000019EB
+    - name: VDD_PNP_Get_Monitor_Info
+      processed: ''
+      offset: 000019ED
+    - name: VGMIEnumKeysLoop
+      processed: ''
+      offset: 00001AC1
+    - name: VGMIEndEnumKeysLoop
+      processed: ''
+      offset: 00001B18
+    - name: VGMIEndofKeyEnumeration
+      processed: ''
+      offset: 00001B21
+    - name: VGMICloseKey
+      processed: ''
+      offset: 00001B46
+    - name: VGMISetupRefreshRateLoop
+      processed: ''
+      offset: 00001B62
+    - name: VGMIGetRefreshRateLoop
+      processed: ''
+      offset: 00001B7D
+    - name: VGMICrackString
+      processed: ''
+      offset: 00001BFA
+    - name: VGMICalcRefreshRateMax
+      processed: ''
+      offset: 00001C86
+    - name: VGMICalcRefreshRateMin
+      processed: ''
+      offset: 00001CD2
+    - name: VGMINextMonitorMode
+      processed: ''
+      offset: 00001CF9
+    - name: VGMIDoneGettingRefreshRate
+      processed: ''
+      offset: 00001D15
+    - name: VGMIGoodExit
+      processed: ''
+      offset: 00001D78
+    - name: VGMIUseEDID
+      processed: ''
+      offset: 00001D99
+    - name: VGMIErrorExit
+      processed: ''
+      offset: 00001E2C
+    - name: VDD_PNP_GetDisplayConfig
+      processed: ''
+      offset: '00001E37'
+    - name: VPFD_GoodExit
+      processed: ''
+      offset: 00001EA8
+    - name: VPFD_ErrorExit
+      processed: ''
+      offset: 00001EB1
+    - name: VDD_Get_DISPLAYINFO
+      processed: ''
+      offset: 00001EC8
+    - name: VGDI_GoodExit
+      processed: ''
+      offset: 00001F37
+    - name: VGDI_ErrorExit
+      processed: ''
+      offset: 00001F3B
+    - name: VDD_PNP_FillDISPLAYINFO
+      processed: ''
+      offset: 00001F41
+    - name: VFDI_FillDesktopData
+      processed: ''
+      offset: '00002009'
+    - name: VFDI_FillMonitorData
+      processed: ''
+      offset: 0000208D
+    - name: VFDI_DetermineReturnCode
+      processed: ''
+      offset: '00002141'
+    - name: Exec_VESA_Int
+      processed: ''
+      offset: 000021AA
+    - name: VESA_Timeout
+      processed: ''
+      offset: '00002210'
+    - name: VDD_PNP_GetVESAEDID
+      processed: ''
+      offset: '00002279'
+    - name: _VDD_PNP_GetVESAEDID
+      processed: ''
+      offset: '00002279'
+    - name: VGVEAllocAlternate
+      processed: ''
+      offset: '00002324'
+    - name: VGVEPrepareForBIOSCall
+      processed: ''
+      offset: '00002350'
+    - name: VGVEDeallocTempScheme
+      processed: ''
+      offset: 000023AA
+    - name: VGVEDeallocV86MMGRScheme
+      processed: ''
+      offset: 000023C0
+    - name: VGVECheckVESAReturnCode
+      processed: ''
+      offset: 000023D8
+    - name: VGVEValidateEDIDHeader
+      processed: ''
+      offset: '000023E2'
+    - name: VGVEGoodExit
+      processed: ''
+      offset: 000023F9
+    - name: VGVEFailExit
+      processed: ''
+      offset: '00002408'
+    - name: VGVEErrorExit1
+      processed: ''
+      offset: 0000240F
+    - name: VGVEErrorExit2
+      processed: ''
+      offset: '00002416'
+    - name: VGVEErrorExit3
+      processed: ''
+      offset: 0000241D
+    - name: VGVEErrorExit4
+      processed: ''
+      offset: '00002424'
+    - name: VGVEErrorExit5
+      processed: ''
+      offset: 0000242B
+    - name: VGVEErrorExit6
+      processed: ''
+      offset: '00002432'
+    - name: VGVEErrorExit7
+      processed: ''
+      offset: '00002439'
+    - name: VGVEErrorExit8
+      processed: ''
+      offset: '00002440'
+    - name: VGVEErrorExit
+      processed: ''
+      offset: '00002447'
+    - name: VDD_VESA_CALL
+      processed: ''
+      offset: '00002451'
+    - name: _VDD_VESA_CALL
+      processed: ''
+      offset: '00002451'
+    - name: StringConcat
+      processed: ''
+      offset: 000024CE
+    - name: SC_DoneCopyingFirstString
+      processed: ''
+      offset: 000024EA
+    - name: SC_DoneConcatenating
+      processed: ''
+      offset: 000024F7
+    - name: StringCompare
+      processed: ''
+      offset: 000024FC
+    - name: SCmp_Loop
+      processed: ''
+      offset: '00002508'
+    - name: SCmp_DoneWithCompare
+      processed: ''
+      offset: 0000252D
+    - name: IsStringNumeric
+      processed: ''
+      offset: '00002531'
+    - name: ISN_Loop
+      processed: ''
+      offset: 0000253C
+    - name: ISN_StringIsntNumeric
+      processed: ''
+      offset: 0000254B
+    - name: ISN_StringIsNumeric
+      processed: ''
+      offset: 0000254E
+    - name: ConvertStringToInteger
+      processed: ''
+      offset: '00002552'
+    - name: CSTIGotStringLength
+      processed: ''
+      offset: 0000256C
+    - name: CSTIConvertLoop
+      processed: ''
+      offset: '00002576'
+    - name: ConvertXYString
+      processed: ''
+      offset: '00002591'
+    - name: ConvertHexToString
+      processed: ''
+      offset: 000025AF
+    - name: CHTSLoop
+      processed: ''
+      offset: 000025C6
+    - name: CHTSDoneConverting
+      processed: ''
+      offset: 000025EF
+    - name: BreakUpString
+      processed: ''
+      offset: 000025F4
+    - name: BUSFoundDelimitor
+      processed: ''
+      offset: 0000260B
+    - name: SearchForDelimitor
+      processed: ''
+      offset: '00002613'
+    - name: SFDFoundDelimitor
+      processed: ''
+      offset: '00002628'
+    - name: SFDDelimitorNotFound
+      processed: ''
+      offset: 0000262B
+  - num: '10'
+    name: _VMCREATE
+    offset: 00007A20
+    symbols:
+    - name: VDD_Create_VM
+      processed: ''
+      offset: '00000000'
+    - name: VDD_Sys_VM_Init
+      processed: ''
+      offset: '00000066'
+    - name: VDD_VM_Init
+      processed: ''
+      offset: 0000007B
+    - name: VDD_VM_Critical_Init
+      processed: ''
+      offset: 000000AD
+    - name: VDD_State_Create_VM
+      processed: ''
+      offset: '000000E0'
+    - name: VDD_State_VM_Init
+      processed: ''
+      offset: 0000018B
+    - name: VDD_PIF_State
+      processed: ''
+      offset: 0000028A
+    - name: VDD_Grb_Version
+      processed: ''
+      offset: 000002DC
+    - name: VDD_VM_Mem_Create_VM
+      processed: ''
+      offset: 0000031C
+  - num: '11'
+    name: _VMDESTROY
+    offset: 00007C10
+    symbols:
+    - name: VDD_Destroy_VM
+      processed: ''
+      offset: '00000000'
+    - name: VDD_End_PM_App
+      processed: ''
+      offset: '00000059'
+    - name: VDD_State_Destroy_VM
+      processed: ''
+      offset: '00000080'
+    - name: VDD_VM_Mem_Destroy_VM
+      processed: ''
+      offset: '00000104'
+  - num: '12'
+    name: _THCREATE
+    offset: 00007D20
+    symbols:
+    - name: VDD_VM_Suspend
+      processed: ''
+      offset: '00000000'
+    - name: VDD_VM_Mem_VM_Suspend
+      processed: ''
+      offset: '00000038'
+    - name: VDD_VM_Mem_Unlock_Save_Mem
+      processed: ''
+      offset: '00000045'
+  - num: '13'
+    name: _VMRESUME
+    offset: '00007E40'
+    symbols:
+    - name: VDD_VM_Resume
+      processed: ''
+      offset: '00000000'
+    - name: VDD_VM_Mem_VM_Resume
+      processed: ''
+      offset: 0000003C
+  - num: '14'
+    name: _PNP
+    offset: 00009BE0
+    symbols:
+    - name: _GetBIOSData
+      processed: ''
+      offset: '00000000'
+    - name: GetBIOSData
+      processed: ''
+      offset: '00000000'
+    - name: SetBIOSData
+      processed: ''
+      offset: '00000071'
+    - name: _SetBIOSData
+      processed: ''
+      offset: '00000071'
+    - name: _DetTimeRATE
+      processed: ''
+      offset: 000000F0
+    - name: _GetRefreshRatesFromEDID
+      processed: ''
+      offset: 0000015D
+    - name: _IsValidEDID
+      processed: ''
+      offset: 0000039E
+    - name: _GetDeviceIDFromEDID
+      processed: ''
+      offset: 000003D6
+    - name: _GetStringFromEDID
+      processed: ''
+      offset: '00000463'
+    - name: _VDD_SetDeviceBusyBit
+      processed: ''
+      offset: 000004B0
+    - name: _IsThisDevNodeTheVGA
+      processed: ''
+      offset: '00000508'
+    - name: _GetMemoryBaseAndSize
+      processed: ''
+      offset: 000005A7
+    - name: _GetMemBase
+      processed: ''
+      offset: '00000634'
+    - name: _WriteBootLog
+      processed: ''
+      offset: '00000647'
+    - name: _FailReason
+      processed: ''
+      offset: '00000664'
+    - name: _MakeDeviceName
+      processed: ''
+      offset: '00000723'
+    - name: _FreeDeviceName
+      processed: ''
+      offset: 000007A8
+    - name: _GetDeviceName
+      processed: ''
+      offset: 000007FD
+    - name: _OpenDevice
+      processed: ''
+      offset: '00000854'
+    - name: _CloseDevice
+      processed: ''
+      offset: 0000098F
+    - name: _GetDeviceID
+      processed: ''
+      offset: '000009E2'
+    - name: _VDD_Get_Monitor
+      processed: ''
+      offset: 00000A15
+    - name: _PerUserProfilesOn
+      processed: ''
+      offset: 00000A40
+    - name: _IsDefaultUser
+      processed: ''
+      offset: 00000AA0
+    - name: _OpenDeviceKey
+      processed: ''
+      offset: 00000B64
+    - name: _VDD_EnableDevice_Error
+      processed: ''
+      offset: 00000CBD
+    - name: _EnableDevice
+      processed: ''
+      offset: 00000D03
+    - name: __EnableDevice
+      processed: ''
+      offset: 00000D4B
+    - name: _AddDeviceToList
+      processed: ''
+      offset: '00001023'
+    - name: _RemoveDeviceFromList
+      processed: ''
+      offset: '00001059'
+    - name: _CallMiniVDD2
+      processed: ''
+      offset: 0000108E
+    - name: _GetDeviceIntStatus
+      processed: ''
+      offset: '00001112'
+    - name: _LoadMiniVDD
+      processed: ''
+      offset: 0000116C
+    - name: _StartDevice
+      processed: ''
+      offset: 0000146C
+    - name: _CanStopDevice
+      processed: ''
+      offset: 000018F6
+    - name: _StopDevice
+      processed: ''
+      offset: 0000198A
+    - name: _VDD_PnP_Handler
+      processed: ''
+      offset: 00001A54
+    - name: _VDD_Register_DevLoader
+      processed: ''
+      offset: 00001C09
+    - name: _VDD_New_DevNode@12
+      processed: ''
+      offset: 00001C19
+    - name: _CreateDeviceDDB
+      processed: ''
+      offset: 00001C86
+    - name: _VESA_CALL
+      processed: ''
+      offset: 00001D20
+    - name: _GetSystemPowerMgmtType
+      processed: ''
+      offset: 00001DD4
+    - name: _InitAdapterPowerState
+      processed: ''
+      offset: '00001E16'
+    - name: _InitPowerOverrides
+      processed: ''
+      offset: 00001ED6
+    - name: _InitMonitorPowerState
+      processed: ''
+      offset: 00001F3A
+    - name: _SMPSviaAPM
+      processed: ''
+      offset: '00002010'
+    - name: _CallPowerStateFunc
+      processed: ''
+      offset: 000020F5
+    - name: _SetAdapterPowerState
+      processed: ''
+      offset: '00002191'
+    - name: _SetMonitorPowerState
+      processed: ''
+      offset: '00002230'
+    - name: _SetDevicePowerState
+      processed: ''
+      offset: '000022E8'
+    - name: __SetDevicePowerState
+      processed: ''
+      offset: 0000233D
+    - name: _GetDevicePowerState
+      processed: ''
+      offset: 000023B9
+    - name: _VDD_IOCTL@4
+      processed: ''
+      offset: '00002430'
+    - name: _VDD_Device_IOCTL@8
+      processed: ''
+      offset: 0000244D
+    - name: _CCODE__VPOWERD_Set_Device_Power_State
+      processed: ''
+      offset: 0000253C
+    - name: _CCODE__SHELL_CallAtAppyTime
+      processed: ''
+      offset: '00002544'
+    - name: _CCODE__SHELL_CallDll
+      processed: ''
+      offset: 0000254C
+    - name: _CCODE__SHELL_CancelAppyTimeEvent
+      processed: ''
+      offset: '00002554'
+    - name: _CCODE__SHELL_LoadLibrary
+      processed: ''
+      offset: 0000255C
+    - name: _CCODE__SHELL_GetProcAddress
+      processed: ''
+      offset: '00002564'
+    - name: _CCODE__RegOpenKey
+      processed: ''
+      offset: 0000256C
+    - name: _CCODE__RegCloseKey
+      processed: ''
+      offset: '00002574'
+    - name: _CCODE__RegCreateKey
+      processed: ''
+      offset: 0000257C
+    - name: _CCODE__RegEnumKey
+      processed: ''
+      offset: '00002584'
+    - name: _CCODE__RegDeleteValue
+      processed: ''
+      offset: 0000258C
+    - name: _CCODE__RegQueryValueEx
+      processed: ''
+      offset: '00002594'
+    - name: _CCODE__RegSetValueEx
+      processed: ''
+      offset: 0000259C
+    - name: _CCODE__HeapAllocate
+      processed: ''
+      offset: 000025A4
+    - name: _CCODE__HeapFree
+      processed: ''
+      offset: 000025AC
+    - name: _CCODE__Debug_Printf_Service
+      processed: ''
+      offset: 000025B4
+    - name: _CCODE_Get_Sys_VM_Handle
+      processed: ''
+      offset: 000025C8
+    - name: _CCODE_Directed_Sys_Control@24
+      processed: ''
+      offset: 000025D4
+    - name: _CCODE__Sprintf
+      processed: ''
+      offset: '00002600'
+    - name: _CCODE__PageAllocate
+      processed: ''
+      offset: '00002608'
+    - name: _CCODE_VMM_GetSystemInitState
+      processed: ''
+      offset: '00002610'
+    - name: _CCODE__PageFree
+      processed: ''
+      offset: '00002618'
+    - name: _CCODE_Get_Cur_VM_Handle
+      processed: ''
+      offset: '00002620'
+    - name: _CCODE_Get_Cur_Thread_Handle
+      processed: ''
+      offset: 0000262C
+    - name: _CCODE__LinPageLock
+      processed: ''
+      offset: '00002638'
+    - name: _CCODE__LinPageUnLock
+      processed: ''
+      offset: '00002640'
+    - name: _CCODE__AttemptingSomethingDangerous
+      processed: ''
+      offset: '00002648'
+    - name: _CCODE_Open_Boot_Log
+      processed: ''
+      offset: '00002650'
+    - name: _CCODE_Write_Boot_Log@8
+      processed: ''
+      offset: '00002658'
+    - name: _CCODE_Close_Boot_Log
+      processed: ''
+      offset: '00002664'
+    - name: _CCODE__CopyPageTable
+      processed: ''
+      offset: 0000266C
+    - name: _CCODE__PhysIntoV86
+      processed: ''
+      offset: '00002674'
+    - name: _CCODE__LinMapIntoV86
+      processed: ''
+      offset: 0000267C
+    - name: _CCODE__PageReAllocate
+      processed: ''
+      offset: '00002684'
+    - name: _CCODE_VMM_Add_DDB@4
+      processed: ''
+      offset: 0000268C
+    - name: _CCODE_VMM_Remove_DDB@4
+      processed: ''
+      offset: 000026A0
+    - name: _CCODE__Allocate_Temp_V86_Data_Area
+      processed: ''
+      offset: 000026B4
+    - name: _CCODE__Free_Temp_V86_Data_Area
+      processed: ''
+      offset: 000026BC
+    - name: _CCODE__CONFIGMG_Locate_DevNode
+      processed: ''
+      offset: 000026C4
+    - name: _CCODE__CONFIGMG_Get_Parent
+      processed: ''
+      offset: 000026CC
+    - name: _CCODE__CONFIGMG_Get_Child
+      processed: ''
+      offset: 000026D4
+    - name: _CCODE__CONFIGMG_Get_Sibling
+      processed: ''
+      offset: 000026DC
+    - name: _CCODE__CONFIGMG_Get_Device_ID
+      processed: ''
+      offset: '000026E4'
+    - name: _CCODE__CONFIGMG_Create_DevNode
+      processed: ''
+      offset: 000026EC
+    - name: _CCODE__CONFIGMG_Register_Device_Driver
+      processed: ''
+      offset: 000026F4
+    - name: _CCODE__CONFIGMG_Register_Enumerator
+      processed: ''
+      offset: 000026FC
+    - name: _CCODE__CONFIGMG_Get_First_Log_Conf
+      processed: ''
+      offset: '00002704'
+    - name: _CCODE__CONFIGMG_Get_Next_Res_Des
+      processed: ''
+      offset: 0000270C
+    - name: _CCODE__CONFIGMG_Load_DLVxDs
+      processed: ''
+      offset: '00002714'
+    - name: _CCODE__CONFIGMG_Get_DDBs
+      processed: ''
+      offset: 0000271C
+    - name: _CCODE__CONFIGMG_Register_DevLoader
+      processed: ''
+      offset: '00002724'
+    - name: _CCODE__CONFIGMG_Reenumerate_DevNode
+      processed: ''
+      offset: 0000272C
+    - name: _CCODE__CONFIGMG_Reset_Children_Marks
+      processed: ''
+      offset: '00002734'
+    - name: _CCODE__CONFIGMG_Remove_Unmarked_Children
+      processed: ''
+      offset: 0000273C
+    - name: _CCODE__CONFIGMG_Get_Alloc_Log_Conf
+      processed: ''
+      offset: '00002744'
+    - name: _CCODE__CONFIGMG_Get_DevNode_Key
+      processed: ''
+      offset: 0000274C
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      processed: ''
+      offset: '00002754'
+    - name: _CCODE__CONFIGMG_Write_Registry_Value
+      processed: ''
+      offset: 0000275C
+    - name: _CCODE__CONFIGMG_Get_Bus_Info
+      processed: ''
+      offset: '00002764'
+    - name: _CCODE__CONFIGMG_Get_Device_Driver_Private_DWord
+      processed: ''
+      offset: 0000276C
+    - name: _CCODE__CONFIGMG_Set_Device_Driver_Private_DWord
+      processed: ''
+      offset: '00002774'
+    - name: _CCODE__CONFIGMG_Get_Hardware_Profile_Info
+      processed: ''
+      offset: 0000277C
+    - name: _CCODE__CONFIGMG_Call_Enumerator_Function
+      processed: ''
+      offset: '00002784'
+    - name: _CCODE__CONFIGMG_Get_Global_State
+      processed: ''
+      offset: 0000278C
+    - name: _CCODE__CONFIGMG_Discard_Boot_Log_Conf
+      processed: ''
+      offset: '00002794'
+    - name: _CCODE__CONFIGMG_Set_Dependent_DevNode
+      processed: ''
+      offset: 0000279C
+    - name: _CCODE__CONFIGMG_Set_DevNode_PowerState
+      processed: ''
+      offset: 000027A4
+    - name: _CCODE__CONFIGMG_Get_DevNode_PowerState
+      processed: ''
+      offset: 000027AC
+    - name: _CCODE__CONFIGMG_Set_DevNode_PowerCapabilities
+      processed: ''
+      offset: 000027B4
+    - name: _CCODE__CONFIGMG_Get_DevNode_PowerCapabilities
+      processed: ''
+      offset: 000027BC
+    - name: _CCODE__CONFIGMG_Get_DevNode_Handler
+      processed: ''
+      offset: 000027C4
+    - name: _CCODE__CONFIGMG_System_Device_Power_State_Mapping
+      processed: ''
+      offset: 000027CC
+  - num: '15'
+    name: _DOSVM
+    offset: 000127F0
+    symbols:
+    - name: VDD_Set_Device_Focus
+      processed: ''
+      offset: '00000000'
+    - name: VDD_Ctl_Set_Focus
+      processed: ''
+      offset: '00000068'
+    - name: VDD_Ctl_End_Dsp_Crit
+      processed: ''
+      offset: '00000090'
+    - name: VDD_Grab_DoGrab
+      processed: ''
+      offset: 000000B0
+    - name: VDD_Grab_ACopy
+      processed: ''
+      offset: 000001B0
+    - name: VDD_Grab_DCopy
+      processed: ''
+      offset: 000001F8
+    - name: VDD_Grab_Get_Text_Copy_Buf
+      processed: ''
+      offset: '00000238'
+    - name: VDD_Grab_Delete_Text_Copy_Buf
+      processed: ''
+      offset: 000002A3
+    - name: VDD_Grab_Change_Query
+      processed: ''
+      offset: 0000030D
+    - name: VDD_Grab_Clear_Mod_State
+      processed: ''
+      offset: 000003A5
+    - name: VDD_Grab_Save_Dirty_Pages
+      processed: ''
+      offset: 000003EC
+    - name: VDD_Grab_Get_Chgs
+      processed: ''
+      offset: 000004D6
+    - name: VDD_OEM_CRTC_Enable
+      processed: ''
+      offset: '00000584'
+    - name: GoToWindowsMode
+      processed: ''
+      offset: '00000598'
+    - name: GRWMRescheduleThis
+      processed: ''
+      offset: 000005D7
+    - name: GRWMOKToContinue
+      processed: ''
+      offset: 000005EE
+    - name: GRWMFoolBIOSMode
+      processed: ''
+      offset: '00000627'
+    - name: GRWMSetToHiResMode
+      processed: ''
+      offset: 0000062E
+    - name: GRWMReenableTraps
+      processed: ''
+      offset: '00000694'
+    - name: DoneGoingToWindows
+      processed: ''
+      offset: 000006BE
+    - name: GoToVGAMode
+      processed: ''
+      offset: 000006C0
+    - name: GRWMGoingToHiResVM
+      processed: ''
+      offset: '00000723'
+    - name: GRWMCheckVGAToVGA
+      processed: ''
+      offset: 0000073C
+    - name: HiResToVGAMode
+      processed: ''
+      offset: 0000075A
+    - name: GRWMSaveBIOSStates
+      processed: ''
+      offset: '00000777'
+    - name: GRWMSaveInt43H
+      processed: ''
+      offset: 000007C0
+    - name: GRWMDoneWithBIOSModeChange
+      processed: ''
+      offset: '00000838'
+    - name: DisableVGAPortTraps
+      processed: ''
+      offset: 0000085E
+    - name: EnableVGAPortTraps
+      processed: ''
+      offset: 0000089C
+    - name: VDD_LinearModeRemap
+      processed: ''
+      offset: 000008DA
+    - name: SLMRSetMemoryEnabled
+      processed: ''
+      offset: '00000955'
+    - name: BLTerDrawRegTrap
+      processed: ''
+      offset: 0000095F
+    - name: SDRTSetOwnerToWindows
+      processed: ''
+      offset: 000009D7
+    - name: SDRTPerformPhysicalIO
+      processed: ''
+      offset: 00000A39
+    - name: BLTerDrawVGARegTrap
+      processed: ''
+      offset: 00000A5E
+    - name: BDVTSetOwnerToWindows
+      processed: ''
+      offset: 00000AC4
+    - name: SaveOurPages
+      processed: ''
+      offset: 00000B21
+    - name: SOPSaveLoop
+      processed: ''
+      offset: 00000B32
+    - name: SOPEndLoop
+      processed: ''
+      offset: 00000B48
+    - name: UnmapOffScreenPages
+      processed: ''
+      offset: 00000B50
+    - name: UOSPUnmapLoop
+      processed: ''
+      offset: 00000B6F
+    - name: UOSPEndLoop
+      processed: ''
+      offset: 00000BCC
+    - name: CheckHiResSwitchAllowed
+      processed: ''
+      offset: 00000BE2
+    - name: CHSAGetSaveBufferSize
+      processed: ''
+      offset: 00000C76
+    - name: CHSAAllocHiResSaveBuffer
+      processed: ''
+      offset: 00000C9C
+    - name: CHSAForceSaveToHappenNow
+      processed: ''
+      offset: 00000D24
+    - name: CHSAJumpToNextHandler
+      processed: ''
+      offset: 00000D44
+    - name: CHSAFail
+      processed: ''
+      offset: 00000D4B
+    - name: GetVESAMemory
+      processed: ''
+      offset: 00000D4E
+    - name: GVMPrepareForBIOSCall
+      processed: ''
+      offset: 00000DB1
+    - name: GVMGotAnAnswer
+      processed: ''
+      offset: '00000E16'
+    - name: GVMGoodExit
+      processed: ''
+      offset: '00000E24'
+    - name: GVMErrorDealloc
+      processed: ''
+      offset: 00000E2D
+    - name: GVMError
+      processed: ''
+      offset: '00000E34'
+    - name: SaveHiResScreen
+      processed: ''
+      offset: '00000E44'
+    - name: SHRSGetBankSize
+      processed: ''
+      offset: 00000F32
+    - name: SHRSGetLinearVRAMAddr
+      processed: ''
+      offset: 00000F68
+    - name: SHRSBankSizeFailure
+      processed: ''
+      offset: 0000101E
+    - name: SHRSBankSizeSuccess
+      processed: ''
+      offset: 0000102A
+    - name: SHRSSaveDisplayStartData
+      processed: ''
+      offset: 0000103D
+    - name: SHRSSetupVRAMCopy
+      processed: ''
+      offset: 0000107F
+    - name: SHRSSaveLoop
+      processed: ''
+      offset: 0000111A
+    - name: SHRSDoneSaving
+      processed: ''
+      offset: '00001170'
+    - name: RestoreHiResScreen
+      processed: ''
+      offset: 000011AF
+    - name: RHRSNoSaveWasDone
+      processed: ''
+      offset: 000011ED
+    - name: RHRSSaveWasOK
+      processed: ''
+      offset: '00001213'
+    - name: RHRSRestoreVESA
+      processed: ''
+      offset: 0000122F
+    - name: RHRSSetupRestoreLoop
+      processed: ''
+      offset: 0000127F
+    - name: RHRSRestoreLoop
+      processed: ''
+      offset: '00001303'
+    - name: RHRSRestoreState
+      processed: ''
+      offset: '00001359'
+    - name: RHRSRestoreDisplayStartData
+      processed: ''
+      offset: 0000136A
+    - name: RHRSRestoreBank
+      processed: ''
+      offset: '00001397'
+    - name: RHRSFreeSaveBuffer
+      processed: ''
+      offset: 000013ED
+    - name: RHRSRestoreTrappingState
+      processed: ''
+      offset: 0000141D
+    - name: RHRSExit
+      processed: ''
+      offset: 0000147F
+    - name: VDD_State_Begin_SR_Section
+      processed: ''
+      offset: '00001488'
+    - name: VDD_State_End_SR_Section
+      processed: ''
+      offset: 000014B7
+    - name: VDD_State_Set_Latches_Owner
+      processed: ''
+      offset: '00001518'
+    - name: VDD_State_Clear_MemC_Owner
+      processed: ''
+      offset: 0000158B
+    - name: VDD_State_Set_MemC_Owner
+      processed: ''
+      offset: 000015A9
+    - name: VDD_State_DisableLinearMemory
+      processed: ''
+      offset: 000015F8
+    - name: VDD_State_Set_CRTC_Owner
+      processed: ''
+      offset: '00001752'
+    - name: VSSCO_SuspendLoop
+      processed: ''
+      offset: 0000178A
+    - name: VSSCO_SuspendVM
+      processed: ''
+      offset: 000017C1
+    - name: VSSCO_DoSuspend
+      processed: ''
+      offset: 0000182D
+    - name: VSSCO_NoSuspendNeeded
+      processed: ''
+      offset: '00001837'
+    - name: VSSCO_DoneSuspending
+      processed: ''
+      offset: '00001849'
+    - name: VSSCO_ResumeVMs
+      processed: ''
+      offset: 000018C4
+    - name: VSSCO_ResumeLoop
+      processed: ''
+      offset: 000018D6
+    - name: VSSCO_ResumeVM
+      processed: ''
+      offset: '00001908'
+    - name: VSSCO_NoResumeNeeded
+      processed: ''
+      offset: 0000190E
+    - name: VDD_State_Get_CRTC_Index_Port
+      processed: ''
+      offset: 000019A2
+    - name: VDD_State_Restore_Regs
+      processed: ''
+      offset: 000019BB
+    - name: VSRRRestoreAttribute
+      processed: ''
+      offset: 00001A4A
+    - name: VSRRRestoreDAC
+      processed: ''
+      offset: 00001A8F
+    - name: VDD_State_Restore_MemC
+      processed: ''
+      offset: 00001AA8
+    - name: VSRRRestoreMisc
+      processed: ''
+      offset: 00001B20
+    - name: VSRRCheckForPhonyA0Mapping
+      processed: ''
+      offset: 00001B43
+    - name: MiniVDD_Restore
+      processed: ''
+      offset: 00001B5C
+    - name: VSRR_Exit
+      processed: ''
+      offset: 00001B82
+    - name: VDD_State_Restore_CRTC
+      processed: ''
+      offset: 00001B84
+    - name: VDD_State_Restore_DAC
+      processed: ''
+      offset: 00001BAA
+    - name: VDD_State_Get_Screen_Start
+      processed: ''
+      offset: 00001BEA
+    - name: VDD_State_Get_Display_Dimensions
+      processed: ''
+      offset: 00001C10
+    - name: VDD_State_Get_Dimensions
+      processed: ''
+      offset: 00001C2E
+    - name: gvp_graphics
+      processed: ''
+      offset: 00001C90
+    - name: GVPWeAreModeX
+      processed: ''
+      offset: 00001CC5
+    - name: VDD_State_Scrn_On
+      processed: ''
+      offset: 00001D27
+    - name: VDD_State_Scrn_Off
+      processed: ''
+      offset: 00001D98
+    - name: VDD_State_Restore_Index
+      processed: ''
+      offset: '00001E10'
+    - name: VDD_State_Modify_VMs_MemC
+      processed: ''
+      offset: 00001E6A
+    - name: VDD_State_Set_MemC_Planar
+      processed: ''
+      offset: 00001EB4
+    - name: VDD_State_Internal_Set_MemC_Planar
+      processed: ''
+      offset: 00001F7A
+    - name: VDD_State_Save_CRTC_Owner
+      processed: ''
+      offset: 00001FD4
+    - name: VDD_State_Restore_Latches
+      processed: ''
+      offset: 0000204B
+    - name: VSRLCheckLatchOwner
+      processed: ''
+      offset: '00002098'
+    - name: VSRLSetupForLatchRestore
+      processed: ''
+      offset: 000020AC
+    - name: VDD_State_Save_Latches
+      processed: ''
+      offset: 0000213B
+    - name: VSSLSetupForLatchSave
+      processed: ''
+      offset: '00002189'
+    - name: MiniVDD_LatchSave
+      processed: ''
+      offset: 0000218E
+    - name: VDD_State_Get_Mode
+      processed: ''
+      offset: 000021FC
+    - name: VDD_State_Get_Mem_Mapping
+      processed: ''
+      offset: 0000231B
+    - name: VDD_State_Change_Query
+      processed: ''
+      offset: 0000233F
+    - name: VDD_State_Get_Chgs
+      processed: ''
+      offset: '00002369'
+    - name: VDD_State_Chk_CRTC
+      processed: ''
+      offset: 000023F7
+    - name: VDD_State_Clear_Mod_State
+      processed: ''
+      offset: 0000248A
+    - name: VDD_State_Chk_Cursor
+      processed: ''
+      offset: 000024A1
+    - name: VDD_State_Get_State
+      processed: ''
+      offset: 000024EE
+    - name: VDD_State_Get_Cursor_Posn
+      processed: ''
+      offset: 000025DD
+    - name: VDD_State_Copy_Ctlr_State
+      processed: ''
+      offset: '00002609'
+    - name: VDD_VGA_Save_Regs
+      processed: ''
+      offset: '00002658'
+    - name: VDD_VGA_Save_Attr
+      processed: ''
+      offset: 000026EB
+    - name: VDD_VGA_Save_Misc
+      processed: ''
+      offset: 0000279C
+    - name: VDD_VGA_Save_CRTC
+      processed: ''
+      offset: 000027BD
+    - name: VDD_VGA_Save_Grp
+      processed: ''
+      offset: 000027F6
+    - name: VDD_VGA_Save_Seq
+      processed: ''
+      offset: '00002825'
+    - name: VDD_VGA_Save_DAC
+      processed: ''
+      offset: '00002854'
+    - name: VDD_Int_Can_Emulate
+      processed: ''
+      offset: '00002890'
+    - name: VDD_Int_9
+      processed: ''
+      offset: '00002901'
+    - name: VDD_Int_16
+      processed: ''
+      offset: '00002922'
+    - name: UpdateModRect
+      processed: ''
+      offset: '00002989'
+    - name: VDD_Int_10
+      processed: ''
+      offset: 000029EA
+    - name: VI10VESA
+      processed: ''
+      offset: '00002E77'
+    - name: VESA_NotHandledByMiniVDD
+      processed: ''
+      offset: 00002EAA
+    - name: VESA_GetMode
+      processed: ''
+      offset: 00002ED2
+    - name: VESA_ModeSetDone
+      processed: ''
+      offset: 00002EE7
+    - name: VMSDModeSet
+      processed: ''
+      offset: 00002F30
+    - name: ScrollWinUp
+      processed: ''
+      offset: 00002F6A
+    - name: ScrollWinDown
+      processed: ''
+      offset: 00002FB3
+    - name: VDD_Dspy_SetPosn
+      processed: ''
+      offset: 0000300B
+    - name: VDD_Int_10_Mode_Switch
+      processed: ''
+      offset: '00003064'
+    - name: VDD_Int_10_Mode_Change_Start
+      processed: ''
+      offset: 000030A9
+    - name: VDD_Int_10_Mode_Sw_Done
+      processed: ''
+      offset: '00003173'
+    - name: VDD_Int_10_Mode_Change_End
+      processed: ''
+      offset: '00003185'
+    - name: VDD_Int_10_PM
+      processed: ''
+      offset: 000031EA
+    - name: VDD_PH_Mem_Access_Latch_Page
+      processed: ''
+      offset: '00003248'
+    - name: VDD_PH_Mem_End_Access_Latch_Page
+      processed: ''
+      offset: 0000327E
+    - name: VDD_PH_Mem_Shared_Page
+      processed: ''
+      offset: '00003297'
+    - name: VDD_PH_Mem_Get_PPD_Ptr
+      processed: ''
+      offset: '00003301'
+    - name: VDD_PH_Mem_VM_Using_All
+      processed: ''
+      offset: '00003336'
+    - name: VDD_PH_Mem_CalcPagePhys
+      processed: ''
+      offset: '00003380'
+    - name: cpp_SetToVDDBank
+      processed: ''
+      offset: '00003396'
+    - name: cpp_SetToWindowsBank
+      processed: ''
+      offset: 000033A8
+    - name: cpp_CalcBanking
+      processed: ''
+      offset: 000033B8
+    - name: VDD_PH_Mem_Mapped_Phys
+      processed: ''
+      offset: 000033CD
+    - name: VDD_PH_Mem_Get_Visible_Pages
+      processed: ''
+      offset: '00003421'
+    - name: VGVPHiResVM
+      processed: ''
+      offset: '00003453'
+    - name: VGVPLieAboutScreenSize
+      processed: ''
+      offset: 0000347F
+    - name: VDD_PH_Mem_Page_Visible
+      processed: ''
+      offset: '00003514'
+    - name: VDD_PH_Mem_CalcPageId
+      processed: ''
+      offset: 0000353A
+    - name: VDD_PH_Mem_CalcPageAddr
+      processed: ''
+      offset: '00003590'
+    - name: VDD_PH_Mem_Alloc_Video_Page
+      processed: ''
+      offset: 000035DB
+    - name: find_page
+      processed: ''
+      offset: 0000365C
+    - name: MiniVDDPageAdjust
+      processed: ''
+      offset: 0000366E
+    - name: MiniVDDPageAdjustDone
+      processed: ''
+      offset: '00003690'
+    - name: alloc_page_free
+      processed: ''
+      offset: '000036E7'
+    - name: no_page_free
+      processed: ''
+      offset: 000036FF
+    - name: alloc_page
+      processed: ''
+      offset: 0000373E
+    - name: VDD_PH_Mem_LRU_Sweep
+      processed: ''
+      offset: '000037E8'
+    - name: VDD_PH_Mem_update_LRU
+      processed: ''
+      offset: 0000385E
+    - name: VDD_PH_Mem_Change_Page
+      processed: ''
+      offset: 000038CF
+    - name: VDD_PH_Mem_Get_Page_Owner
+      processed: ''
+      offset: 0000392F
+    - name: VDD_PH_Mem_Free_Page
+      processed: ''
+      offset: '00003979'
+    - name: VDD_PH_Mem_Restore_Mapping
+      processed: ''
+      offset: 00003A2D
+    - name: VDD_PH_Mem_Set_A0_Mapping
+      processed: ''
+      offset: 00003A3F
+    - name: VDD_PH_Mem_Modify_VMs_MemC
+      processed: ''
+      offset: 00003A62
+    - name: VDD_PH_Mem_Clear_MemC_mods
+      processed: ''
+      offset: 00003AA5
+    - name: VDD_PH_Mem_Access_Page
+      processed: ''
+      offset: 00003AC6
+    - name: VDD_PH_Mem_Page_Accessible
+      processed: ''
+      offset: 00003B9A
+    - name: VDD_PH_Mem_Release_Page
+      processed: ''
+      offset: 00003BCB
+    - name: VDD_Get_VM_Info
+      processed: ''
+      offset: 00003BEA
+    - name: VDD_Hide_Cursor
+      processed: ''
+      offset: 00003C05
+    - name: VDD_Query_Access
+      processed: ''
+      offset: 00003C5F
+    - name: VQA_CheckSuspended
+      processed: ''
+      offset: 00003CB3
+    - name: VQA_AllowAccess
+      processed: ''
+      offset: 00003CBE
+    - name: VQA_DontAllowAccess
+      processed: ''
+      offset: 00003CC1
+    - name: VDD_Set_VMType
+      processed: ''
+      offset: 00003CCB
+    - name: VDD_Check_Update_Soon
+      processed: ''
+      offset: 00003D66
+    - name: VDD_Get_ModTime
+      processed: ''
+      offset: 00003DD6
+    - name: VDD_InvalidateSelector
+      processed: ''
+      offset: '00003E27'
+    - name: VISInvalidateLoop
+      processed: ''
+      offset: 00003E4B
+    - name: VISEndInvalidateLoop
+      processed: ''
+      offset: '00003E71'
+    - name: VISBadness
+      processed: ''
+      offset: '00003E81'
+    - name: VDD_ValidateSelector
+      processed: ''
+      offset: '00003E84'
+    - name: VVSSearchLoop
+      processed: ''
+      offset: 00003EB5
+    - name: VVSEndSearchLoop
+      processed: ''
+      offset: 00003EE3
+    - name: VVSCheckInstruction
+      processed: ''
+      offset: 00003EEB
+    - name: VVSOurGPFault
+      processed: ''
+      offset: 00003F11
+    - name: VVSValidateLoop
+      processed: ''
+      offset: 00003F1B
+    - name: VVSEndValidateLoop
+      processed: ''
+      offset: 00003F3B
+    - name: VVSBadness
+      processed: ''
+      offset: 00003F50
+    - name: VVSChain
+      processed: ''
+      offset: 00003F53
+    - name: VVSChain0C
+      processed: ''
+      offset: 00003F60
+    - name: VDD_PM_API
+      processed: ''
+      offset: 00003F6A
+    - name: VPAItsAMiniVDDCall
+      processed: ''
+      offset: 00003F97
+    - name: VPA_IOCTL
+      processed: ''
+      offset: 00003FBF
+    - name: VPAItsAGrabberCall
+      processed: ''
+      offset: 00003FEB
+    - name: VDD_Get_GrbState
+      processed: ''
+      offset: 000040AB
+    - name: VDD_Get_State
+      processed: ''
+      offset: 000040B8
+    - name: VDD_Get_Mod
+      processed: ''
+      offset: '00004119'
+    - name: VDD_Clear_Mod
+      processed: ''
+      offset: 000041A4
+    - name: VDD_Get_Mem
+      processed: ''
+      offset: 000041B9
+    - name: VDD_Get_GrbMem
+      processed: ''
+      offset: 000041FC
+    - name: VGMm_Set_Struc
+      processed: ''
+      offset: '00004218'
+    - name: VDD_Suspend_NormSch
+      processed: ''
+      offset: '00004307'
+    - name: VDD_Free_Grab
+      processed: ''
+      offset: 0000432F
+    - name: VDD_Free_Mem
+      processed: ''
+      offset: '00004343'
+    - name: VDD_Unlock_APP
+      processed: ''
+      offset: 0000435A
+    - name: VDD_VM_Mem_Alloc_PageMaps
+      processed: ''
+      offset: 000043A8
+    - name: VDD_VM_Mem_Grow_PageMaps
+      processed: ''
+      offset: '00004434'
+    - name: VDD_VM_Mem_VM_Critical_Init
+      processed: ''
+      offset: 000044D1
+    - name: VDD_VM_Mem_alloc_visible_page
+      processed: ''
+      offset: '00004512'
+    - name: VDD_VM_Mem_Chk_VideoPages
+      processed: ''
+      offset: '00004612'
+    - name: VDD_VM_Mem_Set_Device_Focus
+      processed: ''
+      offset: '00004669'
+    - name: VDD_VM_Mem_Dealloc
+      processed: ''
+      offset: '00004743'
+    - name: VDD_VM_Mem_DMain
+      processed: ''
+      offset: 000047A7
+    - name: VDD_VM_Mem_Adjust_Plane_Sizes
+      processed: ''
+      offset: 000047BD
+    - name: mr_mod_plane_size
+      processed: ''
+      offset: '00004870'
+    - name: VDD_VM_Mem_Realloc_Plane
+      processed: ''
+      offset: '00004889'
+    - name: VDD_VM_Mem_Realloc
+      processed: ''
+      offset: 000048F3
+    - name: VDD_VM_Mem_Font_Page
+      processed: ''
+      offset: 000049BC
+    - name: VDD_VM_Mem_End_Mode_Chg
+      processed: ''
+      offset: 000049D6
+    - name: VDD_VM_Mem_Change_SaveMem
+      processed: ''
+      offset: 00004B13
+    - name: VDD_VM_Mem_Adjust_Visible_Pages
+      processed: ''
+      offset: 00004B67
+    - name: VDD_VM_Mem_Chk_Alloc
+      processed: ''
+      offset: 00004BDA
+    - name: VDD_VM_Mem_MemC_about_to_change
+      processed: ''
+      offset: 00004C80
+    - name: VDD_VM_Mem_Disable
+      processed: ''
+      offset: 00004CD4
+    - name: VDD_VM_Mem_VM_can_use_savemem
+      processed: ''
+      offset: 00004D6C
+    - name: VDD_PFault
+      processed: ''
+      offset: 00004D92
+    - name: VPFSleepLoop
+      processed: ''
+      offset: 00004DDD
+    - name: VPFNoSleepNeeded
+      processed: ''
+      offset: 00004DF1
+    - name: pf_pgmp_ok
+      processed: ''
+      offset: '00004E51'
+    - name: pf_try_using_VRAM
+      processed: ''
+      offset: 00004EB2
+    - name: pf_alloc_page
+      processed: ''
+      offset: 00004EE9
+    - name: pf_exit
+      processed: ''
+      offset: 00004FAF
+    - name: VDD_VM_Mem_Map_SaveMem
+      processed: ''
+      offset: 00004FE7
+    - name: msm_map_null
+      processed: ''
+      offset: '00005047'
+    - name: msm_map_vram
+      processed: ''
+      offset: '00005063'
+    - name: VDD_VM_Mem_Unmap_SaveMem
+      processed: ''
+      offset: 000050FE
+    - name: VDD_VM_Mem_MapNull
+      processed: ''
+      offset: 000051BF
+    - name: VDD_VM_Mem_Disable_Null
+      processed: ''
+      offset: 0000521F
+    - name: VDD_VM_Mem_Page_Handler
+      processed: ''
+      offset: 0000528D
+    - name: VPHTrashShadow
+      processed: ''
+      offset: '00005363'
+    - name: unmap_page
+      processed: ''
+      offset: '00005376'
+    - name: VDD_VM_Mem_Msg_Page_Handler
+      processed: ''
+      offset: 0000537B
+    - name: VDD_VM_Mem_Unmap_Page
+      processed: ''
+      offset: '00005385'
+    - name: VDD_VM_Mem_Get_PTE
+      processed: ''
+      offset: 000053F6
+    - name: VDD_VM_Mem_Is_Page_Dirty
+      processed: ''
+      offset: '00005421'
+    - name: VDD_VM_Mem_Chk_SaveMem
+      processed: ''
+      offset: '00005450'
+    - name: VDD_VM_Mem_Chk_MemC_State
+      processed: ''
+      offset: '00005486'
+    - name: VDD_VM_Mem_Save_Page
+      processed: ''
+      offset: '00005506'
+    - name: VDD_VM_Mem_Restore_Page
+      processed: ''
+      offset: 000056D8
+    - name: rp_text
+      processed: ''
+      offset: 000057BB
+    - name: rp_chain4
+      processed: ''
+      offset: '00005854'
+    - name: rp_exit
+      processed: ''
+      offset: 000058C1
+    - name: VDD_VM_Mem_Select_Plane
+      processed: ''
+      offset: 000058D9
+    - name: VDD_VM_Mem_Chk_Plane_Size
+      processed: ''
+      offset: 0000591B
+    - name: VDD_VM_Mem_Lock_SaveMem_Page
+      processed: ''
+      offset: '00005941'
+    - name: VDD_VM_Mem_copy_from_plane
+      processed: ''
+      offset: '00005970'
+    - name: VDD_VM_Mem_save_attribute_page
+      processed: ''
+      offset: 000059B8
+    - name: VDD_VM_Mem_restore_attribute_page
+      processed: ''
+      offset: 00005A03
+    - name: VDD_VM_Mem_copy_to_plane
+      processed: ''
+      offset: 00005A35
+    - name: VDD_VM_Mem_zero_page
+      processed: ''
+      offset: 00005A82
+    - name: VDD_VM_Mem_zero_page_no_pushad
+      processed: ''
+      offset: 00005A90
+    - name: VDD_VM_Mem_init_text
+      processed: ''
+      offset: 00005ABD
+    - name: VDD_VM_Mem_Save_Dirty_State
+      processed: ''
+      offset: 00005AF0
+    - name: VDD_VM_Mem_Free_Pages
+      processed: ''
+      offset: 00005B80
+    - name: VDD_VM_Mem_Record_VRAM_Mod
+      processed: ''
+      offset: 00005BF8
+    - name: VDD_Font_save_font
+      processed: ''
+      offset: 00005C44
+    - name: VDD_Font_restore_font
+      processed: ''
+      offset: 00005CD2
+    - name: VDD_VMIdle
+      processed: ''
+      offset: 00005D4C
+    - name: VDD_VMTimeOut
+      processed: ''
+      offset: 00005D9C
+    - name: VDD_Update_Window
+      processed: ''
+      offset: 00005DDC
+    - name: VDD_Set_VM_Time_Out
+      processed: ''
+      offset: '00005E48'
+    - name: VDD_Clr_VM_Time_Out
+      processed: ''
+      offset: '00005E90'
+    - name: VDD_Update_Event
+      processed: ''
+      offset: 00005EAA
+    - name: VDD_Upd_CallBack
+      processed: ''
+      offset: 00005EE5
+    - name: VDD_VMDA_Grab
+      processed: ''
+      offset: 00005F13
+    - name: VDD_Grab_Event
+      processed: ''
+      offset: 00005F6D
+    - name: VDD_Grab_CallBack
+      processed: ''
+      offset: 00005FAA
+    - name: VDD_Proc_VM_Resume
+      processed: ''
+      offset: 00005FC5
+    - name: VDD_Proc_VM_Suspend
+      processed: ''
+      offset: 00005FFB
+    - name: VDD_Proc_BGrnd_INT2F
+      processed: ''
+      offset: 0000600F
+    - name: VDD_Proc_FGrnd_INT2F
+      processed: ''
+      offset: 000060C7
+    - name: SYONG
+      processed: ''
+      offset: '00006103'
+    - name: VDD_Proc_BGrnd_Notify
+      processed: ''
+      offset: 0000618B
+    - name: VDD_Proc_Notify_Bkgnd_VMs
+      processed: ''
+      offset: '000061E3'
+    - name: VDD_Proc_Chk_Bkgnd_Usage
+      processed: ''
+      offset: '00006240'
+    - name: VDD_Proc_Suspend_Bkgnd_VMs
+      processed: ''
+      offset: '00006292'
+    - name: VDD_Proc_Resume_Bkgnd_VMs
+      processed: ''
+      offset: 0000633D
+    - name: rbv_call_resume
+      processed: ''
+      offset: '000063E8'
+    - name: VDD_Proc_Force_Cur_VM_Fgrnd
+      processed: ''
+      offset: 0000641C
+    - name: VDD_Proc_Set_Device_Focus
+      processed: ''
+      offset: '00006451'
+    - name: VSDFCheckSuspendParams
+      processed: ''
+      offset: 000064A5
+    - name: VDD_TIO_Set_Trap
+      processed: ''
+      offset: 000064F4
+    - name: VIOST_EnableTrap
+      processed: ''
+      offset: '00006620'
+    - name: VIOT_Disp
+      processed: ''
+      offset: '00006658'
+    - name: VIOT_Disp0
+      processed: ''
+      offset: 000066BB
+    - name: VIOT_Dispatch_Jump
+      processed: ''
+      offset: 000066CB
+    - name: VIOT_Disp_Ignore
+      processed: ''
+      offset: 000066FF
+    - name: VIOT_CRTC
+      processed: ''
+      offset: '00006711'
+    - name: VIOT_In_Undef
+      processed: ''
+      offset: '00006744'
+    - name: VIOT_Ignore
+      processed: ''
+      offset: '00006750'
+    - name: VIOT_3C0
+      processed: ''
+      offset: 0000675C
+    - name: VIOT_In_3C0
+      processed: ''
+      offset: 0000677F
+    - name: VIOT_3C1
+      processed: ''
+      offset: '00006788'
+    - name: VIOT_In_3C1
+      processed: ''
+      offset: 000067C9
+    - name: VIOT_3C2
+      processed: ''
+      offset: 000067DC
+    - name: VIOT_3C4
+      processed: ''
+      offset: '00006850'
+    - name: VIOT_3C5
+      processed: ''
+      offset: '00006888'
+    - name: VIOT_VO_Seq
+      processed: ''
+      offset: 000068C9
+    - name: VIOT_3C6
+      processed: ''
+      offset: '00006964'
+    - name: VIOT_In_3C6
+      processed: ''
+      offset: 0000699B
+    - name: VIOT_3C7
+      processed: ''
+      offset: 000069B8
+    - name: VIOT_3C8
+      processed: ''
+      offset: 00006A44
+    - name: VIOT_3C9
+      processed: ''
+      offset: 00006ADC
+    - name: VIOT_3CA
+      processed: ''
+      offset: 00006B9C
+    - name: VIOT_3CC
+      processed: ''
+      offset: 00006BB0
+    - name: VIOT_3CE
+      processed: ''
+      offset: 00006BCC
+    - name: VIOT_3CENoSpecialHandling
+      processed: ''
+      offset: 00006BFA
+    - name: VIOT_3CF
+      processed: ''
+      offset: 00006C2C
+    - name: VIOT_3CFNoSpecialHandling
+      processed: ''
+      offset: 00006C5A
+    - name: VIOT_3D4
+      processed: ''
+      offset: 00006D88
+    - name: VIOT_3D5
+      processed: ''
+      offset: 00006DA4
+    - name: VIOT_In_CRT
+      processed: ''
+      offset: 00006E0F
+    - name: VIOT_VI_CRT
+      processed: ''
+      offset: '00006E13'
+    - name: VIOT_3DA
+      processed: ''
+      offset: '00006E44'
+    - name: VIOT_3DB
+      processed: ''
+      offset: 00006EA4
+  - num: '16'
+    name: _TEXT
+    offset: 00012A20
+    symbols:
+    - name: _VDD_Irp_ProcessIrp
+      processed: ''
+      offset: 000001BC
+  - num: '18'
+    name: CONST
+    offset: '00000000'
+    symbols:
+    - name: _GUID_I2C_INTERFACE
+      processed: ''
+      offset: '00000000'
+    - name: _GUID_GPIO_INTERFACE
+      processed: ''
+      offset: '00000010'

@@ -1,289 +1,418 @@
-filename: "vmm32/vcd.vxd"
+filename: vmm32/vcd.vxd
 #TODO: bring up more details from symdeb
-binary: "vmm32/vcd.vxd"
-description: ""
-note: ""
+binary: VCD
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_LGROUP"
-        offset: "00000990"
-        symbols:
-          - name: 'VCD_not_idle'
-            offset: "00000000"            
-          - name: 'VCD_Control'
-            offset: "00000025"            
-          - name: 'VCD_Dispatch_IO'
-            offset: "00000078"            
-          - name: 'VCD_Virt_In_Out_RxTxB'
-            offset: "00000122"            
-          - name: 'VCD_Virt_In_Out_IER'
-            offset: "00000134"            
-          - name: 'VCD_Virt_In_IIR'
-            offset: "0000014A"            
-          - name: 'VCD_Virt_Out_IIR'
-            offset: "0000014D"            
-          - name: 'VCD_Virt_In_LCR'
-            offset: "00000152"            
-          - name: 'VCD_Virt_Out_LCR'
-            offset: "00000156"            
-          - name: 'VCD_Virt_In_MCR'
-            offset: "0000015E"            
-          - name: 'VCD_Virt_Out_MCR'
-            offset: "00000162"            
-          - name: 'VCD_Virt_In_LSR'
-            offset: "0000016A"            
-          - name: 'VCD_Virt_In_MSR'
-            offset: "00000178"            
-          - name: 'VCD_Cant_Virtualize'
-            offset: "00000186"            
-          - name: 'VCD_Take_Port'
-            offset: "000001A8"            
-          - name: 'VCD_handler'
-            offset: "000001F6"            
-          - name: 'VCD_Sharable_Int'
-            offset: "00000230"            
-          - name: 'VCD_Int'
-            offset: "00000243"            
-          - name: 'VCD_COMMDRV_Int'
-            offset: "000002D9"            
-          - name: 'VCD_Sharable_EOI'
-            offset: "000002F0"            
-          - name: 'VCD_EOI'
-            offset: "00000314"            
-          - name: 'VCD_Mask'
-            offset: "0000033B"            
-          - name: 'VCD_Debug_Dump'
-            offset: "00000344"            
-          - name: 'VCD_Dump2'
-            offset: "00000393"            
-          - name: 'VCD_Eat_Interrupt'
-            offset: "00000660"            
-          - name: '_VCD_Get_Version'
-            offset: "00000690"            
-          - name: '_VCD_Set_Port_Global'
-            offset: "00000694"            
-          - name: '_VCD_Get_Focus'
-            offset: "00000698"            
-          - name: '_VCD_Virtualize_Port'
-            offset: "0000069C"            
-          - name: '_VCD_Acquire_Port'
-            offset: "000006A0"            
-          - name: '_VCD_Free_Port'
-            offset: "000006A4"            
-          - name: '_VCD_Acquire_Port_Windows_Style'
-            offset: "000006A8"            
-          - name: '_VCD_Free_Port_Windows_Style'
-            offset: "000006AC"            
-          - name: '_VCD_Steal_Port_Windows_Style'
-            offset: "000006B0"            
-          - name: '_VCD_Find_COM_Index'
-            offset: "000006B4"            
-          - name: '_VCD_Set_Port_Global_Special'
-            offset: "000006B8"            
-          - name: '_VCD_Virtualize_Port_Dynamic'
-            offset: "000006BC"            
-          - name: '_VCD_Unvirtualize_Port_Dynamic'
-            offset: "000006C0"            
-          - name: 'VCD_DDB'
-            offset: "000006C4"            
-          - name: 'VCD_Setup_Ptrs_Addr'
-            offset: "00000C0C"            
-          - name: 'VCD_Xmit_CallBack_Addr'
-            offset: "00000C10"            
-      - num: "2"
-        name: "_LMGROUP"
-        offset: "000009D0"
-        symbols:
-          - name: '@MSG_LAB'
-            offset: "00000000"            
-          - name: '@MSG_LDATA'
-            offset: "00000018"            
-      - num: "3"
-        name: "_IGROUP"
-        offset: "000016D0"
-        symbols:
-          - name: 'VCD_add_portnum'
-            offset: "00000000"            
-          - name: 'VCD_copy_ini_string'
-            offset: "0000001B"            
-          - name: 'VCD_Initialize'
-            offset: "00000027"            
-          - name: 'VCD_Device_Init'
-            offset: "00000159"            
-          - name: 'VCD_Init_Complete'
-            offset: "000002AB"            
-          - name: 'VCD_Init_Port'
-            offset: "000002E1"            
-          - name: 'VCD_Virtualize_Port'
-            offset: "00000426"            
-          - name: 'VCD_Relocate_COMM_Int'
-            offset: "000004D8"            
-          - name: 'VCD_Setup_Ptrs'
-            offset: "0000056C"            
-          - name: 'VCD_Xmit_CallBack'
-            offset: "000005B3"            
-          - name: 'VCD_Enable_THRE'
-            offset: "000005FB"            
-          - name: 'VCD_Sharable_COMM_Int'
-            offset: "0000061C"            
-          - name: 'VCD_COMM_Int'
-            offset: "00000624"            
-          - name: 'VCD_LineStat'
-            offset: "00000657"            
-          - name: 'VCD_DataAvail'
-            offset: "00000672"            
-          - name: 'VCD_XmitEmpty'
-            offset: "0000078E"            
-          - name: 'VCD_ModemStatus'
-            offset: "0000089A"            
-          - name: 'VCD_Sharable_COMM_Int_Addr'
-            offset: "00000ADC"            
-          - name: 'VCD_COMM_Int_Addr'
-            offset: "00000AE0"            
-          - name: 'Com_Boost_Time'
-            offset: "00000B28"            
-          - name: 'VCD_Base_Ini'
-            offset: "00000B34"            
-          - name: 'VCD_IRQ_Ini'
-            offset: "00000B39"            
-          - name: 'VCD_assign_Ini'
-            offset: "00000B3D"            
-          - name: 'VCD_INI_Buf'
-            offset: "00000B48"            
-          - name: 'VCD_INI_Num'
-            offset: "00000B4B"            
-          - name: 'COM_IRQs_Sharable'
-            offset: "00000B58"            
-          - name: 'COM_30_Support'
-            offset: "00000B66"            
-          - name: 'Com_Ports_Ini'
-            offset: "00000B70"            
-          - name: 'COM_Device_Name_Base'
-            offset: "00000B7B"            
-          - name: 'COM_Device_Name_Num_Off'
-            offset: "00000B83"            
-      - num: "4"
-        name: "_PTEXT"
-        offset: "00002E20"
-        symbols:
-          - name: 'ReadDefaultState'
-            offset: "0000001C"            
-          - name: 'VCD_Virtualize_Port_Dynamic'
-            offset: "00000079"            
-          - name: 'VCD_UnVirtualize_Port_Dynamic'
-            offset: "00000184"            
-          - name: 'VCD_Get_Version'
-            offset: "000001E1"            
-          - name: 'VCD_Set_Port_Global'
-            offset: "000001F6"            
-          - name: 'VCD_Set_Port_Global_Special'
-            offset: "00000262"            
-          - name: 'VCD_Get_Focus'
-            offset: "0000027D"            
-          - name: 'VCD_Acquire_Port'
-            offset: "000002B1"            
-          - name: 'VCD_Free_Port'
-            offset: "0000038F"            
-          - name: 'Find_Index'
-            offset: "000003DA"            
-          - name: 'VCD_Find_COM_Index'
-            offset: "00000411"            
-          - name: 'VCD_Acquire_Port_Windows_Style'
-            offset: "0000042D"            
-          - name: 'VCD_Validate_Handle'
-            offset: "0000058E"            
-          - name: 'VCD_Free_Port_Windows_Style'
-            offset: "000005B4"            
-          - name: 'VCD_Steal_Port_Windows_Style'
-            offset: "00000607"            
-          - name: 'VCD_PM_Get_Version'
-            offset: "00000645"            
-          - name: 'VCD_Set_Focus'
-            offset: "00000658"            
-          - name: 'VCD_Suspend_VM'
-            offset: "000006D2"            
-          - name: 'VCD_Set_IRQ_Procs'
-            offset: "0000070A"            
-          - name: 'VCD_Notify_VxD'
-            offset: "00000778"            
-          - name: 'VCD_Enable_Trapping'
-            offset: "000007AE"            
-          - name: 'VCD_Disable_Trapping'
-            offset: "000007CA"            
-          - name: 'VCD_Create_VM'
-            offset: "000007FB"            
-          - name: 'VCD_Init_VM_CB'
-            offset: "00000821"            
-          - name: 'FillBiosArea'
-            offset: "00000875"            
-          - name: 'VCD_Clear_Int'
-            offset: "000008A4"            
-          - name: 'VCD_Attach'
-            offset: "000008C9"            
-          - name: 'VCD_Set_IRQ_Mask'
-            offset: "00000995"            
-          - name: 'VCD_Read_State'
-            offset: "000009B9"            
-          - name: 'VCD_Detach'
-            offset: "000009F7"            
-          - name: 'VCD_Virtualize_IRQ'
-            offset: "00000A71"            
-          - name: 'VCD_Set_Owner_Event'
-            offset: "00000B45"            
-          - name: 'VCD_Set_Owner'
-            offset: "00000B5E"            
-          - name: 'VCD_Destroy_VM'
-            offset: "00000C6D"            
-          - name: 'VCD_Detach_If_Owner'
-            offset: "00000C93"            
-          - name: 'VCD_Assign'
-            offset: "00000CD3"            
-          - name: 'VCD_Soft_Int_14h'
-            offset: "00000D81"            
-          - name: 'VCD_Get_Contention_Handler'
-            offset: "00000DB2"            
-          - name: '_VCD_Contention_Handler'
-            offset: "00000DC1"            
-          - name: '_VCD_Map_Name_To_Resource'
-            offset: "00000DDA"            
-          - name: 'GetPortNum'
-            offset: "00000E07"            
-          - name: '_VCD_Acquire_Resource'
-            offset: "00000E82"            
-          - name: '_VCD_Steal_Resource'
-            offset: "00000EEC"            
-          - name: '_VCD_Release_Resource'
-            offset: "00000F62"            
-      - num: "5"
-        name: "_PDATA"
-        offset: "00002E50"
-        symbols:
-          - name: 'verify_base_ini'
-            offset: "0000039C"            
-      - num: "6"
-        name: "_RARE"
-        offset: "00000000"
-        symbols:
-          - name: 'VCD_PM_Svc_Call'
-            offset: "00000000"            
-          - name: 'VCD_PM_Get_Port_Array'
-            offset: "0000004B"            
-          - name: 'VCD_PM_Get_Data_Ptr'
-            offset: "00000085"            
-          - name: 'VCD_PM_Get_Port_Behavior'
-            offset: "000000AA"            
-          - name: 'VCD_PM_Set_Port_Behavior'
-            offset: "000000C8"            
-          - name: 'VCD_PM_Acquire_Port'
-            offset: "000000EA"            
-          - name: 'VCD_PM_Free_Port'
-            offset: "0000015D"            
-          - name: 'VCD_PM_Steal_Port'
-            offset: "00000175"            
-          - name: '_VCD_Port_Arrival'
-            offset: "00000186"            
-          - name: '_VCD_Port_Departure'
-            offset: "00000374"            
+- version: system
+  tree:
+  - - vcd.asm
+    - vcdint.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00000990'
+    symbols:
+    - name: VCD_not_idle
+      processed: ''
+      offset: '00000000'
+    - name: VCD_Control
+      processed: ''
+      offset: '00000025'
+    - name: VCD_Dispatch_IO
+      processed: ''
+      offset: '00000078'
+    - name: VCD_Virt_In_Out_RxTxB
+      processed: ''
+      offset: '00000122'
+    - name: VCD_Virt_In_Out_IER
+      processed: ''
+      offset: '00000134'
+    - name: VCD_Virt_In_IIR
+      processed: ''
+      offset: 0000014A
+    - name: VCD_Virt_Out_IIR
+      processed: ''
+      offset: 0000014D
+    - name: VCD_Virt_In_LCR
+      processed: ''
+      offset: '00000152'
+    - name: VCD_Virt_Out_LCR
+      processed: ''
+      offset: '00000156'
+    - name: VCD_Virt_In_MCR
+      processed: ''
+      offset: 0000015E
+    - name: VCD_Virt_Out_MCR
+      processed: ''
+      offset: '00000162'
+    - name: VCD_Virt_In_LSR
+      processed: ''
+      offset: 0000016A
+    - name: VCD_Virt_In_MSR
+      processed: ''
+      offset: '00000178'
+    - name: VCD_Cant_Virtualize
+      processed: ''
+      offset: '00000186'
+    - name: VCD_Take_Port
+      processed: ''
+      offset: 000001A8
+    - name: VCD_handler
+      processed: ''
+      offset: 000001F6
+    - name: VCD_Sharable_Int
+      processed: ''
+      offset: '00000230'
+    - name: VCD_Int
+      processed: ''
+      offset: '00000243'
+    - name: VCD_COMMDRV_Int
+      processed: ''
+      offset: 000002D9
+    - name: VCD_Sharable_EOI
+      processed: ''
+      offset: 000002F0
+    - name: VCD_EOI
+      processed: ''
+      offset: '00000314'
+    - name: VCD_Mask
+      processed: ''
+      offset: 0000033B
+    - name: VCD_Debug_Dump
+      processed: ''
+      offset: '00000344'
+    - name: VCD_Dump2
+      processed: ''
+      offset: '00000393'
+    - name: VCD_Eat_Interrupt
+      processed: ''
+      offset: '00000660'
+    - name: _VCD_Get_Version
+      processed: ''
+      offset: '00000690'
+    - name: _VCD_Set_Port_Global
+      processed: ''
+      offset: '00000694'
+    - name: _VCD_Get_Focus
+      processed: ''
+      offset: '00000698'
+    - name: _VCD_Virtualize_Port
+      processed: ''
+      offset: 0000069C
+    - name: _VCD_Acquire_Port
+      processed: ''
+      offset: 000006A0
+    - name: _VCD_Free_Port
+      processed: ''
+      offset: 000006A4
+    - name: _VCD_Acquire_Port_Windows_Style
+      processed: ''
+      offset: 000006A8
+    - name: _VCD_Free_Port_Windows_Style
+      processed: ''
+      offset: 000006AC
+    - name: _VCD_Steal_Port_Windows_Style
+      processed: ''
+      offset: 000006B0
+    - name: _VCD_Find_COM_Index
+      processed: ''
+      offset: 000006B4
+    - name: _VCD_Set_Port_Global_Special
+      processed: ''
+      offset: 000006B8
+    - name: _VCD_Virtualize_Port_Dynamic
+      processed: ''
+      offset: 000006BC
+    - name: _VCD_Unvirtualize_Port_Dynamic
+      processed: ''
+      offset: 000006C0
+    - name: VCD_DDB
+      processed: ''
+      offset: 000006C4
+    - name: VCD_Setup_Ptrs_Addr
+      processed: ''
+      offset: 00000C0C
+    - name: VCD_Xmit_CallBack_Addr
+      processed: ''
+      offset: 00000C10
+  - num: '2'
+    name: _LMGROUP
+    offset: 000009D0
+    symbols:
+    - name: '@MSG_LAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      processed: ''
+      offset: '00000018'
+  - num: '3'
+    name: _IGROUP
+    offset: 000016D0
+    symbols:
+    - name: VCD_add_portnum
+      processed: ''
+      offset: '00000000'
+    - name: VCD_copy_ini_string
+      processed: ''
+      offset: 0000001B
+    - name: VCD_Initialize
+      processed: ''
+      offset: '00000027'
+    - name: VCD_Device_Init
+      processed: ''
+      offset: '00000159'
+    - name: VCD_Init_Complete
+      processed: ''
+      offset: 000002AB
+    - name: VCD_Init_Port
+      processed: ''
+      offset: '000002E1'
+    - name: VCD_Virtualize_Port
+      processed: ''
+      offset: '00000426'
+    - name: VCD_Relocate_COMM_Int
+      processed: ''
+      offset: 000004D8
+    - name: VCD_Setup_Ptrs
+      processed: ''
+      offset: 0000056C
+    - name: VCD_Xmit_CallBack
+      processed: ''
+      offset: 000005B3
+    - name: VCD_Enable_THRE
+      processed: ''
+      offset: 000005FB
+    - name: VCD_Sharable_COMM_Int
+      processed: ''
+      offset: 0000061C
+    - name: VCD_COMM_Int
+      processed: ''
+      offset: '00000624'
+    - name: VCD_LineStat
+      processed: ''
+      offset: '00000657'
+    - name: VCD_DataAvail
+      processed: ''
+      offset: '00000672'
+    - name: VCD_XmitEmpty
+      processed: ''
+      offset: 0000078E
+    - name: VCD_ModemStatus
+      processed: ''
+      offset: 0000089A
+    - name: VCD_Sharable_COMM_Int_Addr
+      processed: ''
+      offset: 00000ADC
+    - name: VCD_COMM_Int_Addr
+      processed: ''
+      offset: 00000AE0
+    - name: Com_Boost_Time
+      processed: ''
+      offset: 00000B28
+    - name: VCD_Base_Ini
+      processed: ''
+      offset: 00000B34
+    - name: VCD_IRQ_Ini
+      processed: ''
+      offset: 00000B39
+    - name: VCD_assign_Ini
+      processed: ''
+      offset: 00000B3D
+    - name: VCD_INI_Buf
+      processed: ''
+      offset: 00000B48
+    - name: VCD_INI_Num
+      processed: ''
+      offset: 00000B4B
+    - name: COM_IRQs_Sharable
+      processed: ''
+      offset: 00000B58
+    - name: COM_30_Support
+      processed: ''
+      offset: 00000B66
+    - name: Com_Ports_Ini
+      processed: ''
+      offset: 00000B70
+    - name: COM_Device_Name_Base
+      processed: ''
+      offset: 00000B7B
+    - name: COM_Device_Name_Num_Off
+      processed: ''
+      offset: 00000B83
+  - num: '4'
+    name: _PTEXT
+    offset: '00002E20'
+    symbols:
+    - name: ReadDefaultState
+      processed: ''
+      offset: 0000001C
+    - name: VCD_Virtualize_Port_Dynamic
+      processed: ''
+      offset: '00000079'
+    - name: VCD_UnVirtualize_Port_Dynamic
+      processed: ''
+      offset: '00000184'
+    - name: VCD_Get_Version
+      processed: ''
+      offset: '000001E1'
+    - name: VCD_Set_Port_Global
+      processed: ''
+      offset: 000001F6
+    - name: VCD_Set_Port_Global_Special
+      processed: ''
+      offset: '00000262'
+    - name: VCD_Get_Focus
+      processed: ''
+      offset: 0000027D
+    - name: VCD_Acquire_Port
+      processed: ''
+      offset: 000002B1
+    - name: VCD_Free_Port
+      processed: ''
+      offset: 0000038F
+    - name: Find_Index
+      processed: ''
+      offset: 000003DA
+    - name: VCD_Find_COM_Index
+      processed: ''
+      offset: '00000411'
+    - name: VCD_Acquire_Port_Windows_Style
+      processed: ''
+      offset: 0000042D
+    - name: VCD_Validate_Handle
+      processed: ''
+      offset: 0000058E
+    - name: VCD_Free_Port_Windows_Style
+      processed: ''
+      offset: 000005B4
+    - name: VCD_Steal_Port_Windows_Style
+      processed: ''
+      offset: '00000607'
+    - name: VCD_PM_Get_Version
+      processed: ''
+      offset: '00000645'
+    - name: VCD_Set_Focus
+      processed: ''
+      offset: '00000658'
+    - name: VCD_Suspend_VM
+      processed: ''
+      offset: 000006D2
+    - name: VCD_Set_IRQ_Procs
+      processed: ''
+      offset: 0000070A
+    - name: VCD_Notify_VxD
+      processed: ''
+      offset: '00000778'
+    - name: VCD_Enable_Trapping
+      processed: ''
+      offset: 000007AE
+    - name: VCD_Disable_Trapping
+      processed: ''
+      offset: 000007CA
+    - name: VCD_Create_VM
+      processed: ''
+      offset: 000007FB
+    - name: VCD_Init_VM_CB
+      processed: ''
+      offset: '00000821'
+    - name: FillBiosArea
+      processed: ''
+      offset: '00000875'
+    - name: VCD_Clear_Int
+      processed: ''
+      offset: 000008A4
+    - name: VCD_Attach
+      processed: ''
+      offset: 000008C9
+    - name: VCD_Set_IRQ_Mask
+      processed: ''
+      offset: '00000995'
+    - name: VCD_Read_State
+      processed: ''
+      offset: 000009B9
+    - name: VCD_Detach
+      processed: ''
+      offset: 000009F7
+    - name: VCD_Virtualize_IRQ
+      processed: ''
+      offset: 00000A71
+    - name: VCD_Set_Owner_Event
+      processed: ''
+      offset: 00000B45
+    - name: VCD_Set_Owner
+      processed: ''
+      offset: 00000B5E
+    - name: VCD_Destroy_VM
+      processed: ''
+      offset: 00000C6D
+    - name: VCD_Detach_If_Owner
+      processed: ''
+      offset: 00000C93
+    - name: VCD_Assign
+      processed: ''
+      offset: 00000CD3
+    - name: VCD_Soft_Int_14h
+      processed: ''
+      offset: 00000D81
+    - name: VCD_Get_Contention_Handler
+      processed: ''
+      offset: 00000DB2
+    - name: _VCD_Contention_Handler
+      processed: ''
+      offset: 00000DC1
+    - name: _VCD_Map_Name_To_Resource
+      processed: ''
+      offset: 00000DDA
+    - name: GetPortNum
+      processed: ''
+      offset: '00000E07'
+    - name: _VCD_Acquire_Resource
+      processed: ''
+      offset: '00000E82'
+    - name: _VCD_Steal_Resource
+      processed: ''
+      offset: 00000EEC
+    - name: _VCD_Release_Resource
+      processed: ''
+      offset: 00000F62
+  - num: '5'
+    name: _PDATA
+    offset: '00002E50'
+    symbols:
+    - name: verify_base_ini
+      processed: ''
+      offset: 0000039C
+  - num: '6'
+    name: _RARE
+    offset: '00000000'
+    symbols:
+    - name: VCD_PM_Svc_Call
+      processed: ''
+      offset: '00000000'
+    - name: VCD_PM_Get_Port_Array
+      processed: ''
+      offset: 0000004B
+    - name: VCD_PM_Get_Data_Ptr
+      processed: ''
+      offset: '00000085'
+    - name: VCD_PM_Get_Port_Behavior
+      processed: ''
+      offset: 000000AA
+    - name: VCD_PM_Set_Port_Behavior
+      processed: ''
+      offset: 000000C8
+    - name: VCD_PM_Acquire_Port
+      processed: ''
+      offset: 000000EA
+    - name: VCD_PM_Free_Port
+      processed: ''
+      offset: 0000015D
+    - name: VCD_PM_Steal_Port
+      processed: ''
+      offset: '00000175'
+    - name: _VCD_Port_Arrival
+      processed: ''
+      offset: '00000186'
+    - name: _VCD_Port_Departure
+      processed: ''
+      offset: '00000374'

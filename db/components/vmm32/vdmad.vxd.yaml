@@ -1,505 +1,742 @@
-filename: "vmm32/vdmad.vxd"
+filename: vmm32/vdmad.vxd
 #TODO: bring up more details from symdeb
-binary: "vmm32/vdmad.vxd"
-description: ""
-note: ""
+binary: VDMAD
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_LGROUP"
-        offset: "00003E10"
-        symbols:
-          - name: 'VDMAD_EISA_ChainMode_Status1'
-            offset: "00000000"            
-          - name: 'VDMAD_EISA_ChainMode_Status2'
-            offset: "00000021"            
-          - name: 'VDMAD_EISA_Ext_Mode'
-            offset: "0000005A"            
-          - name: 'VDMAD_EISA_High_Page'
-            offset: "000000A8"            
-          - name: 'VDMAD_EISA_High_Count'
-            offset: "000000E4"            
-          - name: 'VDMAD_EISA_Stop'
-            offset: "0000013B"            
-          - name: 'VDMAD_Set_EISA_Phys_State'
-            offset: "00000177"            
-          - name: 'VDMAD_Control'
-            offset: "00000258"            
-          - name: 'VDMAD_Init_VM_CB'
-            offset: "000002A6"            
-          - name: 'VDMAD_VM_Suspend'
-            offset: "000002C7"            
-          - name: 'VDMAD_Abort_Transfer'
-            offset: "000002EF"            
-          - name: 'VDMAD_VM_Not_Executeable'
-            offset: "00000329"            
-          - name: 'VDMAD_Get_DMA_Handle'
-            offset: "000003B5"            
-          - name: 'VDMAD_Get_DMA_Handle_For_Ctrl'
-            offset: "000003C5"            
-          - name: 'Test_Global_DMA'
-            offset: "00000405"            
-          - name: 'VDMAD_Read_DMA_Status'
-            offset: "00000449"            
-          - name: 'VDMAD_Get_Version'
-            offset: "0000048B"            
-          - name: 'VDMAD_Get_Max_Phys_Page'
-            offset: "000004A0"            
-          - name: 'VDMAD_Virtualize_Channel'
-            offset: "000004B4"            
-          - name: 'VDMAD_Unvirtualize_Channel'
-            offset: "00000501"            
-          - name: 'VDMAD_Set_Channel_Callbacks'
-            offset: "00000555"            
-          - name: 'VDMAD_Disable_Translation'
-            offset: "00000589"            
-          - name: 'VDMAD_Enable_Translation'
-            offset: "000005C4"            
-          - name: 'VDMAD_Get_Region_Info'
-            offset: "00000602"            
-          - name: 'VDMAD_Set_Region_Info'
-            offset: "00000623"            
-          - name: 'VDMAD_Get_Virt_State'
-            offset: "0000067B"            
-          - name: 'VDMAD_Set_Virt_State'
-            offset: "000006EE"            
-          - name: 'VDMAD_Get_Virt_Count'
-            offset: "000007EB"            
-          - name: 'VDMAD_Set_Virt_Count'
-            offset: "0000080C"            
-          - name: 'VDMAD_Get_Virt_Address'
-            offset: "00000830"            
-          - name: 'VDMAD_Set_Virt_Address'
-            offset: "00000847"            
-          - name: 'VDMAD_Set_Phys_State'
-            offset: "0000085E"            
-          - name: 'VDMAD_Get_Phys_Count'
-            offset: "00000901"            
-          - name: 'VDMAD_Get_Phys_Status'
-            offset: "0000092D"            
-          - name: 'VDMAD_Mask_Channel'
-            offset: "00000944"            
-          - name: 'VDMAD_Phys_Mask_Channel'
-            offset: "000009D5"            
-          - name: 'VDMAD_UnMask_Channel'
-            offset: "000009E6"            
-          - name: 'VDMAD_Phys_Unmask_Channel'
-            offset: "00000A83"            
-          - name: 'IN_DMA_Count'
-            offset: "00000A8E"            
-          - name: 'Read_DMA_Count'
-            offset: "00000AB8"            
-          - name: 'Out_DMA_Word'
-            offset: "00000AD8"            
-          - name: 'VDMAD_Dirty_Region'
-            offset: "00000AFA"            
-          - name: 'VDMAD_Lock_DMA_Region'
-            offset: "00000B14"            
-          - name: 'VDMAD_Unlock_DMA_Region'
-            offset: "00000BFB"            
-          - name: 'VDMAD_Unlock_DMA_Region_No_Dirty'
-            offset: "00000C34"            
-          - name: 'VDMAD_Scatter_Page_Lock'
-            offset: "00000C40"            
-          - name: 'VDMAD_Scatter_Page_Lock_w_holes'
-            offset: "00000C70"            
-          - name: 'VDMAD_Scatter_Lock'
-            offset: "00000CBF"            
-          - name: 'VDMAD_Scatter_Unlock'
-            offset: "00000EDB"            
-          - name: 'VDMAD_Request_Buffer'
-            offset: "00000F9B"            
-          - name: 'RB_Alloc_Buffer'
-            offset: "0000102E"            
-          - name: 'VDMAD_Time_Out'
-            offset: "000010B5"            
-          - name: 'VDMAD_Release_Buffer'
-            offset: "00001131"            
-          - name: 'VDMAD_Partial_DMA'
-            offset: "0000117D"            
-          - name: 'VDMAD_Partial_Copy'
-            offset: "000011FB"            
-          - name: 'Verify_Copy_Params'
-            offset: "00001214"            
-          - name: 'VDMAD_Copy_To_Buffer'
-            offset: "00001253"            
-          - name: 'VDMAD_Copy_From_Buffer'
-            offset: "0000126E"            
-          - name: 'VDMAD_Copy_Fault'
-            offset: "00001294"            
-          - name: 'VDMAD_Get_EISA_Adr_Mode'
-            offset: "000012A7"            
-          - name: 'VDMAD_Set_EISA_Adr_Mode'
-            offset: "000012D0"            
-          - name: 'VDMAD_jmp_filter'
-            offset: "0000131E"            
-          - name: 'VDMAD_HW_Check_TC'
-            offset: "00001324"            
-          - name: 'VDMAD_TC_Event'
-            offset: "00001364"            
-          - name: 'VDMAD_Check_Ctrl_TC'
-            offset: "000013A7"            
-          - name: 'VDMAD_Call_Def'
-            offset: "00001404"            
-          - name: 'VDMAD_Default_Handler'
-            offset: "00001410"            
-          - name: 'VDMAD_Attempt_Lock'
-            offset: "00001513"            
-          - name: 'VDMAD_Free_Region'
-            offset: "0000157B"            
-          - name: 'VDMAD_Grab_Buffer'
-            offset: "000015B6"            
-          - name: 'VDMAD_Free_Buffer'
-            offset: "00001615"            
-          - name: 'VDMAD_Complete_Event'
-            offset: "00001635"            
-          - name: 'VDMAD_DMA_Complete'
-            offset: "00001637"            
-          - name: 'VDMAD_Validate_Handle'
-            offset: "000016A9"            
-          - name: 'VDMAD_Validate_Buff_ID'
-            offset: "000016DD"            
-          - name: 'VDMAD_API_System_Exit'
-            offset: "00001704"            
-          - name: 'VDMAD_PM_DMA_Services'
-            offset: "0000171D"            
-          - name: 'VDMAD_V86_DMA_Services'
-            offset: "00001753"            
-          - name: 'VDMAD_DMA_Services'
-            offset: "00001788"            
-          - name: 'VDMAD_API_GetVersion'
-            offset: "000017F7"            
-          - name: 'VDMAD_API_Lock'
-            offset: "00001850"            
-          - name: 'VDMAD_API_Unlock'
-            offset: "00001923"            
-          - name: 'VDMAD_API_SLock'
-            offset: "00001975"            
-          - name: 'VDMAD_API_SUnlock'
-            offset: "000019E8"            
-          - name: 'VDMAD_API_RequestBuf'
-            offset: "00001A2B"            
-          - name: 'VDMAD_API_ReleaseBuf'
-            offset: "00001A6F"            
-          - name: 'VDMAD_API_CopyToBuf'
-            offset: "00001AB1"            
-          - name: 'VDMAD_API_CopyFromBuf'
-            offset: "00001AEB"            
-          - name: 'VDMAD_API_DisableAuto'
-            offset: "00001B25"            
-          - name: 'VDMAD_API_EnableAuto'
-            offset: "00001B55"            
-          - name: 'VDMAD_Get_DDS_ptrs'
-            offset: "00001B85"            
-          - name: 'GetControllerState'
-            offset: "00001BCC"            
-          - name: 'VDMAD_GetChannel_FromPage'
-            offset: "00001BDD"            
-          - name: 'GetChannel'
-            offset: "00001C23"            
-          - name: 'Get_VM_FlipFlop_Ptr'
-            offset: "00001C46"            
-          - name: 'VDMAD_Status'
-            offset: "00001C7E"            
-          - name: 'VDMAD_Reset'
-            offset: "00001CFF"            
-          - name: 'VDMAD_Mask'
-            offset: "00001D5F"            
-          - name: 'VDMAD_ResetMask'
-            offset: "00001D98"            
-          - name: 'VDMAD_Mode'
-            offset: "00001DD3"            
-          - name: 'VDMAD_SoftReq'
-            offset: "00001E61"            
-          - name: 'VDMAD_MaskSingle'
-            offset: "00001EB1"            
-          - name: 'VDMAD_CLR_FF'
-            offset: "00001EF2"            
-          - name: 'update_adr_byte'
-            offset: "00001F17"            
-          - name: 'VDMAD_Base'
-            offset: "00001F72"            
-          - name: 'VDMAD_Count'
-            offset: "00002003"            
-          - name: 'VDMAD_Page'
-            offset: "000020A9"            
-          - name: 'VDMAD_Bad_Read'
-            offset: "000020FF"            
-          - name: 'VDMAD_Notify_all'
-            offset: "00002101"            
-          - name: 'VDMAD_NotifyOwner'
-            offset: "00002134"            
-          - name: 'VDMAD_NoCheck'
-            offset: "000021AA"            
-          - name: 'VDMAD_IO_Check_TC'
-            offset: "000021B5"            
-          - name: 'VDMAD_Read_PS2_Mode'
-            offset: "000021F4"            
-          - name: 'VDMAD_PS2_Read_Channels'
-            offset: "00002222"            
-          - name: 'VDMAD_Set_PS2_Phys_State'
-            offset: "00002278"            
-          - name: 'VDMAD_RegFunc'
-            offset: "00002387"            
-          - name: 'VDMAD_ExecFunc'
-            offset: "0000240E"            
-          - name: 'PS2_Get_Chl_Data_Ptr'
-            offset: "0000250A"            
-          - name: 'PS2_DMA_Set_IO_Adr'
-            offset: "00002522"            
-          - name: 'PS2_DMA_Set_Mem_Adr'
-            offset: "00002537"            
-          - name: 'PS2_DMA_Get_Mem_Adr'
-            offset: "0000253B"            
-          - name: 'PS2_DMA_Set_Count'
-            offset: "0000254F"            
-          - name: 'PS2_DMA_Get_Count'
-            offset: "00002553"            
-          - name: 'PS2_DMA_Get_Status'
-            offset: "00002567"            
-          - name: 'PS2_DMA_Set_Mode'
-            offset: "00002576"            
-          - name: 'PS2_DMA_Set_Arbus'
-            offset: "0000258B"            
-          - name: 'PS2_DMA_Set_Chn_Mask'
-            offset: "0000259B"            
-          - name: 'PS2_DMA_Reset_Chn_Mask'
-            offset: "000025AF"            
-          - name: 'PS2_DMA_Master_Clear'
-            offset: "000025C3"            
-          - name: 'PS2_Queue_DMA_Data'
-            offset: "0000263E"            
-          - name: 'VDMADArb_Unmask_Channel'
-            offset: "00002658"            
-          - name: 'DMA_EISA_Ext_Modes'
-            offset: "00002668"            
-          - name: '_VDMAD_Get_Version'
-            offset: "000027E8"            
-          - name: '_VDMAD_Virtualize_Channel'
-            offset: "000027EC"            
-          - name: '_VDMAD_Get_Region_Info'
-            offset: "000027F0"            
-          - name: '_VDMAD_Set_Region_Info'
-            offset: "000027F4"            
-          - name: '_VDMAD_Get_Virt_State'
-            offset: "000027F8"            
-          - name: '_VDMAD_Set_Virt_State'
-            offset: "000027FC"            
-          - name: '_VDMAD_Set_Phys_State'
-            offset: "00002800"            
-          - name: '_VDMAD_Mask_Channel'
-            offset: "00002804"            
-          - name: '_VDMAD_UnMask_Channel'
-            offset: "00002808"            
-          - name: '_VDMAD_Lock_DMA_Region'
-            offset: "0000280C"            
-          - name: '_VDMAD_Unlock_DMA_Region'
-            offset: "00002810"            
-          - name: '_VDMAD_Scatter_Lock'
-            offset: "00002814"            
-          - name: '_VDMAD_Scatter_Unlock'
-            offset: "00002818"            
-          - name: '_VDMAD_Reserve_Buffer_Space'
-            offset: "0000281C"            
-          - name: '_VDMAD_Request_Buffer'
-            offset: "00002820"            
-          - name: '_VDMAD_Release_Buffer'
-            offset: "00002824"            
-          - name: '_VDMAD_Copy_To_Buffer'
-            offset: "00002828"            
-          - name: '_VDMAD_Copy_From_Buffer'
-            offset: "0000282C"            
-          - name: '_VDMAD_Default_Handler'
-            offset: "00002830"            
-          - name: '_VDMAD_Disable_Translation'
-            offset: "00002834"            
-          - name: '_VDMAD_Enable_Translation'
-            offset: "00002838"            
-          - name: '_VDMAD_Get_EISA_Adr_Mode'
-            offset: "0000283C"            
-          - name: '_VDMAD_Set_EISA_Adr_Mode'
-            offset: "00002840"            
-          - name: '_VDMAD_Unlock_DMA_Region_No_Dirty'
-            offset: "00002844"            
-          - name: '_VDMAD_Phys_Mask_Channel'
-            offset: "00002848"            
-          - name: '_VDMAD_Phys_Unmask_Channel'
-            offset: "0000284C"            
-          - name: '_VDMAD_Unvirtualize_Channel'
-            offset: "00002850"            
-          - name: '_VDMAD_Set_IO_Address'
-            offset: "00002854"            
-          - name: '_VDMAD_Get_Phys_Count'
-            offset: "00002858"            
-          - name: '_VDMAD_Get_Phys_Status'
-            offset: "0000285C"            
-          - name: '_VDMAD_Get_Max_Phys_Page'
-            offset: "00002860"            
-          - name: '_VDMAD_Set_Channel_Callbacks'
-            offset: "00002864"            
-          - name: '_VDMAD_Get_Virt_Count'
-            offset: "00002868"            
-          - name: '_VDMAD_Set_Virt_Count'
-            offset: "0000286C"            
-          - name: '_VDMAD_Get_Virt_Address'
-            offset: "00002870"            
-          - name: '_VDMAD_Set_Virt_Address'
-            offset: "00002874"            
-          - name: 'VDMAD_DDB'
-            offset: "00002878"            
-          - name: 'VDMAD_CB_Offset'
-            offset: "000028D8"            
-          - name: 'DMA_Channels'
-            offset: "000028DC"            
-          - name: 'DMA_Ctrl1'
-            offset: "00002A9C"            
-          - name: 'DMA_Ctrl2'
-            offset: "00002AA4"            
-          - name: 'DMA_consts'
-            offset: "00002AAC"            
-          - name: 'DMA_Buff_Table'
-            offset: "00002ACC"            
-          - name: 'VDMAD_Free_Buff_Timeout'
-            offset: "00002B8C"            
-          - name: 'DMA_Max_Physical'
-            offset: "00002B90"            
-          - name: 'VDMAD_Check_TC'
-            offset: "00002B94"            
-          - name: 'VDMAD_DMA1_status'
-            offset: "00002BA8"            
-          - name: 'VDMAD_DMA2_status'
-            offset: "00002BA9"            
-          - name: 'VDMAD_Machine_Type'
-            offset: "00002BAA"            
-          - name: 'VDMAD_Rsvd_Mask'
-            offset: "00002BAB"            
-          - name: 'page_ports'
-            offset: "00003244"            
-          - name: 'base_ports'
-            offset: "0000324C"            
-          - name: 'count_ports'
-            offset: "00003254"            
-          - name: 'EISA_high_page_ports'
-            offset: "0000325C"            
-          - name: 'EISA_high_count_ports'
-            offset: "0000326C"            
-      - num: "2"
-        name: "_LMGROUP"
-        offset: "00003E50"
-        symbols:
-          - name: '@MSG_LAB'
-            offset: "00000000"            
-          - name: '@MSG_LDATA'
-            offset: "00000010"            
-      - num: "3"
-        name: "_IGROUP"
-        offset: "00004640"
-        symbols:
-          - name: 'VDMAD_EISA_Init'
-            offset: "00000000"            
-          - name: 'VDMAD_Set_Req_Buff_SizeK'
-            offset: "000000CC"            
-          - name: 'VDMAD_Sys_Crit_Init'
-            offset: "000000E4"            
-          - name: 'VDMAD_Reserve_Buffer_Space'
-            offset: "00000345"            
-          - name: 'VDMAD_Init_Complete'
-            offset: "00000389"            
-          - name: 'VDMAD_API_Device_Init'
-            offset: "000003D8"            
-          - name: 'VDMAD_PS2_Device_Init'
-            offset: "000004A0"            
-          - name: 'VDMAD_PnP_Init'
-            offset: "000004BC"            
-          - name: 'VDMADArb_Init_Complete'
-            offset: "00000560"            
-          - name: 'DumpHexChar'
-            offset: "000005DC"            
-          - name: 'VDMAD_EISA_IO_Table'
-            offset: "000005EC"            
-          - name: 'VDMAD_IO_Table_Old'
-            offset: "00000888"            
-          - name: 'VDMAD_IO_Table'
-            offset: "00000902"            
-          - name: 'VDMAD_Ini_Buffer_Size'
-            offset: "000009F0"            
-          - name: 'VDMAD_Ini_XT_Buffer'
-            offset: "000009FE"            
-          - name: 'VDMAD_EISA_Size_Ini'
-            offset: "00000A0D"            
-          - name: 'VDMAD_MCA_Size_Ini'
-            offset: "00000A15"            
-          - name: 'VDMAD_Max_DMA_pg_Ini'
-            offset: "00000A1C"            
-          - name: 'VDMAD_PS2_IO_Table'
-            offset: "00000A2C"            
-      - num: "4"
-        name: "_PTEXT"
-        offset: "000046C0"
-        symbols:
-          - name: 'VDMAD_Set_IO_Address'
-            offset: "00000006"            
-      - num: "5"
-        name: "_PDATA"
-        offset: "00004710"
-        symbols:
-          - name: 'VDMAD_Devnode_Handle'
-            offset: "00000034"            
-          - name: 'fDMAARBITDebug'
-            offset: "00000038"            
-      - num: "6"
-        name: "_DBOGROUP"
-        offset: "000049B0"
-        symbols:
-          - name: 'VDMAD_Query'
-            offset: "00000000"            
-          - name: 'VDMAD_ShowChannel_State'
-            offset: "0000028F"            
-      - num: "7"
-        name: "_RARE"
-        offset: "00004B30"
-        symbols:
-          - name: 'VDMAD_Force_Contig'
-            offset: "00000000"            
-          - name: 'VDMAD_In_Your_Face'
-            offset: "000000B8"            
-      - num: "8"
-        name: "_VMDESTROY"
-        offset: "00000000"
-        symbols:
-          - name: 'VDMAD_PnP_New_DevNode'
-            offset: "00000000"            
-          - name: 'VDMAD_Arbitrate'
-            offset: "00000051"            
-          - name: 'VDMAD_Test_Alloc'
-            offset: "0000007C"            
-          - name: 'VDMAD_Alloc_Elements'
-            offset: "000000FC"            
-          - name: 'VDMAD_Next_Element'
-            offset: "0000027C"            
-          - name: 'VDMAD_Get_DMA_Count'
-            offset: "000002BC"            
-          - name: 'VDMAD_CheckResvd'
-            offset: "000002E8"            
-          - name: 'VDMADArb_Alloc_Channel'
-            offset: "00000326"            
-          - name: 'VDMADArb_Unalloc_Channel'
-            offset: "00000344"            
-          - name: 'VDMAD_Retest_Alloc'
-            offset: "00000362"            
-          - name: 'VDMAD_Force_Alloc'
-            offset: "00000402"            
-          - name: 'VDMAD_Set_Alloc'
-            offset: "00000418"            
-          - name: 'VDMAD_Release_Alloc'
-            offset: "0000044D"            
-          - name: 'VDMAD_Query_Free'
-            offset: "00000465"            
-          - name: 'VDMAD_Remove'
-            offset: "0000048C"            
-          - name: 'VDMAD_Sort_Res_Desc'
-            offset: "0000049A"            
-          - name: 'VDMAD_Arb_Unalloc'
-            offset: "000004A3"            
+- version: system
+  tree:
+  - - dmaeisa.asm
+    - vdmadapi.asm
+    - vdmadarb.asm
+    - vdmad.asm
+    - vdmadio.asm
+    - vdmadps2.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00003E10'
+    symbols:
+    - name: VDMAD_EISA_ChainMode_Status1
+      processed: ''
+      offset: '00000000'
+    - name: VDMAD_EISA_ChainMode_Status2
+      processed: ''
+      offset: '00000021'
+    - name: VDMAD_EISA_Ext_Mode
+      processed: ''
+      offset: 0000005A
+    - name: VDMAD_EISA_High_Page
+      processed: ''
+      offset: 000000A8
+    - name: VDMAD_EISA_High_Count
+      processed: ''
+      offset: '000000E4'
+    - name: VDMAD_EISA_Stop
+      processed: ''
+      offset: 0000013B
+    - name: VDMAD_Set_EISA_Phys_State
+      processed: ''
+      offset: '00000177'
+    - name: VDMAD_Control
+      processed: ''
+      offset: '00000258'
+    - name: VDMAD_Init_VM_CB
+      processed: ''
+      offset: 000002A6
+    - name: VDMAD_VM_Suspend
+      processed: ''
+      offset: 000002C7
+    - name: VDMAD_Abort_Transfer
+      processed: ''
+      offset: 000002EF
+    - name: VDMAD_VM_Not_Executeable
+      processed: ''
+      offset: '00000329'
+    - name: VDMAD_Get_DMA_Handle
+      processed: ''
+      offset: 000003B5
+    - name: VDMAD_Get_DMA_Handle_For_Ctrl
+      processed: ''
+      offset: 000003C5
+    - name: Test_Global_DMA
+      processed: ''
+      offset: '00000405'
+    - name: VDMAD_Read_DMA_Status
+      processed: ''
+      offset: '00000449'
+    - name: VDMAD_Get_Version
+      processed: ''
+      offset: 0000048B
+    - name: VDMAD_Get_Max_Phys_Page
+      processed: ''
+      offset: 000004A0
+    - name: VDMAD_Virtualize_Channel
+      processed: ''
+      offset: 000004B4
+    - name: VDMAD_Unvirtualize_Channel
+      processed: ''
+      offset: '00000501'
+    - name: VDMAD_Set_Channel_Callbacks
+      processed: ''
+      offset: '00000555'
+    - name: VDMAD_Disable_Translation
+      processed: ''
+      offset: '00000589'
+    - name: VDMAD_Enable_Translation
+      processed: ''
+      offset: 000005C4
+    - name: VDMAD_Get_Region_Info
+      processed: ''
+      offset: '00000602'
+    - name: VDMAD_Set_Region_Info
+      processed: ''
+      offset: '00000623'
+    - name: VDMAD_Get_Virt_State
+      processed: ''
+      offset: 0000067B
+    - name: VDMAD_Set_Virt_State
+      processed: ''
+      offset: 000006EE
+    - name: VDMAD_Get_Virt_Count
+      processed: ''
+      offset: 000007EB
+    - name: VDMAD_Set_Virt_Count
+      processed: ''
+      offset: 0000080C
+    - name: VDMAD_Get_Virt_Address
+      processed: ''
+      offset: '00000830'
+    - name: VDMAD_Set_Virt_Address
+      processed: ''
+      offset: '00000847'
+    - name: VDMAD_Set_Phys_State
+      processed: ''
+      offset: 0000085E
+    - name: VDMAD_Get_Phys_Count
+      processed: ''
+      offset: '00000901'
+    - name: VDMAD_Get_Phys_Status
+      processed: ''
+      offset: 0000092D
+    - name: VDMAD_Mask_Channel
+      processed: ''
+      offset: '00000944'
+    - name: VDMAD_Phys_Mask_Channel
+      processed: ''
+      offset: 000009D5
+    - name: VDMAD_UnMask_Channel
+      processed: ''
+      offset: '000009E6'
+    - name: VDMAD_Phys_Unmask_Channel
+      processed: ''
+      offset: 00000A83
+    - name: IN_DMA_Count
+      processed: ''
+      offset: 00000A8E
+    - name: Read_DMA_Count
+      processed: ''
+      offset: 00000AB8
+    - name: Out_DMA_Word
+      processed: ''
+      offset: 00000AD8
+    - name: VDMAD_Dirty_Region
+      processed: ''
+      offset: 00000AFA
+    - name: VDMAD_Lock_DMA_Region
+      processed: ''
+      offset: 00000B14
+    - name: VDMAD_Unlock_DMA_Region
+      processed: ''
+      offset: 00000BFB
+    - name: VDMAD_Unlock_DMA_Region_No_Dirty
+      processed: ''
+      offset: 00000C34
+    - name: VDMAD_Scatter_Page_Lock
+      processed: ''
+      offset: 00000C40
+    - name: VDMAD_Scatter_Page_Lock_w_holes
+      processed: ''
+      offset: 00000C70
+    - name: VDMAD_Scatter_Lock
+      processed: ''
+      offset: 00000CBF
+    - name: VDMAD_Scatter_Unlock
+      processed: ''
+      offset: 00000EDB
+    - name: VDMAD_Request_Buffer
+      processed: ''
+      offset: 00000F9B
+    - name: RB_Alloc_Buffer
+      processed: ''
+      offset: 0000102E
+    - name: VDMAD_Time_Out
+      processed: ''
+      offset: 000010B5
+    - name: VDMAD_Release_Buffer
+      processed: ''
+      offset: '00001131'
+    - name: VDMAD_Partial_DMA
+      processed: ''
+      offset: 0000117D
+    - name: VDMAD_Partial_Copy
+      processed: ''
+      offset: 000011FB
+    - name: Verify_Copy_Params
+      processed: ''
+      offset: '00001214'
+    - name: VDMAD_Copy_To_Buffer
+      processed: ''
+      offset: '00001253'
+    - name: VDMAD_Copy_From_Buffer
+      processed: ''
+      offset: 0000126E
+    - name: VDMAD_Copy_Fault
+      processed: ''
+      offset: '00001294'
+    - name: VDMAD_Get_EISA_Adr_Mode
+      processed: ''
+      offset: 000012A7
+    - name: VDMAD_Set_EISA_Adr_Mode
+      processed: ''
+      offset: 000012D0
+    - name: VDMAD_jmp_filter
+      processed: ''
+      offset: 0000131E
+    - name: VDMAD_HW_Check_TC
+      processed: ''
+      offset: '00001324'
+    - name: VDMAD_TC_Event
+      processed: ''
+      offset: '00001364'
+    - name: VDMAD_Check_Ctrl_TC
+      processed: ''
+      offset: 000013A7
+    - name: VDMAD_Call_Def
+      processed: ''
+      offset: '00001404'
+    - name: VDMAD_Default_Handler
+      processed: ''
+      offset: '00001410'
+    - name: VDMAD_Attempt_Lock
+      processed: ''
+      offset: '00001513'
+    - name: VDMAD_Free_Region
+      processed: ''
+      offset: 0000157B
+    - name: VDMAD_Grab_Buffer
+      processed: ''
+      offset: 000015B6
+    - name: VDMAD_Free_Buffer
+      processed: ''
+      offset: '00001615'
+    - name: VDMAD_Complete_Event
+      processed: ''
+      offset: '00001635'
+    - name: VDMAD_DMA_Complete
+      processed: ''
+      offset: '00001637'
+    - name: VDMAD_Validate_Handle
+      processed: ''
+      offset: 000016A9
+    - name: VDMAD_Validate_Buff_ID
+      processed: ''
+      offset: 000016DD
+    - name: VDMAD_API_System_Exit
+      processed: ''
+      offset: '00001704'
+    - name: VDMAD_PM_DMA_Services
+      processed: ''
+      offset: 0000171D
+    - name: VDMAD_V86_DMA_Services
+      processed: ''
+      offset: '00001753'
+    - name: VDMAD_DMA_Services
+      processed: ''
+      offset: '00001788'
+    - name: VDMAD_API_GetVersion
+      processed: ''
+      offset: 000017F7
+    - name: VDMAD_API_Lock
+      processed: ''
+      offset: '00001850'
+    - name: VDMAD_API_Unlock
+      processed: ''
+      offset: '00001923'
+    - name: VDMAD_API_SLock
+      processed: ''
+      offset: '00001975'
+    - name: VDMAD_API_SUnlock
+      processed: ''
+      offset: '000019E8'
+    - name: VDMAD_API_RequestBuf
+      processed: ''
+      offset: 00001A2B
+    - name: VDMAD_API_ReleaseBuf
+      processed: ''
+      offset: 00001A6F
+    - name: VDMAD_API_CopyToBuf
+      processed: ''
+      offset: 00001AB1
+    - name: VDMAD_API_CopyFromBuf
+      processed: ''
+      offset: 00001AEB
+    - name: VDMAD_API_DisableAuto
+      processed: ''
+      offset: 00001B25
+    - name: VDMAD_API_EnableAuto
+      processed: ''
+      offset: 00001B55
+    - name: VDMAD_Get_DDS_ptrs
+      processed: ''
+      offset: 00001B85
+    - name: GetControllerState
+      processed: ''
+      offset: 00001BCC
+    - name: VDMAD_GetChannel_FromPage
+      processed: ''
+      offset: 00001BDD
+    - name: GetChannel
+      processed: ''
+      offset: 00001C23
+    - name: Get_VM_FlipFlop_Ptr
+      processed: ''
+      offset: 00001C46
+    - name: VDMAD_Status
+      processed: ''
+      offset: 00001C7E
+    - name: VDMAD_Reset
+      processed: ''
+      offset: 00001CFF
+    - name: VDMAD_Mask
+      processed: ''
+      offset: 00001D5F
+    - name: VDMAD_ResetMask
+      processed: ''
+      offset: 00001D98
+    - name: VDMAD_Mode
+      processed: ''
+      offset: 00001DD3
+    - name: VDMAD_SoftReq
+      processed: ''
+      offset: '00001E61'
+    - name: VDMAD_MaskSingle
+      processed: ''
+      offset: 00001EB1
+    - name: VDMAD_CLR_FF
+      processed: ''
+      offset: 00001EF2
+    - name: update_adr_byte
+      processed: ''
+      offset: 00001F17
+    - name: VDMAD_Base
+      processed: ''
+      offset: 00001F72
+    - name: VDMAD_Count
+      processed: ''
+      offset: '00002003'
+    - name: VDMAD_Page
+      processed: ''
+      offset: 000020A9
+    - name: VDMAD_Bad_Read
+      processed: ''
+      offset: 000020FF
+    - name: VDMAD_Notify_all
+      processed: ''
+      offset: '00002101'
+    - name: VDMAD_NotifyOwner
+      processed: ''
+      offset: '00002134'
+    - name: VDMAD_NoCheck
+      processed: ''
+      offset: 000021AA
+    - name: VDMAD_IO_Check_TC
+      processed: ''
+      offset: 000021B5
+    - name: VDMAD_Read_PS2_Mode
+      processed: ''
+      offset: 000021F4
+    - name: VDMAD_PS2_Read_Channels
+      processed: ''
+      offset: '00002222'
+    - name: VDMAD_Set_PS2_Phys_State
+      processed: ''
+      offset: '00002278'
+    - name: VDMAD_RegFunc
+      processed: ''
+      offset: '00002387'
+    - name: VDMAD_ExecFunc
+      processed: ''
+      offset: 0000240E
+    - name: PS2_Get_Chl_Data_Ptr
+      processed: ''
+      offset: 0000250A
+    - name: PS2_DMA_Set_IO_Adr
+      processed: ''
+      offset: '00002522'
+    - name: PS2_DMA_Set_Mem_Adr
+      processed: ''
+      offset: '00002537'
+    - name: PS2_DMA_Get_Mem_Adr
+      processed: ''
+      offset: 0000253B
+    - name: PS2_DMA_Set_Count
+      processed: ''
+      offset: 0000254F
+    - name: PS2_DMA_Get_Count
+      processed: ''
+      offset: '00002553'
+    - name: PS2_DMA_Get_Status
+      processed: ''
+      offset: '00002567'
+    - name: PS2_DMA_Set_Mode
+      processed: ''
+      offset: '00002576'
+    - name: PS2_DMA_Set_Arbus
+      processed: ''
+      offset: 0000258B
+    - name: PS2_DMA_Set_Chn_Mask
+      processed: ''
+      offset: 0000259B
+    - name: PS2_DMA_Reset_Chn_Mask
+      processed: ''
+      offset: 000025AF
+    - name: PS2_DMA_Master_Clear
+      processed: ''
+      offset: 000025C3
+    - name: PS2_Queue_DMA_Data
+      processed: ''
+      offset: 0000263E
+    - name: VDMADArb_Unmask_Channel
+      processed: ''
+      offset: '00002658'
+    - name: DMA_EISA_Ext_Modes
+      processed: ''
+      offset: '00002668'
+    - name: _VDMAD_Get_Version
+      processed: ''
+      offset: '000027E8'
+    - name: _VDMAD_Virtualize_Channel
+      processed: ''
+      offset: 000027EC
+    - name: _VDMAD_Get_Region_Info
+      processed: ''
+      offset: 000027F0
+    - name: _VDMAD_Set_Region_Info
+      processed: ''
+      offset: 000027F4
+    - name: _VDMAD_Get_Virt_State
+      processed: ''
+      offset: 000027F8
+    - name: _VDMAD_Set_Virt_State
+      processed: ''
+      offset: 000027FC
+    - name: _VDMAD_Set_Phys_State
+      processed: ''
+      offset: '00002800'
+    - name: _VDMAD_Mask_Channel
+      processed: ''
+      offset: '00002804'
+    - name: _VDMAD_UnMask_Channel
+      processed: ''
+      offset: '00002808'
+    - name: _VDMAD_Lock_DMA_Region
+      processed: ''
+      offset: 0000280C
+    - name: _VDMAD_Unlock_DMA_Region
+      processed: ''
+      offset: '00002810'
+    - name: _VDMAD_Scatter_Lock
+      processed: ''
+      offset: '00002814'
+    - name: _VDMAD_Scatter_Unlock
+      processed: ''
+      offset: '00002818'
+    - name: _VDMAD_Reserve_Buffer_Space
+      processed: ''
+      offset: 0000281C
+    - name: _VDMAD_Request_Buffer
+      processed: ''
+      offset: '00002820'
+    - name: _VDMAD_Release_Buffer
+      processed: ''
+      offset: '00002824'
+    - name: _VDMAD_Copy_To_Buffer
+      processed: ''
+      offset: '00002828'
+    - name: _VDMAD_Copy_From_Buffer
+      processed: ''
+      offset: 0000282C
+    - name: _VDMAD_Default_Handler
+      processed: ''
+      offset: '00002830'
+    - name: _VDMAD_Disable_Translation
+      processed: ''
+      offset: '00002834'
+    - name: _VDMAD_Enable_Translation
+      processed: ''
+      offset: '00002838'
+    - name: _VDMAD_Get_EISA_Adr_Mode
+      processed: ''
+      offset: 0000283C
+    - name: _VDMAD_Set_EISA_Adr_Mode
+      processed: ''
+      offset: '00002840'
+    - name: _VDMAD_Unlock_DMA_Region_No_Dirty
+      processed: ''
+      offset: '00002844'
+    - name: _VDMAD_Phys_Mask_Channel
+      processed: ''
+      offset: '00002848'
+    - name: _VDMAD_Phys_Unmask_Channel
+      processed: ''
+      offset: 0000284C
+    - name: _VDMAD_Unvirtualize_Channel
+      processed: ''
+      offset: '00002850'
+    - name: _VDMAD_Set_IO_Address
+      processed: ''
+      offset: '00002854'
+    - name: _VDMAD_Get_Phys_Count
+      processed: ''
+      offset: '00002858'
+    - name: _VDMAD_Get_Phys_Status
+      processed: ''
+      offset: 0000285C
+    - name: _VDMAD_Get_Max_Phys_Page
+      processed: ''
+      offset: '00002860'
+    - name: _VDMAD_Set_Channel_Callbacks
+      processed: ''
+      offset: '00002864'
+    - name: _VDMAD_Get_Virt_Count
+      processed: ''
+      offset: '00002868'
+    - name: _VDMAD_Set_Virt_Count
+      processed: ''
+      offset: 0000286C
+    - name: _VDMAD_Get_Virt_Address
+      processed: ''
+      offset: '00002870'
+    - name: _VDMAD_Set_Virt_Address
+      processed: ''
+      offset: '00002874'
+    - name: VDMAD_DDB
+      processed: ''
+      offset: '00002878'
+    - name: VDMAD_CB_Offset
+      processed: ''
+      offset: 000028D8
+    - name: DMA_Channels
+      processed: ''
+      offset: 000028DC
+    - name: DMA_Ctrl1
+      processed: ''
+      offset: 00002A9C
+    - name: DMA_Ctrl2
+      processed: ''
+      offset: 00002AA4
+    - name: DMA_consts
+      processed: ''
+      offset: 00002AAC
+    - name: DMA_Buff_Table
+      processed: ''
+      offset: 00002ACC
+    - name: VDMAD_Free_Buff_Timeout
+      processed: ''
+      offset: 00002B8C
+    - name: DMA_Max_Physical
+      processed: ''
+      offset: 00002B90
+    - name: VDMAD_Check_TC
+      processed: ''
+      offset: 00002B94
+    - name: VDMAD_DMA1_status
+      processed: ''
+      offset: 00002BA8
+    - name: VDMAD_DMA2_status
+      processed: ''
+      offset: 00002BA9
+    - name: VDMAD_Machine_Type
+      processed: ''
+      offset: 00002BAA
+    - name: VDMAD_Rsvd_Mask
+      processed: ''
+      offset: 00002BAB
+    - name: page_ports
+      processed: ''
+      offset: '00003244'
+    - name: base_ports
+      processed: ''
+      offset: 0000324C
+    - name: count_ports
+      processed: ''
+      offset: '00003254'
+    - name: EISA_high_page_ports
+      processed: ''
+      offset: 0000325C
+    - name: EISA_high_count_ports
+      processed: ''
+      offset: 0000326C
+  - num: '2'
+    name: _LMGROUP
+    offset: '00003E50'
+    symbols:
+    - name: '@MSG_LAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      processed: ''
+      offset: '00000010'
+  - num: '3'
+    name: _IGROUP
+    offset: '00004640'
+    symbols:
+    - name: VDMAD_EISA_Init
+      processed: ''
+      offset: '00000000'
+    - name: VDMAD_Set_Req_Buff_SizeK
+      processed: ''
+      offset: 000000CC
+    - name: VDMAD_Sys_Crit_Init
+      processed: ''
+      offset: '000000E4'
+    - name: VDMAD_Reserve_Buffer_Space
+      processed: ''
+      offset: '00000345'
+    - name: VDMAD_Init_Complete
+      processed: ''
+      offset: '00000389'
+    - name: VDMAD_API_Device_Init
+      processed: ''
+      offset: 000003D8
+    - name: VDMAD_PS2_Device_Init
+      processed: ''
+      offset: 000004A0
+    - name: VDMAD_PnP_Init
+      processed: ''
+      offset: 000004BC
+    - name: VDMADArb_Init_Complete
+      processed: ''
+      offset: '00000560'
+    - name: DumpHexChar
+      processed: ''
+      offset: 000005DC
+    - name: VDMAD_EISA_IO_Table
+      processed: ''
+      offset: 000005EC
+    - name: VDMAD_IO_Table_Old
+      processed: ''
+      offset: '00000888'
+    - name: VDMAD_IO_Table
+      processed: ''
+      offset: '00000902'
+    - name: VDMAD_Ini_Buffer_Size
+      processed: ''
+      offset: 000009F0
+    - name: VDMAD_Ini_XT_Buffer
+      processed: ''
+      offset: 000009FE
+    - name: VDMAD_EISA_Size_Ini
+      processed: ''
+      offset: 00000A0D
+    - name: VDMAD_MCA_Size_Ini
+      processed: ''
+      offset: 00000A15
+    - name: VDMAD_Max_DMA_pg_Ini
+      processed: ''
+      offset: 00000A1C
+    - name: VDMAD_PS2_IO_Table
+      processed: ''
+      offset: 00000A2C
+  - num: '4'
+    name: _PTEXT
+    offset: 000046C0
+    symbols:
+    - name: VDMAD_Set_IO_Address
+      processed: ''
+      offset: '00000006'
+  - num: '5'
+    name: _PDATA
+    offset: '00004710'
+    symbols:
+    - name: VDMAD_Devnode_Handle
+      processed: ''
+      offset: '00000034'
+    - name: fDMAARBITDebug
+      processed: ''
+      offset: '00000038'
+  - num: '6'
+    name: _DBOGROUP
+    offset: 000049B0
+    symbols:
+    - name: VDMAD_Query
+      processed: ''
+      offset: '00000000'
+    - name: VDMAD_ShowChannel_State
+      processed: ''
+      offset: 0000028F
+  - num: '7'
+    name: _RARE
+    offset: 00004B30
+    symbols:
+    - name: VDMAD_Force_Contig
+      processed: ''
+      offset: '00000000'
+    - name: VDMAD_In_Your_Face
+      processed: ''
+      offset: 000000B8
+  - num: '8'
+    name: _VMDESTROY
+    offset: '00000000'
+    symbols:
+    - name: VDMAD_PnP_New_DevNode
+      processed: ''
+      offset: '00000000'
+    - name: VDMAD_Arbitrate
+      processed: ''
+      offset: '00000051'
+    - name: VDMAD_Test_Alloc
+      processed: ''
+      offset: 0000007C
+    - name: VDMAD_Alloc_Elements
+      processed: ''
+      offset: 000000FC
+    - name: VDMAD_Next_Element
+      processed: ''
+      offset: 0000027C
+    - name: VDMAD_Get_DMA_Count
+      processed: ''
+      offset: 000002BC
+    - name: VDMAD_CheckResvd
+      processed: ''
+      offset: '000002E8'
+    - name: VDMADArb_Alloc_Channel
+      processed: ''
+      offset: '00000326'
+    - name: VDMADArb_Unalloc_Channel
+      processed: ''
+      offset: '00000344'
+    - name: VDMAD_Retest_Alloc
+      processed: ''
+      offset: '00000362'
+    - name: VDMAD_Force_Alloc
+      processed: ''
+      offset: '00000402'
+    - name: VDMAD_Set_Alloc
+      processed: ''
+      offset: '00000418'
+    - name: VDMAD_Release_Alloc
+      processed: ''
+      offset: 0000044D
+    - name: VDMAD_Query_Free
+      processed: ''
+      offset: '00000465'
+    - name: VDMAD_Remove
+      processed: ''
+      offset: 0000048C
+    - name: VDMAD_Sort_Res_Desc
+      processed: ''
+      offset: 0000049A
+    - name: VDMAD_Arb_Unalloc
+      processed: ''
+      offset: 000004A3

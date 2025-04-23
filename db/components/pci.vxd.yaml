@@ -1,965 +1,1458 @@
-filename: "pci.vxd"
+filename: pci.vxd
 #TODO: bring up more details from symdeb
-binary: "pci.vxd"
-description: ""
-note: ""
+binary: PCI
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: ".data"
-        offset: "00000AA0"
-        symbols:
-          - name: '_BeginLockable_Debug_Flags'
-            offset: "00000260"            
-          - name: '__PCI_Get_Version'
-            offset: "00000264"            
-          - name: '__PCI_Read_Config'
-            offset: "00000268"            
-          - name: '__PCI_Write_Config'
-            offset: "0000026C"            
-          - name: '__PCI_Lock_Unlock'
-            offset: "00000270"            
-          - name: 'PCI_DDB'
-            offset: "00000274"            
-          - name: '_PCIDDB'
-            offset: "00000274"            
-          - name: '_dwTracing'
-            offset: "000002E8"            
-          - name: '_DebuggerCommands'
-            offset: "000002F0"            
-          - name: 'PCI_Control'
-            offset: "00001DB0"            
-          - name: '_ValidateHappy'
-            offset: "00001DEA"            
-          - name: '_ValidateCurrentDevNode'
-            offset: "00001E05"            
-          - name: '_SelectIndex'
-            offset: "00001E42"            
-          - name: '_DebListDevNode'
-            offset: "00001E71"            
-          - name: '_DebProcessDevNode'
-            offset: "00001FA1"            
-          - name: '_PCIWalk'
-            offset: "00002447"            
-          - name: '_PCIWalkDepth'
-            offset: "000024ED"            
-          - name: '_PCIDetectIntProc'
-            offset: "00002560"            
-          - name: '_CheckTestCard'
-            offset: "00002604"            
-          - name: '_GetFirstBitSet'
-            offset: "00002919"            
-          - name: '_CheckInts'
-            offset: "00002935"            
-          - name: '_DebDumpBridgeInfo'
-            offset: "00002B8B"            
-          - name: '_ShowAll'
-            offset: "00002E40"            
-          - name: '_ShowList'
-            offset: "00002E53"            
-          - name: '_ShowBus'
-            offset: "00002E83"            
-          - name: '_ConfigSpace'
-            offset: "00002EAF"            
-          - name: '_EnterDataDword'
-            offset: "00002EDB"            
-          - name: '_EnterData'
-            offset: "00002F5C"            
-          - name: '_FindIRQRouting'
-            offset: "00002FE2"            
-          - name: '_GlobalInfo'
-            offset: "00002FF1"            
-          - name: '_GetLink'
-            offset: "0000311B"            
-          - name: '_ShowDevNode'
-            offset: "000032CA"            
-          - name: '_TraceAccess'
-            offset: "000032E0"            
-          - name: '_SelectByDevNode'
-            offset: "000032F4"            
-          - name: '_SelectByIndex'
-            offset: "00003308"            
-          - name: '_AppyIDETest'
-            offset: "00003360"            
-          - name: '_IDETest'
-            offset: "00003417"            
-          - name: '_AppyShowROM'
-            offset: "0000342F"            
-          - name: '_ShowROM'
-            offset: "000035E7"            
-          - name: '_SetState'
-            offset: "000035FF"            
-          - name: '_AppyDebugger'
-            offset: "0000364E"            
-          - name: '_PMSchedDebugger'
-            offset: "0000366B"            
-          - name: '_Debugger@0'
-            offset: "00003697"            
-          - name: '_LCODE__Debug_Printf_Service'
-            offset: "000036B8"            
-          - name: '@CMDReadNumber@12'
-            offset: "000036D0"            
-          - name: '_LCODE__CONFIGMG_Call_At_Appy_Time'
-            offset: "000037C4"            
-          - name: '@CMDMenu@8'
-            offset: "000037D0"            
-          - name: '@CMDInChar@0'
-            offset: "00003890"            
-      - num: "2"
-        name: "RARE"
-        offset: "00000DD0"
-        symbols:
-          - name: '_PCIExit@0'
-            offset: "00000000"            
-          - name: '_StrCat'
-            offset: "00000031"            
-          - name: '_StrStr'
-            offset: "00000069"            
-          - name: '_StrChr'
-            offset: "000000A1"            
-          - name: '_RegCopyKey'
-            offset: "000000B9"            
-          - name: '_RegRenameKey'
-            offset: "00000298"            
-          - name: '_InternalRegReplaceString'
-            offset: "00000351"            
-          - name: '_RegReplaceString'
-            offset: "0000060C"            
-          - name: '_RegSearchAndReplace'
-            offset: "00000685"            
-      - num: "3"
-        name: "PNP"
-        offset: "00004960"
-        symbols:
-          - name: '_LinToPhys'
-            offset: "00000000"            
-          - name: '_HandleAGP'
-            offset: "00000043"            
-          - name: '_QueryBridgeArbitrate'
-            offset: "000002FA"            
-          - name: '_FreeArbResInfo'
-            offset: "00000371"            
-          - name: '_GetAlloc'
-            offset: "0000039E"            
-          - name: '_GetSize'
-            offset: "000003D3"            
-          - name: '_GetAlignment'
-            offset: "000003F2"            
-          - name: '_GetNextResDes'
-            offset: "00000416"            
-          - name: '_GetSortedResDes'
-            offset: "0000047D"            
-          - name: '_SaveAlloc'
-            offset: "00000542"            
-          - name: '_Unalloc'
-            offset: "00000576"            
-          - name: '_InitializeArb'
-            offset: "0000061D"            
-          - name: '_BridgeArbTest'
-            offset: "000007B8"            
-          - name: '_BridgeArbRetest'
-            offset: "00000898"            
-          - name: '_BridgeArbSet'
-            offset: "00000929"            
-          - name: '_BridgeArbitrate'
-            offset: "00000957"            
-          - name: '_BridgeIOArbitrator'
-            offset: "00000B05"            
-          - name: '_BridgeMemArbitrator'
-            offset: "00000B76"            
-          - name: '_GetBusNumberAlloc'
-            offset: "00000BE7"            
-          - name: '_SetBusNumber'
-            offset: "00000C3B"            
-          - name: '_GetTopLevelBridge'
-            offset: "00000CE6"            
-          - name: '_FindBusNumLimit'
-            offset: "00000D1B"            
-          - name: '_RecursiveInitializeTemp'
-            offset: "00000D6B"            
-          - name: '_SetTopLevelUsed'
-            offset: "00000DF6"            
-          - name: '_RecursiveResetBridges'
-            offset: "00000E9C"            
-          - name: '_RecursiveSetBridges'
-            offset: "00000F0A"            
-          - name: '_RebalanceAllBusNum'
-            offset: "00001002"            
-          - name: '_RecursiveGetLargest'
-            offset: "000010EC"            
-          - name: '_IsBusNumFeasible'
-            offset: "00001155"            
-          - name: '_CanAssignBusNum'
-            offset: "00001380"            
-          - name: '_BusNumTesting'
-            offset: "0000189F"            
-          - name: '_BusNumberArbitrator'
-            offset: "000018EC"            
-          - name: '_CheckOptionROM'
-            offset: "00001962"            
-          - name: '_AddResource'
-            offset: "0000198D"            
-          - name: '_AddIRQ'
-            offset: "00001AAB"            
-          - name: '_AddIO'
-            offset: "00001AEF"            
-          - name: '_AddMem'
-            offset: "00001B86"            
-          - name: '_DoIRQ'
-            offset: "00001C04"            
-          - name: '_DoMems'
-            offset: "00001ECF"            
-          - name: '_DoIOs'
-            offset: "00001F39"            
-          - name: '_DoROM'
-            offset: "00001F80"            
-          - name: '_AddDisabledIDE'
-            offset: "00001FA9"            
-          - name: '_DoNativeIDE'
-            offset: "00001FC5"            
-          - name: '_AddCompatibilityMem'
-            offset: "00002064"            
-          - name: '_AddCompatibilityIO'
-            offset: "0000211A"            
-          - name: '_LoadResources'
-            offset: "000021E1"            
-          - name: '_DoResources'
-            offset: "000023FC"            
-          - name: '_SanityCheckBridgeEnabled'
-            offset: "00002436"            
-          - name: '_InitializeWindowRes'
-            offset: "000024B8"            
-          - name: '_HandleBridge'
-            offset: "000025A0"            
-          - name: '_HandlePCMCIA'
-            offset: "00002984"            
-          - name: '_HandleVideo'
-            offset: "000029BB"            
-          - name: '_IsBrokenIntelOrion'
-            offset: "00002A70"            
-          - name: '_HandleIDE'
-            offset: "00002ABE"            
-          - name: '_HandleDeviceNameChange'
-            offset: "00002EEA"            
-          - name: '_CreateDevNode'
-            offset: "00003253"            
-          - name: '_EnumerateOneDevice'
-            offset: "0000339C"            
-          - name: '_UpdateSystemDMAUsage'
-            offset: "00003564"            
-          - name: '_ComputeDMAUsage'
-            offset: "00003592"            
-          - name: '_RecursiveComputeDMAUsage'
-            offset: "00003653"            
-          - name: '_InterceptDeviceChangeMsg'
-            offset: "000036A5"            
-          - name: '_InitFDMA'
-            offset: "000036F5"            
-          - name: '_ExitFDMA'
-            offset: "00003754"            
-          - name: '_LocateGARTMiniport'
-            offset: "00003788"            
-          - name: '_PCIReserve'
-            offset: "00003792"            
-          - name: '_PCIMap'
-            offset: "000037ED"            
-          - name: '_PCIUnMap'
-            offset: "0000384C"            
-          - name: '_PCIFree'
-            offset: "00003875"            
-          - name: '_ExitGART'
-            offset: "000038AC"            
-          - name: '_HandleGART'
-            offset: "000038D4"            
-          - name: '_AllocateDOSMemory'
-            offset: "000039FA"            
-          - name: '_DeallocateDOSMemory'
-            offset: "00003A49"            
-          - name: '_GetRealModeIRQRoute'
-            offset: "00003A7A"            
-          - name: '_BIOSGetRealModeIRQRoute'
-            offset: "00003AC4"            
-          - name: '_PCIBIOSGetRealModeIRQRoute'
-            offset: "00003BE5"            
-          - name: '_GetChannelStatus'
-            offset: "00003C5D"            
-          - name: '_RewriteVRM'
-            offset: "00003D7B"            
-          - name: '_HandleInt1A@8'
-            offset: "00003E87"            
-          - name: '_PCI_Int_1A'
-            offset: "00004230"            
-          - name: '_FindDeviceCallback'
-            offset: "0000423B"            
-          - name: '_PCIWalk2'
-            offset: "0000432C"            
-          - name: '_GetIRQResDes'
-            offset: "000043E7"            
-          - name: '_IRQArbitrator'
-            offset: "00004451"            
-          - name: '_RegisterIRQArbitrator'
-            offset: "00004749"            
-          - name: '_FindIRQInfo'
-            offset: "000047D1"            
-          - name: '_GetBarberPoleInfo'
-            offset: "00004815"            
-          - name: '_BarberPole'
-            offset: "00004942"            
-          - name: '_FindLink'
-            offset: "00004A42"            
-          - name: '_CreateIRQHolderDevNode'
-            offset: "00004A5E"            
-          - name: '_CreateNormalIRQHolderDevNode'
-            offset: "00004B0F"            
-          - name: '_GetValidLinkInfo'
-            offset: "00004DD4"            
-          - name: '_AllocateIRQ'
-            offset: "00004E72"            
-          - name: '_AddIRQHolders'
-            offset: "00004F39"            
-          - name: '_RecreateIRQHolders'
-            offset: "000050CD"            
-          - name: '_DestroyUnusedIRQHolder'
-            offset: "000050EA"            
-          - name: '_MakeIRQHoldersPNP'
-            offset: "00005110"            
-          - name: '_PCIBIOSGetIRQRoutingTable'
-            offset: "00005140"            
-          - name: '_ValidateIRQInfoHeader'
-            offset: "0000521A"            
-          - name: '_ACPIGetOneRoutingTable'
-            offset: "00005297"            
-          - name: '_ACPIAddPRT'
-            offset: "00005886"            
-          - name: '_ACPIRemovePRT'
-            offset: "00005968"            
-          - name: '_ACPIGetIRQRoutingTable'
-            offset: "00005A21"            
-          - name: '_BIOSGetIRQRoutingTable'
-            offset: "00005A65"            
-          - name: '_RegGetIRQRoutingTable'
-            offset: "00005B1F"            
-          - name: '_GetIRQRoutingTable'
-            offset: "00005C28"            
-          - name: '_ScanForMiniportData'
-            offset: "00005D1B"            
-          - name: '_GetIRQMiniportData'
-            offset: "00005D7D"            
-          - name: '_UpdateStatusFlags'
-            offset: "00005EDB"            
-          - name: '_CleanUpIRQRouting'
-            offset: "00005F0D"            
-          - name: '_IsStringInBIOS'
-            offset: "00005F74"            
-          - name: '_CheckRoutingTableEntry'
-            offset: "00005FA7"            
-          - name: '_SanityCheckIRQRoutingTable'
-            offset: "0000612D"            
-          - name: '_InitIRQRouting'
-            offset: "000062E3"            
-          - name: '_NewIRQHolder'
-            offset: "000065B3"            
-          - name: '_DisablePnPLinks'
-            offset: "00006774"            
-          - name: '_ReadMiniportData'
-            offset: "000067DF"            
-          - name: '_FindMiniport'
-            offset: "0000687D"            
-          - name: '_LoadMiniport'
-            offset: "000068FE"            
-          - name: '_FreeMiniport'
-            offset: "000069A9"            
-          - name: '_OpenPCIKey'
-            offset: "00006A08"            
-          - name: '_ReadRegistryValue'
-            offset: "00006A67"            
-          - name: '_WriteRegistryValue'
-            offset: "00006AF9"            
-          - name: '_ClosePCIKey'
-            offset: "00006B75"            
-          - name: '_InitDevNodeInfo'
-            offset: "00006BCE"            
-          - name: '_FindArbRes'
-            offset: "00006C61"            
-          - name: '_IsVideo'
-            offset: "00006CC3"            
-          - name: '_IsCardBusCard'
-            offset: "00006CF4"            
-          - name: '_IsVGA'
-            offset: "00006D39"            
-          - name: '_CheckCMDPrimaryIDE'
-            offset: "00006D76"            
-          - name: '_CheckCMDSecondaryIDE'
-            offset: "00006DAE"            
-          - name: '_GetMaxBus'
-            offset: "00006DF8"            
-          - name: '_CheckMechanism1'
-            offset: "00006E1C"            
-          - name: '_DetectMechanismAndNumDev'
-            offset: "00006E9E"            
-          - name: '_FindPCI32Entry'
-            offset: "00007060"            
-          - name: '_GetBIOSAttributes'
-            offset: "00007114"            
-          - name: '_PCIPropChange'
-            offset: "00007120"            
-          - name: '_PCISetupDevNode'
-            offset: "0000720E"            
-          - name: '_WalkBus'
-            offset: "00007568"            
-          - name: '_RecreateNonPCIChildren'
-            offset: "00007764"            
-          - name: '_EnumerateBus'
-            offset: "00007842"            
-          - name: '_EnumerateRootBus'
-            offset: "00007895"            
-          - name: '_GetSetConfigSpace'
-            offset: "00007908"            
-          - name: '_PCIEnumFuncHandler'
-            offset: "00007A87"            
-          - name: '_ShouldKillLogConf'
-            offset: "00007C14"            
-          - name: '_UseParentIRQ'
-            offset: "00007C8E"            
-          - name: '_PCIFilterDevNode'
-            offset: "00007DA0"            
-          - name: '_RegisterPCIBusEnumerator'
-            offset: "00007F0C"            
-          - name: '_PCIPnPNewDevNode@8'
-            offset: "00007F69"            
-          - name: '_UpdateResourceRequirement'
-            offset: "0000800F"            
-          - name: '_IncreaseBridgeRequirements'
-            offset: "0000804B"            
-          - name: '_GetMaxRequirement'
-            offset: "0000826E"            
-          - name: '_AddNonPCIResourceRequirements'
-            offset: "000082D5"            
-          - name: '_DoMyNonPCIChildren'
-            offset: "00008389"            
-          - name: '_AdjustBridgeRequirements'
-            offset: "00008414"            
-          - name: '_BridgeTestCanStop'
-            offset: "000087FE"            
-          - name: '_BridgeTestCanStopFailed'
-            offset: "00008832"            
-          - name: '_CallRealModePCIBIOS'
-            offset: "000089BC"            
-          - name: '_BeginRecursiveVGA'
-            offset: "00008ABB"            
-          - name: '_BeginVGA'
-            offset: "00008C63"            
-          - name: '_EndRecursiveVGA'
-            offset: "00008D1B"            
-          - name: '_EndVGA'
-            offset: "00008E3A"            
-      - num: "4"
-        name: "L0CKABLE_BEGIN"
-        offset: "000077E0"
-        symbols:
-          - name: '_BeginLockable'
-            offset: "00000000"            
-          - name: '_ConfigureFDMA'
-            offset: "00000004"            
-          - name: '_ReprogramFDMA'
-            offset: "00000067"            
-          - name: '_TriggerHandler'
-            offset: "0000007D"            
-          - name: '_IRQLinkConfigHandler'
-            offset: "0000013D"            
-          - name: '_GetHeaderType'
-            offset: "0000038E"            
-          - name: '_GetSubSystem'
-            offset: "000003E8"            
-          - name: '_IsEnabled'
-            offset: "00000475"            
-          - name: '_IsThisADevice'
-            offset: "00000579"            
-          - name: '_GetDevNodeInfo'
-            offset: "00000591"            
-          - name: '_SetDevNodeInfo'
-            offset: "000005E2"            
-          - name: '_GetBridgeInfo'
-            offset: "000005FD"            
-          - name: '_SetBridgeInfo'
-            offset: "00000651"            
-          - name: '_GetClassDescription'
-            offset: "0000069C"            
-          - name: '_IsTopBusDevNode'
-            offset: "000006C3"            
-          - name: '_AddPositionalInfo'
-            offset: "000006E7"            
-          - name: '_GetName'
-            offset: "0000076C"            
-          - name: '_HasNewCapabilities'
-            offset: "0000089F"            
-          - name: '_GetCapability'
-            offset: "000008F0"            
-          - name: '_LockDevNodeInfo'
-            offset: "0000099E"            
-          - name: '_UnlockDevNodeInfo'
-            offset: "000009EE"            
-          - name: '_IsIDE'
-            offset: "00000A0A"            
-          - name: '_LockMe'
-            offset: "00000A31"            
-          - name: '_UnlockMe'
-            offset: "00000AA6"            
-          - name: '_InDebugger'
-            offset: "00000B13"            
-          - name: '_Output'
-            offset: "00000B3E"            
-          - name: '_Input'
-            offset: "00000B70"            
-          - name: '_PCICallBIOS'
-            offset: "00000B9E"            
-          - name: '_PCIASDCallBIOS'
-            offset: "00000C2F"            
-          - name: '_ReadConfig'
-            offset: "00000CB8"            
-          - name: '_WriteConfig'
-            offset: "00000FFE"            
-          - name: '_PCIEXP_GetVersion'
-            offset: "0000134B"            
-          - name: '_PCIEXP_GetHandleInfo'
-            offset: "00001351"            
-          - name: '_PCIEXP_ReadConfig'
-            offset: "00001390"            
-          - name: '_PCIEXP_WriteConfig'
-            offset: "000013A8"            
-          - name: '_PCIEXP_AllocatePages'
-            offset: "000013C3"            
-          - name: '_PCIEXP_FreePages'
-            offset: "00001475"            
-          - name: '_PCIEXP_LinToPhys'
-            offset: "00001486"            
-          - name: '_PCIEXP_SetPhysicalCacheTypeRange'
-            offset: "00001494"            
-          - name: '_GetIRQCount'
-            offset: "000014C0"            
-          - name: '_SetIRQ'
-            offset: "000014DF"            
-          - name: '_GetWindow'
-            offset: "000016FE"            
-          - name: '_SetWindow'
-            offset: "00001774"            
-          - name: '_EnableDevice'
-            offset: "000017EA"            
-          - name: '_TekramOutDI'
-            offset: "00001925"            
-          - name: '_TekramInDO'
-            offset: "00001994"            
-          - name: '_CheckTekram'
-            offset: "000019E3"            
-          - name: '_GetBABaseAndLength'
-            offset: "00001B12"            
-          - name: '_GetROMBAR'
-            offset: "00001C09"            
-          - name: '_GetROMSize'
-            offset: "00001C2C"            
-          - name: '_GetROMData'
-            offset: "00001CAB"            
-          - name: '_IsPositiveDecodeBridge'
-            offset: "00001F5D"            
-          - name: '_IsGhost'
-            offset: "00001FE7"            
-          - name: '_LockIOS'
-            offset: "00002143"            
-          - name: '_ESDIGetAltStatusPort'
-            offset: "000021A5"            
-          - name: '_ESDIWaitNotBusy'
-            offset: "000021FB"            
-          - name: '_ESDIWaitForDRQ'
-            offset: "0000222A"            
-          - name: '_ESDIGetDriveId'
-            offset: "00002259"            
-          - name: '_FindIDE'
-            offset: "000022D0"            
-          - name: '_SanityCheckMechanism2'
-            offset: "00002471"            
-          - name: '_KillBridge'
-            offset: "00002585"            
-          - name: '_ReadConfigByte'
-            offset: "000025B7"            
-          - name: '_ReadConfigWord'
-            offset: "000025FB"            
-          - name: '_ReadConfigDword'
-            offset: "0000263F"            
-          - name: '_WriteConfigByte'
-            offset: "00002683"            
-          - name: '_WriteConfigWord'
-            offset: "000026CC"            
-          - name: '_WriteConfigDword'
-            offset: "00002715"            
-          - name: '_FindDevice'
-            offset: "0000275C"            
-          - name: '_OpRegionHandler'
-            offset: "000029AD"            
-          - name: '_QuickDisableDevice'
-            offset: "00002AE7"            
-          - name: '_ValidateRoutingTableEntries'
-            offset: "00002B08"            
-          - name: '_CheckForBadChipsets'
-            offset: "00002B81"            
-          - name: '_CanSetWPEBit'
-            offset: "00002BC2"            
-          - name: '_PCIStartDevNode'
-            offset: "00002BF0"            
-          - name: '_DisableDevice'
-            offset: "000032BC"            
-          - name: '_PCIStopDevNode'
-            offset: "0000353E"            
-          - name: '_PCIEnumHandler'
-            offset: "0000358A"            
-          - name: '_ChangePowerState'
-            offset: "00003AD9"            
-          - name: '_PutDeviceInD0'
-            offset: "00003B89"            
-          - name: '_AcknowledgePME'
-            offset: "00003BCA"            
-          - name: '_PCIArmDisarmWakeEnable'
-            offset: "00003C77"            
-          - name: '_SetAPMCapabilities'
-            offset: "00003D28"            
-          - name: '_WakeUpWalk'
-            offset: "00003DB1"            
-          - name: '_PCIAPMDevNode'
-            offset: "00003E39"            
-          - name: '_PCI_Get_Version'
-            offset: "00003FFC"            
-          - name: '_PCI_Read_Config'
-            offset: "00004002"            
-          - name: '_PCI_Write_Config'
-            offset: "0000401A"            
-          - name: '_PCI_Lock_Unlock'
-            offset: "00004035"            
-          - name: '_KCODE__CONFIGMG_Get_Sibling'
-            offset: "000040A0"            
-          - name: '_KCODE__CONFIGMG_Get_Child'
-            offset: "000040A8"            
-          - name: '_KCODE__CONFIGMG_Get_Parent'
-            offset: "000040B0"            
-          - name: '_KCODE__CONFIGMG_Free_Range_List'
-            offset: "000040B8"            
-          - name: '_KCODE__CONFIGMG_Get_Next_Res_Des'
-            offset: "000040C0"            
-          - name: '_KCODE__CONFIGMG_Delete_Range'
-            offset: "000040C8"            
-          - name: '_KCODE__CONFIGMG_Get_First_Log_Conf'
-            offset: "000040D0"            
-          - name: '_KCODE__CONFIGMG_Dup_Range_List'
-            offset: "000040D8"            
-          - name: '_KCODE__CONFIGMG_Add_Range'
-            offset: "000040E0"            
-          - name: '_KCODE__CONFIGMG_Find_Range'
-            offset: "000040E8"            
-          - name: '_KCODE__Debug_Printf_Service'
-            offset: "000040F0"            
-          - name: '_KCODE__HeapFree'
-            offset: "00004104"            
-          - name: '_KCODE__CONFIGMG_Get_DevNode_Status'
-            offset: "0000410C"            
-          - name: '_KCODE__CONFIGMG_Set_Bus_Info'
-            offset: "00004114"            
-          - name: '_KCODE__CONFIGMG_Next_Range'
-            offset: "0000411C"            
-          - name: '_KCODE__CONFIGMG_First_Range'
-            offset: "00004124"            
-          - name: '_KCODE__CONFIGMG_Invert_Range_List'
-            offset: "0000412C"            
-          - name: '_KCODE__CONFIGMG_Create_Range_List'
-            offset: "00004134"            
-          - name: '_KCODE__CONFIGMG_Assert_Structure'
-            offset: "0000413C"            
-          - name: '_KCODE__CONFIGMG_Debug_DevNode'
-            offset: "00004144"            
-          - name: '_KCODE__CONFIGMG_Dump_Range_List'
-            offset: "0000414C"            
-          - name: '_KCODE_VPICD_Phys_EOI@4'
-            offset: "00004154"            
-          - name: '_KCODE__CONFIGMG_Reenumerate_DevNode'
-            offset: "00004164"            
-          - name: '_KCODE__CONFIGMG_Remove_SubTree'
-            offset: "0000416C"            
-          - name: '_KCODE_VPICD_Force_Default_Behavior@4'
-            offset: "00004174"            
-          - name: '_KCODE_VPICD_Physically_Unmask@4'
-            offset: "00004184"            
-          - name: '_KCODE_VPICD_Virtualize_IRQ@4'
-            offset: "00004194"            
-          - name: '_KCODE__CONFIGMG_Query_Arbitrator_Free_Data'
-            offset: "000041A8"            
-          - name: '_KCODE__CONFIGMG_Disable_DevNode'
-            offset: "000041B0"            
-          - name: '_KCODE__CONFIGMG_Call_Enumerator_Function'
-            offset: "000041B8"            
-          - name: '_KCODE__CONFIGMG_Get_Next_Log_Conf'
-            offset: "000041C0"            
-          - name: '_KCODE__CONFIGMG_Add_Res_Des'
-            offset: "000041C8"            
-          - name: '_KCODE__CONFIGMG_Add_Empty_Log_Conf'
-            offset: "000041D0"            
-          - name: '_KCODE__CONFIGMG_Set_Dependent_DevNode'
-            offset: "000041D8"            
-          - name: '_KCODE__CONFIGMG_Get_Dependent_DevNode'
-            offset: "000041E0"            
-          - name: '_KCODE__CONFIGMG_Register_Arbitrator'
-            offset: "000041E8"            
-          - name: '_KCODE__HeapAllocate'
-            offset: "000041F0"            
-          - name: '_KCODE__CONFIGMG_Get_Depth'
-            offset: "000041F8"            
-          - name: '_KCODE__CONFIGMG_Read_Registry_Value'
-            offset: "00004200"            
-          - name: '_KCODE__CONFIGMG_Write_Registry_Value'
-            offset: "00004208"            
-          - name: '_KCODE__RegEnumKey'
-            offset: "00004210"            
-          - name: '_KCODE__RegQueryInfoKey'
-            offset: "00004218"            
-          - name: '_KCODE__RegCloseKey'
-            offset: "00004220"            
-          - name: '_KCODE__RegOpenKey'
-            offset: "00004228"            
-          - name: '_KCODE__Sprintf'
-            offset: "00004230"            
-          - name: '_KCODE__RegCreateKey'
-            offset: "00004238"            
-          - name: '_KCODE__CONFIGMG_Create_DevNode'
-            offset: "00004240"            
-          - name: '_KCODE__SHELL_HookSystemBroadcast'
-            offset: "00004248"            
-          - name: '_KCODE__CONFIGMG_Locate_DevNode'
-            offset: "00004250"            
-          - name: '_KCODE__SHELL_UnhookSystemBroadcast'
-            offset: "00004258"            
-          - name: '_KCODE__FlushCaches'
-            offset: "00004260"            
-          - name: '_KCODE__RegisterGARTHandler'
-            offset: "00004268"            
-          - name: '_KCODE__Allocate_Temp_V86_Data_Area'
-            offset: "00004270"            
-          - name: '_KCODE__Free_Temp_V86_Data_Area'
-            offset: "00004278"            
-          - name: '_KCODE__lmemcpy'
-            offset: "00004280"            
-          - name: '_KCODE__AttemptingSomethingDangerous'
-            offset: "00004288"            
-          - name: '_KCODE__RegFlushKey'
-            offset: "00004290"            
-          - name: '_KCODE__MapPhysToLinear'
-            offset: "00004298"            
-          - name: '_KCODE__PELDR_AddExportTable'
-            offset: "000042A0"            
-          - name: '_KCODE__PELDR_RemoveExportTable'
-            offset: "000042A8"            
-          - name: '_KCODE__CONFIGMG_Enable_DevNode'
-            offset: "000042B0"            
-          - name: '_KCODE__CONFIGMG_Discard_Boot_Log_Conf'
-            offset: "000042B8"            
-          - name: '_KCODE__CONFIGMG_Get_Alloc_Log_Conf'
-            offset: "000042C0"            
-          - name: '_KCODE__CONFIGMG_Set_DevNode_PowerState'
-            offset: "000042C8"            
-          - name: '_KCODE__LinRegionLock'
-            offset: "000042D0"            
-          - name: '_KCODE__LinRegionUnLock'
-            offset: "000042D8"            
-          - name: '_KCODE__CONFIGMG_Set_DevNode_Problem'
-            offset: "000042E0"            
-          - name: '_KCODE__CONFIGMG_Change_DevNode_Status'
-            offset: "000042E8"            
-          - name: '_KCODE__CONFIGMG_Set_Device_Driver_Private_DWord'
-            offset: "000042F0"            
-          - name: '_KCODE__CONFIGMG_Get_Device_Driver_Private_DWord'
-            offset: "000042F8"            
-          - name: '_KCODE__HeapReAllocate'
-            offset: "00004300"            
-          - name: '_KCODE__ACPI_GetNameSpaceObject'
-            offset: "00004308"            
-          - name: '_KCODE__ACPI_FreeDataBuffs'
-            offset: "00004310"            
-          - name: '_KCODE__ACPI_EvalPkgDataElement'
-            offset: "00004318"            
-          - name: '_KCODE__ACPI_RunControlMethod'
-            offset: "00004320"            
-          - name: '_KCODE__ACPI_GetObject'
-            offset: "00004328"            
-          - name: '_KCODE__ACPI_DevNodeToNameSpace'
-            offset: "00004330"            
-          - name: '_KCODE__RegQueryValueEx'
-            offset: "00004338"            
-          - name: '_KCODE__CONFIGMG_Register_DevLoader'
-            offset: "00004340"            
-          - name: '_KCODE__VPICD_Register_Trigger_Handler'
-            offset: "00004348"            
-          - name: '_KCODE__CONFIGMG_Register_Device_Driver'
-            offset: "00004350"            
-          - name: '_KCODE__CONFIGMG_Register_Enumerator'
-            offset: "00004358"            
-          - name: '_KCODE__CONFIGMG_Set_DevNode_PowerCapabilities'
-            offset: "00004360"            
-          - name: '_KCODE__CONFIGMG_Get_Bus_Info'
-            offset: "00004368"            
-          - name: '_KCODE__CONFIGMG_Add_Remove_DevNode_Property'
-            offset: "00004370"            
-          - name: '_KCODE__PELDR_FreeModule'
-            offset: "00004378"            
-          - name: '_KCODE__PELDR_GetProcAddress'
-            offset: "00004380"            
-          - name: '_KCODE__PELDR_LoadModule'
-            offset: "00004388"            
-          - name: '_KCODE__CONFIGMG_Get_Private_DWord'
-            offset: "00004390"            
-          - name: '_KCODE__CONFIGMG_Set_Private_DWord'
-            offset: "00004398"            
-          - name: '_KCODE__GetRegistryKey'
-            offset: "000043A0"            
-          - name: '_KCODE__CONFIGMG_Get_Global_State'
-            offset: "000043A8"            
-          - name: '_KCODE__RegSetValueEx'
-            offset: "000043B0"            
-          - name: '_KCODE__PageModifyPermissions'
-            offset: "000043B8"            
-          - name: '_KCODE__PageAllocate'
-            offset: "000043C0"            
-          - name: '_KCODE__PageFree'
-            offset: "000043C8"            
-          - name: '_KCODE_MTRRSetPhysicalCacheTypeRange@12'
-            offset: "000043D0"            
-          - name: '_KCODE__VPICD_Clear_IR_Bits'
-            offset: "000043E8"            
-          - name: '_KCODE__CONFIGMG_Yield'
-            offset: "000043F0"            
-          - name: '_KCODE__LinPageLock'
-            offset: "000043F8"            
-          - name: '_KCODE__PageCommitPhys'
-            offset: "00004400"            
-          - name: '_KCODE__PageReserve'
-            offset: "00004408"            
-          - name: '_KCODE__ACPI_WalkNameSpace'
-            offset: "00004410"            
-          - name: '_KCODE__CONFIGMG_Get_Res_Des_Data_Size'
-            offset: "00004418"            
-          - name: '_KCODE__CONFIGMG_Add_ID'
-            offset: "00004420"            
-          - name: '_KCODE__CONFIGMG_Get_Device_ID'
-            offset: "00004428"            
-          - name: '_KCODE__CONFIGMG_Remove_Unmarked_Children'
-            offset: "00004430"            
-          - name: '_KCODE__CONFIGMG_Reset_Children_Marks'
-            offset: "00004438"            
-          - name: '_KCODE__CONFIGMG_Free_Log_Conf'
-            offset: "00004440"            
-          - name: '_KCODE__CONFIGMG_Reprocess_DevNode'
-            offset: "00004448"            
-          - name: '_KCODE__CONFIGMG_System_Device_Power_State_Mapping'
-            offset: "00004450"            
-          - name: '_KCODE_Hook_V86_Int_Chain@8'
-            offset: "00004458"            
-          - name: '_KCODE_Unhook_V86_Int_Chain@8'
-            offset: "00004474"            
-          - name: '_KCODE__CONFIGMG_Register_Enumerator_Function'
-            offset: "00004490"            
-          - name: '_KCODE__CONFIGMG_Waking_Up_From_DevNode'
-            offset: "00004498"            
-          - name: '_KCODE__CONFIGMG_Modify_Res_Des'
-            offset: "000044A0"            
-          - name: '_KCODE__CONFIGMG_Refilter_DevNode'
-            offset: "000044A8"            
-          - name: '_KCODE__RegEnumValue'
-            offset: "000044B0"            
-          - name: '_KCODE__RegDeleteKey'
-            offset: "000044B8"            
-          - name: '_KCODE__CONFIGMG_Lock'
-            offset: "000044C0"            
-          - name: '_KCODE__CONFIGMG_Unlock'
-            offset: "000044C8"            
-          - name: '_pGlobalIRQInfo'
-            offset: "00004650"            
-          - name: '_dwPCIOptions'
-            offset: "00004B70"            
-          - name: '_fCantUseBIOS'
-            offset: "00004B74"            
-          - name: '_fUseMechanism1'
-            offset: "00004B78"            
-          - name: '_fUseDWORDOnly'
-            offset: "00004B7C"            
-          - name: '_PCI32Entry'
-            offset: "00004B80"            
-          - name: '_dwLockCount'
-            offset: "00004B84"            
-          - name: '_fLockMe'
-            offset: "00004BB8"            
-          - name: '_pfnPCIHookFunc'
-            offset: "00004BBC"            
-          - name: '_dnPCIRoot'
-            offset: "00005B5C"            
-          - name: '_dwBIOSAttributes'
-            offset: "00005B60"            
-          - name: '_pISABusDevNodeInfo'
-            offset: "00005B64"            
-          - name: '_EndLockable'
-            offset: "000062B0"            
-      - num: "5"
-        name: "_PDATA"
-        offset: "000079A0"
-        symbols:
-          - name: '_lpszReturnCRName'
-            offset: "0000014C"            
-          - name: '_lpszArbFuncName'
-            offset: "00000208"            
-          - name: '_fGARTInitialized'
-            offset: "00001528"            
-          - name: '_ulGARTCapabilities'
-            offset: "0000152C"            
-          - name: '_pGARTRefData'
-            offset: "00001530"            
-          - name: '_pGARTDevNodeInfo'
-            offset: "00001534"            
-          - name: '_ghHandler'
-            offset: "00001630"            
-          - name: '_hlPCIExportList'
-            offset: "00001910"            
-          - name: '_wBestIRQs'
-            offset: "00001CAC"            
-          - name: '_IRQMP'
-            offset: "00001CB0"            
-          - name: '_dwGlobalIRQInfoCount'
-            offset: "00001CC4"            
-          - name: '_fACPISteering'
-            offset: "00001CC8"            
-          - name: '_pGlobalLinkInfo'
-            offset: "00001CCC"            
-          - name: '_aepIRQ'
-            offset: "00001D80"            
-          - name: '_hkPCI'
-            offset: "00002C80"            
-          - name: '_bNumDev'
-            offset: "00002E04"            
-          - name: '_pROMInfoListHead'
-            offset: "00002E08"            
-          - name: '_bMaxBus'
-            offset: "00002EF8"            
-          - name: '_bMaxFoundBus'
-            offset: "00002EFC"            
-          - name: '_dwPCIRootDepth'
-            offset: "00002F00"            
-          - name: '_lpszResourceName'
-            offset: "0000336C"            
-          - name: '_fBegin'
-            offset: "00003C58"            
-          - name: '_dnOldVGADevNode'
-            offset: "00003C5C"            
-      - num: "6"
-        name: "_IDATA"
-        offset: "00000000"
-        symbols:
-          - name: '_GetOptionROMInfo'
-            offset: "00000088"            
-          - name: '_PCIInit@0'
-            offset: "0000017B"            
-          - name: '_ICODE__ACPI_RegisterOpRegionCookedHandler'
-            offset: "00000218"            
+- version: system
+  tree:
+  - - agp.c
+    - bridgarb.c
+    - busnoarb.c
+    - debug.c
+    - ../../../dev/ddk/inc/pci.inc
+    - enum1dev.c
+    - "\t../fdma.c"
+    - "\t../gart.c"
+    - getroutc.c
+    - ide.c
+    - "\t../init.c"
+    - int1a.c
+    - irqarb.c
+    - "\t../link.c"
+    - miniport.c
+    - "\t../misc.c"
+    - pci.asm
+    - pci_cfg.c
+    - pcienm.c
+    - power.c
+    - rebal.c
+    - registry.c
+    - rmbios.asm
+    - services.c
+    - video.c
+    - gart.c
+    - Yt.h
+    - Yu.h
+  segments:
+  - num: '1'
+    name: .data
+    offset: 00000AA0
+    symbols:
+    - name: _BeginLockable_Debug_Flags
+      processed: ''
+      offset: '00000260'
+    - name: __PCI_Get_Version
+      processed: ''
+      offset: '00000264'
+    - name: __PCI_Read_Config
+      processed: ''
+      offset: '00000268'
+    - name: __PCI_Write_Config
+      processed: ''
+      offset: 0000026C
+    - name: __PCI_Lock_Unlock
+      processed: ''
+      offset: '00000270'
+    - name: PCI_DDB
+      processed: ''
+      offset: '00000274'
+    - name: _PCIDDB
+      processed: ''
+      offset: '00000274'
+    - name: _dwTracing
+      processed: ''
+      offset: '000002E8'
+    - name: _DebuggerCommands
+      processed: ''
+      offset: 000002F0
+    - name: PCI_Control
+      processed: ''
+      offset: 00001DB0
+    - name: _ValidateHappy
+      processed: ''
+      offset: 00001DEA
+    - name: _ValidateCurrentDevNode
+      processed: ''
+      offset: '00001E05'
+    - name: _SelectIndex
+      processed: ''
+      offset: '00001E42'
+    - name: _DebListDevNode
+      processed: ''
+      offset: '00001E71'
+    - name: _DebProcessDevNode
+      processed: ''
+      offset: 00001FA1
+    - name: _PCIWalk
+      processed: ''
+      offset: '00002447'
+    - name: _PCIWalkDepth
+      processed: ''
+      offset: 000024ED
+    - name: _PCIDetectIntProc
+      processed: ''
+      offset: '00002560'
+    - name: _CheckTestCard
+      processed: ''
+      offset: '00002604'
+    - name: _GetFirstBitSet
+      processed: ''
+      offset: '00002919'
+    - name: _CheckInts
+      processed: ''
+      offset: '00002935'
+    - name: _DebDumpBridgeInfo
+      processed: ''
+      offset: 00002B8B
+    - name: _ShowAll
+      processed: ''
+      offset: '00002E40'
+    - name: _ShowList
+      processed: ''
+      offset: '00002E53'
+    - name: _ShowBus
+      processed: ''
+      offset: '00002E83'
+    - name: _ConfigSpace
+      processed: ''
+      offset: 00002EAF
+    - name: _EnterDataDword
+      processed: ''
+      offset: 00002EDB
+    - name: _EnterData
+      processed: ''
+      offset: 00002F5C
+    - name: _FindIRQRouting
+      processed: ''
+      offset: 00002FE2
+    - name: _GlobalInfo
+      processed: ''
+      offset: 00002FF1
+    - name: _GetLink
+      processed: ''
+      offset: 0000311B
+    - name: _ShowDevNode
+      processed: ''
+      offset: 000032CA
+    - name: _TraceAccess
+      processed: ''
+      offset: '000032E0'
+    - name: _SelectByDevNode
+      processed: ''
+      offset: 000032F4
+    - name: _SelectByIndex
+      processed: ''
+      offset: '00003308'
+    - name: _AppyIDETest
+      processed: ''
+      offset: '00003360'
+    - name: _IDETest
+      processed: ''
+      offset: '00003417'
+    - name: _AppyShowROM
+      processed: ''
+      offset: 0000342F
+    - name: _ShowROM
+      processed: ''
+      offset: '000035E7'
+    - name: _SetState
+      processed: ''
+      offset: 000035FF
+    - name: _AppyDebugger
+      processed: ''
+      offset: 0000364E
+    - name: _PMSchedDebugger
+      processed: ''
+      offset: 0000366B
+    - name: _Debugger@0
+      processed: ''
+      offset: '00003697'
+    - name: _LCODE__Debug_Printf_Service
+      processed: ''
+      offset: 000036B8
+    - name: '@CMDReadNumber@12'
+      processed: ''
+      offset: 000036D0
+    - name: _LCODE__CONFIGMG_Call_At_Appy_Time
+      processed: ''
+      offset: 000037C4
+    - name: '@CMDMenu@8'
+      processed: ''
+      offset: 000037D0
+    - name: '@CMDInChar@0'
+      processed: ''
+      offset: '00003890'
+  - num: '2'
+    name: RARE
+    offset: 00000DD0
+    symbols:
+    - name: _PCIExit@0
+      processed: ''
+      offset: '00000000'
+    - name: _StrCat
+      processed: ''
+      offset: '00000031'
+    - name: _StrStr
+      processed: ''
+      offset: '00000069'
+    - name: _StrChr
+      processed: ''
+      offset: 000000A1
+    - name: _RegCopyKey
+      processed: ''
+      offset: 000000B9
+    - name: _RegRenameKey
+      processed: ''
+      offset: '00000298'
+    - name: _InternalRegReplaceString
+      processed: ''
+      offset: '00000351'
+    - name: _RegReplaceString
+      processed: ''
+      offset: 0000060C
+    - name: _RegSearchAndReplace
+      processed: ''
+      offset: '00000685'
+  - num: '3'
+    name: PNP
+    offset: '00004960'
+    symbols:
+    - name: _LinToPhys
+      processed: ''
+      offset: '00000000'
+    - name: _HandleAGP
+      processed: ''
+      offset: '00000043'
+    - name: _QueryBridgeArbitrate
+      processed: ''
+      offset: 000002FA
+    - name: _FreeArbResInfo
+      processed: ''
+      offset: '00000371'
+    - name: _GetAlloc
+      processed: ''
+      offset: 0000039E
+    - name: _GetSize
+      processed: ''
+      offset: 000003D3
+    - name: _GetAlignment
+      processed: ''
+      offset: 000003F2
+    - name: _GetNextResDes
+      processed: ''
+      offset: '00000416'
+    - name: _GetSortedResDes
+      processed: ''
+      offset: 0000047D
+    - name: _SaveAlloc
+      processed: ''
+      offset: '00000542'
+    - name: _Unalloc
+      processed: ''
+      offset: '00000576'
+    - name: _InitializeArb
+      processed: ''
+      offset: 0000061D
+    - name: _BridgeArbTest
+      processed: ''
+      offset: 000007B8
+    - name: _BridgeArbRetest
+      processed: ''
+      offset: '00000898'
+    - name: _BridgeArbSet
+      processed: ''
+      offset: '00000929'
+    - name: _BridgeArbitrate
+      processed: ''
+      offset: '00000957'
+    - name: _BridgeIOArbitrator
+      processed: ''
+      offset: 00000B05
+    - name: _BridgeMemArbitrator
+      processed: ''
+      offset: 00000B76
+    - name: _GetBusNumberAlloc
+      processed: ''
+      offset: 00000BE7
+    - name: _SetBusNumber
+      processed: ''
+      offset: 00000C3B
+    - name: _GetTopLevelBridge
+      processed: ''
+      offset: 00000CE6
+    - name: _FindBusNumLimit
+      processed: ''
+      offset: 00000D1B
+    - name: _RecursiveInitializeTemp
+      processed: ''
+      offset: 00000D6B
+    - name: _SetTopLevelUsed
+      processed: ''
+      offset: 00000DF6
+    - name: _RecursiveResetBridges
+      processed: ''
+      offset: 00000E9C
+    - name: _RecursiveSetBridges
+      processed: ''
+      offset: 00000F0A
+    - name: _RebalanceAllBusNum
+      processed: ''
+      offset: '00001002'
+    - name: _RecursiveGetLargest
+      processed: ''
+      offset: 000010EC
+    - name: _IsBusNumFeasible
+      processed: ''
+      offset: '00001155'
+    - name: _CanAssignBusNum
+      processed: ''
+      offset: '00001380'
+    - name: _BusNumTesting
+      processed: ''
+      offset: 0000189F
+    - name: _BusNumberArbitrator
+      processed: ''
+      offset: 000018EC
+    - name: _CheckOptionROM
+      processed: ''
+      offset: '00001962'
+    - name: _AddResource
+      processed: ''
+      offset: 0000198D
+    - name: _AddIRQ
+      processed: ''
+      offset: 00001AAB
+    - name: _AddIO
+      processed: ''
+      offset: 00001AEF
+    - name: _AddMem
+      processed: ''
+      offset: 00001B86
+    - name: _DoIRQ
+      processed: ''
+      offset: 00001C04
+    - name: _DoMems
+      processed: ''
+      offset: 00001ECF
+    - name: _DoIOs
+      processed: ''
+      offset: 00001F39
+    - name: _DoROM
+      processed: ''
+      offset: 00001F80
+    - name: _AddDisabledIDE
+      processed: ''
+      offset: 00001FA9
+    - name: _DoNativeIDE
+      processed: ''
+      offset: 00001FC5
+    - name: _AddCompatibilityMem
+      processed: ''
+      offset: '00002064'
+    - name: _AddCompatibilityIO
+      processed: ''
+      offset: 0000211A
+    - name: _LoadResources
+      processed: ''
+      offset: '000021E1'
+    - name: _DoResources
+      processed: ''
+      offset: 000023FC
+    - name: _SanityCheckBridgeEnabled
+      processed: ''
+      offset: '00002436'
+    - name: _InitializeWindowRes
+      processed: ''
+      offset: 000024B8
+    - name: _HandleBridge
+      processed: ''
+      offset: 000025A0
+    - name: _HandlePCMCIA
+      processed: ''
+      offset: '00002984'
+    - name: _HandleVideo
+      processed: ''
+      offset: 000029BB
+    - name: _IsBrokenIntelOrion
+      processed: ''
+      offset: 00002A70
+    - name: _HandleIDE
+      processed: ''
+      offset: 00002ABE
+    - name: _HandleDeviceNameChange
+      processed: ''
+      offset: 00002EEA
+    - name: _CreateDevNode
+      processed: ''
+      offset: '00003253'
+    - name: _EnumerateOneDevice
+      processed: ''
+      offset: 0000339C
+    - name: _UpdateSystemDMAUsage
+      processed: ''
+      offset: '00003564'
+    - name: _ComputeDMAUsage
+      processed: ''
+      offset: '00003592'
+    - name: _RecursiveComputeDMAUsage
+      processed: ''
+      offset: '00003653'
+    - name: _InterceptDeviceChangeMsg
+      processed: ''
+      offset: 000036A5
+    - name: _InitFDMA
+      processed: ''
+      offset: 000036F5
+    - name: _ExitFDMA
+      processed: ''
+      offset: '00003754'
+    - name: _LocateGARTMiniport
+      processed: ''
+      offset: '00003788'
+    - name: _PCIReserve
+      processed: ''
+      offset: '00003792'
+    - name: _PCIMap
+      processed: ''
+      offset: 000037ED
+    - name: _PCIUnMap
+      processed: ''
+      offset: 0000384C
+    - name: _PCIFree
+      processed: ''
+      offset: '00003875'
+    - name: _ExitGART
+      processed: ''
+      offset: 000038AC
+    - name: _HandleGART
+      processed: ''
+      offset: 000038D4
+    - name: _AllocateDOSMemory
+      processed: ''
+      offset: 000039FA
+    - name: _DeallocateDOSMemory
+      processed: ''
+      offset: 00003A49
+    - name: _GetRealModeIRQRoute
+      processed: ''
+      offset: 00003A7A
+    - name: _BIOSGetRealModeIRQRoute
+      processed: ''
+      offset: 00003AC4
+    - name: _PCIBIOSGetRealModeIRQRoute
+      processed: ''
+      offset: 00003BE5
+    - name: _GetChannelStatus
+      processed: ''
+      offset: 00003C5D
+    - name: _RewriteVRM
+      processed: ''
+      offset: 00003D7B
+    - name: _HandleInt1A@8
+      processed: ''
+      offset: '00003E87'
+    - name: _PCI_Int_1A
+      processed: ''
+      offset: '00004230'
+    - name: _FindDeviceCallback
+      processed: ''
+      offset: 0000423B
+    - name: _PCIWalk2
+      processed: ''
+      offset: 0000432C
+    - name: _GetIRQResDes
+      processed: ''
+      offset: '000043E7'
+    - name: _IRQArbitrator
+      processed: ''
+      offset: '00004451'
+    - name: _RegisterIRQArbitrator
+      processed: ''
+      offset: '00004749'
+    - name: _FindIRQInfo
+      processed: ''
+      offset: 000047D1
+    - name: _GetBarberPoleInfo
+      processed: ''
+      offset: '00004815'
+    - name: _BarberPole
+      processed: ''
+      offset: '00004942'
+    - name: _FindLink
+      processed: ''
+      offset: 00004A42
+    - name: _CreateIRQHolderDevNode
+      processed: ''
+      offset: 00004A5E
+    - name: _CreateNormalIRQHolderDevNode
+      processed: ''
+      offset: 00004B0F
+    - name: _GetValidLinkInfo
+      processed: ''
+      offset: 00004DD4
+    - name: _AllocateIRQ
+      processed: ''
+      offset: '00004E72'
+    - name: _AddIRQHolders
+      processed: ''
+      offset: 00004F39
+    - name: _RecreateIRQHolders
+      processed: ''
+      offset: 000050CD
+    - name: _DestroyUnusedIRQHolder
+      processed: ''
+      offset: 000050EA
+    - name: _MakeIRQHoldersPNP
+      processed: ''
+      offset: '00005110'
+    - name: _PCIBIOSGetIRQRoutingTable
+      processed: ''
+      offset: '00005140'
+    - name: _ValidateIRQInfoHeader
+      processed: ''
+      offset: 0000521A
+    - name: _ACPIGetOneRoutingTable
+      processed: ''
+      offset: '00005297'
+    - name: _ACPIAddPRT
+      processed: ''
+      offset: '00005886'
+    - name: _ACPIRemovePRT
+      processed: ''
+      offset: '00005968'
+    - name: _ACPIGetIRQRoutingTable
+      processed: ''
+      offset: 00005A21
+    - name: _BIOSGetIRQRoutingTable
+      processed: ''
+      offset: 00005A65
+    - name: _RegGetIRQRoutingTable
+      processed: ''
+      offset: 00005B1F
+    - name: _GetIRQRoutingTable
+      processed: ''
+      offset: 00005C28
+    - name: _ScanForMiniportData
+      processed: ''
+      offset: 00005D1B
+    - name: _GetIRQMiniportData
+      processed: ''
+      offset: 00005D7D
+    - name: _UpdateStatusFlags
+      processed: ''
+      offset: 00005EDB
+    - name: _CleanUpIRQRouting
+      processed: ''
+      offset: 00005F0D
+    - name: _IsStringInBIOS
+      processed: ''
+      offset: 00005F74
+    - name: _CheckRoutingTableEntry
+      processed: ''
+      offset: 00005FA7
+    - name: _SanityCheckIRQRoutingTable
+      processed: ''
+      offset: 0000612D
+    - name: _InitIRQRouting
+      processed: ''
+      offset: '000062E3'
+    - name: _NewIRQHolder
+      processed: ''
+      offset: 000065B3
+    - name: _DisablePnPLinks
+      processed: ''
+      offset: '00006774'
+    - name: _ReadMiniportData
+      processed: ''
+      offset: 000067DF
+    - name: _FindMiniport
+      processed: ''
+      offset: 0000687D
+    - name: _LoadMiniport
+      processed: ''
+      offset: 000068FE
+    - name: _FreeMiniport
+      processed: ''
+      offset: 000069A9
+    - name: _OpenPCIKey
+      processed: ''
+      offset: 00006A08
+    - name: _ReadRegistryValue
+      processed: ''
+      offset: 00006A67
+    - name: _WriteRegistryValue
+      processed: ''
+      offset: 00006AF9
+    - name: _ClosePCIKey
+      processed: ''
+      offset: 00006B75
+    - name: _InitDevNodeInfo
+      processed: ''
+      offset: 00006BCE
+    - name: _FindArbRes
+      processed: ''
+      offset: 00006C61
+    - name: _IsVideo
+      processed: ''
+      offset: 00006CC3
+    - name: _IsCardBusCard
+      processed: ''
+      offset: 00006CF4
+    - name: _IsVGA
+      processed: ''
+      offset: 00006D39
+    - name: _CheckCMDPrimaryIDE
+      processed: ''
+      offset: 00006D76
+    - name: _CheckCMDSecondaryIDE
+      processed: ''
+      offset: 00006DAE
+    - name: _GetMaxBus
+      processed: ''
+      offset: 00006DF8
+    - name: _CheckMechanism1
+      processed: ''
+      offset: 00006E1C
+    - name: _DetectMechanismAndNumDev
+      processed: ''
+      offset: 00006E9E
+    - name: _FindPCI32Entry
+      processed: ''
+      offset: '00007060'
+    - name: _GetBIOSAttributes
+      processed: ''
+      offset: '00007114'
+    - name: _PCIPropChange
+      processed: ''
+      offset: '00007120'
+    - name: _PCISetupDevNode
+      processed: ''
+      offset: 0000720E
+    - name: _WalkBus
+      processed: ''
+      offset: '00007568'
+    - name: _RecreateNonPCIChildren
+      processed: ''
+      offset: '00007764'
+    - name: _EnumerateBus
+      processed: ''
+      offset: '00007842'
+    - name: _EnumerateRootBus
+      processed: ''
+      offset: '00007895'
+    - name: _GetSetConfigSpace
+      processed: ''
+      offset: '00007908'
+    - name: _PCIEnumFuncHandler
+      processed: ''
+      offset: 00007A87
+    - name: _ShouldKillLogConf
+      processed: ''
+      offset: 00007C14
+    - name: _UseParentIRQ
+      processed: ''
+      offset: 00007C8E
+    - name: _PCIFilterDevNode
+      processed: ''
+      offset: 00007DA0
+    - name: _RegisterPCIBusEnumerator
+      processed: ''
+      offset: 00007F0C
+    - name: _PCIPnPNewDevNode@8
+      processed: ''
+      offset: 00007F69
+    - name: _UpdateResourceRequirement
+      processed: ''
+      offset: 0000800F
+    - name: _IncreaseBridgeRequirements
+      processed: ''
+      offset: 0000804B
+    - name: _GetMaxRequirement
+      processed: ''
+      offset: 0000826E
+    - name: _AddNonPCIResourceRequirements
+      processed: ''
+      offset: 000082D5
+    - name: _DoMyNonPCIChildren
+      processed: ''
+      offset: '00008389'
+    - name: _AdjustBridgeRequirements
+      processed: ''
+      offset: '00008414'
+    - name: _BridgeTestCanStop
+      processed: ''
+      offset: 000087FE
+    - name: _BridgeTestCanStopFailed
+      processed: ''
+      offset: '00008832'
+    - name: _CallRealModePCIBIOS
+      processed: ''
+      offset: 000089BC
+    - name: _BeginRecursiveVGA
+      processed: ''
+      offset: 00008ABB
+    - name: _BeginVGA
+      processed: ''
+      offset: 00008C63
+    - name: _EndRecursiveVGA
+      processed: ''
+      offset: 00008D1B
+    - name: _EndVGA
+      processed: ''
+      offset: 00008E3A
+  - num: '4'
+    name: L0CKABLE_BEGIN
+    offset: '000077E0'
+    symbols:
+    - name: _BeginLockable
+      processed: ''
+      offset: '00000000'
+    - name: _ConfigureFDMA
+      processed: ''
+      offset: '00000004'
+    - name: _ReprogramFDMA
+      processed: ''
+      offset: '00000067'
+    - name: _TriggerHandler
+      processed: ''
+      offset: 0000007D
+    - name: _IRQLinkConfigHandler
+      processed: ''
+      offset: 0000013D
+    - name: _GetHeaderType
+      processed: ''
+      offset: 0000038E
+    - name: _GetSubSystem
+      processed: ''
+      offset: '000003E8'
+    - name: _IsEnabled
+      processed: ''
+      offset: '00000475'
+    - name: _IsThisADevice
+      processed: ''
+      offset: '00000579'
+    - name: _GetDevNodeInfo
+      processed: ''
+      offset: '00000591'
+    - name: _SetDevNodeInfo
+      processed: ''
+      offset: '000005E2'
+    - name: _GetBridgeInfo
+      processed: ''
+      offset: 000005FD
+    - name: _SetBridgeInfo
+      processed: ''
+      offset: '00000651'
+    - name: _GetClassDescription
+      processed: ''
+      offset: 0000069C
+    - name: _IsTopBusDevNode
+      processed: ''
+      offset: 000006C3
+    - name: _AddPositionalInfo
+      processed: ''
+      offset: '000006E7'
+    - name: _GetName
+      processed: ''
+      offset: 0000076C
+    - name: _HasNewCapabilities
+      processed: ''
+      offset: 0000089F
+    - name: _GetCapability
+      processed: ''
+      offset: 000008F0
+    - name: _LockDevNodeInfo
+      processed: ''
+      offset: 0000099E
+    - name: _UnlockDevNodeInfo
+      processed: ''
+      offset: 000009EE
+    - name: _IsIDE
+      processed: ''
+      offset: 00000A0A
+    - name: _LockMe
+      processed: ''
+      offset: 00000A31
+    - name: _UnlockMe
+      processed: ''
+      offset: 00000AA6
+    - name: _InDebugger
+      processed: ''
+      offset: 00000B13
+    - name: _Output
+      processed: ''
+      offset: 00000B3E
+    - name: _Input
+      processed: ''
+      offset: 00000B70
+    - name: _PCICallBIOS
+      processed: ''
+      offset: 00000B9E
+    - name: _PCIASDCallBIOS
+      processed: ''
+      offset: 00000C2F
+    - name: _ReadConfig
+      processed: ''
+      offset: 00000CB8
+    - name: _WriteConfig
+      processed: ''
+      offset: 00000FFE
+    - name: _PCIEXP_GetVersion
+      processed: ''
+      offset: 0000134B
+    - name: _PCIEXP_GetHandleInfo
+      processed: ''
+      offset: '00001351'
+    - name: _PCIEXP_ReadConfig
+      processed: ''
+      offset: '00001390'
+    - name: _PCIEXP_WriteConfig
+      processed: ''
+      offset: 000013A8
+    - name: _PCIEXP_AllocatePages
+      processed: ''
+      offset: 000013C3
+    - name: _PCIEXP_FreePages
+      processed: ''
+      offset: '00001475'
+    - name: _PCIEXP_LinToPhys
+      processed: ''
+      offset: '00001486'
+    - name: _PCIEXP_SetPhysicalCacheTypeRange
+      processed: ''
+      offset: '00001494'
+    - name: _GetIRQCount
+      processed: ''
+      offset: 000014C0
+    - name: _SetIRQ
+      processed: ''
+      offset: 000014DF
+    - name: _GetWindow
+      processed: ''
+      offset: 000016FE
+    - name: _SetWindow
+      processed: ''
+      offset: '00001774'
+    - name: _EnableDevice
+      processed: ''
+      offset: 000017EA
+    - name: _TekramOutDI
+      processed: ''
+      offset: '00001925'
+    - name: _TekramInDO
+      processed: ''
+      offset: '00001994'
+    - name: _CheckTekram
+      processed: ''
+      offset: '000019E3'
+    - name: _GetBABaseAndLength
+      processed: ''
+      offset: 00001B12
+    - name: _GetROMBAR
+      processed: ''
+      offset: 00001C09
+    - name: _GetROMSize
+      processed: ''
+      offset: 00001C2C
+    - name: _GetROMData
+      processed: ''
+      offset: 00001CAB
+    - name: _IsPositiveDecodeBridge
+      processed: ''
+      offset: 00001F5D
+    - name: _IsGhost
+      processed: ''
+      offset: 00001FE7
+    - name: _LockIOS
+      processed: ''
+      offset: '00002143'
+    - name: _ESDIGetAltStatusPort
+      processed: ''
+      offset: 000021A5
+    - name: _ESDIWaitNotBusy
+      processed: ''
+      offset: 000021FB
+    - name: _ESDIWaitForDRQ
+      processed: ''
+      offset: 0000222A
+    - name: _ESDIGetDriveId
+      processed: ''
+      offset: '00002259'
+    - name: _FindIDE
+      processed: ''
+      offset: 000022D0
+    - name: _SanityCheckMechanism2
+      processed: ''
+      offset: '00002471'
+    - name: _KillBridge
+      processed: ''
+      offset: '00002585'
+    - name: _ReadConfigByte
+      processed: ''
+      offset: 000025B7
+    - name: _ReadConfigWord
+      processed: ''
+      offset: 000025FB
+    - name: _ReadConfigDword
+      processed: ''
+      offset: 0000263F
+    - name: _WriteConfigByte
+      processed: ''
+      offset: '00002683'
+    - name: _WriteConfigWord
+      processed: ''
+      offset: 000026CC
+    - name: _WriteConfigDword
+      processed: ''
+      offset: '00002715'
+    - name: _FindDevice
+      processed: ''
+      offset: 0000275C
+    - name: _OpRegionHandler
+      processed: ''
+      offset: 000029AD
+    - name: _QuickDisableDevice
+      processed: ''
+      offset: 00002AE7
+    - name: _ValidateRoutingTableEntries
+      processed: ''
+      offset: 00002B08
+    - name: _CheckForBadChipsets
+      processed: ''
+      offset: 00002B81
+    - name: _CanSetWPEBit
+      processed: ''
+      offset: 00002BC2
+    - name: _PCIStartDevNode
+      processed: ''
+      offset: 00002BF0
+    - name: _DisableDevice
+      processed: ''
+      offset: 000032BC
+    - name: _PCIStopDevNode
+      processed: ''
+      offset: 0000353E
+    - name: _PCIEnumHandler
+      processed: ''
+      offset: 0000358A
+    - name: _ChangePowerState
+      processed: ''
+      offset: 00003AD9
+    - name: _PutDeviceInD0
+      processed: ''
+      offset: 00003B89
+    - name: _AcknowledgePME
+      processed: ''
+      offset: 00003BCA
+    - name: _PCIArmDisarmWakeEnable
+      processed: ''
+      offset: 00003C77
+    - name: _SetAPMCapabilities
+      processed: ''
+      offset: 00003D28
+    - name: _WakeUpWalk
+      processed: ''
+      offset: 00003DB1
+    - name: _PCIAPMDevNode
+      processed: ''
+      offset: '00003E39'
+    - name: _PCI_Get_Version
+      processed: ''
+      offset: 00003FFC
+    - name: _PCI_Read_Config
+      processed: ''
+      offset: '00004002'
+    - name: _PCI_Write_Config
+      processed: ''
+      offset: 0000401A
+    - name: _PCI_Lock_Unlock
+      processed: ''
+      offset: '00004035'
+    - name: _KCODE__CONFIGMG_Get_Sibling
+      processed: ''
+      offset: 000040A0
+    - name: _KCODE__CONFIGMG_Get_Child
+      processed: ''
+      offset: 000040A8
+    - name: _KCODE__CONFIGMG_Get_Parent
+      processed: ''
+      offset: 000040B0
+    - name: _KCODE__CONFIGMG_Free_Range_List
+      processed: ''
+      offset: 000040B8
+    - name: _KCODE__CONFIGMG_Get_Next_Res_Des
+      processed: ''
+      offset: 000040C0
+    - name: _KCODE__CONFIGMG_Delete_Range
+      processed: ''
+      offset: 000040C8
+    - name: _KCODE__CONFIGMG_Get_First_Log_Conf
+      processed: ''
+      offset: 000040D0
+    - name: _KCODE__CONFIGMG_Dup_Range_List
+      processed: ''
+      offset: 000040D8
+    - name: _KCODE__CONFIGMG_Add_Range
+      processed: ''
+      offset: '000040E0'
+    - name: _KCODE__CONFIGMG_Find_Range
+      processed: ''
+      offset: '000040E8'
+    - name: _KCODE__Debug_Printf_Service
+      processed: ''
+      offset: 000040F0
+    - name: _KCODE__HeapFree
+      processed: ''
+      offset: '00004104'
+    - name: _KCODE__CONFIGMG_Get_DevNode_Status
+      processed: ''
+      offset: 0000410C
+    - name: _KCODE__CONFIGMG_Set_Bus_Info
+      processed: ''
+      offset: '00004114'
+    - name: _KCODE__CONFIGMG_Next_Range
+      processed: ''
+      offset: 0000411C
+    - name: _KCODE__CONFIGMG_First_Range
+      processed: ''
+      offset: '00004124'
+    - name: _KCODE__CONFIGMG_Invert_Range_List
+      processed: ''
+      offset: 0000412C
+    - name: _KCODE__CONFIGMG_Create_Range_List
+      processed: ''
+      offset: '00004134'
+    - name: _KCODE__CONFIGMG_Assert_Structure
+      processed: ''
+      offset: 0000413C
+    - name: _KCODE__CONFIGMG_Debug_DevNode
+      processed: ''
+      offset: '00004144'
+    - name: _KCODE__CONFIGMG_Dump_Range_List
+      processed: ''
+      offset: 0000414C
+    - name: _KCODE_VPICD_Phys_EOI@4
+      processed: ''
+      offset: '00004154'
+    - name: _KCODE__CONFIGMG_Reenumerate_DevNode
+      processed: ''
+      offset: '00004164'
+    - name: _KCODE__CONFIGMG_Remove_SubTree
+      processed: ''
+      offset: 0000416C
+    - name: _KCODE_VPICD_Force_Default_Behavior@4
+      processed: ''
+      offset: '00004174'
+    - name: _KCODE_VPICD_Physically_Unmask@4
+      processed: ''
+      offset: '00004184'
+    - name: _KCODE_VPICD_Virtualize_IRQ@4
+      processed: ''
+      offset: '00004194'
+    - name: _KCODE__CONFIGMG_Query_Arbitrator_Free_Data
+      processed: ''
+      offset: 000041A8
+    - name: _KCODE__CONFIGMG_Disable_DevNode
+      processed: ''
+      offset: 000041B0
+    - name: _KCODE__CONFIGMG_Call_Enumerator_Function
+      processed: ''
+      offset: 000041B8
+    - name: _KCODE__CONFIGMG_Get_Next_Log_Conf
+      processed: ''
+      offset: 000041C0
+    - name: _KCODE__CONFIGMG_Add_Res_Des
+      processed: ''
+      offset: 000041C8
+    - name: _KCODE__CONFIGMG_Add_Empty_Log_Conf
+      processed: ''
+      offset: 000041D0
+    - name: _KCODE__CONFIGMG_Set_Dependent_DevNode
+      processed: ''
+      offset: 000041D8
+    - name: _KCODE__CONFIGMG_Get_Dependent_DevNode
+      processed: ''
+      offset: '000041E0'
+    - name: _KCODE__CONFIGMG_Register_Arbitrator
+      processed: ''
+      offset: '000041E8'
+    - name: _KCODE__HeapAllocate
+      processed: ''
+      offset: 000041F0
+    - name: _KCODE__CONFIGMG_Get_Depth
+      processed: ''
+      offset: 000041F8
+    - name: _KCODE__CONFIGMG_Read_Registry_Value
+      processed: ''
+      offset: '00004200'
+    - name: _KCODE__CONFIGMG_Write_Registry_Value
+      processed: ''
+      offset: '00004208'
+    - name: _KCODE__RegEnumKey
+      processed: ''
+      offset: '00004210'
+    - name: _KCODE__RegQueryInfoKey
+      processed: ''
+      offset: '00004218'
+    - name: _KCODE__RegCloseKey
+      processed: ''
+      offset: '00004220'
+    - name: _KCODE__RegOpenKey
+      processed: ''
+      offset: '00004228'
+    - name: _KCODE__Sprintf
+      processed: ''
+      offset: '00004230'
+    - name: _KCODE__RegCreateKey
+      processed: ''
+      offset: '00004238'
+    - name: _KCODE__CONFIGMG_Create_DevNode
+      processed: ''
+      offset: '00004240'
+    - name: _KCODE__SHELL_HookSystemBroadcast
+      processed: ''
+      offset: '00004248'
+    - name: _KCODE__CONFIGMG_Locate_DevNode
+      processed: ''
+      offset: '00004250'
+    - name: _KCODE__SHELL_UnhookSystemBroadcast
+      processed: ''
+      offset: '00004258'
+    - name: _KCODE__FlushCaches
+      processed: ''
+      offset: '00004260'
+    - name: _KCODE__RegisterGARTHandler
+      processed: ''
+      offset: '00004268'
+    - name: _KCODE__Allocate_Temp_V86_Data_Area
+      processed: ''
+      offset: '00004270'
+    - name: _KCODE__Free_Temp_V86_Data_Area
+      processed: ''
+      offset: '00004278'
+    - name: _KCODE__lmemcpy
+      processed: ''
+      offset: '00004280'
+    - name: _KCODE__AttemptingSomethingDangerous
+      processed: ''
+      offset: '00004288'
+    - name: _KCODE__RegFlushKey
+      processed: ''
+      offset: '00004290'
+    - name: _KCODE__MapPhysToLinear
+      processed: ''
+      offset: '00004298'
+    - name: _KCODE__PELDR_AddExportTable
+      processed: ''
+      offset: 000042A0
+    - name: _KCODE__PELDR_RemoveExportTable
+      processed: ''
+      offset: 000042A8
+    - name: _KCODE__CONFIGMG_Enable_DevNode
+      processed: ''
+      offset: 000042B0
+    - name: _KCODE__CONFIGMG_Discard_Boot_Log_Conf
+      processed: ''
+      offset: 000042B8
+    - name: _KCODE__CONFIGMG_Get_Alloc_Log_Conf
+      processed: ''
+      offset: 000042C0
+    - name: _KCODE__CONFIGMG_Set_DevNode_PowerState
+      processed: ''
+      offset: 000042C8
+    - name: _KCODE__LinRegionLock
+      processed: ''
+      offset: 000042D0
+    - name: _KCODE__LinRegionUnLock
+      processed: ''
+      offset: 000042D8
+    - name: _KCODE__CONFIGMG_Set_DevNode_Problem
+      processed: ''
+      offset: '000042E0'
+    - name: _KCODE__CONFIGMG_Change_DevNode_Status
+      processed: ''
+      offset: '000042E8'
+    - name: _KCODE__CONFIGMG_Set_Device_Driver_Private_DWord
+      processed: ''
+      offset: 000042F0
+    - name: _KCODE__CONFIGMG_Get_Device_Driver_Private_DWord
+      processed: ''
+      offset: 000042F8
+    - name: _KCODE__HeapReAllocate
+      processed: ''
+      offset: '00004300'
+    - name: _KCODE__ACPI_GetNameSpaceObject
+      processed: ''
+      offset: '00004308'
+    - name: _KCODE__ACPI_FreeDataBuffs
+      processed: ''
+      offset: '00004310'
+    - name: _KCODE__ACPI_EvalPkgDataElement
+      processed: ''
+      offset: '00004318'
+    - name: _KCODE__ACPI_RunControlMethod
+      processed: ''
+      offset: '00004320'
+    - name: _KCODE__ACPI_GetObject
+      processed: ''
+      offset: '00004328'
+    - name: _KCODE__ACPI_DevNodeToNameSpace
+      processed: ''
+      offset: '00004330'
+    - name: _KCODE__RegQueryValueEx
+      processed: ''
+      offset: '00004338'
+    - name: _KCODE__CONFIGMG_Register_DevLoader
+      processed: ''
+      offset: '00004340'
+    - name: _KCODE__VPICD_Register_Trigger_Handler
+      processed: ''
+      offset: '00004348'
+    - name: _KCODE__CONFIGMG_Register_Device_Driver
+      processed: ''
+      offset: '00004350'
+    - name: _KCODE__CONFIGMG_Register_Enumerator
+      processed: ''
+      offset: '00004358'
+    - name: _KCODE__CONFIGMG_Set_DevNode_PowerCapabilities
+      processed: ''
+      offset: '00004360'
+    - name: _KCODE__CONFIGMG_Get_Bus_Info
+      processed: ''
+      offset: '00004368'
+    - name: _KCODE__CONFIGMG_Add_Remove_DevNode_Property
+      processed: ''
+      offset: '00004370'
+    - name: _KCODE__PELDR_FreeModule
+      processed: ''
+      offset: '00004378'
+    - name: _KCODE__PELDR_GetProcAddress
+      processed: ''
+      offset: '00004380'
+    - name: _KCODE__PELDR_LoadModule
+      processed: ''
+      offset: '00004388'
+    - name: _KCODE__CONFIGMG_Get_Private_DWord
+      processed: ''
+      offset: '00004390'
+    - name: _KCODE__CONFIGMG_Set_Private_DWord
+      processed: ''
+      offset: '00004398'
+    - name: _KCODE__GetRegistryKey
+      processed: ''
+      offset: 000043A0
+    - name: _KCODE__CONFIGMG_Get_Global_State
+      processed: ''
+      offset: 000043A8
+    - name: _KCODE__RegSetValueEx
+      processed: ''
+      offset: 000043B0
+    - name: _KCODE__PageModifyPermissions
+      processed: ''
+      offset: 000043B8
+    - name: _KCODE__PageAllocate
+      processed: ''
+      offset: 000043C0
+    - name: _KCODE__PageFree
+      processed: ''
+      offset: 000043C8
+    - name: _KCODE_MTRRSetPhysicalCacheTypeRange@12
+      processed: ''
+      offset: 000043D0
+    - name: _KCODE__VPICD_Clear_IR_Bits
+      processed: ''
+      offset: '000043E8'
+    - name: _KCODE__CONFIGMG_Yield
+      processed: ''
+      offset: 000043F0
+    - name: _KCODE__LinPageLock
+      processed: ''
+      offset: 000043F8
+    - name: _KCODE__PageCommitPhys
+      processed: ''
+      offset: '00004400'
+    - name: _KCODE__PageReserve
+      processed: ''
+      offset: '00004408'
+    - name: _KCODE__ACPI_WalkNameSpace
+      processed: ''
+      offset: '00004410'
+    - name: _KCODE__CONFIGMG_Get_Res_Des_Data_Size
+      processed: ''
+      offset: '00004418'
+    - name: _KCODE__CONFIGMG_Add_ID
+      processed: ''
+      offset: '00004420'
+    - name: _KCODE__CONFIGMG_Get_Device_ID
+      processed: ''
+      offset: '00004428'
+    - name: _KCODE__CONFIGMG_Remove_Unmarked_Children
+      processed: ''
+      offset: '00004430'
+    - name: _KCODE__CONFIGMG_Reset_Children_Marks
+      processed: ''
+      offset: '00004438'
+    - name: _KCODE__CONFIGMG_Free_Log_Conf
+      processed: ''
+      offset: '00004440'
+    - name: _KCODE__CONFIGMG_Reprocess_DevNode
+      processed: ''
+      offset: '00004448'
+    - name: _KCODE__CONFIGMG_System_Device_Power_State_Mapping
+      processed: ''
+      offset: '00004450'
+    - name: _KCODE_Hook_V86_Int_Chain@8
+      processed: ''
+      offset: '00004458'
+    - name: _KCODE_Unhook_V86_Int_Chain@8
+      processed: ''
+      offset: '00004474'
+    - name: _KCODE__CONFIGMG_Register_Enumerator_Function
+      processed: ''
+      offset: '00004490'
+    - name: _KCODE__CONFIGMG_Waking_Up_From_DevNode
+      processed: ''
+      offset: '00004498'
+    - name: _KCODE__CONFIGMG_Modify_Res_Des
+      processed: ''
+      offset: 000044A0
+    - name: _KCODE__CONFIGMG_Refilter_DevNode
+      processed: ''
+      offset: 000044A8
+    - name: _KCODE__RegEnumValue
+      processed: ''
+      offset: 000044B0
+    - name: _KCODE__RegDeleteKey
+      processed: ''
+      offset: 000044B8
+    - name: _KCODE__CONFIGMG_Lock
+      processed: ''
+      offset: 000044C0
+    - name: _KCODE__CONFIGMG_Unlock
+      processed: ''
+      offset: 000044C8
+    - name: _pGlobalIRQInfo
+      processed: ''
+      offset: '00004650'
+    - name: _dwPCIOptions
+      processed: ''
+      offset: 00004B70
+    - name: _fCantUseBIOS
+      processed: ''
+      offset: 00004B74
+    - name: _fUseMechanism1
+      processed: ''
+      offset: 00004B78
+    - name: _fUseDWORDOnly
+      processed: ''
+      offset: 00004B7C
+    - name: _PCI32Entry
+      processed: ''
+      offset: 00004B80
+    - name: _dwLockCount
+      processed: ''
+      offset: 00004B84
+    - name: _fLockMe
+      processed: ''
+      offset: 00004BB8
+    - name: _pfnPCIHookFunc
+      processed: ''
+      offset: 00004BBC
+    - name: _dnPCIRoot
+      processed: ''
+      offset: 00005B5C
+    - name: _dwBIOSAttributes
+      processed: ''
+      offset: 00005B60
+    - name: _pISABusDevNodeInfo
+      processed: ''
+      offset: 00005B64
+    - name: _EndLockable
+      processed: ''
+      offset: 000062B0
+  - num: '5'
+    name: _PDATA
+    offset: 000079A0
+    symbols:
+    - name: _lpszReturnCRName
+      processed: ''
+      offset: 0000014C
+    - name: _lpszArbFuncName
+      processed: ''
+      offset: '00000208'
+    - name: _fGARTInitialized
+      processed: ''
+      offset: '00001528'
+    - name: _ulGARTCapabilities
+      processed: ''
+      offset: 0000152C
+    - name: _pGARTRefData
+      processed: ''
+      offset: '00001530'
+    - name: _pGARTDevNodeInfo
+      processed: ''
+      offset: '00001534'
+    - name: _ghHandler
+      processed: ''
+      offset: '00001630'
+    - name: _hlPCIExportList
+      processed: ''
+      offset: '00001910'
+    - name: _wBestIRQs
+      processed: ''
+      offset: 00001CAC
+    - name: _IRQMP
+      processed: ''
+      offset: 00001CB0
+    - name: _dwGlobalIRQInfoCount
+      processed: ''
+      offset: 00001CC4
+    - name: _fACPISteering
+      processed: ''
+      offset: 00001CC8
+    - name: _pGlobalLinkInfo
+      processed: ''
+      offset: 00001CCC
+    - name: _aepIRQ
+      processed: ''
+      offset: 00001D80
+    - name: _hkPCI
+      processed: ''
+      offset: 00002C80
+    - name: _bNumDev
+      processed: ''
+      offset: '00002E04'
+    - name: _pROMInfoListHead
+      processed: ''
+      offset: '00002E08'
+    - name: _bMaxBus
+      processed: ''
+      offset: 00002EF8
+    - name: _bMaxFoundBus
+      processed: ''
+      offset: 00002EFC
+    - name: _dwPCIRootDepth
+      processed: ''
+      offset: 00002F00
+    - name: _lpszResourceName
+      processed: ''
+      offset: 0000336C
+    - name: _fBegin
+      processed: ''
+      offset: 00003C58
+    - name: _dnOldVGADevNode
+      processed: ''
+      offset: 00003C5C
+  - num: '6'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _GetOptionROMInfo
+      processed: ''
+      offset: '00000088'
+    - name: _PCIInit@0
+      processed: ''
+      offset: 0000017B
+    - name: _ICODE__ACPI_RegisterOpRegionCookedHandler
+      processed: ''
+      offset: '00000218'

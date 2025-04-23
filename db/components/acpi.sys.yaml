@@ -1,2411 +1,3750 @@
-filename: "acpi.sys"
+filename: acpi.sys
 #TODO: bring up more details from symdeb
-binary: "acpi.sys"
-description: ""
-note: ""
+binary: ACPI
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_LTEXT"
-        offset: "000004F0"
-        symbols:
-          - name: '_HandleEndPMApp@0'
-            offset: "00000000"            
-          - name: '_ACPIControl@0'
-            offset: "000000A0"            
-          - name: '_Debugger@0'
-            offset: "00000100"            
-          - name: '_DbgPrompt@12'
-            offset: "00000120"            
-          - name: '_ACPI_Set_Bus_Info_Hook'
-            offset: "00000158"            
-          - name: '_HookServices'
-            offset: "00000188"            
-          - name: '__HookServices'
-            offset: "00000188"            
-          - name: 'ACPI_CLS_Hook'
-            offset: "000001E4"            
-          - name: 'ACPI_BakColor_Hook'
-            offset: "0000020A"            
-          - name: '_ACPI_Unhook_Hooks'
-            offset: "00000224"            
-          - name: '_ACPIInterrupt'
-            offset: "00000260"            
-          - name: '_LCODE__Debug_Printf_Service'
-            offset: "000003F4"            
-          - name: '@CMDReadNumber@12'
-            offset: "00000410"            
-          - name: '@CMDMenu@8'
-            offset: "00000510"            
-          - name: '@CMDGetString@16'
-            offset: "000005D0"            
-          - name: '_LCODE__PCI_Read_Config'
-            offset: "00000674"            
-          - name: '_LCODE__PCI_Write_Config'
-            offset: "0000067C"            
-          - name: '_LCODE_VPICD_Phys_EOI@4'
-            offset: "00000684"            
-          - name: '_LCODE__Assert_Range'
-            offset: "00000694"            
-          - name: '_LCODE__VTD_Delay_Ex'
-            offset: "0000069C"            
-          - name: '@CMDInChar@0'
-            offset: "000006B0"            
-          - name: '_LCODE__lstrlen'
-            offset: "000006B8"            
-      - num: "2"
-        name: ".text"
-        offset: "00007730"
-        symbols:
-          - name: '_ValidateCurrentDevNode'
-            offset: "00000000"            
-          - name: '_SelectIndex'
-            offset: "00000050"            
-          - name: '_DebListDevNode'
-            offset: "00000080"            
-          - name: '_DebProcessDevNode'
-            offset: "000000D0"            
-          - name: '_ShowDevNode'
-            offset: "000000F0"            
-          - name: '_SelectByDevNode'
-            offset: "00000110"            
-          - name: '_SelectByIndex'
-            offset: "00000130"            
-          - name: '_ACPIDebugPrint'
-            offset: "00000190"            
-          - name: '_ACPIIdle'
-            offset: "000001E0"            
-          - name: '_ACPIIdleEvilPIIX4'
-            offset: "00000200"            
-          - name: '_EnterC1@0'
-            offset: "00000250"            
-          - name: '_EnterC2@0'
-            offset: "000002B0"            
-          - name: '_EnterC2NoPromotion@0'
-            offset: "00000360"            
-          - name: '_EnterC3@0'
-            offset: "000003E0"            
-          - name: '_ACPIDispatchAddDevice@8'
-            offset: "00000510"            
-          - name: '_ACPIIoctlAcquireGlobalLock@12'
-            offset: "00000700"            
-          - name: '_ACPIIoctlAsyncEvalControlMethod@12'
-            offset: "000007E0"            
-          - name: '_ACPIIoctlAsyncEvalControlMethodCompletion'
-            offset: "000008C0"            
-          - name: '_ACPIIoctlEvalControlMethod@12'
-            offset: "00000910"            
-          - name: '_ACPIIoctlEvalPostProcessing@8'
-            offset: "000009D0"            
-          - name: '_ACPIIoctlEvalPreProcessing@32'
-            offset: "00000D10"            
-          - name: '_ACPIIoctlRegisterOpRegionHandler@12'
-            offset: "00001050"            
-          - name: '_ACPIIoctlReleaseGlobalLock@12'
-            offset: "000011B0"            
-          - name: '_ACPIIoctlUnRegisterOpRegionHandler@12'
-            offset: "00001230"            
-          - name: '_ACPIIrpDispatchDeviceControl@8'
-            offset: "00001290"            
-          - name: '_ACPIInterruptDisable@0'
-            offset: "000014E0"            
-          - name: '_ACPIFixedEnables@0'
-            offset: "00001500"            
-          - name: '_ACPIInterruptEnablePMOnly@0'
-            offset: "00001550"            
-          - name: '_ACPIReadPm1Status@0'
-            offset: "00001570"            
-          - name: '_EnterACPIMode@0'
-            offset: "000015A0"            
-          - name: '_InitializeAndEnableACPI@4'
-            offset: "00001730"            
-          - name: '_EvaluateSimpleACPIControlMethod@8'
-            offset: "00001B60"            
-          - name: '_EvaluateFairlySimpleACPIControlMethod@20'
-            offset: "00001B80"            
-          - name: '_EvaluateACPIControlMethod@24'
-            offset: "00001C40"            
-          - name: '_EvaluateACPIPackageObject@16'
-            offset: "00001D10"            
-          - name: '_GetACPINameSpaceObjectHandle@16'
-            offset: "00001D60"            
-          - name: '_DisplayObjectData@24'
-            offset: "00001DF0"            
-          - name: '_iEvaluateACPIControlMethod@24'
-            offset: "00001E50"            
-          - name: '_FreeACPINameSpaceObjectDataBuffer@4'
-            offset: "00001F50"            
-          - name: '_ACPIClearGPRegisters@0'
-            offset: "00001F70"            
-          - name: '_ACPIIsGPEvent@0'
-            offset: "00001FD0"            
-          - name: '_ACPIAsyncGPECompletion'
-            offset: "00002030"            
-          - name: '_ACPIProcessGPEs@0'
-            offset: "000020D0"            
-          - name: '_ACPIEnableDisableGPEvents@4'
-            offset: "00002570"            
-          - name: '_ACPIEnableDisableWakeGPEvents@4'
-            offset: "000025E0"            
-          - name: '_ACPIGpeConnectVector@28'
-            offset: "00002650"            
-          - name: '_ACPIGpeDisconnectVector@4'
-            offset: "000027B0"            
-          - name: '_ACPIGpeEnableEvent@8'
-            offset: "00002850"            
-          - name: '_ACPIGpeDisableEvent@8'
-            offset: "000028F0"            
-          - name: '_ACPIGpeClearStatus@8'
-            offset: "000029A0"            
-          - name: '_GetGpeVectorEntry@4'
-            offset: "000029F0"            
-          - name: '_FreeGpeVectorEntry@4'
-            offset: "00002AF0"            
-          - name: '_InstallGpeVector@8'
-            offset: "00002B20"            
-          - name: '_RemoveGpeVector@4'
-            offset: "00002B70"            
-          - name: '_GetRefCountArrayIndex@4'
-            offset: "00002BB0"            
-          - name: '_InstallRemoveGpeIndex@16'
-            offset: "00002C00"            
-          - name: '_ArmDisarmObject@8'
-            offset: "00003070"            
-          - name: '_ACPIIsValidGpeIndex@4'
-            offset: "00003310"            
-          - name: '_ACPIGpeIndexToGpeRegister@4'
-            offset: "00003370"            
-          - name: '_ACPIGpeIndexToByteIndex@4'
-            offset: "000033C0"            
-          - name: '_ACPIGpeRegisterToGpeIndex@8'
-            offset: "00003400"            
-          - name: '_ACPIReadGpeStatusRegister@4'
-            offset: "00003450"            
-          - name: '_ACPIWriteGpeStatusRegister@8'
-            offset: "000034B0"            
-          - name: '_ACPIWriteGpeEnableRegister@8'
-            offset: "00003510"            
-          - name: '_ACPIDebugTraceIO@16'
-            offset: "00003570"            
-          - name: '_READ_PM1_ENABLE@0'
-            offset: "000035D0"            
-          - name: '_READ_PM1_STATUS@0'
-            offset: "00003670"            
-          - name: '_WRITE_PM1_ENABLE@4'
-            offset: "00003700"            
-          - name: '_CLEAR_PM1_STATUS_BITS@4'
-            offset: "00003790"            
-          - name: '_CLEAR_PM1_STATUS_REGISTER@0'
-            offset: "00003810"            
-          - name: '_READ_PM1_CONTROL_SPLIT@4'
-            offset: "000038C0"            
-          - name: '_READ_PM1_CONTROL@0'
-            offset: "00003920"            
-          - name: '_WRITE_PM1_CONTROL@12'
-            offset: "00003980"            
-          - name: '_ACPIIrpSuccess@8'
-            offset: "00003A80"            
-          - name: '_ACPIFilterDeviceControl@8'
-            offset: "00003AC0"            
-          - name: '_ACPIForwardIrpToTarget@8'
-            offset: "00003B00"            
-          - name: '_ACPIIrpInvalid@8'
-            offset: "00003B90"            
-          - name: '_ACPIBusIrpQueryInterface@8'
-            offset: "00003BD0"            
-          - name: '_ACPIDispatchIrp@8'
-            offset: "00003CF0"            
-          - name: '_ACPIPdoDispatchIrp@8'
-            offset: "00003E20"            
-          - name: '_GlobalLockEventHandler'
-            offset: "00003EB0"            
-          - name: '_ACPIAsyncAcquireGlobalLock@4'
-            offset: "00003F30"            
-          - name: '_ACPIReleaseGlobalLock@4'
-            offset: "000040F0"            
-          - name: '_ACPIHardwareGlobalLockReleased@0'
-            offset: "000041D0"            
-          - name: '_ACPIStartNextGlobalLockRequest@0'
-            offset: "00004200"            
-          - name: '_ACPIAcquireHardwareGlobalLock@4'
-            offset: "000042E0"            
-          - name: '_ACPIReleaseHardwareGlobalLock@0'
-            offset: "00004320"            
-          - name: '_ACPIRegisterForDeviceNotifications@12'
-            offset: "00004370"            
-          - name: '_ACPIUnregisterForDeviceNotifications@8'
-            offset: "00004400"            
-          - name: '_NotifyHandler'
-            offset: "00004490"            
-          - name: '_WorkerNotifyHandler'
-            offset: "00004520"            
-          - name: '_DeviceNotify@16'
-            offset: "00004600"            
-          - name: '_QueueNotify@24'
-            offset: "000047B0"            
-          - name: '_DequeueNotify@4'
-            offset: "000048D0"            
-          - name: '_NotifyWorkerThread@4'
-            offset: "00004960"            
-          - name: '_InternalRawAccessOpRegionHandler'
-            offset: "00004A90"            
-          - name: '_InternalOpRegionHandler'
-            offset: "00004BF0"            
-          - name: '_OpRgWorkerThread@4'
-            offset: "00004D10"            
-          - name: '_WorkerInternalOpRegionHandler'
-            offset: "00004E40"            
-          - name: '_QueueOpRegionAccess@32'
-            offset: "00004F80"            
-          - name: '_DequeueOpRegionAccess@4'
-            offset: "000050B0"            
-          - name: '_UnRegisterOperationRegionHandler@4'
-            offset: "00005140"            
-          - name: '_CreateRegList@0'
-            offset: "000051E0"            
-          - name: '_RegisterNewREGObject@8'
-            offset: "00005250"            
-          - name: '_FindRegObject@4'
-            offset: "000052F0"            
-          - name: '_EvalMatchingRegObjects@8'
-            offset: "00005370"            
-          - name: '_RegisterNewDevice@8'
-            offset: "00005420"            
-          - name: '_GetNumberOfPowerResources@4'
-            offset: "00005CD0"            
-          - name: '_GetPNSObjForPR@8'
-            offset: "00005DB0"            
-          - name: '_GetSystemLevelForPR@4'
-            offset: "00005EE0"            
-          - name: '_GetResourceOrderForPR@4'
-            offset: "00005F70"            
-          - name: '_CreateDeviceListHead@0'
-            offset: "00006000"            
-          - name: '_RegisterNewPowerResource@4'
-            offset: "00006050"            
-          - name: '_CreatePowerResourceListHead@0'
-            offset: "00006120"            
-          - name: '_UsePowerResource@8'
-            offset: "00006170"            
-          - name: '_ReleasePowerResource@4'
-            offset: "000062D0"            
-          - name: '_FindPowerResourceNode@4'
-            offset: "00006400"            
-          - name: '_FindDeviceListNode@4'
-            offset: "00006440"            
-          - name: '_FindDeviceListNodeByHandle@4'
-            offset: "00006480"            
-          - name: '_FindSpecialDeviceListNode@4'
-            offset: "000064C0"            
-          - name: '_WakeNotifyDevicesByGpeIndex@4'
-            offset: "00006560"            
-          - name: '_SetOSSpecificDeviceHandleInDeviceNode@8'
-            offset: "00006600"            
-          - name: '_CheckForSpecialDevices@8'
-            offset: "00006670"            
-          - name: '_BuildDStateSStateMatrixForDevice@12'
-            offset: "00006740"            
-          - name: '_DoFinalDeviceProcessing@0'
-            offset: "00006A60"            
-          - name: '_IdentifyCriticalDevice@4'
-            offset: "00006AC0"            
-          - name: '_ApplyRemoveDeviceWakePower@8'
-            offset: "00006B40"            
-          - name: '_ACPISetRTCAlarmWithTimeFields@4'
-            offset: "00006C90"            
-          - name: '_HexToBCD@4'
-            offset: "00006FB0"            
-          - name: '_BCDToHex@4'
-            offset: "00007000"            
-          - name: '_SetSystemIndicator@8'
-            offset: "00007050"            
-          - name: '_DisableACPI@0'
-            offset: "00007210"            
-          - name: '_RunControlMethod@20'
-            offset: "00007290"            
-          - name: '_ACPIGetTimerValue@0'
-            offset: "00007430"            
-          - name: '_ArmACPIWakeDevices@0'
-            offset: "00007480"            
-          - name: '_ArmACPILid@4'
-            offset: "000074E0"            
-          - name: '_DisArmACPIWakeDevices@0'
-            offset: "00007560"            
-          - name: '_PrepareForShutdown@0'
-            offset: "000075D0"            
-          - name: '_EnterSleepState@4'
-            offset: "00007670"            
-          - name: '_AcpiResumeComplete@0'
-            offset: "00007B40"            
-          - name: '_SetTargetedSleepingState@4'
-            offset: "00007B70"            
-          - name: '_ACPIInterruptTestOurs@0'
-            offset: "00007C70"            
-          - name: '_ACPIRegLocalCopyString@12'
-            offset: "00007CF0"            
-          - name: '_ReadAMLFileEntry@8'
-            offset: "00007D60"            
-          - name: '_ACPIRegReadAMLRegistryEntry@4'
-            offset: "00007F50"            
-          - name: '_ACPIRegReadEntireAcpiTable@8'
-            offset: "00008210"            
-          - name: '_ACPIRegDumpAcpiTable@16'
-            offset: "00008460"            
-          - name: '_ACPIRegDumpAcpiTables@0'
-            offset: "000085F0"            
-          - name: '_PowerButtonNotify@8'
-            offset: "000086D0"            
-          - name: '_SleepButtonNotify@8'
-            offset: "00008720"            
-          - name: '_LidNotify@8'
-            offset: "00008770"            
-          - name: '_IsLidOpen@4'
-            offset: "00008850"            
-          - name: '_ACPIButtonEnumerate@8'
-            offset: "000088D0"            
-          - name: '_ACPISetDeviceInterface@8'
-            offset: "00008A90"            
-          - name: '_ACPICMButtonNotify@8'
-            offset: "00008B70"            
-          - name: '_ACPIButtonEvent@12'
-            offset: "00008C00"            
-          - name: '_ACPISwitchAddDevice@8'
-            offset: "00008D20"            
-          - name: '_ACPIDispatchSwitchIrp@8'
-            offset: "00008EA0"            
-          - name: '_ACPIButtonPNP@8'
-            offset: "00008FD0"            
-          - name: '_ButtonPowerDispatch@8'
-            offset: "000090A0"            
-          - name: '_AMLIDebugger@4'
-            offset: "00009140"            
-          - name: '_DebugHelp'
-            offset: "000091C0"            
-          - name: '_DebugExpr'
-            offset: "0000A010"            
-          - name: '_IsNumber'
-            offset: "0000A1C0"            
-          - name: '_AddBrkPt'
-            offset: "0000A210"            
-          - name: '_ClearBrkPt'
-            offset: "0000A2D0"            
-          - name: '_SetBrkPtState'
-            offset: "0000A330"            
-          - name: '_EnableDisableBP'
-            offset: "0000A3C0"            
-          - name: '_DebugBC'
-            offset: "0000A4E0"            
-          - name: '_DebugBD'
-            offset: "0000A610"            
-          - name: '_DebugBE'
-            offset: "0000A640"            
-          - name: '_DebugBL'
-            offset: "0000A670"            
-          - name: '_DebugBP'
-            offset: "0000A7B0"            
-          - name: '_DebugClearLog'
-            offset: "0000A860"            
-          - name: '_DumpData'
-            offset: "0000A920"            
-          - name: '_DebugDumpData'
-            offset: "0000AC90"            
-          - name: '_DebugD'
-            offset: "0000AD70"            
-          - name: '_DebugDB'
-            offset: "0000ADB0"            
-          - name: '_DebugDW'
-            offset: "0000ADE0"            
-          - name: '_DebugDD'
-            offset: "0000AE10"            
-          - name: '_DebugDA'
-            offset: "0000AE40"            
-          - name: '_DebugDC'
-            offset: "0000AE70"            
-          - name: '_DebugDumpHeap'
-            offset: "0000AED0"            
-          - name: '_DumpHeap'
-            offset: "0000B050"            
-          - name: '_DebugDumpStack'
-            offset: "0000B170"            
-          - name: '_DebugDumpLog'
-            offset: "0000B2F0"            
-          - name: '_DumpStack'
-            offset: "0000B890"            
-          - name: '_DebugDumpNameSpace'
-            offset: "0000BA70"            
-          - name: '_DebugDumpObject'
-            offset: "0000BBF0"            
-          - name: '_DebugEditMem'
-            offset: "0000BCA0"            
-          - name: '_DebugFindNSObj'
-            offset: "0000C0F0"            
-          - name: '_FindNSObj'
-            offset: "0000C220"            
-          - name: '_InPort'
-            offset: "0000C2D0"            
-          - name: '_DebugInPort'
-            offset: "0000C370"            
-          - name: '_DebugI'
-            offset: "0000C4D0"            
-          - name: '_DebugIW'
-            offset: "0000C500"            
-          - name: '_DebugID'
-            offset: "0000C530"            
-          - name: '_DebugQuit'
-            offset: "0000C560"            
-          - name: '_DebugListCtxts'
-            offset: "0000C600"            
-          - name: '_DebugLN'
-            offset: "0000C7C0"            
-          - name: '_DummyCallBack'
-            offset: "0000C890"            
-          - name: '_DebugNotify'
-            offset: "0000C8A0"            
-          - name: '_OutPort'
-            offset: "0000CAB0"            
-          - name: '_DebugOutPort'
-            offset: "0000CB40"            
-          - name: '_DebugO'
-            offset: "0000CC40"            
-          - name: '_DebugOW'
-            offset: "0000CC70"            
-          - name: '_DebugOD'
-            offset: "0000CCA0"            
-          - name: '_PrintSymbol'
-            offset: "0000CCD0"            
-          - name: '_DebugStep'
-            offset: "0000CD50"            
-          - name: '_DumpContext'
-            offset: "0000CDC0"            
-          - name: '_DebugDumpContext'
-            offset: "0000D200"            
-          - name: '_DebugSet'
-            offset: "0000D300"            
-          - name: '_DebugSetLogSize'
-            offset: "0000D440"            
-          - name: '_SetLogSize'
-            offset: "0000D4C0"            
-          - name: '_DebugTrace'
-            offset: "0000D570"            
-          - name: '_DebugUnAsm'
-            offset: "0000D5E0"            
-          - name: '_DebugRunMethod'
-            offset: "0000D850"            
-          - name: '_RunMethodCallBack'
-            offset: "0000DB10"            
-          - name: '_AddObjSymbol'
-            offset: "0000DB90"            
-          - name: '_FreeSymList'
-            offset: "0000DCD0"            
-          - name: '_FindObjSymbol'
-            offset: "0000DD20"            
-          - name: '_CheckBP'
-            offset: "0000DDA0"            
-          - name: '_PrintBuffData'
-            offset: "0000DE00"            
-          - name: '_PrintIndent'
-            offset: "0000DF10"            
-          - name: '_PrintObject'
-            offset: "0000DFE0"            
-          - name: '_LogEvent'
-            offset: "0000E1C0"            
-          - name: '_LogSchedEvent'
-            offset: "0000E2B0"            
-          - name: '_LogError'
-            offset: "0000E3B0"            
-          - name: '_CatError'
-            offset: "0000E440"            
-          - name: '_ConPrintf'
-            offset: "0000E4C0"            
-          - name: '_ConPrompt'
-            offset: "0000E520"            
-          - name: '_DumpMemObjCounts'
-            offset: "0000E560"            
-          - name: '_IsTraceOn'
-            offset: "0000E830"            
-          - name: '_IsTrigPt'
-            offset: "0000E900"            
-          - name: '_TraceIndent'
-            offset: "0000E980"            
-          - name: '_SetTrace'
-            offset: "0000E9D0"            
-          - name: '_AddTraceTrigPts'
-            offset: "0000EA70"            
-          - name: '_ZapTraceTrigPts'
-            offset: "0000EB70"            
-          - name: '_Debugger'
-            offset: "0000EC50"            
-          - name: '_DbgExecuteCmd'
-            offset: "0000ECB0"            
-          - name: '_UnAsmScope'
-            offset: "0000EDF0"            
-          - name: '_Indent'
-            offset: "0000EF40"            
-          - name: '_FindOpClass'
-            offset: "0000EF90"            
-          - name: '_FindOpTerm'
-            offset: "0000EFE0"            
-          - name: '_FindKeywordTerm'
-            offset: "0000F060"            
-          - name: '_UnAsmOpcode'
-            offset: "0000F120"            
-          - name: '_UnAsmDataObj'
-            offset: "0000F320"            
-          - name: '_UnAsmNameObj'
-            offset: "0000F4C0"            
-          - name: '_UnAsmNameTail'
-            offset: "0000F6F0"            
-          - name: '_UnAsmTermObj'
-            offset: "0000F840"            
-          - name: '_UnAsmArgs'
-            offset: "0000F990"            
-          - name: '_UnAsmSuperName'
-            offset: "0000FD10"            
-          - name: '_UnAsmDataList'
-            offset: "0000FE40"            
-          - name: '_UnAsmPkgList'
-            offset: "0000FF40"            
-          - name: '_UnAsmFieldList'
-            offset: "000100C0"            
-          - name: '_UnAsmField'
-            offset: "000101A0"            
-          - name: '_DbgParseArgs'
-            offset: "000102E0"            
-          - name: '_DbgParseOneArg'
-            offset: "00010360"            
-          - name: '_DbgMatchArg'
-            offset: "00010620"            
-          - name: '_RtlAssert@16'
-            offset: "000106EE"            
-          - name: '_IoCreateSymbolicLink@8'
-            offset: "000106F4"            
-          - name: '_IoCreateDevice@28'
-            offset: "000106FA"            
-          - name: '_RtlInitUnicodeString@8'
-            offset: "00010700"            
-          - name: '_DbgPrint'
-            offset: "00010706"            
-          - name: '_vsprintf'
-            offset: "0001070C"            
-          - name: '_ZwPowerInformation@20'
-            offset: "00010712"            
-          - name: '_ExAllocatePoolWithTag@12'
-            offset: "00010718"            
-          - name: '_ExFreePool@4'
-            offset: "0001071E"            
-          - name: '@KfLowerIrql@4'
-            offset: "00010724"            
-          - name: '@KfRaiseIrql@4'
-            offset: "0001072A"            
-          - name: '_DbgBreakPoint@0'
-            offset: "00010730"            
-          - name: '_KeGetCurrentIrql@0'
-            offset: "00010736"            
-          - name: '_READ_PORT_ULONG@4'
-            offset: "0001073C"            
-          - name: '_READ_PORT_UCHAR@4'
-            offset: "00010742"            
-          - name: '_WRITE_PORT_UCHAR@8'
-            offset: "00010748"            
-          - name: '@InterlockedCompareExchange@12'
-            offset: "0001074E"            
-          - name: '_IoAttachDeviceToDeviceStack@8'
-            offset: "00010754"            
-          - name: '_ZwClose@4'
-            offset: "0001075A"            
-          - name: '_ZwQueryValueKey@24'
-            offset: "00010760"            
-          - name: '_IoOpenDeviceRegistryKey@16'
-            offset: "00010766"            
-          - name: '@IofCompleteRequest@8'
-            offset: "0001076C"            
-          - name: '_MmUnlockPagableImageSection@4'
-            offset: "00010772"            
-          - name: '_MmLockPagableDataSection@4'
-            offset: "00010778"            
-          - name: '@KfReleaseSpinLock@8'
-            offset: "0001077E"            
-          - name: '@KfAcquireSpinLock@4'
-            offset: "00010784"            
-          - name: '_KeInitializeSpinLock@4'
-            offset: "0001078A"            
-          - name: '_READ_PORT_USHORT@4'
-            offset: "00010790"            
-          - name: '_WRITE_PORT_USHORT@8'
-            offset: "00010796"            
-          - name: '_MmMapIoSpace@16'
-            offset: "0001079C"            
-          - name: '_MmUnmapIoSpace@8'
-            offset: "000107A2"            
-          - name: '@IofCallDriver@8'
-            offset: "000107A8"            
-          - name: '_RtlCompareMemory@12'
-            offset: "000107AE"            
-          - name: '@InterlockedDecrement@4'
-            offset: "000107B4"            
-          - name: '@InterlockedIncrement@4'
-            offset: "000107BA"            
-          - name: '@ExfInterlockedRemoveHeadList@8'
-            offset: "000107C0"            
-          - name: '_ExQueueWorkItem@8'
-            offset: "000107C6"            
-          - name: '_RtlTimeToTimeFields@8'
-            offset: "000107CC"            
-          - name: '_WRITE_PORT_ULONG@8'
-            offset: "000107D2"            
-          - name: '_KeInitializeMutex@8'
-            offset: "000107D8"            
-          - name: '_KeWaitForSingleObject@20'
-            offset: "000107DE"            
-          - name: '_KeReleaseMutex@8'
-            offset: "000107E4"            
-          - name: '_sprintf'
-            offset: "000107EA"            
-          - name: '_IoDeleteDevice@4'
-            offset: "000107F0"            
-          - name: '_RtlFreeUnicodeString@4'
-            offset: "000107F6"            
-          - name: '_IoSetDeviceInterfaceState@8'
-            offset: "000107FC"            
-          - name: '_IoRegisterDeviceInterface@16'
-            offset: "00010802"            
-          - name: '_IoGetDeviceProperty@20'
-            offset: "00010808"            
-          - name: '_PoStartNextPowerIrp@4'
-            offset: "0001080E"            
-          - name: '_KeGetCurrentThread@0'
-            offset: "00010814"            
-          - name: '_KeInitializeTimer@4'
-            offset: "0001081A"            
-          - name: '_KeInitializeEvent@12'
-            offset: "00010820"            
-          - name: '_KeSetEvent@12'
-            offset: "00010826"            
-          - name: '_KeSetTimer@16'
-            offset: "0001082C"            
-          - name: '_KeCancelTimer@4'
-            offset: "00010832"            
-          - name: '_KeInitializeDpc@12'
-            offset: "00010838"            
-          - name: '_KeStallExecutionProcessor@4'
-            offset: "0001083E"            
-      - num: "3"
-        name: "_PTEXT"
-        offset: "00007890"
-        symbols:
-          - name: '_InsertSleepScanCode'
-            offset: "00000000"            
-          - name: '_InsertNullScanCode'
-            offset: "00000021"            
-          - name: '_CheckPagerType'
-            offset: "00000040"            
-          - name: '_W32_Device_Init'
-            offset: "00000058"            
-          - name: '__ACPI_Get_Version@8'
-            offset: "00000074"            
-          - name: '__ACPI_SetSystemIndicator@16'
-            offset: "00000093"            
-      - num: "4"
-        name: "W32"
-        offset: "00007920"
-        symbols:
-          - name: '_W32_ACPI_Get_Version'
-            offset: "00000000"            
-          - name: '_W32_ACPI_SetSystemIndicator'
-            offset: "0000000E"            
-      - num: "5"
-        name: "PNP"
-        offset: "00008A50"
-        symbols:
-          - name: '_ConfigureCPUHandlers@0'
-            offset: "00000000"            
-          - name: '_UserWantsToSleep@0'
-            offset: "00000100"            
-          - name: '_OSOpenFile'
-            offset: "0000010C"            
-          - name: '_OSCloseFile'
-            offset: "00000219"            
-          - name: '_OSReadFile'
-            offset: "000002A6"            
-          - name: '_OSWriteFile'
-            offset: "000003AE"            
-          - name: 'DOSLSeek'
-            offset: "000004BA"            
-          - name: '_CCODE__HeapFree'
-            offset: "000004F8"            
-          - name: '_CCODE__CONFIGMG_Call_At_Appy_Time'
-            offset: "00000500"            
-          - name: '_CCODE__HeapAllocate'
-            offset: "00000508"            
-          - name: '_CCODE_SHELL_SYSMODAL_Message@16'
-            offset: "00000510"            
-          - name: '_CCODE__lstrlen'
-            offset: "00000534"            
-          - name: '_CCODE__lstrcpyn'
-            offset: "0000053C"            
-          - name: '_CCODE_Get_Sys_VM_Handle'
-            offset: "00000544"            
-          - name: '_CCODE__Sprintf'
-            offset: "00000550"            
-          - name: '_CCODE__CONFIGMG_Register_Device_Driver'
-            offset: "00000558"            
-          - name: '_CCODE__CONFIGMG_Change_DevNode_Status'
-            offset: "00000560"            
-          - name: '_CCODE__CONFIGMG_Register_Enumerator'
-            offset: "00000568"            
-          - name: '_CCODE_VPICD_Force_Default_Behavior@4'
-            offset: "00000570"            
-          - name: '_CCODE_Get_Cur_VM_Handle'
-            offset: "00000580"            
-          - name: '_CCODE_VXDLDR_LoadDevice@16'
-            offset: "0000058C"            
-          - name: '_CCODE_VMM_Add_DDB@4'
-            offset: "000005B0"            
-          - name: '_CCODE__Debug_Printf_Service'
-            offset: "000005C4"            
-          - name: '_CCODE__CONFIGMG_Assert_Structure'
-            offset: "000005D8"            
-          - name: '_CCODE__CONFIGMG_Debug_DevNode'
-            offset: "000005E0"            
-          - name: '_CCODE__CONFIGMG_Recompute_HW_Prof'
-            offset: "000005E8"            
-          - name: '_CCODE__CONFIGMG_Reenumerate_DevNode'
-            offset: "000005F0"            
-          - name: '_CCODE__CONFIGMG_Fail_Change_HW_Prof'
-            offset: "000005F8"            
-          - name: '_CCODE__CONFIGMG_Query_Change_HW_Prof'
-            offset: "00000600"            
-          - name: '_CCODE__CONFIGMG_Remove_SubTree'
-            offset: "00000608"            
-          - name: '_CCODE__CONFIGMG_Query_Remove_SubTree'
-            offset: "00000610"            
-          - name: '_CCODE__CONFIGMG_Yield'
-            offset: "00000618"            
-          - name: '_CCODE__VPOWERD_Set_System_Power_State'
-            offset: "00000620"            
-          - name: '_CCODE__VPOWERD_Get_Power_Status'
-            offset: "00000628"            
-          - name: '_CCODE__CONFIGMG_CallBack_At_Appy_Time'
-            offset: "00000630"            
-          - name: '_CCODE__CONFIGMG_Get_Global_State'
-            offset: "00000638"            
-          - name: '_CCODE__CONFIGMG_Read_Registry_Value'
-            offset: "00000640"            
-          - name: '_CCODE__CONFIGMG_Get_Next_Res_Des'
-            offset: "00000648"            
-          - name: '_CCODE__CONFIGMG_Get_First_Log_Conf'
-            offset: "00000650"            
-          - name: '_CCODE__CONFIGMG_Get_Sibling'
-            offset: "00000658"            
-          - name: '_CCODE__CONFIGMG_Get_Private_DWord'
-            offset: "00000660"            
-          - name: '_CCODE__CONFIGMG_Get_Child'
-            offset: "00000668"            
-          - name: '_CCODE__VPOWERD_Register_Power_Handler'
-            offset: "00000670"            
-          - name: '_CCODE__VPOWERD_Transfer_Control'
-            offset: "00000678"            
-          - name: '_CCODE__CONFIGMG_Set_DevNode_Problem'
-            offset: "00000680"            
-          - name: '_CCODE__CONFIGMG_Set_Private_DWord'
-            offset: "00000688"            
-          - name: '_CCODE__CONFIGMG_Get_Bus_Info'
-            offset: "00000690"            
-          - name: '_CCODE__CONFIGMG_Get_Parent'
-            offset: "00000698"            
-          - name: '_CCODE__CONFIGMG_Set_DevNode_PowerCapabilities'
-            offset: "000006A0"            
-          - name: '_CCODE__CONFIGMG_System_Device_Power_State_Mapping'
-            offset: "000006A8"            
-          - name: '_CCODE__CONFIGMG_Get_DevNode_Status'
-            offset: "000006B0"            
-          - name: '_CCODE__CONFIGMG_CM_To_ISAPNP'
-            offset: "000006B8"            
-          - name: '_CCODE__lmemcpy'
-            offset: "000006C0"            
-          - name: '_CCODE__VPICD_Clear_IR_Bits'
-            offset: "000006C8"            
-          - name: '_CCODE__PCI_Lock_Unlock'
-            offset: "000006D0"            
-          - name: '_CCODE__CONFIGMG_Add_ID'
-            offset: "000006D8"            
-          - name: '_CCODE__CONFIGMG_Set_Dependent_DevNode'
-            offset: "000006E0"            
-          - name: '_CCODE__CONFIGMG_Disable_DevNode'
-            offset: "000006E8"            
-          - name: '_CCODE__CONFIGMG_ISAPNP_To_CM'
-            offset: "000006F0"            
-          - name: '_CCODE__CONFIGMG_Set_Bus_Info'
-            offset: "000006F8"            
-          - name: '_CCODE__CONFIGMG_Create_DevNode'
-            offset: "00000700"            
-          - name: '_CCODE__CONFIGMG_Remove_Unmarked_Children'
-            offset: "00000708"            
-          - name: '_CCODE__CONFIGMG_Reset_Children_Marks'
-            offset: "00000710"            
-          - name: '_CCODE__AttemptingSomethingDangerous'
-            offset: "00000718"            
-          - name: '_CCODE__CONFIGMG_Get_Device_ID'
-            offset: "00000720"            
-          - name: '_CCODE_VMM_GetSystemInitState'
-            offset: "00000728"            
-          - name: '_CCODE__CONFIGMG_Get_Device_Driver_Private_DWord'
-            offset: "00000730"            
-          - name: '_CCODE_Cancel_Time_Out@4'
-            offset: "00000738"            
-          - name: '_CCODE__NtKernPhysicalDeviceObjectToDevNode'
-            offset: "00000748"            
-          - name: '_CCODE__CONFIGMG_Waking_Up_From_DevNode'
-            offset: "00000750"            
-          - name: '_CCODE__Set_Global_Time_Out_Ex'
-            offset: "00000758"            
-          - name: '_CCODE__CONFIGMG_Add_Remove_DevNode_Property'
-            offset: "00000760"            
-          - name: '_CCODE_Get_Cur_Thread_Handle'
-            offset: "00000768"            
-          - name: '_CCODE_Call_Restricted_Event@24'
-            offset: "00000774"            
-          - name: '_CCODE__VPICD_Register_Trigger_Handler'
-            offset: "000007A0"            
-          - name: '_CCODE_VPICD_Physically_Unmask@4'
-            offset: "000007A8"            
-          - name: '_CCODE_VPICD_Physically_Mask@4'
-            offset: "000007B8"            
-          - name: '_CCODE_VPICD_Virtualize_IRQ@4'
-            offset: "000007C8"            
-          - name: '_CCODE__CONFIGMG_Add_Res_Des'
-            offset: "000007DC"            
-          - name: '_CCODE__CONFIGMG_Add_Empty_Log_Conf'
-            offset: "000007E4"            
-          - name: '_CCODE__FlushCaches'
-            offset: "000007EC"            
-          - name: '_CCODE__PageCommitPhys'
-            offset: "000007F4"            
-          - name: '_CCODE__PageFree'
-            offset: "000007FC"            
-          - name: '_CCODE__LinRegionUnLock'
-            offset: "00000804"            
-          - name: '_CCODE__LinRegionLock'
-            offset: "0000080C"            
-          - name: '_CCODE__PageReserve'
-            offset: "00000814"            
-          - name: '_CCODE__PageAllocate'
-            offset: "0000081C"            
-          - name: '_CCODE_Get_Machine_Info@16'
-            offset: "00000824"            
-          - name: '_CCODE__RegCloseKey'
-            offset: "00000858"            
-          - name: '_CCODE__RegCreateKey'
-            offset: "00000860"            
-          - name: '_CCODE__RegOpenKey'
-            offset: "00000868"            
-          - name: '_CCODE__RegEnumKey'
-            offset: "00000870"            
-          - name: '_CCODE__RegQueryValueEx'
-            offset: "00000878"            
-          - name: '_CCODE__RegSetValueEx'
-            offset: "00000880"            
-          - name: '_CCODE__CONFIGMG_Write_Registry_Value'
-            offset: "00000888"            
-      - num: "6"
-        name: "_LDATA"
-        offset: "00008AA0"
-        symbols:
-          - name: '_IgnoreHook'
-            offset: "0000000C"            
-      - num: "7"
-        name: ".rdata"
-        offset: "00008B60"
-        symbols:
-          - name: '_GUID_ACPI_INTERFACE_STANDARD'
-            offset: "00000058"            
-          - name: '_GUID_DEVICE_BATTERY'
-            offset: "00000068"            
-          - name: '_GUID_DEVICE_SYS_BUTTON'
-            offset: "00000078"            
-          - name: '_GUID_DEVICE_LID'
-            offset: "00000088"            
-          - name: '_GUID_DEVICE_THERMAL_ZONE'
-            offset: "00000098"            
-          - name: '_GUID_CLASS_INPUT'
-            offset: "000000A8"            
-      - num: "8"
-        name: ".data"
-        offset: "000093B0"
-        symbols:
-          - name: '_CpuPowerStateHandlers'
-            offset: "00000360"            
-          - name: '_C1Max'
-            offset: "0000036C"            
-          - name: '_C2Max'
-            offset: "00000370"            
-          - name: '_C3Min'
-            offset: "00000374"            
-          - name: '_C3Max'
-            offset: "00000378"            
-          - name: '_widevaluestring'
-            offset: "000004E8"            
-          - name: '_AcpiFdoIrpDispatch'
-            offset: "000004F0"            
-          - name: '_SpecialDeviceID'
-            offset: "00000510"            
-          - name: '_SpecialInstanceID'
-            offset: "00000520"            
-          - name: '_HexDigit'
-            offset: "00000AF0"            
-          - name: '_FirstSetLeftBit'
-            offset: "00000B08"            
-          - name: '_pElcr0'
-            offset: "00000F78"            
-          - name: '_pElcr1'
-            offset: "00000F7C"            
-          - name: '_RegionSpaceHandlersNeeded'
-            offset: "000019D4"            
-          - name: '_DoAcpiTableDump'
-            offset: "00004550"            
-          - name: '_ACPIFixedButtonId'
-            offset: "00004A38"            
-          - name: '_ACPIFixedButtonDeviceName'
-            offset: "00004A50"            
-          - name: '_AcpiFixedButtonIrpDispatch'
-            offset: "00004A88"            
-          - name: '_AcpiPowerButtonIrpDispatch'
-            offset: "00004AA8"            
-          - name: '_AcpiSleepButtonIrpDispatch'
-            offset: "00004AC8"            
-          - name: '_AcpiLidIrpDispatch'
-            offset: "00004AE8"            
-          - name: '_ArgsHelp'
-            offset: "00004E58"            
-          - name: '_ArgsBC'
-            offset: "00004E88"            
-          - name: '_ArgsBD'
-            offset: "00004EB8"            
-          - name: '_ArgsBE'
-            offset: "00004EE8"            
-          - name: '_ArgsBP'
-            offset: "00004F18"            
-          - name: '_ArgsD'
-            offset: "00004F48"            
-          - name: '_ArgsDB'
-            offset: "00004F90"            
-          - name: '_ArgsDW'
-            offset: "00004FD8"            
-          - name: '_ArgsDD'
-            offset: "00005020"            
-          - name: '_ArgsDA'
-            offset: "00005068"            
-          - name: '_ArgsDumpHeap'
-            offset: "000050B0"            
-          - name: '_ArgsDumpStack'
-            offset: "000050E0"            
-          - name: '_ArgsDNS'
-            offset: "00005128"            
-          - name: '_ArgsDumpObject'
-            offset: "00005170"            
-          - name: '_ArgsEditMem'
-            offset: "000051A0"            
-          - name: '_ArgsFindNS'
-            offset: "000051D0"            
-          - name: '_ArgsI'
-            offset: "00005200"            
-          - name: '_ArgsIW'
-            offset: "00005230"            
-          - name: '_ArgsID'
-            offset: "00005260"            
-          - name: '_ArgsLN'
-            offset: "00005290"            
-          - name: '_ArgsNotify'
-            offset: "000052C0"            
-          - name: '_ArgsO'
-            offset: "000052F0"            
-          - name: '_ArgsOW'
-            offset: "00005320"            
-          - name: '_ArgsOD'
-            offset: "00005350"            
-          - name: '_ArgsDumpCtxt'
-            offset: "00005380"            
-          - name: '_ArgsRunMethod'
-            offset: "000053B0"            
-          - name: '_ArgsSetOptions'
-            offset: "000053E0"            
-          - name: '_ArgsSetTrace'
-            offset: "00005530"            
-          - name: '_ArgsUnAsm'
-            offset: "000055C0"            
-          - name: '_DbgCmds'
-            offset: "000055F0"            
-          - name: '_pszTokenSeps'
-            offset: "000096D8"            
-          - name: '_pszSwitchChars'
-            offset: "00009A5C"            
-          - name: '_pszOptionSeps'
-            offset: "00009A60"            
-          - name: '_TermTable'
-            offset: "00009B60"            
-          - name: '_OpClassTable'
-            offset: "0000AF48"            
-          - name: '_ExOpClassTable'
-            offset: "0000B048"            
-          - name: '_CurrentCpuPowerStateHandlerIndex'
-            offset: "0000BBB0"            
-          - name: '_CurrentTimer'
-            offset: "0000BBB8"            
-          - name: '_LastStateLength'
-            offset: "0000BBC0"            
-          - name: '_C1Hit'
-            offset: "0000BBC4"            
-          - name: '_C2Hit'
-            offset: "0000BBC8"            
-          - name: '_C3Hit'
-            offset: "0000BBCC"            
-          - name: '_newDeviceObject'
-            offset: "0000BBD0"            
-          - name: '_ACPIDriverObject'
-            offset: "0000BBD4"            
-          - name: '_LockRequest'
-            offset: "0000BBD8"            
-          - name: '_GpeWake'
-            offset: "0000BBDC"            
-          - name: '_GpeEnable'
-            offset: "0000BBE0"            
-          - name: '_GpeCurEnable'
-            offset: "0000BBE4"            
-          - name: '_GpeIsLevel'
-            offset: "0000BBE8"            
-          - name: '_GpeHandlerType'
-            offset: "0000BBEC"            
-          - name: '_GpeMap'
-            offset: "0000BBF0"            
-          - name: '_GpeVectorTable'
-            offset: "0000BBF4"            
-          - name: '_GpeVectorFree'
-            offset: "0000BBF8"            
-          - name: '_GpeVectorTableSize'
-            offset: "0000BBFC"            
-          - name: '_AcpiInformation'
-            offset: "0000BC00"            
-          - name: '_pRegNodeListHead'
-            offset: "0000BC08"            
-          - name: '_DeviceListHead'
-            offset: "0000BC0C"            
-          - name: '_PowerResourceListHead'
-            offset: "0000BC10"            
-          - name: '_ThermalInfo'
-            offset: "0000BC14"            
-          - name: '_ThermalInitialized'
-            offset: "0000BC18"            
-          - name: '_Throttling'
-            offset: "0000BC1C"            
-          - name: '_FixedButtonDeviceObject'
-            offset: "0000BC20"            
-          - name: '_gUserHasArrived'
-            offset: "0000BC24"            
-          - name: '_gDebugger'
-            offset: "0000C040"            
-          - name: '_dwCmdArg'
-            offset: "0000C1D0"            
-          - name: '_fRunningMethod'
-            offset: "0000C228"            
-          - name: '_giTraceLevel'
-            offset: "0000C2E0"            
-          - name: '_giIndent'
-            offset: "0000C2E4"            
-          - name: '_aszTrigPtBuff'
-            offset: "0000C2E8"            
-          - name: '_dwcTriggers'
-            offset: "0000C428"            
-          - name: '_gicCode'
-            offset: "0000C430"            
-          - name: '_giLevel'
-            offset: "0000C434"            
-          - name: '_gpnsCurUnAsmScope'
-            offset: "0000C438"            
-          - name: '_pm1a'
-            offset: "0000C43C"            
-          - name: '_pm1b'
-            offset: "0000C43E"            
-          - name: '_gCurrentSleepingState'
-            offset: "0000C440"            
-          - name: '_TimerInfo'
-            offset: "0000C460"            
-          - name: '_NotifyHandlerLock'
-            offset: "0000C480"            
-          - name: '_pOpRgListHead'
-            offset: "0000C484"            
-          - name: '_pNotifyListHead'
-            offset: "0000C488"            
-          - name: '_OriginalElcr0'
-            offset: "0000C48C"            
-          - name: '_OriginalElcr1'
-            offset: "0000C48D"            
-          - name: '_ACPIInterfaceTable'
-            offset: "0000C4A0"            
-          - name: '_ProcessorList'
-            offset: "0000C4E0"            
-          - name: '_DDBInformation'
-            offset: "0000C520"            
-          - name: '_OpRgListLock'
-            offset: "0000C530"            
-          - name: '_NotifyListLock'
-            offset: "0000C534"            
-          - name: '_GpeTableLock'
-            offset: "0000C538"            
-          - name: '_DebuggerPortPNSOBJ'
-            offset: "0000C53C"            
-          - name: '_gBootedInAPMMode'
-            offset: "0000C540"            
-          - name: '_IsEvilPIIX4'
-            offset: "0000C541"            
-          - name: '_gDeviceObject'
-            offset: "0000C544"            
-          - name: '_NotifyQueue'
-            offset: "0000C550"            
-          - name: '_OpRgQueue'
-            offset: "0000C560"            
-          - name: '_GPEWakeRefCountArray'
-            offset: "0000C570"            
-      - num: "9"
-        name: ".idata$2"
-        offset: "00009B50"
-        symbols:
-          - name: '__IMPORT_DESCRIPTOR_NTOSKRNL'
-            offset: "00000000"            
-          - name: '__IMPORT_DESCRIPTOR_HAL'
-            offset: "00000014"            
-          - name: '__NULL_IMPORT_DESCRIPTOR'
-            offset: "00000028"            
-          - name: '__imp__WRITE_PORT_USHORT@8'
-            offset: "00000128"            
-          - name: '__imp__KeStallExecutionProcessor@4'
-            offset: "0000012C"            
-          - name: '__imp__WRITE_PORT_UCHAR@8'
-            offset: "00000130"            
-          - name: '__imp__READ_PORT_USHORT@4'
-            offset: "00000134"            
-          - name: '__imp__READ_PORT_UCHAR@4'
-            offset: "00000138"            
-          - name: '__imp_@KfAcquireSpinLock@4'
-            offset: "0000013C"            
-          - name: '__imp__READ_PORT_ULONG@4'
-            offset: "00000140"            
-          - name: '__imp_@KfReleaseSpinLock@8'
-            offset: "00000144"            
-          - name: '__imp_@KfLowerIrql@4'
-            offset: "00000148"            
-          - name: '__imp_@KfRaiseIrql@4'
-            offset: "0000014C"            
-          - name: '__imp__KeGetCurrentIrql@0'
-            offset: "00000150"            
-          - name: '__imp__WRITE_PORT_ULONG@8'
-            offset: "00000154"            
-          - name: '\177HAL_NULL_THUNK_DATA'
-            offset: "00000158"            
-          - name: '__imp__ExAllocatePoolWithTag@12'
-            offset: "0000015C"            
-          - name: '__imp__ExFreePool@4'
-            offset: "00000160"            
-          - name: '__imp__DbgBreakPoint@0'
-            offset: "00000164"            
-          - name: '__imp__vsprintf'
-            offset: "00000168"            
-          - name: '__imp__IoAttachDeviceToDeviceStack@8'
-            offset: "0000016C"            
-          - name: '__imp__ZwClose@4'
-            offset: "00000170"            
-          - name: '__imp__ZwQueryValueKey@24'
-            offset: "00000174"            
-          - name: '__imp__ZwPowerInformation@20'
-            offset: "00000178"            
-          - name: '__imp_@IofCompleteRequest@8'
-            offset: "0000017C"            
-          - name: '__imp__MmUnlockPagableImageSection@4'
-            offset: "00000180"            
-          - name: '__imp__MmLockPagableDataSection@4'
-            offset: "00000184"            
-          - name: '__imp__DbgPrint'
-            offset: "00000188"            
-          - name: '__imp_@InterlockedCompareExchange@12'
-            offset: "0000018C"            
-          - name: '__imp__KeInitializeSpinLock@4'
-            offset: "00000190"            
-          - name: '__imp__IoOpenDeviceRegistryKey@16'
-            offset: "00000194"            
-          - name: '__imp__IoCreateSymbolicLink@8'
-            offset: "00000198"            
-          - name: '__imp__RtlInitUnicodeString@8'
-            offset: "0000019C"            
-          - name: '__imp__MmUnmapIoSpace@8'
-            offset: "000001A0"            
-          - name: '__imp_@IofCallDriver@8'
-            offset: "000001A4"            
-          - name: '__imp__RtlCompareMemory@12'
-            offset: "000001A8"            
-          - name: '__imp_@InterlockedDecrement@4'
-            offset: "000001AC"            
-          - name: '__imp_@InterlockedIncrement@4'
-            offset: "000001B0"            
-          - name: '__imp_@ExfInterlockedRemoveHeadList@8'
-            offset: "000001B4"            
-          - name: '__imp__ExQueueWorkItem@8'
-            offset: "000001B8"            
-          - name: '__imp__RtlTimeToTimeFields@8'
-            offset: "000001BC"            
-          - name: '__imp__IoCreateDevice@28'
-            offset: "000001C0"            
-          - name: '__imp__KeInitializeMutex@8'
-            offset: "000001C4"            
-          - name: '__imp__KeWaitForSingleObject@20'
-            offset: "000001C8"            
-          - name: '__imp__KeReleaseMutex@8'
-            offset: "000001CC"            
-          - name: '__imp__sprintf'
-            offset: "000001D0"            
-          - name: '__imp__IoDeleteDevice@4'
-            offset: "000001D4"            
-          - name: '__imp__RtlFreeUnicodeString@4'
-            offset: "000001D8"            
-          - name: '__imp__IoSetDeviceInterfaceState@8'
-            offset: "000001DC"            
-          - name: '__imp__IoRegisterDeviceInterface@16'
-            offset: "000001E0"            
-          - name: '__imp__IoGetDeviceProperty@20'
-            offset: "000001E4"            
-          - name: '__imp__PoStartNextPowerIrp@4'
-            offset: "000001E8"            
-          - name: '__imp__KeGetCurrentThread@0'
-            offset: "000001EC"            
-          - name: '__imp__KeInitializeTimer@4'
-            offset: "000001F0"            
-          - name: '__imp__KeInitializeEvent@12'
-            offset: "000001F4"            
-          - name: '__imp__KeSetEvent@12'
-            offset: "000001F8"            
-          - name: '__imp__KeSetTimer@16'
-            offset: "000001FC"            
-          - name: '__imp__KeCancelTimer@4'
-            offset: "00000200"            
-          - name: '__imp__KeInitializeDpc@12'
-            offset: "00000204"            
-          - name: '__imp__RtlAssert@16'
-            offset: "00000208"            
-          - name: '__imp__MmMapIoSpace@16'
-            offset: "0000020C"            
-          - name: '\177NTOSKRNL_NULL_THUNK_DATA'
-            offset: "00000210"            
-      - num: "10"
-        name: "_LDATA"
-        offset: "00009BD0"
-        symbols:
-          - name: '_ACPIServiceTable'
-            offset: "00000000"            
-          - name: '_ACPI_DDB'
-            offset: "00000070"            
-          - name: '_DebuggerCommands'
-            offset: "000000E8"            
-          - name: '_gPm1Status'
-            offset: "000001A0"            
-          - name: '_hACPIInterrupt'
-            offset: "000001A4"            
-      - num: "12"
-        name: "PAGE"
-        offset: "00015CC0"
-        symbols:
-          - name: '_MakeAppyCallBack'
-            offset: "00000000"            
-          - name: '_MakeAppy'
-            offset: "00000040"            
-          - name: '_NotifyUserInAVeryNonSubtleWay@16'
-            offset: "00000120"            
-          - name: '_ACPIAssert@20'
-            offset: "00000510"            
-          - name: '_ACPIInit@0'
-            offset: "00000550"            
-          - name: '_ACPIPnPNewDevNode@8'
-            offset: "00000590"            
-          - name: '_ACPIExit@0'
-            offset: "00000600"            
-          - name: '_ACPICreateDeviceObject@8'
-            offset: "00000610"            
-          - name: '_OSInitialize@4'
-            offset: "00000670"            
-          - name: '_RecursiveFindDock'
-            offset: "00000710"            
-          - name: '_FindDock'
-            offset: "000007B0"            
-          - name: '_ComputeHardWareProfile'
-            offset: "00000810"            
-          - name: '_Reenumerate'
-            offset: "00000880"            
-          - name: '_Dock'
-            offset: "00000900"            
-          - name: '_OSDeviceCheck@4'
-            offset: "00000B00"            
-          - name: '_AllowUndocking'
-            offset: "00000B60"            
-          - name: '_Undock'
-            offset: "00000C20"            
-          - name: '_OSDeviceCheckOnParent@4'
-            offset: "00001300"            
-          - name: '_OSAreWeDocked@0'
-            offset: "00001360"            
-          - name: '_OSUndockNow@0'
-            offset: "00001380"            
-          - name: '_ACPIPowerHandler'
-            offset: "00001430"            
-          - name: '_IsItALink'
-            offset: "000014C0"            
-          - name: '_GetIRQCount'
-            offset: "00001580"            
-          - name: '_LoadVPOWERD'
-            offset: "00001600"            
-          - name: '_APMTransfer'
-            offset: "00001690"            
-          - name: '_RegisterWithPO'
-            offset: "000016F0"            
-          - name: '_DWordToName'
-            offset: "000018A0"            
-          - name: '_GetID'
-            offset: "00001960"            
-          - name: '_GetBuffer'
-            offset: "00001AA0"            
-          - name: '_RecursiveDevNodeToNameSpace'
-            offset: "00001B90"            
-          - name: '_DevNodeToNameSpace'
-            offset: "00001EA0"            
-          - name: '_NameSpaceToDevNode'
-            offset: "00001EF0"            
-          - name: '_SetSystemDeviceMapping'
-            offset: "000021B0"            
-          - name: '_GetDeviceStatus'
-            offset: "00002290"            
-          - name: '_ACPIStartDevNode'
-            offset: "000022B0"            
-          - name: '_ACPIStopDevNode'
-            offset: "000027C0"            
-          - name: '_ACPISetupDevNode'
-            offset: "00002A30"            
-          - name: '_ACPIAPMDevNode'
-            offset: "00002BE0"            
-          - name: '_ACPICreateDevNodeHook'
-            offset: "00002DF0"            
-          - name: '_ACPIProcessEnum'
-            offset: "000031D0"            
-          - name: '_ACPIRecurseEnum'
-            offset: "000034F0"            
-          - name: '_CreateCompositeBatteryDevNode'
-            offset: "00003550"            
-          - name: '_ACPIEnumerate'
-            offset: "00003580"            
-          - name: '_CreatePnPBIOSNode'
-            offset: "00003660"            
-          - name: '_FirstStart'
-            offset: "000036E0"            
-          - name: '_FirstEnumerationWithEC'
-            offset: "00003790"            
-          - name: '_FirstEnumeration'
-            offset: "000037C0"            
-          - name: '_ACPIEnumHandler'
-            offset: "000038C0"            
-          - name: '_ACPIShutdown@0'
-            offset: "00003D90"            
-          - name: '_OSConvertDeviceHandleToPNSOBJ@4'
-            offset: "00003DF0"            
-          - name: '_DeviceAndPowerRegistration'
-            offset: "00003E70"            
-          - name: '_AddProcessor'
-            offset: "00003F10"            
-          - name: '_LoadUnloadDefinitionBlock'
-            offset: "00003FD0"            
-          - name: '_OpRegionCreationHook'
-            offset: "00004070"            
-          - name: '_OSInitializeCallbacks@0'
-            offset: "00004130"            
-          - name: '_ACPIIrpFilter@4'
-            offset: "00004280"            
-          - name: '_OSSyncWakeupFrom'
-            offset: "00004310"            
-          - name: '_OSWakeupFrom@12'
-            offset: "00004340"            
-          - name: '_CheckForEvilPIIX4@0'
-            offset: "00004360"            
-          - name: '_DisableStopBreakEvents@0'
-            offset: "00004420"            
-          - name: '_EnableStopBreakEvents@0'
-            offset: "00004490"            
-          - name: '_AssertClockEventEnables@0'
-            offset: "00004500"            
-          - name: '_ThermalPoll'
-            offset: "00004560"            
-          - name: '_ResetPassiveCoolingTimeout@8'
-            offset: "00004590"            
-          - name: '_OSCriticalShutdown@0'
-            offset: "000045C0"            
-          - name: '_OSArmDisarmDeviceForWakeup@8'
-            offset: "000045E0"            
-          - name: '_OSIsCriticalSectionOwned@0'
-            offset: "00004640"            
-          - name: '_ACPIInterruptProcessing'
-            offset: "00004680"            
-          - name: '_ELCR'
-            offset: "000047B0"            
-          - name: '_ACPIInterruptDeviceDriver'
-            offset: "00004830"            
-          - name: '_CreateInterruptDevNode'
-            offset: "00004A20"            
-          - name: '_OSInterruptVector@8'
-            offset: "00004BE0"            
-          - name: '_LockUnlockDevice'
-            offset: "00004C00"            
-          - name: '_DoLockNow@0'
-            offset: "00004C90"            
-          - name: '_UnlockNow@0'
-            offset: "00004D00"            
-          - name: '_ACPI_GetVersion'
-            offset: "00004D10"            
-          - name: '_ACPI_SetTimingMode'
-            offset: "00004D20"            
-          - name: '_ACPI_SetTimingModeEx'
-            offset: "00004E50"            
-          - name: '_ACPI_GetIDEPMComplianceLevel'
-            offset: "00004F00"            
-          - name: '_ACPI_SetSystemPowerState'
-            offset: "00005040"            
-          - name: '_ACPI_RegisterOpRegionCookedHandler'
-            offset: "00005060"            
-          - name: '_ACPI_Set_RTC'
-            offset: "000050F0"            
-          - name: '_ACPI_Get_RTC'
-            offset: "00005110"            
-          - name: '_ACPI_GetTimingMode'
-            offset: "00005130"            
-          - name: '_ACPI_GetTimingModeEx'
-            offset: "000052A0"            
-          - name: '_ACPI_GetTaskFile'
-            offset: "000053E0"            
-          - name: '_ACPI_FreeTaskFileBuffer'
-            offset: "00005480"            
-          - name: '_ACPI_WalkNameSpace'
-            offset: "000054C0"            
-          - name: '_ACPI_GetObject'
-            offset: "00005540"            
-          - name: '_ACPI_NameSpaceToDevNode'
-            offset: "00005560"            
-          - name: '_ACPI_DevNodeToNameSpace'
-            offset: "00005580"            
-          - name: '_ACPI_RunControlMethod'
-            offset: "000055A0"            
-          - name: '_ACPI_PrepareForSleeping'
-            offset: "000056A0"            
-          - name: '_ACPI_PrepareForResume'
-            offset: "000056B0"            
-          - name: '_ACPI_SystemShutdown'
-            offset: "000056C0"            
-          - name: '_ACPI_EvalPackageElement'
-            offset: "000056E0"            
-          - name: '_ACPI_EvalPkgDataElement'
-            offset: "00005710"            
-          - name: '_ACPI_FreeDataBuffs'
-            offset: "00005740"            
-          - name: '_ACPI_GetRootSystemDescriptorTable'
-            offset: "00005760"            
-          - name: '_ACPI_GetNameSpaceObject'
-            offset: "00005780"            
-          - name: '_ACPI_IdentifyDebuggerCommInfo'
-            offset: "000057B0"            
-          - name: '_ACPI_ResumeComplete'
-            offset: "00005810"            
-          - name: '_RealModeWakeUpCode@0'
-            offset: "00005820"            
-          - name: '_RealModeWakeUpCodeEnd'
-            offset: "00005860"            
-          - name: '_FlushPage'
-            offset: "00005870"            
-          - name: '_BiosHibernate'
-            offset: "000058C0"            
-          - name: '_EnterDeepSleep@12'
-            offset: "00005960"            
-          - name: '_SetPhysicalAddress'
-            offset: "00005B50"            
-          - name: '_CopyPageTableMinusEntry'
-            offset: "00005BB0"            
-          - name: '_CreateGDTSelector'
-            offset: "00005C60"            
-          - name: '_FreeGDTSelector'
-            offset: "00005CD0"            
-          - name: '_LockDeepSleep'
-            offset: "00005D40"            
-          - name: '_UnlockDeepSleep'
-            offset: "00006080"            
-          - name: '_NameObject'
-            offset: "000060F0"            
-          - name: '_IntObj'
-            offset: "00006100"            
-          - name: '_GetObject'
-            offset: "00006130"            
-          - name: '_GetData'
-            offset: "00006190"            
-          - name: '_GetInteger'
-            offset: "00006230"            
-          - name: '_OSCloseHandle@4'
-            offset: "000062C0"            
-          - name: '_OSCreateHandle@12'
-            offset: "000062F0"            
-          - name: '_OSOpenHandle@12'
-            offset: "00006340"            
-          - name: '_OSOpenLargestSubkey@12'
-            offset: "00006390"            
-          - name: '_OSReadRegValue@16'
-            offset: "000064B0"            
-          - name: '_OSWriteRegValue@16'
-            offset: "00006580"            
-          - name: '_OSLockRegion@8'
-            offset: "00006620"            
-          - name: '_OSUnlockRegion@8'
-            offset: "00006650"            
-          - name: '_OSVerifyBuffer@8'
-            offset: "00006680"            
-          - name: '_OSSleep@4'
-            offset: "000066A0"            
-          - name: '_OSUserArrival@0'
-            offset: "000066C0"            
-          - name: '_ConvertToNumber@12'
-            offset: "000066D0"            
-          - name: '_BuildGPEMasks@0'
-            offset: "000067E0"            
-          - name: '_ACPIPowerButton@8'
-            offset: "00006960"            
-          - name: '_LockEverything@0'
-            offset: "000069B0"            
-          - name: '_UnlockEverything@0'
-            offset: "00006A50"            
-          - name: '_ACPIInitialize@4'
-            offset: "00006AB0"            
-          - name: '_ACPIFinishInitialize@0'
-            offset: "00007010"            
-          - name: '_GetPBlkAddress@4'
-            offset: "000070D0"            
-          - name: '_InitializeACPIInformation@0'
-            offset: "00007190"            
-          - name: '_ACPITranslateIoAddress@4'
-            offset: "00007630"            
-          - name: '_ACPITranslateAndMapMemoryAddress@12'
-            offset: "00007670"            
-          - name: '_ACPIUnmapIoSpace@8'
-            offset: "000076D0"            
-          - name: '_RegisterOperationRegionHandler@20'
-            offset: "000076F0"            
-          - name: '_ACPISetPower@8'
-            offset: "00007850"            
-          - name: '_ACPISetRTCAlarm@4'
-            offset: "00007D10"            
-          - name: '_ACPIGetRTCAlarm@4'
-            offset: "00007D40"            
-          - name: '_ACPICancelRTCAlarm@0'
-            offset: "00007F20"            
-          - name: '_ACPIHandleRTCAlarm@4'
-            offset: "00007FD0"            
-          - name: '_ACPIWakeInOneMinute@0'
-            offset: "000080B0"            
-          - name: '_ACPITerminate@0'
-            offset: "000081A0"            
-          - name: '_ACPICleanUp@0'
-            offset: "000081B0"            
-          - name: '_GetZoneListNode@4'
-            offset: "00008360"            
-          - name: '_GetTemperature@8'
-            offset: "00008410"            
-          - name: '_ThermalEvent@4'
-            offset: "00008500"            
-          - name: '_EnablePassiveCooling@12'
-            offset: "000086A0"            
-          - name: '_PassiveCoolingTimeOut'
-            offset: "00008810"            
-          - name: '_SetProcessorFrequency@4'
-            offset: "000088E0"            
-          - name: '_DisablePassiveCooling@4'
-            offset: "00008A60"            
-          - name: '_PerformActiveCooling@8'
-            offset: "00008AF0"            
-          - name: '_DisableActiveCooling@4'
-            offset: "00008D00"            
-          - name: '_ThermalTripPointChange@4'
-            offset: "00008D80"            
-          - name: '_ThermalNotify@8'
-            offset: "00008FB0"            
-          - name: '_IsZonePassiveCapable@4'
-            offset: "00009080"            
-          - name: '_CreateAndInitThermInfo@0'
-            offset: "00009130"            
-          - name: '_InitializeNewThermalZone@4'
-            offset: "00009230"            
-          - name: '_CompleteThermalZoneInitialization@4'
-            offset: "000092F0"            
-          - name: '_ThermalZoneRegistration'
-            offset: "00009520"            
-          - name: '_FinishThermalInit@0'
-            offset: "00009560"            
-          - name: '_ThermalEventOnEachZone@0'
-            offset: "000095D0"            
-          - name: '_EnterThermal@0'
-            offset: "00009630"            
-          - name: '_LeaveThermal@0'
-            offset: "00009670"            
-          - name: '_PrepareForSleeping@0'
-            offset: "000096B0"            
-          - name: '_PrepareForPageableResume@0'
-            offset: "00009710"            
-          - name: '_ACPILoadFindRSDT@0'
-            offset: "00009820"            
-          - name: '_ACPILoadProcessDSDT@4'
-            offset: "00009A10"            
-          - name: '_ACPILoadProcessFADT@4'
-            offset: "00009BB0"            
-          - name: '_ACPILoadProcessFACS@4'
-            offset: "0000A160"            
-          - name: '_ACPILoadTableCheckSum@8'
-            offset: "0000A230"            
-          - name: '_DetermineSupportedSStates@0'
-            offset: "0000A360"            
-          - name: '_ACPIButtonStartDevice@8'
-            offset: "0000A510"            
-          - name: '_ACPICMPowerButtonStart@8'
-            offset: "0000A550"            
-          - name: '_ACPICMSleepButtonStart@8'
-            offset: "0000A5B0"            
-          - name: '_ACPICMLidStart@8'
-            offset: "0000A610"            
-          - name: '_ACPICMiButtonStart@12'
-            offset: "0000A670"            
-          - name: '_ACPICMLidWorker@8'
-            offset: "0000A6F0"            
-          - name: '_ACPIButtonDeviceControl@8'
-            offset: "0000A790"            
-          - name: '_AMLIInitialize'
-            offset: "0000A870"            
-          - name: '_AMLITerminate'
-            offset: "0000AC80"            
-          - name: '_AMLILoadDDB'
-            offset: "0000AF30"            
-          - name: '_AMLIUnloadDDB'
-            offset: "0000B1A0"            
-          - name: '_AMLIGetNameSpaceObject'
-            offset: "0000B270"            
-          - name: '_AMLIGetFieldUnitRegionObj'
-            offset: "0000B460"            
-          - name: '_AMLIEvalNameSpaceObject'
-            offset: "0000B570"            
-          - name: '_AMLIAsyncEvalObject'
-            offset: "0000B7F0"            
-          - name: '_AMLINestAsyncEvalObject'
-            offset: "0000BA90"            
-          - name: '_AMLIEvalPackageElement'
-            offset: "0000BD30"            
-          - name: '_AMLIEvalPkgDataElement'
-            offset: "0000C0A0"            
-          - name: '_AMLIFreeDataBuffs'
-            offset: "0000C2D0"            
-          - name: '_AMLIRegEventHandler'
-            offset: "0000C3B0"            
-          - name: '_AMLILockNotification'
-            offset: "0000C5C0"            
-          - name: '_AMLIUnlockNotification'
-            offset: "0000C7E0"            
-          - name: '_AMLIReferenceObject'
-            offset: "0000C900"            
-          - name: '_AMLIDereferenceObject'
-            offset: "0000C9E0"            
-          - name: '_AMLIGetLastError'
-            offset: "0000CB20"            
-          - name: '_StrLen'
-            offset: "0000CC10"            
-          - name: '_StrCpy'
-            offset: "0000CCF0"            
-          - name: '_StrCat'
-            offset: "0000CE00"            
-          - name: '_StrCmp'
-            offset: "0000CF30"            
-          - name: '_StrChr'
-            offset: "0000D1C0"            
-          - name: '_StrRChr'
-            offset: "0000D2B0"            
-          - name: '_StrTok'
-            offset: "0000D3B0"            
-          - name: '_StrToUL'
-            offset: "0000D550"            
-          - name: '_StrToL'
-            offset: "0000D710"            
-          - name: '_StrStr'
-            offset: "0000D810"            
-          - name: '_StrUpr'
-            offset: "0000D900"            
-          - name: '_StrLwr'
-            offset: "0000D9E0"            
-          - name: '_GetNameSpaceObject'
-            offset: "0000DAC0"            
-          - name: '_CreateNameSpaceObject'
-            offset: "0000DDE0"            
-          - name: '_FreeNameSpaceObjects'
-            offset: "0000E2E0"            
-          - name: '_LoadDDB'
-            offset: "0000E670"            
-          - name: '_LoadMemDDB'
-            offset: "0000E800"            
-          - name: '_LoadFieldUnitDDB'
-            offset: "0000E910"            
-          - name: '_UnloadDDB'
-            offset: "0000EC60"            
-          - name: '_EvalPackageElement'
-            offset: "0000ECF0"            
-          - name: '_DumpNameSpaceObject'
-            offset: "0000EE00"            
-          - name: '_DumpNameSpaceTree'
-            offset: "0000EF30"            
-          - name: '_FindOpcodeTerm'
-            offset: "0000F030"            
-          - name: '_GetBaseObject'
-            offset: "0000F0F0"            
-          - name: '_GetBaseData'
-            offset: "0000F1A0"            
-          - name: '_NewObjOwner'
-            offset: "0000F280"            
-          - name: '_FreeObjOwner'
-            offset: "0000F3B0"            
-          - name: '_InsertOwnerObjList'
-            offset: "0000F4C0"            
-          - name: '_FreeDataBuffs'
-            offset: "0000F570"            
-          - name: '_PutIntObjData'
-            offset: "0000F770"            
-          - name: '_GetFieldUnitRegionObj'
-            offset: "0000F840"            
-          - name: '_CopyObjData'
-            offset: "0000F9F0"            
-          - name: '_MoveObjData'
-            offset: "0000FB40"            
-          - name: '_DupObjData'
-            offset: "0000FC60"            
-          - name: '_CopyObjBuffer'
-            offset: "0000FE50"            
-          - name: '_InitializeMutex'
-            offset: "0000FFE0"            
-          - name: '_AcquireMutex'
-            offset: "00010080"            
-          - name: '_ReleaseMutex'
-            offset: "00010250"            
-          - name: '_AcquireGL'
-            offset: "000103C0"            
-          - name: '_ReleaseGL'
-            offset: "000104E0"            
-          - name: '_MapUnmapPhysMem'
-            offset: "000105A0"            
-          - name: '_MapPhysMem'
-            offset: "00010780"            
-          - name: '_MapUnmapCallBack@4'
-            offset: "00010860"            
-          - name: '_MatchObjType'
-            offset: "00010990"            
-          - name: '_ValidateTarget'
-            offset: "00010AC0"            
-          - name: '_ValidateArgTypes'
-            offset: "00010CC0"            
-          - name: '_RegEventHandler'
-            offset: "000111C0"            
-          - name: '_RegOpcodeHandler'
-            offset: "000112A0"            
-          - name: '_RegRSAccess'
-            offset: "000113D0"            
-          - name: '_FindRSAccess'
-            offset: "000115E0"            
-          - name: '_FreeRSAccessList'
-            offset: "00011690"            
-          - name: '_NameSegString'
-            offset: "00011750"            
-          - name: '_GetObjectPath'
-            offset: "000117F0"            
-          - name: '_GetObjectTypeName'
-            offset: "00011940"            
-          - name: '_GetRegionSpaceName'
-            offset: "00011A20"            
-          - name: '_ValidateTable'
-            offset: "00011B20"            
-          - name: '_NewObjData'
-            offset: "00011BF0"            
-          - name: '_FreeObjData'
-            offset: "00011FB0"            
-          - name: '_FreeMem'
-            offset: "000122C0"            
-          - name: '_ReadObject'
-            offset: "00012310"            
-          - name: '_WriteObject'
-            offset: "000124B0"            
-          - name: '_AccFieldUnit'
-            offset: "00012780"            
-          - name: '_ReadField'
-            offset: "00012A40"            
-          - name: '_WriteField'
-            offset: "00012D00"            
-          - name: '_WriteFieldLoop'
-            offset: "00012F10"            
-          - name: '_PushAccFieldObj'
-            offset: "000130A0"            
-          - name: '_ReadFieldObj'
-            offset: "000132A0"            
-          - name: '_WriteFieldObj'
-            offset: "00013670"            
-          - name: '_RawFieldAccess'
-            offset: "00013990"            
-          - name: '_AccessFieldData'
-            offset: "00013BB0"            
-          - name: '_PushPreserveWriteObj'
-            offset: "00013EB0"            
-          - name: '_PreserveWriteObj'
-            offset: "00013F90"            
-          - name: '_AccessBaseField'
-            offset: "00014130"            
-          - name: '_WriteCookAccess'
-            offset: "000145B0"            
-          - name: '_ReadBuffField'
-            offset: "00014900"            
-          - name: '_WriteBuffField'
-            offset: "00014A80"            
-          - name: '_ReadSystemMem'
-            offset: "00014BF0"            
-          - name: '_WriteSystemMem'
-            offset: "00014D00"            
-          - name: '_ReadSystemIO'
-            offset: "00014E40"            
-          - name: '_WriteSystemIO'
-            offset: "00014F60"            
-          - name: '_DumpObject'
-            offset: "00015060"            
-          - name: '_NeedGlobalLock'
-            offset: "00015750"            
-          - name: '_AsyncCallBack'
-            offset: "000158B0"            
-          - name: '_EvalMethodComplete'
-            offset: "00015A60"            
-          - name: '_SyncEvalObject'
-            offset: "00015B10"            
-          - name: '_AsyncEvalObject'
-            offset: "00015D50"            
-          - name: '_NestAsyncEvalObject'
-            offset: "000160C0"            
-          - name: '_ProcessEvalObj'
-            offset: "000164A0"            
-          - name: '_TimeoutCallback@16'
-            offset: "000165C0"            
-          - name: '_QueueContext'
-            offset: "00016730"            
-          - name: '_DequeueAndReadyContext'
-            offset: "000168B0"            
-          - name: '_AcquireASLMutex'
-            offset: "000169E0"            
-          - name: '_ReleaseASLMutex'
-            offset: "00016BD0"            
-          - name: '_WaitASLEvent'
-            offset: "00016D70"            
-          - name: '_ResetASLEvent'
-            offset: "00016E70"            
-          - name: '_SignalASLEvent'
-            offset: "00016F00"            
-          - name: '_ExpireTimeSlice@16'
-            offset: "00016FA0"            
-          - name: '_StartTimeSlice@16'
-            offset: "00017050"            
-          - name: '_StartTimeSlicePassive@4'
-            offset: "00017140"            
-          - name: '_DispatchCtxtQueue'
-            offset: "00017210"            
-          - name: '_InsertReadyQueue'
-            offset: "00017410"            
-          - name: '_RestartContext'
-            offset: "000177B0"            
-          - name: '_RestartCtxtPassive@4'
-            offset: "00017980"            
-          - name: '_RestartCtxtCallback'
-            offset: "00017A20"            
-          - name: '_BankField'
-            offset: "00017AF0"            
-          - name: '_CreateXField'
-            offset: "00017DA0"            
-          - name: '_CreateBitField'
-            offset: "00017FA0"            
-          - name: '_CreateByteField'
-            offset: "000180B0"            
-          - name: '_CreateWordField'
-            offset: "000181A0"            
-          - name: '_CreateDWordField'
-            offset: "00018290"            
-          - name: '_CreateField'
-            offset: "00018380"            
-          - name: '_Device'
-            offset: "000184C0"            
-          - name: '_InitEvent'
-            offset: "000185F0"            
-          - name: '_Event'
-            offset: "00018710"            
-          - name: '_Field'
-            offset: "00018810"            
-          - name: '_IndexField'
-            offset: "00018A40"            
-          - name: '_Method'
-            offset: "00018CD0"            
-          - name: '_InitMutex'
-            offset: "00018EC0"            
-          - name: '_Mutex'
-            offset: "00018FF0"            
-          - name: '_OpRegion'
-            offset: "00019100"            
-          - name: '_PowerRes'
-            offset: "00019360"            
-          - name: '_Processor'
-            offset: "00019550"            
-          - name: '_ThermalZone'
-            offset: "00019750"            
-          - name: '_NewHeap'
-            offset: "00019880"            
-          - name: '_FreeHeap'
-            offset: "000199D0"            
-          - name: '_InitHeap'
-            offset: "00019A70"            
-          - name: '_HeapAlloc'
-            offset: "00019B30"            
-          - name: '_HeapFree'
-            offset: "00019EF0"            
-          - name: '_HeapFindFirstFit'
-            offset: "0001A060"            
-          - name: '_HeapInsertFreeList'
-            offset: "0001A160"            
-          - name: '_NewContext'
-            offset: "0001A3C0"            
-          - name: '_FreeContext'
-            offset: "0001A540"            
-          - name: '_InitContext'
-            offset: "0001A660"            
-          - name: '_IsStackEmpty'
-            offset: "0001A770"            
-          - name: '_PushFrame'
-            offset: "0001A820"            
-          - name: '_PopFrame'
-            offset: "0001A9A0"            
-          - name: '_PushPost'
-            offset: "0001AAA0"            
-          - name: '_PushScope'
-            offset: "0001AB80"            
-          - name: '_PushCall'
-            offset: "0001ACC0"            
-          - name: '_PushTerm'
-            offset: "0001AED0"            
-          - name: '_RunContext'
-            offset: "0001B080"            
-          - name: '_ListRemoveEntry'
-            offset: "0001B490"            
-          - name: '_ListRemoveHead'
-            offset: "0001B5C0"            
-          - name: '_ListRemoveTail'
-            offset: "0001B690"            
-          - name: '_ListRemoveAll'
-            offset: "0001B770"            
-          - name: '_ListInsertHead'
-            offset: "0001B830"            
-          - name: '_ListInsertTail'
-            offset: "0001B910"            
-          - name: '_Buffer'
-            offset: "0001BA30"            
-          - name: '_Package'
-            offset: "0001BC70"            
-          - name: '_ParsePackage'
-            offset: "0001BE30"            
-          - name: '_Acquire'
-            offset: "0001C1C0"            
-          - name: '_Concat'
-            offset: "0001C350"            
-          - name: '_DerefOf'
-            offset: "0001C6D0"            
-          - name: '_ExprOp1'
-            offset: "0001C820"            
-          - name: '_ExprOp2'
-            offset: "0001CD30"            
-          - name: '_Divide'
-            offset: "0001D590"            
-          - name: '_ProcessDivide'
-            offset: "0001D7B0"            
-          - name: '_IncDec'
-            offset: "0001D900"            
-          - name: '_ProcessIncDec'
-            offset: "0001D9F0"            
-          - name: '_Index'
-            offset: "0001DCE0"            
-          - name: '_LNot'
-            offset: "0001DFD0"            
-          - name: '_LogOp2'
-            offset: "0001E150"            
-          - name: '_ObjTypeSizeOf'
-            offset: "0001E600"            
-          - name: '_RefOf'
-            offset: "0001E870"            
-          - name: '_CondRefOf'
-            offset: "0001E930"            
-          - name: '_Store'
-            offset: "0001EA60"            
-          - name: '_Wait'
-            offset: "0001EB80"            
-          - name: '_ProcessWait'
-            offset: "0001ECF0"            
-          - name: '_Match'
-            offset: "0001EDF0"            
-          - name: '_MatchData'
-            offset: "0001EFD0"            
-          - name: '_Break'
-            offset: "0001F0F0"            
-          - name: '_BreakPoint'
-            offset: "0001F190"            
-          - name: '_Fatal'
-            offset: "0001F240"            
-          - name: '_IfElse'
-            offset: "0001F340"            
-          - name: '_Load'
-            offset: "0001F5B0"            
-          - name: '_Notify'
-            offset: "0001F7E0"            
-          - name: '_ReleaseResetSignalUnload'
-            offset: "0001FA00"            
-          - name: '_Return'
-            offset: "0001FF10"            
-          - name: '_SleepStall'
-            offset: "0001FFE0"            
-          - name: '_While'
-            offset: "00020250"            
-          - name: '_Alias'
-            offset: "00020370"            
-          - name: '_Name'
-            offset: "000204D0"            
-          - name: '_Scope'
-            offset: "000205F0"            
-          - name: '_ParseScope'
-            offset: "00020720"            
-          - name: '_ParseNestedContext'
-            offset: "00020A70"            
-          - name: '_ParseCall'
-            offset: "00020BC0"            
-          - name: '_ParseTerm'
-            offset: "00021080"            
-          - name: '_ParseAcquire'
-            offset: "000214A0"            
-          - name: '_ParseOpcode'
-            offset: "00021720"            
-          - name: '_ParseArgObj'
-            offset: "000219C0"            
-          - name: '_ParseLocalObj'
-            offset: "00021B20"            
-          - name: '_ParseNameObj'
-            offset: "00021C50"            
-          - name: '_ParseAndGetNameSpaceObject'
-            offset: "00021D80"            
-          - name: '_ParseArg'
-            offset: "00021E90"            
-          - name: '_ParseSuperName'
-            offset: "00022110"            
-          - name: '_ParseIntObj'
-            offset: "000224A0"            
-          - name: '_ParseString'
-            offset: "000227C0"            
-          - name: '_ParseObjName'
-            offset: "000229D0"            
-          - name: '_ParseName'
-            offset: "00022BE0"            
-          - name: '_ParseNameTail'
-            offset: "00022E60"            
-          - name: '_ParseInteger'
-            offset: "00023040"            
-          - name: '_ParseField'
-            offset: "000231B0"            
-          - name: '_ParseFieldList'
-            offset: "00023560"            
-          - name: '_ParsePackageLen'
-            offset: "00023730"            
-      - num: "13"
-        name: ".edata"
-        offset: "00016540"
-        symbols:
-          - name: '_DisplayNonSubtle'
-            offset: "00000090"            
-          - name: '_gpszOSName'
-            offset: "00000318"            
-          - name: '_fDockCapable'
-            offset: "00000390"            
-          - name: '_pnsGlobalEJ'
-            offset: "00000394"            
-          - name: '_PIIX4DevFunc'
-            offset: "00000AD0"            
-          - name: '_dnACPIDevNode'
-            offset: "00000AD4"            
-          - name: '_fFirstEnum'
-            offset: "00000AD8"            
-          - name: '_dnECDevNode'
-            offset: "00000ADC"            
-          - name: '_pLockCodeHandle'
-            offset: "000022D4"            
-          - name: '_pLockDataHandle'
-            offset: "000022D8"            
-          - name: '_gdwcMemObjs'
-            offset: "00003B90"            
-          - name: '_gdwcCTObjs'
-            offset: "00003B94"            
-          - name: '_gdwcHPObjs'
-            offset: "00003B98"            
-          - name: '_gdwcODObjs'
-            offset: "00003B9C"            
-          - name: '_gdwcNSObjs'
-            offset: "00003BA0"            
-          - name: '_gdwcOOObjs'
-            offset: "00003BA4"            
-          - name: '_gdwcBFObjs'
-            offset: "00003BA8"            
-          - name: '_gdwcSDObjs'
-            offset: "00003BAC"            
-          - name: '_gdwcBDObjs'
-            offset: "00003BB0"            
-          - name: '_gdwcPKObjs'
-            offset: "00003BB4"            
-          - name: '_gdwcFUObjs'
-            offset: "00003BB8"            
-          - name: '_gdwcKFObjs'
-            offset: "00003BBC"            
-          - name: '_gdwcFObjs'
-            offset: "00003BC0"            
-          - name: '_gdwcIFObjs'
-            offset: "00003BC4"            
-          - name: '_gdwcORObjs'
-            offset: "00003BC8"            
-          - name: '_gdwcMTObjs'
-            offset: "00003BCC"            
-          - name: '_gdwcEVObjs'
-            offset: "00003BD0"            
-          - name: '_gdwcMEObjs'
-            offset: "00003BD4"            
-          - name: '_gdwcPRObjs'
-            offset: "00003BD8"            
-          - name: '_gdwcPCObjs'
-            offset: "00003BDC"            
-          - name: '_gdwcRSObjs'
-            offset: "00003BE0"            
-          - name: '_gdwcSYObjs'
-            offset: "00003BE4"            
-          - name: '_gdwcPHObjs'
-            offset: "00003BE8"            
-          - name: '_gdwcCRObjs'
-            offset: "00003BEC"            
-          - name: '_gdwGlobalHeapSize'
-            offset: "00003BF0"            
-          - name: '_gdwLocalHeapMax'
-            offset: "00003BF4"            
-          - name: '_gdwLocalStackMax'
-            offset: "00003BF8"            
-          - name: '_gdwGHeapSnapshot'
-            offset: "00003BFC"            
-          - name: '_gpszTrigPts'
-            offset: "00003C00"            
-          - name: '_gdwfAMLI'
-            offset: "00003C04"            
-          - name: '_gdwfAMLIInit'
-            offset: "00003C08"            
-          - name: '_gdwCtxtBlkSize'
-            offset: "00003C0C"            
-          - name: '_gdwGlobalHeapBlkSize'
-            offset: "00003C10"            
-          - name: '_gpnsNameSpaceRoot'
-            offset: "00003C14"            
-          - name: '_gpheapGlobal'
-            offset: "00003C18"            
-          - name: '_gplistCtxtHead'
-            offset: "00003C1C"            
-          - name: '_gplistObjOwners'
-            offset: "00003C20"            
-          - name: '_gplistDefuncNSObjs'
-            offset: "00003C24"            
-          - name: '_gpRSAccessHead'
-            offset: "00003C28"            
-          - name: '_ghNotify'
-            offset: "00003C30"            
-          - name: '_ghValidateTable'
-            offset: "00003C38"            
-          - name: '_ghFatal'
-            offset: "00003C40"            
-          - name: '_ghGlobalLock'
-            offset: "00003C48"            
-          - name: '_gReadyQueue'
-            offset: "00003C50"            
-          - name: '_gmutCtxtList'
-            offset: "00003CE0"            
-          - name: '_gmutOwnerList'
-            offset: "00003D00"            
-          - name: '_atAlias'
-            offset: "00003D20"            
-          - name: '_atName'
-            offset: "00003D40"            
-          - name: '_atScope'
-            offset: "00003D60"            
-          - name: '_atBankField'
-            offset: "00003D80"            
-          - name: '_atBitField'
-            offset: "00003DA0"            
-          - name: '_atByteField'
-            offset: "00003DC0"            
-          - name: '_atDWordField'
-            offset: "00003DE0"            
-          - name: '_atCreateField'
-            offset: "00003E00"            
-          - name: '_atWordField'
-            offset: "00003E20"            
-          - name: '_atDevice'
-            offset: "00003E40"            
-          - name: '_atEvent'
-            offset: "00003E60"            
-          - name: '_atField'
-            offset: "00003E80"            
-          - name: '_atIndexField'
-            offset: "00003EA0"            
-          - name: '_atMethod'
-            offset: "00003EC0"            
-          - name: '_atMutex'
-            offset: "00003EE0"            
-          - name: '_atOpRegion'
-            offset: "00003F00"            
-          - name: '_atPowerRes'
-            offset: "00003F20"            
-          - name: '_atProcessor'
-            offset: "00003F40"            
-          - name: '_atThermalZone'
-            offset: "00003F60"            
-          - name: '_atBreak'
-            offset: "00003F80"            
-          - name: '_atBreakPoint'
-            offset: "00003FA0"            
-          - name: '_atElse'
-            offset: "00003FC0"            
-          - name: '_atFatal'
-            offset: "00003FE0"            
-          - name: '_atIf'
-            offset: "00004000"            
-          - name: '_atLoad'
-            offset: "00004020"            
-          - name: '_atNOP'
-            offset: "00004040"            
-          - name: '_atNotify'
-            offset: "00004060"            
-          - name: '_atRelease'
-            offset: "00004080"            
-          - name: '_atReset'
-            offset: "000040A0"            
-          - name: '_atReturn'
-            offset: "000040C0"            
-          - name: '_atSignal'
-            offset: "000040E0"            
-          - name: '_atSleep'
-            offset: "00004100"            
-          - name: '_atStall'
-            offset: "00004120"            
-          - name: '_atUnload'
-            offset: "00004140"            
-          - name: '_atWhile'
-            offset: "00004160"            
-          - name: '_atAcquire'
-            offset: "00004180"            
-          - name: '_atAdd'
-            offset: "000041A0"            
-          - name: '_atAnd'
-            offset: "000041C0"            
-          - name: '_atBuffer'
-            offset: "000041E0"            
-          - name: '_atConcat'
-            offset: "00004200"            
-          - name: '_atCondRefOf'
-            offset: "00004220"            
-          - name: '_atDecrement'
-            offset: "00004240"            
-          - name: '_atDerefOf'
-            offset: "00004260"            
-          - name: '_atDivide'
-            offset: "00004280"            
-          - name: '_atFindSetLBit'
-            offset: "000042A0"            
-          - name: '_atFindSetRBit'
-            offset: "000042C0"            
-          - name: '_atFromBCD'
-            offset: "000042E0"            
-          - name: '_atIncrement'
-            offset: "00004300"            
-          - name: '_atIndex'
-            offset: "00004320"            
-          - name: '_atLAnd'
-            offset: "00004340"            
-          - name: '_atLEq'
-            offset: "00004360"            
-          - name: '_atLG'
-            offset: "00004380"            
-          - name: '_atLL'
-            offset: "000043A0"            
-          - name: '_atLNot'
-            offset: "000043C0"            
-          - name: '_atLOr'
-            offset: "000043E0"            
-          - name: '_atMatch'
-            offset: "00004400"            
-          - name: '_atMultiply'
-            offset: "00004420"            
-          - name: '_atNAnd'
-            offset: "00004440"            
-          - name: '_atNOr'
-            offset: "00004460"            
-          - name: '_atNot'
-            offset: "00004480"            
-          - name: '_atObjType'
-            offset: "000044A0"            
-          - name: '_atOr'
-            offset: "000044C0"            
-          - name: '_atPackage'
-            offset: "000044E0"            
-          - name: '_atRefOf'
-            offset: "00004500"            
-          - name: '_atShiftLeft'
-            offset: "00004520"            
-          - name: '_atShiftRight'
-            offset: "00004540"            
-          - name: '_atSizeOf'
-            offset: "00004560"            
-          - name: '_atStore'
-            offset: "00004580"            
-          - name: '_atSubtract'
-            offset: "000045A0"            
-          - name: '_atToBCD'
-            offset: "000045C0"            
-          - name: '_atWait'
-            offset: "000045E0"            
-          - name: '_atXOr'
-            offset: "00004600"            
-          - name: '_atNameObj'
-            offset: "00004620"            
-          - name: '_atDataObj'
-            offset: "00004640"            
-          - name: '_atString'
-            offset: "00004660"            
-          - name: '_atArgObj'
-            offset: "00004680"            
-          - name: '_atLocalObj'
-            offset: "000046A0"            
-          - name: '_atDebugObj'
-            offset: "000046C0"            
-          - name: '_OpcodeTable'
-            offset: "000046E0"            
-          - name: '_ExOpcodeTable'
-            offset: "00004AE0"            
-      - num: "14"
-        name: "INIT"
-        offset: "00000000"
-        symbols:
-          - name: '_DriverEntry@8'
-            offset: "00000000"            
+- version: system
+  tree:
+  - - acpiappy.c
+    - acpibs.c
+    - "\t../acpi.c"
+    - acpictl.c
+    - acpictrl.c
+    - acpidbg2.c
+    - acpidbg.c
+    - acpidock.c
+    - acpienbl.c
+    - acpienum.c
+    - acpievnt.c
+    - acpiexpt.c
+    - acpigpe.c
+    - acpigpio.c
+    - acpihook.asm
+    - acpiidle.c
+    - acpiinit.c
+    - acpiintr.c
+    - acpiio.c
+    - acpiirp.c
+    - acpilock.c
+    - acpins.c
+    - acpintfy.c
+    - acpioprg.c
+    - acpipowr.c
+    - acpirtc.c
+    - acpiserv.c
+    - acpisi.c
+    - acpiterm.c
+    - acpithrm.c
+    - acpitimr.c
+    - acpiwake.c
+    - acpizzzz.c
+    - amldebug.c
+    - amliapi.c
+    - cmdarg.c
+    - "\t../ctxt.c"
+    - debugger.c
+    - '%../../../../../dev/ddk/inc/configmg.h'
+    - fileio.asm
+    - "\t../heap.c"
+    - "\t../list.c"
+    - loaddsdt.c
+    - "\t../misc.c"
+    - namedobj.c
+    - nsmod.c
+    - object.c
+    - parser.c
+    - reg.c
+    - sched.c
+    - strlib.c
+    - "\t../sync.c"
+    - trace.c
+    - type1op.c
+    - type2op.c
+    - unasm.c
+    - w32.asm
+    - w9xbutt.c
+    - acpi.c
+    - cm04z.asm
+    - cm05z.asm
+    - cm06z.asm
+    - cm08z.asm
+    - cm0az.asm
+    - cm0bz.asm
+    - cm0cz.asm
+    - cm0dz.asm
+    - cm0ez.asm
+    - cm0fz.asm
+    - cm10z.asm
+    - cm16z.asm
+    - cm19z.asm
+    - cm1bz.asm
+    - cm1dz.asm
+    - cm20z.asm
+    - cm34z.asm
+    - cm36z.asm
+    - cm37z.asm
+    - cm38z.asm
+    - cm39z.asm
+    - cm3fz.asm
+    - cm40z.asm
+    - cm41z.asm
+    - cm44z.asm
+    - cm45z.asm
+    - cm47z.asm
+    - cm48z.asm
+    - cm49z.asm
+    - cm4fz.asm
+    - cm50z.asm
+    - cm52z.asm
+    - cm56z.asm
+    - cm58z.asm
+    - cm5cz.asm
+    - cm5ez.asm
+    - cm60z.asm
+    - cm67z.asm
+    - cm6fz.asm
+    - cm75z.asm
+    - cm76z.asm
+    - cm78z.asm
+    - cm7az.asm
+    - cm7bz.asm
+    - cmd01.c
+    - cmd02.c
+    - cmd03.c
+    - cmd07.c
+    - ctxt.c
+    - data.c
+    - ../../../../dev/ddk/inc/configmg.h
+    - dl02z.asm
+    - heap.c
+    - list.c
+    - misc.c
+    - ntk0az.asm
+    - pch.c
+    - pci02z.asm
+    - pci03z.asm
+    - pci04z.asm
+    - pic02z.asm
+    - pic05z.asm
+    - pic09z.asm
+    - pic0az.asm
+    - pic12z.asm
+    - pic1az.asm
+    - pic1fz.asm
+    - pw06z.asm
+    - pw08z.asm
+    - pw0bz.asm
+    - pw0dz.asm
+    - reg01z.asm
+    - reg02z.asm
+    - reg03z.asm
+    - reg05z.asm
+    - reg0Az.asm
+    - reg0Bz.asm
+    - shell0dz.asm
+    - sync.c
+    - uasmdata.c
+    - vmm02z.asm
+    - vmm03z.asm
+    - vmm09z.asm
+    - vmm0dz.asm
+    - vmm16z.asm
+    - vmm29z.asm
+    - vmm2az.asm
+    - vmm2bz.asm
+    - vmm2cz.asm
+    - vmm2dz.asm
+    - vmm36z.asm
+    - vmm39z.asm
+    - vmm3az.asm
+    - vmm3bz.asm
+    - vmm3cz.asm
+    - vmm4az.asm
+    - vmm4cz.asm
+    - vmm4dz.asm
+    - vmm4fz.asm
+    - vmm52z.asm
+    - vmm5fz.asm
+    - vmm6bz.asm
+    - vmm6cz.asm
+    - vmm70z.asm
+    - vmm72z.asm
+    - vtd05z.asm
+  segments:
+  - num: '1'
+    name: _LTEXT
+    offset: 000004F0
+    symbols:
+    - name: _HandleEndPMApp@0
+      processed: ''
+      offset: '00000000'
+    - name: _ACPIControl@0
+      processed: ''
+      offset: 000000A0
+    - name: _Debugger@0
+      processed: ''
+      offset: '00000100'
+    - name: _DbgPrompt@12
+      processed: ''
+      offset: '00000120'
+    - name: _ACPI_Set_Bus_Info_Hook
+      processed: ''
+      offset: '00000158'
+    - name: _HookServices
+      processed: ''
+      offset: '00000188'
+    - name: __HookServices
+      processed: ''
+      offset: '00000188'
+    - name: ACPI_CLS_Hook
+      processed: ''
+      offset: '000001E4'
+    - name: ACPI_BakColor_Hook
+      processed: ''
+      offset: 0000020A
+    - name: _ACPI_Unhook_Hooks
+      processed: ''
+      offset: '00000224'
+    - name: _ACPIInterrupt
+      processed: ''
+      offset: '00000260'
+    - name: _LCODE__Debug_Printf_Service
+      processed: ''
+      offset: 000003F4
+    - name: '@CMDReadNumber@12'
+      processed: ''
+      offset: '00000410'
+    - name: '@CMDMenu@8'
+      processed: ''
+      offset: '00000510'
+    - name: '@CMDGetString@16'
+      processed: ''
+      offset: 000005D0
+    - name: _LCODE__PCI_Read_Config
+      processed: ''
+      offset: '00000674'
+    - name: _LCODE__PCI_Write_Config
+      processed: ''
+      offset: 0000067C
+    - name: _LCODE_VPICD_Phys_EOI@4
+      processed: ''
+      offset: '00000684'
+    - name: _LCODE__Assert_Range
+      processed: ''
+      offset: '00000694'
+    - name: _LCODE__VTD_Delay_Ex
+      processed: ''
+      offset: 0000069C
+    - name: '@CMDInChar@0'
+      processed: ''
+      offset: 000006B0
+    - name: _LCODE__lstrlen
+      processed: ''
+      offset: 000006B8
+  - num: '2'
+    name: .text
+    offset: '00007730'
+    symbols:
+    - name: _ValidateCurrentDevNode
+      processed: ''
+      offset: '00000000'
+    - name: _SelectIndex
+      processed: ''
+      offset: '00000050'
+    - name: _DebListDevNode
+      processed: ''
+      offset: '00000080'
+    - name: _DebProcessDevNode
+      processed: ''
+      offset: 000000D0
+    - name: _ShowDevNode
+      processed: ''
+      offset: 000000F0
+    - name: _SelectByDevNode
+      processed: ''
+      offset: '00000110'
+    - name: _SelectByIndex
+      processed: ''
+      offset: '00000130'
+    - name: _ACPIDebugPrint
+      processed: ''
+      offset: '00000190'
+    - name: _ACPIIdle
+      processed: ''
+      offset: '000001E0'
+    - name: _ACPIIdleEvilPIIX4
+      processed: ''
+      offset: '00000200'
+    - name: _EnterC1@0
+      processed: ''
+      offset: '00000250'
+    - name: _EnterC2@0
+      processed: ''
+      offset: 000002B0
+    - name: _EnterC2NoPromotion@0
+      processed: ''
+      offset: '00000360'
+    - name: _EnterC3@0
+      processed: ''
+      offset: '000003E0'
+    - name: _ACPIDispatchAddDevice@8
+      processed: ''
+      offset: '00000510'
+    - name: _ACPIIoctlAcquireGlobalLock@12
+      processed: ''
+      offset: '00000700'
+    - name: _ACPIIoctlAsyncEvalControlMethod@12
+      processed: ''
+      offset: '000007E0'
+    - name: _ACPIIoctlAsyncEvalControlMethodCompletion
+      processed: ''
+      offset: 000008C0
+    - name: _ACPIIoctlEvalControlMethod@12
+      processed: ''
+      offset: '00000910'
+    - name: _ACPIIoctlEvalPostProcessing@8
+      processed: ''
+      offset: 000009D0
+    - name: _ACPIIoctlEvalPreProcessing@32
+      processed: ''
+      offset: 00000D10
+    - name: _ACPIIoctlRegisterOpRegionHandler@12
+      processed: ''
+      offset: '00001050'
+    - name: _ACPIIoctlReleaseGlobalLock@12
+      processed: ''
+      offset: 000011B0
+    - name: _ACPIIoctlUnRegisterOpRegionHandler@12
+      processed: ''
+      offset: '00001230'
+    - name: _ACPIIrpDispatchDeviceControl@8
+      processed: ''
+      offset: '00001290'
+    - name: _ACPIInterruptDisable@0
+      processed: ''
+      offset: '000014E0'
+    - name: _ACPIFixedEnables@0
+      processed: ''
+      offset: '00001500'
+    - name: _ACPIInterruptEnablePMOnly@0
+      processed: ''
+      offset: '00001550'
+    - name: _ACPIReadPm1Status@0
+      processed: ''
+      offset: '00001570'
+    - name: _EnterACPIMode@0
+      processed: ''
+      offset: 000015A0
+    - name: _InitializeAndEnableACPI@4
+      processed: ''
+      offset: '00001730'
+    - name: _EvaluateSimpleACPIControlMethod@8
+      processed: ''
+      offset: 00001B60
+    - name: _EvaluateFairlySimpleACPIControlMethod@20
+      processed: ''
+      offset: 00001B80
+    - name: _EvaluateACPIControlMethod@24
+      processed: ''
+      offset: 00001C40
+    - name: _EvaluateACPIPackageObject@16
+      processed: ''
+      offset: 00001D10
+    - name: _GetACPINameSpaceObjectHandle@16
+      processed: ''
+      offset: 00001D60
+    - name: _DisplayObjectData@24
+      processed: ''
+      offset: 00001DF0
+    - name: _iEvaluateACPIControlMethod@24
+      processed: ''
+      offset: '00001E50'
+    - name: _FreeACPINameSpaceObjectDataBuffer@4
+      processed: ''
+      offset: 00001F50
+    - name: _ACPIClearGPRegisters@0
+      processed: ''
+      offset: 00001F70
+    - name: _ACPIIsGPEvent@0
+      processed: ''
+      offset: 00001FD0
+    - name: _ACPIAsyncGPECompletion
+      processed: ''
+      offset: '00002030'
+    - name: _ACPIProcessGPEs@0
+      processed: ''
+      offset: 000020D0
+    - name: _ACPIEnableDisableGPEvents@4
+      processed: ''
+      offset: '00002570'
+    - name: _ACPIEnableDisableWakeGPEvents@4
+      processed: ''
+      offset: '000025E0'
+    - name: _ACPIGpeConnectVector@28
+      processed: ''
+      offset: '00002650'
+    - name: _ACPIGpeDisconnectVector@4
+      processed: ''
+      offset: 000027B0
+    - name: _ACPIGpeEnableEvent@8
+      processed: ''
+      offset: '00002850'
+    - name: _ACPIGpeDisableEvent@8
+      processed: ''
+      offset: 000028F0
+    - name: _ACPIGpeClearStatus@8
+      processed: ''
+      offset: 000029A0
+    - name: _GetGpeVectorEntry@4
+      processed: ''
+      offset: 000029F0
+    - name: _FreeGpeVectorEntry@4
+      processed: ''
+      offset: 00002AF0
+    - name: _InstallGpeVector@8
+      processed: ''
+      offset: 00002B20
+    - name: _RemoveGpeVector@4
+      processed: ''
+      offset: 00002B70
+    - name: _GetRefCountArrayIndex@4
+      processed: ''
+      offset: 00002BB0
+    - name: _InstallRemoveGpeIndex@16
+      processed: ''
+      offset: 00002C00
+    - name: _ArmDisarmObject@8
+      processed: ''
+      offset: '00003070'
+    - name: _ACPIIsValidGpeIndex@4
+      processed: ''
+      offset: '00003310'
+    - name: _ACPIGpeIndexToGpeRegister@4
+      processed: ''
+      offset: '00003370'
+    - name: _ACPIGpeIndexToByteIndex@4
+      processed: ''
+      offset: 000033C0
+    - name: _ACPIGpeRegisterToGpeIndex@8
+      processed: ''
+      offset: '00003400'
+    - name: _ACPIReadGpeStatusRegister@4
+      processed: ''
+      offset: '00003450'
+    - name: _ACPIWriteGpeStatusRegister@8
+      processed: ''
+      offset: 000034B0
+    - name: _ACPIWriteGpeEnableRegister@8
+      processed: ''
+      offset: '00003510'
+    - name: _ACPIDebugTraceIO@16
+      processed: ''
+      offset: '00003570'
+    - name: _READ_PM1_ENABLE@0
+      processed: ''
+      offset: 000035D0
+    - name: _READ_PM1_STATUS@0
+      processed: ''
+      offset: '00003670'
+    - name: _WRITE_PM1_ENABLE@4
+      processed: ''
+      offset: '00003700'
+    - name: _CLEAR_PM1_STATUS_BITS@4
+      processed: ''
+      offset: '00003790'
+    - name: _CLEAR_PM1_STATUS_REGISTER@0
+      processed: ''
+      offset: '00003810'
+    - name: _READ_PM1_CONTROL_SPLIT@4
+      processed: ''
+      offset: 000038C0
+    - name: _READ_PM1_CONTROL@0
+      processed: ''
+      offset: '00003920'
+    - name: _WRITE_PM1_CONTROL@12
+      processed: ''
+      offset: '00003980'
+    - name: _ACPIIrpSuccess@8
+      processed: ''
+      offset: 00003A80
+    - name: _ACPIFilterDeviceControl@8
+      processed: ''
+      offset: 00003AC0
+    - name: _ACPIForwardIrpToTarget@8
+      processed: ''
+      offset: 00003B00
+    - name: _ACPIIrpInvalid@8
+      processed: ''
+      offset: 00003B90
+    - name: _ACPIBusIrpQueryInterface@8
+      processed: ''
+      offset: 00003BD0
+    - name: _ACPIDispatchIrp@8
+      processed: ''
+      offset: 00003CF0
+    - name: _ACPIPdoDispatchIrp@8
+      processed: ''
+      offset: '00003E20'
+    - name: _GlobalLockEventHandler
+      processed: ''
+      offset: 00003EB0
+    - name: _ACPIAsyncAcquireGlobalLock@4
+      processed: ''
+      offset: 00003F30
+    - name: _ACPIReleaseGlobalLock@4
+      processed: ''
+      offset: 000040F0
+    - name: _ACPIHardwareGlobalLockReleased@0
+      processed: ''
+      offset: 000041D0
+    - name: _ACPIStartNextGlobalLockRequest@0
+      processed: ''
+      offset: '00004200'
+    - name: _ACPIAcquireHardwareGlobalLock@4
+      processed: ''
+      offset: '000042E0'
+    - name: _ACPIReleaseHardwareGlobalLock@0
+      processed: ''
+      offset: '00004320'
+    - name: _ACPIRegisterForDeviceNotifications@12
+      processed: ''
+      offset: '00004370'
+    - name: _ACPIUnregisterForDeviceNotifications@8
+      processed: ''
+      offset: '00004400'
+    - name: _NotifyHandler
+      processed: ''
+      offset: '00004490'
+    - name: _WorkerNotifyHandler
+      processed: ''
+      offset: '00004520'
+    - name: _DeviceNotify@16
+      processed: ''
+      offset: '00004600'
+    - name: _QueueNotify@24
+      processed: ''
+      offset: 000047B0
+    - name: _DequeueNotify@4
+      processed: ''
+      offset: 000048D0
+    - name: _NotifyWorkerThread@4
+      processed: ''
+      offset: '00004960'
+    - name: _InternalRawAccessOpRegionHandler
+      processed: ''
+      offset: 00004A90
+    - name: _InternalOpRegionHandler
+      processed: ''
+      offset: 00004BF0
+    - name: _OpRgWorkerThread@4
+      processed: ''
+      offset: 00004D10
+    - name: _WorkerInternalOpRegionHandler
+      processed: ''
+      offset: '00004E40'
+    - name: _QueueOpRegionAccess@32
+      processed: ''
+      offset: 00004F80
+    - name: _DequeueOpRegionAccess@4
+      processed: ''
+      offset: 000050B0
+    - name: _UnRegisterOperationRegionHandler@4
+      processed: ''
+      offset: '00005140'
+    - name: _CreateRegList@0
+      processed: ''
+      offset: '000051E0'
+    - name: _RegisterNewREGObject@8
+      processed: ''
+      offset: '00005250'
+    - name: _FindRegObject@4
+      processed: ''
+      offset: 000052F0
+    - name: _EvalMatchingRegObjects@8
+      processed: ''
+      offset: '00005370'
+    - name: _RegisterNewDevice@8
+      processed: ''
+      offset: '00005420'
+    - name: _GetNumberOfPowerResources@4
+      processed: ''
+      offset: 00005CD0
+    - name: _GetPNSObjForPR@8
+      processed: ''
+      offset: 00005DB0
+    - name: _GetSystemLevelForPR@4
+      processed: ''
+      offset: 00005EE0
+    - name: _GetResourceOrderForPR@4
+      processed: ''
+      offset: 00005F70
+    - name: _CreateDeviceListHead@0
+      processed: ''
+      offset: '00006000'
+    - name: _RegisterNewPowerResource@4
+      processed: ''
+      offset: '00006050'
+    - name: _CreatePowerResourceListHead@0
+      processed: ''
+      offset: '00006120'
+    - name: _UsePowerResource@8
+      processed: ''
+      offset: '00006170'
+    - name: _ReleasePowerResource@4
+      processed: ''
+      offset: 000062D0
+    - name: _FindPowerResourceNode@4
+      processed: ''
+      offset: '00006400'
+    - name: _FindDeviceListNode@4
+      processed: ''
+      offset: '00006440'
+    - name: _FindDeviceListNodeByHandle@4
+      processed: ''
+      offset: '00006480'
+    - name: _FindSpecialDeviceListNode@4
+      processed: ''
+      offset: 000064C0
+    - name: _WakeNotifyDevicesByGpeIndex@4
+      processed: ''
+      offset: '00006560'
+    - name: _SetOSSpecificDeviceHandleInDeviceNode@8
+      processed: ''
+      offset: '00006600'
+    - name: _CheckForSpecialDevices@8
+      processed: ''
+      offset: '00006670'
+    - name: _BuildDStateSStateMatrixForDevice@12
+      processed: ''
+      offset: '00006740'
+    - name: _DoFinalDeviceProcessing@0
+      processed: ''
+      offset: 00006A60
+    - name: _IdentifyCriticalDevice@4
+      processed: ''
+      offset: 00006AC0
+    - name: _ApplyRemoveDeviceWakePower@8
+      processed: ''
+      offset: 00006B40
+    - name: _ACPISetRTCAlarmWithTimeFields@4
+      processed: ''
+      offset: 00006C90
+    - name: _HexToBCD@4
+      processed: ''
+      offset: 00006FB0
+    - name: _BCDToHex@4
+      processed: ''
+      offset: '00007000'
+    - name: _SetSystemIndicator@8
+      processed: ''
+      offset: '00007050'
+    - name: _DisableACPI@0
+      processed: ''
+      offset: '00007210'
+    - name: _RunControlMethod@20
+      processed: ''
+      offset: '00007290'
+    - name: _ACPIGetTimerValue@0
+      processed: ''
+      offset: '00007430'
+    - name: _ArmACPIWakeDevices@0
+      processed: ''
+      offset: '00007480'
+    - name: _ArmACPILid@4
+      processed: ''
+      offset: '000074E0'
+    - name: _DisArmACPIWakeDevices@0
+      processed: ''
+      offset: '00007560'
+    - name: _PrepareForShutdown@0
+      processed: ''
+      offset: 000075D0
+    - name: _EnterSleepState@4
+      processed: ''
+      offset: '00007670'
+    - name: _AcpiResumeComplete@0
+      processed: ''
+      offset: 00007B40
+    - name: _SetTargetedSleepingState@4
+      processed: ''
+      offset: 00007B70
+    - name: _ACPIInterruptTestOurs@0
+      processed: ''
+      offset: 00007C70
+    - name: _ACPIRegLocalCopyString@12
+      processed: ''
+      offset: 00007CF0
+    - name: _ReadAMLFileEntry@8
+      processed: ''
+      offset: 00007D60
+    - name: _ACPIRegReadAMLRegistryEntry@4
+      processed: ''
+      offset: 00007F50
+    - name: _ACPIRegReadEntireAcpiTable@8
+      processed: ''
+      offset: '00008210'
+    - name: _ACPIRegDumpAcpiTable@16
+      processed: ''
+      offset: '00008460'
+    - name: _ACPIRegDumpAcpiTables@0
+      processed: ''
+      offset: 000085F0
+    - name: _PowerButtonNotify@8
+      processed: ''
+      offset: 000086D0
+    - name: _SleepButtonNotify@8
+      processed: ''
+      offset: '00008720'
+    - name: _LidNotify@8
+      processed: ''
+      offset: '00008770'
+    - name: _IsLidOpen@4
+      processed: ''
+      offset: '00008850'
+    - name: _ACPIButtonEnumerate@8
+      processed: ''
+      offset: 000088D0
+    - name: _ACPISetDeviceInterface@8
+      processed: ''
+      offset: 00008A90
+    - name: _ACPICMButtonNotify@8
+      processed: ''
+      offset: 00008B70
+    - name: _ACPIButtonEvent@12
+      processed: ''
+      offset: 00008C00
+    - name: _ACPISwitchAddDevice@8
+      processed: ''
+      offset: 00008D20
+    - name: _ACPIDispatchSwitchIrp@8
+      processed: ''
+      offset: 00008EA0
+    - name: _ACPIButtonPNP@8
+      processed: ''
+      offset: 00008FD0
+    - name: _ButtonPowerDispatch@8
+      processed: ''
+      offset: 000090A0
+    - name: _AMLIDebugger@4
+      processed: ''
+      offset: '00009140'
+    - name: _DebugHelp
+      processed: ''
+      offset: 000091C0
+    - name: _DebugExpr
+      processed: ''
+      offset: 0000A010
+    - name: _IsNumber
+      processed: ''
+      offset: 0000A1C0
+    - name: _AddBrkPt
+      processed: ''
+      offset: 0000A210
+    - name: _ClearBrkPt
+      processed: ''
+      offset: 0000A2D0
+    - name: _SetBrkPtState
+      processed: ''
+      offset: 0000A330
+    - name: _EnableDisableBP
+      processed: ''
+      offset: 0000A3C0
+    - name: _DebugBC
+      processed: ''
+      offset: 0000A4E0
+    - name: _DebugBD
+      processed: ''
+      offset: 0000A610
+    - name: _DebugBE
+      processed: ''
+      offset: 0000A640
+    - name: _DebugBL
+      processed: ''
+      offset: 0000A670
+    - name: _DebugBP
+      processed: ''
+      offset: 0000A7B0
+    - name: _DebugClearLog
+      processed: ''
+      offset: 0000A860
+    - name: _DumpData
+      processed: ''
+      offset: 0000A920
+    - name: _DebugDumpData
+      processed: ''
+      offset: 0000AC90
+    - name: _DebugD
+      processed: ''
+      offset: 0000AD70
+    - name: _DebugDB
+      processed: ''
+      offset: 0000ADB0
+    - name: _DebugDW
+      processed: ''
+      offset: 0000ADE0
+    - name: _DebugDD
+      processed: ''
+      offset: 0000AE10
+    - name: _DebugDA
+      processed: ''
+      offset: 0000AE40
+    - name: _DebugDC
+      processed: ''
+      offset: 0000AE70
+    - name: _DebugDumpHeap
+      processed: ''
+      offset: 0000AED0
+    - name: _DumpHeap
+      processed: ''
+      offset: 0000B050
+    - name: _DebugDumpStack
+      processed: ''
+      offset: 0000B170
+    - name: _DebugDumpLog
+      processed: ''
+      offset: 0000B2F0
+    - name: _DumpStack
+      processed: ''
+      offset: 0000B890
+    - name: _DebugDumpNameSpace
+      processed: ''
+      offset: 0000BA70
+    - name: _DebugDumpObject
+      processed: ''
+      offset: 0000BBF0
+    - name: _DebugEditMem
+      processed: ''
+      offset: 0000BCA0
+    - name: _DebugFindNSObj
+      processed: ''
+      offset: 0000C0F0
+    - name: _FindNSObj
+      processed: ''
+      offset: 0000C220
+    - name: _InPort
+      processed: ''
+      offset: 0000C2D0
+    - name: _DebugInPort
+      processed: ''
+      offset: 0000C370
+    - name: _DebugI
+      processed: ''
+      offset: 0000C4D0
+    - name: _DebugIW
+      processed: ''
+      offset: 0000C500
+    - name: _DebugID
+      processed: ''
+      offset: 0000C530
+    - name: _DebugQuit
+      processed: ''
+      offset: 0000C560
+    - name: _DebugListCtxts
+      processed: ''
+      offset: 0000C600
+    - name: _DebugLN
+      processed: ''
+      offset: 0000C7C0
+    - name: _DummyCallBack
+      processed: ''
+      offset: 0000C890
+    - name: _DebugNotify
+      processed: ''
+      offset: 0000C8A0
+    - name: _OutPort
+      processed: ''
+      offset: 0000CAB0
+    - name: _DebugOutPort
+      processed: ''
+      offset: 0000CB40
+    - name: _DebugO
+      processed: ''
+      offset: 0000CC40
+    - name: _DebugOW
+      processed: ''
+      offset: 0000CC70
+    - name: _DebugOD
+      processed: ''
+      offset: 0000CCA0
+    - name: _PrintSymbol
+      processed: ''
+      offset: 0000CCD0
+    - name: _DebugStep
+      processed: ''
+      offset: 0000CD50
+    - name: _DumpContext
+      processed: ''
+      offset: 0000CDC0
+    - name: _DebugDumpContext
+      processed: ''
+      offset: 0000D200
+    - name: _DebugSet
+      processed: ''
+      offset: 0000D300
+    - name: _DebugSetLogSize
+      processed: ''
+      offset: 0000D440
+    - name: _SetLogSize
+      processed: ''
+      offset: 0000D4C0
+    - name: _DebugTrace
+      processed: ''
+      offset: 0000D570
+    - name: _DebugUnAsm
+      processed: ''
+      offset: 0000D5E0
+    - name: _DebugRunMethod
+      processed: ''
+      offset: 0000D850
+    - name: _RunMethodCallBack
+      processed: ''
+      offset: 0000DB10
+    - name: _AddObjSymbol
+      processed: ''
+      offset: 0000DB90
+    - name: _FreeSymList
+      processed: ''
+      offset: 0000DCD0
+    - name: _FindObjSymbol
+      processed: ''
+      offset: 0000DD20
+    - name: _CheckBP
+      processed: ''
+      offset: 0000DDA0
+    - name: _PrintBuffData
+      processed: ''
+      offset: 0000DE00
+    - name: _PrintIndent
+      processed: ''
+      offset: 0000DF10
+    - name: _PrintObject
+      processed: ''
+      offset: 0000DFE0
+    - name: _LogEvent
+      processed: ''
+      offset: 0000E1C0
+    - name: _LogSchedEvent
+      processed: ''
+      offset: 0000E2B0
+    - name: _LogError
+      processed: ''
+      offset: 0000E3B0
+    - name: _CatError
+      processed: ''
+      offset: '0000E440'
+    - name: _ConPrintf
+      processed: ''
+      offset: 0000E4C0
+    - name: _ConPrompt
+      processed: ''
+      offset: '0000E520'
+    - name: _DumpMemObjCounts
+      processed: ''
+      offset: '0000E560'
+    - name: _IsTraceOn
+      processed: ''
+      offset: '0000E830'
+    - name: _IsTrigPt
+      processed: ''
+      offset: '0000E900'
+    - name: _TraceIndent
+      processed: ''
+      offset: '0000E980'
+    - name: _SetTrace
+      processed: ''
+      offset: 0000E9D0
+    - name: _AddTraceTrigPts
+      processed: ''
+      offset: 0000EA70
+    - name: _ZapTraceTrigPts
+      processed: ''
+      offset: 0000EB70
+    - name: _Debugger
+      processed: ''
+      offset: 0000EC50
+    - name: _DbgExecuteCmd
+      processed: ''
+      offset: 0000ECB0
+    - name: _UnAsmScope
+      processed: ''
+      offset: 0000EDF0
+    - name: _Indent
+      processed: ''
+      offset: 0000EF40
+    - name: _FindOpClass
+      processed: ''
+      offset: 0000EF90
+    - name: _FindOpTerm
+      processed: ''
+      offset: 0000EFE0
+    - name: _FindKeywordTerm
+      processed: ''
+      offset: 0000F060
+    - name: _UnAsmOpcode
+      processed: ''
+      offset: 0000F120
+    - name: _UnAsmDataObj
+      processed: ''
+      offset: 0000F320
+    - name: _UnAsmNameObj
+      processed: ''
+      offset: 0000F4C0
+    - name: _UnAsmNameTail
+      processed: ''
+      offset: 0000F6F0
+    - name: _UnAsmTermObj
+      processed: ''
+      offset: 0000F840
+    - name: _UnAsmArgs
+      processed: ''
+      offset: 0000F990
+    - name: _UnAsmSuperName
+      processed: ''
+      offset: 0000FD10
+    - name: _UnAsmDataList
+      processed: ''
+      offset: 0000FE40
+    - name: _UnAsmPkgList
+      processed: ''
+      offset: 0000FF40
+    - name: _UnAsmFieldList
+      processed: ''
+      offset: 000100C0
+    - name: _UnAsmField
+      processed: ''
+      offset: 000101A0
+    - name: _DbgParseArgs
+      processed: ''
+      offset: '000102E0'
+    - name: _DbgParseOneArg
+      processed: ''
+      offset: '00010360'
+    - name: _DbgMatchArg
+      processed: ''
+      offset: '00010620'
+    - name: _RtlAssert@16
+      processed: ''
+      offset: 000106EE
+    - name: _IoCreateSymbolicLink@8
+      processed: ''
+      offset: 000106F4
+    - name: _IoCreateDevice@28
+      processed: ''
+      offset: 000106FA
+    - name: _RtlInitUnicodeString@8
+      processed: ''
+      offset: '00010700'
+    - name: _DbgPrint
+      processed: ''
+      offset: '00010706'
+    - name: _vsprintf
+      processed: ''
+      offset: 0001070C
+    - name: _ZwPowerInformation@20
+      processed: ''
+      offset: '00010712'
+    - name: _ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00010718'
+    - name: _ExFreePool@4
+      processed: ''
+      offset: 0001071E
+    - name: '@KfLowerIrql@4'
+      processed: ''
+      offset: '00010724'
+    - name: '@KfRaiseIrql@4'
+      processed: ''
+      offset: 0001072A
+    - name: _DbgBreakPoint@0
+      processed: ''
+      offset: '00010730'
+    - name: _KeGetCurrentIrql@0
+      processed: ''
+      offset: '00010736'
+    - name: _READ_PORT_ULONG@4
+      processed: ''
+      offset: 0001073C
+    - name: _READ_PORT_UCHAR@4
+      processed: ''
+      offset: '00010742'
+    - name: _WRITE_PORT_UCHAR@8
+      processed: ''
+      offset: '00010748'
+    - name: '@InterlockedCompareExchange@12'
+      processed: ''
+      offset: 0001074E
+    - name: _IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '00010754'
+    - name: _ZwClose@4
+      processed: ''
+      offset: 0001075A
+    - name: _ZwQueryValueKey@24
+      processed: ''
+      offset: '00010760'
+    - name: _IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: '00010766'
+    - name: '@IofCompleteRequest@8'
+      processed: ''
+      offset: 0001076C
+    - name: _MmUnlockPagableImageSection@4
+      processed: ''
+      offset: '00010772'
+    - name: _MmLockPagableDataSection@4
+      processed: ''
+      offset: '00010778'
+    - name: '@KfReleaseSpinLock@8'
+      processed: ''
+      offset: 0001077E
+    - name: '@KfAcquireSpinLock@4'
+      processed: ''
+      offset: '00010784'
+    - name: _KeInitializeSpinLock@4
+      processed: ''
+      offset: 0001078A
+    - name: _READ_PORT_USHORT@4
+      processed: ''
+      offset: '00010790'
+    - name: _WRITE_PORT_USHORT@8
+      processed: ''
+      offset: '00010796'
+    - name: _MmMapIoSpace@16
+      processed: ''
+      offset: 0001079C
+    - name: _MmUnmapIoSpace@8
+      processed: ''
+      offset: 000107A2
+    - name: '@IofCallDriver@8'
+      processed: ''
+      offset: 000107A8
+    - name: _RtlCompareMemory@12
+      processed: ''
+      offset: 000107AE
+    - name: '@InterlockedDecrement@4'
+      processed: ''
+      offset: 000107B4
+    - name: '@InterlockedIncrement@4'
+      processed: ''
+      offset: 000107BA
+    - name: '@ExfInterlockedRemoveHeadList@8'
+      processed: ''
+      offset: 000107C0
+    - name: _ExQueueWorkItem@8
+      processed: ''
+      offset: 000107C6
+    - name: _RtlTimeToTimeFields@8
+      processed: ''
+      offset: 000107CC
+    - name: _WRITE_PORT_ULONG@8
+      processed: ''
+      offset: 000107D2
+    - name: _KeInitializeMutex@8
+      processed: ''
+      offset: 000107D8
+    - name: _KeWaitForSingleObject@20
+      processed: ''
+      offset: 000107DE
+    - name: _KeReleaseMutex@8
+      processed: ''
+      offset: '000107E4'
+    - name: _sprintf
+      processed: ''
+      offset: 000107EA
+    - name: _IoDeleteDevice@4
+      processed: ''
+      offset: 000107F0
+    - name: _RtlFreeUnicodeString@4
+      processed: ''
+      offset: 000107F6
+    - name: _IoSetDeviceInterfaceState@8
+      processed: ''
+      offset: 000107FC
+    - name: _IoRegisterDeviceInterface@16
+      processed: ''
+      offset: '00010802'
+    - name: _IoGetDeviceProperty@20
+      processed: ''
+      offset: '00010808'
+    - name: _PoStartNextPowerIrp@4
+      processed: ''
+      offset: 0001080E
+    - name: _KeGetCurrentThread@0
+      processed: ''
+      offset: '00010814'
+    - name: _KeInitializeTimer@4
+      processed: ''
+      offset: 0001081A
+    - name: _KeInitializeEvent@12
+      processed: ''
+      offset: '00010820'
+    - name: _KeSetEvent@12
+      processed: ''
+      offset: '00010826'
+    - name: _KeSetTimer@16
+      processed: ''
+      offset: 0001082C
+    - name: _KeCancelTimer@4
+      processed: ''
+      offset: '00010832'
+    - name: _KeInitializeDpc@12
+      processed: ''
+      offset: '00010838'
+    - name: _KeStallExecutionProcessor@4
+      processed: ''
+      offset: 0001083E
+  - num: '3'
+    name: _PTEXT
+    offset: '00007890'
+    symbols:
+    - name: _InsertSleepScanCode
+      processed: ''
+      offset: '00000000'
+    - name: _InsertNullScanCode
+      processed: ''
+      offset: '00000021'
+    - name: _CheckPagerType
+      processed: ''
+      offset: '00000040'
+    - name: _W32_Device_Init
+      processed: ''
+      offset: '00000058'
+    - name: __ACPI_Get_Version@8
+      processed: ''
+      offset: '00000074'
+    - name: __ACPI_SetSystemIndicator@16
+      processed: ''
+      offset: '00000093'
+  - num: '4'
+    name: W32
+    offset: '00007920'
+    symbols:
+    - name: _W32_ACPI_Get_Version
+      processed: ''
+      offset: '00000000'
+    - name: _W32_ACPI_SetSystemIndicator
+      processed: ''
+      offset: 0000000E
+  - num: '5'
+    name: PNP
+    offset: 00008A50
+    symbols:
+    - name: _ConfigureCPUHandlers@0
+      processed: ''
+      offset: '00000000'
+    - name: _UserWantsToSleep@0
+      processed: ''
+      offset: '00000100'
+    - name: _OSOpenFile
+      processed: ''
+      offset: 0000010C
+    - name: _OSCloseFile
+      processed: ''
+      offset: '00000219'
+    - name: _OSReadFile
+      processed: ''
+      offset: 000002A6
+    - name: _OSWriteFile
+      processed: ''
+      offset: 000003AE
+    - name: DOSLSeek
+      processed: ''
+      offset: 000004BA
+    - name: _CCODE__HeapFree
+      processed: ''
+      offset: 000004F8
+    - name: _CCODE__CONFIGMG_Call_At_Appy_Time
+      processed: ''
+      offset: '00000500'
+    - name: _CCODE__HeapAllocate
+      processed: ''
+      offset: '00000508'
+    - name: _CCODE_SHELL_SYSMODAL_Message@16
+      processed: ''
+      offset: '00000510'
+    - name: _CCODE__lstrlen
+      processed: ''
+      offset: '00000534'
+    - name: _CCODE__lstrcpyn
+      processed: ''
+      offset: 0000053C
+    - name: _CCODE_Get_Sys_VM_Handle
+      processed: ''
+      offset: '00000544'
+    - name: _CCODE__Sprintf
+      processed: ''
+      offset: '00000550'
+    - name: _CCODE__CONFIGMG_Register_Device_Driver
+      processed: ''
+      offset: '00000558'
+    - name: _CCODE__CONFIGMG_Change_DevNode_Status
+      processed: ''
+      offset: '00000560'
+    - name: _CCODE__CONFIGMG_Register_Enumerator
+      processed: ''
+      offset: '00000568'
+    - name: _CCODE_VPICD_Force_Default_Behavior@4
+      processed: ''
+      offset: '00000570'
+    - name: _CCODE_Get_Cur_VM_Handle
+      processed: ''
+      offset: '00000580'
+    - name: _CCODE_VXDLDR_LoadDevice@16
+      processed: ''
+      offset: 0000058C
+    - name: _CCODE_VMM_Add_DDB@4
+      processed: ''
+      offset: 000005B0
+    - name: _CCODE__Debug_Printf_Service
+      processed: ''
+      offset: 000005C4
+    - name: _CCODE__CONFIGMG_Assert_Structure
+      processed: ''
+      offset: 000005D8
+    - name: _CCODE__CONFIGMG_Debug_DevNode
+      processed: ''
+      offset: '000005E0'
+    - name: _CCODE__CONFIGMG_Recompute_HW_Prof
+      processed: ''
+      offset: '000005E8'
+    - name: _CCODE__CONFIGMG_Reenumerate_DevNode
+      processed: ''
+      offset: 000005F0
+    - name: _CCODE__CONFIGMG_Fail_Change_HW_Prof
+      processed: ''
+      offset: 000005F8
+    - name: _CCODE__CONFIGMG_Query_Change_HW_Prof
+      processed: ''
+      offset: '00000600'
+    - name: _CCODE__CONFIGMG_Remove_SubTree
+      processed: ''
+      offset: '00000608'
+    - name: _CCODE__CONFIGMG_Query_Remove_SubTree
+      processed: ''
+      offset: '00000610'
+    - name: _CCODE__CONFIGMG_Yield
+      processed: ''
+      offset: '00000618'
+    - name: _CCODE__VPOWERD_Set_System_Power_State
+      processed: ''
+      offset: '00000620'
+    - name: _CCODE__VPOWERD_Get_Power_Status
+      processed: ''
+      offset: '00000628'
+    - name: _CCODE__CONFIGMG_CallBack_At_Appy_Time
+      processed: ''
+      offset: '00000630'
+    - name: _CCODE__CONFIGMG_Get_Global_State
+      processed: ''
+      offset: '00000638'
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      processed: ''
+      offset: '00000640'
+    - name: _CCODE__CONFIGMG_Get_Next_Res_Des
+      processed: ''
+      offset: '00000648'
+    - name: _CCODE__CONFIGMG_Get_First_Log_Conf
+      processed: ''
+      offset: '00000650'
+    - name: _CCODE__CONFIGMG_Get_Sibling
+      processed: ''
+      offset: '00000658'
+    - name: _CCODE__CONFIGMG_Get_Private_DWord
+      processed: ''
+      offset: '00000660'
+    - name: _CCODE__CONFIGMG_Get_Child
+      processed: ''
+      offset: '00000668'
+    - name: _CCODE__VPOWERD_Register_Power_Handler
+      processed: ''
+      offset: '00000670'
+    - name: _CCODE__VPOWERD_Transfer_Control
+      processed: ''
+      offset: '00000678'
+    - name: _CCODE__CONFIGMG_Set_DevNode_Problem
+      processed: ''
+      offset: '00000680'
+    - name: _CCODE__CONFIGMG_Set_Private_DWord
+      processed: ''
+      offset: '00000688'
+    - name: _CCODE__CONFIGMG_Get_Bus_Info
+      processed: ''
+      offset: '00000690'
+    - name: _CCODE__CONFIGMG_Get_Parent
+      processed: ''
+      offset: '00000698'
+    - name: _CCODE__CONFIGMG_Set_DevNode_PowerCapabilities
+      processed: ''
+      offset: 000006A0
+    - name: _CCODE__CONFIGMG_System_Device_Power_State_Mapping
+      processed: ''
+      offset: 000006A8
+    - name: _CCODE__CONFIGMG_Get_DevNode_Status
+      processed: ''
+      offset: 000006B0
+    - name: _CCODE__CONFIGMG_CM_To_ISAPNP
+      processed: ''
+      offset: 000006B8
+    - name: _CCODE__lmemcpy
+      processed: ''
+      offset: 000006C0
+    - name: _CCODE__VPICD_Clear_IR_Bits
+      processed: ''
+      offset: 000006C8
+    - name: _CCODE__PCI_Lock_Unlock
+      processed: ''
+      offset: 000006D0
+    - name: _CCODE__CONFIGMG_Add_ID
+      processed: ''
+      offset: 000006D8
+    - name: _CCODE__CONFIGMG_Set_Dependent_DevNode
+      processed: ''
+      offset: '000006E0'
+    - name: _CCODE__CONFIGMG_Disable_DevNode
+      processed: ''
+      offset: '000006E8'
+    - name: _CCODE__CONFIGMG_ISAPNP_To_CM
+      processed: ''
+      offset: 000006F0
+    - name: _CCODE__CONFIGMG_Set_Bus_Info
+      processed: ''
+      offset: 000006F8
+    - name: _CCODE__CONFIGMG_Create_DevNode
+      processed: ''
+      offset: '00000700'
+    - name: _CCODE__CONFIGMG_Remove_Unmarked_Children
+      processed: ''
+      offset: '00000708'
+    - name: _CCODE__CONFIGMG_Reset_Children_Marks
+      processed: ''
+      offset: '00000710'
+    - name: _CCODE__AttemptingSomethingDangerous
+      processed: ''
+      offset: '00000718'
+    - name: _CCODE__CONFIGMG_Get_Device_ID
+      processed: ''
+      offset: '00000720'
+    - name: _CCODE_VMM_GetSystemInitState
+      processed: ''
+      offset: '00000728'
+    - name: _CCODE__CONFIGMG_Get_Device_Driver_Private_DWord
+      processed: ''
+      offset: '00000730'
+    - name: _CCODE_Cancel_Time_Out@4
+      processed: ''
+      offset: '00000738'
+    - name: _CCODE__NtKernPhysicalDeviceObjectToDevNode
+      processed: ''
+      offset: '00000748'
+    - name: _CCODE__CONFIGMG_Waking_Up_From_DevNode
+      processed: ''
+      offset: '00000750'
+    - name: _CCODE__Set_Global_Time_Out_Ex
+      processed: ''
+      offset: '00000758'
+    - name: _CCODE__CONFIGMG_Add_Remove_DevNode_Property
+      processed: ''
+      offset: '00000760'
+    - name: _CCODE_Get_Cur_Thread_Handle
+      processed: ''
+      offset: '00000768'
+    - name: _CCODE_Call_Restricted_Event@24
+      processed: ''
+      offset: '00000774'
+    - name: _CCODE__VPICD_Register_Trigger_Handler
+      processed: ''
+      offset: 000007A0
+    - name: _CCODE_VPICD_Physically_Unmask@4
+      processed: ''
+      offset: 000007A8
+    - name: _CCODE_VPICD_Physically_Mask@4
+      processed: ''
+      offset: 000007B8
+    - name: _CCODE_VPICD_Virtualize_IRQ@4
+      processed: ''
+      offset: 000007C8
+    - name: _CCODE__CONFIGMG_Add_Res_Des
+      processed: ''
+      offset: 000007DC
+    - name: _CCODE__CONFIGMG_Add_Empty_Log_Conf
+      processed: ''
+      offset: '000007E4'
+    - name: _CCODE__FlushCaches
+      processed: ''
+      offset: 000007EC
+    - name: _CCODE__PageCommitPhys
+      processed: ''
+      offset: 000007F4
+    - name: _CCODE__PageFree
+      processed: ''
+      offset: 000007FC
+    - name: _CCODE__LinRegionUnLock
+      processed: ''
+      offset: '00000804'
+    - name: _CCODE__LinRegionLock
+      processed: ''
+      offset: 0000080C
+    - name: _CCODE__PageReserve
+      processed: ''
+      offset: '00000814'
+    - name: _CCODE__PageAllocate
+      processed: ''
+      offset: 0000081C
+    - name: _CCODE_Get_Machine_Info@16
+      processed: ''
+      offset: '00000824'
+    - name: _CCODE__RegCloseKey
+      processed: ''
+      offset: '00000858'
+    - name: _CCODE__RegCreateKey
+      processed: ''
+      offset: '00000860'
+    - name: _CCODE__RegOpenKey
+      processed: ''
+      offset: '00000868'
+    - name: _CCODE__RegEnumKey
+      processed: ''
+      offset: '00000870'
+    - name: _CCODE__RegQueryValueEx
+      processed: ''
+      offset: '00000878'
+    - name: _CCODE__RegSetValueEx
+      processed: ''
+      offset: '00000880'
+    - name: _CCODE__CONFIGMG_Write_Registry_Value
+      processed: ''
+      offset: '00000888'
+  - num: '6'
+    name: _LDATA
+    offset: 00008AA0
+    symbols:
+    - name: _IgnoreHook
+      processed: ''
+      offset: 0000000C
+  - num: '7'
+    name: .rdata
+    offset: 00008B60
+    symbols:
+    - name: _GUID_ACPI_INTERFACE_STANDARD
+      processed: ''
+      offset: '00000058'
+    - name: _GUID_DEVICE_BATTERY
+      processed: ''
+      offset: '00000068'
+    - name: _GUID_DEVICE_SYS_BUTTON
+      processed: ''
+      offset: '00000078'
+    - name: _GUID_DEVICE_LID
+      processed: ''
+      offset: '00000088'
+    - name: _GUID_DEVICE_THERMAL_ZONE
+      processed: ''
+      offset: '00000098'
+    - name: _GUID_CLASS_INPUT
+      processed: ''
+      offset: 000000A8
+  - num: '8'
+    name: .data
+    offset: 000093B0
+    symbols:
+    - name: _CpuPowerStateHandlers
+      processed: ''
+      offset: '00000360'
+    - name: _C1Max
+      processed: ''
+      offset: 0000036C
+    - name: _C2Max
+      processed: ''
+      offset: '00000370'
+    - name: _C3Min
+      processed: ''
+      offset: '00000374'
+    - name: _C3Max
+      processed: ''
+      offset: '00000378'
+    - name: _widevaluestring
+      processed: ''
+      offset: '000004E8'
+    - name: _AcpiFdoIrpDispatch
+      processed: ''
+      offset: 000004F0
+    - name: _SpecialDeviceID
+      processed: ''
+      offset: '00000510'
+    - name: _SpecialInstanceID
+      processed: ''
+      offset: '00000520'
+    - name: _HexDigit
+      processed: ''
+      offset: 00000AF0
+    - name: _FirstSetLeftBit
+      processed: ''
+      offset: 00000B08
+    - name: _pElcr0
+      processed: ''
+      offset: 00000F78
+    - name: _pElcr1
+      processed: ''
+      offset: 00000F7C
+    - name: _RegionSpaceHandlersNeeded
+      processed: ''
+      offset: 000019D4
+    - name: _DoAcpiTableDump
+      processed: ''
+      offset: '00004550'
+    - name: _ACPIFixedButtonId
+      processed: ''
+      offset: 00004A38
+    - name: _ACPIFixedButtonDeviceName
+      processed: ''
+      offset: 00004A50
+    - name: _AcpiFixedButtonIrpDispatch
+      processed: ''
+      offset: 00004A88
+    - name: _AcpiPowerButtonIrpDispatch
+      processed: ''
+      offset: 00004AA8
+    - name: _AcpiSleepButtonIrpDispatch
+      processed: ''
+      offset: 00004AC8
+    - name: _AcpiLidIrpDispatch
+      processed: ''
+      offset: 00004AE8
+    - name: _ArgsHelp
+      processed: ''
+      offset: '00004E58'
+    - name: _ArgsBC
+      processed: ''
+      offset: '00004E88'
+    - name: _ArgsBD
+      processed: ''
+      offset: 00004EB8
+    - name: _ArgsBE
+      processed: ''
+      offset: 00004EE8
+    - name: _ArgsBP
+      processed: ''
+      offset: 00004F18
+    - name: _ArgsD
+      processed: ''
+      offset: 00004F48
+    - name: _ArgsDB
+      processed: ''
+      offset: 00004F90
+    - name: _ArgsDW
+      processed: ''
+      offset: 00004FD8
+    - name: _ArgsDD
+      processed: ''
+      offset: '00005020'
+    - name: _ArgsDA
+      processed: ''
+      offset: '00005068'
+    - name: _ArgsDumpHeap
+      processed: ''
+      offset: 000050B0
+    - name: _ArgsDumpStack
+      processed: ''
+      offset: '000050E0'
+    - name: _ArgsDNS
+      processed: ''
+      offset: '00005128'
+    - name: _ArgsDumpObject
+      processed: ''
+      offset: '00005170'
+    - name: _ArgsEditMem
+      processed: ''
+      offset: 000051A0
+    - name: _ArgsFindNS
+      processed: ''
+      offset: 000051D0
+    - name: _ArgsI
+      processed: ''
+      offset: '00005200'
+    - name: _ArgsIW
+      processed: ''
+      offset: '00005230'
+    - name: _ArgsID
+      processed: ''
+      offset: '00005260'
+    - name: _ArgsLN
+      processed: ''
+      offset: '00005290'
+    - name: _ArgsNotify
+      processed: ''
+      offset: 000052C0
+    - name: _ArgsO
+      processed: ''
+      offset: 000052F0
+    - name: _ArgsOW
+      processed: ''
+      offset: '00005320'
+    - name: _ArgsOD
+      processed: ''
+      offset: '00005350'
+    - name: _ArgsDumpCtxt
+      processed: ''
+      offset: '00005380'
+    - name: _ArgsRunMethod
+      processed: ''
+      offset: 000053B0
+    - name: _ArgsSetOptions
+      processed: ''
+      offset: '000053E0'
+    - name: _ArgsSetTrace
+      processed: ''
+      offset: '00005530'
+    - name: _ArgsUnAsm
+      processed: ''
+      offset: 000055C0
+    - name: _DbgCmds
+      processed: ''
+      offset: 000055F0
+    - name: _pszTokenSeps
+      processed: ''
+      offset: 000096D8
+    - name: _pszSwitchChars
+      processed: ''
+      offset: 00009A5C
+    - name: _pszOptionSeps
+      processed: ''
+      offset: 00009A60
+    - name: _TermTable
+      processed: ''
+      offset: 00009B60
+    - name: _OpClassTable
+      processed: ''
+      offset: 0000AF48
+    - name: _ExOpClassTable
+      processed: ''
+      offset: 0000B048
+    - name: _CurrentCpuPowerStateHandlerIndex
+      processed: ''
+      offset: 0000BBB0
+    - name: _CurrentTimer
+      processed: ''
+      offset: 0000BBB8
+    - name: _LastStateLength
+      processed: ''
+      offset: 0000BBC0
+    - name: _C1Hit
+      processed: ''
+      offset: 0000BBC4
+    - name: _C2Hit
+      processed: ''
+      offset: 0000BBC8
+    - name: _C3Hit
+      processed: ''
+      offset: 0000BBCC
+    - name: _newDeviceObject
+      processed: ''
+      offset: 0000BBD0
+    - name: _ACPIDriverObject
+      processed: ''
+      offset: 0000BBD4
+    - name: _LockRequest
+      processed: ''
+      offset: 0000BBD8
+    - name: _GpeWake
+      processed: ''
+      offset: 0000BBDC
+    - name: _GpeEnable
+      processed: ''
+      offset: 0000BBE0
+    - name: _GpeCurEnable
+      processed: ''
+      offset: 0000BBE4
+    - name: _GpeIsLevel
+      processed: ''
+      offset: 0000BBE8
+    - name: _GpeHandlerType
+      processed: ''
+      offset: 0000BBEC
+    - name: _GpeMap
+      processed: ''
+      offset: 0000BBF0
+    - name: _GpeVectorTable
+      processed: ''
+      offset: 0000BBF4
+    - name: _GpeVectorFree
+      processed: ''
+      offset: 0000BBF8
+    - name: _GpeVectorTableSize
+      processed: ''
+      offset: 0000BBFC
+    - name: _AcpiInformation
+      processed: ''
+      offset: 0000BC00
+    - name: _pRegNodeListHead
+      processed: ''
+      offset: 0000BC08
+    - name: _DeviceListHead
+      processed: ''
+      offset: 0000BC0C
+    - name: _PowerResourceListHead
+      processed: ''
+      offset: 0000BC10
+    - name: _ThermalInfo
+      processed: ''
+      offset: 0000BC14
+    - name: _ThermalInitialized
+      processed: ''
+      offset: 0000BC18
+    - name: _Throttling
+      processed: ''
+      offset: 0000BC1C
+    - name: _FixedButtonDeviceObject
+      processed: ''
+      offset: 0000BC20
+    - name: _gUserHasArrived
+      processed: ''
+      offset: 0000BC24
+    - name: _gDebugger
+      processed: ''
+      offset: 0000C040
+    - name: _dwCmdArg
+      processed: ''
+      offset: 0000C1D0
+    - name: _fRunningMethod
+      processed: ''
+      offset: 0000C228
+    - name: _giTraceLevel
+      processed: ''
+      offset: 0000C2E0
+    - name: _giIndent
+      processed: ''
+      offset: 0000C2E4
+    - name: _aszTrigPtBuff
+      processed: ''
+      offset: 0000C2E8
+    - name: _dwcTriggers
+      processed: ''
+      offset: 0000C428
+    - name: _gicCode
+      processed: ''
+      offset: 0000C430
+    - name: _giLevel
+      processed: ''
+      offset: 0000C434
+    - name: _gpnsCurUnAsmScope
+      processed: ''
+      offset: 0000C438
+    - name: _pm1a
+      processed: ''
+      offset: 0000C43C
+    - name: _pm1b
+      processed: ''
+      offset: 0000C43E
+    - name: _gCurrentSleepingState
+      processed: ''
+      offset: 0000C440
+    - name: _TimerInfo
+      processed: ''
+      offset: 0000C460
+    - name: _NotifyHandlerLock
+      processed: ''
+      offset: 0000C480
+    - name: _pOpRgListHead
+      processed: ''
+      offset: 0000C484
+    - name: _pNotifyListHead
+      processed: ''
+      offset: 0000C488
+    - name: _OriginalElcr0
+      processed: ''
+      offset: 0000C48C
+    - name: _OriginalElcr1
+      processed: ''
+      offset: 0000C48D
+    - name: _ACPIInterfaceTable
+      processed: ''
+      offset: 0000C4A0
+    - name: _ProcessorList
+      processed: ''
+      offset: 0000C4E0
+    - name: _DDBInformation
+      processed: ''
+      offset: 0000C520
+    - name: _OpRgListLock
+      processed: ''
+      offset: 0000C530
+    - name: _NotifyListLock
+      processed: ''
+      offset: 0000C534
+    - name: _GpeTableLock
+      processed: ''
+      offset: 0000C538
+    - name: _DebuggerPortPNSOBJ
+      processed: ''
+      offset: 0000C53C
+    - name: _gBootedInAPMMode
+      processed: ''
+      offset: 0000C540
+    - name: _IsEvilPIIX4
+      processed: ''
+      offset: 0000C541
+    - name: _gDeviceObject
+      processed: ''
+      offset: 0000C544
+    - name: _NotifyQueue
+      processed: ''
+      offset: 0000C550
+    - name: _OpRgQueue
+      processed: ''
+      offset: 0000C560
+    - name: _GPEWakeRefCountArray
+      processed: ''
+      offset: 0000C570
+  - num: '9'
+    name: .idata$2
+    offset: 00009B50
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000014'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000028'
+    - name: __imp__WRITE_PORT_USHORT@8
+      processed: ''
+      offset: '00000128'
+    - name: __imp__KeStallExecutionProcessor@4
+      processed: ''
+      offset: 0000012C
+    - name: __imp__WRITE_PORT_UCHAR@8
+      processed: ''
+      offset: '00000130'
+    - name: __imp__READ_PORT_USHORT@4
+      processed: ''
+      offset: '00000134'
+    - name: __imp__READ_PORT_UCHAR@4
+      processed: ''
+      offset: '00000138'
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: 0000013C
+    - name: __imp__READ_PORT_ULONG@4
+      processed: ''
+      offset: '00000140'
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: '00000144'
+    - name: __imp_@KfLowerIrql@4
+      processed: ''
+      offset: '00000148'
+    - name: __imp_@KfRaiseIrql@4
+      processed: ''
+      offset: 0000014C
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: '00000150'
+    - name: __imp__WRITE_PORT_ULONG@8
+      processed: ''
+      offset: '00000154'
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000158'
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 0000015C
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000160'
+    - name: __imp__DbgBreakPoint@0
+      processed: ''
+      offset: '00000164'
+    - name: __imp__vsprintf
+      processed: ''
+      offset: '00000168'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: 0000016C
+    - name: __imp__ZwClose@4
+      processed: ''
+      offset: '00000170'
+    - name: __imp__ZwQueryValueKey@24
+      processed: ''
+      offset: '00000174'
+    - name: __imp__ZwPowerInformation@20
+      processed: ''
+      offset: '00000178'
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: 0000017C
+    - name: __imp__MmUnlockPagableImageSection@4
+      processed: ''
+      offset: '00000180'
+    - name: __imp__MmLockPagableDataSection@4
+      processed: ''
+      offset: '00000184'
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: '00000188'
+    - name: __imp_@InterlockedCompareExchange@12
+      processed: ''
+      offset: 0000018C
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: '00000190'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: '00000194'
+    - name: __imp__IoCreateSymbolicLink@8
+      processed: ''
+      offset: '00000198'
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: 0000019C
+    - name: __imp__MmUnmapIoSpace@8
+      processed: ''
+      offset: 000001A0
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: 000001A4
+    - name: __imp__RtlCompareMemory@12
+      processed: ''
+      offset: 000001A8
+    - name: __imp_@InterlockedDecrement@4
+      processed: ''
+      offset: 000001AC
+    - name: __imp_@InterlockedIncrement@4
+      processed: ''
+      offset: 000001B0
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      processed: ''
+      offset: 000001B4
+    - name: __imp__ExQueueWorkItem@8
+      processed: ''
+      offset: 000001B8
+    - name: __imp__RtlTimeToTimeFields@8
+      processed: ''
+      offset: 000001BC
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: 000001C0
+    - name: __imp__KeInitializeMutex@8
+      processed: ''
+      offset: 000001C4
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: 000001C8
+    - name: __imp__KeReleaseMutex@8
+      processed: ''
+      offset: 000001CC
+    - name: __imp__sprintf
+      processed: ''
+      offset: 000001D0
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: 000001D4
+    - name: __imp__RtlFreeUnicodeString@4
+      processed: ''
+      offset: 000001D8
+    - name: __imp__IoSetDeviceInterfaceState@8
+      processed: ''
+      offset: 000001DC
+    - name: __imp__IoRegisterDeviceInterface@16
+      processed: ''
+      offset: '000001E0'
+    - name: __imp__IoGetDeviceProperty@20
+      processed: ''
+      offset: '000001E4'
+    - name: __imp__PoStartNextPowerIrp@4
+      processed: ''
+      offset: '000001E8'
+    - name: __imp__KeGetCurrentThread@0
+      processed: ''
+      offset: 000001EC
+    - name: __imp__KeInitializeTimer@4
+      processed: ''
+      offset: 000001F0
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: 000001F4
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: 000001F8
+    - name: __imp__KeSetTimer@16
+      processed: ''
+      offset: 000001FC
+    - name: __imp__KeCancelTimer@4
+      processed: ''
+      offset: '00000200'
+    - name: __imp__KeInitializeDpc@12
+      processed: ''
+      offset: '00000204'
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: '00000208'
+    - name: __imp__MmMapIoSpace@16
+      processed: ''
+      offset: 0000020C
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000210'
+  - num: '10'
+    name: _LDATA
+    offset: 00009BD0
+    symbols:
+    - name: _ACPIServiceTable
+      processed: ''
+      offset: '00000000'
+    - name: _ACPI_DDB
+      processed: ''
+      offset: '00000070'
+    - name: _DebuggerCommands
+      processed: ''
+      offset: '000000E8'
+    - name: _gPm1Status
+      processed: ''
+      offset: 000001A0
+    - name: _hACPIInterrupt
+      processed: ''
+      offset: 000001A4
+  - num: '12'
+    name: PAGE
+    offset: 00015CC0
+    symbols:
+    - name: _MakeAppyCallBack
+      processed: ''
+      offset: '00000000'
+    - name: _MakeAppy
+      processed: ''
+      offset: '00000040'
+    - name: _NotifyUserInAVeryNonSubtleWay@16
+      processed: ''
+      offset: '00000120'
+    - name: _ACPIAssert@20
+      processed: ''
+      offset: '00000510'
+    - name: _ACPIInit@0
+      processed: ''
+      offset: '00000550'
+    - name: _ACPIPnPNewDevNode@8
+      processed: ''
+      offset: '00000590'
+    - name: _ACPIExit@0
+      processed: ''
+      offset: '00000600'
+    - name: _ACPICreateDeviceObject@8
+      processed: ''
+      offset: '00000610'
+    - name: _OSInitialize@4
+      processed: ''
+      offset: '00000670'
+    - name: _RecursiveFindDock
+      processed: ''
+      offset: '00000710'
+    - name: _FindDock
+      processed: ''
+      offset: 000007B0
+    - name: _ComputeHardWareProfile
+      processed: ''
+      offset: '00000810'
+    - name: _Reenumerate
+      processed: ''
+      offset: '00000880'
+    - name: _Dock
+      processed: ''
+      offset: '00000900'
+    - name: _OSDeviceCheck@4
+      processed: ''
+      offset: 00000B00
+    - name: _AllowUndocking
+      processed: ''
+      offset: 00000B60
+    - name: _Undock
+      processed: ''
+      offset: 00000C20
+    - name: _OSDeviceCheckOnParent@4
+      processed: ''
+      offset: '00001300'
+    - name: _OSAreWeDocked@0
+      processed: ''
+      offset: '00001360'
+    - name: _OSUndockNow@0
+      processed: ''
+      offset: '00001380'
+    - name: _ACPIPowerHandler
+      processed: ''
+      offset: '00001430'
+    - name: _IsItALink
+      processed: ''
+      offset: 000014C0
+    - name: _GetIRQCount
+      processed: ''
+      offset: '00001580'
+    - name: _LoadVPOWERD
+      processed: ''
+      offset: '00001600'
+    - name: _APMTransfer
+      processed: ''
+      offset: '00001690'
+    - name: _RegisterWithPO
+      processed: ''
+      offset: 000016F0
+    - name: _DWordToName
+      processed: ''
+      offset: 000018A0
+    - name: _GetID
+      processed: ''
+      offset: '00001960'
+    - name: _GetBuffer
+      processed: ''
+      offset: 00001AA0
+    - name: _RecursiveDevNodeToNameSpace
+      processed: ''
+      offset: 00001B90
+    - name: _DevNodeToNameSpace
+      processed: ''
+      offset: 00001EA0
+    - name: _NameSpaceToDevNode
+      processed: ''
+      offset: 00001EF0
+    - name: _SetSystemDeviceMapping
+      processed: ''
+      offset: 000021B0
+    - name: _GetDeviceStatus
+      processed: ''
+      offset: '00002290'
+    - name: _ACPIStartDevNode
+      processed: ''
+      offset: 000022B0
+    - name: _ACPIStopDevNode
+      processed: ''
+      offset: 000027C0
+    - name: _ACPISetupDevNode
+      processed: ''
+      offset: 00002A30
+    - name: _ACPIAPMDevNode
+      processed: ''
+      offset: 00002BE0
+    - name: _ACPICreateDevNodeHook
+      processed: ''
+      offset: 00002DF0
+    - name: _ACPIProcessEnum
+      processed: ''
+      offset: 000031D0
+    - name: _ACPIRecurseEnum
+      processed: ''
+      offset: 000034F0
+    - name: _CreateCompositeBatteryDevNode
+      processed: ''
+      offset: '00003550'
+    - name: _ACPIEnumerate
+      processed: ''
+      offset: '00003580'
+    - name: _CreatePnPBIOSNode
+      processed: ''
+      offset: '00003660'
+    - name: _FirstStart
+      processed: ''
+      offset: '000036E0'
+    - name: _FirstEnumerationWithEC
+      processed: ''
+      offset: '00003790'
+    - name: _FirstEnumeration
+      processed: ''
+      offset: 000037C0
+    - name: _ACPIEnumHandler
+      processed: ''
+      offset: 000038C0
+    - name: _ACPIShutdown@0
+      processed: ''
+      offset: 00003D90
+    - name: _OSConvertDeviceHandleToPNSOBJ@4
+      processed: ''
+      offset: 00003DF0
+    - name: _DeviceAndPowerRegistration
+      processed: ''
+      offset: '00003E70'
+    - name: _AddProcessor
+      processed: ''
+      offset: 00003F10
+    - name: _LoadUnloadDefinitionBlock
+      processed: ''
+      offset: 00003FD0
+    - name: _OpRegionCreationHook
+      processed: ''
+      offset: '00004070'
+    - name: _OSInitializeCallbacks@0
+      processed: ''
+      offset: '00004130'
+    - name: _ACPIIrpFilter@4
+      processed: ''
+      offset: '00004280'
+    - name: _OSSyncWakeupFrom
+      processed: ''
+      offset: '00004310'
+    - name: _OSWakeupFrom@12
+      processed: ''
+      offset: '00004340'
+    - name: _CheckForEvilPIIX4@0
+      processed: ''
+      offset: '00004360'
+    - name: _DisableStopBreakEvents@0
+      processed: ''
+      offset: '00004420'
+    - name: _EnableStopBreakEvents@0
+      processed: ''
+      offset: '00004490'
+    - name: _AssertClockEventEnables@0
+      processed: ''
+      offset: '00004500'
+    - name: _ThermalPoll
+      processed: ''
+      offset: '00004560'
+    - name: _ResetPassiveCoolingTimeout@8
+      processed: ''
+      offset: '00004590'
+    - name: _OSCriticalShutdown@0
+      processed: ''
+      offset: 000045C0
+    - name: _OSArmDisarmDeviceForWakeup@8
+      processed: ''
+      offset: '000045E0'
+    - name: _OSIsCriticalSectionOwned@0
+      processed: ''
+      offset: '00004640'
+    - name: _ACPIInterruptProcessing
+      processed: ''
+      offset: '00004680'
+    - name: _ELCR
+      processed: ''
+      offset: 000047B0
+    - name: _ACPIInterruptDeviceDriver
+      processed: ''
+      offset: '00004830'
+    - name: _CreateInterruptDevNode
+      processed: ''
+      offset: 00004A20
+    - name: _OSInterruptVector@8
+      processed: ''
+      offset: 00004BE0
+    - name: _LockUnlockDevice
+      processed: ''
+      offset: 00004C00
+    - name: _DoLockNow@0
+      processed: ''
+      offset: 00004C90
+    - name: _UnlockNow@0
+      processed: ''
+      offset: 00004D00
+    - name: _ACPI_GetVersion
+      processed: ''
+      offset: 00004D10
+    - name: _ACPI_SetTimingMode
+      processed: ''
+      offset: 00004D20
+    - name: _ACPI_SetTimingModeEx
+      processed: ''
+      offset: '00004E50'
+    - name: _ACPI_GetIDEPMComplianceLevel
+      processed: ''
+      offset: 00004F00
+    - name: _ACPI_SetSystemPowerState
+      processed: ''
+      offset: '00005040'
+    - name: _ACPI_RegisterOpRegionCookedHandler
+      processed: ''
+      offset: '00005060'
+    - name: _ACPI_Set_RTC
+      processed: ''
+      offset: 000050F0
+    - name: _ACPI_Get_RTC
+      processed: ''
+      offset: '00005110'
+    - name: _ACPI_GetTimingMode
+      processed: ''
+      offset: '00005130'
+    - name: _ACPI_GetTimingModeEx
+      processed: ''
+      offset: 000052A0
+    - name: _ACPI_GetTaskFile
+      processed: ''
+      offset: '000053E0'
+    - name: _ACPI_FreeTaskFileBuffer
+      processed: ''
+      offset: '00005480'
+    - name: _ACPI_WalkNameSpace
+      processed: ''
+      offset: 000054C0
+    - name: _ACPI_GetObject
+      processed: ''
+      offset: '00005540'
+    - name: _ACPI_NameSpaceToDevNode
+      processed: ''
+      offset: '00005560'
+    - name: _ACPI_DevNodeToNameSpace
+      processed: ''
+      offset: '00005580'
+    - name: _ACPI_RunControlMethod
+      processed: ''
+      offset: 000055A0
+    - name: _ACPI_PrepareForSleeping
+      processed: ''
+      offset: 000056A0
+    - name: _ACPI_PrepareForResume
+      processed: ''
+      offset: 000056B0
+    - name: _ACPI_SystemShutdown
+      processed: ''
+      offset: 000056C0
+    - name: _ACPI_EvalPackageElement
+      processed: ''
+      offset: '000056E0'
+    - name: _ACPI_EvalPkgDataElement
+      processed: ''
+      offset: '00005710'
+    - name: _ACPI_FreeDataBuffs
+      processed: ''
+      offset: '00005740'
+    - name: _ACPI_GetRootSystemDescriptorTable
+      processed: ''
+      offset: '00005760'
+    - name: _ACPI_GetNameSpaceObject
+      processed: ''
+      offset: '00005780'
+    - name: _ACPI_IdentifyDebuggerCommInfo
+      processed: ''
+      offset: 000057B0
+    - name: _ACPI_ResumeComplete
+      processed: ''
+      offset: '00005810'
+    - name: _RealModeWakeUpCode@0
+      processed: ''
+      offset: '00005820'
+    - name: _RealModeWakeUpCodeEnd
+      processed: ''
+      offset: '00005860'
+    - name: _FlushPage
+      processed: ''
+      offset: '00005870'
+    - name: _BiosHibernate
+      processed: ''
+      offset: 000058C0
+    - name: _EnterDeepSleep@12
+      processed: ''
+      offset: '00005960'
+    - name: _SetPhysicalAddress
+      processed: ''
+      offset: 00005B50
+    - name: _CopyPageTableMinusEntry
+      processed: ''
+      offset: 00005BB0
+    - name: _CreateGDTSelector
+      processed: ''
+      offset: 00005C60
+    - name: _FreeGDTSelector
+      processed: ''
+      offset: 00005CD0
+    - name: _LockDeepSleep
+      processed: ''
+      offset: 00005D40
+    - name: _UnlockDeepSleep
+      processed: ''
+      offset: '00006080'
+    - name: _NameObject
+      processed: ''
+      offset: 000060F0
+    - name: _IntObj
+      processed: ''
+      offset: '00006100'
+    - name: _GetObject
+      processed: ''
+      offset: '00006130'
+    - name: _GetData
+      processed: ''
+      offset: '00006190'
+    - name: _GetInteger
+      processed: ''
+      offset: '00006230'
+    - name: _OSCloseHandle@4
+      processed: ''
+      offset: 000062C0
+    - name: _OSCreateHandle@12
+      processed: ''
+      offset: 000062F0
+    - name: _OSOpenHandle@12
+      processed: ''
+      offset: '00006340'
+    - name: _OSOpenLargestSubkey@12
+      processed: ''
+      offset: '00006390'
+    - name: _OSReadRegValue@16
+      processed: ''
+      offset: 000064B0
+    - name: _OSWriteRegValue@16
+      processed: ''
+      offset: '00006580'
+    - name: _OSLockRegion@8
+      processed: ''
+      offset: '00006620'
+    - name: _OSUnlockRegion@8
+      processed: ''
+      offset: '00006650'
+    - name: _OSVerifyBuffer@8
+      processed: ''
+      offset: '00006680'
+    - name: _OSSleep@4
+      processed: ''
+      offset: 000066A0
+    - name: _OSUserArrival@0
+      processed: ''
+      offset: 000066C0
+    - name: _ConvertToNumber@12
+      processed: ''
+      offset: 000066D0
+    - name: _BuildGPEMasks@0
+      processed: ''
+      offset: '000067E0'
+    - name: _ACPIPowerButton@8
+      processed: ''
+      offset: '00006960'
+    - name: _LockEverything@0
+      processed: ''
+      offset: 000069B0
+    - name: _UnlockEverything@0
+      processed: ''
+      offset: 00006A50
+    - name: _ACPIInitialize@4
+      processed: ''
+      offset: 00006AB0
+    - name: _ACPIFinishInitialize@0
+      processed: ''
+      offset: '00007010'
+    - name: _GetPBlkAddress@4
+      processed: ''
+      offset: 000070D0
+    - name: _InitializeACPIInformation@0
+      processed: ''
+      offset: '00007190'
+    - name: _ACPITranslateIoAddress@4
+      processed: ''
+      offset: '00007630'
+    - name: _ACPITranslateAndMapMemoryAddress@12
+      processed: ''
+      offset: '00007670'
+    - name: _ACPIUnmapIoSpace@8
+      processed: ''
+      offset: 000076D0
+    - name: _RegisterOperationRegionHandler@20
+      processed: ''
+      offset: 000076F0
+    - name: _ACPISetPower@8
+      processed: ''
+      offset: '00007850'
+    - name: _ACPISetRTCAlarm@4
+      processed: ''
+      offset: 00007D10
+    - name: _ACPIGetRTCAlarm@4
+      processed: ''
+      offset: 00007D40
+    - name: _ACPICancelRTCAlarm@0
+      processed: ''
+      offset: 00007F20
+    - name: _ACPIHandleRTCAlarm@4
+      processed: ''
+      offset: 00007FD0
+    - name: _ACPIWakeInOneMinute@0
+      processed: ''
+      offset: 000080B0
+    - name: _ACPITerminate@0
+      processed: ''
+      offset: 000081A0
+    - name: _ACPICleanUp@0
+      processed: ''
+      offset: 000081B0
+    - name: _GetZoneListNode@4
+      processed: ''
+      offset: '00008360'
+    - name: _GetTemperature@8
+      processed: ''
+      offset: '00008410'
+    - name: _ThermalEvent@4
+      processed: ''
+      offset: '00008500'
+    - name: _EnablePassiveCooling@12
+      processed: ''
+      offset: 000086A0
+    - name: _PassiveCoolingTimeOut
+      processed: ''
+      offset: '00008810'
+    - name: _SetProcessorFrequency@4
+      processed: ''
+      offset: '000088E0'
+    - name: _DisablePassiveCooling@4
+      processed: ''
+      offset: 00008A60
+    - name: _PerformActiveCooling@8
+      processed: ''
+      offset: 00008AF0
+    - name: _DisableActiveCooling@4
+      processed: ''
+      offset: 00008D00
+    - name: _ThermalTripPointChange@4
+      processed: ''
+      offset: 00008D80
+    - name: _ThermalNotify@8
+      processed: ''
+      offset: 00008FB0
+    - name: _IsZonePassiveCapable@4
+      processed: ''
+      offset: '00009080'
+    - name: _CreateAndInitThermInfo@0
+      processed: ''
+      offset: '00009130'
+    - name: _InitializeNewThermalZone@4
+      processed: ''
+      offset: '00009230'
+    - name: _CompleteThermalZoneInitialization@4
+      processed: ''
+      offset: 000092F0
+    - name: _ThermalZoneRegistration
+      processed: ''
+      offset: '00009520'
+    - name: _FinishThermalInit@0
+      processed: ''
+      offset: '00009560'
+    - name: _ThermalEventOnEachZone@0
+      processed: ''
+      offset: 000095D0
+    - name: _EnterThermal@0
+      processed: ''
+      offset: '00009630'
+    - name: _LeaveThermal@0
+      processed: ''
+      offset: '00009670'
+    - name: _PrepareForSleeping@0
+      processed: ''
+      offset: 000096B0
+    - name: _PrepareForPageableResume@0
+      processed: ''
+      offset: '00009710'
+    - name: _ACPILoadFindRSDT@0
+      processed: ''
+      offset: '00009820'
+    - name: _ACPILoadProcessDSDT@4
+      processed: ''
+      offset: 00009A10
+    - name: _ACPILoadProcessFADT@4
+      processed: ''
+      offset: 00009BB0
+    - name: _ACPILoadProcessFACS@4
+      processed: ''
+      offset: 0000A160
+    - name: _ACPILoadTableCheckSum@8
+      processed: ''
+      offset: 0000A230
+    - name: _DetermineSupportedSStates@0
+      processed: ''
+      offset: 0000A360
+    - name: _ACPIButtonStartDevice@8
+      processed: ''
+      offset: 0000A510
+    - name: _ACPICMPowerButtonStart@8
+      processed: ''
+      offset: 0000A550
+    - name: _ACPICMSleepButtonStart@8
+      processed: ''
+      offset: 0000A5B0
+    - name: _ACPICMLidStart@8
+      processed: ''
+      offset: 0000A610
+    - name: _ACPICMiButtonStart@12
+      processed: ''
+      offset: 0000A670
+    - name: _ACPICMLidWorker@8
+      processed: ''
+      offset: 0000A6F0
+    - name: _ACPIButtonDeviceControl@8
+      processed: ''
+      offset: 0000A790
+    - name: _AMLIInitialize
+      processed: ''
+      offset: 0000A870
+    - name: _AMLITerminate
+      processed: ''
+      offset: 0000AC80
+    - name: _AMLILoadDDB
+      processed: ''
+      offset: 0000AF30
+    - name: _AMLIUnloadDDB
+      processed: ''
+      offset: 0000B1A0
+    - name: _AMLIGetNameSpaceObject
+      processed: ''
+      offset: 0000B270
+    - name: _AMLIGetFieldUnitRegionObj
+      processed: ''
+      offset: 0000B460
+    - name: _AMLIEvalNameSpaceObject
+      processed: ''
+      offset: 0000B570
+    - name: _AMLIAsyncEvalObject
+      processed: ''
+      offset: 0000B7F0
+    - name: _AMLINestAsyncEvalObject
+      processed: ''
+      offset: 0000BA90
+    - name: _AMLIEvalPackageElement
+      processed: ''
+      offset: 0000BD30
+    - name: _AMLIEvalPkgDataElement
+      processed: ''
+      offset: 0000C0A0
+    - name: _AMLIFreeDataBuffs
+      processed: ''
+      offset: 0000C2D0
+    - name: _AMLIRegEventHandler
+      processed: ''
+      offset: 0000C3B0
+    - name: _AMLILockNotification
+      processed: ''
+      offset: 0000C5C0
+    - name: _AMLIUnlockNotification
+      processed: ''
+      offset: 0000C7E0
+    - name: _AMLIReferenceObject
+      processed: ''
+      offset: 0000C900
+    - name: _AMLIDereferenceObject
+      processed: ''
+      offset: 0000C9E0
+    - name: _AMLIGetLastError
+      processed: ''
+      offset: 0000CB20
+    - name: _StrLen
+      processed: ''
+      offset: 0000CC10
+    - name: _StrCpy
+      processed: ''
+      offset: 0000CCF0
+    - name: _StrCat
+      processed: ''
+      offset: 0000CE00
+    - name: _StrCmp
+      processed: ''
+      offset: 0000CF30
+    - name: _StrChr
+      processed: ''
+      offset: 0000D1C0
+    - name: _StrRChr
+      processed: ''
+      offset: 0000D2B0
+    - name: _StrTok
+      processed: ''
+      offset: 0000D3B0
+    - name: _StrToUL
+      processed: ''
+      offset: 0000D550
+    - name: _StrToL
+      processed: ''
+      offset: 0000D710
+    - name: _StrStr
+      processed: ''
+      offset: 0000D810
+    - name: _StrUpr
+      processed: ''
+      offset: 0000D900
+    - name: _StrLwr
+      processed: ''
+      offset: 0000D9E0
+    - name: _GetNameSpaceObject
+      processed: ''
+      offset: 0000DAC0
+    - name: _CreateNameSpaceObject
+      processed: ''
+      offset: 0000DDE0
+    - name: _FreeNameSpaceObjects
+      processed: ''
+      offset: 0000E2E0
+    - name: _LoadDDB
+      processed: ''
+      offset: '0000E670'
+    - name: _LoadMemDDB
+      processed: ''
+      offset: '0000E800'
+    - name: _LoadFieldUnitDDB
+      processed: ''
+      offset: '0000E910'
+    - name: _UnloadDDB
+      processed: ''
+      offset: 0000EC60
+    - name: _EvalPackageElement
+      processed: ''
+      offset: 0000ECF0
+    - name: _DumpNameSpaceObject
+      processed: ''
+      offset: 0000EE00
+    - name: _DumpNameSpaceTree
+      processed: ''
+      offset: 0000EF30
+    - name: _FindOpcodeTerm
+      processed: ''
+      offset: 0000F030
+    - name: _GetBaseObject
+      processed: ''
+      offset: 0000F0F0
+    - name: _GetBaseData
+      processed: ''
+      offset: 0000F1A0
+    - name: _NewObjOwner
+      processed: ''
+      offset: 0000F280
+    - name: _FreeObjOwner
+      processed: ''
+      offset: 0000F3B0
+    - name: _InsertOwnerObjList
+      processed: ''
+      offset: 0000F4C0
+    - name: _FreeDataBuffs
+      processed: ''
+      offset: 0000F570
+    - name: _PutIntObjData
+      processed: ''
+      offset: 0000F770
+    - name: _GetFieldUnitRegionObj
+      processed: ''
+      offset: 0000F840
+    - name: _CopyObjData
+      processed: ''
+      offset: 0000F9F0
+    - name: _MoveObjData
+      processed: ''
+      offset: 0000FB40
+    - name: _DupObjData
+      processed: ''
+      offset: 0000FC60
+    - name: _CopyObjBuffer
+      processed: ''
+      offset: 0000FE50
+    - name: _InitializeMutex
+      processed: ''
+      offset: 0000FFE0
+    - name: _AcquireMutex
+      processed: ''
+      offset: '00010080'
+    - name: _ReleaseMutex
+      processed: ''
+      offset: '00010250'
+    - name: _AcquireGL
+      processed: ''
+      offset: 000103C0
+    - name: _ReleaseGL
+      processed: ''
+      offset: '000104E0'
+    - name: _MapUnmapPhysMem
+      processed: ''
+      offset: 000105A0
+    - name: _MapPhysMem
+      processed: ''
+      offset: '00010780'
+    - name: _MapUnmapCallBack@4
+      processed: ''
+      offset: '00010860'
+    - name: _MatchObjType
+      processed: ''
+      offset: '00010990'
+    - name: _ValidateTarget
+      processed: ''
+      offset: 00010AC0
+    - name: _ValidateArgTypes
+      processed: ''
+      offset: 00010CC0
+    - name: _RegEventHandler
+      processed: ''
+      offset: 000111C0
+    - name: _RegOpcodeHandler
+      processed: ''
+      offset: 000112A0
+    - name: _RegRSAccess
+      processed: ''
+      offset: 000113D0
+    - name: _FindRSAccess
+      processed: ''
+      offset: '000115E0'
+    - name: _FreeRSAccessList
+      processed: ''
+      offset: '00011690'
+    - name: _NameSegString
+      processed: ''
+      offset: '00011750'
+    - name: _GetObjectPath
+      processed: ''
+      offset: 000117F0
+    - name: _GetObjectTypeName
+      processed: ''
+      offset: '00011940'
+    - name: _GetRegionSpaceName
+      processed: ''
+      offset: 00011A20
+    - name: _ValidateTable
+      processed: ''
+      offset: 00011B20
+    - name: _NewObjData
+      processed: ''
+      offset: 00011BF0
+    - name: _FreeObjData
+      processed: ''
+      offset: 00011FB0
+    - name: _FreeMem
+      processed: ''
+      offset: 000122C0
+    - name: _ReadObject
+      processed: ''
+      offset: '00012310'
+    - name: _WriteObject
+      processed: ''
+      offset: 000124B0
+    - name: _AccFieldUnit
+      processed: ''
+      offset: '00012780'
+    - name: _ReadField
+      processed: ''
+      offset: 00012A40
+    - name: _WriteField
+      processed: ''
+      offset: 00012D00
+    - name: _WriteFieldLoop
+      processed: ''
+      offset: 00012F10
+    - name: _PushAccFieldObj
+      processed: ''
+      offset: 000130A0
+    - name: _ReadFieldObj
+      processed: ''
+      offset: 000132A0
+    - name: _WriteFieldObj
+      processed: ''
+      offset: '00013670'
+    - name: _RawFieldAccess
+      processed: ''
+      offset: '00013990'
+    - name: _AccessFieldData
+      processed: ''
+      offset: 00013BB0
+    - name: _PushPreserveWriteObj
+      processed: ''
+      offset: 00013EB0
+    - name: _PreserveWriteObj
+      processed: ''
+      offset: 00013F90
+    - name: _AccessBaseField
+      processed: ''
+      offset: '00014130'
+    - name: _WriteCookAccess
+      processed: ''
+      offset: 000145B0
+    - name: _ReadBuffField
+      processed: ''
+      offset: '00014900'
+    - name: _WriteBuffField
+      processed: ''
+      offset: 00014A80
+    - name: _ReadSystemMem
+      processed: ''
+      offset: 00014BF0
+    - name: _WriteSystemMem
+      processed: ''
+      offset: 00014D00
+    - name: _ReadSystemIO
+      processed: ''
+      offset: '00014E40'
+    - name: _WriteSystemIO
+      processed: ''
+      offset: 00014F60
+    - name: _DumpObject
+      processed: ''
+      offset: '00015060'
+    - name: _NeedGlobalLock
+      processed: ''
+      offset: '00015750'
+    - name: _AsyncCallBack
+      processed: ''
+      offset: 000158B0
+    - name: _EvalMethodComplete
+      processed: ''
+      offset: 00015A60
+    - name: _SyncEvalObject
+      processed: ''
+      offset: 00015B10
+    - name: _AsyncEvalObject
+      processed: ''
+      offset: 00015D50
+    - name: _NestAsyncEvalObject
+      processed: ''
+      offset: 000160C0
+    - name: _ProcessEvalObj
+      processed: ''
+      offset: 000164A0
+    - name: _TimeoutCallback@16
+      processed: ''
+      offset: 000165C0
+    - name: _QueueContext
+      processed: ''
+      offset: '00016730'
+    - name: _DequeueAndReadyContext
+      processed: ''
+      offset: 000168B0
+    - name: _AcquireASLMutex
+      processed: ''
+      offset: '000169E0'
+    - name: _ReleaseASLMutex
+      processed: ''
+      offset: 00016BD0
+    - name: _WaitASLEvent
+      processed: ''
+      offset: 00016D70
+    - name: _ResetASLEvent
+      processed: ''
+      offset: '00016E70'
+    - name: _SignalASLEvent
+      processed: ''
+      offset: 00016F00
+    - name: _ExpireTimeSlice@16
+      processed: ''
+      offset: 00016FA0
+    - name: _StartTimeSlice@16
+      processed: ''
+      offset: '00017050'
+    - name: _StartTimeSlicePassive@4
+      processed: ''
+      offset: '00017140'
+    - name: _DispatchCtxtQueue
+      processed: ''
+      offset: '00017210'
+    - name: _InsertReadyQueue
+      processed: ''
+      offset: '00017410'
+    - name: _RestartContext
+      processed: ''
+      offset: 000177B0
+    - name: _RestartCtxtPassive@4
+      processed: ''
+      offset: '00017980'
+    - name: _RestartCtxtCallback
+      processed: ''
+      offset: 00017A20
+    - name: _BankField
+      processed: ''
+      offset: 00017AF0
+    - name: _CreateXField
+      processed: ''
+      offset: 00017DA0
+    - name: _CreateBitField
+      processed: ''
+      offset: 00017FA0
+    - name: _CreateByteField
+      processed: ''
+      offset: 000180B0
+    - name: _CreateWordField
+      processed: ''
+      offset: 000181A0
+    - name: _CreateDWordField
+      processed: ''
+      offset: '00018290'
+    - name: _CreateField
+      processed: ''
+      offset: '00018380'
+    - name: _Device
+      processed: ''
+      offset: 000184C0
+    - name: _InitEvent
+      processed: ''
+      offset: 000185F0
+    - name: _Event
+      processed: ''
+      offset: '00018710'
+    - name: _Field
+      processed: ''
+      offset: '00018810'
+    - name: _IndexField
+      processed: ''
+      offset: 00018A40
+    - name: _Method
+      processed: ''
+      offset: 00018CD0
+    - name: _InitMutex
+      processed: ''
+      offset: 00018EC0
+    - name: _Mutex
+      processed: ''
+      offset: 00018FF0
+    - name: _OpRegion
+      processed: ''
+      offset: '00019100'
+    - name: _PowerRes
+      processed: ''
+      offset: '00019360'
+    - name: _Processor
+      processed: ''
+      offset: '00019550'
+    - name: _ThermalZone
+      processed: ''
+      offset: '00019750'
+    - name: _NewHeap
+      processed: ''
+      offset: '00019880'
+    - name: _FreeHeap
+      processed: ''
+      offset: 000199D0
+    - name: _InitHeap
+      processed: ''
+      offset: 00019A70
+    - name: _HeapAlloc
+      processed: ''
+      offset: 00019B30
+    - name: _HeapFree
+      processed: ''
+      offset: 00019EF0
+    - name: _HeapFindFirstFit
+      processed: ''
+      offset: 0001A060
+    - name: _HeapInsertFreeList
+      processed: ''
+      offset: 0001A160
+    - name: _NewContext
+      processed: ''
+      offset: 0001A3C0
+    - name: _FreeContext
+      processed: ''
+      offset: 0001A540
+    - name: _InitContext
+      processed: ''
+      offset: 0001A660
+    - name: _IsStackEmpty
+      processed: ''
+      offset: 0001A770
+    - name: _PushFrame
+      processed: ''
+      offset: 0001A820
+    - name: _PopFrame
+      processed: ''
+      offset: 0001A9A0
+    - name: _PushPost
+      processed: ''
+      offset: 0001AAA0
+    - name: _PushScope
+      processed: ''
+      offset: 0001AB80
+    - name: _PushCall
+      processed: ''
+      offset: 0001ACC0
+    - name: _PushTerm
+      processed: ''
+      offset: 0001AED0
+    - name: _RunContext
+      processed: ''
+      offset: 0001B080
+    - name: _ListRemoveEntry
+      processed: ''
+      offset: 0001B490
+    - name: _ListRemoveHead
+      processed: ''
+      offset: 0001B5C0
+    - name: _ListRemoveTail
+      processed: ''
+      offset: 0001B690
+    - name: _ListRemoveAll
+      processed: ''
+      offset: 0001B770
+    - name: _ListInsertHead
+      processed: ''
+      offset: 0001B830
+    - name: _ListInsertTail
+      processed: ''
+      offset: 0001B910
+    - name: _Buffer
+      processed: ''
+      offset: 0001BA30
+    - name: _Package
+      processed: ''
+      offset: 0001BC70
+    - name: _ParsePackage
+      processed: ''
+      offset: 0001BE30
+    - name: _Acquire
+      processed: ''
+      offset: 0001C1C0
+    - name: _Concat
+      processed: ''
+      offset: 0001C350
+    - name: _DerefOf
+      processed: ''
+      offset: 0001C6D0
+    - name: _ExprOp1
+      processed: ''
+      offset: 0001C820
+    - name: _ExprOp2
+      processed: ''
+      offset: 0001CD30
+    - name: _Divide
+      processed: ''
+      offset: 0001D590
+    - name: _ProcessDivide
+      processed: ''
+      offset: 0001D7B0
+    - name: _IncDec
+      processed: ''
+      offset: 0001D900
+    - name: _ProcessIncDec
+      processed: ''
+      offset: 0001D9F0
+    - name: _Index
+      processed: ''
+      offset: 0001DCE0
+    - name: _LNot
+      processed: ''
+      offset: 0001DFD0
+    - name: _LogOp2
+      processed: ''
+      offset: '0001E150'
+    - name: _ObjTypeSizeOf
+      processed: ''
+      offset: '0001E600'
+    - name: _RefOf
+      processed: ''
+      offset: '0001E870'
+    - name: _CondRefOf
+      processed: ''
+      offset: '0001E930'
+    - name: _Store
+      processed: ''
+      offset: 0001EA60
+    - name: _Wait
+      processed: ''
+      offset: 0001EB80
+    - name: _ProcessWait
+      processed: ''
+      offset: 0001ECF0
+    - name: _Match
+      processed: ''
+      offset: 0001EDF0
+    - name: _MatchData
+      processed: ''
+      offset: 0001EFD0
+    - name: _Break
+      processed: ''
+      offset: 0001F0F0
+    - name: _BreakPoint
+      processed: ''
+      offset: 0001F190
+    - name: _Fatal
+      processed: ''
+      offset: 0001F240
+    - name: _IfElse
+      processed: ''
+      offset: 0001F340
+    - name: _Load
+      processed: ''
+      offset: 0001F5B0
+    - name: _Notify
+      processed: ''
+      offset: 0001F7E0
+    - name: _ReleaseResetSignalUnload
+      processed: ''
+      offset: 0001FA00
+    - name: _Return
+      processed: ''
+      offset: 0001FF10
+    - name: _SleepStall
+      processed: ''
+      offset: 0001FFE0
+    - name: _While
+      processed: ''
+      offset: '00020250'
+    - name: _Alias
+      processed: ''
+      offset: '00020370'
+    - name: _Name
+      processed: ''
+      offset: 000204D0
+    - name: _Scope
+      processed: ''
+      offset: 000205F0
+    - name: _ParseScope
+      processed: ''
+      offset: '00020720'
+    - name: _ParseNestedContext
+      processed: ''
+      offset: 00020A70
+    - name: _ParseCall
+      processed: ''
+      offset: 00020BC0
+    - name: _ParseTerm
+      processed: ''
+      offset: '00021080'
+    - name: _ParseAcquire
+      processed: ''
+      offset: 000214A0
+    - name: _ParseOpcode
+      processed: ''
+      offset: '00021720'
+    - name: _ParseArgObj
+      processed: ''
+      offset: 000219C0
+    - name: _ParseLocalObj
+      processed: ''
+      offset: 00021B20
+    - name: _ParseNameObj
+      processed: ''
+      offset: 00021C50
+    - name: _ParseAndGetNameSpaceObject
+      processed: ''
+      offset: 00021D80
+    - name: _ParseArg
+      processed: ''
+      offset: '00021E90'
+    - name: _ParseSuperName
+      processed: ''
+      offset: '00022110'
+    - name: _ParseIntObj
+      processed: ''
+      offset: 000224A0
+    - name: _ParseString
+      processed: ''
+      offset: 000227C0
+    - name: _ParseObjName
+      processed: ''
+      offset: 000229D0
+    - name: _ParseName
+      processed: ''
+      offset: 00022BE0
+    - name: _ParseNameTail
+      processed: ''
+      offset: '00022E60'
+    - name: _ParseInteger
+      processed: ''
+      offset: '00023040'
+    - name: _ParseField
+      processed: ''
+      offset: 000231B0
+    - name: _ParseFieldList
+      processed: ''
+      offset: '00023560'
+    - name: _ParsePackageLen
+      processed: ''
+      offset: '00023730'
+  - num: '13'
+    name: .edata
+    offset: '00016540'
+    symbols:
+    - name: _DisplayNonSubtle
+      processed: ''
+      offset: '00000090'
+    - name: _gpszOSName
+      processed: ''
+      offset: '00000318'
+    - name: _fDockCapable
+      processed: ''
+      offset: '00000390'
+    - name: _pnsGlobalEJ
+      processed: ''
+      offset: '00000394'
+    - name: _PIIX4DevFunc
+      processed: ''
+      offset: 00000AD0
+    - name: _dnACPIDevNode
+      processed: ''
+      offset: 00000AD4
+    - name: _fFirstEnum
+      processed: ''
+      offset: 00000AD8
+    - name: _dnECDevNode
+      processed: ''
+      offset: 00000ADC
+    - name: _pLockCodeHandle
+      processed: ''
+      offset: 000022D4
+    - name: _pLockDataHandle
+      processed: ''
+      offset: 000022D8
+    - name: _gdwcMemObjs
+      processed: ''
+      offset: 00003B90
+    - name: _gdwcCTObjs
+      processed: ''
+      offset: 00003B94
+    - name: _gdwcHPObjs
+      processed: ''
+      offset: 00003B98
+    - name: _gdwcODObjs
+      processed: ''
+      offset: 00003B9C
+    - name: _gdwcNSObjs
+      processed: ''
+      offset: 00003BA0
+    - name: _gdwcOOObjs
+      processed: ''
+      offset: 00003BA4
+    - name: _gdwcBFObjs
+      processed: ''
+      offset: 00003BA8
+    - name: _gdwcSDObjs
+      processed: ''
+      offset: 00003BAC
+    - name: _gdwcBDObjs
+      processed: ''
+      offset: 00003BB0
+    - name: _gdwcPKObjs
+      processed: ''
+      offset: 00003BB4
+    - name: _gdwcFUObjs
+      processed: ''
+      offset: 00003BB8
+    - name: _gdwcKFObjs
+      processed: ''
+      offset: 00003BBC
+    - name: _gdwcFObjs
+      processed: ''
+      offset: 00003BC0
+    - name: _gdwcIFObjs
+      processed: ''
+      offset: 00003BC4
+    - name: _gdwcORObjs
+      processed: ''
+      offset: 00003BC8
+    - name: _gdwcMTObjs
+      processed: ''
+      offset: 00003BCC
+    - name: _gdwcEVObjs
+      processed: ''
+      offset: 00003BD0
+    - name: _gdwcMEObjs
+      processed: ''
+      offset: 00003BD4
+    - name: _gdwcPRObjs
+      processed: ''
+      offset: 00003BD8
+    - name: _gdwcPCObjs
+      processed: ''
+      offset: 00003BDC
+    - name: _gdwcRSObjs
+      processed: ''
+      offset: 00003BE0
+    - name: _gdwcSYObjs
+      processed: ''
+      offset: 00003BE4
+    - name: _gdwcPHObjs
+      processed: ''
+      offset: 00003BE8
+    - name: _gdwcCRObjs
+      processed: ''
+      offset: 00003BEC
+    - name: _gdwGlobalHeapSize
+      processed: ''
+      offset: 00003BF0
+    - name: _gdwLocalHeapMax
+      processed: ''
+      offset: 00003BF4
+    - name: _gdwLocalStackMax
+      processed: ''
+      offset: 00003BF8
+    - name: _gdwGHeapSnapshot
+      processed: ''
+      offset: 00003BFC
+    - name: _gpszTrigPts
+      processed: ''
+      offset: 00003C00
+    - name: _gdwfAMLI
+      processed: ''
+      offset: 00003C04
+    - name: _gdwfAMLIInit
+      processed: ''
+      offset: 00003C08
+    - name: _gdwCtxtBlkSize
+      processed: ''
+      offset: 00003C0C
+    - name: _gdwGlobalHeapBlkSize
+      processed: ''
+      offset: 00003C10
+    - name: _gpnsNameSpaceRoot
+      processed: ''
+      offset: 00003C14
+    - name: _gpheapGlobal
+      processed: ''
+      offset: 00003C18
+    - name: _gplistCtxtHead
+      processed: ''
+      offset: 00003C1C
+    - name: _gplistObjOwners
+      processed: ''
+      offset: 00003C20
+    - name: _gplistDefuncNSObjs
+      processed: ''
+      offset: 00003C24
+    - name: _gpRSAccessHead
+      processed: ''
+      offset: 00003C28
+    - name: _ghNotify
+      processed: ''
+      offset: 00003C30
+    - name: _ghValidateTable
+      processed: ''
+      offset: 00003C38
+    - name: _ghFatal
+      processed: ''
+      offset: 00003C40
+    - name: _ghGlobalLock
+      processed: ''
+      offset: 00003C48
+    - name: _gReadyQueue
+      processed: ''
+      offset: 00003C50
+    - name: _gmutCtxtList
+      processed: ''
+      offset: 00003CE0
+    - name: _gmutOwnerList
+      processed: ''
+      offset: 00003D00
+    - name: _atAlias
+      processed: ''
+      offset: 00003D20
+    - name: _atName
+      processed: ''
+      offset: 00003D40
+    - name: _atScope
+      processed: ''
+      offset: 00003D60
+    - name: _atBankField
+      processed: ''
+      offset: 00003D80
+    - name: _atBitField
+      processed: ''
+      offset: 00003DA0
+    - name: _atByteField
+      processed: ''
+      offset: 00003DC0
+    - name: _atDWordField
+      processed: ''
+      offset: 00003DE0
+    - name: _atCreateField
+      processed: ''
+      offset: '00003E00'
+    - name: _atWordField
+      processed: ''
+      offset: '00003E20'
+    - name: _atDevice
+      processed: ''
+      offset: '00003E40'
+    - name: _atEvent
+      processed: ''
+      offset: '00003E60'
+    - name: _atField
+      processed: ''
+      offset: '00003E80'
+    - name: _atIndexField
+      processed: ''
+      offset: 00003EA0
+    - name: _atMethod
+      processed: ''
+      offset: 00003EC0
+    - name: _atMutex
+      processed: ''
+      offset: 00003EE0
+    - name: _atOpRegion
+      processed: ''
+      offset: 00003F00
+    - name: _atPowerRes
+      processed: ''
+      offset: 00003F20
+    - name: _atProcessor
+      processed: ''
+      offset: 00003F40
+    - name: _atThermalZone
+      processed: ''
+      offset: 00003F60
+    - name: _atBreak
+      processed: ''
+      offset: 00003F80
+    - name: _atBreakPoint
+      processed: ''
+      offset: 00003FA0
+    - name: _atElse
+      processed: ''
+      offset: 00003FC0
+    - name: _atFatal
+      processed: ''
+      offset: 00003FE0
+    - name: _atIf
+      processed: ''
+      offset: '00004000'
+    - name: _atLoad
+      processed: ''
+      offset: '00004020'
+    - name: _atNOP
+      processed: ''
+      offset: '00004040'
+    - name: _atNotify
+      processed: ''
+      offset: '00004060'
+    - name: _atRelease
+      processed: ''
+      offset: '00004080'
+    - name: _atReset
+      processed: ''
+      offset: 000040A0
+    - name: _atReturn
+      processed: ''
+      offset: 000040C0
+    - name: _atSignal
+      processed: ''
+      offset: '000040E0'
+    - name: _atSleep
+      processed: ''
+      offset: '00004100'
+    - name: _atStall
+      processed: ''
+      offset: '00004120'
+    - name: _atUnload
+      processed: ''
+      offset: '00004140'
+    - name: _atWhile
+      processed: ''
+      offset: '00004160'
+    - name: _atAcquire
+      processed: ''
+      offset: '00004180'
+    - name: _atAdd
+      processed: ''
+      offset: 000041A0
+    - name: _atAnd
+      processed: ''
+      offset: 000041C0
+    - name: _atBuffer
+      processed: ''
+      offset: '000041E0'
+    - name: _atConcat
+      processed: ''
+      offset: '00004200'
+    - name: _atCondRefOf
+      processed: ''
+      offset: '00004220'
+    - name: _atDecrement
+      processed: ''
+      offset: '00004240'
+    - name: _atDerefOf
+      processed: ''
+      offset: '00004260'
+    - name: _atDivide
+      processed: ''
+      offset: '00004280'
+    - name: _atFindSetLBit
+      processed: ''
+      offset: 000042A0
+    - name: _atFindSetRBit
+      processed: ''
+      offset: 000042C0
+    - name: _atFromBCD
+      processed: ''
+      offset: '000042E0'
+    - name: _atIncrement
+      processed: ''
+      offset: '00004300'
+    - name: _atIndex
+      processed: ''
+      offset: '00004320'
+    - name: _atLAnd
+      processed: ''
+      offset: '00004340'
+    - name: _atLEq
+      processed: ''
+      offset: '00004360'
+    - name: _atLG
+      processed: ''
+      offset: '00004380'
+    - name: _atLL
+      processed: ''
+      offset: 000043A0
+    - name: _atLNot
+      processed: ''
+      offset: 000043C0
+    - name: _atLOr
+      processed: ''
+      offset: '000043E0'
+    - name: _atMatch
+      processed: ''
+      offset: '00004400'
+    - name: _atMultiply
+      processed: ''
+      offset: '00004420'
+    - name: _atNAnd
+      processed: ''
+      offset: '00004440'
+    - name: _atNOr
+      processed: ''
+      offset: '00004460'
+    - name: _atNot
+      processed: ''
+      offset: '00004480'
+    - name: _atObjType
+      processed: ''
+      offset: 000044A0
+    - name: _atOr
+      processed: ''
+      offset: 000044C0
+    - name: _atPackage
+      processed: ''
+      offset: '000044E0'
+    - name: _atRefOf
+      processed: ''
+      offset: '00004500'
+    - name: _atShiftLeft
+      processed: ''
+      offset: '00004520'
+    - name: _atShiftRight
+      processed: ''
+      offset: '00004540'
+    - name: _atSizeOf
+      processed: ''
+      offset: '00004560'
+    - name: _atStore
+      processed: ''
+      offset: '00004580'
+    - name: _atSubtract
+      processed: ''
+      offset: 000045A0
+    - name: _atToBCD
+      processed: ''
+      offset: 000045C0
+    - name: _atWait
+      processed: ''
+      offset: '000045E0'
+    - name: _atXOr
+      processed: ''
+      offset: '00004600'
+    - name: _atNameObj
+      processed: ''
+      offset: '00004620'
+    - name: _atDataObj
+      processed: ''
+      offset: '00004640'
+    - name: _atString
+      processed: ''
+      offset: '00004660'
+    - name: _atArgObj
+      processed: ''
+      offset: '00004680'
+    - name: _atLocalObj
+      processed: ''
+      offset: 000046A0
+    - name: _atDebugObj
+      processed: ''
+      offset: 000046C0
+    - name: _OpcodeTable
+      processed: ''
+      offset: '000046E0'
+    - name: _ExOpcodeTable
+      processed: ''
+      offset: 00004AE0
+  - num: '14'
+    name: INIT
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'

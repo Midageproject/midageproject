@@ -1,123 +1,178 @@
-filename: "iosubsys/diskvsd.vxd"
+filename: iosubsys/diskvsd.vxd
 #TODO: bring up more details from symdeb
-binary: "iosubsys/diskvsd.vxd"
-description: ""
-note: ""
+binary: DISKVSD
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_LGROUP"
-        offset: "000018E0"
-        symbols:
-          - name: 'async_request'
-            offset: "0000000C"            
-          - name: 'VSD_Callback'
-            offset: "00000048"            
-          - name: 'vsd_c_callback'
-            offset: "000000C2"            
-          - name: 'VSD_media_sense_callback'
-            offset: "0000023D"            
-          - name: 'vsd_format_cb'
-            offset: "00000351"            
-          - name: 'fmt_cb_free_iop'
-            offset: "000003EE"            
-          - name: 'VSD_Compute_Callback'
-            offset: "00000467"            
-          - name: 'VSD_Write_Callback'
-            offset: "000005CD"            
-          - name: 'VSD_Error_Handler'
-            offset: "0000067C"            
-          - name: 'VSD_Request'
-            offset: "00000C6C"            
-          - name: 'VSD_service_table'
-            offset: "00000E61"            
-          - name: 'VSD_Unsupported_Command'
-            offset: "00000E95"            
-          - name: 'VSD_Setup_sense_media'
-            offset: "00000EAB"            
-          - name: 'VSD_Setup_Format'
-            offset: "00000EBB"            
-          - name: 'VSD_Setup_Read'
-            offset: "0000100F"            
-          - name: 'VSD_Setup_Write'
-            offset: "00001055"            
-          - name: 'VSD_Setup_Write_Verify'
-            offset: "0000109B"            
-          - name: 'VSD_Setup_Verify'
-            offset: "000010FC"            
-          - name: 'VSD_Setup_Test_Unit_Ready'
-            offset: "00001149"            
-          - name: 'VSD_Setup_Request_Sense'
-            offset: "00001169"            
-          - name: 'VSD_Setup_Lock_Media'
-            offset: "000011A1"            
-          - name: 'VSD_Setup_Unlock_Media'
-            offset: "000011A5"            
-          - name: 'VSD_Setup_Start_Unit'
-            offset: "000011CA"            
-          - name: 'VSD_Setup_Load_Unit'
-            offset: "000011CE"            
-          - name: 'VSD_Setup_Unload_Unit'
-            offset: "000011D2"            
-          - name: 'VSD_Setup_Stop_Unit'
-            offset: "000011FC"            
-          - name: 'VSD_Setup_Compute_Geom'
-            offset: "00001267"            
-          - name: 'VSD_Setup_IOCTL'
-            offset: "000012F3"            
-          - name: 'setup_internal_async_request'
-            offset: "000012F9"            
-          - name: 'VSD_Internal_Request'
-            offset: "00001495"            
-          - name: 'VSD_Setup_Mode_Sense'
-            offset: "00001586"            
-          - name: 'VSD_Setup_Inquiry'
-            offset: "000015B0"            
-          - name: 'VSD_setup_srb'
-            offset: "000015D9"            
-          - name: 'vsd_send_criteria_request'
-            offset: "00001677"            
-          - name: 'vsd_send_internal_request'
-            offset: "00001781"            
-          - name: 'vsd_ret_iop'
-            offset: "00001894"            
-          - name: 'vsd_ilb'
-            offset: "000018F4"            
-          - name: 'get_trace_ptr'
-            offset: "00001928"            
-          - name: 'dot_command'
-            offset: "0000194A"            
-          - name: 'VSD_dump_help'
-            offset: "00001970"            
-          - name: 'VSD_trace_dump'
-            offset: "0000197F"            
-          - name: 'DiskVSD_DDB'
-            offset: "00001AC8"            
-          - name: 'DISKVSD_trace_cur'
-            offset: "00003068"            
-      - num: "2"
-        name: "_IGROUP"
-        offset: "000019A0"
-        symbols:
-          - name: 'DiskVSD_Device_Init'
-            offset: "00000000"            
-          - name: 'Drv_Reg_Pkt'
-            offset: "00000064"            
-      - num: "3"
-        name: "_PTEXT"
-        offset: "00001C00"
-        symbols:
-          - name: 'VSD_Cfg_Device'
-            offset: "00000000"            
-          - name: 'VSD_Ucfg_Device'
-            offset: "0000020A"            
-          - name: 'VSD_init_complete'
-            offset: "00000228"            
-      - num: "4"
-        name: "_PDATA"
-        offset: "00000000"
-        symbols:
-          - name: 'diskvsd_device_count'
-            offset: "00000000"            
+- version: system
+  tree:
+  - - vsdaer.asm
+    - vsd.asm
+    - vsdco.asm
+    - vsddbg.asm
+    - vsderror.asm
+    - vsdreq.asm
+    - vsdstart.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '000018E0'
+    symbols:
+    - name: async_request
+      processed: ''
+      offset: 0000000C
+    - name: VSD_Callback
+      processed: ''
+      offset: '00000048'
+    - name: vsd_c_callback
+      processed: ''
+      offset: 000000C2
+    - name: VSD_media_sense_callback
+      processed: ''
+      offset: 0000023D
+    - name: vsd_format_cb
+      processed: ''
+      offset: '00000351'
+    - name: fmt_cb_free_iop
+      processed: ''
+      offset: 000003EE
+    - name: VSD_Compute_Callback
+      processed: ''
+      offset: '00000467'
+    - name: VSD_Write_Callback
+      processed: ''
+      offset: 000005CD
+    - name: VSD_Error_Handler
+      processed: ''
+      offset: 0000067C
+    - name: VSD_Request
+      processed: ''
+      offset: 00000C6C
+    - name: VSD_service_table
+      processed: ''
+      offset: '00000E61'
+    - name: VSD_Unsupported_Command
+      processed: ''
+      offset: '00000E95'
+    - name: VSD_Setup_sense_media
+      processed: ''
+      offset: 00000EAB
+    - name: VSD_Setup_Format
+      processed: ''
+      offset: 00000EBB
+    - name: VSD_Setup_Read
+      processed: ''
+      offset: 0000100F
+    - name: VSD_Setup_Write
+      processed: ''
+      offset: '00001055'
+    - name: VSD_Setup_Write_Verify
+      processed: ''
+      offset: 0000109B
+    - name: VSD_Setup_Verify
+      processed: ''
+      offset: 000010FC
+    - name: VSD_Setup_Test_Unit_Ready
+      processed: ''
+      offset: '00001149'
+    - name: VSD_Setup_Request_Sense
+      processed: ''
+      offset: '00001169'
+    - name: VSD_Setup_Lock_Media
+      processed: ''
+      offset: 000011A1
+    - name: VSD_Setup_Unlock_Media
+      processed: ''
+      offset: 000011A5
+    - name: VSD_Setup_Start_Unit
+      processed: ''
+      offset: 000011CA
+    - name: VSD_Setup_Load_Unit
+      processed: ''
+      offset: 000011CE
+    - name: VSD_Setup_Unload_Unit
+      processed: ''
+      offset: 000011D2
+    - name: VSD_Setup_Stop_Unit
+      processed: ''
+      offset: 000011FC
+    - name: VSD_Setup_Compute_Geom
+      processed: ''
+      offset: '00001267'
+    - name: VSD_Setup_IOCTL
+      processed: ''
+      offset: 000012F3
+    - name: setup_internal_async_request
+      processed: ''
+      offset: 000012F9
+    - name: VSD_Internal_Request
+      processed: ''
+      offset: '00001495'
+    - name: VSD_Setup_Mode_Sense
+      processed: ''
+      offset: '00001586'
+    - name: VSD_Setup_Inquiry
+      processed: ''
+      offset: 000015B0
+    - name: VSD_setup_srb
+      processed: ''
+      offset: 000015D9
+    - name: vsd_send_criteria_request
+      processed: ''
+      offset: '00001677'
+    - name: vsd_send_internal_request
+      processed: ''
+      offset: '00001781'
+    - name: vsd_ret_iop
+      processed: ''
+      offset: '00001894'
+    - name: vsd_ilb
+      processed: ''
+      offset: 000018F4
+    - name: get_trace_ptr
+      processed: ''
+      offset: '00001928'
+    - name: dot_command
+      processed: ''
+      offset: 0000194A
+    - name: VSD_dump_help
+      processed: ''
+      offset: '00001970'
+    - name: VSD_trace_dump
+      processed: ''
+      offset: 0000197F
+    - name: DiskVSD_DDB
+      processed: ''
+      offset: 00001AC8
+    - name: DISKVSD_trace_cur
+      processed: ''
+      offset: '00003068'
+  - num: '2'
+    name: _IGROUP
+    offset: 000019A0
+    symbols:
+    - name: DiskVSD_Device_Init
+      processed: ''
+      offset: '00000000'
+    - name: Drv_Reg_Pkt
+      processed: ''
+      offset: '00000064'
+  - num: '3'
+    name: _PTEXT
+    offset: 00001C00
+    symbols:
+    - name: VSD_Cfg_Device
+      processed: ''
+      offset: '00000000'
+    - name: VSD_Ucfg_Device
+      processed: ''
+      offset: 0000020A
+    - name: VSD_init_complete
+      processed: ''
+      offset: '00000228'
+  - num: '4'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: diskvsd_device_count
+      processed: ''
+      offset: '00000000'

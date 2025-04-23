@@ -1,481 +1,722 @@
-filename: "unimodem.vxd"
+filename: unimodem.vxd
 #TODO: bring up more details from symdeb
-binary: "unimodem.vxd"
-description: ""
-note: ""
+binary: UNIMODEM
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_LGROUP"
-        offset: "00004FE0"
-        symbols:
-          - name: 'MCX_Control'
-            offset: "00000000"            
-          - name: '_ReadTimeout'
-            offset: "0000001C"            
-          - name: '_ReadCompletionRoutine'
-            offset: "0000006D"            
-          - name: '_HW_Event_Notify'
-            offset: "000000B7"            
-          - name: 'MCX_PM_API_Handler'
-            offset: "0000012B"            
-          - name: '_PortGetQueueStatus'
-            offset: "000001A4"            
-          - name: 'MCX_Comm_Notify'
-            offset: "000001B6"            
-          - name: '_MCX_Comm_Notify'
-            offset: "000001B6"            
-          - name: '_PortSetState'
-            offset: "00000274"            
-          - name: '_PortSetup'
-            offset: "0000029D"            
-          - name: '_PortTransmitChar'
-            offset: "000002AF"            
-          - name: '_PortClearError'
-            offset: "000002DD"            
-          - name: '_PortEscapeFunction'
-            offset: "000002EF"            
-          - name: '_PortGetEventMask'
-            offset: "0000037E"            
-          - name: '_PortWrite'
-            offset: "0000038D"            
-          - name: '_PortRead'
-            offset: "000003CA"            
-          - name: 'MCX_Debug_Query'
-            offset: "00000458"            
-          - name: '_MCXDial'
-            offset: "00000470"            
-          - name: '_MCXMonitor'
-            offset: "00000690"            
-          - name: '_RealMonitor'
-            offset: "000006BF"            
-          - name: '_MCXAnswer'
-            offset: "00000901"            
-          - name: '_GetPortSpecificSettings'
-            offset: "00000A7C"            
-          - name: '_MCXInit'
-            offset: "00000B73"            
-          - name: '_MCXHangup'
-            offset: "00000EB3"            
-          - name: '_MCXSetPassthrough'
-            offset: "000015F0"            
-          - name: '_MCXGetNegotiatedRate'
-            offset: "000018A2"            
-          - name: '_MCXGetStatistics'
-            offset: "000018FD"            
-          - name: '_FreeModemCommands@4'
-            offset: "0000195D"            
-          - name: '_ModemCommand'
-            offset: "000019D0"            
-          - name: '_ModemWriteCommand'
-            offset: "00001B59"            
-          - name: '_ReadNotifyClient'
-            offset: "00001EB3"            
-          - name: '_HangupTimeoutHandler'
-            offset: "0000305E"            
-          - name: '_ReadCompletionRoutine2'
-            offset: "000030A6"            
-          - name: '_HWDetectionRoutine'
-            offset: "00004B2D"            
-          - name: '_CheckResponse'
-            offset: "00004EB0"            
-          - name: '_MatchResponse'
-            offset: "00004F5A"            
-          - name: '_ExpandMacros'
-            offset: "00005090"            
-          - name: '_ltoa'
-            offset: "0000540F"            
-          - name: '_strncmpi'
-            offset: "000054B2"            
-          - name: '_strcmpi'
-            offset: "0000557A"            
-          - name: '_LoadRegCommands'
-            offset: "0000563C"            
-          - name: '_HandleCommErrors'
-            offset: "000058E8"            
-          - name: '_PrintString'
-            offset: "00005AE3"            
-          - name: '_PrintCommSettings'
-            offset: "00005DDE"            
-          - name: '_CreateDialCommands'
-            offset: "00005E83"            
-          - name: '_VVEscapeFunc'
-            offset: "000068F7"            
-          - name: '_VVCallBackFunc'
-            offset: "00006CBC"            
-          - name: '_VVSetClass'
-            offset: "00006D38"            
-          - name: '_VVTimerCallback'
-            offset: "00006F41"            
-          - name: '_FreeModem'
-            offset: "00006F90"            
-          - name: '_IsModem'
-            offset: "000075ED"            
-          - name: '_IsModemOpen'
-            offset: "0000764A"            
-          - name: '_BuildResponsesLinkedList'
-            offset: "00007674"            
-          - name: '_AllocateModem'
-            offset: "000079A7"            
-          - name: '_PortGetProperties'
-            offset: "00008D60"            
-          - name: '_PortGetConfig'
-            offset: "00008FFC"            
-          - name: '_PortSetConfig'
-            offset: "00009132"            
-          - name: '_CreateSettingsInitEntry'
-            offset: "000093F5"            
-          - name: '_CreateCommand'
-            offset: "0000A21E"            
-          - name: '_ModemOpenLog'
-            offset: "0000A840"            
-          - name: '_ModemCloseLog'
-            offset: "0000A9AC"            
-          - name: '_InternalInitReadComm@16'
-            offset: "0000A9F0"            
-          - name: '_InternalResetReadComm@8'
-            offset: "0000AA27"            
-          - name: '_InternalDisableReadComm@4'
-            offset: "0000AB65"            
-          - name: '_InternalPushComm@8'
-            offset: "0000ABAF"            
-          - name: '_InternalReadComm@16'
-            offset: "0000AC14"            
-          - name: '_InternalPurgeReadQueue@4'
-            offset: "0000ACB5"            
-          - name: '_InternalSetReadCallBack@16'
-            offset: "0000ACF4"            
-          - name: '_EventProc'
-            offset: "0000AD4F"            
-          - name: '_InternalReadCompletionRoutine'
-            offset: "0000B00B"            
-          - name: '_MCXGetCallInfo'
-            offset: "0000B060"            
-          - name: '_MCXClearCallInfo'
-            offset: "0000B0A9"            
-          - name: '_MCXIsModemAvailible'
-            offset: "0000B0E1"            
-          - name: '_MCXGetAsyncStatus'
-            offset: "0000B135"            
-          - name: '_MCXWaveOpen'
-            offset: "0000B177"            
-          - name: '_MCXWaveClose'
-            offset: "0000B1EE"            
-          - name: '_MCXHandsetWaveOpen'
-            offset: "0000B374"            
-          - name: '_RealCloseHandset'
-            offset: "0000B55F"            
-          - name: '_AppyTimeHandler'
-            offset: "0000B699"            
-          - name: '_HandsetTimeoutHandler'
-            offset: "0000B6CB"            
-          - name: '_HandsetOnHook'
-            offset: "0000B719"            
-          - name: '_MCXHandsetWaveClose'
-            offset: "0000B77B"            
-          - name: '_MCXSyncVoiceStartWavePlay'
-            offset: "0000B86C"            
-          - name: '_MCXSyncVoiceStopWavePlay'
-            offset: "0000BA50"            
-          - name: '_MCXSyncVoiceStartWaveRecord'
-            offset: "0000BB8A"            
-          - name: '_MCXSyncVoiceStopWaveRecord'
-            offset: "0000BD6E"            
-          - name: '_IssueSyncModemCommand@12'
-            offset: "0000BEA8"            
-          - name: '_MCXVoiceDialSetup'
-            offset: "0000BF2B"            
-          - name: '_MCXVoiceAnswer'
-            offset: "0000C0EB"            
-          - name: '_SetComm@8'
-            offset: "0000C270"            
-          - name: '_MCXVoiceModemCommand'
-            offset: "0000C30B"            
-          - name: '_VoiceCommandDispatch'
-            offset: "0000C436"            
-          - name: '_StartNextCommand'
-            offset: "0000C55A"            
-          - name: '_CompleteCurrentCommand'
-            offset: "0000C6DC"            
-          - name: '_CompleteAllCommands'
-            offset: "0000C8F2"            
-          - name: '_AdjustVolume'
-            offset: "0000C968"            
-          - name: '_MCXSetSpeakerPhoneState'
-            offset: "0000C9CC"            
-          - name: '_MCXGenerateDigit'
-            offset: "0000CED4"            
-          - name: '_SWMatchResponse'
-            offset: "0000D15C"            
-          - name: '_SerialSetFormat'
-            offset: "0000D260"            
-          - name: '_SerialStartWave'
-            offset: "0000D374"            
-          - name: '_SerialStopWave'
-            offset: "0000D4E7"            
-          - name: '_SWEscapeFunc'
-            offset: "0000D66B"            
-          - name: '_SetPowerD0'
-            offset: "0000D7A0"            
-          - name: '_SetPowerD3'
-            offset: "0000D81C"            
-          - name: '_InitDleMatchObject@24'
-            offset: "0000D8C0"            
-          - name: '_MatchDleResponse'
-            offset: "0000D91C"            
-          - name: '_DleMatchHandler@8'
-            offset: "0000DA51"            
-          - name: '_InitDtmfTranslator@12'
-            offset: "0000DAD0"            
-          - name: '_ConvertToDTMF@4'
-            offset: "0000DAFD"            
-          - name: '_HandleDTMF@8'
-            offset: "0000DB8D"            
-          - name: '_LCODE_VXDLDR_LoadDevice@16'
-            offset: "0000DDD8"            
-          - name: '_LCODE_VXDLDR_UnloadDevice@8'
-            offset: "0000DDFC"            
-          - name: '_LCODE__SHELL_CallAtAppyTime'
-            offset: "0000DE10"            
-          - name: '_LCODE__SHELL_CancelAppyTimeEvent'
-            offset: "0000DE18"            
-          - name: '_LCODE__RegOpenKey'
-            offset: "0000DE20"            
-          - name: '_LCODE__RegCloseKey'
-            offset: "0000DE28"            
-          - name: '_LCODE__RegCreateKey'
-            offset: "0000DE30"            
-          - name: '_LCODE__RegDeleteKey'
-            offset: "0000DE38"            
-          - name: '_LCODE__RegEnumValue'
-            offset: "0000DE40"            
-          - name: '_LCODE__RegQueryValueEx'
-            offset: "0000DE48"            
-          - name: '_LCODE__RegSetValueEx'
-            offset: "0000DE50"            
-          - name: '_LCODE__VCOMM_SetCommState'
-            offset: "0000DE58"            
-          - name: '_LCODE__VCOMM_GetCommState'
-            offset: "0000DE60"            
-          - name: '_LCODE__VCOMM_GetCommQueueStatus'
-            offset: "0000DE68"            
-          - name: '_LCODE__VCOMM_ClearCommError'
-            offset: "0000DE70"            
-          - name: '_LCODE__VCOMM_GetCommProperties'
-            offset: "0000DE78"            
-          - name: '_LCODE__VCOMM_EscapeCommFunction'
-            offset: "0000DE80"            
-          - name: '_LCODE__VCOMM_PurgeComm'
-            offset: "0000DE88"            
-          - name: '_LCODE__VCOMM_SetCommEventMask'
-            offset: "0000DE90"            
-          - name: '_LCODE__VCOMM_GetCommEventMask'
-            offset: "0000DE98"            
-          - name: '_LCODE__VCOMM_WriteComm'
-            offset: "0000DEA0"            
-          - name: '_LCODE__VCOMM_ReadComm'
-            offset: "0000DEA8"            
-          - name: '_LCODE__VCOMM_GetLastError'
-            offset: "0000DEB0"            
-          - name: '_LCODE__VCOMM_SetReadCallBack'
-            offset: "0000DEB8"            
-          - name: '_LCODE__VCOMM_SetWriteCallBack'
-            offset: "0000DEC0"            
-          - name: '_LCODE__HeapAllocate'
-            offset: "0000DEC8"            
-          - name: '_LCODE__HeapFree'
-            offset: "0000DED0"            
-          - name: '_LCODE__HeapReAllocate'
-            offset: "0000DED8"            
-          - name: '_LCODE__HeapGetSize'
-            offset: "0000DEE0"            
-          - name: '_LCODE_Get_Sys_VM_Handle'
-            offset: "0000DEE8"            
-          - name: '_LCODE_Create_Semaphore@4'
-            offset: "0000DEF4"            
-          - name: '_LCODE_Destroy_Semaphore@4'
-            offset: "0000DF04"            
-          - name: '_LCODE_Signal_Semaphore@4'
-            offset: "0000DF10"            
-          - name: '_LCODE_Wait_Semaphore@8'
-            offset: "0000DF1C"            
-          - name: '_LCODE_Set_Global_Time_Out@12'
-            offset: "0000DF28"            
-          - name: '_LCODE_Cancel_Time_Out@4'
-            offset: "0000DF44"            
-          - name: '_LCODE_Get_Exec_Path@4'
-            offset: "0000DF54"            
-          - name: '_LCODE__BlockOnID'
-            offset: "0000DF68"            
-          - name: '_LCODE__SignalID'
-            offset: "0000DF70"            
-          - name: '_LCODE_Call_Restricted_Event@24'
-            offset: "0000DF78"            
-          - name: '_LCODE_Cancel_Restricted_Event@4'
-            offset: "0000DFA4"            
-          - name: '_LCODE__CONFIGMG_Get_DevNode_Key'
-            offset: "0000DFB4"            
-          - name: '_LCODE__CONFIGMG_Read_Registry_Value'
-            offset: "0000DFBC"            
-          - name: '_LCODE__OpenLog'
-            offset: "0000DFC4"            
-          - name: '_LCODE__CloseLog'
-            offset: "0000DFCC"            
-          - name: '_LCODE__LogPrintf'
-            offset: "0000DFD4"            
-          - name: '_LCODE__FlushLog'
-            offset: "0000DFDC"            
-          - name: '_LCODE__ClearLog'
-            offset: "0000DFE4"            
-          - name: '_LCODE__GetLogFree'
-            offset: "0000DFEC"            
-          - name: '_LCODE__CreateLog'
-            offset: "0000DFF4"            
-          - name: 'UNIMODEM_DDB'
-            offset: "0000DFFC"            
-          - name: 'MCX_PM_API_Table'
-            offset: "0000E04C"            
-          - name: 'MCX_Functions'
-            offset: "0000E104"            
-          - name: '_VCOMM_Map_Ring0DCB_To_Win32'
-            offset: "0000E190"            
-          - name: '_VCOMM_Map_Win32DCB_To_Ring0'
-            offset: "0000E1A9"            
-          - name: '_UniPostMessage@16'
-            offset: "0000E230"            
-          - name: '_Map1616Flat@4'
-            offset: "0000E264"            
-          - name: '_ClearSyncEvent@4'
-            offset: "0000E2AB"            
-          - name: '_SignalEvent@8'
-            offset: "0000E2C6"            
-          - name: '_WaitEvent@4'
-            offset: "0000E2F7"            
-          - name: '_SetWin32Event'
-            offset: "0000E368"            
-          - name: '_CloseWin32Event'
-            offset: "0000E39C"            
-          - name: '_UnimodemSleep@4'
-            offset: "0000E3CE"            
-          - name: '_InitCommandQueue'
-            offset: "0000E470"            
-          - name: '_AddCommand'
-            offset: "0000E4A0"            
-          - name: '_RemoveCommand'
-            offset: "0000E4F0"            
-          - name: '_szMonitorVVon'
-            offset: "0000E524"            
-          - name: '_szMonitorVVoff'
-            offset: "0000E538"            
-          - name: '_g_dwLatency'
-            offset: "0000E54C"            
-          - name: '_szBlindOn'
-            offset: "0000E5C4"            
-          - name: '_szBlindOff'
-            offset: "0000E5D0"            
-          - name: '_pModemFirst'
-            offset: "00010D7C"            
-          - name: '_szSettings'
-            offset: "00011880"            
-          - name: '_szSettingsInit'
-            offset: "0001188C"            
-          - name: '_szPrefix'
-            offset: "0001189C"            
-          - name: '_szTerminator'
-            offset: "000118A4"            
-          - name: '_szLoggerVxD'
-            offset: "00011E40"            
-          - name: '_szLoggerName'
-            offset: "00011E4C"            
-          - name: '_StartPlayCommands'
-            offset: "00011FE0"            
-          - name: '_StopPlayCommands'
-            offset: "00011FEC"            
-          - name: '_StartRecordCommands'
-            offset: "00011FF8"            
-          - name: '_StopRecordCommands'
-            offset: "00012004"            
-          - name: '_StateChangeTable'
-            offset: "00012050"            
-          - name: '_DefaultDleTable'
-            offset: "000128A8"            
-      - num: "2"
-        name: "_PMGROUP"
-        offset: "00005030"
-        symbols:
-          - name: '@MSG_PAB'
-            offset: "00000000"            
-          - name: '_MSG_PAB'
-            offset: "00000000"            
-          - name: '@MSG_PDATA'
-            offset: "000000E4"            
-      - num: "4"
-        name: "_PTEXT"
-        offset: "00005B50"
-        symbols:
-          - name: 'MCX_Init'
-            offset: "00000000"            
-          - name: '_MCX_DriverControl'
-            offset: "00000043"            
-          - name: '_InitFunction'
-            offset: "00000055"            
-          - name: 'ReadCompletionEvent'
-            offset: "000000C2"            
-          - name: 'HWDetectionEvent'
-            offset: "000000D2"            
-          - name: '_ClearReadTimer'
-            offset: "000000E2"            
-          - name: '_ClearEvent'
-            offset: "00000102"            
-          - name: '_DebugPrintf'
-            offset: "00000122"            
-          - name: '_PortOpen'
-            offset: "00000148"            
-          - name: '_ModemSetComPort'
-            offset: "000001B3"            
-          - name: '_PerfInit'
-            offset: "000002A1"            
-          - name: '_PerfClose'
-            offset: "000003A9"            
-          - name: '_PortClose'
-            offset: "000003D2"            
-          - name: '_PortGetState'
-            offset: "000004AD"            
-          - name: '_PortSetModemStatusShadow'
-            offset: "000004BF"            
-          - name: '_PortPurge'
-            offset: "000004DF"            
-          - name: '_PortSetEventMask'
-            offset: "000004F1"            
-          - name: '_PortEnableNotification'
-            offset: "00000524"            
-          - name: '_PortSetReadCallBack'
-            offset: "00000589"            
-          - name: '_PortSetWriteCallBack'
-            offset: "00000616"            
-          - name: '_PortGetModemStatus'
-            offset: "000006A3"            
-          - name: '_PortGetError'
-            offset: "000006B5"            
-          - name: '_PortDeviceIOCTL'
-            offset: "000006C7"            
-          - name: '_strncmp'
-            offset: "00000714"            
-          - name: '_ModemCallClient'
-            offset: "00000733"            
-          - name: '_SP_PutNumber'
-            offset: "0000077E"            
-          - name: '_SP_Reverse'
-            offset: "000007BD"            
-          - name: '_Ring0Api'
-            offset: "000007E2"            
-          - name: '_IFSMgr_Get_NetTime'
-            offset: "000007F0"            
-      - num: "5"
-        name: "_PDATA"
-        offset: "00000000"
-        symbols:
-          - name: 'MCX_Name'
-            offset: "00000000"            
+- version: system
+  tree:
+  - - api.c
+    - dle.c
+    - internal.h
+    - logger.c
+    - mcx.asm
+    - mcxdbg.asm
+    - mcxdial.c
+    - mcxfunc.asm
+    - mcxstate.c
+    - mcxutil.asm
+    - uniread.c
+    - "\t../util.c"
+    - vcomm.c
+    - voiceapi.c
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 00004FE0
+    symbols:
+    - name: MCX_Control
+      processed: ''
+      offset: '00000000'
+    - name: _ReadTimeout
+      processed: ''
+      offset: 0000001C
+    - name: _ReadCompletionRoutine
+      processed: ''
+      offset: 0000006D
+    - name: _HW_Event_Notify
+      processed: ''
+      offset: 000000B7
+    - name: MCX_PM_API_Handler
+      processed: ''
+      offset: 0000012B
+    - name: _PortGetQueueStatus
+      processed: ''
+      offset: 000001A4
+    - name: MCX_Comm_Notify
+      processed: ''
+      offset: 000001B6
+    - name: _MCX_Comm_Notify
+      processed: ''
+      offset: 000001B6
+    - name: _PortSetState
+      processed: ''
+      offset: '00000274'
+    - name: _PortSetup
+      processed: ''
+      offset: 0000029D
+    - name: _PortTransmitChar
+      processed: ''
+      offset: 000002AF
+    - name: _PortClearError
+      processed: ''
+      offset: 000002DD
+    - name: _PortEscapeFunction
+      processed: ''
+      offset: 000002EF
+    - name: _PortGetEventMask
+      processed: ''
+      offset: 0000037E
+    - name: _PortWrite
+      processed: ''
+      offset: 0000038D
+    - name: _PortRead
+      processed: ''
+      offset: 000003CA
+    - name: MCX_Debug_Query
+      processed: ''
+      offset: '00000458'
+    - name: _MCXDial
+      processed: ''
+      offset: '00000470'
+    - name: _MCXMonitor
+      processed: ''
+      offset: '00000690'
+    - name: _RealMonitor
+      processed: ''
+      offset: 000006BF
+    - name: _MCXAnswer
+      processed: ''
+      offset: '00000901'
+    - name: _GetPortSpecificSettings
+      processed: ''
+      offset: 00000A7C
+    - name: _MCXInit
+      processed: ''
+      offset: 00000B73
+    - name: _MCXHangup
+      processed: ''
+      offset: 00000EB3
+    - name: _MCXSetPassthrough
+      processed: ''
+      offset: 000015F0
+    - name: _MCXGetNegotiatedRate
+      processed: ''
+      offset: 000018A2
+    - name: _MCXGetStatistics
+      processed: ''
+      offset: 000018FD
+    - name: _FreeModemCommands@4
+      processed: ''
+      offset: 0000195D
+    - name: _ModemCommand
+      processed: ''
+      offset: 000019D0
+    - name: _ModemWriteCommand
+      processed: ''
+      offset: 00001B59
+    - name: _ReadNotifyClient
+      processed: ''
+      offset: 00001EB3
+    - name: _HangupTimeoutHandler
+      processed: ''
+      offset: 0000305E
+    - name: _ReadCompletionRoutine2
+      processed: ''
+      offset: 000030A6
+    - name: _HWDetectionRoutine
+      processed: ''
+      offset: 00004B2D
+    - name: _CheckResponse
+      processed: ''
+      offset: 00004EB0
+    - name: _MatchResponse
+      processed: ''
+      offset: 00004F5A
+    - name: _ExpandMacros
+      processed: ''
+      offset: '00005090'
+    - name: _ltoa
+      processed: ''
+      offset: 0000540F
+    - name: _strncmpi
+      processed: ''
+      offset: 000054B2
+    - name: _strcmpi
+      processed: ''
+      offset: 0000557A
+    - name: _LoadRegCommands
+      processed: ''
+      offset: 0000563C
+    - name: _HandleCommErrors
+      processed: ''
+      offset: '000058E8'
+    - name: _PrintString
+      processed: ''
+      offset: 00005AE3
+    - name: _PrintCommSettings
+      processed: ''
+      offset: 00005DDE
+    - name: _CreateDialCommands
+      processed: ''
+      offset: '00005E83'
+    - name: _VVEscapeFunc
+      processed: ''
+      offset: 000068F7
+    - name: _VVCallBackFunc
+      processed: ''
+      offset: 00006CBC
+    - name: _VVSetClass
+      processed: ''
+      offset: 00006D38
+    - name: _VVTimerCallback
+      processed: ''
+      offset: 00006F41
+    - name: _FreeModem
+      processed: ''
+      offset: 00006F90
+    - name: _IsModem
+      processed: ''
+      offset: 000075ED
+    - name: _IsModemOpen
+      processed: ''
+      offset: 0000764A
+    - name: _BuildResponsesLinkedList
+      processed: ''
+      offset: '00007674'
+    - name: _AllocateModem
+      processed: ''
+      offset: 000079A7
+    - name: _PortGetProperties
+      processed: ''
+      offset: 00008D60
+    - name: _PortGetConfig
+      processed: ''
+      offset: 00008FFC
+    - name: _PortSetConfig
+      processed: ''
+      offset: '00009132'
+    - name: _CreateSettingsInitEntry
+      processed: ''
+      offset: 000093F5
+    - name: _CreateCommand
+      processed: ''
+      offset: 0000A21E
+    - name: _ModemOpenLog
+      processed: ''
+      offset: 0000A840
+    - name: _ModemCloseLog
+      processed: ''
+      offset: 0000A9AC
+    - name: _InternalInitReadComm@16
+      processed: ''
+      offset: 0000A9F0
+    - name: _InternalResetReadComm@8
+      processed: ''
+      offset: 0000AA27
+    - name: _InternalDisableReadComm@4
+      processed: ''
+      offset: 0000AB65
+    - name: _InternalPushComm@8
+      processed: ''
+      offset: 0000ABAF
+    - name: _InternalReadComm@16
+      processed: ''
+      offset: 0000AC14
+    - name: _InternalPurgeReadQueue@4
+      processed: ''
+      offset: 0000ACB5
+    - name: _InternalSetReadCallBack@16
+      processed: ''
+      offset: 0000ACF4
+    - name: _EventProc
+      processed: ''
+      offset: 0000AD4F
+    - name: _InternalReadCompletionRoutine
+      processed: ''
+      offset: 0000B00B
+    - name: _MCXGetCallInfo
+      processed: ''
+      offset: 0000B060
+    - name: _MCXClearCallInfo
+      processed: ''
+      offset: 0000B0A9
+    - name: _MCXIsModemAvailible
+      processed: ''
+      offset: 0000B0E1
+    - name: _MCXGetAsyncStatus
+      processed: ''
+      offset: 0000B135
+    - name: _MCXWaveOpen
+      processed: ''
+      offset: 0000B177
+    - name: _MCXWaveClose
+      processed: ''
+      offset: 0000B1EE
+    - name: _MCXHandsetWaveOpen
+      processed: ''
+      offset: 0000B374
+    - name: _RealCloseHandset
+      processed: ''
+      offset: 0000B55F
+    - name: _AppyTimeHandler
+      processed: ''
+      offset: 0000B699
+    - name: _HandsetTimeoutHandler
+      processed: ''
+      offset: 0000B6CB
+    - name: _HandsetOnHook
+      processed: ''
+      offset: 0000B719
+    - name: _MCXHandsetWaveClose
+      processed: ''
+      offset: 0000B77B
+    - name: _MCXSyncVoiceStartWavePlay
+      processed: ''
+      offset: 0000B86C
+    - name: _MCXSyncVoiceStopWavePlay
+      processed: ''
+      offset: 0000BA50
+    - name: _MCXSyncVoiceStartWaveRecord
+      processed: ''
+      offset: 0000BB8A
+    - name: _MCXSyncVoiceStopWaveRecord
+      processed: ''
+      offset: 0000BD6E
+    - name: _IssueSyncModemCommand@12
+      processed: ''
+      offset: 0000BEA8
+    - name: _MCXVoiceDialSetup
+      processed: ''
+      offset: 0000BF2B
+    - name: _MCXVoiceAnswer
+      processed: ''
+      offset: 0000C0EB
+    - name: _SetComm@8
+      processed: ''
+      offset: 0000C270
+    - name: _MCXVoiceModemCommand
+      processed: ''
+      offset: 0000C30B
+    - name: _VoiceCommandDispatch
+      processed: ''
+      offset: 0000C436
+    - name: _StartNextCommand
+      processed: ''
+      offset: 0000C55A
+    - name: _CompleteCurrentCommand
+      processed: ''
+      offset: 0000C6DC
+    - name: _CompleteAllCommands
+      processed: ''
+      offset: 0000C8F2
+    - name: _AdjustVolume
+      processed: ''
+      offset: 0000C968
+    - name: _MCXSetSpeakerPhoneState
+      processed: ''
+      offset: 0000C9CC
+    - name: _MCXGenerateDigit
+      processed: ''
+      offset: 0000CED4
+    - name: _SWMatchResponse
+      processed: ''
+      offset: 0000D15C
+    - name: _SerialSetFormat
+      processed: ''
+      offset: 0000D260
+    - name: _SerialStartWave
+      processed: ''
+      offset: 0000D374
+    - name: _SerialStopWave
+      processed: ''
+      offset: 0000D4E7
+    - name: _SWEscapeFunc
+      processed: ''
+      offset: 0000D66B
+    - name: _SetPowerD0
+      processed: ''
+      offset: 0000D7A0
+    - name: _SetPowerD3
+      processed: ''
+      offset: 0000D81C
+    - name: _InitDleMatchObject@24
+      processed: ''
+      offset: 0000D8C0
+    - name: _MatchDleResponse
+      processed: ''
+      offset: 0000D91C
+    - name: _DleMatchHandler@8
+      processed: ''
+      offset: 0000DA51
+    - name: _InitDtmfTranslator@12
+      processed: ''
+      offset: 0000DAD0
+    - name: _ConvertToDTMF@4
+      processed: ''
+      offset: 0000DAFD
+    - name: _HandleDTMF@8
+      processed: ''
+      offset: 0000DB8D
+    - name: _LCODE_VXDLDR_LoadDevice@16
+      processed: ''
+      offset: 0000DDD8
+    - name: _LCODE_VXDLDR_UnloadDevice@8
+      processed: ''
+      offset: 0000DDFC
+    - name: _LCODE__SHELL_CallAtAppyTime
+      processed: ''
+      offset: 0000DE10
+    - name: _LCODE__SHELL_CancelAppyTimeEvent
+      processed: ''
+      offset: 0000DE18
+    - name: _LCODE__RegOpenKey
+      processed: ''
+      offset: 0000DE20
+    - name: _LCODE__RegCloseKey
+      processed: ''
+      offset: 0000DE28
+    - name: _LCODE__RegCreateKey
+      processed: ''
+      offset: 0000DE30
+    - name: _LCODE__RegDeleteKey
+      processed: ''
+      offset: 0000DE38
+    - name: _LCODE__RegEnumValue
+      processed: ''
+      offset: 0000DE40
+    - name: _LCODE__RegQueryValueEx
+      processed: ''
+      offset: 0000DE48
+    - name: _LCODE__RegSetValueEx
+      processed: ''
+      offset: 0000DE50
+    - name: _LCODE__VCOMM_SetCommState
+      processed: ''
+      offset: 0000DE58
+    - name: _LCODE__VCOMM_GetCommState
+      processed: ''
+      offset: 0000DE60
+    - name: _LCODE__VCOMM_GetCommQueueStatus
+      processed: ''
+      offset: 0000DE68
+    - name: _LCODE__VCOMM_ClearCommError
+      processed: ''
+      offset: 0000DE70
+    - name: _LCODE__VCOMM_GetCommProperties
+      processed: ''
+      offset: 0000DE78
+    - name: _LCODE__VCOMM_EscapeCommFunction
+      processed: ''
+      offset: 0000DE80
+    - name: _LCODE__VCOMM_PurgeComm
+      processed: ''
+      offset: 0000DE88
+    - name: _LCODE__VCOMM_SetCommEventMask
+      processed: ''
+      offset: 0000DE90
+    - name: _LCODE__VCOMM_GetCommEventMask
+      processed: ''
+      offset: 0000DE98
+    - name: _LCODE__VCOMM_WriteComm
+      processed: ''
+      offset: 0000DEA0
+    - name: _LCODE__VCOMM_ReadComm
+      processed: ''
+      offset: 0000DEA8
+    - name: _LCODE__VCOMM_GetLastError
+      processed: ''
+      offset: 0000DEB0
+    - name: _LCODE__VCOMM_SetReadCallBack
+      processed: ''
+      offset: 0000DEB8
+    - name: _LCODE__VCOMM_SetWriteCallBack
+      processed: ''
+      offset: 0000DEC0
+    - name: _LCODE__HeapAllocate
+      processed: ''
+      offset: 0000DEC8
+    - name: _LCODE__HeapFree
+      processed: ''
+      offset: 0000DED0
+    - name: _LCODE__HeapReAllocate
+      processed: ''
+      offset: 0000DED8
+    - name: _LCODE__HeapGetSize
+      processed: ''
+      offset: 0000DEE0
+    - name: _LCODE_Get_Sys_VM_Handle
+      processed: ''
+      offset: 0000DEE8
+    - name: _LCODE_Create_Semaphore@4
+      processed: ''
+      offset: 0000DEF4
+    - name: _LCODE_Destroy_Semaphore@4
+      processed: ''
+      offset: 0000DF04
+    - name: _LCODE_Signal_Semaphore@4
+      processed: ''
+      offset: 0000DF10
+    - name: _LCODE_Wait_Semaphore@8
+      processed: ''
+      offset: 0000DF1C
+    - name: _LCODE_Set_Global_Time_Out@12
+      processed: ''
+      offset: 0000DF28
+    - name: _LCODE_Cancel_Time_Out@4
+      processed: ''
+      offset: 0000DF44
+    - name: _LCODE_Get_Exec_Path@4
+      processed: ''
+      offset: 0000DF54
+    - name: _LCODE__BlockOnID
+      processed: ''
+      offset: 0000DF68
+    - name: _LCODE__SignalID
+      processed: ''
+      offset: 0000DF70
+    - name: _LCODE_Call_Restricted_Event@24
+      processed: ''
+      offset: 0000DF78
+    - name: _LCODE_Cancel_Restricted_Event@4
+      processed: ''
+      offset: 0000DFA4
+    - name: _LCODE__CONFIGMG_Get_DevNode_Key
+      processed: ''
+      offset: 0000DFB4
+    - name: _LCODE__CONFIGMG_Read_Registry_Value
+      processed: ''
+      offset: 0000DFBC
+    - name: _LCODE__OpenLog
+      processed: ''
+      offset: 0000DFC4
+    - name: _LCODE__CloseLog
+      processed: ''
+      offset: 0000DFCC
+    - name: _LCODE__LogPrintf
+      processed: ''
+      offset: 0000DFD4
+    - name: _LCODE__FlushLog
+      processed: ''
+      offset: 0000DFDC
+    - name: _LCODE__ClearLog
+      processed: ''
+      offset: 0000DFE4
+    - name: _LCODE__GetLogFree
+      processed: ''
+      offset: 0000DFEC
+    - name: _LCODE__CreateLog
+      processed: ''
+      offset: 0000DFF4
+    - name: UNIMODEM_DDB
+      processed: ''
+      offset: 0000DFFC
+    - name: MCX_PM_API_Table
+      processed: ''
+      offset: 0000E04C
+    - name: MCX_Functions
+      processed: ''
+      offset: '0000E104'
+    - name: _VCOMM_Map_Ring0DCB_To_Win32
+      processed: ''
+      offset: '0000E190'
+    - name: _VCOMM_Map_Win32DCB_To_Ring0
+      processed: ''
+      offset: 0000E1A9
+    - name: _UniPostMessage@16
+      processed: ''
+      offset: '0000E230'
+    - name: _Map1616Flat@4
+      processed: ''
+      offset: '0000E264'
+    - name: _ClearSyncEvent@4
+      processed: ''
+      offset: 0000E2AB
+    - name: _SignalEvent@8
+      processed: ''
+      offset: 0000E2C6
+    - name: _WaitEvent@4
+      processed: ''
+      offset: 0000E2F7
+    - name: _SetWin32Event
+      processed: ''
+      offset: '0000E368'
+    - name: _CloseWin32Event
+      processed: ''
+      offset: 0000E39C
+    - name: _UnimodemSleep@4
+      processed: ''
+      offset: 0000E3CE
+    - name: _InitCommandQueue
+      processed: ''
+      offset: '0000E470'
+    - name: _AddCommand
+      processed: ''
+      offset: 0000E4A0
+    - name: _RemoveCommand
+      processed: ''
+      offset: 0000E4F0
+    - name: _szMonitorVVon
+      processed: ''
+      offset: '0000E524'
+    - name: _szMonitorVVoff
+      processed: ''
+      offset: '0000E538'
+    - name: _g_dwLatency
+      processed: ''
+      offset: 0000E54C
+    - name: _szBlindOn
+      processed: ''
+      offset: 0000E5C4
+    - name: _szBlindOff
+      processed: ''
+      offset: 0000E5D0
+    - name: _pModemFirst
+      processed: ''
+      offset: 00010D7C
+    - name: _szSettings
+      processed: ''
+      offset: '00011880'
+    - name: _szSettingsInit
+      processed: ''
+      offset: 0001188C
+    - name: _szPrefix
+      processed: ''
+      offset: 0001189C
+    - name: _szTerminator
+      processed: ''
+      offset: 000118A4
+    - name: _szLoggerVxD
+      processed: ''
+      offset: '00011E40'
+    - name: _szLoggerName
+      processed: ''
+      offset: 00011E4C
+    - name: _StartPlayCommands
+      processed: ''
+      offset: 00011FE0
+    - name: _StopPlayCommands
+      processed: ''
+      offset: 00011FEC
+    - name: _StartRecordCommands
+      processed: ''
+      offset: 00011FF8
+    - name: _StopRecordCommands
+      processed: ''
+      offset: '00012004'
+    - name: _StateChangeTable
+      processed: ''
+      offset: '00012050'
+    - name: _DefaultDleTable
+      processed: ''
+      offset: 000128A8
+  - num: '2'
+    name: _PMGROUP
+    offset: '00005030'
+    symbols:
+    - name: '@MSG_PAB'
+      processed: ''
+      offset: '00000000'
+    - name: _MSG_PAB
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_PDATA'
+      processed: ''
+      offset: '000000E4'
+  - num: '4'
+    name: _PTEXT
+    offset: 00005B50
+    symbols:
+    - name: MCX_Init
+      processed: ''
+      offset: '00000000'
+    - name: _MCX_DriverControl
+      processed: ''
+      offset: '00000043'
+    - name: _InitFunction
+      processed: ''
+      offset: '00000055'
+    - name: ReadCompletionEvent
+      processed: ''
+      offset: 000000C2
+    - name: HWDetectionEvent
+      processed: ''
+      offset: 000000D2
+    - name: _ClearReadTimer
+      processed: ''
+      offset: '000000E2'
+    - name: _ClearEvent
+      processed: ''
+      offset: '00000102'
+    - name: _DebugPrintf
+      processed: ''
+      offset: '00000122'
+    - name: _PortOpen
+      processed: ''
+      offset: '00000148'
+    - name: _ModemSetComPort
+      processed: ''
+      offset: 000001B3
+    - name: _PerfInit
+      processed: ''
+      offset: 000002A1
+    - name: _PerfClose
+      processed: ''
+      offset: 000003A9
+    - name: _PortClose
+      processed: ''
+      offset: 000003D2
+    - name: _PortGetState
+      processed: ''
+      offset: 000004AD
+    - name: _PortSetModemStatusShadow
+      processed: ''
+      offset: 000004BF
+    - name: _PortPurge
+      processed: ''
+      offset: 000004DF
+    - name: _PortSetEventMask
+      processed: ''
+      offset: 000004F1
+    - name: _PortEnableNotification
+      processed: ''
+      offset: '00000524'
+    - name: _PortSetReadCallBack
+      processed: ''
+      offset: '00000589'
+    - name: _PortSetWriteCallBack
+      processed: ''
+      offset: '00000616'
+    - name: _PortGetModemStatus
+      processed: ''
+      offset: 000006A3
+    - name: _PortGetError
+      processed: ''
+      offset: 000006B5
+    - name: _PortDeviceIOCTL
+      processed: ''
+      offset: 000006C7
+    - name: _strncmp
+      processed: ''
+      offset: '00000714'
+    - name: _ModemCallClient
+      processed: ''
+      offset: '00000733'
+    - name: _SP_PutNumber
+      processed: ''
+      offset: 0000077E
+    - name: _SP_Reverse
+      processed: ''
+      offset: 000007BD
+    - name: _Ring0Api
+      processed: ''
+      offset: '000007E2'
+    - name: _IFSMgr_Get_NetTime
+      processed: ''
+      offset: 000007F0
+  - num: '5'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: MCX_Name
+      processed: ''
+      offset: '00000000'

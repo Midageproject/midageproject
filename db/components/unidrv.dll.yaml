@@ -1,1003 +1,1519 @@
-filename: "unidrv.dll"
+filename: unidrv.dll
 #TODO: bring up more details from symdeb
-binary: "unidrv.dll"
-description: ""
-note: ""
+binary: UNIDRV
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_TEXT"
-        offset: "000007E0"
-        symbols:
-          - name: 'LibEntry'
-            offset: "00000000"            
-          - name: 'WEP'
-            offset: "00000020"            
-          - name: 'LibMain'
-            offset: "00000024"            
-          - name: 'COPY'
-            offset: "00000070"            
-          - name: 'SETBYTEVALUE'
-            offset: "0000009C"            
-          - name: 'OFFSETCLIPRECT'
-            offset: "000000D1"            
-          - name: '__aFldiv'
-            offset: "00000136"            
-          - name: '__aFlmul'
-            offset: "000001D0"            
-          - name: '__aFulmul'
-            offset: "000001D0"            
-          - name: '__aFlrem'
-            offset: "00000202"            
-          - name: '__aFlshl'
-            offset: "000002A2"            
-          - name: '__aFlshr'
-            offset: "000002AE"            
-          - name: '__aFuldiv'
-            offset: "000002BA"            
-          - name: '__aFulrem'
-            offset: "0000031A"            
-          - name: '__aFulshr'
-            offset: "00000384"            
-      - num: "2"
-        name: "_DEVMODE"
-        offset: "00001640"
-        symbols:
-          - name: 'UniDeviceMode'
-            offset: "00000000"            
-          - name: 'UniExtDeviceMode'
-            offset: "000000B2"            
-          - name: 'UniExtDeviceModePropSheet'
-            offset: "000000F4"            
-          - name: 'UniAdvancedSetUpDialog'
-            offset: "0000012A"            
-          - name: 'SETDLGFLAGS'
-            offset: "00000180"            
-          - name: 'IENTERDEVMODE'
-            offset: "000003E2"            
-          - name: 'GETHELPFILENAME'
-            offset: "000007EA"            
-          - name: 'PROPPAGECALLBACK'
-            offset: "00000852"            
-          - name: 'COMMITCHANGES'
-            offset: "00000874"            
-          - name: 'IENDDEVMODE'
-            offset: "00000A04"            
-          - name: 'GETMINPAPERSIZE'
-            offset: "00000B9E"            
-          - name: 'GETMAXPAPERSIZE'
-            offset: "00000C46"            
-          - name: 'CHECKLEGALPRINTQUALITY'
-            offset: "00000CE4"            
-          - name: 'CHECKLEGALRESVALUE'
-            offset: "00000E82"            
-          - name: 'VERSIONCHECKLEGALRESVALUE'
-            offset: "00000EEC"            
-          - name: 'GETOLDDEVMODEINFO'
-            offset: "00000F1A"            
-          - name: 'MODIFYDEVICEMODE'
-            offset: "00000FD0"            
-          - name: 'GETNEARESTMEMORYVALUE'
-            offset: "000017DE"            
-          - name: 'ISVALIDUNIDRVVERSION'
-            offset: "00001962"            
-          - name: 'ISUSA'
-            offset: "000019AA"            
-          - name: 'GETMODELNAMEID'
-            offset: "000019EA"            
-          - name: 'ISTHISOURDEVMODE'
-            offset: "00001A90"            
-          - name: 'GETDEFAULTINDEX'
-            offset: "00001B40"            
-          - name: 'GETCACHEDDEVICEMODE'
-            offset: "00001BC2"            
-          - name: 'GETTTCAPS'
-            offset: "00001ECC"            
-          - name: 'GETTTDEF'
-            offset: "00001F6C"            
-          - name: 'SUPPORTJOBSEPARATION'
-            offset: "00001FA6"            
-          - name: 'UniDeviceCapabilities'
-            offset: "00001FDC"            
-          - name: 'GETPAPERDIMENSIONS'
-            offset: "00002512"            
-          - name: 'GETBINNAMES'
-            offset: "000025A4"            
-          - name: 'GETPAPERNAMES'
-            offset: "00002608"            
-      - num: "3"
-        name: "_ENABLE"
-        offset: "00002C60"
-        symbols:
-          - name: 'UniDisable'
-            offset: "00000000"            
-          - name: 'UniEnable'
-            offset: "00000370"            
-          - name: 'GETTTDOWNLOADINFO'
-            offset: "000018FC"            
-          - name: 'SETGDIINFO'
-            offset: "00001958"            
-          - name: 'BUILDCOMMANDTABLE'
-            offset: "00001A02"            
-          - name: 'GETBRUTE'
-            offset: "00002238"            
-          - name: 'COMPUTEMINXMOVEUNITS'
-            offset: "0000244C"            
-          - name: 'GETCOMPRESSIONINFO'
-            offset: "000024F8"            
-          - name: 'LOADDATA'
-            offset: "00002620"            
-          - name: 'GETTABLEINFO'
-            offset: "0000264E"            
-          - name: 'FARGETTABLEINFO'
-            offset: "000026AC"            
-          - name: 'HYPOTENEOUS'
-            offset: "000026C2"            
-          - name: 'GETPAPERFORMAT'
-            offset: "0000271C"            
-          - name: 'GETMINPAPERMARGINS'
-            offset: "00002978"            
-          - name: 'CONVERTMARGINSUNIT'
-            offset: "00002ADE"            
-          - name: 'GETCOLORTRC'
-            offset: "00002D8C"            
-          - name: 'BUILDFONTMAPTABLE'
-            offset: "00002E74"            
-          - name: 'GETRESFONTIDS'
-            offset: "0000322A"            
-          - name: 'MAKEAPPNAME'
-            offset: "0000346C"            
-          - name: 'BUILDRESFONTFM'
-            offset: "00003520"            
-          - name: 'MERGEFONTS'
-            offset: "0000370E"            
-          - name: 'FONTINFOTOFONTMAP'
-            offset: "000038E4"            
-          - name: 'COPYFONT'
-            offset: "000039F2"            
-          - name: 'GETSHORTMODULENAME'
-            offset: "00003BA8"            
-          - name: 'MAKEFONTSUMNAME'
-            offset: "00003C56"            
-          - name: 'CHECKVALIDFONTSUM'
-            offset: "00003D40"            
-          - name: 'FONTSUMTOFONTMAP'
-            offset: "00003E50"            
-          - name: 'SAVEFONTSUM'
-            offset: "00003FE8"            
-          - name: 'DELETEFONTSUM'
-            offset: "000042CE"            
-          - name: 'FONTSUMSTRTOATOM'
-            offset: "000042FA"            
-          - name: 'FONTSUMATOMTOSTR'
-            offset: "0000434A"            
-          - name: 'HEAPINIT'
-            offset: "0000443C"            
-          - name: 'HEAPALLOC'
-            offset: "0000447E"            
-          - name: 'HEAPDESTROY'
-            offset: "00004526"            
-      - num: "4"
-        name: "_REALIZE"
-        offset: "00003900"
-        symbols:
-          - name: 'UniDeviceSelectBitmap'
-            offset: "00000000"            
-          - name: 'UniBitmapBits'
-            offset: "0000003E"            
-          - name: 'UniGetCharWidth'
-            offset: "00000090"            
-          - name: 'FONTINFOTOTEXTMETRIC'
-            offset: "0000023C"            
-          - name: 'UniEnumObj'
-            offset: "000003FA"            
-          - name: 'GPOINTLIST'
-            offset: "0000045A"            
-          - name: 'UniColorInfo'
-            offset: "00000470"            
-          - name: 'UniEnumDFonts'
-            offset: "000004B6"            
-          - name: 'FONTMAPTOLOGFONT'
-            offset: "0000077A"            
-          - name: 'BUILDFONTFACELIST'
-            offset: "000007E4"            
-          - name: 'RGB_ENUMOBJEXT'
-            offset: "000008F8"            
-          - name: 'GAMMACORRECTION'
-            offset: "00000912"            
-          - name: 'UniRealizeObject'
-            offset: "000009DA"            
-          - name: 'BIT_INDEX'
-            offset: "00000B5A"            
-          - name: 'REALIZEFONT'
-            offset: "00000B62"            
-          - name: 'UDDELETEFONT'
-            offset: "00001262"            
-          - name: 'TMTOSTRUCT'
-            offset: "00001294"            
-          - name: 'SCALEFONT'
-            offset: "0000137A"            
-          - name: 'FONTMAPTOFONTINFO'
-            offset: "00001638"            
-          - name: 'GETFUNCSCALEWIDTH'
-            offset: "00001ADC"            
-          - name: 'BUILDENGINEFONTMAP'
-            offset: "00001B6E"            
-          - name: 'REALIZERBRUSH'
-            offset: "00001D0C"            
-          - name: 'DITHERBRUSH'
-            offset: "00001DF4"            
-          - name: 'BUILDHALFTONEBRUSH'
-            offset: "00001F68"            
-          - name: 'ADJUSTSPOTDI'
-            offset: "0000204C"            
-          - name: 'REALIZERPEN'
-            offset: "000020AA"            
-          - name: 'RGB_REALIZEOBJECTEXT'
-            offset: "0000212C"            
-      - num: "5"
-        name: "_ESCAPE"
-        offset: "00004760"
-        symbols:
-          - name: 'GETBANDFORMAT'
-            offset: "00000000"            
-          - name: 'FREEBANDBUFFERS'
-            offset: "000005E0"            
-          - name: 'UniControl'
-            offset: "0000064A"            
-          - name: 'GETPAPERMETRICS'
-            offset: "000010F2"            
-          - name: 'ISMEMLOW'
-            offset: "00001160"            
-          - name: 'ENOUGHMEMFORONEPAGE'
-            offset: "000011B6"            
-          - name: 'ENOUGHMEMFORNONTT'
-            offset: "00001238"            
-          - name: 'GETNUMDEVFONTSUSED'
-            offset: "000012CC"            
-          - name: 'GETNUMSOFTFONTSUSED'
-            offset: "00001310"            
-          - name: 'GETEXTENDEDSTUFF'
-            offset: "00001358"            
-          - name: 'SENDINITCMDS'
-            offset: "000015B4"            
-          - name: 'CONTROLNEXTBAND'
-            offset: "000017CE"            
-          - name: 'DRAWPATTERNRECT'
-            offset: "00001E28"            
-          - name: 'LOGPAGEERRS'
-            offset: "00002052"            
-          - name: 'REPORTPAGEERRS'
-            offset: "000020A8"            
-          - name: 'SETPAGEERRS'
-            offset: "000020DE"            
-          - name: 'WRITEDIALOGBUF'
-            offset: "0000219A"            
-          - name: 'FLUSHSPOOLBUF'
-            offset: "000021EA"            
-          - name: 'GETFREEMEMINFO'
-            offset: "00002240"            
-          - name: 'INITBITMAP'
-            offset: "00002260"            
-      - num: "6"
-        name: "_TEXTOUT"
-        offset: "000060F0"
-        symbols:
-          - name: 'XMOVETO'
-            offset: "00000000"            
-          - name: 'JUSTIFYX'
-            offset: "000002E0"            
-          - name: 'RELXMOVETO'
-            offset: "000003F2"            
-          - name: 'FINEXMOVETO'
-            offset: "00000476"            
-          - name: 'YMOVETO'
-            offset: "0000054C"            
-          - name: 'WriteSpoolBuf'
-            offset: "000008D0"            
-          - name: '_WriteChannel'
-            offset: "0000095C"            
-          - name: 'FORMATNUM'
-            offset: "00000CA6"            
-          - name: 'SELECTCOLOR'
-            offset: "00000F90"            
-          - name: 'UniExtTextOut'
-            offset: "00000FF2"            
-          - name: 'SBCSEXTTEXTOUT'
-            offset: "0000144E"            
-          - name: 'CHPOSITION'
-            offset: "00001BB0"            
-          - name: 'BMTEXTOUT'
-            offset: "00001E62"            
-          - name: 'SENDTEXT'
-            offset: "0000209E"            
-          - name: 'DRAWOPAQUERECT'
-            offset: "000023E8"            
-          - name: 'SELECTGRAYPATTERN'
-            offset: "00002600"            
-          - name: 'DOWNLOADPCLHEADER'
-            offset: "000027C0"            
-          - name: 'DOWNLOADPCLCHAR'
-            offset: "0000296C"            
-          - name: 'IFSCALEWIDTH'
-            offset: "00002C50"            
-          - name: 'TTSCALEWIDTH'
-            offset: "00002CB6"            
-          - name: 'PCLSENDSCALABLEFONTCMD'
-            offset: "00002D3C"            
-          - name: 'GETPOINTSIZE100'
-            offset: "00002E10"            
-          - name: 'CONVERTFONTSIZETOSTR'
-            offset: "00002E4A"            
-          - name: 'ITOA'
-            offset: "00002F00"            
-          - name: 'LTOA'
-            offset: "00002F3F"            
-          - name: 'CALCXCD'
-            offset: "00002F90"            
-          - name: 'UDSELECTFONT'
-            offset: "00002FFA"            
-          - name: 'DOWNLOADCHARS'
-            offset: "000032B8"            
-          - name: 'SETFNTINFO'
-            offset: "000036EE"            
-          - name: 'GETFNTINFO'
-            offset: "00003770"            
-          - name: 'FILTERCHAR'
-            offset: "0000380E"            
-          - name: 'OUTPUTCHAR'
-            offset: "00003858"            
-          - name: 'LOADCTT'
-            offset: "00003ABA"            
-          - name: 'SELECTCTT'
-            offset: "00003AFE"            
-          - name: 'UNSELECTCTT'
-            offset: "00003B68"            
-          - name: 'TTGETSFDL'
-            offset: "00003B9A"            
-          - name: 'TTBITMAP'
-            offset: "00003D84"            
-          - name: 'REGISTERFONTUSE'
-            offset: "00003E9C"            
-          - name: 'DL_ADDFONT'
-            offset: "00003F8C"            
-          - name: 'DL_GETSFDL'
-            offset: "0000400E"            
-          - name: 'DL_ERASEDLFONTLIST'
-            offset: "000040C0"            
-          - name: 'SENDFONTCMD'
-            offset: "000041B0"            
-          - name: 'GETMEM'
-            offset: "00004224"            
-          - name: 'ISJUSTIFIED'
-            offset: "000042C6"            
-          - name: 'SETSTYLE'
-            offset: "000042F0"            
-      - num: "7"
-        name: "_GRAPH"
-        offset: "00006440"
-        symbols:
-          - name: 'UniBitblt'
-            offset: "00000000"            
-          - name: 'UniStretchBlt'
-            offset: "000001A8"            
-          - name: 'UniOutput'
-            offset: "00000324"            
-          - name: 'FIXBANDOFFSET'
-            offset: "000006EA"            
-      - num: "8"
-        name: "_LDUMP"
-        offset: "00007140"
-        symbols:
-          - name: 'STRIPBLANKS'
-            offset: "00000000"            
-          - name: 'TRANSPOSEBITMAP'
-            offset: "00000053"            
-          - name: 'ISHORIZBANDWHITE'
-            offset: "000001CF"            
-          - name: 'REMOVEBLACK'
-            offset: "0000022B"            
-          - name: 'FINDLEFTBOUND'
-            offset: "0000028E"            
-          - name: 'INVERT'
-            offset: "000002DF"            
-          - name: 'TIFF_COMP'
-            offset: "0000030F"            
-          - name: 'SETNEWBOUND'
-            offset: "000003C3"            
-          - name: 'DRC'
-            offset: "0000045A"            
-          - name: 'LASERDUMP'
-            offset: "000004EC"            
-          - name: 'LASERBLOCKOUT'
-            offset: "00000DE8"            
-          - name: 'GETCOMPRESSIONBUFFERS'
-            offset: "00001352"            
-      - num: "9"
-        name: "_DIMAPS"
-        offset: "00009570"
-        symbols:
-          - name: 'UniDIBBlt'
-            offset: "00000000"            
-          - name: 'DWCOLORTABLE'
-            offset: "000001A5"            
-          - name: 'UniSetDIBitsToDevice'
-            offset: "000001C6"            
-          - name: 'UniStretchDIB'
-            offset: "0000028E"            
-          - name: 'NEWDIBTORGBBITMAP'
-            offset: "000003A6"            
-          - name: 'BUILD8COLORMAP'
-            offset: "000017F6"            
-          - name: 'BUILD256COLORMAP'
-            offset: "000018C4"            
-          - name: 'MAKEBWTABLE'
-            offset: "00001BF4"            
-          - name: 'MAKERGBTABLES'
-            offset: "00001C28"            
-          - name: 'CORRECTTRC'
-            offset: "00001E6C"            
-          - name: 'GETSRCSCAN'
-            offset: "00001F26"            
-          - name: 'INITPATTERNARRAY'
-            offset: "00001FBA"            
-          - name: 'RGBTO4BPPDIB'
-            offset: "00001FE0"            
-          - name: 'UMULDIV'
-            offset: "000021A4"            
-          - name: 'L_MUL'
-            offset: "000021B5"            
-          - name: 'STRETCHSCANLINE'
-            offset: "000021C2"            
-          - name: 'ONETOONESCANLINE'
-            offset: "0000244D"            
-          - name: 'CREATEONEPLANEDEST'
-            offset: "0000265A"            
-          - name: 'CREATETHREEPLANEDEST'
-            offset: "00002CA3"            
-          - name: 'INITLINEBUF'
-            offset: "00002E53"            
-          - name: 'CLONEDESTSCANLINE'
-            offset: "00002EB2"            
-          - name: 'STRETCHLINEBUF'
-            offset: "00002F45"            
-          - name: 'INITMASKBYTES'
-            offset: "00002F6E"            
-          - name: 'NORMALIZESUMBUF'
-            offset: "00002FB2"            
-          - name: 'COMPRESSSCANLINE'
-            offset: "00002FD2"            
-      - num: "10"
-        name: "_DMDLG"
-        offset: "0000B260"
-        symbols:
-          - name: 'DEVICEOPTIONSDLGPROC'
-            offset: "00000000"            
-          - name: 'SETPAGEPROTECTION'
-            offset: "000003B0"            
-          - name: 'INITDEVICEOPTIONSDLG'
-            offset: "00000456"            
-          - name: 'REFRESHPRINTERMEMORY'
-            offset: "000007B8"            
-          - name: 'SETUPMEMORYCOMBOBOX'
-            offset: "0000087A"            
-          - name: 'GETMEMDISPLAYSTR'
-            offset: "00000A20"            
-          - name: 'SAVEDEVICEOPTIONSDLG'
-            offset: "00000B0C"            
-          - name: 'SETDEVICEOPTIONSDEFAULTS'
-            offset: "00000C4E"            
-          - name: 'GRAPHICSDLGPROC'
-            offset: "00000E32"            
-          - name: 'INITGRAPHICSDLG'
-            offset: "000011BA"            
-          - name: 'SETRESOLUTION'
-            offset: "0000133C"            
-          - name: 'SETDITHER'
-            offset: "00001494"            
-          - name: 'SETVECTORMODE'
-            offset: "000015EE"            
-          - name: 'SAVEGRAPHICSDLG'
-            offset: "00001642"            
-          - name: 'SETGRAPHICSDEFAULTS'
-            offset: "0000172A"            
-          - name: 'COLORGRAPHICSDLGPROC'
-            offset: "00001788"            
-          - name: 'INITCOLORGRAPHICSDLG'
-            offset: "000018B4"            
-          - name: 'SAVECOLORGRAPHICSDLG'
-            offset: "00001928"            
-          - name: 'SETCOLORGRAPHICSDEFAULTS'
-            offset: "000019C2"            
-          - name: 'SETICMINTENT'
-            offset: "000019F4"            
-          - name: 'CALLFONTINSTALLER'
-            offset: "00001A74"            
-          - name: 'FONTSDLGPROC'
-            offset: "00001B26"            
-          - name: 'INITFONTSDLG'
-            offset: "00001D46"            
-          - name: 'SETTRUETYPE'
-            offset: "00001F9C"            
-          - name: 'GETEXTERNALCARTS'
-            offset: "0000207A"            
-          - name: 'GETWINCARTHANDLE'
-            offset: "000021C8"            
-          - name: 'UPDATELIST'
-            offset: "00002220"            
-          - name: 'SHOWCURRENTCARTS'
-            offset: "0000247C"            
-          - name: 'SHIFTLIST'
-            offset: "00002598"            
-          - name: 'CLEARLIST'
-            offset: "000025D2"            
-          - name: 'SAVEFONTSDLG'
-            offset: "000025F0"            
-          - name: 'SETFONTSDEFAULTS'
-            offset: "000026C0"            
-          - name: 'GETMARGINS'
-            offset: "00002736"            
-          - name: 'DISPLAYMARGINS'
-            offset: "00002808"            
-          - name: 'SETMARGINSPINRANGE'
-            offset: "00002854"            
-          - name: 'MARGINSDLGPROC'
-            offset: "000029BE"            
-          - name: 'GETPAPERFLAGS'
-            offset: "00002C74"            
-          - name: 'SETORIENTATION'
-            offset: "00002C7A"            
-          - name: 'SETDUPLEX'
-            offset: "00002CDC"            
-          - name: 'LOADRESOURCESTR'
-            offset: "00002D52"            
-          - name: 'WRITERESOLUTIONSTR'
-            offset: "00002DB0"            
-          - name: 'SETUPCOMBOORLISTBOX'
-            offset: "00002E36"            
-          - name: 'GETGPCDATA'
-            offset: "0000303C"            
-          - name: 'PAPERDLGPROC'
-            offset: "0000309C"            
-          - name: 'INITPAPERDLG'
-            offset: "000035DE"            
-          - name: 'SAVEPAPERDLG'
-            offset: "0000375C"            
-          - name: 'CHECKPAPERS'
-            offset: "00003890"            
-          - name: 'CHECKPAGEPROTECTION'
-            offset: "00003AE4"            
-          - name: 'SETPAPERDEFAULTS'
-            offset: "00003B9A"            
-          - name: 'GETONEUSERPAPERSIZE'
-            offset: "00003CDC"            
-          - name: 'SHOWMINMAXPAPERSIZES'
-            offset: "00003D44"            
-          - name: 'SETCUSTOMPAPERRANGE'
-            offset: "00003DCA"            
-          - name: 'PAPERSIZEDLGPROC'
-            offset: "00003E86"            
-          - name: 'INITABOUTDLG'
-            offset: "0000428A"            
-          - name: 'ABOUTDLGPROC'
-            offset: "00004452"            
-          - name: 'PRNTSELECTDLGPROC'
-            offset: "00004496"            
-          - name: 'PAGEERRDLGPROC'
-            offset: "000044A2"            
-          - name: 'GETPAGEERRMSGID'
-            offset: "00004592"            
-          - name: 'CHECKPRINTABLEREGION'
-            offset: "000045BA"            
-          - name: 'POSITIONCONTROLS'
-            offset: "00004606"            
-          - name: 'TESTFORJOBSEPARATION'
-            offset: "00004714"            
-          - name: 'MOREPAPERDLGPROC'
-            offset: "00004780"            
-          - name: 'SHOWJOBSEPARATION'
-            offset: "00004988"            
-          - name: 'INITMOREPAPERDLG'
-            offset: "000049F2"            
-          - name: 'SAVEMOREPAPERDLG'
-            offset: "00004B14"            
-          - name: 'SETMOREPAPERDEFAULTS'
-            offset: "00004BF8"            
-          - name: 'WRITEMSGSTR'
-            offset: "00004C52"            
-          - name: 'PRINTMSG'
-            offset: "00004C9C"            
-          - name: 'PRINTMSGPARAM'
-            offset: "00004D16"            
-      - num: "11"
-        name: "_DJFONT"
-        offset: "0000B5F0"
-        symbols:
-          - name: 'DJ_ADJUSTFONTINFO'
-            offset: "00000000"            
-          - name: 'GPERMOPTS'
-            offset: "000000FD"            
-          - name: 'DJ_PERMUTATERESFONT'
-            offset: "00000164"            
-          - name: 'DJ_PERMUTATESOFTFONT'
-            offset: "00000268"            
-          - name: 'DJ_DUPLICATEFONT'
-            offset: "0000033C"            
-          - name: 'READNUM'
-            offset: "000006C0"            
-          - name: 'DJ_GETPERMINFO'
-            offset: "00000722"            
-      - num: "12"
-        name: "_INSTALL"
-        offset: "0000BA80"
-        symbols:
-          - name: 'UniDevInstall'
-            offset: "00000000"            
-          - name: 'GPROFILEENTRIES'
-            offset: "000000A1"            
-          - name: 'GDMFIELDS'
-            offset: "00000263"            
-          - name: 'COPYPROFILESECTION'
-            offset: "00000296"            
-          - name: 'GETONEPROFILEINRANGE'
-            offset: "00000352"            
-          - name: 'GETONEDWORDPROFILEINRANGE'
-            offset: "00000396"            
-          - name: 'GETONEPROFILEINRESLIST'
-            offset: "0000044C"            
-          - name: 'GETDEVICEMODE'
-            offset: "000004E2"            
-      - num: "13"
-        name: "_TEXTOUT2"
-        offset: "0000C190"
-        symbols:
-          - name: 'INITPQ'
-            offset: "00000000"            
-          - name: 'SELECTTEXTCOLOR'
-            offset: "0000006A"            
-          - name: 'CREATEPQ'
-            offset: "000000B0"            
-          - name: 'MINPQ'
-            offset: "000000DE"            
-          - name: 'EXTRACTPQ'
-            offset: "000000E2"            
-          - name: 'GETMIN'
-            offset: "000000E6"            
-          - name: 'SIZEPQ'
-            offset: "000001BC"            
-          - name: 'INSERTPQ'
-            offset: "000001F7"            
-          - name: 'UDUNSELECTFONT'
-            offset: "000002CA"            
-          - name: 'INSERTTOS'
-            offset: "0000032C"            
-          - name: 'CHLINEOUT'
-            offset: "00000544"            
-          - name: 'STROUT'
-            offset: "000006A0"            
-          - name: 'TOSOUT'
-            offset: "000006DA"            
-          - name: 'OUTPUTLOOKAHEAD'
-            offset: "000009CE"            
-      - num: "14"
-        name: "_DUMP"
-        offset: "0000CAD0"
-        symbols:
-          - name: 'DUMP'
-            offset: "00000000"            
-          - name: 'BLOCKOUT'
-            offset: "00000252"            
-          - name: 'TRANSPOSE'
-            offset: "000004EA"            
-          - name: 'RGBDUMP'
-            offset: "00000560"            
-          - name: 'UniPixel'
-            offset: "0000086E"            
-          - name: 'ZF0'
-            offset: "000008F4"            
-          - name: 'ZF7'
-            offset: "000008F8"            
-          - name: 'ZF15'
-            offset: "000008FE"            
-          - name: 'BMTRANSPOSE'
-            offset: "00000910"            
-          - name: 'BMUNINTERLACE'
-            offset: "000009A8"            
-          - name: 'ISVERTBANDWHITE'
-            offset: "00000A8C"            
-          - name: 'CONVERTCOLOR'
-            offset: "00000ADB"            
-          - name: 'RESETADJACENT'
-            offset: "00000BEE"            
-      - num: "15"
-        name: "_TEXTOUT3"
-        offset: "0000CE10"
-        symbols:
-          - name: 'SIMULATEUNDERLINE'
-            offset: "00000000"            
-          - name: 'DRAWLINES'
-            offset: "000002A6"            
-          - name: 'MAKEPATTERNRECT'
-            offset: "00000382"            
-          - name: 'CREATETRANSMATRICES'
-            offset: "0000041C"            
-          - name: 'TRANSFORMPOINT'
-            offset: "000004E6"            
-          - name: 'TRANSFORMRECT'
-            offset: "0000053E"            
-          - name: 'SENDROTATEDTEXT'
-            offset: "000005E6"            
-      - num: "16"
-        name: "_PCLETTO"
-        offset: "0000DDC0"
-        symbols:
-          - name: 'DOWNLOADTTOUTLINEHEADER'
-            offset: "00000000"            
-          - name: 'RGWUNICODE'
-            offset: "0000019E"            
-          - name: 'DOWNLOADTTOUTLINECHARS'
-            offset: "000003B0"            
-          - name: 'DOWNLOADUSERSYMSET'
-            offset: "000005BA"            
-          - name: 'SETFONTPITCHANDHEIGHT'
-            offset: "000006EA"            
-          - name: 'INITFONTDESC'
-            offset: "00000774"            
-          - name: 'EXECFONTDESC'
-            offset: "0000079E"            
-          - name: 'RELEASEFONT'
-            offset: "00000866"            
-          - name: 'CONVERTPCLSPECINFO'
-            offset: "00000874"            
-          - name: 'CONVERTINFO'
-            offset: "00000906"            
-          - name: 'INITPCLFILE'
-            offset: "00000B52"            
-          - name: 'ENDFONTDESC'
-            offset: "00000B78"            
-          - name: 'SENDALLGLYPHDATA'
-            offset: "00000BE2"            
-          - name: 'OUTPUTGLYPH'
-            offset: "00000D0C"            
-          - name: 'INITBOUNDFILE'
-            offset: "00000DD0"            
-          - name: 'INITUNBOUNDFILE'
-            offset: "0000111C"            
-          - name: 'CALCCHECKSUM'
-            offset: "00001444"            
-          - name: 'OUTPUTSEGCC'
-            offset: "00001474"            
-          - name: 'OUTPUTSEGPA'
-            offset: "000014B4"            
-          - name: 'OUTPUTSEGGT'
-            offset: "000014F6"            
-          - name: 'OUTPUTSEGNULL'
-            offset: "0000152C"            
-          - name: 'INITTT'
-            offset: "00001550"            
-          - name: 'PREPARETTOUT'
-            offset: "00001730"            
-          - name: 'GETTTINFO'
-            offset: "00001978"            
-          - name: 'GETPCLTABLEINFO'
-            offset: "00001AA0"            
-          - name: 'RELEASETT'
-            offset: "00001B0A"            
-          - name: 'GETDEFPITCH'
-            offset: "00001BA2"            
-          - name: 'GETDEFSTYLESTROKE'
-            offset: "00001C36"            
-          - name: 'GETDEFXHEIGHT'
-            offset: "00001D1E"            
-          - name: 'CALCTABLECHECKSUM'
-            offset: "00001DDE"            
-          - name: 'GETHEADINFO'
-            offset: "00001E46"            
-          - name: 'GETHEADINFOA'
-            offset: "00001EE6"            
-          - name: 'GETMAXPINFO'
-            offset: "00001F04"            
-          - name: 'GETNAMEINFO'
-            offset: "00001F22"            
-          - name: 'GETPOSTINFO'
-            offset: "00002020"            
-          - name: 'GETOS2INFO'
-            offset: "0000205C"            
-          - name: 'GETOS2INFOA'
-            offset: "000020F8"            
-          - name: 'GETHHEAINFO'
-            offset: "00002132"            
-          - name: 'GETHMTXINFO'
-            offset: "00002150"            
-          - name: 'GETPCLTINFO'
-            offset: "000021AC"            
-          - name: 'GETGLYPHYMAX'
-            offset: "0000227E"            
-          - name: 'GETGLYPHID'
-            offset: "0000229C"            
-          - name: 'GETSPECGLYPHID'
-            offset: "000022CE"            
-          - name: 'GETGLYPHDATA'
-            offset: "00002306"            
-          - name: 'GETCOMPONENTINFO'
-            offset: "000024D8"            
-          - name: 'GETFORMAT4TABLE'
-            offset: "0000257A"            
-          - name: 'GETSPECFORMAT4TABLE'
-            offset: "00002644"            
-          - name: 'COMPUTEINDEX4'
-            offset: "00002728"            
-      - num: "17"
-        name: "_SOFTFONT"
-        offset: "0000E500"
-        symbols:
-          - name: 'INITWINSF'
-            offset: "00000000"            
-          - name: 'NEXTWINSF'
-            offset: "000000E8"            
-          - name: 'ENDWINSF'
-            offset: "000001EC"            
-          - name: 'NEXTWINCART'
-            offset: "00000200"            
-          - name: 'GETNUMCARTFONTS'
-            offset: "000004BC"            
-          - name: 'RGNOTRANS'
-            offset: "000005D7"            
-          - name: 'BUILDCARTFONTFM'
-            offset: "0000062C"            
-          - name: 'BUILDSOFTFONTFM'
-            offset: "0000079E"            
-          - name: 'CONVERTTOGPCFONTMETRICS'
-            offset: "00000984"            
-          - name: 'CONVERTESCAPESTR'
-            offset: "00000FA2"            
-          - name: 'DOWNLOADSOFTFONT'
-            offset: "00001018"            
-          - name: 'DL_ISFONTDOWN'
-            offset: "000011D2"            
-      - num: "18"
-        name: "_CAPSL"
-        offset: "0000E750"
-        symbols:
-          - name: 'DOWNLOADCAPSLHEADER'
-            offset: "00000000"            
-          - name: 'DOWNLOADCAPSLCHAR'
-            offset: "00000114"            
-          - name: 'CAPSLSCALEWIDTH'
-            offset: "000004AC"            
-          - name: 'CAPSLSENDSCALABLEFONTCMD'
-            offset: "0000051A"            
-      - num: "19"
-        name: "_PPDS"
-        offset: "0000E9E0"
-        symbols:
-          - name: 'DOWNLOADPPDSHEADER'
-            offset: "00000000"            
-          - name: 'DOWNLOADPPDSCHAR'
-            offset: "00000230"            
-          - name: 'PPDSSCALEWIDTH'
-            offset: "0000051A"            
-          - name: 'PPDSSENDSCALABLEFONTCMD'
-            offset: "0000058E"            
-      - num: "20"
-        name: "_VECTOR"
-        offset: "0000F510"
-        symbols:
-          - name: 'ATAN'
-            offset: "00000000"            
-          - name: 'SCALESHORT'
-            offset: "000000CA"            
-          - name: 'TRANSPOINT'
-            offset: "00000100"            
-          - name: 'SCALEPOINT'
-            offset: "0000017E"            
-          - name: 'TRANSRECT'
-            offset: "000001D0"            
-          - name: 'ENTERVECT'
-            offset: "000002A4"            
-          - name: 'EXITVECT'
-            offset: "000002D8"            
-          - name: 'TRANSSELECT'
-            offset: "0000030C"            
-          - name: 'PENSELECT'
-            offset: "0000034C"            
-          - name: 'BRUSHSELECT'
-            offset: "00000538"            
-          - name: 'REALIZEVBRUSH'
-            offset: "00000934"            
-          - name: 'DELETEVBRUSH'
-            offset: "00000D00"            
-          - name: 'REALIZEVPEN'
-            offset: "00000D5A"            
-          - name: 'VECTOROUTPUT'
-            offset: "00000F3C"            
-          - name: 'VECTOUTPUT'
-            offset: "000016D8"            
-          - name: 'GETNULLPEN'
-            offset: "00001C54"            
-          - name: 'VECTORBITBLT'
-            offset: "00001CB8"            
-      - num: "21"
-        name: "DGROUP"
-        offset: "00000000"
-        symbols:
-          - name: 'pLocalHeap'
-            offset: "00000006"            
-          - name: 'rsrvptrs'
-            offset: "00000006"            
-          - name: 'pAtomTable'
-            offset: "00000008"            
-          - name: 'pStackTop'
-            offset: "0000000A"            
-          - name: 'pStackMin'
-            offset: "0000000C"            
-          - name: 'pStackBot'
-            offset: "0000000E"            
-          - name: 'GDEFINITCMDORDER'
-            offset: "000000AC"            
-          - name: 'SZNULL'
-            offset: "000000B8"            
-          - name: 'RGCHMODULENAME'
-            offset: "000000BA"            
-          - name: 'GHINSTUNIDRV'
-            offset: "000000C2"            
-          - name: 'GCONSTMAP'
-            offset: "000000C4"            
-          - name: 'GBMPATTERN'
-            offset: "000001F0"            
-          - name: 'BIT_MASK'
-            offset: "00000210"            
-          - name: 'GCOARSE8X8'
-            offset: "00000218"            
-          - name: 'GFINE8X8'
-            offset: "00000258"            
-          - name: 'GLINEART8X8'
-            offset: "00000298"            
-          - name: 'COLORTRC'
-            offset: "00000398"            
-          - name: 'DWHELPMAP'
-            offset: "00000410"            
-          - name: 'SZSIZEUNIT'
-            offset: "00000770"            
-          - name: 'SZBRUSH'
-            offset: "0000077A"            
-          - name: 'SZINTENSITY'
-            offset: "00000780"            
-          - name: 'SZBAND'
-            offset: "0000078A"            
-          - name: 'SZMEMORY'
-            offset: "00000790"            
-          - name: 'SZMEMRESERVE'
-            offset: "00000798"            
-          - name: 'SZNUMCARTS'
-            offset: "000007A4"            
-          - name: 'SZCARTRIDGE'
-            offset: "000007BA"            
-          - name: 'SZPAGEPROTECT'
-            offset: "000007C6"            
-          - name: 'SZLEFTMARGIN'
-            offset: "000007D6"            
-          - name: 'SZTOPMARGIN'
-            offset: "000007DC"            
-          - name: 'SZRIGHTMARGIN'
-            offset: "000007E0"            
-          - name: 'SZBOTTOMMARGIN'
-            offset: "000007E6"            
-          - name: 'SZVECTOR'
-            offset: "000007EE"            
-          - name: 'TANTABLE'
-            offset: "00000898"            
-          - name: 'RESERVED_CHARID_STRING'
-            offset: "00000C90"            
-          - name: 'GTTINTABLETAG'
-            offset: "00000CF8"            
-          - name: 'GTTOUTTABLEINFO'
-            offset: "00000D3E"            
-          - name: 'GFNRGB_ENUMOBJ'
-            offset: "00000D90"            
-          - name: 'RGBBITS'
-            offset: "00000D94"            
-          - name: 'GFNRGB_REALIZEOBJECT'
-            offset: "00000DC4"            
+- version: system
+  tree:
+  - - advdmdlg.c
+    - bandsize.c
+    - bitblt.c
+    - charwdth.c
+    - control.c
+    - devcaps.c
+    - devmode.c
+    - dib2.asm
+    - dib.c
+    - disable.c
+    - djfont.c
+    - dmdlg.c
+    - "\t../dump.c"
+    - dumputil.asm
+    - enable2.c
+    - enable.c
+    - enumobj.c
+    - escutil.asm
+    - fontmap.c
+    - fontsum.c
+    - fontutil.c
+    - hcdump.c
+    - install.c
+    - ldiv.asm
+    - ldump.c
+    - libentry.asm
+    - lmul.asm
+    - lrem.asm
+    - lshl.asm
+    - lshr.asm
+    - message.c
+    - newdib2.c
+    - newdib3.asm
+    - newdib.c
+    - output.c
+    - pcletto.c
+    - pcletto/entry.c
+    - pcletto/pclout.c
+    - pcletto/tt.c
+    - pcletto/tttab.c
+    - physical.c
+    - "\t../pq.asm"
+    - realize.c
+    - sfutils.c
+    - softfont.c
+    - textout.c
+    - tos.c
+    - "\t../trig.c"
+    - ttcapsl.c
+    - ttpcl.c
+    - ttppds.c
+    - "\tuldiv.asm"
+    - "\tulrem.asm"
+    - "\tulshr.asm"
+    - utils.asm
+    - vector.c
+    - voutput.c
+    - wep.c
+    - xcd.asm
+    - HHt.H
+    - NEWID.H
+    - UNIDRV.HLP
+  segments:
+  - num: '1'
+    name: _TEXT
+    offset: '000007E0'
+    symbols:
+    - name: LibEntry
+      processed: ''
+      offset: '00000000'
+    - name: WEP
+      processed: ''
+      offset: '00000020'
+    - name: LibMain
+      processed: ''
+      offset: '00000024'
+    - name: COPY
+      processed: ''
+      offset: '00000070'
+    - name: SETBYTEVALUE
+      processed: ''
+      offset: 0000009C
+    - name: OFFSETCLIPRECT
+      processed: ''
+      offset: 000000D1
+    - name: __aFldiv
+      processed: ''
+      offset: '00000136'
+    - name: __aFlmul
+      processed: ''
+      offset: 000001D0
+    - name: __aFulmul
+      processed: ''
+      offset: 000001D0
+    - name: __aFlrem
+      processed: ''
+      offset: '00000202'
+    - name: __aFlshl
+      processed: ''
+      offset: 000002A2
+    - name: __aFlshr
+      processed: ''
+      offset: 000002AE
+    - name: __aFuldiv
+      processed: ''
+      offset: 000002BA
+    - name: __aFulrem
+      processed: ''
+      offset: 0000031A
+    - name: __aFulshr
+      processed: ''
+      offset: '00000384'
+  - num: '2'
+    name: _DEVMODE
+    offset: '00001640'
+    symbols:
+    - name: UniDeviceMode
+      processed: ''
+      offset: '00000000'
+    - name: UniExtDeviceMode
+      processed: ''
+      offset: 000000B2
+    - name: UniExtDeviceModePropSheet
+      processed: ''
+      offset: 000000F4
+    - name: UniAdvancedSetUpDialog
+      processed: ''
+      offset: 0000012A
+    - name: SETDLGFLAGS
+      processed: ''
+      offset: '00000180'
+    - name: IENTERDEVMODE
+      processed: ''
+      offset: '000003E2'
+    - name: GETHELPFILENAME
+      processed: ''
+      offset: 000007EA
+    - name: PROPPAGECALLBACK
+      processed: ''
+      offset: '00000852'
+    - name: COMMITCHANGES
+      processed: ''
+      offset: '00000874'
+    - name: IENDDEVMODE
+      processed: ''
+      offset: 00000A04
+    - name: GETMINPAPERSIZE
+      processed: ''
+      offset: 00000B9E
+    - name: GETMAXPAPERSIZE
+      processed: ''
+      offset: 00000C46
+    - name: CHECKLEGALPRINTQUALITY
+      processed: ''
+      offset: 00000CE4
+    - name: CHECKLEGALRESVALUE
+      processed: ''
+      offset: '00000E82'
+    - name: VERSIONCHECKLEGALRESVALUE
+      processed: ''
+      offset: 00000EEC
+    - name: GETOLDDEVMODEINFO
+      processed: ''
+      offset: 00000F1A
+    - name: MODIFYDEVICEMODE
+      processed: ''
+      offset: 00000FD0
+    - name: GETNEARESTMEMORYVALUE
+      processed: ''
+      offset: 000017DE
+    - name: ISVALIDUNIDRVVERSION
+      processed: ''
+      offset: '00001962'
+    - name: ISUSA
+      processed: ''
+      offset: 000019AA
+    - name: GETMODELNAMEID
+      processed: ''
+      offset: 000019EA
+    - name: ISTHISOURDEVMODE
+      processed: ''
+      offset: 00001A90
+    - name: GETDEFAULTINDEX
+      processed: ''
+      offset: 00001B40
+    - name: GETCACHEDDEVICEMODE
+      processed: ''
+      offset: 00001BC2
+    - name: GETTTCAPS
+      processed: ''
+      offset: 00001ECC
+    - name: GETTTDEF
+      processed: ''
+      offset: 00001F6C
+    - name: SUPPORTJOBSEPARATION
+      processed: ''
+      offset: 00001FA6
+    - name: UniDeviceCapabilities
+      processed: ''
+      offset: 00001FDC
+    - name: GETPAPERDIMENSIONS
+      processed: ''
+      offset: '00002512'
+    - name: GETBINNAMES
+      processed: ''
+      offset: 000025A4
+    - name: GETPAPERNAMES
+      processed: ''
+      offset: '00002608'
+  - num: '3'
+    name: _ENABLE
+    offset: 00002C60
+    symbols:
+    - name: UniDisable
+      processed: ''
+      offset: '00000000'
+    - name: UniEnable
+      processed: ''
+      offset: '00000370'
+    - name: GETTTDOWNLOADINFO
+      processed: ''
+      offset: 000018FC
+    - name: SETGDIINFO
+      processed: ''
+      offset: '00001958'
+    - name: BUILDCOMMANDTABLE
+      processed: ''
+      offset: 00001A02
+    - name: GETBRUTE
+      processed: ''
+      offset: '00002238'
+    - name: COMPUTEMINXMOVEUNITS
+      processed: ''
+      offset: 0000244C
+    - name: GETCOMPRESSIONINFO
+      processed: ''
+      offset: 000024F8
+    - name: LOADDATA
+      processed: ''
+      offset: '00002620'
+    - name: GETTABLEINFO
+      processed: ''
+      offset: 0000264E
+    - name: FARGETTABLEINFO
+      processed: ''
+      offset: 000026AC
+    - name: HYPOTENEOUS
+      processed: ''
+      offset: 000026C2
+    - name: GETPAPERFORMAT
+      processed: ''
+      offset: 0000271C
+    - name: GETMINPAPERMARGINS
+      processed: ''
+      offset: '00002978'
+    - name: CONVERTMARGINSUNIT
+      processed: ''
+      offset: 00002ADE
+    - name: GETCOLORTRC
+      processed: ''
+      offset: 00002D8C
+    - name: BUILDFONTMAPTABLE
+      processed: ''
+      offset: '00002E74'
+    - name: GETRESFONTIDS
+      processed: ''
+      offset: 0000322A
+    - name: MAKEAPPNAME
+      processed: ''
+      offset: 0000346C
+    - name: BUILDRESFONTFM
+      processed: ''
+      offset: '00003520'
+    - name: MERGEFONTS
+      processed: ''
+      offset: 0000370E
+    - name: FONTINFOTOFONTMAP
+      processed: ''
+      offset: '000038E4'
+    - name: COPYFONT
+      processed: ''
+      offset: 000039F2
+    - name: GETSHORTMODULENAME
+      processed: ''
+      offset: 00003BA8
+    - name: MAKEFONTSUMNAME
+      processed: ''
+      offset: 00003C56
+    - name: CHECKVALIDFONTSUM
+      processed: ''
+      offset: 00003D40
+    - name: FONTSUMTOFONTMAP
+      processed: ''
+      offset: '00003E50'
+    - name: SAVEFONTSUM
+      processed: ''
+      offset: 00003FE8
+    - name: DELETEFONTSUM
+      processed: ''
+      offset: 000042CE
+    - name: FONTSUMSTRTOATOM
+      processed: ''
+      offset: 000042FA
+    - name: FONTSUMATOMTOSTR
+      processed: ''
+      offset: 0000434A
+    - name: HEAPINIT
+      processed: ''
+      offset: 0000443C
+    - name: HEAPALLOC
+      processed: ''
+      offset: 0000447E
+    - name: HEAPDESTROY
+      processed: ''
+      offset: '00004526'
+  - num: '4'
+    name: _REALIZE
+    offset: '00003900'
+    symbols:
+    - name: UniDeviceSelectBitmap
+      processed: ''
+      offset: '00000000'
+    - name: UniBitmapBits
+      processed: ''
+      offset: 0000003E
+    - name: UniGetCharWidth
+      processed: ''
+      offset: '00000090'
+    - name: FONTINFOTOTEXTMETRIC
+      processed: ''
+      offset: 0000023C
+    - name: UniEnumObj
+      processed: ''
+      offset: 000003FA
+    - name: GPOINTLIST
+      processed: ''
+      offset: 0000045A
+    - name: UniColorInfo
+      processed: ''
+      offset: '00000470'
+    - name: UniEnumDFonts
+      processed: ''
+      offset: 000004B6
+    - name: FONTMAPTOLOGFONT
+      processed: ''
+      offset: 0000077A
+    - name: BUILDFONTFACELIST
+      processed: ''
+      offset: '000007E4'
+    - name: RGB_ENUMOBJEXT
+      processed: ''
+      offset: 000008F8
+    - name: GAMMACORRECTION
+      processed: ''
+      offset: '00000912'
+    - name: UniRealizeObject
+      processed: ''
+      offset: 000009DA
+    - name: BIT_INDEX
+      processed: ''
+      offset: 00000B5A
+    - name: REALIZEFONT
+      processed: ''
+      offset: 00000B62
+    - name: UDDELETEFONT
+      processed: ''
+      offset: '00001262'
+    - name: TMTOSTRUCT
+      processed: ''
+      offset: '00001294'
+    - name: SCALEFONT
+      processed: ''
+      offset: 0000137A
+    - name: FONTMAPTOFONTINFO
+      processed: ''
+      offset: '00001638'
+    - name: GETFUNCSCALEWIDTH
+      processed: ''
+      offset: 00001ADC
+    - name: BUILDENGINEFONTMAP
+      processed: ''
+      offset: 00001B6E
+    - name: REALIZERBRUSH
+      processed: ''
+      offset: 00001D0C
+    - name: DITHERBRUSH
+      processed: ''
+      offset: 00001DF4
+    - name: BUILDHALFTONEBRUSH
+      processed: ''
+      offset: 00001F68
+    - name: ADJUSTSPOTDI
+      processed: ''
+      offset: 0000204C
+    - name: REALIZERPEN
+      processed: ''
+      offset: 000020AA
+    - name: RGB_REALIZEOBJECTEXT
+      processed: ''
+      offset: 0000212C
+  - num: '5'
+    name: _ESCAPE
+    offset: '00004760'
+    symbols:
+    - name: GETBANDFORMAT
+      processed: ''
+      offset: '00000000'
+    - name: FREEBANDBUFFERS
+      processed: ''
+      offset: '000005E0'
+    - name: UniControl
+      processed: ''
+      offset: 0000064A
+    - name: GETPAPERMETRICS
+      processed: ''
+      offset: 000010F2
+    - name: ISMEMLOW
+      processed: ''
+      offset: '00001160'
+    - name: ENOUGHMEMFORONEPAGE
+      processed: ''
+      offset: 000011B6
+    - name: ENOUGHMEMFORNONTT
+      processed: ''
+      offset: '00001238'
+    - name: GETNUMDEVFONTSUSED
+      processed: ''
+      offset: 000012CC
+    - name: GETNUMSOFTFONTSUSED
+      processed: ''
+      offset: '00001310'
+    - name: GETEXTENDEDSTUFF
+      processed: ''
+      offset: '00001358'
+    - name: SENDINITCMDS
+      processed: ''
+      offset: 000015B4
+    - name: CONTROLNEXTBAND
+      processed: ''
+      offset: 000017CE
+    - name: DRAWPATTERNRECT
+      processed: ''
+      offset: '00001E28'
+    - name: LOGPAGEERRS
+      processed: ''
+      offset: '00002052'
+    - name: REPORTPAGEERRS
+      processed: ''
+      offset: 000020A8
+    - name: SETPAGEERRS
+      processed: ''
+      offset: 000020DE
+    - name: WRITEDIALOGBUF
+      processed: ''
+      offset: 0000219A
+    - name: FLUSHSPOOLBUF
+      processed: ''
+      offset: 000021EA
+    - name: GETFREEMEMINFO
+      processed: ''
+      offset: '00002240'
+    - name: INITBITMAP
+      processed: ''
+      offset: '00002260'
+  - num: '6'
+    name: _TEXTOUT
+    offset: 000060F0
+    symbols:
+    - name: XMOVETO
+      processed: ''
+      offset: '00000000'
+    - name: JUSTIFYX
+      processed: ''
+      offset: '000002E0'
+    - name: RELXMOVETO
+      processed: ''
+      offset: 000003F2
+    - name: FINEXMOVETO
+      processed: ''
+      offset: '00000476'
+    - name: YMOVETO
+      processed: ''
+      offset: 0000054C
+    - name: WriteSpoolBuf
+      processed: ''
+      offset: 000008D0
+    - name: _WriteChannel
+      processed: ''
+      offset: 0000095C
+    - name: FORMATNUM
+      processed: ''
+      offset: 00000CA6
+    - name: SELECTCOLOR
+      processed: ''
+      offset: 00000F90
+    - name: UniExtTextOut
+      processed: ''
+      offset: 00000FF2
+    - name: SBCSEXTTEXTOUT
+      processed: ''
+      offset: 0000144E
+    - name: CHPOSITION
+      processed: ''
+      offset: 00001BB0
+    - name: BMTEXTOUT
+      processed: ''
+      offset: '00001E62'
+    - name: SENDTEXT
+      processed: ''
+      offset: 0000209E
+    - name: DRAWOPAQUERECT
+      processed: ''
+      offset: '000023E8'
+    - name: SELECTGRAYPATTERN
+      processed: ''
+      offset: '00002600'
+    - name: DOWNLOADPCLHEADER
+      processed: ''
+      offset: 000027C0
+    - name: DOWNLOADPCLCHAR
+      processed: ''
+      offset: 0000296C
+    - name: IFSCALEWIDTH
+      processed: ''
+      offset: 00002C50
+    - name: TTSCALEWIDTH
+      processed: ''
+      offset: 00002CB6
+    - name: PCLSENDSCALABLEFONTCMD
+      processed: ''
+      offset: 00002D3C
+    - name: GETPOINTSIZE100
+      processed: ''
+      offset: '00002E10'
+    - name: CONVERTFONTSIZETOSTR
+      processed: ''
+      offset: 00002E4A
+    - name: ITOA
+      processed: ''
+      offset: 00002F00
+    - name: LTOA
+      processed: ''
+      offset: 00002F3F
+    - name: CALCXCD
+      processed: ''
+      offset: 00002F90
+    - name: UDSELECTFONT
+      processed: ''
+      offset: 00002FFA
+    - name: DOWNLOADCHARS
+      processed: ''
+      offset: 000032B8
+    - name: SETFNTINFO
+      processed: ''
+      offset: 000036EE
+    - name: GETFNTINFO
+      processed: ''
+      offset: '00003770'
+    - name: FILTERCHAR
+      processed: ''
+      offset: 0000380E
+    - name: OUTPUTCHAR
+      processed: ''
+      offset: '00003858'
+    - name: LOADCTT
+      processed: ''
+      offset: 00003ABA
+    - name: SELECTCTT
+      processed: ''
+      offset: 00003AFE
+    - name: UNSELECTCTT
+      processed: ''
+      offset: 00003B68
+    - name: TTGETSFDL
+      processed: ''
+      offset: 00003B9A
+    - name: TTBITMAP
+      processed: ''
+      offset: 00003D84
+    - name: REGISTERFONTUSE
+      processed: ''
+      offset: 00003E9C
+    - name: DL_ADDFONT
+      processed: ''
+      offset: 00003F8C
+    - name: DL_GETSFDL
+      processed: ''
+      offset: 0000400E
+    - name: DL_ERASEDLFONTLIST
+      processed: ''
+      offset: 000040C0
+    - name: SENDFONTCMD
+      processed: ''
+      offset: 000041B0
+    - name: GETMEM
+      processed: ''
+      offset: '00004224'
+    - name: ISJUSTIFIED
+      processed: ''
+      offset: 000042C6
+    - name: SETSTYLE
+      processed: ''
+      offset: 000042F0
+  - num: '7'
+    name: _GRAPH
+    offset: '00006440'
+    symbols:
+    - name: UniBitblt
+      processed: ''
+      offset: '00000000'
+    - name: UniStretchBlt
+      processed: ''
+      offset: 000001A8
+    - name: UniOutput
+      processed: ''
+      offset: '00000324'
+    - name: FIXBANDOFFSET
+      processed: ''
+      offset: 000006EA
+  - num: '8'
+    name: _LDUMP
+    offset: '00007140'
+    symbols:
+    - name: STRIPBLANKS
+      processed: ''
+      offset: '00000000'
+    - name: TRANSPOSEBITMAP
+      processed: ''
+      offset: '00000053'
+    - name: ISHORIZBANDWHITE
+      processed: ''
+      offset: 000001CF
+    - name: REMOVEBLACK
+      processed: ''
+      offset: 0000022B
+    - name: FINDLEFTBOUND
+      processed: ''
+      offset: 0000028E
+    - name: INVERT
+      processed: ''
+      offset: 000002DF
+    - name: TIFF_COMP
+      processed: ''
+      offset: 0000030F
+    - name: SETNEWBOUND
+      processed: ''
+      offset: 000003C3
+    - name: DRC
+      processed: ''
+      offset: 0000045A
+    - name: LASERDUMP
+      processed: ''
+      offset: 000004EC
+    - name: LASERBLOCKOUT
+      processed: ''
+      offset: 00000DE8
+    - name: GETCOMPRESSIONBUFFERS
+      processed: ''
+      offset: '00001352'
+  - num: '9'
+    name: _DIMAPS
+    offset: '00009570'
+    symbols:
+    - name: UniDIBBlt
+      processed: ''
+      offset: '00000000'
+    - name: DWCOLORTABLE
+      processed: ''
+      offset: 000001A5
+    - name: UniSetDIBitsToDevice
+      processed: ''
+      offset: 000001C6
+    - name: UniStretchDIB
+      processed: ''
+      offset: 0000028E
+    - name: NEWDIBTORGBBITMAP
+      processed: ''
+      offset: 000003A6
+    - name: BUILD8COLORMAP
+      processed: ''
+      offset: 000017F6
+    - name: BUILD256COLORMAP
+      processed: ''
+      offset: 000018C4
+    - name: MAKEBWTABLE
+      processed: ''
+      offset: 00001BF4
+    - name: MAKERGBTABLES
+      processed: ''
+      offset: 00001C28
+    - name: CORRECTTRC
+      processed: ''
+      offset: 00001E6C
+    - name: GETSRCSCAN
+      processed: ''
+      offset: 00001F26
+    - name: INITPATTERNARRAY
+      processed: ''
+      offset: 00001FBA
+    - name: RGBTO4BPPDIB
+      processed: ''
+      offset: 00001FE0
+    - name: UMULDIV
+      processed: ''
+      offset: 000021A4
+    - name: L_MUL
+      processed: ''
+      offset: 000021B5
+    - name: STRETCHSCANLINE
+      processed: ''
+      offset: 000021C2
+    - name: ONETOONESCANLINE
+      processed: ''
+      offset: 0000244D
+    - name: CREATEONEPLANEDEST
+      processed: ''
+      offset: 0000265A
+    - name: CREATETHREEPLANEDEST
+      processed: ''
+      offset: 00002CA3
+    - name: INITLINEBUF
+      processed: ''
+      offset: '00002E53'
+    - name: CLONEDESTSCANLINE
+      processed: ''
+      offset: 00002EB2
+    - name: STRETCHLINEBUF
+      processed: ''
+      offset: 00002F45
+    - name: INITMASKBYTES
+      processed: ''
+      offset: 00002F6E
+    - name: NORMALIZESUMBUF
+      processed: ''
+      offset: 00002FB2
+    - name: COMPRESSSCANLINE
+      processed: ''
+      offset: 00002FD2
+  - num: '10'
+    name: _DMDLG
+    offset: 0000B260
+    symbols:
+    - name: DEVICEOPTIONSDLGPROC
+      processed: ''
+      offset: '00000000'
+    - name: SETPAGEPROTECTION
+      processed: ''
+      offset: 000003B0
+    - name: INITDEVICEOPTIONSDLG
+      processed: ''
+      offset: '00000456'
+    - name: REFRESHPRINTERMEMORY
+      processed: ''
+      offset: 000007B8
+    - name: SETUPMEMORYCOMBOBOX
+      processed: ''
+      offset: 0000087A
+    - name: GETMEMDISPLAYSTR
+      processed: ''
+      offset: 00000A20
+    - name: SAVEDEVICEOPTIONSDLG
+      processed: ''
+      offset: 00000B0C
+    - name: SETDEVICEOPTIONSDEFAULTS
+      processed: ''
+      offset: 00000C4E
+    - name: GRAPHICSDLGPROC
+      processed: ''
+      offset: '00000E32'
+    - name: INITGRAPHICSDLG
+      processed: ''
+      offset: 000011BA
+    - name: SETRESOLUTION
+      processed: ''
+      offset: 0000133C
+    - name: SETDITHER
+      processed: ''
+      offset: '00001494'
+    - name: SETVECTORMODE
+      processed: ''
+      offset: 000015EE
+    - name: SAVEGRAPHICSDLG
+      processed: ''
+      offset: '00001642'
+    - name: SETGRAPHICSDEFAULTS
+      processed: ''
+      offset: 0000172A
+    - name: COLORGRAPHICSDLGPROC
+      processed: ''
+      offset: '00001788'
+    - name: INITCOLORGRAPHICSDLG
+      processed: ''
+      offset: 000018B4
+    - name: SAVECOLORGRAPHICSDLG
+      processed: ''
+      offset: '00001928'
+    - name: SETCOLORGRAPHICSDEFAULTS
+      processed: ''
+      offset: 000019C2
+    - name: SETICMINTENT
+      processed: ''
+      offset: 000019F4
+    - name: CALLFONTINSTALLER
+      processed: ''
+      offset: 00001A74
+    - name: FONTSDLGPROC
+      processed: ''
+      offset: 00001B26
+    - name: INITFONTSDLG
+      processed: ''
+      offset: 00001D46
+    - name: SETTRUETYPE
+      processed: ''
+      offset: 00001F9C
+    - name: GETEXTERNALCARTS
+      processed: ''
+      offset: 0000207A
+    - name: GETWINCARTHANDLE
+      processed: ''
+      offset: 000021C8
+    - name: UPDATELIST
+      processed: ''
+      offset: '00002220'
+    - name: SHOWCURRENTCARTS
+      processed: ''
+      offset: 0000247C
+    - name: SHIFTLIST
+      processed: ''
+      offset: '00002598'
+    - name: CLEARLIST
+      processed: ''
+      offset: 000025D2
+    - name: SAVEFONTSDLG
+      processed: ''
+      offset: 000025F0
+    - name: SETFONTSDEFAULTS
+      processed: ''
+      offset: 000026C0
+    - name: GETMARGINS
+      processed: ''
+      offset: '00002736'
+    - name: DISPLAYMARGINS
+      processed: ''
+      offset: '00002808'
+    - name: SETMARGINSPINRANGE
+      processed: ''
+      offset: '00002854'
+    - name: MARGINSDLGPROC
+      processed: ''
+      offset: 000029BE
+    - name: GETPAPERFLAGS
+      processed: ''
+      offset: 00002C74
+    - name: SETORIENTATION
+      processed: ''
+      offset: 00002C7A
+    - name: SETDUPLEX
+      processed: ''
+      offset: 00002CDC
+    - name: LOADRESOURCESTR
+      processed: ''
+      offset: 00002D52
+    - name: WRITERESOLUTIONSTR
+      processed: ''
+      offset: 00002DB0
+    - name: SETUPCOMBOORLISTBOX
+      processed: ''
+      offset: '00002E36'
+    - name: GETGPCDATA
+      processed: ''
+      offset: 0000303C
+    - name: PAPERDLGPROC
+      processed: ''
+      offset: 0000309C
+    - name: INITPAPERDLG
+      processed: ''
+      offset: 000035DE
+    - name: SAVEPAPERDLG
+      processed: ''
+      offset: 0000375C
+    - name: CHECKPAPERS
+      processed: ''
+      offset: '00003890'
+    - name: CHECKPAGEPROTECTION
+      processed: ''
+      offset: 00003AE4
+    - name: SETPAPERDEFAULTS
+      processed: ''
+      offset: 00003B9A
+    - name: GETONEUSERPAPERSIZE
+      processed: ''
+      offset: 00003CDC
+    - name: SHOWMINMAXPAPERSIZES
+      processed: ''
+      offset: 00003D44
+    - name: SETCUSTOMPAPERRANGE
+      processed: ''
+      offset: 00003DCA
+    - name: PAPERSIZEDLGPROC
+      processed: ''
+      offset: '00003E86'
+    - name: INITABOUTDLG
+      processed: ''
+      offset: 0000428A
+    - name: ABOUTDLGPROC
+      processed: ''
+      offset: '00004452'
+    - name: PRNTSELECTDLGPROC
+      processed: ''
+      offset: '00004496'
+    - name: PAGEERRDLGPROC
+      processed: ''
+      offset: 000044A2
+    - name: GETPAGEERRMSGID
+      processed: ''
+      offset: '00004592'
+    - name: CHECKPRINTABLEREGION
+      processed: ''
+      offset: 000045BA
+    - name: POSITIONCONTROLS
+      processed: ''
+      offset: '00004606'
+    - name: TESTFORJOBSEPARATION
+      processed: ''
+      offset: '00004714'
+    - name: MOREPAPERDLGPROC
+      processed: ''
+      offset: '00004780'
+    - name: SHOWJOBSEPARATION
+      processed: ''
+      offset: '00004988'
+    - name: INITMOREPAPERDLG
+      processed: ''
+      offset: 000049F2
+    - name: SAVEMOREPAPERDLG
+      processed: ''
+      offset: 00004B14
+    - name: SETMOREPAPERDEFAULTS
+      processed: ''
+      offset: 00004BF8
+    - name: WRITEMSGSTR
+      processed: ''
+      offset: 00004C52
+    - name: PRINTMSG
+      processed: ''
+      offset: 00004C9C
+    - name: PRINTMSGPARAM
+      processed: ''
+      offset: 00004D16
+  - num: '11'
+    name: _DJFONT
+    offset: 0000B5F0
+    symbols:
+    - name: DJ_ADJUSTFONTINFO
+      processed: ''
+      offset: '00000000'
+    - name: GPERMOPTS
+      processed: ''
+      offset: 000000FD
+    - name: DJ_PERMUTATERESFONT
+      processed: ''
+      offset: '00000164'
+    - name: DJ_PERMUTATESOFTFONT
+      processed: ''
+      offset: '00000268'
+    - name: DJ_DUPLICATEFONT
+      processed: ''
+      offset: 0000033C
+    - name: READNUM
+      processed: ''
+      offset: 000006C0
+    - name: DJ_GETPERMINFO
+      processed: ''
+      offset: '00000722'
+  - num: '12'
+    name: _INSTALL
+    offset: 0000BA80
+    symbols:
+    - name: UniDevInstall
+      processed: ''
+      offset: '00000000'
+    - name: GPROFILEENTRIES
+      processed: ''
+      offset: 000000A1
+    - name: GDMFIELDS
+      processed: ''
+      offset: '00000263'
+    - name: COPYPROFILESECTION
+      processed: ''
+      offset: '00000296'
+    - name: GETONEPROFILEINRANGE
+      processed: ''
+      offset: '00000352'
+    - name: GETONEDWORDPROFILEINRANGE
+      processed: ''
+      offset: '00000396'
+    - name: GETONEPROFILEINRESLIST
+      processed: ''
+      offset: 0000044C
+    - name: GETDEVICEMODE
+      processed: ''
+      offset: '000004E2'
+  - num: '13'
+    name: _TEXTOUT2
+    offset: 0000C190
+    symbols:
+    - name: INITPQ
+      processed: ''
+      offset: '00000000'
+    - name: SELECTTEXTCOLOR
+      processed: ''
+      offset: 0000006A
+    - name: CREATEPQ
+      processed: ''
+      offset: 000000B0
+    - name: MINPQ
+      processed: ''
+      offset: 000000DE
+    - name: EXTRACTPQ
+      processed: ''
+      offset: '000000E2'
+    - name: GETMIN
+      processed: ''
+      offset: '000000E6'
+    - name: SIZEPQ
+      processed: ''
+      offset: 000001BC
+    - name: INSERTPQ
+      processed: ''
+      offset: 000001F7
+    - name: UDUNSELECTFONT
+      processed: ''
+      offset: 000002CA
+    - name: INSERTTOS
+      processed: ''
+      offset: 0000032C
+    - name: CHLINEOUT
+      processed: ''
+      offset: '00000544'
+    - name: STROUT
+      processed: ''
+      offset: 000006A0
+    - name: TOSOUT
+      processed: ''
+      offset: 000006DA
+    - name: OUTPUTLOOKAHEAD
+      processed: ''
+      offset: 000009CE
+  - num: '14'
+    name: _DUMP
+    offset: 0000CAD0
+    symbols:
+    - name: DUMP
+      processed: ''
+      offset: '00000000'
+    - name: BLOCKOUT
+      processed: ''
+      offset: '00000252'
+    - name: TRANSPOSE
+      processed: ''
+      offset: 000004EA
+    - name: RGBDUMP
+      processed: ''
+      offset: '00000560'
+    - name: UniPixel
+      processed: ''
+      offset: 0000086E
+    - name: ZF0
+      processed: ''
+      offset: 000008F4
+    - name: ZF7
+      processed: ''
+      offset: 000008F8
+    - name: ZF15
+      processed: ''
+      offset: 000008FE
+    - name: BMTRANSPOSE
+      processed: ''
+      offset: '00000910'
+    - name: BMUNINTERLACE
+      processed: ''
+      offset: 000009A8
+    - name: ISVERTBANDWHITE
+      processed: ''
+      offset: 00000A8C
+    - name: CONVERTCOLOR
+      processed: ''
+      offset: 00000ADB
+    - name: RESETADJACENT
+      processed: ''
+      offset: 00000BEE
+  - num: '15'
+    name: _TEXTOUT3
+    offset: 0000CE10
+    symbols:
+    - name: SIMULATEUNDERLINE
+      processed: ''
+      offset: '00000000'
+    - name: DRAWLINES
+      processed: ''
+      offset: 000002A6
+    - name: MAKEPATTERNRECT
+      processed: ''
+      offset: '00000382'
+    - name: CREATETRANSMATRICES
+      processed: ''
+      offset: 0000041C
+    - name: TRANSFORMPOINT
+      processed: ''
+      offset: '000004E6'
+    - name: TRANSFORMRECT
+      processed: ''
+      offset: 0000053E
+    - name: SENDROTATEDTEXT
+      processed: ''
+      offset: '000005E6'
+  - num: '16'
+    name: _PCLETTO
+    offset: 0000DDC0
+    symbols:
+    - name: DOWNLOADTTOUTLINEHEADER
+      processed: ''
+      offset: '00000000'
+    - name: RGWUNICODE
+      processed: ''
+      offset: 0000019E
+    - name: DOWNLOADTTOUTLINECHARS
+      processed: ''
+      offset: 000003B0
+    - name: DOWNLOADUSERSYMSET
+      processed: ''
+      offset: 000005BA
+    - name: SETFONTPITCHANDHEIGHT
+      processed: ''
+      offset: 000006EA
+    - name: INITFONTDESC
+      processed: ''
+      offset: '00000774'
+    - name: EXECFONTDESC
+      processed: ''
+      offset: 0000079E
+    - name: RELEASEFONT
+      processed: ''
+      offset: '00000866'
+    - name: CONVERTPCLSPECINFO
+      processed: ''
+      offset: '00000874'
+    - name: CONVERTINFO
+      processed: ''
+      offset: '00000906'
+    - name: INITPCLFILE
+      processed: ''
+      offset: 00000B52
+    - name: ENDFONTDESC
+      processed: ''
+      offset: 00000B78
+    - name: SENDALLGLYPHDATA
+      processed: ''
+      offset: 00000BE2
+    - name: OUTPUTGLYPH
+      processed: ''
+      offset: 00000D0C
+    - name: INITBOUNDFILE
+      processed: ''
+      offset: 00000DD0
+    - name: INITUNBOUNDFILE
+      processed: ''
+      offset: 0000111C
+    - name: CALCCHECKSUM
+      processed: ''
+      offset: '00001444'
+    - name: OUTPUTSEGCC
+      processed: ''
+      offset: '00001474'
+    - name: OUTPUTSEGPA
+      processed: ''
+      offset: 000014B4
+    - name: OUTPUTSEGGT
+      processed: ''
+      offset: 000014F6
+    - name: OUTPUTSEGNULL
+      processed: ''
+      offset: 0000152C
+    - name: INITTT
+      processed: ''
+      offset: '00001550'
+    - name: PREPARETTOUT
+      processed: ''
+      offset: '00001730'
+    - name: GETTTINFO
+      processed: ''
+      offset: '00001978'
+    - name: GETPCLTABLEINFO
+      processed: ''
+      offset: 00001AA0
+    - name: RELEASETT
+      processed: ''
+      offset: 00001B0A
+    - name: GETDEFPITCH
+      processed: ''
+      offset: 00001BA2
+    - name: GETDEFSTYLESTROKE
+      processed: ''
+      offset: 00001C36
+    - name: GETDEFXHEIGHT
+      processed: ''
+      offset: 00001D1E
+    - name: CALCTABLECHECKSUM
+      processed: ''
+      offset: 00001DDE
+    - name: GETHEADINFO
+      processed: ''
+      offset: '00001E46'
+    - name: GETHEADINFOA
+      processed: ''
+      offset: 00001EE6
+    - name: GETMAXPINFO
+      processed: ''
+      offset: 00001F04
+    - name: GETNAMEINFO
+      processed: ''
+      offset: 00001F22
+    - name: GETPOSTINFO
+      processed: ''
+      offset: '00002020'
+    - name: GETOS2INFO
+      processed: ''
+      offset: 0000205C
+    - name: GETOS2INFOA
+      processed: ''
+      offset: 000020F8
+    - name: GETHHEAINFO
+      processed: ''
+      offset: '00002132'
+    - name: GETHMTXINFO
+      processed: ''
+      offset: '00002150'
+    - name: GETPCLTINFO
+      processed: ''
+      offset: 000021AC
+    - name: GETGLYPHYMAX
+      processed: ''
+      offset: 0000227E
+    - name: GETGLYPHID
+      processed: ''
+      offset: 0000229C
+    - name: GETSPECGLYPHID
+      processed: ''
+      offset: 000022CE
+    - name: GETGLYPHDATA
+      processed: ''
+      offset: '00002306'
+    - name: GETCOMPONENTINFO
+      processed: ''
+      offset: 000024D8
+    - name: GETFORMAT4TABLE
+      processed: ''
+      offset: 0000257A
+    - name: GETSPECFORMAT4TABLE
+      processed: ''
+      offset: '00002644'
+    - name: COMPUTEINDEX4
+      processed: ''
+      offset: '00002728'
+  - num: '17'
+    name: _SOFTFONT
+    offset: '0000E500'
+    symbols:
+    - name: INITWINSF
+      processed: ''
+      offset: '00000000'
+    - name: NEXTWINSF
+      processed: ''
+      offset: '000000E8'
+    - name: ENDWINSF
+      processed: ''
+      offset: 000001EC
+    - name: NEXTWINCART
+      processed: ''
+      offset: '00000200'
+    - name: GETNUMCARTFONTS
+      processed: ''
+      offset: 000004BC
+    - name: RGNOTRANS
+      processed: ''
+      offset: 000005D7
+    - name: BUILDCARTFONTFM
+      processed: ''
+      offset: 0000062C
+    - name: BUILDSOFTFONTFM
+      processed: ''
+      offset: 0000079E
+    - name: CONVERTTOGPCFONTMETRICS
+      processed: ''
+      offset: '00000984'
+    - name: CONVERTESCAPESTR
+      processed: ''
+      offset: 00000FA2
+    - name: DOWNLOADSOFTFONT
+      processed: ''
+      offset: '00001018'
+    - name: DL_ISFONTDOWN
+      processed: ''
+      offset: 000011D2
+  - num: '18'
+    name: _CAPSL
+    offset: '0000E750'
+    symbols:
+    - name: DOWNLOADCAPSLHEADER
+      processed: ''
+      offset: '00000000'
+    - name: DOWNLOADCAPSLCHAR
+      processed: ''
+      offset: '00000114'
+    - name: CAPSLSCALEWIDTH
+      processed: ''
+      offset: 000004AC
+    - name: CAPSLSENDSCALABLEFONTCMD
+      processed: ''
+      offset: 0000051A
+  - num: '19'
+    name: _PPDS
+    offset: 0000E9E0
+    symbols:
+    - name: DOWNLOADPPDSHEADER
+      processed: ''
+      offset: '00000000'
+    - name: DOWNLOADPPDSCHAR
+      processed: ''
+      offset: '00000230'
+    - name: PPDSSCALEWIDTH
+      processed: ''
+      offset: 0000051A
+    - name: PPDSSENDSCALABLEFONTCMD
+      processed: ''
+      offset: 0000058E
+  - num: '20'
+    name: _VECTOR
+    offset: 0000F510
+    symbols:
+    - name: ATAN
+      processed: ''
+      offset: '00000000'
+    - name: SCALESHORT
+      processed: ''
+      offset: 000000CA
+    - name: TRANSPOINT
+      processed: ''
+      offset: '00000100'
+    - name: SCALEPOINT
+      processed: ''
+      offset: 0000017E
+    - name: TRANSRECT
+      processed: ''
+      offset: 000001D0
+    - name: ENTERVECT
+      processed: ''
+      offset: 000002A4
+    - name: EXITVECT
+      processed: ''
+      offset: 000002D8
+    - name: TRANSSELECT
+      processed: ''
+      offset: 0000030C
+    - name: PENSELECT
+      processed: ''
+      offset: 0000034C
+    - name: BRUSHSELECT
+      processed: ''
+      offset: '00000538'
+    - name: REALIZEVBRUSH
+      processed: ''
+      offset: '00000934'
+    - name: DELETEVBRUSH
+      processed: ''
+      offset: 00000D00
+    - name: REALIZEVPEN
+      processed: ''
+      offset: 00000D5A
+    - name: VECTOROUTPUT
+      processed: ''
+      offset: 00000F3C
+    - name: VECTOUTPUT
+      processed: ''
+      offset: 000016D8
+    - name: GETNULLPEN
+      processed: ''
+      offset: 00001C54
+    - name: VECTORBITBLT
+      processed: ''
+      offset: 00001CB8
+  - num: '21'
+    name: DGROUP
+    offset: '00000000'
+    symbols:
+    - name: pLocalHeap
+      processed: ''
+      offset: '00000006'
+    - name: rsrvptrs
+      processed: ''
+      offset: '00000006'
+    - name: pAtomTable
+      processed: ''
+      offset: '00000008'
+    - name: pStackTop
+      processed: ''
+      offset: 0000000A
+    - name: pStackMin
+      processed: ''
+      offset: 0000000C
+    - name: pStackBot
+      processed: ''
+      offset: 0000000E
+    - name: GDEFINITCMDORDER
+      processed: ''
+      offset: 000000AC
+    - name: SZNULL
+      processed: ''
+      offset: 000000B8
+    - name: RGCHMODULENAME
+      processed: ''
+      offset: 000000BA
+    - name: GHINSTUNIDRV
+      processed: ''
+      offset: 000000C2
+    - name: GCONSTMAP
+      processed: ''
+      offset: 000000C4
+    - name: GBMPATTERN
+      processed: ''
+      offset: 000001F0
+    - name: BIT_MASK
+      processed: ''
+      offset: '00000210'
+    - name: GCOARSE8X8
+      processed: ''
+      offset: '00000218'
+    - name: GFINE8X8
+      processed: ''
+      offset: '00000258'
+    - name: GLINEART8X8
+      processed: ''
+      offset: '00000298'
+    - name: COLORTRC
+      processed: ''
+      offset: '00000398'
+    - name: DWHELPMAP
+      processed: ''
+      offset: '00000410'
+    - name: SZSIZEUNIT
+      processed: ''
+      offset: '00000770'
+    - name: SZBRUSH
+      processed: ''
+      offset: 0000077A
+    - name: SZINTENSITY
+      processed: ''
+      offset: '00000780'
+    - name: SZBAND
+      processed: ''
+      offset: 0000078A
+    - name: SZMEMORY
+      processed: ''
+      offset: '00000790'
+    - name: SZMEMRESERVE
+      processed: ''
+      offset: '00000798'
+    - name: SZNUMCARTS
+      processed: ''
+      offset: 000007A4
+    - name: SZCARTRIDGE
+      processed: ''
+      offset: 000007BA
+    - name: SZPAGEPROTECT
+      processed: ''
+      offset: 000007C6
+    - name: SZLEFTMARGIN
+      processed: ''
+      offset: 000007D6
+    - name: SZTOPMARGIN
+      processed: ''
+      offset: 000007DC
+    - name: SZRIGHTMARGIN
+      processed: ''
+      offset: '000007E0'
+    - name: SZBOTTOMMARGIN
+      processed: ''
+      offset: '000007E6'
+    - name: SZVECTOR
+      processed: ''
+      offset: 000007EE
+    - name: TANTABLE
+      processed: ''
+      offset: '00000898'
+    - name: RESERVED_CHARID_STRING
+      processed: ''
+      offset: 00000C90
+    - name: GTTINTABLETAG
+      processed: ''
+      offset: 00000CF8
+    - name: GTTOUTTABLEINFO
+      processed: ''
+      offset: 00000D3E
+    - name: GFNRGB_ENUMOBJ
+      processed: ''
+      offset: 00000D90
+    - name: RGBBITS
+      processed: ''
+      offset: 00000D94
+    - name: GFNRGB_REALIZEOBJECT
+      processed: ''
+      offset: 00000DC4

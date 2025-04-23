@@ -1,377 +1,697 @@
-filename: "winmm.dll"
+filename: winmm.dll
 #TODO: bring up more details from symdeb
-binary: "winmm.dll"
-description: ""
-note: ""
+binary: WINMM
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: ".rdata"
-        offset: "00000000"
-        symbols:
-          - name: '_joySetCapture@16'
-            offset: "00000453"            
-          - name: '_joySetThreshold@8'
-            offset: "00000479"            
-          - name: '_auxSetVolume@8'
-            offset: "00000AB5"            
-          - name: '_mixerGetNumDevs@0'
-            offset: "00000B50"            
-          - name: '_joyGetNumDevs@0'
-            offset: "00000B54"            
-          - name: '_midiOutGetNumDevs@0'
-            offset: "00000B58"            
-          - name: '_midiInGetNumDevs@0'
-            offset: "00000B5C"            
-          - name: '_auxGetNumDevs@0'
-            offset: "00000B60"            
-          - name: '_waveOutGetNumDevs@0'
-            offset: "00000B64"            
-          - name: '_waveInGetNumDevs@0'
-            offset: "00000B68"            
-          - name: '_mciGetCreatorTask@4'
-            offset: "00000CA5"            
-          - name: '_joyReleaseCapture@4'
-            offset: "00000CA9"            
-          - name: '_SendDriverMessage16@16'
-            offset: "00000D13"            
-          - name: '_OpenDriver16@12'
-            offset: "00000D3A"            
-          - name: '_CloseDriver16@12'
-            offset: "00000D6D"            
-          - name: '_mmioInstallIOProc32@12'
-            offset: "00000D71"            
-          - name: '_PlaySoundW@12'
-            offset: "000013A3"            
-          - name: '_sndPlaySoundW@8'
-            offset: "000013B0"            
-          - name: '_mciSendCommandW@16'
-            offset: "000013BD"            
-          - name: '_mciSendStringW@16'
-            offset: "000013CD"            
-          - name: '_mciGetErrorStringW@12'
-            offset: "000013DD"            
-          - name: '_mciGetDeviceIDW@4'
-            offset: "000013EA"            
-          - name: '_mciGetDeviceIDFromElementIDW@8'
-            offset: "000013F7"            
-          - name: '_mmioOpenW@12'
-            offset: "00001404"            
-          - name: '_mmioRenameW@16'
-            offset: "00001411"            
-          - name: '_mmioInstallIOProc16@12'
-            offset: "00001421"            
-          - name: '_mmioStringToFOURCCW@8'
-            offset: "0000142E"            
-          - name: '_mmioInstallIOProcW@12'
-            offset: "0000143B"            
-          - name: '_joyGetDevCapsW@12'
-            offset: "00001448"            
-          - name: '_midiOutGetDevCapsW@12'
-            offset: "00001458"            
-          - name: '_midiOutGetErrorTextW@12'
-            offset: "00001468"            
-          - name: '_midiInGetDevCapsW@12'
-            offset: "00001478"            
-          - name: '_midiInGetErrorTextW@12'
-            offset: "00001488"            
-          - name: '_auxGetDevCapsW@12'
-            offset: "00001498"            
-          - name: '_waveOutGetDevCapsW@12'
-            offset: "000014A8"            
-          - name: '_waveOutGetErrorTextW@12'
-            offset: "000014B8"            
-          - name: '_waveInGetDevCapsW@12'
-            offset: "000014C8"            
-          - name: '_waveInGetErrorTextW@12'
-            offset: "000014D8"            
-          - name: '_mixerGetDevCapsW@12'
-            offset: "000014E8"            
-          - name: '_mixerGetLineInfoW@12'
-            offset: "000014F8"            
-          - name: '_mixerGetLineControlsW@12'
-            offset: "00001508"            
-          - name: '_mixerGetControlDetailsW@12'
-            offset: "00001518"            
-          - name: '_mciDriverNotify@12'
-            offset: "00001528"            
-          - name: '_mciDriverYield@4'
-            offset: "00001535"            
-          - name: '_mciFreeCommandResource@4'
-            offset: "00001542"            
-          - name: '_mciSetDriverData@8'
-            offset: "0000154F"            
-          - name: '_mciGetDriverData@4'
-            offset: "0000155C"            
-          - name: '_mciLoadCommandResource@12'
-            offset: "00001569"            
-          - name: '_DrvGetModuleHandle@4'
-            offset: "0000192F"            
-          - name: '_GetDriverFlags@4'
-            offset: "0000198F"            
-          - name: '_DrvOpen@12'
-            offset: "000021AB"            
-          - name: '_DrvOpenA@12'
-            offset: "000021C3"            
-          - name: '_DrvClose@12'
-            offset: "000021DB"            
-          - name: '_DrvSendMessage@16'
-            offset: "00002412"            
-          - name: '_DefDriverProc@20'
-            offset: "000025E0"            
-          - name: '_DriverCallback@28'
-            offset: "00002632"            
-          - name: '_mmsystemGetVersion@0'
-            offset: "000026F6"            
-          - name: '_midiOpen@28'
-            offset: "000035ED"            
-          - name: '_midiOutOpen@20'
-            offset: "000036B7"            
-          - name: '_midiInOpen@20'
-            offset: "000036D9"            
-          - name: '_midiStreamOpen@24'
-            offset: "000036FB"            
-          - name: '_midiStreamClose@4'
-            offset: "00003784"            
-          - name: '_waveOpen@32'
-            offset: "00003805"            
-          - name: '_waveOutOpen@24'
-            offset: "00003925"            
-          - name: '_waveInOpen@24'
-            offset: "0000394A"            
-          - name: '_mixerMessage@16'
-            offset: "00003CC1"            
-          - name: '_mixerGetID@12'
-            offset: "00003CE1"            
-          - name: '_mixerSetControlDetails@12'
-            offset: "00003D8F"            
-          - name: '_mixerGetLineInfoA@12'
-            offset: "00003E3D"            
-          - name: '_mixerGetLineControlsA@12'
-            offset: "00003EEE"            
-          - name: '_mixerGetControlDetailsA@12'
-            offset: "00003F9C"            
-          - name: '_mixerOpen@20'
-            offset: "0000404A"            
-          - name: '_mixerClose@4'
-            offset: "000040E0"            
-          - name: '_mixerGetDevCapsA@12'
-            offset: "00004161"            
-          - name: '_joyGetDevCapsA@12'
-            offset: "00004239"            
-          - name: '_joyGetPos@8'
-            offset: "000042A8"            
-          - name: '_joyGetPosEx@8'
-            offset: "000042F7"            
-          - name: '_joyConfigChanged@4'
-            offset: "0000434B"            
-          - name: '_joyGetThreshold@8'
-            offset: "00004357"            
-          - name: '_waveOutPrepareHeader@12'
-            offset: "00004910"            
-          - name: '_waveInPrepareHeader@12'
-            offset: "00004929"            
-          - name: '_midiOutPrepareHeader@12'
-            offset: "00004942"            
-          - name: '_midiInPrepareHeader@12'
-            offset: "0000495B"            
-          - name: '_waveOutUnprepareHeader@12'
-            offset: "00004974"            
-          - name: '_waveInUnprepareHeader@12'
-            offset: "0000498D"            
-          - name: '_midiOutUnprepareHeader@12'
-            offset: "000049A6"            
-          - name: '_midiInUnprepareHeader@12'
-            offset: "000049BF"            
-          - name: '_midiOutGetID@8'
-            offset: "000049D8"            
-          - name: '_midiOutGetVolume@8'
-            offset: "00004A6D"            
-          - name: '_midiOutSetVolume@8'
-            offset: "00004B18"            
-          - name: '_midiStreamProperty@12'
-            offset: "00004BAE"            
-          - name: '_midiOutShortMsg@8'
-            offset: "00004C46"            
-          - name: '_midiStreamPosition@12'
-            offset: "00004D14"            
-          - name: '_midiOutGetDevCapsA@12'
-            offset: "00004DB2"            
-          - name: '_midiOutMessage@16'
-            offset: "00004E89"            
-          - name: '_midiOutMsg@16'
-            offset: "00004EA9"            
-          - name: '_midiStreamOut@12'
-            offset: "00004FB2"            
-          - name: '_midiOutClose@4'
-            offset: "00004FCB"            
-          - name: '_midiInGetDevCapsA@12'
-            offset: "0000504C"            
-          - name: '_midiInGetID@8'
-            offset: "00005123"            
-          - name: '_midiDisconnect@12'
-            offset: "000052A6"            
-          - name: '_midiConnect@12'
-            offset: "000052B8"            
-          - name: '_midiInMessage@16'
-            offset: "000052CA"            
-          - name: '_midiInClose@4'
-            offset: "000052EA"            
-          - name: '_midiInReset@4'
-            offset: "0000536B"            
-          - name: '_midiOutReset@4'
-            offset: "000053EC"            
-          - name: '_midiStreamPause@4'
-            offset: "0000546D"            
-          - name: '_midiStreamRestart@4'
-            offset: "000054E8"            
-          - name: '_midiStreamStop@4'
-            offset: "00005563"            
-          - name: '_midiInStart@4'
-            offset: "000055DE"            
-          - name: '_midiInStop@4'
-            offset: "00005659"            
-          - name: '_waveOutPause@4'
-            offset: "000056D4"            
-          - name: '_waveOutRestart@4'
-            offset: "0000574F"            
-          - name: '_waveOutReset@4'
-            offset: "000057CA"            
-          - name: '_waveOutBreakLoop@4'
-            offset: "0000584B"            
-          - name: '_waveInStart@4'
-            offset: "000058C6"            
-          - name: '_waveInStop@4'
-            offset: "00005941"            
-          - name: '_waveInReset@4'
-            offset: "000059BC"            
-          - name: '_waveOutGetDevCapsA@12'
-            offset: "00005A3D"            
-          - name: '_waveOutGetPosition@12'
-            offset: "00005B4D"            
-          - name: '_waveOutGetPitch@8'
-            offset: "00005BEB"            
-          - name: '_waveOutSetPitch@8'
-            offset: "00005C80"            
-          - name: '_waveOutGetPlaybackRate@8'
-            offset: "00005CFE"            
-          - name: '_waveOutSetPlaybackRate@8'
-            offset: "00005D93"            
-          - name: '_waveOutGetID@8'
-            offset: "00005E11"            
-          - name: '_waveOutGetVolume@8'
-            offset: "00005EA6"            
-          - name: '_waveOutSetVolume@8'
-            offset: "00005F51"            
-          - name: '_waveOutMessage@16'
-            offset: "00005FE7"            
-          - name: '_waveOutClose@4'
-            offset: "00006007"            
-          - name: '_waveInGetDevCapsA@12'
-            offset: "00006088"            
-          - name: '_waveInGetPosition@12'
-            offset: "00006170"            
-          - name: '_waveInMessage@16'
-            offset: "0000620E"            
-          - name: '_waveInGetID@8'
-            offset: "0000622E"            
-          - name: '_waveInClose@4'
-            offset: "000062C3"            
-          - name: '_waveOutWrite@12'
-            offset: "00006344"            
-          - name: '_midiOutLongMsg@12'
-            offset: "0000644F"            
-          - name: '_waveInAddBuffer@12'
-            offset: "00006468"            
-          - name: '_midiInAddBuffer@12'
-            offset: "0000656D"            
-          - name: '_midiOutGetErrorTextA@12'
-            offset: "00006672"            
-          - name: '_midiOutCachePatches@16'
-            offset: "0000669D"            
-          - name: '_midiOutCacheDrumPatches@16'
-            offset: "0000673B"            
-          - name: '_midiInGetErrorTextA@12'
-            offset: "000067D9"            
-          - name: '_auxOutMessage@16'
-            offset: "00006804"            
-          - name: '_auxGetVolume@8'
-            offset: "00006824"            
-          - name: '_waveOutGetErrorTextA@12'
-            offset: "00006849"            
-          - name: '_waveInGetErrorTextA@12'
-            offset: "00006874"            
-          - name: '_mciExecute@4'
-            offset: "0000689F"            
-          - name: '_mciGetDeviceIDA@4'
-            offset: "000068C3"            
-          - name: '_mciGetErrorStringA@12'
-            offset: "000068E7"            
-          - name: '_mciGetYieldProc@8'
-            offset: "00006912"            
-          - name: '_mciSetYieldProc@12'
-            offset: "00006917"            
-          - name: '_auxGetDevCapsA@12'
-            offset: "0000691C"            
-          - name: '_timeGetSystemTime@8'
-            offset: "0000699B"            
-          - name: '_timeGetTime@0'
-            offset: "000069E4"            
-          - name: '_timeGetDevCaps@8'
-            offset: "00006A25"            
-          - name: '_timeSetEvent@20'
-            offset: "00006C6A"            
-          - name: '_timeKillEvent@4'
-            offset: "00006ECA"            
-          - name: '_timeBeginPeriod@4'
-            offset: "00006FAB"            
-          - name: '_timeEndPeriod@4'
-            offset: "00006FD8"            
-          - name: '_mciSendCommandA@16'
-            offset: "00007809"            
-          - name: '_mciSendStringA@16'
-            offset: "00007B6D"            
-          - name: '_mmioRenameA@16'
-            offset: "00007DCD"            
-          - name: '_mmioOpenA@12'
-            offset: "00007E68"            
-          - name: '_mmioClose@8'
-            offset: "00007FD7"            
-          - name: '_mmioRead@12'
-            offset: "00008047"            
-          - name: '_mmioWrite@12'
-            offset: "00008148"            
-          - name: '_mmioSeek@12'
-            offset: "00008265"            
-          - name: '_mmioGetInfo@12'
-            offset: "00008344"            
-          - name: '_mmioSetInfo@12'
-            offset: "000083B0"            
-          - name: '_mmioSetBuffer@16'
-            offset: "000084BA"            
-          - name: '_mmioFlush@8'
-            offset: "0000868F"            
-          - name: '_mmioAdvance@12'
-            offset: "0000871E"            
-          - name: '_mmioStringToFOURCCA@8'
-            offset: "00008828"            
-          - name: '_mmioInstallIOProcA@12'
-            offset: "00008893"            
-          - name: '_mmioSendMessage@16'
-            offset: "0000897A"            
-          - name: '_mmioDOSIOProc@16'
-            offset: "00008A45"            
-          - name: '_mmioMEMIOProc@16'
-            offset: "00008DB7"            
-          - name: '_mmioDescend@16'
-            offset: "00008E44"            
-          - name: '_mmioAscend@12'
-            offset: "00008F93"            
-          - name: '_mmioCreateChunk@12'
-            offset: "0000906E"            
-          - name: '_PlaySoundA@12'
-            offset: "0000987A"            
-          - name: '_sndPlaySoundA@8'
-            offset: "000098D4"            
+- version: system
+  tree:
+  - - '../apphack.c(394) assert failed: pApp'
+    - '../apphack.c(463) assert failed: pApp'
+    - '../devioctl.c(137) assert failed: mmc.hMMDevLdr != NULL'
+    - '../devioctl.c(189) assert failed: mmc.hMMDevLdr != NULL'
+    - '../devioctl.c(224) assert failed: mmc.hMMDevLdr != NULL'
+    - '../devioctl.c(252) assert failed: mmc.hMMDevLdr != NULL'
+    - '../devioctl.c(300) assert failed: mmc.hMMDevLdr != NULL'
+    - '../devioctl.c(301) assert failed: INVALID_HANDLE_VALUE != mmc.hMMDevLdr'
+    - '../drvr.c(1060) assert failed: !fIs16'
+    - '../drvr.c(1255) assert failed: DrvClose of invalid driver %d'
+    - '../drvr.c(1272) assert failed: lRet'
+    - '../drvr.c(1399) assert failed: lpde && lpde->hModule && lpde->pid'
+    - '../drvr.c(1451) assert failed: uMsg != DRV_OPEN'
+    - '../drvr.c(1452) assert failed: uMsg != DRV_CLOSE'
+    - '../drvr.c(1453) assert failed: uMsg != DRV_ENABLE'
+    - '../drvr.c(1454) assert failed: uMsg != DRV_DISABLE'
+    - '../drvr.c(1455) assert failed: uMsg != DRV_LOAD'
+    - '../drvr.c(1456) assert failed: uMsg != DRV_FREE'
+    - '../drvr.c(1488) assert failed: !IsBadCodePtr(DriverProc)'
+    - '../drvr.c(1506) assert failed: IsValidDrvHandle(hDriver)'
+    - '../drvr.c(186) assert failed: Rundown called with ref count already 0!'
+    - '../drvr.c(241) assert failed: lpsz'
+    - '../drvr.c(293) assert failed: lpName'
+    - '../drvr.c(294) assert failed: lpName->nUseage'
+    - '../drvr.c(486) assert failed: IsValidDrvHandle(ix+1)'
+    - '../drvr.c(487) assert failed: lpdt[ix].hModule == 0'
+    - '../drvr.c(488) assert failed: lpdt[ix].lpName == NULL'
+    - '../drvr.c(489) assert failed: lpdt[ix].fInUse == FALSE'
+    - '../drvr.c(532) assert failed: ASSERT! DrvGetModuleHandle of 16 bit driver %d'
+    - '../drvr.c(614) assert failed: lpde'
+    - '../drvr.c(615) assert failed: lpde->lpName'
+    - '../drvr.c(616) assert failed: lpde->pid'
+    - '../drvr.c(617) assert failed: lpde->fInUse'
+    - '../drvr.c(636) assert failed: lpdt->hModule != NULL'
+    - '../drvr.c(637) assert failed: lpdt->pid'
+    - '../drvr.c(638) assert failed: lpdt->lpName'
+    - '../drvr.c(649) assert failed: nInstCount > 0'
+    - '../drvr.c(723) assert failed: lpde->fIs16'
+    - '../drvr.c(724) assert failed: !lpde->lpName'
+    - '../drvr.c(746) assert failed: dwDrv16'
+    - mmsys.cpl
+    - MMSYS.CPL
+    - '../mmthrd.c(408) assert failed: 0L != lpmt'
+    - '../mmthrd.c(485) assert failed: NULL != lpmt'
+    - '../mmthrd.c(582) assert failed: NULL != lpmt'
+    - '../mmthrd.c(588) assert failed: lResult >= 0'
+    - '../playsnd.c(145) assert failed: cb < cbName'
+    - '../playsnd.c(191) assert failed: HIWORD(pszSound)'
+    - '../playsnd.c(396) assert failed: Rundown called with ref count already 0!'
+    - '../playsnd.c(546) assert failed: pseHead && psePrev == (LPVOID)pseHead'
+    - '../playsnd.c(565) assert failed: Deque: sound list is cross linked!'
+    - '../playsnd.c(707) assert failed: pseHead && psePrev == (LPVOID)pseHead'
+    - '../playsnd.c(726) assert failed: Deque: sound list is cross linked!'
+    - '../playsnd.c(905) assert failed: WaitForSingleObject (pseToFree->hEvtDone,
+      0) == WAIT_OBJECT_0'
+    - '../playsnd.c(981) assert failed: pid == GetCurrentProcessId()'
+    - '../playwav.c(1006) assert failed: pse->hEvtDone && pse->hEvtDone != INVALID_HANDLE_VALUE'
+    - '../playwav.c(1024) assert failed: pse->lStatus == PSE_STAT_STOPPED'
+    - '../playwav.c(247) assert failed: fuPlay & SND_ASYNC'
+    - '../playwav.c(438) assert failed: pse->generic.hdev == NULL'
+    - '../playwav.c(449) assert failed: GetCurrentProcessId() == pse->pid'
+    - '../playwav.c(689) assert failed: pse->pSndData == NULL'
+    - '../winmm.c(159) assert failed: DisableThreadLibraryCalls failed! there is now
+      a potential deadlock on unload of winmm'
+    - '../winmm.c(170) assert failed: nRefCount == 1'
+    - '../winmm.c(190) assert failed: ThunkConnect32 of winmmf Failed: refusing to
+      load'
+    - '../winmm.c(200) assert failed: ThunkConnect32 of winmmsl Failed: refusing to
+      load'
+    - '../winmm.c(232) assert failed: hHeap'
+    - '../winmm.c(238) assert failed: NULL == mmc.AppZ.pNext'
+    - '../winmm.c(246) assert failed: PROCESS_DETACH with reference count already
+      0!'
+    - '../wmmcore.c(1062) assert failed: pmdi->pta'
+    - '../wmmcore.c(1080) assert failed: pta->hRing0Thd == pmdi->dwSysCallback'
+    - '../wmmcore.c(1081) assert failed: pta->hRing0Thd != 0'
+    - '../wmmcore.c(1148) assert failed: unexpected sys callback type! devType=%x
+      cbType=%x'
+    - '../wmmcore.c(1166) assert failed: pmdi->pta'
+    - '../wmmcore.c(1237) assert failed: !IsBadWritePtr(pmdi,sizeof(*pmdi))'
+    - '../wmmcore.c(1238) assert failed: pmdi->DeviceStamp == DEVICE_STAMP'
+    - '../wmmcore.c(1254) assert failed: !IsBadReadPtr(pmdi,sizeof(*pmdi))'
+    - '../wmmcore.c(1255) assert failed: pmdi->DeviceStamp == DEVICE_STAMP'
+    - '../wmmcore.c(192) assert failed: pmmc->hHeap == NULL'
+    - '../wmmcore.c(193) assert failed: hHeap != NULL'
+    - '../wmmcore.c(1972) assert failed: psHdr'
+    - '../wmmcore.c(198) assert failed: pmmc->hMMDevLdr == NULL'
+    - '../wmmcore.c(200) assert failed: pmmc->hMMDevLdr != NULL'
+    - '../wmmcore.c(2015) assert failed: pmdi->uDevType'
+    - '../wmmcore.c(204) assert failed: pmmc->hVTDAPI == NULL'
+    - '../wmmcore.c(2057) assert failed: psHdr->gh.dwUser == (DWORD)pgh'
+    - '../wmmcore.c(2058) assert failed: psHdr->pmdi == pmdi'
+    - '../wmmcore.c(2097) assert failed: pmdi->pta'
+    - '../wmmcore.c(210) assert failed: pmmc->hVJOYD == NULL'
+    - '../wmmcore.c(2138) assert failed: pmdi->uDevType'
+    - '../wmmcore.c(2172) assert failed: Unprepared buffer(%08X) has non-zero reserved
+      field'
+    - '../wmmcore.c(2181) assert failed: psHdr->gh.dwUser == (DWORD)pgh'
+    - "../wmmcore.c(2182) assert failed: shadow header INQUEUE but users's header
+      is not"
+    - '../wmmcore.c(2204) assert failed: psHdr->pmdi'
+    - '../wmmcore.c(2205) assert failed: psHdr->pmdi->pta == pta'
+    - '../wmmcore.c(2219) assert failed: unpreparing shadow header not found in TA
+      list!'
+    - '../wmmcore.c(230) assert failed: pmmc->hMMDevLdr != NULL'
+    - '../wmmcore.c(288) assert failed: Rundown called with ref count already 0!'
+    - '../wmmcore.c(323) assert failed: !IsBadWritePtr(pmdi,sizeof(*pmdi)) && pmdi->DeviceStamp
+      == DEVICE_STAMP'
+    - '../wmmcore.c(324) assert failed: !IsBadWritePtr(pmdi,sizeof(*pmdi)) && pmdi->DeviceStamp
+      == DEVICE_STAMP'
+    - '../wmmcore.c(335) assert failed: pmdi->cbml.wMask != 0'
+    - '../wmmcore.c(336) assert failed: (pmdi->cbml.wMask & (pmdi->cbml.wMask+1))
+      == 0'
+    - '../wmmcore.c(364) assert failed: pmdi->DeviceStamp == DEVICE_STAMP'
+    - '../wmmcore.c(3718) assert failed: HIWORD(timer.VTDAPI_Timer_Handle) == 0'
+    - '../wmmcore.c(373) assert failed: pmdi->DeviceStamp == DEVICE_STAMP'
+    - '../wmmcore.c(410) assert failed: !IsBadWritePtr(pmdi,sizeof(*pmdi)) && pmdi->DeviceStamp
+      == DEVICE_STAMP'
+    - '../wmmcore.c(411) assert failed: !IsBadWritePtr(pmdi,sizeof(*pmdi)) && pmdi->DeviceStamp
+      == DEVICE_STAMP'
+    - '../wmmcore.c(445) assert failed: !IsBadWritePtr(pmdi,sizeof(*pmdi)) && pmdi->DeviceStamp
+      == DEVICE_STAMP'
+    - '../wmmcore.c(446) assert failed: !IsBadWritePtr(pmdi,sizeof(*pmdi)) && pmdi->DeviceStamp
+      == DEVICE_STAMP'
+    - '../wmmcore.c(465) assert failed: !IsBadWritePtr(pmdi,sizeof(*pmdi)) && pmdi->DeviceStamp
+      == DEVICE_STAMP'
+    - '../wmmcore.c(466) assert failed: !IsBadWritePtr(pmdi,sizeof(*pmdi)) && pmdi->DeviceStamp
+      == DEVICE_STAMP'
+    - '../wmmcore.c(671) assert failed: pta->pPMDIList == NULL'
+    - '../wmmcore.c(860) assert failed: Current TID is target of thread callback!'
+    - '../wmmcore.c(925) assert failed: mmc.hMMDevLdr != NULL'
+    - '../wmmmci.c(1369) assert failed: 0 == ptt->nTokens'
+    - '../wmmmci.c(544) assert failed: lptt[ii].uMsg == uMsg'
+    - '../wmmmci.c(573) assert failed: binary search in non-binary time!'
+    - '../wmmmci.c(618) assert failed: (LPVOID)lprc != (LPVOID)lprcs'
+    - '../wmmmci.c(650) assert failed: pte->wIndex < (ptt->cbShadow / 4)'
+    - '../wmmmci.c(954) assert failed: HIWORD(p16Shadow)'
+    - '../wmmmci.c(955) assert failed: pdwShadow != NULL'
+    - '../wmmmci.c(999) assert failed: uOne != uTwo'
+  segments:
+  - num: '1'
+    name: .rdata
+    offset: '00000000'
+    symbols:
+    - name: _joySetCapture@16
+      processed: ''
+      offset: '00000453'
+    - name: _joySetThreshold@8
+      processed: ''
+      offset: '00000479'
+    - name: _auxSetVolume@8
+      processed: ''
+      offset: 00000AB5
+    - name: _mixerGetNumDevs@0
+      processed: ''
+      offset: 00000B50
+    - name: _joyGetNumDevs@0
+      processed: ''
+      offset: 00000B54
+    - name: _midiOutGetNumDevs@0
+      processed: ''
+      offset: 00000B58
+    - name: _midiInGetNumDevs@0
+      processed: ''
+      offset: 00000B5C
+    - name: _auxGetNumDevs@0
+      processed: ''
+      offset: 00000B60
+    - name: _waveOutGetNumDevs@0
+      processed: ''
+      offset: 00000B64
+    - name: _waveInGetNumDevs@0
+      processed: ''
+      offset: 00000B68
+    - name: _mciGetCreatorTask@4
+      processed: ''
+      offset: 00000CA5
+    - name: _joyReleaseCapture@4
+      processed: ''
+      offset: 00000CA9
+    - name: _SendDriverMessage16@16
+      processed: ''
+      offset: 00000D13
+    - name: _OpenDriver16@12
+      processed: ''
+      offset: 00000D3A
+    - name: _CloseDriver16@12
+      processed: ''
+      offset: 00000D6D
+    - name: _mmioInstallIOProc32@12
+      processed: ''
+      offset: 00000D71
+    - name: _PlaySoundW@12
+      processed: ''
+      offset: 000013A3
+    - name: _sndPlaySoundW@8
+      processed: ''
+      offset: 000013B0
+    - name: _mciSendCommandW@16
+      processed: ''
+      offset: 000013BD
+    - name: _mciSendStringW@16
+      processed: ''
+      offset: 000013CD
+    - name: _mciGetErrorStringW@12
+      processed: ''
+      offset: 000013DD
+    - name: _mciGetDeviceIDW@4
+      processed: ''
+      offset: 000013EA
+    - name: _mciGetDeviceIDFromElementIDW@8
+      processed: ''
+      offset: 000013F7
+    - name: _mmioOpenW@12
+      processed: ''
+      offset: '00001404'
+    - name: _mmioRenameW@16
+      processed: ''
+      offset: '00001411'
+    - name: _mmioInstallIOProc16@12
+      processed: ''
+      offset: '00001421'
+    - name: _mmioStringToFOURCCW@8
+      processed: ''
+      offset: 0000142E
+    - name: _mmioInstallIOProcW@12
+      processed: ''
+      offset: 0000143B
+    - name: _joyGetDevCapsW@12
+      processed: ''
+      offset: '00001448'
+    - name: _midiOutGetDevCapsW@12
+      processed: ''
+      offset: '00001458'
+    - name: _midiOutGetErrorTextW@12
+      processed: ''
+      offset: '00001468'
+    - name: _midiInGetDevCapsW@12
+      processed: ''
+      offset: '00001478'
+    - name: _midiInGetErrorTextW@12
+      processed: ''
+      offset: '00001488'
+    - name: _auxGetDevCapsW@12
+      processed: ''
+      offset: '00001498'
+    - name: _waveOutGetDevCapsW@12
+      processed: ''
+      offset: 000014A8
+    - name: _waveOutGetErrorTextW@12
+      processed: ''
+      offset: 000014B8
+    - name: _waveInGetDevCapsW@12
+      processed: ''
+      offset: 000014C8
+    - name: _waveInGetErrorTextW@12
+      processed: ''
+      offset: 000014D8
+    - name: _mixerGetDevCapsW@12
+      processed: ''
+      offset: '000014E8'
+    - name: _mixerGetLineInfoW@12
+      processed: ''
+      offset: 000014F8
+    - name: _mixerGetLineControlsW@12
+      processed: ''
+      offset: '00001508'
+    - name: _mixerGetControlDetailsW@12
+      processed: ''
+      offset: '00001518'
+    - name: _mciDriverNotify@12
+      processed: ''
+      offset: '00001528'
+    - name: _mciDriverYield@4
+      processed: ''
+      offset: '00001535'
+    - name: _mciFreeCommandResource@4
+      processed: ''
+      offset: '00001542'
+    - name: _mciSetDriverData@8
+      processed: ''
+      offset: 0000154F
+    - name: _mciGetDriverData@4
+      processed: ''
+      offset: 0000155C
+    - name: _mciLoadCommandResource@12
+      processed: ''
+      offset: '00001569'
+    - name: _DrvGetModuleHandle@4
+      processed: ''
+      offset: 0000192F
+    - name: _GetDriverFlags@4
+      processed: ''
+      offset: 0000198F
+    - name: _DrvOpen@12
+      processed: ''
+      offset: 000021AB
+    - name: _DrvOpenA@12
+      processed: ''
+      offset: 000021C3
+    - name: _DrvClose@12
+      processed: ''
+      offset: 000021DB
+    - name: _DrvSendMessage@16
+      processed: ''
+      offset: '00002412'
+    - name: _DefDriverProc@20
+      processed: ''
+      offset: '000025E0'
+    - name: _DriverCallback@28
+      processed: ''
+      offset: '00002632'
+    - name: _mmsystemGetVersion@0
+      processed: ''
+      offset: 000026F6
+    - name: _midiOpen@28
+      processed: ''
+      offset: 000035ED
+    - name: _midiOutOpen@20
+      processed: ''
+      offset: 000036B7
+    - name: _midiInOpen@20
+      processed: ''
+      offset: 000036D9
+    - name: _midiStreamOpen@24
+      processed: ''
+      offset: 000036FB
+    - name: _midiStreamClose@4
+      processed: ''
+      offset: '00003784'
+    - name: _waveOpen@32
+      processed: ''
+      offset: '00003805'
+    - name: _waveOutOpen@24
+      processed: ''
+      offset: '00003925'
+    - name: _waveInOpen@24
+      processed: ''
+      offset: 0000394A
+    - name: _mixerMessage@16
+      processed: ''
+      offset: 00003CC1
+    - name: _mixerGetID@12
+      processed: ''
+      offset: 00003CE1
+    - name: _mixerSetControlDetails@12
+      processed: ''
+      offset: 00003D8F
+    - name: _mixerGetLineInfoA@12
+      processed: ''
+      offset: 00003E3D
+    - name: _mixerGetLineControlsA@12
+      processed: ''
+      offset: 00003EEE
+    - name: _mixerGetControlDetailsA@12
+      processed: ''
+      offset: 00003F9C
+    - name: _mixerOpen@20
+      processed: ''
+      offset: 0000404A
+    - name: _mixerClose@4
+      processed: ''
+      offset: '000040E0'
+    - name: _mixerGetDevCapsA@12
+      processed: ''
+      offset: '00004161'
+    - name: _joyGetDevCapsA@12
+      processed: ''
+      offset: '00004239'
+    - name: _joyGetPos@8
+      processed: ''
+      offset: 000042A8
+    - name: _joyGetPosEx@8
+      processed: ''
+      offset: 000042F7
+    - name: _joyConfigChanged@4
+      processed: ''
+      offset: 0000434B
+    - name: _joyGetThreshold@8
+      processed: ''
+      offset: '00004357'
+    - name: _waveOutPrepareHeader@12
+      processed: ''
+      offset: '00004910'
+    - name: _waveInPrepareHeader@12
+      processed: ''
+      offset: '00004929'
+    - name: _midiOutPrepareHeader@12
+      processed: ''
+      offset: '00004942'
+    - name: _midiInPrepareHeader@12
+      processed: ''
+      offset: 0000495B
+    - name: _waveOutUnprepareHeader@12
+      processed: ''
+      offset: '00004974'
+    - name: _waveInUnprepareHeader@12
+      processed: ''
+      offset: 0000498D
+    - name: _midiOutUnprepareHeader@12
+      processed: ''
+      offset: 000049A6
+    - name: _midiInUnprepareHeader@12
+      processed: ''
+      offset: 000049BF
+    - name: _midiOutGetID@8
+      processed: ''
+      offset: 000049D8
+    - name: _midiOutGetVolume@8
+      processed: ''
+      offset: 00004A6D
+    - name: _midiOutSetVolume@8
+      processed: ''
+      offset: 00004B18
+    - name: _midiStreamProperty@12
+      processed: ''
+      offset: 00004BAE
+    - name: _midiOutShortMsg@8
+      processed: ''
+      offset: 00004C46
+    - name: _midiStreamPosition@12
+      processed: ''
+      offset: 00004D14
+    - name: _midiOutGetDevCapsA@12
+      processed: ''
+      offset: 00004DB2
+    - name: _midiOutMessage@16
+      processed: ''
+      offset: '00004E89'
+    - name: _midiOutMsg@16
+      processed: ''
+      offset: 00004EA9
+    - name: _midiStreamOut@12
+      processed: ''
+      offset: 00004FB2
+    - name: _midiOutClose@4
+      processed: ''
+      offset: 00004FCB
+    - name: _midiInGetDevCapsA@12
+      processed: ''
+      offset: 0000504C
+    - name: _midiInGetID@8
+      processed: ''
+      offset: '00005123'
+    - name: _midiDisconnect@12
+      processed: ''
+      offset: 000052A6
+    - name: _midiConnect@12
+      processed: ''
+      offset: 000052B8
+    - name: _midiInMessage@16
+      processed: ''
+      offset: 000052CA
+    - name: _midiInClose@4
+      processed: ''
+      offset: 000052EA
+    - name: _midiInReset@4
+      processed: ''
+      offset: 0000536B
+    - name: _midiOutReset@4
+      processed: ''
+      offset: 000053EC
+    - name: _midiStreamPause@4
+      processed: ''
+      offset: 0000546D
+    - name: _midiStreamRestart@4
+      processed: ''
+      offset: '000054E8'
+    - name: _midiStreamStop@4
+      processed: ''
+      offset: '00005563'
+    - name: _midiInStart@4
+      processed: ''
+      offset: 000055DE
+    - name: _midiInStop@4
+      processed: ''
+      offset: '00005659'
+    - name: _waveOutPause@4
+      processed: ''
+      offset: 000056D4
+    - name: _waveOutRestart@4
+      processed: ''
+      offset: 0000574F
+    - name: _waveOutReset@4
+      processed: ''
+      offset: 000057CA
+    - name: _waveOutBreakLoop@4
+      processed: ''
+      offset: 0000584B
+    - name: _waveInStart@4
+      processed: ''
+      offset: 000058C6
+    - name: _waveInStop@4
+      processed: ''
+      offset: '00005941'
+    - name: _waveInReset@4
+      processed: ''
+      offset: 000059BC
+    - name: _waveOutGetDevCapsA@12
+      processed: ''
+      offset: 00005A3D
+    - name: _waveOutGetPosition@12
+      processed: ''
+      offset: 00005B4D
+    - name: _waveOutGetPitch@8
+      processed: ''
+      offset: 00005BEB
+    - name: _waveOutSetPitch@8
+      processed: ''
+      offset: 00005C80
+    - name: _waveOutGetPlaybackRate@8
+      processed: ''
+      offset: 00005CFE
+    - name: _waveOutSetPlaybackRate@8
+      processed: ''
+      offset: 00005D93
+    - name: _waveOutGetID@8
+      processed: ''
+      offset: '00005E11'
+    - name: _waveOutGetVolume@8
+      processed: ''
+      offset: 00005EA6
+    - name: _waveOutSetVolume@8
+      processed: ''
+      offset: 00005F51
+    - name: _waveOutMessage@16
+      processed: ''
+      offset: 00005FE7
+    - name: _waveOutClose@4
+      processed: ''
+      offset: '00006007'
+    - name: _waveInGetDevCapsA@12
+      processed: ''
+      offset: '00006088'
+    - name: _waveInGetPosition@12
+      processed: ''
+      offset: '00006170'
+    - name: _waveInMessage@16
+      processed: ''
+      offset: 0000620E
+    - name: _waveInGetID@8
+      processed: ''
+      offset: 0000622E
+    - name: _waveInClose@4
+      processed: ''
+      offset: 000062C3
+    - name: _waveOutWrite@12
+      processed: ''
+      offset: '00006344'
+    - name: _midiOutLongMsg@12
+      processed: ''
+      offset: 0000644F
+    - name: _waveInAddBuffer@12
+      processed: ''
+      offset: '00006468'
+    - name: _midiInAddBuffer@12
+      processed: ''
+      offset: 0000656D
+    - name: _midiOutGetErrorTextA@12
+      processed: ''
+      offset: '00006672'
+    - name: _midiOutCachePatches@16
+      processed: ''
+      offset: 0000669D
+    - name: _midiOutCacheDrumPatches@16
+      processed: ''
+      offset: 0000673B
+    - name: _midiInGetErrorTextA@12
+      processed: ''
+      offset: 000067D9
+    - name: _auxOutMessage@16
+      processed: ''
+      offset: '00006804'
+    - name: _auxGetVolume@8
+      processed: ''
+      offset: '00006824'
+    - name: _waveOutGetErrorTextA@12
+      processed: ''
+      offset: '00006849'
+    - name: _waveInGetErrorTextA@12
+      processed: ''
+      offset: '00006874'
+    - name: _mciExecute@4
+      processed: ''
+      offset: 0000689F
+    - name: _mciGetDeviceIDA@4
+      processed: ''
+      offset: 000068C3
+    - name: _mciGetErrorStringA@12
+      processed: ''
+      offset: '000068E7'
+    - name: _mciGetYieldProc@8
+      processed: ''
+      offset: '00006912'
+    - name: _mciSetYieldProc@12
+      processed: ''
+      offset: '00006917'
+    - name: _auxGetDevCapsA@12
+      processed: ''
+      offset: 0000691C
+    - name: _timeGetSystemTime@8
+      processed: ''
+      offset: 0000699B
+    - name: _timeGetTime@0
+      processed: ''
+      offset: '000069E4'
+    - name: _timeGetDevCaps@8
+      processed: ''
+      offset: 00006A25
+    - name: _timeSetEvent@20
+      processed: ''
+      offset: 00006C6A
+    - name: _timeKillEvent@4
+      processed: ''
+      offset: 00006ECA
+    - name: _timeBeginPeriod@4
+      processed: ''
+      offset: 00006FAB
+    - name: _timeEndPeriod@4
+      processed: ''
+      offset: 00006FD8
+    - name: _mciSendCommandA@16
+      processed: ''
+      offset: '00007809'
+    - name: _mciSendStringA@16
+      processed: ''
+      offset: 00007B6D
+    - name: _mmioRenameA@16
+      processed: ''
+      offset: 00007DCD
+    - name: _mmioOpenA@12
+      processed: ''
+      offset: '00007E68'
+    - name: _mmioClose@8
+      processed: ''
+      offset: 00007FD7
+    - name: _mmioRead@12
+      processed: ''
+      offset: '00008047'
+    - name: _mmioWrite@12
+      processed: ''
+      offset: '00008148'
+    - name: _mmioSeek@12
+      processed: ''
+      offset: '00008265'
+    - name: _mmioGetInfo@12
+      processed: ''
+      offset: '00008344'
+    - name: _mmioSetInfo@12
+      processed: ''
+      offset: 000083B0
+    - name: _mmioSetBuffer@16
+      processed: ''
+      offset: 000084BA
+    - name: _mmioFlush@8
+      processed: ''
+      offset: 0000868F
+    - name: _mmioAdvance@12
+      processed: ''
+      offset: 0000871E
+    - name: _mmioStringToFOURCCA@8
+      processed: ''
+      offset: '00008828'
+    - name: _mmioInstallIOProcA@12
+      processed: ''
+      offset: '00008893'
+    - name: _mmioSendMessage@16
+      processed: ''
+      offset: 0000897A
+    - name: _mmioDOSIOProc@16
+      processed: ''
+      offset: 00008A45
+    - name: _mmioMEMIOProc@16
+      processed: ''
+      offset: 00008DB7
+    - name: _mmioDescend@16
+      processed: ''
+      offset: '00008E44'
+    - name: _mmioAscend@12
+      processed: ''
+      offset: 00008F93
+    - name: _mmioCreateChunk@12
+      processed: ''
+      offset: 0000906E
+    - name: _PlaySoundA@12
+      processed: ''
+      offset: 0000987A
+    - name: _sndPlaySoundA@8
+      processed: ''
+      offset: 000098D4

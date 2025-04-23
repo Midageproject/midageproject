@@ -1,277 +1,401 @@
-filename: "compbatt.sys"
+filename: compbatt.sys
 #TODO: bring up more details from symdeb
-binary: "compbatt.sys"
-description: ""
-note: ""
+binary: COMPBATT
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: ".text"
-        offset: "00000AC0"
-        symbols:
-          - name: '_CompBattPnpDispatch@8'
-            offset: "00000000"            
-          - name: '_CompBattPowerDispatch@8'
-            offset: "00000150"            
-          - name: '_CompBattPnpEventHandler@8'
-            offset: "000001B0"            
-          - name: '_CompBattAddNewBattery@8'
-            offset: "000002B0"            
-          - name: '_CompBattGetBatteries@4'
-            offset: "00000600"            
-          - name: '_CompBattAddDevice@8'
-            offset: "000006F0"            
-          - name: '_CompBattOpenClose@8'
-            offset: "000008D0"            
-          - name: '_CompBattSystemControl@8'
-            offset: "00000980"            
-          - name: '_CompBattGetStaticInfo@4'
-            offset: "00000A60"            
-          - name: '_CompBattMonitorIrpComplete@12'
-            offset: "00000B30"            
-          - name: '_CompBattRecalculateTag@4'
-            offset: "00001070"            
-          - name: '_CompBattChargeDischarge@4'
-            offset: "00001120"            
-          - name: '_BattIoctlComplete@12'
-            offset: "00001300"            
-          - name: '_IsBatteryAlreadyOnList@8'
-            offset: "00001330"            
-          - name: '_BatteryClassInitializeDevice@8'
-            offset: "000013B8"            
-          - name: '_BatteryClassIoctl@8'
-            offset: "000013BE"            
-          - name: '_BatteryClassStatusNotify@4'
-            offset: "000013C4"            
-          - name: '@IofCompleteRequest@8'
-            offset: "000013CA"            
-          - name: '_IoRegisterPlugPlayNotification@28'
-            offset: "000013D0"            
-          - name: '_DbgPrint'
-            offset: "000013D6"            
-          - name: '_PoStartNextPowerIrp@4'
-            offset: "000013DC"            
-          - name: '@ExReleaseFastMutex@4'
-            offset: "000013E2"            
-          - name: '_ExFreePool@4'
-            offset: "000013E8"            
-          - name: '_ZwClose@4'
-            offset: "000013EE"            
-          - name: '_IoAllocateIrp@8'
-            offset: "000013F4"            
-          - name: '_IoGetRelatedDeviceObject@4'
-            offset: "000013FA"            
-          - name: '_ObReferenceObjectByHandle@24'
-            offset: "00001400"            
-          - name: '_ZwCreateFile@44'
-            offset: "00001406"            
-          - name: '_RtlCopyUnicodeString@8'
-            offset: "0000140C"            
-          - name: '_ExAllocatePoolWithTag@12'
-            offset: "00001412"            
-          - name: '@ExAcquireFastMutex@4'
-            offset: "00001418"            
-          - name: '_RtlAssert@16'
-            offset: "0000141E"            
-          - name: '_KeGetCurrentIrql@0'
-            offset: "00001424"            
-          - name: '_RtlInitUnicodeString@8'
-            offset: "0000142A"            
-          - name: '_IoGetDeviceInterfaces@16'
-            offset: "00001430"            
-          - name: '_IoDeleteDevice@4'
-            offset: "00001436"            
-          - name: '_KeInitializeEvent@12'
-            offset: "0000143C"            
-          - name: '_IoAttachDeviceToDeviceStack@8'
-            offset: "00001442"            
-          - name: '_IoCreateSymbolicLink@8'
-            offset: "00001448"            
-          - name: '_IoCreateDevice@28'
-            offset: "0000144E"            
-          - name: '_DbgBreakPoint@0'
-            offset: "00001454"            
-          - name: '@IofCallDriver@8'
-            offset: "0000145A"            
-          - name: '_KeQueryInterruptTime@0'
-            offset: "00001460"            
-          - name: '_IoCancelIrp@4'
-            offset: "00001466"            
-          - name: '_KeSetEvent@12'
-            offset: "0000146C"            
-          - name: '_KeWaitForSingleObject@20'
-            offset: "00001472"            
-          - name: '_IoBuildDeviceIoControlRequest@36'
-            offset: "00001478"            
-          - name: '_RtlCompareUnicodeString@12'
-            offset: "0000147E"            
-      - num: "2"
-        name: ".rdata"
-        offset: "00000D70"
-        symbols:
-          - name: '_GUID_HWPROFILE_QUERY_CHANGE'
-            offset: "00000058"            
-          - name: '_GUID_HWPROFILE_CHANGE_CANCELLED'
-            offset: "00000068"            
-          - name: '_GUID_HWPROFILE_CHANGE_COMPLETE'
-            offset: "00000078"            
-          - name: '_GUID_DEVICE_INTERFACE_ARRIVAL'
-            offset: "00000088"            
-          - name: '_GUID_DEVICE_INTERFACE_REMOVAL'
-            offset: "00000098"            
-          - name: '_GUID_TARGET_DEVICE_QUERY_REMOVE'
-            offset: "000000A8"            
-          - name: '_GUID_TARGET_DEVICE_REMOVE_CANCELLED'
-            offset: "000000B8"            
-          - name: '_GUID_TARGET_DEVICE_REMOVE_COMPLETE'
-            offset: "000000C8"            
-          - name: '_GUID_BUS_INTERFACE_STANDARD'
-            offset: "000000D8"            
-          - name: '_GUID_PCI_BUS_INTERFACE_STANDARD'
-            offset: "000000E8"            
-          - name: '_GUID_ARBITER_INTERFACE_STANDARD'
-            offset: "000000F8"            
-          - name: '_GUID_TRANSLATOR_INTERFACE_STANDARD'
-            offset: "00000108"            
-          - name: '_GUID_ACPI_INTERFACE_STANDARD'
-            offset: "00000118"            
-          - name: '_GUID_BUS_TYPE_PCMCIA'
-            offset: "00000128"            
-          - name: '_GUID_BUS_TYPE_PCI'
-            offset: "00000138"            
-          - name: '_GUID_DEVICE_BATTERY'
-            offset: "00000148"            
-          - name: '_GUID_DEVICE_SYS_BUTTON'
-            offset: "00000158"            
-          - name: '_GUID_DEVICE_LID'
-            offset: "00000168"            
-          - name: '_GUID_DEVICE_THERMAL_ZONE'
-            offset: "00000178"            
-          - name: '_GUID_CLASS_INPUT'
-            offset: "00000188"            
-      - num: "3"
-        name: ".data"
-        offset: "00000DA0"
-        symbols:
-          - name: '_CompBattDebug'
-            offset: "000003F0"            
-      - num: "4"
-        name: ".idata$2"
-        offset: "000012E0"
-        symbols:
-          - name: '__IMPORT_DESCRIPTOR_BATTC'
-            offset: "00000000"            
-          - name: '__IMPORT_DESCRIPTOR_NTOSKRNL'
-            offset: "00000014"            
-          - name: '__IMPORT_DESCRIPTOR_HAL'
-            offset: "00000028"            
-          - name: '__NULL_IMPORT_DESCRIPTOR'
-            offset: "0000003C"            
-          - name: '__imp__BatteryClassInitializeDevice@8'
-            offset: "000000E4"            
-          - name: '__imp__BatteryClassIoctl@8'
-            offset: "000000E8"            
-          - name: '__imp__BatteryClassStatusNotify@4'
-            offset: "000000EC"            
-          - name: '\177BATTC_NULL_THUNK_DATA'
-            offset: "000000F0"            
-          - name: '__imp__KeGetCurrentIrql@0'
-            offset: "000000F4"            
-          - name: '__imp_@ExReleaseFastMutex@4'
-            offset: "000000F8"            
-          - name: '__imp_@ExAcquireFastMutex@4'
-            offset: "000000FC"            
-          - name: '\177HAL_NULL_THUNK_DATA'
-            offset: "00000100"            
-          - name: '__imp__ExFreePool@4'
-            offset: "00000104"            
-          - name: '__imp__ZwClose@4'
-            offset: "00000108"            
-          - name: '__imp__PoStartNextPowerIrp@4'
-            offset: "0000010C"            
-          - name: '__imp__IoRegisterPlugPlayNotification@28'
-            offset: "00000110"            
-          - name: '__imp__DbgPrint'
-            offset: "00000114"            
-          - name: '__imp__ObReferenceObjectByHandle@24'
-            offset: "00000118"            
-          - name: '__imp__ZwCreateFile@44'
-            offset: "0000011C"            
-          - name: '__imp__RtlCopyUnicodeString@8'
-            offset: "00000120"            
-          - name: '__imp__ExAllocatePoolWithTag@12'
-            offset: "00000124"            
-          - name: '__imp__IoGetRelatedDeviceObject@4'
-            offset: "00000128"            
-          - name: '__imp__IoAllocateIrp@8'
-            offset: "0000012C"            
-          - name: '__imp__RtlInitUnicodeString@8'
-            offset: "00000130"            
-          - name: '__imp_@IofCompleteRequest@8'
-            offset: "00000134"            
-          - name: '__imp__IoGetDeviceInterfaces@16'
-            offset: "00000138"            
-          - name: '__imp__IoDeleteDevice@4'
-            offset: "0000013C"            
-          - name: '__imp__KeInitializeEvent@12'
-            offset: "00000140"            
-          - name: '__imp__IoAttachDeviceToDeviceStack@8'
-            offset: "00000144"            
-          - name: '__imp__IoCreateSymbolicLink@8'
-            offset: "00000148"            
-          - name: '__imp__IoCreateDevice@28'
-            offset: "0000014C"            
-          - name: '__imp__DbgBreakPoint@0'
-            offset: "00000150"            
-          - name: '__imp_@IofCallDriver@8'
-            offset: "00000154"            
-          - name: '__imp__KeQueryInterruptTime@0'
-            offset: "00000158"            
-          - name: '__imp__IoCancelIrp@4'
-            offset: "0000015C"            
-          - name: '__imp__KeSetEvent@12'
-            offset: "00000160"            
-          - name: '__imp__KeWaitForSingleObject@20'
-            offset: "00000164"            
-          - name: '__imp__IoBuildDeviceIoControlRequest@36'
-            offset: "00000168"            
-          - name: '__imp__RtlCompareUnicodeString@12'
-            offset: "0000016C"            
-          - name: '__imp__RtlAssert@16'
-            offset: "00000170"            
-          - name: '\177NTOSKRNL_NULL_THUNK_DATA'
-            offset: "00000174"            
-      - num: "5"
-        name: "PAGE"
-        offset: "000019D0"
-        symbols:
-          - name: '_CompBattUnload@4'
-            offset: "00000000"            
-          - name: '_CompBattIoctl@8'
-            offset: "00000010"            
-          - name: '_CompBattQueryTag@8'
-            offset: "000000E0"            
-          - name: '_CompBattQueryInformation@28'
-            offset: "00000200"            
-          - name: '_CompBattQueryStatus@12'
-            offset: "00000470"            
-          - name: '_CompBattSetStatusNotify@12'
-            offset: "000007F0"            
-          - name: '_CompBattDisableStatusNotify@4'
-            offset: "00000A20"            
-          - name: '_CompBattGetBatteryInformation@8'
-            offset: "00000AB0"            
-          - name: '_CompBattGetBatteryGranularity@8'
-            offset: "00000D50"            
-          - name: '_CompBattGetEstimatedTime@8'
-            offset: "00000ED0"            
-          - name: '_BatteryIoctl@28'
-            offset: "00001100"            
-      - num: "6"
-        name: "INIT"
-        offset: "00000000"
-        symbols:
-          - name: '_DriverEntry@8'
-            offset: "00000000"            
+- version: system
+  tree:
+  - - compbatt.c
+    - compmisc.c
+    - comppnp.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00000AC0
+    symbols:
+    - name: _CompBattPnpDispatch@8
+      processed: ''
+      offset: '00000000'
+    - name: _CompBattPowerDispatch@8
+      processed: ''
+      offset: '00000150'
+    - name: _CompBattPnpEventHandler@8
+      processed: ''
+      offset: 000001B0
+    - name: _CompBattAddNewBattery@8
+      processed: ''
+      offset: 000002B0
+    - name: _CompBattGetBatteries@4
+      processed: ''
+      offset: '00000600'
+    - name: _CompBattAddDevice@8
+      processed: ''
+      offset: 000006F0
+    - name: _CompBattOpenClose@8
+      processed: ''
+      offset: 000008D0
+    - name: _CompBattSystemControl@8
+      processed: ''
+      offset: '00000980'
+    - name: _CompBattGetStaticInfo@4
+      processed: ''
+      offset: 00000A60
+    - name: _CompBattMonitorIrpComplete@12
+      processed: ''
+      offset: 00000B30
+    - name: _CompBattRecalculateTag@4
+      processed: ''
+      offset: '00001070'
+    - name: _CompBattChargeDischarge@4
+      processed: ''
+      offset: '00001120'
+    - name: _BattIoctlComplete@12
+      processed: ''
+      offset: '00001300'
+    - name: _IsBatteryAlreadyOnList@8
+      processed: ''
+      offset: '00001330'
+    - name: _BatteryClassInitializeDevice@8
+      processed: ''
+      offset: 000013B8
+    - name: _BatteryClassIoctl@8
+      processed: ''
+      offset: 000013BE
+    - name: _BatteryClassStatusNotify@4
+      processed: ''
+      offset: 000013C4
+    - name: '@IofCompleteRequest@8'
+      processed: ''
+      offset: 000013CA
+    - name: _IoRegisterPlugPlayNotification@28
+      processed: ''
+      offset: 000013D0
+    - name: _DbgPrint
+      processed: ''
+      offset: 000013D6
+    - name: _PoStartNextPowerIrp@4
+      processed: ''
+      offset: 000013DC
+    - name: '@ExReleaseFastMutex@4'
+      processed: ''
+      offset: '000013E2'
+    - name: _ExFreePool@4
+      processed: ''
+      offset: '000013E8'
+    - name: _ZwClose@4
+      processed: ''
+      offset: 000013EE
+    - name: _IoAllocateIrp@8
+      processed: ''
+      offset: 000013F4
+    - name: _IoGetRelatedDeviceObject@4
+      processed: ''
+      offset: 000013FA
+    - name: _ObReferenceObjectByHandle@24
+      processed: ''
+      offset: '00001400'
+    - name: _ZwCreateFile@44
+      processed: ''
+      offset: '00001406'
+    - name: _RtlCopyUnicodeString@8
+      processed: ''
+      offset: 0000140C
+    - name: _ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00001412'
+    - name: '@ExAcquireFastMutex@4'
+      processed: ''
+      offset: '00001418'
+    - name: _RtlAssert@16
+      processed: ''
+      offset: 0000141E
+    - name: _KeGetCurrentIrql@0
+      processed: ''
+      offset: '00001424'
+    - name: _RtlInitUnicodeString@8
+      processed: ''
+      offset: 0000142A
+    - name: _IoGetDeviceInterfaces@16
+      processed: ''
+      offset: '00001430'
+    - name: _IoDeleteDevice@4
+      processed: ''
+      offset: '00001436'
+    - name: _KeInitializeEvent@12
+      processed: ''
+      offset: 0000143C
+    - name: _IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '00001442'
+    - name: _IoCreateSymbolicLink@8
+      processed: ''
+      offset: '00001448'
+    - name: _IoCreateDevice@28
+      processed: ''
+      offset: 0000144E
+    - name: _DbgBreakPoint@0
+      processed: ''
+      offset: '00001454'
+    - name: '@IofCallDriver@8'
+      processed: ''
+      offset: 0000145A
+    - name: _KeQueryInterruptTime@0
+      processed: ''
+      offset: '00001460'
+    - name: _IoCancelIrp@4
+      processed: ''
+      offset: '00001466'
+    - name: _KeSetEvent@12
+      processed: ''
+      offset: 0000146C
+    - name: _KeWaitForSingleObject@20
+      processed: ''
+      offset: '00001472'
+    - name: _IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: '00001478'
+    - name: _RtlCompareUnicodeString@12
+      processed: ''
+      offset: 0000147E
+  - num: '2'
+    name: .rdata
+    offset: 00000D70
+    symbols:
+    - name: _GUID_HWPROFILE_QUERY_CHANGE
+      processed: ''
+      offset: '00000058'
+    - name: _GUID_HWPROFILE_CHANGE_CANCELLED
+      processed: ''
+      offset: '00000068'
+    - name: _GUID_HWPROFILE_CHANGE_COMPLETE
+      processed: ''
+      offset: '00000078'
+    - name: _GUID_DEVICE_INTERFACE_ARRIVAL
+      processed: ''
+      offset: '00000088'
+    - name: _GUID_DEVICE_INTERFACE_REMOVAL
+      processed: ''
+      offset: '00000098'
+    - name: _GUID_TARGET_DEVICE_QUERY_REMOVE
+      processed: ''
+      offset: 000000A8
+    - name: _GUID_TARGET_DEVICE_REMOVE_CANCELLED
+      processed: ''
+      offset: 000000B8
+    - name: _GUID_TARGET_DEVICE_REMOVE_COMPLETE
+      processed: ''
+      offset: 000000C8
+    - name: _GUID_BUS_INTERFACE_STANDARD
+      processed: ''
+      offset: 000000D8
+    - name: _GUID_PCI_BUS_INTERFACE_STANDARD
+      processed: ''
+      offset: '000000E8'
+    - name: _GUID_ARBITER_INTERFACE_STANDARD
+      processed: ''
+      offset: 000000F8
+    - name: _GUID_TRANSLATOR_INTERFACE_STANDARD
+      processed: ''
+      offset: '00000108'
+    - name: _GUID_ACPI_INTERFACE_STANDARD
+      processed: ''
+      offset: '00000118'
+    - name: _GUID_BUS_TYPE_PCMCIA
+      processed: ''
+      offset: '00000128'
+    - name: _GUID_BUS_TYPE_PCI
+      processed: ''
+      offset: '00000138'
+    - name: _GUID_DEVICE_BATTERY
+      processed: ''
+      offset: '00000148'
+    - name: _GUID_DEVICE_SYS_BUTTON
+      processed: ''
+      offset: '00000158'
+    - name: _GUID_DEVICE_LID
+      processed: ''
+      offset: '00000168'
+    - name: _GUID_DEVICE_THERMAL_ZONE
+      processed: ''
+      offset: '00000178'
+    - name: _GUID_CLASS_INPUT
+      processed: ''
+      offset: '00000188'
+  - num: '3'
+    name: .data
+    offset: 00000DA0
+    symbols:
+    - name: _CompBattDebug
+      processed: ''
+      offset: 000003F0
+  - num: '4'
+    name: .idata$2
+    offset: '000012E0'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_BATTC
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __imp__BatteryClassInitializeDevice@8
+      processed: ''
+      offset: '000000E4'
+    - name: __imp__BatteryClassIoctl@8
+      processed: ''
+      offset: '000000E8'
+    - name: __imp__BatteryClassStatusNotify@4
+      processed: ''
+      offset: 000000EC
+    - name: \177BATTC_NULL_THUNK_DATA
+      processed: ''
+      offset: 000000F0
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: 000000F4
+    - name: __imp_@ExReleaseFastMutex@4
+      processed: ''
+      offset: 000000F8
+    - name: __imp_@ExAcquireFastMutex@4
+      processed: ''
+      offset: 000000FC
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000100'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000104'
+    - name: __imp__ZwClose@4
+      processed: ''
+      offset: '00000108'
+    - name: __imp__PoStartNextPowerIrp@4
+      processed: ''
+      offset: 0000010C
+    - name: __imp__IoRegisterPlugPlayNotification@28
+      processed: ''
+      offset: '00000110'
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: '00000114'
+    - name: __imp__ObReferenceObjectByHandle@24
+      processed: ''
+      offset: '00000118'
+    - name: __imp__ZwCreateFile@44
+      processed: ''
+      offset: 0000011C
+    - name: __imp__RtlCopyUnicodeString@8
+      processed: ''
+      offset: '00000120'
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000124'
+    - name: __imp__IoGetRelatedDeviceObject@4
+      processed: ''
+      offset: '00000128'
+    - name: __imp__IoAllocateIrp@8
+      processed: ''
+      offset: 0000012C
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: '00000130'
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: '00000134'
+    - name: __imp__IoGetDeviceInterfaces@16
+      processed: ''
+      offset: '00000138'
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: 0000013C
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '00000140'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '00000144'
+    - name: __imp__IoCreateSymbolicLink@8
+      processed: ''
+      offset: '00000148'
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: 0000014C
+    - name: __imp__DbgBreakPoint@0
+      processed: ''
+      offset: '00000150'
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '00000154'
+    - name: __imp__KeQueryInterruptTime@0
+      processed: ''
+      offset: '00000158'
+    - name: __imp__IoCancelIrp@4
+      processed: ''
+      offset: 0000015C
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: '00000160'
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: '00000164'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: '00000168'
+    - name: __imp__RtlCompareUnicodeString@12
+      processed: ''
+      offset: 0000016C
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: '00000170'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000174'
+  - num: '5'
+    name: PAGE
+    offset: 000019D0
+    symbols:
+    - name: _CompBattUnload@4
+      processed: ''
+      offset: '00000000'
+    - name: _CompBattIoctl@8
+      processed: ''
+      offset: '00000010'
+    - name: _CompBattQueryTag@8
+      processed: ''
+      offset: '000000E0'
+    - name: _CompBattQueryInformation@28
+      processed: ''
+      offset: '00000200'
+    - name: _CompBattQueryStatus@12
+      processed: ''
+      offset: '00000470'
+    - name: _CompBattSetStatusNotify@12
+      processed: ''
+      offset: 000007F0
+    - name: _CompBattDisableStatusNotify@4
+      processed: ''
+      offset: 00000A20
+    - name: _CompBattGetBatteryInformation@8
+      processed: ''
+      offset: 00000AB0
+    - name: _CompBattGetBatteryGranularity@8
+      processed: ''
+      offset: 00000D50
+    - name: _CompBattGetEstimatedTime@8
+      processed: ''
+      offset: 00000ED0
+    - name: _BatteryIoctl@28
+      processed: ''
+      offset: '00001100'
+  - num: '6'
+    name: INIT
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'

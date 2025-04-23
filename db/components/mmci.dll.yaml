@@ -1,395 +1,593 @@
-filename: "mmci.dll"
+filename: mmci.dll
 #TODO: bring up more details from symdeb
-binary: "mmci.dll"
-description: ""
-note: ""
+binary: MMCI
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_TEXT"
-        offset: "000011B0"
-        symbols:
-          - name: 'LibEntry'
-            offset: "00000000"            
-          - name: 'WEP'
-            offset: "00000021"            
-          - name: '_aszMRClassDrvr'
-            offset: "000001E5"            
-          - name: '_aszMessageSvr'
-            offset: "0000021F"            
-          - name: '_aszConfigured'
-            offset: "00000241"            
-          - name: '_aszDriverKey'
-            offset: "0000024C"            
-          - name: '_aszDriversSec'
-            offset: "0000025A"            
-          - name: '_aszJoyClass'
-            offset: "00000262"            
-          - name: '_aszAuxClass'
-            offset: "0000026B"            
-          - name: '_aszMixerClass'
-            offset: "0000026F"            
-          - name: '_aszMidiClass'
-            offset: "00000275"            
-          - name: '_aszWaveClass'
-            offset: "0000027A"            
-          - name: '_aszSWKey'
-            offset: "0000027F"            
-          - name: '_aszMediaType'
-            offset: "0000028B"            
-          - name: '_aszMediaResKey'
-            offset: "00000295"            
-          - name: '_aszNewDrvKey'
-            offset: "000002CC"            
-          - name: '_aszNULL'
-            offset: "00000315"            
-          - name: '_aszSection'
-            offset: "00000316"            
-          - name: 'LibMain'
-            offset: "00000410"            
-          - name: '_MMInfDoUpdateInis'
-            offset: "00000908"            
-          - name: '_MMInfDoAddReg'
-            offset: "00000990"            
-          - name: '_MMInfDoCopyFiles'
-            offset: "00000C76"            
-          - name: '_MMGetDisksInfo'
-            offset: "00000EB4"            
-          - name: 'MEDIA_CONVERTOLDINF'
-            offset: "00000FEA"            
-          - name: 'MEDIA_SELECTDEVICE'
-            offset: "0000134C"            
-          - name: 'INITDRVCONFIGINFO'
-            offset: "0000139E"            
-          - name: 'CONFIGUREDRIVER'
-            offset: "000013C6"            
-          - name: 'CONFIGURENEWDRIVERS'
-            offset: "00001426"            
-          - name: '_ParseVersion'
-            offset: "00001C18"            
-          - name: '_PerUserSetupPreferredAudioDevices'
-            offset: "00001D2A"            
-          - name: '_SetupPreferredAudioDevices'
-            offset: "00001E0C"            
-          - name: 'REMOVERING3REGENTRIES'
-            offset: "000020DE"            
-          - name: 'REMOVEDEVICE'
-            offset: "00002362"            
-          - name: 'MEDIA_INSTALLSOFTWAREDEVICE'
-            offset: "00002656"            
-          - name: 'DIINSTALLDEVICEUICALLBACKPROC'
-            offset: "00002766"            
-          - name: 'MEDIA_INSTALLDEVICESECTION'
-            offset: "0000284A"            
-          - name: '_FindPathToOtherInf'
-            offset: "00002930"            
-          - name: 'MEDIA_INSTALLOTHERDEVICES'
-            offset: "000029B6"            
-          - name: 'MEDIA_INSTALLHARDWAREDEVICE'
-            offset: "00002ABA"            
-          - name: 'MEDIATYPEISSOFTWARE'
-            offset: "00002C3C"            
-          - name: 'MEDIA_INSTALLDEVICE'
-            offset: "00002C7A"            
-          - name: 'CLASSINSTALL'
-            offset: "00002CE8"            
-          - name: '__aFlshl'
-            offset: "00002DA4"            
-          - name: '__fstrchr'
-            offset: "00002DB0"            
-          - name: '__fstrupr'
-            offset: "00002DE2"            
-          - name: '__fstrcspn'
-            offset: "00002E06"            
-          - name: '__fstrspn'
-            offset: "00002E62"            
-          - name: '__fstrstr'
-            offset: "00002EBE"            
-      - num: "2"
-        name: "ALLOWINS_TEXT"
-        offset: "00001990"
-        symbols:
-          - name: 'FILEEXISTS'
-            offset: "00000074"            
-          - name: 'MYSTRTOK'
-            offset: "00000098"            
-          - name: '_LPSTRtoDWORD'
-            offset: "0000012E"            
-          - name: 'FILENAMEFROMPATH'
-            offset: "000001A0"            
-          - name: '_GetFileVersion'
-            offset: "000001F6"            
-          - name: 'ISINFSHIPPEDWITHWINDOWS'
-            offset: "000002EA"            
-          - name: '_FindPathToInf'
-            offset: "00000482"            
-          - name: '_ProcessDDBKey'
-            offset: "00000532"            
-          - name: '_GetUpgradeWarningFromDDB'
-            offset: "00000680"            
-          - name: '_SearchDDB'
-            offset: "00000738"            
-          - name: 'GETUPGRADEWARNINGSENUM'
-            offset: "00000914"            
-          - name: '_IsInRegistry'
-            offset: "00000986"            
-          - name: '_RegTestsTrue'
-            offset: "00000D06"            
-          - name: '_ProcessKnownRegSection'
-            offset: "00000DD6"            
-          - name: 'SEARCHINFREGWARNINGS'
-            offset: "00000EAA"            
-          - name: 'GETUPGRADEWARNINGS'
-            offset: "00000F22"            
-          - name: 'GETEXISTINGDRIVERINFO'
-            offset: "00001076"            
-          - name: 'GETNEWDRIVERINFO'
-            offset: "000011DE"            
-          - name: 'INITDRVUPGRADEINFO'
-            offset: "0000123E"            
-          - name: 'ALLOWDRIVERINSTALL'
-            offset: "000012B2"            
-      - num: "3"
-        name: "SELBEST_TEXT"
-        offset: "00001C40"
-        symbols:
-          - name: 'GETDRIVERTYPEENUM'
-            offset: "00000034"            
-          - name: '_GetDriverType'
-            offset: "000000C8"            
-          - name: 'BETTERDRIVER'
-            offset: "000001BE"            
-          - name: '_GetExistingDriverMatchParams'
-            offset: "000002CC"            
-          - name: 'PICKBESTDRIVER'
-            offset: "00000394"            
-          - name: 'SELECTBESTCOMPATDRV'
-            offset: "000004E4"            
-      - num: "4"
-        name: "DGROUP"
-        offset: "00000000"
-        symbols:
-          - name: 'rsrvptrs'
-            offset: "00000006"            
-          - name: 'pLocalHeap'
-            offset: "00000006"            
-          - name: 'pAtomTable'
-            offset: "00000008"            
-          - name: 'pStackTop'
-            offset: "0000000A"            
-          - name: 'pStackMin'
-            offset: "0000000C"            
-          - name: 'pStackBot'
-            offset: "0000000E"            
-          - name: '?szSTExecFmt@?2??SysTray_EnableService@@9@9'
-            offset: "0000001C"            
-          - name: '??_C@_0BA@MAHH@SystemTray_Main?$AA@'
-            offset: "0000002C"            
-          - name: '??_C@_0BP@HPJI@system?4ini?0386Enh?0?0?$CCdevice?$DN?$CFs?$CC?$AA@'
-            offset: "0000003C"            
-          - name: '??_C@_04IBCE@?$FLMCI?$AA@'
-            offset: "0000005C"            
-          - name: '??_C@_03MFOG@MCI?$AA@'
-            offset: "00000062"            
-          - name: '??_C@_01PCFE@?2?$AA@'
-            offset: "00000066"            
-          - name: '??_C@_04PLDJ@Wave?$AA@'
-            offset: "00000068"            
-          - name: '??_C@_04CCOG@MIDI?$AA@'
-            offset: "0000006E"            
-          - name: '??_C@_05JHOC@Mixer?$AA@'
-            offset: "00000074"            
-          - name: '??_C@_03IEAK@Aux?$AA@'
-            offset: "0000007A"            
-          - name: '??_C@_08GCCE@Joystick?$AA@'
-            offset: "0000007E"            
-          - name: '??_C@_07NGLM@MSVIDEO?$AA@'
-            offset: "00000088"            
-          - name: '??_C@_0L@LLFA@WaveMapper?$AA@'
-            offset: "00000090"            
-          - name: '??_C@_0L@OIOM@MidiMapper?$AA@'
-            offset: "0000009C"            
-          - name: '??_C@_06LFAG@MAPPER?$AA@'
-            offset: "000000A8"            
-          - name: '??_C@_04DDDH@VIDC?$AA@'
-            offset: "000000B0"            
-          - name: '??_C@_04JKEH@VIDS?$AA@'
-            offset: "000000B6"            
-          - name: '??_C@_03CHOA@ICM?$AA@'
-            offset: "000000BC"            
-          - name: '??_C@_05PBMJ@MSACM?$AA@'
-            offset: "000000C0"            
-          - name: '??_C@_03LHFF@ACM?$AA@'
-            offset: "000000C6"            
-          - name: '??_C@_07CNPM@UNKNOWN?$AA@'
-            offset: "000000CA"            
-          - name: '??_C@_0L@MEGC@HKLM?0?$CFs?0?0?0?$AA@'
-            offset: "000000D2"            
-          - name: '??_C@_0BF@JNLF@HKLM?0?$CFs?0Driver?0?0?$CC?$CFs?$CC?$AA@'
-            offset: "000000DE"            
-          - name: '??_C@_0BK@LJDG@HKLM?0?$CFs?0Description?0?0?$CC?$CFs?$CC?$AA@'
-            offset: "000000F4"            
-          - name: '??_C@_0BJ@NJDM@HKLM?0?$CFs?0Parameters?0?0?$CC?$CFs?$CC?$AA@'
-            offset: "0000010E"            
-          - name: '??_C@_0BB@PMCK@SourceDisksFiles?$AA@'
-            offset: "00000128"            
-          - name: '??_C@_05IPJG@?$CFs?3?$CFs?$AA@'
-            offset: "0000013A"            
-          - name: '??_C@_02MECO@?$CFd?$AA@'
-            offset: "00000140"            
-          - name: '??_C@_0M@BHNN@?$CFs?5?$DN?5?$CFs?0?$CFs?0?$AA@'
-            offset: "00000144"            
-          - name: '??_C@_05DMPF@disks?$AA@'
-            offset: "00000150"            
-          - name: '??_C@_08NKAM@oemdisks?$AA@'
-            offset: "00000156"            
-          - name: '??_C@_07PCHH@Unknown?$AA@'
-            offset: "00000160"            
-          - name: '??_C@_08FKFA@Provider?$AA@'
-            offset: "00000168"            
-          - name: '??_C@_07BPOH@version?$AA@'
-            offset: "00000172"            
-          - name: '??_C@_07PCHH@OldDrvs?$AA@'
-            offset: "0000017A"            
-          - name: '??_C@_0N@NONH@Manufacturer?$AA@'
-            offset: "00000182"            
-          - name: '??_C@_02PIFG@11?$AA@'
-            offset: "00000190"            
-          - name: '??_C@_0P@KHII@DefaultDestDir?$AA@'
-            offset: "00000194"            
-          - name: '??_C@_0BA@CKAH@DestinationDirs?$AA@'
-            offset: "000001A4"            
-          - name: '??_C@_07FFBB@Strings?$AA@'
-            offset: "000001B4"            
-          - name: '??_C@_06JCDB@?$CF?$CF?$CFs?$CF?$CF?$AA@'
-            offset: "000001BC"            
-          - name: '??_C@_04JBBA@?$CC?$CFs?$CC?$AA@'
-            offset: "000001C4"            
-          - name: '??_C@_0N@HPDF@Copyfiles?4?$CFs?$AA@'
-            offset: "000001CA"            
-          - name: '??_C@_0O@EACA@Updateinis?4?$CFs?$AA@'
-            offset: "000001D8"            
-          - name: '??_C@_09IFNE@AddReg?4?$CFs?$AA@'
-            offset: "000001E6"            
-          - name: '??_C@_0P@NLGL@?0?5Copyfiles?4?$CFs?$AA@'
-            offset: "000001F0"            
-          - name: '??_C@_0BA@BIE@?0?5Updateinis?4?$CFs?$AA@'
-            offset: "00000200"            
-          - name: '??_C@_0M@NCCE@?0?5AddReg?4?$CFs?$AA@'
-            offset: "00000210"            
-          - name: '??_C@_09PGDB@CopyFiles?$AA@'
-            offset: "0000021C"            
-          - name: '??_C@_0L@POOM@Updateinis?$AA@'
-            offset: "00000226"            
-          - name: '??_C@_06IKJC@AddReg?$AA@'
-            offset: "00000232"            
-          - name: '??_C@_08LOIE@Software?$AA@'
-            offset: "0000023A"            
-          - name: '??_C@_01FBAH@1?$AA@'
-            offset: "00000244"            
-          - name: '??_C@_0FA@NMKJ@Software?2Microsoft?2Active?5Setup?2@'
-            offset: "00000246"            
-          - name: '??_C@_07MNFD@Version?$AA@'
-            offset: "00000296"            
-          - name: '??_C@_0M@ENIL@?$CFu?0?$CFu?0?$CFu?0?$CFu?$AA@'
-            offset: "0000029E"            
-          - name: '??_C@_08FNF@StubPath?$AA@'
-            offset: "000002AA"            
-          - name: '??_C@_0N@EJIA@rundll32?4exe?$AA@'
-            offset: "000002B4"            
-          - name: '??_C@_0CK@HHEC@shell32?4dll?0Control_RunDLL?5mmsys@'
-            offset: "000002C2"            
-          - name: '??_C@_01FCOA@?5?$AA@'
-            offset: "000002EC"            
-          - name: '??_C@_0O@IKHH@EnumPropPages?$AA@'
-            offset: "000002EE"            
-          - name: '??_C@_09BHKM@DevLoader?$AA@'
-            offset: "000002FC"            
-          - name: '??_C@_06LCIG@Driver?$AA@'
-            offset: "00000306"            
-          - name: '??_C@_0L@MNFF@NTMPDriver?$AA@'
-            offset: "0000030E"            
-          - name: '??_C@_0BC@NLBA@AssociatedFilters?$AA@'
-            offset: "0000031A"            
-          - name: '??_C@_04BKDP@FDMA?$AA@'
-            offset: "0000032C"            
-          - name: '??_C@_0BD@IFEJ@UnretainedSettings?$AA@'
-            offset: "00000332"            
-          - name: '??_C@_0L@CMJP@SubClasses?$AA@'
-            offset: "00000346"            
-          - name: '??_C@_0L@OEGH@NewDrivers?$AA@'
-            offset: "00000352"            
-          - name: '??_C@_00A@?$AA@'
-            offset: "0000035E"            
-          - name: '??_C@_0M@CAHD@AlsoInstall?$AA@'
-            offset: "00000360"            
-          - name: '??_C@_01KMAE@?0?$AA@'
-            offset: "0000036C"            
-          - name: '??_C@_02NDAK@?5?$CI?$AA@'
-            offset: "0000036E"            
-          - name: '??_C@_02HJJN@?5?$CJ?$AA@'
-            offset: "00000372"            
-          - name: '??_C@_0BL@DMCO@SetupPreferredAudioDevices?$AA@'
-            offset: "00000376"            
-          - name: '??_C@_0DA@KCKP@Software?2Microsoft?2Windows?2Curre@'
-            offset: "00000392"            
-          - name: '??_C@_07HFM@HWSetup?$AA@'
-            offset: "000003C2"            
-          - name: '??_C@_03IGFG@?5?0?7?$AA@'
-            offset: "000003CA"            
-          - name: '??_C@_09BBGE@?2INFBACK?2?$AA@'
-            offset: "000003CE"            
-          - name: '??_C@_07NKML@?2OTHER?2?$AA@'
-            offset: "000003D8"            
-          - name: '??_C@_07IHKF@strings?$AA@'
-            offset: "000003E0"            
-          - name: '??_C@_01BJG@?6?$AA@'
-            offset: "000003E8"            
-          - name: '??_C@_0BD@FGDD@?$CFs?4?$CFu?4?$CFu?4?$CFu?4?$CFu?4?$CFlu?$AA@'
-            offset: "000003EA"            
-          - name: '??_C@_07PMOP@drivers?$AA@'
-            offset: "000003FE"            
-          - name: '??_C@_0M@BKAA@update?4list?$AA@'
-            offset: "00000406"            
-          - name: '??_C@_0L@DFB@KnownFiles?$AA@'
-            offset: "00000412"            
-          - name: '??_C@_07IOPL@Default?$AA@'
-            offset: "0000041E"            
-          - name: '??_C@_04FFPF@HKCR?$AA@'
-            offset: "00000426"            
-          - name: '??_C@_04BA@HKCU?$AA@'
-            offset: "0000042C"            
-          - name: '??_C@_04CJNJ@HKLM?$AA@'
-            offset: "00000432"            
-          - name: '??_C@_03DNGK@HKU?$AA@'
-            offset: "00000438"            
-          - name: '??_C@_04FGBC@HKCC?$AA@'
-            offset: "0000043C"            
-          - name: '??_C@_03GIIP@HKR?$AA@'
-            offset: "00000442"            
-          - name: '??_C@_02GIEM@?0?5?$AA@'
-            offset: "00000446"            
-          - name: '??_C@_0BA@JMOP@KnownRegEntries?$AA@'
-            offset: "0000044A"            
-          - name: '??_C@_0L@KAFL@DriverDesc?$AA@'
-            offset: "0000045A"            
-          - name: '??_C@_0L@PKHD@InfSection?$AA@'
-            offset: "00000466"            
-          - name: '??_C@_07EGBM@InfPath?$AA@'
-            offset: "00000472"            
-          - name: '??_C@_0M@HCOO@drivers?4ddb?$AA@'
-            offset: "0000047A"            
-          - name: '??_C@_04JDOB@?$CFs?6?6?$AA@'
-            offset: "00000486"            
-          - name: '??_C@_04GNEN@?4VXD?$AA@'
-            offset: "0000048C"            
-          - name: '??_C@_04JNDO@?4SYS?$AA@'
-            offset: "00000492"            
-          - name: '_ghInstance'
-            offset: "00000C50"            
-          - name: '_IsMaintenanceMode'
-            offset: "00000C52"            
-          - name: '_SkipCopyIfFilePresent'
-            offset: "00000C54"            
+- version: system
+  tree:
+  - - ../allowins.c
+    - ../libinit.ASM
+    - lshl.asm
+    - ../mminstal.c
+    - ../selbest.c
+    - strchr.asm
+    - strcspn.asm
+    - strspn.asm
+    - strstr.asm
+    - strupr.asm
+    - Device Installed8You may have to restart Windows for your change to work.cSetup
+      has found a newer version of this driver and can install it now to get the best
+      performance.
+    - shell32.dll,Control_RunDLL mmsys.cpl,@0,S
+  segments:
+  - num: '1'
+    name: _TEXT
+    offset: 000011B0
+    symbols:
+    - name: LibEntry
+      processed: ''
+      offset: '00000000'
+    - name: WEP
+      processed: ''
+      offset: '00000021'
+    - name: _aszMRClassDrvr
+      processed: ''
+      offset: '000001E5'
+    - name: _aszMessageSvr
+      processed: ''
+      offset: 0000021F
+    - name: _aszConfigured
+      processed: ''
+      offset: '00000241'
+    - name: _aszDriverKey
+      processed: ''
+      offset: 0000024C
+    - name: _aszDriversSec
+      processed: ''
+      offset: 0000025A
+    - name: _aszJoyClass
+      processed: ''
+      offset: '00000262'
+    - name: _aszAuxClass
+      processed: ''
+      offset: 0000026B
+    - name: _aszMixerClass
+      processed: ''
+      offset: 0000026F
+    - name: _aszMidiClass
+      processed: ''
+      offset: '00000275'
+    - name: _aszWaveClass
+      processed: ''
+      offset: 0000027A
+    - name: _aszSWKey
+      processed: ''
+      offset: 0000027F
+    - name: _aszMediaType
+      processed: ''
+      offset: 0000028B
+    - name: _aszMediaResKey
+      processed: ''
+      offset: '00000295'
+    - name: _aszNewDrvKey
+      processed: ''
+      offset: 000002CC
+    - name: _aszNULL
+      processed: ''
+      offset: '00000315'
+    - name: _aszSection
+      processed: ''
+      offset: '00000316'
+    - name: LibMain
+      processed: ''
+      offset: '00000410'
+    - name: _MMInfDoUpdateInis
+      processed: ''
+      offset: '00000908'
+    - name: _MMInfDoAddReg
+      processed: ''
+      offset: '00000990'
+    - name: _MMInfDoCopyFiles
+      processed: ''
+      offset: 00000C76
+    - name: _MMGetDisksInfo
+      processed: ''
+      offset: 00000EB4
+    - name: MEDIA_CONVERTOLDINF
+      processed: ''
+      offset: 00000FEA
+    - name: MEDIA_SELECTDEVICE
+      processed: ''
+      offset: 0000134C
+    - name: INITDRVCONFIGINFO
+      processed: ''
+      offset: 0000139E
+    - name: CONFIGUREDRIVER
+      processed: ''
+      offset: 000013C6
+    - name: CONFIGURENEWDRIVERS
+      processed: ''
+      offset: '00001426'
+    - name: _ParseVersion
+      processed: ''
+      offset: 00001C18
+    - name: _PerUserSetupPreferredAudioDevices
+      processed: ''
+      offset: 00001D2A
+    - name: _SetupPreferredAudioDevices
+      processed: ''
+      offset: 00001E0C
+    - name: REMOVERING3REGENTRIES
+      processed: ''
+      offset: 000020DE
+    - name: REMOVEDEVICE
+      processed: ''
+      offset: '00002362'
+    - name: MEDIA_INSTALLSOFTWAREDEVICE
+      processed: ''
+      offset: '00002656'
+    - name: DIINSTALLDEVICEUICALLBACKPROC
+      processed: ''
+      offset: '00002766'
+    - name: MEDIA_INSTALLDEVICESECTION
+      processed: ''
+      offset: 0000284A
+    - name: _FindPathToOtherInf
+      processed: ''
+      offset: '00002930'
+    - name: MEDIA_INSTALLOTHERDEVICES
+      processed: ''
+      offset: 000029B6
+    - name: MEDIA_INSTALLHARDWAREDEVICE
+      processed: ''
+      offset: 00002ABA
+    - name: MEDIATYPEISSOFTWARE
+      processed: ''
+      offset: 00002C3C
+    - name: MEDIA_INSTALLDEVICE
+      processed: ''
+      offset: 00002C7A
+    - name: CLASSINSTALL
+      processed: ''
+      offset: 00002CE8
+    - name: __aFlshl
+      processed: ''
+      offset: 00002DA4
+    - name: __fstrchr
+      processed: ''
+      offset: 00002DB0
+    - name: __fstrupr
+      processed: ''
+      offset: 00002DE2
+    - name: __fstrcspn
+      processed: ''
+      offset: '00002E06'
+    - name: __fstrspn
+      processed: ''
+      offset: '00002E62'
+    - name: __fstrstr
+      processed: ''
+      offset: 00002EBE
+  - num: '2'
+    name: ALLOWINS_TEXT
+    offset: '00001990'
+    symbols:
+    - name: FILEEXISTS
+      processed: ''
+      offset: '00000074'
+    - name: MYSTRTOK
+      processed: ''
+      offset: '00000098'
+    - name: _LPSTRtoDWORD
+      processed: ''
+      offset: 0000012E
+    - name: FILENAMEFROMPATH
+      processed: ''
+      offset: 000001A0
+    - name: _GetFileVersion
+      processed: ''
+      offset: 000001F6
+    - name: ISINFSHIPPEDWITHWINDOWS
+      processed: ''
+      offset: 000002EA
+    - name: _FindPathToInf
+      processed: ''
+      offset: '00000482'
+    - name: _ProcessDDBKey
+      processed: ''
+      offset: '00000532'
+    - name: _GetUpgradeWarningFromDDB
+      processed: ''
+      offset: '00000680'
+    - name: _SearchDDB
+      processed: ''
+      offset: '00000738'
+    - name: GETUPGRADEWARNINGSENUM
+      processed: ''
+      offset: '00000914'
+    - name: _IsInRegistry
+      processed: ''
+      offset: '00000986'
+    - name: _RegTestsTrue
+      processed: ''
+      offset: 00000D06
+    - name: _ProcessKnownRegSection
+      processed: ''
+      offset: 00000DD6
+    - name: SEARCHINFREGWARNINGS
+      processed: ''
+      offset: 00000EAA
+    - name: GETUPGRADEWARNINGS
+      processed: ''
+      offset: 00000F22
+    - name: GETEXISTINGDRIVERINFO
+      processed: ''
+      offset: '00001076'
+    - name: GETNEWDRIVERINFO
+      processed: ''
+      offset: 000011DE
+    - name: INITDRVUPGRADEINFO
+      processed: ''
+      offset: 0000123E
+    - name: ALLOWDRIVERINSTALL
+      processed: ''
+      offset: 000012B2
+  - num: '3'
+    name: SELBEST_TEXT
+    offset: 00001C40
+    symbols:
+    - name: GETDRIVERTYPEENUM
+      processed: ''
+      offset: '00000034'
+    - name: _GetDriverType
+      processed: ''
+      offset: 000000C8
+    - name: BETTERDRIVER
+      processed: ''
+      offset: 000001BE
+    - name: _GetExistingDriverMatchParams
+      processed: ''
+      offset: 000002CC
+    - name: PICKBESTDRIVER
+      processed: ''
+      offset: '00000394'
+    - name: SELECTBESTCOMPATDRV
+      processed: ''
+      offset: '000004E4'
+  - num: '4'
+    name: DGROUP
+    offset: '00000000'
+    symbols:
+    - name: rsrvptrs
+      processed: ''
+      offset: '00000006'
+    - name: pLocalHeap
+      processed: ''
+      offset: '00000006'
+    - name: pAtomTable
+      processed: ''
+      offset: '00000008'
+    - name: pStackTop
+      processed: ''
+      offset: 0000000A
+    - name: pStackMin
+      processed: ''
+      offset: 0000000C
+    - name: pStackBot
+      processed: ''
+      offset: 0000000E
+    - name: ?szSTExecFmt@?2??SysTray_EnableService@@9@9
+      processed: "`SysTray_EnableService'::`3'::szSTExecFmt"
+      offset: 0000001C
+    - name: ??_C@_0BA@MAHH@SystemTray_Main?$AA@
+      processed: "`string'"
+      offset: 0000002C
+    - name: ??_C@_0BP@HPJI@system?4ini?0386Enh?0?0?$CCdevice?$DN?$CFs?$CC?$AA@
+      processed: "`string'"
+      offset: 0000003C
+    - name: ??_C@_04IBCE@?$FLMCI?$AA@
+      processed: "`string'"
+      offset: 0000005C
+    - name: ??_C@_03MFOG@MCI?$AA@
+      processed: "`string'"
+      offset: '00000062'
+    - name: ??_C@_01PCFE@?2?$AA@
+      processed: "`string'"
+      offset: '00000066'
+    - name: ??_C@_04PLDJ@Wave?$AA@
+      processed: "`string'"
+      offset: '00000068'
+    - name: ??_C@_04CCOG@MIDI?$AA@
+      processed: "`string'"
+      offset: 0000006E
+    - name: ??_C@_05JHOC@Mixer?$AA@
+      processed: "`string'"
+      offset: '00000074'
+    - name: ??_C@_03IEAK@Aux?$AA@
+      processed: "`string'"
+      offset: 0000007A
+    - name: ??_C@_08GCCE@Joystick?$AA@
+      processed: "`string'"
+      offset: 0000007E
+    - name: ??_C@_07NGLM@MSVIDEO?$AA@
+      processed: "`string'"
+      offset: '00000088'
+    - name: ??_C@_0L@LLFA@WaveMapper?$AA@
+      processed: "`string'"
+      offset: '00000090'
+    - name: ??_C@_0L@OIOM@MidiMapper?$AA@
+      processed: "`string'"
+      offset: 0000009C
+    - name: ??_C@_06LFAG@MAPPER?$AA@
+      processed: "`string'"
+      offset: 000000A8
+    - name: ??_C@_04DDDH@VIDC?$AA@
+      processed: "`string'"
+      offset: 000000B0
+    - name: ??_C@_04JKEH@VIDS?$AA@
+      processed: "`string'"
+      offset: 000000B6
+    - name: ??_C@_03CHOA@ICM?$AA@
+      processed: "`string'"
+      offset: 000000BC
+    - name: ??_C@_05PBMJ@MSACM?$AA@
+      processed: "`string'"
+      offset: 000000C0
+    - name: ??_C@_03LHFF@ACM?$AA@
+      processed: "`string'"
+      offset: 000000C6
+    - name: ??_C@_07CNPM@UNKNOWN?$AA@
+      processed: "`string'"
+      offset: 000000CA
+    - name: ??_C@_0L@MEGC@HKLM?0?$CFs?0?0?0?$AA@
+      processed: "`string'"
+      offset: 000000D2
+    - name: ??_C@_0BF@JNLF@HKLM?0?$CFs?0Driver?0?0?$CC?$CFs?$CC?$AA@
+      processed: "`string'"
+      offset: 000000DE
+    - name: ??_C@_0BK@LJDG@HKLM?0?$CFs?0Description?0?0?$CC?$CFs?$CC?$AA@
+      processed: "`string'"
+      offset: 000000F4
+    - name: ??_C@_0BJ@NJDM@HKLM?0?$CFs?0Parameters?0?0?$CC?$CFs?$CC?$AA@
+      processed: "`string'"
+      offset: 0000010E
+    - name: ??_C@_0BB@PMCK@SourceDisksFiles?$AA@
+      processed: "`string'"
+      offset: '00000128'
+    - name: ??_C@_05IPJG@?$CFs?3?$CFs?$AA@
+      processed: "`string'"
+      offset: 0000013A
+    - name: ??_C@_02MECO@?$CFd?$AA@
+      processed: "`string'"
+      offset: '00000140'
+    - name: ??_C@_0M@BHNN@?$CFs?5?$DN?5?$CFs?0?$CFs?0?$AA@
+      processed: "`string'"
+      offset: '00000144'
+    - name: ??_C@_05DMPF@disks?$AA@
+      processed: "`string'"
+      offset: '00000150'
+    - name: ??_C@_08NKAM@oemdisks?$AA@
+      processed: "`string'"
+      offset: '00000156'
+    - name: ??_C@_07PCHH@Unknown?$AA@
+      processed: "`string'"
+      offset: '00000160'
+    - name: ??_C@_08FKFA@Provider?$AA@
+      processed: "`string'"
+      offset: '00000168'
+    - name: ??_C@_07BPOH@version?$AA@
+      processed: "`string'"
+      offset: '00000172'
+    - name: ??_C@_07PCHH@OldDrvs?$AA@
+      processed: "`string'"
+      offset: 0000017A
+    - name: ??_C@_0N@NONH@Manufacturer?$AA@
+      processed: "`string'"
+      offset: '00000182'
+    - name: ??_C@_02PIFG@11?$AA@
+      processed: "`string'"
+      offset: '00000190'
+    - name: ??_C@_0P@KHII@DefaultDestDir?$AA@
+      processed: "`string'"
+      offset: '00000194'
+    - name: ??_C@_0BA@CKAH@DestinationDirs?$AA@
+      processed: "`string'"
+      offset: 000001A4
+    - name: ??_C@_07FFBB@Strings?$AA@
+      processed: "`string'"
+      offset: 000001B4
+    - name: ??_C@_06JCDB@?$CF?$CF?$CFs?$CF?$CF?$AA@
+      processed: "`string'"
+      offset: 000001BC
+    - name: ??_C@_04JBBA@?$CC?$CFs?$CC?$AA@
+      processed: "`string'"
+      offset: 000001C4
+    - name: ??_C@_0N@HPDF@Copyfiles?4?$CFs?$AA@
+      processed: "`string'"
+      offset: 000001CA
+    - name: ??_C@_0O@EACA@Updateinis?4?$CFs?$AA@
+      processed: "`string'"
+      offset: 000001D8
+    - name: ??_C@_09IFNE@AddReg?4?$CFs?$AA@
+      processed: "`string'"
+      offset: '000001E6'
+    - name: ??_C@_0P@NLGL@?0?5Copyfiles?4?$CFs?$AA@
+      processed: "`string'"
+      offset: 000001F0
+    - name: ??_C@_0BA@BIE@?0?5Updateinis?4?$CFs?$AA@
+      processed: "`string'"
+      offset: '00000200'
+    - name: ??_C@_0M@NCCE@?0?5AddReg?4?$CFs?$AA@
+      processed: "`string'"
+      offset: '00000210'
+    - name: ??_C@_09PGDB@CopyFiles?$AA@
+      processed: "`string'"
+      offset: 0000021C
+    - name: ??_C@_0L@POOM@Updateinis?$AA@
+      processed: "`string'"
+      offset: '00000226'
+    - name: ??_C@_06IKJC@AddReg?$AA@
+      processed: "`string'"
+      offset: '00000232'
+    - name: ??_C@_08LOIE@Software?$AA@
+      processed: "`string'"
+      offset: 0000023A
+    - name: ??_C@_01FBAH@1?$AA@
+      processed: "`string'"
+      offset: '00000244'
+    - name: ??_C@_0FA@NMKJ@Software?2Microsoft?2Active?5Setup?2@
+      processed: "`string'"
+      offset: '00000246'
+    - name: ??_C@_07MNFD@Version?$AA@
+      processed: "`string'"
+      offset: '00000296'
+    - name: ??_C@_0M@ENIL@?$CFu?0?$CFu?0?$CFu?0?$CFu?$AA@
+      processed: "`string'"
+      offset: 0000029E
+    - name: ??_C@_08FNF@StubPath?$AA@
+      processed: "`string'"
+      offset: 000002AA
+    - name: ??_C@_0N@EJIA@rundll32?4exe?$AA@
+      processed: "`string'"
+      offset: 000002B4
+    - name: ??_C@_0CK@HHEC@shell32?4dll?0Control_RunDLL?5mmsys@
+      processed: "`string'"
+      offset: 000002C2
+    - name: ??_C@_01FCOA@?5?$AA@
+      processed: "`string'"
+      offset: 000002EC
+    - name: ??_C@_0O@IKHH@EnumPropPages?$AA@
+      processed: "`string'"
+      offset: 000002EE
+    - name: ??_C@_09BHKM@DevLoader?$AA@
+      processed: "`string'"
+      offset: 000002FC
+    - name: ??_C@_06LCIG@Driver?$AA@
+      processed: "`string'"
+      offset: '00000306'
+    - name: ??_C@_0L@MNFF@NTMPDriver?$AA@
+      processed: "`string'"
+      offset: 0000030E
+    - name: ??_C@_0BC@NLBA@AssociatedFilters?$AA@
+      processed: "`string'"
+      offset: 0000031A
+    - name: ??_C@_04BKDP@FDMA?$AA@
+      processed: "`string'"
+      offset: 0000032C
+    - name: ??_C@_0BD@IFEJ@UnretainedSettings?$AA@
+      processed: "`string'"
+      offset: '00000332'
+    - name: ??_C@_0L@CMJP@SubClasses?$AA@
+      processed: "`string'"
+      offset: '00000346'
+    - name: ??_C@_0L@OEGH@NewDrivers?$AA@
+      processed: "`string'"
+      offset: '00000352'
+    - name: ??_C@_00A@?$AA@
+      processed: "`string'"
+      offset: 0000035E
+    - name: ??_C@_0M@CAHD@AlsoInstall?$AA@
+      processed: "`string'"
+      offset: '00000360'
+    - name: ??_C@_01KMAE@?0?$AA@
+      processed: "`string'"
+      offset: 0000036C
+    - name: ??_C@_02NDAK@?5?$CI?$AA@
+      processed: "`string'"
+      offset: 0000036E
+    - name: ??_C@_02HJJN@?5?$CJ?$AA@
+      processed: "`string'"
+      offset: '00000372'
+    - name: ??_C@_0BL@DMCO@SetupPreferredAudioDevices?$AA@
+      processed: "`string'"
+      offset: '00000376'
+    - name: ??_C@_0DA@KCKP@Software?2Microsoft?2Windows?2Curre@
+      processed: "`string'"
+      offset: '00000392'
+    - name: ??_C@_07HFM@HWSetup?$AA@
+      processed: "`string'"
+      offset: 000003C2
+    - name: ??_C@_03IGFG@?5?0?7?$AA@
+      processed: "`string'"
+      offset: 000003CA
+    - name: ??_C@_09BBGE@?2INFBACK?2?$AA@
+      processed: "`string'"
+      offset: 000003CE
+    - name: ??_C@_07NKML@?2OTHER?2?$AA@
+      processed: "`string'"
+      offset: 000003D8
+    - name: ??_C@_07IHKF@strings?$AA@
+      processed: "`string'"
+      offset: '000003E0'
+    - name: ??_C@_01BJG@?6?$AA@
+      processed: "`string'"
+      offset: '000003E8'
+    - name: ??_C@_0BD@FGDD@?$CFs?4?$CFu?4?$CFu?4?$CFu?4?$CFu?4?$CFlu?$AA@
+      processed: "`string'"
+      offset: 000003EA
+    - name: ??_C@_07PMOP@drivers?$AA@
+      processed: "`string'"
+      offset: 000003FE
+    - name: ??_C@_0M@BKAA@update?4list?$AA@
+      processed: "`string'"
+      offset: '00000406'
+    - name: ??_C@_0L@DFB@KnownFiles?$AA@
+      processed: "`string'"
+      offset: '00000412'
+    - name: ??_C@_07IOPL@Default?$AA@
+      processed: "`string'"
+      offset: 0000041E
+    - name: ??_C@_04FFPF@HKCR?$AA@
+      processed: "`string'"
+      offset: '00000426'
+    - name: ??_C@_04BA@HKCU?$AA@
+      processed: "`string'"
+      offset: 0000042C
+    - name: ??_C@_04CJNJ@HKLM?$AA@
+      processed: "`string'"
+      offset: '00000432'
+    - name: ??_C@_03DNGK@HKU?$AA@
+      processed: "`string'"
+      offset: '00000438'
+    - name: ??_C@_04FGBC@HKCC?$AA@
+      processed: "`string'"
+      offset: 0000043C
+    - name: ??_C@_03GIIP@HKR?$AA@
+      processed: "`string'"
+      offset: '00000442'
+    - name: ??_C@_02GIEM@?0?5?$AA@
+      processed: "`string'"
+      offset: '00000446'
+    - name: ??_C@_0BA@JMOP@KnownRegEntries?$AA@
+      processed: "`string'"
+      offset: 0000044A
+    - name: ??_C@_0L@KAFL@DriverDesc?$AA@
+      processed: "`string'"
+      offset: 0000045A
+    - name: ??_C@_0L@PKHD@InfSection?$AA@
+      processed: "`string'"
+      offset: '00000466'
+    - name: ??_C@_07EGBM@InfPath?$AA@
+      processed: "`string'"
+      offset: '00000472'
+    - name: ??_C@_0M@HCOO@drivers?4ddb?$AA@
+      processed: "`string'"
+      offset: 0000047A
+    - name: ??_C@_04JDOB@?$CFs?6?6?$AA@
+      processed: "`string'"
+      offset: '00000486'
+    - name: ??_C@_04GNEN@?4VXD?$AA@
+      processed: "`string'"
+      offset: 0000048C
+    - name: ??_C@_04JNDO@?4SYS?$AA@
+      processed: "`string'"
+      offset: '00000492'
+    - name: _ghInstance
+      processed: ''
+      offset: 00000C50
+    - name: _IsMaintenanceMode
+      processed: ''
+      offset: 00000C52
+    - name: _SkipCopyIfFilePresent
+      processed: ''
+      offset: 00000C54

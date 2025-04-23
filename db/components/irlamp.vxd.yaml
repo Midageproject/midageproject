@@ -1,821 +1,1245 @@
-filename: "irlamp.vxd"
+filename: irlamp.vxd
 #TODO: bring up more details from symdeb
-binary: "irlamp.vxd"
-description: ""
-note: ""
+binary: IRLAMP
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_LGROUP"
-        offset: "00003C30"
-        symbols:
-          - name: 'IRLAMP_Control'
-            offset: "00000000"            
-          - name: '_IRLAMP_Register'
-            offset: "0000003A"            
-          - name: '_VTD_Get_Date_And_Time'
-            offset: "00000040"            
-          - name: '_VTD_GetRealTime'
-            offset: "00000046"            
-          - name: '_InitializeW32Event'
-            offset: "0000004C"            
-          - name: '_SetW32Event'
-            offset: "0000006F"            
-          - name: '_ClearW32Event'
-            offset: "00000081"            
-          - name: '_ResetW32Event'
-            offset: "0000008C"            
-          - name: '_PulseW32Event'
-            offset: "0000009B"            
-          - name: '_WaitSingleObject'
-            offset: "000000AA"            
-          - name: '_CreateR0Thread'
-            offset: "000000C4"            
-          - name: '_LM_IoCtl'
-            offset: "000000E5"            
-          - name: '_DebugPrintf'
-            offset: "000000FE"            
-          - name: 'the_idtr'
-            offset: "0000011B"            
-          - name: 'old_desc'
-            offset: "00000123"            
-          - name: 'our_idt'
-            offset: "0000012B"            
-          - name: 'DbgLogSystemMessage'
-            offset: "00000133"            
-          - name: '_InitThreadExLock'
-            offset: "00000160"            
-          - name: '_FreeThreadExLock'
-            offset: "000001AC"            
-          - name: '_EnterThreadExLock'
-            offset: "000001DC"            
-          - name: '_LeaveThreadExLock'
-            offset: "00000220"            
-          - name: '_IrLapInit'
-            offset: "00000285"            
-          - name: '_IRLAP_InitializeWrapper'
-            offset: "0000058D"            
-          - name: '_IRLAP_DeinitializeWrapper'
-            offset: "000005EB"            
-          - name: '_IRLAP_AllocatePort'
-            offset: "0000061C"            
-          - name: '_IRLAP_DeallocatePort'
-            offset: "00000709"            
-          - name: '_IRLAP_SendUnitData'
-            offset: "0000073B"            
-          - name: '_IRLAP_MediaBusy'
-            offset: "00000838"            
-          - name: '_IRLAP_Sniff'
-            offset: "00000853"            
-          - name: '_IrLapSniffTimerFunc'
-            offset: "000008FB"            
-          - name: '_IrLapGetDispatchBuffer'
-            offset: "0000096F"            
-          - name: '_IrLapFinishDispatchBuffer'
-            offset: "00000A90"            
-          - name: '_RecordDebugRx'
-            offset: "00000B1D"            
-          - name: '_IrLapDispatchBuffers'
-            offset: "00000B9D"            
-          - name: '_CheckAddress'
-            offset: "00000E0F"            
-          - name: '_IrLapAllocateTxPacket'
-            offset: "00001004"            
-          - name: '_IrLapFreeTxPacket'
-            offset: "00001146"            
-          - name: '_IrLapGetProcessPacket'
-            offset: "00001249"            
-          - name: '_IrLapFinishProcessPacket'
-            offset: "0000131F"            
-          - name: '_IrLapProcessTxPackets'
-            offset: "00001345"            
-          - name: '_RecordDebugTx'
-            offset: "00001409"            
-          - name: '_SendCompleteDpc'
-            offset: "00001472"            
-          - name: '_IRLAPFRM_Send'
-            offset: "00001491"            
-          - name: '_IrLapErrorHandler'
-            offset: "000014E4"            
-          - name: '_IrLapState_NDM'
-            offset: "00001536"            
-          - name: '_IrLapMediaChangeHandler'
-            offset: "00001969"            
-          - name: '_IrLapNextState_NDM'
-            offset: "00001980"            
-          - name: '_memCopy'
-            offset: "00001A1F"            
-          - name: '_zeroMemory'
-            offset: "00001A62"            
-          - name: '_IrLapGenerateDeviceAddress'
-            offset: "00001A96"            
-          - name: '_IrdaRand'
-            offset: "00001ACF"            
-          - name: '_IrLapSendDMRsp'
-            offset: "00001B09"            
-          - name: '_IrLapSendTest'
-            offset: "00001B5E"            
-          - name: '_IRLAMP_DebugQuery@0'
-            offset: "00001CBE"            
-          - name: '_InitEventMutex'
-            offset: "00001CE8"            
-          - name: '_FreeEventMutex'
-            offset: "00001D2A"            
-          - name: '_EnterEventMutex'
-            offset: "00001D5A"            
-          - name: '_LeaveEventMutex'
-            offset: "00001DB6"            
-          - name: '_RecordDebugEvent'
-            offset: "00001DF2"            
-          - name: '_PutEventRecord'
-            offset: "00001E49"            
-          - name: '_GetEventRecord'
-            offset: "00001F0E"            
-          - name: '_Win32ThreadFunc'
-            offset: "00001FBE"            
-          - name: '_IrLapStartTimer'
-            offset: "00002126"            
-          - name: '_IrLapEventProc'
-            offset: "000021AA"            
-          - name: '_IrLapTimerFunc'
-            offset: "000021F6"            
-          - name: '_IrLapDisableTimers'
-            offset: "0000224A"            
-          - name: '_IrLapTimerHandler'
-            offset: "000022DC"            
-          - name: '_MinTimerPeriod'
-            offset: "0000232F"            
-          - name: '_DetermineTimerPeriod'
-            offset: "00002396"            
-          - name: '_AdjustTimerPeriod'
-            offset: "00002435"            
-          - name: '_LmStartTimer'
-            offset: "00002479"            
-          - name: '_LmCancelTimer'
-            offset: "0000259B"            
-          - name: '_IRLAP_DiscoverDevices'
-            offset: "00002620"            
-          - name: '_IrLapState_QUERY'
-            offset: "000027B1"            
-          - name: '_IrLapState_REPLY'
-            offset: "000029AC"            
-          - name: '_GetRxDiscoveryInfo'
-            offset: "00002B3F"            
-          - name: '_IrLapSendBOS'
-            offset: "00002C0B"            
-          - name: '_IrLapRxDiscoveryAction'
-            offset: "00002C95"            
-          - name: '_IrLapSendXIDDiscovery'
-            offset: "00002E74"            
-          - name: '_AcquireListsMutex'
-            offset: "00003018"            
-          - name: '_InitListData'
-            offset: "000030A2"            
-          - name: '_FreeListData'
-            offset: "000030E4"            
-          - name: '_InitListHead'
-            offset: "00003114"            
-          - name: '_InsertTailList'
-            offset: "00003143"            
-          - name: '_RemoveHeadList'
-            offset: "00003228"            
-          - name: '_RemoveEntryList'
-            offset: "0000331A"            
-          - name: '_InsertHeadList'
-            offset: "000033D6"            
-          - name: '_IsNodeOnList'
-            offset: "000034C2"            
-          - name: '_IsListCircular'
-            offset: "00003559"            
-          - name: '_DbgLogListAction'
-            offset: "0000360C"            
-          - name: '_DbgRecordList'
-            offset: "00003834"            
-          - name: '_IRLAP_Connect'
-            offset: "00003954"            
-          - name: '_IRLAP_ConnectResp'
-            offset: "00003AE8"            
-          - name: '_IrLapState_SETUP'
-            offset: "00003BA1"            
-          - name: '_IrLapState_SSETUP'
-            offset: "00003F14"            
-          - name: '_IrLapState_SETUP2'
-            offset: "00004044"            
-          - name: '_IrLapState_CONN'
-            offset: "0000411F"            
-          - name: '_IrLapState_CONN2'
-            offset: "0000423B"            
-          - name: '_DisconnectIndic'
-            offset: "00004277"            
-          - name: '_IrLapRxConnectAction'
-            offset: "000042F7"            
-          - name: '_InitConnection'
-            offset: "000043E1"            
-          - name: '_FinishConnection'
-            offset: "0000491C"            
-          - name: '_InitCurConnection'
-            offset: "00004986"            
-          - name: '_CalculateCapacity'
-            offset: "000049F7"            
-          - name: '_ScanBits'
-            offset: "00004A8A"            
-          - name: '_SetConnectionParameters'
-            offset: "00004ADD"            
-          - name: '_AdjustNegotiationParms'
-            offset: "00004C3F"            
-          - name: '_GenRandomConnectAddr'
-            offset: "00004D7A"            
-          - name: '_GenRandomBackoff'
-            offset: "00004E53"            
-          - name: '_ParseConnectionParms'
-            offset: "00004E8E"            
-          - name: '_FillNegParms'
-            offset: "00004F5F"            
-          - name: '_IrLapSendSNRM'
-            offset: "00005066"            
-          - name: '_IrLapSendUA'
-            offset: "0000511E"            
-          - name: '_IRLAP_SendData'
-            offset: "000051D8"            
-          - name: '_IRLAP_Disconnect'
-            offset: "000053CE"            
-          - name: '_InitPollTimer'
-            offset: "000054FA"            
-          - name: '_IrLapSetStateNRM'
-            offset: "0000559E"            
-          - name: '_IrLapState_NRM'
-            offset: "00005632"            
-          - name: '_IrLapConState_XMIT'
-            offset: "000056CA"            
-          - name: '_IrLapConState_RECV_P'
-            offset: "000059AA"            
-          - name: '_IrLapConState_RECV_S'
-            offset: "00005BEC"            
-          - name: '_IrLapConState_PCLOSE_P'
-            offset: "00005D9C"            
-          - name: '_IrLapConState_PCLOSE_S'
-            offset: "00005F41"            
-          - name: '_IrLapConState_PCLOSE_S2'
-            offset: "00006156"            
-          - name: '_IrLapConState_ERROR_P'
-            offset: "000061CA"            
-          - name: '_IrLapConState_ERROR_S'
-            offset: "000062DE"            
-          - name: '_NextStateRECV'
-            offset: "000064A2"            
-          - name: '_NextStateXMIT'
-            offset: "000065C5"            
-          - name: '_CheckProgress'
-            offset: "00006683"            
-          - name: '_CheckRemoteBusy'
-            offset: "00006855"            
-          - name: '_Disconnect'
-            offset: "00006A3C"            
-          - name: '_ValidNR'
-            offset: "00006AF9"            
-          - name: '_ProcessNR'
-            offset: "00006BC6"            
-          - name: '_SendData'
-            offset: "00006DCC"            
-          - name: '_PutBackUnackedFrames'
-            offset: "00006FBF"            
-          - name: '_SendSelectedFrame'
-            offset: "000071C1"            
-          - name: '_SendIFrames'
-            offset: "000072DA"            
-          - name: '_SendUIFrames'
-            offset: "000075A7"            
-          - name: '_ReleaseBufferedData'
-            offset: "00007807"            
-          - name: '_ProcessConnectionEnd'
-            offset: "00007A57"            
-          - name: '_HandleInvalidFrame'
-            offset: "00007BF2"            
-          - name: '_HandleUFrame'
-            offset: "00007DD6"            
-          - name: '_HandleIFrame'
-            offset: "000080FD"            
-          - name: '_HandleSFrame'
-            offset: "00008294"            
-          - name: '_HandleFTimer'
-            offset: "000083DD"            
-          - name: '_Between'
-            offset: "000084CD"            
-          - name: '_IrLapSendSUFrame'
-            offset: "0000855A"            
-          - name: '_IrLapSendUAFrame'
-            offset: "000086A8"            
-          - name: '_IrLapFrmInit'
-            offset: "000087A0"            
-          - name: '_LM_AllocateMemory'
-            offset: "00008800"            
-          - name: '_IRLAMPEX_Init'
-            offset: "00008905"            
-          - name: '_IRLAMP_Dynamic_Shutdown@0'
-            offset: "00008949"            
-          - name: '_IRLAMP_Dynamic_Exit@0'
-            offset: "000089A4"            
-          - name: '_LMI_GetMediaFlag'
-            offset: "00008A4B"            
-          - name: '_LMI_GetSpeed'
-            offset: "00008A72"            
-          - name: '_LMI_SetMaxSpeed'
-            offset: "00008A91"            
-          - name: '_LmCheckPtr'
-            offset: "00008AB3"            
-          - name: '_IRLAP_AbortPackets'
-            offset: "00008AF0"            
-          - name: '_AbortUnackedList'
-            offset: "00008CF8"            
-          - name: '_AbortState'
-            offset: "00008E3F"            
-          - name: '_LM_Startup'
-            offset: "00008EE8"            
-          - name: '_LM_Shutdown'
-            offset: "000090EB"            
-          - name: '_LM_InitClient'
-            offset: "0000915E"            
-          - name: '_LM_AddIncoming'
-            offset: "000091BB"            
-          - name: '_LM_RemoveIncoming'
-            offset: "0000927D"            
-          - name: '_LM_BindClient'
-            offset: "00009362"            
-          - name: '_LM_UnBindClient'
-            offset: "0000958B"            
-          - name: '_LM_DiscoveryReq'
-            offset: "0000975A"            
-          - name: '_LM_ConnectReq'
-            offset: "0000981B"            
-          - name: '_LM_ConnectRsp'
-            offset: "00009A59"            
-          - name: '_LM_DisconnectReq'
-            offset: "00009B3D"            
-          - name: '_LM_Idle'
-            offset: "00009CC4"            
-          - name: '_LM_DeviceStatus'
-            offset: "00009D44"            
-          - name: '_LM_StatusReq'
-            offset: "00009DEC"            
-          - name: '_LM_ReceiveData'
-            offset: "00009EA2"            
-          - name: '_LM_DataReq'
-            offset: "00009EEF"            
-          - name: '_LM_UDataReq'
-            offset: "00009F48"            
-          - name: '_LM_NoConnectDataReq'
-            offset: "00009FA1"            
-          - name: '_LM_GetIrLapFrmStats'
-            offset: "0000A0B0"            
-          - name: '_LM_GetDeviceStats'
-            offset: "0000A0FC"            
-          - name: '_LM_GetDiscoveryCache'
-            offset: "0000A183"            
-          - name: '_LM_SetNickname'
-            offset: "0000A1D1"            
-          - name: '_LM_SetHints'
-            offset: "0000A268"            
-          - name: '_LM_Sniff'
-            offset: "0000A313"            
-          - name: '_LM_PeriodicDiscovery'
-            offset: "0000A36A"            
-          - name: '_LM_GetPeriodicDiscoveryPeriod'
-            offset: "0000A482"            
-          - name: '_LM_LocalBusy'
-            offset: "0000A4C8"            
-          - name: '_LM_AbortConnection'
-            offset: "0000A53E"            
-          - name: '_LmFindCacheConflicts'
-            offset: "0000A5CC"            
-          - name: '_LmRemoveCacheConflicts'
-            offset: "0000A77A"            
-          - name: '_LmAddDeviceToCache'
-            offset: "0000A887"            
-          - name: '_LmValidClientForConnection'
-            offset: "0000A934"            
-          - name: '_LmGiveStatusIndication'
-            offset: "0000A99B"            
-          - name: '_LmDisconnectPendingConnections'
-            offset: "0000AA1E"            
-          - name: '_LmStartIrLapConnection'
-            offset: "0000AB2B"            
-          - name: '_LmFindIcc'
-            offset: "0000ABB0"            
-          - name: '_LmFindIdleIcc'
-            offset: "0000AC68"            
-          - name: '_LmProcessConnectResponse'
-            offset: "0000AD38"            
-          - name: '_LmProcessConnectCommand'
-            offset: "0000AE21"            
-          - name: '_LmProcessDisconnectCommand'
-            offset: "0000AFD0"            
-          - name: '_LmProcessAccessModeCommand'
-            offset: "0000B0EC"            
-          - name: '_LmSendDisconnect'
-            offset: "0000B1BB"            
-          - name: '_LmSetWatchDogTime'
-            offset: "0000B2C7"            
-          - name: '_LmClearWatchDogTime'
-            offset: "0000B2D2"            
-          - name: '_LmValidatePacket'
-            offset: "0000B2DD"            
-          - name: '_LmUpdateXidInfo'
-            offset: "0000B3BD"            
-          - name: '_LmInitCallbacks'
-            offset: "0000B490"            
-          - name: '_IrLapDiscoverConf'
-            offset: "0000B540"            
-          - name: '_IrLapDiscoverIndic'
-            offset: "0000B6A1"            
-          - name: '_IrLapConnectConf'
-            offset: "0000B754"            
-          - name: '_IrlapConnectIndic'
-            offset: "0000B7AA"            
-          - name: '_IrLapDisconIndic'
-            offset: "0000B861"            
-          - name: '_IrLapSendHandler'
-            offset: "0000BABD"            
-          - name: '_IrLapDataIndic'
-            offset: "0000BBA6"            
-          - name: '_IrLapUnitDataHand'
-            offset: "0000BE25"            
-          - name: '_IrLapUnitDataIndic'
-            offset: "0000BE50"            
-          - name: '_IrLapStatusIndic'
-            offset: "0000BF11"            
-          - name: '_IrLmpErrorHandler'
-            offset: "0000BF7C"            
-          - name: '_LmIasInitClient'
-            offset: "0000BFD8"            
-          - name: '_LMIAS_ClientRequest'
-            offset: "0000C1FE"            
-          - name: '_LmIasClientStatusInd'
-            offset: "0000C42B"            
-          - name: '_LmIasClientConnectCnf'
-            offset: "0000C45B"            
-          - name: '_LmIasClientDisconnectInd'
-            offset: "0000C4DB"            
-          - name: '_LmIasClientDataInd'
-            offset: "0000C58D"            
-          - name: '_LmIasClientPacketHandled'
-            offset: "0000C5DC"            
-          - name: '_LmIasClientState_Calling'
-            offset: "0000C6A1"            
-          - name: '_LmIasClientState_Outstanding'
-            offset: "0000C720"            
-          - name: '_LmIasClientErrorHandler'
-            offset: "0000C83D"            
-          - name: '_LmIasFindConnect'
-            offset: "0000C848"            
-          - name: '_LmIasStartNewConnection'
-            offset: "0000C900"            
-          - name: '_LmIasFindIdleConnection'
-            offset: "0000CB1B"            
-          - name: '_LmIasDisconnectPendingConnections'
-            offset: "0000CC2E"            
-          - name: '_LmIasStartOperation'
-            offset: "0000CD1C"            
-          - name: '_LmIasFindPendingToken'
-            offset: "0000CDF3"            
-          - name: '_LmIasEndOperation'
-            offset: "0000CE8E"            
-          - name: '_LmIasClientSendCommand'
-            offset: "0000CEA6"            
-          - name: '_LmIasSetTokenTime'
-            offset: "0000D00C"            
-          - name: '_LmIasProcessWaitingOpers'
-            offset: "0000D04E"            
-          - name: '_LmIasClientTimerFunc'
-            offset: "0000D116"            
-          - name: '_LmIasClientDiscTimerFunc'
-            offset: "0000D1CE"            
-          - name: '_LmIasClientWdTimerFunc'
-            offset: "0000D22E"            
-          - name: '_LmIasSendAck'
-            offset: "0000D2C8"            
-          - name: '_LmIasClientSendDisconnect'
-            offset: "0000D382"            
-          - name: '_LmIasClientDisconnect'
-            offset: "0000D3D4"            
-          - name: '_LMIAS_RegisterObject'
-            offset: "0000D524"            
-          - name: '_LMIAS_DeregisterObject'
-            offset: "0000D5F2"            
-          - name: '_LMIAS_SetDeviceName'
-            offset: "0000D739"            
-          - name: '_LmIasInitServer'
-            offset: "0000D7B7"            
-          - name: '_LmIasServerConnectInd'
-            offset: "0000D9E9"            
-          - name: '_LmIasServerDisconnectInd'
-            offset: "0000DAFF"            
-          - name: '_LmIasServerDataInd'
-            offset: "0000DB2C"            
-          - name: '_LmIasServerPacketHandled'
-            offset: "0000DBC9"            
-          - name: '_LmIasServerErrorHnd'
-            offset: "0000DC7D"            
-          - name: '_LmIasServerState_Receiving'
-            offset: "0000DC88"            
-          - name: '_LmIasServerState_Returning'
-            offset: "0000DE37"            
-          - name: '_LmIasUpdateHints'
-            offset: "0000DEB3"            
-          - name: '_LmIasServerFindConnect'
-            offset: "0000DF8A"            
-          - name: '_LmIasServerSendDisconnect'
-            offset: "0000E04E"            
-          - name: '_LmIasServerDisconnect'
-            offset: "0000E082"            
-          - name: '_LmIasServerSendAck'
-            offset: "0000E0AD"            
-          - name: '_LmIasServerSendReject'
-            offset: "0000E135"            
-          - name: '_LmIasServerAddObject'
-            offset: "0000E1C8"            
-          - name: '_LmIasServerRemoveObject'
-            offset: "0000E276"            
-          - name: '_LmIasServerStartQuery'
-            offset: "0000E29F"            
-          - name: '_LmIasServerFinishQuery'
-            offset: "0000E2C0"            
-          - name: '_LmIasServerValidateObject'
-            offset: "0000E3B0"            
-          - name: '_LmIasServerDetermineCommand'
-            offset: "0000E574"            
-          - name: '_ProcessCommandNull'
-            offset: "0000E62E"            
-          - name: '_ProcessResultNull'
-            offset: "0000E639"            
-          - name: '_ProcessCommandGVBC'
-            offset: "0000E644"            
-          - name: '_ProcessResultGVBC'
-            offset: "0000E7F7"            
-          - name: '_GetNumObjectsGVBC'
-            offset: "0000E8F8"            
-          - name: '_FillTxBufferGVBC'
-            offset: "0000E95B"            
-          - name: '_SendTxBufferGVBC'
-            offset: "0000EA77"            
-          - name: '_StoreIasAttributeValue'
-            offset: "0000EAF3"            
-          - name: '_IasAttribValueSize'
-            offset: "0000EC07"            
-          - name: '_FindNextResultGVBC'
-            offset: "0000EC92"            
-          - name: '_FindObjectViaClassName'
-            offset: "0000EDB4"            
-          - name: '_FindAttribViaName'
-            offset: "0000EE26"            
-          - name: '_StrnCmp'
-            offset: "0000EEA8"            
-          - name: '_SendServerTxBuffer'
-            offset: "0000EF29"            
-          - name: '_LmIasValidateClientToken'
-            offset: "0000F01C"            
-          - name: '_ProcessAttribValue'
-            offset: "0000F447"            
-          - name: '_ProcessEndGVBC'
-            offset: "0000F722"            
-          - name: '_ProcessRetCode'
-            offset: "0000F79F"            
-          - name: '_TokenCallBack'
-            offset: "0000F7F9"            
-          - name: '_MuxCon_ValidateActiveConnect'
-            offset: "0000F854"            
-          - name: '_MuxCon_ValidForReq'
-            offset: "0000F8DE"            
-          - name: '_MuxCon_ValidForRsp'
-            offset: "0000F97E"            
-          - name: '_MuxCon_ValidForDisc'
-            offset: "0000FA15"            
-          - name: '_MuxCon_SendConnectPacket'
-            offset: "0000FAB8"            
-          - name: '_MuxCon_SendResponsePacket'
-            offset: "0000FB12"            
-          - name: '_MuxCon_Init'
-            offset: "0000FB60"            
-          - name: '_MuxCon_MakeDisconnected'
-            offset: "0000FBDC"            
-          - name: '_MuxCon_MakeActive'
-            offset: "0000FC81"            
-          - name: '_MuxCon_MakeIncoming'
-            offset: "0000FCD3"            
-          - name: '_MuxCon_MakePending'
-            offset: "0000FD64"            
-          - name: '_MuxCon_InitConPacket'
-            offset: "0000FDE9"            
-          - name: '_MuxCon_SendData'
-            offset: "0000FE55"            
-          - name: '_MuxCon_Idle'
-            offset: "0000FF30"            
-          - name: '_MuxCon_CheckDisconnect'
-            offset: "0000FF80"            
-          - name: '_MuxCon_CheckPendingDisc'
-            offset: "0001001A"            
-          - name: '_MuxCon_Disconnect'
-            offset: "00010053"            
-          - name: '_MuxIcc_Init'
-            offset: "00010170"            
-          - name: '_MuxIcc_Allocate'
-            offset: "000101B4"            
-          - name: '_MuxIcc_Free'
-            offset: "00010234"            
-          - name: '_MuxIcc_MakePending'
-            offset: "000102D9"            
-          - name: '_MuxIcc_MakeActive'
-            offset: "0001036E"            
-          - name: '_MuxIcc_MakeClosing'
-            offset: "00010496"            
-          - name: '_MuxIcc_MakeClosed'
-            offset: "0001059A"            
-          - name: '_MuxIcc_ChangeToActive'
-            offset: "000106E6"            
-          - name: '_MuxIcc_StartConnection'
-            offset: "0001078B"            
-          - name: '_MuxIcc_ProcessPendingConnects'
-            offset: "00010835"            
-          - name: '_MuxIcc_FindConnection'
-            offset: "00010923"            
-          - name: '_MuxIcc_DisconnectList'
-            offset: "000109DF"            
-          - name: '_MuxIcc_Disconnect'
-            offset: "00010A34"            
-          - name: '_MuxIcc_AddIncomingConnect'
-            offset: "00010AC2"            
-          - name: '_MuxIcc_AddPendingConnect'
-            offset: "00010B45"            
-          - name: '_MuxIcc_AllocateIncoming'
-            offset: "00010B82"            
-          - name: '_MuxIcc_RemoveConnect'
-            offset: "00010C10"            
-          - name: '_MuxIcc_StatusIndic'
-            offset: "00010C4E"            
-          - name: '_MuxIcc_CheckForPossibleIcc'
-            offset: "00010D3F"            
-          - name: '_MuxIcc_CheckClosing'
-            offset: "00010DA4"            
-          - name: '_MuxIcc_CheckDisconnect'
-            offset: "00010F4C"            
-          - name: '_MuxIcc_DiscTimerFunc'
-            offset: "00011015"            
-          - name: '_LmSmoothCache'
-            offset: "00011120"            
-          - name: '_LmAddDeviceToSmoothCache'
-            offset: "00011219"            
-          - name: '_LmRemoveFailedItems'
-            offset: "00011358"            
-          - name: '_LmDiscoveryTimerFunc'
-            offset: "000114F7"            
-          - name: '_LmPerformPeriodicDiscovery'
-            offset: "0001156A"            
-          - name: '_LmPerformDiscovery'
-            offset: "00011610"            
-          - name: '_LmSmoothStatusInd'
-            offset: "0001175A"            
-          - name: '_LmStartPinging'
-            offset: "000117A9"            
-          - name: '_LmProcessPingResult'
-            offset: "000118AC"            
-          - name: '_LmConfirmDiscovery'
-            offset: "00011A98"            
-          - name: '_LmStartPeriodicDiscoveryTimer'
-            offset: "00011B3A"            
-          - name: '_LmUpdateDiscoveryCache'
-            offset: "00011BA9"            
-          - name: '_LmIndicateCacheChange'
-            offset: "00011C0B"            
-          - name: '_LmDiscoveryConfirm'
-            offset: "00011C82"            
-          - name: 'IRLAMPEX_DDB'
-            offset: "00011D08"            
-          - name: '_IrLap'
-            offset: "00011E60"            
-          - name: '_ThreadExLock'
-            offset: "00011E6C"            
-          - name: '_RXBack'
-            offset: "00011E70"            
-          - name: '_TXBack'
-            offset: "00011E74"            
-          - name: '_doRetroactiveShutdown'
-            offset: "000120F4"            
-          - name: '_Win32ThreadFuncActive'
-            offset: "000120F8"            
-          - name: '_EventMutex'
-            offset: "000120FC"            
-          - name: '_EQFront'
-            offset: "00012100"            
-          - name: '_EQBack'
-            offset: "00012104"            
-          - name: '_DebugEQBack'
-            offset: "00012108"            
-          - name: '_slotTable'
-            offset: "00012260"            
-          - name: '_allListsMutex'
-            offset: "0001234C"            
-          - name: '_DbgListLog'
-            offset: "00012354"            
-          - name: '_DbgListRecords'
-            offset: "00016354"            
-          - name: '_ParmIdentifierTable'
-            offset: "000167F8"            
-          - name: '_DefaultNegTable'
-            offset: "00016800"            
-          - name: '_PollTime2Table'
-            offset: "00016C90"            
-          - name: '_PollTime3Table'
-            offset: "00016CA0"            
-          - name: '_IrLapFrmCap'
-            offset: "00017564"            
-          - name: '_IrLapFrmWrap'
-            offset: "00017568"            
-          - name: '_IrLapFrmParm'
-            offset: "0001756C"            
-          - name: '_IrLampParm'
-            offset: "00017570"            
-          - name: '_NumIccs'
-            offset: "00017574"            
-          - name: '_IrLampWrap'
-            offset: "0001757C"            
-          - name: '_IoCtlTable'
-            offset: "00017604"            
-          - name: '_IoCtlTableSize'
-            offset: "00017610"            
-          - name: '_IrLmp'
-            offset: "00017788"            
-          - name: '_IrLmpInitialized'
-            offset: "0001778C"            
-          - name: '_IasClient'
-            offset: "00017E6C"            
-          - name: '_IasClientNoConCB'
-            offset: "00017E74"            
-          - name: '_IasClientCB'
-            offset: "00017E94"            
-          - name: '_IasServer'
-            offset: "000185D4"            
-          - name: '_IasServerNoConCB'
-            offset: "000185DC"            
-          - name: '_IasServerCB'
-            offset: "000185FC"            
-          - name: '_IrlapEventNames'
-            offset: "00018D04"            
-          - name: '_dwsNumPackets'
-            offset: "00018D68"            
-          - name: '_EventQueue'
-            offset: "00018D6C"            
-          - name: '_stServbuff'
-            offset: "00018E6C"            
-          - name: '_DebugEventQueue'
-            offset: "00018E8C"            
-          - name: '_ThreadExRef'
-            offset: "00019E8C"            
-          - name: '_DebugRxQueue'
-            offset: "00019E90"            
-          - name: '_DebugTxQueue'
-            offset: "0001AE90"            
-          - name: '_fThreadEnable'
-            offset: "0001BE90"            
-      - num: "2"
-        name: "_IGROUP"
-        offset: "00003D00"
-        symbols:
-          - name: 'IRLAMP_Dynamic_Init'
-            offset: "00000000"            
-          - name: '_IRLAMPEX_DynamicInit'
-            offset: "00000020"            
-      - num: "3"
-        name: "_RARE"
-        offset: "00000000"
-        symbols:
-          - name: '_CCODE__HeapAllocate'
-            offset: "00000000"            
-          - name: '_CCODE__HeapFree'
-            offset: "00000008"            
-          - name: '_CCODE__Trace_Out_Service@4'
-            offset: "00000010"            
-          - name: '_CCODE__Debug_Printf_Service'
-            offset: "00000018"            
-          - name: '_CCODE_Schedule_Global_Event@8'
-            offset: "0000002C"            
-          - name: '_CCODE_Get_Sys_VM_Handle'
-            offset: "00000044"            
-          - name: '_CCODE_Set_Global_Time_Out@12'
-            offset: "00000050"            
-          - name: '_CCODE_Cancel_Time_Out@4'
-            offset: "0000006C"            
-          - name: '_CCODE_Get_Last_Updated_System_Time'
-            offset: "0000007C"            
-          - name: '_CCODE__CreateMutex'
-            offset: "00000084"            
-          - name: '_CCODE__DestroyMutex'
-            offset: "0000008C"            
-          - name: '_CCODE__EnterMutex'
-            offset: "00000094"            
-          - name: '_CCODE__LeaveMutex'
-            offset: "0000009C"            
-          - name: '_CCODE__lmemcpy'
-            offset: "000000A4"            
-          - name: '_CCODE_Call_Restricted_Event@24'
-            offset: "000000AC"            
+- version: system
+  tree:
+  - - abort.c
+    - clientop.c
+    - "\tconnect.c"
+    - cvxdctrl.asm
+    - discover.c
+    - iasutils.c
+    - irlap.c
+    - irlmpmux.c
+    - lampinit.c
+    - laptimer.c
+    - list.c
+    - lmclient.c
+    - lmserver.c
+    - muxcb.c
+    - muxcon.c
+    - muxicc.c
+    - muxutils.c
+    - "\tprimary.c"
+    - serverop.c
+    - smooth.c
+    - connect.c
+    - IRLAMP disconnect (primary.c) line %d
+    - IRLAMP handling invalid frame (primary.c) line %d
+    - IRLAMP sending disconnect (primary.c) line %d
+    - primary.c
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 00003C30
+    symbols:
+    - name: IRLAMP_Control
+      processed: ''
+      offset: '00000000'
+    - name: _IRLAMP_Register
+      processed: ''
+      offset: 0000003A
+    - name: _VTD_Get_Date_And_Time
+      processed: ''
+      offset: '00000040'
+    - name: _VTD_GetRealTime
+      processed: ''
+      offset: '00000046'
+    - name: _InitializeW32Event
+      processed: ''
+      offset: 0000004C
+    - name: _SetW32Event
+      processed: ''
+      offset: 0000006F
+    - name: _ClearW32Event
+      processed: ''
+      offset: '00000081'
+    - name: _ResetW32Event
+      processed: ''
+      offset: 0000008C
+    - name: _PulseW32Event
+      processed: ''
+      offset: 0000009B
+    - name: _WaitSingleObject
+      processed: ''
+      offset: 000000AA
+    - name: _CreateR0Thread
+      processed: ''
+      offset: 000000C4
+    - name: _LM_IoCtl
+      processed: ''
+      offset: '000000E5'
+    - name: _DebugPrintf
+      processed: ''
+      offset: 000000FE
+    - name: the_idtr
+      processed: ''
+      offset: 0000011B
+    - name: old_desc
+      processed: ''
+      offset: '00000123'
+    - name: our_idt
+      processed: ''
+      offset: 0000012B
+    - name: DbgLogSystemMessage
+      processed: ''
+      offset: '00000133'
+    - name: _InitThreadExLock
+      processed: ''
+      offset: '00000160'
+    - name: _FreeThreadExLock
+      processed: ''
+      offset: 000001AC
+    - name: _EnterThreadExLock
+      processed: ''
+      offset: 000001DC
+    - name: _LeaveThreadExLock
+      processed: ''
+      offset: '00000220'
+    - name: _IrLapInit
+      processed: ''
+      offset: '00000285'
+    - name: _IRLAP_InitializeWrapper
+      processed: ''
+      offset: 0000058D
+    - name: _IRLAP_DeinitializeWrapper
+      processed: ''
+      offset: 000005EB
+    - name: _IRLAP_AllocatePort
+      processed: ''
+      offset: 0000061C
+    - name: _IRLAP_DeallocatePort
+      processed: ''
+      offset: '00000709'
+    - name: _IRLAP_SendUnitData
+      processed: ''
+      offset: 0000073B
+    - name: _IRLAP_MediaBusy
+      processed: ''
+      offset: '00000838'
+    - name: _IRLAP_Sniff
+      processed: ''
+      offset: '00000853'
+    - name: _IrLapSniffTimerFunc
+      processed: ''
+      offset: 000008FB
+    - name: _IrLapGetDispatchBuffer
+      processed: ''
+      offset: 0000096F
+    - name: _IrLapFinishDispatchBuffer
+      processed: ''
+      offset: 00000A90
+    - name: _RecordDebugRx
+      processed: ''
+      offset: 00000B1D
+    - name: _IrLapDispatchBuffers
+      processed: ''
+      offset: 00000B9D
+    - name: _CheckAddress
+      processed: ''
+      offset: 00000E0F
+    - name: _IrLapAllocateTxPacket
+      processed: ''
+      offset: '00001004'
+    - name: _IrLapFreeTxPacket
+      processed: ''
+      offset: '00001146'
+    - name: _IrLapGetProcessPacket
+      processed: ''
+      offset: '00001249'
+    - name: _IrLapFinishProcessPacket
+      processed: ''
+      offset: 0000131F
+    - name: _IrLapProcessTxPackets
+      processed: ''
+      offset: '00001345'
+    - name: _RecordDebugTx
+      processed: ''
+      offset: '00001409'
+    - name: _SendCompleteDpc
+      processed: ''
+      offset: '00001472'
+    - name: _IRLAPFRM_Send
+      processed: ''
+      offset: '00001491'
+    - name: _IrLapErrorHandler
+      processed: ''
+      offset: '000014E4'
+    - name: _IrLapState_NDM
+      processed: ''
+      offset: '00001536'
+    - name: _IrLapMediaChangeHandler
+      processed: ''
+      offset: '00001969'
+    - name: _IrLapNextState_NDM
+      processed: ''
+      offset: '00001980'
+    - name: _memCopy
+      processed: ''
+      offset: 00001A1F
+    - name: _zeroMemory
+      processed: ''
+      offset: 00001A62
+    - name: _IrLapGenerateDeviceAddress
+      processed: ''
+      offset: 00001A96
+    - name: _IrdaRand
+      processed: ''
+      offset: 00001ACF
+    - name: _IrLapSendDMRsp
+      processed: ''
+      offset: 00001B09
+    - name: _IrLapSendTest
+      processed: ''
+      offset: 00001B5E
+    - name: _IRLAMP_DebugQuery@0
+      processed: ''
+      offset: 00001CBE
+    - name: _InitEventMutex
+      processed: ''
+      offset: 00001CE8
+    - name: _FreeEventMutex
+      processed: ''
+      offset: 00001D2A
+    - name: _EnterEventMutex
+      processed: ''
+      offset: 00001D5A
+    - name: _LeaveEventMutex
+      processed: ''
+      offset: 00001DB6
+    - name: _RecordDebugEvent
+      processed: ''
+      offset: 00001DF2
+    - name: _PutEventRecord
+      processed: ''
+      offset: '00001E49'
+    - name: _GetEventRecord
+      processed: ''
+      offset: 00001F0E
+    - name: _Win32ThreadFunc
+      processed: ''
+      offset: 00001FBE
+    - name: _IrLapStartTimer
+      processed: ''
+      offset: '00002126'
+    - name: _IrLapEventProc
+      processed: ''
+      offset: 000021AA
+    - name: _IrLapTimerFunc
+      processed: ''
+      offset: 000021F6
+    - name: _IrLapDisableTimers
+      processed: ''
+      offset: 0000224A
+    - name: _IrLapTimerHandler
+      processed: ''
+      offset: 000022DC
+    - name: _MinTimerPeriod
+      processed: ''
+      offset: 0000232F
+    - name: _DetermineTimerPeriod
+      processed: ''
+      offset: '00002396'
+    - name: _AdjustTimerPeriod
+      processed: ''
+      offset: '00002435'
+    - name: _LmStartTimer
+      processed: ''
+      offset: '00002479'
+    - name: _LmCancelTimer
+      processed: ''
+      offset: 0000259B
+    - name: _IRLAP_DiscoverDevices
+      processed: ''
+      offset: '00002620'
+    - name: _IrLapState_QUERY
+      processed: ''
+      offset: 000027B1
+    - name: _IrLapState_REPLY
+      processed: ''
+      offset: 000029AC
+    - name: _GetRxDiscoveryInfo
+      processed: ''
+      offset: 00002B3F
+    - name: _IrLapSendBOS
+      processed: ''
+      offset: 00002C0B
+    - name: _IrLapRxDiscoveryAction
+      processed: ''
+      offset: 00002C95
+    - name: _IrLapSendXIDDiscovery
+      processed: ''
+      offset: '00002E74'
+    - name: _AcquireListsMutex
+      processed: ''
+      offset: '00003018'
+    - name: _InitListData
+      processed: ''
+      offset: 000030A2
+    - name: _FreeListData
+      processed: ''
+      offset: '000030E4'
+    - name: _InitListHead
+      processed: ''
+      offset: '00003114'
+    - name: _InsertTailList
+      processed: ''
+      offset: '00003143'
+    - name: _RemoveHeadList
+      processed: ''
+      offset: '00003228'
+    - name: _RemoveEntryList
+      processed: ''
+      offset: 0000331A
+    - name: _InsertHeadList
+      processed: ''
+      offset: 000033D6
+    - name: _IsNodeOnList
+      processed: ''
+      offset: 000034C2
+    - name: _IsListCircular
+      processed: ''
+      offset: '00003559'
+    - name: _DbgLogListAction
+      processed: ''
+      offset: 0000360C
+    - name: _DbgRecordList
+      processed: ''
+      offset: '00003834'
+    - name: _IRLAP_Connect
+      processed: ''
+      offset: '00003954'
+    - name: _IRLAP_ConnectResp
+      processed: ''
+      offset: 00003AE8
+    - name: _IrLapState_SETUP
+      processed: ''
+      offset: 00003BA1
+    - name: _IrLapState_SSETUP
+      processed: ''
+      offset: 00003F14
+    - name: _IrLapState_SETUP2
+      processed: ''
+      offset: '00004044'
+    - name: _IrLapState_CONN
+      processed: ''
+      offset: 0000411F
+    - name: _IrLapState_CONN2
+      processed: ''
+      offset: 0000423B
+    - name: _DisconnectIndic
+      processed: ''
+      offset: '00004277'
+    - name: _IrLapRxConnectAction
+      processed: ''
+      offset: 000042F7
+    - name: _InitConnection
+      processed: ''
+      offset: '000043E1'
+    - name: _FinishConnection
+      processed: ''
+      offset: 0000491C
+    - name: _InitCurConnection
+      processed: ''
+      offset: '00004986'
+    - name: _CalculateCapacity
+      processed: ''
+      offset: 000049F7
+    - name: _ScanBits
+      processed: ''
+      offset: 00004A8A
+    - name: _SetConnectionParameters
+      processed: ''
+      offset: 00004ADD
+    - name: _AdjustNegotiationParms
+      processed: ''
+      offset: 00004C3F
+    - name: _GenRandomConnectAddr
+      processed: ''
+      offset: 00004D7A
+    - name: _GenRandomBackoff
+      processed: ''
+      offset: '00004E53'
+    - name: _ParseConnectionParms
+      processed: ''
+      offset: 00004E8E
+    - name: _FillNegParms
+      processed: ''
+      offset: 00004F5F
+    - name: _IrLapSendSNRM
+      processed: ''
+      offset: '00005066'
+    - name: _IrLapSendUA
+      processed: ''
+      offset: 0000511E
+    - name: _IRLAP_SendData
+      processed: ''
+      offset: 000051D8
+    - name: _IRLAP_Disconnect
+      processed: ''
+      offset: 000053CE
+    - name: _InitPollTimer
+      processed: ''
+      offset: 000054FA
+    - name: _IrLapSetStateNRM
+      processed: ''
+      offset: 0000559E
+    - name: _IrLapState_NRM
+      processed: ''
+      offset: '00005632'
+    - name: _IrLapConState_XMIT
+      processed: ''
+      offset: 000056CA
+    - name: _IrLapConState_RECV_P
+      processed: ''
+      offset: 000059AA
+    - name: _IrLapConState_RECV_S
+      processed: ''
+      offset: 00005BEC
+    - name: _IrLapConState_PCLOSE_P
+      processed: ''
+      offset: 00005D9C
+    - name: _IrLapConState_PCLOSE_S
+      processed: ''
+      offset: 00005F41
+    - name: _IrLapConState_PCLOSE_S2
+      processed: ''
+      offset: '00006156'
+    - name: _IrLapConState_ERROR_P
+      processed: ''
+      offset: 000061CA
+    - name: _IrLapConState_ERROR_S
+      processed: ''
+      offset: 000062DE
+    - name: _NextStateRECV
+      processed: ''
+      offset: 000064A2
+    - name: _NextStateXMIT
+      processed: ''
+      offset: 000065C5
+    - name: _CheckProgress
+      processed: ''
+      offset: '00006683'
+    - name: _CheckRemoteBusy
+      processed: ''
+      offset: '00006855'
+    - name: _Disconnect
+      processed: ''
+      offset: 00006A3C
+    - name: _ValidNR
+      processed: ''
+      offset: 00006AF9
+    - name: _ProcessNR
+      processed: ''
+      offset: 00006BC6
+    - name: _SendData
+      processed: ''
+      offset: 00006DCC
+    - name: _PutBackUnackedFrames
+      processed: ''
+      offset: 00006FBF
+    - name: _SendSelectedFrame
+      processed: ''
+      offset: 000071C1
+    - name: _SendIFrames
+      processed: ''
+      offset: 000072DA
+    - name: _SendUIFrames
+      processed: ''
+      offset: 000075A7
+    - name: _ReleaseBufferedData
+      processed: ''
+      offset: '00007807'
+    - name: _ProcessConnectionEnd
+      processed: ''
+      offset: 00007A57
+    - name: _HandleInvalidFrame
+      processed: ''
+      offset: 00007BF2
+    - name: _HandleUFrame
+      processed: ''
+      offset: 00007DD6
+    - name: _HandleIFrame
+      processed: ''
+      offset: 000080FD
+    - name: _HandleSFrame
+      processed: ''
+      offset: '00008294'
+    - name: _HandleFTimer
+      processed: ''
+      offset: 000083DD
+    - name: _Between
+      processed: ''
+      offset: 000084CD
+    - name: _IrLapSendSUFrame
+      processed: ''
+      offset: 0000855A
+    - name: _IrLapSendUAFrame
+      processed: ''
+      offset: 000086A8
+    - name: _IrLapFrmInit
+      processed: ''
+      offset: 000087A0
+    - name: _LM_AllocateMemory
+      processed: ''
+      offset: '00008800'
+    - name: _IRLAMPEX_Init
+      processed: ''
+      offset: '00008905'
+    - name: _IRLAMP_Dynamic_Shutdown@0
+      processed: ''
+      offset: '00008949'
+    - name: _IRLAMP_Dynamic_Exit@0
+      processed: ''
+      offset: 000089A4
+    - name: _LMI_GetMediaFlag
+      processed: ''
+      offset: 00008A4B
+    - name: _LMI_GetSpeed
+      processed: ''
+      offset: 00008A72
+    - name: _LMI_SetMaxSpeed
+      processed: ''
+      offset: 00008A91
+    - name: _LmCheckPtr
+      processed: ''
+      offset: 00008AB3
+    - name: _IRLAP_AbortPackets
+      processed: ''
+      offset: 00008AF0
+    - name: _AbortUnackedList
+      processed: ''
+      offset: 00008CF8
+    - name: _AbortState
+      processed: ''
+      offset: 00008E3F
+    - name: _LM_Startup
+      processed: ''
+      offset: 00008EE8
+    - name: _LM_Shutdown
+      processed: ''
+      offset: 000090EB
+    - name: _LM_InitClient
+      processed: ''
+      offset: 0000915E
+    - name: _LM_AddIncoming
+      processed: ''
+      offset: 000091BB
+    - name: _LM_RemoveIncoming
+      processed: ''
+      offset: 0000927D
+    - name: _LM_BindClient
+      processed: ''
+      offset: '00009362'
+    - name: _LM_UnBindClient
+      processed: ''
+      offset: 0000958B
+    - name: _LM_DiscoveryReq
+      processed: ''
+      offset: 0000975A
+    - name: _LM_ConnectReq
+      processed: ''
+      offset: 0000981B
+    - name: _LM_ConnectRsp
+      processed: ''
+      offset: 00009A59
+    - name: _LM_DisconnectReq
+      processed: ''
+      offset: 00009B3D
+    - name: _LM_Idle
+      processed: ''
+      offset: 00009CC4
+    - name: _LM_DeviceStatus
+      processed: ''
+      offset: 00009D44
+    - name: _LM_StatusReq
+      processed: ''
+      offset: 00009DEC
+    - name: _LM_ReceiveData
+      processed: ''
+      offset: 00009EA2
+    - name: _LM_DataReq
+      processed: ''
+      offset: 00009EEF
+    - name: _LM_UDataReq
+      processed: ''
+      offset: 00009F48
+    - name: _LM_NoConnectDataReq
+      processed: ''
+      offset: 00009FA1
+    - name: _LM_GetIrLapFrmStats
+      processed: ''
+      offset: 0000A0B0
+    - name: _LM_GetDeviceStats
+      processed: ''
+      offset: 0000A0FC
+    - name: _LM_GetDiscoveryCache
+      processed: ''
+      offset: 0000A183
+    - name: _LM_SetNickname
+      processed: ''
+      offset: 0000A1D1
+    - name: _LM_SetHints
+      processed: ''
+      offset: 0000A268
+    - name: _LM_Sniff
+      processed: ''
+      offset: 0000A313
+    - name: _LM_PeriodicDiscovery
+      processed: ''
+      offset: 0000A36A
+    - name: _LM_GetPeriodicDiscoveryPeriod
+      processed: ''
+      offset: 0000A482
+    - name: _LM_LocalBusy
+      processed: ''
+      offset: 0000A4C8
+    - name: _LM_AbortConnection
+      processed: ''
+      offset: 0000A53E
+    - name: _LmFindCacheConflicts
+      processed: ''
+      offset: 0000A5CC
+    - name: _LmRemoveCacheConflicts
+      processed: ''
+      offset: 0000A77A
+    - name: _LmAddDeviceToCache
+      processed: ''
+      offset: 0000A887
+    - name: _LmValidClientForConnection
+      processed: ''
+      offset: 0000A934
+    - name: _LmGiveStatusIndication
+      processed: ''
+      offset: 0000A99B
+    - name: _LmDisconnectPendingConnections
+      processed: ''
+      offset: 0000AA1E
+    - name: _LmStartIrLapConnection
+      processed: ''
+      offset: 0000AB2B
+    - name: _LmFindIcc
+      processed: ''
+      offset: 0000ABB0
+    - name: _LmFindIdleIcc
+      processed: ''
+      offset: 0000AC68
+    - name: _LmProcessConnectResponse
+      processed: ''
+      offset: 0000AD38
+    - name: _LmProcessConnectCommand
+      processed: ''
+      offset: 0000AE21
+    - name: _LmProcessDisconnectCommand
+      processed: ''
+      offset: 0000AFD0
+    - name: _LmProcessAccessModeCommand
+      processed: ''
+      offset: 0000B0EC
+    - name: _LmSendDisconnect
+      processed: ''
+      offset: 0000B1BB
+    - name: _LmSetWatchDogTime
+      processed: ''
+      offset: 0000B2C7
+    - name: _LmClearWatchDogTime
+      processed: ''
+      offset: 0000B2D2
+    - name: _LmValidatePacket
+      processed: ''
+      offset: 0000B2DD
+    - name: _LmUpdateXidInfo
+      processed: ''
+      offset: 0000B3BD
+    - name: _LmInitCallbacks
+      processed: ''
+      offset: 0000B490
+    - name: _IrLapDiscoverConf
+      processed: ''
+      offset: 0000B540
+    - name: _IrLapDiscoverIndic
+      processed: ''
+      offset: 0000B6A1
+    - name: _IrLapConnectConf
+      processed: ''
+      offset: 0000B754
+    - name: _IrlapConnectIndic
+      processed: ''
+      offset: 0000B7AA
+    - name: _IrLapDisconIndic
+      processed: ''
+      offset: 0000B861
+    - name: _IrLapSendHandler
+      processed: ''
+      offset: 0000BABD
+    - name: _IrLapDataIndic
+      processed: ''
+      offset: 0000BBA6
+    - name: _IrLapUnitDataHand
+      processed: ''
+      offset: 0000BE25
+    - name: _IrLapUnitDataIndic
+      processed: ''
+      offset: 0000BE50
+    - name: _IrLapStatusIndic
+      processed: ''
+      offset: 0000BF11
+    - name: _IrLmpErrorHandler
+      processed: ''
+      offset: 0000BF7C
+    - name: _LmIasInitClient
+      processed: ''
+      offset: 0000BFD8
+    - name: _LMIAS_ClientRequest
+      processed: ''
+      offset: 0000C1FE
+    - name: _LmIasClientStatusInd
+      processed: ''
+      offset: 0000C42B
+    - name: _LmIasClientConnectCnf
+      processed: ''
+      offset: 0000C45B
+    - name: _LmIasClientDisconnectInd
+      processed: ''
+      offset: 0000C4DB
+    - name: _LmIasClientDataInd
+      processed: ''
+      offset: 0000C58D
+    - name: _LmIasClientPacketHandled
+      processed: ''
+      offset: 0000C5DC
+    - name: _LmIasClientState_Calling
+      processed: ''
+      offset: 0000C6A1
+    - name: _LmIasClientState_Outstanding
+      processed: ''
+      offset: 0000C720
+    - name: _LmIasClientErrorHandler
+      processed: ''
+      offset: 0000C83D
+    - name: _LmIasFindConnect
+      processed: ''
+      offset: 0000C848
+    - name: _LmIasStartNewConnection
+      processed: ''
+      offset: 0000C900
+    - name: _LmIasFindIdleConnection
+      processed: ''
+      offset: 0000CB1B
+    - name: _LmIasDisconnectPendingConnections
+      processed: ''
+      offset: 0000CC2E
+    - name: _LmIasStartOperation
+      processed: ''
+      offset: 0000CD1C
+    - name: _LmIasFindPendingToken
+      processed: ''
+      offset: 0000CDF3
+    - name: _LmIasEndOperation
+      processed: ''
+      offset: 0000CE8E
+    - name: _LmIasClientSendCommand
+      processed: ''
+      offset: 0000CEA6
+    - name: _LmIasSetTokenTime
+      processed: ''
+      offset: 0000D00C
+    - name: _LmIasProcessWaitingOpers
+      processed: ''
+      offset: 0000D04E
+    - name: _LmIasClientTimerFunc
+      processed: ''
+      offset: 0000D116
+    - name: _LmIasClientDiscTimerFunc
+      processed: ''
+      offset: 0000D1CE
+    - name: _LmIasClientWdTimerFunc
+      processed: ''
+      offset: 0000D22E
+    - name: _LmIasSendAck
+      processed: ''
+      offset: 0000D2C8
+    - name: _LmIasClientSendDisconnect
+      processed: ''
+      offset: 0000D382
+    - name: _LmIasClientDisconnect
+      processed: ''
+      offset: 0000D3D4
+    - name: _LMIAS_RegisterObject
+      processed: ''
+      offset: 0000D524
+    - name: _LMIAS_DeregisterObject
+      processed: ''
+      offset: 0000D5F2
+    - name: _LMIAS_SetDeviceName
+      processed: ''
+      offset: 0000D739
+    - name: _LmIasInitServer
+      processed: ''
+      offset: 0000D7B7
+    - name: _LmIasServerConnectInd
+      processed: ''
+      offset: 0000D9E9
+    - name: _LmIasServerDisconnectInd
+      processed: ''
+      offset: 0000DAFF
+    - name: _LmIasServerDataInd
+      processed: ''
+      offset: 0000DB2C
+    - name: _LmIasServerPacketHandled
+      processed: ''
+      offset: 0000DBC9
+    - name: _LmIasServerErrorHnd
+      processed: ''
+      offset: 0000DC7D
+    - name: _LmIasServerState_Receiving
+      processed: ''
+      offset: 0000DC88
+    - name: _LmIasServerState_Returning
+      processed: ''
+      offset: 0000DE37
+    - name: _LmIasUpdateHints
+      processed: ''
+      offset: 0000DEB3
+    - name: _LmIasServerFindConnect
+      processed: ''
+      offset: 0000DF8A
+    - name: _LmIasServerSendDisconnect
+      processed: ''
+      offset: 0000E04E
+    - name: _LmIasServerDisconnect
+      processed: ''
+      offset: '0000E082'
+    - name: _LmIasServerSendAck
+      processed: ''
+      offset: 0000E0AD
+    - name: _LmIasServerSendReject
+      processed: ''
+      offset: '0000E135'
+    - name: _LmIasServerAddObject
+      processed: ''
+      offset: 0000E1C8
+    - name: _LmIasServerRemoveObject
+      processed: ''
+      offset: '0000E276'
+    - name: _LmIasServerStartQuery
+      processed: ''
+      offset: 0000E29F
+    - name: _LmIasServerFinishQuery
+      processed: ''
+      offset: 0000E2C0
+    - name: _LmIasServerValidateObject
+      processed: ''
+      offset: 0000E3B0
+    - name: _LmIasServerDetermineCommand
+      processed: ''
+      offset: '0000E574'
+    - name: _ProcessCommandNull
+      processed: ''
+      offset: 0000E62E
+    - name: _ProcessResultNull
+      processed: ''
+      offset: '0000E639'
+    - name: _ProcessCommandGVBC
+      processed: ''
+      offset: '0000E644'
+    - name: _ProcessResultGVBC
+      processed: ''
+      offset: 0000E7F7
+    - name: _GetNumObjectsGVBC
+      processed: ''
+      offset: 0000E8F8
+    - name: _FillTxBufferGVBC
+      processed: ''
+      offset: 0000E95B
+    - name: _SendTxBufferGVBC
+      processed: ''
+      offset: 0000EA77
+    - name: _StoreIasAttributeValue
+      processed: ''
+      offset: 0000EAF3
+    - name: _IasAttribValueSize
+      processed: ''
+      offset: 0000EC07
+    - name: _FindNextResultGVBC
+      processed: ''
+      offset: 0000EC92
+    - name: _FindObjectViaClassName
+      processed: ''
+      offset: 0000EDB4
+    - name: _FindAttribViaName
+      processed: ''
+      offset: 0000EE26
+    - name: _StrnCmp
+      processed: ''
+      offset: 0000EEA8
+    - name: _SendServerTxBuffer
+      processed: ''
+      offset: 0000EF29
+    - name: _LmIasValidateClientToken
+      processed: ''
+      offset: 0000F01C
+    - name: _ProcessAttribValue
+      processed: ''
+      offset: 0000F447
+    - name: _ProcessEndGVBC
+      processed: ''
+      offset: 0000F722
+    - name: _ProcessRetCode
+      processed: ''
+      offset: 0000F79F
+    - name: _TokenCallBack
+      processed: ''
+      offset: 0000F7F9
+    - name: _MuxCon_ValidateActiveConnect
+      processed: ''
+      offset: 0000F854
+    - name: _MuxCon_ValidForReq
+      processed: ''
+      offset: 0000F8DE
+    - name: _MuxCon_ValidForRsp
+      processed: ''
+      offset: 0000F97E
+    - name: _MuxCon_ValidForDisc
+      processed: ''
+      offset: 0000FA15
+    - name: _MuxCon_SendConnectPacket
+      processed: ''
+      offset: 0000FAB8
+    - name: _MuxCon_SendResponsePacket
+      processed: ''
+      offset: 0000FB12
+    - name: _MuxCon_Init
+      processed: ''
+      offset: 0000FB60
+    - name: _MuxCon_MakeDisconnected
+      processed: ''
+      offset: 0000FBDC
+    - name: _MuxCon_MakeActive
+      processed: ''
+      offset: 0000FC81
+    - name: _MuxCon_MakeIncoming
+      processed: ''
+      offset: 0000FCD3
+    - name: _MuxCon_MakePending
+      processed: ''
+      offset: 0000FD64
+    - name: _MuxCon_InitConPacket
+      processed: ''
+      offset: 0000FDE9
+    - name: _MuxCon_SendData
+      processed: ''
+      offset: 0000FE55
+    - name: _MuxCon_Idle
+      processed: ''
+      offset: 0000FF30
+    - name: _MuxCon_CheckDisconnect
+      processed: ''
+      offset: 0000FF80
+    - name: _MuxCon_CheckPendingDisc
+      processed: ''
+      offset: 0001001A
+    - name: _MuxCon_Disconnect
+      processed: ''
+      offset: '00010053'
+    - name: _MuxIcc_Init
+      processed: ''
+      offset: '00010170'
+    - name: _MuxIcc_Allocate
+      processed: ''
+      offset: 000101B4
+    - name: _MuxIcc_Free
+      processed: ''
+      offset: '00010234'
+    - name: _MuxIcc_MakePending
+      processed: ''
+      offset: 000102D9
+    - name: _MuxIcc_MakeActive
+      processed: ''
+      offset: 0001036E
+    - name: _MuxIcc_MakeClosing
+      processed: ''
+      offset: '00010496'
+    - name: _MuxIcc_MakeClosed
+      processed: ''
+      offset: 0001059A
+    - name: _MuxIcc_ChangeToActive
+      processed: ''
+      offset: '000106E6'
+    - name: _MuxIcc_StartConnection
+      processed: ''
+      offset: 0001078B
+    - name: _MuxIcc_ProcessPendingConnects
+      processed: ''
+      offset: '00010835'
+    - name: _MuxIcc_FindConnection
+      processed: ''
+      offset: '00010923'
+    - name: _MuxIcc_DisconnectList
+      processed: ''
+      offset: 000109DF
+    - name: _MuxIcc_Disconnect
+      processed: ''
+      offset: 00010A34
+    - name: _MuxIcc_AddIncomingConnect
+      processed: ''
+      offset: 00010AC2
+    - name: _MuxIcc_AddPendingConnect
+      processed: ''
+      offset: 00010B45
+    - name: _MuxIcc_AllocateIncoming
+      processed: ''
+      offset: 00010B82
+    - name: _MuxIcc_RemoveConnect
+      processed: ''
+      offset: 00010C10
+    - name: _MuxIcc_StatusIndic
+      processed: ''
+      offset: 00010C4E
+    - name: _MuxIcc_CheckForPossibleIcc
+      processed: ''
+      offset: 00010D3F
+    - name: _MuxIcc_CheckClosing
+      processed: ''
+      offset: 00010DA4
+    - name: _MuxIcc_CheckDisconnect
+      processed: ''
+      offset: 00010F4C
+    - name: _MuxIcc_DiscTimerFunc
+      processed: ''
+      offset: '00011015'
+    - name: _LmSmoothCache
+      processed: ''
+      offset: '00011120'
+    - name: _LmAddDeviceToSmoothCache
+      processed: ''
+      offset: '00011219'
+    - name: _LmRemoveFailedItems
+      processed: ''
+      offset: '00011358'
+    - name: _LmDiscoveryTimerFunc
+      processed: ''
+      offset: 000114F7
+    - name: _LmPerformPeriodicDiscovery
+      processed: ''
+      offset: 0001156A
+    - name: _LmPerformDiscovery
+      processed: ''
+      offset: '00011610'
+    - name: _LmSmoothStatusInd
+      processed: ''
+      offset: 0001175A
+    - name: _LmStartPinging
+      processed: ''
+      offset: 000117A9
+    - name: _LmProcessPingResult
+      processed: ''
+      offset: 000118AC
+    - name: _LmConfirmDiscovery
+      processed: ''
+      offset: 00011A98
+    - name: _LmStartPeriodicDiscoveryTimer
+      processed: ''
+      offset: 00011B3A
+    - name: _LmUpdateDiscoveryCache
+      processed: ''
+      offset: 00011BA9
+    - name: _LmIndicateCacheChange
+      processed: ''
+      offset: 00011C0B
+    - name: _LmDiscoveryConfirm
+      processed: ''
+      offset: 00011C82
+    - name: IRLAMPEX_DDB
+      processed: ''
+      offset: 00011D08
+    - name: _IrLap
+      processed: ''
+      offset: '00011E60'
+    - name: _ThreadExLock
+      processed: ''
+      offset: 00011E6C
+    - name: _RXBack
+      processed: ''
+      offset: '00011E70'
+    - name: _TXBack
+      processed: ''
+      offset: '00011E74'
+    - name: _doRetroactiveShutdown
+      processed: ''
+      offset: 000120F4
+    - name: _Win32ThreadFuncActive
+      processed: ''
+      offset: 000120F8
+    - name: _EventMutex
+      processed: ''
+      offset: 000120FC
+    - name: _EQFront
+      processed: ''
+      offset: '00012100'
+    - name: _EQBack
+      processed: ''
+      offset: '00012104'
+    - name: _DebugEQBack
+      processed: ''
+      offset: '00012108'
+    - name: _slotTable
+      processed: ''
+      offset: '00012260'
+    - name: _allListsMutex
+      processed: ''
+      offset: 0001234C
+    - name: _DbgListLog
+      processed: ''
+      offset: '00012354'
+    - name: _DbgListRecords
+      processed: ''
+      offset: '00016354'
+    - name: _ParmIdentifierTable
+      processed: ''
+      offset: 000167F8
+    - name: _DefaultNegTable
+      processed: ''
+      offset: '00016800'
+    - name: _PollTime2Table
+      processed: ''
+      offset: 00016C90
+    - name: _PollTime3Table
+      processed: ''
+      offset: 00016CA0
+    - name: _IrLapFrmCap
+      processed: ''
+      offset: '00017564'
+    - name: _IrLapFrmWrap
+      processed: ''
+      offset: '00017568'
+    - name: _IrLapFrmParm
+      processed: ''
+      offset: 0001756C
+    - name: _IrLampParm
+      processed: ''
+      offset: '00017570'
+    - name: _NumIccs
+      processed: ''
+      offset: '00017574'
+    - name: _IrLampWrap
+      processed: ''
+      offset: 0001757C
+    - name: _IoCtlTable
+      processed: ''
+      offset: '00017604'
+    - name: _IoCtlTableSize
+      processed: ''
+      offset: '00017610'
+    - name: _IrLmp
+      processed: ''
+      offset: '00017788'
+    - name: _IrLmpInitialized
+      processed: ''
+      offset: 0001778C
+    - name: _IasClient
+      processed: ''
+      offset: 00017E6C
+    - name: _IasClientNoConCB
+      processed: ''
+      offset: '00017E74'
+    - name: _IasClientCB
+      processed: ''
+      offset: '00017E94'
+    - name: _IasServer
+      processed: ''
+      offset: 000185D4
+    - name: _IasServerNoConCB
+      processed: ''
+      offset: 000185DC
+    - name: _IasServerCB
+      processed: ''
+      offset: 000185FC
+    - name: _IrlapEventNames
+      processed: ''
+      offset: 00018D04
+    - name: _dwsNumPackets
+      processed: ''
+      offset: 00018D68
+    - name: _EventQueue
+      processed: ''
+      offset: 00018D6C
+    - name: _stServbuff
+      processed: ''
+      offset: 00018E6C
+    - name: _DebugEventQueue
+      processed: ''
+      offset: 00018E8C
+    - name: _ThreadExRef
+      processed: ''
+      offset: 00019E8C
+    - name: _DebugRxQueue
+      processed: ''
+      offset: '00019E90'
+    - name: _DebugTxQueue
+      processed: ''
+      offset: 0001AE90
+    - name: _fThreadEnable
+      processed: ''
+      offset: 0001BE90
+  - num: '2'
+    name: _IGROUP
+    offset: 00003D00
+    symbols:
+    - name: IRLAMP_Dynamic_Init
+      processed: ''
+      offset: '00000000'
+    - name: _IRLAMPEX_DynamicInit
+      processed: ''
+      offset: '00000020'
+  - num: '3'
+    name: _RARE
+    offset: '00000000'
+    symbols:
+    - name: _CCODE__HeapAllocate
+      processed: ''
+      offset: '00000000'
+    - name: _CCODE__HeapFree
+      processed: ''
+      offset: '00000008'
+    - name: _CCODE__Trace_Out_Service@4
+      processed: ''
+      offset: '00000010'
+    - name: _CCODE__Debug_Printf_Service
+      processed: ''
+      offset: '00000018'
+    - name: _CCODE_Schedule_Global_Event@8
+      processed: ''
+      offset: 0000002C
+    - name: _CCODE_Get_Sys_VM_Handle
+      processed: ''
+      offset: '00000044'
+    - name: _CCODE_Set_Global_Time_Out@12
+      processed: ''
+      offset: '00000050'
+    - name: _CCODE_Cancel_Time_Out@4
+      processed: ''
+      offset: 0000006C
+    - name: _CCODE_Get_Last_Updated_System_Time
+      processed: ''
+      offset: 0000007C
+    - name: _CCODE__CreateMutex
+      processed: ''
+      offset: '00000084'
+    - name: _CCODE__DestroyMutex
+      processed: ''
+      offset: 0000008C
+    - name: _CCODE__EnterMutex
+      processed: ''
+      offset: '00000094'
+    - name: _CCODE__LeaveMutex
+      processed: ''
+      offset: 0000009C
+    - name: _CCODE__lmemcpy
+      processed: ''
+      offset: 000000A4
+    - name: _CCODE_Call_Restricted_Event@24
+      processed: ''
+      offset: 000000AC

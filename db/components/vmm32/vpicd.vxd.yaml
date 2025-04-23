@@ -1,563 +1,828 @@
-filename: "vmm32/vpicd.vxd"
+filename: vmm32/vpicd.vxd
 #TODO: bring up more details from symdeb
-binary: "vmm32/vpicd.vxd"
-description: ""
-note: ""
+binary: VPICD
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_LGROUP"
-        offset: "00003B70"
-        symbols:
-          - name: 'VPICD_Force_Default_Owner'
-            offset: "00000006"            
-          - name: 'VPICD_Force_Default_Behavior'
-            offset: "000000A8"            
-          - name: 'VPICD_Get_Virtualization_Count'
-            offset: "000001E3"            
-          - name: 'Def_Int_IRQ9_Owner_Detect'
-            offset: "00000222"            
-          - name: 'Def_Int_Detect_IRQ9_Event'
-            offset: "00000230"            
-          - name: 'Def_Int_PM_Vec_Hook'
-            offset: "000002BB"            
-          - name: 'Default_IRQ9_EOI'
-            offset: "00000320"            
-          - name: 'Default_Cascade_EOI'
-            offset: "0000034C"            
-          - name: 'Default_INT'
-            offset: "00000370"            
-          - name: 'Default_EOI'
-            offset: "000003BC"            
-          - name: 'Default_Shared_EOI'
-            offset: "000003C8"            
-          - name: 'Default_PM_Share_Int'
-            offset: "000003D3"            
-          - name: 'Default_MASK'
-            offset: "000003DC"            
-          - name: 'Default_Iret'
-            offset: "000004EF"            
-          - name: 'Default_Shared_IRET'
-            offset: "000004F9"            
-          - name: 'Def_Int_Share_Error_EOI'
-            offset: "000006B3"            
-          - name: 'Def_Int_Share_Error_Timeout'
-            offset: "000006D4"            
-          - name: 'Def_Int_Share_Error_IRET'
-            offset: "000006FC"            
-          - name: 'Def_Int_Share_Error_Bitch'
-            offset: "00000717"            
-          - name: 'Def_Int_Share_Error'
-            offset: "00000728"            
-          - name: 'VPICD_Power_Handler'
-            offset: "000007CC"            
-          - name: 'ReInitializePIC'
-            offset: "00000855"            
-          - name: 'VPICD_Control'
-            offset: "000008CD"            
-          - name: 'VPICD_Sys_Critical_Exit'
-            offset: "00000928"            
-          - name: 'VPICD_Create_VM'
-            offset: "00000982"            
-          - name: 'VPICD_Not_Executeable'
-            offset: "000009C2"            
-          - name: 'VPICD_Thread_Not_Executeable'
-            offset: "00000A61"            
-          - name: 'VPICD_Set_Virt_Mask'
-            offset: "00000A88"            
-          - name: 'VPICD_State_Change_Event'
-            offset: "00000B90"            
-          - name: 'VPICD_Adjust_Pri_Boost'
-            offset: "00000BA4"            
-          - name: 'VPICD_Simulate_Int'
-            offset: "00000C40"            
-          - name: 'VPICD_Begin_V86_Int_Stack'
-            offset: "00000FA3"            
-          - name: 'VPICD_Set_VxD_PM_From_V86'
-            offset: "00001075"            
-          - name: 'VPICD_IRET_PM_From_V86'
-            offset: "0000107C"            
-          - name: 'VPICD_Set_VxD_PM_From_PM'
-            offset: "00001094"            
-          - name: 'VPICD_IRET_PM_From_PM'
-            offset: "000010A6"            
-          - name: 'VPICD_Set_VxD_V86_From_PM'
-            offset: "000010B4"            
-          - name: 'VPICD_IRET_V86_From_PM'
-            offset: "000010B8"            
-          - name: 'VPICD_End_V86_Int_Stack'
-            offset: "000010CA"            
-          - name: 'VPICD_Set_VxD_V86_From_V86'
-            offset: "0000118F"            
-          - name: 'VPICD_IRET_V86_From_V86'
-            offset: "00001193"            
-          - name: 'VPICD_IRET_Call_Devices'
-            offset: "000011B7"            
-          - name: 'VPICD_Time_Out'
-            offset: "0000125D"            
-          - name: 'VPICD_Hook_Int_Serv_Hook'
-            offset: "0000133D"            
-          - name: 'VPICD_Common_Int_Code'
-            offset: "00001354"            
-          - name: 'VPICD_Common_Slave_Int'
-            offset: "00001354"            
-          - name: 'VPICD_Common_Master_Int'
-            offset: "0000135A"            
-          - name: 'VPICD_Common_Shared_Slave_Int'
-            offset: "00001504"            
-          - name: 'VPICD_Common_Shared_Int_Code'
-            offset: "00001504"            
-          - name: 'VPICD_Common_Shared_Master_Int'
-            offset: "0000150A"            
-          - name: 'VPICD_Slave_Mask_Change_Proc'
-            offset: "0000156D"            
-          - name: 'Hw_IRQ_0'
-            offset: "00001574"            
-          - name: 'Hw_IRQ_1'
-            offset: "000015A8"            
-          - name: 'Hw_IRQ_3'
-            offset: "000015DC"            
-          - name: 'Hw_IRQ_4'
-            offset: "00001610"            
-          - name: 'Hw_IRQ_5'
-            offset: "00001644"            
-          - name: 'Hw_IRQ_6'
-            offset: "00001678"            
-          - name: 'Hw_IRQ_7'
-            offset: "000016AC"            
-          - name: 'Hw_IRQ_8'
-            offset: "000016F0"            
-          - name: 'Hw_IRQ_9'
-            offset: "00001724"            
-          - name: 'Hw_IRQ_10'
-            offset: "00001758"            
-          - name: 'Hw_IRQ_11'
-            offset: "0000178C"            
-          - name: 'Hw_IRQ_12'
-            offset: "000017C0"            
-          - name: 'Hw_IRQ_13'
-            offset: "000017F4"            
-          - name: 'Hw_IRQ_14'
-            offset: "00001828"            
-          - name: 'Hw_IRQ_15'
-            offset: "0000185C"            
-          - name: 'Hw_IRQ_2'
-            offset: "000018A0"            
-          - name: 'VPICD_Slave_Error'
-            offset: "000018AC"            
-          - name: 'VPICD_API'
-            offset: "000018C0"            
-          - name: 'VPICD_API_Convert_LDT_To_GDT'
-            offset: "00001A27"            
-          - name: 'VPICD_Common_API_Int'
-            offset: "00001A7F"            
-          - name: 'VPICD_API_Call_From_Use16'
-            offset: "00001ABC"            
-          - name: 'VPICD_BIH_EOI'
-            offset: "00001AF8"            
-          - name: 'VPICD_BIH_Mask'
-            offset: "00001B00"            
-          - name: 'VPICD_BIH_Unmask'
-            offset: "00001B08"            
-          - name: 'VPICD_BIH_Get_Mask'
-            offset: "00001B10"            
-          - name: 'VPICD_BIH_Get_IRR'
-            offset: "00001B20"            
-          - name: 'VPICD_BIH_Get_ISR'
-            offset: "00001B28"            
-          - name: 'VPICD_BIH_Call_Back_PM'
-            offset: "00001B34"            
-          - name: 'VPICD_BHI_Call_PM_Event'
-            offset: "00001BA1"            
-          - name: 'VPICD_Virtual_EOI'
-            offset: "00001C0E"            
-          - name: 'VPICD_Simulate_IO_0'
-            offset: "00001C40"            
-          - name: 'VPICD_Trap_SP0'
-            offset: "00001C48"            
-          - name: 'VPICD_In_0'
-            offset: "00001C5D"            
-          - name: 'VPICD_Trap_MP0'
-            offset: "00001C88"            
-          - name: 'VPICD_Out_0'
-            offset: "00001C9B"            
-          - name: 'VPICD_Simulate_IO_1'
-            offset: "00001D80"            
-          - name: 'VPICD_Trap_SP1'
-            offset: "00001D88"            
-          - name: 'VPICD_In_1'
-            offset: "00001D99"            
-          - name: 'VPICD_Trap_MP1'
-            offset: "00001DA0"            
-          - name: 'VPICD_Out_1'
-            offset: "00001DAF"            
-          - name: 'VPICD_Not_Supported'
-            offset: "00001E14"            
-          - name: 'VPICD_Get_Version'
-            offset: "00001E2A"            
-          - name: 'VPICD_Virtualize_IRQ'
-            offset: "00001E49"            
-          - name: 'VPICD_Set_Int_Request'
-            offset: "00002144"            
-          - name: 'VPICD_Clear_Int_Request'
-            offset: "000021D4"            
-          - name: 'VPICD_Get_Complete_Status'
-            offset: "00002250"            
-          - name: 'VPICD_Get_Status'
-            offset: "000022F0"            
-          - name: 'VPICD_Test_Phys_Request'
-            offset: "0000234B"            
-          - name: 'VPICD_Phys_EOI'
-            offset: "00002390"            
-          - name: 'VPICD_Convert_IRQ_To_Int'
-            offset: "00002415"            
-          - name: 'VPICD_Convert_Int_To_IRQ'
-            offset: "00002455"            
-          - name: 'VPICD_CITI_Test_Range'
-            offset: "000024A2"            
-          - name: 'VPICD_Get_IRQ_Complete_Status'
-            offset: "000024B8"            
-          - name: 'VPICD_Convert_Handle_To_IRQ'
-            offset: "00002504"            
-          - name: 'VPICD_Physically_Mask'
-            offset: "00002534"            
-          - name: 'VPICD_Physically_Unmask'
-            offset: "000025AC"            
-          - name: 'VPICD_Set_Auto_Masking'
-            offset: "00002624"            
-          - name: 'VPICD_Call_When_Hw_Int'
-            offset: "000026AC"            
-          - name: 'VPICD_Bogus_Hw_Filter'
-            offset: "000026CE"            
-          - name: 'VPICD_Auto_Mask_At_Inst_Swap'
-            offset: "000026D5"            
-          - name: 'VPICD_Begin_Inst_Page_Swap'
-            offset: "00002718"            
-          - name: 'VPICD_End_Inst_Page_Swap'
-            offset: "00002738"            
-          - name: 'VPICD_VM_SlavePIC_Mask_Change'
-            offset: "00002796"            
-          - name: 'clr_ir_int_proc'
-            offset: "000027A3"            
-          - name: 'clr_ir_enable_int'
-            offset: "000027C3"            
-          - name: '_VPICD_Clear_IR_Bits'
-            offset: "00002809"            
-          - name: '_VPICD_Set_Irql_Mask'
-            offset: "00002889"            
-          - name: '_VPICD_Prepare_For_Shutdown'
-            offset: "000028DE"            
-          - name: '_VPICD_Set_Channel_Irql'
-            offset: "00002924"            
-          - name: 'VPICD_PreAlloc_IRQ'
-            offset: "00002978"            
-          - name: 'VPICDARB_Unmask'
-            offset: "0000299F"            
-          - name: 'VPICD_Release_IRQ'
-            offset: "000029BF"            
-          - name: 'Orig_V86_Int_0Ah_Vector'
-            offset: "000029FC"            
-          - name: 'Orig_V86_Int_71h_Vector'
-            offset: "00002A00"            
-          - name: 'Orig_PM_Int_0Ah_Vector'
-            offset: "00002A04"            
-          - name: 'Orig_PM_Int_71h_Vector'
-            offset: "00002A0A"            
-          - name: 'Def_Int_PM_Set_Vec_Chain'
-            offset: "00002A10"            
-          - name: '_VPICD_Get_Version'
-            offset: "00002BF0"            
-          - name: '_VPICD_Virtualize_IRQ'
-            offset: "00002BF4"            
-          - name: '_VPICD_Set_Int_Request'
-            offset: "00002BF8"            
-          - name: '_VPICD_Clear_Int_Request'
-            offset: "00002BFC"            
-          - name: '_VPICD_Phys_EOI'
-            offset: "00002C00"            
-          - name: '_VPICD_Get_Complete_Status'
-            offset: "00002C04"            
-          - name: '_VPICD_Get_Status'
-            offset: "00002C08"            
-          - name: '_VPICD_Test_Phys_Request'
-            offset: "00002C0C"            
-          - name: '_VPICD_Physically_Mask'
-            offset: "00002C10"            
-          - name: '_VPICD_Physically_Unmask'
-            offset: "00002C14"            
-          - name: '_VPICD_Set_Auto_Masking'
-            offset: "00002C18"            
-          - name: '_VPICD_Get_IRQ_Complete_Status'
-            offset: "00002C1C"            
-          - name: '_VPICD_Convert_Handle_To_IRQ'
-            offset: "00002C20"            
-          - name: '_VPICD_Convert_IRQ_To_Int'
-            offset: "00002C24"            
-          - name: '_VPICD_Convert_Int_To_IRQ'
-            offset: "00002C28"            
-          - name: '_VPICD_Call_When_Hw_Int'
-            offset: "00002C2C"            
-          - name: '_VPICD_Force_Default_Owner'
-            offset: "00002C30"            
-          - name: '_VPICD_Force_Default_Behavior'
-            offset: "00002C34"            
-          - name: '_VPICD_Auto_Mask_At_Inst_Swap'
-            offset: "00002C38"            
-          - name: '_VPICD_Begin_Inst_Page_Swap'
-            offset: "00002C3C"            
-          - name: '_VPICD_End_Inst_Page_Swap'
-            offset: "00002C40"            
-          - name: '_VPICD_Virtual_EOI'
-            offset: "00002C44"            
-          - name: '_VPICD_Get_Virtualization_Count'
-            offset: "00002C48"            
-          - name: '_VPICD_Post_Sys_Critical_Init'
-            offset: "00002C4C"            
-          - name: '_VPICD_VM_SlavePIC_Mask_Change'
-            offset: "00002C50"            
-          - name: '__VPICD_Clear_IR_Bits'
-            offset: "00002C54"            
-          - name: '__VPICD_Get_Level_Mask'
-            offset: "00002C58"            
-          - name: '__VPICD_Set_Level_Mask'
-            offset: "00002C5C"            
-          - name: '__VPICD_Set_Irql_Mask'
-            offset: "00002C60"            
-          - name: '__VPICD_Set_Channel_Irql'
-            offset: "00002C64"            
-          - name: '__VPICD_Prepare_For_Shutdown'
-            offset: "00002C68"            
-          - name: '__VPICD_Register_Trigger_Handler'
-            offset: "00002C6C"            
-          - name: 'VPICD_DDB'
-            offset: "00002C70"            
-          - name: 'VPICD_Phys_IMR'
-            offset: "00002CC0"            
-          - name: 'VPICD_Phys_ISR'
-            offset: "00002CC2"            
-          - name: 'VPICD_Hardware_IRR'
-            offset: "00002CC4"            
-          - name: 'VPICD_Def_IMR'
-            offset: "00002CC6"            
-          - name: 'VPICD_Inst_Swap_Mask'
-            offset: "00002CC8"            
-          - name: 'VPICD_Last_IMR'
-            offset: "00002CCA"            
-          - name: 'VPICD_Irql_IMR'
-            offset: "00002CCC"            
-          - name: 'VPICD_Hw_Int_Filter'
-            offset: "00002CD0"            
-          - name: 'VPICD_SIRQ_Alloc_List'
-            offset: "00002CD4"            
-          - name: 'VPICD_Irql_Mask_Table'
-            offset: "00002CFC"            
-          - name: 'VIRQ_0'
-            offset: "00002D3C"            
-          - name: 'VIRQ_1'
-            offset: "00002D7C"            
-          - name: 'VIRQ_2'
-            offset: "00002DBC"            
-          - name: 'VIRQ_3'
-            offset: "00002DFC"            
-          - name: 'VIRQ_4'
-            offset: "00002E3C"            
-          - name: 'VIRQ_5'
-            offset: "00002E7C"            
-          - name: 'VIRQ_6'
-            offset: "00002EBC"            
-          - name: 'VIRQ_7'
-            offset: "00002EFC"            
-          - name: 'VIRQ_8'
-            offset: "00002F3C"            
-          - name: 'VIRQ_9'
-            offset: "00002F7C"            
-          - name: 'VIRQ_10'
-            offset: "00002FBC"            
-          - name: 'VIRQ_11'
-            offset: "00002FFC"            
-          - name: 'VIRQ_12'
-            offset: "0000303C"            
-          - name: 'VIRQ_13'
-            offset: "0000307C"            
-          - name: 'VIRQ_14'
-            offset: "000030BC"            
-          - name: 'VIRQ_15'
-            offset: "000030FC"            
-          - name: 'SIRQ_0'
-            offset: "0000313C"            
-          - name: 'SIRQ_1'
-            offset: "00003170"            
-          - name: 'SIRQ_2'
-            offset: "000031A4"            
-          - name: 'SIRQ_3'
-            offset: "000031D8"            
-          - name: 'SIRQ_4'
-            offset: "0000320C"            
-          - name: 'SIRQ_5'
-            offset: "00003240"            
-          - name: 'SIRQ_6'
-            offset: "00003274"            
-          - name: 'SIRQ_7'
-            offset: "000032A8"            
-          - name: 'SIRQ_8'
-            offset: "000032DC"            
-          - name: 'SIRQ_9'
-            offset: "00003310"            
-          - name: 'SIRQ_10'
-            offset: "00003344"            
-          - name: 'SIRQ_11'
-            offset: "00003378"            
-          - name: 'SIRQ_12'
-            offset: "000033AC"            
-          - name: 'SIRQ_13'
-            offset: "000033E0"            
-          - name: 'SIRQ_14'
-            offset: "00003414"            
-          - name: 'SIRQ_15'
-            offset: "00003448"            
-          - name: 'VPICD_Priority_XRef'
-            offset: "0000347C"            
-          - name: 'VPICD_IRQ_Convert'
-            offset: "000034BC"            
-          - name: 'VPICD_CB_Offset'
-            offset: "000034FC"            
-          - name: 'PEF_state_CB_offset'
-            offset: "00003500"            
-          - name: 'SYSVM_Stack_Seg'
-            offset: "00003528"            
-          - name: 'fSimulatedIntsOK'
-            offset: "00003548"            
-          - name: 'VPICD_ES_Mask'
-            offset: "00003549"            
-          - name: 'VPICD_Shared_Hook_Off_Tbl'
-            offset: "0000354C"            
-          - name: 'VPICD_Shared_Hook_Tbl'
-            offset: "00003588"            
-          - name: 'VPICD_ES_Hooked_Mask'
-            offset: "00003B18"            
-          - name: 'VPICD_Arb_Data'
-            offset: "000041CE"            
-      - num: "2"
-        name: "_LMGROUP"
-        offset: "00003BB0"
-        symbols:
-          - name: '@MSG_LAB'
-            offset: "00000000"            
-          - name: '@MSG_LDATA'
-            offset: "00000014"            
-      - num: "3"
-        name: "_IMGROUP"
-        offset: "00003BF0"
-        symbols:
-          - name: '@MSG_IAB'
-            offset: "00000000"            
-          - name: '@MSG_IDATA'
-            offset: "00000010"            
-      - num: "4"
-        name: "_IGROUP"
-        offset: "00004220"
-        symbols:
-          - name: 'VPICD_Sys_Critical_Init'
-            offset: "00000000"            
-          - name: 'VPICD_Post_Sys_Critical_Init'
-            offset: "0000037C"            
-          - name: 'VPICD_Init_Complete'
-            offset: "000003E4"            
-          - name: 'VPICD_API_Init'
-            offset: "00000410"            
-          - name: 'VPICD_PnP_Init'
-            offset: "000004A0"            
-          - name: 'VPICDArb_Init_Complete'
-            offset: "00000552"            
-          - name: 'DumpHexChar'
-            offset: "000005E3"            
-          - name: 'VPICD_IO_Table'
-            offset: "0000060E"            
-          - name: 'VPICD_IRQ9_Global_Str'
-            offset: "000007B8"            
-      - num: "5"
-        name: "_PDATA"
-        offset: "00004250"
-        symbols:
-          - name: 'fIRQARBITDebug'
-            offset: "00000000"            
-      - num: "6"
-        name: "_DBOGROUP"
-        offset: "000046C0"
-        symbols:
-          - name: 'VPICD_Debug_Arb'
-            offset: "00000000"            
-          - name: 'VPICD_Debug_Info'
-            offset: "000000F1"            
-          - name: 'VPICD_Debug_Global_Info'
-            offset: "00000144"            
-          - name: 'VPICD_Debug_Local_Info'
-            offset: "0000024B"            
-          - name: 'VPICD_Debug_IRQ_Handler_Info'
-            offset: "00000398"            
-          - name: 'VPICD_Debug_IRQ_Title'
-            offset: "0000048B"            
-          - name: 'VPICD_Debug_Show_IRQs'
-            offset: "000004A2"            
-      - num: "7"
-        name: "_LOCKABLE"
-        offset: "00004730"
-        symbols:
-          - name: 'VPICD_Stop_Using_Stacks'
-            offset: "00000000"            
-      - num: "8"
-        name: "_RARE"
-        offset: "000047C0"
-        symbols:
-          - name: 'VPICD_Begin_PM_App'
-            offset: "00000000"            
-      - num: "9"
-        name: "_VMDESTROY"
-        offset: "00000000"
-        symbols:
-          - name: 'VPICD_Arbitrate'
-            offset: "00000000"            
-          - name: 'VPICD_Test_Alloc'
-            offset: "0000002B"            
-          - name: 'VPICD_Alloc_Elements'
-            offset: "00000094"            
-          - name: 'VPICD_Next_Element'
-            offset: "00000214"            
-          - name: 'VPICD_Dup_Alloc'
-            offset: "0000024A"            
-          - name: 'VPICD_Retest_Alloc'
-            offset: "00000273"            
-          - name: 'VPICD_Force_Alloc'
-            offset: "0000036F"            
-          - name: 'VPICD_Set_Alloc'
-            offset: "00000385"            
-          - name: 'VPICD_Apply_Alloc'
-            offset: "000003C4"            
-          - name: 'VPICD_Release_Alloc'
-            offset: "00000498"            
-          - name: 'VPICD_Query_Free'
-            offset: "000004B0"            
-          - name: 'VPICD_Remove'
-            offset: "000004E7"            
-          - name: 'VPICD_Query_Arbitrate'
-            offset: "000004EF"            
-          - name: 'VPICD_Add_Reserve'
-            offset: "000004F7"            
-          - name: 'VPICD_Write_Reserve'
-            offset: "000004FF"            
-          - name: 'VPICD_Begin_PnP_Mode'
-            offset: "00000507"            
-          - name: 'VPICD_Sort_Res_Desc'
-            offset: "00000512"            
-          - name: 'VPICD_Arb_Unalloc'
-            offset: "000005AD"            
-          - name: '_VPICD_Get_Level_Mask'
-            offset: "0000061F"            
-          - name: '_VPICD_Set_Level_Mask'
-            offset: "0000063F"            
-          - name: '_VPICD_Register_Trigger_Handler'
-            offset: "00000674"            
-          - name: 'VPICD_VXDLDR_Notify'
-            offset: "000006B8"            
+- version: system
+  tree:
+  - - defint.asm
+    - vpicdapi.asm
+    - vpicdarb.asm
+    - vpicd.asm
+    - vpicdbg.asm
+    - vpicdio.asm
+    - vpicserv.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 00003B70
+    symbols:
+    - name: VPICD_Force_Default_Owner
+      processed: ''
+      offset: '00000006'
+    - name: VPICD_Force_Default_Behavior
+      processed: ''
+      offset: 000000A8
+    - name: VPICD_Get_Virtualization_Count
+      processed: ''
+      offset: '000001E3'
+    - name: Def_Int_IRQ9_Owner_Detect
+      processed: ''
+      offset: '00000222'
+    - name: Def_Int_Detect_IRQ9_Event
+      processed: ''
+      offset: '00000230'
+    - name: Def_Int_PM_Vec_Hook
+      processed: ''
+      offset: 000002BB
+    - name: Default_IRQ9_EOI
+      processed: ''
+      offset: '00000320'
+    - name: Default_Cascade_EOI
+      processed: ''
+      offset: 0000034C
+    - name: Default_INT
+      processed: ''
+      offset: '00000370'
+    - name: Default_EOI
+      processed: ''
+      offset: 000003BC
+    - name: Default_Shared_EOI
+      processed: ''
+      offset: 000003C8
+    - name: Default_PM_Share_Int
+      processed: ''
+      offset: 000003D3
+    - name: Default_MASK
+      processed: ''
+      offset: 000003DC
+    - name: Default_Iret
+      processed: ''
+      offset: 000004EF
+    - name: Default_Shared_IRET
+      processed: ''
+      offset: 000004F9
+    - name: Def_Int_Share_Error_EOI
+      processed: ''
+      offset: 000006B3
+    - name: Def_Int_Share_Error_Timeout
+      processed: ''
+      offset: 000006D4
+    - name: Def_Int_Share_Error_IRET
+      processed: ''
+      offset: 000006FC
+    - name: Def_Int_Share_Error_Bitch
+      processed: ''
+      offset: '00000717'
+    - name: Def_Int_Share_Error
+      processed: ''
+      offset: '00000728'
+    - name: VPICD_Power_Handler
+      processed: ''
+      offset: 000007CC
+    - name: ReInitializePIC
+      processed: ''
+      offset: '00000855'
+    - name: VPICD_Control
+      processed: ''
+      offset: 000008CD
+    - name: VPICD_Sys_Critical_Exit
+      processed: ''
+      offset: '00000928'
+    - name: VPICD_Create_VM
+      processed: ''
+      offset: '00000982'
+    - name: VPICD_Not_Executeable
+      processed: ''
+      offset: 000009C2
+    - name: VPICD_Thread_Not_Executeable
+      processed: ''
+      offset: 00000A61
+    - name: VPICD_Set_Virt_Mask
+      processed: ''
+      offset: 00000A88
+    - name: VPICD_State_Change_Event
+      processed: ''
+      offset: 00000B90
+    - name: VPICD_Adjust_Pri_Boost
+      processed: ''
+      offset: 00000BA4
+    - name: VPICD_Simulate_Int
+      processed: ''
+      offset: 00000C40
+    - name: VPICD_Begin_V86_Int_Stack
+      processed: ''
+      offset: 00000FA3
+    - name: VPICD_Set_VxD_PM_From_V86
+      processed: ''
+      offset: '00001075'
+    - name: VPICD_IRET_PM_From_V86
+      processed: ''
+      offset: 0000107C
+    - name: VPICD_Set_VxD_PM_From_PM
+      processed: ''
+      offset: '00001094'
+    - name: VPICD_IRET_PM_From_PM
+      processed: ''
+      offset: 000010A6
+    - name: VPICD_Set_VxD_V86_From_PM
+      processed: ''
+      offset: 000010B4
+    - name: VPICD_IRET_V86_From_PM
+      processed: ''
+      offset: 000010B8
+    - name: VPICD_End_V86_Int_Stack
+      processed: ''
+      offset: 000010CA
+    - name: VPICD_Set_VxD_V86_From_V86
+      processed: ''
+      offset: 0000118F
+    - name: VPICD_IRET_V86_From_V86
+      processed: ''
+      offset: '00001193'
+    - name: VPICD_IRET_Call_Devices
+      processed: ''
+      offset: 000011B7
+    - name: VPICD_Time_Out
+      processed: ''
+      offset: 0000125D
+    - name: VPICD_Hook_Int_Serv_Hook
+      processed: ''
+      offset: 0000133D
+    - name: VPICD_Common_Int_Code
+      processed: ''
+      offset: '00001354'
+    - name: VPICD_Common_Slave_Int
+      processed: ''
+      offset: '00001354'
+    - name: VPICD_Common_Master_Int
+      processed: ''
+      offset: 0000135A
+    - name: VPICD_Common_Shared_Slave_Int
+      processed: ''
+      offset: '00001504'
+    - name: VPICD_Common_Shared_Int_Code
+      processed: ''
+      offset: '00001504'
+    - name: VPICD_Common_Shared_Master_Int
+      processed: ''
+      offset: 0000150A
+    - name: VPICD_Slave_Mask_Change_Proc
+      processed: ''
+      offset: 0000156D
+    - name: Hw_IRQ_0
+      processed: ''
+      offset: '00001574'
+    - name: Hw_IRQ_1
+      processed: ''
+      offset: 000015A8
+    - name: Hw_IRQ_3
+      processed: ''
+      offset: 000015DC
+    - name: Hw_IRQ_4
+      processed: ''
+      offset: '00001610'
+    - name: Hw_IRQ_5
+      processed: ''
+      offset: '00001644'
+    - name: Hw_IRQ_6
+      processed: ''
+      offset: '00001678'
+    - name: Hw_IRQ_7
+      processed: ''
+      offset: 000016AC
+    - name: Hw_IRQ_8
+      processed: ''
+      offset: 000016F0
+    - name: Hw_IRQ_9
+      processed: ''
+      offset: '00001724'
+    - name: Hw_IRQ_10
+      processed: ''
+      offset: '00001758'
+    - name: Hw_IRQ_11
+      processed: ''
+      offset: 0000178C
+    - name: Hw_IRQ_12
+      processed: ''
+      offset: 000017C0
+    - name: Hw_IRQ_13
+      processed: ''
+      offset: 000017F4
+    - name: Hw_IRQ_14
+      processed: ''
+      offset: '00001828'
+    - name: Hw_IRQ_15
+      processed: ''
+      offset: 0000185C
+    - name: Hw_IRQ_2
+      processed: ''
+      offset: 000018A0
+    - name: VPICD_Slave_Error
+      processed: ''
+      offset: 000018AC
+    - name: VPICD_API
+      processed: ''
+      offset: 000018C0
+    - name: VPICD_API_Convert_LDT_To_GDT
+      processed: ''
+      offset: 00001A27
+    - name: VPICD_Common_API_Int
+      processed: ''
+      offset: 00001A7F
+    - name: VPICD_API_Call_From_Use16
+      processed: ''
+      offset: 00001ABC
+    - name: VPICD_BIH_EOI
+      processed: ''
+      offset: 00001AF8
+    - name: VPICD_BIH_Mask
+      processed: ''
+      offset: 00001B00
+    - name: VPICD_BIH_Unmask
+      processed: ''
+      offset: 00001B08
+    - name: VPICD_BIH_Get_Mask
+      processed: ''
+      offset: 00001B10
+    - name: VPICD_BIH_Get_IRR
+      processed: ''
+      offset: 00001B20
+    - name: VPICD_BIH_Get_ISR
+      processed: ''
+      offset: 00001B28
+    - name: VPICD_BIH_Call_Back_PM
+      processed: ''
+      offset: 00001B34
+    - name: VPICD_BHI_Call_PM_Event
+      processed: ''
+      offset: 00001BA1
+    - name: VPICD_Virtual_EOI
+      processed: ''
+      offset: 00001C0E
+    - name: VPICD_Simulate_IO_0
+      processed: ''
+      offset: 00001C40
+    - name: VPICD_Trap_SP0
+      processed: ''
+      offset: 00001C48
+    - name: VPICD_In_0
+      processed: ''
+      offset: 00001C5D
+    - name: VPICD_Trap_MP0
+      processed: ''
+      offset: 00001C88
+    - name: VPICD_Out_0
+      processed: ''
+      offset: 00001C9B
+    - name: VPICD_Simulate_IO_1
+      processed: ''
+      offset: 00001D80
+    - name: VPICD_Trap_SP1
+      processed: ''
+      offset: 00001D88
+    - name: VPICD_In_1
+      processed: ''
+      offset: 00001D99
+    - name: VPICD_Trap_MP1
+      processed: ''
+      offset: 00001DA0
+    - name: VPICD_Out_1
+      processed: ''
+      offset: 00001DAF
+    - name: VPICD_Not_Supported
+      processed: ''
+      offset: '00001E14'
+    - name: VPICD_Get_Version
+      processed: ''
+      offset: 00001E2A
+    - name: VPICD_Virtualize_IRQ
+      processed: ''
+      offset: '00001E49'
+    - name: VPICD_Set_Int_Request
+      processed: ''
+      offset: '00002144'
+    - name: VPICD_Clear_Int_Request
+      processed: ''
+      offset: 000021D4
+    - name: VPICD_Get_Complete_Status
+      processed: ''
+      offset: '00002250'
+    - name: VPICD_Get_Status
+      processed: ''
+      offset: 000022F0
+    - name: VPICD_Test_Phys_Request
+      processed: ''
+      offset: 0000234B
+    - name: VPICD_Phys_EOI
+      processed: ''
+      offset: '00002390'
+    - name: VPICD_Convert_IRQ_To_Int
+      processed: ''
+      offset: '00002415'
+    - name: VPICD_Convert_Int_To_IRQ
+      processed: ''
+      offset: '00002455'
+    - name: VPICD_CITI_Test_Range
+      processed: ''
+      offset: 000024A2
+    - name: VPICD_Get_IRQ_Complete_Status
+      processed: ''
+      offset: 000024B8
+    - name: VPICD_Convert_Handle_To_IRQ
+      processed: ''
+      offset: '00002504'
+    - name: VPICD_Physically_Mask
+      processed: ''
+      offset: '00002534'
+    - name: VPICD_Physically_Unmask
+      processed: ''
+      offset: 000025AC
+    - name: VPICD_Set_Auto_Masking
+      processed: ''
+      offset: '00002624'
+    - name: VPICD_Call_When_Hw_Int
+      processed: ''
+      offset: 000026AC
+    - name: VPICD_Bogus_Hw_Filter
+      processed: ''
+      offset: 000026CE
+    - name: VPICD_Auto_Mask_At_Inst_Swap
+      processed: ''
+      offset: 000026D5
+    - name: VPICD_Begin_Inst_Page_Swap
+      processed: ''
+      offset: '00002718'
+    - name: VPICD_End_Inst_Page_Swap
+      processed: ''
+      offset: '00002738'
+    - name: VPICD_VM_SlavePIC_Mask_Change
+      processed: ''
+      offset: '00002796'
+    - name: clr_ir_int_proc
+      processed: ''
+      offset: 000027A3
+    - name: clr_ir_enable_int
+      processed: ''
+      offset: 000027C3
+    - name: _VPICD_Clear_IR_Bits
+      processed: ''
+      offset: '00002809'
+    - name: _VPICD_Set_Irql_Mask
+      processed: ''
+      offset: '00002889'
+    - name: _VPICD_Prepare_For_Shutdown
+      processed: ''
+      offset: 000028DE
+    - name: _VPICD_Set_Channel_Irql
+      processed: ''
+      offset: '00002924'
+    - name: VPICD_PreAlloc_IRQ
+      processed: ''
+      offset: '00002978'
+    - name: VPICDARB_Unmask
+      processed: ''
+      offset: 0000299F
+    - name: VPICD_Release_IRQ
+      processed: ''
+      offset: 000029BF
+    - name: Orig_V86_Int_0Ah_Vector
+      processed: ''
+      offset: 000029FC
+    - name: Orig_V86_Int_71h_Vector
+      processed: ''
+      offset: 00002A00
+    - name: Orig_PM_Int_0Ah_Vector
+      processed: ''
+      offset: 00002A04
+    - name: Orig_PM_Int_71h_Vector
+      processed: ''
+      offset: 00002A0A
+    - name: Def_Int_PM_Set_Vec_Chain
+      processed: ''
+      offset: 00002A10
+    - name: _VPICD_Get_Version
+      processed: ''
+      offset: 00002BF0
+    - name: _VPICD_Virtualize_IRQ
+      processed: ''
+      offset: 00002BF4
+    - name: _VPICD_Set_Int_Request
+      processed: ''
+      offset: 00002BF8
+    - name: _VPICD_Clear_Int_Request
+      processed: ''
+      offset: 00002BFC
+    - name: _VPICD_Phys_EOI
+      processed: ''
+      offset: 00002C00
+    - name: _VPICD_Get_Complete_Status
+      processed: ''
+      offset: 00002C04
+    - name: _VPICD_Get_Status
+      processed: ''
+      offset: 00002C08
+    - name: _VPICD_Test_Phys_Request
+      processed: ''
+      offset: 00002C0C
+    - name: _VPICD_Physically_Mask
+      processed: ''
+      offset: 00002C10
+    - name: _VPICD_Physically_Unmask
+      processed: ''
+      offset: 00002C14
+    - name: _VPICD_Set_Auto_Masking
+      processed: ''
+      offset: 00002C18
+    - name: _VPICD_Get_IRQ_Complete_Status
+      processed: ''
+      offset: 00002C1C
+    - name: _VPICD_Convert_Handle_To_IRQ
+      processed: ''
+      offset: 00002C20
+    - name: _VPICD_Convert_IRQ_To_Int
+      processed: ''
+      offset: 00002C24
+    - name: _VPICD_Convert_Int_To_IRQ
+      processed: ''
+      offset: 00002C28
+    - name: _VPICD_Call_When_Hw_Int
+      processed: ''
+      offset: 00002C2C
+    - name: _VPICD_Force_Default_Owner
+      processed: ''
+      offset: 00002C30
+    - name: _VPICD_Force_Default_Behavior
+      processed: ''
+      offset: 00002C34
+    - name: _VPICD_Auto_Mask_At_Inst_Swap
+      processed: ''
+      offset: 00002C38
+    - name: _VPICD_Begin_Inst_Page_Swap
+      processed: ''
+      offset: 00002C3C
+    - name: _VPICD_End_Inst_Page_Swap
+      processed: ''
+      offset: 00002C40
+    - name: _VPICD_Virtual_EOI
+      processed: ''
+      offset: 00002C44
+    - name: _VPICD_Get_Virtualization_Count
+      processed: ''
+      offset: 00002C48
+    - name: _VPICD_Post_Sys_Critical_Init
+      processed: ''
+      offset: 00002C4C
+    - name: _VPICD_VM_SlavePIC_Mask_Change
+      processed: ''
+      offset: 00002C50
+    - name: __VPICD_Clear_IR_Bits
+      processed: ''
+      offset: 00002C54
+    - name: __VPICD_Get_Level_Mask
+      processed: ''
+      offset: 00002C58
+    - name: __VPICD_Set_Level_Mask
+      processed: ''
+      offset: 00002C5C
+    - name: __VPICD_Set_Irql_Mask
+      processed: ''
+      offset: 00002C60
+    - name: __VPICD_Set_Channel_Irql
+      processed: ''
+      offset: 00002C64
+    - name: __VPICD_Prepare_For_Shutdown
+      processed: ''
+      offset: 00002C68
+    - name: __VPICD_Register_Trigger_Handler
+      processed: ''
+      offset: 00002C6C
+    - name: VPICD_DDB
+      processed: ''
+      offset: 00002C70
+    - name: VPICD_Phys_IMR
+      processed: ''
+      offset: 00002CC0
+    - name: VPICD_Phys_ISR
+      processed: ''
+      offset: 00002CC2
+    - name: VPICD_Hardware_IRR
+      processed: ''
+      offset: 00002CC4
+    - name: VPICD_Def_IMR
+      processed: ''
+      offset: 00002CC6
+    - name: VPICD_Inst_Swap_Mask
+      processed: ''
+      offset: 00002CC8
+    - name: VPICD_Last_IMR
+      processed: ''
+      offset: 00002CCA
+    - name: VPICD_Irql_IMR
+      processed: ''
+      offset: 00002CCC
+    - name: VPICD_Hw_Int_Filter
+      processed: ''
+      offset: 00002CD0
+    - name: VPICD_SIRQ_Alloc_List
+      processed: ''
+      offset: 00002CD4
+    - name: VPICD_Irql_Mask_Table
+      processed: ''
+      offset: 00002CFC
+    - name: VIRQ_0
+      processed: ''
+      offset: 00002D3C
+    - name: VIRQ_1
+      processed: ''
+      offset: 00002D7C
+    - name: VIRQ_2
+      processed: ''
+      offset: 00002DBC
+    - name: VIRQ_3
+      processed: ''
+      offset: 00002DFC
+    - name: VIRQ_4
+      processed: ''
+      offset: 00002E3C
+    - name: VIRQ_5
+      processed: ''
+      offset: 00002E7C
+    - name: VIRQ_6
+      processed: ''
+      offset: 00002EBC
+    - name: VIRQ_7
+      processed: ''
+      offset: 00002EFC
+    - name: VIRQ_8
+      processed: ''
+      offset: 00002F3C
+    - name: VIRQ_9
+      processed: ''
+      offset: 00002F7C
+    - name: VIRQ_10
+      processed: ''
+      offset: 00002FBC
+    - name: VIRQ_11
+      processed: ''
+      offset: 00002FFC
+    - name: VIRQ_12
+      processed: ''
+      offset: 0000303C
+    - name: VIRQ_13
+      processed: ''
+      offset: 0000307C
+    - name: VIRQ_14
+      processed: ''
+      offset: 000030BC
+    - name: VIRQ_15
+      processed: ''
+      offset: 000030FC
+    - name: SIRQ_0
+      processed: ''
+      offset: 0000313C
+    - name: SIRQ_1
+      processed: ''
+      offset: '00003170'
+    - name: SIRQ_2
+      processed: ''
+      offset: 000031A4
+    - name: SIRQ_3
+      processed: ''
+      offset: 000031D8
+    - name: SIRQ_4
+      processed: ''
+      offset: 0000320C
+    - name: SIRQ_5
+      processed: ''
+      offset: '00003240'
+    - name: SIRQ_6
+      processed: ''
+      offset: '00003274'
+    - name: SIRQ_7
+      processed: ''
+      offset: 000032A8
+    - name: SIRQ_8
+      processed: ''
+      offset: 000032DC
+    - name: SIRQ_9
+      processed: ''
+      offset: '00003310'
+    - name: SIRQ_10
+      processed: ''
+      offset: '00003344'
+    - name: SIRQ_11
+      processed: ''
+      offset: '00003378'
+    - name: SIRQ_12
+      processed: ''
+      offset: 000033AC
+    - name: SIRQ_13
+      processed: ''
+      offset: '000033E0'
+    - name: SIRQ_14
+      processed: ''
+      offset: '00003414'
+    - name: SIRQ_15
+      processed: ''
+      offset: '00003448'
+    - name: VPICD_Priority_XRef
+      processed: ''
+      offset: 0000347C
+    - name: VPICD_IRQ_Convert
+      processed: ''
+      offset: 000034BC
+    - name: VPICD_CB_Offset
+      processed: ''
+      offset: 000034FC
+    - name: PEF_state_CB_offset
+      processed: ''
+      offset: '00003500'
+    - name: SYSVM_Stack_Seg
+      processed: ''
+      offset: '00003528'
+    - name: fSimulatedIntsOK
+      processed: ''
+      offset: '00003548'
+    - name: VPICD_ES_Mask
+      processed: ''
+      offset: '00003549'
+    - name: VPICD_Shared_Hook_Off_Tbl
+      processed: ''
+      offset: 0000354C
+    - name: VPICD_Shared_Hook_Tbl
+      processed: ''
+      offset: '00003588'
+    - name: VPICD_ES_Hooked_Mask
+      processed: ''
+      offset: 00003B18
+    - name: VPICD_Arb_Data
+      processed: ''
+      offset: 000041CE
+  - num: '2'
+    name: _LMGROUP
+    offset: 00003BB0
+    symbols:
+    - name: '@MSG_LAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      processed: ''
+      offset: '00000014'
+  - num: '3'
+    name: _IMGROUP
+    offset: 00003BF0
+    symbols:
+    - name: '@MSG_IAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_IDATA'
+      processed: ''
+      offset: '00000010'
+  - num: '4'
+    name: _IGROUP
+    offset: '00004220'
+    symbols:
+    - name: VPICD_Sys_Critical_Init
+      processed: ''
+      offset: '00000000'
+    - name: VPICD_Post_Sys_Critical_Init
+      processed: ''
+      offset: 0000037C
+    - name: VPICD_Init_Complete
+      processed: ''
+      offset: '000003E4'
+    - name: VPICD_API_Init
+      processed: ''
+      offset: '00000410'
+    - name: VPICD_PnP_Init
+      processed: ''
+      offset: 000004A0
+    - name: VPICDArb_Init_Complete
+      processed: ''
+      offset: '00000552'
+    - name: DumpHexChar
+      processed: ''
+      offset: '000005E3'
+    - name: VPICD_IO_Table
+      processed: ''
+      offset: 0000060E
+    - name: VPICD_IRQ9_Global_Str
+      processed: ''
+      offset: 000007B8
+  - num: '5'
+    name: _PDATA
+    offset: '00004250'
+    symbols:
+    - name: fIRQARBITDebug
+      processed: ''
+      offset: '00000000'
+  - num: '6'
+    name: _DBOGROUP
+    offset: 000046C0
+    symbols:
+    - name: VPICD_Debug_Arb
+      processed: ''
+      offset: '00000000'
+    - name: VPICD_Debug_Info
+      processed: ''
+      offset: 000000F1
+    - name: VPICD_Debug_Global_Info
+      processed: ''
+      offset: '00000144'
+    - name: VPICD_Debug_Local_Info
+      processed: ''
+      offset: 0000024B
+    - name: VPICD_Debug_IRQ_Handler_Info
+      processed: ''
+      offset: '00000398'
+    - name: VPICD_Debug_IRQ_Title
+      processed: ''
+      offset: 0000048B
+    - name: VPICD_Debug_Show_IRQs
+      processed: ''
+      offset: 000004A2
+  - num: '7'
+    name: _LOCKABLE
+    offset: '00004730'
+    symbols:
+    - name: VPICD_Stop_Using_Stacks
+      processed: ''
+      offset: '00000000'
+  - num: '8'
+    name: _RARE
+    offset: 000047C0
+    symbols:
+    - name: VPICD_Begin_PM_App
+      processed: ''
+      offset: '00000000'
+  - num: '9'
+    name: _VMDESTROY
+    offset: '00000000'
+    symbols:
+    - name: VPICD_Arbitrate
+      processed: ''
+      offset: '00000000'
+    - name: VPICD_Test_Alloc
+      processed: ''
+      offset: 0000002B
+    - name: VPICD_Alloc_Elements
+      processed: ''
+      offset: '00000094'
+    - name: VPICD_Next_Element
+      processed: ''
+      offset: '00000214'
+    - name: VPICD_Dup_Alloc
+      processed: ''
+      offset: 0000024A
+    - name: VPICD_Retest_Alloc
+      processed: ''
+      offset: '00000273'
+    - name: VPICD_Force_Alloc
+      processed: ''
+      offset: 0000036F
+    - name: VPICD_Set_Alloc
+      processed: ''
+      offset: '00000385'
+    - name: VPICD_Apply_Alloc
+      processed: ''
+      offset: 000003C4
+    - name: VPICD_Release_Alloc
+      processed: ''
+      offset: '00000498'
+    - name: VPICD_Query_Free
+      processed: ''
+      offset: 000004B0
+    - name: VPICD_Remove
+      processed: ''
+      offset: '000004E7'
+    - name: VPICD_Query_Arbitrate
+      processed: ''
+      offset: 000004EF
+    - name: VPICD_Add_Reserve
+      processed: ''
+      offset: 000004F7
+    - name: VPICD_Write_Reserve
+      processed: ''
+      offset: 000004FF
+    - name: VPICD_Begin_PnP_Mode
+      processed: ''
+      offset: '00000507'
+    - name: VPICD_Sort_Res_Desc
+      processed: ''
+      offset: '00000512'
+    - name: VPICD_Arb_Unalloc
+      processed: ''
+      offset: 000005AD
+    - name: _VPICD_Get_Level_Mask
+      processed: ''
+      offset: 0000061F
+    - name: _VPICD_Set_Level_Mask
+      processed: ''
+      offset: 0000063F
+    - name: _VPICD_Register_Trigger_Handler
+      processed: ''
+      offset: '00000674'
+    - name: VPICD_VXDLDR_Notify
+      processed: ''
+      offset: 000006B8

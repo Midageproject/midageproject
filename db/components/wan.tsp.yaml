@@ -1,445 +1,674 @@
-filename: "wan.tsp"
+filename: wan.tsp
 #TODO: bring up more details from symdeb
-binary: "wan.tsp"
-description: ""
-note: ""
+binary: WAN
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_TEXT"
-        offset: "00001120"
-        symbols:
-          - name: 'LIBENTRY'
-            offset: "00000000"            
-          - name: 'LIBMAIN'
-            offset: "00000022"            
-          - name: 'CREATECALLBACKWINDOW'
-            offset: "00000057"            
-          - name: 'WAN_WindowProc'
-            offset: "0000014B"            
-          - name: 'TAPIMINIPORTREQUEST'
-            offset: "000002AC"            
-          - name: 'DEVICEIOCONTROL'
-            offset: "000009FD"            
-          - name: 'MINIPORTIOCTLREQUEST'
-            offset: "00000B2E"            
-          - name: 'MINIPORTREQUEST'
-            offset: "00000D1D"            
-          - name: 'MINIPORTINIT'
-            offset: "00000E53"            
-          - name: 'MINIPORTDEINIT'
-            offset: "00000F56"            
-          - name: 'MINIPORTGETASYNCCOMPLETEINFO'
-            offset: "0000103F"            
-          - name: 'MINIPORTGETEVENTNOTIFICATIONINFO'
-            offset: "00001156"            
-          - name: 'MINIPORTENUMERATEADAPTERS'
-            offset: "00001725"            
-          - name: 'MINIPORTADDNEWADAPTER'
-            offset: "0000198F"            
-          - name: 'MINIPORTREMOVEADAPTER'
-            offset: "00001C53"            
-          - name: 'DEBUGDUMPMPR'
-            offset: "00001ECB"            
-          - name: 'TSPI_PROVIDERINSTALL'
-            offset: "00001FA4"            
-          - name: 'TSPI_PROVIDERENUMDEVICES'
-            offset: "000020F9"            
-          - name: 'TSPI_PROVIDERINIT'
-            offset: "0000248C"            
-          - name: 'TSPI_PROVIDERSHUTDOWN'
-            offset: "000028B7"            
-          - name: 'TSPI_PROVIDERCONFIG'
-            offset: "00002BE7"            
-          - name: 'DEBUGDUMPWC'
-            offset: "00002C50"            
-          - name: 'DEBUGDUMPLD'
-            offset: "00002D26"            
-          - name: 'DEBUGDUMPCALL'
-            offset: "00002EB3"            
-          - name: 'TSPI_LINEACCEPT'
-            offset: "00002F48"            
-          - name: 'TSPI_LINEDIAL'
-            offset: "0000307A"            
-          - name: 'TSPI_LINEANSWER'
-            offset: "000031A4"            
-          - name: 'TSPI_LINEGETCALLSTATUS'
-            offset: "000032D7"            
-          - name: 'TSPI_LINEGETCALLINFO'
-            offset: "00003528"            
-          - name: 'TSPI_LINEGETCALLADDRESSID'
-            offset: "0000377A"            
-          - name: 'TSPI_LINESETAPPSPECIFIC'
-            offset: "0000389E"            
-          - name: 'TSPI_LINEDROP'
-            offset: "00003961"            
-          - name: 'TSPI_LINECLOSECALL'
-            offset: "00003A94"            
-          - name: 'TSPI_LINESETMEDIAMODE'
-            offset: "00003C5F"            
-          - name: 'THUNKTONEWLAC'
-            offset: "00003D22"            
-          - name: 'TSPI_LINEGETADDRESSCAPS'
-            offset: "00003FC9"            
-          - name: 'TSPI_LINEGETADDRESSSTATUS'
-            offset: "000043FC"            
-          - name: 'TSPI_LINECLOSE'
-            offset: "00004678"            
-          - name: 'TSPI_LINEMAKECALL'
-            offset: "000048C1"            
-          - name: 'TSPI_LINENEGOTIATETSPIVERSION'
-            offset: "00004E1C"            
-          - name: 'TSPI_LINEGETEXTENSIONID'
-            offset: "00005191"            
-          - name: 'TSPI_LINENEGOTIATEEXTVERSION'
-            offset: "00005383"            
-          - name: 'TSPI_LINEGETICON'
-            offset: "00005565"            
-          - name: 'THUNKTONEWLDC'
-            offset: "00005681"            
-          - name: 'TSPI_LINEGETDEVCAPS'
-            offset: "000059B4"            
-          - name: 'TSPI_LINEGETDEVCONFIG'
-            offset: "00005DD8"            
-          - name: 'TSPI_LINESETDEVCONFIG'
-            offset: "00006664"            
-          - name: 'TSPI_LINECONFIGDIALOG'
-            offset: "00006A80"            
-          - name: 'TSPI_LINECONFIGDIALOGEDIT'
-            offset: "00006BBD"            
-          - name: 'TSPI_LINEOPEN'
-            offset: "000070D2"            
-          - name: 'TSPI_LINESELECTEXTVERSION'
-            offset: "000072F4"            
-          - name: 'TSPI_LINEDEVSPECIFIC'
-            offset: "00007431"            
-          - name: 'TSPI_LINESETDEFAULTMEDIADETECTION'
-            offset: "0000763A"            
-          - name: 'TSPI_LINECONDITIONALMEDIADETECTION'
-            offset: "000076FD"            
-          - name: 'TSPI_LINEGETID'
-            offset: "00007874"            
-          - name: 'TSPI_LINEGETLINEDEVSTATUS'
-            offset: "00007E63"            
-          - name: 'TSPI_LINEGETNUMADDRESSIDS'
-            offset: "000080DD"            
-          - name: 'TSPI_LINESETSTATUSMESSAGES'
-            offset: "00008284"            
-          - name: 'TSPI_LINEADDTOCONFERENCE'
-            offset: "00008372"            
-          - name: 'TSPI_LINEBLINDTRANSFER'
-            offset: "0000844D"            
-          - name: 'TSPI_LINECOMPLETECALL'
-            offset: "00008578"            
-          - name: 'TSPI_LINECOMPLETETRANSFER'
-            offset: "000086EC"            
-          - name: 'TSPI_LINEDEVSPECIFICFEATURE'
-            offset: "00008944"            
-          - name: 'TSPI_LINEFORWARD'
-            offset: "00008A90"            
-          - name: 'TSPI_LINEGATHERDIGITS'
-            offset: "00008D5C"            
-          - name: 'TSPI_LINEGENERATEDIGITS'
-            offset: "00008F15"            
-          - name: 'TSPI_LINEGENERATETONE'
-            offset: "0000903A"            
-          - name: 'TSPI_LINEGETADDRESSID'
-            offset: "00009185"            
-          - name: 'TSPI_LINEHOLD'
-            offset: "000092AE"            
-          - name: 'TSPI_LINEMONITORDIGITS'
-            offset: "0000937A"            
-          - name: 'TSPI_LINEMONITORMEDIA'
-            offset: "00009451"            
-          - name: 'TSPI_LINEMONITORTONES'
-            offset: "00009528"            
-          - name: 'TSPI_LINEPARK'
-            offset: "0000964E"            
-          - name: 'TSPI_LINEPICKUP'
-            offset: "00009826"            
-          - name: 'TSPI_LINEPREPAREADDTOCONFERENCE'
-            offset: "00009A97"            
-          - name: 'TSPI_LINEREDIRECT'
-            offset: "00009BF6"            
-          - name: 'TSPI_LINEREMOVEFROMCONFERENCE'
-            offset: "00009D01"            
-          - name: 'TSPI_LINESECURECALL'
-            offset: "00009DCD"            
-          - name: 'TSPI_LINESENDUSERUSERINFO'
-            offset: "00009E99"            
-          - name: 'TSPI_LINESETCALLPARAMS'
-            offset: "00009FE8"            
-          - name: 'TSPI_LINESETMEDIACONTROL'
-            offset: "0000A12A"            
-          - name: 'TSPI_LINESETTERMINAL'
-            offset: "0000A3C4"            
-          - name: 'TSPI_LINESETUPCONFERENCE'
-            offset: "0000A4EA"            
-          - name: 'TSPI_LINESETUPTRANSFER'
-            offset: "0000A689"            
-          - name: 'TSPI_LINESWAPHOLD'
-            offset: "0000A7E8"            
-          - name: 'TSPI_LINEUNCOMPLETECALL'
-            offset: "0000A8C3"            
-          - name: 'TSPI_LINEUNHOLD'
-            offset: "0000A99E"            
-          - name: 'TSPI_LINEUNPARK'
-            offset: "0000AA6A"            
-          - name: 'TSPI_LINERELEASEUSERUSERINFO'
-            offset: "0000ABDF"            
-          - name: 'TSPI_PHONECLOSE'
-            offset: "0000ACAC"            
-          - name: 'TSPI_PHONECONFIGDIALOG'
-            offset: "0000AD73"            
-          - name: 'TSPI_PHONEDEVSPECIFIC'
-            offset: "0000ADA5"            
-          - name: 'TSPI_PHONEGETBUTTONINFO'
-            offset: "0000AE9F"            
-          - name: 'TSPI_PHONEGETDATA'
-            offset: "0000AFCD"            
-          - name: 'TSPI_PHONEGETDEVCAPS'
-            offset: "0000B0E4"            
-          - name: 'TSPI_PHONEGETDISPLAY'
-            offset: "0000B221"            
-          - name: 'TSPI_PHONEGETEXTENSIONID'
-            offset: "0000B340"            
-          - name: 'TSPI_PHONEGETGAIN'
-            offset: "0000B43F"            
-          - name: 'TSPI_PHONEGETHOOKSWITCH'
-            offset: "0000B53A"            
-          - name: 'TSPI_PHONEGETICON'
-            offset: "0000B626"            
-          - name: 'TSPI_PHONEGETID'
-            offset: "0000B743"            
-          - name: 'TSPI_PHONEGETLAMP'
-            offset: "0000B8B2"            
-          - name: 'TSPI_PHONEGETRING'
-            offset: "0000B9AD"            
-          - name: 'TSPI_PHONEGETSTATUS'
-            offset: "0000BAAC"            
-          - name: 'TSPI_PHONEGETVOLUME'
-            offset: "0000BBCB"            
-          - name: 'TSPI_PHONENEGOTIATEEXTVERSION'
-            offset: "0000BCC6"            
-          - name: 'TSPI_PHONENEGOTIATETSPIVERSION'
-            offset: "0000BDDF"            
-          - name: 'TSPI_PHONEOPEN'
-            offset: "0000BEE9"            
-          - name: 'TSPI_PHONESELECTEXTVERSION'
-            offset: "0000BFF3"            
-          - name: 'TSPI_PHONESETBUTTONINFO'
-            offset: "0000C0CA"            
-          - name: 'TSPI_PHONESETDATA'
-            offset: "0000C1CE"            
-          - name: 'TSPI_PHONESETDISPLAY'
-            offset: "0000C2D8"            
-          - name: 'TSPI_PHONESETGAIN'
-            offset: "0000C3F1"            
-          - name: 'TSPI_PHONESETHOOKSWITCH'
-            offset: "0000C4DB"            
-          - name: 'TSPI_PHONESETLAMP'
-            offset: "0000C5C5"            
-          - name: 'TSPI_PHONESETRING'
-            offset: "0000C6AF"            
-          - name: 'TSPI_PHONESETSTATUSMESSAGES'
-            offset: "0000C799"            
-          - name: 'TSPI_PHONESETVOLUME'
-            offset: "0000C88E"            
-          - name: 'FINISHCOMPLETE_TRANSFER'
-            offset: "0000C978"            
-          - name: 'FINISHMAKE_CALL'
-            offset: "0000C9BE"            
-          - name: 'FINISHDEV_SPECIFIC'
-            offset: "0000CA4A"            
-          - name: 'FINISHASYNCACTION'
-            offset: "0000CAC9"            
-          - name: 'GETCALLCBFROMCALLHANDLE'
-            offset: "0000CDCD"            
-          - name: 'GETCALLCBFROMMINIPORTCALLHANDLE'
-            offset: "0000CE80"            
-          - name: 'GETCBFROMCALLHANDLE'
-            offset: "0000CF51"            
-          - name: 'GETCBFROMHANDLE'
-            offset: "0000CFF8"            
-          - name: 'GETPHONEFROMHANDLE'
-            offset: "0000D076"            
-          - name: 'GETCBFROMID'
-            offset: "0000D0EC"            
-          - name: 'GETPHONEFROMID'
-            offset: "0000D178"            
-          - name: 'GETCBFROMREQUESTID'
-            offset: "0000D1FC"            
-          - name: 'GETPHONEFROMREQUESTID'
-            offset: "0000D288"            
-          - name: 'GETMINIPORTFROMHANDLE'
-            offset: "0000D30C"            
-          - name: 'GETMINIPORTFROMREGPATH'
-            offset: "0000D395"            
-          - name: 'REMOVELINEDEVICEFROMLIST'
-            offset: "0000D41A"            
-          - name: 'REMOVEPHONEDEVICEFROMLIST'
-            offset: "0000D4D7"            
-          - name: 'REMOVECALLINSTANCEFROMLIST'
-            offset: "0000D594"            
-          - name: 'WANCONFIG_CREATE'
-            offset: "0000D651"            
-          - name: 'WANCONFIG_DESTROY'
-            offset: "0000D807"            
-          - name: 'WANPBCONFIG_CREATE'
-            offset: "0000D846"            
-          - name: 'WANPBCONFIG_DESTROY'
-            offset: "0000DA98"            
-          - name: 'LINEDEV_CREATE'
-            offset: "0000DAD7"            
-          - name: 'LINEDEV_DESTROY'
-            offset: "0000DE7B"            
-          - name: 'PHONEDEV_CREATE'
-            offset: "0000DFCA"            
-          - name: 'PHONEDEV_DESTROY'
-            offset: "0000E0FB"            
-          - name: 'VALIDATEDEVICECLASS'
-            offset: "0000E1BF"            
-          - name: 'LMEMSET'
-            offset: "0000E2AA"            
-          - name: 'C_SZASSERTFAILED'
-            offset: "0000E2EF"            
-          - name: 'C_SZDBG'
-            offset: "0000E31B"            
-          - name: 'C_SZTRACE'
-            offset: "0000E324"            
-          - name: 'C_SZNEWLINE'
-            offset: "0000E32D"            
-          - name: 'LMEMMOVE'
-            offset: "0000E330"            
-          - name: '@ChrCmp'
-            offset: "0000E3CF"            
-          - name: '@ChrCmpI'
-            offset: "0000E41F"            
-          - name: 'LSTRNICMP'
-            offset: "0000E46F"            
-          - name: 'LSTRNCMP'
-            offset: "0000E50F"            
-          - name: 'ANSITOINT'
-            offset: "0000E59D"            
-          - name: 'ANSICHR'
-            offset: "0000E7C5"            
-          - name: 'CONSTRUCTVMESSAGESTRING'
-            offset: "0000E81A"            
-          - name: '_ConstructMessage'
-            offset: "0000E8D9"            
-          - name: '_MsgBox'
-            offset: "0000E94E"            
-          - name: 'GETREASONSTRING'
-            offset: "0000E9FE"            
-          - name: 'COMMONDEBUGBREAK'
-            offset: "0000EAEC"            
-          - name: 'COMMONASSERTFAILED'
-            offset: "0000EB32"            
-          - name: '_CommonAssertMsg'
-            offset: "0000EBCF"            
-          - name: '_CommonDebugMsg'
-            offset: "0000EC1B"            
-          - name: 'DBG_SAFESTR'
-            offset: "0000EC87"            
-          - name: 'ROVCOMM_INIT'
-            offset: "0000ECB2"            
-          - name: 'ROVCOMM_TERMINATE'
-            offset: "0000ECD1"            
-          - name: 'ISINIYES'
-            offset: "0000ECE4"            
-          - name: 'C_SZINIKEYBREAKFLAGS'
-            offset: "0000EDC9"            
-          - name: 'C_SZZERO'
-            offset: "0000EDD4"            
-          - name: 'C_SZINISECDEBUGUI'
-            offset: "0000EDD6"            
-          - name: 'C_SZINIFILE'
-            offset: "0000EDDD"            
-          - name: 'C_SZINIKEYDUMPFLAGS'
-            offset: "0000EDE8"            
-          - name: 'C_SZINIKEYTRACEFLAGS'
-            offset: "0000EDF2"            
-          - name: 'PROCESSINTEGERS'
-            offset: "0000EDFD"            
-          - name: 'ROVCOMM_PROCESSINIFILE'
-            offset: "0000EEC6"            
-          - name: 'SETSTRING'
-            offset: "0000EEDE"            
-          - name: 'CATSTRING'
-            offset: "0000F012"            
-          - name: 'MEM_TERMINATE'
-            offset: "0000F15C"            
-          - name: 'CREATEHEAP'
-            offset: "0000F17A"            
-          - name: 'DESTROYHEAP'
-            offset: "0000F226"            
-          - name: 'HEAPALLOC'
-            offset: "0000F2EE"            
-          - name: '__aFlmul'
-            offset: "0000F320"            
-          - name: '__aFulmul'
-            offset: "0000F320"            
-      - num: "2"
-        name: "_WEP"
-        offset: "00001150"
-        symbols:
-          - name: 'WEP'
-            offset: "00000000"            
-      - num: "3"
-        name: "DGROUP"
-        offset: "00000000"
-        symbols:
-          - name: 'PLOCALHEAP'
-            offset: "00000006"            
-          - name: 'RSRVPTRS'
-            offset: "00000006"            
-          - name: 'PATOMTABLE'
-            offset: "00000008"            
-          - name: 'PSTACKTOP'
-            offset: "0000000A"            
-          - name: 'PSTACKMIN'
-            offset: "0000000C"            
-          - name: 'PSTACKBOT'
-            offset: "0000000E"            
-          - name: 'GHINSTANCE'
-            offset: "00000010"            
-          - name: 'GDWNUMOFLINES'
-            offset: "00000012"            
-          - name: 'GDWNUMOFPHONES'
-            offset: "00000016"            
-          - name: 'GULNEXTWANREQUESTID'
-            offset: "0000001A"            
-          - name: 'GHWNDWAN'
-            offset: "0000001E"            
-          - name: 'WAN_WNDCLASS'
-            offset: "00000020"            
-          - name: 'GFNCOMPLETIONCALLBACK'
-            offset: "0000002A"            
-          - name: 'GFNLINECREATEPROC'
-            offset: "0000002E"            
-          - name: 'GFNPHONECREATEPROC'
-            offset: "00000032"            
-          - name: 'GHPROVIDER'
-            offset: "00000036"            
-          - name: 'GPMINIPORTDEV'
-            offset: "0000003A"            
-          - name: 'GPLINEDEV'
-            offset: "0000003C"            
-          - name: 'GPPHONEDEV'
-            offset: "0000003E"            
-          - name: 'G_DWBREAKFLAGS'
-            offset: "00007D1A"            
-          - name: 'G_DWDUMPFLAGS'
-            offset: "00007D1E"            
-          - name: 'G_DWTRACEFLAGS'
-            offset: "00007D22"            
-          - name: 'G_HHPFIRST'
-            offset: "00007F0E"            
-          - name: 'GDWPROVIDERID'
-            offset: "00007F50"            
-          - name: 'GDWLINEDEVICEIDBASE'
-            offset: "00007F54"            
-          - name: 'GDWPHONEDEVICEIDBASE'
-            offset: "00007F58"            
+- version: system
+  tree:
+  - - hX.h
+    - libinit.asm
+    - "\t../line.c"
+    - line.c
+    - lmul.asm
+    - phone.c
+    - "phone.c\t../line.c\t../tspi.c"
+    - rovcomm.c
+    - "rovcomm.c\t../util.c"
+    - ~../rovini.c
+    - rovini.c
+    - rovmem.c
+    - "\t../tspi.c"
+    - tspi.c
+    - "\t../util.c"
+    - util.c
+    - wan.c
+    - wanioctl.c
+  segments:
+  - num: '1'
+    name: _TEXT
+    offset: '00001120'
+    symbols:
+    - name: LIBENTRY
+      processed: ''
+      offset: '00000000'
+    - name: LIBMAIN
+      processed: ''
+      offset: '00000022'
+    - name: CREATECALLBACKWINDOW
+      processed: ''
+      offset: '00000057'
+    - name: WAN_WindowProc
+      processed: ''
+      offset: 0000014B
+    - name: TAPIMINIPORTREQUEST
+      processed: ''
+      offset: 000002AC
+    - name: DEVICEIOCONTROL
+      processed: ''
+      offset: 000009FD
+    - name: MINIPORTIOCTLREQUEST
+      processed: ''
+      offset: 00000B2E
+    - name: MINIPORTREQUEST
+      processed: ''
+      offset: 00000D1D
+    - name: MINIPORTINIT
+      processed: ''
+      offset: '00000E53'
+    - name: MINIPORTDEINIT
+      processed: ''
+      offset: 00000F56
+    - name: MINIPORTGETASYNCCOMPLETEINFO
+      processed: ''
+      offset: 0000103F
+    - name: MINIPORTGETEVENTNOTIFICATIONINFO
+      processed: ''
+      offset: '00001156'
+    - name: MINIPORTENUMERATEADAPTERS
+      processed: ''
+      offset: '00001725'
+    - name: MINIPORTADDNEWADAPTER
+      processed: ''
+      offset: 0000198F
+    - name: MINIPORTREMOVEADAPTER
+      processed: ''
+      offset: 00001C53
+    - name: DEBUGDUMPMPR
+      processed: ''
+      offset: 00001ECB
+    - name: TSPI_PROVIDERINSTALL
+      processed: ''
+      offset: 00001FA4
+    - name: TSPI_PROVIDERENUMDEVICES
+      processed: ''
+      offset: 000020F9
+    - name: TSPI_PROVIDERINIT
+      processed: ''
+      offset: 0000248C
+    - name: TSPI_PROVIDERSHUTDOWN
+      processed: ''
+      offset: 000028B7
+    - name: TSPI_PROVIDERCONFIG
+      processed: ''
+      offset: 00002BE7
+    - name: DEBUGDUMPWC
+      processed: ''
+      offset: 00002C50
+    - name: DEBUGDUMPLD
+      processed: ''
+      offset: 00002D26
+    - name: DEBUGDUMPCALL
+      processed: ''
+      offset: 00002EB3
+    - name: TSPI_LINEACCEPT
+      processed: ''
+      offset: 00002F48
+    - name: TSPI_LINEDIAL
+      processed: ''
+      offset: 0000307A
+    - name: TSPI_LINEANSWER
+      processed: ''
+      offset: 000031A4
+    - name: TSPI_LINEGETCALLSTATUS
+      processed: ''
+      offset: 000032D7
+    - name: TSPI_LINEGETCALLINFO
+      processed: ''
+      offset: '00003528'
+    - name: TSPI_LINEGETCALLADDRESSID
+      processed: ''
+      offset: 0000377A
+    - name: TSPI_LINESETAPPSPECIFIC
+      processed: ''
+      offset: 0000389E
+    - name: TSPI_LINEDROP
+      processed: ''
+      offset: '00003961'
+    - name: TSPI_LINECLOSECALL
+      processed: ''
+      offset: 00003A94
+    - name: TSPI_LINESETMEDIAMODE
+      processed: ''
+      offset: 00003C5F
+    - name: THUNKTONEWLAC
+      processed: ''
+      offset: 00003D22
+    - name: TSPI_LINEGETADDRESSCAPS
+      processed: ''
+      offset: 00003FC9
+    - name: TSPI_LINEGETADDRESSSTATUS
+      processed: ''
+      offset: 000043FC
+    - name: TSPI_LINECLOSE
+      processed: ''
+      offset: '00004678'
+    - name: TSPI_LINEMAKECALL
+      processed: ''
+      offset: 000048C1
+    - name: TSPI_LINENEGOTIATETSPIVERSION
+      processed: ''
+      offset: 00004E1C
+    - name: TSPI_LINEGETEXTENSIONID
+      processed: ''
+      offset: '00005191'
+    - name: TSPI_LINENEGOTIATEEXTVERSION
+      processed: ''
+      offset: '00005383'
+    - name: TSPI_LINEGETICON
+      processed: ''
+      offset: '00005565'
+    - name: THUNKTONEWLDC
+      processed: ''
+      offset: '00005681'
+    - name: TSPI_LINEGETDEVCAPS
+      processed: ''
+      offset: 000059B4
+    - name: TSPI_LINEGETDEVCONFIG
+      processed: ''
+      offset: 00005DD8
+    - name: TSPI_LINESETDEVCONFIG
+      processed: ''
+      offset: '00006664'
+    - name: TSPI_LINECONFIGDIALOG
+      processed: ''
+      offset: 00006A80
+    - name: TSPI_LINECONFIGDIALOGEDIT
+      processed: ''
+      offset: 00006BBD
+    - name: TSPI_LINEOPEN
+      processed: ''
+      offset: 000070D2
+    - name: TSPI_LINESELECTEXTVERSION
+      processed: ''
+      offset: 000072F4
+    - name: TSPI_LINEDEVSPECIFIC
+      processed: ''
+      offset: '00007431'
+    - name: TSPI_LINESETDEFAULTMEDIADETECTION
+      processed: ''
+      offset: 0000763A
+    - name: TSPI_LINECONDITIONALMEDIADETECTION
+      processed: ''
+      offset: 000076FD
+    - name: TSPI_LINEGETID
+      processed: ''
+      offset: '00007874'
+    - name: TSPI_LINEGETLINEDEVSTATUS
+      processed: ''
+      offset: '00007E63'
+    - name: TSPI_LINEGETNUMADDRESSIDS
+      processed: ''
+      offset: 000080DD
+    - name: TSPI_LINESETSTATUSMESSAGES
+      processed: ''
+      offset: '00008284'
+    - name: TSPI_LINEADDTOCONFERENCE
+      processed: ''
+      offset: '00008372'
+    - name: TSPI_LINEBLINDTRANSFER
+      processed: ''
+      offset: 0000844D
+    - name: TSPI_LINECOMPLETECALL
+      processed: ''
+      offset: '00008578'
+    - name: TSPI_LINECOMPLETETRANSFER
+      processed: ''
+      offset: 000086EC
+    - name: TSPI_LINEDEVSPECIFICFEATURE
+      processed: ''
+      offset: '00008944'
+    - name: TSPI_LINEFORWARD
+      processed: ''
+      offset: 00008A90
+    - name: TSPI_LINEGATHERDIGITS
+      processed: ''
+      offset: 00008D5C
+    - name: TSPI_LINEGENERATEDIGITS
+      processed: ''
+      offset: 00008F15
+    - name: TSPI_LINEGENERATETONE
+      processed: ''
+      offset: 0000903A
+    - name: TSPI_LINEGETADDRESSID
+      processed: ''
+      offset: '00009185'
+    - name: TSPI_LINEHOLD
+      processed: ''
+      offset: 000092AE
+    - name: TSPI_LINEMONITORDIGITS
+      processed: ''
+      offset: 0000937A
+    - name: TSPI_LINEMONITORMEDIA
+      processed: ''
+      offset: '00009451'
+    - name: TSPI_LINEMONITORTONES
+      processed: ''
+      offset: '00009528'
+    - name: TSPI_LINEPARK
+      processed: ''
+      offset: 0000964E
+    - name: TSPI_LINEPICKUP
+      processed: ''
+      offset: '00009826'
+    - name: TSPI_LINEPREPAREADDTOCONFERENCE
+      processed: ''
+      offset: 00009A97
+    - name: TSPI_LINEREDIRECT
+      processed: ''
+      offset: 00009BF6
+    - name: TSPI_LINEREMOVEFROMCONFERENCE
+      processed: ''
+      offset: 00009D01
+    - name: TSPI_LINESECURECALL
+      processed: ''
+      offset: 00009DCD
+    - name: TSPI_LINESENDUSERUSERINFO
+      processed: ''
+      offset: '00009E99'
+    - name: TSPI_LINESETCALLPARAMS
+      processed: ''
+      offset: 00009FE8
+    - name: TSPI_LINESETMEDIACONTROL
+      processed: ''
+      offset: 0000A12A
+    - name: TSPI_LINESETTERMINAL
+      processed: ''
+      offset: 0000A3C4
+    - name: TSPI_LINESETUPCONFERENCE
+      processed: ''
+      offset: 0000A4EA
+    - name: TSPI_LINESETUPTRANSFER
+      processed: ''
+      offset: 0000A689
+    - name: TSPI_LINESWAPHOLD
+      processed: ''
+      offset: 0000A7E8
+    - name: TSPI_LINEUNCOMPLETECALL
+      processed: ''
+      offset: 0000A8C3
+    - name: TSPI_LINEUNHOLD
+      processed: ''
+      offset: 0000A99E
+    - name: TSPI_LINEUNPARK
+      processed: ''
+      offset: 0000AA6A
+    - name: TSPI_LINERELEASEUSERUSERINFO
+      processed: ''
+      offset: 0000ABDF
+    - name: TSPI_PHONECLOSE
+      processed: ''
+      offset: 0000ACAC
+    - name: TSPI_PHONECONFIGDIALOG
+      processed: ''
+      offset: 0000AD73
+    - name: TSPI_PHONEDEVSPECIFIC
+      processed: ''
+      offset: 0000ADA5
+    - name: TSPI_PHONEGETBUTTONINFO
+      processed: ''
+      offset: 0000AE9F
+    - name: TSPI_PHONEGETDATA
+      processed: ''
+      offset: 0000AFCD
+    - name: TSPI_PHONEGETDEVCAPS
+      processed: ''
+      offset: 0000B0E4
+    - name: TSPI_PHONEGETDISPLAY
+      processed: ''
+      offset: 0000B221
+    - name: TSPI_PHONEGETEXTENSIONID
+      processed: ''
+      offset: 0000B340
+    - name: TSPI_PHONEGETGAIN
+      processed: ''
+      offset: 0000B43F
+    - name: TSPI_PHONEGETHOOKSWITCH
+      processed: ''
+      offset: 0000B53A
+    - name: TSPI_PHONEGETICON
+      processed: ''
+      offset: 0000B626
+    - name: TSPI_PHONEGETID
+      processed: ''
+      offset: 0000B743
+    - name: TSPI_PHONEGETLAMP
+      processed: ''
+      offset: 0000B8B2
+    - name: TSPI_PHONEGETRING
+      processed: ''
+      offset: 0000B9AD
+    - name: TSPI_PHONEGETSTATUS
+      processed: ''
+      offset: 0000BAAC
+    - name: TSPI_PHONEGETVOLUME
+      processed: ''
+      offset: 0000BBCB
+    - name: TSPI_PHONENEGOTIATEEXTVERSION
+      processed: ''
+      offset: 0000BCC6
+    - name: TSPI_PHONENEGOTIATETSPIVERSION
+      processed: ''
+      offset: 0000BDDF
+    - name: TSPI_PHONEOPEN
+      processed: ''
+      offset: 0000BEE9
+    - name: TSPI_PHONESELECTEXTVERSION
+      processed: ''
+      offset: 0000BFF3
+    - name: TSPI_PHONESETBUTTONINFO
+      processed: ''
+      offset: 0000C0CA
+    - name: TSPI_PHONESETDATA
+      processed: ''
+      offset: 0000C1CE
+    - name: TSPI_PHONESETDISPLAY
+      processed: ''
+      offset: 0000C2D8
+    - name: TSPI_PHONESETGAIN
+      processed: ''
+      offset: 0000C3F1
+    - name: TSPI_PHONESETHOOKSWITCH
+      processed: ''
+      offset: 0000C4DB
+    - name: TSPI_PHONESETLAMP
+      processed: ''
+      offset: 0000C5C5
+    - name: TSPI_PHONESETRING
+      processed: ''
+      offset: 0000C6AF
+    - name: TSPI_PHONESETSTATUSMESSAGES
+      processed: ''
+      offset: 0000C799
+    - name: TSPI_PHONESETVOLUME
+      processed: ''
+      offset: 0000C88E
+    - name: FINISHCOMPLETE_TRANSFER
+      processed: ''
+      offset: 0000C978
+    - name: FINISHMAKE_CALL
+      processed: ''
+      offset: 0000C9BE
+    - name: FINISHDEV_SPECIFIC
+      processed: ''
+      offset: 0000CA4A
+    - name: FINISHASYNCACTION
+      processed: ''
+      offset: 0000CAC9
+    - name: GETCALLCBFROMCALLHANDLE
+      processed: ''
+      offset: 0000CDCD
+    - name: GETCALLCBFROMMINIPORTCALLHANDLE
+      processed: ''
+      offset: 0000CE80
+    - name: GETCBFROMCALLHANDLE
+      processed: ''
+      offset: 0000CF51
+    - name: GETCBFROMHANDLE
+      processed: ''
+      offset: 0000CFF8
+    - name: GETPHONEFROMHANDLE
+      processed: ''
+      offset: 0000D076
+    - name: GETCBFROMID
+      processed: ''
+      offset: 0000D0EC
+    - name: GETPHONEFROMID
+      processed: ''
+      offset: 0000D178
+    - name: GETCBFROMREQUESTID
+      processed: ''
+      offset: 0000D1FC
+    - name: GETPHONEFROMREQUESTID
+      processed: ''
+      offset: 0000D288
+    - name: GETMINIPORTFROMHANDLE
+      processed: ''
+      offset: 0000D30C
+    - name: GETMINIPORTFROMREGPATH
+      processed: ''
+      offset: 0000D395
+    - name: REMOVELINEDEVICEFROMLIST
+      processed: ''
+      offset: 0000D41A
+    - name: REMOVEPHONEDEVICEFROMLIST
+      processed: ''
+      offset: 0000D4D7
+    - name: REMOVECALLINSTANCEFROMLIST
+      processed: ''
+      offset: 0000D594
+    - name: WANCONFIG_CREATE
+      processed: ''
+      offset: 0000D651
+    - name: WANCONFIG_DESTROY
+      processed: ''
+      offset: 0000D807
+    - name: WANPBCONFIG_CREATE
+      processed: ''
+      offset: 0000D846
+    - name: WANPBCONFIG_DESTROY
+      processed: ''
+      offset: 0000DA98
+    - name: LINEDEV_CREATE
+      processed: ''
+      offset: 0000DAD7
+    - name: LINEDEV_DESTROY
+      processed: ''
+      offset: 0000DE7B
+    - name: PHONEDEV_CREATE
+      processed: ''
+      offset: 0000DFCA
+    - name: PHONEDEV_DESTROY
+      processed: ''
+      offset: 0000E0FB
+    - name: VALIDATEDEVICECLASS
+      processed: ''
+      offset: 0000E1BF
+    - name: LMEMSET
+      processed: ''
+      offset: 0000E2AA
+    - name: C_SZASSERTFAILED
+      processed: ''
+      offset: 0000E2EF
+    - name: C_SZDBG
+      processed: ''
+      offset: 0000E31B
+    - name: C_SZTRACE
+      processed: ''
+      offset: '0000E324'
+    - name: C_SZNEWLINE
+      processed: ''
+      offset: 0000E32D
+    - name: LMEMMOVE
+      processed: ''
+      offset: '0000E330'
+    - name: '@ChrCmp'
+      processed: ''
+      offset: 0000E3CF
+    - name: '@ChrCmpI'
+      processed: ''
+      offset: 0000E41F
+    - name: LSTRNICMP
+      processed: ''
+      offset: 0000E46F
+    - name: LSTRNCMP
+      processed: ''
+      offset: 0000E50F
+    - name: ANSITOINT
+      processed: ''
+      offset: 0000E59D
+    - name: ANSICHR
+      processed: ''
+      offset: 0000E7C5
+    - name: CONSTRUCTVMESSAGESTRING
+      processed: ''
+      offset: 0000E81A
+    - name: _ConstructMessage
+      processed: ''
+      offset: 0000E8D9
+    - name: _MsgBox
+      processed: ''
+      offset: 0000E94E
+    - name: GETREASONSTRING
+      processed: ''
+      offset: 0000E9FE
+    - name: COMMONDEBUGBREAK
+      processed: ''
+      offset: 0000EAEC
+    - name: COMMONASSERTFAILED
+      processed: ''
+      offset: 0000EB32
+    - name: _CommonAssertMsg
+      processed: ''
+      offset: 0000EBCF
+    - name: _CommonDebugMsg
+      processed: ''
+      offset: 0000EC1B
+    - name: DBG_SAFESTR
+      processed: ''
+      offset: 0000EC87
+    - name: ROVCOMM_INIT
+      processed: ''
+      offset: 0000ECB2
+    - name: ROVCOMM_TERMINATE
+      processed: ''
+      offset: 0000ECD1
+    - name: ISINIYES
+      processed: ''
+      offset: 0000ECE4
+    - name: C_SZINIKEYBREAKFLAGS
+      processed: ''
+      offset: 0000EDC9
+    - name: C_SZZERO
+      processed: ''
+      offset: 0000EDD4
+    - name: C_SZINISECDEBUGUI
+      processed: ''
+      offset: 0000EDD6
+    - name: C_SZINIFILE
+      processed: ''
+      offset: 0000EDDD
+    - name: C_SZINIKEYDUMPFLAGS
+      processed: ''
+      offset: 0000EDE8
+    - name: C_SZINIKEYTRACEFLAGS
+      processed: ''
+      offset: 0000EDF2
+    - name: PROCESSINTEGERS
+      processed: ''
+      offset: 0000EDFD
+    - name: ROVCOMM_PROCESSINIFILE
+      processed: ''
+      offset: 0000EEC6
+    - name: SETSTRING
+      processed: ''
+      offset: 0000EEDE
+    - name: CATSTRING
+      processed: ''
+      offset: 0000F012
+    - name: MEM_TERMINATE
+      processed: ''
+      offset: 0000F15C
+    - name: CREATEHEAP
+      processed: ''
+      offset: 0000F17A
+    - name: DESTROYHEAP
+      processed: ''
+      offset: 0000F226
+    - name: HEAPALLOC
+      processed: ''
+      offset: 0000F2EE
+    - name: __aFlmul
+      processed: ''
+      offset: 0000F320
+    - name: __aFulmul
+      processed: ''
+      offset: 0000F320
+  - num: '2'
+    name: _WEP
+    offset: '00001150'
+    symbols:
+    - name: WEP
+      processed: ''
+      offset: '00000000'
+  - num: '3'
+    name: DGROUP
+    offset: '00000000'
+    symbols:
+    - name: PLOCALHEAP
+      processed: ''
+      offset: '00000006'
+    - name: RSRVPTRS
+      processed: ''
+      offset: '00000006'
+    - name: PATOMTABLE
+      processed: ''
+      offset: '00000008'
+    - name: PSTACKTOP
+      processed: ''
+      offset: 0000000A
+    - name: PSTACKMIN
+      processed: ''
+      offset: 0000000C
+    - name: PSTACKBOT
+      processed: ''
+      offset: 0000000E
+    - name: GHINSTANCE
+      processed: ''
+      offset: '00000010'
+    - name: GDWNUMOFLINES
+      processed: ''
+      offset: '00000012'
+    - name: GDWNUMOFPHONES
+      processed: ''
+      offset: '00000016'
+    - name: GULNEXTWANREQUESTID
+      processed: ''
+      offset: 0000001A
+    - name: GHWNDWAN
+      processed: ''
+      offset: 0000001E
+    - name: WAN_WNDCLASS
+      processed: ''
+      offset: '00000020'
+    - name: GFNCOMPLETIONCALLBACK
+      processed: ''
+      offset: 0000002A
+    - name: GFNLINECREATEPROC
+      processed: ''
+      offset: 0000002E
+    - name: GFNPHONECREATEPROC
+      processed: ''
+      offset: '00000032'
+    - name: GHPROVIDER
+      processed: ''
+      offset: '00000036'
+    - name: GPMINIPORTDEV
+      processed: ''
+      offset: 0000003A
+    - name: GPLINEDEV
+      processed: ''
+      offset: 0000003C
+    - name: GPPHONEDEV
+      processed: ''
+      offset: 0000003E
+    - name: G_DWBREAKFLAGS
+      processed: ''
+      offset: 00007D1A
+    - name: G_DWDUMPFLAGS
+      processed: ''
+      offset: 00007D1E
+    - name: G_DWTRACEFLAGS
+      processed: ''
+      offset: 00007D22
+    - name: G_HHPFIRST
+      processed: ''
+      offset: 00007F0E
+    - name: GDWPROVIDERID
+      processed: ''
+      offset: 00007F50
+    - name: GDWLINEDEVICEIDBASE
+      processed: ''
+      offset: 00007F54
+    - name: GDWPHONEDEVICEIDBASE
+      processed: ''
+      offset: 00007F58

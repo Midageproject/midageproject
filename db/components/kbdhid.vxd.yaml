@@ -1,229 +1,335 @@
-filename: "kbdhid.vxd"
+filename: kbdhid.vxd
 #TODO: bring up more details from symdeb
-binary: "kbdhid.vxd"
-description: ""
-note: ""
+binary: KBDHID
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_LGROUP"
-        offset: "00000660"
-        symbols:
-          - name: '_KBDHID_Timeout_AutoRepeat@0'
-            offset: "00000000"            
-          - name: 'ControlProc'
-            offset: "00000020"            
-          - name: '_KBDHID_Enter_Lock@0'
-            offset: "0000004F"            
-          - name: '_KBDHID_Leave_Lock@0'
-            offset: "00000081"            
-          - name: '_KBDHID_Destroy_Lock@0'
-            offset: "00000098"            
-          - name: '_IncPendingActionCount@0'
-            offset: "000000C0"            
-          - name: '_DecPendingActionCount@0'
-            offset: "000000CC"            
-          - name: '_HandleShutdown'
-            offset: "00000167"            
-          - name: '__NtKernInternalDeviceIoControl@40'
-            offset: "0000019C"            
-          - name: '_LCODE__NtKernCreateFile@44'
-            offset: "000001A4"            
-          - name: '_LCODE__NtKernClose@4'
-            offset: "000001AC"            
-          - name: '_LCODE__NtKernReadFile@36'
-            offset: "000001B4"            
-          - name: '_LCODE__NtKernWriteFile@36'
-            offset: "000001BC"            
-          - name: '_LCODE__NtKernDeviceIoControl@40'
-            offset: "000001C4"            
-          - name: '_LCODE__NtKernQueueWorkItem@8'
-            offset: "000001CC"            
-          - name: '_LCODE__PELDR_GetProcAddress'
-            offset: "000001D4"            
-          - name: '_LCODE__HeapAllocate'
-            offset: "000001DC"            
-          - name: '_LCODE__HeapFree'
-            offset: "000001E4"            
-          - name: '_LCODE__Trace_Out_Service@4'
-            offset: "000001EC"            
-          - name: '_LCODE__Debug_Printf_Service'
-            offset: "000001F4"            
-          - name: '_LCODE_Set_Global_Time_Out@12'
-            offset: "00000208"            
-          - name: '_LCODE_Get_Last_Updated_System_Time'
-            offset: "00000224"            
-          - name: '__imp__ExFreePool@4'
-            offset: "0000022C"            
-          - name: 'WDMExFreePool'
-            offset: "00000230"            
-          - name: '__imp__RtlAssert@16'
-            offset: "0000023C"            
-          - name: 'WDMRtlAssert'
-            offset: "00000240"            
-          - name: '__imp__KeGetCurrentIrql@0'
-            offset: "0000024C"            
-          - name: 'WDMKeGetCurrentIrql'
-            offset: "00000250"            
-          - name: 'KBDHID_DDB'
-            offset: "0000025C"            
-          - name: '_shuttingDown'
-            offset: "000002AC"            
-          - name: '_pendingActionCount'
-            offset: "000002B0"            
-          - name: '_GUID_CLASS_INPUT'
-            offset: "00000310"            
-          - name: '_GUID_DEVICE_SYS_BUTTON'
-            offset: "00000320"            
-          - name: '_pHidP_GetUsages'
-            offset: "00000334"            
-          - name: '_TimeoutWorkItem'
-            offset: "00000338"            
-          - name: '_pHidP_SetUsages'
-            offset: "00000348"            
-          - name: '_pHidP_GetCaps'
-            offset: "0000034C"            
-          - name: '_AltIsDown'
-            offset: "00000350"            
-          - name: '_KBDHID_LEDs'
-            offset: "00000354"            
-          - name: '_kbdTail'
-            offset: "00000358"            
-          - name: '_pHidP_GetUsageValue'
-            offset: "0000035C"            
-          - name: '_pIoGetDeviceInterfaces'
-            offset: "00000360"            
-          - name: '_KBDHID_ReadCount'
-            offset: "00000364"            
-          - name: '_pHidP_GetMaxUsageListLength'
-            offset: "00000368"            
-          - name: '_KBDHID_MultiCount'
-            offset: "0000036C"            
-          - name: '_pHidP_GetSpecificButtonCaps'
-            offset: "00000370"            
-          - name: '_hTimeout'
-            offset: "00000374"            
-          - name: '_kbdHead'
-            offset: "00000378"            
-      - num: "3"
-        name: "_PTEXT"
-        offset: "00001570"
-        symbols:
-          - name: '_DbgCommonEntry@0'
-            offset: "00000000"            
-          - name: '_KBDHID_UnicodeStrcmp@8'
-            offset: "0000002A"            
-          - name: '_UnicodeStringLength@4'
-            offset: "00000086"            
-          - name: '_KBDHID_GetFunctions@0'
-            offset: "000000A8"            
-          - name: '_KBDHID_Enqueue@4'
-            offset: "000001B0"            
-          - name: '_KBDHID_Dequeue@4'
-            offset: "00000239"            
-          - name: '_KBDHID_Is_Active_Device@4'
-            offset: "00000334"            
-          - name: '_KBDHID_Find_Device_By_Name@4'
-            offset: "00000358"            
-          - name: '_KBDHID_Device_Init@0'
-            offset: "0000039A"            
-          - name: '_KBDHID_Callback_Open@4'
-            offset: "0000045E"            
-          - name: '_KbdReadComplete@12'
-            offset: "00000E09"            
-          - name: '_KBDHID_Callback_Read@4'
-            offset: "00000F1A"            
-          - name: '_KBDHID_Callback_Close@4'
-            offset: "00000FF1"            
-          - name: '_KBDHID_DeviceExit@0'
-            offset: "000011A4"            
-          - name: '_KBDHID_Set_LEDs'
-            offset: "000011CD"            
-          - name: '_KBDHID_Set_Key_Rate'
-            offset: "000011E5"            
-          - name: '_KBDHID_Call_LEDs@0'
-            offset: "00001216"            
-          - name: '_KbdWriteComplete@12'
-            offset: "0000128B"            
-          - name: '_KBDHID_Callback_LEDs@4'
-            offset: "000012A9"            
-          - name: '_KBDHID_KeyboardKeypadCode@12'
-            offset: "00001498"            
-          - name: '_KBDHID_KeyboardPrtScrn@12'
-            offset: "00001550"            
-          - name: '_KbdPutKey@12'
-            offset: "000015A5"            
-          - name: '_UpdateKeystrokes@8'
-            offset: "00001633"            
-          - name: '_KBDHID_Check_AutoRepeat@4'
-            offset: "00001A18"            
-          - name: '_KBDHID_Callback_AutoRepeat@4'
-            offset: "00001B0F"            
-          - name: '_KBDHID_Start_Bluescreen_Mode@0'
-            offset: "00001B5A"            
-          - name: '_KBDHID_End_Bluescreen_Mode@0'
-            offset: "00001B61"            
-          - name: '_KBDHID_CatchBluescreenKeystroke@8'
-            offset: "00001B68"            
-          - name: 'KBDHID_Init'
-            offset: "00001B7C"            
-          - name: '_KBDHID_Hook@0'
-            offset: "00001B9C"            
-          - name: '_KBDHID_Unhook@0'
-            offset: "00001C20"            
-          - name: 'KBDHID_Exit'
-            offset: "00001C96"            
-          - name: 'KBDHID_Kernel32Shutdown'
-            offset: "00001CB1"            
-          - name: 'KBDHID_New_Devnode'
-            offset: "00001CC0"            
-          - name: 'KBDHID_New_Devnode_Callback'
-            offset: "00001CE8"            
-          - name: '_KbdPutBytes'
-            offset: "00001CFC"            
-          - name: '_GetKeyRateCode'
-            offset: "00001D3D"            
-          - name: 'KBDHID_Hook_Proc_Set_LEDs'
-            offset: "00001D58"            
-          - name: 'KBDHID_Hook_Proc_Set_Key_Rate'
-            offset: "00001D7B"            
-          - name: 'KBDHID_Hook_Sysmodal'
-            offset: "00001D9E"            
-          - name: 'MyCallAtAppyTime'
-            offset: "00001DBC"            
-      - num: "4"
-        name: "_PDATA"
-        offset: "00000000"
-        symbols:
-          - name: '_StartRepeatTime'
-            offset: "00000000"            
-          - name: '_IntervalRepeatTime'
-            offset: "00000004"            
-          - name: '_IsNumLock'
-            offset: "00000008"            
-          - name: '_KBDHID_IsBlueScreenTime'
-            offset: "0000000C"            
-          - name: '_ModifierCodes'
-            offset: "00000010"            
-          - name: '_XlateToScanCode'
-            offset: "00000030"            
-          - name: '_XlateKbdPadCodes'
-            offset: "00000430"            
-          - name: '_XlatePrtScrnCodes'
-            offset: "00000458"            
-          - name: '_KbdPadCodes'
-            offset: "0000045C"            
-          - name: '_KbdPrtScrnCodes'
-            offset: "00000470"            
-          - name: '_ScanCodeSubTables'
-            offset: "00000484"            
-          - name: '_XlateControlToKbd'
-            offset: "000004C4"            
-          - name: '_KbdSysControlCodes'
-            offset: "000004F8"            
-          - name: '_dbgLastEntry'
-            offset: "0000050C"            
-          - name: '_VKD_Hooked'
-            offset: "000013DC"            
+- version: system
+  tree:
+  - - kbdhid.c
+    - shutdown.c
+    - vxd.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00000660'
+    symbols:
+    - name: _KBDHID_Timeout_AutoRepeat@0
+      processed: ''
+      offset: '00000000'
+    - name: ControlProc
+      processed: ''
+      offset: '00000020'
+    - name: _KBDHID_Enter_Lock@0
+      processed: ''
+      offset: 0000004F
+    - name: _KBDHID_Leave_Lock@0
+      processed: ''
+      offset: '00000081'
+    - name: _KBDHID_Destroy_Lock@0
+      processed: ''
+      offset: '00000098'
+    - name: _IncPendingActionCount@0
+      processed: ''
+      offset: 000000C0
+    - name: _DecPendingActionCount@0
+      processed: ''
+      offset: 000000CC
+    - name: _HandleShutdown
+      processed: ''
+      offset: '00000167'
+    - name: __NtKernInternalDeviceIoControl@40
+      processed: ''
+      offset: 0000019C
+    - name: _LCODE__NtKernCreateFile@44
+      processed: ''
+      offset: 000001A4
+    - name: _LCODE__NtKernClose@4
+      processed: ''
+      offset: 000001AC
+    - name: _LCODE__NtKernReadFile@36
+      processed: ''
+      offset: 000001B4
+    - name: _LCODE__NtKernWriteFile@36
+      processed: ''
+      offset: 000001BC
+    - name: _LCODE__NtKernDeviceIoControl@40
+      processed: ''
+      offset: 000001C4
+    - name: _LCODE__NtKernQueueWorkItem@8
+      processed: ''
+      offset: 000001CC
+    - name: _LCODE__PELDR_GetProcAddress
+      processed: ''
+      offset: 000001D4
+    - name: _LCODE__HeapAllocate
+      processed: ''
+      offset: 000001DC
+    - name: _LCODE__HeapFree
+      processed: ''
+      offset: '000001E4'
+    - name: _LCODE__Trace_Out_Service@4
+      processed: ''
+      offset: 000001EC
+    - name: _LCODE__Debug_Printf_Service
+      processed: ''
+      offset: 000001F4
+    - name: _LCODE_Set_Global_Time_Out@12
+      processed: ''
+      offset: '00000208'
+    - name: _LCODE_Get_Last_Updated_System_Time
+      processed: ''
+      offset: '00000224'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: 0000022C
+    - name: WDMExFreePool
+      processed: ''
+      offset: '00000230'
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: 0000023C
+    - name: WDMRtlAssert
+      processed: ''
+      offset: '00000240'
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: 0000024C
+    - name: WDMKeGetCurrentIrql
+      processed: ''
+      offset: '00000250'
+    - name: KBDHID_DDB
+      processed: ''
+      offset: 0000025C
+    - name: _shuttingDown
+      processed: ''
+      offset: 000002AC
+    - name: _pendingActionCount
+      processed: ''
+      offset: 000002B0
+    - name: _GUID_CLASS_INPUT
+      processed: ''
+      offset: '00000310'
+    - name: _GUID_DEVICE_SYS_BUTTON
+      processed: ''
+      offset: '00000320'
+    - name: _pHidP_GetUsages
+      processed: ''
+      offset: '00000334'
+    - name: _TimeoutWorkItem
+      processed: ''
+      offset: '00000338'
+    - name: _pHidP_SetUsages
+      processed: ''
+      offset: '00000348'
+    - name: _pHidP_GetCaps
+      processed: ''
+      offset: 0000034C
+    - name: _AltIsDown
+      processed: ''
+      offset: '00000350'
+    - name: _KBDHID_LEDs
+      processed: ''
+      offset: '00000354'
+    - name: _kbdTail
+      processed: ''
+      offset: '00000358'
+    - name: _pHidP_GetUsageValue
+      processed: ''
+      offset: 0000035C
+    - name: _pIoGetDeviceInterfaces
+      processed: ''
+      offset: '00000360'
+    - name: _KBDHID_ReadCount
+      processed: ''
+      offset: '00000364'
+    - name: _pHidP_GetMaxUsageListLength
+      processed: ''
+      offset: '00000368'
+    - name: _KBDHID_MultiCount
+      processed: ''
+      offset: 0000036C
+    - name: _pHidP_GetSpecificButtonCaps
+      processed: ''
+      offset: '00000370'
+    - name: _hTimeout
+      processed: ''
+      offset: '00000374'
+    - name: _kbdHead
+      processed: ''
+      offset: '00000378'
+  - num: '3'
+    name: _PTEXT
+    offset: '00001570'
+    symbols:
+    - name: _DbgCommonEntry@0
+      processed: ''
+      offset: '00000000'
+    - name: _KBDHID_UnicodeStrcmp@8
+      processed: ''
+      offset: 0000002A
+    - name: _UnicodeStringLength@4
+      processed: ''
+      offset: '00000086'
+    - name: _KBDHID_GetFunctions@0
+      processed: ''
+      offset: 000000A8
+    - name: _KBDHID_Enqueue@4
+      processed: ''
+      offset: 000001B0
+    - name: _KBDHID_Dequeue@4
+      processed: ''
+      offset: '00000239'
+    - name: _KBDHID_Is_Active_Device@4
+      processed: ''
+      offset: '00000334'
+    - name: _KBDHID_Find_Device_By_Name@4
+      processed: ''
+      offset: '00000358'
+    - name: _KBDHID_Device_Init@0
+      processed: ''
+      offset: 0000039A
+    - name: _KBDHID_Callback_Open@4
+      processed: ''
+      offset: 0000045E
+    - name: _KbdReadComplete@12
+      processed: ''
+      offset: '00000E09'
+    - name: _KBDHID_Callback_Read@4
+      processed: ''
+      offset: 00000F1A
+    - name: _KBDHID_Callback_Close@4
+      processed: ''
+      offset: 00000FF1
+    - name: _KBDHID_DeviceExit@0
+      processed: ''
+      offset: 000011A4
+    - name: _KBDHID_Set_LEDs
+      processed: ''
+      offset: 000011CD
+    - name: _KBDHID_Set_Key_Rate
+      processed: ''
+      offset: '000011E5'
+    - name: _KBDHID_Call_LEDs@0
+      processed: ''
+      offset: '00001216'
+    - name: _KbdWriteComplete@12
+      processed: ''
+      offset: 0000128B
+    - name: _KBDHID_Callback_LEDs@4
+      processed: ''
+      offset: 000012A9
+    - name: _KBDHID_KeyboardKeypadCode@12
+      processed: ''
+      offset: '00001498'
+    - name: _KBDHID_KeyboardPrtScrn@12
+      processed: ''
+      offset: '00001550'
+    - name: _KbdPutKey@12
+      processed: ''
+      offset: 000015A5
+    - name: _UpdateKeystrokes@8
+      processed: ''
+      offset: '00001633'
+    - name: _KBDHID_Check_AutoRepeat@4
+      processed: ''
+      offset: 00001A18
+    - name: _KBDHID_Callback_AutoRepeat@4
+      processed: ''
+      offset: 00001B0F
+    - name: _KBDHID_Start_Bluescreen_Mode@0
+      processed: ''
+      offset: 00001B5A
+    - name: _KBDHID_End_Bluescreen_Mode@0
+      processed: ''
+      offset: 00001B61
+    - name: _KBDHID_CatchBluescreenKeystroke@8
+      processed: ''
+      offset: 00001B68
+    - name: KBDHID_Init
+      processed: ''
+      offset: 00001B7C
+    - name: _KBDHID_Hook@0
+      processed: ''
+      offset: 00001B9C
+    - name: _KBDHID_Unhook@0
+      processed: ''
+      offset: 00001C20
+    - name: KBDHID_Exit
+      processed: ''
+      offset: 00001C96
+    - name: KBDHID_Kernel32Shutdown
+      processed: ''
+      offset: 00001CB1
+    - name: KBDHID_New_Devnode
+      processed: ''
+      offset: 00001CC0
+    - name: KBDHID_New_Devnode_Callback
+      processed: ''
+      offset: 00001CE8
+    - name: _KbdPutBytes
+      processed: ''
+      offset: 00001CFC
+    - name: _GetKeyRateCode
+      processed: ''
+      offset: 00001D3D
+    - name: KBDHID_Hook_Proc_Set_LEDs
+      processed: ''
+      offset: 00001D58
+    - name: KBDHID_Hook_Proc_Set_Key_Rate
+      processed: ''
+      offset: 00001D7B
+    - name: KBDHID_Hook_Sysmodal
+      processed: ''
+      offset: 00001D9E
+    - name: MyCallAtAppyTime
+      processed: ''
+      offset: 00001DBC
+  - num: '4'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: _StartRepeatTime
+      processed: ''
+      offset: '00000000'
+    - name: _IntervalRepeatTime
+      processed: ''
+      offset: '00000004'
+    - name: _IsNumLock
+      processed: ''
+      offset: '00000008'
+    - name: _KBDHID_IsBlueScreenTime
+      processed: ''
+      offset: 0000000C
+    - name: _ModifierCodes
+      processed: ''
+      offset: '00000010'
+    - name: _XlateToScanCode
+      processed: ''
+      offset: '00000030'
+    - name: _XlateKbdPadCodes
+      processed: ''
+      offset: '00000430'
+    - name: _XlatePrtScrnCodes
+      processed: ''
+      offset: '00000458'
+    - name: _KbdPadCodes
+      processed: ''
+      offset: 0000045C
+    - name: _KbdPrtScrnCodes
+      processed: ''
+      offset: '00000470'
+    - name: _ScanCodeSubTables
+      processed: ''
+      offset: '00000484'
+    - name: _XlateControlToKbd
+      processed: ''
+      offset: 000004C4
+    - name: _KbdSysControlCodes
+      processed: ''
+      offset: 000004F8
+    - name: _dbgLastEntry
+      processed: ''
+      offset: 0000050C
+    - name: _VKD_Hooked
+      processed: ''
+      offset: 000013DC

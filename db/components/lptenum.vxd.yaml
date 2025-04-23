@@ -1,157 +1,232 @@
-filename: "lptenum.vxd"
+filename: lptenum.vxd
 #TODO: bring up more details from symdeb
-binary: "lptenum.vxd"
-description: ""
-note: ""
+binary: LPTENUM
+description: ''
 appearances:
-  - version: "system"
-    tree: []
-    segments:
-      - num: "1"
-        name: "_LGROUP"
-        offset: "000006B0"
-        symbols:
-          - name: 'LPTENUM_Control'
-            offset: "00000000"            
-          - name: '_P1284Terminate'
-            offset: "00000030"            
-          - name: '_P1284Negotiate'
-            offset: "000000FC"            
-          - name: '_AssembleNibbles'
-            offset: "0000023B"            
-          - name: '_NibbleRead'
-            offset: "00000276"            
-          - name: '_ByteRead'
-            offset: "000003BF"            
-          - name: '_ChecknFault'
-            offset: "000003D0"            
-          - name: '_CheckPort'
-            offset: "000003E8"            
-          - name: '_inpb'
-            offset: "00000440"            
-          - name: '_inpnb'
-            offset: "0000044E"            
-          - name: '_inpw'
-            offset: "0000046C"            
-          - name: '_inpnw'
-            offset: "0000047B"            
-          - name: '_inpd'
-            offset: "000004A0"            
-          - name: '_inpnd'
-            offset: "000004AE"            
-          - name: '_outpb'
-            offset: "000004DE"            
-          - name: '_outpnb'
-            offset: "000004EF"            
-          - name: '_outps'
-            offset: "0000050D"            
-          - name: '_outpnw'
-            offset: "00000520"            
-          - name: '_outpl'
-            offset: "00000545"            
-          - name: '_outpnd'
-            offset: "00000556"            
-          - name: '_LCODE__Debug_Printf_Service'
-            offset: "00000590"            
-          - name: 'LPTENUM_DDB'
-            offset: "000005A4"            
-          - name: '_lStartTick'
-            offset: "000005F4"            
-          - name: '_lEndTick'
-            offset: "000005F8"            
-      - num: "3"
-        name: "_PTEXT"
-        offset: "00000710"
-        symbols:
-          - name: '_GetTime'
-            offset: "00000000"            
-      - num: "4"
-        name: "_PDATA"
-        offset: "00000740"
-        symbols:
-          - name: '_cszEnumLptEnum'
-            offset: "00000000"            
-      - num: "5"
-        name: "_DBOGROUP"
-        offset: "00000000"
-        symbols:
-          - name: '_LPTEnumerator'
-            offset: "00000000"            
-          - name: '_FindLPTDevices'
-            offset: "00000044"            
-          - name: '_NewEnumerator'
-            offset: "000001C2"            
-          - name: '_Notify_Loss'
-            offset: "000001D8"            
-          - name: '_strcmpi'
-            offset: "000001DB"            
-          - name: '_AddOtherInstalledDevices'
-            offset: "0000022F"            
-          - name: '_swapbyte'
-            offset: "00000430"            
-          - name: '_LPTENUM_Init@0'
-            offset: "00000450"            
-          - name: '_LPTENUM_Exit@0'
-            offset: "00000456"            
-          - name: '_LPTENUM_NewDevNode@8'
-            offset: "0000045C"            
-          - name: '_StringLen'
-            offset: "00000480"            
-          - name: '_StringPos'
-            offset: "000004A1"            
-          - name: '_strchr'
-            offset: "000004C9"            
-          - name: '_StringCmp'
-            offset: "000004EB"            
-          - name: '_StringUppercase'
-            offset: "00000521"            
-          - name: '_StringAppend'
-            offset: "00000549"            
-          - name: '_StringCopy'
-            offset: "00000581"            
-          - name: '_StringSubst'
-            offset: "000005AD"            
-          - name: '_FindP1284Device'
-            offset: "000005E0"            
-          - name: '_GetP1284DeviceID'
-            offset: "00000A4A"            
-          - name: '_FindP1284Keys'
-            offset: "00000B4A"            
-          - name: '_CCODE__RegOpenKey'
-            offset: "00000DD0"            
-          - name: '_CCODE__RegCloseKey'
-            offset: "00000DD8"            
-          - name: '_CCODE__RegEnumKey'
-            offset: "00000DE0"            
-          - name: '_CCODE__RegQueryValueEx'
-            offset: "00000DE8"            
-          - name: '_CCODE__VCOMM_Get_Contention_Handler'
-            offset: "00000DF0"            
-          - name: '_CCODE__VCOMM_Map_Name_To_Resource'
-            offset: "00000DF8"            
-          - name: '_CCODE__HeapAllocate'
-            offset: "00000E00"            
-          - name: '_CCODE__HeapFree'
-            offset: "00000E08"            
-          - name: '_CCODE__Sprintf'
-            offset: "00000E10"            
-          - name: '_CCODE__CONFIGMG_Get_Device_ID'
-            offset: "00000E18"            
-          - name: '_CCODE__CONFIGMG_Create_DevNode'
-            offset: "00000E20"            
-          - name: '_CCODE__CONFIGMG_Register_Enumerator'
-            offset: "00000E28"            
-          - name: '_CCODE__CONFIGMG_Get_First_Log_Conf'
-            offset: "00000E30"            
-          - name: '_CCODE__CONFIGMG_Get_Next_Res_Des'
-            offset: "00000E38"            
-          - name: '_CCODE__CONFIGMG_Get_CRC_CheckSum'
-            offset: "00000E40"            
-          - name: '_CCODE__CONFIGMG_Reset_Children_Marks'
-            offset: "00000E48"            
-          - name: '_CCODE__CONFIGMG_Remove_Unmarked_Children'
-            offset: "00000E50"            
-          - name: '_CCODE__CONFIGMG_Read_Registry_Value'
-            offset: "00000E58"            
-          - name: '_CCODE__CONFIGMG_Write_Registry_Value'
-            offset: "00000E60"            
+- version: system
+  tree:
+  - - 1284comm.c
+    - enum1284.c
+    - "\t../enum.c"
+    - "\t../io.asm"
+    - lptenum.asm
+    - "\t../misc.c"
+    - pstatus.c
+    - str.c
+    - sysctrl.c
+    - tmtick.c
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 000006B0
+    symbols:
+    - name: LPTENUM_Control
+      processed: ''
+      offset: '00000000'
+    - name: _P1284Terminate
+      processed: ''
+      offset: '00000030'
+    - name: _P1284Negotiate
+      processed: ''
+      offset: 000000FC
+    - name: _AssembleNibbles
+      processed: ''
+      offset: 0000023B
+    - name: _NibbleRead
+      processed: ''
+      offset: '00000276'
+    - name: _ByteRead
+      processed: ''
+      offset: 000003BF
+    - name: _ChecknFault
+      processed: ''
+      offset: 000003D0
+    - name: _CheckPort
+      processed: ''
+      offset: '000003E8'
+    - name: _inpb
+      processed: ''
+      offset: '00000440'
+    - name: _inpnb
+      processed: ''
+      offset: 0000044E
+    - name: _inpw
+      processed: ''
+      offset: 0000046C
+    - name: _inpnw
+      processed: ''
+      offset: 0000047B
+    - name: _inpd
+      processed: ''
+      offset: 000004A0
+    - name: _inpnd
+      processed: ''
+      offset: 000004AE
+    - name: _outpb
+      processed: ''
+      offset: 000004DE
+    - name: _outpnb
+      processed: ''
+      offset: 000004EF
+    - name: _outps
+      processed: ''
+      offset: 0000050D
+    - name: _outpnw
+      processed: ''
+      offset: '00000520'
+    - name: _outpl
+      processed: ''
+      offset: '00000545'
+    - name: _outpnd
+      processed: ''
+      offset: '00000556'
+    - name: _LCODE__Debug_Printf_Service
+      processed: ''
+      offset: '00000590'
+    - name: LPTENUM_DDB
+      processed: ''
+      offset: 000005A4
+    - name: _lStartTick
+      processed: ''
+      offset: 000005F4
+    - name: _lEndTick
+      processed: ''
+      offset: 000005F8
+  - num: '3'
+    name: _PTEXT
+    offset: '00000710'
+    symbols:
+    - name: _GetTime
+      processed: ''
+      offset: '00000000'
+  - num: '4'
+    name: _PDATA
+    offset: '00000740'
+    symbols:
+    - name: _cszEnumLptEnum
+      processed: ''
+      offset: '00000000'
+  - num: '5'
+    name: _DBOGROUP
+    offset: '00000000'
+    symbols:
+    - name: _LPTEnumerator
+      processed: ''
+      offset: '00000000'
+    - name: _FindLPTDevices
+      processed: ''
+      offset: '00000044'
+    - name: _NewEnumerator
+      processed: ''
+      offset: 000001C2
+    - name: _Notify_Loss
+      processed: ''
+      offset: 000001D8
+    - name: _strcmpi
+      processed: ''
+      offset: 000001DB
+    - name: _AddOtherInstalledDevices
+      processed: ''
+      offset: 0000022F
+    - name: _swapbyte
+      processed: ''
+      offset: '00000430'
+    - name: _LPTENUM_Init@0
+      processed: ''
+      offset: '00000450'
+    - name: _LPTENUM_Exit@0
+      processed: ''
+      offset: '00000456'
+    - name: _LPTENUM_NewDevNode@8
+      processed: ''
+      offset: 0000045C
+    - name: _StringLen
+      processed: ''
+      offset: '00000480'
+    - name: _StringPos
+      processed: ''
+      offset: 000004A1
+    - name: _strchr
+      processed: ''
+      offset: 000004C9
+    - name: _StringCmp
+      processed: ''
+      offset: 000004EB
+    - name: _StringUppercase
+      processed: ''
+      offset: '00000521'
+    - name: _StringAppend
+      processed: ''
+      offset: '00000549'
+    - name: _StringCopy
+      processed: ''
+      offset: '00000581'
+    - name: _StringSubst
+      processed: ''
+      offset: 000005AD
+    - name: _FindP1284Device
+      processed: ''
+      offset: '000005E0'
+    - name: _GetP1284DeviceID
+      processed: ''
+      offset: 00000A4A
+    - name: _FindP1284Keys
+      processed: ''
+      offset: 00000B4A
+    - name: _CCODE__RegOpenKey
+      processed: ''
+      offset: 00000DD0
+    - name: _CCODE__RegCloseKey
+      processed: ''
+      offset: 00000DD8
+    - name: _CCODE__RegEnumKey
+      processed: ''
+      offset: 00000DE0
+    - name: _CCODE__RegQueryValueEx
+      processed: ''
+      offset: 00000DE8
+    - name: _CCODE__VCOMM_Get_Contention_Handler
+      processed: ''
+      offset: 00000DF0
+    - name: _CCODE__VCOMM_Map_Name_To_Resource
+      processed: ''
+      offset: 00000DF8
+    - name: _CCODE__HeapAllocate
+      processed: ''
+      offset: '00000E00'
+    - name: _CCODE__HeapFree
+      processed: ''
+      offset: '00000E08'
+    - name: _CCODE__Sprintf
+      processed: ''
+      offset: '00000E10'
+    - name: _CCODE__CONFIGMG_Get_Device_ID
+      processed: ''
+      offset: '00000E18'
+    - name: _CCODE__CONFIGMG_Create_DevNode
+      processed: ''
+      offset: '00000E20'
+    - name: _CCODE__CONFIGMG_Register_Enumerator
+      processed: ''
+      offset: '00000E28'
+    - name: _CCODE__CONFIGMG_Get_First_Log_Conf
+      processed: ''
+      offset: '00000E30'
+    - name: _CCODE__CONFIGMG_Get_Next_Res_Des
+      processed: ''
+      offset: '00000E38'
+    - name: _CCODE__CONFIGMG_Get_CRC_CheckSum
+      processed: ''
+      offset: '00000E40'
+    - name: _CCODE__CONFIGMG_Reset_Children_Marks
+      processed: ''
+      offset: '00000E48'
+    - name: _CCODE__CONFIGMG_Remove_Unmarked_Children
+      processed: ''
+      offset: '00000E50'
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      processed: ''
+      offset: '00000E58'
+    - name: _CCODE__CONFIGMG_Write_Registry_Value
+      processed: ''
+      offset: '00000E60'
