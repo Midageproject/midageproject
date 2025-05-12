@@ -1,0 +1,47 @@
+name: Build and Push to External GitHub Pages Repo
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install jinja2 ruamel.yaml
+
+      - name: Run site generator
+        run: |
+          python explorer/generate_explorer.py
+
+      - name: Deploy to orgname.github.io (gh-pages branch)
+        run: |
+          cd dist
+          git init
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git remote add origin https://x-access-token:${{ secrets.ORG_DEPLOY_TOKEN }}@github.com/midageproject/midageproject.github.io.git
+          git checkout -b gh-pages
+          git add .
+          git commit -m "Deploy $(date +'%Y-%m-%d %H:%M:%S')"
+          git push --force origin gh-pages
