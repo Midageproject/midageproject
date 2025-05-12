@@ -1,0 +1,25 @@
+<div class="appearance-block">
+  <h2>{{ data.binary }} — {{ data.appearances[appearance_index].version }}</h2>
+
+  <div class="source-tree-scroll">
+    <h3>Source Tree</h3>
+    <ul>
+      {% for path in data.appearances[appearance_index].tree %}
+        <li>{{ path }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="segments">
+    {% for segment in data.appearances[appearance_index].segments %}
+      <div class="segment">
+        <h4>Segment {{ segment.num }}: {{ segment.name }} @ {{ segment.offset }}</h4>
+        <ul>
+          {% for sym in segment.symbols %}
+            <li><code>{{ sym.offset }}</code> — {{ sym.name }} {% if sym.processed %}<em>{{ sym.processed }}</em>{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</div>

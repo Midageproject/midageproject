@@ -33,7 +33,7 @@ def main():
         paths = set()
 
         cmd_fmt = (
-       'strings {} | '
+       'strings "{}" | '
         'grep -Ei "[./\\\\]{{0,2}}[a-z0-9_./\\\\-]{{2,}}\\.(c|cpp|asm|h|inc)" | '
         "sed -e 's|\\\\|/|g' -e 's|^[.]/||' -e 's|^\\.\\./||' | "
         'sort -u'
@@ -69,17 +69,16 @@ def main():
         for appearance in data.get('appearances', []):
             if appearance.get('version') == current_version:
                 tree = appearance.get('tree', [])
-                if isinstance(tree, list):
-                    # Avoid duplicates
-                    new_paths = [p for p in paths if p not in tree]
-                    if new_paths:
-                        tree.extend = new_paths
-                        appearance['tree'].append(new_paths)
-                        updated = True
-                else:
-                    print(f"Warning: 'tree' is not a list in {yaml_file}")
+                if any(isinstance(i, list) for i in tree):
+                    # flatten if needed
+                    tree = [item for sublist in tree for item in (sublist if isinstance(sublist, list) else [sublist])]
+
+                new_paths = [p for p in paths if p not in tree]
+                if new_paths:
+                    tree.extend(new_paths)
+                    appearance['tree'] = tree
+                    updated = True
                 break
-            updated = True
 
         if updated:
             with yaml_file.open('w', encoding='utf-8') as f:

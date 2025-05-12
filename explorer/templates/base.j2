@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Midage Crisis{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header>
+    <div href="/" class="logo"><span>🌍</span>Semetary</div>
+    <nav>
+      <a href="/">HOME</a>
+      <a href="https://github.com/logkos/midageproject"><img src="assets/github-mark-white.png" alt="GitHub" width="40" height="40"></a>
+    </nav>
+  </header>
+
+{% block content %}
+{{ content_block | safe }}
+{% endblock %}
+
+</body>
+</html>
