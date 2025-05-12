@@ -4,12 +4,7 @@ binary: CDTSD
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - tsdaer.asm
-  - tsd.asm
-  - tsdinit.asm
-  - tsdreq.asm
-  - tsdsubs.asm
+  tree: []
   segments:
   - num: '1'
     name: _LGROUP
@@ -66,8 +61,19 @@ appearances:
     - name: CDTSD_num_devices
       processed: ''
       offset: '00000098'
+  source_tree:
+  - tsdaer.asm
+  - tsd.asm
+  - tsdinit.asm
+  - tsdreq.asm
+  - tsdsubs.asm
 - version: Windows 98 Retail
-  source_tree: []
+  source_tree:
+  - tsdaer.asm
+  - tsd.asm
+  - tsdinit.asm
+  - tsdreq.asm
+  - tsdsubs.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -124,9 +130,3 @@ appearances:
     - name: CDTSD_num_devices
       demangled: ''
       offset: 0000001C
-  tree:
-  - tsdaer.asm
-  - tsd.asm
-  - tsdinit.asm
-  - tsdreq.asm
-  - tsdsubs.asm

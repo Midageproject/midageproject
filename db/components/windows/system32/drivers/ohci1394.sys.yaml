@@ -4,18 +4,7 @@ binary: OHCI1394
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - ../common/common.c
-  - intel/llshr.asm
-  - interrup.c
-  - ohciirp.c
-  - ohcipnp.c
-  - ohcisoch.c
-  - openhci.c
-  - '"../../../../../wdm10/ddk/inc/wdm.h'
-  - interrup.c"../../../../../wdm10/ddk/inc/wdm.h
-  - ohciirp.c"../../../../../wdm10/ddk/inc/wdm.h
-  - ../../../../wdm10/ddk/inc/wdm.h
+  tree: []
   segments:
   - num: '1'
     name: .text
@@ -1224,8 +1213,28 @@ appearances:
     - name: _DriverEntry@8
       processed: ''
       offset: 00000F0F
+  source_tree:
+  - ../common/common.c
+  - intel/llshr.asm
+  - interrup.c
+  - ohciirp.c
+  - ohcipnp.c
+  - ohcisoch.c
+  - openhci.c
+  - '"../../../../../wdm10/ddk/inc/wdm.h'
+  - interrup.c"../../../../../wdm10/ddk/inc/wdm.h
+  - ohciirp.c"../../../../../wdm10/ddk/inc/wdm.h
+  - ../../../../wdm10/ddk/inc/wdm.h
 - version: Windows 98 Retail
-  source_tree: []
+  source_tree:
+  - ../common/common.c
+  - intel/llshr.asm
+  - interrup.c
+  - ohciirp.c
+  - ohcipnp.c
+  - ohcisoch.c
+  - openhci.c
+  - '"../../../../../wdm10/ddk/inc/wdm.h'
   segments:
   - num: '1'
     name: .text
@@ -1653,12 +1662,3 @@ appearances:
     - name: _DriverEntry@8
       demangled: ''
       offset: 00000C27
-  tree:
-  - ../common/common.c
-  - intel/llshr.asm
-  - interrup.c
-  - ohciirp.c
-  - ohcipnp.c
-  - ohcisoch.c
-  - openhci.c
-  - '"../../../../../wdm10/ddk/inc/wdm.h'

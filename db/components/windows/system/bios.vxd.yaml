@@ -4,19 +4,7 @@ binary: BIOS
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - bios.asm
-  - callbios.c
-  - convert.c
-  - debug.c
-  - ' ../../../../dev/ddk/inc/bios.inc'
-  - "\t../enum.c"
-  - "\t../escd.c"
-  - events.c
-  - selector.c
-  - services.c
-  - sysctrl.c
-  - sysmsgs.c
+  tree: []
   segments:
   - num: '1'
     name: _LDATA
@@ -760,6 +748,19 @@ appearances:
     - name: _gabyTempEscdFn
       processed: ''
       offset: 00000DB8
+  source_tree:
+  - bios.asm
+  - callbios.c
+  - convert.c
+  - debug.c
+  - ' ../../../../dev/ddk/inc/bios.inc'
+  - "\t../enum.c"
+  - "\t../escd.c"
+  - events.c
+  - selector.c
+  - services.c
+  - sysctrl.c
+  - sysmsgs.c
 - version: Windows 98 Retail
   source_tree: []
   segments:

@@ -4,13 +4,7 @@ binary: USBSCAN
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - ioctl.c
-  - "\t../ocrw.c"
-  - power.c
-  - usbscan.c
-  - ocrw.c
-  - "power.c\t../ocrw.c"
+  tree: []
   segments:
   - num: '1'
     name: .text
@@ -340,6 +334,13 @@ appearances:
     - name: _USPower@8
       processed: ''
       offset: 00002C80
+  source_tree:
+  - ioctl.c
+  - "\t../ocrw.c"
+  - power.c
+  - usbscan.c
+  - ocrw.c
+  - "power.c\t../ocrw.c"
 - version: Windows 98 Retail
   source_tree: []
   segments:

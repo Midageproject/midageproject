@@ -4,10 +4,7 @@ binary: KBDHID
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - kbdhid.c
-  - shutdown.c
-  - vxd.asm
+  tree: []
   segments:
   - num: '1'
     name: _LGROUP
@@ -333,8 +330,15 @@ appearances:
     - name: _VKD_Hooked
       processed: ''
       offset: 000013DC
+  source_tree:
+  - kbdhid.c
+  - shutdown.c
+  - vxd.asm
 - version: Windows 98 Retail
-  source_tree: []
+  source_tree:
+  - kbdhid.c
+  - shutdown.c
+  - vxd.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -630,7 +634,3 @@ appearances:
     - name: _VKD_Hooked
       demangled: ''
       offset: 000006BC
-  tree:
-  - kbdhid.c
-  - shutdown.c
-  - vxd.asm

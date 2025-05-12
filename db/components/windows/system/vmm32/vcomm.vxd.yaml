@@ -4,12 +4,7 @@ binary: VCOMM
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - vcommapi.asm
-  - vcomm.asm
-  - vcommpnp.asm
-  - vcommsrv.asm
-  - vcommw32.asm
+  tree: []
   segments:
   - num: '1'
     name: _LGROUP
@@ -753,8 +748,19 @@ appearances:
     - name: VCOMM_New_DevNode
       processed: ''
       offset: 000004EA
+  source_tree:
+  - vcommapi.asm
+  - vcomm.asm
+  - vcommpnp.asm
+  - vcommsrv.asm
+  - vcommw32.asm
 - version: Windows 98 Retail
-  source_tree: []
+  source_tree:
+  - vcommapi.asm
+  - vcomm.asm
+  - vcommpnp.asm
+  - vcommsrv.asm
+  - vcommw32.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -1462,9 +1468,3 @@ appearances:
     - name: VCOMM_New_DevNode
       demangled: ''
       offset: 000004BE
-  tree:
-  - vcommapi.asm
-  - vcomm.asm
-  - vcommpnp.asm
-  - vcommsrv.asm
-  - vcommw32.asm

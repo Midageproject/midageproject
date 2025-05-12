@@ -4,18 +4,7 @@ binary: NDISWAN
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - init.asm
-  - ioctl.c
-  - "\t../link.c"
-  - memory.c
-  - ndisstub.asm
-  - ndistapi.c
-  - ndiswan.c
-  - receive.c
-  - "\t../send.c"
-  - transfer.c
-  - wanif.c
+  tree: []
   segments:
   - num: '1'
     name: .bss
@@ -415,6 +404,18 @@ appearances:
     - name: _DbgPrint
       processed: ''
       offset: 0000012A
+  source_tree:
+  - init.asm
+  - ioctl.c
+  - "\t../link.c"
+  - memory.c
+  - ndisstub.asm
+  - ndistapi.c
+  - ndiswan.c
+  - receive.c
+  - "\t../send.c"
+  - transfer.c
+  - wanif.c
 - version: Windows 98 Retail
   source_tree: []
   segments:

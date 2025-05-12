@@ -4,21 +4,7 @@ binary: UNIMODEM
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - api.c
-  - dle.c
-  - internal.h
-  - logger.c
-  - mcx.asm
-  - mcxdbg.asm
-  - mcxdial.c
-  - mcxfunc.asm
-  - mcxstate.c
-  - mcxutil.asm
-  - uniread.c
-  - "\t../util.c"
-  - vcomm.c
-  - voiceapi.c
+  tree: []
   segments:
   - num: '1'
     name: _LGROUP
@@ -720,8 +706,35 @@ appearances:
     - name: MCX_Name
       processed: ''
       offset: '00000000'
+  source_tree:
+  - api.c
+  - dle.c
+  - internal.h
+  - logger.c
+  - mcx.asm
+  - mcxdbg.asm
+  - mcxdial.c
+  - mcxfunc.asm
+  - mcxstate.c
+  - mcxutil.asm
+  - uniread.c
+  - "\t../util.c"
+  - vcomm.c
+  - voiceapi.c
 - version: Windows 98 Retail
-  source_tree: []
+  source_tree:
+  - api.c
+  - dle.c
+  - logger.c
+  - mcx.asm
+  - mcxdial.c
+  - mcxfunc.asm
+  - mcxstate.c
+  - mcxutil.asm
+  - uniread.c
+  - "\t../util.c"
+  - vcomm.c
+  - voiceapi.c
   segments:
   - num: '1'
     name: _LGROUP
@@ -1436,16 +1449,3 @@ appearances:
     - name: _CCODE__LogPrintf
       demangled: ''
       offset: '00000058'
-  tree:
-  - api.c
-  - dle.c
-  - logger.c
-  - mcx.asm
-  - mcxdial.c
-  - mcxfunc.asm
-  - mcxstate.c
-  - mcxutil.asm
-  - uniread.c
-  - "\t../util.c"
-  - vcomm.c
-  - voiceapi.c

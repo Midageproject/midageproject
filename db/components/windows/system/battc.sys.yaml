@@ -4,16 +4,7 @@ binary: BATTC
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - battc.c
-  - "\t../bsrv.c"
-  - intel/llmul.asm
-  - intel/ulldiv.asm
-  - battcdat.c
-  - '----------- BattInfo.Capacity   = %x'
-  - bsrv.c
-  - '----------- Irp.HighCapacity    = %x'
-  - '----------- Irp.HighCapacity = %x'
+  tree: []
   segments:
   - num: '1'
     name: .text
@@ -254,8 +245,20 @@ appearances:
     - name: _BattDebug
       processed: ''
       offset: '00000000'
+  source_tree:
+  - battc.c
+  - "\t../bsrv.c"
+  - intel/llmul.asm
+  - intel/ulldiv.asm
+  - battcdat.c
+  - '----------- BattInfo.Capacity   = %x'
+  - bsrv.c
+  - '----------- Irp.HighCapacity    = %x'
+  - '----------- Irp.HighCapacity = %x'
 - version: Windows 98 Retail
-  source_tree: []
+  source_tree:
+  - intel/llmul.asm
+  - intel/ulldiv.asm
   segments:
   - num: '1'
     name: .text
@@ -427,6 +430,3 @@ appearances:
     - name: _BattDebug
       demangled: ''
       offset: '00000000'
-  tree:
-  - intel/llmul.asm
-  - intel/ulldiv.asm

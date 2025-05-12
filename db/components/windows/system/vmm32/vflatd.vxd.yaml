@@ -4,8 +4,7 @@ binary: VFLATD
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - vflatd.asm
+  tree: []
   segments:
   - num: '1'
     name: _LGROUP
@@ -103,8 +102,11 @@ appearances:
     - name: VFLATD_Debug_Query
       processed: ''
       offset: '00000000'
+  source_tree:
+  - vflatd.asm
 - version: Windows 98 Retail
-  source_tree: []
+  source_tree:
+  - vflatd.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -192,5 +194,3 @@ appearances:
     - name: VFLATD_AllocGDT_Hook
       demangled: ''
       offset: '00000601'
-  tree:
-  - vflatd.asm

@@ -4,12 +4,7 @@ binary: VKD
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - vad.asm
-  - vkd.asm
-  - vkdhk.asm
-  - vkdio.asm
-  - vkdphys.asm
+  tree: []
   segments:
   - num: '1'
     name: _LGROUP
@@ -639,8 +634,19 @@ appearances:
     - name: VKD_API_Force_Key
       processed: ''
       offset: 0000003C
+  source_tree:
+  - vad.asm
+  - vkd.asm
+  - vkdhk.asm
+  - vkdio.asm
+  - vkdphys.asm
 - version: Windows 98 Retail
-  source_tree: []
+  source_tree:
+  - vad.asm
+  - vkd.asm
+  - vkdhk.asm
+  - vkdio.asm
+  - vkdphys.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -1243,9 +1249,3 @@ appearances:
     - name: VKD_API_Force_Key
       demangled: ''
       offset: 0000002C
-  tree:
-  - vad.asm
-  - vkd.asm
-  - vkdhk.asm
-  - vkdio.asm
-  - vkdphys.asm

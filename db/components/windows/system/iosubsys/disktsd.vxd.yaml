@@ -4,13 +4,7 @@ binary: DISKTSD
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - tsdaer.asm
-  - tsd.asm
-  - tsdinit.asm
-  - tsdpart.asm
-  - tsdreq.asm
-  - tsdsubs.asm
+  tree: []
   segments:
   - num: '1'
     name: _LGROUP
@@ -264,8 +258,21 @@ appearances:
     - name: tsd_find_i13_bds
       processed: ''
       offset: 00002A06
+  source_tree:
+  - tsdaer.asm
+  - tsd.asm
+  - tsdinit.asm
+  - tsdpart.asm
+  - tsdreq.asm
+  - tsdsubs.asm
 - version: Windows 98 Retail
-  source_tree: []
+  source_tree:
+  - tsdaer.asm
+  - tsd.asm
+  - tsdinit.asm
+  - tsdpart.asm
+  - tsdreq.asm
+  - tsdsubs.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -519,10 +526,3 @@ appearances:
     - name: tsd_find_i13_bds
       demangled: ''
       offset: 0000211C
-  tree:
-  - tsdaer.asm
-  - tsd.asm
-  - tsdinit.asm
-  - tsdpart.asm
-  - tsdreq.asm
-  - tsdsubs.asm

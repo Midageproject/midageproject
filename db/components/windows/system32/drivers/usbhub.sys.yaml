@@ -4,20 +4,7 @@ binary: USBHUB
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - dbg.c
-  - hubpwr.c
-  - intel/lldiv.asm
-  - ioctli.c
-  - parent.c
-  - pnppower.c
-  - "\t../sync.c"
-  - usbhub.c
-  - globals.c
-  - intel/lldiv.asmNSI
-  - "pnppower.c\t../sync.c"
-  - sync.c
-  - urb->UrbSelectConfiguration.ConfigurationDescriptor->bConfigurationValue == deviceExtensionParent->CurrentConfig
+  tree: []
   segments:
   - num: '1'
     name: .text
@@ -954,6 +941,20 @@ appearances:
     - name: _USBH_FdoPower@12
       processed: ''
       offset: 0000A880
+  source_tree:
+  - dbg.c
+  - hubpwr.c
+  - intel/lldiv.asm
+  - ioctli.c
+  - parent.c
+  - pnppower.c
+  - "\t../sync.c"
+  - usbhub.c
+  - globals.c
+  - intel/lldiv.asmNSI
+  - "pnppower.c\t../sync.c"
+  - sync.c
+  - urb->UrbSelectConfiguration.ConfigurationDescriptor->bConfigurationValue == deviceExtensionParent->CurrentConfig
 - version: Windows 98 Retail
   source_tree: []
   segments:

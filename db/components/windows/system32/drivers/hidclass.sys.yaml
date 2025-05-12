@@ -4,38 +4,7 @@ binary: HIDCLASS
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - complete.c
-  - "\t../data.c"
-  - debug.c
-  - device.c
-  - dispatch.c
-  - driverex.c
-  - fdoext.c
-  - feature.c
-  - "\t../init.c"
-  - "\t../name.c"
-  - physdesc.c
-  - pingpong.c
-  - polled.c
-  - power.c
-  - "\t../read.c"
-  - services.c
-  - "\t../util.c"
-  - write.c
-  - data.c
-  - "dispatch.c\t../data.c"
-  - fdoExtension->deviceDesc.CollectionDescLength > 0
-  - init.c
-  - ISPTR(fdoExt->deviceDesc.CollectionDesc)
-  - (LONG)pingPong->backoffTimerPeriod.HighPart == -1
-  - name.c
-  - "physdesc.c\t../name.c"
-  - "pingpong.c\t../init.c"
-  - read.c
-  - "services.c\t../read.c"
-  - util.c
-  - "write.c\t../util.c"
+  tree: []
   segments:
   - num: '1'
     name: .text
@@ -777,6 +746,38 @@ appearances:
     - name: _HidpIrpMajorPower@8
       processed: ''
       offset: 000052F0
+  source_tree:
+  - complete.c
+  - "\t../data.c"
+  - debug.c
+  - device.c
+  - dispatch.c
+  - driverex.c
+  - fdoext.c
+  - feature.c
+  - "\t../init.c"
+  - "\t../name.c"
+  - physdesc.c
+  - pingpong.c
+  - polled.c
+  - power.c
+  - "\t../read.c"
+  - services.c
+  - "\t../util.c"
+  - write.c
+  - data.c
+  - "dispatch.c\t../data.c"
+  - fdoExtension->deviceDesc.CollectionDescLength > 0
+  - init.c
+  - ISPTR(fdoExt->deviceDesc.CollectionDesc)
+  - (LONG)pingPong->backoffTimerPeriod.HighPart == -1
+  - name.c
+  - "physdesc.c\t../name.c"
+  - "pingpong.c\t../init.c"
+  - read.c
+  - "services.c\t../read.c"
+  - util.c
+  - "write.c\t../util.c"
 - version: Windows 98 Retail
   source_tree: []
   segments:

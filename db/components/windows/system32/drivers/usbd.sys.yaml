@@ -4,14 +4,7 @@ binary: USBD
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - config.c
-  - dbgsrvic.c
-  - device.c
-  - service.c
-  - urb.c
-  - "\t../usbd.c"
-  - usbd.c
+  tree: []
   segments:
   - num: '1'
     name: .text
@@ -612,6 +605,14 @@ appearances:
     - name: _USBD_SelectInterface@16
       processed: ''
       offset: 00003DF0
+  source_tree:
+  - config.c
+  - dbgsrvic.c
+  - device.c
+  - service.c
+  - urb.c
+  - "\t../usbd.c"
+  - usbd.c
 - version: Windows 98 Retail
   source_tree: []
   segments:

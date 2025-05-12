@@ -4,20 +4,7 @@ binary: USBAUDIO
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - adapter.c
-  - dalsemi.c
-  - descript.c
-  - input.c
-  - intel/lldiv.asm
-  - intel/llmul.asm
-  - intel/ulldiv.asm
-  - mpaudio.c
-  - mpinit.c
-  - pcm2usb.c
-  - property.c
-  - write.c
-  - ksguid.c
+  tree: []
   segments:
   - num: '1'
     name: .text
@@ -1526,8 +1513,25 @@ appearances:
     - name: _BUSID_SoftwareDeviceEnumerator
       processed: ''
       offset: '00001380'
+  source_tree:
+  - adapter.c
+  - dalsemi.c
+  - descript.c
+  - input.c
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/ulldiv.asm
+  - mpaudio.c
+  - mpinit.c
+  - pcm2usb.c
+  - property.c
+  - write.c
+  - ksguid.c
 - version: Windows 98 Retail
-  source_tree: []
+  source_tree:
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/ulldiv.asm
   segments:
   - num: '1'
     name: .text
@@ -2055,7 +2059,3 @@ appearances:
     - name: _GUID_NULL
       demangled: ''
       offset: '00000260'
-  tree:
-  - intel/lldiv.asm
-  - intel/llmul.asm
-  - intel/ulldiv.asm

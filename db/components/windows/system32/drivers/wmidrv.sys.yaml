@@ -4,14 +4,7 @@ binary: WMIDRV
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree:
-  - api.c
-  - notify.c
-  - register.c
-  - wmi.c
-  - cm3ez.asm
-  - '!../../../dev/ddk/lib/vxdwraps.clb#../../../wdm10/ddk/lib/i386/wdm.lib#../../../dev/ntddk/lib/ntoskrnl.lib'
-  - ntk0az.asm
+  tree: []
   segments:
   - num: '1'
     name: .text
@@ -451,6 +444,14 @@ appearances:
     - name: _DriverEntry@8
       processed: ''
       offset: '00000000'
+  source_tree:
+  - api.c
+  - notify.c
+  - register.c
+  - wmi.c
+  - cm3ez.asm
+  - '!../../../dev/ddk/lib/vxdwraps.clb#../../../wdm10/ddk/lib/i386/wdm.lib#../../../dev/ntddk/lib/ntoskrnl.lib'
+  - ntk0az.asm
 - version: Windows 98 Retail
   source_tree: []
   segments:
