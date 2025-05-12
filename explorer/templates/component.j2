@@ -1,25 +1,59 @@
 <div class="appearance-block">
   <h2>{{ data.binary }} — {{ data.appearances[appearance_index].version }}</h2>
+<hr class="segment-separator">
 
+
+  <div class="tree-and-segments">
   <div class="source-tree-scroll">
     <h3>Source Tree</h3>
     <ul>
-      {% for path in data.appearances[appearance_index].tree %}
+      {% for path in data.appearances[appearance_index].source_tree %}
         <li>{{ path }}</li>
       {% endfor %}
     </ul>
   </div>
+{% if data.description != '' %}
+ <div class="wiki-description">
+    <p>{{ data.description | markdown }}</p>
+</div>
+{% endif %}
 
+<hr class="segment-separator">
   <div class="segments">
-    {% for segment in data.appearances[appearance_index].segments %}
-      <div class="segment">
-        <h4>Segment {{ segment.num }}: {{ segment.name }} @ {{ segment.offset }}</h4>
-        <ul>
-          {% for sym in segment.symbols %}
-            <li><code>{{ sym.offset }}</code> — {{ sym.name }} {% if sym.processed %}<em>{{ sym.processed }}</em>{% endif %}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endfor %}
-  </div>
+  {% for segment in data.appearances[appearance_index].segments %}
+    <details class="segment">
+      <summary>
+        Segment {{ segment.num }}: {{ segment.name }} @ {{ segment.offset }}
+      </summary>
+      <ul>
+        {% for sym in segment.symbols %}
+          <li data-segment="{{ segment.offset }}" data-offset="{{ sym.offset }}">
+            <code>{{ sym.offset }}</code> — {{ sym.name }}
+            {% if sym.processed %}<em class="processed-tag">({{ sym.processed }})</em>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </details>
+  {% endfor %}
+</div>
+
+</div>
+
+<script>
+  const symbolItems = document.querySelectorAll('.segments li');
+  symbolItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const seg = parseInt(item.dataset.segment, 16);
+      const off = parseInt(item.dataset.offset, 16);
+      const abs = seg + off;
+      const addrStr = '0x' + abs.toString(16).padStart(8, '0').toUpperCase();
+      navigator.clipboard.writeText(addrStr);
+      symbolItems.forEach(i => i.classList.remove('symbol-copied'));
+
+    item.classList.add('symbol-copied');
+    });
+  });
+</script>
+
+</div>
 </div>

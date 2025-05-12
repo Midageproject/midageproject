@@ -13,11 +13,12 @@ body {
     padding: 1rem 2rem;
     background-color: #0d0c1d;
   }
-  
+
   .logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #efef60;
+    text-decoration: none;
   }
   
   .logo span {
@@ -69,6 +70,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
   }
   
   .cta-button:hover {
@@ -128,7 +130,7 @@ body {
   }
 
   .appearance-block {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.9);
     padding: 2rem;
     margin: 2rem auto;
     border-radius: 12px;
@@ -144,17 +146,27 @@ body {
     color: #efef60;
     text-shadow: 0 1px 2px black;
   }
+
+  .tree-and-segments {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
   
   .source-tree-scroll {
-    max-height: 300px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    max-height: 400px;
     overflow-y: auto;
+    border-radius: 8px;
     padding: 1rem;
-    margin-bottom: 2rem;
-    border: 1px solid #333;
-    background-color: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #444;
     font-family: monospace;
     font-size: 0.9rem;
-    border-radius: 6px;
   }
   
   .source-tree-scroll ul {
@@ -170,13 +182,46 @@ body {
   }
   
   .segments {
-    margin-top: 2rem;
+    flex: 2;
+    min-width: 400px;
+    max-width: 800px;
   }
   
   .segment {
     margin-bottom: 1.5rem;
   }
   
+  .symbol-copied {
+    background-color: #005f87;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .processed-tag {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .wiki-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #ccc;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    box-shadow: inset 0 0 0 1px #222;
+  }
+  
+  .segment-separator {
+    border: none;
+    height: 1px;
+    background-color: #333;
+    margin: 2rem 0 1.5rem 0;
+  }
+  
+  
+
   .segment h4 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
@@ -195,4 +240,37 @@ body {
     word-break: break-word;
   }
   
-  
+  details.segment {
+    background: #1a1a1a;
+    margin: 8px 0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 6px;
+    color: #ddd;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #5fd7ff;
+  }
+
+  .segment ul {
+    margin-top: 6px;
+    list-style: none;
+    padding-left: 1rem;
+  }
+
+  .segment li {
+    padding: 2px 0;
+    cursor: pointer;
+  }
+
+  .segment li:hover {
+    background: #333;
+    color: #fff;
+  }
+
+  .segment li code {
+    color: #8ec07c;
+  }
