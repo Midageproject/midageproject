@@ -66,17 +66,18 @@ def main():
         # Update appearances
         current_version = input_dir.stem.split('-', 1)[0]
         updated = False
-        for appearance in data.get('appearances', []):
-            if appearance.get('version') == current_version:
-                tree = appearance.get('tree', [])
+        for appearance in data['appearances']:
+            if appearance['version'] == current_version:
+                tree = appearance.get('source_tree', [])
                 if any(isinstance(i, list) for i in tree):
                     # flatten if needed
                     tree = [item for sublist in tree for item in (sublist if isinstance(sublist, list) else [sublist])]
-
+                    appearance['source_tree'] = tree
+                    
                 new_paths = [p for p in paths if p not in tree]
                 if new_paths:
                     tree.extend(new_paths)
-                    appearance['tree'] = tree
+                    appearance['source_tree'] = tree
                     updated = True
                 break
 
