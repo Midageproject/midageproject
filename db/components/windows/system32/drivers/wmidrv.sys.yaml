@@ -1,0 +1,767 @@
+filename: windows/system32/drivers/wmidrv.sys
+#TODO: bring up more details from symdeb
+binary: WMIDRV
+description: ''
+appearances:
+- version: Windows 98 Debug
+  tree:
+  - api.c
+  - notify.c
+  - register.c
+  - wmi.c
+  - cm3ez.asm
+  - '!../../../dev/ddk/lib/vxdwraps.clb#../../../wdm10/ddk/lib/i386/wdm.lib#../../../dev/ntddk/lib/ntoskrnl.lib'
+  - ntk0az.asm
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000930'
+    symbols:
+    - name: _WMIInitialize@0
+      processed: ''
+      offset: '00000000'
+    - name: _IoWMIWriteEvent@4
+      processed: ''
+      offset: '00000050'
+    - name: _WmipInitNotificationQueue@4
+      processed: ''
+      offset: '00000150'
+    - name: _WmipNotificationCancel@8
+      processed: ''
+      offset: '00000260'
+    - name: _WmipUnpendNotificationIrpOrQueue@8
+      processed: ''
+      offset: '00000330'
+    - name: _WmipGetNotificationOrPendIrp@16
+      processed: ''
+      offset: '000003E0'
+    - name: _WmipFlushNotificationQueue@8
+      processed: ''
+      offset: '00000540'
+    - name: _WmipInitializeRegistration@4
+      processed: ''
+      offset: '00000630'
+    - name: _WmipDriverEntry@8
+      processed: ''
+      offset: '00000710'
+    - name: _WmipCancelPendingIrps@8
+      processed: ''
+      offset: 000008B0
+    - name: _WmipUpdateDeviceStackSize@8
+      processed: ''
+      offset: '00000940'
+    - name: _WmipWmiIrpCompletion@12
+      processed: ''
+      offset: '00000990'
+    - name: _DbgBreakPoint@0
+      processed: ''
+      offset: 000009B4
+    - name: _DbgPrint
+      processed: ''
+      offset: 000009BA
+    - name: _RtlAssert@16
+      processed: ''
+      offset: 000009C0
+    - name: _KeGetCurrentIrql@0
+      processed: ''
+      offset: 000009C6
+    - name: _ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 000009CC
+    - name: '@ExReleaseFastMutex@4'
+      processed: ''
+      offset: 000009D2
+    - name: '@ExAcquireFastMutex@4'
+      processed: ''
+      offset: 000009D8
+    - name: _ZwClose@4
+      processed: ''
+      offset: 000009DE
+    - name: _RtlAppendUnicodeToString@8
+      processed: ''
+      offset: '000009E4'
+    - name: _ZwQueryValueKey@24
+      processed: ''
+      offset: 000009EA
+    - name: _IoOpenDeviceInterfaceRegistryKey@12
+      processed: ''
+      offset: 000009F0
+    - name: _ExFreePool@4
+      processed: ''
+      offset: 000009F6
+    - name: _IoGetDeviceProperty@20
+      processed: ''
+      offset: 000009FC
+    - name: _ExQueueWorkItem@8
+      processed: ''
+      offset: 00000A02
+    - name: _KeInitializeSpinLock@4
+      processed: ''
+      offset: 00000A08
+    - name: '@IofCompleteRequest@8'
+      processed: ''
+      offset: 00000A0E
+    - name: '@KfReleaseSpinLock@8'
+      processed: ''
+      offset: 00000A14
+    - name: '@KfAcquireSpinLock@4'
+      processed: ''
+      offset: 00000A1A
+    - name: _IoReleaseCancelSpinLock@4
+      processed: ''
+      offset: 00000A20
+    - name: '@InterlockedExchange@8'
+      processed: ''
+      offset: 00000A26
+    - name: '@ExfInterlockedInsertTailList@12'
+      processed: ''
+      offset: 00000A2C
+    - name: '@ExfInterlockedRemoveHeadList@8'
+      processed: ''
+      offset: 00000A32
+    - name: _KeInitializeEvent@12
+      processed: ''
+      offset: 00000A38
+    - name: '@InterlockedDecrement@4'
+      processed: ''
+      offset: 00000A3E
+    - name: _KeWaitForSingleObject@20
+      processed: ''
+      offset: 00000A44
+    - name: _ObReferenceObjectByPointer@16
+      processed: ''
+      offset: 00000A4A
+    - name: '@ObfDereferenceObject@4'
+      processed: ''
+      offset: 00000A50
+    - name: _RtlAnsiStringToUnicodeString@12
+      processed: ''
+      offset: 00000A56
+    - name: _RtlInitAnsiString@8
+      processed: ''
+      offset: 00000A5C
+    - name: _RtlFreeUnicodeString@4
+      processed: ''
+      offset: 00000A62
+    - name: _IoDeleteDevice@4
+      processed: ''
+      offset: 00000A68
+    - name: _IoCreateSymbolicLink@8
+      processed: ''
+      offset: 00000A6E
+    - name: _IoCreateDevice@28
+      processed: ''
+      offset: 00000A74
+    - name: _RtlInitUnicodeString@8
+      processed: ''
+      offset: 00000A7A
+    - name: _KeSetEvent@12
+      processed: ''
+      offset: 00000A80
+    - name: '@IofCallDriver@8'
+      processed: ''
+      offset: 00000A86
+    - name: _IoBuildSynchronousFsdRequest@28
+      processed: ''
+      offset: 00000A8C
+    - name: _IoGetRelatedDeviceObject@4
+      processed: ''
+      offset: 00000A92
+    - name: '@InterlockedIncrement@4'
+      processed: ''
+      offset: 00000A98
+    - name: _IoGetAttachedDeviceReference@4
+      processed: ''
+      offset: 00000A9E
+    - name: _ObReferenceObjectByHandle@24
+      processed: ''
+      offset: 00000AA4
+    - name: _IoCreateDriver@8
+      processed: ''
+      offset: 00000AAA
+  - num: '2'
+    name: PNP
+    offset: 000009A0
+    symbols:
+    - name: _CCODE__CONFIGMG_Get_DevNode_Key
+      processed: ''
+      offset: '00000000'
+    - name: _CCODE__NtKernPhysicalDeviceObjectToDevNode
+      processed: ''
+      offset: '00000008'
+  - num: '4'
+    name: .data
+    offset: 000009F0
+    symbols:
+    - name: _WmipServiceDeviceObject
+      processed: ''
+      offset: 000011CC
+    - name: _WmipInitialized
+      processed: ''
+      offset: 000011D0
+  - num: '5'
+    name: .idata$2
+    offset: '00001090'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      processed: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: '00000108'
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: 0000010C
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: '00000110'
+    - name: __imp_@ExAcquireFastMutex@4
+      processed: ''
+      offset: '00000114'
+    - name: __imp_@ExReleaseFastMutex@4
+      processed: ''
+      offset: '00000118'
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000011C
+    - name: __imp__ZwClose@4
+      processed: ''
+      offset: '00000120'
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: '00000124'
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: '00000128'
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 0000012C
+    - name: __imp__ZwQueryValueKey@24
+      processed: ''
+      offset: '00000130'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000134'
+    - name: __imp__IoGetDeviceProperty@20
+      processed: ''
+      offset: '00000138'
+    - name: __imp__ExQueueWorkItem@8
+      processed: ''
+      offset: 0000013C
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: '00000140'
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: '00000144'
+    - name: __imp__RtlAppendUnicodeToString@8
+      processed: ''
+      offset: '00000148'
+    - name: __imp__IoOpenDeviceInterfaceRegistryKey@12
+      processed: ''
+      offset: 0000014C
+    - name: __imp__IoReleaseCancelSpinLock@4
+      processed: ''
+      offset: '00000150'
+    - name: __imp_@InterlockedExchange@8
+      processed: ''
+      offset: '00000154'
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      processed: ''
+      offset: '00000158'
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      processed: ''
+      offset: 0000015C
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '00000160'
+    - name: __imp__DbgBreakPoint@0
+      processed: ''
+      offset: '00000164'
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: '00000168'
+    - name: __imp__ObReferenceObjectByPointer@16
+      processed: ''
+      offset: 0000016C
+    - name: __imp_@ObfDereferenceObject@4
+      processed: ''
+      offset: '00000170'
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      processed: ''
+      offset: '00000174'
+    - name: __imp__RtlInitAnsiString@8
+      processed: ''
+      offset: '00000178'
+    - name: __imp__RtlFreeUnicodeString@4
+      processed: ''
+      offset: 0000017C
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: '00000180'
+    - name: __imp__IoCreateSymbolicLink@8
+      processed: ''
+      offset: '00000184'
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: '00000188'
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: 0000018C
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: '00000190'
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '00000194'
+    - name: __imp__IoBuildSynchronousFsdRequest@28
+      processed: ''
+      offset: '00000198'
+    - name: __imp__IoGetRelatedDeviceObject@4
+      processed: ''
+      offset: 0000019C
+    - name: __imp_@InterlockedIncrement@4
+      processed: ''
+      offset: 000001A0
+    - name: __imp__IoGetAttachedDeviceReference@4
+      processed: ''
+      offset: 000001A4
+    - name: __imp__ObReferenceObjectByHandle@24
+      processed: ''
+      offset: 000001A8
+    - name: __imp__IoFileObjectType
+      processed: ''
+      offset: 000001AC
+    - name: _IoFileObjectType
+      processed: ''
+      offset: 000001AC
+    - name: __imp_@InterlockedDecrement@4
+      processed: ''
+      offset: 000001B0
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: 000001B4
+    - name: __imp__IoCreateDriver@8
+      processed: ''
+      offset: 000001B8
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      processed: ''
+      offset: 000001BC
+  - num: '6'
+    name: PAGE
+    offset: '00002080'
+    symbols:
+    - name: _IoWMIRegistrationControl@8
+      processed: ''
+      offset: '00000000'
+    - name: _IoWMIAllocateInstanceIds@12
+      processed: ''
+      offset: '00000180'
+    - name: _IoWMISuggestInstanceName@16
+      processed: ''
+      offset: '00000390'
+    - name: _WmipNotifyUserMode@16
+      processed: ''
+      offset: '00000710'
+    - name: _WmipReadNotification@20
+      processed: ''
+      offset: 00000A50
+    - name: _WmipEventNotification@4
+      processed: ''
+      offset: 00000B30
+    - name: _WmipAllocRegEntry@12
+      processed: ''
+      offset: 00000BF0
+    - name: _WmipUnreferenceRegEntry@8
+      processed: ''
+      offset: 00000F00
+    - name: _WmipWaitForIrpCompletion@4
+      processed: ''
+      offset: 000010D0
+    - name: _WmipRegisterDevice@12
+      processed: ''
+      offset: '00001160'
+    - name: _WmipDeregisterDevice@8
+      processed: ''
+      offset: '00001290'
+    - name: _WmipUpdateRegistration@8
+      processed: ''
+      offset: 000013F0
+    - name: _WmipFindRegEntryByDevice@8
+      processed: ''
+      offset: 000014C0
+    - name: _WmipGetAllRegInfo@16
+      processed: ''
+      offset: 000015D0
+    - name: _WmipPDOToDeviceInstanceName@8
+      processed: ''
+      offset: '00001700'
+    - name: _WmipTranslatePDOInstanceNames@8
+      processed: ''
+      offset: '00001800'
+    - name: _WmipOpen@8
+      processed: ''
+      offset: 00001A30
+    - name: _WmipClose@8
+      processed: ''
+      offset: 00001B10
+    - name: _WmipCleanup@8
+      processed: ''
+      offset: 00001C00
+    - name: _WmipIoControl@8
+      processed: ''
+      offset: 00001D00
+    - name: _WmipFileObjectToPDO@8
+      processed: ''
+      offset: '00002530'
+    - name: _WmipForwardWmiIrp@28
+      processed: ''
+      offset: 000026A0
+    - name: _WmipTranslateFileHandle@8
+      processed: ''
+      offset: '00002970'
+    - name: _WmipProbeWnodeWorker@36
+      processed: ''
+      offset: 00002AB0
+    - name: _WmipProbeWnodeAllData@12
+      processed: ''
+      offset: 00002C50
+    - name: _WmipProbeWnodeSingleInstance@16
+      processed: ''
+      offset: 00002D20
+    - name: _WmipProbeWnodeSingleItem@8
+      processed: ''
+      offset: '00002E30'
+    - name: _WmipProbeWnodeMethodItem@12
+      processed: ''
+      offset: 00002F10
+  - num: '8'
+    name: INIT
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: 000001B0
+    symbols:
+    - name: _WMIInitialize@0
+      demangled: ''
+      offset: '00000000'
+    - name: _IoWMIWriteEvent@4
+      demangled: ''
+      offset: 0000001E
+    - name: _WmipInitNotificationQueue@4
+      demangled: ''
+      offset: '00000089'
+    - name: _WmipNotificationCancel@8
+      demangled: ''
+      offset: 000000C4
+    - name: _WmipUnpendNotificationIrpOrQueue@8
+      demangled: ''
+      offset: '00000128'
+    - name: _WmipGetNotificationOrPendIrp@16
+      demangled: ''
+      offset: '00000186'
+    - name: _WmipFlushNotificationQueue@8
+      demangled: ''
+      offset: 0000024F
+    - name: _WmipInitializeRegistration@4
+      demangled: ''
+      offset: 000002D1
+    - name: _WmipDriverEntry@8
+      demangled: ''
+      offset: '00000316'
+    - name: _WmipCancelPendingIrps@8
+      demangled: ''
+      offset: '00000404'
+    - name: _WmipUpdateDeviceStackSize@8
+      demangled: ''
+      offset: 0000045E
+    - name: _WmipWmiIrpCompletion@12
+      demangled: ''
+      offset: '00000490'
+  - num: '2'
+    name: PNP
+    offset: '00000220'
+    symbols:
+    - name: _CCODE__CONFIGMG_Get_DevNode_Key
+      demangled: ''
+      offset: '00000000'
+    - name: _CCODE__NtKernPhysicalDeviceObjectToDevNode
+      demangled: ''
+      offset: '00000008'
+  - num: '4'
+    name: .data
+    offset: '00000380'
+    symbols:
+    - name: ??_C@_13IKBE@?$AA_?$AA?$AA@
+      demangled: "`string'"
+      offset: '00000000'
+    - name: 
+        ??_C@_1DK@KACK@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AAW?$AAM?$AAI?$AAS?$AAe?$AAr?$AAv?$AAi@
+      demangled: "`string'"
+      offset: '00000004'
+    - name: 
+        ??_C@_1CE@LDEL@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAW?$AAM?$AAI?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?$AA@
+      demangled: "`string'"
+      offset: '00000040'
+    - name: _WmipServiceDeviceObject
+      demangled: ''
+      offset: '00000064'
+    - name: _WmipInitialized
+      demangled: ''
+      offset: '00000068'
+  - num: '5'
+    name: .idata$2
+    offset: 000009C0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: 000000F8
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: 000000FC
+    - name: __imp_@ExAcquireFastMutex@4
+      demangled: ''
+      offset: '00000100'
+    - name: __imp_@ExReleaseFastMutex@4
+      demangled: ''
+      offset: '00000104'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000108'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000010C
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: '00000110'
+    - name: __imp__IoGetDeviceProperty@20
+      demangled: ''
+      offset: '00000114'
+    - name: __imp__RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: '00000118'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 0000011C
+    - name: __imp__IoOpenDeviceInterfaceRegistryKey@12
+      demangled: ''
+      offset: '00000120'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000124'
+    - name: __imp__ZwQueryValueKey@24
+      demangled: ''
+      offset: '00000128'
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: '00000130'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000134'
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      demangled: ''
+      offset: '00000138'
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      demangled: ''
+      offset: 0000013C
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000140'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000148'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: 0000014C
+    - name: __imp_@ObfDereferenceObject@4
+      demangled: ''
+      offset: '00000150'
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      demangled: ''
+      offset: '00000154'
+    - name: __imp__RtlInitAnsiString@8
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000160'
+    - name: __imp__IoCreateSymbolicLink@8
+      demangled: ''
+      offset: '00000164'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 0000016C
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000170'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000174'
+    - name: __imp__IoBuildSynchronousFsdRequest@28
+      demangled: ''
+      offset: '00000178'
+    - name: __imp__IoGetRelatedDeviceObject@4
+      demangled: ''
+      offset: 0000017C
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__IoGetAttachedDeviceReference@4
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__ObReferenceObjectByHandle@24
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__IoFileObjectType
+      demangled: ''
+      offset: 0000018C
+    - name: _IoFileObjectType
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__ObReferenceObjectByPointer@16
+      demangled: ''
+      offset: '00000190'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__IoCreateDriver@8
+      demangled: ''
+      offset: '00000198'
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000019C
+  - num: '6'
+    name: PAGE
+    offset: 00000D00
+    symbols:
+    - name: _IoWMIRegistrationControl@8
+      demangled: ''
+      offset: '00000000'
+    - name: _IoWMIAllocateInstanceIds@12
+      demangled: ''
+      offset: 0000009D
+    - name: _IoWMISuggestInstanceName@16
+      demangled: ''
+      offset: 000001B4
+    - name: _WmipNotifyUserMode@16
+      demangled: ''
+      offset: 000003FC
+    - name: _WmipReadNotification@20
+      demangled: ''
+      offset: 000005D6
+    - name: _WmipEventNotification@4
+      demangled: ''
+      offset: '00000641'
+    - name: _WmipAllocRegEntry@12
+      demangled: ''
+      offset: '00000673'
+    - name: _WmipUnreferenceRegEntry@8
+      demangled: ''
+      offset: 000007BA
+    - name: _WmipWaitForIrpCompletion@4
+      demangled: ''
+      offset: '00000858'
+    - name: _WmipRegisterDevice@12
+      demangled: ''
+      offset: '00000874'
+    - name: _WmipDeregisterDevice@8
+      demangled: ''
+      offset: '00000913'
+    - name: _WmipUpdateRegistration@8
+      demangled: ''
+      offset: 0000098A
+    - name: _WmipFindRegEntryByDevice@8
+      demangled: ''
+      offset: 000009B5
+    - name: _WmipGetAllRegInfo@16
+      demangled: ''
+      offset: 00000A0A
+    - name: _WmipPDOToDeviceInstanceName@8
+      demangled: ''
+      offset: 00000A87
+    - name: _WmipTranslatePDOInstanceNames@8
+      demangled: ''
+      offset: 00000AE6
+    - name: _WmipOpen@8
+      demangled: ''
+      offset: 00000C06
+    - name: _WmipClose@8
+      demangled: ''
+      offset: 00000C41
+    - name: _WmipCleanup@8
+      demangled: ''
+      offset: 00000C89
+    - name: _WmipIoControl@8
+      demangled: ''
+      offset: 00000CDE
+    - name: _WmipFileObjectToPDO@8
+      demangled: ''
+      offset: 0000104D
+    - name: _WmipForwardWmiIrp@28
+      demangled: ''
+      offset: 000010F7
+    - name: _WmipTranslateFileHandle@8
+      demangled: ''
+      offset: '00001230'
+    - name: _WmipProbeWnodeWorker@36
+      demangled: ''
+      offset: 000012DE
+    - name: _WmipProbeWnodeAllData@12
+      demangled: ''
+      offset: 0000135C
+    - name: _WmipProbeWnodeSingleInstance@16
+      demangled: ''
+      offset: '00001397'
+    - name: _WmipProbeWnodeSingleItem@8
+      demangled: ''
+      offset: 000013FF
+    - name: _WmipProbeWnodeMethodItem@12
+      demangled: ''
+      offset: '00001457'
+  - num: '8'
+    name: INIT
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'

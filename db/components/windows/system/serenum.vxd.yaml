@@ -1,0 +1,598 @@
+filename: windows/system/serenum.vxd
+#TODO: bring up more details from symdeb
+binary: SERENUM
+description: ''
+appearances:
+- version: Windows 98 Debug
+  tree:
+  - ../enum.c
+  - gidei.c
+  - serenum.asm
+  - sysctrl.c
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 000000B0
+    symbols:
+    - name: SERENUM_Control
+      processed: ''
+      offset: '00000000'
+    - name: SERENUM_DDB
+      processed: ''
+      offset: '00000028'
+    - name: _SERENUM_GetVersion
+      processed: ''
+      offset: '00000078'
+  - num: '2'
+    name: _IGROUP
+    offset: '00000120'
+    symbols:
+    - name: Enum_Init
+      processed: ''
+      offset: '00000000'
+  - num: '3'
+    name: _PDATA
+    offset: '00000170'
+    symbols:
+    - name: _IRQ_Owner
+      processed: ''
+      offset: 000002F4
+    - name: _cszEnumSerEnum
+      processed: ''
+      offset: '00000334'
+    - name: _comlist
+      processed: ''
+      offset: '00001494'
+  - num: '4'
+    name: _DBOGROUP
+    offset: '00000000'
+    symbols:
+    - name: _GIDEI_Enum@0
+      processed: ''
+      offset: '00000000'
+    - name: _StringSubst@16
+      processed: ''
+      offset: '00000065'
+    - name: _add_GIDEI_DevNode@4
+      processed: ''
+      offset: '00000097'
+    - name: _strcmpi@8
+      processed: ''
+      offset: 000002A0
+    - name: _AddOtherInstalledDevices@8
+      processed: ''
+      offset: 000002F5
+    - name: _SafeCloseComm@0
+      processed: ''
+      offset: '000006E5'
+    - name: _TimeOut_Abort@0
+      processed: ''
+      offset: '00000785'
+    - name: _Abort_Enumeration@4
+      processed: ''
+      offset: 000007BC
+    - name: _TimeOut_Next_Try@0
+      processed: ''
+      offset: 000007F3
+    - name: _ReadEvent
+      processed: ''
+      offset: '00000820'
+    - name: _ReadEvent_Final
+      processed: ''
+      offset: 0000083C
+    - name: _SerEnumerator
+      processed: ''
+      offset: '00000858'
+    - name: _FindCOM
+      processed: ''
+      offset: '00000969'
+    - name: _TimeOut_T1@0
+      processed: ''
+      offset: 00000D07
+    - name: _TimeOut_T2@0
+      processed: ''
+      offset: 00000DC5
+    - name: _TimeOut_T3@0
+      processed: ''
+      offset: '00000E41'
+    - name: _TimeOut_T4@0
+      processed: ''
+      offset: 00000ED7
+    - name: _TimeOut_T5@0
+      processed: ''
+      offset: 00000F7A
+    - name: _TimeOut_T6@0
+      processed: ''
+      offset: '00001021'
+    - name: _NewEnumerator
+      processed: ''
+      offset: '00001091'
+    - name: _fixpt_to_ascii@8
+      processed: ''
+      offset: 000010B6
+    - name: _get_dev_OtherID@8
+      processed: ''
+      offset: 0000112A
+    - name: _htoi@4
+      processed: ''
+      offset: '00001160'
+    - name: _get_dev_pnprev@8
+      processed: ''
+      offset: 0000119C
+    - name: _get_dev_name@8
+      processed: ''
+      offset: 000013FF
+    - name: _get_dev_serialno@8
+      processed: ''
+      offset: 0000149D
+    - name: _get_dev_class@8
+      processed: ''
+      offset: '00001515'
+    - name: _get_dev_compid@8
+      processed: ''
+      offset: 0000156A
+    - name: _get_dev_desc@8
+      processed: ''
+      offset: 000015C1
+    - name: _BuildDevNode
+      processed: ''
+      offset: '00001618'
+    - name: _Collect_PNP_COM@0
+      processed: ''
+      offset: 00001CA2
+    - name: _CollectData@4
+      processed: ''
+      offset: 00001DA3
+    - name: _GetInstance@4
+      processed: ''
+      offset: 00001DE0
+    - name: _SERENUM_Exit@0
+      processed: ''
+      offset: '00001E95'
+    - name: _SERENUM_NewDevNode@8
+      processed: ''
+      offset: 00001EA8
+    - name: _P_Init
+      processed: ''
+      offset: 00001ED4
+    - name: _DebugPrintf
+      processed: ''
+      offset: 00001EF4
+    - name: SERENUM_GetVersion
+      processed: ''
+      offset: 00001F1E
+    - name: _StringAppend@8
+      processed: ''
+      offset: 00001F2D
+    - name: _DangerousIRQ@4
+      processed: ''
+      offset: 00001F59
+    - name: _VMDIsMouseThere@4
+      processed: ''
+      offset: 00001F8A
+    - name: _ScheduleNotCritEvent@4
+      processed: ''
+      offset: 00001FB8
+    - name: _CCODE__RegOpenKey
+      processed: ''
+      offset: 00001FE0
+    - name: _CCODE__RegCloseKey
+      processed: ''
+      offset: 00001FE8
+    - name: _CCODE__RegEnumKey
+      processed: ''
+      offset: 00001FF0
+    - name: _CCODE__RegQueryValueEx
+      processed: ''
+      offset: 00001FF8
+    - name: _CCODE__VCOMM_OpenComm
+      processed: ''
+      offset: '00002000'
+    - name: _CCODE__VCOMM_SetCommState
+      processed: ''
+      offset: '00002008'
+    - name: _CCODE__VCOMM_SetupComm
+      processed: ''
+      offset: '00002010'
+    - name: _CCODE__VCOMM_CloseComm
+      processed: ''
+      offset: '00002018'
+    - name: _CCODE__VCOMM_ClearCommError
+      processed: ''
+      offset: '00002020'
+    - name: _CCODE__VCOMM_GetModemStatus
+      processed: ''
+      offset: '00002028'
+    - name: _CCODE__VCOMM_EscapeCommFunction
+      processed: ''
+      offset: '00002030'
+    - name: _CCODE__VCOMM_PurgeComm
+      processed: ''
+      offset: '00002038'
+    - name: _CCODE__VCOMM_ReadComm
+      processed: ''
+      offset: '00002040'
+    - name: _CCODE__VCOMM_SetReadCallBack
+      processed: ''
+      offset: '00002048'
+    - name: _CCODE__HeapAllocate
+      processed: ''
+      offset: '00002050'
+    - name: _CCODE__HeapFree
+      processed: ''
+      offset: '00002058'
+    - name: _CCODE_Get_Sys_VM_Handle
+      processed: ''
+      offset: '00002060'
+    - name: _CCODE_Cancel_Time_Out@4
+      processed: ''
+      offset: 0000206C
+    - name: _CCODE_Get_Last_Updated_System_Time
+      processed: ''
+      offset: 0000207C
+    - name: _CCODE_List_Allocate@4
+      processed: ''
+      offset: '00002084'
+    - name: _CCODE_List_Attach@8
+      processed: ''
+      offset: '00002098'
+    - name: _CCODE_List_Create@8
+      processed: ''
+      offset: 000020A8
+    - name: _CCODE_List_Deallocate@8
+      processed: ''
+      offset: 000020BC
+    - name: _CCODE_List_Get_First@4
+      processed: ''
+      offset: 000020CC
+    - name: _CCODE_List_Get_Next@8
+      processed: ''
+      offset: 000020DC
+    - name: _CCODE_List_Remove@8
+      processed: ''
+      offset: 000020EC
+    - name: _CCODE_VMM_GetSystemInitState
+      processed: ''
+      offset: '00002100'
+    - name: _CCODE__lstrcpyn
+      processed: ''
+      offset: '00002108'
+    - name: _CCODE__lstrlen
+      processed: ''
+      offset: '00002110'
+    - name: _CCODE__Set_Global_Time_Out_Ex
+      processed: ''
+      offset: '00002118'
+    - name: _CCODE__CONFIGMG_Get_Device_ID
+      processed: ''
+      offset: '00002120'
+    - name: _CCODE__CONFIGMG_Get_Private_DWord
+      processed: ''
+      offset: '00002128'
+    - name: _CCODE__CONFIGMG_Set_Private_DWord
+      processed: ''
+      offset: '00002130'
+    - name: _CCODE__CONFIGMG_Create_DevNode
+      processed: ''
+      offset: '00002138'
+    - name: _CCODE__CONFIGMG_Remove_SubTree
+      processed: ''
+      offset: '00002140'
+    - name: _CCODE__CONFIGMG_Register_Enumerator
+      processed: ''
+      offset: '00002148'
+    - name: _CCODE__CONFIGMG_Get_First_Log_Conf
+      processed: ''
+      offset: '00002150'
+    - name: _CCODE__CONFIGMG_Get_Next_Res_Des
+      processed: ''
+      offset: '00002158'
+    - name: _CCODE__CONFIGMG_Reenumerate_DevNode
+      processed: ''
+      offset: '00002160'
+    - name: _CCODE__CONFIGMG_Reset_Children_Marks
+      processed: ''
+      offset: '00002168'
+    - name: _CCODE__CONFIGMG_Remove_Unmarked_Children
+      processed: ''
+      offset: '00002170'
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      processed: ''
+      offset: '00002178'
+    - name: _CCODE__CONFIGMG_Write_Registry_Value
+      processed: ''
+      offset: '00002180'
+    - name: _CCODE__CONFIGMG_Call_At_Appy_Time
+      processed: ''
+      offset: '00002188'
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 000000B0
+    symbols:
+    - name: SERENUM_Control
+      demangled: ''
+      offset: '00000000'
+    - name: SERENUM_DDB
+      demangled: ''
+      offset: '00000028'
+    - name: _SERENUM_GetVersion
+      demangled: ''
+      offset: '00000078'
+  - num: '2'
+    name: _IGROUP
+    offset: '00000120'
+    symbols:
+    - name: Enum_Init
+      demangled: ''
+      offset: '00000000'
+  - num: '3'
+    name: _PDATA
+    offset: '00000170'
+    symbols:
+    - name: _IRQ_Owner
+      demangled: ''
+      offset: 000000BC
+    - name: _cszEnumSerEnum
+      demangled: ''
+      offset: 000000FC
+    - name: _comlist
+      demangled: ''
+      offset: 000001A0
+  - num: '4'
+    name: _DBOGROUP
+    offset: '00000000'
+    symbols:
+    - name: _GIDEI_Enum@0
+      demangled: ''
+      offset: '00000000'
+    - name: _StringSubst@16
+      demangled: ''
+      offset: 0000002A
+    - name: _add_GIDEI_DevNode@4
+      demangled: ''
+      offset: 0000005C
+    - name: _strcmpi@8
+      demangled: ''
+      offset: '000001E0'
+    - name: _AddOtherInstalledDevices@8
+      demangled: ''
+      offset: '00000233'
+    - name: _SafeCloseComm@0
+      demangled: ''
+      offset: 0000049B
+    - name: _TimeOut_Abort@0
+      demangled: ''
+      offset: 0000053B
+    - name: _Abort_Enumeration@4
+      demangled: ''
+      offset: 0000055A
+    - name: _TimeOut_Next_Try@0
+      demangled: ''
+      offset: 0000057C
+    - name: _ReadEvent
+      demangled: ''
+      offset: '00000594'
+    - name: _ReadEvent_Final
+      demangled: ''
+      offset: 000005B0
+    - name: _SerEnumerator
+      demangled: ''
+      offset: 000005CC
+    - name: '@FindCOM@4'
+      demangled: ''
+      offset: '00000670'
+    - name: _TimeOut_T1@0
+      demangled: ''
+      offset: '00000927'
+    - name: _TimeOut_T2@0
+      demangled: ''
+      offset: 000009AE
+    - name: _TimeOut_T3@0
+      demangled: ''
+      offset: 00000A00
+    - name: _TimeOut_T4@0
+      demangled: ''
+      offset: 00000A6C
+    - name: _TimeOut_T5@0
+      demangled: ''
+      offset: 00000AE5
+    - name: _TimeOut_T6@0
+      demangled: ''
+      offset: 00000B62
+    - name: '@NewEnumerator@4'
+      demangled: ''
+      offset: 00000B9B
+    - name: _fixpt_to_ascii@8
+      demangled: ''
+      offset: 00000BAC
+    - name: _get_dev_OtherID@8
+      demangled: ''
+      offset: 00000C20
+    - name: _htoi@4
+      demangled: ''
+      offset: 00000C56
+    - name: _get_dev_pnprev@8
+      demangled: ''
+      offset: 00000C92
+    - name: _get_dev_name@8
+      demangled: ''
+      offset: '00000E23'
+    - name: _get_dev_serialno@8
+      demangled: ''
+      offset: 00000ED9
+    - name: _get_dev_class@8
+      demangled: ''
+      offset: 00000F51
+    - name: _get_dev_compid@8
+      demangled: ''
+      offset: 00000FA8
+    - name: _get_dev_desc@8
+      demangled: ''
+      offset: 00000FFB
+    - name: _BuildDevNode
+      demangled: ''
+      offset: '00001052'
+    - name: _Collect_PNP_COM@0
+      demangled: ''
+      offset: 0000143F
+    - name: _CollectData@4
+      demangled: ''
+      offset: 000014F5
+    - name: _GetInstance@4
+      demangled: ''
+      offset: '00001530'
+    - name: _SERENUM_Exit@0
+      demangled: ''
+      offset: '000015E2'
+    - name: _SERENUM_NewDevNode@8
+      demangled: ''
+      offset: '000015E8'
+    - name: SERENUM_GetVersion
+      demangled: ''
+      offset: '00001600'
+    - name: _StringAppend@8
+      demangled: ''
+      offset: '00001607'
+    - name: _DangerousIRQ@4
+      demangled: ''
+      offset: 0000162B
+    - name: _VMDIsMouseThere@4
+      demangled: ''
+      offset: '00001654'
+    - name: _ScheduleNotCritEvent@4
+      demangled: ''
+      offset: 0000167A
+    - name: _CCODE__RegOpenKey
+      demangled: ''
+      offset: '00001698'
+    - name: _CCODE__RegCloseKey
+      demangled: ''
+      offset: 000016A0
+    - name: _CCODE__RegEnumKey
+      demangled: ''
+      offset: 000016A8
+    - name: _CCODE__RegQueryValueEx
+      demangled: ''
+      offset: 000016B0
+    - name: _CCODE__VCOMM_OpenComm
+      demangled: ''
+      offset: 000016B8
+    - name: _CCODE__VCOMM_SetCommState
+      demangled: ''
+      offset: 000016C0
+    - name: _CCODE__VCOMM_SetupComm
+      demangled: ''
+      offset: 000016C8
+    - name: _CCODE__VCOMM_CloseComm
+      demangled: ''
+      offset: 000016D0
+    - name: _CCODE__VCOMM_ClearCommError
+      demangled: ''
+      offset: 000016D8
+    - name: _CCODE__VCOMM_GetModemStatus
+      demangled: ''
+      offset: '000016E0'
+    - name: _CCODE__VCOMM_EscapeCommFunction
+      demangled: ''
+      offset: '000016E8'
+    - name: _CCODE__VCOMM_PurgeComm
+      demangled: ''
+      offset: 000016F0
+    - name: _CCODE__VCOMM_ReadComm
+      demangled: ''
+      offset: 000016F8
+    - name: _CCODE__VCOMM_SetReadCallBack
+      demangled: ''
+      offset: '00001700'
+    - name: _CCODE__HeapAllocate
+      demangled: ''
+      offset: '00001708'
+    - name: _CCODE__HeapFree
+      demangled: ''
+      offset: '00001710'
+    - name: _CCODE_Get_Sys_VM_Handle
+      demangled: ''
+      offset: '00001718'
+    - name: _CCODE_Cancel_Time_Out@4
+      demangled: ''
+      offset: '00001724'
+    - name: _CCODE_List_Allocate@4
+      demangled: ''
+      offset: '00001734'
+    - name: _CCODE_List_Attach@8
+      demangled: ''
+      offset: '00001748'
+    - name: _CCODE_List_Create@8
+      demangled: ''
+      offset: '00001758'
+    - name: _CCODE_List_Deallocate@8
+      demangled: ''
+      offset: 0000176C
+    - name: _CCODE_List_Get_First@4
+      demangled: ''
+      offset: 0000177C
+    - name: _CCODE_List_Get_Next@8
+      demangled: ''
+      offset: 0000178C
+    - name: _CCODE_List_Remove@8
+      demangled: ''
+      offset: 0000179C
+    - name: _CCODE_VMM_GetSystemInitState
+      demangled: ''
+      offset: 000017B0
+    - name: _CCODE__lstrlen
+      demangled: ''
+      offset: 000017B8
+    - name: _CCODE__Set_Global_Time_Out_Ex
+      demangled: ''
+      offset: 000017C0
+    - name: _CCODE__CONFIGMG_Get_Device_ID
+      demangled: ''
+      offset: 000017C8
+    - name: _CCODE__CONFIGMG_Get_Private_DWord
+      demangled: ''
+      offset: 000017D0
+    - name: _CCODE__CONFIGMG_Set_Private_DWord
+      demangled: ''
+      offset: 000017D8
+    - name: _CCODE__CONFIGMG_Create_DevNode
+      demangled: ''
+      offset: '000017E0'
+    - name: _CCODE__CONFIGMG_Remove_SubTree
+      demangled: ''
+      offset: '000017E8'
+    - name: _CCODE__CONFIGMG_Register_Enumerator
+      demangled: ''
+      offset: 000017F0
+    - name: _CCODE__CONFIGMG_Get_First_Log_Conf
+      demangled: ''
+      offset: 000017F8
+    - name: _CCODE__CONFIGMG_Get_Next_Res_Des
+      demangled: ''
+      offset: '00001800'
+    - name: _CCODE__CONFIGMG_Reenumerate_DevNode
+      demangled: ''
+      offset: '00001808'
+    - name: _CCODE__CONFIGMG_Reset_Children_Marks
+      demangled: ''
+      offset: '00001810'
+    - name: _CCODE__CONFIGMG_Remove_Unmarked_Children
+      demangled: ''
+      offset: '00001818'
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      demangled: ''
+      offset: '00001820'
+    - name: _CCODE__CONFIGMG_Write_Registry_Value
+      demangled: ''
+      offset: '00001828'
+    - name: _CCODE__CONFIGMG_Call_At_Appy_Time
+      demangled: ''
+      offset: '00001830'
+  tree:
+  - ../enum.c
+  - gidei.c
+  - serenum.asm
+  - sysctrl.c

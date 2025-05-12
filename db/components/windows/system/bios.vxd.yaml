@@ -1,0 +1,1508 @@
+filename: windows/system/bios.vxd
+#TODO: bring up more details from symdeb
+binary: BIOS
+description: ''
+appearances:
+- version: Windows 98 Debug
+  tree:
+  - bios.asm
+  - callbios.c
+  - convert.c
+  - debug.c
+  - ' ../../../../dev/ddk/inc/bios.inc'
+  - "\t../enum.c"
+  - "\t../escd.c"
+  - events.c
+  - selector.c
+  - services.c
+  - sysctrl.c
+  - sysmsgs.c
+  segments:
+  - num: '1'
+    name: _LDATA
+    offset: '000004E0'
+    symbols:
+    - name: _BeginLockable_Debug_Flags
+      processed: ''
+      offset: '00000000'
+    - name: __BIOSGetVersion
+      processed: ''
+      offset: '00000004'
+    - name: __BIOSSoftUndock
+      processed: ''
+      offset: '00000008'
+    - name: __BIOSGetCapabilities
+      processed: ''
+      offset: 0000000C
+    - name: __BIOSGetAPMTable
+      processed: ''
+      offset: '00000010'
+    - name: BIOS_DDB
+      processed: ''
+      offset: '00000014'
+    - name: _DebuggerCommands
+      processed: ''
+      offset: 000001C8
+    - name: _pbyEventNotification
+      processed: ''
+      offset: 000007C8
+    - name: BIOS_Control
+      processed: ''
+      offset: '00000830'
+    - name: _GetMsec
+      processed: ''
+      offset: 0000085D
+    - name: _DebLogEvent
+      processed: ''
+      offset: 0000087E
+    - name: _ValidateCurrentDevNode
+      processed: ''
+      offset: 000008FE
+    - name: _SelectIndex
+      processed: ''
+      offset: '00000934'
+    - name: _DebListDevNode
+      processed: ''
+      offset: '00000954'
+    - name: _DebProcessDevNode
+      processed: ''
+      offset: 000009D0
+    - name: _BIOSWalk
+      processed: ''
+      offset: 00000A7D
+    - name: _ShowAll
+      processed: ''
+      offset: 00000AB2
+    - name: _DumpEvents
+      processed: ''
+      offset: 00000ABE
+    - name: _ShowList
+      processed: ''
+      offset: 00000B85
+    - name: _ShowDevNode
+      processed: ''
+      offset: 00000BAE
+    - name: _SelectByDevNode
+      processed: ''
+      offset: 00000BC4
+    - name: _SelectByIndex
+      processed: ''
+      offset: 00000BD8
+    - name: _Debugger@0
+      processed: ''
+      offset: 00000C29
+    - name: _LogEvent
+      processed: ''
+      offset: 00000C38
+    - name: _PollEventProc
+      processed: ''
+      offset: 00000C4A
+    - name: _LCODE__Debug_Printf_Service
+      processed: ''
+      offset: 00000C84
+    - name: '@CMDReadNumber@12'
+      processed: ''
+      offset: 00000CA0
+    - name: '@CMDMenu@8'
+      processed: ''
+      offset: 00000DA0
+    - name: _LCODE__CONFIGMG_Call_At_Appy_Time
+      processed: ''
+      offset: '00000E60'
+    - name: _LCODE_Set_Global_Time_Out@12
+      processed: ''
+      offset: '00000E68'
+    - name: '@CMDInChar@0'
+      processed: ''
+      offset: '00000E90'
+  - num: '2'
+    name: PNP
+    offset: '00002590'
+    symbols:
+    - name: _BIOSAddInstanceHook
+      processed: ''
+      offset: '00000000'
+    - name: APIHandler
+      processed: ''
+      offset: '00000097'
+    - name: _CallBIOS@4
+      processed: ''
+      offset: 000000A9
+    - name: _PNPBIOS_GetEvent
+      processed: ''
+      offset: '00000271'
+    - name: _PNPBIOS_GetNodeInfo
+      processed: ''
+      offset: 000002ED
+    - name: _PNPBIOS_GetDevNode
+      processed: ''
+      offset: '00000376'
+    - name: _PNPBIOS_SetDevNode
+      processed: ''
+      offset: 0000043F
+    - name: _PNPBIOS_SendMessage
+      processed: ''
+      offset: 000004C5
+    - name: _PNPBIOS_GetDockInfo
+      processed: ''
+      offset: '00000533'
+    - name: _PNPBIOS_GetAPMTable
+      processed: ''
+      offset: 000005B1
+    - name: _PNPBIOS_SetOldISARes
+      processed: ''
+      offset: '00000621'
+    - name: _PNPBIOS_GetOldISARes
+      processed: ''
+      offset: 0000068E
+    - name: _PNPBIOS_GetEscdInfo
+      processed: ''
+      offset: 000006FB
+    - name: _PNPBIOS_GetEscd
+      processed: ''
+      offset: 0000076E
+    - name: _PNPBIOS_SetEscd
+      processed: ''
+      offset: '000007E2'
+    - name: _EisaID
+      processed: ''
+      offset: '00000856'
+    - name: _DWordAscii
+      processed: ''
+      offset: 000008FE
+    - name: _MemCpy
+      processed: ''
+      offset: '00000946'
+    - name: _MemCmp
+      processed: ''
+      offset: 0000096B
+    - name: _StrChr
+      processed: ''
+      offset: '00000996'
+    - name: _StrStr
+      processed: ''
+      offset: 000009BC
+    - name: _MakeChicagoDeviceName
+      processed: ''
+      offset: 00000A01
+    - name: _ConvertChicagoToCMConfig
+      processed: ''
+      offset: 00000A6A
+    - name: _SkipToNextList
+      processed: ''
+      offset: 00000C07
+    - name: _DontStaticallyDisable
+      processed: ''
+      offset: 00000C71
+    - name: _IsDevNodeMarkedDisabled
+      processed: ''
+      offset: 00000CB2
+    - name: _BIOSSetupDevNode
+      processed: ''
+      offset: 00000D1C
+    - name: _BIOSDisableable
+      processed: ''
+      offset: 00000D4F
+    - name: _BIOSRemovable
+      processed: ''
+      offset: 00000DA0
+    - name: _BIOSEnumerate
+      processed: ''
+      offset: 00000E0E
+    - name: _BIOSPreShutDown
+      processed: ''
+      offset: '00001316'
+    - name: _BIOSShutDown
+      processed: ''
+      offset: 000013C4
+    - name: _BIOSStartDevNode
+      processed: ''
+      offset: 000013CD
+    - name: _BIOSStopDevNode
+      processed: ''
+      offset: 0000157F
+    - name: _NewEnumerator
+      processed: ''
+      offset: '00001680'
+    - name: _CheckSum
+      processed: ''
+      offset: 000016A6
+    - name: _EscdGetNextBrdHdrOffset
+      processed: ''
+      offset: 000016C9
+    - name: _EscdGetTotalFuncLen
+      processed: ''
+      offset: '000016E7'
+    - name: _EscdGetFuncOffset
+      processed: ''
+      offset: 000016F4
+    - name: _EscdGetFuncCount
+      processed: ''
+      offset: '00001724'
+    - name: _EscdUpdateSizesAndChecksums
+      processed: ''
+      offset: '00001763'
+    - name: _EscdGetBrdECD
+      processed: ''
+      offset: 000017EA
+    - name: _EscdFindFunctionID
+      processed: ''
+      offset: '00001831'
+    - name: _EscdLockFunction
+      processed: ''
+      offset: '000018E4'
+    - name: _EscdFindSlotNumber
+      processed: ''
+      offset: 0000192D
+    - name: _EscdFindBoardID
+      processed: ''
+      offset: '00001964'
+    - name: _EscdDetermineLegacySlot
+      processed: ''
+      offset: '00001998'
+    - name: _EscdDeleteDevice
+      processed: ''
+      offset: 00001A1B
+    - name: _ConfigContainsResources
+      processed: ''
+      offset: 00001A6E
+    - name: _ConfigDelMemRes
+      processed: ''
+      offset: 00001A9C
+    - name: _ConfigDelIrqRes
+      processed: ''
+      offset: 00001AEE
+    - name: _ConfigDelDmaRes
+      processed: ''
+      offset: 00001B4E
+    - name: _ConfigDelIoRes
+      processed: ''
+      offset: 00001BAE
+    - name: _EscdCheckMemoryEntries
+      processed: ''
+      offset: 00001C02
+    - name: _EscdCheckIRQEntries
+      processed: ''
+      offset: 00001CC9
+    - name: _EscdCheckDMAEntries
+      processed: ''
+      offset: 00001D1A
+    - name: _EscdCheckIOEntries
+      processed: ''
+      offset: 00001D6B
+    - name: _ConfigDelFnConflicts
+      processed: ''
+      offset: '00001E20'
+    - name: _ConfigRemoveConflicts
+      processed: ''
+      offset: 00001EC8
+    - name: _EscdReplaceFunction
+      processed: ''
+      offset: 00001F55
+    - name: _EscdOverwriteMemory
+      processed: ''
+      offset: 00001FF5
+    - name: _EscdOverwriteIrq
+      processed: ''
+      offset: 0000206E
+    - name: _EscdOverwriteDma
+      processed: ''
+      offset: 000020FD
+    - name: _EscdOverwriteIo
+      processed: ''
+      offset: '00002159'
+    - name: _EscdMergeResourcesIntoFunction
+      processed: ''
+      offset: 000021F4
+    - name: _EscdMergeResources
+      processed: ''
+      offset: 000023FB
+    - name: _EscdAddOldLegacyFunction
+      processed: ''
+      offset: '00002493'
+    - name: _ValidateESCDImage
+      processed: ''
+      offset: 000025B7
+    - name: _AllowUndocking
+      processed: ''
+      offset: '00002700'
+    - name: _ProcessEvent
+      processed: ''
+      offset: 000027F4
+    - name: _ProcessUnknownEvent
+      processed: ''
+      offset: 000029B1
+    - name: _LockTimedOut
+      processed: ''
+      offset: 000029CB
+    - name: _BIOS_Lock_CM
+      processed: ''
+      offset: 00002A05
+    - name: _BIOS_Unlock_CM
+      processed: ''
+      offset: 00002A37
+    - name: _AppyPollEventProc
+      processed: ''
+      offset: 00002A66
+    - name: _CreateGDTSelector
+      processed: ''
+      offset: 00002ACE
+    - name: _ModifyGDTSelector
+      processed: ''
+      offset: 00002B2A
+    - name: _FreeGDTSelector
+      processed: ''
+      offset: 00002B8E
+    - name: _APIDispatch
+      processed: ''
+      offset: 00002BD7
+    - name: _GetVersion
+      processed: ''
+      offset: 00002C7B
+    - name: _BIOSGetVersion
+      processed: ''
+      offset: 00002C81
+    - name: _V86GetVersion
+      processed: ''
+      offset: 00002C86
+    - name: _GetCapabilities
+      processed: ''
+      offset: 00002C8B
+    - name: _BIOSGetCapabilities
+      processed: ''
+      offset: 00002CA2
+    - name: _V86GetCapabilities
+      processed: ''
+      offset: 00002CA7
+    - name: _DoIt
+      processed: ''
+      offset: 00002CAC
+    - name: _SoftUndock
+      processed: ''
+      offset: 00002CEE
+    - name: _BIOSSoftUndock
+      processed: ''
+      offset: 00002D03
+    - name: _V86SoftUndock
+      processed: ''
+      offset: 00002D08
+    - name: _GetAPMTable
+      processed: ''
+      offset: 00002D0D
+    - name: _BIOSGetAPMTable
+      processed: ''
+      offset: 00002D28
+    - name: _V86GetAPMTable
+      processed: ''
+      offset: 00002D86
+    - name: _CheckBIOSExt
+      processed: ''
+      offset: 00002DC2
+    - name: _InstallPollingHandler
+      processed: ''
+      offset: 00002DEC
+    - name: _CheckQEMMHack
+      processed: ''
+      offset: '00002E46'
+    - name: _BIOSInit
+      processed: ''
+      offset: '00002E95'
+    - name: _BIOS_NewDevNode@8
+      processed: ''
+      offset: 000032DD
+    - name: _BIOS_W32DeviceIOControl@4
+      processed: ''
+      offset: '00003341'
+    - name: _AdvancePastSubString
+      processed: ''
+      offset: 000033B0
+    - name: _PciBusNum
+      processed: ''
+      offset: 000033F8
+    - name: _PciDevFnNum
+      processed: ''
+      offset: 0000341F
+    - name: _CompressedPnpID
+      processed: ''
+      offset: '00003483'
+    - name: _PnpCompressedID
+      processed: ''
+      offset: 000034A7
+    - name: _PnpSerialID
+      processed: ''
+      offset: 000034CB
+    - name: _PnpFunctionNum
+      processed: ''
+      offset: '00003508'
+    - name: _ReplaceForcedConfig
+      processed: ''
+      offset: '00003531'
+    - name: _TraverseDevNodeSubTree
+      processed: ''
+      offset: 000036A4
+    - name: _UpdateForcedConfigs
+      processed: ''
+      offset: 000036F6
+    - name: _AddDevNodeResToESCDBuf
+      processed: ''
+      offset: '00003722'
+    - name: _GetCheckAndSaveESCD
+      processed: ''
+      offset: 000037A9
+    - name: _AddDevNodeResToISABuf
+      processed: ''
+      offset: 000039EC
+    - name: _CheckAndSaveOldISA
+      processed: ''
+      offset: 00003B24
+    - name: _SaveInNVRAM
+      processed: ''
+      offset: 00003BC7
+    - name: _AddLegacyToNVRAM
+      processed: ''
+      offset: 00003C3F
+  - num: '3'
+    name: L0CKABLE_BEGIN
+    offset: 00002F50
+    symbols:
+    - name: _BeginLockable
+      processed: ''
+      offset: '00000000'
+    - name: _BIOSEnumHandler
+      processed: ''
+      offset: '00000004'
+    - name: _KCODE__LinPageUnLock
+      processed: ''
+      offset: '000001E4'
+    - name: _KCODE__Call_On_My_Not_Flat_Stack
+      processed: ''
+      offset: 000001EC
+    - name: _KCODE__AttemptingSomethingDangerous
+      processed: ''
+      offset: 000001F4
+    - name: _KCODE__LinPageLock
+      processed: ''
+      offset: 000001FC
+    - name: _KCODE__Sprintf
+      processed: ''
+      offset: '00000204'
+    - name: _KCODE__CONFIGMG_Get_Next_Res_Des
+      processed: ''
+      offset: 0000020C
+    - name: _KCODE__Debug_Printf_Service
+      processed: ''
+      offset: '00000214'
+    - name: _KCODE__CONFIGMG_Assert_Structure
+      processed: ''
+      offset: '00000228'
+    - name: _KCODE__CONFIGMG_Get_Device_ID
+      processed: ''
+      offset: '00000230'
+    - name: _KCODE__CONFIGMG_Get_Private_DWord
+      processed: ''
+      offset: '00000238'
+    - name: _KCODE__CONFIGMG_Debug_DevNode
+      processed: ''
+      offset: '00000240'
+    - name: _KCODE__CONFIGMG_Get_Sibling
+      processed: ''
+      offset: '00000248'
+    - name: _KCODE__CONFIGMG_Get_Child
+      processed: ''
+      offset: '00000250'
+    - name: _KCODE__CONFIGMG_Read_Registry_Value
+      processed: ''
+      offset: '00000258'
+    - name: _KCODE__CONFIGMG_ISAPNP_To_CM
+      processed: ''
+      offset: '00000260'
+    - name: _KCODE__CONFIGMG_Get_DevNode_Status
+      processed: ''
+      offset: '00000268'
+    - name: _KCODE__CONFIGMG_Get_Global_State
+      processed: ''
+      offset: '00000270'
+    - name: _KCODE__CONFIGMG_Remove_Unmarked_Children
+      processed: ''
+      offset: '00000278'
+    - name: _KCODE__CONFIGMG_Write_Registry_Value
+      processed: ''
+      offset: '00000280'
+    - name: _KCODE__CONFIGMG_Disable_DevNode
+      processed: ''
+      offset: '00000288'
+    - name: _KCODE__CONFIGMG_Remove_SubTree
+      processed: ''
+      offset: '00000290'
+    - name: _KCODE__RegCloseKey
+      processed: ''
+      offset: '00000298'
+    - name: _KCODE__RegQueryValueEx
+      processed: ''
+      offset: 000002A0
+    - name: _KCODE__GetRegistryKey
+      processed: ''
+      offset: 000002A8
+    - name: _KCODE__CONFIGMG_Free_Log_Conf
+      processed: ''
+      offset: 000002B0
+    - name: _KCODE__CONFIGMG_Add_Res_Des
+      processed: ''
+      offset: 000002B8
+    - name: _KCODE__CONFIGMG_Add_Empty_Log_Conf
+      processed: ''
+      offset: 000002C0
+    - name: _KCODE__CONFIGMG_Get_Next_Log_Conf
+      processed: ''
+      offset: 000002C8
+    - name: _KCODE__CONFIGMG_Get_First_Log_Conf
+      processed: ''
+      offset: 000002D0
+    - name: _KCODE__CONFIGMG_Set_DevNode_PowerCapabilities
+      processed: ''
+      offset: 000002D8
+    - name: _KCODE__CONFIGMG_Set_Bus_Info
+      processed: ''
+      offset: '000002E0'
+    - name: _KCODE__CONFIGMG_Set_Private_DWord
+      processed: ''
+      offset: '000002E8'
+    - name: _KCODE__CONFIGMG_Create_DevNode
+      processed: ''
+      offset: 000002F0
+    - name: _KCODE__CONFIGMG_Reset_Children_Marks
+      processed: ''
+      offset: 000002F8
+    - name: _KCODE__HeapReAllocate
+      processed: ''
+      offset: '00000300'
+    - name: _KCODE__RegOpenKey
+      processed: ''
+      offset: '00000308'
+    - name: _KCODE__lmemcpy
+      processed: ''
+      offset: '00000310'
+    - name: _KCODE__CONFIGMG_Set_DevNode_Problem
+      processed: ''
+      offset: '00000318'
+    - name: _KCODE__CONFIGMG_CM_To_ISAPNP
+      processed: ''
+      offset: '00000320'
+    - name: _KCODE__CONFIGMG_Change_DevNode_Status
+      processed: ''
+      offset: '00000328'
+    - name: _KCODE__CONFIGMG_Get_Parent
+      processed: ''
+      offset: '00000330'
+    - name: _KCODE__LinRegionLock
+      processed: ''
+      offset: '00000338'
+    - name: _KCODE__LinRegionUnLock
+      processed: ''
+      offset: '00000340'
+    - name: _KCODE__CONFIGMG_Register_Enumerator
+      processed: ''
+      offset: '00000348'
+    - name: _KCODE__HeapFree
+      processed: ''
+      offset: '00000350'
+    - name: _KCODE__HeapAllocate
+      processed: ''
+      offset: '00000358'
+    - name: _KCODE__CONFIGMG_Reenumerate_DevNode
+      processed: ''
+      offset: '00000360'
+    - name: _KCODE__CONFIGMG_Fail_Change_HW_Prof
+      processed: ''
+      offset: '00000368'
+    - name: _KCODE__CONFIGMG_Query_Remove_SubTree
+      processed: ''
+      offset: '00000370'
+    - name: _KCODE__CONFIGMG_Query_Change_HW_Prof
+      processed: ''
+      offset: '00000378'
+    - name: _KCODE__CONFIGMG_Recompute_HW_Prof
+      processed: ''
+      offset: '00000380'
+    - name: _KCODE_Cancel_Time_Out@4
+      processed: ''
+      offset: '00000388'
+    - name: _KCODE__CONFIGMG_Lock
+      processed: ''
+      offset: '00000398'
+    - name: _KCODE__CONFIGMG_Unlock
+      processed: ''
+      offset: 000003A0
+    - name: _KCODE__CONFIGMG_Call_At_Appy_Time
+      processed: ''
+      offset: 000003A8
+    - name: _KCODE_Set_Global_Time_Out@12
+      processed: ''
+      offset: 000003B0
+    - name: _KCODE_VMM_GetSystemInitState
+      processed: ''
+      offset: 000003CC
+    - name: _KCODE__MapPhysToLinear
+      processed: ''
+      offset: 000003D4
+    - name: _KCODE__CopyPageTable
+      processed: ''
+      offset: 000003DC
+    - name: _KCODE__PageAllocate
+      processed: ''
+      offset: '000003E4'
+    - name: _KCODE__CONFIGMG_Register_Device_Driver
+      processed: ''
+      offset: 000003EC
+    - name: _KCODE__CONFIGMG_Get_Device_ID_Size
+      processed: ''
+      offset: 000003F4
+    - name: _KCODE__CONFIGMG_Locate_DevNode
+      processed: ''
+      offset: 000003FC
+    - name: _KCODE__CONFIGMG_Get_Alloc_Log_Conf
+      processed: ''
+      offset: '00000404'
+    - name: _dnBIOSDevNode
+      processed: ''
+      offset: '00000414'
+    - name: _EndLockable
+      processed: ''
+      offset: '00000480'
+  - num: '4'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: _wBIOSEntrySeg
+      processed: ''
+      offset: '00000030'
+    - name: _wBIOSEntryOff
+      processed: ''
+      offset: '00000034'
+    - name: _BIOSDataSel
+      processed: ''
+      offset: '00000038'
+    - name: _pBIOSData
+      processed: ''
+      offset: 0000003C
+    - name: _wBIOSDataSel
+      processed: ''
+      offset: '00000040'
+    - name: _wBIOSStackSS
+      processed: ''
+      offset: '00000044'
+    - name: _pBIOSStack
+      processed: ''
+      offset: '00000048'
+    - name: _bCallVxD
+      processed: ''
+      offset: '00000058'
+    - name: _fDellProblem
+      processed: ''
+      offset: 000003C8
+    - name: _dwOEMNumber
+      processed: ''
+      offset: 000003D4
+    - name: _rgbNodeHandleFlags
+      processed: ''
+      offset: 000003D8
+    - name: _dwMaxResourceSize
+      processed: ''
+      offset: 000004D8
+    - name: _fEscdShareEdge
+      processed: ''
+      offset: 000007FC
+    - name: _fProcessingSoftUndock
+      processed: ''
+      offset: '00000928'
+    - name: _fProcessingDockChange
+      processed: ''
+      offset: 0000092C
+    - name: __pClientRegisters
+      processed: ''
+      offset: 00000B50
+    - name: _fBIOSWorking
+      processed: ''
+      offset: 00000B54
+    - name: _dwAddInstanceAddr
+      processed: ''
+      offset: 00000B8C
+    - name: _dwEventNotify
+      processed: ''
+      offset: 00000B90
+    - name: _gpbyNVRAM
+      processed: ''
+      offset: 00000D94
+    - name: _gpbyOldNVRAM
+      processed: ''
+      offset: 00000D98
+    - name: _gwNVRAMSize
+      processed: ''
+      offset: 00000D9C
+    - name: _gwNVRAMBufSel
+      processed: ''
+      offset: 00000DA0
+    - name: _gpbyCurResTable
+      processed: ''
+      offset: 00000DA4
+    - name: _gwCurResTableSel
+      processed: ''
+      offset: 00000DA8
+    - name: _gdwCurBufOffset
+      processed: ''
+      offset: 00000DAC
+    - name: _gdwSysBufSize
+      processed: ''
+      offset: 00000DB0
+    - name: _gbyLegacyCardSlot
+      processed: ''
+      offset: 00000DB4
+    - name: _gabyTempEscdFn
+      processed: ''
+      offset: 00000DB8
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LDATA
+    offset: '00000190'
+    symbols:
+    - name: __BIOSGetVersion
+      demangled: ''
+      offset: '00000000'
+    - name: __BIOSSoftUndock
+      demangled: ''
+      offset: '00000004'
+    - name: __BIOSGetCapabilities
+      demangled: ''
+      offset: '00000008'
+    - name: __BIOSGetAPMTable
+      demangled: ''
+      offset: 0000000C
+    - name: BIOS_DDB
+      demangled: ''
+      offset: '00000010'
+    - name: _pbyEventNotification
+      demangled: ''
+      offset: '00000060'
+    - name: BIOS_Control
+      demangled: ''
+      offset: 000000D0
+    - name: '@LogEvent@8'
+      demangled: ''
+      offset: 0000010B
+    - name: _PollEventProc
+      demangled: ''
+      offset: 0000011D
+    - name: '@CMDReadNumber@12'
+      demangled: ''
+      offset: '00000160'
+    - name: '@CMDMenu@8'
+      demangled: ''
+      offset: '00000260'
+    - name: _LCODE__CONFIGMG_Call_At_Appy_Time
+      demangled: ''
+      offset: '00000320'
+    - name: _LCODE_Set_Global_Time_Out@12
+      demangled: ''
+      offset: '00000328'
+    - name: _LCODE__Debug_Printf_Service
+      demangled: ''
+      offset: '00000344'
+    - name: '@CMDInChar@0'
+      demangled: ''
+      offset: '00000360'
+  - num: '2'
+    name: _DB1CODE
+    offset: 000002D0
+    symbols:
+    - name: '@GetMsec@0'
+      demangled: ''
+      offset: '00000001'
+    - name: '@DebLogEvent@8'
+      demangled: ''
+      offset: '00000022'
+    - name: '@ValidateCurrentDevNode@0'
+      demangled: ''
+      offset: '00000062'
+    - name: _SelectIndex
+      demangled: ''
+      offset: '00000098'
+    - name: _DebListDevNode
+      demangled: ''
+      offset: 000000B5
+    - name: _DebProcessDevNode
+      demangled: ''
+      offset: '00000131'
+    - name: '@BIOSWalk@4'
+      demangled: ''
+      offset: 000001DE
+    - name: _ShowAll
+      demangled: ''
+      offset: '00000216'
+    - name: _DumpEvents
+      demangled: ''
+      offset: '00000220'
+    - name: _ShowList
+      demangled: ''
+      offset: 000002DF
+    - name: _ShowDevNode
+      demangled: ''
+      offset: '00000306'
+    - name: _SelectByDevNode
+      demangled: ''
+      offset: 0000031C
+    - name: _SelectByIndex
+      demangled: ''
+      offset: '00000330'
+    - name: _Debugger@0
+      demangled: ''
+      offset: '00000380'
+    - name: _DebuggerCommands
+      demangled: ''
+      offset: 000004F4
+  - num: '3'
+    name: PNP
+    offset: 00000D70
+    symbols:
+    - name: _BIOSAddInstanceHook
+      demangled: ''
+      offset: '00000000'
+    - name: APIHandler
+      demangled: ''
+      offset: '00000084'
+    - name: _CallBIOS@4
+      demangled: ''
+      offset: 0000008E
+    - name: '@PNPBIOS_GetEvent@0'
+      demangled: ''
+      offset: 0000018E
+    - name: '@PNPBIOS_GetNodeInfo@0'
+      demangled: ''
+      offset: 000001D4
+    - name: '@PNPBIOS_GetDevNode@8'
+      demangled: ''
+      offset: '00000227'
+    - name: '@PNPBIOS_SetDevNode@8'
+      demangled: ''
+      offset: 000002BC
+    - name: '@PNPBIOS_SendMessage@4'
+      demangled: ''
+      offset: '00000315'
+    - name: '@PNPBIOS_GetDockInfo@0'
+      demangled: ''
+      offset: '00000352'
+    - name: '@PNPBIOS_GetAPMTable@8'
+      demangled: ''
+      offset: 0000039A
+    - name: '@PNPBIOS_SetOldISARes@4'
+      demangled: ''
+      offset: 000003DC
+    - name: '@PNPBIOS_GetOldISARes@4'
+      demangled: ''
+      offset: '00000417'
+    - name: '@PNPBIOS_GetEscdInfo@12'
+      demangled: ''
+      offset: '00000452'
+    - name: '@PNPBIOS_GetEscd@8'
+      demangled: ''
+      offset: '00000499'
+    - name: '@PNPBIOS_SetEscd@8'
+      demangled: ''
+      offset: '000004E0'
+    - name: _EisaID
+      demangled: ''
+      offset: '00000527'
+    - name: _DWordAscii
+      demangled: ''
+      offset: 000005CB
+    - name: _MemCpy
+      demangled: ''
+      offset: '00000613'
+    - name: '@MemCmp@12'
+      demangled: ''
+      offset: '00000637'
+    - name: '@StrChr@8'
+      demangled: ''
+      offset: 0000065E
+    - name: '@StrStr@12'
+      demangled: ''
+      offset: 0000067B
+    - name: '@MakeChicagoDeviceName@8'
+      demangled: ''
+      offset: 000006BB
+    - name: '@ConvertChicagoToCMConfig@12'
+      demangled: ''
+      offset: '00000728'
+    - name: '@SkipToNextList@4'
+      demangled: ''
+      offset: 000008C5
+    - name: '@DontStaticallyDisable@4'
+      demangled: ''
+      offset: '00000907'
+    - name: '@IsDevNodeMarkedDisabled@4'
+      demangled: ''
+      offset: '00000946'
+    - name: '@BIOSSetupDevNode@4'
+      demangled: ''
+      offset: 000009B0
+    - name: '@BIOSDisableable@8'
+      demangled: ''
+      offset: 000009DF
+    - name: '@BIOSRemovable@8'
+      demangled: ''
+      offset: 00000A0A
+    - name: '@BIOSEnumerate@0'
+      demangled: ''
+      offset: 00000A52
+    - name: '@BIOSPreShutDown@0'
+      demangled: ''
+      offset: 00000ED5
+    - name: '@BIOSShutDown@0'
+      demangled: ''
+      offset: 00000F83
+    - name: '@BIOSStartDevNode@8'
+      demangled: ''
+      offset: 00000F8C
+    - name: '@BIOSStopDevNode@12'
+      demangled: ''
+      offset: 000010BF
+    - name: '@NewEnumerator@4'
+      demangled: ''
+      offset: 000011C6
+    - name: '@CheckSum@8'
+      demangled: ''
+      offset: '000011E8'
+    - name: '@EscdGetNextBrdHdrOffset@8'
+      demangled: ''
+      offset: '00001203'
+    - name: '@EscdGetTotalFuncLen@4'
+      demangled: ''
+      offset: '00001229'
+    - name: '@EscdGetFuncOffset@12'
+      demangled: ''
+      offset: 0000122F
+    - name: '@EscdGetFuncCount@4'
+      demangled: ''
+      offset: '00001267'
+    - name: '@EscdUpdateSizesAndChecksums@4'
+      demangled: ''
+      offset: 0000129F
+    - name: '@EscdGetBrdECD@4'
+      demangled: ''
+      offset: '00001323'
+    - name: '@EscdFindFunctionID@16'
+      demangled: ''
+      offset: '00001363'
+    - name: '@EscdLockFunction@8'
+      demangled: ''
+      offset: '00001413'
+    - name: '@EscdFindSlotNumber@8'
+      demangled: ''
+      offset: '00001454'
+    - name: '@EscdFindBoardID@8'
+      demangled: ''
+      offset: 0000148B
+    - name: '@EscdDetermineLegacySlot@4'
+      demangled: ''
+      offset: 000014BC
+    - name: '@EscdDeleteDevice@8'
+      demangled: ''
+      offset: 0000153C
+    - name: '@ConfigContainsResources@4'
+      demangled: ''
+      offset: '00001584'
+    - name: '@ConfigDelMemRes@8'
+      demangled: ''
+      offset: 000015A7
+    - name: '@ConfigDelIrqRes@8'
+      demangled: ''
+      offset: 000015EF
+    - name: '@ConfigDelDmaRes@8'
+      demangled: ''
+      offset: '00001646'
+    - name: '@ConfigDelIoRes@8'
+      demangled: ''
+      offset: 0000169E
+    - name: '@EscdCheckMemoryEntries@8'
+      demangled: ''
+      offset: '000016E8'
+    - name: '@EscdCheckIRQEntries@8'
+      demangled: ''
+      offset: 000017B4
+    - name: '@EscdCheckDMAEntries@8'
+      demangled: ''
+      offset: '00001801'
+    - name: '@EscdCheckIOEntries@8'
+      demangled: ''
+      offset: 0000184E
+    - name: '@ConfigDelFnConflicts@16'
+      demangled: ''
+      offset: '00001902'
+    - name: _ConfigRemoveConflicts
+      demangled: ''
+      offset: 000019AA
+    - name: '@EscdReplaceFunction@12'
+      demangled: ''
+      offset: 00001A31
+    - name: '@EscdOverwriteMemory@16'
+      demangled: ''
+      offset: 00001AD2
+    - name: '@EscdOverwriteIrq@16'
+      demangled: ''
+      offset: 00001B4E
+    - name: '@EscdOverwriteDma@16'
+      demangled: ''
+      offset: 00001BE0
+    - name: '@EscdOverwriteIo@16'
+      demangled: ''
+      offset: 00001C43
+    - name: '@EscdMergeResourcesIntoFunction@8'
+      demangled: ''
+      offset: 00001CDA
+    - name: '@EscdMergeResources@12'
+      demangled: ''
+      offset: 00001ED0
+    - name: '@EscdAddOldLegacyFunction@16'
+      demangled: ''
+      offset: 00001F69
+    - name: '@ValidateESCDImage@8'
+      demangled: ''
+      offset: 0000208A
+    - name: _AllowUndocking
+      demangled: ''
+      offset: '00002117'
+    - name: _ProcessEvent
+      demangled: ''
+      offset: 000021B9
+    - name: _ProcessUnknownEvent
+      demangled: ''
+      offset: 000022D9
+    - name: _LockTimedOut
+      demangled: ''
+      offset: 000022EF
+    - name: '@BIOS_Lock_CM@0'
+      demangled: ''
+      offset: '00002308'
+    - name: '@BIOS_Unlock_CM@0'
+      demangled: ''
+      offset: 0000233A
+    - name: _AppyPollEventProc
+      demangled: ''
+      offset: '00002369'
+    - name: '@CreateGDTSelector@12'
+      demangled: ''
+      offset: 000023CD
+    - name: '@ModifyGDTSelector@12'
+      demangled: ''
+      offset: '00002432'
+    - name: '@FreeGDTSelector@4'
+      demangled: ''
+      offset: '00002471'
+    - name: _APIDispatch
+      demangled: ''
+      offset: 0000248F
+    - name: _GetVersion
+      demangled: ''
+      offset: '00002533'
+    - name: _BIOSGetVersion
+      demangled: ''
+      offset: '00002539'
+    - name: _V86GetVersion
+      demangled: ''
+      offset: 0000253E
+    - name: _GetCapabilities
+      demangled: ''
+      offset: '00002543'
+    - name: _BIOSGetCapabilities
+      demangled: ''
+      offset: 0000255A
+    - name: _V86GetCapabilities
+      demangled: ''
+      offset: 0000255F
+    - name: _DoIt
+      demangled: ''
+      offset: '00002564'
+    - name: _SoftUndock
+      demangled: ''
+      offset: '00002586'
+    - name: _BIOSSoftUndock
+      demangled: ''
+      offset: 0000259B
+    - name: _V86SoftUndock
+      demangled: ''
+      offset: 000025A0
+    - name: _GetAPMTable
+      demangled: ''
+      offset: 000025A5
+    - name: _BIOSGetAPMTable
+      demangled: ''
+      offset: 000025BE
+    - name: _V86GetAPMTable
+      demangled: ''
+      offset: '00002615'
+    - name: '@CheckBIOSExt@0'
+      demangled: ''
+      offset: '00002651'
+    - name: '@InstallPollingHandler@0'
+      demangled: ''
+      offset: 0000267B
+    - name: '@CheckQEMMHack@12'
+      demangled: ''
+      offset: 000026D5
+    - name: '@BIOSInit@0'
+      demangled: ''
+      offset: '00002722'
+    - name: _BIOS_NewDevNode@8
+      demangled: ''
+      offset: 00002A3B
+    - name: _BIOS_W32DeviceIOControl@4
+      demangled: ''
+      offset: 00002A9F
+    - name: '@AdvancePastSubString@8'
+      demangled: ''
+      offset: 00002B0E
+    - name: '@PciBusNum@4'
+      demangled: ''
+      offset: 00002B4D
+    - name: '@PciDevFnNum@4'
+      demangled: ''
+      offset: 00002B75
+    - name: '@CompressedPnpID@4'
+      demangled: ''
+      offset: 00002BD4
+    - name: '@PnpCompressedID@4'
+      demangled: ''
+      offset: 00002BF9
+    - name: '@PnpSerialID@4'
+      demangled: ''
+      offset: 00002C1E
+    - name: '@PnpFunctionNum@4'
+      demangled: ''
+      offset: 00002C59
+    - name: _ReplaceForcedConfig
+      demangled: ''
+      offset: 00002C83
+    - name: '@TraverseDevNodeSubTree@8'
+      demangled: ''
+      offset: 00002DD7
+    - name: '@UpdateForcedConfigs@0'
+      demangled: ''
+      offset: '00002E24'
+    - name: _AddDevNodeResToESCDBuf
+      demangled: ''
+      offset: 00002E4E
+    - name: '@GetCheckAndSaveESCD@0'
+      demangled: ''
+      offset: 00002ED1
+    - name: _AddDevNodeResToISABuf
+      demangled: ''
+      offset: 000030A9
+    - name: '@CheckAndSaveOldISA@0'
+      demangled: ''
+      offset: '000031E1'
+    - name: '@SaveInNVRAM@0'
+      demangled: ''
+      offset: 0000325C
+    - name: '@AddLegacyToNVRAM@4'
+      demangled: ''
+      offset: 000032D0
+  - num: '4'
+    name: L0CKABLE_BEGIN
+    offset: '00001680'
+    symbols:
+    - name: _BeginLockable
+      demangled: ''
+      offset: '00000000'
+    - name: _BIOSEnumHandler
+      demangled: ''
+      offset: '00000004'
+    - name: _KCODE__LinPageUnLock
+      demangled: ''
+      offset: '00000188'
+    - name: _KCODE__Call_On_My_Not_Flat_Stack
+      demangled: ''
+      offset: '00000190'
+    - name: _KCODE__AttemptingSomethingDangerous
+      demangled: ''
+      offset: '00000198'
+    - name: _KCODE__LinPageLock
+      demangled: ''
+      offset: 000001A0
+    - name: _KCODE__Sprintf
+      demangled: ''
+      offset: 000001A8
+    - name: _KCODE__CONFIGMG_Get_Next_Res_Des
+      demangled: ''
+      offset: 000001B0
+    - name: _KCODE__Debug_Printf_Service
+      demangled: ''
+      offset: 000001B8
+    - name: _KCODE__CONFIGMG_Assert_Structure
+      demangled: ''
+      offset: 000001CC
+    - name: _KCODE__CONFIGMG_Get_Device_ID
+      demangled: ''
+      offset: 000001D4
+    - name: _KCODE__CONFIGMG_Get_Private_DWord
+      demangled: ''
+      offset: 000001DC
+    - name: _KCODE__CONFIGMG_Debug_DevNode
+      demangled: ''
+      offset: '000001E4'
+    - name: _KCODE__CONFIGMG_Get_Sibling
+      demangled: ''
+      offset: 000001EC
+    - name: _KCODE__CONFIGMG_Get_Child
+      demangled: ''
+      offset: 000001F4
+    - name: _KCODE__CONFIGMG_Read_Registry_Value
+      demangled: ''
+      offset: 000001FC
+    - name: _KCODE__CONFIGMG_ISAPNP_To_CM
+      demangled: ''
+      offset: '00000204'
+    - name: _KCODE__CONFIGMG_Get_DevNode_Status
+      demangled: ''
+      offset: 0000020C
+    - name: _KCODE__CONFIGMG_Get_Global_State
+      demangled: ''
+      offset: '00000214'
+    - name: _KCODE__CONFIGMG_Remove_Unmarked_Children
+      demangled: ''
+      offset: 0000021C
+    - name: _KCODE__CONFIGMG_Write_Registry_Value
+      demangled: ''
+      offset: '00000224'
+    - name: _KCODE__CONFIGMG_Disable_DevNode
+      demangled: ''
+      offset: 0000022C
+    - name: _KCODE__CONFIGMG_Remove_SubTree
+      demangled: ''
+      offset: '00000234'
+    - name: _KCODE__RegCloseKey
+      demangled: ''
+      offset: 0000023C
+    - name: _KCODE__RegQueryValueEx
+      demangled: ''
+      offset: '00000244'
+    - name: _KCODE__GetRegistryKey
+      demangled: ''
+      offset: 0000024C
+    - name: _KCODE__CONFIGMG_Free_Log_Conf
+      demangled: ''
+      offset: '00000254'
+    - name: _KCODE__CONFIGMG_Add_Res_Des
+      demangled: ''
+      offset: 0000025C
+    - name: _KCODE__CONFIGMG_Add_Empty_Log_Conf
+      demangled: ''
+      offset: '00000264'
+    - name: _KCODE__CONFIGMG_Get_Next_Log_Conf
+      demangled: ''
+      offset: 0000026C
+    - name: _KCODE__CONFIGMG_Get_First_Log_Conf
+      demangled: ''
+      offset: '00000274'
+    - name: _KCODE__CONFIGMG_Set_DevNode_PowerCapabilities
+      demangled: ''
+      offset: 0000027C
+    - name: _KCODE__CONFIGMG_Set_Bus_Info
+      demangled: ''
+      offset: '00000284'
+    - name: _KCODE__CONFIGMG_Set_Private_DWord
+      demangled: ''
+      offset: 0000028C
+    - name: _KCODE__CONFIGMG_Create_DevNode
+      demangled: ''
+      offset: '00000294'
+    - name: _KCODE__CONFIGMG_Reset_Children_Marks
+      demangled: ''
+      offset: 0000029C
+    - name: _KCODE__HeapReAllocate
+      demangled: ''
+      offset: 000002A4
+    - name: _KCODE__RegOpenKey
+      demangled: ''
+      offset: 000002AC
+    - name: _KCODE__lmemcpy
+      demangled: ''
+      offset: 000002B4
+    - name: _KCODE__CONFIGMG_Set_DevNode_Problem
+      demangled: ''
+      offset: 000002BC
+    - name: _KCODE__CONFIGMG_CM_To_ISAPNP
+      demangled: ''
+      offset: 000002C4
+    - name: _KCODE__CONFIGMG_Change_DevNode_Status
+      demangled: ''
+      offset: 000002CC
+    - name: _KCODE__CONFIGMG_Get_Parent
+      demangled: ''
+      offset: 000002D4
+    - name: _KCODE__LinRegionLock
+      demangled: ''
+      offset: 000002DC
+    - name: _KCODE__LinRegionUnLock
+      demangled: ''
+      offset: '000002E4'
+    - name: _KCODE__CONFIGMG_Register_Enumerator
+      demangled: ''
+      offset: 000002EC
+    - name: _KCODE__HeapFree
+      demangled: ''
+      offset: 000002F4
+    - name: _KCODE__HeapAllocate
+      demangled: ''
+      offset: 000002FC
+    - name: _KCODE__CONFIGMG_Reenumerate_DevNode
+      demangled: ''
+      offset: '00000304'
+    - name: _KCODE__CONFIGMG_Fail_Change_HW_Prof
+      demangled: ''
+      offset: 0000030C
+    - name: _KCODE__CONFIGMG_Query_Remove_SubTree
+      demangled: ''
+      offset: '00000314'
+    - name: _KCODE__CONFIGMG_Query_Change_HW_Prof
+      demangled: ''
+      offset: 0000031C
+    - name: _KCODE__CONFIGMG_Recompute_HW_Prof
+      demangled: ''
+      offset: '00000324'
+    - name: _KCODE_Cancel_Time_Out@4
+      demangled: ''
+      offset: 0000032C
+    - name: _KCODE__CONFIGMG_Lock
+      demangled: ''
+      offset: 0000033C
+    - name: _KCODE__CONFIGMG_Unlock
+      demangled: ''
+      offset: '00000344'
+    - name: _KCODE__CONFIGMG_Call_At_Appy_Time
+      demangled: ''
+      offset: 0000034C
+    - name: _KCODE_Set_Global_Time_Out@12
+      demangled: ''
+      offset: '00000354'
+    - name: _KCODE_VMM_GetSystemInitState
+      demangled: ''
+      offset: '00000370'
+    - name: _KCODE__MapPhysToLinear
+      demangled: ''
+      offset: '00000378'
+    - name: _KCODE__CopyPageTable
+      demangled: ''
+      offset: '00000380'
+    - name: _KCODE__PageAllocate
+      demangled: ''
+      offset: '00000388'
+    - name: _KCODE__CONFIGMG_Register_Device_Driver
+      demangled: ''
+      offset: '00000390'
+    - name: _KCODE__CONFIGMG_Get_Device_ID_Size
+      demangled: ''
+      offset: '00000398'
+    - name: _KCODE__CONFIGMG_Locate_DevNode
+      demangled: ''
+      offset: 000003A0
+    - name: _KCODE__CONFIGMG_Get_Alloc_Log_Conf
+      demangled: ''
+      offset: 000003A8
+    - name: _dnBIOSDevNode
+      demangled: ''
+      offset: 000003B8
+    - name: _EndLockable
+      demangled: ''
+      offset: 000003BC
+  - num: '5'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: _wBIOSEntrySeg
+      demangled: ''
+      offset: '00000000'
+    - name: _wBIOSEntryOff
+      demangled: ''
+      offset: '00000004'
+    - name: _BIOSDataSel
+      demangled: ''
+      offset: '00000008'
+    - name: _pBIOSData
+      demangled: ''
+      offset: 0000000C
+    - name: _wBIOSDataSel
+      demangled: ''
+      offset: '00000010'
+    - name: _wBIOSStackSS
+      demangled: ''
+      offset: '00000014'
+    - name: _pBIOSStack
+      demangled: ''
+      offset: '00000018'
+    - name: _bCallVxD
+      demangled: ''
+      offset: '00000028'
+    - name: _fDellProblem
+      demangled: ''
+      offset: '00000050'
+    - name: _dwOEMNumber
+      demangled: ''
+      offset: 0000005C
+    - name: _rgbNodeHandleFlags
+      demangled: ''
+      offset: '00000060'
+    - name: _dwMaxResourceSize
+      demangled: ''
+      offset: '00000160'
+    - name: _fEscdShareEdge
+      demangled: ''
+      offset: 0000020C
+    - name: _fProcessingSoftUndock
+      demangled: ''
+      offset: '00000214'
+    - name: _fProcessingDockChange
+      demangled: ''
+      offset: '00000218'
+    - name: __pClientRegisters
+      demangled: ''
+      offset: '00000220'
+    - name: _fBIOSWorking
+      demangled: ''
+      offset: '00000224'
+    - name: _dwAddInstanceAddr
+      demangled: ''
+      offset: '00000228'
+    - name: _dwEventNotify
+      demangled: ''
+      offset: 0000022C
+    - name: _gpbyNVRAM
+      demangled: ''
+      offset: '00000244'
+    - name: _gpbyOldNVRAM
+      demangled: ''
+      offset: '00000248'
+    - name: _gwNVRAMSize
+      demangled: ''
+      offset: 0000024C
+    - name: _gwNVRAMBufSel
+      demangled: ''
+      offset: '00000250'
+    - name: _gpbyCurResTable
+      demangled: ''
+      offset: '00000254'
+    - name: _gwCurResTableSel
+      demangled: ''
+      offset: '00000258'
+    - name: _gdwCurBufOffset
+      demangled: ''
+      offset: 0000025C
+    - name: _gdwSysBufSize
+      demangled: ''
+      offset: '00000260'
+    - name: _gbyLegacyCardSlot
+      demangled: ''
+      offset: '00000264'
+    - name: _gabyTempEscdFn
+      demangled: ''
+      offset: '00000268'

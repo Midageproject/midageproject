@@ -1,0 +1,732 @@
+filename: windows/system/debugcmd.vxd
+#TODO: bring up more details from symdeb
+binary: DEBUGCMD
+description: ''
+appearances:
+- version: Windows 98 Debug
+  tree:
+  - dbgcmd.c
+  - dbgonly.c
+  - debugcmd.asm
+  - ' ../../../../../dev/ddk/inc/vmm.h'
+  - dosnames.asm
+  - dostrc.asm
+  - regdbg.c
+  - thread.h
+  - "\t../util.c"
+  - vxd.c
+  - 'ERROR: DEBUGCMD.386 version does not match DOS386 version (SchedSys.h)'
+  - 'ERROR: DEBUGCMD.386 version does not match DOS386 version (VmmDebug.h)'
+  - 'ERROR: DEBUGCMD.386 version does not match DOS386 version (VmmSys.h)'
+  segments:
+  - num: '1'
+    name: .bss
+    offset: '00002600'
+    symbols:
+    - name: _TransferLocal
+      processed: ''
+      offset: '00000000'
+    - name: _pDynamicDeviceList
+      processed: ''
+      offset: '00000034'
+    - name: _SearchStaticVXDs
+      processed: ''
+      offset: 0000021A
+    - name: _SearchDynamicVXDs
+      processed: ''
+      offset: 0000028D
+    - name: _dbgObjName
+      processed: ''
+      offset: '000002E8'
+    - name: _dbgFindDev
+      processed: ''
+      offset: '00000361'
+    - name: _dbgHexToString
+      processed: ''
+      offset: 000003FE
+    - name: _dbgGetVXDName
+      processed: ''
+      offset: 0000044A
+    - name: _TmpFoo
+      processed: ''
+      offset: 000004F0
+    - name: _My_pthcbCur
+      processed: ''
+      offset: 000006A4
+    - name: _My_VM_List_Head
+      processed: ''
+      offset: 000006A8
+    - name: _My_pmtxCritSec
+      processed: ''
+      offset: 000006AC
+    - name: _pStaticVXDLocationArray
+      processed: ''
+      offset: 000006B0
+    - name: _NumberOfStaticVXDs
+      processed: ''
+      offset: 000006B4
+    - name: _dbtDebug
+      processed: ''
+      offset: '000027E0'
+    - name: DEBUGCMD_DDB
+      processed: ''
+      offset: 0000283C
+    - name: _lCpuMHz
+      processed: ''
+      offset: 0000288C
+    - name: _llLastTimeStamp
+      processed: ''
+      offset: '00002890'
+    - name: _fCpuHasRdtsc
+      processed: ''
+      offset: '00002898'
+    - name: _flFeatureFlags
+      processed: ''
+      offset: '00002899'
+    - name: Debug_Name_Off_Table
+      processed: ''
+      offset: 00003A75
+    - name: LFN_MapTable
+      processed: ''
+      offset: 00003C71
+    - name: Index_Action
+      processed: ''
+      offset: 00003C8B
+    - name: _DumpRegQueryValueEx
+      processed: ''
+      offset: 0000496C
+    - name: _EnumerateOneKey
+      processed: ''
+      offset: 00004A5B
+    - name: _RegQueryCmd
+      processed: ''
+      offset: 00004B22
+    - name: _RegCommandHelp
+      processed: ''
+      offset: 00004BD7
+    - name: _RegCommand@0
+      processed: ''
+      offset: 00004C0F
+    - name: _dbgCommandParse@0
+      processed: ''
+      offset: 00004C6D
+    - name: _dbgDumpSemaphore
+      processed: ''
+      offset: 00004CA2
+    - name: _dbgDumpMutex
+      processed: ''
+      offset: 00004DF4
+    - name: _dbgGetTimeStampCounter
+      processed: ''
+      offset: '00004E75'
+    - name: _dbgDumpPmtx
+      processed: ''
+      offset: 00004F17
+    - name: _dbgDumpPModeStack
+      processed: ''
+      offset: '00005033'
+    - name: _dbgDumpThreadState
+      processed: ''
+      offset: '00005141'
+    - name: _dbgGetSyncType
+      processed: ''
+      offset: '00005382'
+    - name: _dbgDumpThreadSummary
+      processed: ''
+      offset: 000053C2
+    - name: _dbgDumpAllThreads
+      processed: ''
+      offset: 000054BE
+    - name: _DBGIDToThread
+      processed: ''
+      offset: 000055D6
+    - name: _dbgDumpThcb
+      processed: ''
+      offset: 0000564A
+    - name: _dbgHelp
+      processed: ''
+      offset: '00005841'
+    - name: _dbgCmdParse@0
+      processed: ''
+      offset: '00005908'
+    - name: _dbgrDumpSemaphore
+      processed: ''
+      offset: 00005AD8
+    - name: _dbgrDumpMutex
+      processed: ''
+      offset: 00005C04
+    - name: _dbgrGetTimeStampCounter
+      processed: ''
+      offset: 00005C85
+    - name: _dbgrDumpPmtx
+      processed: ''
+      offset: 00005D27
+    - name: _dbgrDumpPModeStack
+      processed: ''
+      offset: 00005E1D
+    - name: _dbgrDumpThreadState
+      processed: ''
+      offset: 00005F26
+    - name: _dbgrDumpThreadSummary
+      processed: ''
+      offset: '00006167'
+    - name: _dbgrDumpAllThreads
+      processed: ''
+      offset: '00006240'
+    - name: _dbgrIdToThread
+      processed: ''
+      offset: '00006358'
+    - name: _dbgrDumpThcb
+      processed: ''
+      offset: 000063CC
+    - name: _dbgrHelp
+      processed: ''
+      offset: 000065AE
+    - name: _dbgrCmdParse@0
+      processed: ''
+      offset: '00006628'
+    - name: _dbgPeekCharacter
+      processed: ''
+      offset: 0000675A
+    - name: _dbgPeekNonWhite
+      processed: ''
+      offset: 000067BC
+    - name: _dbgGetCharacter
+      processed: ''
+      offset: 000067CF
+    - name: _dbgAsciiToHex
+      processed: ''
+      offset: '00006831'
+    - name: _dbgGetString
+      processed: ''
+      offset: '00006843'
+    - name: DEBUGCMD_Control
+      processed: ''
+      offset: 000068B4
+    - name: DEBUGCMD_Create_Thread
+      processed: ''
+      offset: '000068E6'
+    - name: DEBUGCMD_Destroy_VM
+      processed: ''
+      offset: 000068EC
+    - name: DEBUGCMD_Destroy_Thread
+      processed: ''
+      offset: 000068FA
+    - name: DEBUGCMD_Debug_Query
+      processed: ''
+      offset: '00006900'
+    - name: DEBUGCMD_End_PM_App
+      processed: ''
+      offset: '00006906'
+    - name: dbgTraceDotCommand
+      processed: ''
+      offset: 0000690C
+    - name: DEBUGCMD_Get_Version
+      processed: ''
+      offset: 0000691A
+    - name: dbgThreadDotCommand
+      processed: ''
+      offset: '00006929'
+    - name: dbgRegDotCommand
+      processed: ''
+      offset: '00006933'
+    - name: _dbgPrintf
+      processed: ''
+      offset: 0000693D
+    - name: _dbgInChar
+      processed: ''
+      offset: 0000695B
+    - name: _dbgIsChar
+      processed: ''
+      offset: '00006962'
+    - name: _dbgOutChar
+      processed: ''
+      offset: '00006969'
+    - name: _dbgCommandLineChar
+      processed: ''
+      offset: '00006978'
+    - name: _dbgVerifyMemory
+      processed: ''
+      offset: '00006985'
+    - name: _dbgGetRegisterESP@0
+      processed: ''
+      offset: 0000699C
+    - name: _dbgGetRegisterSS@0
+      processed: ''
+      offset: 000069B0
+    - name: dbgGetDeviceList
+      processed: ''
+      offset: 000069C6
+    - name: _dbgGetDeviceList@0
+      processed: ''
+      offset: 000069C6
+    - name: _dbgEvaluateExpression@0
+      processed: ''
+      offset: 000069CD
+    - name: DEBUGCMD_PM_Handler
+      processed: ''
+      offset: 000069D9
+    - name: DEBUGCMD_V86_Handler
+      processed: ''
+      offset: 000069DA
+    - name: _dbgPriLogDump
+      processed: ''
+      offset: 000069DE
+    - name: _dbgPriLogDumpLow
+      processed: ''
+      offset: 00006B22
+    - name: _dbgPriLogSet
+      processed: ''
+      offset: 00006B32
+    - name: _dbgPriLogFilterSet
+      processed: ''
+      offset: 00006B6B
+    - name: _dbgSchedLogSet
+      processed: ''
+      offset: 00006BF4
+    - name: _dbgMaxUsedStack
+      processed: ''
+      offset: 00006C3A
+    - name: _dbgDumpProfile
+      processed: ''
+      offset: 00006CB1
+    - name: _dbgProfileCounts
+      processed: ''
+      offset: 00006D1B
+    - name: DOSTRC_Create_Thread
+      processed: ''
+      offset: 00006DE8
+    - name: DOSTRC_Destroy_Thread
+      processed: ''
+      offset: '00006E28'
+    - name: DOSTRC_End_PM_App
+      processed: ''
+      offset: '00006E46'
+    - name: DOSTRC_PI21
+      processed: ''
+      offset: '00006E80'
+    - name: DOSTRC_PI21_CB
+      processed: ''
+      offset: 0000715D
+    - name: DOSTRC_Ring0FileIOHook
+      processed: ''
+      offset: '00007364'
+    - name: DOSTRC_Debug_Query
+      processed: ''
+      offset: '00007444'
+    - name: DOSTRC_Get_Sel_Base
+      processed: ''
+      offset: 0000744B
+    - name: DOSTRC_DOS_Mapper_Info
+      processed: ''
+      offset: 0000748E
+    - name: DOSTRC_Dump_RW_Stats
+      processed: ''
+      offset: '00007903'
+    - name: _LCODE__RegQueryValueEx
+      processed: ''
+      offset: 000079CC
+    - name: _LCODE__RegEnumValue
+      processed: ''
+      offset: 000079D4
+    - name: _LCODE__RegEnumKey
+      processed: ''
+      offset: 000079DC
+    - name: _LCODE__RegCloseKey
+      processed: ''
+      offset: '000079E4'
+    - name: _LCODE__RegOpenKey
+      processed: ''
+      offset: 000079EC
+  - num: '2'
+    name: _RCODE
+    offset: '00002680'
+    symbols:
+    - name: DEBUGCMD_init
+      processed: ''
+      offset: '00000000'
+  - num: '3'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _dbgInit@4
+      processed: ''
+      offset: '00000130'
+    - name: DEBUGCMD_Special_Init
+      processed: ''
+      offset: '00000190'
+    - name: DEBUGCMD_Device_Init
+      processed: ''
+      offset: 000001A4
+    - name: DEBUGCMD_Device_Exit
+      processed: ''
+      offset: '000001E5'
+    - name: dbgInitDotCommand
+      processed: ''
+      offset: 000001F9
+    - name: DEBUGCMD_Init_Complete
+      processed: ''
+      offset: 0000023E
+    - name: DOSTRC_Init_Complete
+      processed: ''
+      offset: '00000244'
+    - name: DOSTRC_Device_Init
+      processed: ''
+      offset: 000002C3
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: '00000900'
+    symbols:
+    - name: _TransferLocal
+      demangled: ''
+      offset: '00000000'
+    - name: _pDynamicDeviceList
+      demangled: ''
+      offset: '00000020'
+    - name: _SearchStaticVXDs
+      demangled: ''
+      offset: '00000206'
+    - name: _SearchDynamicVXDs
+      demangled: ''
+      offset: '00000279'
+    - name: _dbgObjName
+      demangled: ''
+      offset: 000002D3
+    - name: _dbgFindDev
+      demangled: ''
+      offset: 0000033F
+    - name: _dbgHexToString
+      demangled: ''
+      offset: 000003DC
+    - name: _dbgGetVXDName
+      demangled: ''
+      offset: '00000428'
+    - name: _TmpFoo
+      demangled: ''
+      offset: 000004CC
+    - name: _My_pthcbCur
+      demangled: ''
+      offset: '00000680'
+    - name: _My_VM_List_Head
+      demangled: ''
+      offset: '00000684'
+    - name: _My_pmtxCritSec
+      demangled: ''
+      offset: '00000688'
+    - name: _pStaticVXDLocationArray
+      demangled: ''
+      offset: 0000068C
+    - name: _NumberOfStaticVXDs
+      demangled: ''
+      offset: '00000690'
+    - name: _dbtDebug
+      demangled: ''
+      offset: 000027BC
+    - name: DEBUGCMD_DDB
+      demangled: ''
+      offset: '00002818'
+    - name: _lCpuMHz
+      demangled: ''
+      offset: '00002868'
+    - name: _llLastTimeStamp
+      demangled: ''
+      offset: 0000286C
+    - name: _fCpuHasRdtsc
+      demangled: ''
+      offset: '00002874'
+    - name: _flFeatureFlags
+      demangled: ''
+      offset: '00002875'
+    - name: Debug_Name_Off_Table
+      demangled: ''
+      offset: 00003A51
+    - name: LFN_MapTable
+      demangled: ''
+      offset: 00003C4D
+    - name: Index_Action
+      demangled: ''
+      offset: 00003C67
+    - name: _DumpRegQueryValueEx
+      demangled: ''
+      offset: '00004948'
+    - name: _EnumerateOneKey
+      demangled: ''
+      offset: 00004A37
+    - name: _RegQueryCmd
+      demangled: ''
+      offset: 00004AFE
+    - name: _RegCommandHelp
+      demangled: ''
+      offset: 00004BB3
+    - name: _RegCommand@0
+      demangled: ''
+      offset: 00004BEB
+    - name: _dbgCommandParse@0
+      demangled: ''
+      offset: 00004C49
+    - name: _dbgDumpSemaphore
+      demangled: ''
+      offset: 00004C7E
+    - name: _dbgDumpMutex
+      demangled: ''
+      offset: 00004DCE
+    - name: _dbgGetTimeStampCounter
+      demangled: ''
+      offset: 00004E4D
+    - name: _dbgDumpPmtx
+      demangled: ''
+      offset: 00004EEF
+    - name: _dbgDumpPModeStack
+      demangled: ''
+      offset: '00005009'
+    - name: _dbgDumpThreadState
+      demangled: ''
+      offset: '00005117'
+    - name: _dbgGetSyncType
+      demangled: ''
+      offset: 0000534B
+    - name: _dbgDumpThreadSummary
+      demangled: ''
+      offset: '00005388'
+    - name: _dbgDumpAllThreads
+      demangled: ''
+      offset: '00005482'
+    - name: _DBGIDToThread
+      demangled: ''
+      offset: 0000559A
+    - name: _dbgDumpThcb
+      demangled: ''
+      offset: 0000560B
+    - name: _dbgHelp
+      demangled: ''
+      offset: 000057FF
+    - name: _dbgCmdParse@0
+      demangled: ''
+      offset: 000058C6
+    - name: _dbgrDumpSemaphore
+      demangled: ''
+      offset: 00005A91
+    - name: _dbgrDumpMutex
+      demangled: ''
+      offset: 00005BBB
+    - name: _dbgrGetTimeStampCounter
+      demangled: ''
+      offset: 00005C3A
+    - name: _dbgrDumpPmtx
+      demangled: ''
+      offset: 00005CDC
+    - name: _dbgrDumpPModeStack
+      demangled: ''
+      offset: 00005DD0
+    - name: _dbgrDumpThreadState
+      demangled: ''
+      offset: 00005ED9
+    - name: _dbgrDumpThreadSummary
+      demangled: ''
+      offset: 0000610D
+    - name: _dbgrDumpAllThreads
+      demangled: ''
+      offset: '000061E4'
+    - name: _dbgrIdToThread
+      demangled: ''
+      offset: 000062FC
+    - name: _dbgrDumpThcb
+      demangled: ''
+      offset: 0000636D
+    - name: _dbgrHelp
+      demangled: ''
+      offset: 0000654C
+    - name: _dbgrCmdParse@0
+      demangled: ''
+      offset: 000065C6
+    - name: _dbgPeekCharacter
+      demangled: ''
+      offset: 000066F8
+    - name: _dbgPeekNonWhite
+      demangled: ''
+      offset: 0000675A
+    - name: _dbgGetCharacter
+      demangled: ''
+      offset: 0000676D
+    - name: _dbgAsciiToHex
+      demangled: ''
+      offset: 000067CF
+    - name: _dbgGetString
+      demangled: ''
+      offset: '000067E1'
+    - name: DEBUGCMD_Control
+      demangled: ''
+      offset: '00006850'
+    - name: DEBUGCMD_Create_Thread
+      demangled: ''
+      offset: '00006882'
+    - name: DEBUGCMD_Destroy_VM
+      demangled: ''
+      offset: '00006888'
+    - name: DEBUGCMD_Destroy_Thread
+      demangled: ''
+      offset: '00006896'
+    - name: DEBUGCMD_Debug_Query
+      demangled: ''
+      offset: 0000689C
+    - name: DEBUGCMD_End_PM_App
+      demangled: ''
+      offset: 000068A2
+    - name: dbgTraceDotCommand
+      demangled: ''
+      offset: 000068A8
+    - name: DEBUGCMD_Get_Version
+      demangled: ''
+      offset: 000068B0
+    - name: dbgThreadDotCommand
+      demangled: ''
+      offset: 000068B7
+    - name: dbgRegDotCommand
+      demangled: ''
+      offset: 000068C1
+    - name: _dbgPrintf
+      demangled: ''
+      offset: 000068CB
+    - name: _dbgInChar
+      demangled: ''
+      offset: '000068E9'
+    - name: _dbgIsChar
+      demangled: ''
+      offset: 000068F0
+    - name: _dbgOutChar
+      demangled: ''
+      offset: 000068F7
+    - name: _dbgCommandLineChar
+      demangled: ''
+      offset: '00006906'
+    - name: _dbgVerifyMemory
+      demangled: ''
+      offset: '00006913'
+    - name: _dbgGetRegisterESP@0
+      demangled: ''
+      offset: 0000692A
+    - name: _dbgGetRegisterSS@0
+      demangled: ''
+      offset: 0000693E
+    - name: dbgGetDeviceList
+      demangled: ''
+      offset: '00006954'
+    - name: _dbgGetDeviceList@0
+      demangled: ''
+      offset: '00006954'
+    - name: _dbgEvaluateExpression@0
+      demangled: ''
+      offset: 0000695B
+    - name: DEBUGCMD_PM_Handler
+      demangled: ''
+      offset: '00006967'
+    - name: DEBUGCMD_V86_Handler
+      demangled: ''
+      offset: '00006968'
+    - name: _dbgPriLogDump
+      demangled: ''
+      offset: 0000696C
+    - name: _dbgPriLogDumpLow
+      demangled: ''
+      offset: 00006AAD
+    - name: _dbgPriLogSet
+      demangled: ''
+      offset: 00006AB9
+    - name: _dbgPriLogFilterSet
+      demangled: ''
+      offset: 00006AEF
+    - name: _dbgSchedLogSet
+      demangled: ''
+      offset: 00006B75
+    - name: _dbgMaxUsedStack
+      demangled: ''
+      offset: 00006BB6
+    - name: _dbgDumpProfile
+      demangled: ''
+      offset: 00006C29
+    - name: _dbgProfileCounts
+      demangled: ''
+      offset: 00006C93
+    - name: DOSTRC_Create_Thread
+      demangled: ''
+      offset: 00006D60
+    - name: DOSTRC_Destroy_Thread
+      demangled: ''
+      offset: 00006DA0
+    - name: DOSTRC_End_PM_App
+      demangled: ''
+      offset: 00006DBE
+    - name: DOSTRC_PI21
+      demangled: ''
+      offset: 00006DF8
+    - name: DOSTRC_PI21_CB
+      demangled: ''
+      offset: 000070D5
+    - name: DOSTRC_Ring0FileIOHook
+      demangled: ''
+      offset: 000072DC
+    - name: DOSTRC_Debug_Query
+      demangled: ''
+      offset: 000073BC
+    - name: DOSTRC_Get_Sel_Base
+      demangled: ''
+      offset: 000073C3
+    - name: DOSTRC_DOS_Mapper_Info
+      demangled: ''
+      offset: '00007406'
+    - name: DOSTRC_Dump_RW_Stats
+      demangled: ''
+      offset: 0000787B
+    - name: _LCODE__RegQueryValueEx
+      demangled: ''
+      offset: '00007944'
+    - name: _LCODE__RegEnumValue
+      demangled: ''
+      offset: 0000794C
+    - name: _LCODE__RegEnumKey
+      demangled: ''
+      offset: '00007954'
+    - name: _LCODE__RegCloseKey
+      demangled: ''
+      offset: 0000795C
+    - name: _LCODE__RegOpenKey
+      demangled: ''
+      offset: '00007964'
+  - num: '2'
+    name: _RCODE
+    offset: '00000930'
+    symbols:
+    - name: DEBUGCMD_init
+      demangled: ''
+      offset: '00000000'
+  - num: '3'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _dbgInit@4
+      demangled: ''
+      offset: '00000110'
+    - name: DEBUGCMD_Special_Init
+      demangled: ''
+      offset: 0000016C
+    - name: DEBUGCMD_Device_Init
+      demangled: ''
+      offset: '00000180'
+    - name: DEBUGCMD_Device_Exit
+      demangled: ''
+      offset: 000001C1
+    - name: dbgInitDotCommand
+      demangled: ''
+      offset: 000001D5
+    - name: DEBUGCMD_Init_Complete
+      demangled: ''
+      offset: 0000021A
+    - name: DOSTRC_Init_Complete
+      demangled: ''
+      offset: '00000220'
+    - name: DOSTRC_Device_Init
+      demangled: ''
+      offset: 0000029F

@@ -1,0 +1,587 @@
+filename: windows/system/iosubsys/rmm.pdr
+#TODO: bring up more details from symdeb
+binary: RMM
+description: ''
+appearances:
+- version: Windows 98 Debug
+  tree:
+  - rmmaer.asm
+  - rmm.asm
+  - rmmcomp.asm
+  - rmmdbg.asm
+  - rmminit.asm
+  - rmmreq.asm
+  - rmmser.asm
+  - rmmsstor.asm
+  - rmmsubs.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00001670'
+    symbols:
+    - name: RMM_Async_Event
+      processed: ''
+      offset: 0000001C
+    - name: RMM_Boot_Complete
+      processed: ''
+      offset: 0000004F
+    - name: RMM_Unconfigure
+      processed: ''
+      offset: 0000011E
+    - name: RMMTab
+      processed: ''
+      offset: '00000190'
+    - name: apfnRMMTab
+      processed: ''
+      offset: 000001BC
+    - name: RMM_Request
+      processed: ''
+      offset: 000001DC
+    - name: RMM_Process_Err
+      processed: ''
+      offset: '00000752'
+    - name: RMM_call_RM_driver
+      processed: ''
+      offset: 0000077A
+    - name: RMM_call_back_event
+      processed: ''
+      offset: '00000868'
+    - name: RMM_Poll_Indos
+      processed: ''
+      offset: '00000943'
+    - name: RMMSuspendHndlr
+      processed: ''
+      offset: 00000A98
+    - name: RMMNotExecHndlr
+      processed: ''
+      offset: 00000A9E
+    - name: IsSafe
+      processed: ''
+      offset: 00000B8E
+    - name: SetupUnitNum
+      processed: ''
+      offset: 00000C57
+    - name: SetWrite
+      processed: ''
+      offset: 00000C71
+    - name: SetMedCh
+      processed: ''
+      offset: 00000D8B
+    - name: SetBuildBPB
+      processed: ''
+      offset: 00000DA0
+    - name: SetIOCTL
+      processed: ''
+      offset: 00000E8B
+    - name: RMMCompTbl
+      processed: ''
+      offset: 00000EAF
+    - name: CVMCommand
+      processed: ''
+      offset: 00000EDB
+    - name: SetIoctlRead
+      processed: ''
+      offset: 00000F2F
+    - name: SetIoctlRem
+      processed: ''
+      offset: 00000F75
+    - name: SetGenericIoctl
+      processed: ''
+      offset: 00000F9C
+    - name: Find_BDS
+      processed: ''
+      offset: '00001090'
+    - name: GetDPBAddr
+      processed: ''
+      offset: 000010B7
+    - name: SgOfftoLin
+      processed: ''
+      offset: '00001165'
+    - name: FindDPB
+      processed: ''
+      offset: '00001176'
+    - name: RMMInt4bHandler
+      processed: ''
+      offset: '00001194'
+    - name: RMMInt4bIret
+      processed: ''
+      offset: 000011B9
+    - name: SetRMMBusy
+      processed: ''
+      offset: 000011C6
+    - name: ClrRMMBusy
+      processed: ''
+      offset: 000011FD
+    - name: RMMSendNextCommand
+      processed: ''
+      offset: '00001241'
+    - name: RMMIsCompressed
+      processed: ''
+      offset: 000012B8
+    - name: RMMFlushUnit
+      processed: ''
+      offset: 000012C4
+    - name: RMMFreeClusters
+      processed: ''
+      offset: 000012C6
+    - name: RMMFullClusters
+      processed: ''
+      offset: '00001352'
+    - name: RMMRemount
+      processed: ''
+      offset: 000013A2
+    - name: RMMAllocateSpace
+      processed: ''
+      offset: 000013AA
+    - name: TimedStacFLush
+      processed: ''
+      offset: 000013C1
+    - name: FlushStacVol
+      processed: ''
+      offset: 000013EE
+    - name: get_trace_ptr
+      processed: ''
+      offset: 0000146C
+    - name: RMMDotCommand
+      processed: ''
+      offset: '00001491'
+    - name: RMMDumpHelp
+      processed: ''
+      offset: 000014B7
+    - name: RMMTraceDump
+      processed: ''
+      offset: 000014C6
+    - name: RMM_Ilb
+      processed: ''
+      offset: '00001600'
+    - name: RMM_DDB
+      processed: ''
+      offset: 000016F0
+    - name: dbgflag
+      processed: ''
+      offset: '00001740'
+    - name: PollCnt
+      processed: ''
+      offset: '00001741'
+    - name: CDSTab
+      processed: ''
+      offset: 00001F24
+    - name: BDSHead
+      processed: ''
+      offset: 00001FA4
+    - name: DPBHead
+      processed: ''
+      offset: 00001FA8
+    - name: pDOSDATA
+      processed: ''
+      offset: 00001FAC
+    - name: XferBuf
+      processed: ''
+      offset: 00001FB0
+    - name: RMMCurrentCmd
+      processed: ''
+      offset: 00001FB4
+    - name: pGlbPhysDCB
+      processed: ''
+      offset: 00001FB8
+    - name: RMMFlags
+      processed: ''
+      offset: 00001FBC
+    - name: RMMv86Code
+      processed: ''
+      offset: 00001FBE
+    - name: RMMv86SegStart
+      processed: ''
+      offset: 00001FC0
+    - name: DevPacketSeg
+      processed: ''
+      offset: 00001FC2
+    - name: DevPacketPtr
+      processed: ''
+      offset: 00001FC4
+    - name: pRMMDDB
+      processed: ''
+      offset: 00001FC8
+    - name: OrigI4b
+      processed: ''
+      offset: 00001FCC
+    - name: BiosSecBuffer
+      processed: ''
+      offset: 00001FD0
+    - name: ThreadEvSched
+      processed: ''
+      offset: 00001FD4
+    - name: ResEvHndl
+      processed: ''
+      offset: 00001FD8
+    - name: LastDrive
+      processed: ''
+      offset: 00001FDC
+    - name: ForceRMMBusyCnt
+      processed: ''
+      offset: 00001FDD
+    - name: RMMFlpABUnitNum
+      processed: ''
+      offset: 00001FDE
+    - name: Error_Map_Tab
+      processed: ''
+      offset: 000020F8
+    - name: RMD_To_I24
+      processed: ''
+      offset: '00002108'
+  - num: '2'
+    name: _LMGROUP
+    offset: 000016B0
+    symbols:
+    - name: '@MSG_LAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      processed: ''
+      offset: '00000014'
+  - num: '3'
+    name: _IGROUP
+    offset: '00000000'
+    symbols:
+    - name: RMM_Initialize
+      processed: ''
+      offset: '00000000'
+    - name: RMM_init_V86_stack
+      processed: ''
+      offset: 000001D3
+    - name: RMM_Init_Complete
+      processed: ''
+      offset: '00000231'
+    - name: RMM_Inquire
+      processed: ''
+      offset: '00000287'
+    - name: RMM_Configure
+      processed: ''
+      offset: '00000373'
+    - name: RMM_check_removable
+      processed: ''
+      offset: '00000457'
+    - name: GetIOSYSRMD
+      processed: ''
+      offset: '00000522'
+    - name: SegOffToLin
+      processed: ''
+      offset: '00000558'
+    - name: RealOrProt
+      processed: ''
+      offset: '00000572'
+    - name: RMM_Init
+      processed: ''
+      offset: '00000638'
+    - name: RMM_GetProfileBoolean
+      processed: ''
+      offset: '00000685'
+    - name: HookInt4b
+      processed: ''
+      offset: 000006A4
+    - name: RMM_check_compressed
+      processed: ''
+      offset: 000006C4
+    - name: RMMIsStacker
+      processed: ''
+      offset: '00000911'
+    - name: RMMIsSuperStor
+      processed: ''
+      offset: 00000B3C
+    - name: DetectSuperStor
+      processed: ''
+      offset: 00000B7B
+    - name: SuperStorSwap
+      processed: ''
+      offset: 00000BAC
+    - name: SendIOCTL
+      processed: ''
+      offset: 00000BC8
+    - name: Drv_Reg_Pkt
+      processed: ''
+      offset: 00000C54
+    - name: rmmfSTACAll
+      processed: ''
+      offset: '00000E40'
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00001240'
+    symbols:
+    - name: RMM_Async_Event
+      demangled: ''
+      offset: 0000001C
+    - name: RMM_Boot_Complete
+      demangled: ''
+      offset: '00000045'
+    - name: RMM_Unconfigure
+      demangled: ''
+      offset: 000000F6
+    - name: RMMTab
+      demangled: ''
+      offset: '00000154'
+    - name: apfnRMMTab
+      demangled: ''
+      offset: '00000180'
+    - name: RMM_Request
+      demangled: ''
+      offset: 000001A0
+    - name: RMM_Process_Err
+      demangled: ''
+      offset: 0000047D
+    - name: RMM_call_RM_driver
+      demangled: ''
+      offset: '00000495'
+    - name: RMM_call_back_event
+      demangled: ''
+      offset: 0000054E
+    - name: RMM_Poll_Indos
+      demangled: ''
+      offset: 0000058D
+    - name: RMMSuspendHndlr
+      demangled: ''
+      offset: '00000608'
+    - name: RMMNotExecHndlr
+      demangled: ''
+      offset: 0000060E
+    - name: IsSafe
+      demangled: ''
+      offset: '00000698'
+    - name: SetupUnitNum
+      demangled: ''
+      offset: 000006F9
+    - name: SetWrite
+      demangled: ''
+      offset: '00000713'
+    - name: SetMedCh
+      demangled: ''
+      offset: '000007E6'
+    - name: SetBuildBPB
+      demangled: ''
+      offset: 000007FB
+    - name: SetIOCTL
+      demangled: ''
+      offset: 000008D3
+    - name: RMMCompTbl
+      demangled: ''
+      offset: 000008F7
+    - name: CVMCommand
+      demangled: ''
+      offset: '00000923'
+    - name: SetIoctlRead
+      demangled: ''
+      offset: '00000961'
+    - name: SetIoctlRem
+      demangled: ''
+      offset: 000009A7
+    - name: SetGenericIoctl
+      demangled: ''
+      offset: 000009CE
+    - name: Find_BDS
+      demangled: ''
+      offset: 00000A98
+    - name: GetDPBAddr
+      demangled: ''
+      offset: 00000ABF
+    - name: SgOfftoLin
+      demangled: ''
+      offset: 00000B04
+    - name: FindDPB
+      demangled: ''
+      offset: 00000B15
+    - name: RMMInt4bHandler
+      demangled: ''
+      offset: 00000B34
+    - name: RMMInt4bIret
+      demangled: ''
+      offset: 00000B59
+    - name: SetRMMBusy
+      demangled: ''
+      offset: 00000B66
+    - name: ClrRMMBusy
+      demangled: ''
+      offset: 00000B8A
+    - name: RMMSendNextCommand
+      demangled: ''
+      offset: 00000BB8
+    - name: RMMIsCompressed
+      demangled: ''
+      offset: 00000BF0
+    - name: RMMFlushUnit
+      demangled: ''
+      offset: 00000BFC
+    - name: RMMFreeClusters
+      demangled: ''
+      offset: 00000BFE
+    - name: RMMFullClusters
+      demangled: ''
+      offset: 00000C8A
+    - name: RMMRemount
+      demangled: ''
+      offset: 00000CCE
+    - name: RMMAllocateSpace
+      demangled: ''
+      offset: 00000CD6
+    - name: TimedStacFLush
+      demangled: ''
+      offset: 00000CE2
+    - name: FlushStacVol
+      demangled: ''
+      offset: 00000D0F
+    - name: RMM_Ilb
+      demangled: ''
+      offset: 00000D58
+    - name: RMM_DDB
+      demangled: ''
+      offset: 00000DC0
+    - name: CDSTab
+      demangled: ''
+      offset: '00000E10'
+    - name: BDSHead
+      demangled: ''
+      offset: '00000E90'
+    - name: DPBHead
+      demangled: ''
+      offset: '00000E94'
+    - name: pDOSDATA
+      demangled: ''
+      offset: '00000E98'
+    - name: XferBuf
+      demangled: ''
+      offset: 00000E9C
+    - name: RMMCurrentCmd
+      demangled: ''
+      offset: 00000EA0
+    - name: pGlbPhysDCB
+      demangled: ''
+      offset: 00000EA4
+    - name: RMMFlags
+      demangled: ''
+      offset: 00000EA8
+    - name: RMMv86Code
+      demangled: ''
+      offset: 00000EAA
+    - name: RMMv86SegStart
+      demangled: ''
+      offset: 00000EAC
+    - name: DevPacketSeg
+      demangled: ''
+      offset: 00000EAE
+    - name: DevPacketPtr
+      demangled: ''
+      offset: 00000EB0
+    - name: pRMMDDB
+      demangled: ''
+      offset: 00000EB4
+    - name: OrigI4b
+      demangled: ''
+      offset: 00000EB8
+    - name: BiosSecBuffer
+      demangled: ''
+      offset: 00000EBC
+    - name: ThreadEvSched
+      demangled: ''
+      offset: 00000EC0
+    - name: ResEvHndl
+      demangled: ''
+      offset: 00000EC4
+    - name: LastDrive
+      demangled: ''
+      offset: 00000EC8
+    - name: ForceRMMBusyCnt
+      demangled: ''
+      offset: 00000EC9
+    - name: RMMFlpABUnitNum
+      demangled: ''
+      offset: 00000ECA
+    - name: Error_Map_Tab
+      demangled: ''
+      offset: 00000ECC
+    - name: RMD_To_I24
+      demangled: ''
+      offset: 00000EDC
+  - num: '2'
+    name: _LMGROUP
+    offset: '00001280'
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000014'
+  - num: '3'
+    name: _IGROUP
+    offset: '00000000'
+    symbols:
+    - name: RMM_Initialize
+      demangled: ''
+      offset: '00000000'
+    - name: RMM_init_V86_stack
+      demangled: ''
+      offset: 000001B3
+    - name: RMM_Init_Complete
+      demangled: ''
+      offset: 000001F5
+    - name: RMM_Inquire
+      demangled: ''
+      offset: '00000231'
+    - name: RMM_Configure
+      demangled: ''
+      offset: '00000307'
+    - name: RMM_check_removable
+      demangled: ''
+      offset: 000003D2
+    - name: GetIOSYSRMD
+      demangled: ''
+      offset: '00000494'
+    - name: SegOffToLin
+      demangled: ''
+      offset: 000004BF
+    - name: RealOrProt
+      demangled: ''
+      offset: 000004D9
+    - name: RMM_Init
+      demangled: ''
+      offset: 0000059C
+    - name: RMM_GetProfileBoolean
+      demangled: ''
+      offset: '000005E9'
+    - name: HookInt4b
+      demangled: ''
+      offset: '00000608'
+    - name: RMM_check_compressed
+      demangled: ''
+      offset: '00000628'
+    - name: RMMIsStacker
+      demangled: ''
+      offset: 000007CC
+    - name: RMMIsSuperStor
+      demangled: ''
+      offset: 000009D8
+    - name: DetectSuperStor
+      demangled: ''
+      offset: 00000A04
+    - name: SuperStorSwap
+      demangled: ''
+      offset: 00000A35
+    - name: SendIOCTL
+      demangled: ''
+      offset: 00000A51
+    - name: Drv_Reg_Pkt
+      demangled: ''
+      offset: 00000ADC
+    - name: rmmfSTACAll
+      demangled: ''
+      offset: 00000BA4
+  tree:
+  - rmmaer.asm
+  - rmm.asm
+  - rmmcomp.asm
+  - rmminit.asm
+  - rmmreq.asm
+  - rmmser.asm
+  - rmmsstor.asm
+  - rmmsubs.asm

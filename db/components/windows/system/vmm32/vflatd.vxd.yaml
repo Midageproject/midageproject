@@ -1,0 +1,196 @@
+filename: windows/system/vmm32/vflatd.vxd
+#TODO: bring up more details from symdeb
+binary: VFLATD
+description: ''
+appearances:
+- version: Windows 98 Debug
+  tree:
+  - vflatd.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '000004E0'
+    symbols:
+    - name: _VFLATD_LOG
+      processed: ''
+      offset: '00000000'
+    - name: VFLATD_Control
+      processed: ''
+      offset: '00000057'
+    - name: VFLATD_Reset
+      processed: ''
+      offset: '00000062'
+    - name: VFLATD_Unmap_Flat_Selector
+      processed: ''
+      offset: 000000F8
+    - name: VFLATD_Unmap_and_Hook
+      processed: ''
+      offset: '00000106'
+    - name: VFLATD_Enable_Local_Trapping_Hook
+      processed: ''
+      offset: '00000155'
+    - name: VFLATD_Inv_PF_Hook
+      processed: ''
+      offset: '00000172'
+    - name: VFLATD_Direct_PageFault_Handler
+      processed: ''
+      offset: 000001EC
+    - name: VFLATD_Linear_Fault_Handler
+      processed: ''
+      offset: 000002D4
+    - name: VFLATD_Linear_Fault_Handler_4k
+      processed: ''
+      offset: 0000037C
+    - name: _VFLATD_Get_Version
+      processed: ''
+      offset: 000003AC
+    - name: _VFLATD_Unmap_Flat_Selector
+      processed: ''
+      offset: 000003B0
+    - name: VFLATD_DDB
+      processed: ''
+      offset: 000003B4
+  - num: '3'
+    name: _PTEXT
+    offset: 00000CA0
+    symbols:
+    - name: VFLATD_Get_Version
+      processed: ''
+      offset: '00000006'
+    - name: VFLATD_PM_API_Handler
+      processed: ''
+      offset: '00000036'
+    - name: VFLATD_PM_API_Query
+      processed: ''
+      offset: 0000005A
+    - name: VFLATD_PM_API_Query_Bank_Info
+      processed: ''
+      offset: 0000008F
+    - name: VFLATD_PM_API_Get_Video_Base
+      processed: ''
+      offset: 000000D9
+    - name: VFLATD_PM_API_Create_Physical_Frame_Buffer
+      processed: ''
+      offset: 0000010C
+    - name: VFLATD_PM_API_Create_Virtual_Frame_Buffer
+      processed: ''
+      offset: '00000179'
+    - name: Create_Virtual_Frame_Buffer
+      processed: ''
+      offset: 000001AE
+    - name: VFLATD_Commit
+      processed: ''
+      offset: 000004C9
+    - name: GetPTE
+      processed: ''
+      offset: 0000052F
+    - name: VFLATD_PM_API_Reset
+      processed: ''
+      offset: '00000579'
+    - name: VFLATD_PM_API_Begin_Linear_Access
+      processed: ''
+      offset: 0000058B
+    - name: VFLATD_PM_API_End_Linear_Access
+      processed: ''
+      offset: '00000664'
+    - name: VFLATD_AllocGDT_Hook
+      processed: ''
+      offset: 000006F7
+  - num: '4'
+    name: _DBOGROUP
+    offset: '00000000'
+    symbols:
+    - name: VFLATD_Debug_Query
+      processed: ''
+      offset: '00000000'
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00000440'
+    symbols:
+    - name: VFLATD_Control
+      demangled: ''
+      offset: '00000000'
+    - name: VFLATD_Reset
+      demangled: ''
+      offset: '00000002'
+    - name: VFLATD_Unmap_Flat_Selector
+      demangled: ''
+      offset: 0000007C
+    - name: VFLATD_Unmap_and_Hook
+      demangled: ''
+      offset: '00000082'
+    - name: VFLATD_Enable_Local_Trapping_Hook
+      demangled: ''
+      offset: 000000BF
+    - name: VFLATD_Inv_PF_Hook
+      demangled: ''
+      offset: 000000DC
+    - name: VFLATD_Direct_PageFault_Handler
+      demangled: ''
+      offset: '00000144'
+    - name: VFLATD_Linear_Fault_Handler
+      demangled: ''
+      offset: 000001F8
+    - name: VFLATD_Linear_Fault_Handler_4k
+      demangled: ''
+      offset: 000002A0
+    - name: _VFLATD_Get_Version
+      demangled: ''
+      offset: 000002D0
+    - name: _VFLATD_Unmap_Flat_Selector
+      demangled: ''
+      offset: 000002D4
+    - name: VFLATD_DDB
+      demangled: ''
+      offset: 000002D8
+  - num: '2'
+    name: _IGROUP
+    offset: '00000000'
+    symbols:
+    - name: VFLATD_Get_Version
+      demangled: ''
+      offset: '00000000'
+    - name: VFLATD_PM_API_Handler
+      demangled: ''
+      offset: '00000028'
+    - name: VFLATD_PM_API_Query
+      demangled: ''
+      offset: '00000044'
+    - name: VFLATD_PM_API_Query_Bank_Info
+      demangled: ''
+      offset: '00000071'
+    - name: VFLATD_PM_API_Get_Video_Base
+      demangled: ''
+      offset: 000000B0
+    - name: VFLATD_PM_API_Create_Physical_Frame_Buffer
+      demangled: ''
+      offset: 000000DB
+    - name: VFLATD_PM_API_Create_Virtual_Frame_Buffer
+      demangled: ''
+      offset: '00000140'
+    - name: Create_Virtual_Frame_Buffer
+      demangled: ''
+      offset: 0000016D
+    - name: VFLATD_Commit
+      demangled: ''
+      offset: 0000041F
+    - name: GetPTE
+      demangled: ''
+      offset: 0000047D
+    - name: VFLATD_PM_API_Reset
+      demangled: ''
+      offset: 000004BF
+    - name: VFLATD_PM_API_Begin_Linear_Access
+      demangled: ''
+      offset: 000004C9
+    - name: VFLATD_PM_API_End_Linear_Access
+      demangled: ''
+      offset: '00000588'
+    - name: VFLATD_AllocGDT_Hook
+      demangled: ''
+      offset: '00000601'
+  tree:
+  - vflatd.asm

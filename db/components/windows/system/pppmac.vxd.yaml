@@ -1,0 +1,3874 @@
+filename: windows/system/pppmac.vxd
+#TODO: bring up more details from symdeb
+binary: PPPMAC
+description: ''
+appearances:
+- version: Windows 98 Debug
+  tree:
+  - 2../../../../../net/vxd/ndis31/mac/common/efilter.c
+  - 3../../../../../net/vxd/ndis31/mac/common/ndisos.asm
+  - 4../../../../../net/vxd/ndis31/mac/common/ndisdbg.asm
+  - 4../../../../../net/vxd/ndis31/mac/common/ndishlp.asm
+  - 4../../../../../net/vxd/ndis31/mac/common/ndismac.asm
+  - ahdlc.c
+  - ansihelp.c
+  - asyncmac.c
+  - asyutil.c
+  - "\t../cbcp.c"
+  - ccp.c
+  - "\t../chap.c"
+  - cip.c
+  - "\t../cipx.c"
+  - '#../../../../../dev/ddk/inc/vmmreg.h'
+  - driver.asm
+  - fcs.c
+  - fsa.c
+  - fsasvc.c
+  - "\t../hdlc.c"
+  - ../inc/pppsvc.inc
+  - ioctl.c
+  - ip.c
+  - "\t../ipcp.c"
+  - ipsvc.asm
+  - ipxcp.c
+  - ipxctrl.asm
+  - lcp.c
+  - lockit.asm
+  - logger.asm
+  - loopback.c
+  - memory.c
+  - miniport.c
+  - "\t../mppc.c"
+  - mppcif.c
+  - "\t../mppe.c"
+  - msg.asm
+  - multilnk.c
+  - nbfcp.c
+  - nbsvc.asm
+  - netbios.c
+  - nwc.c
+  - nwcsvc.c
+  - packet.c
+  - pap.c
+  - perf.asm
+  - ras.c
+  - receive.c
+  - reset.c
+  - "\t../send.c"
+  - "\t../slip.c"
+  - stacif.c
+  - transfer.c
+  - vcomm.c
+  - wanif.h
+  segments:
+  - num: '1'
+    name: .bss
+    offset: 000024B0
+    symbols:
+    - name: _ShutdownEventDword
+      processed: ''
+      offset: '00000000'
+    - name: _ctest
+      processed: ''
+      offset: '00000004'
+    - name: _cframe
+      processed: ''
+      offset: '00000020'
+    - name: _Scoreboard
+      processed: ''
+      offset: '00000040'
+    - name: _GlobalAdapterHead
+      processed: ''
+      offset: '00000298'
+    - name: _GlobalLock
+      processed: ''
+      offset: 000002A0
+    - name: _AsyncMacHandle
+      processed: ''
+      offset: 000002A4
+    - name: _AsyncNdisWrapperHandle
+      processed: ''
+      offset: 000002A8
+    - name: _AsyncDriverObject
+      processed: ''
+      offset: 000002AC
+    - name: ___strlen@4
+      processed: ''
+      offset: 000002C0
+    - name: ___strcmp@8
+      processed: ''
+      offset: 000002F7
+    - name: ___strncmp@12
+      processed: ''
+      offset: 000003A5
+    - name: ___strnicmp@12
+      processed: ''
+      offset: '00000475'
+    - name: ___strcmpi@8
+      processed: ''
+      offset: 0000068F
+    - name: ___strncpy@12
+      processed: ''
+      offset: '00000886'
+    - name: ___strcpy@8
+      processed: ''
+      offset: 000008F5
+    - name: ___strcat@8
+      processed: ''
+      offset: '00000952'
+    - name: ___strstr@8
+      processed: ''
+      offset: 000009C5
+    - name: ___memchr@12
+      processed: ''
+      offset: 000009D5
+    - name: ___strchr@8
+      processed: ''
+      offset: 00000A34
+    - name: ___strrchr@8
+      processed: ''
+      offset: 00000A9F
+    - name: ___strlwr@4
+      processed: ''
+      offset: 00000AB9
+    - name: ___atoi@4
+      processed: ''
+      offset: 00000B39
+    - name: ___itoa@12
+      processed: ''
+      offset: 00000B84
+    - name: _rc4_key@12
+      processed: ''
+      offset: 00000C40
+    - name: _rc4@12
+      processed: ''
+      offset: 00000CD0
+    - name: _LZS_SizeOfCompressionHistory@0
+      processed: ''
+      offset: 00000D90
+    - name: _LZS_InitCompressionHistory@4
+      processed: ''
+      offset: 00000DA0
+    - name: _LZS_Compress@28
+      processed: ''
+      offset: 00000DE0
+    - name: _Compress_Lzs_drEngine@28
+      processed: ''
+      offset: '00001440'
+    - name: _LZS_InitDecompressionHistory@4
+      processed: ''
+      offset: 00001C10
+    - name: _LZS_SizeOfDecompressionHistory@0
+      processed: ''
+      offset: 00001C40
+    - name: _Expand_Lzs_drEngine@20
+      processed: ''
+      offset: 00001C50
+    - name: _EocdToken@12
+      processed: ''
+      offset: '00002180'
+    - name: _LZS_Decompress@24
+      processed: ''
+      offset: '00002200'
+    - name: _Expand_Null_Engine@20
+      processed: ''
+      offset: 00002AB0
+    - name: _mem_copy_r@12
+      processed: ''
+      offset: 00002B30
+    - name: _copy_prev_string_r@12
+      processed: ''
+      offset: 00002C00
+    - name: _init_hash_tbl_r@12
+      processed: ''
+      offset: 00002D40
+    - name: BeginLockable_Debug_Flags
+      processed: ''
+      offset: 00002DF8
+    - name: _PPP_Get_Version
+      processed: ''
+      offset: '00002E34'
+    - name: __FSARegisterCP
+      processed: ''
+      offset: '00002E38'
+    - name: __FSAAllocFrame
+      processed: ''
+      offset: 00002E3C
+    - name: __FSADeallocFrame
+      processed: ''
+      offset: '00002E40'
+    - name: __FSAWriteFrame
+      processed: ''
+      offset: '00002E44'
+    - name: __FSAWanUp
+      processed: ''
+      offset: '00002E48'
+    - name: __FSAWanDown
+      processed: ''
+      offset: 00002E4C
+    - name: __FSAPerformActions
+      processed: ''
+      offset: '00002E50'
+    - name: __FSATransitState
+      processed: ''
+      offset: '00002E54'
+    - name: __OverlappedComplete
+      processed: ''
+      offset: '00002E58'
+    - name: __SetProtocolFilter
+      processed: ''
+      offset: 00002E5C
+    - name: __MiniportReceiveIndication
+      processed: ''
+      offset: '00002E60'
+    - name: __MiniportSendCompletionHandler
+      processed: ''
+      offset: '00002E64'
+    - name: PPPMAC_DDB
+      processed: ''
+      offset: '00002E68'
+    - name: _AssertPagesLocked@0
+      processed: ''
+      offset: 00002EF0
+    - name: _AsyncAllocateMemory@16
+      processed: ''
+      offset: 00002F00
+    - name: _AsyncFreeMemory@12
+      processed: ''
+      offset: 00002F7B
+    - name: _AsyncAllocateFrames@8
+      processed: ''
+      offset: 00002FE4
+    - name: _AsyncDeallocatePool@4
+      processed: ''
+      offset: 0000320A
+    - name: _AsyncGetFrameFromPool@12
+      processed: ''
+      offset: 000032BC
+    - name: _AsyncDeallocFrame@4
+      processed: ''
+      offset: 0000350F
+    - name: _DebugAdapterFrameInfo@4
+      processed: ''
+      offset: 0000365E
+    - name: _ValidateFrame@8
+      processed: ''
+      offset: 000036EE
+    - name: _CheckFrameSupply@8
+      processed: ''
+      offset: '00003762'
+    - name: C_Device_Init
+      processed: ''
+      offset: 00003BC8
+    - name: C_Device_Deinit
+      processed: ''
+      offset: 00003BF9
+    - name: C_Device_Sys_VM_Terminate
+      processed: ''
+      offset: 00003C00
+    - name: PPPMAC_Control
+      processed: ''
+      offset: 00003C07
+    - name: _AsyncScheduleGlobalEvent
+      processed: ''
+      offset: 00003CA4
+    - name: _AsyncCancelVMMGlobalEvent
+      processed: ''
+      offset: 00003CB0
+    - name: _VMM_RegOpenKey
+      processed: ''
+      offset: 00003CC4
+    - name: _VMM_RegCloseKey
+      processed: ''
+      offset: 00003CDE
+    - name: _VMM_RegEnumValue
+      processed: ''
+      offset: 00003CF2
+    - name: _PPPGetLastUpdatedSystemTime
+      processed: ''
+      offset: 00003D1B
+    - name: _AsyncClearDDBFlags
+      processed: ''
+      offset: 00003D27
+    - name: _PPPYieldToVMM
+      processed: ''
+      offset: 00003D47
+    - name: _AsyncPostMessage
+      processed: ''
+      offset: 00003D7F
+    - name: _DhcpSetInfo
+      processed: ''
+      offset: 00003DBE
+    - name: _sprintf
+      processed: ''
+      offset: 00003DF0
+    - name: _VMM_In_Debug_Chr
+      processed: ''
+      offset: 00003DF7
+    - name: _DIOCCompletionRoutine
+      processed: ''
+      offset: '00003E09'
+    - name: PPP_Get_Version
+      processed: ''
+      offset: '00003E28'
+    - name: _ScheduleVMEvent
+      processed: ''
+      offset: '00003E38'
+    - name: _PPPGetMessagePtr
+      processed: ''
+      offset: '00003E64'
+    - name: _NdisMoveMemory@12
+      processed: ''
+      offset: '00003E78'
+    - name: _MoveOverlappedMemory@12
+      processed: ''
+      offset: '00003E98'
+    - name: _NdisRawWritePortBufferUchar@12
+      processed: ''
+      offset: 00003ED4
+    - name: _NdisRawWritePortBufferUshort@12
+      processed: ''
+      offset: 00003EE8
+    - name: _NdisRawWritePortBufferUlong@12
+      processed: ''
+      offset: 00003EFD
+    - name: _NdisRawReadPortBufferUchar@12
+      processed: ''
+      offset: 00003F11
+    - name: _NdisRawReadPortBufferUshort@12
+      processed: ''
+      offset: 00003F25
+    - name: _NdisRawReadPortBufferUlong@12
+      processed: ''
+      offset: 00003F3A
+    - name: _NdisInitializeWrapper@16
+      processed: ''
+      offset: 00003F4E
+    - name: _NdisTerminateWrapper@8
+      processed: ''
+      offset: 00003F54
+    - name: _NdisRegisterMac@24
+      processed: ''
+      offset: 00003F5A
+    - name: _NdisDeregisterMac@8
+      processed: ''
+      offset: 00003F60
+    - name: _NdisRegisterAdapter@24
+      processed: ''
+      offset: 00003F66
+    - name: _NdisDeregisterAdapter@4
+      processed: ''
+      offset: 00003F6C
+    - name: _NdisCompleteOpenAdapter@12
+      processed: ''
+      offset: 00003F72
+    - name: _NdisCompleteCloseAdapter@8
+      processed: ''
+      offset: 00003F78
+    - name: _NdisCompleteSend@12
+      processed: ''
+      offset: 00003F7E
+    - name: _NdisCompleteTransferData@16
+      processed: ''
+      offset: 00003F84
+    - name: _NdisCompleteReset@8
+      processed: ''
+      offset: 00003F8A
+    - name: _NdisCompleteRequest@12
+      processed: ''
+      offset: 00003F90
+    - name: _NdisIndicateReceive@32
+      processed: ''
+      offset: 00003F96
+    - name: _NdisIndicateReceiveComplete@4
+      processed: ''
+      offset: 00003F9C
+    - name: _NdisIndicateStatus@16
+      processed: ''
+      offset: 00003FA2
+    - name: _NdisIndicateStatusComplete@4
+      processed: ''
+      offset: 00003FA8
+    - name: _NdisCompleteQueryStatistics@12
+      processed: ''
+      offset: 00003FAE
+    - name: _NdisReadMcaPosInformation@16
+      processed: ''
+      offset: 00003FB4
+    - name: _NdisReadEisaSlotInformation@16
+      processed: ''
+      offset: 00003FBA
+    - name: _NdisReadNetworkAddress@16
+      processed: ''
+      offset: 00003FC0
+    - name: _NdisAllocateSharedMemory@20
+      processed: ''
+      offset: 00003FC6
+    - name: _NdisFreeSharedMemory@20
+      processed: ''
+      offset: 00003FCC
+    - name: _NdisReleaseAdapterResources@4
+      processed: ''
+      offset: 00003FD2
+    - name: _WrapperDelayBinding@4
+      processed: ''
+      offset: 00003FD8
+    - name: _WrapperResumeBinding@4
+      processed: ''
+      offset: 00003FDE
+    - name: _WrapperRemoveChildren@4
+      processed: ''
+      offset: 00003FE4
+    - name: _NdisImmediateReadPciSlotInformation@20
+      processed: ''
+      offset: 00003FEA
+    - name: _NdisImmediateWritePciSlotInformation@20
+      processed: ''
+      offset: 00003FF0
+    - name: _NdisReadPciSlotInformation@20
+      processed: ''
+      offset: 00003FF6
+    - name: _NdisWritePciSlotInformation@20
+      processed: ''
+      offset: 00003FFC
+    - name: _NdisPciAssignResources@20
+      processed: ''
+      offset: '00004002'
+    - name: _WrapperQueryAdapterResources
+      processed: ''
+      offset: '00004008'
+    - name: _DbgPrint
+      processed: ''
+      offset: '00004010'
+    - name: _NdisGetVersion@0
+      processed: ''
+      offset: '00004030'
+    - name: _NdisSetTimer@8
+      processed: ''
+      offset: '00004036'
+    - name: _NdisCancelTimer@8
+      processed: ''
+      offset: 0000403C
+    - name: _NdisInitializeInterrupt@40
+      processed: ''
+      offset: '00004042'
+    - name: _NdisRemoveInterrupt@4
+      processed: ''
+      offset: '00004048'
+    - name: _NdisSynchronizeWithInterrupt@12
+      processed: ''
+      offset: 0000404E
+    - name: _NdisStallExecution@4
+      processed: ''
+      offset: '00004054'
+    - name: _NdisAllocateMemory@16
+      processed: ''
+      offset: 0000405A
+    - name: _NdisFreeMemory@12
+      processed: ''
+      offset: '00004060'
+    - name: _NdisAllocatePacketPool@16
+      processed: ''
+      offset: '00004066'
+    - name: _NdisFreePacketPool@4
+      processed: ''
+      offset: 0000406C
+    - name: _NdisAllocatePacket@12
+      processed: ''
+      offset: '00004072'
+    - name: _NdisReinitializePacket@4
+      processed: ''
+      offset: '00004078'
+    - name: _NdisFreePacket@4
+      processed: ''
+      offset: 0000407E
+    - name: _NdisQueryPacket@20
+      processed: ''
+      offset: '00004084'
+    - name: _NdisAllocateBufferPool@12
+      processed: ''
+      offset: 0000408A
+    - name: _NdisFreeBufferPool@4
+      processed: ''
+      offset: '00004090'
+    - name: _NdisAllocateBuffer@20
+      processed: ''
+      offset: '00004096'
+    - name: _NdisCopyBuffer@24
+      processed: ''
+      offset: 0000409C
+    - name: _NdisFreeBuffer@4
+      processed: ''
+      offset: 000040A2
+    - name: _NdisQueryBuffer@12
+      processed: ''
+      offset: 000040A8
+    - name: _NdisGetBufferPhysicalAddress@12
+      processed: ''
+      offset: 000040AE
+    - name: _NdisChainBufferAtFront@8
+      processed: ''
+      offset: 000040B4
+    - name: _NdisChainBufferAtBack@8
+      processed: ''
+      offset: 000040BA
+    - name: _NdisUnchainBufferAtFront@8
+      processed: ''
+      offset: 000040C0
+    - name: _NdisUnchainBufferAtBack@8
+      processed: ''
+      offset: 000040C6
+    - name: _NdisGetNextBuffer@8
+      processed: ''
+      offset: 000040CC
+    - name: _NdisCopyFromPacketToPacket@24
+      processed: ''
+      offset: 000040D2
+    - name: _NdisOpenConfiguration@12
+      processed: ''
+      offset: 000040D8
+    - name: _NdisReadConfiguration@20
+      processed: ''
+      offset: 000040DE
+    - name: _NdisCloseConfiguration@4
+      processed: ''
+      offset: '000040E4'
+    - name: _NdisEqualString@12
+      processed: ''
+      offset: 000040EA
+    - name: _NdisOpenFile@20
+      processed: ''
+      offset: 000040F0
+    - name: _NdisMapFile@12
+      processed: ''
+      offset: 000040F6
+    - name: _NdisUnmapFile@4
+      processed: ''
+      offset: 000040FC
+    - name: _NdisCloseFile@4
+      processed: ''
+      offset: '00004102'
+    - name: _NdisAllocateDmaChannel@20
+      processed: ''
+      offset: '00004108'
+    - name: _NdisSetupDmaTransfer@24
+      processed: ''
+      offset: 0000410E
+    - name: _NdisCompleteDmaTransfer@24
+      processed: ''
+      offset: '00004114'
+    - name: _NdisReadDmaCounter@4
+      processed: ''
+      offset: 0000411A
+    - name: _NdisFreeDmaChannel@4
+      processed: ''
+      offset: '00004120'
+    - name: _NdisMapIoSpace@20
+      processed: ''
+      offset: '00004126'
+    - name: _NdisWriteErrorLogEntry
+      processed: ''
+      offset: 0000412C
+    - name: _NdisRegAdaptShutdown@12
+      processed: ''
+      offset: '00004132'
+    - name: _NdisDeregAdaptShutdown@4
+      processed: ''
+      offset: '00004138'
+    - name: _EthCreateFilter@28
+      processed: ''
+      offset: '00004140'
+    - name: _EthDeleteFilter@4
+      processed: ''
+      offset: 0000427E
+    - name: _EthNoteFilterOpenAdapter@16
+      processed: ''
+      offset: 000042EE
+    - name: _EthDeleteFilterOpenAdapter@12
+      processed: ''
+      offset: 000043F9
+    - name: _EthChangeFilterAddresses@24
+      processed: ''
+      offset: '00004551'
+    - name: _EthFilterAdjust@20
+      processed: ''
+      offset: '00004982'
+    - name: _EthNumberOfOpenFilterAddresses@8
+      processed: ''
+      offset: 00004A41
+    - name: _EthQueryOpenFilterAddresses@24
+      processed: ''
+      offset: 00004AAC
+    - name: _EthQueryGlobalFilterAddresses@20
+      processed: ''
+      offset: 00004B6D
+    - name: _EthFilterIndicateReceive@32
+      processed: ''
+      offset: 00004BC4
+    - name: _EthFilterDprIndicateReceive@32
+      processed: ''
+      offset: 00004C2C
+    - name: _EthFilterIndicateReceiveComplete@4
+      processed: ''
+      offset: 00004F2A
+    - name: _EthFilterDprIndicateReceiveComplete@4
+      processed: ''
+      offset: 00004F76
+    - name: _EthShouldAddressLoopBack@8
+      processed: ''
+      offset: 000051D6
+  - num: '2'
+    name: _PMSG$1
+    offset: 000024F0
+    symbols:
+    - name: '@MSG_PAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_PDATA'
+      processed: ''
+      offset: 000001D4
+  - num: '3'
+    name: _PTEXT
+    offset: 00002EE0
+    symbols:
+    - name: _IncPageLockCount@0
+      processed: ''
+      offset: '00000005'
+    - name: _DecPageLockCount@0
+      processed: ''
+      offset: 0000008A
+    - name: LockUnlockPageable
+      processed: ''
+      offset: '00000107'
+    - name: PPPMAC_PM_API
+      processed: ''
+      offset: '00000148'
+    - name: PPPMAC_DeviceIOControl
+      processed: ''
+      offset: 000001DE
+    - name: _AssertInts
+      processed: ''
+      offset: '00000223'
+    - name: PPPMAC_V86_API
+      processed: ''
+      offset: '00000240'
+    - name: _VxDWinPrintf
+      processed: ''
+      offset: 0000025C
+    - name: _IPXLoaded
+      processed: ''
+      offset: '00000284'
+    - name: _IPXControlRouter
+      processed: ''
+      offset: 000002A1
+    - name: _IPXGetNetId
+      processed: ''
+      offset: 000002CA
+    - name: _IPXSetNetId
+      processed: ''
+      offset: 000002F8
+    - name: _CheckVTDI
+      processed: ''
+      offset: '00000318'
+    - name: _IPHook
+      processed: ''
+      offset: 0000035C
+    - name: _IPSetAddress
+      processed: ''
+      offset: 000003A5
+    - name: _NetBiosLoaded
+      processed: ''
+      offset: 000003CC
+    - name: _NetBiosEnum
+      processed: ''
+      offset: 000003ED
+    - name: _NetBiosSubmit
+      processed: ''
+      offset: 000003FF
+    - name: _NBGWLoad
+      processed: ''
+      offset: 0000041A
+    - name: _NBGWUnload
+      processed: ''
+      offset: '00000477'
+    - name: _NBGWDeviceIOControl
+      processed: ''
+      offset: 0000048E
+    - name: _PPPLoadVxD
+      processed: ''
+      offset: 000004B3
+    - name: _PPPUnloadVxD
+      processed: ''
+      offset: '00000503'
+    - name: _CancelVMEvent
+      processed: ''
+      offset: 0000051C
+    - name: _DoOpenLog
+      processed: ''
+      offset: '00000530'
+    - name: _DoCloseLog
+      processed: ''
+      offset: 000005AC
+    - name: _DoLogPrintf
+      processed: ''
+      offset: '000005E2'
+    - name: _DoFlushLog
+      processed: ''
+      offset: '000005E8'
+    - name: _PerfRegister
+      processed: ''
+      offset: 000005F0
+    - name: _PerfAddStat
+      processed: ''
+      offset: '00000622'
+    - name: _PerfDeregister
+      processed: ''
+      offset: '00000666'
+  - num: '4'
+    name: L0CKABLE_BEGIN
+    offset: '00018470'
+    symbols:
+    - name: BeginLockable
+      processed: ''
+      offset: '00000000'
+    - name: _CBDeviceInit@0
+      processed: ''
+      offset: '00000010'
+    - name: _CBTermPort
+      processed: ''
+      offset: 000000F4
+    - name: _CBThisLayerStarted
+      processed: ''
+      offset: '00000194'
+    - name: _CBGetConfigReqSize
+      processed: ''
+      offset: 000001EF
+    - name: _CBCreateConfigReq
+      processed: ''
+      offset: '00000236'
+    - name: _CBParseRequest
+      processed: ''
+      offset: '00000266'
+    - name: _CBCallback@8
+      processed: ''
+      offset: 0000068C
+    - name: _CBMakeResponse
+      processed: ''
+      offset: 000007AD
+    - name: _CBParseAck
+      processed: ''
+      offset: 00000C46
+    - name: _CBInput
+      processed: ''
+      offset: 00000D03
+    - name: _DriverEntry@8
+      processed: ''
+      offset: 00000EC0
+    - name: _Init_Complete@0
+      processed: ''
+      offset: '000010E2'
+    - name: _AsyncAddAdapter@12
+      processed: ''
+      offset: 000010EC
+    - name: _AsyncRemoveAdapter@4
+      processed: ''
+      offset: 0000278E
+    - name: _AsyncUnload@4
+      processed: ''
+      offset: 000028B2
+    - name: _AsyncDriverExit
+      processed: ''
+      offset: 000029FE
+    - name: _AsyncSystemExit
+      processed: ''
+      offset: 00002A39
+    - name: _AsyncRegisterAdapter@4
+      processed: ''
+      offset: 00002A7E
+    - name: _AsyncOpenAdapter@36
+      processed: ''
+      offset: 00002B7A
+    - name: _AsyncCloseAdapter@4
+      processed: ''
+      offset: 00002F7D
+    - name: _AsyncRequest@8
+      processed: ''
+      offset: 0000326C
+    - name: _AsyncQueryProtocolInformation@32
+      processed: ''
+      offset: '00003363'
+    - name: _AsyncQueryInformation@12
+      processed: ''
+      offset: 0000383C
+    - name: _AsyncSetInformation@12
+      processed: ''
+      offset: '00003900'
+    - name: _AsyncSetPacketFilter@16
+      processed: ''
+      offset: '00003E24'
+    - name: _AsyncFillInGlobalData@8
+      processed: ''
+      offset: 00003F39
+    - name: _AsyncQueryGlobalStatistics@8
+      processed: ''
+      offset: '00004105'
+    - name: _AsyncReset@4
+      processed: ''
+      offset: '00004208'
+    - name: _AsyncSetInitializationBlock@4
+      processed: ''
+      offset: 0000437B
+    - name: _CalculateCRC@8
+      processed: ''
+      offset: '00004591'
+    - name: _AsyncChangeMulticastAddresses@28
+      processed: ''
+      offset: '00004639'
+    - name: _AsyncChangeFilterClasses@20
+      processed: ''
+      offset: 0000466B
+    - name: _AsyncCloseAction@4
+      processed: ''
+      offset: 0000469D
+    - name: _SetupForReset@16
+      processed: ''
+      offset: 000046FB
+    - name: _FinishPendOp@8
+      processed: ''
+      offset: 000047A2
+    - name: _AsyncSaveConfigInfo@8
+      processed: ''
+      offset: '00004860'
+    - name: _AsyncUpdateConfigInfo@8
+      processed: ''
+      offset: 00004BB1
+    - name: _AsyncFindProtocolBinding
+      processed: ''
+      offset: 00004FD2
+    - name: _TerminateConnection
+      processed: ''
+      offset: '00005022'
+    - name: _AsyncClosePort
+      processed: ''
+      offset: '00005071'
+    - name: _InetAddr@4
+      processed: ''
+      offset: 000050FB
+    - name: _scramble@16
+      processed: ''
+      offset: 0000520D
+    - name: _LoadCPList@0
+      processed: ''
+      offset: '00005283'
+    - name: _UnloadCPList@0
+      processed: ''
+      offset: 000054F5
+    - name: _FindAdapterByName@4
+      processed: ''
+      offset: 000055D1
+    - name: _SetAdapterName@8
+      processed: ''
+      offset: 000056EA
+    - name: _LogDumpBuffer@12
+      processed: ''
+      offset: '00005748'
+    - name: _DbgDumpBuffer@12
+      processed: ''
+      offset: 00005CE1
+    - name: _slen@12
+      processed: ''
+      offset: 000061B4
+    - name: _DebugTimerRoutine@16
+      processed: ''
+      offset: '00006246'
+    - name: _DebugAdapterOpenInfo@4
+      processed: ''
+      offset: 000062D9
+    - name: _DebugAdapterInfo@4
+      processed: ''
+      offset: 000063FF
+    - name: _DebugAsyncInfo@4
+      processed: ''
+      offset: '00006471'
+    - name: _DebugQuery
+      processed: ''
+      offset: 00006A2A
+    - name: _AsyncIOCtlRequest
+      processed: ''
+      offset: 00006F40
+    - name: _PPPClosingTimeout@16
+      processed: ''
+      offset: 0000B49C
+    - name: _AsyncCopyFromPacketToBuffer@20
+      processed: ''
+      offset: 0000B4E0
+    - name: _AsyncCopyFromBufferToPacket@20
+      processed: ''
+      offset: 0000B612
+    - name: _AsyncTransferData@24
+      processed: ''
+      offset: 0000B750
+    - name: _AsyncProcessLoopBack@16
+      processed: ''
+      offset: 0000B840
+    - name: _AsyncPutPacketOnLoopBack@12
+      processed: ''
+      offset: 0000BA10
+    - name: _AsyncFakeARPResponse@16
+      processed: ''
+      offset: 0000BAC2
+    - name: _AsyncARPRequest@4
+      processed: ''
+      offset: 0000C19B
+    - name: _ProcessReset@4
+      processed: ''
+      offset: 0000C210
+    - name: _VCommInit@12
+      processed: ''
+      offset: 0000C4E0
+    - name: _VCommShutdown@4
+      processed: ''
+      offset: 0000C562
+    - name: _VCommDeInit@4
+      processed: ''
+      offset: 0000C73D
+    - name: _VcommDataReadyEvent
+      processed: ''
+      offset: 0000C786
+    - name: _VcommDataReady
+      processed: ''
+      offset: 0000C884
+    - name: _SetEventChar@8
+      processed: ''
+      offset: 0000C905
+    - name: _VcommRequestData@4
+      processed: ''
+      offset: 0000C94B
+    - name: _VcommWriteCompletionRoutine
+      processed: ''
+      offset: 0000CA5F
+    - name: _VCommWriteFrame@4
+      processed: ''
+      offset: 0000CA93
+    - name: _VCOMM_ClearCommError@12
+      processed: ''
+      offset: 0000CFD5
+    - name: _VCOMM_PurgeComm@8
+      processed: ''
+      offset: 0000CFFD
+    - name: _VCOMM_EnableSerialTimer@4
+      processed: ''
+      offset: 0000D022
+    - name: _VCOMM_WriteComm@16
+      processed: ''
+      offset: 0000D04E
+    - name: _VCOMM_ReadComm@16
+      processed: ''
+      offset: 0000D079
+    - name: _VCOMM_SetReadCallbacks@16
+      processed: ''
+      offset: 0000D0A4
+    - name: _VCOMM_SetWriteCallbacks@16
+      processed: ''
+      offset: 0000D0CF
+    - name: _CancelSerialRequests@4
+      processed: ''
+      offset: 0000D0FA
+    - name: _VCOMM_GetCommState@8
+      processed: ''
+      offset: 0000D2CA
+    - name: _VCOMM_SetCommState@12
+      processed: ''
+      offset: 0000D2EF
+    - name: _VCOMM_GetEventMask@12
+      processed: ''
+      offset: 0000D317
+    - name: _VCOMM_SetEventMask@12
+      processed: ''
+      offset: 0000D33F
+    - name: _VCOMM_EnableCommNotification@12
+      processed: ''
+      offset: 0000D367
+    - name: _VCOMM_SetEventChar@8
+      processed: ''
+      offset: 0000D38F
+    - name: _MiniportInit@12
+      processed: ''
+      offset: 0000D3F0
+    - name: _MiniportDeInit@4
+      processed: ''
+      offset: 0000D6FD
+    - name: _MiniportChangeHandler
+      processed: ''
+      offset: 0000D88C
+    - name: _MiniportSetLinkStatus@4
+      processed: ''
+      offset: 0000D938
+    - name: _MiniportGetLinkStatus@4
+      processed: ''
+      offset: 0000D9C6
+    - name: _MiniportSendFrame@4
+      processed: ''
+      offset: 0000DA54
+    - name: _MiniportSendCompletionHandler
+      processed: ''
+      offset: 0000DC52
+    - name: _MiniportReceiveIndication
+      processed: ''
+      offset: 0000DD09
+    - name: _AsyncSendPacket@8
+      processed: ''
+      offset: '0000E170'
+    - name: _PacketShouldBeSent@8
+      processed: ''
+      offset: 0000E41D
+    - name: _AsyncPumpPacket@8
+      processed: ''
+      offset: 0000E5D4
+    - name: _AsyncSendFrame@8
+      processed: ''
+      offset: 0000F04B
+    - name: _AsyncPumpFrame@4
+      processed: ''
+      offset: 0000F209
+    - name: _AsyncWriteCompletionRoutine
+      processed: ''
+      offset: 0000F313
+    - name: _AsyncCompleteFinalWrite
+      processed: ''
+      offset: 0000F4E1
+    - name: _AsyncIndicateFragment@4
+      processed: ''
+      offset: 0000F6A9
+    - name: _PPPInput@4
+      processed: ''
+      offset: 0000F6E0
+    - name: _IndicateCP@12
+      processed: ''
+      offset: 0001041D
+    - name: _AsyncHDLCPrimeInput@4
+      processed: ''
+      offset: 000106F0
+    - name: _AsyncHDLCFrame@4
+      processed: ''
+      offset: 0001077B
+    - name: _AsyncHDLCReadFrame@4
+      processed: ''
+      offset: 00010ACE
+    - name: _HDLCPrimeInput@4
+      processed: ''
+      offset: '00011310'
+    - name: _HDLCFrame@4
+      processed: ''
+      offset: '00011351'
+    - name: _HDLCReadFrame@4
+      processed: ''
+      offset: 000113C0
+    - name: _RasCRC@8
+      processed: ''
+      offset: 000116F0
+    - name: _RasPrimeInput@4
+      processed: ''
+      offset: '00011751'
+    - name: _RasFrame@4
+      processed: ''
+      offset: 000117B9
+    - name: _RasReadFrame@4
+      processed: ''
+      offset: 00011AF4
+    - name: _SlipStart@8
+      processed: ''
+      offset: '00012590'
+    - name: _SlipStop@4
+      processed: ''
+      offset: '000127E3'
+    - name: _SlipGetIPAddress@4
+      processed: ''
+      offset: 000128C8
+    - name: _SlipPrimeInput@4
+      processed: ''
+      offset: 00012A4B
+    - name: _SlipFrame@4
+      processed: ''
+      offset: 00012AE6
+    - name: _SlipInput@4
+      processed: ''
+      offset: 00012CA4
+    - name: _SlipReadFrame@4
+      processed: ''
+      offset: 00012E7B
+    - name: _MultilinkHeader@12
+      processed: ''
+      offset: 000135F0
+    - name: _MLFindSendLink@4
+      processed: ''
+      offset: '00013839'
+    - name: _MLFindHoleInReassemblyList@8
+      processed: ''
+      offset: 000138A4
+    - name: _MLFlushToResync@4
+      processed: ''
+      offset: 000139F3
+    - name: _MLFlushOnPacketLoss@4
+      processed: ''
+      offset: 00013AEF
+    - name: _MLTryToAssembleFrame@4
+      processed: ''
+      offset: 00013CD6
+    - name: _MLPInput@4
+      processed: ''
+      offset: '000142E9'
+    - name: _MLDeleteDanglingBundle
+      processed: ''
+      offset: 00014AC7
+    - name: _MLMergeBundle@8
+      processed: ''
+      offset: 00014B28
+    - name: _MLReallocReadFrame@4
+      processed: ''
+      offset: 00014CE3
+    - name: _RemoveLinkFromBundle@4
+      processed: ''
+      offset: 00014D47
+    - name: _pppfcs@12
+      processed: ''
+      offset: 00014F20
+    - name: _FSADeviceDeinit@0
+      processed: ''
+      offset: 00014FA0
+    - name: _FSAPortOpen@4
+      processed: ''
+      offset: '00015010'
+    - name: _FSAPortUp@4
+      processed: ''
+      offset: 00015CC2
+    - name: _FSAPortDown@4
+      processed: ''
+      offset: 00015D62
+    - name: _FSAPortClose@4
+      processed: ''
+      offset: 00015DCD
+    - name: _FSAPortTerminate@4
+      processed: ''
+      offset: 00015E3B
+    - name: _FSATimeout@16
+      processed: ''
+      offset: 0001605B
+    - name: _FSAInput@16
+      processed: ''
+      offset: 0001610B
+    - name: _FSAInvalidEvent@4
+      processed: ''
+      offset: 000165FA
+    - name: _FSAThisLayerUp@4
+      processed: ''
+      offset: '00016653'
+    - name: _FSAThisLayerDown@4
+      processed: ''
+      offset: 000171F0
+    - name: _FSAThisLayerStarted@4
+      processed: ''
+      offset: '00017578'
+    - name: _FSAThisLayerFinished@4
+      processed: ''
+      offset: 0001766B
+    - name: _FSAInitializeRestartCounter@4
+      processed: ''
+      offset: 00017B72
+    - name: _FSAZeroRestartCounter@4
+      processed: ''
+      offset: 00017C1A
+    - name: _FSASendConfigReq@4
+      processed: ''
+      offset: 00017C9D
+    - name: _FSASendConfigResponse@4
+      processed: ''
+      offset: 00017EB9
+    - name: _FSASendTermReq@4
+      processed: ''
+      offset: 00017FFD
+    - name: _FSASendTermAck@4
+      processed: ''
+      offset: 0001816F
+    - name: _FSASendCodeReject@4
+      processed: ''
+      offset: 0001826D
+    - name: _FSASendEchoReply@4
+      processed: ''
+      offset: 000183EF
+    - name: _FSASendProtoReject@12
+      processed: ''
+      offset: '00018577'
+    - name: _FSARecvProtoReject@12
+      processed: ''
+      offset: 000186B9
+    - name: _FSAEnumProtocols@8
+      processed: ''
+      offset: '00018827'
+    - name: _FSAProtocolInfo@8
+      processed: ''
+      offset: 00018A17
+    - name: _DebugFSAInfo@0
+      processed: ''
+      offset: 00018AB9
+    - name: _DebugAdapterFSAInfo@4
+      processed: ''
+      offset: 00018C6C
+    - name: _DebugFSAConnectionInfo@4
+      processed: ''
+      offset: 00018D29
+    - name: _FSARegisterCP
+      processed: ''
+      offset: 00018F90
+    - name: _FSAGetCPContext
+      processed: ''
+      offset: '00019389'
+    - name: _FSAShutdown@8
+      processed: ''
+      offset: 0001946D
+    - name: _FSAAllocFrame
+      processed: ''
+      offset: '00019553'
+    - name: _FSADeallocFrame
+      processed: ''
+      offset: 0001963A
+    - name: _FSAWriteFrame
+      processed: ''
+      offset: '00019671'
+    - name: _FSAWanUp
+      processed: ''
+      offset: 000196AA
+    - name: _FSAWanDown
+      processed: ''
+      offset: '00019886'
+    - name: _FSAPerformActions
+      processed: ''
+      offset: 00019A19
+    - name: _FSATransitState
+      processed: ''
+      offset: 00019AF4
+    - name: _SetProtocolFilter
+      processed: ''
+      offset: 00019BD6
+    - name: _OverlappedComplete
+      processed: ''
+      offset: 00019C25
+    - name: _PPPProtocolFromName
+      processed: ''
+      offset: 00019C4C
+    - name: _PPPProtocolFromCode
+      processed: ''
+      offset: 00019CB2
+    - name: _GetTime@0
+      processed: ''
+      offset: 00019D20
+    - name: _LCPDeviceInit@0
+      processed: ''
+      offset: 00019D62
+    - name: _LCPSetConfigOptionDefaults@4
+      processed: ''
+      offset: '00019E41'
+    - name: _LCPInitPort
+      processed: ''
+      offset: 00019F33
+    - name: _LCPThisLayerUp
+      processed: ''
+      offset: 0001A080
+    - name: _LCPThisLayerDown
+      processed: ''
+      offset: 0001A491
+    - name: _LCPThisLayerFinished
+      processed: ''
+      offset: 0001A525
+    - name: _LCPThisLayerStarted
+      processed: ''
+      offset: 0001A5A6
+    - name: _LCPGetConfigReqSize
+      processed: ''
+      offset: 0001A6F7
+    - name: _LCPCreateConfigReq
+      processed: ''
+      offset: 0001A910
+    - name: _LCPInput
+      processed: ''
+      offset: 0001AD0D
+    - name: _LCPParseConfigReq@20
+      processed: ''
+      offset: 0001B194
+    - name: _LCPParseConfigAck@12
+      processed: ''
+      offset: 0001C8F3
+    - name: _LCPParseConfigNak@12
+      processed: ''
+      offset: 0001CEF3
+    - name: _LCPParseConfigReject@12
+      processed: ''
+      offset: 0001DB49
+    - name: _LCPGetProtocolInfo
+      processed: ''
+      offset: '0001E290'
+    - name: _IPXCPDeviceInit@0
+      processed: ''
+      offset: '0001E310'
+    - name: _IPXCPSetConfigOptionDefaults@4
+      processed: ''
+      offset: 0001E3EF
+    - name: _IPXCPInitPort
+      processed: ''
+      offset: 0001E4A6
+    - name: _IPXCPTermPort
+      processed: ''
+      offset: 0001E55A
+    - name: _IPXCPThisLayerUp
+      processed: ''
+      offset: 0001E5A3
+    - name: _IPXCPThisLayerDown
+      processed: ''
+      offset: 0001E7B7
+    - name: _IPXCPThisLayerStarted
+      processed: ''
+      offset: 0001E83A
+    - name: _IPXCPGetConfigReqSize
+      processed: ''
+      offset: 0001E95B
+    - name: _IPXCPCreateConfigReq
+      processed: ''
+      offset: 0001EA4D
+    - name: _IPXCPInput
+      processed: ''
+      offset: 0001EC64
+    - name: _IPXCPParseConfigReq@20
+      processed: ''
+      offset: 0001EF6A
+    - name: _IPXCPParseConfigAck@12
+      processed: ''
+      offset: 000200CA
+    - name: _IPXCPParseConfigNak@12
+      processed: ''
+      offset: 000204CB
+    - name: _IPXCPParseConfigReject@12
+      processed: ''
+      offset: 00020A0E
+    - name: _IPXCPGetANodeNumber@8
+      processed: ''
+      offset: 00020DA0
+    - name: _IPXCPGetProtocolInfo
+      processed: ''
+      offset: 00020E6C
+    - name: _CIPXDeallocSlots@12
+      processed: ''
+      offset: 00020EF0
+    - name: _CIPXAllocSlots@12
+      processed: ''
+      offset: 00020FE0
+    - name: _CIPXInit@8
+      processed: ''
+      offset: 000212DF
+    - name: _CIPXDeinit@4
+      processed: ''
+      offset: '00021455'
+    - name: _CIPXSendPkt@12
+      processed: ''
+      offset: 0002151E
+    - name: _CIPXCompress
+      processed: ''
+      offset: 0002160F
+    - name: _CIPXDecompress
+      processed: ''
+      offset: 00021EE2
+    - name: _CIPXSetOptions@16
+      processed: ''
+      offset: 00022D4E
+    - name: _IPCPDeviceInit@0
+      processed: ''
+      offset: '00022E00'
+    - name: _IPCPSetConfigOptionDefaults@4
+      processed: ''
+      offset: 00022EE1
+    - name: _IPCPInitPort
+      processed: ''
+      offset: 00022F7F
+    - name: _IPCPTermPort
+      processed: ''
+      offset: '00023062'
+    - name: _IPCPThisLayerUp
+      processed: ''
+      offset: 000230AE
+    - name: _IPCPThisLayerDown
+      processed: ''
+      offset: 0002361C
+    - name: _IPCPThisLayerStarted
+      processed: ''
+      offset: 0002373F
+    - name: _IPCPGetConfigReqSize
+      processed: ''
+      offset: 00023AAB
+    - name: _IPCPCreateConfigReq
+      processed: ''
+      offset: 00023C2A
+    - name: _IPCPInput
+      processed: ''
+      offset: '00023E62'
+    - name: _IPCPParseConfigReq@20
+      processed: ''
+      offset: 000241BE
+    - name: _IPCPParseConfigAck@12
+      processed: ''
+      offset: '000250E2'
+    - name: _IPCPParseConfigNak@12
+      processed: ''
+      offset: 000255C5
+    - name: _IPCPParseConfigReject@12
+      processed: ''
+      offset: 000262BF
+    - name: _IPCPGetProtocolInfo
+      processed: ''
+      offset: '00026727'
+    - name: _ConfigIP
+      processed: ''
+      offset: 000267A1
+    - name: _CIPDeallocSlots@12
+      processed: ''
+      offset: '00026820'
+    - name: _CIPAllocSlots@12
+      processed: ''
+      offset: 000269A4
+    - name: _CIPInit@8
+      processed: ''
+      offset: 00026D30
+    - name: _CIPDeinit@4
+      processed: ''
+      offset: 00026EA5
+    - name: _CIPCompress
+      processed: ''
+      offset: 00026F6E
+    - name: _CIPDecompress
+      processed: ''
+      offset: 00027B68
+    - name: _CIPSetOptions@16
+      processed: ''
+      offset: 00028F4F
+    - name: _FindHardwareAddr
+      processed: ''
+      offset: '00029020'
+    - name: _IPGetAddress
+      processed: ''
+      offset: 0002925D
+    - name: _IsSameNetwork@8
+      processed: ''
+      offset: 00029A0A
+    - name: _AdjustRouteMetrics@24
+      processed: ''
+      offset: 00029ADB
+    - name: _IPUpdateRoutes
+      processed: ''
+      offset: 0002B064
+    - name: _IPGetNetMask
+      processed: ''
+      offset: 0002B1E8
+    - name: _IPAdapterUp
+      processed: ''
+      offset: 0002B21D
+    - name: _IPAdapterDown
+      processed: ''
+      offset: 0002B6AA
+    - name: _NBFCPDeviceInit@0
+      processed: ''
+      offset: 0002BA10
+    - name: _NBFCPSetConfigOptionDefaults@4
+      processed: ''
+      offset: 0002BAFB
+    - name: _NBFCPInitPort
+      processed: ''
+      offset: 0002BB55
+    - name: _NBFCPTermPort
+      processed: ''
+      offset: 0002BC15
+    - name: _NBFCPThisLayerUp
+      processed: ''
+      offset: 0002BCE8
+    - name: _NBFCPThisLayerDown
+      processed: ''
+      offset: 0002BDE4
+    - name: _NBFCPThisLayerStarted
+      processed: ''
+      offset: 0002BE5B
+    - name: _NBFCPGetConfigReqSize
+      processed: ''
+      offset: 0002BF80
+    - name: _NBFCPCreateConfigReq
+      processed: ''
+      offset: 0002C089
+    - name: _NBFCPInput
+      processed: ''
+      offset: 0002C377
+    - name: _NBFCPParseConfigReq@20
+      processed: ''
+      offset: 0002C60B
+    - name: _NBFCPParseConfigAck@12
+      processed: ''
+      offset: 0002D22C
+    - name: _NBFCPParseConfigNak@12
+      processed: ''
+      offset: 0002D5BA
+    - name: _NBFCPParseConfigReject@12
+      processed: ''
+      offset: 0002DA82
+    - name: _NBFCPGetProtocolInfo
+      processed: ''
+      offset: 0002DEAE
+    - name: _GetNetBiosNames@4
+      processed: ''
+      offset: 0002DF40
+    - name: _LoadNetBiosGateway@0
+      processed: ''
+      offset: 0002E2C5
+    - name: _UnloadNetBiosGateway@0
+      processed: ''
+      offset: 0002E32F
+    - name: _InitNetBiosGateway@4
+      processed: ''
+      offset: 0002E3B8
+    - name: _ProjectNetBiosGateway@4
+      processed: ''
+      offset: 0002E44E
+    - name: _ProjectionCallback
+      processed: ''
+      offset: 0002E4D6
+    - name: _StartNetBiosGateway@4
+      processed: ''
+      offset: 0002E5A1
+    - name: _StopNetBiosGateway@4
+      processed: ''
+      offset: 0002E5F3
+    - name: _NBGatewayCallback
+      processed: ''
+      offset: 0002E6E4
+    - name: _NBProjectionDone@0
+      processed: ''
+      offset: '0002E853'
+    - name: _NWCFrame@4
+      processed: ''
+      offset: 0002EA10
+    - name: _NWCReadFrame@4
+      processed: ''
+      offset: 0002ECA9
+    - name: _NWCStartup@4
+      processed: ''
+      offset: 0002F7D0
+    - name: _NWCInitialize@4
+      processed: ''
+      offset: 0002F8DB
+    - name: _NWCPrimeInput@4
+      processed: ''
+      offset: 0002F9CC
+    - name: _NWCClose@4
+      processed: ''
+      offset: 0002FAC2
+    - name: _NWCShutdown@8
+      processed: ''
+      offset: 0002FB50
+    - name: _NWCInput@4
+      processed: ''
+      offset: 0002FC80
+    - name: _NWCHandleLoginResponse@4
+      processed: ''
+      offset: 000302F4
+    - name: _NWCSendLoginRequest@4
+      processed: ''
+      offset: '00030522'
+    - name: _NWCSendCP@12
+      processed: ''
+      offset: '00030691'
+    - name: _NWCHandleEthernet@4
+      processed: ''
+      offset: 000306EE
+    - name: _NWCPrepEthernet@8
+      processed: ''
+      offset: '00030859'
+    - name: _NWCVerifyLogin@4
+      processed: ''
+      offset: 0003097A
+    - name: _NWCAuthCallback@8
+      processed: ''
+      offset: 00030BF7
+    - name: _NWCTimeout@16
+      processed: ''
+      offset: 00030E1D
+    - name: _NWCCalcCRC@12
+      processed: ''
+      offset: '00031183'
+    - name: _NWCVerifyCRC@12
+      processed: ''
+      offset: 000311CE
+    - name: _NWCEncryptPW@8
+      processed: ''
+      offset: 0003123C
+    - name: _NWCDecryptPW@8
+      processed: ''
+      offset: 000312AA
+    - name: _NWCAllocFrame@4
+      processed: ''
+      offset: '00031322'
+    - name: _DebugAdapterNWCInfo@4
+      processed: ''
+      offset: 000313C2
+    - name: _CHAPGetLCPReqSize
+      processed: ''
+      offset: '000314E0'
+    - name: _CHAPBuildLCPRequest
+      processed: ''
+      offset: 000314EA
+    - name: _CHAPParseLCPRequest
+      processed: ''
+      offset: 0003153E
+    - name: _CHAPDeviceInit@0
+      processed: ''
+      offset: '00031636'
+    - name: _CHAPInitPort
+      processed: ''
+      offset: '00031717'
+    - name: _CHAPTermPort
+      processed: ''
+      offset: '00031768'
+    - name: _CHAPThisLayerStarted
+      processed: ''
+      offset: 0003186F
+    - name: _CHAPThisLayerUp
+      processed: ''
+      offset: '00031953'
+    - name: _CHAPThisLayerDown
+      processed: ''
+      offset: 0003199D
+    - name: _CHAPDelayTimeout@16
+      processed: ''
+      offset: 00031A37
+    - name: _CHAPResponseTimeout@16
+      processed: ''
+      offset: 00031AE4
+    - name: _CHAPReauthTimeout@16
+      processed: ''
+      offset: 00031C41
+    - name: _CHAPGetConfigReqSize
+      processed: ''
+      offset: 00031D2B
+    - name: _CHAPCreateConfigReq
+      processed: ''
+      offset: 00031DCD
+    - name: _CHAPParseChallenge
+      processed: ''
+      offset: 00031EF6
+    - name: _CHAPChallengeCallback@8
+      processed: ''
+      offset: '00032221'
+    - name: _CHAPMakeResponse
+      processed: ''
+      offset: '00032337'
+    - name: _CHAPParseSuccess
+      processed: ''
+      offset: '00032726'
+    - name: _CHAPParseFailure
+      processed: ''
+      offset: 000327F0
+    - name: _CHAPChangePasswordCallback@8
+      processed: ''
+      offset: 00032FE0
+    - name: _CHAPMakeChangePasswordResponse
+      processed: ''
+      offset: 000330EF
+    - name: _CHAPFailureCallback@8
+      processed: ''
+      offset: '000332E8'
+    - name: _CHAPParseResponse
+      processed: ''
+      offset: '00033546'
+    - name: _CHAPResponseCallback@8
+      processed: ''
+      offset: '00033860'
+    - name: _CHAPDoFSAWork
+      processed: ''
+      offset: 00033BDF
+    - name: _CHAPInput
+      processed: ''
+      offset: 00033D91
+    - name: _AnsiToInt
+      processed: ''
+      offset: '00034146'
+    - name: _IntToAnsi
+      processed: ''
+      offset: '00034214'
+    - name: _HexVal
+      processed: ''
+      offset: 000342C3
+    - name: _HexChar
+      processed: ''
+      offset: '00034346'
+    - name: _CCPDeviceInit@0
+      processed: ''
+      offset: '00034380'
+    - name: _CCPSetConfigOptionDefaults@4
+      processed: ''
+      offset: '00034461'
+    - name: _CCPInitPort
+      processed: ''
+      offset: 000344C1
+    - name: _CCPTermPort
+      processed: ''
+      offset: '000345E6'
+    - name: _SetCompressionFilters@8
+      processed: ''
+      offset: '00034616'
+    - name: _SetEncryptionFilters@8
+      processed: ''
+      offset: 0003489E
+    - name: _CCPThisLayerUp
+      processed: ''
+      offset: 00034A8A
+    - name: _CCPThisLayerDown
+      processed: ''
+      offset: 00034DB5
+    - name: _CCPThisLayerStarted
+      processed: ''
+      offset: 00034F68
+    - name: _CCPThisLayerFinished
+      processed: ''
+      offset: '000350E2'
+    - name: _CCPGetConfigReqSize
+      processed: ''
+      offset: 0003512E
+    - name: _CCPCreateConfigReq
+      processed: ''
+      offset: 000351C3
+    - name: _CCPInput
+      processed: ''
+      offset: '00035389'
+    - name: _CCPParseConfigReq@24
+      processed: ''
+      offset: 000357EA
+    - name: _CCPParseConfigAck@16
+      processed: ''
+      offset: '00036466'
+    - name: _CCPParseConfigNak@16
+      processed: ''
+      offset: '000368E8'
+    - name: _CCPParseConfigReject@16
+      processed: ''
+      offset: '00037043'
+    - name: _CCPSendCompressReset
+      processed: ''
+      offset: '00037372'
+    - name: _CCPGetProtocolInfo
+      processed: ''
+      offset: '00037538'
+    - name: _CCPGetHighBit@4
+      processed: ''
+      offset: 000375B2
+    - name: _CCPCheckEncryption@4
+      processed: ''
+      offset: '000375E2'
+    - name: _PAPDeviceInit@0
+      processed: ''
+      offset: '00037710'
+    - name: _PAPTermPort
+      processed: ''
+      offset: 000377F1
+    - name: _PAPThisLayerStarted
+      processed: ''
+      offset: 000378D7
+    - name: _PAPGetAuthReqSize
+      processed: ''
+      offset: 0003796F
+    - name: _PAPCreateAuthReq
+      processed: ''
+      offset: '000379E9'
+    - name: _PAPInput
+      processed: ''
+      offset: 00037AE5
+    - name: _PAPParseAuthReq@4
+      processed: ''
+      offset: 00037ED6
+    - name: _PAPProcessAuthReqResult@4
+      processed: ''
+      offset: 0003818B
+    - name: _PAPAuthCallback@8
+      processed: ''
+      offset: '00038287'
+    - name: _PAPRetryTimeout@16
+      processed: ''
+      offset: 0003855C
+    - name: _PAPDelayTimeout@16
+      processed: ''
+      offset: 000385DD
+    - name: _PAPLoginCallback@8
+      processed: ''
+      offset: '00038712'
+    - name: _A_SHAInitCommon@4
+      processed: ''
+      offset: 000387C0
+    - name: _A_SHAUpdateCommon@16
+      processed: ''
+      offset: 0003880C
+    - name: _A_SHAFinalCommon@12
+      processed: ''
+      offset: 000388EB
+    - name: _A_SHAInit@4
+      processed: ''
+      offset: 0003899B
+    - name: _A_SHAUpdate@12
+      processed: ''
+      offset: 000389AE
+    - name: _A_SHAFinal@8
+      processed: ''
+      offset: 000389CE
+    - name: _SHATransform@8
+      processed: ''
+      offset: 000389EA
+    - name: _SHAExpand@4
+      processed: ''
+      offset: 00039F8C
+    - name: _ByteReverse@12
+      processed: ''
+      offset: 00039FF5
+    - name: _GetStartKeyFromSHA@8
+      processed: ''
+      offset: 0003A05C
+    - name: _GetNewKeyFromSHA@4
+      processed: ''
+      offset: 0003A14A
+    - name: _MppeAllocSendContext@12
+      processed: ''
+      offset: 0003A216
+    - name: _MppeAllocRecvContext@12
+      processed: ''
+      offset: 0003A427
+    - name: _MppeFreeContext@8
+      processed: ''
+      offset: 0003A629
+    - name: _MppeSendReset@4
+      processed: ''
+      offset: 0003A6A1
+    - name: _MppeRecvReset@4
+      processed: ''
+      offset: 0003A744
+    - name: _MppeChangeKey@4
+      processed: ''
+      offset: 0003A7E7
+    - name: _MppeDecryptPacket@16
+      processed: ''
+      offset: 0003A925
+    - name: _MppeEncryptPacket@20
+      processed: ''
+      offset: 0003ABEE
+    - name: _lzsInitSend@12
+      processed: ''
+      offset: 0003AD10
+    - name: _lzsDeinitSend@8
+      processed: ''
+      offset: 0003AE06
+    - name: _lzsInitRecv@12
+      processed: ''
+      offset: 0003AE9C
+    - name: _lzsDeinitRecv@8
+      processed: ''
+      offset: 0003AF9C
+    - name: _lzsResetSendContext@4
+      processed: ''
+      offset: 0003B03A
+    - name: _lzsResetRecvContext@4
+      processed: ''
+      offset: 0003B094
+    - name: _lzsCompress@12
+      processed: ''
+      offset: 0003B0A4
+    - name: _lzsDecompress@24
+      processed: ''
+      offset: 0003B140
+    - name: _msppcInitSend@12
+      processed: ''
+      offset: 0003B1C0
+    - name: _msppcDeinitSend@8
+      processed: ''
+      offset: 0003B2E1
+    - name: _msppcInitRecv@12
+      processed: ''
+      offset: 0003B3B5
+    - name: _msppcDeinitRecv@8
+      processed: ''
+      offset: 0003B4E1
+    - name: _msppcCompress@12
+      processed: ''
+      offset: 0003B5C0
+    - name: _msppcResetSendContext@4
+      processed: ''
+      offset: 0003CF2A
+    - name: _msppcResetRecvContext@4
+      processed: ''
+      offset: 0003CFD6
+    - name: _msppcDecompress@24
+      processed: ''
+      offset: 0003D062
+    - name: _FramingTypeNames
+      processed: ''
+      offset: 0003E0DC
+    - name: _NdisMediumTypeNames
+      processed: ''
+      offset: 0003E0F8
+    - name: _NdisMediumSubtypeNames
+      processed: ''
+      offset: '0003E118'
+    - name: _NdisWanHeaderFormatNames
+      processed: ''
+      offset: 0003E12C
+    - name: _TraceMask
+      processed: ''
+      offset: '0003E134'
+    - name: _TraceLevel
+      processed: ''
+      offset: '0003E138'
+    - name: _hLog
+      processed: ''
+      offset: 0003E13C
+    - name: _dwLogRefCount
+      processed: ''
+      offset: '0003E140'
+    - name: _gDebugTimer
+      processed: ''
+      offset: '0003E144'
+    - name: _gMemAllocated
+      processed: ''
+      offset: '0003E148'
+    - name: _fPrintf
+      processed: ''
+      offset: 0003E14C
+    - name: _PPPVXDInfo
+      processed: ''
+      offset: 0003E1B0
+    - name: _GlobalAdapterCount
+      processed: ''
+      offset: 0003E1C0
+    - name: _HighestAcceptableMax
+      processed: ''
+      offset: 0003E1C4
+    - name: _AsyncGlobalSupportedOids
+      processed: ''
+      offset: 0003E1C8
+    - name: _AsyncProtocolSupportedOids
+      processed: ''
+      offset: '0003E254'
+    - name: _fMultiSingleLink
+      processed: ''
+      offset: 00042AB8
+    - name: _dst_addr
+      processed: ''
+      offset: 0004389C
+    - name: _src_addr
+      processed: ''
+      offset: 000438A4
+    - name: _bcast_addr
+      processed: ''
+      offset: 000438AC
+    - name: _FsaEventNames
+      processed: ''
+      offset: 00044AAC
+    - name: _FsaActionNames
+      processed: ''
+      offset: 00044AF0
+    - name: _FsaStateNames
+      processed: ''
+      offset: 00044B2C
+    - name: _FSAGlobal
+      processed: ''
+      offset: 00044B58
+    - name: _FSAActionTable
+      processed: ''
+      offset: 00044B64
+    - name: _FSAEventStateTable
+      processed: ''
+      offset: 00044B9C
+    - name: _fForceMultilink
+      processed: ''
+      offset: '00046710'
+    - name: _CipxOn
+      processed: ''
+      offset: 000474B4
+    - name: _pCIPXHandleList
+      processed: ''
+      offset: 00047CD4
+    - name: _CipOn
+      processed: ''
+      offset: 0004867C
+    - name: _pCIPHandleList
+      processed: ''
+      offset: 0004900C
+    - name: _NBFGlobal
+      processed: ''
+      offset: 0004A5DC
+    - name: _ChapCodes
+      processed: ''
+      offset: 0004B784
+    - name: _fPreferLZS
+      processed: ''
+      offset: 0004C36C
+    - name: _fNoHistory
+      processed: ''
+      offset: 0004C370
+    - name: _SHApad1
+      processed: ''
+      offset: 0004DC4C
+    - name: _SHApad2
+      processed: ''
+      offset: 0004DC74
+    - name: _lookup_array1
+      processed: ''
+      offset: 0004E29C
+    - name: _lookup_array2
+      processed: ''
+      offset: 0004E69C
+    - name: _lookup_array3
+      processed: ''
+      offset: 0004EA9C
+    - name: EndLockable
+      processed: ''
+      offset: 0004F018
+  - num: '6'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _InitializeLockable@0
+      processed: ''
+      offset: 0000001C
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: 000010C0
+    symbols:
+    - name: _ShutdownEventDword
+      demangled: ''
+      offset: '00000000'
+    - name: _GlobalAdapterHead
+      demangled: ''
+      offset: '00000008'
+    - name: _AsyncMacHandle
+      demangled: ''
+      offset: '00000010'
+    - name: _AsyncNdisWrapperHandle
+      demangled: ''
+      offset: '00000014'
+    - name: _AsyncDriverObject
+      demangled: ''
+      offset: '00000018'
+    - name: ___strlen@4
+      demangled: ''
+      offset: '00000020'
+    - name: ___strcmp@8
+      demangled: ''
+      offset: '00000057'
+    - name: ___strncmp@12
+      demangled: ''
+      offset: '00000105'
+    - name: ___strnicmp@12
+      demangled: ''
+      offset: 000001D5
+    - name: ___strcmpi@8
+      demangled: ''
+      offset: 000003EF
+    - name: ___strncpy@12
+      demangled: ''
+      offset: '000005E6'
+    - name: ___strcpy@8
+      demangled: ''
+      offset: '00000655'
+    - name: ___strcat@8
+      demangled: ''
+      offset: 000006B2
+    - name: ___strstr@8
+      demangled: ''
+      offset: '00000725'
+    - name: ___memchr@12
+      demangled: ''
+      offset: '00000735'
+    - name: ___strchr@8
+      demangled: ''
+      offset: '00000794'
+    - name: ___strrchr@8
+      demangled: ''
+      offset: 000007FF
+    - name: ___strlwr@4
+      demangled: ''
+      offset: '00000819'
+    - name: ___atoi@4
+      demangled: ''
+      offset: '00000899'
+    - name: ___itoa@12
+      demangled: ''
+      offset: '000008E4'
+    - name: _rc4_key@12
+      demangled: ''
+      offset: 000009A0
+    - name: _rc4@12
+      demangled: ''
+      offset: 00000A30
+    - name: _LZS_SizeOfCompressionHistory@0
+      demangled: ''
+      offset: 00000AF0
+    - name: _LZS_InitCompressionHistory@4
+      demangled: ''
+      offset: 00000B00
+    - name: _LZS_Compress@28
+      demangled: ''
+      offset: 00000B40
+    - name: _Compress_Lzs_drEngine@28
+      demangled: ''
+      offset: 000011A0
+    - name: _LZS_InitDecompressionHistory@4
+      demangled: ''
+      offset: '00001970'
+    - name: _LZS_SizeOfDecompressionHistory@0
+      demangled: ''
+      offset: 000019A0
+    - name: _Expand_Lzs_drEngine@20
+      demangled: ''
+      offset: 000019B0
+    - name: _EocdToken@12
+      demangled: ''
+      offset: 00001EE0
+    - name: _LZS_Decompress@24
+      demangled: ''
+      offset: 00001F60
+    - name: _Expand_Null_Engine@20
+      demangled: ''
+      offset: '00002810'
+    - name: _mem_copy_r@12
+      demangled: ''
+      offset: '00002890'
+    - name: _copy_prev_string_r@12
+      demangled: ''
+      offset: '00002960'
+    - name: _init_hash_tbl_r@12
+      demangled: ''
+      offset: 00002AA0
+    - name: _PPP_Get_Version
+      demangled: ''
+      offset: 00002B60
+    - name: __FSARegisterCP
+      demangled: ''
+      offset: 00002B64
+    - name: __FSAAllocFrame
+      demangled: ''
+      offset: 00002B68
+    - name: __FSADeallocFrame
+      demangled: ''
+      offset: 00002B6C
+    - name: __FSAWriteFrame
+      demangled: ''
+      offset: 00002B70
+    - name: __FSAWanUp
+      demangled: ''
+      offset: 00002B74
+    - name: __FSAWanDown
+      demangled: ''
+      offset: 00002B78
+    - name: __FSAPerformActions
+      demangled: ''
+      offset: 00002B7C
+    - name: __FSATransitState
+      demangled: ''
+      offset: 00002B80
+    - name: __OverlappedComplete
+      demangled: ''
+      offset: 00002B84
+    - name: __SetProtocolFilter
+      demangled: ''
+      offset: 00002B88
+    - name: __MiniportReceiveIndication
+      demangled: ''
+      offset: 00002B8C
+    - name: __MiniportSendCompletionHandler
+      demangled: ''
+      offset: 00002B90
+    - name: PPPMAC_DDB
+      demangled: ''
+      offset: 00002B94
+    - name: _AsyncGetFrameFromPool@12
+      demangled: ''
+      offset: 00002BF0
+    - name: _AsyncDeallocFrame@4
+      demangled: ''
+      offset: 00002CC5
+    - name: C_Device_Init
+      demangled: ''
+      offset: 00002D2C
+    - name: C_Device_Deinit
+      demangled: ''
+      offset: 00002D4B
+    - name: C_Device_Sys_VM_Terminate
+      demangled: ''
+      offset: 00002D52
+    - name: PPPMAC_Control
+      demangled: ''
+      offset: 00002D59
+    - name: _AsyncScheduleGlobalEvent
+      demangled: ''
+      offset: 00002DF6
+    - name: _AsyncCancelVMMGlobalEvent
+      demangled: ''
+      offset: 00002DFD
+    - name: _VMM_RegOpenKey
+      demangled: ''
+      offset: '00002E11'
+    - name: _VMM_RegCloseKey
+      demangled: ''
+      offset: 00002E2B
+    - name: _VMM_RegEnumValue
+      demangled: ''
+      offset: 00002E3F
+    - name: _PPPGetLastUpdatedSystemTime
+      demangled: ''
+      offset: '00002E68'
+    - name: _AsyncClearDDBFlags
+      demangled: ''
+      offset: 00002E6F
+    - name: _PPPYieldToVMM
+      demangled: ''
+      offset: 00002E8F
+    - name: _AsyncPostMessage
+      demangled: ''
+      offset: 00002EC2
+    - name: _DhcpSetInfo
+      demangled: ''
+      offset: 00002EFC
+    - name: _sprintf
+      demangled: ''
+      offset: 00002F2E
+    - name: _DIOCCompletionRoutine
+      demangled: ''
+      offset: 00002F35
+    - name: PPP_Get_Version
+      demangled: ''
+      offset: 00002F49
+    - name: _ScheduleVMEvent
+      demangled: ''
+      offset: 00002F50
+    - name: _PPPGetMessagePtr
+      demangled: ''
+      offset: 00002F7C
+    - name: _NdisGetVersion@0
+      demangled: ''
+      offset: 00002F90
+    - name: _NdisSetTimer@8
+      demangled: ''
+      offset: 00002F96
+    - name: _NdisCancelTimer@8
+      demangled: ''
+      offset: 00002F9C
+    - name: _NdisInitializeInterrupt@40
+      demangled: ''
+      offset: 00002FA2
+    - name: _NdisRemoveInterrupt@4
+      demangled: ''
+      offset: 00002FA8
+    - name: _NdisSynchronizeWithInterrupt@12
+      demangled: ''
+      offset: 00002FAE
+    - name: _NdisStallExecution@4
+      demangled: ''
+      offset: 00002FB4
+    - name: _NdisAllocateMemory@16
+      demangled: ''
+      offset: 00002FBA
+    - name: _NdisFreeMemory@12
+      demangled: ''
+      offset: 00002FC0
+    - name: _NdisAllocatePacketPool@16
+      demangled: ''
+      offset: 00002FC6
+    - name: _NdisFreePacketPool@4
+      demangled: ''
+      offset: 00002FCC
+    - name: _NdisAllocatePacket@12
+      demangled: ''
+      offset: 00002FD2
+    - name: _NdisReinitializePacket@4
+      demangled: ''
+      offset: 00002FD8
+    - name: _NdisFreePacket@4
+      demangled: ''
+      offset: 00002FDE
+    - name: _NdisQueryPacket@20
+      demangled: ''
+      offset: 00002FE4
+    - name: _NdisAllocateBufferPool@12
+      demangled: ''
+      offset: 00002FEA
+    - name: _NdisFreeBufferPool@4
+      demangled: ''
+      offset: 00002FF0
+    - name: _NdisAllocateBuffer@20
+      demangled: ''
+      offset: 00002FF6
+    - name: _NdisCopyBuffer@24
+      demangled: ''
+      offset: 00002FFC
+    - name: _NdisFreeBuffer@4
+      demangled: ''
+      offset: '00003002'
+    - name: _NdisQueryBuffer@12
+      demangled: ''
+      offset: '00003008'
+    - name: _NdisGetBufferPhysicalAddress@12
+      demangled: ''
+      offset: 0000300E
+    - name: _NdisChainBufferAtFront@8
+      demangled: ''
+      offset: '00003014'
+    - name: _NdisChainBufferAtBack@8
+      demangled: ''
+      offset: 0000301A
+    - name: _NdisUnchainBufferAtFront@8
+      demangled: ''
+      offset: '00003020'
+    - name: _NdisUnchainBufferAtBack@8
+      demangled: ''
+      offset: '00003026'
+    - name: _NdisGetNextBuffer@8
+      demangled: ''
+      offset: 0000302C
+    - name: _NdisCopyFromPacketToPacket@24
+      demangled: ''
+      offset: '00003032'
+    - name: _NdisOpenConfiguration@12
+      demangled: ''
+      offset: '00003038'
+    - name: _NdisReadConfiguration@20
+      demangled: ''
+      offset: 0000303E
+    - name: _NdisCloseConfiguration@4
+      demangled: ''
+      offset: '00003044'
+    - name: _NdisEqualString@12
+      demangled: ''
+      offset: 0000304A
+    - name: _NdisOpenFile@20
+      demangled: ''
+      offset: '00003050'
+    - name: _NdisMapFile@12
+      demangled: ''
+      offset: '00003056'
+    - name: _NdisUnmapFile@4
+      demangled: ''
+      offset: 0000305C
+    - name: _NdisCloseFile@4
+      demangled: ''
+      offset: '00003062'
+    - name: _NdisAllocateDmaChannel@20
+      demangled: ''
+      offset: '00003068'
+    - name: _NdisSetupDmaTransfer@24
+      demangled: ''
+      offset: 0000306E
+    - name: _NdisCompleteDmaTransfer@24
+      demangled: ''
+      offset: '00003074'
+    - name: _NdisReadDmaCounter@4
+      demangled: ''
+      offset: 0000307A
+    - name: _NdisFreeDmaChannel@4
+      demangled: ''
+      offset: '00003080'
+    - name: _NdisMapIoSpace@20
+      demangled: ''
+      offset: '00003086'
+    - name: _NdisWriteErrorLogEntry
+      demangled: ''
+      offset: 0000308C
+    - name: _NdisRegAdaptShutdown@12
+      demangled: ''
+      offset: '00003092'
+    - name: _NdisDeregAdaptShutdown@4
+      demangled: ''
+      offset: '00003098'
+    - name: _NdisMoveMemory@12
+      demangled: ''
+      offset: 000030A0
+    - name: _MoveOverlappedMemory@12
+      demangled: ''
+      offset: 000030C0
+    - name: _NdisRawWritePortBufferUchar@12
+      demangled: ''
+      offset: 000030FC
+    - name: _NdisRawWritePortBufferUshort@12
+      demangled: ''
+      offset: '00003110'
+    - name: _NdisRawWritePortBufferUlong@12
+      demangled: ''
+      offset: '00003125'
+    - name: _NdisRawReadPortBufferUchar@12
+      demangled: ''
+      offset: '00003139'
+    - name: _NdisRawReadPortBufferUshort@12
+      demangled: ''
+      offset: 0000314D
+    - name: _NdisRawReadPortBufferUlong@12
+      demangled: ''
+      offset: '00003162'
+    - name: _NdisInitializeWrapper@16
+      demangled: ''
+      offset: '00003176'
+    - name: _NdisTerminateWrapper@8
+      demangled: ''
+      offset: 0000317C
+    - name: _NdisRegisterMac@24
+      demangled: ''
+      offset: '00003182'
+    - name: _NdisDeregisterMac@8
+      demangled: ''
+      offset: '00003188'
+    - name: _NdisRegisterAdapter@24
+      demangled: ''
+      offset: 0000318E
+    - name: _NdisDeregisterAdapter@4
+      demangled: ''
+      offset: '00003194'
+    - name: _NdisCompleteOpenAdapter@12
+      demangled: ''
+      offset: 0000319A
+    - name: _NdisCompleteCloseAdapter@8
+      demangled: ''
+      offset: 000031A0
+    - name: _NdisCompleteSend@12
+      demangled: ''
+      offset: 000031A6
+    - name: _NdisCompleteTransferData@16
+      demangled: ''
+      offset: 000031AC
+    - name: _NdisCompleteReset@8
+      demangled: ''
+      offset: 000031B2
+    - name: _NdisCompleteRequest@12
+      demangled: ''
+      offset: 000031B8
+    - name: _NdisIndicateReceive@32
+      demangled: ''
+      offset: 000031BE
+    - name: _NdisIndicateReceiveComplete@4
+      demangled: ''
+      offset: 000031C4
+    - name: _NdisIndicateStatus@16
+      demangled: ''
+      offset: 000031CA
+    - name: _NdisIndicateStatusComplete@4
+      demangled: ''
+      offset: 000031D0
+    - name: _NdisCompleteQueryStatistics@12
+      demangled: ''
+      offset: 000031D6
+    - name: _NdisReadMcaPosInformation@16
+      demangled: ''
+      offset: 000031DC
+    - name: _NdisReadEisaSlotInformation@16
+      demangled: ''
+      offset: '000031E2'
+    - name: _NdisReadNetworkAddress@16
+      demangled: ''
+      offset: '000031E8'
+    - name: _NdisAllocateSharedMemory@20
+      demangled: ''
+      offset: 000031EE
+    - name: _NdisFreeSharedMemory@20
+      demangled: ''
+      offset: 000031F4
+    - name: _NdisReleaseAdapterResources@4
+      demangled: ''
+      offset: 000031FA
+    - name: _WrapperDelayBinding@4
+      demangled: ''
+      offset: '00003200'
+    - name: _WrapperResumeBinding@4
+      demangled: ''
+      offset: '00003206'
+    - name: _WrapperRemoveChildren@4
+      demangled: ''
+      offset: 0000320C
+    - name: _NdisImmediateReadPciSlotInformation@20
+      demangled: ''
+      offset: '00003212'
+    - name: _NdisImmediateWritePciSlotInformation@20
+      demangled: ''
+      offset: '00003218'
+    - name: _NdisReadPciSlotInformation@20
+      demangled: ''
+      offset: 0000321E
+    - name: _NdisWritePciSlotInformation@20
+      demangled: ''
+      offset: '00003224'
+    - name: _NdisPciAssignResources@20
+      demangled: ''
+      offset: 0000322A
+    - name: _WrapperQueryAdapterResources
+      demangled: ''
+      offset: '00003230'
+    - name: _EthFilterIndicateReceive@32
+      demangled: ''
+      offset: '00003240'
+    - name: _EthFilterDprIndicateReceive@32
+      demangled: ''
+      offset: 0000326C
+    - name: _EthFilterIndicateReceiveComplete@4
+      demangled: ''
+      offset: 000034F6
+    - name: _EthFilterDprIndicateReceiveComplete@4
+      demangled: ''
+      offset: '00003506'
+    - name: _EthShouldAddressLoopBack@8
+      demangled: ''
+      offset: 0000360B
+  - num: '2'
+    name: _PMSG$1
+    offset: '00001100'
+    symbols:
+    - name: '@MSG_PAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_PDATA'
+      demangled: ''
+      offset: 000001D4
+  - num: '3'
+    name: _PTEXT
+    offset: 000014A0
+    symbols:
+    - name: _IncPageLockCount@0
+      demangled: ''
+      offset: '00000005'
+    - name: _DecPageLockCount@0
+      demangled: ''
+      offset: 0000006B
+    - name: LockUnlockPageable
+      demangled: ''
+      offset: 000000C9
+    - name: _AsyncAllocateFrames@8
+      demangled: ''
+      offset: '00000100'
+    - name: _AsyncDeallocatePool@4
+      demangled: ''
+      offset: 000002B7
+    - name: PPPMAC_PM_API
+      demangled: ''
+      offset: 0000032C
+    - name: PPPMAC_DeviceIOControl
+      demangled: ''
+      offset: 0000039D
+    - name: _AssertInts
+      demangled: ''
+      offset: 000003CA
+    - name: PPPMAC_V86_API
+      demangled: ''
+      offset: 000003CB
+    - name: _IPXLoaded
+      demangled: ''
+      offset: 000003D4
+    - name: _IPXControlRouter
+      demangled: ''
+      offset: 000003F1
+    - name: _IPXGetNetId
+      demangled: ''
+      offset: 0000041A
+    - name: _IPXSetNetId
+      demangled: ''
+      offset: '00000448'
+    - name: _CheckVTDI
+      demangled: ''
+      offset: '00000468'
+    - name: _IPHook
+      demangled: ''
+      offset: 000004AC
+    - name: _IPSetAddress
+      demangled: ''
+      offset: 000004F5
+    - name: _NetBiosLoaded
+      demangled: ''
+      offset: 0000051C
+    - name: _NetBiosEnum
+      demangled: ''
+      offset: 0000053D
+    - name: _NetBiosSubmit
+      demangled: ''
+      offset: 0000054F
+    - name: _NBGWLoad
+      demangled: ''
+      offset: 0000056A
+    - name: _NBGWUnload
+      demangled: ''
+      offset: 000005C7
+    - name: _NBGWDeviceIOControl
+      demangled: ''
+      offset: 000005DE
+    - name: _PPPLoadVxD
+      demangled: ''
+      offset: '00000603'
+    - name: _PPPUnloadVxD
+      demangled: ''
+      offset: '00000653'
+    - name: _CancelVMEvent
+      demangled: ''
+      offset: 0000066C
+    - name: _DoOpenLog
+      demangled: ''
+      offset: '00000680'
+    - name: _DoCloseLog
+      demangled: ''
+      offset: 000006FC
+    - name: _DoLogPrintf
+      demangled: ''
+      offset: '00000732'
+    - name: _DoFlushLog
+      demangled: ''
+      offset: '00000738'
+    - name: _PerfRegister
+      demangled: ''
+      offset: '00000740'
+    - name: _PerfAddStat
+      demangled: ''
+      offset: 0000076A
+    - name: _PerfDeregister
+      demangled: ''
+      offset: 000007A6
+    - name: _EthCreateFilter@28
+      demangled: ''
+      offset: 000007D0
+    - name: _EthDeleteFilter@4
+      demangled: ''
+      offset: 0000090E
+    - name: _EthNoteFilterOpenAdapter@16
+      demangled: ''
+      offset: '00000964'
+    - name: _EthDeleteFilterOpenAdapter@12
+      demangled: ''
+      offset: 00000A6F
+    - name: _EthChangeFilterAddresses@24
+      demangled: ''
+      offset: 00000B8B
+    - name: _EthFilterAdjust@20
+      demangled: ''
+      offset: 00000FBC
+    - name: _EthNumberOfOpenFilterAddresses@8
+      demangled: ''
+      offset: 0000107B
+    - name: _EthQueryOpenFilterAddresses@24
+      demangled: ''
+      offset: '000010E6'
+    - name: _EthQueryGlobalFilterAddresses@20
+      demangled: ''
+      offset: 000011A7
+  - num: '4'
+    name: L0CKABLE_BEGIN
+    offset: 00003BC0
+    symbols:
+    - name: BeginLockable
+      demangled: ''
+      offset: '00000000'
+    - name: _CBDeviceInit@0
+      demangled: ''
+      offset: '00000010'
+    - name: _CBTermPort
+      demangled: ''
+      offset: 000000C9
+    - name: _CBThisLayerStarted
+      demangled: ''
+      offset: 0000013C
+    - name: _CBGetConfigReqSize
+      demangled: ''
+      offset: 0000016A
+    - name: _CBCreateConfigReq
+      demangled: ''
+      offset: '00000185'
+    - name: _CBParseRequest
+      demangled: ''
+      offset: 0000018A
+    - name: _CBCallback@8
+      demangled: ''
+      offset: '00000434'
+    - name: _CBMakeResponse
+      demangled: ''
+      offset: '00000528'
+    - name: _CBParseAck
+      demangled: ''
+      offset: '00000901'
+    - name: _CBInput
+      demangled: ''
+      offset: '00000939'
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '000009E0'
+    - name: _Init_Complete@0
+      demangled: ''
+      offset: 00000B87
+    - name: _AsyncAddAdapter@12
+      demangled: ''
+      offset: 00000B91
+    - name: _AsyncRemoveAdapter@4
+      demangled: ''
+      offset: 00001CFE
+    - name: _AsyncUnload@4
+      demangled: ''
+      offset: 00001DC0
+    - name: _AsyncDriverExit
+      demangled: ''
+      offset: '00001E13'
+    - name: _AsyncSystemExit
+      demangled: ''
+      offset: '00001E18'
+    - name: _AsyncRegisterAdapter@4
+      demangled: ''
+      offset: '00001E27'
+    - name: _AsyncQueryProtocolInformation@32
+      demangled: ''
+      offset: 000023BE
+    - name: _AsyncQueryInformation@12
+      demangled: ''
+      offset: 000027F9
+    - name: _AsyncSetInformation@12
+      demangled: ''
+      offset: 0000286A
+    - name: _AsyncFillInGlobalData@8
+      demangled: ''
+      offset: 00002C2E
+    - name: _SetupForReset@16
+      demangled: ''
+      offset: 0000303E
+    - name: _FinishPendOp@8
+      demangled: ''
+      offset: '00003092'
+    - name: _AsyncSaveConfigInfo@8
+      demangled: ''
+      offset: '00003140'
+    - name: _AsyncUpdateConfigInfo@8
+      demangled: ''
+      offset: '00003375'
+    - name: _AsyncFindProtocolBinding
+      demangled: ''
+      offset: '00003656'
+    - name: _TerminateConnection
+      demangled: ''
+      offset: 000036A6
+    - name: _AsyncClosePort
+      demangled: ''
+      offset: 000036CD
+    - name: _InetAddr@4
+      demangled: ''
+      offset: '000036E5'
+    - name: _scramble@16
+      demangled: ''
+      offset: 000037F7
+    - name: _LoadCPList@0
+      demangled: ''
+      offset: 0000386D
+    - name: _UnloadCPList@0
+      demangled: ''
+      offset: 00003A2B
+    - name: _FindAdapterByName@4
+      demangled: ''
+      offset: 00003ADA
+    - name: _SetAdapterName@8
+      demangled: ''
+      offset: 00003B30
+    - name: _LogDumpBuffer@12
+      demangled: ''
+      offset: 00003B57
+    - name: _DbgDumpBuffer@12
+      demangled: ''
+      offset: 000040F0
+    - name: _AsyncIOCtlRequest
+      demangled: ''
+      offset: '00004180'
+    - name: _PPPClosingTimeout@16
+      demangled: ''
+      offset: '00006E08'
+    - name: _AsyncCopyFromPacketToBuffer@20
+      demangled: ''
+      offset: '00006E30'
+    - name: _AsyncCopyFromBufferToPacket@20
+      demangled: ''
+      offset: 00006F62
+    - name: _AsyncTransferData@24
+      demangled: ''
+      offset: 000070A0
+    - name: _AsyncProcessLoopBack@16
+      demangled: ''
+      offset: '00007180'
+    - name: _AsyncPutPacketOnLoopBack@12
+      demangled: ''
+      offset: '000072E8'
+    - name: _AsyncFakeARPResponse@16
+      demangled: ''
+      offset: 0000739A
+    - name: _AsyncARPRequest@4
+      demangled: ''
+      offset: '000075E9'
+    - name: _ProcessReset@4
+      demangled: ''
+      offset: '00007660'
+    - name: _VCommInit@12
+      demangled: ''
+      offset: 000078C0
+    - name: _VCommShutdown@4
+      demangled: ''
+      offset: '00007918'
+    - name: _VCommDeInit@4
+      demangled: ''
+      offset: '00007995'
+    - name: _VcommDataReadyEvent
+      demangled: ''
+      offset: 000079B4
+    - name: _VcommDataReady
+      demangled: ''
+      offset: 00007A89
+    - name: _SetEventChar@8
+      demangled: ''
+      offset: 00007B0A
+    - name: _VcommRequestData@4
+      demangled: ''
+      offset: 00007B3D
+    - name: _VcommWriteCompletionRoutine
+      demangled: ''
+      offset: 00007BE9
+    - name: _VCommWriteFrame@4
+      demangled: ''
+      offset: 00007C16
+    - name: _VCOMM_ClearCommError@12
+      demangled: ''
+      offset: 00007CF9
+    - name: _VCOMM_PurgeComm@8
+      demangled: ''
+      offset: 00007D21
+    - name: _VCOMM_EnableSerialTimer@4
+      demangled: ''
+      offset: 00007D46
+    - name: _VCOMM_WriteComm@16
+      demangled: ''
+      offset: 00007D72
+    - name: _VCOMM_ReadComm@16
+      demangled: ''
+      offset: 00007D9D
+    - name: _VCOMM_SetReadCallbacks@16
+      demangled: ''
+      offset: 00007DC8
+    - name: _VCOMM_SetWriteCallbacks@16
+      demangled: ''
+      offset: 00007DF3
+    - name: _CancelSerialRequests@4
+      demangled: ''
+      offset: 00007E1E
+    - name: _VCOMM_GetCommState@8
+      demangled: ''
+      offset: 00007E7E
+    - name: _VCOMM_SetCommState@12
+      demangled: ''
+      offset: 00007EA3
+    - name: _VCOMM_GetEventMask@12
+      demangled: ''
+      offset: 00007ECB
+    - name: _VCOMM_SetEventMask@12
+      demangled: ''
+      offset: 00007EF3
+    - name: _VCOMM_EnableCommNotification@12
+      demangled: ''
+      offset: 00007F1B
+    - name: _VCOMM_SetEventChar@8
+      demangled: ''
+      offset: 00007F43
+    - name: _MiniportInit@12
+      demangled: ''
+      offset: 00007F90
+    - name: _MiniportDeInit@4
+      demangled: ''
+      offset: '00008119'
+    - name: _MiniportChangeHandler
+      demangled: ''
+      offset: 000081B0
+    - name: _MiniportSetLinkStatus@4
+      demangled: ''
+      offset: '000081E2'
+    - name: _MiniportGetLinkStatus@4
+      demangled: ''
+      offset: '00008212'
+    - name: _MiniportSendFrame@4
+      demangled: ''
+      offset: '00008242'
+    - name: _MiniportSendCompletionHandler
+      demangled: ''
+      offset: 0000830A
+    - name: _MiniportReceiveIndication
+      demangled: ''
+      offset: '00008339'
+    - name: _AsyncSendPacket@8
+      demangled: ''
+      offset: 000083D0
+    - name: _PacketShouldBeSent@8
+      demangled: ''
+      offset: '00008621'
+    - name: _AsyncPumpPacket@8
+      demangled: ''
+      offset: '00008776'
+    - name: _AsyncSendFrame@8
+      demangled: ''
+      offset: 0000912E
+    - name: _AsyncPumpFrame@4
+      demangled: ''
+      offset: 000092C4
+    - name: _AsyncWriteCompletionRoutine
+      demangled: ''
+      offset: 0000935C
+    - name: _AsyncCompleteFinalWrite
+      demangled: ''
+      offset: 000094A6
+    - name: _AsyncIndicateFragment@4
+      demangled: ''
+      offset: 000095D8
+    - name: _PPPInput@4
+      demangled: ''
+      offset: '000095E0'
+    - name: _IndicateCP@12
+      demangled: ''
+      offset: 00009E9C
+    - name: _AsyncHDLCPrimeInput@4
+      demangled: ''
+      offset: 0000A0D0
+    - name: _AsyncHDLCFrame@4
+      demangled: ''
+      offset: 0000A15B
+    - name: _AsyncHDLCReadFrame@4
+      demangled: ''
+      offset: 0000A46E
+    - name: _HDLCPrimeInput@4
+      demangled: ''
+      offset: 0000A9B0
+    - name: _HDLCFrame@4
+      demangled: ''
+      offset: 0000A9F1
+    - name: _HDLCReadFrame@4
+      demangled: ''
+      offset: 0000AA60
+    - name: _RasCRC@8
+      demangled: ''
+      offset: 0000AD00
+    - name: _RasPrimeInput@4
+      demangled: ''
+      offset: 0000AD61
+    - name: _RasFrame@4
+      demangled: ''
+      offset: 0000ADC9
+    - name: _RasReadFrame@4
+      demangled: ''
+      offset: 0000B07D
+    - name: _SlipStart@8
+      demangled: ''
+      offset: 0000B890
+    - name: _SlipStop@4
+      demangled: ''
+      offset: 0000BAE3
+    - name: _SlipGetIPAddress@4
+      demangled: ''
+      offset: 0000BBC8
+    - name: _SlipPrimeInput@4
+      demangled: ''
+      offset: 0000BC7C
+    - name: _SlipFrame@4
+      demangled: ''
+      offset: 0000BD17
+    - name: _SlipInput@4
+      demangled: ''
+      offset: 0000BE88
+    - name: _SlipReadFrame@4
+      demangled: ''
+      offset: 0000C01C
+    - name: _MultilinkHeader@12
+      demangled: ''
+      offset: 0000C3B0
+    - name: _MLFindSendLink@4
+      demangled: ''
+      offset: 0000C5F9
+    - name: _MLFindHoleInReassemblyList@8
+      demangled: ''
+      offset: 0000C664
+    - name: _MLFlushToResync@4
+      demangled: ''
+      offset: 0000C776
+    - name: _MLFlushOnPacketLoss@4
+      demangled: ''
+      offset: 0000C829
+    - name: _MLTryToAssembleFrame@4
+      demangled: ''
+      offset: 0000C9C9
+    - name: _MLPInput@4
+      demangled: ''
+      offset: 0000CCD0
+    - name: _MLDeleteDanglingBundle
+      demangled: ''
+      offset: 0000D294
+    - name: _MLMergeBundle@8
+      demangled: ''
+      offset: 0000D2C1
+    - name: _MLReallocReadFrame@4
+      demangled: ''
+      offset: 0000D3ED
+    - name: _RemoveLinkFromBundle@4
+      demangled: ''
+      offset: 0000D42C
+    - name: _pppfcs@12
+      demangled: ''
+      offset: 0000D600
+    - name: _FSADeviceDeinit@0
+      demangled: ''
+      offset: 0000D670
+    - name: _FSAPortOpen@4
+      demangled: ''
+      offset: 0000D6B6
+    - name: _FSAPortUp@4
+      demangled: ''
+      offset: 0000DE58
+    - name: _FSAPortDown@4
+      demangled: ''
+      offset: 0000DEA5
+    - name: _FSAPortClose@4
+      demangled: ''
+      offset: 0000DEE7
+    - name: _FSAPortTerminate@4
+      demangled: ''
+      offset: 0000DF2C
+    - name: _FSATimeout@16
+      demangled: ''
+      offset: '0000E099'
+    - name: _FSAInput@16
+      demangled: ''
+      offset: 0000E0F1
+    - name: _FSAInvalidEvent@4
+      demangled: ''
+      offset: '0000E465'
+    - name: _FSAThisLayerUp@4
+      demangled: ''
+      offset: '0000E478'
+    - name: _FSAThisLayerDown@4
+      demangled: ''
+      offset: 0000EBE7
+    - name: _FSAThisLayerStarted@4
+      demangled: ''
+      offset: 0000EE46
+    - name: _FSAThisLayerFinished@4
+      demangled: ''
+      offset: 0000EEE1
+    - name: _FSAInitializeRestartCounter@4
+      demangled: ''
+      offset: 0000F238
+    - name: _FSAZeroRestartCounter@4
+      demangled: ''
+      offset: 0000F285
+    - name: _FSASendConfigReq@4
+      demangled: ''
+      offset: 0000F2B2
+    - name: _FSASendConfigResponse@4
+      demangled: ''
+      offset: 0000F426
+    - name: _FSASendTermReq@4
+      demangled: ''
+      offset: 0000F4AA
+    - name: _FSASendTermAck@4
+      demangled: ''
+      offset: 0000F59C
+    - name: _FSASendCodeReject@4
+      demangled: ''
+      offset: 0000F61B
+    - name: _FSASendEchoReply@4
+      demangled: ''
+      offset: 0000F704
+    - name: _FSASendProtoReject@12
+      demangled: ''
+      offset: 0000F7F5
+    - name: _FSARecvProtoReject@12
+      demangled: ''
+      offset: 0000F8E6
+    - name: _FSAEnumProtocols@8
+      demangled: ''
+      offset: 0000F9D8
+    - name: _FSAProtocolInfo@8
+      demangled: ''
+      offset: 0000FBC8
+    - name: _FSARegisterCP
+      demangled: ''
+      offset: 0000FC70
+    - name: _FSAGetCPContext
+      demangled: ''
+      offset: 0000FF1C
+    - name: _FSAShutdown@8
+      demangled: ''
+      offset: 0000FFD6
+    - name: _FSAAllocFrame
+      demangled: ''
+      offset: '00010023'
+    - name: _FSADeallocFrame
+      demangled: ''
+      offset: 0001007D
+    - name: _FSAWriteFrame
+      demangled: ''
+      offset: 0001008B
+    - name: _FSAWanUp
+      demangled: ''
+      offset: 0001009B
+    - name: _FSAWanDown
+      demangled: ''
+      offset: 000101A1
+    - name: _FSAPerformActions
+      demangled: ''
+      offset: '00010233'
+    - name: _FSATransitState
+      demangled: ''
+      offset: 000102B9
+    - name: _SetProtocolFilter
+      demangled: ''
+      offset: '00010335'
+    - name: _OverlappedComplete
+      demangled: ''
+      offset: '00010384'
+    - name: _PPPProtocolFromName
+      demangled: ''
+      offset: 000103AB
+    - name: _PPPProtocolFromCode
+      demangled: ''
+      offset: '00010411'
+    - name: _GetTime@0
+      demangled: ''
+      offset: '00010480'
+    - name: _LCPDeviceInit@0
+      demangled: ''
+      offset: '00010499'
+    - name: _LCPSetConfigOptionDefaults@4
+      demangled: ''
+      offset: 0001054F
+    - name: _LCPInitPort
+      demangled: ''
+      offset: '00010618'
+    - name: _LCPThisLayerUp
+      demangled: ''
+      offset: 0001073A
+    - name: _LCPThisLayerDown
+      demangled: ''
+      offset: 00010AD3
+    - name: _LCPThisLayerFinished
+      demangled: ''
+      offset: 00010B3E
+    - name: _LCPThisLayerStarted
+      demangled: ''
+      offset: 00010B96
+    - name: _LCPGetConfigReqSize
+      demangled: ''
+      offset: 00010CBF
+    - name: _LCPCreateConfigReq
+      demangled: ''
+      offset: '00010E85'
+    - name: _LCPInput
+      demangled: ''
+      offset: '00011258'
+    - name: _LCPParseConfigReq@20
+      demangled: ''
+      offset: '00011552'
+    - name: _LCPParseConfigAck@12
+      demangled: ''
+      offset: '00012603'
+    - name: _LCPParseConfigNak@12
+      demangled: ''
+      offset: 00012BB0
+    - name: _LCPParseConfigReject@12
+      demangled: ''
+      offset: 000134D6
+    - name: _LCPGetProtocolInfo
+      demangled: ''
+      offset: 00013B4A
+    - name: _IPXCPDeviceInit@0
+      demangled: ''
+      offset: 00013BD0
+    - name: _IPXCPSetConfigOptionDefaults@4
+      demangled: ''
+      offset: 00013C86
+    - name: _IPXCPInitPort
+      demangled: ''
+      offset: 00013D14
+    - name: _IPXCPTermPort
+      demangled: ''
+      offset: 00013D9F
+    - name: _IPXCPThisLayerUp
+      demangled: ''
+      offset: 00013DBF
+    - name: _IPXCPThisLayerDown
+      demangled: ''
+      offset: 00013FA9
+    - name: _IPXCPThisLayerStarted
+      demangled: ''
+      offset: '00014002'
+    - name: _IPXCPGetConfigReqSize
+      demangled: ''
+      offset: 000140FB
+    - name: _IPXCPCreateConfigReq
+      demangled: ''
+      offset: 000141C4
+    - name: _IPXCPInput
+      demangled: ''
+      offset: 000143B2
+    - name: _IPXCPParseConfigReq@20
+      demangled: ''
+      offset: 000145EE
+    - name: _IPXCPParseConfigAck@12
+      demangled: ''
+      offset: '00015242'
+    - name: _IPXCPParseConfigNak@12
+      demangled: ''
+      offset: '00015618'
+    - name: _IPXCPParseConfigReject@12
+      demangled: ''
+      offset: 00015A41
+    - name: _IPXCPGetANodeNumber@8
+      demangled: ''
+      offset: 00015D7D
+    - name: _IPXCPGetProtocolInfo
+      demangled: ''
+      offset: '00015E20'
+    - name: _CIPXDeallocSlots@12
+      demangled: ''
+      offset: 00015EA0
+    - name: _CIPXAllocSlots@12
+      demangled: ''
+      offset: 00015F4B
+    - name: _CIPXInit@8
+      demangled: ''
+      offset: '00016188'
+    - name: _CIPXDeinit@4
+      demangled: ''
+      offset: '00016291'
+    - name: _CIPXSendPkt@12
+      demangled: ''
+      offset: '00016320'
+    - name: _CIPXCompress
+      demangled: ''
+      offset: 0001638A
+    - name: _CIPXDecompress
+      demangled: ''
+      offset: 00016A0C
+    - name: _CIPXSetOptions@16
+      demangled: ''
+      offset: 0001711A
+    - name: _IPCPDeviceInit@0
+      demangled: ''
+      offset: 000171B0
+    - name: _IPCPSetConfigOptionDefaults@4
+      demangled: ''
+      offset: '00017266'
+    - name: _IPCPInitPort
+      demangled: ''
+      offset: 000172D9
+    - name: _IPCPTermPort
+      demangled: ''
+      offset: '00017365'
+    - name: _IPCPThisLayerUp
+      demangled: ''
+      offset: '00017385'
+    - name: _IPCPThisLayerDown
+      demangled: ''
+      offset: 0001789D
+    - name: _IPCPThisLayerStarted
+      demangled: ''
+      offset: '00017995'
+    - name: _IPCPGetConfigReqSize
+      demangled: ''
+      offset: 00017C46
+    - name: _IPCPCreateConfigReq
+      demangled: ''
+      offset: 00017D6C
+    - name: _IPCPInput
+      demangled: ''
+      offset: 00017F78
+    - name: _IPCPParseConfigReq@20
+      demangled: ''
+      offset: 0001819A
+    - name: _IPCPParseConfigAck@12
+      demangled: ''
+      offset: 00018C20
+    - name: _IPCPParseConfigNak@12
+      demangled: ''
+      offset: 0001907C
+    - name: _IPCPParseConfigReject@12
+      demangled: ''
+      offset: 000199EA
+    - name: _IPCPGetProtocolInfo
+      demangled: ''
+      offset: 00019D95
+    - name: _ConfigIP
+      demangled: ''
+      offset: 00019E0F
+    - name: _CIPDeallocSlots@12
+      demangled: ''
+      offset: '00019E60'
+    - name: _CIPAllocSlots@12
+      demangled: ''
+      offset: 00019F11
+    - name: _CIPInit@8
+      demangled: ''
+      offset: 0001A16C
+    - name: _CIPDeinit@4
+      demangled: ''
+      offset: 0001A274
+    - name: _CIPCompress
+      demangled: ''
+      offset: 0001A303
+    - name: _CIPDecompress
+      demangled: ''
+      offset: 0001AC7F
+    - name: _CIPSetOptions@16
+      demangled: ''
+      offset: 0001BEE7
+    - name: _FindHardwareAddr
+      demangled: ''
+      offset: 0001BF80
+    - name: _IPGetAddress
+      demangled: ''
+      offset: 0001C135
+    - name: _IsSameNetwork@8
+      demangled: ''
+      offset: 0001C66A
+    - name: _AdjustRouteMetrics@24
+      demangled: ''
+      offset: 0001C73B
+    - name: _IPUpdateRoutes
+      demangled: ''
+      offset: 0001CCE7
+    - name: _IPGetNetMask
+      demangled: ''
+      offset: 0001CDC0
+    - name: _IPAdapterUp
+      demangled: ''
+      offset: 0001CDF5
+    - name: _IPAdapterDown
+      demangled: ''
+      offset: 0001D0A8
+    - name: _NBFCPDeviceInit@0
+      demangled: ''
+      offset: 0001D220
+    - name: _NBFCPSetConfigOptionDefaults@4
+      demangled: ''
+      offset: 0001D2E0
+    - name: _NBFCPInitPort
+      demangled: ''
+      offset: 0001D30F
+    - name: _NBFCPTermPort
+      demangled: ''
+      offset: 0001D379
+    - name: _NBFCPThisLayerUp
+      demangled: ''
+      offset: 0001D3F4
+    - name: _NBFCPThisLayerDown
+      demangled: ''
+      offset: 0001D4C3
+    - name: _NBFCPThisLayerStarted
+      demangled: ''
+      offset: 0001D50D
+    - name: _NBFCPGetConfigReqSize
+      demangled: ''
+      offset: 0001D605
+    - name: _NBFCPCreateConfigReq
+      demangled: ''
+      offset: 0001D6E1
+    - name: _NBFCPInput
+      demangled: ''
+      offset: 0001D9A3
+    - name: _NBFCPParseConfigReq@20
+      demangled: ''
+      offset: 0001DB88
+    - name: _NBFCPParseConfigAck@12
+      demangled: ''
+      offset: 0001E4C2
+    - name: _NBFCPParseConfigNak@12
+      demangled: ''
+      offset: '0001E823'
+    - name: _NBFCPParseConfigReject@12
+      demangled: ''
+      offset: 0001EBC9
+    - name: _NBFCPGetProtocolInfo
+      demangled: ''
+      offset: 0001EF99
+    - name: _GetNetBiosNames@4
+      demangled: ''
+      offset: 0001F030
+    - name: _LoadNetBiosGateway@0
+      demangled: ''
+      offset: 0001F35D
+    - name: _UnloadNetBiosGateway@0
+      demangled: ''
+      offset: 0001F3C7
+    - name: _InitNetBiosGateway@4
+      demangled: ''
+      offset: 0001F3F9
+    - name: _ProjectNetBiosGateway@4
+      demangled: ''
+      offset: 0001F48F
+    - name: _ProjectionCallback
+      demangled: ''
+      offset: 0001F4DF
+    - name: _StartNetBiosGateway@4
+      demangled: ''
+      offset: 0001F552
+    - name: _StopNetBiosGateway@4
+      demangled: ''
+      offset: 0001F5A4
+    - name: _NBGatewayCallback
+      demangled: ''
+      offset: 0001F60A
+    - name: _NBProjectionDone@0
+      demangled: ''
+      offset: 0001F6C0
+    - name: _NWCFrame@4
+      demangled: ''
+      offset: 0001F810
+    - name: _NWCReadFrame@4
+      demangled: ''
+      offset: 0001FA4B
+    - name: _NWCStartup@4
+      demangled: ''
+      offset: 000201B0
+    - name: _NWCInitialize@4
+      demangled: ''
+      offset: '00020272'
+    - name: _NWCPrimeInput@4
+      demangled: ''
+      offset: '00020339'
+    - name: _NWCClose@4
+      demangled: ''
+      offset: '00020405'
+    - name: _NWCShutdown@8
+      demangled: ''
+      offset: 0002046A
+    - name: _NWCInput@4
+      demangled: ''
+      offset: 000204F3
+    - name: _NWCHandleLoginResponse@4
+      demangled: ''
+      offset: 000209D5
+    - name: _NWCSendLoginRequest@4
+      demangled: ''
+      offset: 00020B17
+    - name: _NWCSendCP@12
+      demangled: ''
+      offset: 00020C5D
+    - name: _NWCHandleEthernet@4
+      demangled: ''
+      offset: 00020CBA
+    - name: _NWCPrepEthernet@8
+      demangled: ''
+      offset: 00020DED
+    - name: _NWCVerifyLogin@4
+      demangled: ''
+      offset: 00020EEC
+    - name: _NWCAuthCallback@8
+      demangled: ''
+      offset: 000210DC
+    - name: _NWCTimeout@16
+      demangled: ''
+      offset: 000212BC
+    - name: _NWCCalcCRC@12
+      demangled: ''
+      offset: 000214AD
+    - name: _NWCVerifyCRC@12
+      demangled: ''
+      offset: 000214F8
+    - name: _NWCEncryptPW@8
+      demangled: ''
+      offset: '00021566'
+    - name: _NWCDecryptPW@8
+      demangled: ''
+      offset: 000215D4
+    - name: _NWCAllocFrame@4
+      demangled: ''
+      offset: 0002164C
+    - name: _CHAPGetLCPReqSize
+      demangled: ''
+      offset: 000216A0
+    - name: _CHAPBuildLCPRequest
+      demangled: ''
+      offset: 000216AA
+    - name: _CHAPParseLCPRequest
+      demangled: ''
+      offset: 000216D3
+    - name: _CHAPDeviceInit@0
+      demangled: ''
+      offset: 000217A1
+    - name: _CHAPInitPort
+      demangled: ''
+      offset: '00021857'
+    - name: _CHAPTermPort
+      demangled: ''
+      offset: 0002187D
+    - name: _CHAPThisLayerStarted
+      demangled: ''
+      offset: '00021959'
+    - name: _CHAPThisLayerUp
+      demangled: ''
+      offset: 00021A12
+    - name: _CHAPThisLayerDown
+      demangled: ''
+      offset: 00021A31
+    - name: _CHAPDelayTimeout@16
+      demangled: ''
+      offset: 00021A73
+    - name: _CHAPResponseTimeout@16
+      demangled: ''
+      offset: 00021AC9
+    - name: _CHAPReauthTimeout@16
+      demangled: ''
+      offset: 00021B92
+    - name: _CHAPGetConfigReqSize
+      demangled: ''
+      offset: 00021BE8
+    - name: _CHAPCreateConfigReq
+      demangled: ''
+      offset: 00021C61
+    - name: _CHAPParseChallenge
+      demangled: ''
+      offset: 00021CDE
+    - name: _CHAPChallengeCallback@8
+      demangled: ''
+      offset: 00021E8F
+    - name: _CHAPMakeResponse
+      demangled: ''
+      offset: 00021F7A
+    - name: _CHAPParseSuccess
+      demangled: ''
+      offset: 000221BA
+    - name: _CHAPParseFailure
+      demangled: ''
+      offset: 0002222D
+    - name: _CHAPChangePasswordCallback@8
+      demangled: ''
+      offset: '00022935'
+    - name: _CHAPMakeChangePasswordResponse
+      demangled: ''
+      offset: '000229E2'
+    - name: _CHAPFailureCallback@8
+      demangled: ''
+      offset: 00022B85
+    - name: _CHAPParseResponse
+      demangled: ''
+      offset: 00022D60
+    - name: _CHAPResponseCallback@8
+      demangled: ''
+      offset: 00022F9D
+    - name: _CHAPDoFSAWork
+      demangled: ''
+      offset: 000232A9
+    - name: _CHAPInput
+      demangled: ''
+      offset: 000233D3
+    - name: _AnsiToInt
+      demangled: ''
+      offset: '000235E7'
+    - name: _IntToAnsi
+      demangled: ''
+      offset: 000236B5
+    - name: _HexVal
+      demangled: ''
+      offset: '00023764'
+    - name: _HexChar
+      demangled: ''
+      offset: '000237E7'
+    - name: _CCPDeviceInit@0
+      demangled: ''
+      offset: '00023820'
+    - name: _CCPSetConfigOptionDefaults@4
+      demangled: ''
+      offset: 000238D6
+    - name: _CCPInitPort
+      demangled: ''
+      offset: 0002390B
+    - name: _CCPTermPort
+      demangled: ''
+      offset: 00023A04
+    - name: _SetCompressionFilters@8
+      demangled: ''
+      offset: 00023A09
+    - name: _SetEncryptionFilters@8
+      demangled: ''
+      offset: 00023BBE
+    - name: _CCPThisLayerUp
+      demangled: ''
+      offset: 00023D3F
+    - name: _CCPThisLayerDown
+      demangled: ''
+      offset: 00023F19
+    - name: _CCPThisLayerStarted
+      demangled: ''
+      offset: 00023FF1
+    - name: _CCPThisLayerFinished
+      demangled: ''
+      offset: 000240C0
+    - name: _CCPGetConfigReqSize
+      demangled: ''
+      offset: 000240DF
+    - name: _CCPCreateConfigReq
+      demangled: ''
+      offset: '00024148'
+    - name: _CCPInput
+      demangled: ''
+      offset: 0002425B
+    - name: _CCPParseConfigReq@24
+      demangled: ''
+      offset: '00024556'
+    - name: _CCPParseConfigAck@16
+      demangled: ''
+      offset: 00024C71
+    - name: _CCPParseConfigNak@16
+      demangled: ''
+      offset: 00024E8A
+    - name: _CCPParseConfigReject@16
+      demangled: ''
+      offset: '00025196'
+    - name: _CCPSendCompressReset
+      demangled: ''
+      offset: 000252F7
+    - name: _CCPGetProtocolInfo
+      demangled: ''
+      offset: '00025416'
+    - name: _CCPGetHighBit@4
+      demangled: ''
+      offset: '00025490'
+    - name: _CCPCheckEncryption@4
+      demangled: ''
+      offset: 000254C0
+    - name: _PAPDeviceInit@0
+      demangled: ''
+      offset: '00025540'
+    - name: _PAPTermPort
+      demangled: ''
+      offset: 000255F6
+    - name: _PAPThisLayerStarted
+      demangled: ''
+      offset: 000256AF
+    - name: _PAPGetAuthReqSize
+      demangled: ''
+      offset: 0002571C
+    - name: _PAPCreateAuthReq
+      demangled: ''
+      offset: 0002576B
+    - name: _PAPInput
+      demangled: ''
+      offset: 0002583C
+    - name: _PAPParseAuthReq@4
+      demangled: ''
+      offset: 00025B23
+    - name: _PAPProcessAuthReqResult@4
+      demangled: ''
+      offset: 00025D84
+    - name: _PAPAuthCallback@8
+      demangled: ''
+      offset: '00025E80'
+    - name: _PAPRetryTimeout@16
+      demangled: ''
+      offset: '00026049'
+    - name: _PAPDelayTimeout@16
+      demangled: ''
+      offset: 0002609F
+    - name: _PAPLoginCallback@8
+      demangled: ''
+      offset: 0002613E
+    - name: _A_SHAInitCommon@4
+      demangled: ''
+      offset: 000261B0
+    - name: _A_SHAUpdateCommon@16
+      demangled: ''
+      offset: 000261FC
+    - name: _A_SHAFinalCommon@12
+      demangled: ''
+      offset: 000262DB
+    - name: _A_SHAInit@4
+      demangled: ''
+      offset: 0002638B
+    - name: _A_SHAUpdate@12
+      demangled: ''
+      offset: 0002639E
+    - name: _A_SHAFinal@8
+      demangled: ''
+      offset: 000263BE
+    - name: _SHATransform@8
+      demangled: ''
+      offset: 000263DA
+    - name: _SHAExpand@4
+      demangled: ''
+      offset: 0002797C
+    - name: _ByteReverse@12
+      demangled: ''
+      offset: '000279E5'
+    - name: _GetStartKeyFromSHA@8
+      demangled: ''
+      offset: 00027A4C
+    - name: _GetNewKeyFromSHA@4
+      demangled: ''
+      offset: 00027B3A
+    - name: _MppeAllocSendContext@12
+      demangled: ''
+      offset: 00027C06
+    - name: _MppeAllocRecvContext@12
+      demangled: ''
+      offset: 00027DBC
+    - name: _MppeFreeContext@8
+      demangled: ''
+      offset: 00027F65
+    - name: _MppeSendReset@4
+      demangled: ''
+      offset: 00027F87
+    - name: _MppeRecvReset@4
+      demangled: ''
+      offset: 00027FCE
+    - name: _MppeChangeKey@4
+      demangled: ''
+      offset: '00028015'
+    - name: _MppeDecryptPacket@16
+      demangled: ''
+      offset: '00028120'
+    - name: _MppeEncryptPacket@20
+      demangled: ''
+      offset: 000282BF
+    - name: _lzsInitSend@12
+      demangled: ''
+      offset: '00028360'
+    - name: _lzsDeinitSend@8
+      demangled: ''
+      offset: '00028425'
+    - name: _lzsInitRecv@12
+      demangled: ''
+      offset: 000284BB
+    - name: _lzsDeinitRecv@8
+      demangled: ''
+      offset: 0002858A
+    - name: _lzsResetSendContext@4
+      demangled: ''
+      offset: '00028628'
+    - name: _lzsResetRecvContext@4
+      demangled: ''
+      offset: '00028682'
+    - name: _lzsCompress@12
+      demangled: ''
+      offset: '00028692'
+    - name: _lzsDecompress@24
+      demangled: ''
+      offset: 0002872E
+    - name: _msppcInitSend@12
+      demangled: ''
+      offset: 000287B0
+    - name: _msppcDeinitSend@8
+      demangled: ''
+      offset: '00028849'
+    - name: _msppcInitRecv@12
+      demangled: ''
+      offset: 000288C7
+    - name: _msppcDeinitRecv@8
+      demangled: ''
+      offset: 0002896C
+    - name: _msppcCompress@12
+      demangled: ''
+      offset: 00028A00
+    - name: _msppcResetSendContext@4
+      demangled: ''
+      offset: 0002A36A
+    - name: _msppcResetRecvContext@4
+      demangled: ''
+      offset: 0002A3B5
+    - name: _msppcDecompress@24
+      demangled: ''
+      offset: 0002A3E0
+    - name: _TraceMask
+      demangled: ''
+      offset: 0002B0D0
+    - name: _TraceLevel
+      demangled: ''
+      offset: 0002B0D4
+    - name: _hLog
+      demangled: ''
+      offset: 0002B0D8
+    - name: _dwLogRefCount
+      demangled: ''
+      offset: 0002B0DC
+    - name: _PPPVXDInfo
+      demangled: ''
+      offset: 0002B140
+    - name: _GlobalAdapterCount
+      demangled: ''
+      offset: 0002B150
+    - name: _HighestAcceptableMax
+      demangled: ''
+      offset: 0002B154
+    - name: _AsyncGlobalSupportedOids
+      demangled: ''
+      offset: 0002B158
+    - name: _AsyncProtocolSupportedOids
+      demangled: ''
+      offset: 0002B1E4
+    - name: _fMultiSingleLink
+      demangled: ''
+      offset: 0002B468
+    - name: _dst_addr
+      demangled: ''
+      offset: 0002B47C
+    - name: _src_addr
+      demangled: ''
+      offset: 0002B484
+    - name: _bcast_addr
+      demangled: ''
+      offset: 0002B48C
+    - name: _FSAGlobal
+      demangled: ''
+      offset: 0002B8C0
+    - name: _FSAActionTable
+      demangled: ''
+      offset: 0002B8CC
+    - name: _FSAEventStateTable
+      demangled: ''
+      offset: 0002B904
+    - name: _fForceMultilink
+      demangled: ''
+      offset: 0002BB84
+    - name: _CipxOn
+      demangled: ''
+      offset: 0002BB88
+    - name: _pCIPXHandleList
+      demangled: ''
+      offset: 0002BBA8
+    - name: _CipOn
+      demangled: ''
+      offset: 0002BBAC
+    - name: _pCIPHandleList
+      demangled: ''
+      offset: 0002BBC0
+    - name: _NBFGlobal
+      demangled: ''
+      offset: 0002BBC4
+    - name: _SHApad1
+      demangled: ''
+      offset: 0002BBEC
+    - name: _SHApad2
+      demangled: ''
+      offset: 0002BC14
+    - name: _lookup_array1
+      demangled: ''
+      offset: 0002BC3C
+    - name: _lookup_array2
+      demangled: ''
+      offset: 0002C03C
+    - name: _lookup_array3
+      demangled: ''
+      offset: 0002C43C
+    - name: EndLockable
+      demangled: ''
+      offset: 0002C83C
+  - num: '6'
+    name: _ITEXT
+    offset: '00000000'
+    symbols:
+    - name: _InitializeLockable@0
+      demangled: ''
+      offset: '00000000'

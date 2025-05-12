@@ -1,0 +1,1664 @@
+filename: windows/system32/drivers/ohci1394.sys
+#TODO: bring up more details from symdeb
+binary: OHCI1394
+description: ''
+appearances:
+- version: Windows 98 Debug
+  tree:
+  - ../common/common.c
+  - intel/llshr.asm
+  - interrup.c
+  - ohciirp.c
+  - ohcipnp.c
+  - ohcisoch.c
+  - openhci.c
+  - '"../../../../../wdm10/ddk/inc/wdm.h'
+  - interrup.c"../../../../../wdm10/ddk/inc/wdm.h
+  - ohciirp.c"../../../../../wdm10/ddk/inc/wdm.h
+  - ../../../../wdm10/ddk/inc/wdm.h
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00003620'
+    symbols:
+    - name: _OhciIsr@8
+      processed: ''
+      offset: '00000000'
+    - name: _OhciDpc@16
+      processed: ''
+      offset: 000000DD
+    - name: _OhciSynchGetIntBits@4
+      processed: ''
+      offset: 000003D8
+    - name: _OhciRestartIsochStreams@4
+      processed: ''
+      offset: 0000043A
+    - name: _OhciHandleIsochInt@12
+      processed: ''
+      offset: '00000545'
+    - name: _OhciHandleAsyncResponse@4
+      processed: ''
+      offset: 0000066E
+    - name: _OhciHandleAsyncRequest@4
+      processed: ''
+      offset: 00000B99
+    - name: _OhciHandleAsyncRspXmit@4
+      processed: ''
+      offset: 0000136A
+    - name: _OhciHandleAsyncReqXmit@4
+      processed: ''
+      offset: '00001477'
+    - name: _OhciTimeOutDpc@16
+      processed: ''
+      offset: 000017D7
+    - name: _OhciBusReset@8
+      processed: ''
+      offset: 0000186B
+    - name: _OhciHandleBusReset@8
+      processed: ''
+      offset: 0000198A
+    - name: _OhciCleanupPendingLists@4
+      processed: ''
+      offset: 00001B5B
+    - name: _ExFreeToNPagedLookasideList@8
+      processed: ''
+      offset: 00001DE6
+    - name: _OhciCleanupDmaBlockWrite@8
+      processed: ''
+      offset: '00001E14'
+    - name: _OhciRetryAsyncRequest@12
+      processed: ''
+      offset: 00001EFC
+    - name: _HandleIOCtl@12
+      processed: ''
+      offset: 00001FEB
+    - name: _CreatePortObjectAndSymLink@20
+      processed: ''
+      offset: 0000204D
+    - name: _OhciIOCtl@8
+      processed: ''
+      offset: 000021B2
+    - name: _OhciStartIo@8
+      processed: ''
+      offset: 000029C8
+    - name: _OhciSetupAsyncDma@16
+      processed: ''
+      offset: 0000397C
+    - name: _OhciGetAsyncScatterGather@16
+      processed: ''
+      offset: 00003B0F
+    - name: _OhciInsertTailDbInDmaContext@12
+      processed: ''
+      offset: 00003C61
+    - name: _OhciMapPhysicalRange@8
+      processed: ''
+      offset: 00003DFD
+    - name: _ExAllocateFromNPagedLookasideList@4
+      processed: ''
+      offset: '000040E9'
+    - name: _OhciGetAllocList@16
+      processed: ''
+      offset: '00004113'
+    - name: _OhciSetupAllocateDma@16
+      processed: ''
+      offset: '000042E1'
+    - name: _OhciSynchCompletionRoutine@12
+      processed: ''
+      offset: '00004428'
+    - name: _OhciInitializeReceiveDma@8
+      processed: ''
+      offset: 0000443E
+    - name: _OhciInitializeHw@8
+      processed: ''
+      offset: '00004577'
+    - name: _OhciShutdown@4
+      processed: ''
+      offset: 00004AD4
+    - name: _OhciPower@8
+      processed: ''
+      offset: 00004CDE
+    - name: _OhciSetPowerState@16
+      processed: ''
+      offset: 00004DA4
+    - name: _OhciRequestPowerCompletion@20
+      processed: ''
+      offset: 0000505E
+    - name: _OhciPowerUpCompletionRoutine@12
+      processed: ''
+      offset: 000050A1
+    - name: _OhciGetIsochDmaContext@12
+      processed: ''
+      offset: '00005119'
+    - name: _OhciReturnIsochDmaContext@12
+      processed: ''
+      offset: 000051AD
+    - name: _OhciGetIsochScatterGather@16
+      processed: ''
+      offset: 000051F0
+    - name: _OhciSetupIsochDma@16
+      processed: ''
+      offset: 0000585B
+    - name: _OhciIsochDynamicAppend@12
+      processed: ''
+      offset: 00005F47
+    - name: _OhciConfigureContext@8
+      processed: ''
+      offset: '00006303'
+    - name: _OhciGetIsochDbHeap@8
+      processed: ''
+      offset: 0000643C
+    - name: _OhciReturnIsochDbHeap@8
+      processed: ''
+      offset: 0000651A
+    - name: _OhciCalcIsochDbDmaSize@8
+      processed: ''
+      offset: 000065FA
+    - name: _OhciBusManagementCsrs@16
+      processed: ''
+      offset: 0000667D
+    - name: _OhciIsochAllocateBandwidth@8
+      processed: ''
+      offset: '00006774'
+    - name: _OhciIsochAllocateChannel@8
+      processed: ''
+      offset: '00006932'
+    - name: _OhciIsochFreeBandwidth@8
+      processed: ''
+      offset: 00006BB1
+    - name: _OhciIsochFreeChannel@8
+      processed: ''
+      offset: 00006C64
+    - name: _OhciIsochQueryResources@8
+      processed: ''
+      offset: 00006D04
+    - name: _OhciIsochSetChannelBandwidth@8
+      processed: ''
+      offset: 00006DF3
+    - name: _OhciUnload@4
+      processed: ''
+      offset: 00006EF1
+    - name: _OhciBusResetFinished@4
+      processed: ''
+      offset: 00006EF4
+    - name: _OhciFormTopologyMap@8
+      processed: ''
+      offset: 00006FAC
+    - name: _OhciCalculateCrc@8
+      processed: ''
+      offset: 000075AD
+    - name: _OhciCrc16@8
+      processed: ''
+      offset: 000075D1
+    - name: _OhciGenerateLocalSelfId@8
+      processed: ''
+      offset: 0000760C
+    - name: _Bus1394RegisterPortDriver@4
+      processed: ''
+      offset: 000076D4
+    - name: _KeInsertQueueDpc@12
+      processed: ''
+      offset: 000076DA
+    - name: _WRITE_REGISTER_ULONG@8
+      processed: ''
+      offset: '000076E0'
+    - name: _READ_REGISTER_ULONG@4
+      processed: ''
+      offset: '000076E6'
+    - name: '@KefReleaseSpinLockFromDpcLevel@4'
+      processed: ''
+      offset: 000076EC
+    - name: _KeSynchronizeExecution@12
+      processed: ''
+      offset: 000076F2
+    - name: '@KefAcquireSpinLockAtDpcLevel@4'
+      processed: ''
+      offset: 000076F8
+    - name: _DbgPrint
+      processed: ''
+      offset: 000076FE
+    - name: _RtlAssert@16
+      processed: ''
+      offset: '00007704'
+    - name: '@IofCompleteRequest@8'
+      processed: ''
+      offset: 0000770A
+    - name: '@ExfInterlockedInsertTailList@12'
+      processed: ''
+      offset: '00007710'
+    - name: _MmUnmapLockedPages@8
+      processed: ''
+      offset: '00007716'
+    - name: _KeCancelTimer@4
+      processed: ''
+      offset: 0000771C
+    - name: _KeStallExecutionProcessor@4
+      processed: ''
+      offset: '00007722'
+    - name: '@KfReleaseSpinLock@8'
+      processed: ''
+      offset: '00007728'
+    - name: '@KfAcquireSpinLock@4'
+      processed: ''
+      offset: 0000772E
+    - name: '@ExfInterlockedRemoveHeadList@8'
+      processed: ''
+      offset: '00007734'
+    - name: '@ExInterlockedPushEntrySList@12'
+      processed: ''
+      offset: 0000773A
+    - name: _KeSetTimer@16
+      processed: ''
+      offset: '00007740'
+    - name: _ExFreePool@4
+      processed: ''
+      offset: '00007746'
+    - name: _RtlCopyUnicodeString@8
+      processed: ''
+      offset: 0000774C
+    - name: _IoCreateUnprotectedSymbolicLink@8
+      processed: ''
+      offset: '00007752'
+    - name: _ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00007758'
+    - name: _IoCreateDevice@28
+      processed: ''
+      offset: 0000775E
+    - name: _RtlIntegerToUnicodeString@12
+      processed: ''
+      offset: '00007764'
+    - name: _RtlAppendUnicodeStringToString@8
+      processed: ''
+      offset: 0000776A
+    - name: _RtlAppendUnicodeToString@8
+      processed: ''
+      offset: '00007770'
+    - name: _RtlInitUnicodeString@8
+      processed: ''
+      offset: '00007776'
+    - name: _IoStartPacket@16
+      processed: ''
+      offset: 0000777C
+    - name: _MmMapLockedPages@8
+      processed: ''
+      offset: '00007782'
+    - name: '@InterlockedExchange@8'
+      processed: ''
+      offset: '00007788'
+    - name: _IoStartNextPacket@8
+      processed: ''
+      offset: 0000778E
+    - name: '@ExInterlockedPopEntrySList@8'
+      processed: ''
+      offset: '00007794'
+    - name: _KeInitializeDpc@12
+      processed: ''
+      offset: 0000779A
+    - name: _KeInitializeSpinLock@4
+      processed: ''
+      offset: 000077A0
+    - name: _IoDetachDevice@4
+      processed: ''
+      offset: 000077A6
+    - name: _IoDeleteDevice@4
+      processed: ''
+      offset: 000077AC
+    - name: _IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: 000077B2
+    - name: '@IofCallDriver@8'
+      processed: ''
+      offset: 000077B8
+    - name: _IoDeleteSymbolicLink@4
+      processed: ''
+      offset: 000077BE
+    - name: _ExInitializeNPagedLookasideList@28
+      processed: ''
+      offset: 000077C4
+    - name: _KeInitializeTimer@4
+      processed: ''
+      offset: 000077CA
+    - name: _MmCreateMdl@12
+      processed: ''
+      offset: 000077D0
+    - name: _IoDisconnectInterrupt@4
+      processed: ''
+      offset: 000077D6
+    - name: _IoConnectInterrupt@44
+      processed: ''
+      offset: 000077DC
+    - name: _MmUnmapIoSpace@8
+      processed: ''
+      offset: '000077E2'
+    - name: _IoGetDmaAdapter@12
+      processed: ''
+      offset: '000077E8'
+    - name: _MmMapIoSpace@16
+      processed: ''
+      offset: 000077EE
+    - name: _KeWaitForSingleObject@20
+      processed: ''
+      offset: 000077F4
+    - name: _KeInitializeEvent@12
+      processed: ''
+      offset: 000077FA
+    - name: _KeSetEvent@12
+      processed: ''
+      offset: '00007800'
+    - name: _ExDeleteNPagedLookasideList@4
+      processed: ''
+      offset: '00007806'
+    - name: _IoFreeMdl@4
+      processed: ''
+      offset: 0000780C
+    - name: _ZwClose@4
+      processed: ''
+      offset: '00007812'
+    - name: _IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: '00007818'
+    - name: _ZwQueryValueKey@24
+      processed: ''
+      offset: 0000781E
+    - name: _PoCallDriver@8
+      processed: ''
+      offset: '00007824'
+    - name: _PoStartNextPowerIrp@4
+      processed: ''
+      offset: 0000782A
+    - name: _PoSetPowerState@12
+      processed: ''
+      offset: '00007830'
+    - name: _PoRequestPowerIrp@24
+      processed: ''
+      offset: '00007836'
+    - name: __allshr
+      processed: ''
+      offset: '00007840'
+  - num: '3'
+    name: .data
+    offset: '00006580'
+    symbols:
+    - name: ??_C@_0CL@HHIN@?8OhciDpc?3?5Isoch?5Xmit?5context?5?$CFx?5@
+      processed: "`string'"
+      offset: '00000000'
+    - name: ??_C@_0CO@NBCG@?8OhciDpc?3?5Isoch?5Receive?5context?5@
+      processed: "`string'"
+      offset: 0000002C
+    - name: ??_C@_0CM@FOHG@?8OhciIsr?3?5Could?5not?5stop?5async?5T@
+      processed: "`string'"
+      offset: 0000005C
+    - name: ??_C@_0DG@PANH@?8OhciDpc?3?5UNRECOVARABLE?5ERROR?4?5R@
+      processed: "`string'"
+      offset: '00000088'
+    - name: ??_C@_0CI@IFCC@?8OhciDpc?3?5Int?5mask?5at?5start?5of?5D@
+      processed: "`string'"
+      offset: 000000C0
+    - name: ??_C@_0DG@JHHJ@?8OhciDpc?3?5Driver?1Device?5not?5read@
+      processed: "`string'"
+      offset: '000000E8'
+    - name: ??_C@_0EI@PJN@?8OhciDpc?0?5cycle?5inconsistent?5Int@
+      processed: "`string'"
+      offset: '00000120'
+    - name: ??_C@_0BM@DCAG@?8OhciDpc?3?5Invalid?5resource?6?$AA@
+      processed: "`string'"
+      offset: '00000168'
+    - name: ??_C@_0CN@MNIM@?8OhciDpc?3?5Isoch?3Doing?5callback?5f@
+      processed: "`string'"
+      offset: '00000184'
+    - name: ??_C@_0BK@OBAP@isochDescriptor?9?$DOCallback?$AA@
+      processed: "`string'"
+      offset: 000001B4
+    - name: ??_C@_0O@PIGB@?4?4?2interrup?4c?$AA@
+      processed: "`string'"
+      offset: 000001D0
+    - name: ??_C@_0EF@KLEO@?8OhciHandleAsyncResponse?3?5Stale?5@
+      processed: "`string'"
+      offset: '000001E0'
+    - name: ??_C@_0DB@DNFI@?8OhciHandleAsyncResponse?3?5Blowin@
+      processed: "`string'"
+      offset: '00000228'
+    - name: ??_C@_0BJ@LKFN@irp?9?$DOType?5?$DN?$DN?5IO_TYPE_IRP?$AA@
+      processed: "`string'"
+      offset: 0000025C
+    - name: ??_C@_0DH@IBAN@?8OhciHandleAsyncResponse?3?5Error?5@
+      processed: "`string'"
+      offset: '00000278'
+    - name: ??_C@_0EM@KHLJ@?8OhciHandleAsyncResponse?3?5Exceed@
+      processed: "`string'"
+      offset: 000002B0
+    - name: ??_C@_0DL@DHPM@?8OhciHandleAsyncResponse?3?5Data?5B@
+      processed: "`string'"
+      offset: 000002FC
+    - name: ??_C@_0DD@BGPF@?8OhciHandleAsyncResponse?3?5Segmen@
+      processed: "`string'"
+      offset: '00000338'
+    - name: ??_C@_0EJ@KKKP@?8OhciHandleAsyncResponse?3?5Receiv@
+      processed: "`string'"
+      offset: 0000036C
+    - name: ??_C@_0ED@NHNH@?8OhciHandleAsyncRequest?3?5Out?5of?5@
+      processed: "`string'"
+      offset: 000003B8
+    - name: ??_C@_0DJ@LBOO@?$CBIsListEmpty?$CI?$CGDeviceExtension?9?$DOA@
+      processed: "`string'"
+      offset: 000003FC
+    - name: ??_C@_0DA@GEHM@?8OhciHandleAsyncRequest?3?5Blowing@
+      processed: "`string'"
+      offset: '00000438'
+    - name: ??_C@_0FD@DOJF@?8OhciHandleAsyncRequest?3?5Xmit?5Re@
+      processed: "`string'"
+      offset: '00000468'
+    - name: ??_C@_0EG@CMLA@?8OhciHandleAsyncRequest?3?5Bus?5Ind@
+      processed: "`string'"
+      offset: 000004BC
+    - name: ??_C@_0DO@JDHF@?8OhciHandleAsyncRequest?3?5Raw?5res@
+      processed: "`string'"
+      offset: '00000504'
+    - name: ??_C@_0DM@PBCC@?8OhciHandleAsyncRequest?3?5Indicat@
+      processed: "`string'"
+      offset: '00000544'
+    - name: ??_C@_0DB@LLHE@?8OhciHandleAsyncRequest?3?5Bus?5Res@
+      processed: "`string'"
+      offset: '00000580'
+    - name: ??_C@_0EL@HJFK@asyncWorker?9?$DOAsyncWorkAreaIndex?5@
+      processed: "`string'"
+      offset: 000005B4
+    - name: ??_C@_0EL@PDFD@?8OhciHandleAsyncRequest?3?5Exceed?5@
+      processed: "`string'"
+      offset: '00000600'
+    - name: ??_C@_0BO@BMMA@?8OhciHandleRspXmit?3?5PKT?5ERR?5?6?$AA@
+      processed: "`string'"
+      offset: 0000064C
+    - name: ??_C@_0EJ@IKMA@?8OhciHandleRspXmit?3?5Response?5pac@
+      processed: "`string'"
+      offset: 0000066C
+    - name: ??_C@_0EG@DFJN@?8OhciHandleAsyncXmit?3?5Pulled?5out@
+      processed: "`string'"
+      offset: 000006B8
+    - name: ??_C@_0CN@HEM@?8OhciHandleAsyncXmit?3?5ACK?5MISSIN@
+      processed: "`string'"
+      offset: '00000700'
+    - name: ??_C@_0DI@FACP@?8OhciHandleAsyncXmit?3?5AT?5FIFO?5EV@
+      processed: "`string'"
+      offset: '00000730'
+    - name: ??_C@_0CO@LFDI@?8OhciHandleAsyncXmit?3?5EVT_TIMEOU@
+      processed: "`string'"
+      offset: '00000768'
+    - name: ??_C@_0CP@FICE@?8OhciHandleAsyncXmit?3?5EVT_FLUSHE@
+      processed: "`string'"
+      offset: '00000798'
+    - name: ??_C@_0CI@OIGA@?8OhciHandleAsyncXmit?3?5EVT_PACKET@
+      processed: "`string'"
+      offset: 000007C8
+    - name: ??_C@_0CO@KBCA@?8OhciHandleAsyncXmit?3?5ACK?5CRC?5ER@
+      processed: "`string'"
+      offset: 000007F0
+    - name: ??_C@_0FE@KMNO@?8OhciHandleAsyncXmit?3?5ACK_COMPLE@
+      processed: "`string'"
+      offset: '00000820'
+    - name: ??_C@_0CM@FPFN@?8OhciHandleAsyncXmit?3?5ACK_BUSY_X@
+      processed: "`string'"
+      offset: '00000874'
+    - name: ??_C@_0CP@FPJO@?8OhciHandleAsyncXmit?3?5ACK?5DATA?5E@
+      processed: "`string'"
+      offset: 000008A0
+    - name: ??_C@_0EB@HMGK@?8OhciHandleAsyncXmit?3?5Request?5co@
+      processed: "`string'"
+      offset: 000008D0
+    - name: ??_C@_0DH@EJHK@?8OhciTimeOutDpc?3?5Found?5timed?5out@
+      processed: "`string'"
+      offset: '00000914'
+    - name: ??_C@_0CD@IKNE@?8OhciBusReset?3?5Failed?5reg?51?5read@
+      processed: "`string'"
+      offset: 0000094C
+    - name: ??_C@_0BP@ILIN@?8OhciBusReset?3?5Gap?5Count?5?$DN?5?$CFd?6?$AA@
+      processed: "`string'"
+      offset: '00000970'
+    - name: ??_C@_0CH@HAFA@?8OhciBusReset?3?5Initiating?5Bus?5Re@
+      processed: "`string'"
+      offset: '00000990'
+    - name: ??_C@_0DH@ONPM@?8OhciHandleBusReset?3?5TI?5OHCI?5rev@
+      processed: "`string'"
+      offset: 000009B8
+    - name: ??_C@_0DM@NPGB@?8OhciHandleBusReset?3?5Calling?5the@
+      processed: "`string'"
+      offset: 000009F0
+    - name: ??_C@_0CL@DLJD@?8OhciHandleBusReset?3?5Enabling?5cy@
+      processed: "`string'"
+      offset: 00000A2C
+    - name: ??_C@_0EF@BNGE@?8OhciHandleBusReset?3?5Couldnt?5Rea@
+      processed: "`string'"
+      offset: 00000A58
+    - name: ??_C@_0DH@INBG@?8OhciHandleBusReset?3?5Couldnt?5Rea@
+      processed: "`string'"
+      offset: 00000AA0
+    - name: ??_C@_0CP@EPNA@?8OhciHandleBusReset?3?5Phy?5Reset?5h@
+      processed: "`string'"
+      offset: 00000AD8
+    - name: ??_C@_0BJ@BLDF@freeMapRegisters?5?$CB?$DN?5NULL?$AA@
+      processed: "`string'"
+      offset: 00000B08
+    - name: ??_C@_0BM@MGEC@flushAdapterBuffers?5?$CB?$DN?5NULL?$AA@
+      processed: "`string'"
+      offset: 00000B24
+    - name: ??_C@_0CD@PJBI@?4?4?2?4?4?2?4?4?2?4?4?2?4?4?2wdm10?2ddk?2inc?2wdm@
+      processed: "`string'"
+      offset: 00000B40
+    - name: ??_C@_0DB@CKBK@?8OhciHandleBusReset?3?5Freeing?5add@
+      processed: "`string'"
+      offset: 00000B64
+    - name: ??_C@_0CO@PPCE@?8OhciHandleBusReset?3?5Freeing?5add@
+      processed: "`string'"
+      offset: 00000B98
+    - name: ??_C@_0FA@IBKG@?8OhciHandleBusReset?3?5Found?5stale@
+      processed: "`string'"
+      offset: 00000BC8
+    - name: ??_C@_0CL@NAHF@?8OhciRetryAsyncRequest?3?5Device?5i@
+      processed: "`string'"
+      offset: 00000C18
+    - name: ??_C@_0CF@KLEP@?8OhciRetryAsyncRequest?3?5retrying@
+      processed: "`string'"
+      offset: 00000C44
+    - name: 
+        ??_C@_1CI@KDMG@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      processed: "`string'"
+      offset: 00000C6C
+    - name: 
+        ??_C@_1CA@MPBH@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      processed: "`string'"
+      offset: 00000C94
+    - name: ??_C@_0EE@KBAC@?8OhciIOCtl?3?5Failing?5read?1write?5d@
+      processed: "`string'"
+      offset: 00000CB4
+    - name: ??_C@_0DF@OING@?8OhciIOCtl?3?5Failing?5Lock?5due?5to?5@
+      processed: "`string'"
+      offset: 00000CF8
+    - name: ??_C@_0DP@BFBH@?8OhciIOCtl?3?5Failing?5Phy?5Config?5P@
+      processed: "`string'"
+      offset: 00000D30
+    - name: ??_C@_0CK@OJEG@?6OhciIOCTL?5Irp?5?$CFx?5returned?5with?5@
+      processed: "`string'"
+      offset: 00000D70
+    - name: ??_C@_0BJ@FPNP@freeCommonBuffer?5?$CB?$DN?5NULL?$AA@
+      processed: "`string'"
+      offset: 00000D9C
+    - name: ??_C@_0CP@GOPN@?8OhciStartIo?3?5ISOCH_FREE_RESOURC@
+      processed: "`string'"
+      offset: 00000DB8
+    - name: ??_C@_0CI@DNHL@?8OhciIOCTL?3?5Got?5ISOCH_FREE_RESOU@
+      processed: "`string'"
+      offset: 00000DE8
+    - name: ??_C@_0CC@LLKD@?8OhciIOCTL?3?5Max?5buffer?5too?5small@
+      processed: "`string'"
+      offset: '00000E10'
+    - name: ??_C@_0DK@FLJN@?8OhciIOCTL?3?5Could?5not?5allocate?5r@
+      processed: "`string'"
+      offset: '00000E34'
+    - name: ??_C@_0CI@KDGK@?8OhciIOCtl?3?5Common?5Buffer?5Addres@
+      processed: "`string'"
+      offset: '00000E70'
+    - name: ??_C@_0EC@JMGG@?8OhciIOCtl?3?5Couldn?8t?5allocate?5bi@
+      processed: "`string'"
+      offset: '00000E98'
+    - name: ??_C@_0BN@IHIP@allocateCommonBuffer?5?$CB?$DN?5NULL?$AA@
+      processed: "`string'"
+      offset: 00000EDC
+    - name: ??_C@_0EM@NOJI@?8OhciIOCtl?3?5Allocating?5Isoch?5res@
+      processed: "`string'"
+      offset: 00000EFC
+    - name: ??_C@_0EF@FHOJ@?8OhciIOCtl?3?5Allocating?5Isoch?5res@
+      processed: "`string'"
+      offset: 00000F48
+    - name: ??_C@_0CJ@PKHD@?8OhciIOCTL?3?5Could?5not?5get?5dma?5co@
+      processed: "`string'"
+      offset: 00000F90
+    - name: ??_C@_0CK@OIKM@?8OhciIOCTL?3?5Got?5ISOCH_ALLOCATE_R@
+      processed: "`string'"
+      offset: 00000FBC
+    - name: ??_C@_0BM@FBCO@?8OhciIOCTL?3?5Irp?5?$CFx?0?5Irb?5?$CFx?6?$AA@
+      processed: "`string'"
+      offset: 00000FE8
+    - name: ??_C@_0CK@BJMI@?8OhciStartIo?3?5Got?5ISOCH_STOP?5for@
+      processed: "`string'"
+      offset: '00001004'
+    - name: ??_C@_0EE@BJAN@?8OhciStartIo?3?5ISOCH_TALK?5with?5sy@
+      processed: "`string'"
+      offset: '00001030'
+    - name: ??_C@_0DD@GGJF@?8OhciStartIo?3?5Got?5ISOCH_TALK?0str@
+      processed: "`string'"
+      offset: '00001074'
+    - name: ??_C@_0CL@NIGK@?8OhciStartIo?3?5Read?1write?5alloc?5D@
+      processed: "`string'"
+      offset: 000010A8
+    - name: ??_C@_0CJ@BICM@?8OhciStartIo?3Db?5?$CFx?0Node?5?$DN?5?$CFx?0?5tL@
+      processed: "`string'"
+      offset: 000010D4
+    - name: ??_C@_0CI@IJCL@?8OhciStartIo?3?5Partial?5request?0?5i@
+      processed: "`string'"
+      offset: '00001100'
+    - name: ??_C@_0DK@OAMB@?8OhciStartIo?3?5Got?5async?5Stream?5I@
+      processed: "`string'"
+      offset: '00001128'
+    - name: ??_C@_0BP@IDLO@?8OhciStartIo?3?5RAW?5Packet?5?$DN?5?$CFx?6?$AA@
+      processed: "`string'"
+      offset: '00001164'
+    - name: ??_C@_0CN@OIGA@?8OhciStartIo?3?5Read?1write?5invalid@
+      processed: "`string'"
+      offset: '00001184'
+    - name: ??_C@_0CO@ILAF@?8OhciStartIo?3?5Run?5out?5of?5ASync?5T@
+      processed: "`string'"
+      offset: 000011B4
+    - name: ??_C@_0CM@LHII@?8OhciStartIo?3?5Got?5ISOCH_LISTEN?5f@
+      processed: "`string'"
+      offset: '000011E4'
+    - name: ??_C@_0EA@LPDP@?8OhciStartIo?3?5Detach?5Buffers?3Rec@
+      processed: "`string'"
+      offset: '00001210'
+    - name: ??_C@_0CK@OLKG@?8OhciStartIo?3?5Detaching?5?$CFx?5reser@
+      processed: "`string'"
+      offset: '00001250'
+    - name: ??_C@_0BP@OCPD@allocateAdapterChannel?5?$CB?$DN?5NULL?$AA@
+      processed: "`string'"
+      offset: 0000127C
+    - name: ??_C@_0CK@ILFJ@?8OhciStartIo?3?5Attaching?5?$CFx?5reser@
+      processed: "`string'"
+      offset: 0000129C
+    - name: ??_C@_0CL@OHKB@slot?5?$DM?$DN?5MAX_OHCI_COMMAND_DESCRIP@
+      processed: "`string'"
+      offset: 000012C8
+    - name: ??_C@_0N@BEMN@?4?4?2ohciirp?4c?$AA@
+      processed: "`string'"
+      offset: 000012F4
+    - name: ??_C@_0CJ@BNKG@?8OhciAsyncAllocDma?3?5Exceed?5slot?5@
+      processed: "`string'"
+      offset: '00001304'
+    - name: ??_C@_0DA@OBIJ@?8OhciInsertTailDb?3?5AT?5tail?5empty@
+      processed: "`string'"
+      offset: '00001330'
+    - name: ??_C@_0CM@MOLL@?8OhciInsertTailDb?3?5DESC?5pints?5to@
+      processed: "`string'"
+      offset: '00001360'
+    - name: ??_C@_0CK@GBLL@?8OhciStartIo?3?5Allocate?5address?5f@
+      processed: "`string'"
+      offset: 0000138C
+    - name: ??_C@_0DD@FLDP@?6OhciMapRange?5got?5Notify?5callbac@
+      processed: "`string'"
+      offset: 000013B8
+    - name: ??_C@_0P@JFOO@addressMapping?$AA@
+      processed: "`string'"
+      offset: 000013EC
+    - name: ??_C@_0DA@OLBM@?8OhciAllocScatterGather?0?5done?5Ir@
+      processed: "`string'"
+      offset: 000013FC
+    - name: ??_C@_0DP@FIMD@OhciAllocScatterGather?5got?5large@
+      processed: "`string'"
+      offset: 0000142C
+    - name: ??_C@_0DG@PAJJ@Irb?9?$DOFunctionNumber?5?$DN?$DN?5REQUEST_A@
+      processed: "`string'"
+      offset: 0000146C
+    - name: ??_C@_0CP@DMKJ@?8OhciSetupAllocDma?5called?5with?5I@
+      processed: "`string'"
+      offset: 000014A4
+    - name: ??_C@_0CO@BIBO@?8OhciSetupAllocDma?5caled?5with?5In@
+      processed: "`string'"
+      offset: 000014D4
+    - name: ??_C@_0DH@MNLI@?8OhciPnPAddDevice?3?5Failed?5to?5reg@
+      processed: "`string'"
+      offset: '00001504'
+    - name: ??_C@_0EA@OPJL@Ohci1394?3?5OhchSystemControl?3?5IRP@
+      processed: "`string'"
+      offset: 0000153C
+    - name: ??_C@_0CA@KOKF@?8OhciPnP?3?5Got?5unhandled?5irp?5?$CFx?6?$AA@
+      processed: "`string'"
+      offset: 0000157C
+    - name: ??_C@_0CC@EFII@?8OhciPnP?3?5Got?5QUERY_CAPABILITIES@
+      processed: "`string'"
+      offset: 0000159C
+    - name: ??_C@_0CI@GKOE@?8OhciPnP?3?5Got?5REMOVE_DEVICE?0?5dev@
+      processed: "`string'"
+      offset: 000015C0
+    - name: ??_C@_0CE@NEKH@?8OhciPnP?3?5Got?5STOP_DEVICE?5devext@
+      processed: "`string'"
+      offset: '000015E8'
+    - name: ??_C@_0DC@MKCG@?8OhciPnP?3?5Couldn?8t?5initialize?5th@
+      processed: "`string'"
+      offset: 0000160C
+    - name: ??_C@_0DN@NPBM@?8OhciPnP?3?5Couldn?8t?5allocate?5pool@
+      processed: "`string'"
+      offset: '00001640'
+    - name: ??_C@_0EI@KNKP@?8OhciPnP?3?5Couldn?8t?5allocate?5cont@
+      processed: "`string'"
+      offset: '00001680'
+    - name: ??_C@_0DB@NELL@?8OhciPnP?3?5allocating?5common?5buff@
+      processed: "`string'"
+      offset: 000016C8
+    - name: ??_C@_0CN@GNGD@?8OhciPnP?3?5Couldn?8t?5connect?5to?5th@
+      processed: "`string'"
+      offset: 000016FC
+    - name: ??_C@_0DC@EDE@?8OhciPnP?3?5We?8ve?5got?5?$CFd?5MapRegist@
+      processed: "`string'"
+      offset: 0000172C
+    - name: ??_C@_0CM@NHPI@?8OhciPnP?3?5Couldn?8t?5allocate?5adap@
+      processed: "`string'"
+      offset: '00001760'
+    - name: ??_C@_0DI@FJHM@?8OhciPnP?3?5Couldn?8t?5get?1translate@
+      processed: "`string'"
+      offset: 0000178C
+    - name: ??_C@_0DO@JFJN@?8OHCIPnP?3?5Successfully?5stored?5Ve@
+      processed: "`string'"
+      offset: 000017C4
+    - name: ??_C@_0DO@EELH@?8OHCIPnP?3?5Successfully?5stored?5Re@
+      processed: "`string'"
+      offset: '00001804'
+    - name: ??_C@_0DC@JKLO@?8OHCIPnP?3?5Port?5Resources?5Found?5?$EA@
+      processed: "`string'"
+      offset: '00001844'
+    - name: ??_C@_0DO@OGAJ@?8OhciPnP?3?5Interrupt?5Resources?5Fo@
+      processed: "`string'"
+      offset: '00001878'
+    - name: ??_C@_0EN@GIHL@?8OhciPnP?3?5Successfully?5mapped?5Me@
+      processed: "`string'"
+      offset: 000018B8
+    - name: ??_C@_0DP@DGEI@?8OhciPnP?3?5Successfully?5mapped?5Me@
+      processed: "`string'"
+      offset: '00001908'
+    - name: ??_C@_0CP@GENM@?8OhciPnP?3?5Successfully?5translate@
+      processed: "`string'"
+      offset: '00001948'
+    - name: ??_C@_0DE@OPJN@?8OhciPnP?3?5Memory?5Resources?5Found@
+      processed: "`string'"
+      offset: '00001978'
+    - name: 
+        ??_C@_0DO@NGJE@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIOhciSynchComp@
+      processed: "`string'"
+      offset: 000019AC
+    - name: ??_C@_0N@FNGO@?4?4?2ohcipnp?4c?$AA@
+      processed: "`string'"
+      offset: 000019EC
+    - name: ??_C@_0CF@KENK@?8OhciPnP?3?5Got?5START_DEVICE?5devex@
+      processed: "`string'"
+      offset: 000019FC
+    - name: ??_C@_0CH@FOPG@?8OhciInitializeHw?3?51394A?5Phy?5fou@
+      processed: "`string'"
+      offset: 00001A24
+    - name: ??_C@_0EF@JJKG@?8OhciInitializeHw?3?5TI?5OHCI?5rev?50@
+      processed: "`string'"
+      offset: 00001A4C
+    - name: ??_C@_0DG@BKBF@?8OhciInitializeHw?3?5verify?5failed@
+      processed: "`string'"
+      offset: 00001A94
+    - name: ??_C@_0DJ@BBHB@?8OhciInitializeHw?3?5Failed?5PhyCon@
+      processed: "`string'"
+      offset: 00001ACC
+    - name: ??_C@_0DE@KKBA@?8OhciInitializeHw?3?5Physical?5Addr@
+      processed: "`string'"
+      offset: 00001B08
+    - name: ??_C@_0DC@JDGD@?8OhciInitializeHw?3?5self?5id?5bfr?5?$DN@
+      processed: "`string'"
+      offset: 00001B3C
+    - name: ??_C@_0CN@BDOH@?8OhciInitializeHw?3?5Node?5Id?5?$DN?5?$CFx?0@
+      processed: "`string'"
+      offset: 00001B70
+    - name: ??_C@_0CM@OOIL@?8OhciInitializeHw?3?5Setting?5Cycle@
+      processed: "`string'"
+      offset: 00001BA0
+    - name: ??_C@_0BP@EKEE@?8OhciVerifyHw?3?5Clear?5all?5Ints?6?$AA@
+      processed: "`string'"
+      offset: 00001BCC
+    - name: ??_C@_0CK@FHLI@?8OhciInitializeHw?3?5Performing?5So@
+      processed: "`string'"
+      offset: 00001BEC
+    - name: ??_C@_0DA@JGFA@?8OhciShutDown?5Setting?5contdender@
+      processed: "`string'"
+      offset: 00001C18
+    - name: ??_C@_0CG@JKDI@?8OhciShutDown?3?5Freeing?5Common?5bu@
+      processed: "`string'"
+      offset: 00001C48
+    - name: ??_C@_0EC@NHKE@?8OhciGetRegistryParameters?3?5stat@
+      processed: "`string'"
+      offset: 00001C70
+    - name: 
+        ??_C@_1CA@PCLB@?$AAT?$AAr?$AAa?$AAn?$AAs?$AAm?$AAi?$AAt?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      processed: "`string'"
+      offset: 00001CB4
+    - name: 
+        ??_C@_1BO@NBKO@?$AAR?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      processed: "`string'"
+      offset: 00001CD4
+    - name: 
+        ??_C@_1BO@MLPO@?$AAD?$AAi?$AAa?$AAg?$AAn?$AAo?$AAs?$AAt?$AAi?$AAc?$AAM?$AAo?$AAd?$AAe?$AA?$AA@
+      processed: "`string'"
+      offset: 00001CF4
+    - name: ??_C@_0GI@KJMO@?8OhciGetRegistryKeyValue?3?5Regist@
+      processed: "`string'"
+      offset: 00001D14
+    - name: ??_C@_0CD@LFNA@?8OhciPower?3?5Type?5?$DN?5?$CFd?0?5State?5?$DN?5?$CF@
+      processed: "`string'"
+      offset: 00001D7C
+    - name: ??_C@_0DH@KGK@?8OhciPower?3?5Unknown?1Unhandled?5Po@
+      processed: "`string'"
+      offset: 00001DA0
+    - name: ??_C@_0CL@OKGH@?8OhciPower?3got?5Power?5IRP?5?$CFx?0?5min@
+      processed: "`string'"
+      offset: 00001DD8
+    - name: ??_C@_0CI@FLHE@irpStack?9?$DOMajorFunction?5?$DN?$DN?5IRP_M@
+      processed: "`string'"
+      offset: '00001E04'
+    - name: ??_C@_0CB@MCF@OhciSetPower?3?5From?5?$CFd?5to?5?$CFd?5NOP?6@
+      processed: "`string'"
+      offset: 00001E2C
+    - name: 
+        ??_C@_0EA@FJOH@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIOhciPowerUpCo@
+      processed: "`string'"
+      offset: '00001E50'
+    - name: ??_C@_0CJ@LGGD@OhciSetPower?3?5Powering?5on?4From?5?$CF@
+      processed: "`string'"
+      offset: '00001E90'
+    - name: ??_C@_0DF@DILM@?8Ohci?5Powering?5off?0?5setting?5cont@
+      processed: "`string'"
+      offset: 00001EBC
+    - name: ??_C@_0CK@IBBP@OhciSetPower?3?5Powering?5off?4From?5@
+      processed: "`string'"
+      offset: 00001EF4
+    - name: ??_C@_0DD@BOBL@OhciSetPower?3?5Sending?5D?5Irp?5requ@
+      processed: "`string'"
+      offset: 00001F20
+    - name: ??_C@_0CK@OLLO@OhciSetPower?3?5System?5ShutDown?5?0?5@
+      processed: "`string'"
+      offset: 00001F54
+    - name: ??_C@_0DF@BPLJ@OhciSetPower?3?5System?5power?5chang@
+      processed: "`string'"
+      offset: 00001F80
+    - name: ??_C@_0EB@CGKP@OhciRequestPowerCompletion?3?5Irp?5@
+      processed: "`string'"
+      offset: 00001FB8
+    - name: ??_C@_0CK@IJMI@?8OhciPowerUpCompletion?3Irp?5?$CFx?0St@
+      processed: "`string'"
+      offset: 00001FFC
+    - name: ??_C@_0DB@FNJA@reservedDsc?9?$DOIsochDbHeap?9?$DOHeapLe@
+      processed: "`string'"
+      offset: '00002028'
+    - name: ??_C@_0O@GMPK@?4?4?2ohcisoch?4c?$AA@
+      processed: "`string'"
+      offset: 0000205C
+    - name: 
+        ??_C@_0FN@NNLG@?8OhciSetupIsochDma?3?5?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK@
+      processed: "`string'"
+      offset: 0000206C
+    - name: ??_C@_0CP@NEPC@?6?5Ohci?5ISOCH?5Listen?5DMA?0?5buffer?5@
+      processed: "`string'"
+      offset: 000020CC
+    - name: ??_C@_0BE@CIAH@mapTransfer?5?$CB?$DN?5NULL?$AA@
+      processed: "`string'"
+      offset: 000020FC
+    - name: ??_C@_0DK@FHKF@?8OhciStartIo?3?5Waking?5ISOCH?5Conte@
+      processed: "`string'"
+      offset: '00002110'
+    - name: ??_C@_0DL@FDMC@?8OhciStartIo?3?5Restarting?5ISOCH?0?5@
+      processed: "`string'"
+      offset: 0000214C
+    - name: ??_C@_0DJ@NHDG@?8OhciStartIo?3AttachBuffers?3?5Conn@
+      processed: "`string'"
+      offset: '00002188'
+    - name: ??_C@_0CN@DMCK@?8OhciStartIo?3?5Inserting?5VERy?5fir@
+      processed: "`string'"
+      offset: 000021C4
+    - name: ??_C@_03JPNJ@irb?$AA@
+      processed: "`string'"
+      offset: 000021F4
+    - name: 
+        ??_C@_0EE@PGB@?8OhciSetupIsochDma?3?5?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK@
+      processed: "`string'"
+      offset: 000021F8
+    - name: ??_C@_0DJ@IIIH@?8OhciManagementCSRs?3?5After?5opera@
+      processed: "`string'"
+      offset: 0000223C
+    - name: ??_C@_0EN@ICC@?8OhciManagementCSRs?3?5Compare?9swa@
+      processed: "`string'"
+      offset: '00002278'
+    - name: ??_C@_0DH@INGG@?8OhciManagementCSRs?3?5Compare?5?$CFx?0@
+      processed: "`string'"
+      offset: 000022C8
+    - name: ??_C@_0DG@MBCG@?8OhciAllocateBandwidth?3SUCCESS?0?5@
+      processed: "`string'"
+      offset: '00002300'
+    - name: ??_C@_0DJ@FAMJ@?8OhciAllocateBandwidth?3bandwidth@
+      processed: "`string'"
+      offset: '00002338'
+    - name: ??_C@_0CP@PN@?8OhciAllocateBandwidth?3bandwidth@
+      processed: "`string'"
+      offset: '00002374'
+    - name: ??_C@_0CP@LDB@?8OhciAllocateBandwidth?3speed?5use@
+      processed: "`string'"
+      offset: 000023A4
+    - name: ??_C@_0CL@DABA@?8OhciAllocateChannel?3SUCCESS?0?5ch@
+      processed: "`string'"
+      offset: 000023D4
+    - name: ??_C@_0DD@PNCC@?8OhciAllocateChannel?3FAILED?0?5req@
+      processed: "`string'"
+      offset: '00002400'
+    - name: ??_C@_0DP@DOLK@?8OhciAllocateChannel?3SUCCESS?0?5re@
+      processed: "`string'"
+      offset: '00002434'
+    - name: ??_C@_0DP@NGPH@?8OhciFreeBandwidth?3FAILED?0?5inval@
+      processed: "`string'"
+      offset: '00002474'
+    - name: ??_C@_0DJ@KECP@?8OhciFreeBandwidth?3FAILED?0?5inval@
+      processed: "`string'"
+      offset: 000024B4
+    - name: ??_C@_0CE@BCGB@?8OhciQueryResources?5Invalid?5spee@
+      processed: "`string'"
+      offset: 000024F0
+    - name: ??_C@_0CD@MEBI@?8OhciQueryResources?5?3failed?5read@
+      processed: "`string'"
+      offset: '00002514'
+    - name: ??_C@_0BN@KNFK@?8OhciQueryResources?5irb?5?$CFx?5?6?$AA@
+      processed: "`string'"
+      offset: '00002538'
+    - name: ??_C@_0BN@DIBF@?8OhciSetBandwidth?3?5SUCCESS?5?6?$AA@
+      processed: "`string'"
+      offset: '00002558'
+    - name: ??_C@_0CL@LHLE@?8OhciSetBandwidth?3?5Stale?5bandwid@
+      processed: "`string'"
+      offset: '00002578'
+    - name: ??_C@_0BO@GOMG@?8OhciSetBandwidth?5struct?5?$CFx?5?6?$AA@
+      processed: "`string'"
+      offset: 000025A4
+    - name: ??_C@_0DP@LLPC@?8OhciFormTopologyMap?3?5Done?4?5BusR@
+      processed: "`string'"
+      offset: 000025C4
+    - name: ??_C@_0EO@KODI@?8OhciFormTopologyMap?3?5Incosistan@
+      processed: "`string'"
+      offset: '00002604'
+    - name: ??_C@_0CH@GAAA@?8OhciFormTopologyMap?3?5Bad?5SelfId@
+      processed: "`string'"
+      offset: '00002654'
+    - name: ??_C@_0CN@KDBI@?8OhciFormTopologyMap?3?5Found?5OWN?5@
+      processed: "`string'"
+      offset: 0000267C
+    - name: ??_C@_0CD@LLHP@?8OhciFormTopologyMap?3?5SelfId?5?$DN?5?$CF@
+      processed: "`string'"
+      offset: 000026AC
+    - name: ??_C@_0DE@LKNO@?8OhciFormTopologyMap?3?5TI?5OHCI?5re@
+      processed: "`string'"
+      offset: 000026D0
+    - name: ??_C@_0FA@OJOD@?8OhciFormTopologyMap?3?5Self?5ID?5Er@
+      processed: "`string'"
+      offset: '00002704'
+    - name: ??_C@_0CI@DKGJ@?8OhciFormTopologyMap?3?5SelfIdCoun@
+      processed: "`string'"
+      offset: '00002754'
+    - name: ??_C@_0DG@HDG@?8OhciFormTopologyMap?3?5ERROR?5read@
+      processed: "`string'"
+      offset: 0000277C
+    - name: ??_C@_0DA@DALJ@?8OhciFormTopologyMap?3?5Fabricated@
+      processed: "`string'"
+      offset: 000027B4
+    - name: _OhciDebugLevel
+      processed: ''
+      offset: 000027F0
+  - num: '4'
+    name: .idata$2
+    offset: '00006E30'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_1394BUS
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __imp__Bus1394RegisterPortDriver@4
+      processed: ''
+      offset: 0000014C
+    - name: \1771394BUS_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000150'
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: '00000154'
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: '00000158'
+    - name: __imp__KeStallExecutionProcessor@4
+      processed: ''
+      offset: 0000015C
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000160'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      processed: ''
+      offset: '00000164'
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: '00000168'
+    - name: __imp__KeSynchronizeExecution@12
+      processed: ''
+      offset: 0000016C
+    - name: __imp__READ_REGISTER_ULONG@4
+      processed: ''
+      offset: '00000170'
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      processed: ''
+      offset: '00000174'
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      processed: ''
+      offset: '00000178'
+    - name: __imp__MmUnmapLockedPages@8
+      processed: ''
+      offset: 0000017C
+    - name: __imp__KeCancelTimer@4
+      processed: ''
+      offset: '00000180'
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: '00000184'
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: '00000188'
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      processed: ''
+      offset: 0000018C
+    - name: __imp__WRITE_REGISTER_ULONG@8
+      processed: ''
+      offset: '00000190'
+    - name: __imp_@ExInterlockedPushEntrySList@12
+      processed: ''
+      offset: '00000194'
+    - name: __imp__KeSetTimer@16
+      processed: ''
+      offset: '00000198'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: 0000019C
+    - name: __imp__RtlCopyUnicodeString@8
+      processed: ''
+      offset: 000001A0
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      processed: ''
+      offset: 000001A4
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 000001A8
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: 000001AC
+    - name: __imp__RtlIntegerToUnicodeString@12
+      processed: ''
+      offset: 000001B0
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      processed: ''
+      offset: 000001B4
+    - name: __imp__RtlAppendUnicodeToString@8
+      processed: ''
+      offset: 000001B8
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: 000001BC
+    - name: __imp__IoStartPacket@16
+      processed: ''
+      offset: 000001C0
+    - name: __imp__MmMapLockedPages@8
+      processed: ''
+      offset: 000001C4
+    - name: __imp__IoStartNextPacket@8
+      processed: ''
+      offset: 000001C8
+    - name: __imp__KeInsertQueueDpc@12
+      processed: ''
+      offset: 000001CC
+    - name: __imp_@ExInterlockedPopEntrySList@8
+      processed: ''
+      offset: 000001D0
+    - name: __imp__KeInitializeDpc@12
+      processed: ''
+      offset: 000001D4
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: 000001D8
+    - name: __imp__IoDetachDevice@4
+      processed: ''
+      offset: 000001DC
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: '000001E0'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '000001E4'
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '000001E8'
+    - name: __imp__IoDeleteSymbolicLink@4
+      processed: ''
+      offset: 000001EC
+    - name: __imp__ExInitializeNPagedLookasideList@28
+      processed: ''
+      offset: 000001F0
+    - name: __imp__KeInitializeTimer@4
+      processed: ''
+      offset: 000001F4
+    - name: __imp__MmCreateMdl@12
+      processed: ''
+      offset: 000001F8
+    - name: __imp__IoDisconnectInterrupt@4
+      processed: ''
+      offset: 000001FC
+    - name: __imp__IoConnectInterrupt@44
+      processed: ''
+      offset: '00000200'
+    - name: __imp__MmUnmapIoSpace@8
+      processed: ''
+      offset: '00000204'
+    - name: __imp__IoGetDmaAdapter@12
+      processed: ''
+      offset: '00000208'
+    - name: __imp__MmMapIoSpace@16
+      processed: ''
+      offset: 0000020C
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: '00000210'
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '00000214'
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: '00000218'
+    - name: __imp__ExDeleteNPagedLookasideList@4
+      processed: ''
+      offset: 0000021C
+    - name: __imp__IoFreeMdl@4
+      processed: ''
+      offset: '00000220'
+    - name: __imp__ZwClose@4
+      processed: ''
+      offset: '00000224'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: '00000228'
+    - name: __imp__ZwQueryValueKey@24
+      processed: ''
+      offset: 0000022C
+    - name: __imp__PoCallDriver@8
+      processed: ''
+      offset: '00000230'
+    - name: __imp__PoStartNextPowerIrp@4
+      processed: ''
+      offset: '00000234'
+    - name: __imp__PoSetPowerState@12
+      processed: ''
+      offset: '00000238'
+    - name: __imp__PoRequestPowerIrp@24
+      processed: ''
+      offset: 0000023C
+    - name: __imp_@InterlockedExchange@8
+      processed: ''
+      offset: '00000240'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000244'
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _OhciPnPAddDevice@8
+      processed: ''
+      offset: '00000000'
+    - name: _OhciSystemControl@8
+      processed: ''
+      offset: '00000267'
+    - name: _OhciPnP@8
+      processed: ''
+      offset: 000002A9
+    - name: _OhciGetRegistryParameters@16
+      processed: ''
+      offset: 00000DAC
+    - name: _OhciGetRegistryKeyValue@20
+      processed: ''
+      offset: '00000E69'
+    - name: _DriverEntry@8
+      processed: ''
+      offset: 00000F0F
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00002CA0
+    symbols:
+    - name: _OhciIsr@8
+      demangled: ''
+      offset: '00000000'
+    - name: _OhciDpc@16
+      demangled: ''
+      offset: 000000DD
+    - name: _OhciSynchGetIntBits@4
+      demangled: ''
+      offset: '00000329'
+    - name: _OhciRestartIsochStreams@4
+      demangled: ''
+      offset: 0000038B
+    - name: _OhciHandleIsochInt@12
+      demangled: ''
+      offset: '00000480'
+    - name: _OhciHandleAsyncResponse@4
+      demangled: ''
+      offset: '00000554'
+    - name: _OhciHandleAsyncRequest@4
+      demangled: ''
+      offset: 000009A5
+    - name: _OhciHandleAsyncRspXmit@4
+      demangled: ''
+      offset: '00001042'
+    - name: _OhciHandleAsyncReqXmit@4
+      demangled: ''
+      offset: '00001109'
+    - name: _OhciTimeOutDpc@16
+      demangled: ''
+      offset: 0000134C
+    - name: _OhciBusReset@8
+      demangled: ''
+      offset: 000013B6
+    - name: _OhciHandleBusReset@8
+      demangled: ''
+      offset: '00001498'
+    - name: _OhciCleanupPendingLists@4
+      demangled: ''
+      offset: 000015EF
+    - name: _ExFreeToNPagedLookasideList@8
+      demangled: ''
+      offset: 000017D1
+    - name: _OhciCleanupDmaBlockWrite@8
+      demangled: ''
+      offset: 000017FF
+    - name: _OhciRetryAsyncRequest@12
+      demangled: ''
+      offset: '00001880'
+    - name: _HandleIOCtl@12
+      demangled: ''
+      offset: '00001943'
+    - name: _CreatePortObjectAndSymLink@20
+      demangled: ''
+      offset: 000019A5
+    - name: _OhciIOCtl@8
+      demangled: ''
+      offset: 00001B0A
+    - name: _OhciStartIo@8
+      demangled: ''
+      offset: '00002145'
+    - name: _OhciSetupAsyncDma@16
+      demangled: ''
+      offset: 00002EBF
+    - name: _OhciGetAsyncScatterGather@16
+      demangled: ''
+      offset: '00003022'
+    - name: _OhciInsertTailDbInDmaContext@12
+      demangled: ''
+      offset: '00003145'
+    - name: _OhciMapPhysicalRange@8
+      demangled: ''
+      offset: 000032B6
+    - name: _ExAllocateFromNPagedLookasideList@4
+      demangled: ''
+      offset: 000034C2
+    - name: _OhciGetAllocList@16
+      demangled: ''
+      offset: 000034EC
+    - name: _OhciSetupAllocateDma@16
+      demangled: ''
+      offset: '00003640'
+    - name: _OhciSynchCompletionRoutine@12
+      demangled: ''
+      offset: 0000374F
+    - name: _OhciInitializeReceiveDma@8
+      demangled: ''
+      offset: '00003765'
+    - name: _OhciInitializeHw@8
+      demangled: ''
+      offset: 0000389E
+    - name: _OhciShutdown@4
+      demangled: ''
+      offset: 00003CF3
+    - name: _OhciPower@8
+      demangled: ''
+      offset: 00003E8D
+    - name: _OhciSetPowerState@16
+      demangled: ''
+      offset: 00003EE5
+    - name: _OhciRequestPowerCompletion@20
+      demangled: ''
+      offset: 000040C1
+    - name: _OhciPowerUpCompletionRoutine@12
+      demangled: ''
+      offset: '000040E3'
+    - name: _OhciGetIsochDmaContext@12
+      demangled: ''
+      offset: 0000413F
+    - name: _OhciReturnIsochDmaContext@12
+      demangled: ''
+      offset: 000041D3
+    - name: _OhciGetIsochScatterGather@16
+      demangled: ''
+      offset: '00004216'
+    - name: _OhciSetupIsochDma@16
+      demangled: ''
+      offset: '00004827'
+    - name: _OhciIsochDynamicAppend@12
+      demangled: ''
+      offset: 00004E5D
+    - name: _OhciConfigureContext@8
+      demangled: ''
+      offset: '00005188'
+    - name: _OhciGetIsochDbHeap@8
+      demangled: ''
+      offset: 0000529B
+    - name: _OhciReturnIsochDbHeap@8
+      demangled: ''
+      offset: '00005379'
+    - name: _OhciCalcIsochDbDmaSize@8
+      demangled: ''
+      offset: '00005459'
+    - name: _OhciBusManagementCsrs@16
+      demangled: ''
+      offset: 000054DC
+    - name: _OhciIsochAllocateBandwidth@8
+      demangled: ''
+      offset: '00005584'
+    - name: _OhciIsochAllocateChannel@8
+      demangled: ''
+      offset: '000056E1'
+    - name: _OhciIsochFreeBandwidth@8
+      demangled: ''
+      offset: 000058FC
+    - name: _OhciIsochFreeChannel@8
+      demangled: ''
+      offset: 0000597F
+    - name: _OhciIsochQueryResources@8
+      demangled: ''
+      offset: 00005A1F
+    - name: _OhciIsochSetChannelBandwidth@8
+      demangled: ''
+      offset: 00005AB9
+    - name: _OhciUnload@4
+      demangled: ''
+      offset: 00005B79
+    - name: _OhciBusResetFinished@4
+      demangled: ''
+      offset: 00005B7C
+    - name: _OhciFormTopologyMap@8
+      demangled: ''
+      offset: 00005C34
+    - name: _OhciCalculateCrc@8
+      demangled: ''
+      offset: '00006127'
+    - name: _OhciCrc16@8
+      demangled: ''
+      offset: 0000614B
+    - name: _OhciGenerateLocalSelfId@8
+      demangled: ''
+      offset: '00006186'
+    - name: _Bus1394RegisterPortDriver@4
+      demangled: ''
+      offset: 0000622E
+    - name: __allshr
+      demangled: ''
+      offset: '00006240'
+  - num: '2'
+    name: .data
+    offset: 00002ED0
+    symbols:
+    - name: 
+        ??_C@_1CI@KDMG@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      demangled: "`string'"
+      offset: '00000000'
+    - name: 
+        ??_C@_1CA@MPBH@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      demangled: "`string'"
+      offset: '00000028'
+    - name: 
+        ??_C@_1CA@PCLB@?$AAT?$AAr?$AAa?$AAn?$AAs?$AAm?$AAi?$AAt?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: "`string'"
+      offset: '00000048'
+    - name: 
+        ??_C@_1BO@NBKO@?$AAR?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: "`string'"
+      offset: '00000068'
+    - name: 
+        ??_C@_1BO@MLPO@?$AAD?$AAi?$AAa?$AAg?$AAn?$AAo?$AAs?$AAt?$AAi?$AAc?$AAM?$AAo?$AAd?$AAe?$AA?$AA@
+      demangled: "`string'"
+      offset: '00000088'
+  - num: '3'
+    name: .idata$2
+    offset: '00003760'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_1394BUS
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__Bus1394RegisterPortDriver@4
+      demangled: ''
+      offset: '00000144'
+    - name: \1771394BUS_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000148'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__KeStallExecutionProcessor@4
+      demangled: ''
+      offset: '00000150'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '00000154'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__WRITE_REGISTER_ULONG@8
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__KeSynchronizeExecution@12
+      demangled: ''
+      offset: '00000160'
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      demangled: ''
+      offset: '00000164'
+    - name: __imp__MmUnmapLockedPages@8
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: 0000016C
+    - name: __imp__READ_REGISTER_ULONG@4
+      demangled: ''
+      offset: '00000170'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      demangled: ''
+      offset: '00000174'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000178'
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      demangled: ''
+      offset: 0000017C
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      demangled: ''
+      offset: '00000180'
+    - name: __imp_@ExInterlockedPushEntrySList@12
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__RtlCopyUnicodeString@8
+      demangled: ''
+      offset: '00000190'
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: 000001A0
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: 000001A8
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 000001AC
+    - name: __imp__IoStartPacket@16
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: 000001B4
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: 000001B8
+    - name: __imp_@ExInterlockedPopEntrySList@8
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__KeInsertQueueDpc@12
+      demangled: ''
+      offset: 000001C0
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: 000001CC
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 000001D4
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 000001DC
+    - name: __imp__ExInitializeNPagedLookasideList@28
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp__MmCreateMdl@12
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__IoDisconnectInterrupt@4
+      demangled: ''
+      offset: 000001EC
+    - name: __imp__IoConnectInterrupt@44
+      demangled: ''
+      offset: 000001F0
+    - name: __imp__MmUnmapIoSpace@8
+      demangled: ''
+      offset: 000001F4
+    - name: __imp__IoGetDmaAdapter@12
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__MmMapIoSpace@16
+      demangled: ''
+      offset: 000001FC
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000200'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000204'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000208'
+    - name: __imp__ExDeleteNPagedLookasideList@4
+      demangled: ''
+      offset: 0000020C
+    - name: __imp__IoFreeMdl@4
+      demangled: ''
+      offset: '00000210'
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: '00000214'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: '00000218'
+    - name: __imp__ZwQueryValueKey@24
+      demangled: ''
+      offset: 0000021C
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: '00000220'
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00000224'
+    - name: __imp__PoSetPowerState@12
+      demangled: ''
+      offset: '00000228'
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: 0000022C
+    - name: __imp__IoStartNextPacket@8
+      demangled: ''
+      offset: '00000230'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000234'
+  - num: '4'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _OhciPnPAddDevice@8
+      demangled: ''
+      offset: '00000000'
+    - name: _OhciSystemControl@8
+      demangled: ''
+      offset: '00000249'
+    - name: _OhciPnP@8
+      demangled: ''
+      offset: '00000277'
+    - name: _OhciGetRegistryParameters@16
+      demangled: ''
+      offset: 00000B06
+    - name: _OhciGetRegistryKeyValue@20
+      demangled: ''
+      offset: 00000B9D
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: 00000C27
+  tree:
+  - ../common/common.c
+  - intel/llshr.asm
+  - interrup.c
+  - ohciirp.c
+  - ohcipnp.c
+  - ohcisoch.c
+  - openhci.c
+  - '"../../../../../wdm10/ddk/inc/wdm.h'

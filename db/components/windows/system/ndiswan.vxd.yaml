@@ -1,0 +1,791 @@
+filename: windows/system/ndiswan.vxd
+#TODO: bring up more details from symdeb
+binary: NDISWAN
+description: ''
+appearances:
+- version: Windows 98 Debug
+  tree:
+  - init.asm
+  - ioctl.c
+  - "\t../link.c"
+  - memory.c
+  - ndisstub.asm
+  - ndistapi.c
+  - ndiswan.c
+  - receive.c
+  - "\t../send.c"
+  - transfer.c
+  - wanif.c
+  segments:
+  - num: '1'
+    name: .bss
+    offset: '00002460'
+    symbols:
+    - name: _NdiswanGlobalInterlock
+      processed: ''
+      offset: '00000028'
+    - name: _NdiswanCCB
+      processed: ''
+      offset: '00000030'
+    - name: _NdiswanNdisProtocolHandle
+      processed: ''
+      offset: '00000068'
+    - name: _HighestAcceptableMax
+      processed: ''
+      offset: 0000006C
+    - name: _NdiswanGlobalSupportedOids
+      processed: ''
+      offset: '00000070'
+    - name: _NdiswanProtocolSupportedOids
+      processed: ''
+      offset: '00000100'
+    - name: _NdiswanInit
+      processed: ''
+      offset: 0000487C
+    - name: _NdiswanRegisterProtocol@4
+      processed: ''
+      offset: 000049B9
+    - name: _NdiswanSubmitNdisRequest@8
+      processed: ''
+      offset: 00004A9F
+    - name: _NdiswanDeregisterProtocol@0
+      processed: ''
+      offset: 00004B72
+    - name: _NdiswanInitializeNdis@20
+      processed: ''
+      offset: 00004BF1
+    - name: _NdiswanCloseNdis@4
+      processed: ''
+      offset: 00004E5F
+    - name: _NdiswanOpenAdapterComplete@12
+      processed: ''
+      offset: 00004F21
+    - name: _NdiswanCloseAdapterComplete@8
+      processed: ''
+      offset: 00004FA3
+    - name: _NdiswanResetComplete@8
+      processed: ''
+      offset: 0000500F
+    - name: _NdiswanRequestComplete@12
+      processed: ''
+      offset: '00005032'
+    - name: _NdiswanStatusIndication@16
+      processed: ''
+      offset: 0000516A
+    - name: _NdiswanStatusComplete@4
+      processed: ''
+      offset: '00005696'
+    - name: _NdiswanBindAdapter@20
+      processed: ''
+      offset: 000056C9
+    - name: _NdiswanUnbindAdapter@12
+      processed: ''
+      offset: 00005C52
+    - name: _NdiswanAddEndpoints@4
+      processed: ''
+      offset: '00005E09'
+    - name: _NdiswanRemoveEndpoints@4
+      processed: ''
+      offset: 00005E3D
+    - name: _NdiswanFindAdapter@4
+      processed: ''
+      offset: 00005F39
+    - name: _NdiswanUnloadProtocol@0
+      processed: ''
+      offset: 00005FEB
+    - name: _NDISWANDriverExit
+      processed: ''
+      offset: '00006061'
+    - name: _NDISWANSystemExit
+      processed: ''
+      offset: '00006078'
+    - name: _DebugQuery
+      processed: ''
+      offset: '00006099'
+    - name: _NdiswanGetNdisStatus@4
+      processed: ''
+      offset: 0000637A
+    - name: _NdiswanGetNdisOid@4
+      processed: ''
+      offset: 000063A5
+    - name: _NdiswanTapiInit@4
+      processed: ''
+      offset: 000063D1
+    - name: _NdiswanTapiGetAdapterInfo@4
+      processed: ''
+      offset: 0000640F
+    - name: _NdiswanTapiRequest@4
+      processed: ''
+      offset: 000064D8
+    - name: _NdiswanTapiGetEventNotification@4
+      processed: ''
+      offset: '00006613'
+    - name: _NdiswanTapiGetAsyncCompletion@4
+      processed: ''
+      offset: '00006730'
+    - name: _NdisTapiIndicateStatus@12
+      processed: ''
+      offset: '00006782'
+    - name: _NdisTapiCompleteRequest@12
+      processed: ''
+      offset: 000068DA
+    - name: _NdisTapiNotifyRemoval@8
+      processed: ''
+      offset: '00006925'
+    - name: _NdisTapiNotifyCreation@8
+      processed: ''
+      offset: '00006960'
+    - name: _MapTapiStatus@16
+      processed: ''
+      offset: 0000699B
+    - name: _MapNdisToTapiStatus@8
+      processed: ''
+      offset: 000069CD
+    - name: _NDISWANDeviceIoControl
+      processed: ''
+      offset: 00006A3B
+    - name: _NdiswanDataReadyEvent
+      processed: ''
+      offset: 00006C65
+    - name: _NdiswanReceiveComplete@4
+      processed: ''
+      offset: '00006E32'
+    - name: _NdiswanReceiveIndication@12
+      processed: ''
+      offset: 00006E7B
+    - name: _NdiswanSendFrame
+      processed: ''
+      offset: 000072FF
+    - name: _NdiswanPumpPacket
+      processed: ''
+      offset: '00007807'
+    - name: _NdiswanSendCompletionHandler@12
+      processed: ''
+      offset: 000079D9
+    - name: _NdiswanOpenLink
+      processed: ''
+      offset: 00007B13
+    - name: _NdiswanCloseLink
+      processed: ''
+      offset: '00007E12'
+    - name: _NdiswanGetLinkStatus
+      processed: ''
+      offset: 00007F79
+    - name: _NdiswanSetLinkStatus
+      processed: ''
+      offset: 00007F92
+    - name: _FindLink@12
+      processed: ''
+      offset: 00007FC9
+    - name: _AllocatePackets@4
+      processed: ''
+      offset: 000080CB
+    - name: _DeallocatePackets@4
+      processed: ''
+      offset: '000082E1'
+    - name: _WanCopyFromBufferToPacket@20
+      processed: ''
+      offset: 000083C7
+    - name: _NdiswanCopyFromPacketToBuffer@20
+      processed: ''
+      offset: '00008496'
+    - name: _NdiswanCopyFromBufferToPacket@20
+      processed: ''
+      offset: '00008562'
+    - name: _NdiswanTransferDataComplete@0
+      processed: ''
+      offset: '00008631'
+    - name: _NdiswanAddInterfaces@0
+      processed: ''
+      offset: 0000864F
+    - name: _NdiswanRemoveInterfaces@0
+      processed: ''
+      offset: 000086C6
+    - name: _NdiswanRegisterInterface@4
+      processed: ''
+      offset: '00008701'
+    - name: _NdiswanDeregisterInterface@4
+      processed: ''
+      offset: '00008873'
+    - name: _NdiswanFindInterfaceById@4
+      processed: ''
+      offset: 00008A04
+    - name: _NdiswanGetInterface
+      processed: ''
+      offset: 00008AE5
+    - name: _NdiswanFreeInterface
+      processed: ''
+      offset: 00008C59
+    - name: _NDISWAN_Get_Version
+      processed: ''
+      offset: 00008D90
+    - name: __NdiswanOpenLink
+      processed: ''
+      offset: 00008D94
+    - name: __NdiswanCloseLink
+      processed: ''
+      offset: 00008D98
+    - name: __NdiswanGetLinkStatus
+      processed: ''
+      offset: 00008D9C
+    - name: __NdiswanSetLinkStatus
+      processed: ''
+      offset: 00008DA0
+    - name: __NdiswanSendFrame
+      processed: ''
+      offset: 00008DA4
+    - name: __NdiswanGetInterface
+      processed: ''
+      offset: 00008DA8
+    - name: __NdiswanFreeInterface
+      processed: ''
+      offset: 00008DAC
+    - name: NDISWAN_DDB
+      processed: ''
+      offset: 00008DB0
+    - name: _TraceLevel
+      processed: ''
+      offset: '00008E00'
+    - name: _fPrintfType
+      processed: ''
+      offset: '00008E04'
+    - name: C_Device_Init
+      processed: ''
+      offset: '00008E40'
+    - name: C_Device_Deinit
+      processed: ''
+      offset: 00008E8E
+    - name: C_Device_Sys_VM_Terminate
+      processed: ''
+      offset: '00008E95'
+    - name: NDISWAN_Control
+      processed: ''
+      offset: 00008E9C
+    - name: _NDISWANScheduleGlobalEvent
+      processed: ''
+      offset: 00008F39
+    - name: _NDISWANCancelVMMGlobalEvent
+      processed: ''
+      offset: 00008F40
+    - name: _GetLastUpdatedSystemTime
+      processed: ''
+      offset: 00008F54
+    - name: _ClearDDBFlags
+      processed: ''
+      offset: 00008F5B
+    - name: _VXDShellPostMessage
+      processed: ''
+      offset: 00008F77
+    - name: _VMM_In_Debug_Chr
+      processed: ''
+      offset: 00008FB1
+    - name: _DIOCCompletionRoutine
+      processed: ''
+      offset: 00008FC3
+    - name: NDISWAN_Get_Version
+      processed: ''
+      offset: 00008FDD
+    - name: _NdisMoveMemory@12
+      processed: ''
+      offset: 00008FEC
+    - name: _MoveOverlappedMemory@12
+      processed: ''
+      offset: 0000900C
+    - name: _NdisAllocateMemory@16
+      processed: ''
+      offset: '00009048'
+    - name: _NdisFreeMemory@12
+      processed: ''
+      offset: 0000904E
+    - name: _NdisAllocatePacketPool@16
+      processed: ''
+      offset: '00009054'
+    - name: _NdisFreePacketPool@4
+      processed: ''
+      offset: 0000905A
+    - name: _NdisAllocatePacket@12
+      processed: ''
+      offset: '00009060'
+    - name: _NdisAllocateBufferPool@12
+      processed: ''
+      offset: '00009066'
+    - name: _NdisFreeBufferPool@4
+      processed: ''
+      offset: 0000906C
+    - name: _NdisAllocateBuffer@20
+      processed: ''
+      offset: '00009072'
+    - name: _NdisChainBufferAtFront@8
+      processed: ''
+      offset: '00009078'
+    - name: _NdisReadConfiguration@20
+      processed: ''
+      offset: 0000907E
+    - name: _NdisCloseConfiguration@4
+      processed: ''
+      offset: '00009084'
+    - name: _NdisRegisterProtocol@16
+      processed: ''
+      offset: 0000908A
+    - name: _NdisDeregisterProtocol@8
+      processed: ''
+      offset: '00009090'
+    - name: _NdisOpenAdapter@44
+      processed: ''
+      offset: '00009096'
+    - name: _NdisCloseAdapter@8
+      processed: ''
+      offset: 0000909C
+    - name: _NdisRequest@12
+      processed: ''
+      offset: 000090A2
+    - name: _NdisOpenProtocolConfiguration@12
+      processed: ''
+      offset: 000090A8
+    - name: _NdisCompleteBindAdapter@12
+      processed: ''
+      offset: 000090AE
+    - name: _NdisCompleteUnbindAdapter@8
+      processed: ''
+      offset: 000090B4
+    - name: _NdisCompleteRequest@12
+      processed: ''
+      offset: 000090BA
+    - name: _NdisIndicateReceive@32
+      processed: ''
+      offset: 000090C0
+    - name: _NdisIndicateReceiveComplete@4
+      processed: ''
+      offset: 000090C6
+    - name: _NdisIndicateStatus@16
+      processed: ''
+      offset: 000090CC
+    - name: _NdisIndicateStatusComplete@4
+      processed: ''
+      offset: 000090D2
+    - name: _NdisCompleteSend@12
+      processed: ''
+      offset: 000090D8
+    - name: _NdisCompleteTransferData@16
+      processed: ''
+      offset: 000090DE
+    - name: _NdisSetTimer@8
+      processed: ''
+      offset: '000090E4'
+    - name: _NdisCancelTimer@8
+      processed: ''
+      offset: 000090EA
+    - name: _NdisFreePacket@4
+      processed: ''
+      offset: 000090F0
+    - name: _NdisQueryPacket@20
+      processed: ''
+      offset: 000090F6
+    - name: _NdisFreeBuffer@4
+      processed: ''
+      offset: 000090FC
+    - name: _NdisQueryBuffer@12
+      processed: ''
+      offset: '00009102'
+    - name: _NdisGetNextBuffer@8
+      processed: ''
+      offset: '00009108'
+    - name: _NdisMWanSend@12
+      processed: ''
+      offset: 0000910E
+  - num: '2'
+    name: _PTEXT
+    offset: '00000000'
+    symbols:
+    - name: NDISWAN_PM_API
+      processed: ''
+      offset: '00000000'
+    - name: NDISWAN_DeviceIOControl
+      processed: ''
+      offset: '00000099'
+    - name: _AssertInts
+      processed: ''
+      offset: 000000D2
+    - name: NDISWAN_V86_API
+      processed: ''
+      offset: 000000EF
+    - name: _DbgPrintf
+      processed: ''
+      offset: 0000010B
+    - name: _DbgPrint
+      processed: ''
+      offset: 0000012A
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: 00000CE0
+    symbols:
+    - name: _NdiswanCCB
+      demangled: ''
+      offset: '00000030'
+    - name: _NdiswanNdisProtocolHandle
+      demangled: ''
+      offset: '00000068'
+    - name: _HighestAcceptableMax
+      demangled: ''
+      offset: 0000006C
+    - name: _NdiswanGlobalSupportedOids
+      demangled: ''
+      offset: '00000070'
+    - name: _NdiswanProtocolSupportedOids
+      demangled: ''
+      offset: '00000100'
+    - name: _NdiswanInit
+      demangled: ''
+      offset: '00000318'
+    - name: _NdiswanRegisterProtocol@4
+      demangled: ''
+      offset: 000003C3
+    - name: _NdiswanSubmitNdisRequest@8
+      demangled: ''
+      offset: '00000470'
+    - name: _NdiswanDeregisterProtocol@0
+      demangled: ''
+      offset: 000004D1
+    - name: _NdiswanInitializeNdis@20
+      demangled: ''
+      offset: 000004FA
+    - name: _NdiswanCloseNdis@4
+      demangled: ''
+      offset: 0000061F
+    - name: _NdiswanOpenAdapterComplete@12
+      demangled: ''
+      offset: 0000066B
+    - name: _NdiswanCloseAdapterComplete@8
+      demangled: ''
+      offset: '00000690'
+    - name: _NdiswanResetComplete@8
+      demangled: ''
+      offset: 000006B5
+    - name: _NdiswanRequestComplete@12
+      demangled: ''
+      offset: 000006B8
+    - name: _NdiswanStatusIndication@16
+      demangled: ''
+      offset: 0000074A
+    - name: _NdiswanStatusComplete@4
+      demangled: ''
+      offset: 000008CA
+    - name: _NdiswanBindAdapter@20
+      demangled: ''
+      offset: 000008CD
+    - name: _NdiswanUnbindAdapter@12
+      demangled: ''
+      offset: 00000B8A
+    - name: _NdiswanAddEndpoints@4
+      demangled: ''
+      offset: 00000C23
+    - name: _NdiswanRemoveEndpoints@4
+      demangled: ''
+      offset: 00000C2B
+    - name: _NdiswanFindAdapter@4
+      demangled: ''
+      offset: 00000C6A
+    - name: _NdiswanUnloadProtocol@0
+      demangled: ''
+      offset: 00000C94
+    - name: _NDISWANDriverExit
+      demangled: ''
+      offset: 00000CC0
+    - name: _NDISWANSystemExit
+      demangled: ''
+      offset: 00000CC1
+    - name: _NdiswanTapiInit@4
+      demangled: ''
+      offset: 00000CCC
+    - name: _NdiswanTapiGetAdapterInfo@4
+      demangled: ''
+      offset: 00000CDD
+    - name: _NdiswanTapiRequest@4
+      demangled: ''
+      offset: 00000D33
+    - name: _NdiswanTapiGetEventNotification@4
+      demangled: ''
+      offset: 00000DA5
+    - name: _NdiswanTapiGetAsyncCompletion@4
+      demangled: ''
+      offset: 00000DF0
+    - name: _NdisTapiIndicateStatus@12
+      demangled: ''
+      offset: '00000E06'
+    - name: _NdisTapiCompleteRequest@12
+      demangled: ''
+      offset: 00000EB7
+    - name: _NdisTapiNotifyRemoval@8
+      demangled: ''
+      offset: 00000EDC
+    - name: _NdisTapiNotifyCreation@8
+      demangled: ''
+      offset: 00000F01
+    - name: _MapTapiStatus@16
+      demangled: ''
+      offset: 00000F26
+    - name: _MapNdisToTapiStatus@8
+      demangled: ''
+      offset: 00000F58
+    - name: _NDISWANDeviceIoControl
+      demangled: ''
+      offset: 00000FA4
+    - name: _NdiswanDataReadyEvent
+      demangled: ''
+      offset: 000010A0
+    - name: _NdiswanReceiveComplete@4
+      demangled: ''
+      offset: '00001136'
+    - name: _NdiswanReceiveIndication@12
+      demangled: ''
+      offset: '00001139'
+    - name: _NdiswanSendFrame
+      demangled: ''
+      offset: 000011F2
+    - name: _NdiswanPumpPacket
+      demangled: ''
+      offset: '000012E3'
+    - name: _NdiswanSendCompletionHandler@12
+      demangled: ''
+      offset: 0000136C
+    - name: _NdiswanOpenLink
+      demangled: ''
+      offset: 000013CE
+    - name: _NdiswanCloseLink
+      demangled: ''
+      offset: '00001517'
+    - name: _NdiswanGetLinkStatus
+      demangled: ''
+      offset: '00001587'
+    - name: _NdiswanSetLinkStatus
+      demangled: ''
+      offset: 0000158A
+    - name: _FindLink@12
+      demangled: ''
+      offset: 0000158D
+    - name: _AllocatePackets@4
+      demangled: ''
+      offset: '000015E8'
+    - name: _DeallocatePackets@4
+      demangled: ''
+      offset: '00001731'
+    - name: _WanCopyFromBufferToPacket@20
+      demangled: ''
+      offset: '00001788'
+    - name: _NdiswanCopyFromPacketToBuffer@20
+      demangled: ''
+      offset: '00001857'
+    - name: _NdiswanCopyFromBufferToPacket@20
+      demangled: ''
+      offset: '00001923'
+    - name: _NdiswanTransferDataComplete@0
+      demangled: ''
+      offset: 000019F2
+    - name: _NdiswanAddInterfaces@0
+      demangled: ''
+      offset: 000019F3
+    - name: _NdiswanRemoveInterfaces@0
+      demangled: ''
+      offset: 00001A37
+    - name: _NdiswanRegisterInterface@4
+      demangled: ''
+      offset: 00001A3F
+    - name: _NdiswanDeregisterInterface@4
+      demangled: ''
+      offset: 00001B1A
+    - name: _NdiswanFindInterfaceById@4
+      demangled: ''
+      offset: 00001BA8
+    - name: _NdiswanGetInterface
+      demangled: ''
+      offset: 00001BCE
+    - name: _NdiswanFreeInterface
+      demangled: ''
+      offset: 00001C83
+    - name: _NDISWAN_Get_Version
+      demangled: ''
+      offset: 00001CD4
+    - name: __NdiswanOpenLink
+      demangled: ''
+      offset: 00001CD8
+    - name: __NdiswanCloseLink
+      demangled: ''
+      offset: 00001CDC
+    - name: __NdiswanGetLinkStatus
+      demangled: ''
+      offset: 00001CE0
+    - name: __NdiswanSetLinkStatus
+      demangled: ''
+      offset: 00001CE4
+    - name: __NdiswanSendFrame
+      demangled: ''
+      offset: 00001CE8
+    - name: __NdiswanGetInterface
+      demangled: ''
+      offset: 00001CEC
+    - name: __NdiswanFreeInterface
+      demangled: ''
+      offset: 00001CF0
+    - name: NDISWAN_DDB
+      demangled: ''
+      offset: 00001CF4
+    - name: C_Device_Init
+      demangled: ''
+      offset: 00001D44
+    - name: C_Device_Deinit
+      demangled: ''
+      offset: 00001D5A
+    - name: C_Device_Sys_VM_Terminate
+      demangled: ''
+      offset: 00001D61
+    - name: NDISWAN_Control
+      demangled: ''
+      offset: 00001D68
+    - name: _NDISWANScheduleGlobalEvent
+      demangled: ''
+      offset: '00001E05'
+    - name: _NDISWANCancelVMMGlobalEvent
+      demangled: ''
+      offset: 00001E0C
+    - name: _GetLastUpdatedSystemTime
+      demangled: ''
+      offset: '00001E20'
+    - name: _ClearDDBFlags
+      demangled: ''
+      offset: '00001E27'
+    - name: _VXDShellPostMessage
+      demangled: ''
+      offset: '00001E43'
+    - name: _DIOCCompletionRoutine
+      demangled: ''
+      offset: 00001E7D
+    - name: NDISWAN_Get_Version
+      demangled: ''
+      offset: '00001E91'
+    - name: _NdisMoveMemory@12
+      demangled: ''
+      offset: '00001E98'
+    - name: _MoveOverlappedMemory@12
+      demangled: ''
+      offset: 00001EB8
+    - name: _NdisAllocateMemory@16
+      demangled: ''
+      offset: 00001EF4
+    - name: _NdisFreeMemory@12
+      demangled: ''
+      offset: 00001EFA
+    - name: _NdisAllocatePacketPool@16
+      demangled: ''
+      offset: 00001F00
+    - name: _NdisFreePacketPool@4
+      demangled: ''
+      offset: 00001F06
+    - name: _NdisAllocatePacket@12
+      demangled: ''
+      offset: 00001F0C
+    - name: _NdisAllocateBufferPool@12
+      demangled: ''
+      offset: 00001F12
+    - name: _NdisFreeBufferPool@4
+      demangled: ''
+      offset: 00001F18
+    - name: _NdisAllocateBuffer@20
+      demangled: ''
+      offset: 00001F1E
+    - name: _NdisChainBufferAtFront@8
+      demangled: ''
+      offset: 00001F24
+    - name: _NdisReadConfiguration@20
+      demangled: ''
+      offset: 00001F2A
+    - name: _NdisCloseConfiguration@4
+      demangled: ''
+      offset: 00001F30
+    - name: _NdisRegisterProtocol@16
+      demangled: ''
+      offset: 00001F36
+    - name: _NdisDeregisterProtocol@8
+      demangled: ''
+      offset: 00001F3C
+    - name: _NdisOpenAdapter@44
+      demangled: ''
+      offset: 00001F42
+    - name: _NdisCloseAdapter@8
+      demangled: ''
+      offset: 00001F48
+    - name: _NdisRequest@12
+      demangled: ''
+      offset: 00001F4E
+    - name: _NdisOpenProtocolConfiguration@12
+      demangled: ''
+      offset: 00001F54
+    - name: _NdisCompleteBindAdapter@12
+      demangled: ''
+      offset: 00001F5A
+    - name: _NdisCompleteUnbindAdapter@8
+      demangled: ''
+      offset: 00001F60
+    - name: _NdisCompleteRequest@12
+      demangled: ''
+      offset: 00001F66
+    - name: _NdisIndicateReceive@32
+      demangled: ''
+      offset: 00001F6C
+    - name: _NdisIndicateReceiveComplete@4
+      demangled: ''
+      offset: 00001F72
+    - name: _NdisIndicateStatus@16
+      demangled: ''
+      offset: 00001F78
+    - name: _NdisIndicateStatusComplete@4
+      demangled: ''
+      offset: 00001F7E
+    - name: _NdisCompleteSend@12
+      demangled: ''
+      offset: 00001F84
+    - name: _NdisCompleteTransferData@16
+      demangled: ''
+      offset: 00001F8A
+    - name: _NdisSetTimer@8
+      demangled: ''
+      offset: 00001F90
+    - name: _NdisCancelTimer@8
+      demangled: ''
+      offset: 00001F96
+    - name: _NdisFreePacket@4
+      demangled: ''
+      offset: 00001F9C
+    - name: _NdisQueryPacket@20
+      demangled: ''
+      offset: 00001FA2
+    - name: _NdisFreeBuffer@4
+      demangled: ''
+      offset: 00001FA8
+    - name: _NdisQueryBuffer@12
+      demangled: ''
+      offset: 00001FAE
+    - name: _NdisGetNextBuffer@8
+      demangled: ''
+      offset: 00001FB4
+    - name: _NdisMWanSend@12
+      demangled: ''
+      offset: 00001FBA
+  - num: '2'
+    name: _PTEXT
+    offset: '00000000'
+    symbols:
+    - name: NDISWAN_PM_API
+      demangled: ''
+      offset: '00000000'
+    - name: NDISWAN_DeviceIOControl
+      demangled: ''
+      offset: '00000081'
+    - name: _AssertInts
+      demangled: ''
+      offset: 000000A2
+    - name: NDISWAN_V86_API
+      demangled: ''
+      offset: 000000A3
