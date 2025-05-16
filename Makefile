@@ -9,7 +9,6 @@ pipeline:
 		python3 tools/fill_db.py $(SYMBOL_DIR)-output
 		python3 tools/pathcrusher.py $(SYMBOL_DIR)
 		make distclean
-		python3 explorer/generate_explorer.py
 		
 clean:
 	rm -rf work
@@ -19,3 +18,7 @@ distclean:
 
 dbclean:
 	rm -rf db/components/*
+
+build-submodules:
+	git submodule update --init --recursive
+	cd $(BUILD_DIR) && cmake -G Ninja .. && ninja

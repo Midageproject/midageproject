@@ -87,7 +87,9 @@ def main():
                 for seg_offset, rows in offsets.items():
                     segment = Segment(num=seg_num, name=rows[0]['SegmentName'], offset=seg_offset)
                     for row in rows:
-                        cmd = ["work/undname", row['SymbolName']]
+                        if (Path(__file__).parent / "demumble/demumble").exists():
+                           necromancer = "tools/demumble/demumble"
+                        cmd = [ necromancer or "work/undname", row['SymbolName']]
                         demangled = subprocess.Popen(cmd, stdout=subprocess.PIPE)
                         stdout, _ = demangled.communicate()
                         processed_name = stdout.decode().strip()
@@ -117,5 +119,6 @@ def main():
                         f.seek(0)
                         f.truncate()
                         yaml.dump(existing, f)
+                        
 if __name__ == "__main__":
     main()
