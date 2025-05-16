@@ -1,17 +1,64 @@
 filename: windows/system/vdhcp.386
-#TODO: bring up more details from symdeb
 binary: VDHCP
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - 0e:/nt/redrum/net/vxd/dhcp/client/dhcp/dhcpinit.c
+  - 0e:/nt/redrum/net/vxd/dhcp/client/dhcp/mediasns.c
+  - 0e:/nt/redrum/net/vxd/dhcp/client/dhcp/protocol.c
+  - 1e:/nt/redrum/net/vxd/dhcp/client/vxd/client16.asm
+  - 1e:/nt/redrum/net/vxd/dhcp/client/vxd/pageable.asm
+  - 8e:/nt/redrum/net/vxd/dhcp/client/inc/../../lib/dhcpcom.c
+  - 8e:/nt/redrum/net/vxd/dhcp/client/inc/../../lib/network.c
+  - 9e:/nt/redrum/net/vxd/dhcp/client/inc/../../lib/dhcpdump.c
+  - /e:/nt/redrum/net/vxd/dhcp/client/dhcp/apiimpl.c
+  - /e:/nt/redrum/net/vxd/dhcp/client/dhcp/apiutil.c
+  - /e:/nt/redrum/net/vxd/dhcp/client/dhcp/autocfg.c
+  - /e:/nt/redrum/net/vxd/dhcp/client/dhcp/dhcpmsg.c
+  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/buffer.asm
+  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/cxport.asm
+  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/dhcpinfo.c
+  - ',e:/nt/redrum/net/vxd/dhcp/client/vxd/first.c'
+  - +e:/nt/redrum/net/vxd/dhcp/client/vxd/init.c
+  - +e:/nt/redrum/net/vxd/dhcp/client/vxd/last.c
+  - ',e:/nt/redrum/net/vxd/dhcp/client/vxd/local.c'
+  - '*e:/nt/redrum/net/vxd/dhcp/client/vxd/msg.c'
+  - ',e:/nt/redrum/net/vxd/dhcp/client/vxd/regio.c'
+  - .e:/nt/redrum/net/vxd/dhcp/client/vxd/sockets.c
+  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/thread.asm
+  - ',e:/nt/redrum/net/vxd/dhcp/client/vxd/utils.c'
+  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/vdhcpapi.c
+  - .e:/nt/redrum/net/vxd/dhcp/client/vxd/vdhcp.asm
+  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/vxddebug.c
+  - -e:/nt/redrum/net/vxd/dhcp/client/vxd/vxdlib.h
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/dhcp/apiimpl.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/dhcp/apiutil.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/dhcp/autocfg.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/dhcp/protocol.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/inc/../../lib/dhcpcom.c
+    line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/dhcpinfo.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/init.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/local.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/msg.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/regio.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/sockets.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/utils.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/vdhcpapi.c line '
+  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/vxddebug.c line '
+  - e:/nt/redrum/net/vxd/dhcp/client/dhcp/apiimpl.c
+  - e:/nt/redrum/net/vxd/dhcp/client/inc/../../lib/dhcpcom.c
+  - e:/nt/redrum/net/vxd/dhcp/client/vxd/dhcpinfo.c
+  - e:/nt/redrum/net/vxd/dhcp/client/vxd/local.c
+  - e:/nt/redrum/net/vxd/dhcp/client/vxd/regio.c
   segments:
   - num: '1'
     name: .bss
     offset: '00002110'
     symbols:
     - name: ?w@?1??int2wstr@@9@9
-      processed: "`int2wstr'::`2'::w"
+      processed: extern "C" `extern "C" int2wstr'::`2'::w
       offset: '00000740'
     - name: _GlobalThreadRunningSemaphore
       processed: ''
@@ -104,10 +151,10 @@ appearances:
       processed: ''
       offset: 00001DF8
     - name: ??_C@_0BN@NLHO@Allocate?5?$CF010x?5?$CF04x?5?$CF04d?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: '"Allocate %010x %04x %04d %s\n"'
       offset: '00001E00'
     - name: ??_C@_0BJ@NPAC@Free?5?$CF010x?5?$CF04x?5?$CF04d?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: '"Free %010x %04x %04d %s\n"'
       offset: '00001E20'
     - name: _ProcessDhcpRequestForever
       processed: ''
@@ -296,16 +343,16 @@ appearances:
       processed: ''
       offset: 00005A64
     - name: ??_C@_0FB@DKNN@Assertion?5failure?5in?5file?5e?3?2nt?2@
-      processed: "`string'"
+      processed: '"Assertion failure in file e:\\nt\\"...'
       offset: '00007114'
     - name: ??_C@_0CD@NOKP@Trying?5to?5look?5for?5a?5NULL?5adapte@
-      processed: "`string'"
+      processed: '"Trying to look for a NULL adapte"...'
       offset: '00007800'
     - name: _DhcpGlobalApiOptionsInfoListPointer
       processed: ''
       offset: '00007834'
     - name: ??_C@_0FA@FOOH@Assertion?5failure?5in?5file?5e?3?2nt?2@
-      processed: "`string'"
+      processed: '"Assertion failure in file e:\\nt\\"...'
       offset: 00008CD4
     - name: _CTEStartTimer
       processed: ''
@@ -1000,55 +1047,6 @@ appearances:
     - name: _ReadClientID
       processed: ''
       offset: 00000D90
-  source_tree:
-  - 0e:/nt/redrum/net/vxd/dhcp/client/dhcp/dhcpinit.c
-  - 0e:/nt/redrum/net/vxd/dhcp/client/dhcp/mediasns.c
-  - 0e:/nt/redrum/net/vxd/dhcp/client/dhcp/protocol.c
-  - 1e:/nt/redrum/net/vxd/dhcp/client/vxd/client16.asm
-  - 1e:/nt/redrum/net/vxd/dhcp/client/vxd/pageable.asm
-  - 8e:/nt/redrum/net/vxd/dhcp/client/inc/../../lib/dhcpcom.c
-  - 8e:/nt/redrum/net/vxd/dhcp/client/inc/../../lib/network.c
-  - 9e:/nt/redrum/net/vxd/dhcp/client/inc/../../lib/dhcpdump.c
-  - /e:/nt/redrum/net/vxd/dhcp/client/dhcp/apiimpl.c
-  - /e:/nt/redrum/net/vxd/dhcp/client/dhcp/apiutil.c
-  - /e:/nt/redrum/net/vxd/dhcp/client/dhcp/autocfg.c
-  - /e:/nt/redrum/net/vxd/dhcp/client/dhcp/dhcpmsg.c
-  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/buffer.asm
-  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/cxport.asm
-  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/dhcpinfo.c
-  - ',e:/nt/redrum/net/vxd/dhcp/client/vxd/first.c'
-  - +e:/nt/redrum/net/vxd/dhcp/client/vxd/init.c
-  - +e:/nt/redrum/net/vxd/dhcp/client/vxd/last.c
-  - ',e:/nt/redrum/net/vxd/dhcp/client/vxd/local.c'
-  - '*e:/nt/redrum/net/vxd/dhcp/client/vxd/msg.c'
-  - ',e:/nt/redrum/net/vxd/dhcp/client/vxd/regio.c'
-  - .e:/nt/redrum/net/vxd/dhcp/client/vxd/sockets.c
-  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/thread.asm
-  - ',e:/nt/redrum/net/vxd/dhcp/client/vxd/utils.c'
-  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/vdhcpapi.c
-  - .e:/nt/redrum/net/vxd/dhcp/client/vxd/vdhcp.asm
-  - /e:/nt/redrum/net/vxd/dhcp/client/vxd/vxddebug.c
-  - -e:/nt/redrum/net/vxd/dhcp/client/vxd/vxdlib.h
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/dhcp/apiimpl.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/dhcp/apiutil.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/dhcp/autocfg.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/dhcp/protocol.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/inc/../../lib/dhcpcom.c
-    line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/dhcpinfo.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/init.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/local.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/msg.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/regio.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/sockets.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/utils.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/vdhcpapi.c line '
-  - 'Assertion failure in file e:/nt/redrum/net/vxd/dhcp/client/vxd/vxddebug.c line '
-  - e:/nt/redrum/net/vxd/dhcp/client/dhcp/apiimpl.c
-  - e:/nt/redrum/net/vxd/dhcp/client/inc/../../lib/dhcpcom.c
-  - e:/nt/redrum/net/vxd/dhcp/client/vxd/dhcpinfo.c
-  - e:/nt/redrum/net/vxd/dhcp/client/vxd/local.c
-  - e:/nt/redrum/net/vxd/dhcp/client/vxd/regio.c
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -1057,7 +1055,7 @@ appearances:
     offset: 00000B70
     symbols:
     - name: ?w@?1??int2wstr@@9@9
-      demangled: "`int2wstr'::`2'::w"
+      demangled: extern "C" `extern "C" int2wstr'::`2'::w
       offset: '00000740'
     - name: _GlobalThreadRunningSemaphore
       demangled: ''

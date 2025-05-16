@@ -1,10 +1,14 @@
 filename: windows/system/cmbatt.sys
-#TODO: bring up more details from symdeb
 binary: CMBATT
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - cmbatt.c
+  - cmbpnp.c
+  - cmexe.c
+  - cmhndlr.c
+  - vxd.c
   segments:
   - num: '1'
     name: .text
@@ -429,12 +433,6 @@ appearances:
     - name: _DriverEntry@8
       processed: ''
       offset: '00000000'
-  source_tree:
-  - cmbatt.c
-  - cmbpnp.c
-  - cmexe.c
-  - cmhndlr.c
-  - vxd.c
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -572,19 +570,19 @@ appearances:
       offset: 0000000C
     - name: 
         ??_C@_1CE@CEK@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAA?$AAc?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Device\\AcAdapter"
       offset: '00000010'
     - name: 
         ??_C@_1DK@CMFE@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAM?$AAe?$AAt?$AAh?$AAo@
-      demangled: "`string'"
+      demangled: L"\\Device\\ControlMetho"
       offset: '00000034'
     - name: 
         ??_C@_1BM@MJID@?$AAA?$AAC?$AAP?$AAI?$AA?2?$AAA?$AAC?$AAP?$AAI?$AA0?$AA0?$AA0?$AA3?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"ACPI\\ACPI0003"
       offset: '00000070'
     - name: 
         ??_C@_1CO@IPPJ@?$AAA?$AAC?$AAP?$AAI?$AA?2?$AA?$CK?$AAP?$AAN?$AAP?$AA0?$AAC?$AA0?$AAA?$AA?0?$AA?$CK?$AAP?$AAN?$AAP?$AA0?$AAC@
-      demangled: "`string'"
+      demangled: L"ACPI\\*PNP0C0A,*PNP0C"
       offset: 0000008C
     - name: _CmBattDebug
       demangled: ''

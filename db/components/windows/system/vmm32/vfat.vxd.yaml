@@ -1,10 +1,37 @@
 filename: windows/system/vmm32/vfat.vxd
-#TODO: bring up more details from symdeb
 binary: VFAT
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - cache.asm
+  - debug.asm
+  - dircache.asm
+  - dirsubr.asm
+  - diskstub.asm
+  - excllock.asm
+  - fat.asm
+  - fatcheck.asm
+  - fatfcn2.asm
+  - fatfcn.asm
+  - fatioctl.asm
+  - fsdata.asm
+  - fsinit.asm
+  - iosubr.asm
+  - lazy.asm
+  - lfn.asm
+  - lfnsubr.asm
+  - lock.asm
+  - misc.asm
+  - notify.asm
+  - pfc.asm
+  - registry.asm
+  - subr.asm
+  - tasking.asm
+  - vfataer.asm
+  - vfatios.asm
+  - vfatw32.asm
+  - vxdinit.asm
   segments:
   - num: '1'
     name: _LDATA
@@ -2333,35 +2360,6 @@ appearances:
     - name: VFAT_Install_Async_Manager
       processed: ''
       offset: 00000E4A
-  source_tree:
-  - cache.asm
-  - debug.asm
-  - dircache.asm
-  - dirsubr.asm
-  - diskstub.asm
-  - excllock.asm
-  - fat.asm
-  - fatcheck.asm
-  - fatfcn2.asm
-  - fatfcn.asm
-  - fatioctl.asm
-  - fsdata.asm
-  - fsinit.asm
-  - iosubr.asm
-  - lazy.asm
-  - lfn.asm
-  - lfnsubr.asm
-  - lock.asm
-  - misc.asm
-  - notify.asm
-  - pfc.asm
-  - registry.asm
-  - subr.asm
-  - tasking.asm
-  - vfataer.asm
-  - vfatios.asm
-  - vfatw32.asm
-  - vxdinit.asm
 - version: Windows 98 Retail
   source_tree:
   - cache.asm

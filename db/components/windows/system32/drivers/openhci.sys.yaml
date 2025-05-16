@@ -1,10 +1,28 @@
 filename: windows/system32/drivers/openhci.sys
-#TODO: bring up more details from symdeb
 binary: OPENHCI
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - async.c
+  - dbg.c
+  - ohciroot.c
+  - ohciurb.c
+  - ohcixfer.c
+  - openhci.c
+  - (Ed->HcED.HeadP & ~0X0F) == Ed->HcED.TailP
+  - (ed->HcED.HeadP & ~15) == ed->HcED.TailP
+  - (ed->HcED.HeadP & ~HcEDHeadP_FLAGS) == nextTd->PhysicalAddress
+  - ed->HcED.HeadP & HcEDHeadP_HALT
+  - (Ed->HcED.HeadP & HcEDHeadP_HALT) || Ed->HcED.sKip
+  - endpoint == transfer->hca.HcdEndpoint
+  - "'ohciurb.c: _OpenEndpoint: Non serial call! %d"
+  - PagePhys.HighPart == 0
+  - transfer->hca.HcdEndpoint == endpoint
+  - transfer->hca.HcdIrp->Cancel == FALSE
+  - transfer->hca.HcdListEntry.Flink == NULL
+  - Trans->hca.HcdEndpoint == Endpoint
+  - ../../../../wdm10/ddk/inc/wdm.h
   segments:
   - num: '1'
     name: .text
@@ -429,22 +447,22 @@ appearances:
     offset: 00003ED0
     symbols:
     - name: ??_C@_0BN@IHIP@allocateCommonBuffer?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"allocateCommonBuffer != NULL"'
       offset: '00000204'
     - name: ??_C@_0CD@PJBI@?4?4?2?4?4?2?4?4?2?4?4?2?4?4?2wdm10?2ddk?2inc?2wdm@
-      processed: "`string'"
+      processed: '"..\\..\\..\\..\\..\\wdm10\\ddk\\inc\\wdm"...'
       offset: '00000224'
     - name: _OHCI_Debug_Trace_Level
       processed: ''
       offset: 000009B8
     - name: ??_C@_0BJ@FPNP@freeCommonBuffer?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"freeCommonBuffer != NULL"'
       offset: 00000FDC
     - name: ??_C@_0BJ@BLDF@freeMapRegisters?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"freeMapRegisters != NULL"'
       offset: '00002418'
     - name: ??_C@_0BM@MGEC@flushAdapterBuffers?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"flushAdapterBuffers != NULL"'
       offset: 00002AA8
     - name: _RH_DeviceDescriptor
       processed: ''
@@ -456,10 +474,10 @@ appearances:
       processed: ''
       offset: 00002C40
     - name: ??_C@_0BP@OCPD@allocateAdapterChannel?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"allocateAdapterChannel != NULL"'
       offset: '00003370'
     - name: ??_C@_0BE@CIAH@mapTransfer?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"mapTransfer != NULL"'
       offset: '00003690'
     - name: _OHCI_LogMask
       processed: ''
@@ -675,26 +693,6 @@ appearances:
     - name: \177USBD_NULL_THUNK_DATA
       processed: ''
       offset: '00000214'
-  source_tree:
-  - async.c
-  - dbg.c
-  - ohciroot.c
-  - ohciurb.c
-  - ohcixfer.c
-  - openhci.c
-  - (Ed->HcED.HeadP & ~0X0F) == Ed->HcED.TailP
-  - (ed->HcED.HeadP & ~15) == ed->HcED.TailP
-  - (ed->HcED.HeadP & ~HcEDHeadP_FLAGS) == nextTd->PhysicalAddress
-  - ed->HcED.HeadP & HcEDHeadP_HALT
-  - (Ed->HcED.HeadP & HcEDHeadP_HALT) || Ed->HcED.sKip
-  - endpoint == transfer->hca.HcdEndpoint
-  - "'ohciurb.c: _OpenEndpoint: Non serial call! %d"
-  - PagePhys.HighPart == 0
-  - transfer->hca.HcdEndpoint == endpoint
-  - transfer->hca.HcdIrp->Cancel == FALSE
-  - transfer->hca.HcdListEntry.Flink == NULL
-  - Trans->hca.HcdEndpoint == Endpoint
-  - ../../../../wdm10/ddk/inc/wdm.h
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -932,11 +930,11 @@ appearances:
       demangled: ''
       offset: '00000000'
     - name: ??_C@_1BC@IEDH@?$AAs?$AAl?$AAo?$AAw?$AAB?$AAu?$AAl?$AAk?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"slowBulk"
       offset: '00000018'
     - name: 
         ??_C@_1DE@EOKK@?$AAr?$AAe?$AAc?$AAo?$AAm?$AAm?$AAe?$AAn?$AAd?$AAe?$AAd?$AAC?$AAl?$AAo?$AAc?$AAk?$AAs?$AAP?$AAe?$AAr@
-      demangled: "`string'"
+      demangled: L"recommendedClocksPer"
       offset: 0000002C
     - name: _RH_DeviceDescriptor
       demangled: ''

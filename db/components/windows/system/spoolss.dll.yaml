@@ -1,10 +1,10 @@
 filename: windows/system/spoolss.dll
-#TODO: bring up more details from symdeb
 binary: SPOOLSS
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - 'localspl: init.c 1049 CloseHandle failed %d %d'
   segments:
   - num: '1'
     name: .rdata
@@ -1030,46 +1030,46 @@ appearances:
       processed: ''
       offset: '00004214'
     - name: ??_C@_05DOGK@Order?$AA@
-      processed: "`string'"
+      processed: '"Order"'
       offset: '00004218'
     - name: ??_C@_0DL@JGBK@SPOOLSS?4DLL?5attached?5to?5processe@
-      processed: "`string'"
+      processed: '"SPOOLSS.DLL attached to processe"...'
       offset: '00004220'
     - name: ??_C@_0DF@HHEF@SPOOLSS?4DLL?5attached?5to?5SPOOL32?4@
-      processed: "`string'"
+      processed: '"SPOOLSS.DLL attached to SPOOL32."...'
       offset: 0000425C
     - name: ??_C@_0M@NKHO@spool32?4exe?$AA@
-      processed: "`string'"
+      processed: '"spool32.exe"'
       offset: '00004294'
     - name: ??_C@_0BI@JBGI@InitializePrintProvidor?$AA@
-      processed: "`string'"
+      processed: '"InitializePrintProvidor"'
       offset: 000042A0
     - name: ??_C@_0BN@HJNH@Failed?5to?5allocate?5providor?4?$AA@
-      processed: "`string'"
+      processed: '"Failed to allocate providor."'
       offset: 000042B8
     - name: ??_C@_0L@FCNC@wnpp32?4dll?$AA@
-      processed: "`string'"
+      processed: '"wnpp32.dll"'
       offset: 000042D8
     - name: ??_C@_0L@KLKN@nwpp32?4dll?$AA@
-      processed: "`string'"
+      processed: '"nwpp32.dll"'
       offset: '000042E4'
     - name: ??_C@_0L@DCML@mspp32?4dll?$AA@
-      processed: "`string'"
+      processed: '"mspp32.dll"'
       offset: 000042F0
     - name: ??_C@_04EFNI@Name?$AA@
-      processed: "`string'"
+      processed: '"Name"'
       offset: 000042FC
     - name: ??_C@_0CG@MIAB@Starting?5SPOOLSS?5InitializeRoute@
-      processed: "`string'"
+      processed: '"Starting SPOOLSS InitializeRoute"...'
       offset: '00004304'
     - name: ??_C@_0BO@MOK@Failed?5to?5alloc?5print?5handle?4?$AA@
-      processed: "`string'"
+      processed: '"Failed to alloc print handle."'
       offset: 0000432C
     - name: ??_C@_0BO@HLAB@Failed?5tp?5alloc?5print?5handle?4?$AA@
-      processed: "`string'"
+      processed: '"Failed tp alloc print handle."'
       offset: 0000434C
     - name: ??_C@_0BK@OALL@MS?5Network?5Print?5Provider?$AA@
-      processed: "`string'"
+      processed: '"MS Network Print Provider"'
       offset: 0000436C
     - name: _szWinPrint
       processed: ''
@@ -1084,16 +1084,16 @@ appearances:
       processed: ''
       offset: 000043A0
     - name: ??_C@_03JGKF@EMF?$AA@
-      processed: "`string'"
+      processed: '"EMF"'
       offset: 000043A4
     - name: ??_C@_03OFLH@RAW?$AA@
-      processed: "`string'"
+      processed: '"RAW"'
       offset: 000043A8
     - name: ??_C@_08PGGC@WinPrint?$AA@
-      processed: "`string'"
+      processed: '"WinPrint"'
       offset: 000043AC
     - name: ??_C@_0DA@PPHO@WinprintPrintDoc?3?5gdiPlaySpoolSt@
-      processed: "`string'"
+      processed: '"WinprintPrintDoc: gdiPlaySpoolSt"...'
       offset: 000043B8
     - name: _hInst
       processed: ''
@@ -1159,73 +1159,73 @@ appearances:
       processed: ''
       offset: 000044C0
     - name: ??_C@_08MPEN@CheckDNS?$AA@
-      processed: "`string'"
+      processed: '"CheckDNS"'
       offset: 000044C8
     - name: ??_C@_0CJ@NCLB@Localmon?$CBEnumPhysicalPort?5took?5?$CF@
-      processed: "`string'"
+      processed: '"Localmon!EnumPhysicalPort took %"...'
       offset: 000044D4
     - name: ??_C@_0DB@JAKN@LocalAlloc?5failed?5in?5LocalmonIni@
-      processed: "`string'"
+      processed: '"LocalAlloc failed in LocalmonIni"...'
       offset: '00004500'
     - name: ??_C@_0CL@HMGJ@localmon?$CBEnumNetworkPrintResourc@
-      processed: "`string'"
+      processed: '"localmon!EnumNetworkPrintResourc"...'
       offset: '00004534'
     - name: ??_C@_0BP@MADK@localmon?$CBOpenPort?5?$CFs?5?3?5Failed?6?$AA@
-      processed: "`string'"
+      processed: '"localmon!OpenPort %s : Failed\n"'
       offset: '00004560'
     - name: ??_C@_06NAPD@append?$AA@
-      processed: "`string'"
+      processed: '"append"'
       offset: '00004580'
     - name: ??_C@_07LJCI@spoolss?$AA@
-      processed: "`string'"
+      processed: '"spoolss"'
       offset: '00004588'
     - name: ??_C@_07OFK@logfile?$AA@
-      processed: "`string'"
+      processed: '"logfile"'
       offset: '00004590'
     - name: ??_C@_00A@?$AA@
-      processed: "`string'"
+      processed: '""'
       offset: '00004598'
     - name: ??_C@_0BI@KPF@StartDocPort?5FAILED?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"StartDocPort FAILED %d\n"'
       offset: 0000459C
     - name: ??_C@_0CB@KDFE@ERROR?3?5Failed?5to?5set?5Comm?5State?6@
-      processed: "`string'"
+      processed: '"ERROR: Failed to set Comm State\n"...'
       offset: 000045B4
     - name: ??_C@_0DA@DGLH@LocalmonStartDocPort?3?5CreateFile@
-      processed: "`string'"
+      processed: '"LocalmonStartDocPort: CreateFile"...'
       offset: 000045D8
     - name: ??_C@_0BK@MBAK@Unknown?5WriteFile?5Error?4?6?$AA@
-      processed: "`string'"
+      processed: '"Unknown WriteFile Error.\n"'
       offset: '00004608'
     - name: ??_C@_0CI@GKFB@LocalmonWritePort?3?5WriteFile?5FAI@
-      processed: "`string'"
+      processed: '"LocalmonWritePort: WriteFile FAI"...'
       offset: '00004624'
     - name: ??_C@_0CI@EILF@Localmon?3?5GetDefaultCommConfig?5f@
-      processed: "`string'"
+      processed: '"Localmon: GetDefaultCommConfig f"...'
       offset: 0000464C
     - name: _bInPromptForShadowPrint
       processed: ''
       offset: '00004674'
     - name: ??_C@_0N@LJEF@DOSSpoolMask?$AA@
-      processed: "`string'"
+      processed: '"DOSSpoolMask"'
       offset: '00004678'
     - name: ??_C@_0CB@MMDD@Disable?5CheckDNS?5for?5port?50x?$CF0x?6@
-      processed: "`string'"
+      processed: '"Disable CheckDNS for port 0x%0x\n"...'
       offset: '00004688'
     - name: ??_C@_0CA@DGGI@Enable?5CheckDNS?5for?5port?50x?$CF0x?6?$AA@
-      processed: "`string'"
+      processed: '"Enable CheckDNS for port 0x%0x\n"'
       offset: 000046AC
     - name: ??_C@_0CF@PNPA@Disable?5DOS?5spooling?5for?5port?50x@
-      processed: "`string'"
+      processed: '"Disable DOS spooling for port 0x"...'
       offset: 000046CC
     - name: ??_C@_0CE@JONJ@Enable?5DOS?5spooling?5for?5port?50x?$CF@
-      processed: "`string'"
+      processed: '"Enable DOS spooling for port 0x%"...'
       offset: 000046F4
     - name: ??_C@_0CH@HDF@?$AN?6Boy?0?5is?5FormatMessage?5broken?5a@
-      processed: "`string'"
+      processed: '"\r\nBoy, is FormatMessage broken a"...'
       offset: '00004718'
     - name: ??_C@_0CI@INO@PromptWriteErrir?3?5CreateThread?5F@
-      processed: "`string'"
+      processed: '"PromptWriteErrir: CreateThread F"...'
       offset: '00004740'
     - name: _PrinterInfo1Strings
       processed: ''
@@ -1288,16 +1288,16 @@ appearances:
       processed: ''
       offset: '00004940'
     - name: ??_C@_0O@HNIK@?$CFs?2drivers?2?$CFd?$AA@
-      processed: "`string'"
+      processed: '"%s\\drivers\\%d"'
       offset: 00004A78
     - name: ??_C@_0BN@KOPO@LocalAddPrinterDriver?$CI?5?$CFs?5?$CJ?6?$AA@
-      processed: "`string'"
+      processed: '"LocalAddPrinterDriver( %s )\n"'
       offset: 00004A88
     - name: ??_C@_0CI@OCBC@Failed?5to?5alloc?5driver?5source?5st@
-      processed: "`string'"
+      processed: '"Failed to alloc driver source st"...'
       offset: 00004AA8
     - name: ??_C@_0DL@ONO@Could?5not?5allocate?5?$CFd?5bytes?5for?5@
-      processed: "`string'"
+      processed: '"Could not allocate %d bytes for "...'
       offset: 00004AD0
     - name: _szRegistryConfig
       processed: ''
@@ -1528,406 +1528,406 @@ appearances:
       processed: ''
       offset: 00004C38
     - name: ??_C@_0CN@FKDI@System?2CurrentControlSet?2Control@
-      processed: "`string'"
+      processed: '"System\\CurrentControlSet\\Control"...'
       offset: 00004C3C
     - name: ??_C@_0L@HBPE@Windows?495?$AA@
-      processed: "`string'"
+      processed: '"Windows.95"'
       offset: 00004C6C
     - name: ??_C@_0M@CLGG@Windows?54?40?$AA@
-      processed: "`string'"
+      processed: '"Windows 4.0"'
       offset: 00004C78
     - name: ??_C@_01PCFE@?2?$AA@
-      processed: "`string'"
+      processed: '"\\"'
       offset: 00004C84
     - name: ??_C@_05INGH@ports?$AA@
-      processed: "`string'"
+      processed: '"ports"'
       offset: 00004C88
     - name: ??_C@_0N@PNKN@PrinterPorts?$AA@
-      processed: "`string'"
+      processed: '"PrinterPorts"'
       offset: 00004C90
     - name: ??_C@_07EPIM@devices?$AA@
-      processed: "`string'"
+      processed: '"devices"'
       offset: 00004CA0
     - name: ??_C@_06GFPG@device?$AA@
-      processed: "`string'"
+      processed: '"device"'
       offset: 00004CA8
     - name: ??_C@_07CIAP@windows?$AA@
-      processed: "`string'"
+      processed: '"windows"'
       offset: 00004CB0
     - name: ??_C@_08BFAG@PRINTERS?$AA@
-      processed: "`string'"
+      processed: '"PRINTERS"'
       offset: 00004CB8
     - name: ??_C@_08HFPC@PRTPROCS?$AA@
-      processed: "`string'"
+      processed: '"PRTPROCS"'
       offset: 00004CC4
     - name: ??_C@_07PBNA@DRIVERS?$AA@
-      processed: "`string'"
+      processed: '"DRIVERS"'
       offset: 00004CD0
     - name: ??_C@_08DGBP@Untitled?$AA@
-      processed: "`string'"
+      processed: '"Untitled"'
       offset: 00004CD8
     - name: ??_C@_0BL@OEEA@Locally?5connected?5Printers?$AA@
-      processed: "`string'"
+      processed: '"Locally connected Printers"'
       offset: 00004CE4
     - name: ??_C@_0BK@JPKN@Windows?595?5Local?5Printers?$AA@
-      processed: "`string'"
+      processed: '"Windows 95 Local Printers"'
       offset: 00004D00
     - name: ??_C@_0CA@GGIK@Windows?595?5Local?5Print?5Provider?$AA@
-      processed: "`string'"
+      processed: '"Windows 95 Local Print Provider"'
       offset: 00004D1C
     - name: ??_C@_06HIAG@SetupN?$AA@
-      processed: "`string'"
+      processed: '"SetupN"'
       offset: 00004D3C
     - name: ??_C@_0EA@MMEC@Software?2Microsoft?2Windows?2Curre@
-      processed: "`string'"
+      processed: '"Software\\Microsoft\\Windows\\Curre"...'
       offset: 00004D44
     - name: ??_C@_09PMO@txTimeout?$AA@
-      processed: "`string'"
+      processed: '"txTimeout"'
       offset: 00004D84
     - name: ??_C@_0L@BDEI@dnsTimeout?$AA@
-      processed: "`string'"
+      processed: '"dnsTimeout"'
       offset: 00004D90
     - name: ??_C@_0M@JHCM@StartOnBoot?$AA@
-      processed: "`string'"
+      processed: '"StartOnBoot"'
       offset: 00004D9C
     - name: ??_C@_0BA@MEIO@Dependent?5Files?$AA@
-      processed: "`string'"
+      processed: '"Dependent Files"'
       offset: 00004DA8
     - name: ??_C@_08PHKP@Datatype?$AA@
-      processed: "`string'"
+      processed: '"Datatype"'
       offset: 00004DB8
     - name: ??_C@_0BA@DMML@Default?5DevMode?$AA@
-      processed: "`string'"
+      processed: '"Default DevMode"'
       offset: 00004DC4
     - name: ??_C@_0P@EGEM@Separator?5File?$AA@
-      processed: "`string'"
+      processed: '"Separator File"'
       offset: 00004DD4
     - name: ??_C@_0L@LFGH@Parameters?$AA@
-      processed: "`string'"
+      processed: '"Parameters"'
       offset: 00004DE4
     - name: ??_C@_09MHDF@StartTime?$AA@
-      processed: "`string'"
+      processed: '"StartTime"'
       offset: 00004DF0
     - name: ??_C@_09COEA@UntilTime?$AA@
-      processed: "`string'"
+      processed: '"UntilTime"'
       offset: 00004DFC
     - name: ??_C@_08MJHG@Priority?$AA@
-      processed: "`string'"
+      processed: '"Priority"'
       offset: '00004E08'
     - name: ??_C@_06IOLI@Status?$AA@
-      processed: "`string'"
+      processed: '"Status"'
       offset: '00004E14'
     - name: ??_C@_0L@GIMA@Attributes?$AA@
-      processed: "`string'"
+      processed: '"Attributes"'
       offset: 00004E1C
     - name: ??_C@_0M@DKEL@Description?$AA@
-      processed: "`string'"
+      processed: '"Description"'
       offset: '00004E28'
     - name: ??_C@_08KDKK@Location?$AA@
-      processed: "`string'"
+      processed: '"Location"'
       offset: '00004E34'
     - name: ??_C@_0P@GIPE@Printer?5Driver?$AA@
-      processed: "`string'"
+      processed: '"Printer Driver"'
       offset: '00004E40'
     - name: ??_C@_0BA@OCIL@Print?5Processor?$AA@
-      processed: "`string'"
+      processed: '"Print Processor"'
       offset: '00004E50'
     - name: ??_C@_07OPKD@Monitor?$AA@
-      processed: "`string'"
+      processed: '"Monitor"'
       offset: '00004E60'
     - name: ??_C@_04CEAI@Port?$AA@
-      processed: "`string'"
+      processed: '"Port"'
       offset: '00004E68'
     - name: ??_C@_0L@IOBE@Share?5Name?$AA@
-      processed: "`string'"
+      processed: '"Share Name"'
       offset: '00004E70'
     - name: ??_C@_01KMAE@?0?$AA@
-      processed: "`string'"
+      processed: '","'
       offset: 00004E7C
     - name: ??_C@_06BKKN@?2?$CK?4SPL?$AA@
-      processed: "`string'"
+      processed: '"\\*.SPL"'
       offset: '00004E80'
     - name: ??_C@_06JBOI@?2?$CK?4SHD?$AA@
-      processed: "`string'"
+      processed: '"\\*.SHD"'
       offset: '00004E88'
     - name: ??_C@_09DEHM@Help?5File?$AA@
-      processed: "`string'"
+      processed: '"Help File"'
       offset: '00004E90'
     - name: ??_C@_09FNPC@Data?5File?$AA@
-      processed: "`string'"
+      processed: '"Data File"'
       offset: 00004E9C
     - name: ??_C@_0BD@DOKF@Configuration?5File?$AA@
-      processed: "`string'"
+      processed: '"Configuration File"'
       offset: 00004EA8
     - name: ??_C@_06LCIG@Driver?$AA@
-      processed: "`string'"
+      processed: '"Driver"'
       offset: 00004EBC
     - name: ??_C@_09OCGG@Directory?$AA@
-      processed: "`string'"
+      processed: '"Directory"'
       offset: 00004EC4
     - name: ??_C@_0N@ELEP@Environments?$AA@
-      processed: "`string'"
+      processed: '"Environments"'
       offset: 00004ED0
     - name: ??_C@_08BIDJ@Printers?$AA@
-      processed: "`string'"
+      processed: '"Printers"'
       offset: 00004EE0
     - name: ??_C@_0BB@OGAL@Print?5Processors?$AA@
-      processed: "`string'"
+      processed: '"Print Processors"'
       offset: 00004EEC
     - name: ??_C@_07COFL@Drivers?$AA@
-      processed: "`string'"
+      processed: '"Drivers"'
       offset: 00004F00
     - name: ??_C@_07MNFD@Version?$AA@
-      processed: "`string'"
+      processed: '"Version"'
       offset: 00004F08
     - name: ??_C@_0BC@MABE@PrinterDriverData?$AA@
-      processed: "`string'"
+      processed: '"PrinterDriverData"'
       offset: 00004F10
     - name: ??_C@_0DE@DHHN@System?2CurrentControlSet?2Control@
-      processed: "`string'"
+      processed: '"System\\CurrentControlSet\\Control"...'
       offset: 00004F24
     - name: ??_C@_0DA@FCGC@System?2CurrentControlSet?2Control@
-      processed: "`string'"
+      processed: '"System\\CurrentControlSet\\Control"...'
       offset: 00004F58
     - name: ??_C@_0DA@EMFN@System?2CurrentControlSet?2Control@
-      processed: "`string'"
+      processed: '"System\\CurrentControlSet\\Control"...'
       offset: 00004F88
     - name: ??_C@_0DB@FLOH@System?2CurrentControlSet?2Control@
-      processed: "`string'"
+      processed: '"System\\CurrentControlSet\\Control"...'
       offset: 00004FB8
     - name: ??_C@_0CM@PBCC@System?2CurrentControlSet?2Control@
-      processed: "`string'"
+      processed: '"System\\CurrentControlSet\\Control"...'
       offset: 00004FEC
     - name: ??_C@_0O@CAKM@CurrentConfig?$AA@
-      processed: "`string'"
+      processed: '"CurrentConfig"'
       offset: '00005018'
     - name: ??_C@_07IOPL@Default?$AA@
-      processed: "`string'"
+      processed: '"Default"'
       offset: '00005028'
     - name: ??_C@_06OELI@Config?$AA@
-      processed: "`string'"
+      processed: '"Config"'
       offset: '00005030'
     - name: ??_C@_0BC@NHA@SpoolProcessClass?$AA@
-      processed: "`string'"
+      processed: '"SpoolProcessClass"'
       offset: '00005038'
     - name: ??_C@_0M@IIHP@?2?2?4?2spooler?$AA@
-      processed: "`string'"
+      processed: '"\\\\.\\spooler"'
       offset: 0000504C
     - name: ??_C@_06MGDB@?2spool?$AA@
-      processed: "`string'"
+      processed: '"\\spool"'
       offset: '00005058'
     - name: ??_C@_07LGNH@?2print$?$AA@
-      processed: "`string'"
+      processed: '"\\print$"'
       offset: '00005060'
     - name: ??_C@_0BD@LBMK@MachineName?5?$DN?5?$CFs?4?6?$AA@
-      processed: "`string'"
+      processed: '"MachineName = %s.\n"'
       offset: '00005068'
     - name: ??_C@_0CD@JODJ@LocalSpl?3?5GetComputerName?5failed@
-      processed: "`string'"
+      processed: '"LocalSpl: GetComputerName failed"...'
       offset: 0000507C
     - name: ??_C@_0CO@LKIL@Starting?5LOCALSPL?5InitializePrin@
-      processed: "`string'"
+      processed: '"Starting LOCALSPL InitializePrin"...'
       offset: 000050A0
     - name: ??_C@_05KEJO@?$CFs?2?$CFs?$AA@
-      processed: "`string'"
+      processed: '"%s\\%s"'
       offset: 000050D0
     - name: ??_C@_0CF@OCNG@RegOpenKey?5of?5?$CFs?5Failed?3?5Error?5?$DN@
-      processed: "`string'"
+      processed: '"RegOpenKey of %s Failed: Error ="...'
       offset: 000050D8
     - name: ??_C@_0CG@BOJC@RegOpenKeyEx?5of?5?$CFs?5failed?3?5Error@
-      processed: "`string'"
+      processed: '"RegOpenKeyEx of %s failed: Error"...'
       offset: '00005100'
     - name: ??_C@_0CH@FCII@RegOpenKeyEx?5of?5?$CFs?5failed?3?5Error@
-      processed: "`string'"
+      processed: '"RegOpenKeyEx of %s failed: Error"...'
       offset: '00005128'
     - name: ??_C@_0CI@FNLK@End?5of?5print?5processor?5initializ@
-      processed: "`string'"
+      processed: '"End of print processor initializ"...'
       offset: '00005150'
     - name: ??_C@_0BL@DFEM@Print?5processor?5found?3?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: '"Print processor found: %s\n"'
       offset: '00005178'
     - name: ??_C@_0CE@OCAE@localspl?3?5CloseHandle?5failed?5?$CFd?5@
-      processed: "`string'"
+      processed: '"localspl: CloseHandle failed %d "...'
       offset: '00005194'
     - name: ??_C@_0BM@OFKO@Failed?5to?5allocate?5ini?5job?4?$AA@
-      processed: "`string'"
+      processed: '"Failed to allocate ini job."'
       offset: 000051B8
     - name: ??_C@_0CC@BINC@Failed?5to?5alloc?5ini?5job?5devmode?4@
-      processed: "`string'"
+      processed: '"Failed to alloc ini job devmode."...'
       offset: 000051D4
     - name: ??_C@_0DA@PPOC@localspl?3?5init?4c?51049?5CloseHandl@
-      processed: "`string'"
+      processed: '"localspl: init.c 1049 CloseHandl"...'
       offset: 000051F8
     - name: ??_C@_0BE@OJMO@InitializeMonitorEx?$AA@
-      processed: "`string'"
+      processed: '"InitializeMonitorEx"'
       offset: '00005228'
     - name: ??_C@_0DH@FDMC@Failed?5to?5allocate?5?$CFd?5bytes?5for?5@
-      processed: "`string'"
+      processed: '"Failed to allocate %d bytes for "...'
       offset: 0000523C
     - name: ??_C@_0CJ@NLME@Failed?5to?5GetProcAddress?$CIEnumDat@
-      processed: "`string'"
+      processed: '"Failed to GetProcAddress(EnumDat"...'
       offset: '00005274'
     - name: ??_C@_0BJ@DGJF@InitializePrintProcessor?$AA@
-      processed: "`string'"
+      processed: '"InitializePrintProcessor"'
       offset: 000052A0
     - name: ??_C@_0BL@KDFH@Failed?5to?5LoadLibrary?$CI?$CFs?$CJ?6?$AA@
-      processed: "`string'"
+      processed: '"Failed to LoadLibrary(%s)\n"'
       offset: 000052BC
     - name: ??_C@_0DC@KNEN@Failed?5to?5allocate?5?$CFd?5bytes?5for?5@
-      processed: "`string'"
+      processed: '"Failed to allocate %d bytes for "...'
       offset: 000052D8
     - name: ??_C@_0CJ@HIHJ@LocalInitializePrintProcessor?$CI?5?$CF@
-      processed: "`string'"
+      processed: '"LocalInitializePrintProcessor( %"...'
       offset: 0000530C
     - name: ??_C@_0BN@MBGA@System?5running?5in?5SBS?5mode?4?6?$AA@
-      processed: "`string'"
+      processed: '"System running in SBS mode.\n"'
       offset: '00005338'
     - name: ??_C@_0CF@IOFE@Failed?5to?5alloc?5Job?5source?5strin@
-      processed: "`string'"
+      processed: '"Failed to alloc Job source strin"...'
       offset: '00005358'
     - name: ??_C@_0BH@GBIF@DeleteJob?3?5Bad?5JobId?4?6?$AA@
-      processed: "`string'"
+      processed: '"DeleteJob: Bad JobId.\n"'
       offset: '00005380'
     - name: ??_C@_0DE@FLPJ@localspl?$CBDeleteJob?5Deleting?5job?5@
-      processed: "`string'"
+      processed: '"localspl!DeleteJob Deleting job "...'
       offset: '00005398'
     - name: ??_C@_0CN@KICL@localspl?$CBDeleteJob?5job?5blown?5awa@
-      processed: "`string'"
+      processed: '"localspl!DeleteJob job blown awa"...'
       offset: 000053CC
     - name: ??_C@_0CE@KAIP@localspl?$CBJob?9?$DOcRef?5is?5OFF?$CB?$CB?$CB?50x?$CF@
-      processed: "`string'"
+      processed: '"localspl!Job->cRef is OFF!!! 0x%"...'
       offset: 000053FC
     - name: ??_C@_0CO@MNBP@localspl?$CBPortThread?5job?5blown?5aw@
-      processed: "`string'"
+      processed: '"localspl!PortThread job blown aw"...'
       offset: '00005420'
     - name: ??_C@_0CB@BDKP@Thread?5for?5Port?5?$CFs?5Closing?5Down?6@
-      processed: "`string'"
+      processed: '"Thread for Port %s Closing Down\n"...'
       offset: '00005450'
     - name: ??_C@_0CG@DEFN@Failed?5to?5alloc?5Port?5source?5stri@
-      processed: "`string'"
+      processed: '"Failed to alloc Port source stri"...'
       offset: '00005474'
     - name: ??_C@_0L@MNNG@DevInstall?$AA@
-      processed: "`string'"
+      processed: '"DevInstall"'
       offset: 0000549C
     - name: ??_C@_0DD@PBOI@LocalSpl?$CBDrvDevInstall?3?5LoadLibr@
-      processed: "`string'"
+      processed: '"LocalSpl!DrvDevInstall: LoadLibr"...'
       offset: 000054A8
     - name: ??_C@_0CM@HGIB@LocalSpl?$CBDrvDevInstall?3?5LocalAll@
-      processed: "`string'"
+      processed: '"LocalSpl!DrvDevInstall: LocalAll"...'
       offset: 000054DC
     - name: ??_C@_0CO@FJBP@LocalSpl?$CBDrvDevInstall?3?5CreateTh@
-      processed: "`string'"
+      processed: '"LocalSpl!DrvDevInstall: CreateTh"...'
       offset: '00005508'
     - name: ??_C@_0M@PJOP@?$CFs?0?$CFs?0?$CFd?0?$CFd?$AA@
-      processed: "`string'"
+      processed: '"%s,%s,%d,%d"'
       offset: '00005538'
     - name: ??_C@_0BC@DMLE@winspl16?0?$CFs?0?$CFd?0?$CFd?$AA@
-      processed: "`string'"
+      processed: '"winspl16,%s,%d,%d"'
       offset: '00005544'
     - name: ??_C@_05ECIL@?$CFs?0?$CFs?$AA@
-      processed: "`string'"
+      processed: '"%s,%s"'
       offset: '00005558'
     - name: ??_C@_0M@LLJM@winspl16?0?$CFs?$AA@
-      processed: "`string'"
+      processed: '"winspl16,%s"'
       offset: '00005560'
     - name: ??_C@_0DC@OBED@LocalSpl?$CBDeletePrinter?3?5RegDelet@
-      processed: "`string'"
+      processed: '"LocalSpl!DeletePrinter: RegDelet"...'
       offset: 0000556C
     - name: ??_C@_0DK@JAC@UpdatePrinterIni?3?5RegCreateKeyEx@
-      processed: "`string'"
+      processed: '"UpdatePrinterIni: RegCreateKeyEx"...'
       offset: 000055A0
     - name: ??_C@_0DH@BAFB@LocalSpl?$CBUpdatePrinterIni?3?5RegCr@
-      processed: "`string'"
+      processed: '"LocalSpl!UpdatePrinterIni: RegCr"...'
       offset: 000055DC
     - name: ??_C@_0BB@NKOF@Installed?5Memory?$AA@
-      processed: "`string'"
+      processed: '"Installed Memory"'
       offset: '00005614'
     - name: ??_C@_0BH@LNOP@LocalAddPrinter?$CI?5?$CFs?5?$CJ?6?$AA@
-      processed: "`string'"
+      processed: '"LocalAddPrinter( %s )\n"'
       offset: '00005628'
     - name: ??_C@_0BB@EAEK@Available?5Memory?$AA@
-      processed: "`string'"
+      processed: '"Available Memory"'
       offset: '00005640'
     - name: ??_C@_0BH@BMHH@LocalSetPrinter?$CI?5?$CFs?5?$CJ?6?$AA@
-      processed: "`string'"
+      processed: '"LocalSetPrinter( %s )\n"'
       offset: '00005654'
     - name: ??_C@_08INHA@?$CFs?0?$CFs?0?$CFs?$AA@
-      processed: "`string'"
+      processed: '"%s,%s,%s"'
       offset: 0000566C
     - name: ??_C@_0M@FFGJ@?$CFs?2?$CFs?0?$CFs?0?$CFs?$AA@
-      processed: "`string'"
+      processed: '"%s\\%s,%s,%s"'
       offset: '00005678'
     - name: ??_C@_0BM@FFAN@OpenPrinter?5?$CFs?3?50x?$CF0x?5TRUE?6?$AA@
-      processed: "`string'"
+      processed: '"OpenPrinter %s: 0x%0x TRUE\n"'
       offset: '00005684'
     - name: ??_C@_0EI@COPF@localspl?$CBCheckScheduler?3?5Giving?5@
-      processed: "`string'"
+      processed: '"localspl!CheckScheduler: Giving "...'
       offset: 000056A0
     - name: ??_C@_0DA@DKEK@localspl?$CBFindDatatype?3?5Could?5not@
-      processed: "`string'"
+      processed: '"localspl!FindDatatype: Could not"...'
       offset: '000056E8'
     - name: ??_C@_0BN@BBFB@LocalSpl?$CBStartDoc?5FAILED?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"LocalSpl!StartDoc FAILED %d\n"'
       offset: '00005718'
     - name: ??_C@_0BM@GOCH@CreateFile?$CI?$CFs?$CJ?5failed?5?3?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"CreateFile(%s) failed : %d\n"'
       offset: '00005738'
     - name: ??_C@_0BM@GMBE@cWritten?5?$CI?$CFd?$CJ?5?$DO?5cbBuf?5?$CI?$CFd?$CJ?6?$AA@
-      processed: "`string'"
+      processed: '"cWritten (%d) > cbBuf (%d)\n"'
       offset: '00005754'
     - name: ??_C@_0DA@FGHH@Localspl?3Signaling?5for?5Write?0?5Si@
-      processed: "`string'"
+      processed: '"Localspl:Signaling for Write, Si"...'
       offset: '00005770'
     - name: ??_C@_0CG@OKAE@WritePrinter?5Written?5to?5disk?5?$CFd?5@
-      processed: "`string'"
+      processed: '"WritePrinter Written to disk %d "...'
       offset: 000057A0
     - name: ??_C@_0BL@FMDK@ERROR?5in?5WritePrinter?3?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"ERROR in WritePrinter: %x\n"'
       offset: 000057C8
     - name: ??_C@_0DI@OKKG@Localspl?3EndPage?5Signaling?5for?5W@
-      processed: "`string'"
+      processed: '"Localspl:EndPage Signaling for W"...'
       offset: '000057E4'
     - name: ??_C@_0BL@DDFN@ERROR?5in?5AbortPrinter?3?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"ERROR in AbortPrinter: %x\n"'
       offset: 0000581C
     - name: ??_C@_0EC@NLBO@Localspl?3Wake?5up?5for?5Write?0?5Size@
-      processed: "`string'"
+      processed: '"Localspl:Wake up for Write, Size"...'
       offset: '00005838'
     - name: ??_C@_0DA@LGGG@Localspl?3Waiting?5for?5Write?0?5Size@
-      processed: "`string'"
+      processed: '"Localspl:Waiting for Write, Size"...'
       offset: 0000587C
     - name: ??_C@_0CF@JOKB@LocalSpl?$CBEndDocPrinter?5?$CFs?5FAILED@
-      processed: "`string'"
+      processed: '"LocalSpl!EndDocPrinter %s FAILED"...'
       offset: 000058AC
     - name: ??_C@_0CM@JBCN@Deleting?5Job?5because?5it?5is?5zero?5@
-      processed: "`string'"
+      processed: '"Deleting Job because it is zero "...'
       offset: 000058D4
     - name: ??_C@_0CE@EMIE@localspl?3?5calling?5net?5AbortPrint@
-      processed: "`string'"
+      processed: '"localspl: calling net AbortPrint"...'
       offset: '00005900'
     - name: ??_C@_0BL@FBOG@LocalSpl?$CBAddJob?5FAILED?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"LocalSpl!AddJob FAILED %d\n"'
       offset: '00005924'
     - name: ??_C@_0CC@HBCH@localspl?3?5FindClose?5failed?5?$CFd?5?$CFd@
-      processed: "`string'"
+      processed: '"localspl: FindClose failed %d %d"...'
       offset: '00005940'
     - name: ??_C@_0DK@EAPF@localspl?3?5Could?5not?5FindFirst?5th@
-      processed: "`string'"
+      processed: '"localspl: Could not FindFirst th"...'
       offset: '00005964'
     - name: ??_C@_08ONGK@?$CFs?2?$CFs?2?$CFs?$AA@
-      processed: "`string'"
+      processed: '"%s\\%s\\%s"'
       offset: 000059A0
     - name: ??_C@_0BL@BOMC@ClosePrinter?5FAILED?5?$CFx?5?3?5?6?$AA@
-      processed: "`string'"
+      processed: '"ClosePrinter FAILED %x : \n"'
       offset: 000059AC
     - name: ??_C@_0CJ@PJEA@ClosePrinter?3?5Cleaning?5pSpool?9?$DOh@
-      processed: "`string'"
+      processed: '"ClosePrinter: Cleaning pSpool->h"...'
       offset: 000059C8
     - name: ??_C@_0BL@DNLM@LocalSpl?$CBClosePrinter?$CI?$CFs?$CJ?6?$AA@
-      processed: "`string'"
+      processed: '"LocalSpl!ClosePrinter(%s)\n"'
       offset: 000059F4
     - name: ??_C@_0CA@LBBH@ERROR?5in?5PrinterMessageBox?3?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"ERROR in PrinterMessageBox: %x\n"'
       offset: 00005A10
     - name: _dwSplHeapSize
       processed: ''
@@ -1948,46 +1948,46 @@ appearances:
       processed: ''
       offset: 00005A44
     - name: ??_C@_0CH@NJN@Memory?5Allocation?5failed?5for?5?$CFd?5@
-      processed: "`string'"
+      processed: '"Memory Allocation failed for %d "...'
       offset: 00005A48
     - name: ??_C@_0CC@PHPM@Corrupt?5Memory?5in?5spooler?5?3?5?$CF0lx@
-      processed: "`string'"
+      processed: '"Corrupt Memory in spooler : %0lx"...'
       offset: 00005A70
     - name: ??_C@_08JKOM@?$CF05ld?4?$CFs?$AA@
-      processed: "`string'"
+      processed: '"%05ld.%s"'
       offset: 00005A94
     - name: ??_C@_03ECJG@SHD?$AA@
-      processed: "`string'"
+      processed: '"SHD"'
       offset: 00005AA0
     - name: ??_C@_03MJND@SPL?$AA@
-      processed: "`string'"
+      processed: '"SPL"'
       offset: 00005AA4
     - name: ??_C@_01FEHD@?$AN?$AA@
-      processed: "`string'"
+      processed: '"\r"'
       offset: 00005AA8
     - name: ??_C@_01BJG@?6?$AA@
-      processed: "`string'"
+      processed: '"\n"'
       offset: 00005AAC
     - name: ??_C@_0BA@DFEI@IsPrinterShared?$AA@
-      processed: "`string'"
+      processed: '"IsPrinterShared"'
       offset: 00005AB0
     - name: ??_C@_0BH@GKAE@Network?2SharingHandler?$AA@
-      processed: "`string'"
+      processed: '"Network\\SharingHandler"'
       offset: 00005AC0
     - name: ??_C@_0P@NKOF@SHChangeNotify?$AA@
-      processed: "`string'"
+      processed: '"SHChangeNotify"'
       offset: 00005AD8
     - name: ??_C@_07MFEP@shell32?$AA@
-      processed: "`string'"
+      processed: '"shell32"'
       offset: 00005AE8
     - name: ??_C@_0BH@FMMJ@Printing?5Shadow?5Jobs?4?6?$AA@
-      processed: "`string'"
+      processed: '"Printing Shadow Jobs.\n"'
       offset: 00005AF0
     - name: ??_C@_0CL@DLLE@Localspl?$CBFinish?5CheckNetAvailabi@
-      processed: "`string'"
+      processed: '"Localspl!Finish CheckNetAvailabi"...'
       offset: 00005B08
     - name: ??_C@_0CK@DPOD@Localspl?$CBStart?5CheckNetAvailabil@
-      processed: "`string'"
+      processed: '"Localspl!Start CheckNetAvailabil"...'
       offset: 00005B34
     - name: _szParamJob
       processed: ''
@@ -1999,19 +1999,19 @@ appearances:
       processed: ''
       offset: 00005B68
     - name: ??_C@_01FCOA@?5?$AA@
-      processed: "`string'"
+      processed: '" "'
       offset: 00005B6C
     - name: ??_C@_0O@LKGL@?2spbanner?4wmf?$AA@
-      processed: "`string'"
+      processed: '"\\spbanner.wmf"'
       offset: 00005B70
     - name: ??_C@_06FALM@config?$AA@
-      processed: "`string'"
+      processed: '"config"'
       offset: 00005B80
     - name: ??_C@_0DC@LLMF@ReadConfig?5?9?5Available?5printer?5s@
-      processed: "`string'"
+      processed: '"ReadConfig - Available printer s"...'
       offset: 00005B88
     - name: ??_C@_0DD@PEIJ@LocalSpl?$CBUpdateConfig?3?5RegCreate@
-      processed: "`string'"
+      processed: '"LocalSpl!UpdateConfig: RegCreate"...'
       offset: 00005BBC
     - name: _dwDosSpoolPortFlag
       processed: ''
@@ -2569,8 +2569,6 @@ appearances:
     - name: \177USER32_NULL_THUNK_DATA
       processed: ''
       offset: 000005F8
-  source_tree:
-  - 'localspl: init.c 1049 CloseHandle failed %d %d'
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -3577,28 +3575,28 @@ appearances:
       demangled: ''
       offset: '00004214'
     - name: ??_C@_05DOGK@Order?$AA@
-      demangled: "`string'"
+      demangled: '"Order"'
       offset: '00004218'
     - name: ??_C@_0M@NKHO@spool32?4exe?$AA@
-      demangled: "`string'"
+      demangled: '"spool32.exe"'
       offset: '00004220'
     - name: ??_C@_0BI@JBGI@InitializePrintProvidor?$AA@
-      demangled: "`string'"
+      demangled: '"InitializePrintProvidor"'
       offset: 0000422C
     - name: ??_C@_0L@FCNC@wnpp32?4dll?$AA@
-      demangled: "`string'"
+      demangled: '"wnpp32.dll"'
       offset: '00004244'
     - name: ??_C@_0L@KLKN@nwpp32?4dll?$AA@
-      demangled: "`string'"
+      demangled: '"nwpp32.dll"'
       offset: '00004250'
     - name: ??_C@_0L@DCML@mspp32?4dll?$AA@
-      demangled: "`string'"
+      demangled: '"mspp32.dll"'
       offset: 0000425C
     - name: ??_C@_04EFNI@Name?$AA@
-      demangled: "`string'"
+      demangled: '"Name"'
       offset: '00004268'
     - name: ??_C@_0BK@OALL@MS?5Network?5Print?5Provider?$AA@
-      demangled: "`string'"
+      demangled: '"MS Network Print Provider"'
       offset: '00004270'
     - name: _szWinPrint
       demangled: ''
@@ -3613,13 +3611,13 @@ appearances:
       demangled: ''
       offset: 000042A8
     - name: ??_C@_03JGKF@EMF?$AA@
-      demangled: "`string'"
+      demangled: '"EMF"'
       offset: 000042AC
     - name: ??_C@_03OFLH@RAW?$AA@
-      demangled: "`string'"
+      demangled: '"RAW"'
       offset: 000042B0
     - name: ??_C@_08PGGC@WinPrint?$AA@
-      demangled: "`string'"
+      demangled: '"WinPrint"'
       offset: 000042B4
     - name: _hInst
       demangled: ''
@@ -3682,13 +3680,13 @@ appearances:
       demangled: ''
       offset: '00004398'
     - name: ??_C@_08MPEN@CheckDNS?$AA@
-      demangled: "`string'"
+      demangled: '"CheckDNS"'
       offset: 000043A0
     - name: _bInPromptForShadowPrint
       demangled: ''
       offset: 000043AC
     - name: ??_C@_0N@LJEF@DOSSpoolMask?$AA@
-      demangled: "`string'"
+      demangled: '"DOSSpoolMask"'
       offset: 000043B0
     - name: _PrinterInfo1Strings
       demangled: ''
@@ -3751,7 +3749,7 @@ appearances:
       demangled: ''
       offset: '00004598'
     - name: ??_C@_0O@HNIK@?$CFs?2drivers?2?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '"%s\\drivers\\%d"'
       offset: 000046D0
     - name: _szRegistryConfig
       demangled: ''
@@ -3982,238 +3980,238 @@ appearances:
       demangled: ''
       offset: 0000480C
     - name: ??_C@_0CN@FKDI@System?2CurrentControlSet?2Control@
-      demangled: "`string'"
+      demangled: '"System\\CurrentControlSet\\Control"...'
       offset: '00004810'
     - name: ??_C@_0L@HBPE@Windows?495?$AA@
-      demangled: "`string'"
+      demangled: '"Windows.95"'
       offset: '00004840'
     - name: ??_C@_0M@CLGG@Windows?54?40?$AA@
-      demangled: "`string'"
+      demangled: '"Windows 4.0"'
       offset: 0000484C
     - name: ??_C@_01PCFE@?2?$AA@
-      demangled: "`string'"
+      demangled: '"\\"'
       offset: '00004858'
     - name: ??_C@_00A@?$AA@
-      demangled: "`string'"
+      demangled: '""'
       offset: 0000485C
     - name: ??_C@_05INGH@ports?$AA@
-      demangled: "`string'"
+      demangled: '"ports"'
       offset: '00004860'
     - name: ??_C@_0N@PNKN@PrinterPorts?$AA@
-      demangled: "`string'"
+      demangled: '"PrinterPorts"'
       offset: '00004868'
     - name: ??_C@_07EPIM@devices?$AA@
-      demangled: "`string'"
+      demangled: '"devices"'
       offset: '00004878'
     - name: ??_C@_06GFPG@device?$AA@
-      demangled: "`string'"
+      demangled: '"device"'
       offset: '00004880'
     - name: ??_C@_07CIAP@windows?$AA@
-      demangled: "`string'"
+      demangled: '"windows"'
       offset: '00004888'
     - name: ??_C@_08BFAG@PRINTERS?$AA@
-      demangled: "`string'"
+      demangled: '"PRINTERS"'
       offset: '00004890'
     - name: ??_C@_08HFPC@PRTPROCS?$AA@
-      demangled: "`string'"
+      demangled: '"PRTPROCS"'
       offset: 0000489C
     - name: ??_C@_07PBNA@DRIVERS?$AA@
-      demangled: "`string'"
+      demangled: '"DRIVERS"'
       offset: 000048A8
     - name: ??_C@_08DGBP@Untitled?$AA@
-      demangled: "`string'"
+      demangled: '"Untitled"'
       offset: 000048B0
     - name: ??_C@_0BL@OEEA@Locally?5connected?5Printers?$AA@
-      demangled: "`string'"
+      demangled: '"Locally connected Printers"'
       offset: 000048BC
     - name: ??_C@_0BK@JPKN@Windows?595?5Local?5Printers?$AA@
-      demangled: "`string'"
+      demangled: '"Windows 95 Local Printers"'
       offset: 000048D8
     - name: ??_C@_0CA@GGIK@Windows?595?5Local?5Print?5Provider?$AA@
-      demangled: "`string'"
+      demangled: '"Windows 95 Local Print Provider"'
       offset: 000048F4
     - name: ??_C@_06HIAG@SetupN?$AA@
-      demangled: "`string'"
+      demangled: '"SetupN"'
       offset: '00004914'
     - name: ??_C@_0EA@MMEC@Software?2Microsoft?2Windows?2Curre@
-      demangled: "`string'"
+      demangled: '"Software\\Microsoft\\Windows\\Curre"...'
       offset: 0000491C
     - name: ??_C@_09PMO@txTimeout?$AA@
-      demangled: "`string'"
+      demangled: '"txTimeout"'
       offset: 0000495C
     - name: ??_C@_0L@BDEI@dnsTimeout?$AA@
-      demangled: "`string'"
+      demangled: '"dnsTimeout"'
       offset: '00004968'
     - name: ??_C@_0M@JHCM@StartOnBoot?$AA@
-      demangled: "`string'"
+      demangled: '"StartOnBoot"'
       offset: '00004974'
     - name: ??_C@_0BA@MEIO@Dependent?5Files?$AA@
-      demangled: "`string'"
+      demangled: '"Dependent Files"'
       offset: '00004980'
     - name: ??_C@_08PHKP@Datatype?$AA@
-      demangled: "`string'"
+      demangled: '"Datatype"'
       offset: '00004990'
     - name: ??_C@_0BA@DMML@Default?5DevMode?$AA@
-      demangled: "`string'"
+      demangled: '"Default DevMode"'
       offset: 0000499C
     - name: ??_C@_0P@EGEM@Separator?5File?$AA@
-      demangled: "`string'"
+      demangled: '"Separator File"'
       offset: 000049AC
     - name: ??_C@_0L@LFGH@Parameters?$AA@
-      demangled: "`string'"
+      demangled: '"Parameters"'
       offset: 000049BC
     - name: ??_C@_09MHDF@StartTime?$AA@
-      demangled: "`string'"
+      demangled: '"StartTime"'
       offset: 000049C8
     - name: ??_C@_09COEA@UntilTime?$AA@
-      demangled: "`string'"
+      demangled: '"UntilTime"'
       offset: 000049D4
     - name: ??_C@_08MJHG@Priority?$AA@
-      demangled: "`string'"
+      demangled: '"Priority"'
       offset: '000049E0'
     - name: ??_C@_06IOLI@Status?$AA@
-      demangled: "`string'"
+      demangled: '"Status"'
       offset: 000049EC
     - name: ??_C@_0L@GIMA@Attributes?$AA@
-      demangled: "`string'"
+      demangled: '"Attributes"'
       offset: 000049F4
     - name: ??_C@_0M@DKEL@Description?$AA@
-      demangled: "`string'"
+      demangled: '"Description"'
       offset: 00004A00
     - name: ??_C@_08KDKK@Location?$AA@
-      demangled: "`string'"
+      demangled: '"Location"'
       offset: 00004A0C
     - name: ??_C@_0P@GIPE@Printer?5Driver?$AA@
-      demangled: "`string'"
+      demangled: '"Printer Driver"'
       offset: 00004A18
     - name: ??_C@_0BA@OCIL@Print?5Processor?$AA@
-      demangled: "`string'"
+      demangled: '"Print Processor"'
       offset: 00004A28
     - name: ??_C@_07OPKD@Monitor?$AA@
-      demangled: "`string'"
+      demangled: '"Monitor"'
       offset: 00004A38
     - name: ??_C@_04CEAI@Port?$AA@
-      demangled: "`string'"
+      demangled: '"Port"'
       offset: 00004A40
     - name: ??_C@_0L@IOBE@Share?5Name?$AA@
-      demangled: "`string'"
+      demangled: '"Share Name"'
       offset: 00004A48
     - name: ??_C@_01KMAE@?0?$AA@
-      demangled: "`string'"
+      demangled: '","'
       offset: 00004A54
     - name: ??_C@_06BKKN@?2?$CK?4SPL?$AA@
-      demangled: "`string'"
+      demangled: '"\\*.SPL"'
       offset: 00004A58
     - name: ??_C@_06JBOI@?2?$CK?4SHD?$AA@
-      demangled: "`string'"
+      demangled: '"\\*.SHD"'
       offset: 00004A60
     - name: ??_C@_09DEHM@Help?5File?$AA@
-      demangled: "`string'"
+      demangled: '"Help File"'
       offset: 00004A68
     - name: ??_C@_09FNPC@Data?5File?$AA@
-      demangled: "`string'"
+      demangled: '"Data File"'
       offset: 00004A74
     - name: ??_C@_0BD@DOKF@Configuration?5File?$AA@
-      demangled: "`string'"
+      demangled: '"Configuration File"'
       offset: 00004A80
     - name: ??_C@_06LCIG@Driver?$AA@
-      demangled: "`string'"
+      demangled: '"Driver"'
       offset: 00004A94
     - name: ??_C@_09OCGG@Directory?$AA@
-      demangled: "`string'"
+      demangled: '"Directory"'
       offset: 00004A9C
     - name: ??_C@_0N@ELEP@Environments?$AA@
-      demangled: "`string'"
+      demangled: '"Environments"'
       offset: 00004AA8
     - name: ??_C@_08BIDJ@Printers?$AA@
-      demangled: "`string'"
+      demangled: '"Printers"'
       offset: 00004AB8
     - name: ??_C@_0BB@OGAL@Print?5Processors?$AA@
-      demangled: "`string'"
+      demangled: '"Print Processors"'
       offset: 00004AC4
     - name: ??_C@_07COFL@Drivers?$AA@
-      demangled: "`string'"
+      demangled: '"Drivers"'
       offset: 00004AD8
     - name: ??_C@_07MNFD@Version?$AA@
-      demangled: "`string'"
+      demangled: '"Version"'
       offset: 00004AE0
     - name: ??_C@_0BC@MABE@PrinterDriverData?$AA@
-      demangled: "`string'"
+      demangled: '"PrinterDriverData"'
       offset: 00004AE8
     - name: ??_C@_0DE@DHHN@System?2CurrentControlSet?2Control@
-      demangled: "`string'"
+      demangled: '"System\\CurrentControlSet\\Control"...'
       offset: 00004AFC
     - name: ??_C@_0DA@FCGC@System?2CurrentControlSet?2Control@
-      demangled: "`string'"
+      demangled: '"System\\CurrentControlSet\\Control"...'
       offset: 00004B30
     - name: ??_C@_0DA@EMFN@System?2CurrentControlSet?2Control@
-      demangled: "`string'"
+      demangled: '"System\\CurrentControlSet\\Control"...'
       offset: 00004B60
     - name: ??_C@_0DB@FLOH@System?2CurrentControlSet?2Control@
-      demangled: "`string'"
+      demangled: '"System\\CurrentControlSet\\Control"...'
       offset: 00004B90
     - name: ??_C@_0CM@PBCC@System?2CurrentControlSet?2Control@
-      demangled: "`string'"
+      demangled: '"System\\CurrentControlSet\\Control"...'
       offset: 00004BC4
     - name: ??_C@_0O@CAKM@CurrentConfig?$AA@
-      demangled: "`string'"
+      demangled: '"CurrentConfig"'
       offset: 00004BF0
     - name: ??_C@_07IOPL@Default?$AA@
-      demangled: "`string'"
+      demangled: '"Default"'
       offset: 00004C00
     - name: ??_C@_06OELI@Config?$AA@
-      demangled: "`string'"
+      demangled: '"Config"'
       offset: 00004C08
     - name: ??_C@_0BC@NHA@SpoolProcessClass?$AA@
-      demangled: "`string'"
+      demangled: '"SpoolProcessClass"'
       offset: 00004C10
     - name: ??_C@_0M@IIHP@?2?2?4?2spooler?$AA@
-      demangled: "`string'"
+      demangled: '"\\\\.\\spooler"'
       offset: 00004C24
     - name: ??_C@_06MGDB@?2spool?$AA@
-      demangled: "`string'"
+      demangled: '"\\spool"'
       offset: 00004C30
     - name: ??_C@_07LGNH@?2print$?$AA@
-      demangled: "`string'"
+      demangled: '"\\print$"'
       offset: 00004C38
     - name: ??_C@_05KEJO@?$CFs?2?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"%s\\%s"'
       offset: 00004C40
     - name: ??_C@_0BE@OJMO@InitializeMonitorEx?$AA@
-      demangled: "`string'"
+      demangled: '"InitializeMonitorEx"'
       offset: 00004C48
     - name: ??_C@_0BJ@DGJF@InitializePrintProcessor?$AA@
-      demangled: "`string'"
+      demangled: '"InitializePrintProcessor"'
       offset: 00004C5C
     - name: ??_C@_0L@MNNG@DevInstall?$AA@
-      demangled: "`string'"
+      demangled: '"DevInstall"'
       offset: 00004C78
     - name: ??_C@_0M@PJOP@?$CFs?0?$CFs?0?$CFd?0?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '"%s,%s,%d,%d"'
       offset: 00004C84
     - name: ??_C@_0BC@DMLE@winspl16?0?$CFs?0?$CFd?0?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '"winspl16,%s,%d,%d"'
       offset: 00004C90
     - name: ??_C@_05ECIL@?$CFs?0?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"%s,%s"'
       offset: 00004CA4
     - name: ??_C@_0M@LLJM@winspl16?0?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"winspl16,%s"'
       offset: 00004CAC
     - name: ??_C@_0BB@NKOF@Installed?5Memory?$AA@
-      demangled: "`string'"
+      demangled: '"Installed Memory"'
       offset: 00004CB8
     - name: ??_C@_0BB@EAEK@Available?5Memory?$AA@
-      demangled: "`string'"
+      demangled: '"Available Memory"'
       offset: 00004CCC
     - name: ??_C@_08INHA@?$CFs?0?$CFs?0?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"%s,%s,%s"'
       offset: 00004CE0
     - name: ??_C@_0M@FFGJ@?$CFs?2?$CFs?0?$CFs?0?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"%s\\%s,%s,%s"'
       offset: 00004CEC
     - name: ??_C@_08ONGK@?$CFs?2?$CFs?2?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"%s\\%s\\%s"'
       offset: 00004CF8
     - name: _hMsshrui
       demangled: ''
@@ -4228,28 +4226,28 @@ appearances:
       demangled: ''
       offset: 00004D10
     - name: ??_C@_08JKOM@?$CF05ld?4?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"%05ld.%s"'
       offset: 00004D14
     - name: ??_C@_03ECJG@SHD?$AA@
-      demangled: "`string'"
+      demangled: '"SHD"'
       offset: 00004D20
     - name: ??_C@_03MJND@SPL?$AA@
-      demangled: "`string'"
+      demangled: '"SPL"'
       offset: 00004D24
     - name: ??_C@_01BJG@?6?$AA@
-      demangled: "`string'"
+      demangled: '"\n"'
       offset: 00004D28
     - name: ??_C@_0BA@DFEI@IsPrinterShared?$AA@
-      demangled: "`string'"
+      demangled: '"IsPrinterShared"'
       offset: 00004D2C
     - name: ??_C@_0BH@GKAE@Network?2SharingHandler?$AA@
-      demangled: "`string'"
+      demangled: '"Network\\SharingHandler"'
       offset: 00004D3C
     - name: ??_C@_0P@NKOF@SHChangeNotify?$AA@
-      demangled: "`string'"
+      demangled: '"SHChangeNotify"'
       offset: 00004D54
     - name: ??_C@_07MFEP@shell32?$AA@
-      demangled: "`string'"
+      demangled: '"shell32"'
       offset: 00004D64
     - name: _szParamJob
       demangled: ''
@@ -4261,13 +4259,13 @@ appearances:
       demangled: ''
       offset: 00004D74
     - name: ??_C@_01FCOA@?5?$AA@
-      demangled: "`string'"
+      demangled: '" "'
       offset: 00004D78
     - name: ??_C@_0O@LKGL@?2spbanner?4wmf?$AA@
-      demangled: "`string'"
+      demangled: '"\\spbanner.wmf"'
       offset: 00004D7C
     - name: ??_C@_06FALM@config?$AA@
-      demangled: "`string'"
+      demangled: '"config"'
       offset: 00004D8C
     - name: _dwDosSpoolPortFlag
       demangled: ''

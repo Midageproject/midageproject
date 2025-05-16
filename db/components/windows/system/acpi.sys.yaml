@@ -1,10 +1,174 @@
 filename: windows/system/acpi.sys
-#TODO: bring up more details from symdeb
 binary: ACPI
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - acpiappy.c
+  - acpibs.c
+  - "\t../acpi.c"
+  - acpictl.c
+  - acpictrl.c
+  - acpidbg2.c
+  - acpidbg.c
+  - acpidock.c
+  - acpienbl.c
+  - acpienum.c
+  - acpievnt.c
+  - acpiexpt.c
+  - acpigpe.c
+  - acpigpio.c
+  - acpihook.asm
+  - acpiidle.c
+  - acpiinit.c
+  - acpiintr.c
+  - acpiio.c
+  - acpiirp.c
+  - acpilock.c
+  - acpins.c
+  - acpintfy.c
+  - acpioprg.c
+  - acpipowr.c
+  - acpirtc.c
+  - acpiserv.c
+  - acpisi.c
+  - acpiterm.c
+  - acpithrm.c
+  - acpitimr.c
+  - acpiwake.c
+  - acpizzzz.c
+  - amldebug.c
+  - amliapi.c
+  - cmdarg.c
+  - "\t../ctxt.c"
+  - debugger.c
+  - '%../../../../../dev/ddk/inc/configmg.h'
+  - fileio.asm
+  - "\t../heap.c"
+  - "\t../list.c"
+  - loaddsdt.c
+  - "\t../misc.c"
+  - namedobj.c
+  - nsmod.c
+  - object.c
+  - parser.c
+  - reg.c
+  - sched.c
+  - strlib.c
+  - "\t../sync.c"
+  - trace.c
+  - type1op.c
+  - type2op.c
+  - unasm.c
+  - w32.asm
+  - w9xbutt.c
+  - acpi.c
+  - cm04z.asm
+  - cm05z.asm
+  - cm06z.asm
+  - cm08z.asm
+  - cm0az.asm
+  - cm0bz.asm
+  - cm0cz.asm
+  - cm0dz.asm
+  - cm0ez.asm
+  - cm0fz.asm
+  - cm10z.asm
+  - cm16z.asm
+  - cm19z.asm
+  - cm1bz.asm
+  - cm1dz.asm
+  - cm20z.asm
+  - cm34z.asm
+  - cm36z.asm
+  - cm37z.asm
+  - cm38z.asm
+  - cm39z.asm
+  - cm3fz.asm
+  - cm40z.asm
+  - cm41z.asm
+  - cm44z.asm
+  - cm45z.asm
+  - cm47z.asm
+  - cm48z.asm
+  - cm49z.asm
+  - cm4fz.asm
+  - cm50z.asm
+  - cm52z.asm
+  - cm56z.asm
+  - cm58z.asm
+  - cm5cz.asm
+  - cm5ez.asm
+  - cm60z.asm
+  - cm67z.asm
+  - cm6fz.asm
+  - cm75z.asm
+  - cm76z.asm
+  - cm78z.asm
+  - cm7az.asm
+  - cm7bz.asm
+  - cmd01.c
+  - cmd02.c
+  - cmd03.c
+  - cmd07.c
+  - ctxt.c
+  - data.c
+  - ../../../../dev/ddk/inc/configmg.h
+  - dl02z.asm
+  - heap.c
+  - list.c
+  - misc.c
+  - ntk0az.asm
+  - pch.c
+  - pci02z.asm
+  - pci03z.asm
+  - pci04z.asm
+  - pic02z.asm
+  - pic05z.asm
+  - pic09z.asm
+  - pic0az.asm
+  - pic12z.asm
+  - pic1az.asm
+  - pic1fz.asm
+  - pw06z.asm
+  - pw08z.asm
+  - pw0bz.asm
+  - pw0dz.asm
+  - reg01z.asm
+  - reg02z.asm
+  - reg03z.asm
+  - reg05z.asm
+  - reg0Az.asm
+  - reg0Bz.asm
+  - shell0dz.asm
+  - sync.c
+  - uasmdata.c
+  - vmm02z.asm
+  - vmm03z.asm
+  - vmm09z.asm
+  - vmm0dz.asm
+  - vmm16z.asm
+  - vmm29z.asm
+  - vmm2az.asm
+  - vmm2bz.asm
+  - vmm2cz.asm
+  - vmm2dz.asm
+  - vmm36z.asm
+  - vmm39z.asm
+  - vmm3az.asm
+  - vmm3bz.asm
+  - vmm3cz.asm
+  - vmm4az.asm
+  - vmm4cz.asm
+  - vmm4dz.asm
+  - vmm4fz.asm
+  - vmm52z.asm
+  - vmm5fz.asm
+  - vmm6bz.asm
+  - vmm6cz.asm
+  - vmm70z.asm
+  - vmm72z.asm
+  - vtd05z.asm
   segments:
   - num: '1'
     name: _LTEXT
@@ -3583,172 +3747,6 @@ appearances:
     - name: _DriverEntry@8
       processed: ''
       offset: '00000000'
-  source_tree:
-  - acpiappy.c
-  - acpibs.c
-  - "\t../acpi.c"
-  - acpictl.c
-  - acpictrl.c
-  - acpidbg2.c
-  - acpidbg.c
-  - acpidock.c
-  - acpienbl.c
-  - acpienum.c
-  - acpievnt.c
-  - acpiexpt.c
-  - acpigpe.c
-  - acpigpio.c
-  - acpihook.asm
-  - acpiidle.c
-  - acpiinit.c
-  - acpiintr.c
-  - acpiio.c
-  - acpiirp.c
-  - acpilock.c
-  - acpins.c
-  - acpintfy.c
-  - acpioprg.c
-  - acpipowr.c
-  - acpirtc.c
-  - acpiserv.c
-  - acpisi.c
-  - acpiterm.c
-  - acpithrm.c
-  - acpitimr.c
-  - acpiwake.c
-  - acpizzzz.c
-  - amldebug.c
-  - amliapi.c
-  - cmdarg.c
-  - "\t../ctxt.c"
-  - debugger.c
-  - '%../../../../../dev/ddk/inc/configmg.h'
-  - fileio.asm
-  - "\t../heap.c"
-  - "\t../list.c"
-  - loaddsdt.c
-  - "\t../misc.c"
-  - namedobj.c
-  - nsmod.c
-  - object.c
-  - parser.c
-  - reg.c
-  - sched.c
-  - strlib.c
-  - "\t../sync.c"
-  - trace.c
-  - type1op.c
-  - type2op.c
-  - unasm.c
-  - w32.asm
-  - w9xbutt.c
-  - acpi.c
-  - cm04z.asm
-  - cm05z.asm
-  - cm06z.asm
-  - cm08z.asm
-  - cm0az.asm
-  - cm0bz.asm
-  - cm0cz.asm
-  - cm0dz.asm
-  - cm0ez.asm
-  - cm0fz.asm
-  - cm10z.asm
-  - cm16z.asm
-  - cm19z.asm
-  - cm1bz.asm
-  - cm1dz.asm
-  - cm20z.asm
-  - cm34z.asm
-  - cm36z.asm
-  - cm37z.asm
-  - cm38z.asm
-  - cm39z.asm
-  - cm3fz.asm
-  - cm40z.asm
-  - cm41z.asm
-  - cm44z.asm
-  - cm45z.asm
-  - cm47z.asm
-  - cm48z.asm
-  - cm49z.asm
-  - cm4fz.asm
-  - cm50z.asm
-  - cm52z.asm
-  - cm56z.asm
-  - cm58z.asm
-  - cm5cz.asm
-  - cm5ez.asm
-  - cm60z.asm
-  - cm67z.asm
-  - cm6fz.asm
-  - cm75z.asm
-  - cm76z.asm
-  - cm78z.asm
-  - cm7az.asm
-  - cm7bz.asm
-  - cmd01.c
-  - cmd02.c
-  - cmd03.c
-  - cmd07.c
-  - ctxt.c
-  - data.c
-  - ../../../../dev/ddk/inc/configmg.h
-  - dl02z.asm
-  - heap.c
-  - list.c
-  - misc.c
-  - ntk0az.asm
-  - pch.c
-  - pci02z.asm
-  - pci03z.asm
-  - pci04z.asm
-  - pic02z.asm
-  - pic05z.asm
-  - pic09z.asm
-  - pic0az.asm
-  - pic12z.asm
-  - pic1az.asm
-  - pic1fz.asm
-  - pw06z.asm
-  - pw08z.asm
-  - pw0bz.asm
-  - pw0dz.asm
-  - reg01z.asm
-  - reg02z.asm
-  - reg03z.asm
-  - reg05z.asm
-  - reg0Az.asm
-  - reg0Bz.asm
-  - shell0dz.asm
-  - sync.c
-  - uasmdata.c
-  - vmm02z.asm
-  - vmm03z.asm
-  - vmm09z.asm
-  - vmm0dz.asm
-  - vmm16z.asm
-  - vmm29z.asm
-  - vmm2az.asm
-  - vmm2bz.asm
-  - vmm2cz.asm
-  - vmm2dz.asm
-  - vmm36z.asm
-  - vmm39z.asm
-  - vmm3az.asm
-  - vmm3bz.asm
-  - vmm3cz.asm
-  - vmm4az.asm
-  - vmm4cz.asm
-  - vmm4dz.asm
-  - vmm4fz.asm
-  - vmm52z.asm
-  - vmm5fz.asm
-  - vmm6bz.asm
-  - vmm6cz.asm
-  - vmm70z.asm
-  - vmm72z.asm
-  - vtd05z.asm
 - version: Windows 98 Retail
   source_tree:
   - acpihook.asm
@@ -4998,29 +4996,29 @@ appearances:
     offset: 000094A0
     symbols:
     - name: ??_C@_0DC@HNLL@Current?5devnode?5is?5not?5set?0?5not?5@
-      demangled: "`string'"
+      demangled: '"Current devnode is not set, not "...'
       offset: '00000164'
     - name: ??_C@_01FCOA@?5?$AA@
-      demangled: "`string'"
+      demangled: '" "'
       offset: '00000198'
     - name: ??_C@_01FDHG@?$CK?$AA@
-      demangled: "`string'"
+      demangled: '"*"'
       offset: 0000019C
     - name: 
         ??_C@_0FA@BEB@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN@
-      demangled: "`string'"
+      demangled: '"================================"...'
       offset: 000001A0
     - name: ??_C@_07FFID@DevNode?$AA@
-      demangled: "`string'"
+      demangled: '"DevNode"'
       offset: 000001F0
     - name: ??_C@_0BB@IABG@Invalid?5devnode?6?$AA@
-      demangled: "`string'"
+      demangled: '"Invalid devnode\n"'
       offset: 000001F8
     - name: ??_C@_0P@BDPG@Selected?5?$CF08X?6?$AA@
-      demangled: "`string'"
+      demangled: '"Selected %08X\n"'
       offset: 0000020C
     - name: ??_C@_05BFNK@Index?$AA@
-      demangled: "`string'"
+      demangled: '"Index"'
       offset: 0000021C
     - name: _CpuPowerStateHandlers
       demangled: ''
@@ -5051,13 +5049,13 @@ appearances:
       offset: '00000508'
     - name: 
         ??_C@_1BO@LHED@?$AAA?$AAC?$AAP?$AAI?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAT?$AAy?$AAp?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"ACPIDeviceType"
       offset: '00000514'
     - name: ??_C@_05FPI@?2_GPE?$AA@
-      demangled: "`string'"
+      demangled: '"\\_GPE"'
       offset: '00000534'
     - name: ??_C@_04DEAL@?2_S0?$AA@
-      demangled: "`string'"
+      demangled: '"\\_S0"'
       offset: 0000053C
     - name: _HexDigit
       demangled: ''
@@ -5066,7 +5064,7 @@ appearances:
       demangled: ''
       offset: '00000560'
     - name: ??_C@_04NHOM@_PSW?$AA@
-      demangled: "`string'"
+      demangled: '"_PSW"'
       offset: 0000066C
     - name: _pElcr0
       demangled: ''
@@ -5075,133 +5073,133 @@ appearances:
       demangled: ''
       offset: '00000678'
     - name: ??_C@_0BG@HABP@AMLITimeSliceInterval?$AA@
-      demangled: "`string'"
+      demangled: '"AMLITimeSliceInterval"'
       offset: 0000067C
     - name: ??_C@_0BE@GONA@AMLITimeSliceLength?$AA@
-      demangled: "`string'"
+      demangled: '"AMLITimeSliceLength"'
       offset: '00000694'
     - name: ??_C@_0BG@FJGG@AMLIGlobalHeapBlkSize?$AA@
-      demangled: "`string'"
+      demangled: '"AMLIGlobalHeapBlkSize"'
       offset: 000006A8
     - name: ??_C@_0BA@IEPO@AMLICtxtBlkSize?$AA@
-      demangled: "`string'"
+      demangled: '"AMLICtxtBlkSize"'
       offset: 000006C0
     - name: ??_C@_0O@HLGI@AMLIInitFlags?$AA@
-      demangled: "`string'"
+      demangled: '"AMLIInitFlags"'
       offset: 000006D0
     - name: _RegionSpaceHandlersNeeded
       demangled: ''
       offset: '000006E0'
     - name: ??_C@_04MHOH@_REG?$AA@
-      demangled: "`string'"
+      demangled: '"_REG"'
       offset: '000006E4'
     - name: ??_C@_04HFCJ@_PS0?$AA@
-      demangled: "`string'"
+      demangled: '"_PS0"'
       offset: 000006EC
     - name: ??_C@_04MBEG@_PRW?$AA@
-      demangled: "`string'"
+      demangled: '"_PRW"'
       offset: 000006F4
     - name: ??_C@_04DGKN@_PR2?$AA@
-      demangled: "`string'"
+      demangled: '"_PR2"'
       offset: 000006FC
     - name: ??_C@_04MJBE@_PR1?$AA@
-      demangled: "`string'"
+      demangled: '"_PR1"'
       offset: '00000704'
     - name: ??_C@_04GDID@_PR0?$AA@
-      demangled: "`string'"
+      demangled: '"_PR0"'
       offset: 0000070C
     - name: ??_C@_04KFGC@_INI?$AA@
-      demangled: "`string'"
+      demangled: '"_INI"'
       offset: '00000714'
     - name: ??_C@_03PKLK@_ON?$AA@
-      demangled: "`string'"
+      demangled: '"_ON"'
       offset: 0000071C
     - name: ??_C@_04PNBM@_OFF?$AA@
-      demangled: "`string'"
+      demangled: '"_OFF"'
       offset: '00000720'
     - name: ??_C@_07GFHE@PNP0B00?$AA@
-      demangled: "`string'"
+      demangled: '"PNP0B00"'
       offset: '00000728'
     - name: ??_C@_07DMBM@PNP0C0B?$AA@
-      demangled: "`string'"
+      demangled: '"PNP0C0B"'
       offset: '00000730'
     - name: ??_C@_07MDGO@PNP0C0D?$AA@
-      demangled: "`string'"
+      demangled: '"PNP0C0D"'
       offset: '00000738'
     - name: ??_C@_07GJPJ@PNP0C0E?$AA@
-      demangled: "`string'"
+      demangled: '"PNP0C0E"'
       offset: '00000740'
     - name: ??_C@_07JGIL@PNP0C0C?$AA@
-      demangled: "`string'"
+      demangled: '"PNP0C0C"'
       offset: '00000748'
     - name: ??_C@_07MDKF@PNP0C0A?$AA@
-      demangled: "`string'"
+      demangled: '"PNP0C0A"'
       offset: '00000750'
     - name: ??_C@_04NFAP@_MSG?$AA@
-      demangled: "`string'"
+      demangled: '"_MSG"'
       offset: '00000758'
     - name: ??_C@_04NOGO@_SST?$AA@
-      demangled: "`string'"
+      demangled: '"_SST"'
       offset: '00000760'
     - name: ??_C@_04GCFB@_TMP?$AA@
-      demangled: "`string'"
+      demangled: '"_TMP"'
       offset: '00000768'
     - name: ??_C@_04LIPN@_AL0?$AA@
-      demangled: "`string'"
+      demangled: '"_AL0"'
       offset: '00000770'
     - name: ??_C@_04HNHL@_PSV?$AA@
-      demangled: "`string'"
+      demangled: '"_PSV"'
       offset: '00000778'
     - name: ??_C@_04GMPM@_AC0?$AA@
-      demangled: "`string'"
+      demangled: '"_AC0"'
       offset: '00000780'
     - name: ??_C@_04MKFD@_TSP?$AA@
-      demangled: "`string'"
+      demangled: '"_TSP"'
       offset: '00000788'
     - name: ??_C@_04CPE@_TC2?$AA@
-      demangled: "`string'"
+      demangled: '"_TC2"'
       offset: '00000790'
     - name: ??_C@_04PNEN@_TC1?$AA@
-      demangled: "`string'"
+      demangled: '"_TC1"'
       offset: '00000798'
     - name: ??_C@_04OJKO@_CRT?$AA@
-      demangled: "`string'"
+      demangled: '"_CRT"'
       offset: 000007A0
     - name: ??_C@_04BOJL@_SCP?$AA@
-      demangled: "`string'"
+      demangled: '"_SCP"'
       offset: 000007A8
     - name: ??_C@_05JGFL@?2_PTS?$AA@
-      demangled: "`string'"
+      demangled: '"\\_PTS"'
       offset: 000007B0
     - name: ??_C@_04JOJM@?2_S1?$AA@
-      demangled: "`string'"
+      demangled: '"\\_S1"'
       offset: 000007B8
     - name: ??_C@_05PDFL@?2_WAK?$AA@
-      demangled: "`string'"
+      demangled: '"\\_WAK"'
       offset: 000007C0
     - name: ??_C@_04DEMA@?2_S5?$AA@
-      demangled: "`string'"
+      demangled: '"\\_S5"'
       offset: 000007C8
     - name: ??_C@_04JOFH@?2_S4?$AA@
-      demangled: "`string'"
+      demangled: '"\\_S4"'
       offset: 000007D0
     - name: ??_C@_04MLLC@?2_S3?$AA@
-      demangled: "`string'"
+      demangled: '"\\_S3"'
       offset: 000007D8
     - name: ??_C@_04GBCF@?2_S2?$AA@
-      demangled: "`string'"
+      demangled: '"\\_S2"'
       offset: '000007E0'
     - name: _DoAcpiTableDump
       demangled: ''
       offset: '000007E8'
     - name: ??_C@_04OJFH@File?$AA@
-      demangled: "`string'"
+      demangled: '"File"'
       offset: 000007EC
     - name: ??_C@_06NMFG@Action?$AA@
-      demangled: "`string'"
+      demangled: '"Action"'
       offset: 000007F4
     - name: ??_C@_05LCJC@?$CF08lx?$AA@
-      demangled: "`string'"
+      demangled: '"%08lx"'
       offset: 000007FC
     - name: _ACPIFixedButtonId
       demangled: ''
@@ -5222,7 +5220,7 @@ appearances:
       demangled: ''
       offset: 000008B8
     - name: ??_C@_04IKAI@_LID?$AA@
-      demangled: "`string'"
+      demangled: '"_LID"'
       offset: 000008D4
     - name: _ArgsHelp
       demangled: ''
@@ -5309,1033 +5307,1033 @@ appearances:
       demangled: ''
       offset: 00000F58
     - name: ??_C@_0BG@KHNA@Notify?5handler?5failed?$AA@
-      demangled: "`string'"
+      demangled: '"Notify handler failed"'
       offset: 000012A0
     - name: ??_C@_0BE@DNLE@Buffer?5is?5too?5small?$AA@
-      demangled: "`string'"
+      demangled: '"Buffer is too small"'
       offset: 000012B8
     - name: ??_C@_0BE@KPOD@Invalid?5buffer?5size?$AA@
-      demangled: "`string'"
+      demangled: '"Invalid buffer size"'
       offset: 000012CC
     - name: ??_C@_0BD@FEIG@AML?5Stack?5overflow?$AA@
-      demangled: "`string'"
+      demangled: '"AML Stack overflow"'
       offset: '000012E0'
     - name: ??_C@_0BK@LPPD@RegionSpace?5handler?5error?$AA@
-      demangled: "`string'"
+      demangled: '"RegionSpace handler error"'
       offset: 000012F4
     - name: ??_C@_0CL@HOGI@Mutex?5object?5is?5owned?5by?5a?5diffe@
-      demangled: "`string'"
+      demangled: '"Mutex object is owned by a diffe"...'
       offset: '00001310'
     - name: ??_C@_0BK@NPCE@Mutex?5object?5has?5no?5owner?$AA@
-      demangled: "`string'"
+      demangled: '"Mutex object has no owner"'
       offset: 0000133C
     - name: ??_C@_0BJ@HALM@Invalid?5mutex?5sync?5level?$AA@
-      demangled: "`string'"
+      demangled: '"Invalid mutex sync level"'
       offset: '00001358'
     - name: ??_C@_0CD@DBPJ@AML?5Interpreter?5is?5not?5initializ@
-      demangled: "`string'"
+      demangled: '"AML Interpreter is not initializ"...'
       offset: '00001374'
     - name: ??_C@_0CH@LMAO@AML?5Interpreter?5is?5already?5initi@
-      demangled: "`string'"
+      demangled: '"AML Interpreter is already initi"...'
       offset: '00001398'
     - name: ??_C@_0BO@MNCA@Failed?5to?5acquire?5global?5lock?$AA@
-      demangled: "`string'"
+      demangled: '"Failed to acquire global lock"'
       offset: 000013C0
     - name: ??_C@_0O@JLL@Invalid?5table?$AA@
-      demangled: "`string'"
+      demangled: '"Invalid table"'
       offset: '000013E0'
     - name: ??_C@_0BD@HNGJ@Invalid?5AccessSize?$AA@
-      demangled: "`string'"
+      demangled: '"Invalid AccessSize"'
       offset: 000013F0
     - name: ??_C@_0BE@IAOD@Invalid?5RegionSpace?$AA@
-      demangled: "`string'"
+      demangled: '"Invalid RegionSpace"'
       offset: '00001404'
     - name: ??_C@_0N@EMKA@Invalid?5data?$AA@
-      demangled: "`string'"
+      demangled: '"Invalid data"'
       offset: '00001418'
     - name: ??_C@_0BM@CMFA@Event?5handler?5already?5exist?$AA@
-      demangled: "`string'"
+      demangled: '"Event handler already exist"'
       offset: '00001428'
     - name: ??_C@_0CB@ICI@Failed?5to?5register?5event?5handler@
-      demangled: "`string'"
+      demangled: '"Failed to register event handler"...'
       offset: '00001444'
     - name: ??_C@_0BD@IKO@Invalid?5event?5type?$AA@
-      demangled: "`string'"
+      demangled: '"Invalid event type"'
       offset: '00001468'
     - name: ??_C@_0BL@LMPO@Failed?5address?5translation?$AA@
-      demangled: "`string'"
+      demangled: '"Failed address translation"'
       offset: 0000147C
     - name: ??_C@_0BO@NJGE@Incorrect?5number?5of?5arguments?$AA@
-      demangled: "`string'"
+      demangled: '"Incorrect number of arguments"'
       offset: '00001498'
     - name: ??_C@_0BH@JKAF@Unexpected?5target?5type?$AA@
-      demangled: "`string'"
+      demangled: '"Unexpected target type"'
       offset: 000014B8
     - name: ??_C@_0BH@IILC@Unexpected?5object?5type?$AA@
-      demangled: "`string'"
+      demangled: '"Unexpected object type"'
       offset: 000014D0
     - name: ??_C@_0BJ@CJCH@Unexpected?5argument?5type?$AA@
-      demangled: "`string'"
+      demangled: '"Unexpected argument type"'
       offset: '000014E8'
     - name: ??_C@_0BC@HKCA@Invalid?5SuperName?$AA@
-      demangled: "`string'"
+      demangled: '"Invalid SuperName"'
       offset: '00001504'
     - name: ??_C@_0M@MIKD@Fatal?5error?$AA@
-      demangled: "`string'"
+      demangled: '"Fatal error"'
       offset: '00001518'
     - name: ??_C@_0BI@DNG@Argument?5does?5not?5exist?$AA@
-      demangled: "`string'"
+      demangled: '"Argument does not exist"'
       offset: '00001524'
     - name: ??_C@_0BB@MALJ@Index?5is?5too?5big?$AA@
-      demangled: "`string'"
+      demangled: '"Index is too big"'
       offset: 0000153C
     - name: ??_C@_0BF@LIGF@Object?5already?5exist?$AA@
-      demangled: "`string'"
+      demangled: '"Object already exist"'
       offset: '00001550'
     - name: ??_C@_0BB@DJPD@Object?5not?5found?$AA@
-      demangled: "`string'"
+      demangled: '"Object not found"'
       offset: '00001568'
     - name: ??_C@_0BE@OFAL@Invalid?5object?5name?$AA@
-      demangled: "`string'"
+      demangled: '"Invalid object name"'
       offset: 0000157C
     - name: ??_C@_0BC@NLGC@Assertion?5failure?$AA@
-      demangled: "`string'"
+      demangled: '"Assertion failure"'
       offset: '00001590'
     - name: ??_C@_0BI@PKB@Object?5name?5is?5too?5long?$AA@
-      demangled: "`string'"
+      demangled: '"Object name is too long"'
       offset: 000015A4
     - name: ??_C@_0BD@GIKH@Invalid?5AML?5Opcode?$AA@
-      demangled: "`string'"
+      demangled: '"Invalid AML Opcode"'
       offset: 000015BC
     - name: ??_C@_0BK@ILBP@Failed?5to?5allocate?5memory?$AA@
-      demangled: "`string'"
+      demangled: '"Failed to allocate memory"'
       offset: 000015D0
     - name: ??_C@_07FEHI@Success?$AA@
-      demangled: "`string'"
+      demangled: '"Success"'
       offset: 000015EC
     - name: ??_C@_01FOJL@u?$AA@
-      demangled: "`string'"
+      demangled: '"u"'
       offset: 000015F4
     - name: ??_C@_01PEAM@t?$AA@
-      demangled: "`string'"
+      demangled: '"t"'
       offset: 000015F8
     - name: ??_C@_03NHNF@set?$AA@
-      demangled: "`string'"
+      demangled: '"set"'
       offset: 000015FC
     - name: ??_C@_03EHIM@run?$AA@
-      demangled: "`string'"
+      demangled: '"run"'
       offset: '00001600'
     - name: ??_C@_01LHO@r?$AA@
-      demangled: "`string'"
+      demangled: '"r"'
       offset: '00001604'
     - name: ??_C@_01PEMH@q?$AA@
-      demangled: "`string'"
+      demangled: '"q"'
       offset: '00001608'
     - name: ??_C@_01FOFA@p?$AA@
-      demangled: "`string'"
+      demangled: '"p"'
       offset: 0000160C
     - name: ??_C@_02PGIK@od?$AA@
-      demangled: "`string'"
+      demangled: '"od"'
       offset: '00001610'
     - name: ??_C@_02KAED@ow?$AA@
-      demangled: "`string'"
+      demangled: '"ow"'
       offset: '00001614'
     - name: ??_C@_01PGHN@o?$AA@
-      demangled: "`string'"
+      demangled: '"o"'
       offset: '00001618'
     - name: ??_C@_06PDOH@notify?$AA@
-      demangled: "`string'"
+      demangled: '"notify"'
       offset: 0000161C
     - name: ??_C@_02MMOD@ln?$AA@
-      demangled: "`string'"
+      demangled: '"ln"'
       offset: '00001624'
     - name: ??_C@_02JIJA@lc?$AA@
-      demangled: "`string'"
+      demangled: '"lc"'
       offset: '00001628'
     - name: ??_C@_02IBHF@id?$AA@
-      demangled: "`string'"
+      demangled: '"id"'
       offset: 0000162C
     - name: ??_C@_02NHLM@iw?$AA@
-      demangled: "`string'"
+      demangled: '"iw"'
       offset: '00001630'
     - name: ??_C@_01JAP@i?$AA@
-      demangled: "`string'"
+      demangled: '"i"'
       offset: '00001634'
     - name: ??_C@_01KCMF@g?$AA@
-      demangled: "`string'"
+      demangled: '"g"'
       offset: '00001638'
     - name: ??_C@_04MENH@find?$AA@
-      demangled: "`string'"
+      demangled: '"find"'
       offset: 0000163C
     - name: ??_C@_01PHOL@e?$AA@
-      demangled: "`string'"
+      demangled: '"e"'
       offset: '00001644'
     - name: ??_C@_02NDCA@do?$AA@
-      demangled: "`string'"
+      demangled: '"do"'
       offset: '00001648'
     - name: ??_C@_03JDJA@dns?$AA@
-      demangled: "`string'"
+      demangled: '"dns"'
       offset: 0000164C
     - name: ??_C@_02IELE@ds?$AA@
-      demangled: "`string'"
+      demangled: '"ds"'
       offset: '00001650'
     - name: ??_C@_02HIOK@da?$AA@
-      demangled: "`string'"
+      demangled: '"da"'
       offset: '00001654'
     - name: ??_C@_02HICB@dd?$AA@
-      demangled: "`string'"
+      demangled: '"dd"'
       offset: '00001658'
     - name: ??_C@_02COOI@dw?$AA@
-      demangled: "`string'"
+      demangled: '"dw"'
       offset: 0000165C
     - name: ??_C@_02IHFD@db?$AA@
-      demangled: "`string'"
+      demangled: '"db"'
       offset: '00001660'
     - name: ??_C@_01FNHM@d?$AA@
-      demangled: "`string'"
+      demangled: '"d"'
       offset: '00001664'
     - name: ??_C@_02MPC@bp?$AA@
-      demangled: "`string'"
+      demangled: '"bp"'
       offset: '00001668'
     - name: ??_C@_02FLGG@bl?$AA@
-      demangled: "`string'"
+      demangled: '"bl"'
       offset: 0000166C
     - name: ??_C@_02KFEJ@be?$AA@
-      demangled: "`string'"
+      demangled: '"be"'
       offset: '00001670'
     - name: ??_C@_02PNO@bd?$AA@
-      demangled: "`string'"
+      demangled: '"bd"'
       offset: '00001674'
     - name: ??_C@_02FKDL@bc?$AA@
-      demangled: "`string'"
+      demangled: '"bc"'
       offset: '00001678'
     - name: ??_C@_01PKMN@?$DP?$AA@
-      demangled: "`string'"
+      demangled: '"?"'
       offset: 0000167C
     - name: ??_C@_0L@CDKE@verboseoff?$AA@
-      demangled: "`string'"
+      demangled: '"verboseoff"'
       offset: '00001680'
     - name: ??_C@_09KCCO@verboseon?$AA@
-      demangled: "`string'"
+      demangled: '"verboseon"'
       offset: 0000168C
     - name: ??_C@_09CFPE@errbrkoff?$AA@
-      demangled: "`string'"
+      demangled: '"errbrkoff"'
       offset: '00001698'
     - name: ??_C@_08PCBK@errbrkon?$AA@
-      demangled: "`string'"
+      demangled: '"errbrkon"'
       offset: 000016A4
     - name: ??_C@_07FDNL@lbrkoff?$AA@
-      demangled: "`string'"
+      demangled: '"lbrkoff"'
       offset: 000016B0
     - name: ??_C@_06NNJH@lbrkon?$AA@
-      demangled: "`string'"
+      demangled: '"lbrkon"'
       offset: 000016B8
     - name: ??_C@_0N@IION@nesttraceoff?$AA@
-      demangled: "`string'"
+      demangled: '"nesttraceoff"'
       offset: 000016C0
     - name: ??_C@_0M@OLGM@nesttraceon?$AA@
-      demangled: "`string'"
+      demangled: '"nesttraceon"'
       offset: 000016D0
     - name: ??_C@_08GMJJ@traceoff?$AA@
-      demangled: "`string'"
+      demangled: '"traceoff"'
       offset: 000016DC
     - name: ??_C@_07JPFK@traceon?$AA@
-      demangled: "`string'"
+      demangled: '"traceon"'
       offset: '000016E8'
     - name: ??_C@_01KBOJ@s?$AA@
-      demangled: "`string'"
+      demangled: '"s"'
       offset: 000016F0
     - name: ??_C@_01JME@l?$AA@
-      demangled: "`string'"
+      demangled: '"l"'
       offset: 000016F4
     - name: ??_C@_0FE@NDPA@?6Re?9entering?5AML?5debugger?5is?5not@
-      demangled: "`string'"
+      demangled: '"\nRe-entering AML debugger is not"...'
       offset: 000016F8
     - name: ??_C@_0BF@KJNB@?6AMLI?$CI?$DP?5for?5help?$CJ?9?$DO?5?$AA@
-      demangled: "`string'"
+      demangled: '"\nAMLI(? for help)-> "'
       offset: 0000174C
     - name: ??_C@_0DK@EBPB@Unassemble?5AML?5code?5?5?5?5?5?5?9?5u?5?$FL?$DMM@
-      demangled: "`string'"
+      demangled: '"Unassemble AML code      - u [<M"...'
       offset: '00001764'
     - name: ??_C@_0BO@FIEF@Trace?5Into?5AML?5Code?5?5?5?5?5?5?9?5t?6?$AA@
-      demangled: "`string'"
+      demangled: '"Trace Into AML Code      - t\n"'
       offset: 000017A0
     - name: ??_C@_0ND@IGP@Set?5Debugger?5Options?5?5?5?5?5?9?5set?5?$FL@
-      demangled: "`string'"
+      demangled: '"Set Debugger Options     - set ["...'
       offset: 000017C0
     - name: ??_C@_0EG@MLPF@Run?5Method?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?9?5run?5?$DM@
-      demangled: "`string'"
+      demangled: '"Run Method               - run <"...'
       offset: '00001894'
     - name: ??_C@_0BO@NJBA@Display?5Context?5Info?4?5?5?5?5?9?5r?6?$AA@
-      demangled: "`string'"
+      demangled: '"Display Context Info.    - r\n"'
       offset: 000018DC
     - name: ??_C@_0BO@KFDA@Quit?5to?5Kernel?5Debugger?5?5?9?5q?6?$AA@
-      demangled: "`string'"
+      demangled: '"Quit to Kernel Debugger  - q\n"'
       offset: 000018FC
     - name: ??_C@_0BO@FIJO@Step?5Over?5AML?5Code?5?5?5?5?5?5?5?9?5p?6?$AA@
-      demangled: "`string'"
+      demangled: '"Step Over AML Code       - p\n"'
       offset: 0000191C
     - name: ??_C@_0CO@OKHI@Write?5DWord?5to?5Port?5?5?5?5?5?5?9?5od?5?$DMP@
-      demangled: "`string'"
+      demangled: '"Write DWord to Port      - od <P"...'
       offset: 0000193C
     - name: ??_C@_0CN@GNOP@Write?5Word?5to?5Port?5?5?5?5?5?5?5?9?5ow?5?$DMP@
-      demangled: "`string'"
+      demangled: '"Write Word to Port       - ow <P"...'
       offset: 0000196C
     - name: ??_C@_0CM@FLBM@Write?5Byte?5to?5Port?5?5?5?5?5?5?5?9?5o?5?$DMPo@
-      demangled: "`string'"
+      demangled: '"Write Byte to Port       - o <Po"...'
       offset: 0000199C
     - name: ??_C@_0DB@GBEM@Notify?5NameSpace?5Object?5?5?9?5notif@
-      demangled: "`string'"
+      demangled: '"Notify NameSpace Object  - notif"...'
       offset: 000019C8
     - name: ??_C@_0DL@HHMM@Display?5Nearest?5Method?5?5?5?9?5ln?5?$FL?$DM@
-      demangled: "`string'"
+      demangled: '"Display Nearest Method   - ln [<"...'
       offset: 000019FC
     - name: ??_C@_0BP@HHPP@List?5All?5Contexts?5?5?5?5?5?5?5?5?9?5lc?6?$AA@
-      demangled: "`string'"
+      demangled: '"List All Contexts        - lc\n"'
       offset: 00001A38
     - name: ??_C@_0CG@IGEH@Read?5DWord?5from?5Port?5?5?5?5?5?9?5id?5?$DMP@
-      demangled: "`string'"
+      demangled: '"Read DWord from Port     - id <P"...'
       offset: 00001A58
     - name: ??_C@_0CG@HAHI@Read?5Word?5from?5Port?5?5?5?5?5?5?9?5iw?5?$DMP@
-      demangled: "`string'"
+      demangled: '"Read Word from Port      - iw <P"...'
       offset: 00001A80
     - name: ??_C@_0CF@NGBP@Read?5Byte?5from?5Port?5?5?5?5?5?5?9?5i?5?$DMPo@
-      demangled: "`string'"
+      demangled: '"Read Byte from Port      - i <Po"...'
       offset: 00001AA8
     - name: ??_C@_0BO@GHNM@Continue?5Execution?5?5?5?5?5?5?5?9?5g?6?$AA@
-      demangled: "`string'"
+      demangled: '"Continue Execution       - g\n"'
       offset: 00001AD0
     - name: ??_C@_0CL@CJHH@Find?5NameSpace?5Object?5?5?5?5?9?5find?5@
-      demangled: "`string'"
+      demangled: '"Find NameSpace Object    - find "...'
       offset: 00001AF0
     - name: ??_C@_0DE@OOIG@Edit?5Memory?5?5?5?5?5?5?5?5?5?5?5?5?5?5?9?5e?5?$FL?$DMA@
-      demangled: "`string'"
+      demangled: '"Edit Memory              - e [<A"...'
       offset: 00001B1C
     - name: ??_C@_0CG@EPJI@Dump?5Data?5Object?5?5?5?5?5?5?5?5?5?9?5do?5?$DMA@
-      demangled: "`string'"
+      demangled: '"Dump Data Object         - do <A"...'
       offset: 00001B50
     - name: ??_C@_0DM@PILD@Dump?5Name?5Space?5Object?5?5?5?9?5dns?5?$FL@
-      demangled: "`string'"
+      demangled: '"Dump Name Space Object   - dns ["...'
       offset: 00001B78
     - name: ??_C@_0CI@IBPC@Dump?5Stack?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?9?5ds?5?$FL?$DM@
-      demangled: "`string'"
+      demangled: '"Dump Stack               - ds [<"...'
       offset: 00001BB4
     - name: ??_C@_0DC@OOAA@Dump?5Data?5String?5?5?5?5?5?5?5?5?5?9?5da?5?$FL?$FL@
-      demangled: "`string'"
+      demangled: '"Dump Data String         - da [["...'
       offset: 00001BDC
     - name: ??_C@_0DC@FMIJ@Dump?5Data?5DWords?5?5?5?5?5?5?5?5?5?9?5dd?5?$FL?$FL@
-      demangled: "`string'"
+      demangled: '"Dump Data DWords         - dd [["...'
       offset: 00001C10
     - name: ??_C@_0DC@NAPB@Dump?5Data?5Words?5?5?5?5?5?5?5?5?5?5?9?5dw?5?$FL?$FL@
-      demangled: "`string'"
+      demangled: '"Dump Data Words          - dw [["...'
       offset: 00001C44
     - name: ??_C@_0DC@ECFI@Dump?5Data?5Bytes?5?5?5?5?5?5?5?5?5?5?9?5db?5?$FL?$FL@
-      demangled: "`string'"
+      demangled: '"Dump Data Bytes          - db [["...'
       offset: 00001C78
     - name: ??_C@_0DB@IMCK@Dump?5Data?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?9?5d?5?$FL?$FLl@
-      demangled: "`string'"
+      demangled: '"Dump Data                - d [[l"...'
       offset: 00001CAC
     - name: ??_C@_0DN@EIEB@Set?5Breakpoints?5?5?5?5?5?5?5?5?5?5?9?5bp?5?$DMM@
-      demangled: "`string'"
+      demangled: '"Set Breakpoints          - bp <M"...'
       offset: 00001CE0
     - name: ??_C@_0BP@MNJL@List?5Breakpoints?5?5?5?5?5?5?5?5?5?9?5bl?6?$AA@
-      demangled: "`string'"
+      demangled: '"List Breakpoints         - bl\n"'
       offset: 00001D20
     - name: ??_C@_0CN@IFPP@Enable?5Breakpoints?5?5?5?5?5?5?5?9?5be?5?$DMb@
-      demangled: "`string'"
+      demangled: '"Enable Breakpoints       - be <b"...'
       offset: 00001D40
     - name: ??_C@_0CN@KMDD@Disable?5Breakpoints?5?5?5?5?5?5?9?5bd?5?$DMb@
-      demangled: "`string'"
+      demangled: '"Disable Breakpoints      - bd <b"...'
       offset: 00001D70
     - name: ??_C@_0CN@BOBD@Clear?5Breakpoints?5?5?5?5?5?5?5?5?9?5bc?5?$DMb@
-      demangled: "`string'"
+      demangled: '"Clear Breakpoints        - bc <b"...'
       offset: 00001DA0
     - name: 
         ??_C@_0CG@KEAP@Help?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?9?5?$DP?5?$FL?$DMC@
-      demangled: "`string'"
+      demangled: '"Help                     - ? [<C"...'
       offset: 00001DD0
     - name: ??_C@_01BJG@?6?$AA@
-      demangled: "`string'"
+      demangled: '"\n"'
       offset: 00001DF8
     - name: ??_C@_0BK@OFCM@invalid?5help?5command?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"invalid help command - %s"'
       offset: 00001DFC
     - name: ??_C@_0O@DGEF@AMLI_DBGERR?3?5?$AA@
-      demangled: "`string'"
+      demangled: '"AMLI_DBGERR: "'
       offset: '00001E18'
     - name: ??_C@_0CE@DEOG@?$DMCodeAddr?$DO?5?5?5?9?5address?5of?5AML?5co@
-      demangled: "`string'"
+      demangled: '"<CodeAddr>   - address of AML co"...'
       offset: '00001E28'
     - name: ??_C@_0CG@FGNM@Usage?3?5u?5?$FL?$DMMethodName?$DO?5?$HM?5?$DMCodeAd@
-      demangled: "`string'"
+      demangled: '"Usage: u [<MethodName> | <CodeAd"...'
       offset: 00001E4C
     - name: ??_C@_0BH@NJJ@?6Unassemble?5AML?5code?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nUnassemble AML code:\n"'
       offset: '00001E74'
     - name: ??_C@_09PKIG@Usage?3?5t?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: t\n"'
       offset: 00001E8C
     - name: ??_C@_0BH@BLI@?6Trace?5Into?5AML?5Code?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nTrace Into AML Code:\n"'
       offset: '00001E98'
     - name: ??_C@_0CF@JOAM@verboseoff?5?5?5?9?5disable?5verbose?5m@
-      demangled: "`string'"
+      demangled: '"verboseoff   - disable verbose m"...'
       offset: 00001EB0
     - name: ??_C@_0CE@NGBE@verboseon?5?5?5?5?9?5enable?5verbose?5mo@
-      demangled: "`string'"
+      demangled: '"verboseon    - enable verbose mo"...'
       offset: 00001ED8
     - name: ??_C@_0CH@HPOL@errbrkoff?5?5?5?5?9?5disable?5break?5on?5@
-      demangled: "`string'"
+      demangled: '"errbrkoff    - disable break on "...'
       offset: 00001EFC
     - name: ??_C@_0CG@EMBA@errbrkon?5?5?5?5?5?9?5enable?5break?5on?5e@
-      demangled: "`string'"
+      demangled: '"errbrkon     - enable break on e"...'
       offset: 00001F24
     - name: ??_C@_0DC@GFCG@lbrkoff?5?5?5?5?5?5?9?5disable?5load?5DDB?5@
-      demangled: "`string'"
+      demangled: '"lbrkoff      - disable load DDB "...'
       offset: 00001F4C
     - name: ??_C@_0DB@JBD@lbrkon?5?5?5?5?5?5?5?9?5enable?5load?5DDB?5c@
-      demangled: "`string'"
+      demangled: '"lbrkon       - enable load DDB c"...'
       offset: 00001F80
     - name: ??_C@_0EA@EMBM@nesttraceoff?5?9?5turn?5off?5nest?5tra@
-      demangled: "`string'"
+      demangled: '"nesttraceoff - turn off nest tra"...'
       offset: 00001FB4
     - name: ??_C@_0DP@PJMI@nesttraceon?5?5?9?5turn?5on?5nest?5trac@
-      demangled: "`string'"
+      demangled: '"nesttraceon  - turn on nest trac"...'
       offset: 00001FF4
     - name: ??_C@_0CF@EHPF@traceoff?5?5?5?5?5?9?5turn?5off?5AML?5trac@
-      demangled: "`string'"
+      demangled: '"traceoff     - turn off AML trac"...'
       offset: '00002034'
     - name: ??_C@_0CE@HFAP@traceon?5?5?5?5?5?5?9?5turn?5on?5AML?5traci@
-      demangled: "`string'"
+      demangled: '"traceon      - turn on AML traci"...'
       offset: 0000205C
     - name: ??_C@_0IM@JLCE@Usage?3?5set?5?$FLtraceon?5?$HM?5traceoff?$FN?5@
-      demangled: "`string'"
+      demangled: '"Usage: set [traceon | traceoff] "...'
       offset: '00002080'
     - name: ??_C@_0BI@JAAN@?6Set?5Debugger?5Options?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nSet Debugger Options:\n"'
       offset: 0000210C
     - name: ??_C@_0CK@GDAD@?$DMArgList?$DO?5?5?5?5?9?5list?5of?5integer?5a@
-      demangled: "`string'"
+      demangled: '"<ArgList>    - list of integer a"...'
       offset: '00002124'
     - name: ??_C@_0CC@OPIP@?$DMCodeAddr?$DO?5?5?5?9?5address?5of?5method@
-      demangled: "`string'"
+      demangled: '"<CodeAddr>   - address of method"...'
       offset: '00002150'
     - name: ??_C@_0DC@FAAL@Usage?3?5run?5?$DMMethodName?$DO?5?$HM?5?$DMCodeA@
-      demangled: "`string'"
+      demangled: '"Usage: run <MethodName> | <CodeA"...'
       offset: '00002174'
     - name: ??_C@_0BA@HEPC@?6Run?5a?5Method?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nRun a Method:\n"'
       offset: 000021A8
     - name: ??_C@_09INHJ@Usage?3?5r?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: r\n"'
       offset: 000021B8
     - name: ??_C@_0BP@MLHI@?6Display?5Context?5Information?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nDisplay Context Information:\n"'
       offset: 000021C4
     - name: ??_C@_09LGIG@Usage?3?5q?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: q\n"'
       offset: '000021E4'
     - name: ??_C@_0BL@CDBH@?6Quit?5to?5kernel?5debugger?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nQuit to kernel debugger:\n"'
       offset: 000021F0
     - name: ??_C@_09KACM@Usage?3?5p?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: p\n"'
       offset: 0000220C
     - name: ??_C@_0BF@NKBF@?6Step?5over?5AML?5Code?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nStep over AML Code\n"'
       offset: '00002218'
     - name: ??_C@_0BO@EKO@?$DMDWord?$DO?5?9?5data?5to?5be?5written?6?$AA@
-      demangled: "`string'"
+      demangled: '"<DWord> - data to be written\n"'
       offset: '00002230'
     - name: ??_C@_0BI@CBOK@?$DMPort?$DO?5?5?9?5port?5address?6?$AA@
-      demangled: "`string'"
+      demangled: '"<Port>  - port address\n"'
       offset: '00002250'
     - name: ??_C@_0BJ@NNPH@Usage?3?5o?5?$DMPort?$DO?5?$DMDWord?$DO?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: o <Port> <DWord>\n"'
       offset: '00002268'
     - name: ??_C@_0BO@LDAI@?6Write?5Data?5to?5a?5DWord?5Port?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nWrite Data to a DWord Port:\n"'
       offset: '00002284'
     - name: ??_C@_0BN@IFNI@?$DMWord?$DO?5?9?5data?5to?5be?5written?6?$AA@
-      demangled: "`string'"
+      demangled: '"<Word> - data to be written\n"'
       offset: 000022A4
     - name: ??_C@_0BJ@MNOM@Usage?3?5ow?5?$DMPort?$DO?5?$DMWord?$DO?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: ow <Port> <Word>\n"'
       offset: 000022C4
     - name: ??_C@_0BN@PCKD@?6Write?5Data?5to?5a?5Word?5Port?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nWrite Data to a Word Port:\n"'
       offset: '000022E0'
     - name: ??_C@_0BN@KJOG@?$DMByte?$DO?5?9?5data?5to?5be?5written?6?$AA@
-      demangled: "`string'"
+      demangled: '"<Byte> - data to be written\n"'
       offset: '00002300'
     - name: ??_C@_0BI@FPIP@Usage?3?5o?5?$DMPort?$DO?5?$DMByte?$DO?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: o <Port> <Byte>\n"'
       offset: '00002320'
     - name: ??_C@_0BN@DNI@?6Write?5Data?5to?5a?5Byte?5Port?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nWrite Data to a Byte Port:\n"'
       offset: '00002338'
     - name: ??_C@_0BO@DEGB@?$DMValue?$DO?5?9?5notification?5value?6?$AA@
-      demangled: "`string'"
+      demangled: '"<Value> - notification value\n"'
       offset: '00002358'
     - name: ??_C@_0DI@KCII@?$DMObj?$DO?5?5?5?9?5full?5NameSpace?5path?5of@
-      demangled: "`string'"
+      demangled: '"<Obj>   - full NameSpace path of"...'
       offset: '00002378'
     - name: ??_C@_0BN@FJOJ@Usage?3?5notify?5?$DMObj?$DO?5?$DMValue?$DO?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: notify <Obj> <Value>\n"'
       offset: 000023B0
     - name: ??_C@_0BN@LDLM@?6Notify?5a?5NameSpace?5Object?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nNotify a NameSpace Object:\n"'
       offset: 000023D0
     - name: ??_C@_0CH@GABG@Usage?3?5ln?5?$FL?$DMMethodName?$DO?5?$HM?5?$DMCodeA@
-      demangled: "`string'"
+      demangled: '"Usage: ln [<MethodName> | <CodeA"...'
       offset: 000023F0
     - name: ??_C@_0BP@GOLA@?6Display?5Nearest?5Method?5Name?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nDisplay Nearest Method Name:\n"'
       offset: '00002418'
     - name: ??_C@_0L@FFLK@Usage?3?5lc?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: lc\n"'
       offset: '00002438'
     - name: ??_C@_0BF@FPEG@?6List?5All?5Contexts?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nList All Contexts:\n"'
       offset: '00002444'
     - name: ??_C@_0BH@ILBM@?$DMPort?$DO?5?9?5port?5address?6?$AA@
-      demangled: "`string'"
+      demangled: '"<Port> - port address\n"'
       offset: 0000245C
     - name: ??_C@_0BC@ELLE@Usage?3?5id?5?$DMPort?$DO?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: id <Port>\n"'
       offset: '00002474'
     - name: ??_C@_0BP@FPCI@?6Read?5Data?5From?5a?5DWord?5Port?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nRead Data From a DWord Port:\n"'
       offset: '00002488'
     - name: ??_C@_0BC@CJOO@Usage?3?5iw?5?$DMPort?$DO?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: iw <Port>\n"'
       offset: 000024A8
     - name: ??_C@_0BO@NCBM@?6Read?5Data?5From?5a?5Word?5Port?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nRead Data From a Word Port:\n"'
       offset: 000024BC
     - name: ??_C@_0BB@COOA@Usage?3?5i?5?$DMPort?$DO?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: i <Port>\n"'
       offset: 000024DC
     - name: ??_C@_0BO@CDGH@?6Read?5Data?5From?5a?5Byte?5Port?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nRead Data From a Byte Port:\n"'
       offset: 000024F0
     - name: ??_C@_0CM@OJBG@?6Quit?5debugger?0?5continue?5normal?5@
-      demangled: "`string'"
+      demangled: '"\nQuit debugger, continue normal "...'
       offset: '00002510'
     - name: ??_C@_0DH@FLAM@?$DMNameSeg?$DO?5?9?5Name?5of?5the?5NameSpac@
-      demangled: "`string'"
+      demangled: '"<NameSeg> - Name of the NameSpac"...'
       offset: 0000253C
     - name: ??_C@_0BH@ILAO@Usage?3?5find?5?$DMNameSeg?$DO?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: find <NameSeg>\n"'
       offset: '00002574'
     - name: ??_C@_0BJ@LBJF@?6Find?5NameSpace?5Object?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nFind NameSpace Object:\n"'
       offset: 0000258C
     - name: ??_C@_0EP@CMPB@?$DMDataList?$DO?5?9?5list?5of?5data?5separa@
-      demangled: "`string'"
+      demangled: '"<DataList> - list of data separa"...'
       offset: 000025A8
     - name: ??_C@_0EE@OOCL@?$DMAddr?$DO?5?5?5?5?5?9?5memory?5address?5?$CIphy@
-      demangled: "`string'"
+      demangled: '"<Addr>     - memory address (phy"...'
       offset: 000025F8
     - name: ??_C@_0CA@LPF@Usage?3?5e?5?$FL?$DMAddr?$DO?5?$FL?$DMDataList?$DO?$FN?$FN?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: e [<Addr> [<DataList>]]\n"'
       offset: 0000263C
     - name: ??_C@_0P@EPBL@?6Edit?5Memory?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nEdit Memory:\n"'
       offset: 0000265C
     - name: ??_C@_0CF@DNMB@?$DMAddr?$DO?5?9?5address?5of?5the?5data?5obj@
-      demangled: "`string'"
+      demangled: '"<Addr> - address of the data obj"...'
       offset: 0000266C
     - name: ??_C@_0BC@JJKJ@Usage?3?5do?5?$DMAddr?$DO?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: do <Addr>\n"'
       offset: '00002694'
     - name: ??_C@_0BE@IMEE@?6Dump?5Data?5Object?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nDump Data Object:\n"'
       offset: 000026A8
     - name: ??_C@_0DG@CGKH@?$DMAddr?$DO?5?5?5?5?9?5specify?5address?5of?5t@
-      demangled: "`string'"
+      demangled: '"<Addr>    - specify address of t"...'
       offset: 000026BC
     - name: ??_C@_0DP@DBNH@?$DMNameStr?$DO?5?9?5name?5space?5path?5?$CIdum@
-      demangled: "`string'"
+      demangled: '"<NameStr> - name space path (dum"...'
       offset: 000026F4
     - name: ??_C@_0DF@KBOM@s?5?5?5?5?5?5?5?5?5?9?5recursively?5dump?5the@
-      demangled: "`string'"
+      demangled: '"s         - recursively dump the"...'
       offset: '00002734'
     - name: ??_C@_0CI@CDM@Usage?3?5dns?5?$FL?$FL?1s?$FN?5?$FL?$DMNameStr?$DO?5?$HM?5?$DMA@
-      demangled: "`string'"
+      demangled: '"Usage: dns [[/s] [<NameStr> | <A"...'
       offset: 0000276C
     - name: ??_C@_0BK@HCNH@?6Dump?5Name?5Space?5Object?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nDump Name Space Object:\n"'
       offset: '00002794'
     - name: ??_C@_0EH@DCEN@?$DMAddr?$DO?5?9?5address?5of?5the?5context?5@
-      demangled: "`string'"
+      demangled: '"<Addr> - address of the context "...'
       offset: 000027B0
     - name: ??_C@_0BE@OCIA@Usage?3?5ds?5?$FL?$DMAddr?$DO?$FN?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: ds [<Addr>]\n"'
       offset: 000027F8
     - name: ??_C@_0O@JGNB@?6Dump?5Stack?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nDump Stack:\n"'
       offset: 0000280C
     - name: ??_C@_0CJ@PKCN@?$DMMethodName?$DO?5?9?5full?5path?5of?5meth@
-      demangled: "`string'"
+      demangled: '"<MethodName> - full path of meth"...'
       offset: 0000281C
     - name: ??_C@_0EE@PMAM@?$DMAddr?$DO?5?5?5?5?5?5?5?9?5data?5address?5?$CIphy@
-      demangled: "`string'"
+      demangled: '"<Addr>       - data address (phy"...'
       offset: '00002848'
     - name: ??_C@_0CP@GNJN@?$DMLen?$DO?5?5?5?5?5?5?5?5?9?5length?5of?5address@
-      demangled: "`string'"
+      demangled: '"<Len>        - length of address"...'
       offset: 0000288C
     - name: 
         ??_C@_0CN@JMLK@Usage?3?5da?5?$FL?$FLl?$DN?$DMLen?$DO?$FN?5?$DMAddr?$DO?5?$HM?5?$DMM@
-      demangled: "`string'"
+      demangled: '"Usage: da [[l=<Len>] <Addr> | <M"...'
       offset: 000028BC
     - name: ??_C@_0BE@FKCD@?6Dump?5Data?5String?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nDump Data String:\n"'
       offset: 000028EC
     - name: ??_C@_0CO@LIOB@?$DMLen?$DO?5?5?5?5?5?5?5?5?9?5length?5of?5address@
-      demangled: "`string'"
+      demangled: '"<Len>        - length of address"...'
       offset: '00002900'
     - name: 
         ??_C@_0CN@BGLP@Usage?3?5dd?5?$FL?$FLl?$DN?$DMLen?$DO?$FN?5?$DMAddr?$DO?5?$HM?5?$DMM@
-      demangled: "`string'"
+      demangled: '"Usage: dd [[l=<Len>] <Addr> | <M"...'
       offset: '00002930'
     - name: ??_C@_0BE@FPDO@?6Dump?5Data?5DWords?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nDump Data DWords:\n"'
       offset: '00002960'
     - name: 
         ??_C@_0CN@LAKO@Usage?3?5dw?5?$FL?$FLl?$DN?$DMLen?$DO?$FN?5?$DMAddr?$DO?5?$HM?5?$DMM@
-      demangled: "`string'"
+      demangled: '"Usage: dw [[l=<Len>] <Addr> | <M"...'
       offset: '00002974'
     - name: ??_C@_0BD@LFDG@?6Dump?5Data?5Words?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nDump Data Words:\n"'
       offset: 000029A4
     - name: 
         ??_C@_0CN@BKLJ@Usage?3?5db?5?$FL?$FLl?$DN?$DMLen?$DO?$FN?5?$DMAddr?$DO?5?$HM?5?$DMM@
-      demangled: "`string'"
+      demangled: '"Usage: db [[l=<Len>] <Addr> | <M"...'
       offset: 000029B8
     - name: ??_C@_0BD@KOA@?6Dump?5Data?5Bytes?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nDump Data Bytes:\n"'
       offset: '000029E8'
     - name: 
         ??_C@_0CM@EKAP@Usage?3?5d?5?$FL?$FLl?$DN?$DMLen?$DO?$FN?5?$DMAddr?$DO?5?$HM?5?$DMMe@
-      demangled: "`string'"
+      demangled: '"Usage: d [[l=<Len>] <Addr> | <Me"...'
       offset: 000029FC
     - name: ??_C@_0N@LLIO@?6Dump?5Data?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nDump Data:\n"'
       offset: 00002A28
     - name: ??_C@_0DO@EHKP@?$DMCodeAddr?$DO?5?5?5?9?5address?5of?5AML?5co@
-      demangled: "`string'"
+      demangled: '"<CodeAddr>   - address of AML co"...'
       offset: 00002A38
     - name: ??_C@_0ED@JOII@?$DMMethodName?$DO?5?9?5full?5path?5of?5meth@
-      demangled: "`string'"
+      demangled: '"<MethodName> - full path of meth"...'
       offset: 00002A78
     - name: ??_C@_0CJ@DABK@Usage?3?5bp?5?$DMMethodName?$DO?5?$HM?5?$DMCodeAd@
-      demangled: "`string'"
+      demangled: '"Usage: bp <MethodName> | <CodeAd"...'
       offset: 00002ABC
     - name: ??_C@_0BD@IEC@?6Set?5BreakPoints?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nSet BreakPoints:\n"'
       offset: 00002AE8
     - name: ??_C@_0L@PNHJ@Usage?3?5bl?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: bl\n"'
       offset: 00002AFC
     - name: ??_C@_0BI@GBND@?6List?5All?5Breakpoints?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nList All Breakpoints:\n"'
       offset: 00002B08
     - name: ??_C@_0BN@EPON@?$CK?5?5?5?5?5?5?5?5?5?9?5all?5breakpoints?6?$AA@
-      demangled: "`string'"
+      demangled: '"*         - all breakpoints\n"'
       offset: 00002B20
     - name: ??_C@_0CI@NCLJ@?$DMbp?5list?$DO?5?9?5list?5of?5breakpoint?5n@
-      demangled: "`string'"
+      demangled: '"<bp list> - list of breakpoint n"...'
       offset: 00002B40
     - name: ??_C@_0BJ@JPDD@Usage?3?5be?5?$DMbp?5list?$DO?5?$HM?5?$CK?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: be <bp list> | *\n"'
       offset: 00002B68
     - name: ??_C@_0BG@INN@?6Enable?5Breakpoints?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nEnable Breakpoints:\n"'
       offset: 00002B84
     - name: ??_C@_0BJ@LOPB@Usage?3?5bd?5?$DMbp?5list?$DO?5?$HM?5?$CK?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: bd <bp list> | *\n"'
       offset: 00002B9C
     - name: ??_C@_0BH@OCGP@?6Disable?5Breakpoints?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nDisable Breakpoints:\n"'
       offset: 00002BB8
     - name: ??_C@_0BJ@FLLM@Usage?3?5bc?5?$DMbp?5list?$DO?5?$HM?5?$CK?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: bc <bp list> | *\n"'
       offset: 00002BD0
     - name: ??_C@_0BF@FLEA@?6Clear?5Breakpoints?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nClear Breakpoints:\n"'
       offset: 00002BEC
     - name: ??_C@_0CA@IPOO@?$DMCmd?$DO?5?9?5command?5to?5get?5help?5on?6?$AA@
-      demangled: "`string'"
+      demangled: '"<Cmd> - command to get help on\n"'
       offset: 00002C04
     - name: ??_C@_0BC@DCGC@Usage?3?5?$DP?5?$FL?$DMCmd?$DO?$FN?6?$AA@
-      demangled: "`string'"
+      demangled: '"Usage: ? [<Cmd>]\n"'
       offset: 00002C24
     - name: ??_C@_07EAKG@?6Help?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nHelp:\n"'
       offset: 00002C38
     - name: ??_C@_0DA@DHBD@object?5not?5found?5or?5object?5is?5no@
-      demangled: "`string'"
+      demangled: '"object not found or object is no"...'
       offset: 00002C40
     - name: ??_C@_0BO@DACG@invalid?5physical?5address?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"invalid physical address - %s"'
       offset: 00002C70
     - name: ??_C@_0BD@DOGD@no?5free?5breakpoint?$AA@
-      demangled: "`string'"
+      demangled: '"no free breakpoint"'
       offset: 00002C90
     - name: ??_C@_0BK@BBAD@invalid?5breakpoint?5number?$AA@
-      demangled: "`string'"
+      demangled: '"invalid breakpoint number"'
       offset: 00002CA4
     - name: ??_C@_0BL@EJGD@invalid?5breakpoint?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid breakpoint command"'
       offset: 00002CC0
     - name: ??_C@_02DIMO@?$FN?6?$AA@
-      demangled: "`string'"
+      demangled: '"]\n"'
       offset: 00002CDC
     - name: ??_C@_07CFMN@?5?$CL?5?$CFx?$FN?6?$AA@
-      demangled: "`string'"
+      demangled: '" + %x]\n"'
       offset: 00002CE0
     - name: ??_C@_04FALH@?5?$FL?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '" [%s"'
       offset: 00002CE8
     - name: ??_C@_0P@BOPK@?$CF2d?3?5?$DM?$CFc?$DO?5?$CF08x?$AA@
-      demangled: "`string'"
+      demangled: '"%2d: <%c> %08x"'
       offset: 00002CF0
     - name: ??_C@_0BF@NPMI@invalid?5address?5?$CF08x?$AA@
-      demangled: "`string'"
+      demangled: '"invalid address %08x"'
       offset: 00002D00
     - name: ??_C@_04OBKB@?$CF02x?$AA@
-      demangled: "`string'"
+      demangled: '"%02x"'
       offset: 00002D18
     - name: ??_C@_04JGFO@?$CF04x?$AA@
-      demangled: "`string'"
+      demangled: '"%04x"'
       offset: 00002D20
     - name: ??_C@_04HJKA@?$CF08x?$AA@
-      demangled: "`string'"
+      demangled: '"%08x"'
       offset: 00002D28
     - name: ??_C@_01GJD@?9?$AA@
-      demangled: "`string'"
+      demangled: '"-"'
       offset: 00002D30
     - name: ??_C@_02JBML@?$CFc?$AA@
-      demangled: "`string'"
+      demangled: '"%c"'
       offset: 00002D34
     - name: ??_C@_08CHOM@?$CFs?$CF08x?3?5?$AA@
-      demangled: "`string'"
+      demangled: '"%s%08x: "'
       offset: 00002D38
     - name: ??_C@_0CC@JMHC@Failed?5to?5map?5physical?5address?5?$CF@
-      demangled: "`string'"
+      demangled: '"Failed to map physical address %"...'
       offset: 00002D44
     - name: ??_C@_02MLHJ@?$CF?$CF?$AA@
-      demangled: "`string'"
+      demangled: '"%%"'
       offset: 00002D68
     - name: ??_C@_0DC@JKLD@no?5current?5context?5or?5invalid?5co@
-      demangled: "`string'"
+      demangled: '"no current context or invalid co"...'
       offset: 00002D6C
     - name: ??_C@_0BL@POME@invalid?5dump?5stack?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid dump stack command"'
       offset: 00002DA0
     - name: ??_C@_0CB@MDLF@invalid?5context?5block?5address?5?$CFs@
-      demangled: "`string'"
+      demangled: '"invalid context block address %s"...'
       offset: 00002DBC
     - name: ??_C@_09BPEJ@Local?$CFd?3?5?$AA@
-      demangled: "`string'"
+      demangled: '"Local%d: "'
       offset: 00002DE0
     - name: ??_C@_02HHDK@?$CJ?6?$AA@
-      demangled: "`string'"
+      demangled: '")\n"'
       offset: 00002DEC
     - name: ??_C@_01KMAE@?0?$AA@
-      demangled: "`string'"
+      demangled: '","'
       offset: 00002DF0
     - name: ??_C@_09PMKG@?$CF08x?3?5?$CFs?$CI?$AA@
-      demangled: "`string'"
+      demangled: '"%08x: %s("'
       offset: 00002DF4
     - name: ??_C@_0DF@LOIN@?$CF08x?3?5?$CFs?0?5Len?$DN?$CF08d?0?5FrameFlags?$DN?$CF@
-      demangled: "`string'"
+      demangled: '"%08x: %s, Len=%08d, FrameFlags=%"...'
       offset: '00002E00'
     - name: ??_C@_0CJ@DGKM@CtxtBlock?$DN?$CFx?0?5StackTop?$DN?$CFx?0?5Stack@
-      demangled: "`string'"
+      demangled: '"CtxtBlock=%x, StackTop=%x, Stack"...'
       offset: '00002E38'
     - name: ??_C@_01PCFE@?2?$AA@
-      demangled: "`string'"
+      demangled: '"\\"'
       offset: '00002E64'
     - name: ??_C@_0CA@GLC@invalid?5name?5space?5address?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"invalid name space address - %s"'
       offset: '00002E68'
     - name: ??_C@_0BL@FPFN@?6ACPI?5Name?5Space?3?5?$CFs?5?$CI?$CFx?$CJ?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nACPI Name Space: %s (%x)\n"'
       offset: '00002E88'
     - name: ??_C@_0DJ@BDNI@invalid?5name?5space?5object?5or?5obj@
-      demangled: "`string'"
+      demangled: '"invalid name space object or obj"...'
       offset: 00002EA4
     - name: ??_C@_0BL@IGOF@invalid?5EditMemory?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid EditMemory command"'
       offset: 00002EE0
     - name: ??_C@_0BC@NGNH@invalid?5data?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"invalid data - %s"'
       offset: 00002EFC
     - name: ??_C@_0BP@EJOM@data?5must?5be?5a?5byte?5value?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"data must be a byte value - %s"'
       offset: 00002F10
     - name: ??_C@_0BF@OMMO@invalid?5address?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"invalid address - %s"'
       offset: 00002F30
     - name: ??_C@_0BF@NEOE@invalid?5Find?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid Find command"'
       offset: 00002F48
     - name: ??_C@_0BP@EJBA@No?5such?5NameSpace?5object?5?9?5?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: '"No such NameSpace object - %s\n"'
       offset: 00002F60
     - name: ??_C@_0BF@NADN@invalid?5NameSeg?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"invalid NameSeg - %s"'
       offset: 00002F80
     - name: ??_C@_03HHKO@?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: '"%s\n"'
       offset: 00002F98
     - name: ??_C@_0BH@MAIP@invalid?5inport?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid inport command"'
       offset: 00002F9C
     - name: ??_C@_06BIEK@?$CF04x?3?5?$AA@
-      demangled: "`string'"
+      demangled: '"%04x: "'
       offset: 00002FB4
     - name: ??_C@_0BF@NGKJ@invalid?5Quit?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid Quit command"'
       offset: 00002FBC
     - name: ??_C@_0EG@PEIO@?6Shell?5to?5Kernel?5Debugger?4?6Type?5@
-      demangled: "`string'"
+      demangled: '"\nShell to Kernel Debugger.\nType "...'
       offset: 00002FD4
     - name: ??_C@_0BD@BCIH@invalid?5LC?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid LC command"'
       offset: 0000301C
     - name: ??_C@_0EE@GNEM@?$CFcCtxt?$DN?$CF08x?0?5ThID?$DN?$CF08x?0?5Flgs?$DN?$CFc?$CF@
-      demangled: "`string'"
+      demangled: '"%cCtxt=%08x, ThID=%08x, Flgs=%c%"...'
       offset: '00003030'
     - name: ??_C@_0BD@LJDJ@no?5current?5context?$AA@
-      demangled: "`string'"
+      demangled: '"no current context"'
       offset: '00003074'
     - name: ??_C@_0P@FCGI@invalid?5object?$AA@
-      demangled: "`string'"
+      demangled: '"invalid object"'
       offset: '00003088'
     - name: ??_C@_0BN@JDNO@Queuing?3?5Notify?$CI?$CFs?0?5?$CFx?$CJ?5?4?4?4?6?$AA@
-      demangled: "`string'"
+      demangled: '"Queuing: Notify(%s, %x) ...\n"'
       offset: '00003098'
     - name: ??_C@_0BH@CCNK@invalid?5notify?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid notify command"'
       offset: 000030B8
     - name: ??_C@_0BG@LCCB@object?5not?5found?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"object not found - %s"'
       offset: 000030D0
     - name: ??_C@_0CA@KCOB@invalid?5notification?5value?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"invalid notification value - %s"'
       offset: '000030E8'
     - name: ??_C@_0BI@EILL@invalid?5outport?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid outport command"'
       offset: '00003108'
     - name: ??_C@_0BF@JOCH@?$CFx?3?5no?5symbols?5found?$AA@
-      demangled: "`string'"
+      demangled: '"%x: no symbols found"'
       offset: '00003120'
     - name: ??_C@_06CKM@?5?$CL?5?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: '" + %x\n"'
       offset: '00003138'
     - name: ??_C@_06JMJM@?$CFx?3?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"%x: %s"'
       offset: '00003140'
     - name: ??_C@_0BF@BCJJ@invalid?5step?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid step command"'
       offset: '00003148'
     - name: ??_C@_01FIMD@?$FN?$AA@
-      demangled: "`string'"
+      demangled: '"]"'
       offset: '00003160'
     - name: ??_C@_06FLPJ@?5?$CL?5?$CFx?$FN?$AA@
-      demangled: "`string'"
+      demangled: '" + %x]"'
       offset: '00003164'
     - name: ??_C@_0BI@NOFM@?6Next?5AML?5Pointer?3?5?$CF08x?$AA@
-      demangled: "`string'"
+      demangled: '"\nNext AML Pointer: %08x"'
       offset: 0000316C
     - name: ??_C@_0BJ@PALN@?5?5ResType?$DN?$CFs?0?5ResObj?$DN?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: '"  ResType=%s, ResObj=%x\n"'
       offset: '00003184'
     - name: ??_C@_07PCHH@Unknown?$AA@
-      demangled: "`string'"
+      demangled: '"Unknown"'
       offset: 000031A0
     - name: ??_C@_05KEGC@Mutex?$AA@
-      demangled: "`string'"
+      demangled: '"Mutex"'
       offset: 000031A8
     - name: ??_C@_0BD@GHN@?6Resources?5Owned?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nResources Owned:\n"'
       offset: 000031B0
     - name: ??_C@_0O@KNGL@?$CF08x?3?5RetObj?$DN?$AA@
-      demangled: "`string'"
+      demangled: '"%08x: RetObj="'
       offset: 000031C4
     - name: ??_C@_0P@MCHP@?$CF08x?3?5Local?$CFd?$DN?$AA@
-      demangled: "`string'"
+      demangled: '"%08x: Local%d="'
       offset: 000031D4
     - name: ??_C@_0N@OJBH@?$CF08x?3?5Arg?$CFd?$DN?$AA@
-      demangled: "`string'"
+      demangled: '"%08x: Arg%d="'
       offset: '000031E4'
     - name: ??_C@_0BC@IOAK@?6MethodObject?$DN?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nMethodObject=%s\n"'
       offset: 000031F4
     - name: ??_C@_06CPHF@?$DMnone?$DO?$AA@
-      demangled: "`string'"
+      demangled: '"<none>"'
       offset: '00003208'
     - name: ??_C@_0BN@BBHB@invalid?5context?5address?5?9?5?$CFx?$AA@
-      demangled: "`string'"
+      demangled: '"invalid context address - %x"'
       offset: '00003210'
     - name: ??_C@_0BB@FPAJ@VerboseMode?5?$DN?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: '"VerboseMode =%s\n"'
       offset: '00003230'
     - name: ??_C@_0BB@EOFC@ErrorBreak?5?5?$DN?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: '"ErrorBreak  =%s\n"'
       offset: '00003244'
     - name: ??_C@_0BB@KFFL@LoadDDBBreak?$DN?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: '"LoadDDBBreak=%s\n"'
       offset: '00003258'
     - name: ??_C@_0BB@JMKH@AMLTrace?5?5?5?5?$DN?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: '"AMLTrace    =%s\n"'
       offset: 0000326C
     - name: ??_C@_03OJPB@off?$AA@
-      demangled: "`string'"
+      demangled: '"off"'
       offset: '00003280'
     - name: ??_C@_02PHBM@on?$AA@
-      demangled: "`string'"
+      demangled: '"on"'
       offset: '00003284'
     - name: ??_C@_0BG@NNEO@invalid?5trace?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid trace command"'
       offset: '00003288'
     - name: ??_C@_0BD@IPKA@invalid?5address?5?$CFx?$AA@
-      demangled: "`string'"
+      demangled: '"invalid address %x"'
       offset: 000032A0
     - name: ??_C@_0BL@CINL@invalid?5unassemble?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid unassemble command"'
       offset: 000032B4
     - name: ??_C@_0BE@DNEO@invalid?5run?5command?$AA@
-      demangled: "`string'"
+      demangled: '"invalid run command"'
       offset: 000032D0
     - name: ??_C@_0BG@IOGE@?6?$CFs?5returned?5PENDING?6?$AA@
-      demangled: "`string'"
+      demangled: '"\n%s returned PENDING\n"'
       offset: '000032E4'
     - name: ??_C@_0BD@NGEC@too?5many?5arguments?$AA@
-      demangled: "`string'"
+      demangled: '"too many arguments"'
       offset: 000032FC
     - name: ??_C@_0CK@LIAC@invalid?5argument?5?$CFs?5?$CIcan?5only?5be@
-      demangled: "`string'"
+      demangled: '"invalid argument %s (can only be"...'
       offset: '00003310'
     - name: ??_C@_0CD@LHIE@invalid?5method?5or?5method?5not?5fou@
-      demangled: "`string'"
+      demangled: '"invalid method or method not fou"...'
       offset: 0000333C
     - name: ??_C@_0DJ@DBDP@Cannot?5run?5method?5while?5previous@
-      demangled: "`string'"
+      demangled: '"Cannot run method while previous"...'
       offset: '00003360'
     - name: ??_C@_0CJ@BHLO@?6?$CFs?5failed?5with?5the?5following?5er@
-      demangled: "`string'"
+      demangled: '"\n%s failed with the following er"...'
       offset: 0000339C
     - name: ??_C@_0CO@KOEI@?6?$CFs?5completed?5successfully?5with?5@
-      demangled: "`string'"
+      demangled: '"\n%s completed successfully with "...'
       offset: 000033C8
     - name: ??_C@_01KCD@?$HN?$AA@
-      demangled: "`string'"
+      demangled: '"}"'
       offset: 000033F8
     - name: ??_C@_07BNGJ@?00x?$CF02x?$AA@
-      demangled: "`string'"
+      demangled: '",0x%02x"'
       offset: 000033FC
     - name: ??_C@_08IKDH@?6?70x?$CF02x?$AA@
-      demangled: "`string'"
+      demangled: '"\n\t0x%02x"'
       offset: '00003404'
     - name: ??_C@_01PFFB@?$HL?$AA@
-      demangled: "`string'"
+      demangled: '"{"'
       offset: '00003410'
     - name: ??_C@_02KIEA@?$HM?5?$AA@
-      demangled: "`string'"
+      demangled: '"| "'
       offset: '00003414'
     - name: ??_C@_07IOBE@?6?$CF08x?3?5?$AA@
-      demangled: "`string'"
+      demangled: '"\n%08x: "'
       offset: '00003418'
     - name: ??_C@_04BKHJ@0x?$CFx?$AA@
-      demangled: "`string'"
+      demangled: '"0x%x"'
       offset: '00003420'
     - name: ??_C@_04JBBA@?$CC?$CFs?$CC?$AA@
-      demangled: "`string'"
+      demangled: '"\"%s\""'
       offset: '00003428'
     - name: ??_C@_0N@KKEE@Buffer?$CI0x?$CFx?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"Buffer(0x%x)"'
       offset: '00003430'
     - name: ??_C@_02GGCO@?6?7?$AA@
-      demangled: "`string'"
+      demangled: '"\n\t"'
       offset: '00003440'
     - name: ??_C@_0N@FPMG@Package?$CI?$CFd?$CJ?$HL?$AA@
-      demangled: "`string'"
+      demangled: '"Package(%d){"'
       offset: '00003444'
     - name: ??_C@_0CL@IAMJ@?$DMObj?$DN?$CFx?0Type?$DN?$CFs?0Value?$DN0x?$CFx?0Buff?$DN@
-      demangled: "`string'"
+      demangled: '"<Obj=%x,Type=%s,Value=0x%x,Buff="...'
       offset: '00003454'
     - name: ??_C@_0BF@CDBP@AMLI_ERROR?$CI?$CF08x?$CJ?3?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"AMLI_ERROR(%08x): %s"'
       offset: '00003480'
     - name: _pszTokenSeps
       demangled: ''
       offset: '00003498'
     - name: ??_C@_03OALN@?5?7?6?$AA@
-      demangled: "`string'"
+      demangled: '" \t\n"'
       offset: 0000349C
     - name: ??_C@_0BF@EPPC@invalid?5command?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"invalid command - %s"'
       offset: 000034A0
     - name: ??_C@_0CN@PABA@?6Press?5?$DMspace?$DO?5to?5continue?5and?5?8@
-      demangled: "`string'"
+      demangled: "\"\\nPress <space> to continue and \\'\"..."
       offset: 000034B8
     - name: ??_C@_0CF@OHOG@UnAsmOpcode?3?5invalid?5opcode?5clas@
-      demangled: "`string'"
+      demangled: '"UnAsmOpcode: invalid opcode clas"...'
       offset: '000034E8'
     - name: ??_C@_0CB@JNFE@UnAsmOpcode?3?5invalid?5opcode?50x?$CFx@
-      demangled: "`string'"
+      demangled: '"UnAsmOpcode: invalid opcode 0x%x"...'
       offset: '00003510'
     - name: ??_C@_01HMO@?$CC?$AA@
-      demangled: "`string'"
+      demangled: '"\""'
       offset: '00003534'
     - name: ??_C@_0CF@IAJD@UnAsmDataObj?3?5unexpected?5opcode?5@
-      demangled: "`string'"
+      demangled: '"UnAsmDataObj: unexpected opcode "...'
       offset: '00003538'
     - name: ??_C@_02DILL@?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"%s"'
       offset: '00003560'
     - name: ??_C@_0CD@MFND@UnAsmNameObj?3?5name?5too?5long?5?9?5?$CC?$CF@
-      demangled: "`string'"
+      demangled: '"UnAsmNameObj: name too long - \"%"...'
       offset: '00003564'
     - name: ??_C@_0CC@MEDM@UnAsmNameTail?3?5name?5too?5long?5?9?5?$CF@
-      demangled: "`string'"
+      demangled: '"UnAsmNameTail: name too long - %"...'
       offset: '00003588'
     - name: ??_C@_01KMMP@?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '")"'
       offset: 000035AC
     - name: ??_C@_0CC@BPIO@UnAsmOpcode?3?5invalid?5ArgType?5?8?$CFc@
-      demangled: "`string'"
+      demangled: "\"UnAsmOpcode: invalid ArgType \\'%c\"..."
       offset: 000035B0
     - name: ??_C@_02GIEM@?0?5?$AA@
-      demangled: "`string'"
+      demangled: '", "'
       offset: 000035D4
     - name: ??_C@_01GFI@?$CI?$AA@
-      demangled: "`string'"
+      demangled: '"("'
       offset: 000035D8
     - name: ??_C@_0CL@EKOG@UnAsmSuperName?3?5invalid?5SuperNam@
-      demangled: "`string'"
+      demangled: '"UnAsmSuperName: invalid SuperNam"...'
       offset: 000035DC
     - name: ??_C@_08LHIO@?0?50x?$CF02x?$AA@
-      demangled: "`string'"
+      demangled: '", 0x%02x"'
       offset: '00003608'
     - name: ??_C@_06BCG@0x?$CF02x?$AA@
-      demangled: "`string'"
+      demangled: '"0x%02x"'
       offset: '00003614'
     - name: ??_C@_06LIB@?$CFs?0?5?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '"%s, %d"'
       offset: 0000361C
     - name: ??_C@_04JDGB@?0?5?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '", %d"'
       offset: '00003624'
     - name: ??_C@_0N@IAKL@Offset?$CI0x?$CFx?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"Offset(0x%x)"'
       offset: 0000362C
     - name: ??_C@_0BD@NHAG@AccessAs?$CI?$CFs?0?50x?$CFx?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"AccessAs(%s, 0x%x)"'
       offset: 0000363C
     - name: _pszSwitchChars
       demangled: ''
@@ -6344,25 +6342,25 @@ appearances:
       demangled: ''
       offset: '00003654'
     - name: ??_C@_02LMKJ@?$DN?3?$AA@
-      demangled: "`string'"
+      demangled: '"=:"'
       offset: '00003658'
     - name: ??_C@_02HPLL@?9?1?$AA@
-      demangled: "`string'"
+      demangled: '"-/"'
       offset: 0000365C
     - name: ??_C@_0CH@OHBE@argument?5missing?5option?5separato@
-      demangled: "`string'"
+      demangled: '"argument missing option separato"...'
       offset: '00003660'
     - name: ??_C@_0BO@DKAK@invalid?5command?5argument?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"invalid command argument - %s"'
       offset: '00003688'
     - name: ??_C@_0BH@LNIG@invalid?5argument?5table?$AA@
-      demangled: "`string'"
+      demangled: '"invalid argument table"'
       offset: 000036A8
     - name: ??_C@_0BO@JHEH@invalid?5numeric?5argument?5?9?5?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"invalid numeric argument - %s"'
       offset: 000036C0
     - name: ??_C@_0O@LHIL@AMLI_ARGERR?3?5?$AA@
-      demangled: "`string'"
+      demangled: '"AMLI_ARGERR: "'
       offset: '000036E0'
     - name: _TermTable
       demangled: ''
@@ -6374,439 +6372,439 @@ appearances:
       demangled: ''
       offset: 00004BD8
     - name: ??_C@_06GALE@UFUFUU?$AA@
-      demangled: "`string'"
+      demangled: '"UFUFUU"'
       offset: 00004C10
     - name: ??_C@_06CNIM@CKCKCC?$AA@
-      demangled: "`string'"
+      demangled: '"CKCKCC"'
       offset: 00004C18
     - name: ??_C@_09FCNK@LNotEqual?$AA@
-      demangled: "`string'"
+      demangled: '"LNotEqual"'
       offset: 00004C20
     - name: ??_C@_0L@LAEH@LLessEqual?$AA@
-      demangled: "`string'"
+      demangled: '"LLessEqual"'
       offset: 00004C2C
     - name: ??_C@_0O@BJMN@LGreaterEqual?$AA@
-      demangled: "`string'"
+      demangled: '"LGreaterEqual"'
       offset: 00004C38
     - name: ??_C@_04IPEF@UUUU?$AA@
-      demangled: "`string'"
+      demangled: '"UUUU"'
       offset: 00004C48
     - name: ??_C@_03DOPL@UUU?$AA@
-      demangled: "`string'"
+      demangled: '"UUU"'
       offset: 00004C50
     - name: ??_C@_04LNPE@Noop?$AA@
-      demangled: "`string'"
+      demangled: '"Noop"'
       offset: 00004C54
     - name: ??_C@_02IAHH@UU?$AA@
-      demangled: "`string'"
+      demangled: '"UU"'
       offset: 00004C5C
     - name: ??_C@_03JLPM@?5?5U?$AA@
-      demangled: "`string'"
+      demangled: '"  U"'
       offset: 00004C60
     - name: ??_C@_01IJJ@c?$AA@
-      demangled: "`string'"
+      demangled: '"c"'
       offset: 00004C64
     - name: ??_C@_04GDGO@oDUU?$AA@
-      demangled: "`string'"
+      demangled: '"oDUU"'
       offset: 00004C68
     - name: ??_C@_04IJPO@NKCC?$AA@
-      demangled: "`string'"
+      demangled: '"NKCC"'
       offset: 00004C70
     - name: ??_C@_01KOI@x?$AA@
-      demangled: "`string'"
+      demangled: '"x"'
       offset: 00004C78
     - name: ??_C@_03CLHF@m?$CBE?$AA@
-      demangled: "`string'"
+      demangled: '"m!E"'
       offset: 00004C7C
     - name: ??_C@_03IBEH@NKk?$AA@
-      demangled: "`string'"
+      demangled: '"NKk"'
       offset: 00004C80
     - name: ??_C@_05EINH@FFABC?$AA@
-      demangled: "`string'"
+      demangled: '"FFABC"'
       offset: 00004C84
     - name: ??_C@_05CHAB@NNKkk?$AA@
-      demangled: "`string'"
+      demangled: '"NNKkk"'
       offset: 00004C8C
     - name: ??_C@_04IOJO@OABC?$AA@
-      demangled: "`string'"
+      demangled: '"OABC"'
       offset: 00004C94
     - name: ??_C@_04OPKA@NKkk?$AA@
-      demangled: "`string'"
+      demangled: '"NKkk"'
       offset: 00004C9C
     - name: ??_C@_04CBDA@UUUb?$AA@
-      demangled: "`string'"
+      demangled: '"UUUb"'
       offset: 00004CA4
     - name: ??_C@_03JAIO@UUb?$AA@
-      demangled: "`string'"
+      demangled: '"UUb"'
       offset: 00004CAC
     - name: ??_C@_06FPGI@OFUABC?$AA@
-      demangled: "`string'"
+      demangled: '"OFUABC"'
       offset: 00004CB0
     - name: ??_C@_06FED@NNCKkk?$AA@
-      demangled: "`string'"
+      demangled: '"NNCKkk"'
       offset: 00004CB8
     - name: ??_C@_08MBJC@AccessAs?$AA@
-      demangled: "`string'"
+      demangled: '"AccessAs"'
       offset: 00004CC0
     - name: ??_C@_06BGLH@Offset?$AA@
-      demangled: "`string'"
+      demangled: '"Offset"'
       offset: 00004CCC
     - name: ??_C@_0N@EOLE@DDBHandleObj?$AA@
-      demangled: "`string'"
+      demangled: '"DDBHandleObj"'
       offset: 00004CD4
     - name: ??_C@_0N@KEPF@BuffFieldObj?$AA@
-      demangled: "`string'"
+      demangled: '"BuffFieldObj"'
       offset: 00004CE4
     - name: ??_C@_0P@DOGA@ThermalZoneObj?$AA@
-      demangled: "`string'"
+      demangled: '"ThermalZoneObj"'
       offset: 00004CF4
     - name: ??_C@_0M@DIMP@PowerResObj?$AA@
-      demangled: "`string'"
+      demangled: '"PowerResObj"'
       offset: 00004D04
     - name: ??_C@_0M@PAED@OpRegionObj?$AA@
-      demangled: "`string'"
+      demangled: '"OpRegionObj"'
       offset: 00004D10
     - name: ??_C@_08FLNN@MutexObj?$AA@
-      demangled: "`string'"
+      demangled: '"MutexObj"'
       offset: 00004D1C
     - name: ??_C@_09HANG@MethodObj?$AA@
-      demangled: "`string'"
+      demangled: '"MethodObj"'
       offset: 00004D28
     - name: ??_C@_08PICI@EventObj?$AA@
-      demangled: "`string'"
+      demangled: '"EventObj"'
       offset: 00004D34
     - name: ??_C@_09MMLJ@DeviceObj?$AA@
-      demangled: "`string'"
+      demangled: '"DeviceObj"'
       offset: 00004D40
     - name: ??_C@_0N@EFJP@FieldUnitObj?$AA@
-      demangled: "`string'"
+      demangled: '"FieldUnitObj"'
       offset: 00004D4C
     - name: ??_C@_06NFKD@PkgObj?$AA@
-      demangled: "`string'"
+      demangled: '"PkgObj"'
       offset: 00004D5C
     - name: ??_C@_07FOAM@BuffObj?$AA@
-      demangled: "`string'"
+      demangled: '"BuffObj"'
       offset: 00004D64
     - name: ??_C@_06ONPN@StrObj?$AA@
-      demangled: "`string'"
+      demangled: '"StrObj"'
       offset: 00004D6C
     - name: ??_C@_06KNGH@IntObj?$AA@
-      demangled: "`string'"
+      demangled: '"IntObj"'
       offset: 00004D74
     - name: ??_C@_01FIAI@X?$AA@
-      demangled: "`string'"
+      demangled: '"X"'
       offset: 00004D7C
     - name: ??_C@_0L@HJBC@UnknownObj?$AA@
-      demangled: "`string'"
+      demangled: '"UnknownObj"'
       offset: 00004D80
     - name: ??_C@_0N@KJGF@ExtExclusive?$AA@
-      demangled: "`string'"
+      demangled: '"ExtExclusive"'
       offset: 00004D8C
     - name: ??_C@_01FJFF@W?$AA@
-      demangled: "`string'"
+      demangled: '"W"'
       offset: 00004D9C
     - name: ??_C@_09MHEA@ExtShared?$AA@
-      demangled: "`string'"
+      demangled: '"ExtShared"'
       offset: 00004DA0
     - name: ??_C@_0N@FPAL@ExtActiveLow?$AA@
-      demangled: "`string'"
+      demangled: '"ExtActiveLow"'
       offset: 00004DAC
     - name: ??_C@_01PDMC@V?$AA@
-      demangled: "`string'"
+      demangled: '"V"'
       offset: 00004DBC
     - name: ??_C@_0O@LKFB@ExtActiveHigh?$AA@
-      demangled: "`string'"
+      demangled: '"ExtActiveHigh"'
       offset: 00004DC0
     - name: ??_C@_08KPPC@ExtLevel?$AA@
-      demangled: "`string'"
+      demangled: '"ExtLevel"'
       offset: 00004DD0
     - name: ??_C@_07BHGI@ExtEdge?$AA@
-      demangled: "`string'"
+      demangled: '"ExtEdge"'
       offset: 00004DDC
     - name: ??_C@_0M@FKCP@EntireRange?$AA@
-      demangled: "`string'"
+      demangled: '"EntireRange"'
       offset: 00004DE4
     - name: ??_C@_0BB@IDHK@NonISAOnlyRanges?$AA@
-      demangled: "`string'"
+      demangled: '"NonISAOnlyRanges"'
       offset: 00004DF0
     - name: ??_C@_01KGOM@T?$AA@
-      demangled: "`string'"
+      demangled: '"T"'
       offset: '00004E04'
     - name: ??_C@_0O@EACP@ISAOnlyRanges?$AA@
-      demangled: "`string'"
+      demangled: '"ISAOnlyRanges"'
       offset: '00004E08'
     - name: ??_C@_0N@JJK@NonCacheable?$AA@
-      demangled: "`string'"
+      demangled: '"NonCacheable"'
       offset: '00004E18'
     - name: ??_C@_0N@DGGB@Prefetchable?$AA@
-      demangled: "`string'"
+      demangled: '"Prefetchable"'
       offset: '00004E28'
     - name: ??_C@_0P@IBEH@WriteCombining?$AA@
-      demangled: "`string'"
+      demangled: '"WriteCombining"'
       offset: '00004E38'
     - name: ??_C@_09BFIP@Cacheable?$AA@
-      demangled: "`string'"
+      demangled: '"Cacheable"'
       offset: '00004E48'
     - name: ??_C@_0M@BNGP@MaxNotFixed?$AA@
-      demangled: "`string'"
+      demangled: '"MaxNotFixed"'
       offset: '00004E54'
     - name: ??_C@_08HAKH@MaxFixed?$AA@
-      demangled: "`string'"
+      demangled: '"MaxFixed"'
       offset: '00004E60'
     - name: ??_C@_0M@MKEP@MinNotFixed?$AA@
-      demangled: "`string'"
+      demangled: '"MinNotFixed"'
       offset: 00004E6C
     - name: ??_C@_01KGCH@Q?$AA@
-      demangled: "`string'"
+      demangled: '"Q"'
       offset: '00004E78'
     - name: ??_C@_08CDMI@MinFixed?$AA@
-      demangled: "`string'"
+      demangled: '"MinFixed"'
       offset: 00004E7C
     - name: ??_C@_09FFJA@PosDecode?$AA@
-      demangled: "`string'"
+      demangled: '"PosDecode"'
       offset: '00004E88'
     - name: ??_C@_01MLA@P?$AA@
-      demangled: "`string'"
+      demangled: '"P"'
       offset: '00004E94'
     - name: ??_C@_09IHEH@SubDecode?$AA@
-      demangled: "`string'"
+      demangled: '"SubDecode"'
       offset: '00004E98'
     - name: ??_C@_0BB@CDNP@ResourceProducer?$AA@
-      demangled: "`string'"
+      demangled: '"ResourceProducer"'
       offset: 00004EA4
     - name: ??_C@_0BB@PLLM@ResourceConsumer?$AA@
-      demangled: "`string'"
+      demangled: '"ResourceConsumer"'
       offset: 00004EB8
     - name: ??_C@_08DBKI@ReadOnly?$AA@
-      demangled: "`string'"
+      demangled: '"ReadOnly"'
       offset: 00004ECC
     - name: ??_C@_09LAEE@ReadWrite?$AA@
-      demangled: "`string'"
+      demangled: '"ReadWrite"'
       offset: 00004ED8
     - name: ??_C@_08CCLO@Decode10?$AA@
-      demangled: "`string'"
+      demangled: '"Decode10"'
       offset: 00004EE4
     - name: ??_C@_01PBLD@M?$AA@
-      demangled: "`string'"
+      demangled: '"M"'
       offset: 00004EF0
     - name: ??_C@_08NNMM@Decode16?$AA@
-      demangled: "`string'"
+      demangled: '"Decode16"'
       offset: 00004EF4
     - name: ??_C@_0L@LOGO@Transfer16?$AA@
-      demangled: "`string'"
+      demangled: '"Transfer16"'
       offset: 00004F00
     - name: ??_C@_0N@DJHI@Transfer8_16?$AA@
-      demangled: "`string'"
+      demangled: '"Transfer8_16"'
       offset: 00004F0C
     - name: ??_C@_01FLCE@L?$AA@
-      demangled: "`string'"
+      demangled: '"L"'
       offset: 00004F1C
     - name: ??_C@_09HCBA@Transfer8?$AA@
-      demangled: "`string'"
+      demangled: '"Transfer8"'
       offset: 00004F20
     - name: ??_C@_0N@GHCL@NotBusMaster?$AA@
-      demangled: "`string'"
+      demangled: '"NotBusMaster"'
       offset: 00004F2C
     - name: ??_C@_01OMB@K?$AA@
-      demangled: "`string'"
+      demangled: '"K"'
       offset: 00004F3C
     - name: ??_C@_09OGIM@BusMaster?$AA@
-      demangled: "`string'"
+      demangled: '"BusMaster"'
       offset: 00004F40
     - name: ??_C@_05KAOA@TypeF?$AA@
-      demangled: "`string'"
+      demangled: '"TypeF"'
       offset: 00004F4C
     - name: ??_C@_05KLM@TypeB?$AA@
-      demangled: "`string'"
+      demangled: '"TypeB"'
       offset: 00004F54
     - name: ??_C@_05PFAF@TypeA?$AA@
-      demangled: "`string'"
+      demangled: '"TypeA"'
       offset: 00004F5C
     - name: ??_C@_01KEFG@J?$AA@
-      demangled: "`string'"
+      demangled: '"J"'
       offset: 00004F64
     - name: ??_C@_0O@HLLE@Compatibility?$AA@
-      demangled: "`string'"
+      demangled: '"Compatibility"'
       offset: 00004F68
     - name: ??_C@_09MMPK@Exclusive?$AA@
-      demangled: "`string'"
+      demangled: '"Exclusive"'
       offset: 00004F78
     - name: ??_C@_06HHBJ@Shared?$AA@
-      demangled: "`string'"
+      demangled: '"Shared"'
       offset: 00004F84
     - name: ??_C@_09DKJE@ActiveLow?$AA@
-      demangled: "`string'"
+      demangled: '"ActiveLow"'
       offset: 00004F8C
     - name: ??_C@_01PBHI@H?$AA@
-      demangled: "`string'"
+      demangled: '"H"'
       offset: 00004F98
     - name: ??_C@_0L@HDDE@ActiveHigh?$AA@
-      demangled: "`string'"
+      demangled: '"ActiveHigh"'
       offset: 00004F9C
     - name: ??_C@_05PGGH@Level?$AA@
-      demangled: "`string'"
+      demangled: '"Level"'
       offset: 00004FA8
     - name: ??_C@_01PACF@G?$AA@
-      demangled: "`string'"
+      demangled: '"G"'
       offset: 00004FB0
     - name: ??_C@_04ICPD@Edge?$AA@
-      demangled: "`string'"
+      demangled: '"Edge"'
       offset: 00004FB4
     - name: ??_C@_03GCEP@MGT?$AA@
-      demangled: "`string'"
+      demangled: '"MGT"'
       offset: 00004FBC
     - name: ??_C@_03GBKI@MGE?$AA@
-      demangled: "`string'"
+      demangled: '"MGE"'
       offset: 00004FC0
     - name: ??_C@_03OMOE@MLT?$AA@
-      demangled: "`string'"
+      demangled: '"MLT"'
       offset: 00004FC4
     - name: ??_C@_03OPAD@MLE?$AA@
-      demangled: "`string'"
+      demangled: '"MLE"'
       offset: 00004FC8
     - name: ??_C@_03EPNB@MEQ?$AA@
-      demangled: "`string'"
+      demangled: '"MEQ"'
       offset: 00004FCC
     - name: ??_C@_01FKLC@F?$AA@
-      demangled: "`string'"
+      demangled: '"F"'
       offset: 00004FD0
     - name: ??_C@_03MMGL@MTR?$AA@
-      demangled: "`string'"
+      demangled: '"MTR"'
       offset: 00004FD4
     - name: ??_C@_0O@FLNP@NotSerialized?$AA@
-      demangled: "`string'"
+      demangled: '"NotSerialized"'
       offset: 00004FD8
     - name: ??_C@_01KFAL@E?$AA@
-      demangled: "`string'"
+      demangled: '"E"'
       offset: 00004FE8
     - name: ??_C@_0L@DFFO@Serialized?$AA@
-      demangled: "`string'"
+      demangled: '"Serialized"'
       offset: 00004FEC
     - name: ??_C@_0BA@JICJ@EmbeddedControl?$AA@
-      demangled: "`string'"
+      demangled: '"EmbeddedControl"'
       offset: 00004FF8
     - name: ??_C@_0L@MPFF@PCI_Config?$AA@
-      demangled: "`string'"
+      demangled: '"PCI_Config"'
       offset: '00005008'
     - name: ??_C@_01PJM@D?$AA@
-      demangled: "`string'"
+      demangled: '"D"'
       offset: '00005014'
     - name: ??_C@_0N@LMLI@WriteAsZeros?$AA@
-      demangled: "`string'"
+      demangled: '"WriteAsZeros"'
       offset: '00005018'
     - name: ??_C@_0M@IOIB@WriteAsOnes?$AA@
-      demangled: "`string'"
+      demangled: '"WriteAsOnes"'
       offset: '00005028'
     - name: ??_C@_08CDKH@Preserve?$AA@
-      demangled: "`string'"
+      demangled: '"Preserve"'
       offset: '00005034'
     - name: ??_C@_06MODJ@NoLock?$AA@
-      demangled: "`string'"
+      demangled: '"NoLock"'
       offset: '00005040'
     - name: ??_C@_04BKNP@Lock?$AA@
-      demangled: "`string'"
+      demangled: '"Lock"'
       offset: '00005048'
     - name: ??_C@_0M@PONK@SMBQuickAcc?$AA@
-      demangled: "`string'"
+      demangled: '"SMBQuickAcc"'
       offset: '00005050'
     - name: ??_C@_0P@HODL@SMBSendRecvAcc?$AA@
-      demangled: "`string'"
+      demangled: '"SMBSendRecvAcc"'
       offset: 0000505C
     - name: ??_C@_08HGKO@BlockAcc?$AA@
-      demangled: "`string'"
+      demangled: '"BlockAcc"'
       offset: 0000506C
     - name: ??_C@_08IIOK@DWordAcc?$AA@
-      demangled: "`string'"
+      demangled: '"DWordAcc"'
       offset: '00005078'
     - name: ??_C@_07KDPF@WordAcc?$AA@
-      demangled: "`string'"
+      demangled: '"WordAcc"'
       offset: '00005084'
     - name: ??_C@_07BMCD@ByteAcc?$AA@
-      demangled: "`string'"
+      demangled: '"ByteAcc"'
       offset: 0000508C
     - name: ??_C@_01PFH@A?$AA@
-      demangled: "`string'"
+      demangled: '"A"'
       offset: '00005094'
     - name: ??_C@_06OKL@AnyAcc?$AA@
-      demangled: "`string'"
+      demangled: '"AnyAcc"'
       offset: '00005098'
     - name: ??_C@_06LMFL@EISAID?$AA@
-      demangled: "`string'"
+      demangled: '"EISAID"'
       offset: 000050A0
     - name: ??_C@_01MHL@U?$AA@
-      demangled: "`string'"
+      demangled: '"U"'
       offset: 000050A8
     - name: ??_C@_02NBLL@Ua?$AA@
-      demangled: "`string'"
+      demangled: '"Ua"'
       offset: 000050AC
     - name: ??_C@_06MFIC@Local7?$AA@
-      demangled: "`string'"
+      demangled: '"Local7"'
       offset: 000050B0
     - name: ??_C@_06GPBF@Local6?$AA@
-      demangled: "`string'"
+      demangled: '"Local6"'
       offset: 000050B8
     - name: ??_C@_06JAKM@Local5?$AA@
-      demangled: "`string'"
+      demangled: '"Local5"'
       offset: 000050C0
     - name: ??_C@_06DKDL@Local4?$AA@
-      demangled: "`string'"
+      demangled: '"Local4"'
       offset: 000050C8
     - name: ??_C@_06GPNO@Local3?$AA@
-      demangled: "`string'"
+      demangled: '"Local3"'
       offset: 000050D0
     - name: ??_C@_06MFEJ@Local2?$AA@
-      demangled: "`string'"
+      demangled: '"Local2"'
       offset: 000050D8
     - name: ??_C@_06DKPA@Local1?$AA@
-      demangled: "`string'"
+      demangled: '"Local1"'
       offset: '000050E0'
     - name: ??_C@_06JAGH@Local0?$AA@
-      demangled: "`string'"
+      demangled: '"Local0"'
       offset: '000050E8'
     - name: ??_C@_04CJKP@Arg6?$AA@
-      demangled: "`string'"
+      demangled: '"Arg6"'
       offset: 000050F0
     - name: ??_C@_04NGBG@Arg5?$AA@
-      demangled: "`string'"
+      demangled: '"Arg5"'
       offset: 000050F8
     - name: ??_C@_04HMIB@Arg4?$AA@
-      demangled: "`string'"
+      demangled: '"Arg4"'
       offset: '00005100'
     - name: ??_C@_04CJGE@Arg3?$AA@
-      demangled: "`string'"
+      demangled: '"Arg3"'
       offset: '00005108'
     - name: ??_C@_04IDPD@Arg2?$AA@
-      demangled: "`string'"
+      demangled: '"Arg2"'
       offset: '00005110'
     - name: ??_C@_04HMEK@Arg1?$AA@
-      demangled: "`string'"
+      demangled: '"Arg1"'
       offset: '00005118'
     - name: ??_C@_04NGNN@Arg0?$AA@
-      demangled: "`string'"
+      demangled: '"Arg0"'
       offset: '00005120'
     - name: ??_C@_08JLOA@Revision?$AA@
-      demangled: "`string'"
+      demangled: '"Revision"'
       offset: '00005128'
     - name: ??_C@_04KNAI@Ones?$AA@
-      demangled: "`string'"
+      demangled: '"Ones"'
       offset: '00005134'
     - name: ??_C@_03OBMJ@One?$AA@
-      demangled: "`string'"
+      demangled: '"One"'
       offset: 0000513C
     - name: ??_C@_04HCNF@Zero?$AA@
-      demangled: "`string'"
+      demangled: '"Zero"'
       offset: '00005140'
     - name: ??_C@_02BFG@uX?$AA@
-      demangled: "`string'"
+      demangled: '"uX"'
       offset: '00005148'
     - name: ??_C@_08EOLN@External?$AA@
-      demangled: "`string'"
+      demangled: '"External"'
       offset: 0000514C
     - name: ??_C@_07HBPN@Include?$AA@
-      demangled: "`string'"
+      demangled: '"Include"'
       offset: '00005158'
     - name: ??_C@_0BA@CHBK@DefinitionBlock?$AA@
-      demangled: "`string'"
+      demangled: '"DefinitionBlock"'
       offset: '00005160'
     - name: _CurrentCpuPowerStateHandlerIndex
       demangled: ''
@@ -6899,7 +6897,7 @@ appearances:
       demangled: ''
       offset: 000057F8
     - name: ??_C@_00A@?$AA@
-      demangled: "`string'"
+      demangled: '""'
       offset: 000058A8
     - name: _gicCode
       demangled: ''
@@ -7181,19 +7179,19 @@ appearances:
       demangled: ''
       offset: '00000000'
     - name: ??_C@_0BI@GFDD@Select?5DevNode?5by?5index?$AA@
-      demangled: "`string'"
+      demangled: '"Select DevNode by index"'
       offset: '00000040'
     - name: ??_C@_0P@HH@Select?5DevNode?$AA@
-      demangled: "`string'"
+      demangled: '"Select DevNode"'
       offset: '00000058'
     - name: ??_C@_0P@HCKM@select?5devnode?$AA@
-      demangled: "`string'"
+      demangled: '"select devnode"'
       offset: '00000068'
     - name: ??_C@_0BG@DJBI@Show?5selected?5devnode?$AA@
-      demangled: "`string'"
+      demangled: '"Show selected devnode"'
       offset: '00000078'
     - name: ??_C@_0P@JCDL@Show?5selected?5?$AA@
-      demangled: "`string'"
+      demangled: '"Show selected "'
       offset: '00000090'
   - num: '14'
     name: PAGE
@@ -8371,28 +8369,28 @@ appearances:
       demangled: ''
       offset: '00000000'
     - name: ??_C@_0DN@BAIB@This?5problem?5will?5usually?5result@
-      demangled: "`string'"
+      demangled: '"This problem will usually result"...'
       offset: '00000004'
     - name: ??_C@_0IF@ICGG@The?5ACPI?5device?5driver?5has?5encou@
-      demangled: "`string'"
+      demangled: '"The ACPI device driver has encou"...'
       offset: '00000044'
     - name: ??_C@_0IF@BOIF@The?5ACPI?5device?5driver?5has?5encou@
-      demangled: "`string'"
+      demangled: '"The ACPI device driver has encou"...'
       offset: 000000CC
     - name: ??_C@_0DN@JJC@The?5ACPI?5driver?5has?5encountered?5@
-      demangled: "`string'"
+      demangled: '"The ACPI driver has encountered "...'
       offset: '00000154'
     - name: ??_C@_0BI@MPMK@ACPI?5Critical?5Error?5?$CD?$CFx?$AA@
-      demangled: "`string'"
+      demangled: '"ACPI Critical Error #%x"'
       offset: '00000194'
     - name: _gpszOSName
       demangled: ''
       offset: 000001AC
     - name: ??_C@_0BC@PMEJ@Microsoft?5Windows?$AA@
-      demangled: "`string'"
+      demangled: '"Microsoft Windows"'
       offset: 000001B0
     - name: ??_C@_07FPMN@PCI?4VXD?$AA@
-      demangled: "`string'"
+      demangled: '"PCI.VXD"'
       offset: 000001C4
     - name: _fDockCapable
       demangled: ''
@@ -8401,7 +8399,7 @@ appearances:
       demangled: ''
       offset: 000001D0
     - name: ??_C@_04DPHF@?2_SB?$AA@
-      demangled: "`string'"
+      demangled: '"\\_SB"'
       offset: 000001DC
     - name: _PIIX4DevFunc
       demangled: ''
@@ -8416,58 +8414,58 @@ appearances:
       demangled: ''
       offset: 000001F4
     - name: ??_C@_09ELPN@PCIDevice?$AA@
-      demangled: "`string'"
+      demangled: '"PCIDevice"'
       offset: 0000021C
     - name: ??_C@_0M@KMB@VPOWERD?4VXD?$AA@
-      demangled: "`string'"
+      demangled: '"VPOWERD.VXD"'
       offset: '00000228'
     - name: ??_C@_06IIJK@?$CF2X?$CF2X?$AA@
-      demangled: "`string'"
+      demangled: '"%2X%2X"'
       offset: '00000234'
     - name: ??_C@_04CLEA@?$CF08X?$AA@
-      demangled: "`string'"
+      demangled: '"%08X"'
       offset: 0000023C
     - name: ??_C@_04HDFE@_EJD?$AA@
-      demangled: "`string'"
+      demangled: '"_EJD"'
       offset: '00000244'
     - name: ??_C@_0L@LAIL@ACPI?2?$CFs?2?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"ACPI\\%s\\%s"'
       offset: 0000024C
     - name: ??_C@_09MLKF@ACPI?2?$CFs?20?$AA@
-      demangled: "`string'"
+      demangled: '"ACPI\\%s\\0"'
       offset: '00000258'
     - name: ??_C@_08BNLG@?$CKPNP0C09?$AA@
-      demangled: "`string'"
+      demangled: '"*PNP0C09"'
       offset: '00000264'
     - name: ??_C@_0O@FCCI@ACPI?2COMPBATT?$AA@
-      demangled: "`string'"
+      demangled: '"ACPI\\COMPBATT"'
       offset: '00000270'
     - name: ??_C@_0M@HPDE@ACPI?2BUTTON?$AA@
-      demangled: "`string'"
+      demangled: '"ACPI\\BUTTON"'
       offset: '00000280'
     - name: ??_C@_04JEHE@?2_SI?$AA@
-      demangled: "`string'"
+      demangled: '"\\_SI"'
       offset: 0000028C
     - name: ??_C@_04KDOI@?2_TZ?$AA@
-      demangled: "`string'"
+      demangled: '"\\_TZ"'
       offset: '00000294'
     - name: ??_C@_0BA@FLFA@ACPI?2?$CKPNP0C13?20?$AA@
-      demangled: "`string'"
+      demangled: '"ACPI\\*PNP0C13\\0"'
       offset: 0000029C
     - name: ??_C@_0BG@LCOL@ACPI?2ACPI_INTERRUPT?20?$AA@
-      demangled: "`string'"
+      demangled: '"ACPI\\ACPI_INTERRUPT\\0"'
       offset: 000002B4
     - name: ??_C@_04OIGE@_STM?$AA@
-      demangled: "`string'"
+      demangled: '"_STM"'
       offset: 000002CC
     - name: ??_C@_04IBFE@_GTM?$AA@
-      demangled: "`string'"
+      demangled: '"_GTM"'
       offset: 000002D4
     - name: ??_C@_04CKFF@_GTF?$AA@
-      demangled: "`string'"
+      demangled: '"_GTF"'
       offset: 000002DC
     - name: ??_C@_0DC@DLCM@System?2CurrentControlSet?2Service@
-      demangled: "`string'"
+      demangled: '"System\\CurrentControlSet\\Service"...'
       offset: 000002F8
     - name: _pLockCodeHandle
       demangled: ''
@@ -8476,76 +8474,76 @@ appearances:
       demangled: ''
       offset: '00000330'
     - name: ??_C@_03BNJE@_TZ?$AA@
-      demangled: "`string'"
+      demangled: '"_TZ"'
       offset: 0000034C
     - name: ??_C@_03CKAI@_SI?$AA@
-      demangled: "`string'"
+      demangled: '"_SI"'
       offset: '00000350'
     - name: ??_C@_03IBAJ@_SB?$AA@
-      demangled: "`string'"
+      demangled: '"_SB"'
       offset: '00000354'
     - name: ??_C@_03BDIG@_PR?$AA@
-      demangled: "`string'"
+      demangled: '"_PR"'
       offset: '00000358'
     - name: ??_C@_04IPEG@_GPE?$AA@
-      demangled: "`string'"
+      demangled: '"_GPE"'
       offset: 0000035C
     - name: ??_C@_0DB@JJBO@?6AMLI?3?5Break?5at?5AMLI?5Initializat@
-      demangled: "`string'"
+      demangled: '"\nAMLI: Break at AMLI Initializat"...'
       offset: '00000364'
     - name: ??_C@_03BKMA@_GL?$AA@
-      demangled: "`string'"
+      demangled: '"_GL"'
       offset: '00000398'
     - name: ??_C@_0DE@DIGL@AMLIInitialize?3?5failed?5to?5alloca@
-      demangled: "`string'"
+      demangled: '"AMLIInitialize: failed to alloca"...'
       offset: 0000039C
     - name: ??_C@_03HLJ@_OS?$AA@
-      demangled: "`string'"
+      demangled: '"_OS"'
       offset: 000003D0
     - name: ??_C@_04MEAA@_REV?$AA@
-      demangled: "`string'"
+      demangled: '"_REV"'
       offset: 000003D4
     - name: ??_C@_0DA@JCPC@AMLIInitialize?3?5interpreter?5alre@
-      demangled: "`string'"
+      demangled: '"AMLIInitialize: interpreter alre"...'
       offset: 000003DC
     - name: ??_C@_0CL@KLMA@AMLITerminate?3?5interpreter?5not?5i@
-      demangled: "`string'"
+      demangled: '"AMLITerminate: interpreter not i"...'
       offset: 0000040C
     - name: ??_C@_0DD@GGOA@?6AMLI?3?5Break?5at?5Load?5Definition?5@
-      demangled: "`string'"
+      demangled: '"\nAMLI: Break at Load Definition "...'
       offset: '00000438'
     - name: ??_C@_0DD@JAFK@AMLILoadDDB?3?5definition?5block?5lo@
-      demangled: "`string'"
+      demangled: '"AMLILoadDDB: definition block lo"...'
       offset: 0000046C
     - name: ??_C@_0DE@FNAN@AMLI?3?5?$CF08x?3?5Loading?5Definition?5B@
-      demangled: "`string'"
+      demangled: '"AMLI: %08x: Loading Definition B"...'
       offset: 000004A0
     - name: ??_C@_0CA@LGHO@?6Process?5AML?5Debugger?5Request?4?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nProcess AML Debugger Request.\n"'
       offset: 000004D4
     - name: ??_C@_0CF@PIEK@AMLI?3?5?$CF08x?3?5EvalNameSpaceObject?$CI@
-      demangled: "`string'"
+      demangled: '"AMLI: %08x: EvalNameSpaceObject("...'
       offset: 000004F4
     - name: ??_C@_0CB@GDIK@AMLI?3?5?$CF08x?3?5AsyncEvalObject?$CI?$CFs?$CJ?6@
-      demangled: "`string'"
+      demangled: '"AMLI: %08x: AsyncEvalObject(%s)\n"...'
       offset: 0000051C
     - name: ??_C@_0EH@FLDF@AMLIEvalPackageElement?3?5object?5i@
-      demangled: "`string'"
+      demangled: '"AMLIEvalPackageElement: object i"...'
       offset: '00000540'
     - name: ??_C@_0FA@EKOK@AMLIEvalPackageElement?3?5result?5o@
-      demangled: "`string'"
+      demangled: '"AMLIEvalPackageElement: result o"...'
       offset: '00000588'
     - name: ??_C@_0CH@ODON@AMLI?3?5?$CF08x?3?5EvalPackageElement?$CI?$CF@
-      demangled: "`string'"
+      demangled: '"AMLI: %08x: EvalPackageElement(%"...'
       offset: 000005D8
     - name: ??_C@_0DN@CFE@AMLIEvalPkgDataElement?3?5object?5i@
-      demangled: "`string'"
+      demangled: '"AMLIEvalPkgDataElement: object i"...'
       offset: '00000600'
     - name: ??_C@_0CH@EMGA@AMLI?3?5?$CF08x?3?5EvalPkgDataElement?$CI?$CF@
-      demangled: "`string'"
+      demangled: '"AMLI: %08x: EvalPkgDataElement(%"...'
       offset: '00000640'
     - name: ??_C@_0CL@PLHJ@AMLIRegEventHandler?3?5invalid?5eve@
-      demangled: "`string'"
+      demangled: '"AMLIRegEventHandler: invalid eve"...'
       offset: '00000668'
     - name: _gdwfAMLI
       demangled: ''
@@ -8839,883 +8837,883 @@ appearances:
       demangled: ''
       offset: '00001570'
     - name: ??_C@_05FPNF@Debug?$AA@
-      demangled: "`string'"
+      demangled: '"Debug"'
       offset: '00001648'
     - name: ??_C@_03EBKP@XOr?$AA@
-      demangled: "`string'"
+      demangled: '"XOr"'
       offset: '00001650'
     - name: ??_C@_04EGHG@Wait?$AA@
-      demangled: "`string'"
+      demangled: '"Wait"'
       offset: '00001654'
     - name: ??_C@_05BKDM@ToBCD?$AA@
-      demangled: "`string'"
+      demangled: '"ToBCD"'
       offset: 0000165C
     - name: ??_C@_08OHCG@Subtract?$AA@
-      demangled: "`string'"
+      demangled: '"Subtract"'
       offset: '00001664'
     - name: ??_C@_05PDIL@Store?$AA@
-      demangled: "`string'"
+      demangled: '"Store"'
       offset: '00001670'
     - name: ??_C@_06EAAN@SizeOf?$AA@
-      demangled: "`string'"
+      demangled: '"SizeOf"'
       offset: '00001678'
     - name: ??_C@_0L@OPED@ShiftRight?$AA@
-      demangled: "`string'"
+      demangled: '"ShiftRight"'
       offset: '00001680'
     - name: ??_C@_09HGCP@ShiftLeft?$AA@
-      demangled: "`string'"
+      demangled: '"ShiftLeft"'
       offset: 0000168C
     - name: ??_C@_05FIGI@RefOf?$AA@
-      demangled: "`string'"
+      demangled: '"RefOf"'
       offset: '00001698'
     - name: ??_C@_01PAOO@B?$AA@
-      demangled: "`string'"
+      demangled: '"B"'
       offset: 000016A0
     - name: ??_C@_07CPIP@Package?$AA@
-      demangled: "`string'"
+      demangled: '"Package"'
       offset: 000016A4
     - name: ??_C@_02HFNK@Or?$AA@
-      demangled: "`string'"
+      demangled: '"Or"'
       offset: 000016AC
     - name: ??_C@_0L@PNCM@ObjectType?$AA@
-      demangled: "`string'"
+      demangled: '"ObjectType"'
       offset: 000016B0
     - name: ??_C@_03KGJC@Not?$AA@
-      demangled: "`string'"
+      demangled: '"Not"'
       offset: 000016BC
     - name: ??_C@_03IMLC@NOr?$AA@
-      demangled: "`string'"
+      demangled: '"NOr"'
       offset: 000016C0
     - name: ??_C@_04JGGF@NAnd?$AA@
-      demangled: "`string'"
+      demangled: '"NAnd"'
       offset: 000016C4
     - name: ??_C@_08KHNE@Multiply?$AA@
-      demangled: "`string'"
+      demangled: '"Multiply"'
       offset: 000016CC
     - name: ??_C@_06EOCA@CBCBCC?$AA@
-      demangled: "`string'"
+      demangled: '"CBCBCC"'
       offset: 000016D8
     - name: ??_C@_05LKIE@Match?$AA@
-      demangled: "`string'"
+      demangled: '"Match"'
       offset: '000016E0'
     - name: ??_C@_03CIJP@LOr?$AA@
-      demangled: "`string'"
+      demangled: '"LOr"'
       offset: '000016E8'
     - name: ??_C@_04ENMP@LNot?$AA@
-      demangled: "`string'"
+      demangled: '"LNot"'
       offset: 000016EC
     - name: ??_C@_05DBMN@LLess?$AA@
-      demangled: "`string'"
+      demangled: '"LLess"'
       offset: 000016F4
     - name: ??_C@_08MLLJ@LGreater?$AA@
-      demangled: "`string'"
+      demangled: '"LGreater"'
       offset: 000016FC
     - name: ??_C@_06KIBI@LEqual?$AA@
-      demangled: "`string'"
+      demangled: '"LEqual"'
       offset: '00001708'
     - name: ??_C@_02MLCD@CC?$AA@
-      demangled: "`string'"
+      demangled: '"CC"'
       offset: '00001710'
     - name: ??_C@_04NMMB@LAnd?$AA@
-      demangled: "`string'"
+      demangled: '"LAnd"'
       offset: '00001714'
     - name: ??_C@_09MJKL@Increment?$AA@
-      demangled: "`string'"
+      demangled: '"Increment"'
       offset: 0000171C
     - name: ??_C@_07FIHI@FromBCD?$AA@
-      demangled: "`string'"
+      demangled: '"FromBCD"'
       offset: '00001728'
     - name: ??_C@_0BA@LAKF@FindSetRightBit?$AA@
-      demangled: "`string'"
+      demangled: '"FindSetRightBit"'
       offset: '00001730'
     - name: ??_C@_02GCFD@CS?$AA@
-      demangled: "`string'"
+      demangled: '"CS"'
       offset: '00001740'
     - name: ??_C@_0P@ELJG@FindSetLeftBit?$AA@
-      demangled: "`string'"
+      demangled: '"FindSetLeftBit"'
       offset: '00001744'
     - name: ??_C@_04EABI@CCSS?$AA@
-      demangled: "`string'"
+      demangled: '"CCSS"'
       offset: '00001754'
     - name: ??_C@_06DBBI@Divide?$AA@
-      demangled: "`string'"
+      demangled: '"Divide"'
       offset: 0000175C
     - name: ??_C@_07FMNB@DerefOf?$AA@
-      demangled: "`string'"
+      demangled: '"DerefOf"'
       offset: '00001764'
     - name: ??_C@_09IJIF@Decrement?$AA@
-      demangled: "`string'"
+      demangled: '"Decrement"'
       offset: 0000176C
     - name: ??_C@_02IPK@SS?$AA@
-      demangled: "`string'"
+      demangled: '"SS"'
       offset: '00001778'
     - name: ??_C@_09FFPA@CondRefOf?$AA@
-      demangled: "`string'"
+      demangled: '"CondRefOf"'
       offset: 0000177C
     - name: ??_C@_0M@FFFI@Concatenate?$AA@
-      demangled: "`string'"
+      demangled: '"Concatenate"'
       offset: '00001788'
     - name: ??_C@_06FOPI@Buffer?$AA@
-      demangled: "`string'"
+      demangled: '"Buffer"'
       offset: '00001794'
     - name: ??_C@_03DHJM@And?$AA@
-      demangled: "`string'"
+      demangled: '"And"'
       offset: 0000179C
     - name: ??_C@_03BBMC@CCS?$AA@
-      demangled: "`string'"
+      demangled: '"CCS"'
       offset: 000017A0
     - name: ??_C@_03KPJN@Add?$AA@
-      demangled: "`string'"
+      demangled: '"Add"'
       offset: 000017A4
     - name: ??_C@_02KCKG@SW?$AA@
-      demangled: "`string'"
+      demangled: '"SW"'
       offset: 000017A8
     - name: ??_C@_07JHFO@Acquire?$AA@
-      demangled: "`string'"
+      demangled: '"Acquire"'
       offset: 000017AC
     - name: ??_C@_05NNJC@While?$AA@
-      demangled: "`string'"
+      demangled: '"While"'
       offset: 000017B4
     - name: ??_C@_06KBLF@Unload?$AA@
-      demangled: "`string'"
+      demangled: '"Unload"'
       offset: 000017BC
     - name: ??_C@_05NJGE@Stall?$AA@
-      demangled: "`string'"
+      demangled: '"Stall"'
       offset: 000017C4
     - name: ??_C@_05BKOF@Sleep?$AA@
-      demangled: "`string'"
+      demangled: '"Sleep"'
       offset: 000017CC
     - name: ??_C@_06PPEH@Signal?$AA@
-      demangled: "`string'"
+      demangled: '"Signal"'
       offset: 000017D4
     - name: ??_C@_06JCBD@Return?$AA@
-      demangled: "`string'"
+      demangled: '"Return"'
       offset: 000017DC
     - name: ??_C@_05NCED@Reset?$AA@
-      demangled: "`string'"
+      demangled: '"Reset"'
       offset: '000017E4'
     - name: ??_C@_01PDAJ@S?$AA@
-      demangled: "`string'"
+      demangled: '"S"'
       offset: 000017EC
     - name: ??_C@_07IAIL@Release?$AA@
-      demangled: "`string'"
+      demangled: '"Release"'
       offset: 000017F0
     - name: ??_C@_02KBIK@SC?$AA@
-      demangled: "`string'"
+      demangled: '"SC"'
       offset: 000017F8
     - name: ??_C@_06EHOD@Notify?$AA@
-      demangled: "`string'"
+      demangled: '"Notify"'
       offset: 000017FC
     - name: ??_C@_04GIKG@NoOp?$AA@
-      demangled: "`string'"
+      demangled: '"NoOp"'
       offset: '00001804'
     - name: ??_C@_02JLAH@NS?$AA@
-      demangled: "`string'"
+      demangled: '"NS"'
       offset: 0000180C
     - name: ??_C@_04DGNH@Load?$AA@
-      demangled: "`string'"
+      demangled: '"Load"'
       offset: '00001810'
     - name: ??_C@_01FKHJ@C?$AA@
-      demangled: "`string'"
+      demangled: '"C"'
       offset: '00001818'
     - name: ??_C@_02BAJ@If?$AA@
-      demangled: "`string'"
+      demangled: '"If"'
       offset: 0000181C
     - name: ??_C@_03ILPB@BDC?$AA@
-      demangled: "`string'"
+      demangled: '"BDC"'
       offset: '00001820'
     - name: ??_C@_05NMMI@Fatal?$AA@
-      demangled: "`string'"
+      demangled: '"Fatal"'
       offset: '00001824'
     - name: ??_C@_04CCEF@Else?$AA@
-      demangled: "`string'"
+      demangled: '"Else"'
       offset: 0000182C
     - name: ??_C@_0L@NCI@BreakPoint?$AA@
-      demangled: "`string'"
+      demangled: '"BreakPoint"'
       offset: '00001834'
     - name: ??_C@_05EABD@Break?$AA@
-      demangled: "`string'"
+      demangled: '"Break"'
       offset: '00001840'
     - name: ??_C@_0M@ELIN@ThermalZone?$AA@
-      demangled: "`string'"
+      demangled: '"ThermalZone"'
       offset: '00001848'
     - name: ??_C@_04IAJP@NBDB?$AA@
-      demangled: "`string'"
+      demangled: '"NBDB"'
       offset: '00001854'
     - name: ??_C@_09FLMG@Processor?$AA@
-      demangled: "`string'"
+      demangled: '"Processor"'
       offset: 0000185C
     - name: ??_C@_03CHMN@NBW?$AA@
-      demangled: "`string'"
+      demangled: '"NBW"'
       offset: '00001868'
     - name: ??_C@_0O@KMCI@PowerResource?$AA@
-      demangled: "`string'"
+      demangled: '"PowerResource"'
       offset: 0000186C
     - name: ??_C@_04ELFN@NBCC?$AA@
-      demangled: "`string'"
+      demangled: '"NBCC"'
       offset: 0000187C
     - name: ??_C@_0BA@CIJ@OperationRegion?$AA@
-      demangled: "`string'"
+      demangled: '"OperationRegion"'
       offset: '00001884'
     - name: ??_C@_06LEII@Method?$AA@
-      demangled: "`string'"
+      demangled: '"Method"'
       offset: '00001894'
     - name: ??_C@_03GBII@NNB?$AA@
-      demangled: "`string'"
+      demangled: '"NNB"'
       offset: 0000189C
     - name: ??_C@_0L@ILKJ@IndexField?$AA@
-      demangled: "`string'"
+      demangled: '"IndexField"'
       offset: 000018A0
     - name: ??_C@_02JIOA@NB?$AA@
-      demangled: "`string'"
+      demangled: '"NB"'
       offset: 000018AC
     - name: ??_C@_05CIMI@Field?$AA@
-      demangled: "`string'"
+      demangled: '"Field"'
       offset: 000018B0
     - name: ??_C@_05MJIN@Event?$AA@
-      demangled: "`string'"
+      demangled: '"Event"'
       offset: 000018B8
     - name: ??_C@_06NBPC@Device?$AA@
-      demangled: "`string'"
+      demangled: '"Device"'
       offset: 000018C0
     - name: ??_C@_0BA@BLLL@CreateWordField?$AA@
-      demangled: "`string'"
+      demangled: '"CreateWordField"'
       offset: 000018C8
     - name: ??_C@_04NHLC@CCCN?$AA@
-      demangled: "`string'"
+      demangled: '"CCCN"'
       offset: 000018D8
     - name: ??_C@_0M@DCBB@CreateField?$AA@
-      demangled: "`string'"
+      demangled: '"CreateField"'
       offset: '000018E0'
     - name: ??_C@_0BB@KFPM@CreateDWordField?$AA@
-      demangled: "`string'"
+      demangled: '"CreateDWordField"'
       offset: 000018EC
     - name: ??_C@_0BA@LEIC@CreateByteField?$AA@
-      demangled: "`string'"
+      demangled: '"CreateByteField"'
       offset: '00001900'
     - name: ??_C@_03OMMB@CCN?$AA@
-      demangled: "`string'"
+      demangled: '"CCN"'
       offset: '00001910'
     - name: ??_C@_0P@KGJE@CreateBitField?$AA@
-      demangled: "`string'"
+      demangled: '"CreateBitField"'
       offset: '00001914'
     - name: ??_C@_04DJCF@NNCB?$AA@
-      demangled: "`string'"
+      demangled: '"NNCB"'
       offset: '00001924'
     - name: ??_C@_09FDOK@BankField?$AA@
-      demangled: "`string'"
+      demangled: '"BankField"'
       offset: 0000192C
     - name: ??_C@_01OAK@N?$AA@
-      demangled: "`string'"
+      demangled: '"N"'
       offset: '00001938'
     - name: ??_C@_05HBEB@Scope?$AA@
-      demangled: "`string'"
+      demangled: '"Scope"'
       offset: 0000193C
     - name: ??_C@_02MMJD@NO?$AA@
-      demangled: "`string'"
+      demangled: '"NO"'
       offset: '00001944'
     - name: ??_C@_04EFNI@Name?$AA@
-      demangled: "`string'"
+      demangled: '"Name"'
       offset: '00001948'
     - name: ??_C@_02GGAE@NN?$AA@
-      demangled: "`string'"
+      demangled: '"NN"'
       offset: '00001950'
     - name: ??_C@_05CFAG@Alias?$AA@
-      demangled: "`string'"
+      demangled: '"Alias"'
       offset: '00001954'
     - name: ??_C@_0CG@FELB@GetNameSpaceObject?3?5invalid?5name@
-      demangled: "`string'"
+      demangled: '"GetNameSpaceObject: invalid name"...'
       offset: 0000195C
     - name: ??_C@_0CI@KBBP@GetNameSpaceObject?3?5object?5?$CFs?5no@
-      demangled: "`string'"
+      demangled: '"GetNameSpaceObject: object %s no"...'
       offset: '00001984'
     - name: ??_C@_0DK@CKPP@CreateNameSpaceObject?3?5fail?5to?5a@
-      demangled: "`string'"
+      demangled: '"CreateNameSpaceObject: fail to a"...'
       offset: 000019AC
     - name: ??_C@_0CJ@HMJD@CreateNameSpaceObject?3?5invalid?5n@
-      demangled: "`string'"
+      demangled: '"CreateNameSpaceObject: invalid n"...'
       offset: '000019E8'
     - name: ??_C@_0DB@OANH@CreateNameSpaceObject?3?5object?5al@
-      demangled: "`string'"
+      demangled: '"CreateNameSpaceObject: object al"...'
       offset: 00001A14
     - name: ??_C@_0CE@CMFP@LoadDDB?3?5invalid?5table?5?$CFs?5at?50x?$CF@
-      demangled: "`string'"
+      demangled: '"LoadDDB: invalid table %s at 0x%"...'
       offset: 00001A48
     - name: ??_C@_0CM@PNBJ@LoadMemDDB?3?5table?5validation?5fai@
-      demangled: "`string'"
+      demangled: '"LoadMemDDB: table validation fai"...'
       offset: 00001A6C
     - name: ??_C@_0DI@IHIF@LoadFieldUnitDDB?3?5definition?5blo@
-      demangled: "`string'"
+      demangled: '"LoadFieldUnitDDB: definition blo"...'
       offset: 00001A98
     - name: ??_C@_0DC@PCAM@LoadFieldUnitDDB?3?5table?5validati@
-      demangled: "`string'"
+      demangled: '"LoadFieldUnitDDB: table validati"...'
       offset: 00001AD0
     - name: ??_C@_0CM@CJCK@LoadFieldUnitDDB?3?5failed?5to?5allo@
-      demangled: "`string'"
+      demangled: '"LoadFieldUnitDDB: failed to allo"...'
       offset: 00001B04
     - name: ??_C@_0DI@GAOF@LoadFieldUnitDDB?3?5failed?5to?5allo@
-      demangled: "`string'"
+      demangled: '"LoadFieldUnitDDB: failed to allo"...'
       offset: 00001B30
     - name: ??_C@_0DH@DMKL@LoadFieldUnitDDB?3?5failed?5to?5allo@
-      demangled: "`string'"
+      demangled: '"LoadFieldUnitDDB: failed to allo"...'
       offset: 00001B68
     - name: ??_C@_0CB@NOFP@AMLI_ERROR?3?5object?5?$CFs?5not?5found?6@
-      demangled: "`string'"
+      demangled: '"AMLI_ERROR: object %s not found\n"...'
       offset: 00001BA0
     - name: ??_C@_05PMFB@SMBus?$AA@
-      demangled: "`string'"
+      demangled: '"SMBus"'
       offset: 00001DD0
     - name: ??_C@_0BD@HKHM@EmbeddedController?$AA@
-      demangled: "`string'"
+      demangled: '"EmbeddedController"'
       offset: 00001DD8
     - name: ??_C@_0P@BJO@PCIConfigSpace?$AA@
-      demangled: "`string'"
+      demangled: '"PCIConfigSpace"'
       offset: 00001DEC
     - name: ??_C@_08IMMN@SystemIO?$AA@
-      demangled: "`string'"
+      demangled: '"SystemIO"'
       offset: 00001DFC
     - name: ??_C@_0N@KLIB@SystemMemory?$AA@
-      demangled: "`string'"
+      demangled: '"SystemMemory"'
       offset: '00001E08'
     - name: ??_C@_0L@LAKI@DataObject?$AA@
-      demangled: "`string'"
+      demangled: '"DataObject"'
       offset: '00001E18'
     - name: ??_C@_09JIMH@DataField?$AA@
-      demangled: "`string'"
+      demangled: '"DataField"'
       offset: '00001E24'
     - name: ??_C@_04EGOH@Data?$AA@
-      demangled: "`string'"
+      demangled: '"Data"'
       offset: '00001E30'
     - name: ??_C@_09JFAJ@DataAlias?$AA@
-      demangled: "`string'"
+      demangled: '"DataAlias"'
       offset: '00001E38'
     - name: ??_C@_08OHKF@ObjAlias?$AA@
-      demangled: "`string'"
+      demangled: '"ObjAlias"'
       offset: '00001E44'
     - name: ??_C@_09MDNI@DDBHandle?$AA@
-      demangled: "`string'"
+      demangled: '"DDBHandle"'
       offset: '00001E50'
     - name: ??_C@_09OLDF@BuffField?$AA@
-      demangled: "`string'"
+      demangled: '"BuffField"'
       offset: 00001E5C
     - name: ??_C@_08OOCC@OpRegion?$AA@
-      demangled: "`string'"
+      demangled: '"OpRegion"'
       offset: '00001E68'
     - name: ??_C@_09HDGI@FieldUnit?$AA@
-      demangled: "`string'"
+      demangled: '"FieldUnit"'
       offset: '00001E74'
     - name: ??_C@_06PINC@String?$AA@
-      demangled: "`string'"
+      demangled: '"String"'
       offset: '00001E80'
     - name: ??_C@_07HDOI@Integer?$AA@
-      demangled: "`string'"
+      demangled: '"Integer"'
       offset: '00001E88'
     - name: ??_C@_0CN@CBBK@NewObjOwner?3?5failed?5to?5allocate?5@
-      demangled: "`string'"
+      demangled: '"NewObjOwner: failed to allocate "...'
       offset: '00001E90'
     - name: ??_C@_0FN@LEEA@GetFieldUnitRegionObj?3?5base?5obje@
-      demangled: "`string'"
+      demangled: '"GetFieldUnitRegionObj: base obje"...'
       offset: 00001EC0
     - name: ??_C@_0EC@JHBK@GetFieldUnitRegionObj?3?5unknown?5f@
-      demangled: "`string'"
+      demangled: '"GetFieldUnitRegionObj: unknown f"...'
       offset: 00001F20
     - name: ??_C@_0DC@MBKD@DupObjData?3?5failed?5to?5allocate?5d@
-      demangled: "`string'"
+      demangled: '"DupObjData: failed to allocate d"...'
       offset: 00001F64
     - name: ??_C@_0DE@EEBJ@CopyObjBuffer?3?5invalid?5source?5ob@
-      demangled: "`string'"
+      demangled: '"CopyObjBuffer: invalid source ob"...'
       offset: 00001F98
     - name: ??_C@_0CJ@CJFN@AcquireGL?3?5failed?5to?5acquire?5glo@
-      demangled: "`string'"
+      demangled: '"AcquireGL: failed to acquire glo"...'
       offset: 00001FCC
     - name: ??_C@_0DC@CFHJ@MapUnmapPhysMem?3?5IRQL?5is?5not?5at?5@
-      demangled: "`string'"
+      demangled: '"MapUnmapPhysMem: IRQL is not at "...'
       offset: 00001FF8
     - name: ??_C@_0DB@JDIN@MapUnmapPhysMem?3?5failed?5to?5alloc@
-      demangled: "`string'"
+      demangled: '"MapUnmapPhysMem: failed to alloc"...'
       offset: 0000202C
     - name: ??_C@_0DN@MAMK@ValidateTarget?3?5unexpected?5targe@
-      demangled: "`string'"
+      demangled: '"ValidateTarget: unexpected targe"...'
       offset: '00002060'
     - name: ??_C@_0DE@ILF@ValidateTarget?3?5target?5is?5not?5a?5@
-      demangled: "`string'"
+      demangled: '"ValidateTarget: target is not a "...'
       offset: 000020A0
     - name: ??_C@_0DP@GAME@ValidateArgTypes?3?5expected?5Arg?$CFd@
-      demangled: "`string'"
+      demangled: '"ValidateArgTypes: expected Arg%d"...'
       offset: 000020D4
     - name: ??_C@_0DO@IEEN@ValidateArgTypes?3?5expected?5Arg?$CFd@
-      demangled: "`string'"
+      demangled: '"ValidateArgTypes: expected Arg%d"...'
       offset: '00002114'
     - name: ??_C@_0EA@IHMB@ValidateArgTypes?3?5expected?5Arg?$CFd@
-      demangled: "`string'"
+      demangled: '"ValidateArgTypes: expected Arg%d"...'
       offset: '00002154'
     - name: ??_C@_0DN@IJEL@ValidateArgTypes?3?5expected?5Arg?$CFd@
-      demangled: "`string'"
+      demangled: '"ValidateArgTypes: expected Arg%d"...'
       offset: '00002194'
     - name: ??_C@_0DF@FJE@ValidateArgTypes?3?5internal?5error@
-      demangled: "`string'"
+      demangled: '"ValidateArgTypes: internal error"...'
       offset: 000021D4
     - name: ??_C@_0DO@NNME@ValidateArgTypes?3?5expected?5Arg?$CFd@
-      demangled: "`string'"
+      demangled: '"ValidateArgTypes: expected Arg%d"...'
       offset: 0000220C
     - name: ??_C@_0EA@PLOE@ValidateArgTypes?3?5expected?5Arg?$CFd@
-      demangled: "`string'"
+      demangled: '"ValidateArgTypes: expected Arg%d"...'
       offset: 0000224C
     - name: ??_C@_0DN@KLDI@ValidateArgTypes?3?5expected?5Arg?$CFd@
-      demangled: "`string'"
+      demangled: '"ValidateArgTypes: expected Arg%d"...'
       offset: 0000228C
     - name: ??_C@_0DP@KDHO@ValidateArgTypes?3?5expected?5Arg?$CFd@
-      demangled: "`string'"
+      demangled: '"ValidateArgTypes: expected Arg%d"...'
       offset: 000022CC
     - name: ??_C@_0ED@BFMO@ValidateArgTypes?3?5expected?5Arg?$CFd@
-      demangled: "`string'"
+      demangled: '"ValidateArgTypes: expected Arg%d"...'
       offset: 0000230C
     - name: ??_C@_0EA@MLLO@ValidateArgTypes?3?5expected?5Arg?$CFd@
-      demangled: "`string'"
+      demangled: '"ValidateArgTypes: expected Arg%d"...'
       offset: '00002350'
     - name: ??_C@_0CN@LCEG@RegEventHandler?3?5event?5handler?5a@
-      demangled: "`string'"
+      demangled: '"RegEventHandler: event handler a"...'
       offset: '00002390'
     - name: ??_C@_0DP@JOGB@RegOpcodeHandler?3?5opcode?5or?5opco@
-      demangled: "`string'"
+      demangled: '"RegOpcodeHandler: opcode or opco"...'
       offset: 000023C0
     - name: ??_C@_0EK@NPCH@RegOpcodeHandler?3?5either?5invalid@
-      demangled: "`string'"
+      demangled: '"RegOpcodeHandler: either invalid"...'
       offset: '00002400'
     - name: ??_C@_0CH@MEAL@RegRSAccess?3?5illegal?5region?5spac@
-      demangled: "`string'"
+      demangled: '"RegRSAccess: illegal region spac"...'
       offset: 0000244C
     - name: ??_C@_0EC@IMOI@RegRSAccess?3?5CookAccess?5for?5Regi@
-      demangled: "`string'"
+      demangled: '"RegRSAccess: CookAccess for Regi"...'
       offset: '00002474'
     - name: ??_C@_0EB@GHNF@RegRSAccess?3?5RawAccess?5for?5Regio@
-      demangled: "`string'"
+      demangled: '"RegRSAccess: RawAccess for Regio"...'
       offset: 000024B8
     - name: ??_C@_0DC@BHCN@RegRSAccess?3?5failed?5to?5allocate?5@
-      demangled: "`string'"
+      demangled: '"RegRSAccess: failed to allocate "...'
       offset: 000024FC
     - name: ??_C@_01PJCK@?4?$AA@
-      demangled: "`string'"
+      demangled: '"."'
       offset: '00002530'
     - name: ??_C@_04OHEC@MSFT?$AA@
-      demangled: "`string'"
+      demangled: '"MSFT"'
       offset: '00002534'
     - name: ??_C@_0CD@IKLC@NewObjData?3?5invalid?5object?5type?5@
-      demangled: "`string'"
+      demangled: '"NewObjData: invalid object type "...'
       offset: 0000253C
     - name: ??_C@_0CE@FKGC@FreeObjData?3?5invalid?5object?5type@
-      demangled: "`string'"
+      demangled: '"FreeObjData: invalid object type"...'
       offset: '00002560'
     - name: ??_C@_01KPOD@?$DN?$AA@
-      demangled: "`string'"
+      demangled: '"="'
       offset: '00002584'
     - name: ??_C@_0DF@CNJF@WriteObject?3?5unexpected?5target?5o@
-      demangled: "`string'"
+      demangled: '"WriteObject: unexpected target o"...'
       offset: '00002588'
     - name: ??_C@_0EA@KBMF@ReadField?3?5invalid?5access?5size?5f@
-      demangled: "`string'"
+      demangled: '"ReadField: invalid access size f"...'
       offset: 000025C0
     - name: ??_C@_0DG@CBNI@ReadField?3?5failed?5to?5allocate?5ta@
-      demangled: "`string'"
+      demangled: '"ReadField: failed to allocate ta"...'
       offset: '00002600'
     - name: ??_C@_0CO@PFLI@ReadField?3?5invalid?5target?5data?5t@
-      demangled: "`string'"
+      demangled: '"ReadField: invalid target data t"...'
       offset: '00002638'
     - name: ??_C@_0EB@CHPJ@WriteField?3?5invalid?5access?5size?5@
-      demangled: "`string'"
+      demangled: '"WriteField: invalid access size "...'
       offset: '00002668'
     - name: ??_C@_0DA@ENHA@WriteField?3?5invalid?5source?5data?5@
-      demangled: "`string'"
+      demangled: '"WriteField: invalid source data "...'
       offset: 000026AC
     - name: ??_C@_0CO@CGNH@RawFieldAccess?3?5no?5handler?5for?5R@
-      demangled: "`string'"
+      demangled: '"RawFieldAccess: no handler for R"...'
       offset: 000026DC
     - name: ??_C@_0DJ@EHEF@RawFieldAccess?3?5RegionSpace?5?$CFx?5h@
-      demangled: "`string'"
+      demangled: '"RawFieldAccess: RegionSpace %x h"...'
       offset: 0000270C
     - name: ??_C@_0DE@KDPE@RawFieldAccess?3?5invalid?5field?5pa@
-      demangled: "`string'"
+      demangled: '"RawFieldAccess: invalid field pa"...'
       offset: '00002748'
     - name: ??_C@_0CP@FHFD@AccessBaseField?3?5no?5handler?5for?5@
-      demangled: "`string'"
+      demangled: '"AccessBaseField: no handler for "...'
       offset: 0000277C
     - name: ??_C@_0DP@DIHD@AccessBaseField?3?5RegionSpace?5?$CFx?5@
-      demangled: "`string'"
+      demangled: '"AccessBaseField: RegionSpace %x "...'
       offset: 000027AC
     - name: ??_C@_0DP@OEPJ@WriteCookAccess?3?5RegionSpace?5?$CFx?5@
-      demangled: "`string'"
+      demangled: '"WriteCookAccess: RegionSpace %x "...'
       offset: 000027EC
     - name: ??_C@_0EM@LIKD@ReadBuffField?3?5offset?5exceeding?5@
-      demangled: "`string'"
+      demangled: '"ReadBuffField: offset exceeding "...'
       offset: 0000282C
     - name: ??_C@_0FA@OBMK@WriteBuffField?3?5offset?5exceeding@
-      demangled: "`string'"
+      demangled: '"WriteBuffField: offset exceeding"...'
       offset: '00002878'
     - name: ??_C@_0BG@OLJD@DataAlias?$CI?$CFs?3Link?$DN?$CFx?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"DataAlias(%s:Link=%x)"'
       offset: 000028C8
     - name: ??_C@_0DB@LGC@BankField?$CI?$CFs?3Base?$DN?$CFs?0BankName?$DN?$CFs@
-      demangled: "`string'"
+      demangled: '"BankField(%s:Base=%s,BankName=%s"...'
       offset: '000028E0'
     - name: ??_C@_0BC@PJME@Field?$CI?$CFs?3Base?$DN?$CFs?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"Field(%s:Base=%s)"'
       offset: '00002914'
     - name: ??_C@_0CI@CLOA@IndexField?$CI?$CFs?3IndexName?$DN?$CFs?0DataN@
-      demangled: "`string'"
+      demangled: '"IndexField(%s:IndexName=%s,DataN"...'
       offset: '00002928'
     - name: ??_C@_0CB@BPIC@ObjectAlias?$CI?$CFs?3Alias?$DN?$CFs?0Type?$DN?$CFs?$CJ@
-      demangled: "`string'"
+      demangled: '"ObjectAlias(%s:Alias=%s,Type=%s)"...'
       offset: '00002950'
     - name: ??_C@_0BI@BPFM@DDBHandle?$CI?$CFs?3Handle?$DN?$CFx?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"DDBHandle(%s:Handle=%x)"'
       offset: '00002974'
     - name: ??_C@_0FH@GGHN@BufferField?$CI?$CFs?3Ptr?$DN?$CFx?0Len?$DN?$CFd?0Byt@
-      demangled: "`string'"
+      demangled: '"BufferField(%s:Ptr=%x,Len=%d,Byt"...'
       offset: 0000298C
     - name: ??_C@_0BA@HMBE@ThermalZone?$CI?$CFs?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"ThermalZone(%s)"'
       offset: '000029E4'
     - name: ??_C@_0CP@CEOG@Processor?$CI?$CFs?3ApicID?$DN0x?$CFx?0PBlk?$DN0x@
-      demangled: "`string'"
+      demangled: '"Processor(%s:ApicID=0x%x,PBlk=0x"...'
       offset: 000029F4
     - name: ??_C@_0CP@FKNH@PowerResource?$CI?$CFs?3SystemLevel?$DN0x?$CF@
-      demangled: "`string'"
+      demangled: '"PowerResource(%s:SystemLevel=0x%"...'
       offset: 00002A24
     - name: ??_C@_0CP@FHDM@OpRegion?$CI?$CFs?3RegionSpace?$DN?$CFs?0Offse@
-      demangled: "`string'"
+      demangled: '"OpRegion(%s:RegionSpace=%s,Offse"...'
       offset: 00002A54
     - name: ??_C@_0BF@PEKL@Mutex?$CI?$CFs?3pKMutex?$DN?$CFx?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"Mutex(%s:pKMutex=%x)"'
       offset: 00002A84
     - name: ??_C@_0CJ@NPE@Method?$CI?$CFs?3Flags?$DN0x?$CFx?0CodeBuff?$DN?$CFx@
-      demangled: "`string'"
+      demangled: '"Method(%s:Flags=0x%x,CodeBuff=%x"...'
       offset: 00002A9C
     - name: ??_C@_0BF@IAD@Event?$CI?$CFs?3pKEvent?$DN?$CFx?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"Event(%s:pKEvent=%x)"'
       offset: 00002AC8
     - name: ??_C@_0L@NLOG@Device?$CI?$CFs?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"Device(%s)"'
       offset: 00002AE0
     - name: ??_C@_0FG@HAOE@FieldUnit?$CI?$CFs?3FieldParent?$DN?$CFx?0Byte@
-      demangled: "`string'"
+      demangled: '"FieldUnit(%s:FieldParent=%x,Byte"...'
       offset: 00002AEC
     - name: ??_C@_0BM@DGJN@Package?$CI?$CFs?3NumElements?$DN?$CFd?$CJ?$HL?$AA@
-      demangled: "`string'"
+      demangled: '"Package(%s:NumElements=%d){"'
       offset: 00002B44
     - name: ??_C@_0BJ@DIJM@Buffer?$CI?$CFs?3Ptr?$DN?$CFx?0Len?$DN?$CFd?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"Buffer(%s:Ptr=%x,Len=%d)"'
       offset: 00002B60
     - name: ??_C@_0BE@DBNO@String?$CI?$CFs?3Str?$DN?$CC?$CFs?$CC?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"String(%s:Str=\"%s\")"'
       offset: 00002B7C
     - name: ??_C@_0BN@NNPP@Integer?$CI?$CFs?3Value?$DN0x?$CF08x?$FL?$CFd?$FN?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"Integer(%s:Value=0x%08x[%d])"'
       offset: 00002B90
     - name: ??_C@_0M@FPFD@Unknown?$CI?$CFs?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"Unknown(%s)"'
       offset: 00002BB0
     - name: ??_C@_0EE@HGKG@SyncEvalObject?3?5object?5?$CFs?5being?5@
-      demangled: "`string'"
+      demangled: '"SyncEvalObject: object %s being "...'
       offset: 00002BBC
     - name: ??_C@_0DG@BFEJ@SyncEvalObject?3?5object?5synchroni@
-      demangled: "`string'"
+      demangled: '"SyncEvalObject: object synchroni"...'
       offset: 00002C00
     - name: ??_C@_0DM@BONF@SyncEvalObject?3?5cannot?5nest?5a?5Sy@
-      demangled: "`string'"
+      demangled: '"SyncEvalObject: cannot nest a Sy"...'
       offset: 00002C38
     - name: ??_C@_0BB@IBNF@?6AMLI?3?5?$CF08x?3?5?$CFs?$CI?$AA@
-      demangled: "`string'"
+      demangled: '"\nAMLI: %08x: %s("'
       offset: 00002C74
     - name: ??_C@_0EH@FFLB@AsyncEvalObject?3?5incorrect?5numbe@
-      demangled: "`string'"
+      demangled: '"AsyncEvalObject: incorrect numbe"...'
       offset: 00002C88
     - name: ??_C@_0DC@FBIJ@NestAsyncEvalObject?3?5pns?$DN?$CF08x?5No@
-      demangled: "`string'"
+      demangled: '"NestAsyncEvalObject: pns=%08x No"...'
       offset: 00002CD0
     - name: ??_C@_0L@LFBG@?6AMLI?3?5?$CFs?$CI?$AA@
-      demangled: "`string'"
+      demangled: '"\nAMLI: %s("'
       offset: 00002D04
     - name: ??_C@_0EL@COAP@NestAsyncEvalObject?3?5incorrect?5n@
-      demangled: "`string'"
+      demangled: '"NestAsyncEvalObject: incorrect n"...'
       offset: 00002D10
     - name: ??_C@_0BH@GOIK@?6AMLI?3?5EvalObject?$CI?$CFs?$CJ?$DN?$AA@
-      demangled: "`string'"
+      demangled: '"\nAMLI: EvalObject(%s)="'
       offset: 00002D5C
     - name: ??_C@_0DF@ODBK@AcquireASLMutex?3?5failed?5to?5alloc@
-      demangled: "`string'"
+      demangled: '"AcquireASLMutex: failed to alloc"...'
       offset: 00002D74
     - name: ??_C@_0CE@LEDB@AcquireASLMutex?3?5invalid?5sync?5le@
-      demangled: "`string'"
+      demangled: '"AcquireASLMutex: invalid sync le"...'
       offset: 00002DAC
     - name: ??_C@_0DF@FGMK@ReleaseASLMutex?3?5Mutex?5is?5owned?5@
-      demangled: "`string'"
+      demangled: '"ReleaseASLMutex: Mutex is owned "...'
       offset: 00002DD0
     - name: ??_C@_0ED@FEII@ReleaseASLMutex?3?5invalid?5sync?5le@
-      demangled: "`string'"
+      demangled: '"ReleaseASLMutex: invalid sync le"...'
       offset: '00002E08'
     - name: ??_C@_0CE@BJPO@ReleaseASLMutex?3?5Mutex?5is?5not?5ow@
-      demangled: "`string'"
+      demangled: '"ReleaseASLMutex: Mutex is not ow"...'
       offset: 00002E4C
     - name: ??_C@_0DI@LGMB@RestartContext?3?5failed?5to?5alloca@
-      demangled: "`string'"
+      demangled: '"RestartContext: failed to alloca"...'
       offset: '00002E70'
     - name: ??_C@_0CP@DLHN@BankField?3?5failed?5to?5allocate?5Ba@
-      demangled: "`string'"
+      demangled: '"BankField: failed to allocate Ba"...'
       offset: 00002EA8
     - name: ??_C@_0CC@NBMG@BankField?3?5?$CFs?5is?5not?5a?5field?5uni@
-      demangled: "`string'"
+      demangled: '"BankField: %s is not a field uni"...'
       offset: 00002ED8
     - name: ??_C@_0CJ@POID@BankField?3?5?$CFs?5is?5not?5an?5operatio@
-      demangled: "`string'"
+      demangled: '"BankField: %s is not an operatio"...'
       offset: 00002EFC
     - name: ??_C@_0DC@CKEJ@CreateXField?3?5failed?5to?5allocate@
-      demangled: "`string'"
+      demangled: '"CreateXField: failed to allocate"...'
       offset: 00002F28
     - name: ??_C@_02NMBP@BI?$AA@
-      demangled: "`string'"
+      demangled: '"BI"'
       offset: 00002F5C
     - name: ??_C@_0DG@CIAA@CreateField?3?5NoBits?5must?5be?5eval@
-      demangled: "`string'"
+      demangled: '"CreateField: NoBits must be eval"...'
       offset: 00002F60
     - name: ??_C@_0CL@IONH@InitEvent?3?5failed?5to?5allocate?5Ev@
-      demangled: "`string'"
+      demangled: '"InitEvent: failed to allocate Ev"...'
       offset: 00002F98
     - name: ??_C@_0CH@MPLD@Field?3?5failed?5to?5allocate?5Field?5@
-      demangled: "`string'"
+      demangled: '"Field: failed to allocate Field "...'
       offset: 00002FC4
     - name: ??_C@_0CF@OMG@Field?3?5?$CFs?5is?5not?5an?5operation?5re@
-      demangled: "`string'"
+      demangled: '"Field: %s is not an operation re"...'
       offset: 00002FEC
     - name: ??_C@_0DB@GJIC@IndexField?3?5failed?5to?5allocate?5I@
-      demangled: "`string'"
+      demangled: '"IndexField: failed to allocate I"...'
       offset: '00003014'
     - name: ??_C@_0CK@KBBN@IndexField?3?5Data?5?$CI?$CFs?$CJ?5is?5not?5a?5f@
-      demangled: "`string'"
+      demangled: '"IndexField: Data (%s) is not a f"...'
       offset: '00003048'
     - name: ??_C@_0CL@BMNL@IndexField?3?5Index?5?$CI?$CFs?$CJ?5is?5not?5a?5@
-      demangled: "`string'"
+      demangled: '"IndexField: Index (%s) is not a "...'
       offset: '00003074'
     - name: ??_C@_0CJ@EHFJ@Method?3?5failed?5to?5allocate?5metho@
-      demangled: "`string'"
+      demangled: '"Method: failed to allocate metho"...'
       offset: 000030A0
     - name: ??_C@_0CL@DBK@InitMutex?3?5failed?5to?5allocate?5Mu@
-      demangled: "`string'"
+      demangled: '"InitMutex: failed to allocate Mu"...'
       offset: 000030CC
     - name: ??_C@_0CN@KCCK@OpRegion?3?5failed?5to?5allocate?5OpR@
-      demangled: "`string'"
+      demangled: '"OpRegion: failed to allocate OpR"...'
       offset: 000030F8
     - name: ??_C@_0CN@PNMB@PowerRes?3?5failed?5to?5allocate?5Pow@
-      demangled: "`string'"
+      demangled: '"PowerRes: failed to allocate Pow"...'
       offset: '00003128'
     - name: ??_C@_0CP@DCFJ@Processor?3?5failed?5to?5allocate?5pr@
-      demangled: "`string'"
+      demangled: '"Processor: failed to allocate pr"...'
       offset: '00003158'
     - name: ??_C@_0CL@CMAC@NewHeap?3?5failed?5to?5allocate?5new?5@
-      demangled: "`string'"
+      demangled: '"NewHeap: failed to allocate new "...'
       offset: '00003188'
     - name: ??_C@_0DB@OEFK@NewContext?3?5failed?5to?5allocate?5n@
-      demangled: "`string'"
+      demangled: '"NewContext: failed to allocate n"...'
       offset: 000031B4
     - name: ??_C@_0CC@LGNO@PushFrame?3?5stack?5ran?5out?5of?5spac@
-      demangled: "`string'"
+      demangled: '"PushFrame: stack ran out of spac"...'
       offset: '000031E8'
     - name: ??_C@_0CO@HPEL@PushCall?3?5failed?5to?5allocate?5arg@
-      demangled: "`string'"
+      demangled: '"PushCall: failed to allocate arg"...'
       offset: 0000320C
     - name: ??_C@_0CO@KMLJ@PushTerm?3?5failed?5to?5allocate?5arg@
-      demangled: "`string'"
+      demangled: '"PushTerm: failed to allocate arg"...'
       offset: 0000323C
     - name: ??_C@_0DB@DGJA@Buffer?3?5failed?5to?5allocate?5data?5@
-      demangled: "`string'"
+      demangled: '"Buffer: failed to allocate data "...'
       offset: 0000326C
     - name: ??_C@_0CG@CNOB@Buffer?3?5invalid?5buffer?5size?5?$CIsiz@
-      demangled: "`string'"
+      demangled: '"Buffer: invalid buffer size (siz"...'
       offset: 000032A0
     - name: ??_C@_0DI@EOGC@Buffer?3?5too?5many?5initializers?5?$CIb@
-      demangled: "`string'"
+      demangled: '"Buffer: too many initializers (b"...'
       offset: 000032C8
     - name: ??_C@_01FLOP@I?$AA@
-      demangled: "`string'"
+      demangled: '"I"'
       offset: '00003300'
     - name: ??_C@_0DF@PODB@Package?3?5failed?5to?5allocate?5pack@
-      demangled: "`string'"
+      demangled: '"Package: failed to allocate pack"...'
       offset: '00003304'
     - name: ??_C@_0CO@CKOB@ParsePackage?3?5invalid?5opcode?50x?$CF@
-      demangled: "`string'"
+      demangled: '"ParsePackage: invalid opcode 0x%"...'
       offset: 0000333C
     - name: ??_C@_0DD@OAOB@Acquire?3?5object?5is?5not?5mutex?5typ@
-      demangled: "`string'"
+      demangled: '"Acquire: object is not mutex typ"...'
       offset: 0000336C
     - name: ??_C@_02CFEL@OI?$AA@
-      demangled: "`string'"
+      demangled: '"OI"'
       offset: 000033A0
     - name: ??_C@_0CJ@DGPB@Concat?3?5failed?5to?5allocate?5targe@
-      demangled: "`string'"
+      demangled: '"Concat: failed to allocate targe"...'
       offset: 000033A4
     - name: ??_C@_0EE@OPCM@Concat?3?5Source1?5and?5Source2?5are?5@
-      demangled: "`string'"
+      demangled: '"Concat: Source1 and Source2 are "...'
       offset: 000033D0
     - name: ??_C@_02PPJD@DD?$AA@
-      demangled: "`string'"
+      demangled: '"DD"'
       offset: '00003414'
     - name: ??_C@_01FJJO@R?$AA@
-      demangled: "`string'"
+      demangled: '"R"'
       offset: '00003418'
     - name: ??_C@_02FCLE@II?$AA@
-      demangled: "`string'"
+      demangled: '"II"'
       offset: 0000341C
     - name: ??_C@_0DL@IADP@ProcessIncDec?3?5object?5is?5not?5int@
-      demangled: "`string'"
+      demangled: '"ProcessIncDec: object is not int"...'
       offset: '00003420'
     - name: ??_C@_0CM@CHAE@Index?3?5index?5out?9of?9bound?5?$CIindex@
-      demangled: "`string'"
+      demangled: '"Index: index out-of-bound (index"...'
       offset: 0000345C
     - name: ??_C@_0CO@MFOH@Index?3?5failed?5to?5allocate?5buffer@
-      demangled: "`string'"
+      demangled: '"Index: failed to allocate buffer"...'
       offset: '00003488'
     - name: ??_C@_02MKLF@CI?$AA@
-      demangled: "`string'"
+      demangled: '"CI"'
       offset: 000034B8
     - name: ??_C@_0DP@HANL@SizeOf?3?5expected?5argument?5type?5s@
-      demangled: "`string'"
+      demangled: '"SizeOf: expected argument type s"...'
       offset: 000034BC
     - name: ??_C@_0DA@GFLG@Wait?3?5object?5is?5not?5event?5type?5?$CI@
-      demangled: "`string'"
+      demangled: '"Wait: object is not event type ("...'
       offset: 000034FC
     - name: ??_C@_06NEKK@PIIIII?$AA@
-      demangled: "`string'"
+      demangled: '"PIIIII"'
       offset: 0000352C
     - name: ??_C@_0BJ@ONCH@?6Hit?5a?5code?5breakpoint?4?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nHit a code breakpoint.\n"'
       offset: '00003534'
     - name: ??_C@_03BFLN@III?$AA@
-      demangled: "`string'"
+      demangled: '"III"'
       offset: '00003550'
     - name: ??_C@_0DB@CJME@IfElse?3?5Else?5statement?5found?5wit@
-      demangled: "`string'"
+      demangled: '"IfElse: Else statement found wit"...'
       offset: '00003554'
     - name: ??_C@_0DE@FOHF@Load?3?5object?5is?5not?5a?5memory?5OpR@
-      demangled: "`string'"
+      demangled: '"Load: object is not a memory OpR"...'
       offset: '00003588'
     - name: ??_C@_0DO@KIDP@Load?3?5failed?5to?5find?5the?5memory?5@
-      demangled: "`string'"
+      demangled: '"Load: failed to find the memory "...'
       offset: 000035BC
     - name: ??_C@_01NCG@Z?$AA@
-      demangled: "`string'"
+      demangled: '"Z"'
       offset: 000035FC
     - name: ??_C@_0CG@JBPE@Notify?3?5Notify?5handler?5failed?5?$CIr@
-      demangled: "`string'"
+      demangled: '"Notify: Notify handler failed (r"...'
       offset: '00003600'
     - name: ??_C@_0ED@LKCB@Notify?3?5Notification?5value?5is?5gr@
-      demangled: "`string'"
+      demangled: '"Notify: Notification value is gr"...'
       offset: '00003628'
     - name: ??_C@_0DC@PAIB@Signal?3?5object?5is?5not?5event?5type@
-      demangled: "`string'"
+      demangled: '"Signal: object is not event type"...'
       offset: 0000366C
     - name: ??_C@_0DB@KJNJ@Reset?3?5object?5is?5not?5event?5type?5@
-      demangled: "`string'"
+      demangled: '"Reset: object is not event type "...'
       offset: 000036A0
     - name: ??_C@_0CP@OKBC@Release?3?5failed?5to?5release?5globa@
-      demangled: "`string'"
+      demangled: '"Release: failed to release globa"...'
       offset: 000036D4
     - name: ??_C@_0DD@GOGF@Release?3?5object?5is?5not?5mutex?5typ@
-      demangled: "`string'"
+      demangled: '"Release: object is not mutex typ"...'
       offset: '00003704'
     - name: ??_C@_0DB@IBHM@Unload?3?5object?5is?5not?5DDBHandle?5@
-      demangled: "`string'"
+      demangled: '"Unload: object is not DDBHandle "...'
       offset: '00003738'
     - name: ??_C@_01KEJN@O?$AA@
-      demangled: "`string'"
+      demangled: '"O"'
       offset: 0000376C
     - name: ??_C@_0DL@HAPF@Stall?3?5stall?5value?5is?5greater?5th@
-      demangled: "`string'"
+      demangled: '"Stall: stall value is greater th"...'
       offset: '00003770'
     - name: ??_C@_0DL@JFAF@Sleep?3?5sleep?5value?5is?5greater?5th@
-      demangled: "`string'"
+      demangled: '"Sleep: sleep value is greater th"...'
       offset: 000037AC
     - name: ??_C@_0DE@NFGO@ParseAcquire?3?5failed?5to?5release?5@
-      demangled: "`string'"
+      demangled: '"ParseAcquire: failed to release "...'
       offset: '000037E8'
     - name: ??_C@_0CO@PLOG@ParseOpcode?3?5debug?5object?5cannot@
-      demangled: "`string'"
+      demangled: '"ParseOpcode: debug object cannot"...'
       offset: 0000381C
     - name: ??_C@_0CN@BMA@ParseOpcode?3?5invalid?5opcode?50x?$CF0@
-      demangled: "`string'"
+      demangled: '"ParseOpcode: invalid opcode 0x%0"...'
       offset: 0000384C
     - name: ??_C@_0BF@FDKL@?6Hit?5Breakpoint?5?$CFd?4?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nHit Breakpoint %d.\n"'
       offset: 0000387C
     - name: ??_C@_06GEBG@Arg?$CFd?$DN?$AA@
-      demangled: "`string'"
+      demangled: '"Arg%d="'
       offset: '00003894'
     - name: ??_C@_0CC@HKOE@ParseArgObj?3?5Arg?$CFd?5does?5not?5exis@
-      demangled: "`string'"
+      demangled: '"ParseArgObj: Arg%d does not exis"...'
       offset: 0000389C
     - name: ??_C@_08PMPM@Local?$CFd?$DN?$AA@
-      demangled: "`string'"
+      demangled: '"Local%d="'
       offset: 000038C0
     - name: ??_C@_0DA@OPCI@ParseAndGetNameSpaceObject?3?5obje@
-      demangled: "`string'"
+      demangled: '"ParseAndGetNameSpaceObject: obje"...'
       offset: 000038CC
     - name: ??_C@_0CJ@PGNN@ParseArgs?3?5unexpected?5arguemnt?5t@
-      demangled: "`string'"
+      demangled: '"ParseArgs: unexpected arguemnt t"...'
       offset: 000038FC
     - name: ??_C@_0CL@MPJ@ParseSuperName?3?5invalid?5SuperNam@
-      demangled: "`string'"
+      demangled: '"ParseSuperName: invalid SuperNam"...'
       offset: '00003928'
     - name: ??_C@_07BPEF@Local?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '"Local%d"'
       offset: '00003954'
     - name: ??_C@_0CF@HOCA@ParseSuperName?3?5Arg?$CFd?5does?5not?5e@
-      demangled: "`string'"
+      demangled: '"ParseSuperName: Arg%d does not e"...'
       offset: 0000395C
     - name: ??_C@_05PFAD@Arg?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '"Arg%d"'
       offset: '00003984'
     - name: ??_C@_0DF@MAGD@ParseSuperName?3?5invalid?5SuperNam@
-      demangled: "`string'"
+      demangled: '"ParseSuperName: invalid SuperNam"...'
       offset: 0000398C
     - name: ??_C@_0CN@BNCM@ParseIntObj?3?5invalid?5opcode?50x?$CF0@
-      demangled: "`string'"
+      demangled: '"ParseIntObj: invalid opcode 0x%0"...'
       offset: 000039C4
     - name: ??_C@_0CN@PDDA@ParseStrObj?3?5invalid?5opcode?50x?$CF0@
-      demangled: "`string'"
+      demangled: '"ParseStrObj: invalid opcode 0x%0"...'
       offset: 000039F4
     - name: ??_C@_0CO@EABK@ParseString?3?5failed?5to?5allocate?5@
-      demangled: "`string'"
+      demangled: '"ParseString: failed to allocate "...'
       offset: 00003A24
     - name: ??_C@_0CO@JAAN@ParseObjName?3?5invalid?5opcode?50x?$CF@
-      demangled: "`string'"
+      demangled: '"ParseObjName: invalid opcode 0x%"...'
       offset: 00003A54
     - name: ??_C@_0DC@LOG@ParseObjName?3?5failed?5to?5allocate@
-      demangled: "`string'"
+      demangled: '"ParseObjName: failed to allocate"...'
       offset: 00003A84
     - name: ??_C@_0CA@JJHN@ParseName?3?5name?5too?5long?5?9?5?$CC?$CFs?$CC?$AA@
-      demangled: "`string'"
+      demangled: '"ParseName: name too long - \"%s\""'
       offset: 00003AB8
     - name: ??_C@_01KHHK@?$FO?$AA@
-      demangled: "`string'"
+      demangled: '"^"'
       offset: 00003AD8
     - name: ??_C@_0CC@JHOP@ParseNameTail?3?5name?5too?5long?5?9?5?$CF@
-      demangled: "`string'"
+      demangled: '"ParseNameTail: name too long - %"...'
       offset: 00003ADC
     - name: ??_C@_0CP@BNDK@ParseInteger?3?5invalid?5numeric?5da@
-      demangled: "`string'"
+      demangled: '"ParseInteger: invalid numeric da"...'
       offset: 00003B00
     - name: ??_C@_0DA@HGBO@ParseField?3?5failed?5to?5allocate?5F@
-      demangled: "`string'"
+      demangled: '"ParseField: failed to allocate F"...'
       offset: 00003B30
     - name: ??_C@_05LOBO@?$CFs?0?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '"%s,%d"'
       offset: 00003B60
     - name: ??_C@_03FOBE@?0?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '",%d"'
       offset: 00003B68
     - name: ??_C@_0BE@MAOH@AccessAs?$CI0x?$CFx?00x?$CFx?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"AccessAs(0x%x,0x%x)"'
       offset: 00003B6C
     - name: ??_C@_0EM@MFCP@ParseFieldList?3?5offset?5exceeds?5O@
-      demangled: "`string'"
+      demangled: '"ParseFieldList: offset exceeds O"...'
       offset: 00003B80
   - num: '16'
     name: INIT

@@ -1,10 +1,9 @@
 filename: windows/system/ksclockf.ax
-#TODO: bring up more details from symdeb
 binary: KSCLOCKF
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree: []
   segments:
   - num: '1'
     name: .text
@@ -12,18 +11,18 @@ appearances:
     symbols:
     - name: ?CreateInstance@CKsClockF@@SGPAVCUnknown@@PAUIUnknown@@PAJ@Z
       processed: 'public: static class CUnknown * __stdcall CKsClockF::CreateInstance(struct
-        IUnknown *,long *)'
+        IUnknown *, long *)'
       offset: '00000000'
     - name: ??0CKsClockF@@QAE@PAUIUnknown@@PADPAJ@Z
-      processed: 'public: __thiscall CKsClockF::CKsClockF(struct IUnknown *,char *,long
-        *)'
+      processed: 'public: __thiscall CKsClockF::CKsClockF(struct IUnknown *, char
+        *, long *)'
       offset: '00000070'
     - name: ??1CUnknown@@UAE@XZ
       processed: 'public: virtual __thiscall CUnknown::~CUnknown(void)'
       offset: '00000120'
     - name: ?QueryInterface@CKsClockF@@UAGJABU_GUID@@PAPAX@Z
       processed: 'public: virtual long __stdcall CKsClockF::QueryInterface(struct
-        _GUID const &,void * *)'
+        _GUID const &, void **)'
       offset: '00000130'
     - name: ?AddRef@CKsClockF@@UAGKXZ
       processed: 'public: virtual unsigned long __stdcall CKsClockF::AddRef(void)'
@@ -32,11 +31,11 @@ appearances:
       processed: 'public: virtual unsigned long __stdcall CKsClockF::Release(void)'
       offset: '00000160'
     - name: ??_GCKsClockF@@UAEPAXI@Z
-      processed: "public: virtual void * __thiscall CKsClockF::`scalar deleting destructor'(unsigned
+      processed: "public: virtual void * __thiscall CKsClockF::`scalar deleting dtor'(unsigned
         int)"
       offset: '00000170'
     - name: ??_ECKsClockF@@UAEPAXI@Z
-      processed: "public: virtual void * __thiscall CKsClockF::`vector deleting destructor'(unsigned
+      processed: "public: virtual void * __thiscall CKsClockF::`vector deleting dtor'(unsigned
         int)"
       offset: '00000170'
     - name: ??1CKsClockF@@UAE@XZ
@@ -44,7 +43,7 @@ appearances:
       offset: '00000190'
     - name: ?NonDelegatingQueryInterface@CKsClockF@@UAGJABU_GUID@@PAPAX@Z
       processed: 'public: virtual long __stdcall CKsClockF::NonDelegatingQueryInterface(struct
-        _GUID const &,void * *)'
+        _GUID const &, void **)'
       offset: '00000220'
     - name: ?Stop@CKsClockF@@UAGJXZ
       processed: 'public: virtual long __stdcall CKsClockF::Stop(void)'
@@ -73,16 +72,14 @@ appearances:
         *)'
       offset: 000004F0
     - name: ?QueryInterface@CKsClockF@@W3AGJABU_GUID@@PAPAX@Z
-      processed: "[thunk]:public: virtual long __stdcall CKsClockF::QueryInterface`adjustor{4}'
-        (struct _GUID const &,void * *)"
+      processed: "[thunk]: public: virtual long __stdcall CKsClockF::QueryInterface`adjustor{4}'(struct
+        _GUID const &, void **)"
       offset: '00000630'
     - name: ?AddRef@CKsClockF@@W3AGKXZ
-      processed: "[thunk]:public: virtual unsigned long __stdcall CKsClockF::AddRef`adjustor{4}'
-        (void)"
+      processed: "[thunk]: public: virtual unsigned long __stdcall CKsClockF::AddRef`adjustor{4}'(void)"
       offset: '00000640'
     - name: ?Release@CKsClockF@@W3AGKXZ
-      processed: "[thunk]:public: virtual unsigned long __stdcall CKsClockF::Release`adjustor{4}'
-        (void)"
+      processed: "[thunk]: public: virtual unsigned long __stdcall CKsClockF::Release`adjustor{4}'(void)"
       offset: '00000650'
     - name: ??0CBaseObject@@QAE@PBD@Z
       processed: 'public: __thiscall CBaseObject::CBaseObject(char const *)'
@@ -91,12 +88,12 @@ appearances:
       processed: 'public: __thiscall CBaseObject::~CBaseObject(void)'
       offset: 0000066E
     - name: ??0CUnknown@@QAE@PBDPAUIUnknown@@@Z
-      processed: 'public: __thiscall CUnknown::CUnknown(char const *,struct IUnknown
+      processed: 'public: __thiscall CUnknown::CUnknown(char const *, struct IUnknown
         *)'
       offset: '00000695'
     - name: ?NonDelegatingQueryInterface@CUnknown@@UAGJABU_GUID@@PAPAX@Z
       processed: 'public: virtual long __stdcall CUnknown::NonDelegatingQueryInterface(struct
-        _GUID const &,void * *)'
+        _GUID const &, void **)'
       offset: 000006C1
     - name: ?NonDelegatingAddRef@CUnknown@@UAGKXZ
       processed: 'public: virtual unsigned long __stdcall CUnknown::NonDelegatingAddRef(void)'
@@ -140,7 +137,7 @@ appearances:
       offset: 00000A10
     - name: ?QueryInterface@CClassFactory@@UAGJABU_GUID@@PAPAX@Z
       processed: 'public: virtual long __stdcall CClassFactory::QueryInterface(struct
-        _GUID const &,void * *)'
+        _GUID const &, void **)'
       offset: 00000A37
     - name: ?AddRef@CClassFactory@@UAGKXZ
       processed: 'public: virtual unsigned long __stdcall CClassFactory::AddRef(void)'
@@ -150,7 +147,7 @@ appearances:
       offset: 00000A96
     - name: ?CreateInstance@CClassFactory@@UAGJPAUIUnknown@@ABU_GUID@@PAPAX@Z
       processed: 'public: virtual long __stdcall CClassFactory::CreateInstance(struct
-        IUnknown *,struct _GUID const &,void * *)'
+        IUnknown *, struct _GUID const &, void **)'
       offset: 00000ABC
     - name: ?LockServer@CClassFactory@@UAGJH@Z
       processed: 'public: virtual long __stdcall CClassFactory::LockServer(int)'
@@ -172,13 +169,14 @@ appearances:
       processed: ''
       offset: '00000010'
     - name: ??_7CKsClockF@@6BIKsObject@@@
-      processed: const CKsClockF::`vftable'{for `IKsObject'}
+      processed: "const CKsClockF::`vftable'{for `IKsObject'} unused suffix: @"
       offset: '00000020'
     - name: ??_7CKsClockF@@6BIDistributorNotify@@@
-      processed: const CKsClockF::`vftable'{for `IDistributorNotify'}
+      processed: "const CKsClockF::`vftable'{for `IDistributorNotify'} unused suffix:
+        @"
       offset: '00000030'
     - name: ??_7CKsClockF@@6BCUnknown@@@
-      processed: const CKsClockF::`vftable'{for `CUnknown'}
+      processed: "const CKsClockF::`vftable'{for `CUnknown'} unused suffix: @"
       offset: '00000050'
     - name: ??_7IKsObject@@6B@
       processed: const IKsObject::`vftable'
@@ -221,23 +219,23 @@ appearances:
       processed: ''
       offset: 0000000C
     - name: ?g_Templates@@3PAVCFactoryTemplate@@A
-      processed: class CFactoryTemplate * g_Templates
+      processed: class CFactoryTemplate *g_Templates
       offset: '00000010'
     - name: ?g_cTemplates@@3HA
       processed: int g_cTemplates
       offset: '00000024'
     - name: 
         ??_C@_1CG@JPCJ@?$AAK?$AAS?$AA?5?$AAC?$AAl?$AAo?$AAc?$AAk?$AA?5?$AAF?$AAo?$AAr?$AAw?$AAa?$AAr?$AAd?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"KS Clock Forwarder"
       offset: '00000028'
     - name: ?hlibOLEAut32@@3PAUHINSTANCE__@@A
-      processed: struct HINSTANCE__ * hlibOLEAut32
+      processed: struct HINSTANCE__*hlibOLEAut32
       offset: '00000050'
     - name: ?m_cObjects@CBaseObject@@0JA
       processed: 'private: static long CBaseObject::m_cObjects'
       offset: '00000054'
     - name: ?g_hInst@@3PAUHINSTANCE__@@A
-      processed: struct HINSTANCE__ * g_hInst
+      processed: struct HINSTANCE__*g_hInst
       offset: '00000060'
     - name: ?g_amPlatform@@3KA
       processed: unsigned long g_amPlatform
@@ -363,18 +361,18 @@ appearances:
     symbols:
     - name: ?CreateInstance@CKsClockF@@SGPAVCUnknown@@PAUIUnknown@@PAJ@Z
       demangled: 'public: static class CUnknown * __stdcall CKsClockF::CreateInstance(struct
-        IUnknown *,long *)'
+        IUnknown *, long *)'
       offset: '00000000'
     - name: ??0CKsClockF@@QAE@PAUIUnknown@@PADPAJ@Z
-      demangled: 'public: __thiscall CKsClockF::CKsClockF(struct IUnknown *,char *,long
-        *)'
+      demangled: 'public: __thiscall CKsClockF::CKsClockF(struct IUnknown *, char
+        *, long *)'
       offset: '00000070'
     - name: ??1CUnknown@@UAE@XZ
       demangled: 'public: virtual __thiscall CUnknown::~CUnknown(void)'
       offset: '00000120'
     - name: ?QueryInterface@CKsClockF@@UAGJABU_GUID@@PAPAX@Z
       demangled: 'public: virtual long __stdcall CKsClockF::QueryInterface(struct
-        _GUID const &,void * *)'
+        _GUID const &, void **)'
       offset: '00000130'
     - name: ?AddRef@CKsClockF@@UAGKXZ
       demangled: 'public: virtual unsigned long __stdcall CKsClockF::AddRef(void)'
@@ -383,11 +381,11 @@ appearances:
       demangled: 'public: virtual unsigned long __stdcall CKsClockF::Release(void)'
       offset: '00000160'
     - name: ??_GCKsClockF@@UAEPAXI@Z
-      demangled: "public: virtual void * __thiscall CKsClockF::`scalar deleting destructor'(unsigned
+      demangled: "public: virtual void * __thiscall CKsClockF::`scalar deleting dtor'(unsigned
         int)"
       offset: '00000170'
     - name: ??_ECKsClockF@@UAEPAXI@Z
-      demangled: "public: virtual void * __thiscall CKsClockF::`vector deleting destructor'(unsigned
+      demangled: "public: virtual void * __thiscall CKsClockF::`vector deleting dtor'(unsigned
         int)"
       offset: '00000170'
     - name: ??1CKsClockF@@UAE@XZ
@@ -395,7 +393,7 @@ appearances:
       offset: '00000190'
     - name: ?NonDelegatingQueryInterface@CKsClockF@@UAGJABU_GUID@@PAPAX@Z
       demangled: 'public: virtual long __stdcall CKsClockF::NonDelegatingQueryInterface(struct
-        _GUID const &,void * *)'
+        _GUID const &, void **)'
       offset: '00000220'
     - name: ?Stop@CKsClockF@@UAGJXZ
       demangled: 'public: virtual long __stdcall CKsClockF::Stop(void)'
@@ -424,16 +422,14 @@ appearances:
         *)'
       offset: 000004F0
     - name: ?QueryInterface@CKsClockF@@W3AGJABU_GUID@@PAPAX@Z
-      demangled: "[thunk]:public: virtual long __stdcall CKsClockF::QueryInterface`adjustor{4}'
-        (struct _GUID const &,void * *)"
+      demangled: "[thunk]: public: virtual long __stdcall CKsClockF::QueryInterface`adjustor{4}'(struct
+        _GUID const &, void **)"
       offset: '00000630'
     - name: ?AddRef@CKsClockF@@W3AGKXZ
-      demangled: "[thunk]:public: virtual unsigned long __stdcall CKsClockF::AddRef`adjustor{4}'
-        (void)"
+      demangled: "[thunk]: public: virtual unsigned long __stdcall CKsClockF::AddRef`adjustor{4}'(void)"
       offset: '00000640'
     - name: ?Release@CKsClockF@@W3AGKXZ
-      demangled: "[thunk]:public: virtual unsigned long __stdcall CKsClockF::Release`adjustor{4}'
-        (void)"
+      demangled: "[thunk]: public: virtual unsigned long __stdcall CKsClockF::Release`adjustor{4}'(void)"
       offset: '00000650'
     - name: ??0CBaseObject@@QAE@PBD@Z
       demangled: 'public: __thiscall CBaseObject::CBaseObject(char const *)'
@@ -442,12 +438,12 @@ appearances:
       demangled: 'public: __thiscall CBaseObject::~CBaseObject(void)'
       offset: 0000066E
     - name: ??0CUnknown@@QAE@PBDPAUIUnknown@@@Z
-      demangled: 'public: __thiscall CUnknown::CUnknown(char const *,struct IUnknown
+      demangled: 'public: __thiscall CUnknown::CUnknown(char const *, struct IUnknown
         *)'
       offset: '00000695'
     - name: ?NonDelegatingQueryInterface@CUnknown@@UAGJABU_GUID@@PAPAX@Z
       demangled: 'public: virtual long __stdcall CUnknown::NonDelegatingQueryInterface(struct
-        _GUID const &,void * *)'
+        _GUID const &, void **)'
       offset: 000006C1
     - name: ?NonDelegatingAddRef@CUnknown@@UAGKXZ
       demangled: 'public: virtual unsigned long __stdcall CUnknown::NonDelegatingAddRef(void)'
@@ -491,7 +487,7 @@ appearances:
       offset: 00000A10
     - name: ?QueryInterface@CClassFactory@@UAGJABU_GUID@@PAPAX@Z
       demangled: 'public: virtual long __stdcall CClassFactory::QueryInterface(struct
-        _GUID const &,void * *)'
+        _GUID const &, void **)'
       offset: 00000A37
     - name: ?AddRef@CClassFactory@@UAGKXZ
       demangled: 'public: virtual unsigned long __stdcall CClassFactory::AddRef(void)'
@@ -501,7 +497,7 @@ appearances:
       offset: 00000A96
     - name: ?CreateInstance@CClassFactory@@UAGJPAUIUnknown@@ABU_GUID@@PAPAX@Z
       demangled: 'public: virtual long __stdcall CClassFactory::CreateInstance(struct
-        IUnknown *,struct _GUID const &,void * *)'
+        IUnknown *, struct _GUID const &, void **)'
       offset: 00000ABC
     - name: ?LockServer@CClassFactory@@UAGJH@Z
       demangled: 'public: virtual long __stdcall CClassFactory::LockServer(int)'
@@ -523,13 +519,14 @@ appearances:
       demangled: ''
       offset: '00000010'
     - name: ??_7CKsClockF@@6BIKsObject@@@
-      demangled: const CKsClockF::`vftable'{for `IKsObject'}
+      demangled: "const CKsClockF::`vftable'{for `IKsObject'}\n  unused suffix: @"
       offset: '00000020'
     - name: ??_7CKsClockF@@6BIDistributorNotify@@@
-      demangled: const CKsClockF::`vftable'{for `IDistributorNotify'}
+      demangled: "const CKsClockF::`vftable'{for `IDistributorNotify'}\n  unused suffix:
+        @"
       offset: '00000030'
     - name: ??_7CKsClockF@@6BCUnknown@@@
-      demangled: const CKsClockF::`vftable'{for `CUnknown'}
+      demangled: "const CKsClockF::`vftable'{for `CUnknown'}\n  unused suffix: @"
       offset: '00000050'
     - name: ??_7IKsObject@@6B@
       demangled: const IKsObject::`vftable'
@@ -572,23 +569,23 @@ appearances:
       demangled: ''
       offset: 0000000C
     - name: ?g_Templates@@3PAVCFactoryTemplate@@A
-      demangled: class CFactoryTemplate * g_Templates
+      demangled: class CFactoryTemplate *g_Templates
       offset: '00000010'
     - name: ?g_cTemplates@@3HA
       demangled: int g_cTemplates
       offset: '00000024'
     - name: 
         ??_C@_1CG@JPCJ@?$AAK?$AAS?$AA?5?$AAC?$AAl?$AAo?$AAc?$AAk?$AA?5?$AAF?$AAo?$AAr?$AAw?$AAa?$AAr?$AAd?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"KS Clock Forwarder"
       offset: '00000028'
     - name: ?hlibOLEAut32@@3PAUHINSTANCE__@@A
-      demangled: struct HINSTANCE__ * hlibOLEAut32
+      demangled: struct HINSTANCE__*hlibOLEAut32
       offset: '00000050'
     - name: ?m_cObjects@CBaseObject@@0JA
       demangled: 'private: static long CBaseObject::m_cObjects'
       offset: '00000054'
     - name: ?g_hInst@@3PAUHINSTANCE__@@A
-      demangled: struct HINSTANCE__ * g_hInst
+      demangled: struct HINSTANCE__*g_hInst
       offset: '00000060'
     - name: ?g_amPlatform@@3KA
       demangled: unsigned long g_amPlatform

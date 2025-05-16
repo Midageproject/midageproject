@@ -1,10 +1,12 @@
 filename: windows/system/compbatt.sys
-#TODO: bring up more details from symdeb
 binary: COMPBATT
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - compbatt.c
+  - compmisc.c
+  - comppnp.c
   segments:
   - num: '1'
     name: .text
@@ -396,10 +398,6 @@ appearances:
     - name: _DriverEntry@8
       processed: ''
       offset: '00000000'
-  source_tree:
-  - compbatt.c
-  - compmisc.c
-  - comppnp.c
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -525,15 +523,15 @@ appearances:
       offset: '00000000'
     - name: 
         ??_C@_1DK@HBCP@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AAC?$AAo?$AAm?$AAp?$AAo?$AAs?$AAi?$AAt@
-      demangled: "`string'"
+      demangled: L"\\DosDevices\\Composit"
       offset: '00000004'
     - name: 
         ??_C@_1DC@GKHM@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAC?$AAo?$AAm?$AAp?$AAo?$AAs?$AAi?$AAt?$AAe?$AAB?$AAa?$AAt@
-      demangled: "`string'"
+      demangled: L"\\Device\\CompositeBat"
       offset: '00000040'
     - name: 
         ??_C@_1CE@EODN@?$AAC?$AAo?$AAm?$AAp?$AAo?$AAs?$AAi?$AAt?$AAe?$AA?5?$AAB?$AAa?$AAt?$AAt?$AAe?$AAr?$AAy?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Composite Battery"
       offset: '00000074'
   - num: '4'
     name: .idata$2

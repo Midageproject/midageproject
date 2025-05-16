@@ -1,10 +1,22 @@
 filename: windows/system32/drivers/usbhub.sys
-#TODO: bring up more details from symdeb
 binary: USBHUB
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - dbg.c
+  - hubpwr.c
+  - intel/lldiv.asm
+  - ioctli.c
+  - parent.c
+  - pnppower.c
+  - "\t../sync.c"
+  - usbhub.c
+  - globals.c
+  - intel/lldiv.asmNSI
+  - "pnppower.c\t../sync.c"
+  - sync.c
+  - urb->UrbSelectConfiguration.ConfigurationDescriptor->bConfigurationValue == deviceExtensionParent->CurrentConfig
   segments:
   - num: '1'
     name: .text
@@ -941,20 +953,6 @@ appearances:
     - name: _USBH_FdoPower@12
       processed: ''
       offset: 0000A880
-  source_tree:
-  - dbg.c
-  - hubpwr.c
-  - intel/lldiv.asm
-  - ioctli.c
-  - parent.c
-  - pnppower.c
-  - "\t../sync.c"
-  - usbhub.c
-  - globals.c
-  - intel/lldiv.asmNSI
-  - "pnppower.c\t../sync.c"
-  - sync.c
-  - urb->UrbSelectConfiguration.ConfigurationDescriptor->bConfigurationValue == deviceExtensionParent->CurrentConfig
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -1164,11 +1162,11 @@ appearances:
     symbols:
     - name: 
         ??_C@_1CI@GJLP@?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAR?$AAe?$AAm?$AAo?$AAt?$AAe?$AAW?$AAa?$AAk?$AAe?$AAu?$AAp?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DisableRemoteWakeup"
       offset: '00000000'
     - name: 
         ??_C@_1BK@JLND@?$AAF?$AAa?$AAi?$AAl?$AAR?$AAe?$AAa?$AAs?$AAo?$AAn?$AAI?$AAD?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"FailReasonID"
       offset: '00000028'
     - name: _USBH_PostResetDelay
       demangled: ''
@@ -1184,7 +1182,7 @@ appearances:
       offset: 000000A8
     - name: 
         ??_C@_1BK@KPFG@?$AAU?$AAS?$AAB?$AA?2?$AAU?$AAN?$AAK?$AAN?$AAO?$AAW?$AAN?$AA?$AA?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"USB\\UNKNOWN\0"
       offset: '000000E0'
     - name: _pwchUsbSlash
       demangled: ''
@@ -1217,35 +1215,35 @@ appearances:
       demangled: ''
       offset: '00000120'
     - name: ??_C@_1M@LPKD@?$AAP?$AAr?$AAo?$AAt?$AA_?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Prot_"
       offset: '00000124'
     - name: ??_C@_1O@JGHH@?$AAU?$AAS?$AAB?$AA?2?$AAM?$AAI?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"USB\\MI"
       offset: '00000130'
     - name: ??_C@_1BE@MAJL@?$AAS?$AAu?$AAb?$AAC?$AAl?$AAa?$AAs?$AAs?$AA_?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"SubClass_"
       offset: '00000140'
     - name: 
         ??_C@_1BM@GHDD@?$AAU?$AAS?$AAB?$AA?2?$AAC?$AAO?$AAM?$AAP?$AAO?$AAS?$AAI?$AAT?$AAE?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"USB\\COMPOSITE"
       offset: '00000154'
     - name: ??_C@_1O@DFCL@?$AAC?$AAl?$AAa?$AAs?$AAs?$AA_?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Class_"
       offset: '00000170'
     - name: ??_C@_1BE@LJDF@?$AAD?$AAe?$AAv?$AAC?$AAl?$AAa?$AAs?$AAs?$AA_?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DevClass_"
       offset: '00000180'
     - name: ??_C@_19JEGG@?$AAR?$AAe?$AAv?$AA_?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Rev_"
       offset: '00000194'
     - name: ??_C@_19JMBC@?$AAP?$AAi?$AAd?$AA_?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Pid_"
       offset: 000001A0
     - name: ??_C@_19BBKC@?$AAV?$AAi?$AAd?$AA_?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Vid_"
       offset: 000001AC
     - name: ??_C@_19HHFM@?$AAU?$AAS?$AAB?$AA?2?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"USB\\"
       offset: 000001B8
     - name: _UsbhDriverObject
       demangled: ''

@@ -1,10 +1,17 @@
 filename: windows/system/user.exe
-#TODO: bring up more details from symdeb
 binary: USER
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - "0rundll32 shell32.dll,Control_RunDLL desk.cpl ,-1\tSafe mode"
+  - h6.h
+  - hc.h
+  - hd.h
+  - hL.h
+  - hM.h
+  - Ht"Ht.Ht
+  - windows.hlp
   segments:
   - num: '1'
     name: _TEXT
@@ -1556,15 +1563,6 @@ appearances:
     - name: ISCHARALPHA32
       processed: ''
       offset: '00001874'
-  source_tree:
-  - "0rundll32 shell32.dll,Control_RunDLL desk.cpl ,-1\tSafe mode"
-  - h6.h
-  - hc.h
-  - hd.h
-  - hL.h
-  - hM.h
-  - Ht"Ht.Ht
-  - windows.hlp
 - version: Windows 98 Retail
   source_tree: []
   segments:

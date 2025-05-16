@@ -1,10 +1,220 @@
 filename: windows/system/vmm32/ntkern.vxd
-#TODO: bring up more details from symdeb
 binary: NTKERN
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - $D:/NT/private/crt32nt/convert/atox.c
+  - $D:/NT/private/crt32nt/convert/xtoa.c
+  - $D:/NT/private/crt32nt/stdio/fputwc.c
+  - $D:/NT/private/crt32nt/stdio/output.c
+  - 4../../../../../../dos/dos386/vxd/ntkern/inc/macros.h
+  - 5../../../../../../dos/dos386/vxd/ntkern/inc/pregstr.h
+  - apcobj.c
+  - assoc.c
+  - attrib.c
+  - bitmap.c
+  - bugcheck.c
+  - bus.c
+  - callback.c
+  - cnvint.c
+  - connect.c
+  - creasect.c
+  - create.c
+  - dbglog.c
+  - debug.asm
+  - devctrl.c
+  - devnode.c
+  - "'../../../../../../dev/ntddk/inc/ntddk.h"
+  - devquobj.c
+  - '&D:/NT/private/crt32nt/convert/_ctype.c'
+  - "'D:/NT/private/crt32nt/convert/isctype.c"
+  - (D:/NT/private/crt32nt/convert/iswctype.c
+  - '%D:/NT/private/crt32nt/convert/mblen.c'
+  - "'D:/NT/private/crt32nt/convert/_mbslen.c"
+  - (D:/NT/private/crt32nt/convert/mbstowcs.c
+  - '&D:/NT/private/crt32nt/convert/mbtowc.c'
+  - "'D:/NT/private/crt32nt/convert/tolower.c"
+  - "'D:/NT/private/crt32nt/convert/toupper.c"
+  - (D:/NT/private/crt32nt/convert/towlower.c
+  - (D:/NT/private/crt32nt/convert/towupper.c
+  - (D:/NT/private/crt32nt/convert/wcstombs.c
+  - '&D:/NT/private/crt32nt/convert/wctomb.c'
+  - '"D:/NT/private/crt32nt/hack/stubs.c'
+  - '"D:/NT/private/crt32nt/misc/qsort.c'
+  - '!D:/NT/private/crt32nt/misc/rand.c'
+  - '&D:/NT/private/crt32nt/startup/crt0fp.c'
+  - '%D:/NT/private/crt32nt/stdio/_flsbuf.c'
+  - '%D:/NT/private/crt32nt/stdio/sprintf.c'
+  - '&D:/NT/private/crt32nt/stdio/swprintf.c'
+  - '&D:/NT/private/crt32nt/stdio/vsprintf.c'
+  - '&D:/NT/private/crt32nt/stdio/vswprint.c'
+  - '%D:/NT/private/crt32nt/string/wcscat.c'
+  - '%D:/NT/private/crt32nt/string/wcschr.c'
+  - '%D:/NT/private/crt32nt/string/wcscmp.c'
+  - '&D:/NT/private/crt32nt/string/wcscspn.c'
+  - '&D:/NT/private/crt32nt/string/wcsicmp.c'
+  - '%D:/NT/private/crt32nt/string/wcslen.c'
+  - '%D:/NT/private/crt32nt/string/wcslwr.c'
+  - '&D:/NT/private/crt32nt/string/wcsncat.c'
+  - '&D:/NT/private/crt32nt/string/wcsncmp.c'
+  - '&D:/NT/private/crt32nt/string/wcsncpy.c'
+  - "'D:/NT/private/crt32nt/string/wcsnicmp.c"
+  - '&D:/NT/private/crt32nt/string/wcsnset.c'
+  - '&D:/NT/private/crt32nt/string/wcsrchr.c'
+  - '%D:/NT/private/crt32nt/string/wcsrev.c'
+  - '%D:/NT/private/crt32nt/string/wcsspn.c'
+  - '%D:/NT/private/crt32nt/string/wcsstr.c'
+  - '%D:/NT/private/crt32nt/string/wcsupr.c'
+  - drvobj.c
+  - errorlog.c
+  - event.c
+  - eventobj.c
+  - exinit.c
+  - "\t../guid.c"
+  - hal.asm
+  - handle.c
+  - i386/exsup2.asm
+  - i386/exsup3.asm
+  - i386/exsup.asm
+  - i386/memchr.asm
+  - i386/memcmp.asm
+  - i386/strcat.asm
+  - i386/strchr.asm
+  - i386/strcmp.asm
+  - i386/stricmp.asm
+  - i386/strlen.asm
+  - i386/strlwr.asm
+  - i386/strncat.asm
+  - i386/strncmp.asm
+  - i386/strncpy.asm
+  - i386/strnicmp.asm
+  - i386/strnset.asm
+  - i386/strrchr.asm
+  - i386/strrev.asm
+  - i386/strset.asm
+  - i386/strspn.asm
+  - i386/strstr.asm
+  - i386/strupr.asm
+  - "\t../idle.c"
+  - "\t../init.c"
+  - initload.c
+  - internal.c
+  - intrlfst.asm
+  - iodeb.c
+  - ioinit.c
+  - iop.h
+  - iosubs.c
+  - "\t../irql.c"
+  - ixhwsup.c
+  - ixisasup.c
+  - ixphwsup.c
+  - krnasm.asm
+  - largeint.asm
+  - "\tLLDIV.ASM"
+  - "\tLLMUL.ASM"
+  - "\tLLREM.ASM"
+  - "\tLLSHL.ASM"
+  - "\tLLSHR.ASM"
+  - loader.c
+  - loadunld.c
+  - lookasid.c
+  - maperr.c
+  - mapview.c
+  - "\t../misc.c"
+  - mm.c
+  - mminit.c
+  - movemem.asm
+  - msg.asm
+  - "\t../mtrr.c"
+  - mutntobj.c
+  - notify.c
+  - ntapi.c
+  - ntutil.c
+  - obclose.c
+  - obcreate.c
+  - obdir.c
+  - obhandle.c
+  - obinit.c
+  - obinsert.c
+  - objsup.c
+  - oblink.c
+  - obref.c
+  - obtype.c
+  - "\t../open.c"
+  - paction.c
+  - parse.c
+  - pbatt.c
+  - penter.asm
+  - pinfo.c
+  - pnpapi.c
+  - pnpctrl.c
+  - pnpenum.c
+  - pnphdlr.c
+  - pnphirp.c
+  - pnpinit.c
+  - pnpirp.c
+  - pnpmsg.c
+  - pnpsetup.c
+  - pnpstate.c
+  - pnpstr.c
+  - pnputil.c
+  - pocall.c
+  - podebug.c
+  - pohdlr.c
+  - poinit.c
+  - "\t../pool.c"
+  - postate.c
+  - pwork.c
+  - qsinfo.c
+  - raise.c
+  - rdtont2.c
+  - rdtont.c
+  - "\t../read.c"
+  - regstr.c
+  - regutil.c
+  - resource.c
+  - rtl.c
+  - rtlintr.c
+  - seastate.c
+  - sectsup.c
+  - semphobj.c
+  - sertl.c
+  - sidle.c
+  - spinlock.c
+  - switch.c
+  - "\t../test.c"
+  - testob.c
+  - thermal.c
+  - thread.c
+  - threads.c
+  - "\t../time.c"
+  - ULLDIV.ASM
+  - ULLREM.ASM
+  - ULLSHR.ASM
+  - umapview.c
+  - "\t../util.c"
+  - utils.asm
+  - vector.c
+  - w32.asm
+  - "\t../wait.c"
+  - worker.c
+  - write.c
+  - xxhal.c
+  - zw.c
+  - BusAddress.HighPart == 0
+  - guid.c
+  - Ht.Ht
+  - idle.c
+  - irql.c
+  - misc.c
+  - MmCa../creasect.c
+  - open.c
+  - PhysicalAddress.HighPart==0
+  - pool.c
+  - read.c
+  - standardInformation.EndOfFile.HighPart == 0
+  - test.c
   segments:
   - num: '1'
     name: .bss
@@ -494,55 +704,55 @@ appearances:
       processed: ''
       offset: 00000D00
     - name: ??_C@_0BB@HLDA@system32?2drivers?$AA@
-      processed: "`string'"
+      processed: '"system32\\drivers"'
       offset: 00000D10
     - name: ??_C@_08OGD@system32?$AA@
-      processed: "`string'"
+      processed: '"system32"'
       offset: 00000D24
     - name: ??_C@_06GMLA@system?$AA@
-      processed: "`string'"
+      processed: '"system"'
       offset: 00000D30
     - name: ??_C@_07NKAG@?$CFs?$CFs?2?$CFs?$AA@
-      processed: "`string'"
+      processed: '"%s%s\\%s"'
       offset: 00000D38
     - name: ??_C@_05LLOB@FALSE?$AA@
-      processed: "`string'"
+      processed: '"FALSE"'
       offset: 00000D40
     - name: ??_C@_0M@DPL@?4?4?2loader?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\loader.c"'
       offset: 00000D48
     - name: ??_C@_0CF@HIAL@EX?3?5Pageable?5code?5called?5at?5IRQL@
-      processed: "`string'"
+      processed: '"EX: Pageable code called at IRQL"...'
       offset: 00000D54
     - name: ??_C@_0CC@HOED@?8NTKRNLOADER?3?5failing?5load?5of?5?$CFs@
-      processed: "`string'"
+      processed: "\"\\'NTKRNLOADER: failing load of %s\"..."
       offset: 00000D7C
     - name: ??_C@_0EE@OKCO@?8NTKRNLOADER?3?5library?5?$CFs?5does?5no@
-      processed: "`string'"
+      processed: "\"\\'NTKRNLOADER: library %s does no\"..."
       offset: 00000DA0
     - name: ??_C@_0CD@DIIP@pFindDriver?$CI?5pszFileName?5?$CJ?5?$DN?$DN?5NU@
-      processed: "`string'"
+      processed: '"pFindDriver( pszFileName ) == NU"...'
       offset: 00000DE4
     - name: ??_C@_0O@BMMI@DllInitialize?$AA@
-      processed: "`string'"
+      processed: '"DllInitialize"'
       offset: '00000E08'
     - name: ??_C@_0CA@KDD@dllNode?9?$DOpfnDriverEntry?5?$DN?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"dllNode->pfnDriverEntry == NULL"'
       offset: '00000E18'
     - name: ??_C@_0CM@PDGJ@?8NTKRNLOADER?3?5module?5?$CFs?5needs?5im@
-      processed: "`string'"
+      processed: "\"\\'NTKRNLOADER: module %s needs im\"..."
       offset: '00000E38'
     - name: ??_C@_0CB@KHME@?8NTKRNLOADER?3?5loading?5module?5?$CFs?6@
-      processed: "`string'"
+      processed: "\"\\'NTKRNLOADER: loading module %s\\n\"..."
       offset: '00000E64'
     - name: ??_C@_0O@HBII@pNode?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"pNode != NULL"'
       offset: '00000E88'
     - name: ??_C@_0M@PEDC@Result?5?$DN?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"Result == 0"'
       offset: '00000E98'
     - name: ??_C@_0BC@FIAL@pPrevNode?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"pPrevNode != NULL"'
       offset: 00000EA4
     - name: _RegistryMapping
       processed: ''
@@ -551,13 +761,13 @@ appearances:
       processed: ''
       offset: 00000EF0
     - name: ??_C@_0BJ@KILJ@?8MapError?3?5returning?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'MapError: returning %x\\n\""
       offset: 00000EF8
     - name: ??_C@_0BG@FHPO@Context?5?$DM?5MAX_CONTEXT?$AA@
-      processed: "`string'"
+      processed: '"Context < MAX_CONTEXT"'
       offset: 00000F14
     - name: ??_C@_0M@BIBN@?4?4?2maperr?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\maperr.c"'
       offset: 00000F2C
     - name: _MmpUserProbeAddress
       processed: ''
@@ -566,209 +776,209 @@ appearances:
       processed: ''
       offset: 00000F3C
     - name: ??_C@_0BB@BPIP@Inserted?5?$DN?$DN?5TRUE?$AA@
-      processed: "`string'"
+      processed: '"Inserted == TRUE"'
       offset: 00000F40
     - name: ??_C@_0CF@DLHL@MemoryDescriptorList?9?$DOByteCount?5@
-      processed: "`string'"
+      processed: '"MemoryDescriptorList->ByteCount "...'
       offset: 00000F54
     - name: ??_C@_0DE@CLJO@?$CIMemoryDescriptorList?9?$DOMdlFlags?5@
-      processed: "`string'"
+      processed: '"(MemoryDescriptorList->MdlFlags "...'
       offset: 00000F7C
     - name: ??_C@_0EE@NPOP@?$CIMemoryDescriptorList?9?$DOMdlFlags?5@
-      processed: "`string'"
+      processed: '"(MemoryDescriptorList->MdlFlags "...'
       offset: 00000FB0
     - name: ??_C@_0DJ@PPEF@?$CIMemoryDescriptorList?9?$DOMdlFlags?5@
-      processed: "`string'"
+      processed: '"(MemoryDescriptorList->MdlFlags "...'
       offset: 00000FF4
     - name: ??_C@_07JJLE@?4?4?2mm?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\mm.c"'
       offset: '00001030'
     - name: ??_C@_08GGLP@Ret?5?$CB?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"Ret != 0"'
       offset: '00001038'
     - name: ??_C@_0EE@GCAC@?$CIMemoryDescriptorList?9?$DOMdlFlags?5@
-      processed: "`string'"
+      processed: '"(MemoryDescriptorList->MdlFlags "...'
       offset: '00001044'
     - name: ??_C@_0BE@IEHF@BaseAddress?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"BaseAddress != NULL"'
       offset: '00001088'
     - name: ??_C@_0CP@HHJD@HighestAcceptableAddress?4LowPart@
-      processed: "`string'"
+      processed: '"HighestAcceptableAddress.LowPart"...'
       offset: 0000109C
     - name: ??_C@_0IC@OFPN@?$CIMemoryDescriptorList?9?$DOMdlFlags?5@
-      processed: "`string'"
+      processed: '"(MemoryDescriptorList->MdlFlags "...'
       offset: 000010CC
     - name: ??_C@_0KB@IFNO@?$CIMemoryDescriptorList?9?$DOMdlFlags?5@
-      processed: "`string'"
+      processed: '"(MemoryDescriptorList->MdlFlags "...'
       offset: '00001150'
     - name: ??_C@_0EC@HDEB@?$CI?$CIULONG?$CJMemoryDescriptorList?9?$DOBy@
-      processed: "`string'"
+      processed: '"((ULONG)MemoryDescriptorList->By"...'
       offset: 000011F4
     - name: ??_C@_0DO@MBHB@?$CI?$CIULONG?$CJMemoryDescriptorList?9?$DOSt@
-      processed: "`string'"
+      processed: '"((ULONG)MemoryDescriptorList->St"...'
       offset: '00001238'
     - name: ??_C@_0M@BOML@Result?5?$CB?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"Result != 0"'
       offset: '00001278'
     - name: ??_C@_0DG@KEAH@MmMapIoSpace?3?5NtKernSetPhysicalC@
-      processed: "`string'"
+      processed: '"MmMapIoSpace: NtKernSetPhysicalC"...'
       offset: '00001284'
     - name: ??_C@_0CP@KEP@MmMapIoSpace?3?5Failed?5to?5set?5rang@
-      processed: "`string'"
+      processed: '"MmMapIoSpace: Failed to set rang"...'
       offset: 000012BC
     - name: ??_C@_0BM@JIIP@PhysicalAddress?4HighPart?$DN?$DN0?$AA@
-      processed: "`string'"
+      processed: '"PhysicalAddress.HighPart==0"'
       offset: 000012EC
     - name: ??_C@_08GDGN@ret?5?$CB?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"ret != 0"'
       offset: '00001308'
     - name: ??_C@_0BN@KFGI@?$CIULONG?$CJ?5SystemPTESpace?5?$CB?$DN?5?91?$AA@
-      processed: "`string'"
+      processed: '"(ULONG) SystemPTESpace != -1"'
       offset: '00001314'
     - name: ??_C@_0BG@HMFF@SystemPTEBusyMap?5?$CB?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"SystemPTEBusyMap != 0"'
       offset: '00001334'
     - name: ??_C@_1BG@OJPP@?$AAD?$AAy?$AAn?$AAa?$AAm?$AAi?$AAc?$AAW?$AAD?$AAM?$AA?$AA@
-      processed: "`string'"
+      processed: L"DynamicWDM"
       offset: 0000134C
     - name: 
         ??_C@_1GI@DEJO@?$AA?2?$AAR?$AAe?$AAg?$AAi?$AAs?$AAt?$AAr?$AAy?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAY@
-      processed: "`string'"
+      processed: L"\\Registry\\Machine\\SY"...
       offset: '00001364'
     - name: 
         ??_C@_1BK@JLBF@?$AAE?$AAr?$AAr?$AAo?$AAr?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"ErrorControl"
       offset: 000013CC
     - name: ??_C@_1M@HKNH@?$AAS?$AAt?$AAa?$AAr?$AAt?$AA?$AA@
-      processed: "`string'"
+      processed: L"Start"
       offset: '000013E8'
     - name: ??_C@_19KJIP@?$AAT?$AAy?$AAp?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"Type"
       offset: 000013F4
     - name: ??_C@_1BE@PJND@?$AAI?$AAm?$AAa?$AAg?$AAe?$AAP?$AAa?$AAt?$AAh?$AA?$AA@
-      processed: "`string'"
+      processed: L"ImagePath"
       offset: '00001400'
     - name: 
         ??_C@_1IA@PBPA@?$AA?2?$AAR?$AAe?$AAg?$AAi?$AAs?$AAt?$AAr?$AAy?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAY@
-      processed: "`string'"
+      processed: L"\\Registry\\Machine\\SY"...
       offset: '00001414'
     - name: ??_C@_0BF@PFIM@NT_SUCCESS?$CI?5status?5?$CJ?$AA@
-      processed: "`string'"
+      processed: '"NT_SUCCESS( status )"'
       offset: '00001494'
     - name: ??_C@_09CIIC@?4?4?2test?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\test.c"'
       offset: 000014AC
     - name: ??_C@_1BG@FFLG@?$AA?2?$AAa?$AA?2?$AAb?$AA?2?$AAc?$AA?2?$AAd?$AA?2?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\a\\b\\c\\d\\e"
       offset: 000014B8
     - name: ??_C@_0N@GMNI@pIrp?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"pIrp != NULL"'
       offset: 000014D0
     - name: ??_C@_0M@FHGN@ext1?5?$DN?$DN?5ext?$AA@
-      processed: "`string'"
+      processed: '"ext1 == ext"'
       offset: '000014E0'
     - name: ??_C@_0BF@EPII@NT_SUCCESS?$CI?5result?5?$CJ?$AA@
-      processed: "`string'"
+      processed: '"NT_SUCCESS( result )"'
       offset: 000014EC
     - name: ??_C@_0M@EOAC@Length?5?$CB?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"Length != 0"'
       offset: '00001504'
     - name: ??_C@_0BJ@PDB@?8Thread?5?$CF3d?5terminating?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Thread %3d terminating\\n\""
       offset: '00001510'
     - name: ??_C@_0BI@HGAD@?8Thread?5?$CF3d?5unblocking?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Thread %3d unblocking\\n\""
       offset: 0000152C
     - name: ??_C@_0BJ@PJMD@status?5?$DN?$DN?5STATUS_SUCCESS?$AA@
-      processed: "`string'"
+      processed: '"status == STATUS_SUCCESS"'
       offset: '00001544'
     - name: ??_C@_0BG@HMBL@?8Thread?5?$CF3d?5starting?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Thread %3d starting\\n\""
       offset: '00001560'
     - name: ??_C@_0DJ@DAEE@?8ThreadTest?3?5Created?5thread?5?$CF3d?5@
-      processed: "`string'"
+      processed: "\"\\'ThreadTest: Created thread %3d \"..."
       offset: '00001578'
     - name: ??_C@_0BF@DNHP@kernelHandle?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"kernelHandle != NULL"'
       offset: 000015B4
     - name: ??_C@_0CC@NJND@?8ThreadTest?3?5Creating?5thread?5?$CF3d@
-      processed: "`string'"
+      processed: "\"\\'ThreadTest: Creating thread %3d\"..."
       offset: 000015CC
     - name: ??_C@_0BC@PBBK@regHandle?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"regHandle != NULL"'
       offset: 000015F0
     - name: ??_C@_0BJ@NMKO@?2Registry?2Machine?2System?$AA@
-      processed: "`string'"
+      processed: '"\\Registry\\Machine\\System"'
       offset: '00001604'
     - name: ??_C@_0DE@DFLA@standardInformation?4EndOfFile?4Lo@
-      processed: "`string'"
+      processed: '"standardInformation.EndOfFile.Lo"...'
       offset: '00001620'
     - name: ??_C@_0CM@NP@standardInformation?4EndOfFile?4Hi@
-      processed: "`string'"
+      processed: '"standardInformation.EndOfFile.Hi"...'
       offset: '00001654'
     - name: ??_C@_0BB@LPCM@buffer?$FL?5i?5?$FN?5?$DN?$DN?5i?$AA@
-      processed: "`string'"
+      processed: '"buffer[ i ] == i"'
       offset: '00001680'
     - name: 
         ??_C@_1DC@LCIO@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AAC?$AA?3?$AA?2?$AAw?$AAd?$AAm?$AAf?$AAs@
-      processed: "`string'"
+      processed: L"\\DosDevices\\C:\\wdmfs"
       offset: '00001694'
     - name: ??_C@_0P@LDMK@buffer?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"buffer != NULL"'
       offset: 000016C8
     - name: _ThreadDataSlot
       processed: ''
       offset: 000016D8
     - name: ??_C@_0CI@MEK@Get_Cur_Thread_Handle?$CI?$CJ?5?$DN?$DN?5Threa@
-      processed: "`string'"
+      processed: '"Get_Cur_Thread_Handle() == Threa"...'
       offset: 000016DC
     - name: ??_C@_0N@CFEE@?4?4?2threads?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\threads.c"'
       offset: '00001704'
     - name: ??_C@_0CE@DGGI@IsListEmpty?$CI?5?$CGKrnProcess?9?$DOMappin@
-      processed: "`string'"
+      processed: '"IsListEmpty( &KrnProcess->Mappin"...'
       offset: '00001714'
     - name: ??_C@_0CH@HLDJ@IsListEmpty?$CI?5?$CGKrnProcess?9?$DOThread@
-      processed: "`string'"
+      processed: '"IsListEmpty( &KrnProcess->Thread"...'
       offset: '00001738'
     - name: ??_C@_0CP@BHCK@IsListEmpty?$CI?5?$CGKrnProcess?9?$DOLinear@
-      processed: "`string'"
+      processed: '"IsListEmpty( &KrnProcess->Linear"...'
       offset: '00001760'
     - name: ??_C@_0BC@PAEG@KrnThread?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"KrnThread != NULL"'
       offset: '00001790'
     - name: ??_C@_0BE@JDDB@ThreadDataSlot?5?$CB?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"ThreadDataSlot != 0"'
       offset: 000017A4
     - name: ??_C@_0BN@KGNN@NewThread?9?$DOIrql?5?$DM?$DN?5APC_LEVEL?$AA@
-      processed: "`string'"
+      processed: '"NewThread->Irql <= APC_LEVEL"'
       offset: 000017B8
     - name: ??_C@_0CA@HKKH@KeGetCurrentIrql?$CI?$CJ?5?$DM?$DN?5APC_LEVEL?$AA@
-      processed: "`string'"
+      processed: '"KeGetCurrentIrql() <= APC_LEVEL"'
       offset: 000017D8
     - name: ??_C@_0DA@NBKJ@?$CIOldThread?$CJ?9?$DOThreadSignature?5?$DN?$DN?5@
-      processed: "`string'"
+      processed: '"(OldThread)->ThreadSignature == "...'
       offset: 000017F8
     - name: ??_C@_0DA@GCFP@?$CINewThread?$CJ?9?$DOThreadSignature?5?$DN?$DN?5@
-      processed: "`string'"
+      processed: '"(NewThread)->ThreadSignature == "...'
       offset: '00001828'
     - name: ??_C@_0BD@JEGO@ThreadDataSlot?5?$DO?50?$AA@
-      processed: "`string'"
+      processed: '"ThreadDataSlot > 0"'
       offset: '00001858'
     - name: ??_C@_0DE@PDNA@?$CICurrentThread?$CJ?9?$DOThreadSignature@
-      processed: "`string'"
+      processed: '"(CurrentThread)->ThreadSignature"...'
       offset: 0000186C
     - name: ??_C@_0DB@CHBE@?5KTHREAD?5?$CFx?0?5hRing0?5?$CFx?0?5IRQL?5?$CF02@
-      processed: "`string'"
+      processed: '" KTHREAD %x, hRing0 %x, IRQL %02"...'
       offset: 000018A0
     - name: ??_C@_0CB@EMFF@?6Process?5?$CFx?5sys?5?$CFx?5thread?5list?3?6@
-      processed: "`string'"
+      processed: '"\nProcess %x sys %x thread list:\n"...'
       offset: 000018D4
     - name: ??_C@_0BO@GPIB@HARDWARE?2DeviceMap?2InputClass?$AA@
-      processed: "`string'"
+      processed: '"HARDWARE\\DeviceMap\\InputClass"'
       offset: 000018F8
     - name: ??_C@_0BN@KAPE@HARDWARE?2DeviceMap?2InputPort?$AA@
-      processed: "`string'"
+      processed: '"HARDWARE\\DeviceMap\\InputPort"'
       offset: '00001918'
     - name: _PathMapArray
       processed: ''
@@ -780,100 +990,100 @@ appearances:
       processed: ''
       offset: 0000194C
     - name: ??_C@_07CDNJ@?4?4?2zw?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\zw.c"'
       offset: '00001958'
     - name: ??_C@_0EF@COFB@InQueue?$CI?$CGpZWKeyList?0?5pzwkey?$CJ?5?$CG?$CG?5@
-      processed: "`string'"
+      processed: '"InQueue(&pZWKeyList, pzwkey) && "...'
       offset: '00001960'
     - name: ??_C@_0BO@HOLO@?8ZwOpenKey?3?5Key?3?5?$CFs?5Error?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'ZwOpenKey: Key: %s Error %x\\n\""
       offset: 000019A8
     - name: ??_C@_0DD@GJHJ@ObjectAttributes?9?$DOSecurityQualit@
-      processed: "`string'"
+      processed: '"ObjectAttributes->SecurityQualit"...'
       offset: 000019C8
     - name: ??_C@_0CN@ILPC@ObjectAttributes?9?$DOSecurityDescri@
-      processed: "`string'"
+      processed: '"ObjectAttributes->SecurityDescri"...'
       offset: 000019FC
     - name: ??_C@_0DI@FAIF@ObjectAttributes?9?$DOLength?5?$DN?$DN?5size@
-      processed: "`string'"
+      processed: '"ObjectAttributes->Length == size"...'
       offset: 00001A2C
     - name: ??_C@_0BJ@PMMJ@Result?5?$DN?$DN?5STATUS_SUCCESS?$AA@
-      processed: "`string'"
+      processed: '"Result == STATUS_SUCCESS"'
       offset: 00001A64
     - name: ??_C@_0BJ@KALC@result?5?$DN?$DN?5STATUS_SUCCESS?$AA@
-      processed: "`string'"
+      processed: '"result == STATUS_SUCCESS"'
       offset: 00001A80
     - name: ??_C@_0CA@BGKA@?8ZwCreateKey?3?5Key?3?5?$CFs?5Error?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'ZwCreateKey: Key: %s Error %x\\n\""
       offset: 00001A9C
     - name: ??_C@_0EI@KPHD@ValueTypeName?9?$DOLength?5?$DN?$DN?5ValueTy@
-      processed: "`string'"
+      processed: '"ValueTypeName->Length == ValueTy"...'
       offset: 00001ABC
     - name: ??_C@_0FD@FOAP@?$CI?$CIValueTypeName?$CJ?9?$DOLength?5?$CL?5?$CICm_T@
-      processed: "`string'"
+      processed: '"((ValueTypeName)->Length + (Cm_T"...'
       offset: 00001B04
     - name: ??_C@_0CB@HGHD@?$CICm_TypeName?4Length?$CJ?5?$DM?5MAXUSHORT@
-      processed: "`string'"
+      processed: '"(Cm_TypeName.Length) < MAXUSHORT"...'
       offset: 00001B58
     - name: ??_C@_0FC@IEDP@?$CI?$CIValueTypeName?$CJ?9?$DOLength?5?$CL?5?$CIValu@
-      processed: "`string'"
+      processed: '"((ValueTypeName)->Length + (Valu"...'
       offset: 00001B7C
     - name: ??_C@_0CA@OGCC@?$CIValueName?9?$DOLength?$CJ?5?$DM?5MAXUSHORT?$AA@
-      processed: "`string'"
+      processed: '"(ValueName->Length) < MAXUSHORT"'
       offset: 00001BD0
     - name: ??_C@_0FB@PGGO@?$CI?$CIValueTypeName?$CJ?9?$DOLength?5?$CL?5?$CICm_T@
-      processed: "`string'"
+      processed: '"((ValueTypeName)->Length + (Cm_T"...'
       offset: 00001BF0
     - name: ??_C@_0BP@EKCD@?$CICm_T_Name?4Length?$CJ?5?$DM?5MAXUSHORT?$AA@
-      processed: "`string'"
+      processed: '"(Cm_T_Name.Length) < MAXUSHORT"'
       offset: 00001C44
     - name: ??_C@_0CH@IONI@status?5?$DN?$DN?5STATUS_OBJECT_NAME_NOT@
-      processed: "`string'"
+      processed: '"status == STATUS_OBJECT_NAME_NOT"...'
       offset: 00001C64
     - name: ??_C@_0BG@HMBO@ValueName?9?$DOLength?5?$DO?52?$AA@
-      processed: "`string'"
+      processed: '"ValueName->Length > 2"'
       offset: 00001C8C
     - name: ??_C@_0CL@BOHK@?8ZwQueryValueKey?3?5looking?5up?5?$CFs?5@
-      processed: "`string'"
+      processed: "\"\\'ZwQueryValueKey: looking up %s \"..."
       offset: 00001CA4
     - name: ??_C@_0BC@GPPO@NotificationEntry?$AA@
-      processed: "`string'"
+      processed: '"NotificationEntry"'
       offset: 00001CD0
     - name: ??_C@_0M@CCGG@?4?4?2notify?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\notify.c"'
       offset: 00001CE4
     - name: ??_C@_0BF@FAHG@Notify?9?$DORefCount?5?$DO?50?$AA@
-      processed: "`string'"
+      processed: '"Notify->RefCount > 0"'
       offset: 00001CF0
     - name: ??_C@_06EHOD@Notify?$AA@
-      processed: "`string'"
+      processed: '"Notify"'
       offset: 00001D08
     - name: ??_C@_0BF@JGPA@Notify?9?$DOUnregistered?$AA@
-      processed: "`string'"
+      processed: '"Notify->Unregistered"'
       offset: 00001D10
     - name: ??_C@_0CJ@DALC@Driver?5?$CF08X?5failed?5the?5hw?5profil@
-      processed: "`string'"
+      processed: '"Driver %08X failed the hw profil"...'
       offset: 00001D28
     - name: ??_C@_0BD@DAAI@NTKERN?5PNP?5WARNS?3?5?$AA@
-      processed: "`string'"
+      processed: '"NTKERN PNP WARNS: "'
       offset: 00001D54
     - name: ??_C@_0BI@NBFI@EventCategoryData?$DN?$DNNULL?$AA@
-      processed: "`string'"
+      processed: '"EventCategoryData==NULL"'
       offset: 00001D68
     - name: ??_C@_0BC@GKE@EventCategoryData?$AA@
-      processed: "`string'"
+      processed: '"EventCategoryData"'
       offset: 00001D80
     - name: ??_C@_0BD@GDEE@No?5valid?5code?5path?$AA@
-      processed: "`string'"
+      processed: '"No valid code path"'
       offset: 00001D94
     - name: ??_C@_0BC@CGKF@NTKERN?5PO?5ERROR?3?5?$AA@
-      processed: "`string'"
+      processed: '"NTKERN PO ERROR: "'
       offset: 00001DA8
     - name: ??_C@_0M@OAIA@Count?5?$CB?$DN?5?91?$AA@
-      processed: "`string'"
+      processed: '"Count != -1"'
       offset: 00001DBC
     - name: ??_C@_0M@BEI@?4?4?2attrib?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\attrib.c"'
       offset: 00001DC8
     - name: _PoPowerTraceControl
       processed: ''
@@ -891,212 +1101,212 @@ appearances:
       processed: ''
       offset: '00001E00'
     - name: ??_C@_03BNPA@dev?$AA@
-      processed: "`string'"
+      processed: '"dev"'
       offset: '00001E08'
     - name: ??_C@_03HGH@sys?$AA@
-      processed: "`string'"
+      processed: '"sys"'
       offset: 00001E0C
     - name: ??_C@_08IFCJ@complete?$AA@
-      processed: "`string'"
+      processed: '"complete"'
       offset: '00001E10'
     - name: ??_C@_08JLGB@setstate?$AA@
-      processed: "`string'"
+      processed: '"setstate"'
       offset: 00001E1C
     - name: ??_C@_08KHGE@startnxt?$AA@
-      processed: "`string'"
+      processed: '"startnxt"'
       offset: '00001E28'
     - name: ??_C@_07EOPE@present?$AA@
-      processed: "`string'"
+      processed: '"present"'
       offset: '00001E34'
     - name: ??_C@_07JGJN@calldrv?$AA@
-      processed: "`string'"
+      processed: '"calldrv"'
       offset: 00001E3C
     - name: ??_C@_05PBDF@query?$AA@
-      processed: "`string'"
+      processed: '"query"'
       offset: '00001E44'
     - name: ??_C@_03NHNF@set?$AA@
-      processed: "`string'"
+      processed: '"set"'
       offset: 00001E4C
     - name: ??_C@_03NHBO@seq?$AA@
-      processed: "`string'"
+      processed: '"seq"'
       offset: '00001E50'
     - name: ??_C@_04OMDE@wait?$AA@
-      processed: "`string'"
+      processed: '"wait"'
       offset: '00001E54'
     - name: ??_C@_0CM@GBAO@PopPolicyLockThread?5?$DN?$DN?5KeGetCurr@
-      processed: "`string'"
+      processed: '"PopPolicyLockThread == KeGetCurr"...'
       offset: 00001E5C
     - name: ??_C@_09FEJF@?4?4?2misc?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\misc.c"'
       offset: '00001E88'
     - name: ??_C@_0M@EPEN@Unspecified?$AA@
-      processed: "`string'"
+      processed: '"Unspecified"'
       offset: '00001E94'
     - name: ??_C@_07PCLD@Working?$AA@
-      processed: "`string'"
+      processed: '"Working"'
       offset: 00001EA0
     - name: ??_C@_09GJGM@Sleeping1?$AA@
-      processed: "`string'"
+      processed: '"Sleeping1"'
       offset: 00001EA8
     - name: ??_C@_09JGNF@Sleeping2?$AA@
-      processed: "`string'"
+      processed: '"Sleeping2"'
       offset: 00001EB4
     - name: ??_C@_09DMEC@Sleeping3?$AA@
-      processed: "`string'"
+      processed: '"Sleeping3"'
       offset: 00001EC0
     - name: ??_C@_09NLJB@Hibernate?$AA@
-      processed: "`string'"
+      processed: '"Hibernate"'
       offset: 00001ECC
     - name: ??_C@_08DCJK@Shutdown?$AA@
-      processed: "`string'"
+      processed: '"Shutdown"'
       offset: 00001ED8
     - name: ??_C@_01PKMN@?$DP?$AA@
-      processed: "`string'"
+      processed: '"?"'
       offset: 00001EE4
     - name: ??_C@_04COF@None?$AA@
-      processed: "`string'"
+      processed: '"None"'
       offset: 00001EE8
     - name: ??_C@_05BKOF@Sleep?$AA@
-      processed: "`string'"
+      processed: '"Sleep"'
       offset: 00001EF0
     - name: ??_C@_0O@CLAD@ShutdownReset?$AA@
-      processed: "`string'"
+      processed: '"ShutdownReset"'
       offset: 00001EF8
     - name: ??_C@_0M@EBLN@ShutdownOff?$AA@
-      processed: "`string'"
+      processed: '"ShutdownOff"'
       offset: 00001F08
     - name: ??_C@_06PBJL@?0?$CFs?0?$CFd?$AA@
-      processed: "`string'"
+      processed: '",%s,%d"'
       offset: 00001F14
     - name: ??_C@_04BPBB@?0?$CF5s?$AA@
-      processed: "`string'"
+      processed: '",%5s"'
       offset: 00001F1C
     - name: ??_C@_0BF@LPFG@?0irp?$EA?$CF08lx?0isp?$EA?$CF08lx?$AA@
-      processed: "`string'"
+      processed: '",irp@%08lx,isp@%08lx"'
       offset: 00001F24
     - name: ??_C@_09NLKM@?0?0?0?0?$CFs?0?$CFd?$AA@
-      processed: "`string'"
+      processed: '",,,,%s,%d"'
       offset: 00001F3C
     - name: ??_C@_0BI@KJEM@PLOG?0?$CF05ld?0?$CF8s?0do?$EA?$CF08lx?$AA@
-      processed: "`string'"
+      processed: '"PLOG,%05ld,%8s,do@%08lx"'
       offset: 00001F48
     - name: ??_C@_0L@LAKC@?4?4?2ntapi?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\ntapi.c"'
       offset: 00001F60
     - name: ??_C@_0BO@LLFN@PopCriticalShutdown?3?5type?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"PopCriticalShutdown: type %x\n"'
       offset: 00001F6C
     - name: ??_C@_08DJFO@hTimeOut?$AA@
-      processed: "`string'"
+      processed: '"hTimeOut"'
       offset: 00001F8C
     - name: ??_C@_0N@MCIM@?4?4?2paction?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\paction.c"'
       offset: 00001F98
     - name: ??_C@_08COLN@USER?4EXE?$AA@
-      processed: "`string'"
+      processed: '"USER.EXE"'
       offset: 00001FA8
     - name: ??_C@_0M@BPKL@MESSAGEBEEP?$AA@
-      processed: "`string'"
+      processed: '"MESSAGEBEEP"'
       offset: 00001FB4
     - name: ??_C@_09LCBD@?$CBhTimeOut?$AA@
-      processed: "`string'"
+      processed: '"!hTimeOut"'
       offset: 00001FC0
     - name: ??_C@_0CC@PBAG@PopAction?3?5dropped?5user?5event?5?$CFx@
-      processed: "`string'"
+      processed: '"PopAction: dropped user event %x"...'
       offset: 00001FCC
     - name: ??_C@_0CN@OPPJ@PopAction?3?5dropping?5duplicate?5us@
-      processed: "`string'"
+      processed: '"PopAction: dropping duplicate us"...'
       offset: 00001FF0
     - name: ??_C@_0CD@POL@PopAction?3?5queueing?5user?5event?5?$CF@
-      processed: "`string'"
+      processed: '"PopAction: queueing user event %"...'
       offset: '00002020'
     - name: ??_C@_0CB@MLKE@MinState?5?$DM?$DN?5PowerSystemHibernate@
-      processed: "`string'"
+      processed: '"MinState <= PowerSystemHibernate"...'
       offset: '00002044'
     - name: ??_C@_0CJ@KLKC@PopSetPowerAction?3?5?$CFs?0?5Flags?5?$CFx?0@
-      processed: "`string'"
+      processed: '"PopSetPowerAction: %s, Flags %x,"...'
       offset: '00002068'
     - name: ??_C@_0BK@PFIL@PopAction?3?5invalid?5state?6?$AA@
-      processed: "`string'"
+      processed: '"PopAction: invalid state\n"'
       offset: '00002094'
     - name: ??_C@_0M@FPCA@EXITWINDOWS?$AA@
-      processed: "`string'"
+      processed: '"EXITWINDOWS"'
       offset: 000020B0
     - name: ??_C@_0DO@NEMD@PopIssueActionRequest?5of?5Shutdow@
-      processed: "`string'"
+      processed: '"PopIssueActionRequest of Shutdow"...'
       offset: 000020BC
     - name: ??_C@_0CH@ELDM@PowerAction?3?5Setting?5with?5direct@
-      processed: "`string'"
+      processed: '"PowerAction: Setting with direct"...'
       offset: 000020FC
     - name: ??_C@_0CF@COCL@PowerAction?3?5?$CFs?$CFs?0?5Min?$DN?$CFs?0?5Flags@
-      processed: "`string'"
+      processed: '"PowerAction: %s%s, Min=%s, Flags"...'
       offset: '00002124'
     - name: ??_C@_09DFAA@Promote?0?5?$AA@
-      processed: "`string'"
+      processed: '"Promote, "'
       offset: 0000214C
     - name: ??_C@_0BI@JDPI@PopCB?3?5Battery?5removed?6?$AA@
-      processed: "`string'"
+      processed: '"PopCB: Battery removed\n"'
       offset: '00002158'
     - name: 
         ??_C@_0DI@NJGK@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIPopCompletePo@
-      processed: "`string'"
+      processed: '"(1) | (1) | (1) ? (PopCompletePo"...'
       offset: '00002170'
     - name: ??_C@_0BC@FADK@PopCB?3?5query?5tag?6?$AA@
-      processed: "`string'"
+      processed: '"PopCB: query tag\n"'
       offset: 000021A8
     - name: ??_C@_0BD@CNMG@PopCB?3?5query?5info?6?$AA@
-      processed: "`string'"
+      processed: '"PopCB: query info\n"'
       offset: 000021BC
     - name: ??_C@_0DC@EPCE@PopCB?3?5timeout?5?$CFx?0?5pwrstate?5?$CFx?0?5@
-      processed: "`string'"
+      processed: '"PopCB: timeout %x, pwrstate %x, "...'
       offset: 000021D0
     - name: ??_C@_0BH@PIOK@PopCB?3?5query?5est?5time?6?$AA@
-      processed: "`string'"
+      processed: '"PopCB: query est time\n"'
       offset: '00002204'
     - name: ??_C@_0BG@BPMI@PopCB?3?5irp?5cancelled?6?$AA@
-      processed: "`string'"
+      processed: '"PopCB: irp cancelled\n"'
       offset: 0000221C
     - name: ??_C@_0CA@CJKD@PopCB?3?5error?5?$CFx?5?9?5new?5state?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"PopCB: error %x - new state %d\n"'
       offset: '00002234'
     - name: ??_C@_0BI@BIJK@PopCB?3?5New?5battery?5tag?6?$AA@
-      processed: "`string'"
+      processed: '"PopCB: New battery tag\n"'
       offset: '00002254'
     - name: ??_C@_0BC@HJDN@PopCB?3?5info?5read?6?$AA@
-      processed: "`string'"
+      processed: '"PopCB: info read\n"'
       offset: 0000226C
     - name: ??_C@_0CB@BDGM@Capacity?5?$DN?5?$CFu?5TriggerLevel?5?$DN?5?$CFu?6@
-      processed: "`string'"
+      processed: '"Capacity = %u TriggerLevel = %u\n"...'
       offset: '00002280'
     - name: ??_C@_0BO@BKPA@PopCB?3?5AC?1DC?5state?5not?5known?6?$AA@
-      processed: "`string'"
+      processed: '"PopCB: AC/DC state not known\n"'
       offset: 000022A4
     - name: ??_C@_0DE@CHEL@PopCB?3?5Status?5PwrState?5?$CFx?0?5Cap?5?$CF@
-      processed: "`string'"
+      processed: '"PopCB: Status PwrState %x, Cap %"...'
       offset: 000022C4
     - name: ??_C@_0BF@DKFE@PopCB?3?5EstTime?5read?6?$AA@
-      processed: "`string'"
+      processed: '"PopCB: EstTime read\n"'
       offset: 000022F8
     - name: ??_C@_0BH@LF@Irp?5?$DN?$DN?5PopCB?4StatusIrp?$AA@
-      processed: "`string'"
+      processed: '"Irp == PopCB.StatusIrp"'
       offset: '00002310'
     - name: ??_C@_0L@NDDB@?4?4?2pbatt?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\pbatt.c"'
       offset: '00002328'
     - name: ??_C@_0L@PJGB@?4?4?2pinfo?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\pinfo.c"'
       offset: '00002334'
     - name: ??_C@_0BD@IHJK@GetExceptionCode?$CI?$CJ?$AA@
-      processed: "`string'"
+      processed: '"GetExceptionCode()"'
       offset: '00002340'
     - name: ??_C@_0BD@OLFO@NT_SUCCESS?$CIStatus?$CJ?$AA@
-      processed: "`string'"
+      processed: '"NT_SUCCESS(Status)"'
       offset: '00002354'
     - name: ??_C@_0CO@EOMN@PopConnectToPolicyDevice?3?5Device@
-      processed: "`string'"
+      processed: '"PopConnectToPolicyDevice: Device"...'
       offset: '00002368'
     - name: ??_C@_0EA@IFPL@PopConnectToPolicyDevice?3?5Batter@
-      processed: "`string'"
+      processed: '"PopConnectToPolicyDevice: Batter"...'
       offset: '00002398'
     - name: _PopIdleDetectionMode
       processed: ''
@@ -1192,46 +1402,46 @@ appearances:
       processed: ''
       offset: 000028A0
     - name: ??_C@_0M@FPBC@?4?4?2poinit?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\poinit.c"'
       offset: 000028A4
     - name: ??_C@_0L@FLLE@?4?4?2pwork?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\pwork.c"'
       offset: 000028B0
     - name: ??_C@_0BO@ECJJ@PoSIdle?3?5new?5idle?5params?5set?6?$AA@
-      processed: "`string'"
+      processed: '"PoSIdle: new idle params set\n"'
       offset: 000028BC
     - name: ??_C@_0M@MABC@?4?4?2switch?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\switch.c"'
       offset: 000028DC
     - name: ??_C@_0CN@GJOE@PopSystemButtonHandler?3?5unexpect@
-      processed: "`string'"
+      processed: '"PopSystemButtonHandler: unexpect"...'
       offset: '000028E8'
     - name: ??_C@_0BE@FOP@HandleTable?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"HandleTable != NULL"'
       offset: '00002918'
     - name: ??_C@_0M@GFDJ@?4?4?2handle?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\handle.c"'
       offset: 0000292C
     - name: ??_C@_0BA@NHDH@Process?5?$DN?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"Process == NULL"'
       offset: '00002938'
     - name: ??_C@_0CC@JNAC@NewCountEntries?5?$DO?5OldCountEntrie@
-      processed: "`string'"
+      processed: '"NewCountEntries > OldCountEntrie"...'
       offset: '00002948'
     - name: ??_C@_0BE@GGBJ@HandleEntry?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"HandleEntry != NULL"'
       offset: 0000296C
     - name: _PoolFlags
       processed: ''
       offset: '00002980'
     - name: ??_C@_0EE@NOBJ@?$CI?$CI?$CIULONG?$CJmem?5?$FO?5?$CI?$CIULONG?$CJmem?5?$CL?5Num@
-      processed: "`string'"
+      processed: '"(((ULONG)mem ^ ((ULONG)mem + Num"...'
       offset: 0000299C
     - name: ??_C@_0BN@OOPC@?$CI?$CIULONG?$CJmem?5?$CG?5PAGEMASK?$CJ?5?$DN?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"((ULONG)mem & PAGEMASK) == 0"'
       offset: '000029E0'
     - name: ??_C@_09GEEE@?4?4?2pool?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\pool.c"'
       offset: 00002A00
     - name: _ResourceTrack
       processed: ''
@@ -1240,70 +1450,70 @@ appearances:
       processed: ''
       offset: 00002A10
     - name: ??_C@_0BI@EPAN@?8EX?3?5Acquire?5Result?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'EX: Acquire Result %x\\n\""
       offset: 00002A14
     - name: ??_C@_0CP@BNCA@?$CIResource?9?$DOFlag?5?$CG?5ResourceNeverE@
-      processed: "`string'"
+      processed: '"(Resource->Flag & ResourceNeverE"...'
       offset: 00002A2C
     - name: ??_C@_0O@DGEM@?4?4?2resource?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\resource.c"'
       offset: 00002A5C
     - name: ??_C@_0BB@PHOC@?8EX?3?5Acquire?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'EX: Acquire %x\\n\""
       offset: 00002A6C
     - name: ??_C@_0BM@BHKH@OwnerEntry?9?$DOOwnerCount?5?$CB?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"OwnerEntry->OwnerCount != 0"'
       offset: 00002A80
     - name: ??_C@_0BL@CLK@OwnerEntry?9?$DOOwnerCount?5?$DO?50?$AA@
-      processed: "`string'"
+      processed: '"OwnerEntry->OwnerCount > 0"'
       offset: 00002A9C
     - name: ??_C@_0CJ@PFOO@OwnerEntry?9?$DOOwnerThread?5?$DN?$DN?5curre@
-      processed: "`string'"
+      processed: '"OwnerEntry->OwnerThread == curre"...'
       offset: 00002AB8
     - name: ??_C@_0BD@JHHH@OwnerEntry?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"OwnerEntry != NULL"'
       offset: 00002AE4
     - name: ??_C@_0BK@DIMF@Resource?9?$DOActiveCount?5?$DO?50?$AA@
-      processed: "`string'"
+      processed: '"Resource->ActiveCount > 0"'
       offset: 00002AF8
     - name: ??_C@_0CJ@BPAC@Resource?9?$DOOwnerThreads?$FL0?$FN?4OwnerC@
-      processed: "`string'"
+      processed: '"Resource->OwnerThreads[0].OwnerC"...'
       offset: 00002B14
     - name: ??_C@_0FA@LJM@Resource?9?$DOOwnerThreads?$FL0?$FN?4OwnerT@
-      processed: "`string'"
+      processed: '"Resource->OwnerThreads[0].OwnerT"...'
       offset: 00002B40
     - name: ??_C@_0BK@LLFI@?8EX?3?5Release?5resource?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'EX: Release resource %x\\n\""
       offset: 00002B90
     - name: ??_C@_0CG@CKEH@IsExclusiveWaiting?$CIResource?$CJ?5?$DN?$DN?5@
-      processed: "`string'"
+      processed: '"IsExclusiveWaiting(Resource) == "...'
       offset: 00002BAC
     - name: ??_C@_0CD@CJLN@IsSharedWaiting?$CIResource?$CJ?5?$DN?$DN?5FAL@
-      processed: "`string'"
+      processed: '"IsSharedWaiting(Resource) == FAL"...'
       offset: 00002BD4
     - name: ??_C@_0BB@MKLO@?8EX?5?9?5Rewaiting?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'EX - Rewaiting\\n\""
       offset: 00002BF8
     - name: ??_C@_0CE@DFPL@?8?5NumberOfExclusiveWaiters?5?$DN?5?$CF04@
-      processed: "`string'"
+      processed: "\"\\' NumberOfExclusiveWaiters = %04\"..."
       offset: 00002C0C
     - name: ??_C@_0CH@NBOI@?8?5ActiveCount?5?$DN?5?$CF04lx?5?5Flags?5?$DN?5?$CF@
-      processed: "`string'"
+      processed: "\"\\' ActiveCount = %04lx  Flags = %\"..."
       offset: 00002C30
     - name: ??_C@_0BC@EMAC@IsOwnedExclusive?5?$AA@
-      processed: "`string'"
+      processed: '"IsOwnedExclusive "'
       offset: 00002C58
     - name: ??_C@_0O@DCBD@SharedWaiter?5?$AA@
-      processed: "`string'"
+      processed: '"SharedWaiter "'
       offset: 00002C6C
     - name: ??_C@_0BB@PBLJ@ExclusiveWaiter?5?$AA@
-      processed: "`string'"
+      processed: '"ExclusiveWaiter "'
       offset: 00002C7C
     - name: ??_C@_0BB@MPPP@?8Resource?5?$EA?5?$CFlx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Resource @ %lx\\n\""
       offset: 00002C90
     - name: ??_C@_0CB@COIA@?8?5?5Thread?5?$DN?5?$CF08lx?0?5Count?5?$DN?5?$CF02x?6@
-      processed: "`string'"
+      processed: "\"\\'  Thread = %08lx, Count = %02x\\n\"..."
       offset: 00002CA4
     - name: _ExpSemaphoreObjectType
       processed: ''
@@ -1315,67 +1525,67 @@ appearances:
       processed: ''
       offset: 00002CD0
     - name: ??_C@_1M@BACH@?$AAE?$AAv?$AAe?$AAn?$AAt?$AA?$AA@
-      processed: "`string'"
+      processed: L"Event"
       offset: 00002CE0
     - name: ??_C@_0CJ@OPKC@FastMutex?9?$DOOwner?5?$CB?$DN?5KeGetCurrent@
-      processed: "`string'"
+      processed: '"FastMutex->Owner != KeGetCurrent"...'
       offset: 00002CEC
     - name: ??_C@_0L@BHKK@?4?4?2event?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\event.c"'
       offset: 00002D18
     - name: ??_C@_0CJ@EDLF@FastMutex?9?$DOOwner?5?$DN?$DN?5KeGetCurrent@
-      processed: "`string'"
+      processed: '"FastMutex->Owner == KeGetCurrent"...'
       offset: 00002D24
     - name: ??_C@_0CM@DALH@?8Executive?3?5Resource?5initializat@
-      processed: "`string'"
+      processed: "\"\\'Executive: Resource initializat\"..."
       offset: 00002D50
     - name: ??_C@_0CJ@HCDA@?8Executive?3?5Event?5initialization@
-      processed: "`string'"
+      processed: "\"\\'Executive: Event initialization\"..."
       offset: 00002D7C
     - name: ??_C@_0M@BMHK@?8run?5?$CFx?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'run %x %x\\n\""
       offset: 00002DA8
     - name: ??_C@_0BK@DAMD@?8Dequeued?5work?5item?5?$CF08x?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Dequeued work item %08x\\n\""
       offset: 00002DB4
     - name: ??_C@_0M@JNCH@?4?4?2worker?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\worker.c"'
       offset: 00002DD0
     - name: ??_C@_0BD@NPEO@?8Queue?5time?5?$CFx?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Queue time %x %x\\n\""
       offset: 00002DDC
     - name: ??_C@_0CF@PGIF@workItemListEntry?5?$CB?$DN?5?$CGWorkItem?9?$DO@
-      processed: "`string'"
+      processed: '"workItemListEntry != &WorkItem->"...'
       offset: 00002DF0
     - name: ??_C@_0BO@KIMB@?8ExQueueWorkItem?$CI?5?$CF08x?0?5?$CFd?5?$CJ?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'ExQueueWorkItem( %08x, %d )\\n\""
       offset: '00002E18'
     - name: ??_C@_0EA@GEIP@QueueType?5?$DN?$DN?5CriticalWorkQueue?5?$HM@
-      processed: "`string'"
+      processed: '"QueueType == CriticalWorkQueue |"...'
       offset: '00002E38'
     - name: ??_C@_0BN@DINI@WorkItem?9?$DOList?4Flink?5?$DN?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"WorkItem->List.Flink == NULL"'
       offset: '00002E78'
     - name: ??_C@_0BN@LLAA@QueueType?5?$DM?5MaximumWorkQueue?$AA@
-      processed: "`string'"
+      processed: '"QueueType < MaximumWorkQueue"'
       offset: '00002E98'
     - name: _ExpCallbackMapping
       processed: ''
       offset: 00002EB8
     - name: ??_C@_1BC@NEEN@?$AAC?$AAa?$AAl?$AAl?$AAb?$AAa?$AAc?$AAk?$AA?$AA@
-      processed: "`string'"
+      processed: L"Callback"
       offset: 00002EC8
     - name: ??_C@_0O@CIPK@?4?4?2callback?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\callback.c"'
       offset: 00002EDC
     - name: ??_C@_0DC@GJBM@IsListEmpty?$CI?$CGCallbackObject?9?$DOReg@
-      processed: "`string'"
+      processed: '"IsListEmpty(&CallbackObject->Reg"...'
       offset: 00002EEC
     - name: ??_C@_0CE@MNAJ@KeGetCurrentIrql?$CI?$CJ?5?$DM?5DISPATCH_LE@
-      processed: "`string'"
+      processed: '"KeGetCurrentIrql() < DISPATCH_LE"...'
       offset: 00002F20
     - name: ??_C@_0BB@IGGI@CallbackFunction?$AA@
-      processed: "`string'"
+      processed: '"CallbackFunction"'
       offset: 00002F44
     - name: _ExpAdjustScanPeriod
       processed: ''
@@ -1384,40 +1594,40 @@ appearances:
       processed: ''
       offset: 00002F5C
     - name: ??_C@_0O@MFNC@?4?4?2lookasid?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\lookasid.c"'
       offset: 00002F60
     - name: _HalpDmaOperations
       processed: ''
       offset: 00002F70
     - name: ??_C@_0CF@BMOG@DeviceDescriptor?9?$DOReserved1?5?$DN?$DN?5F@
-      processed: "`string'"
+      processed: '"DeviceDescriptor->Reserved1 == F"...'
       offset: 00002FA4
     - name: ??_C@_0O@LALK@?4?4?2ixisasup?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\ixisasup.c"'
       offset: 00002FCC
     - name: ??_C@_0BI@GHDI@MapRegisterBase?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"MapRegisterBase != NULL"'
       offset: 00002FDC
     - name: ??_C@_0GG@BFBN@MaxPhysicalAddress?5?$DN?$DN?50xFFFFFF?5?$HM@
-      processed: "`string'"
+      processed: '"MaxPhysicalAddress == 0xFFFFFF |"...'
       offset: 00002FF4
     - name: ??_C@_0L@IODE@?4?4?2xxhal?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\xxhal.c"'
       offset: 0000305C
     - name: ??_C@_0N@CPMP@?4?4?2ixhwsup?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\ixhwsup.c"'
       offset: '00003068'
     - name: ??_C@_0BJ@PBAE@BusAddress?4HighPart?5?$DN?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"BusAddress.HighPart == 0"'
       offset: '00003078'
     - name: ??_C@_08CFKJ@?4?4?2bus?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\bus.c"'
       offset: '00003094'
     - name: ??_C@_0CB@LOCD@BusNumber?5?$DN?$DN?50?5?$HM?$HM?5BusNumber?5?$DN?$DN?51@
-      processed: "`string'"
+      processed: '"BusNumber == 0 || BusNumber == 1"...'
       offset: 000030A0
     - name: ??_C@_0O@PCIC@?4?4?2ixphwsup?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\ixphwsup.c"'
       offset: 000030C4
     - name: _NlsMbCodePageTag
       processed: ''
@@ -1429,29 +1639,29 @@ appearances:
       processed: ''
       offset: 000030DC
     - name: ??_C@_08NBA@?4?4?2rtl?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\rtl.c"'
       offset: '000030E0'
     - name: ??_C@_0N@OBFI@pStr?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"pStr != NULL"'
       offset: 000030EC
     - name: ??_C@_0DD@HEJB@RtlAssert?3?5Assertion?5?$CI?$CFs?$CJ?5failed@
-      processed: "`string'"
+      processed: '"RtlAssert: Assertion (%s) failed"...'
       offset: 000030FC
     - name: ??_C@_0DG@FKJI@RtlAssert?3?5Assertion?5?$CI?$CFs?$CJ?5failed@
-      processed: "`string'"
+      processed: '"RtlAssert: Assertion (%s) failed"...'
       offset: '00003130'
     - name: 
         ??_C@_0FA@ICHG@?$CB?$CI?$CI?$CI?$CI?$CIULONG?$CJs1?5?$CG?51?$CJ?5?$CB?$DN?50?$CJ?5?$HM?$HM?5?$CI?$CI?$CI@
-      processed: "`string'"
+      processed: '"!(((((ULONG)s1 & 1) != 0) || ((("...'
       offset: '00003168'
     - name: ??_C@_0O@EICH@?$CIn2?5?$CG?51?$CJ?5?$DN?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"(n2 & 1) == 0"'
       offset: 000031B8
     - name: ??_C@_0O@HHLH@?$CIn1?5?$CG?51?$CJ?5?$DN?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"(n1 & 1) == 0"'
       offset: 000031C8
     - name: ??_C@_0CC@MGE@charsPrinted?5?$CB?$DN?5?$CIULONG?$CJ0xFFFFFFF@
-      processed: "`string'"
+      processed: '"charsPrinted != (ULONG)0xFFFFFFF"...'
       offset: 000031D8
     - name: _RtlpBitsClearAnywhere
       processed: ''
@@ -1466,41 +1676,41 @@ appearances:
       processed: ''
       offset: 000034FC
     - name: ??_C@_0M@BMFN@?4?4?2bitmap?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\bitmap.c"'
       offset: '00003614'
     - name: ??_C@_0DK@NBID@StartingIndex?5?$CL?5NumberToSet?5?$DM?$DN?5B@
-      processed: "`string'"
+      processed: '"StartingIndex + NumberToSet <= B"...'
       offset: '00003620'
     - name: ??_C@_0DM@MOOM@StartingIndex?5?$CL?5NumberToClear?5?$DM?$DN@
-      processed: "`string'"
+      processed: '"StartingIndex + NumberToClear <="...'
       offset: 0000365C
     - name: ??_C@_0CJ@LCBI@?8RTL?3?5?$CFwZ?5key?5not?5found?5?9?5Status@
-      processed: "`string'"
+      processed: "\"\\'RTL: %wZ key not found - Status\"..."
       offset: '00003698'
     - name: ??_C@_13HMCP@?$AA?2?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\"
       offset: 000036C4
     - name: ??_C@_0DD@GFCE@?8RtlpGetRegistryHandle?3?5RTL_REGI@
-      processed: "`string'"
+      processed: "\"\\'RtlpGetRegistryHandle: RTL_REGI\"..."
       offset: 000036C8
     - name: ??_C@_0N@BBFO@?4?4?2regutil?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\regutil.c"'
       offset: 000036FC
     - name: ??_C@_0DH@KFIL@?8RTL?3?5Expand?5variables?5for?5?$CFwZ?5f@
-      processed: "`string'"
+      processed: "\"\\'RTL: Expand variables for %wZ f\"..."
       offset: 0000370C
     - name: ??_C@_0DC@HKMD@?8RTL?3?5QueryRoutine?$CI?5?$CFws?5?$CJ?5failed@
-      processed: "`string'"
+      processed: "\"\\'RTL: QueryRoutine( %ws ) failed\"..."
       offset: '00003744'
     - name: 
         ??_C@_1CA@NKCK@?$AA?$CK?$AA?$CK?$AA?$CK?$AA?5?$AAU?$AAn?$AAk?$AAn?$AAo?$AAw?$AAn?$AA?5?$AA?$CK?$AA?$CK?$AA?$CK?$AA?$AA@
-      processed: "`string'"
+      processed: L"*** Unknown ***"
       offset: '00003778'
     - name: ??_C@_0CF@MIKF@RTL?3?5No?5values?5found?5under?5?$CFwZ?5k@
-      processed: "`string'"
+      processed: '"RTL: No values found under %wZ k"...'
       offset: '00003798'
     - name: ??_C@_0BO@KPE@?8RTL?3?5?$CFwZ?5sub?5key?5not?5found?4?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'RTL: %wZ sub key not found.\\n\""
       offset: 000037C0
     - name: _RtlpRegistryPaths
       processed: ''
@@ -1510,23 +1720,23 @@ appearances:
       offset: 000037F8
     - name: 
         ??_C@_1BM@CAEM@?$AAU?$AAs?$AAe?$AAr?$AA?2?$AA?4?$AAD?$AAe?$AAf?$AAa?$AAu?$AAl?$AAt?$AA?$AA@
-      processed: "`string'"
+      processed: L"User\\.Default"
       offset: '00003860'
     - name: 
         ??_C@_1CG@BHB@?$AAH?$AAa?$AAr?$AAd?$AAw?$AAa?$AAr?$AAe?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAM?$AAa?$AAp?$AA?$AA@
-      processed: "`string'"
+      processed: L"Hardware\\DeviceMap"
       offset: 0000387C
     - name: 
         ??_C@_1FE@EPLF@?$AAS?$AAo?$AAf?$AAt?$AAw?$AAa?$AAr?$AAe?$AA?2?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt?$AA?2?$AAW@
-      processed: "`string'"
+      processed: L"Software\\Microsoft\\W"...
       offset: 000038A4
     - name: 
         ??_C@_1EC@JGOB@?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA?2?$AAC?$AAu?$AAr?$AAr?$AAe?$AAn?$AAt?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo@
-      processed: "`string'"
+      processed: L"System\\CurrentContro"...
       offset: 000038F8
     - name: 
         ??_C@_1EE@KIMN@?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA?2?$AAC?$AAu?$AAr?$AAr?$AAe?$AAn?$AAt?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo@
-      processed: "`string'"
+      processed: L"System\\CurrentContro"...
       offset: 0000393C
     - name: _RtlpIntegerChars
       processed: ''
@@ -1559,135 +1769,135 @@ appearances:
       processed: ''
       offset: 00003CC8
     - name: ??_C@_09NKEK@?4?4?2guid?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\guid.c"'
       offset: 00003CD0
     - name: ??_C@_0BJ@JENC@IopAssociationIsLocked?$CI?$CJ?$AA@
-      processed: "`string'"
+      processed: '"IopAssociationIsLocked()"'
       offset: 00003CDC
     - name: ??_C@_0L@BGAP@?4?4?2assoc?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\assoc.c"'
       offset: 00003CF8
     - name: ??_C@_0FF@KEH@IopAssociationLookup?$CI?5SlotHead?0?5@
-      processed: "`string'"
+      processed: '"IopAssociationLookup( SlotHead, "...'
       offset: 00003D04
     - name: ??_C@_0DC@NHON@Remove?5?$DN?$DN?5FALSE?5?$HM?$HM?5?$CBARGUMENT_PRE@
-      processed: "`string'"
+      processed: '"Remove == FALSE || !ARGUMENT_PRE"...'
       offset: 00003D5C
     - name: ??_C@_0M@FJLM@ShareVector?$AA@
-      processed: "`string'"
+      processed: '"ShareVector"'
       offset: 00003D90
     - name: ??_C@_0BO@FBNN@Vector?5?$DO?$DN?5PRIMARY_VECTOR_BASE?$AA@
-      processed: "`string'"
+      processed: '"Vector >= PRIMARY_VECTOR_BASE"'
       offset: 00003D9C
     - name: ??_C@_0N@EGPN@?4?4?2connect?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\connect.c"'
       offset: 00003DBC
     - name: ??_C@_0BB@KFEE@pInterruptObject?$AA@
-      processed: "`string'"
+      processed: '"pInterruptObject"'
       offset: 00003DCC
     - name: ??_C@_1BA@NEMI@?$AA?$CF?$AAw?$AAZ?$AA?2?$AA?$CF?$AAw?$AAZ?$AA?$AA@
-      processed: "`string'"
+      processed: L"%wZ\\%wZ"
       offset: 00003DE0
     - name: ??_C@_0M@FDPN@?4?4?2drvobj?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\drvobj.c"'
       offset: 00003DF0
     - name: 
         ??_C@_1BI@KHDI@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?2?$AA?$CF?$AAl?$AAu?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\Driver\\%lu"
       offset: 00003DFC
     - name: 
         ??_C@_1BI@CICJ@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?2?$AA?$CF?$AAw?$AAZ?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\Driver\\%wZ"
       offset: '00003E14'
     - name: ??_C@_0EH@GBAE@?$CI?$CIFullPath?$CJ?9?$DOLength?5?$CL?5?$CICmSysName@
-      processed: "`string'"
+      processed: '"((FullPath)->Length + (CmSysName"...'
       offset: 00003E2C
     - name: ??_C@_0BP@LO@?$CICmSysName?4Length?$CJ?5?$DM?5MAXUSHORT?$AA@
-      processed: "`string'"
+      processed: '"(CmSysName.Length) < MAXUSHORT"'
       offset: '00003E74'
     - name: ??_C@_13DOBH@?$AA?4?$AA?$AA@
-      processed: "`string'"
+      processed: L"."
       offset: '00003E94'
     - name: ??_C@_0EH@POLI@?$CI?$CIFullPath?$CJ?9?$DOLength?5?$CL?5?$CIDriverNam@
-      processed: "`string'"
+      processed: '"((FullPath)->Length + (DriverNam"...'
       offset: '00003E98'
     - name: ??_C@_0BP@JHN@?$CIDriverNameLength?$CJ?5?$DM?5MAXUSHORT?$AA@
-      processed: "`string'"
+      processed: '"(DriverNameLength) < MAXUSHORT"'
       offset: 00003EE0
     - name: ??_C@_0EG@OCJP@?$CI?$CIFullPath?$CJ?9?$DOLength?5?$CL?5?$CIsizeof?$CI?5W@
-      processed: "`string'"
+      processed: '"((FullPath)->Length + (sizeof( W"...'
       offset: 00003F00
     - name: ??_C@_0FN@ODDF@?$CI?$CIFullPath?$CJ?9?$DOLength?5?$CL?5?$CICmSystemR@
-      processed: "`string'"
+      processed: '"((FullPath)->Length + (CmSystemR"...'
       offset: 00003F48
     - name: ??_C@_0DF@DENH@?$CICmSystemRootSystem32driversName@
-      processed: "`string'"
+      processed: '"(CmSystemRootSystem32driversName"...'
       offset: 00003FA8
     - name: ??_C@_0BN@FCIO@FullPath?9?$DOMaximumLength?5?$DN?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"FullPath->MaximumLength == 0"'
       offset: 00003FE0
     - name: ??_C@_0O@JEPC@?4?4?2initload?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\initload.c"'
       offset: '00004000'
     - name: ??_C@_0CJ@BIDB@valueInformation?9?$DONameLength?5?$DM?5M@
-      processed: "`string'"
+      processed: '"valueInformation->NameLength < M"...'
       offset: '00004010'
     - name: ??_C@_0EF@HKLO@StringU?9?$DOBuffer?$FL?5StringU?9?$DOLength@
-      processed: "`string'"
+      processed: '"StringU->Buffer[ StringU->Length"...'
       offset: 0000403C
     - name: ??_C@_0CJ@OCCL@valueInformation?9?$DODataLength?5?$DM?5M@
-      processed: "`string'"
+      processed: '"valueInformation->DataLength < M"...'
       offset: '00004084'
     - name: ??_C@_0CO@FDFI@?$CIkeyBasicInformation?9?$DONameLength@
-      processed: "`string'"
+      processed: '"(keyBasicInformation->NameLength"...'
       offset: 000040B0
     - name: ??_C@_0CP@KOGF@?8Did?5not?5find?5any?5NT?5group?5secti@
-      processed: "`string'"
+      processed: "\"\\'Did not find any NT group secti\"..."
       offset: '000040E0'
     - name: ??_C@_0DN@NLEH@?$CIvalueInformation?9?$DODataLength?5?9?5@
-      processed: "`string'"
+      processed: '"(valueInformation->DataLength - "...'
       offset: '00004110'
     - name: ??_C@_0CG@KCJF@?8Did?5not?5find?5any?5NT?5drivers?5to?5@
-      processed: "`string'"
+      processed: "\"\\'Did not find any NT drivers to \"..."
       offset: '00004150'
     - name: ??_C@_0CB@OACJ@DeviceObject?9?$DOReferenceCount?5?$DO?50@
-      processed: "`string'"
+      processed: '"DeviceObject->ReferenceCount > 0"...'
       offset: '00004178'
     - name: ??_C@_0O@ECGH@?4?4?2internal?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\internal.c"'
       offset: 0000419C
     - name: ??_C@_0CD@EGL@irp?9?$DOIoStatus?4Status?5?$CB?$DN?50xffffff@
-      processed: "`string'"
+      processed: '"irp->IoStatus.Status != 0xffffff"...'
       offset: 000041AC
     - name: ??_C@_0CM@KFNE@?$CB?$CIMdl?9?$DOMdlFlags?5?$CG?5MDL_MAPPED_TO_@
-      processed: "`string'"
+      processed: '"!(Mdl->MdlFlags & MDL_MAPPED_TO_"...'
       offset: 000041D0
     - name: ??_C@_0BM@MEOJ@Mdl?9?$DOMdlFlags?5?$CG?5MDL_PARTIAL?$AA@
-      processed: "`string'"
+      processed: '"Mdl->MdlFlags & MDL_PARTIAL"'
       offset: 000041FC
     - name: ??_C@_08KMMD@?4?4?2iop?4h?$AA@
-      processed: "`string'"
+      processed: '"..\\iop.h"'
       offset: '00004218'
     - name: ??_C@_0BK@PBCM@?8Disassociating?5Irp?3?5?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Disassociating Irp:  %x\\n\""
       offset: '00004224'
     - name: ??_C@_0BN@FAPP@?8IopSyncServTail?3?5Synch?5I?1O?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'IopSyncServTail: Synch I/O\\n\""
       offset: '00004240'
     - name: ??_C@_0CO@DNIO@?8I?1O?5completed?5without?5pending?0?5@
-      processed: "`string'"
+      processed: "\"\\'I/O completed without pending, \"..."
       offset: '00004260'
     - name: ??_C@_0BG@HKPA@?$CBIrp?9?$DOPendingReturned?$AA@
-      processed: "`string'"
+      processed: '"!Irp->PendingReturned"'
       offset: '00004290'
     - name: ??_C@_0CA@EBEF@?8IopSyncServTail?3?5deferred?5I?1O?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'IopSyncServTail: deferred I/O\\n\""
       offset: 000042A8
     - name: ??_C@_0BF@CKCF@?8Queue?5irp?5?$CFx?5to?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Queue irp %x to %x\\n\""
       offset: 000042C8
     - name: ??_C@_0DE@GOLC@?8IopCancelAlertedRequested?3?5pend@
-      processed: "`string'"
+      processed: "\"\\'IopCancelAlertedRequested: pend\"..."
       offset: '000042E0'
     - name: _Mmp64BitPhysicalAddress
       processed: ''
@@ -1699,468 +1909,468 @@ appearances:
       processed: ''
       offset: 0000431C
     - name: ??_C@_0BI@DHNG@?8IoDriver?5object?5?$CFs?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'IoDriver object %s %x\\n\""
       offset: '00004320'
     - name: ??_C@_0BI@DJND@?8IoDevice?5object?5?$CFs?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'IoDevice object %s %x\\n\""
       offset: '00004338'
     - name: _IopFileMapping
       processed: ''
       offset: '00004350'
     - name: ??_C@_0CH@DDOI@?8IoInit?3?5Failed?5to?5create?5Device@
-      processed: "`string'"
+      processed: "\"\\'IoInit: Failed to create Device\"..."
       offset: '00004360'
     - name: ??_C@_0CH@MKKM@?8IoInit?3?5Failed?5to?5create?5Driver@
-      processed: "`string'"
+      processed: "\"\\'IoInit: Failed to create Driver\"..."
       offset: '00004388'
     - name: ??_C@_1BA@FOJN@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\Device"
       offset: 000043B0
     - name: ??_C@_1BA@BBDO@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\Driver"
       offset: 000043C0
     - name: ??_C@_1BI@EDCJ@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\DosDevices"
       offset: 000043D0
     - name: ??_C@_0CO@PGJE@?8IoInit?3?5Couldn?8t?5create?5object?5@
-      processed: "`string'"
+      processed: "\"\\'IoInit: Couldn\\'t create object \"..."
       offset: '000043E8'
     - name: ??_C@_19GDCN@?$AAF?$AAi?$AAl?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"File"
       offset: '00004418'
     - name: ??_C@_0CF@BPAM@?8IoInit?3?5Created?5object?5type?5Dri@
-      processed: "`string'"
+      processed: "\"\\'IoInit: Created object type Dri\"..."
       offset: '00004424'
     - name: ??_C@_1O@IMKM@?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"Driver"
       offset: 0000444C
     - name: ??_C@_0CF@KMGP@?8IoInit?3?5Created?5object?5type?5Dev@
-      processed: "`string'"
+      processed: "\"\\'IoInit: Created object type Dev\"..."
       offset: 0000445C
     - name: ??_C@_1O@MDAP@?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"Device"
       offset: '00004484'
     - name: ??_C@_1BA@PFGJ@?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"Adapter"
       offset: '00004494'
     - name: ??_C@_0M@PGAE@Irp?9?$DOCancel?$AA@
-      processed: "`string'"
+      processed: '"Irp->Cancel"'
       offset: 000044A4
     - name: ??_C@_0CE@KOCD@?8Multiple?5irp?5complete?5requests?5@
-      processed: "`string'"
+      processed: "\"\\'Multiple irp complete requests \"..."
       offset: 000044B0
     - name: ??_C@_0FA@GAPL@?$CB?$CIIrp?9?$DOFlags?5?$CG?5IRP_PAGING_IO?5?$CG?$CG?5@
-      processed: "`string'"
+      processed: '"!(Irp->Flags & IRP_PAGING_IO && "...'
       offset: 000044D4
     - name: ??_C@_0CD@LLCI@Irp?9?$DOIoStatus?4Status?5?$CB?$DN?50xffffff@
-      processed: "`string'"
+      processed: '"Irp->IoStatus.Status != 0xffffff"...'
       offset: '00004524'
     - name: ??_C@_0CH@LIKF@Irp?9?$DOIoStatus?4Status?5?$CB?$DN?5STATUS_P@
-      processed: "`string'"
+      processed: '"Irp->IoStatus.Status != STATUS_P"...'
       offset: '00004548'
     - name: ??_C@_0BE@CGCC@?$CBIrp?9?$DOCancelRoutine?$AA@
-      processed: "`string'"
+      processed: '"!Irp->CancelRoutine"'
       offset: '00004570'
     - name: ??_C@_0BJ@OGCG@Irp?9?$DOType?5?$DN?$DN?5IO_TYPE_IRP?$AA@
-      processed: "`string'"
+      processed: '"Irp->Type == IO_TYPE_IRP"'
       offset: '00004584'
     - name: ??_C@_0M@BAPF@?4?4?2iosubs?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\iosubs.c"'
       offset: 000045A0
     - name: ??_C@_0BO@PMHC@Null?5name?5device?5object?5?$CF08X?6?$AA@
-      processed: "`string'"
+      processed: '"Null name device object %08X\n"'
       offset: 000045AC
     - name: 
         ??_C@_1BK@PKEN@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAU?$AA_?$AA?$CF?$AAx?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\Device\\U_%x"
       offset: 000045CC
     - name: ??_C@_0BD@EJPF@DeviceName?5?$DN?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"DeviceName == NULL"'
       offset: '000045E8'
     - name: ??_C@_0DB@IEKJ@?$CIDriverObject?9?$DOFlags?5?$CG?5DRVO_UNLO@
-      processed: "`string'"
+      processed: '"(DriverObject->Flags & DRVO_UNLO"...'
       offset: 000045FC
     - name: ??_C@_0CM@PBOB@openPacket?4FileObject?9?$DOType?5?$DN?$DN?5I@
-      processed: "`string'"
+      processed: '"openPacket.FileObject->Type == I"...'
       offset: '00004630'
     - name: ??_C@_0CI@HCBG@Irp?9?$DOCurrentLocation?5?$DO?$DN?5Irp?9?$DOSta@
-      processed: "`string'"
+      processed: '"Irp->CurrentLocation >= Irp->Sta"...'
       offset: 0000465C
     - name: ??_C@_0BF@JJNP@deviceObject?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"deviceObject != NULL"'
       offset: '00004684'
     - name: ??_C@_0DE@LDPP@?$CIDeviceObject?9?$DOFlags?5?$CG?5DO_DEVICE@
-      processed: "`string'"
+      processed: '"(DeviceObject->Flags & DO_DEVICE"...'
       offset: 0000469C
     - name: ??_C@_0DB@ENDE@Sending?5IRP?5to?5uninitialized?5dev@
-      processed: "`string'"
+      processed: '"Sending IRP to uninitialized dev"...'
       offset: 000046D0
     - name: ??_C@_06CAAP@Length?$AA@
-      processed: "`string'"
+      processed: '"Length"'
       offset: '00004704'
     - name: ??_C@_0DB@DKHB@?$CI?$CIMdl?$CJ?9?$DOMdlFlags?5?$CG?5MDL_MAPPED_TO@
-      processed: "`string'"
+      processed: '"((Mdl)->MdlFlags & MDL_MAPPED_TO"...'
       offset: 0000470C
     - name: ??_C@_0CF@EEMI@?$CI?$CIMdl?$CJ?9?$DOMdlFlags?5?$CG?5MDL_PARTIAL?$CJ?5@
-      processed: "`string'"
+      processed: '"((Mdl)->MdlFlags & MDL_PARTIAL) "...'
       offset: '00004740'
     - name: ??_C@_0DE@MOGE@?$CISourceDevice?9?$DOFlags?5?$CG?5DO_DEVICE@
-      processed: "`string'"
+      processed: '"(SourceDevice->Flags & DO_DEVICE"...'
       offset: '00004768'
     - name: ??_C@_0BN@MKDG@deviceObject?5?$CB?$DN?5SourceDevice?$AA@
-      processed: "`string'"
+      processed: '"deviceObject != SourceDevice"'
       offset: 0000479C
     - name: 
         ??_C@_1CM@OIPI@?$AAC?$AAo?$AAm?$AAp?$AAo?$AAn?$AAe?$AAn?$AAt?$AA?5?$AAI?$AAn?$AAf?$AAo?$AAr?$AAm?$AAa?$AAt?$AAi?$AAo@
-      processed: "`string'"
+      processed: L"Component Informatio"
       offset: 000047BC
     - name: 
         ??_C@_1CG@KHLK@?$AAC?$AAo?$AAn?$AAf?$AAi?$AAg?$AAu?$AAr?$AAa?$AAt?$AAi?$AAo?$AAn?$AA?5?$AAD?$AAa?$AAt?$AAa?$AA?$AA@
-      processed: "`string'"
+      processed: L"Configuration Data"
       offset: '000047E8'
     - name: ??_C@_1BG@OHP@?$AAI?$AAd?$AAe?$AAn?$AAt?$AAi?$AAf?$AAi?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"Identifier"
       offset: '00004810'
     - name: ??_C@_0BP@LOMH@listEntry?5?$CB?$DN?5?$CGtimer?9?$DOTimerList?$AA@
-      processed: "`string'"
+      processed: '"listEntry != &timer->TimerList"'
       offset: '00004828'
     - name: ??_C@_0DH@IPIH@?8IO?3?5Waiting?5for?5shutdown?5of?5dev@
-      processed: "`string'"
+      processed: "\"\\'IO: Waiting for shutdown of dev\"..."
       offset: '00004848'
     - name: ??_C@_0BK@BKEO@NTKERN?3?5Shutdown?5phase?50?6?$AA@
-      processed: "`string'"
+      processed: '"NTKERN: Shutdown phase 0\n"'
       offset: '00004880'
     - name: ??_C@_0CB@HHDA@ARGUMENT_PRESENT?$CI?5ClassGuidStr?5?$CJ@
-      processed: "`string'"
+      processed: '"ARGUMENT_PRESENT( ClassGuidStr )"...'
       offset: 0000489C
     - name: ??_C@_0CC@MONO@?$CBARGUMENT_PRESENT?$CI?5ClassGuidStr?5@
-      processed: "`string'"
+      processed: '"!ARGUMENT_PRESENT( ClassGuidStr "...'
       offset: 000048C0
     - name: 
         ??_C@_1BI@LELB@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA?$CF?$AAw?$AAZ?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\Device\\%wZ"
       offset: '000048E4'
     - name: ??_C@_0BP@DOAM@Device?5object?5?$CFx?5has?5no?5name?$CB?6?$AA@
-      processed: "`string'"
+      processed: '"Device object %x has no name!\n"'
       offset: 000048FC
     - name: ??_C@_0DM@HNLM@refString?4Buffer?$FL0?$FN?5?$DN?$DN?5L?8?$CD?8?5?$HM?$HM?5r@
-      processed: "`string'"
+      processed: "\"refString.Buffer[0] == L\\'#\\' || r\"..."
       offset: 0000491C
     - name: ??_C@_0DC@PANC@guid?4Buffer?$FL?91?$FN?5?$DN?$DN?5?8?$CD?8?5?$HM?$HM?5guid?4B@
-      processed: "`string'"
+      processed: "\"guid.Buffer[-1] == \\'#\\' || guid.B\"..."
       offset: '00004958'
     - name: ??_C@_1BA@HANO@?$AA?2?$AA?2?$AA?4?$AA?2?$AA?$CF?$AAw?$AAZ?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\\\.\\%wZ"
       offset: 0000498C
     - name: ??_C@_19JGFB@?$AA?2?$AA?2?$AA?4?$AA?2?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\\\.\\"
       offset: 0000499C
     - name: 
         ??_C@_1BK@LPBE@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\DosDevices\\"
       offset: 000049A8
     - name: 
         ??_C@_1CM@JPOA@?$AA?2?$AA?$CF?$AAs?$AA?2?$AA?$CF?$AA0?$AA8?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?$CD?$AA?$CF?$AAw?$AAZ?$AA?$CF?$AAs?$AA?$CF?$AAw@
-      processed: "`string'"
+      processed: L"\\%s\\%08x%08x#%wZ%s%w"
       offset: 000049C4
     - name: ??_C@_1BG@BJJK@?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?$AA@
-      processed: "`string'"
+      processed: L"DosDevices"
       offset: 000049F0
     - name: ??_C@_15LEKJ@?$AA?2?$AA?4?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\."
       offset: 00004A08
     - name: ??_C@_11A@?$AA?$AA@
-      processed: "`string'"
+      processed: L""
       offset: 00004A10
     - name: ??_C@_0P@HFBB@?8?5?5?5?5Nothing?4?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'    Nothing.\\n\""
       offset: 00004A14
     - name: ??_C@_07KDEM@?8?5?5?5?$CFS?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'   %S\\n\""
       offset: 00004A24
     - name: ??_C@_0DC@HIGH@?8IoGetDeviceInterfaces?$CI?5flags?5?$DN?$DN@
-      processed: "`string'"
+      processed: "\"\\'IoGetDeviceInterfaces( flags ==\"..."
       offset: 00004A2C
     - name: ??_C@_0CA@CALG@len?5?$DN?$DN?5wcslen?$CI?5runningLinkPtr?5?$CJ?$AA@
-      processed: "`string'"
+      processed: '"len == wcslen( runningLinkPtr )"'
       offset: 00004A60
     - name: 
         ??_C@_1BM@PFBL@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?$CF?$AAs?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\DosDevices%s"
       offset: 00004A80
     - name: ??_C@_1BC@KIOB@?$AA?$CF?$AA0?$AA8?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?$AA@
-      processed: "`string'"
+      processed: L"%08x%08x"
       offset: 00004A9C
     - name: ??_C@_0DD@NEFC@?$CIFlags?5?$CG?5?$HODEVICE_INTERFACE_INCLU@
-      processed: "`string'"
+      processed: '"(Flags & ~DEVICE_INTERFACE_INCLU"...'
       offset: 00004AB0
     - name: ??_C@_0CB@IJM@status?5?$DN?$DN?5STATUS_NO_MORE_ENTRIES@
-      processed: "`string'"
+      processed: '"status == STATUS_NO_MORE_ENTRIES"...'
       offset: 00004AE4
     - name: ??_C@_0DA@CEHC@ObGetObjectName?$CI?5PhysicalDeviceO@
-      processed: "`string'"
+      processed: '"ObGetObjectName( PhysicalDeviceO"...'
       offset: 00004B08
     - name: 
         ??_C@_1BG@PKBH@?$AA?$CF?$AAw?$AAZ?$AA?$CD?$AA?$CF?$AAw?$AAZ?$AA?$CF?$AAw?$AAZ?$AA?$AA@
-      processed: "`string'"
+      processed: L"%wZ#%wZ%wZ"
       offset: 00004B38
     - name: ??_C@_0N@LCHJ@IRP_MJ_POWER?$AA@
-      processed: "`string'"
+      processed: '"IRP_MJ_POWER"'
       offset: 00004B50
     - name: ??_C@_0L@BEII@IRP_MJ_PNP?$AA@
-      processed: "`string'"
+      processed: '"IRP_MJ_PNP"'
       offset: 00004B60
     - name: ??_C@_0BG@MDKH@IRP_MJ_SYSTEM_CONTROL?$AA@
-      processed: "`string'"
+      processed: '"IRP_MJ_SYSTEM_CONTROL"'
       offset: 00004B6C
     - name: ??_C@_0CN@LNGI@NTKERN?3?5?$CFS?5didn?8t?5fill?5in?5?$CFs?0?5se@
-      processed: "`string'"
+      processed: "\"NTKERN: %S didn\\'t fill in %s, se\"..."
       offset: 00004B84
     - name: ??_C@_0CH@DELJ@?8IOLOAD?3?5Driver?5?$CFwZ?5took?5?$CFd?4?$CFds?5@
-      processed: "`string'"
+      processed: "\"\\'IOLOAD: Driver %wZ took %d.%ds \"..."
       offset: 00004BB4
     - name: ??_C@_0BE@IJEN@fail?5initialization?$AA@
-      processed: "`string'"
+      processed: '"fail initialization"'
       offset: 00004BDC
     - name: ??_C@_0L@OJAJ@initialize?$AA@
-      processed: "`string'"
+      processed: '"initialize"'
       offset: 00004BF0
     - name: 
         ??_C@_1DM@GGCI@?$AA?2?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAR?$AAo?$AAo?$AAt?$AA?2?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA3?$AA2@
-      processed: "`string'"
+      processed: L"\\SystemRoot\\System32"
       offset: 00004BFC
     - name: 
         ??_C@_1BK@CENL@?$AA?2?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAR?$AAo?$AAo?$AAt?$AA?2?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\SystemRoot\\"
       offset: 00004C38
     - name: ??_C@_19BBIN@?$AA?4?$AAS?$AAY?$AAS?$AA?$AA@
-      processed: "`string'"
+      processed: L".SYS"
       offset: 00004C54
     - name: ??_C@_0O@BGFD@?4?4?2loadunld?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\loadunld.c"'
       offset: 00004C60
     - name: ??_C@_1BG@PJKH@?$AAO?$AAb?$AAj?$AAe?$AAc?$AAt?$AAN?$AAa?$AAm?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"ObjectName"
       offset: 00004C70
     - name: ??_C@_0BM@MEIF@?8NTKERN?3?5Could?5not?5load?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'NTKERN: Could not load %s\\n\""
       offset: 00004C88
     - name: ??_C@_15HGOB@?$AA?$CF?$AAS?$AA?$AA@
-      processed: "`string'"
+      processed: L"%S"
       offset: 00004CA4
     - name: ??_C@_1BG@BNKI@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?2?$AA?$CF?$AAS?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\Driver\\%S"
       offset: 00004CAC
     - name: ??_C@_0CC@FHJH@IopCloseFile?3?5not?5the?5last?5close@
-      processed: "`string'"
+      processed: '"IopCloseFile: not the last close"...'
       offset: 00004CC4
     - name: ??_C@_0M@LLKE@?4?4?2objsup?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\objsup.c"'
       offset: 00004CE8
     - name: ??_C@_0BO@HHAE@?5?$CK?$CK?$CK?5Driver?5?$CFwZ?5unloaded?5?$CK?$CK?$CK?6?$AA@
-      processed: "`string'"
+      processed: '" *** Driver %wZ unloaded ***\n"'
       offset: 00004CF4
     - name: ??_C@_0BP@KDIL@?5?$CK?$CK?$CK?5Unloading?5driver?5?$CFwZ?5?$CK?$CK?$CK?6?$AA@
-      processed: "`string'"
+      processed: '" *** Unloading driver %wZ ***\n"'
       offset: 00004D14
     - name: ??_C@_0BM@OMIM@?$CBdriverObject?9?$DODeviceObject?$AA@
-      processed: "`string'"
+      processed: '"!driverObject->DeviceObject"'
       offset: 00004D34
     - name: ??_C@_0L@GCJ@?4?4?2parse?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\parse.c"'
       offset: 00004D50
     - name: ??_C@_0BG@FDC@?$CBirp?9?$DOPendingReturned?$AA@
-      processed: "`string'"
+      processed: '"!irp->PendingReturned"'
       offset: 00004D5C
     - name: ??_C@_0M@KHFH@?4?4?2qsinfo?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\qsinfo.c"'
       offset: 00004D74
     - name: ??_C@_0BN@CDI@?8NTWF?3?5Direct?5I?1O?5operation?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'NTWF: Direct I/O operation\\n\""
       offset: 00004D80
     - name: ??_C@_0CF@LNCE@?8NTWF?3?5?9ve?5file?5offsets?5are?5ille@
-      processed: "`string'"
+      processed: "\"\\'NTWF: -ve file offsets are ille\"..."
       offset: 00004DA0
     - name: ??_C@_0CK@PLIB@?8NTWF?3?5Invalid?5Byte?5offset?5is?50?5@
-      processed: "`string'"
+      processed: "\"\\'NTWF: Invalid Byte offset is 0 \"..."
       offset: 00004DC8
     - name: ??_C@_0BE@BOJF@?8NtWF?3?5Synch?5Write?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'NtWF: Synch Write\\n\""
       offset: 00004DF4
     - name: ??_C@_0BN@COGG@?8NtWF?3?5Failed?5to?5map?5handle?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'NtWF: Failed to map handle\\n\""
       offset: '00004E08'
     - name: ??_C@_0L@DCIN@?4?4?2write?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\write.c"'
       offset: '00004E28'
     - name: ??_C@_09NMLL@?4?4?2open?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\open.c"'
       offset: '00004E34'
     - name: ??_C@_0L@HBI@String?3?$CFS?6?$AA@
-      processed: "`string'"
+      processed: '"String:%S\n"'
       offset: '00004E40'
     - name: ??_C@_0BE@NFBF@NumberOfStrings?3?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"NumberOfStrings:%x\n"'
       offset: 00004E4C
     - name: ??_C@_0BC@JGKM@IoControlCode?3?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"IoControlCode:%x\n"'
       offset: '00004E60'
     - name: ??_C@_0BD@JIFC@SequenceNumber?3?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"SequenceNumber:%x\n"'
       offset: '00004E74'
     - name: ??_C@_0BA@GGNH@FinalStatus?3?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"FinalStatus:%d\n"'
       offset: '00004E88'
     - name: ??_C@_0BF@BIHM@UniqueErrorValue?3?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"UniqueErrorValue:%d\n"'
       offset: '00004E98'
     - name: ??_C@_0O@HIIA@ErrorCode?3?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"ErrorCode:%x\n"'
       offset: 00004EB0
     - name: ??_C@_0BC@CGBB@EventCategory?3?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"EventCategory:%x\n"'
       offset: 00004EC0
     - name: ??_C@_0BB@IENP@DumpDataSize?3?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"DumpDataSize:%x\n"'
       offset: 00004ED4
     - name: ??_C@_0BA@EPKC@Retry?5Count?3?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"Retry Count:%x\n"'
       offset: 00004EE8
     - name: ??_C@_0BI@OMHI@Major?5Function?5Code?3?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"Major Function Code:%x\n"'
       offset: 00004EF8
     - name: ??_C@_0BA@DBMH@Driver?5Name?3?$CFS?6?$AA@
-      processed: "`string'"
+      processed: '"Driver Name:%S\n"'
       offset: 00004F10
     - name: ??_C@_0CC@KNBK@?6IO?5Error?5Log?5Packet?5Information@
-      processed: "`string'"
+      processed: '"\nIO Error Log Packet Information"...'
       offset: 00004F20
     - name: ??_C@_13A@?$AA?$AA?$AA?$AA@
-      processed: "`string'"
+      processed: L"\0"
       offset: 00004F44
     - name: ??_C@_0O@HGEG@?4?4?2errorlog?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\errorlog.c"'
       offset: 00004F48
     - name: ??_C@_0N@NIGP@?4?4?2obclose?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\obclose.c"'
       offset: 00004F58
     - name: ??_C@_0CF@KOGC@?8NTCreateDirectoryObject?3?5Failed@
-      processed: "`string'"
+      processed: "\"\\'NTCreateDirectoryObject: Failed\"..."
       offset: 00004F68
     - name: ??_C@_0CG@LOBF@?8NTCreateDirectoryObject?5?3?5handl@
-      processed: "`string'"
+      processed: "\"\\'NTCreateDirectoryObject : handl\"..."
       offset: 00004F90
     - name: ??_C@_0BL@IPMC@ObpLeaveRootDirectoryMutex?$AA@
-      processed: "`string'"
+      processed: '"ObpLeaveRootDirectoryMutex"'
       offset: 00004FB8
     - name: ??_C@_0BB@ENME@?$CKDirectoryLocked?$AA@
-      processed: "`string'"
+      processed: '"*DirectoryLocked"'
       offset: 00004FD4
     - name: ??_C@_0L@IEEC@?4?4?2obdir?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\obdir.c"'
       offset: 00004FE8
     - name: ??_C@_0BK@JPFP@OB?3?5?$CFs?5called?5at?5IRQL?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"OB: %s called at IRQL %d\n"'
       offset: 00004FF4
     - name: ??_C@_0BL@PMFI@ObpEnterRootDirectoryMutex?$AA@
-      processed: "`string'"
+      processed: '"ObpEnterRootDirectoryMutex"'
       offset: '00005010'
     - name: ??_C@_0BI@IJIK@ObpLeaveObjectTypeMutex?$AA@
-      processed: "`string'"
+      processed: '"ObpLeaveObjectTypeMutex"'
       offset: 0000502C
     - name: ??_C@_0BI@JNGK@ObpEnterObjectTypeMutex?$AA@
-      processed: "`string'"
+      processed: '"ObpEnterObjectTypeMutex"'
       offset: '00005044'
     - name: ??_C@_0O@JIDA@?4?4?2obhandle?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\obhandle.c"'
       offset: 0000505C
     - name: ??_C@_0CI@IPHL@OB?3?5Invalid?5symbolic?5link?5target@
-      processed: "`string'"
+      processed: '"OB: Invalid symbolic link target"...'
       offset: 0000506C
     - name: ??_C@_0CD@BDNN@?8Deref?3?5Postponing?5object?5remova@
-      processed: "`string'"
+      processed: "\"\\'Deref: Postponing object remova\"..."
       offset: '00005094'
     - name: ??_C@_0FI@ILCA@?$CIObjectHeader?9?$DOType?5?$DN?$DN?5NULL?$CJ?5?$HM?$HM?5@
-      processed: "`string'"
+      processed: '"(ObjectHeader->Type == NULL) || "...'
       offset: 000050B8
     - name: ??_C@_0BM@EBJD@?8Deref?3?5removing?5object?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Deref: removing object %x\\n\""
       offset: '00005110'
     - name: ??_C@_0BP@DGOF@ObjectHeader?9?$DOHandleCount?5?$DN?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"ObjectHeader->HandleCount == 0"'
       offset: 0000512C
     - name: ??_C@_0L@JACA@?4?4?2obref?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\obref.c"'
       offset: 0000514C
     - name: ??_C@_0EG@LKGP@?8ReferenceObjectByHandle?3?5no?5han@
-      processed: "`string'"
+      processed: "\"\\'ReferenceObjectByHandle: no han\"..."
       offset: '00005158'
     - name: ??_C@_0CF@MJOM@?8ReferenceObjectByHandle?3?5Object@
-      processed: "`string'"
+      processed: "\"\\'ReferenceObjectByHandle: Object\"..."
       offset: 000051A0
     - name: ??_C@_0CK@KNAD@?8CreateObjectType?3?5New?5object?5cr@
-      processed: "`string'"
+      processed: "\"\\'CreateObjectType: New object cr\"..."
       offset: 000051C8
     - name: 
         ??_C@_1BK@OIJB@?$AA?2?$AAO?$AAb?$AAj?$AAe?$AAc?$AAt?$AAT?$AAy?$AAp?$AAe?$AAs?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\ObjectTypes"
       offset: 000051F4
     - name: ??_C@_0CN@MNGB@?8ObInit?3?5Failed?5to?5create?5Type?5S@
-      processed: "`string'"
+      processed: "\"\\'ObInit: Failed to create Type S\"..."
       offset: '00005210'
     - name: ??_C@_0CL@JNNG@?8ObInit?3?5Created?5object?5type?5Sym@
-      processed: "`string'"
+      processed: "\"\\'ObInit: Created object type Sym\"..."
       offset: '00005240'
     - name: ??_C@_0CF@PJKN@?8ObInit?3?5Failed?5to?5create?5Direct@
-      processed: "`string'"
+      processed: "\"\\'ObInit: Failed to create Direct\"..."
       offset: 0000526C
     - name: ??_C@_0CI@KPOF@?8ObInit?3?5Created?5object?5type?5Dir@
-      processed: "`string'"
+      processed: "\"\\'ObInit: Created object type Dir\"..."
       offset: '00005294'
     - name: ??_C@_1BE@PPB@?$AAD?$AAi?$AAr?$AAe?$AAc?$AAt?$AAo?$AAr?$AAy?$AA?$AA@
-      processed: "`string'"
+      processed: L"Directory"
       offset: 000052BC
     - name: ??_C@_0CA@LLPC@?8ObInit?3?5Failed?5to?5create?5Type?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'ObInit: Failed to create Type\\n\""
       offset: 000052D0
     - name: ??_C@_0CD@LFKG@?8ObInit?3?5Created?5object?5type?5Typ@
-      processed: "`string'"
+      processed: "\"\\'ObInit: Created object type Typ\"..."
       offset: 000052F0
     - name: ??_C@_0BN@FKCK@?8Symbolic?5link?5object?5?$CFs?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Symbolic link object %s %x\\n\""
       offset: '00005314'
     - name: ??_C@_0BG@NGKK@?8Directory?5object?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Directory object %s\\n\""
       offset: '00005334'
     - name: ??_C@_0BP@OJA@?8Dumping?5the?5object?5directory?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Dumping the object directory\\n\""
       offset: 0000534C
     - name: ??_C@_0BN@DCAD@?8Dumping?5the?5root?5directory?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Dumping the root directory\\n\""
       offset: 0000536C
     - name: ??_C@_0CK@DNIJ@AccessState?9?$DOPrivilegesAllocated@
-      processed: "`string'"
+      processed: '"AccessState->PrivilegesAllocated"...'
       offset: 0000538C
     - name: ??_C@_0CI@EEDD@AccessState?9?$DOSecurityDescriptor?5@
-      processed: "`string'"
+      processed: '"AccessState->SecurityDescriptor "...'
       offset: 000053B8
     - name: ??_C@_0O@FEJO@?4?4?2seastate?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\seastate.c"'
       offset: '000053E0'
     - name: ??_C@_0CF@ICB@Environment?5?$DM?$DN?5CurrentApcEnviron@
-      processed: "`string'"
+      processed: '"Environment <= CurrentApcEnviron"...'
       offset: 000053F0
     - name: ??_C@_0M@PPGA@?4?4?2apcobj?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\apcobj.c"'
       offset: '00005418'
     - name: ??_C@_0BE@IMLO@ApcMode?5?$DN?$DN?5UserMode?$AA@
-      processed: "`string'"
+      processed: '"ApcMode == UserMode"'
       offset: '00005424'
     - name: ??_C@_0BG@BBGI@Thread?9?$DOApcEvent?5?$CB?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"Thread->ApcEvent != 0"'
       offset: '00005438'
     - name: ??_C@_0BJ@KBGE@?$CIApc?$CJ?9?$DOType?5?$DN?$DN?5ApcObject?$AA@
-      processed: "`string'"
+      processed: '"(Apc)->Type == ApcObject"'
       offset: '00005450'
     - name: _FSysErr
       processed: ''
@@ -2175,164 +2385,164 @@ appearances:
       processed: ''
       offset: 0000549C
     - name: ??_C@_0BI@NKKE@?$CFs?5called?5by?5?$CFx?5?6?$CFs?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: '"%s called by %x \n%s %x\n"'
       offset: 000054C0
     - name: ??_C@_0DB@NGP@?$CFs?5called?5by?5?$CFx?5?6?$CFs?5?$CFx?5?6Paramete@
-      processed: "`string'"
+      processed: '"%s called by %x \n%s %x \nParamete"...'
       offset: 000054D8
     - name: ??_C@_0CF@IOKM@KeGetCurrentIrql?$CI?$CJ?5?$DN?$DN?5DISPATCH_L@
-      processed: "`string'"
+      processed: '"KeGetCurrentIrql() == DISPATCH_L"...'
       offset: 0000550C
     - name: ??_C@_0CJ@OIEB@?$CIDeviceQueue?$CJ?9?$DOType?5?$DN?$DN?5DeviceQue@
-      processed: "`string'"
+      processed: '"(DeviceQueue)->Type == DeviceQue"...'
       offset: '00005534'
     - name: ??_C@_0O@NALC@?4?4?2devquobj?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\devquobj.c"'
       offset: '00005560'
     - name: ??_C@_0BK@MEIK@DeviceQueue?9?$DOBusy?5?$DN?$DN?5TRUE?$AA@
-      processed: "`string'"
+      processed: '"DeviceQueue->Busy == TRUE"'
       offset: '00005570'
     - name: ??_C@_0DC@HCDK@?8KeSetEvent?$CI?5?$CFx?0?5?$CFx?0?5?$CFx?5?$CJ?0?5event@
-      processed: "`string'"
+      processed: "\"\\'KeSetEvent( %x, %x, %x ), event\"..."
       offset: 0000558C
     - name: ??_C@_03OEEH@not?$AA@
-      processed: "`string'"
+      processed: '"not"'
       offset: 000055C0
     - name: ??_C@_0CF@HKIN@KeGetCurrentIrql?$CI?$CJ?5?$DM?$DN?5DISPATCH_L@
-      processed: "`string'"
+      processed: '"KeGetCurrentIrql() <= DISPATCH_L"...'
       offset: 000055C4
     - name: ??_C@_0O@KGAP@?4?4?2eventobj?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\eventobj.c"'
       offset: 000055EC
     - name: _NestCount
       processed: ''
       offset: 000055FC
     - name: ??_C@_0BA@HGBI@NestCount?5?$DM?5100?$AA@
-      processed: "`string'"
+      processed: '"NestCount < 100"'
       offset: '00005600'
     - name: ??_C@_09IFHF@?4?4?2irql?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\irql.c"'
       offset: '00005610'
     - name: ??_C@_0BL@NDNN@Irql?5?$DM?$DN?5KeGetCurrentIrql?$CI?$CJ?$AA@
-      processed: "`string'"
+      processed: '"Irql <= KeGetCurrentIrql()"'
       offset: 0000561C
     - name: ??_C@_0O@PFAK@NestCount?5?$DO?50?$AA@
-      processed: "`string'"
+      processed: '"NestCount > 0"'
       offset: '00005638'
     - name: ??_C@_0P@KGBI@?$CKSpinLock?5?$DN?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"*SpinLock == 0"'
       offset: '00005648'
     - name: ??_C@_0O@BGJP@?4?4?2spinlock?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\spinlock.c"'
       offset: '00005658'
     - name: ??_C@_0P@MIP@?$CKSpinLock?5?$DN?$DN?51?$AA@
-      processed: "`string'"
+      processed: '"*SpinLock == 1"'
       offset: '00005668'
     - name: ??_C@_0CJ@BPBA@?8KeDelayExecutionThread?3?5waiting@
-      processed: "`string'"
+      processed: "\"\\'KeDelayExecutionThread: waiting\"..."
       offset: '00005678'
     - name: _MiSectionMapping
       processed: ''
       offset: 000056A4
     - name: ??_C@_0CI@PBCC@Unimplemented?5function?5MiSection@
-      processed: "`string'"
+      processed: '"Unimplemented function MiSection"...'
       offset: 000056B4
     - name: 
         ??_C@_1CO@EMLF@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAP?$AAh?$AAy?$AAs?$AAi?$AAc?$AAa?$AAl?$AAM?$AAe?$AAm?$AAo@
-      processed: "`string'"
+      processed: L"\\Device\\PhysicalMemo"
       offset: 000056DC
     - name: ??_C@_1BA@GGKP@?$AAS?$AAe?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?$AA@
-      processed: "`string'"
+      processed: L"Section"
       offset: 0000570C
     - name: _MMCONTROL
       processed: ''
       offset: 0000571C
     - name: ??_C@_0O@ODBN@?4?4?2creasect?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\creasect.c"'
       offset: '00005720'
     - name: ??_C@_0CO@DBJL@?$CBSection?9?$DOSegment?9?$DOControlArea?9?$DO@
-      processed: "`string'"
+      processed: '"!Section->Segment->ControlArea->"...'
       offset: '00005730'
     - name: ??_C@_0DG@LLHL@Section?9?$DOSegment?9?$DOControlArea?9?$DOu@
-      processed: "`string'"
+      processed: '"Section->Segment->ControlArea->u"...'
       offset: '00005760'
     - name: ??_C@_0CC@HK@MapView?3?5invalid?5capturedbase?5?$CFx@
-      processed: "`string'"
+      processed: '"MapView: invalid capturedbase %x"...'
       offset: '00005798'
     - name: ??_C@_0CL@EJIF@?8?5?5?5?5Inheritdisp?5?$CFlx?5?5Allocation@
-      processed: "`string'"
+      processed: "\"\\'    Inheritdisp %lx  Allocation\"..."
       offset: 000057BC
     - name: ??_C@_0DL@BEEL@?8?5?5?5?5view?5size?5?$CFlx?5offset?5?$CFlx?5co@
-      processed: "`string'"
+      processed: "\"\\'    view size %lx offset %lx co\"..."
       offset: '000057E8'
     - name: ??_C@_0EI@GEBF@?8mapview?5process?5handle?5?$CFlx?5sect@
-      processed: "`string'"
+      processed: "\"\\'mapview process handle %lx sect\"..."
       offset: '00005824'
     - name: ??_C@_0CE@JKGP@ProcessHandle?5?$DN?$DN?5NtCurrentProces@
-      processed: "`string'"
+      processed: '"ProcessHandle == NtCurrentProces"...'
       offset: 0000586C
     - name: ??_C@_0N@NHO@?4?4?2mapview?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\mapview.c"'
       offset: '00005890'
     - name: ??_C@_0BM@CMGN@?$CBControlArea?9?$DOu?4Flags?4Image?$AA@
-      processed: "`string'"
+      processed: '"!ControlArea->u.Flags.Image"'
       offset: 000058A0
     - name: ??_C@_0CE@IDGM@ControlArea?9?$DOu?4Flags?4PhysicalMem@
-      processed: "`string'"
+      processed: '"ControlArea->u.Flags.PhysicalMem"...'
       offset: 000058BC
     - name: ??_C@_0DC@CGOO@?$CIULONG?$CJStartingAddress?5?$DN?$DN?5?$CIPage6@
-      processed: "`string'"
+      processed: '"(ULONG)StartingAddress == (Page6"...'
       offset: '000058E0'
     - name: ??_C@_0CE@ELCJ@IoGetCurrentProcess?$CI?$CJ?5?$DN?$DN?5KrnProc@
-      processed: "`string'"
+      processed: '"IoGetCurrentProcess() == KrnProc"...'
       offset: '00005914'
     - name: ??_C@_0BK@OJFM@CurrentPage?5?$DM?$DN?5EndingPage?$AA@
-      processed: "`string'"
+      processed: '"CurrentPage <= EndingPage"'
       offset: '00005938'
     - name: ??_C@_0CJ@MMEM@?$CILinearBlock?9?$DOFreePages?5?$CG?5PageMa@
-      processed: "`string'"
+      processed: '"(LinearBlock->FreePages & PageMa"...'
       offset: '00005954'
     - name: ??_C@_0CP@GAMC@ZwMapView?3?5insufficient?5linear?5m@
-      processed: "`string'"
+      processed: '"ZwMapView: insufficient linear m"...'
       offset: '00005980'
     - name: ??_C@_0CM@NAL@ControlArea?9?$DONumberOfSectionRefe@
-      processed: "`string'"
+      processed: '"ControlArea->NumberOfSectionRefe"...'
       offset: 000059B0
     - name: ??_C@_0BN@GIJF@ZwMapView?3?5failed?5to?5commit?6?$AA@
-      processed: "`string'"
+      processed: '"ZwMapView: failed to commit\n"'
       offset: 000059DC
     - name: ??_C@_0O@IEIB@ZeroBits?5?$DN?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"ZeroBits == 0"'
       offset: 000059FC
     - name: ??_C@_0BN@KDME@SectionOffset?9?$DOHighPart?5?$DN?$DN?50?$AA@
-      processed: "`string'"
+      processed: '"SectionOffset->HighPart == 0"'
       offset: 00005A0C
     - name: ??_C@_0DC@MPIB@?8NtUnmapView?3?5process?5handle?5?$CFx?0@
-      processed: "`string'"
+      processed: "\"\\'NtUnmapView: process handle %x,\"..."
       offset: 00005A2C
     - name: ??_C@_0O@MKLC@?4?4?2umapview?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\umapview.c"'
       offset: 00005A60
     - name: ??_C@_0CB@LNFD@IoGetCurrentProcess?$CI?$CJ?5?$DN?$DN?5Process@
-      processed: "`string'"
+      processed: '"IoGetCurrentProcess() == Process"...'
       offset: 00005A70
     - name: ??_C@_0CB@IGFP@ARGUMENT_PRESENT?$CI?5StartRoutine?5?$CJ@
-      processed: "`string'"
+      processed: '"ARGUMENT_PRESENT( StartRoutine )"...'
       offset: 00005A94
     - name: ??_C@_0CB@NPJJ@ARGUMENT_PRESENT?$CI?5ThreadHandle?5?$CJ@
-      processed: "`string'"
+      processed: '"ARGUMENT_PRESENT( ThreadHandle )"...'
       offset: 00005AB8
     - name: ??_C@_0M@BFBM@?4?4?2thread?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\thread.c"'
       offset: 00005ADC
     - name: ??_C@_06NMEN@result?$AA@
-      processed: "`string'"
+      processed: '"result"'
       offset: 00005AE8
     - name: _PspThreadMapping
       processed: ''
       offset: 00005AF0
     - name: ??_C@_1O@BEJI@?$AAT?$AAh?$AAr?$AAe?$AAa?$AAd?$AA?$AA@
-      processed: "`string'"
+      processed: L"Thread"
       offset: 00005B00
     - name: ___nullstring
       processed: ''
@@ -2342,10 +2552,10 @@ appearances:
       offset: 00005B18
     - name: 
         ??_C@_1O@POHA@?$AA?$CI?$AAn?$AAu?$AAl?$AAl?$AA?$CJ?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA@
-      processed: "`string'"
+      processed: L"(null)\0\0\0\0\0\0\0"
       offset: 00005B1C
     - name: ??_C@_06ONKE@?$CInull?$CJ?$AA@
-      processed: "`string'"
+      processed: '"(null)"'
       offset: 00005B2C
     - name: __pctype
       processed: ''
@@ -3953,19 +4163,19 @@ appearances:
       processed: ''
       offset: 00014BE0
     - name: ??_C@_0FA@NKCL@No?5supporting?5IoInvalidateDevice@
-      processed: "`string'"
+      processed: '"No supporting IoInvalidateDevice"...'
       offset: 00014BE0
     - name: _SysVMStackLimit
       processed: ''
       offset: 00014BE0
     - name: ??_C@_0BE@MDBF@Irp?9?$DOCancel?5?$DN?$DN?5TRUE?$AA@
-      processed: "`string'"
+      processed: '"Irp->Cancel == TRUE"'
       offset: 00014C30
     - name: ??_C@_0BN@CLEP@Cancel?5routine?5already?5set?$DP?$CB?$AA@
-      processed: "`string'"
+      processed: '"Cancel routine already set?!"'
       offset: 00014C44
     - name: ??_C@_0CN@DJCA@Not?5enough?5memory?5for?5an?5IRP?5in?5@
-      processed: "`string'"
+      processed: '"Not enough memory for an IRP in "...'
       offset: 00014C64
     - name: _DebugInit@4
       processed: ''
@@ -4513,208 +4723,208 @@ appearances:
       processed: ''
       offset: 00000B80
     - name: ??_C@_0BA@JFJO@?$CF08x?5?$CF02d?5?$CF08x?5?$AA@
-      processed: "`string'"
+      processed: '"%08x %02d %08x "'
       offset: 00000B84
     - name: ??_C@_0BB@PJKF@No?5pending?5Irps?6?$AA@
-      processed: "`string'"
+      processed: '"No pending Irps\n"'
       offset: 00000B94
     - name: ??_C@_0BD@FFDI@?6Enter?5selection?3?5?$AA@
-      processed: "`string'"
+      processed: '"\nEnter selection: "'
       offset: 00000BA8
     - name: ??_C@_09EMNI@?$CIX?$CJ?5Exit?6?$AA@
-      processed: "`string'"
+      processed: '"(X) Exit\n"'
       offset: 00000BBC
     - name: ??_C@_0CC@BABL@?$CII?$CJ?5Dump?5pending?5Irp?5information@
-      processed: "`string'"
+      processed: '"(I) Dump pending Irp information"...'
       offset: 00000BC8
     - name: ??_C@_0CJ@IEIH@?$CIT?$CJ?5Dump?5thread?5and?5process?5info@
-      processed: "`string'"
+      processed: '"(T) Dump thread and process info"...'
       offset: 00000BEC
     - name: ??_C@_0BM@JBCN@?$CIP?$CJ?5Dump?5power?5information?6?$AA@
-      processed: "`string'"
+      processed: '"(P) Dump power information\n"'
       offset: 00000C18
     - name: ??_C@_0BN@LOAC@?$CIO?$CJ?5Dump?5object?5information?6?$AA@
-      processed: "`string'"
+      processed: '"(O) Dump object information\n"'
       offset: 00000C34
     - name: ??_C@_0BE@JGGN@?$CID?$CJ?5Dump?5trace?5log?6?$AA@
-      processed: "`string'"
+      processed: '"(D) Dump trace log\n"'
       offset: 00000C54
     - name: ??_C@_0BF@ILII@?6NTKERN?5Debug?5menu?6?6?$AA@
-      processed: "`string'"
+      processed: '"\nNTKERN Debug menu\n\n"'
       offset: 00000C68
     - name: ??_C@_01BJG@?6?$AA@
-      processed: "`string'"
+      processed: '"\n"'
       offset: 00000C80
     - name: ??_C@_08HGNB@INVALID?$CB?$AA@
-      processed: "`string'"
+      processed: '"INVALID!"'
       offset: 00000C84
     - name: ??_C@_01FCOA@?5?$AA@
-      processed: "`string'"
+      processed: '" "'
       offset: 00000C90
     - name: ??_C@_0BM@ELLE@?0?5Flags?3?5?$CFd?0?5EventCode?3?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '", Flags: %d, EventCode: %d\n"'
       offset: 00000C94
     - name: ??_C@_08GKAE@Reserved?$AA@
-      processed: "`string'"
+      processed: '"Reserved"'
       offset: 00000CB0
     - name: ??_C@_09GOGM@?0?5Action?3?$AA@
-      processed: "`string'"
+      processed: '", Action:"'
       offset: 00000CBC
     - name: ??_C@_0DC@LGLE@?$CFs?0?5Spare?5?$CFd?5?$CFd?5?$CFd?0?5Battery?5leve@
-      processed: "`string'"
+      processed: '"%s, Spare %d %d %d, Battery leve"...'
       offset: 00000CC8
     - name: ??_C@_08FGLH@Disabled?$AA@
-      processed: "`string'"
+      processed: '"Disabled"'
       offset: 00000CFC
     - name: ??_C@_07FFME@Enabled?$AA@
-      processed: "`string'"
+      processed: '"Enabled"'
       offset: 00000D08
     - name: ??_C@_0P@FCCG@OverThrottled?3?$AA@
-      processed: "`string'"
+      processed: '"OverThrottled:"'
       offset: 00000D10
     - name: ??_C@_0FA@PKOM@Optimize?3?5?$CFs?0?5Fan?5throttle?5toler@
-      processed: "`string'"
+      processed: '"Optimize: %s, Fan throttle toler"...'
       offset: 00000D20
     - name: ??_C@_04BBGC@Life?$AA@
-      processed: "`string'"
+      processed: '"Life"'
       offset: 00000D70
     - name: ??_C@_05EFBF@Power?$AA@
-      processed: "`string'"
+      processed: '"Power"'
       offset: 00000D78
     - name: ??_C@_03KLCE@Off?$AA@
-      processed: "`string'"
+      processed: '"Off"'
       offset: 00000D80
     - name: ??_C@_02CCEO@On?$AA@
-      processed: "`string'"
+      processed: '"On"'
       offset: 00000D84
     - name: ??_C@_0BE@HGHB@Disk?5spin?5down?3?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"Disk spin down: %d\n"'
       offset: 00000D88
     - name: ??_C@_0CP@BILG@Video?5timeout?3?5?$CFd?0?5Video?5reserve@
-      processed: "`string'"
+      processed: '"Video timeout: %d, Video reserve"...'
       offset: 00000D9C
     - name: ??_C@_0BF@PFDJ@Discharge?5policy?5?$CFd?3?$AA@
-      processed: "`string'"
+      processed: '"Discharge policy %d:"'
       offset: 00000DCC
     - name: ??_C@_0CD@JFOK@Broadcast?5capacity?5resolution?3?5?$CF@
-      processed: "`string'"
+      processed: '"Broadcast capacity resolution: %"...'
       offset: 00000DE4
     - name: ??_C@_0CA@KIK@Doze?5spare?3?5?$CFd?0?5S4?5timeout?3?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"Doze spare: %d, S4 timeout: %d\n"'
       offset: '00000E08'
     - name: ??_C@_0BD@CLIF@WinLogonFlags?3?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"WinLogonFlags: %d\n"'
       offset: '00000E28'
     - name: ??_C@_0BH@KNON@?5Reduce?5Latency?5Sleep?3?$AA@
-      processed: "`string'"
+      processed: '" Reduce Latency Sleep:"'
       offset: 00000E3C
     - name: ??_C@_0M@BFLH@?5Max?5Sleep?3?$AA@
-      processed: "`string'"
+      processed: '" Max Sleep:"'
       offset: '00000E54'
     - name: ??_C@_0L@GEAA@Min?5Sleep?3?$AA@
-      processed: "`string'"
+      processed: '"Min Sleep:"'
       offset: '00000E60'
     - name: ??_C@_0DH@MDM@Idle?5timeout?3?5?$CFd?0?5sensitivity?5?$CFd@
-      processed: "`string'"
+      processed: '"Idle timeout: %d, sensitivity %d"...'
       offset: 00000E6C
     - name: ??_C@_05BFLF@Idle?3?$AA@
-      processed: "`string'"
+      processed: '"Idle:"'
       offset: 00000EA4
     - name: ??_C@_0O@JAMB@Reserved?3?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"Reserved: %d\n"'
       offset: 00000EAC
     - name: ??_C@_0P@NGNF@Lid?5open?5wake?3?$AA@
-      processed: "`string'"
+      processed: '"Lid open wake:"'
       offset: 00000EBC
     - name: ??_C@_0L@FPGN@Lid?5close?3?$AA@
-      processed: "`string'"
+      processed: '"Lid close:"'
       offset: 00000ECC
     - name: ??_C@_0O@CBFB@Sleep?5button?3?$AA@
-      processed: "`string'"
+      processed: '"Sleep button:"'
       offset: 00000ED8
     - name: ??_C@_0O@JNKL@Power?5button?3?$AA@
-      processed: "`string'"
+      processed: '"Power button:"'
       offset: 00000EE8
     - name: ??_C@_0O@MHLB@Revision?3?5?$CFd?6?$AA@
-      processed: "`string'"
+      processed: '"Revision: %d\n"'
       offset: 00000EF8
     - name: ??_C@_0BK@BMCL@Default?5low?5latency?5wake?3?$AA@
-      processed: "`string'"
+      processed: '"Default low latency wake:"'
       offset: 00000F08
     - name: ??_C@_0BL@NEOH@Minimum?5device?5wake?5state?3?$AA@
-      processed: "`string'"
+      processed: '"Minimum device wake state:"'
       offset: 00000F24
     - name: ??_C@_0BG@KNJM@Real?9time?5clock?5wake?3?$AA@
-      processed: "`string'"
+      processed: '"Real-time clock wake:"'
       offset: 00000F40
     - name: ??_C@_0P@HLBA@Soft?5lid?5wake?3?$AA@
-      processed: "`string'"
+      processed: '"Soft lid wake:"'
       offset: 00000F58
     - name: ??_C@_0BB@EIAJ@AC?5on?9line?5wake?3?$AA@
-      processed: "`string'"
+      processed: '"AC on-line wake:"'
       offset: 00000F68
     - name: ??_C@_0CL@MPFN@Battery?5?$CFd?3?5Granularity?3?5?$CFd?0?5Cap@
-      processed: "`string'"
+      processed: '"Battery %d: Granularity: %d, Cap"...'
       offset: 00000F7C
     - name: ??_C@_0BJ@FEIK@Batteries?3?5?$CFs?0?5Life?3?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: '"Batteries: %s, Life: %s\n"'
       offset: 00000FA8
     - name: ??_C@_09JCKO@Long?5term?$AA@
-      processed: "`string'"
+      processed: '"Long term"'
       offset: 00000FC4
     - name: ??_C@_0L@INDI@Short?5term?$AA@
-      processed: "`string'"
+      processed: '"Short term"'
       offset: 00000FD0
     - name: ??_C@_0CE@MDDJ@Disk?5spin?5down?3?5?$CFs?0?5Spare?5?$CFd?5?$CFd?5@
-      processed: "`string'"
+      processed: '"Disk spin down: %s, Spare %d %d "...'
       offset: 00000FDC
     - name: ??_C@_0EK@EBOA@Thermal?5control?3?5?$CFs?0?5Throttle?3?5?$CF@
-      processed: "`string'"
+      processed: '"Thermal control: %s, Throttle: %"...'
       offset: '00001000'
     - name: ??_C@_05MJBI@Can?8t?$AA@
-      processed: "`string'"
+      processed: "\"Can\\'t\""
       offset: 0000104C
     - name: ??_C@_03EGCG@Can?$AA@
-      processed: "`string'"
+      processed: '"Can"'
       offset: '00001054'
     - name: ??_C@_0CK@FBCG@?6Hiberfile?3?5?$CFs?0?5Wake?3?5?$CFs?0?5Spare?5@
-      processed: "`string'"
+      processed: '"\nHiberfile: %s, Wake: %s, Spare "...'
       offset: '00001058'
     - name: ??_C@_08PHKO@Non?9Full?$AA@
-      processed: "`string'"
+      processed: '"Non-Full"'
       offset: '00001084'
     - name: ??_C@_04OOPN@Full?$AA@
-      processed: "`string'"
+      processed: '"Full"'
       offset: '00001090'
     - name: ??_C@_04DMJH@?5S?$CFd?$AA@
-      processed: "`string'"
+      processed: '" S%d"'
       offset: '00001098'
     - name: ??_C@_0O@OFNL@System?5state?3?$AA@
-      processed: "`string'"
+      processed: '"System state:"'
       offset: 000010A0
     - name: ??_C@_08FHHB@Lid?3?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: '"Lid: %s\n"'
       offset: 000010B0
     - name: ??_C@_0BC@CEHF@Sleep?5button?3?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: '"Sleep button: %s\n"'
       offset: 000010BC
     - name: ??_C@_0BC@FHMO@Power?5button?3?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: '"Power button: %s\n"'
       offset: 000010D0
     - name: ??_C@_06OAGO@Absent?$AA@
-      processed: "`string'"
+      processed: '"Absent"'
       offset: '000010E4'
     - name: ??_C@_07JMEA@Present?$AA@
-      processed: "`string'"
+      processed: '"Present"'
       offset: 000010EC
     - name: ??_C@_0BG@LGMD@System?5capabilities?3?6?$AA@
-      processed: "`string'"
+      processed: '"System capabilities:\n"'
       offset: 000010F4
     - name: ??_C@_06GAPH@DC?5?$CFc?6?$AA@
-      processed: "`string'"
+      processed: '"DC %c\n"'
       offset: 0000110C
     - name: ??_C@_06KDNH@AC?5?$CFc?6?$AA@
-      processed: "`string'"
+      processed: '"AC %c\n"'
       offset: '00001114'
   - num: '4'
     name: RARE
@@ -6199,242 +6409,242 @@ appearances:
     offset: 000280D0
     symbols:
     - name: ??_C@_00A@?$AA@
-      processed: "`string'"
+      processed: '""'
       offset: 0000000C
     - name: _WinDir
       processed: ''
       offset: 00002CC0
     - name: ??_C@_0L@LLAF@DeviceDesc?$AA@
-      processed: "`string'"
+      processed: '"DeviceDesc"'
       offset: 00002CD8
     - name: ??_C@_0N@IOME@FriendlyName?$AA@
-      processed: "`string'"
+      processed: '"FriendlyName"'
       offset: 00002CE4
     - name: ??_C@_09CDHI@ClassGUID?$AA@
-      processed: "`string'"
+      processed: '"ClassGUID"'
       offset: 00002CF4
     - name: ??_C@_05LCAF@Class?$AA@
-      processed: "`string'"
+      processed: '"Class"'
       offset: 00002D00
     - name: ??_C@_06LCIG@Driver?$AA@
-      processed: "`string'"
+      processed: '"Driver"'
       offset: 00002D08
     - name: ??_C@_0BO@LADI@0?5?$DN?$DN?5?$CI1?5?$CG?5PropertyBufferSize?$CJ?$AA@
-      processed: "`string'"
+      processed: '"0 == (1 & PropertyBufferSize)"'
       offset: 00002D10
     - name: ??_C@_08KDKK@Location?$AA@
-      processed: "`string'"
+      processed: '"Location"'
       offset: 00002D30
     - name: ??_C@_03KFJO@Mfg?$AA@
-      processed: "`string'"
+      processed: '"Mfg"'
       offset: 00002D3C
     - name: ??_C@_0O@KIHO@CompatibleIDs?$AA@
-      processed: "`string'"
+      processed: '"CompatibleIDs"'
       offset: 00002D40
     - name: ??_C@_0L@LPIN@HardwareID?$AA@
-      processed: "`string'"
+      processed: '"HardwareID"'
       offset: 00002D50
     - name: ??_C@_0CP@OOGA@Big?5error?3?5?$CF08x?5is?5not?5a?5pnp?5wdm@
-      processed: "`string'"
+      processed: '"Big error: %08x is not a pnp wdm"...'
       offset: 00002D5C
     - name: ??_C@_0BD@BHNP@NTKERN?5PNP?5ERROR?3?5?$AA@
-      processed: "`string'"
+      processed: '"NTKERN PNP ERROR: "'
       offset: 00002D8C
     - name: ??_C@_0M@IDIE@?4?4?2pnpapi?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\pnpapi.c"'
       offset: 00002DA0
     - name: ??_C@_0BJ@BMGK@AddDevice?$CI?$CJ?5of?5?$CFs?5failed?$AA@
-      processed: "`string'"
+      processed: '"AddDevice() of %s failed"'
       offset: 00002DB0
     - name: ??_C@_0CC@DONN@Failed?5to?5load?5miniport?5driver?5?$CF@
-      processed: "`string'"
+      processed: '"Failed to load miniport driver %"...'
       offset: 00002DCC
     - name: ??_C@_0BP@KKLP@Error?5opening?5the?5registry?5key?$AA@
-      processed: "`string'"
+      processed: '"Error opening the registry key"'
       offset: 00002DF0
     - name: ??_C@_0CI@OGOL@Could?5not?5find?5a?5backslash?5in?5th@
-      processed: "`string'"
+      processed: '"Could not find a backslash in th"...'
       offset: '00002E10'
     - name: ??_C@_0CF@EJOF@Error?5getting?5a?5key?5for?5devnode?5@
-      processed: "`string'"
+      processed: '"Error getting a key for devnode "...'
       offset: '00002E38'
     - name: ??_C@_0N@IMGC@UpperFilters?$AA@
-      processed: "`string'"
+      processed: '"UpperFilters"'
       offset: '00002E60'
     - name: ??_C@_0L@MNFF@NTMPDriver?$AA@
-      processed: "`string'"
+      processed: '"NTMPDriver"'
       offset: '00002E70'
     - name: ??_C@_0N@JGBG@LowerFilters?$AA@
-      processed: "`string'"
+      processed: '"LowerFilters"'
       offset: 00002E7C
     - name: ??_C@_0FA@GIHA@Failed?5?$CF08X?5to?5create?5fake?5pdo?5f@
-      processed: "`string'"
+      processed: '"Failed %08X to create fake pdo f"...'
       offset: 00002E8C
     - name: _NtPnPDriverObject
       processed: ''
       offset: 00002EDC
     - name: ??_C@_0PG@KFIC@Please?5make?5a?5bug?5to?5the?5owner?5o@
-      processed: "`string'"
+      processed: '"Please make a bug to the owner o"...'
       offset: 00002EE0
     - name: ??_C@_0CF@CDAH@Enumerator?5rightfully?5challenged@
-      processed: "`string'"
+      processed: '"Enumerator rightfully challenged"...'
       offset: 00002FD8
     - name: ??_C@_0CE@HACN@?$CIcould?5not?5get?5the?5enumerator?5na@
-      processed: "`string'"
+      processed: '"(could not get the enumerator na"...'
       offset: '00003000'
     - name: ??_C@_0BF@HIAO@Unsupported?5bus?5type?$AA@
-      processed: "`string'"
+      processed: '"Unsupported bus type"'
       offset: '00003024'
     - name: ??_C@_0BB@GDPD@Unknown?5bus?5type?$AA@
-      processed: "`string'"
+      processed: '"Unknown bus type"'
       offset: 0000303C
     - name: ??_C@_0FB@IODO@PDO?5?$CF08X?5failed?5something?5during@
-      processed: "`string'"
+      processed: '"PDO %08X failed something during"...'
       offset: '00003050'
     - name: ??_C@_0EB@MDBO@PDO?5?$CF08X?5failed?5something?5during@
-      processed: "`string'"
+      processed: '"PDO %08X failed something during"...'
       offset: 000030A4
     - name: ??_C@_0BA@KDFL@busInfo?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"busInfo != NULL"'
       offset: '000030E8'
     - name: ??_C@_0N@INKD@?4?4?2pnpenum?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\pnpenum.c"'
       offset: 000030F8
     - name: ??_C@_0HL@DELD@Contact?5dev?5owner?5for?5?$CFs?0?5which?5@
-      processed: "`string'"
+      processed: '"Contact dev owner for %s, which "...'
       offset: '00003108'
     - name: ??_C@_0EM@FADD@Something?5bad?5?$CF08X?5happened?5duri@
-      processed: "`string'"
+      processed: '"Something bad %08X happened duri"...'
       offset: '00003184'
     - name: ??_C@_0CE@ILLB@Problem?5recreating?5?$CFs?0?5get?5Pierr@
-      processed: "`string'"
+      processed: '"Problem recreating %s, get Pierr"...'
       offset: 000031D0
     - name: ??_C@_0CN@NPOA@DevNode?5named?5?$CFs?5moved?5from?5PDO?5@
-      processed: "`string'"
+      processed: '"DevNode named %s moved from PDO "...'
       offset: 000031F4
     - name: ??_C@_0BP@JAFJ@PDO?5?$CF08X?5is?5on?5a?5dying?5devnode?$AA@
-      processed: "`string'"
+      processed: '"PDO %08X is on a dying devnode"'
       offset: '00003224'
     - name: ??_C@_0EP@LPHA@Something?5bad?5?$CF08X?5happened?5duri@
-      processed: "`string'"
+      processed: '"Something bad %08X happened duri"...'
       offset: '00003244'
     - name: ??_C@_0EC@MKFC@You?5cannot?5have?5a?5NULL?5ID?5if?5you@
-      processed: "`string'"
+      processed: '"You cannot have a NULL ID if you"...'
       offset: '00003294'
     - name: ??_C@_0EM@HBIL@Something?5bad?5happened?5during?5de@
-      processed: "`string'"
+      processed: '"Something bad happened during de"...'
       offset: 000032D8
     - name: ??_C@_0BO@CMDN@PDO?5?$CF08X?5does?5not?5have?5a?5name?$AA@
-      processed: "`string'"
+      processed: '"PDO %08X does not have a name"'
       offset: '00003324'
     - name: ??_C@_0EL@DKBG@Something?5bad?5happened?5during?5de@
-      processed: "`string'"
+      processed: '"Something bad happened during de"...'
       offset: '00003344'
     - name: ??_C@_0BF@DFMM@Unknown?5Dx?5State?5?$CI2?$CJ?$AA@
-      processed: "`string'"
+      processed: '"Unknown Dx State (2)"'
       offset: '00003390'
     - name: ??_C@_0EP@DKOB@We?5can?8t?5power?5manage?5devnode?5?$CF0@
-      processed: "`string'"
+      processed: "\"We can\\'t power manage devnode %0\"..."
       offset: 000033A8
     - name: ??_C@_0EI@CAIJ@Contact?5dev?5owner?5for?5?$CFs?0?5which?5@
-      processed: "`string'"
+      processed: '"Contact dev owner for %s, which "...'
       offset: 000033F8
     - name: ??_C@_0DG@LFBP@Null?5driver?5with?5DO?5?$CF08X?5did?5not@
-      processed: "`string'"
+      processed: '"Null driver with DO %08X did not"...'
       offset: '00003440'
     - name: ??_C@_0BF@ODD@Unknown?5Dx?5State?5?$CI1?$CJ?$AA@
-      processed: "`string'"
+      processed: '"Unknown Dx State (1)"'
       offset: '00003478'
     - name: ??_C@_0CK@DMEC@Filtering?5into?5nothing?0?5returnin@
-      processed: "`string'"
+      processed: '"Filtering into nothing, returnin"...'
       offset: '00003490'
     - name: ??_C@_0DC@FKMK@Could?5not?5get?5the?5filter?5data?0?5f@
-      processed: "`string'"
+      processed: '"Could not get the filter data, f"...'
       offset: 000034BC
     - name: ??_C@_0DC@NMGE@Could?5not?5get?5the?5filter?5size?0?5f@
-      processed: "`string'"
+      processed: '"Could not get the filter size, f"...'
       offset: 000034F0
     - name: ??_C@_0CF@OBE@WhichSpace?5must?5be?50?5for?5PCI?5dev@
-      processed: "`string'"
+      processed: '"WhichSpace must be 0 for PCI dev"...'
       offset: '00003524'
     - name: ??_C@_0CE@MLBM@Read?1Write?5Config?5of?5non?9PCI?5dev@
-      processed: "`string'"
+      processed: '"Read/Write Config of non-PCI dev"...'
       offset: 0000354C
     - name: ??_C@_0N@NCFF@?4?4?2pnphirp?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\pnphirp.c"'
       offset: '00003570'
     - name: ??_C@_0DE@BPAO@pIrpStack?9?$DOParameters?4ReadWriteC@
-      processed: "`string'"
+      processed: '"pIrpStack->Parameters.ReadWriteC"...'
       offset: '00003580'
     - name: ??_C@_0CJ@OEMH@Unknown?5relation?5type?0?5returning@
-      processed: "`string'"
+      processed: '"Unknown relation type, returning"...'
       offset: 000035B4
     - name: ??_C@_0DO@CPJI@Whoser?$CB?5The?5wake?5IRP?5isn?8t?5the?5o@
-      processed: "`string'"
+      processed: "\"Whoser! The wake IRP isn\\'t the o\"..."
       offset: '000035E0'
     - name: _fPnPReady
       processed: ''
       offset: '00003620'
     - name: ??_C@_0FE@DIMK@Extremely?5bad?3?5failed?5?$CI?$CF08X?$CJ?5ins@
-      processed: "`string'"
+      processed: '"Extremely bad: failed (%08X) ins"...'
       offset: '00003624'
     - name: ??_C@_0FD@IHB@Extremely?5bad?3?5failed?5?$CI?$CF08X?$CJ?5cre@
-      processed: "`string'"
+      processed: '"Extremely bad: failed (%08X) cre"...'
       offset: '00003678'
     - name: ??_C@_0DJ@LIDG@Couldn?8t?5get?5capabilities?5of?5PDO@
-      processed: "`string'"
+      processed: "\"Couldn\\'t get capabilities of PDO\"..."
       offset: 000036CC
     - name: ??_C@_0N@KIHN@Capabilities?$AA@
-      processed: "`string'"
+      processed: '"Capabilities"'
       offset: '00003708'
     - name: ??_C@_0DG@PEDN@Get?5PierreYS?0?5I?5don?8t?5know?5how?5t@
-      processed: "`string'"
+      processed: "\"Get PierreYS, I don\\'t know how t\"..."
       offset: '00003718'
     - name: 
         ??_C@_0DI@EGJP@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIPnPCompletion@
-      processed: "`string'"
+      processed: '"(1) | (1) | (1) ? (PnPCompletion"...'
       offset: '00003750'
     - name: ??_C@_0M@CLMD@?4?4?2pnpirp?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\pnpirp.c"'
       offset: '00003788'
     - name: ??_C@_0BO@OPOF@Not?5enough?5memory?5for?5an?5IRP1?$AA@
-      processed: "`string'"
+      processed: '"Not enough memory for an IRP1"'
       offset: '00003794'
     - name: ??_C@_0DE@NHGL@Some?5NTKERN?5dude?5failed?5the?5hard@
-      processed: "`string'"
+      processed: '"Some NTKERN dude failed the hard"...'
       offset: 000037B4
     - name: ??_C@_0DF@MELN@Conversion?5from?5W?5to?5A?5of?5?$CFs?5fai@
-      processed: "`string'"
+      processed: '"Conversion from W to A of %s fai"...'
       offset: '000037E8'
     - name: ??_C@_0GC@OKCJ@Handler?5of?5devnode?5?$CF08X?5return?5s@
-      processed: "`string'"
+      processed: '"Handler of devnode %08X return s"...'
       offset: '00003820'
     - name: ??_C@_0EJ@JIG@Handler?5of?5devnode?5?$CF08X?5return?5?$CF@
-      processed: "`string'"
+      processed: '"Handler of devnode %08X return %"...'
       offset: '00003884'
     - name: ??_C@_0DM@JCGJ@Something?5bad?5?$CF08X?5happened?5duri@
-      processed: "`string'"
+      processed: '"Something bad %08X happened duri"...'
       offset: 000038D0
     - name: ??_C@_0FJ@MEKN@It?5will?5be?5a?5LONG?5while?5before?5W@
-      processed: "`string'"
+      processed: '"It will be a LONG while before W"...'
       offset: 0000390C
     - name: ??_C@_0DN@BLDO@Couldn?8t?5get?5the?5device?5state?5of@
-      processed: "`string'"
+      processed: "\"Couldn\\'t get the device state of\"..."
       offset: '00003968'
     - name: ??_C@_0BP@DPMF@String?5to?5convert?5is?5too?5long?4?$AA@
-      processed: "`string'"
+      processed: '"String to convert is too long."'
       offset: 000039A8
     - name: ??_C@_0DD@GIJH@IFSMGR?1NTKERN?5disagree?5on?5the?5le@
-      processed: "`string'"
+      processed: '"IFSMGR/NTKERN disagree on the le"...'
       offset: 000039C8
     - name: ??_C@_0CK@GCJD@Out?5of?5memory?5in?5ConvertWToHeapA@
-      processed: "`string'"
+      processed: '"Out of memory in ConvertWToHeapA"...'
       offset: 000039FC
     - name: ??_C@_0CD@OAJM@String?5to?5convert?5is?5too?5long?5?$CI2@
-      processed: "`string'"
+      processed: '"String to convert is too long (2"...'
       offset: 00003A28
     - name: ??_C@_0N@CMHL@?4?4?2pnputil?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\pnputil.c"'
       offset: 00003A4C
     - name: _Converts
       processed: ''
@@ -6443,98 +6653,98 @@ appearances:
       processed: ''
       offset: 00003AAC
     - name: ??_C@_0DL@KHBG@Bobo?3?5should?5not?5be?5here?5since?5o@
-      processed: "`string'"
+      processed: '"Bobo: should not be here since o"...'
       offset: 00003B04
     - name: ??_C@_0CH@FECK@Bobo?3?5could?5not?5find?5a?5group?5beg@
-      processed: "`string'"
+      processed: '"Bobo: could not find a group beg"...'
       offset: 00003B40
     - name: ??_C@_0DH@NBPH@Problem?5with?5RD?5?$CF08X?3?5should?5be?5@
-      processed: "`string'"
+      processed: '"Problem with RD %08X: should be "...'
       offset: 00003B68
     - name: ??_C@_0CM@LJEM@Could?5not?5allocate?5memory?5in?5All@
-      processed: "`string'"
+      processed: '"Could not allocate memory in All"...'
       offset: 00003BA0
     - name: ??_C@_0BB@NBGH@Invalid?5MD_Count?$AA@
-      processed: "`string'"
+      processed: '"Invalid MD_Count"'
       offset: 00003BCC
     - name: ??_C@_0BC@PHM@Invalid?5IOD_Count?$AA@
-      processed: "`string'"
+      processed: '"Invalid IOD_Count"'
       offset: 00003BE0
     - name: ??_C@_0CA@HAHO@Unstandard?5alias?4?5Get?5SantoshJ?4?$AA@
-      processed: "`string'"
+      processed: '"Unstandard alias. Get SantoshJ."'
       offset: 00003BF4
     - name: ??_C@_0BK@PBKI@Varying?5level?1edge?5in?5IRQ?$AA@
-      processed: "`string'"
+      processed: '"Varying level/edge in IRQ"'
       offset: 00003C14
     - name: ??_C@_0CB@KMPH@Varying?5share?5disposition?5in?5IRQ@
-      processed: "`string'"
+      processed: '"Varying share disposition in IRQ"...'
       offset: 00003C30
     - name: ??_C@_0CB@NAEK@Incorrect?5size?5for?5a?5NT?5resource@
-      processed: "`string'"
+      processed: '"Incorrect size for a NT resource"...'
       offset: 00003C54
     - name: ??_C@_0CB@PGOM@Could?5not?5copy?5NT?5structure?5back@
-      processed: "`string'"
+      processed: '"Could not copy NT structure back"...'
       offset: 00003C78
     - name: ??_C@_0CA@CIF@Invalid?5data?5in?5the?5config?5data?$AA@
-      processed: "`string'"
+      processed: '"Invalid data in the config data"'
       offset: 00003C9C
     - name: ??_C@_0CC@JMP@Inconsistency?5in?5OS?5specific?5cod@
-      processed: "`string'"
+      processed: '"Inconsistency in OS specific cod"...'
       offset: 00003CBC
     - name: ??_C@_0BL@JOOH@Incorrect?5OS?5specific?5code?$AA@
-      processed: "`string'"
+      processed: '"Incorrect OS specific code"'
       offset: 00003CE0
     - name: ??_C@_0BC@IFFB@Convertion?5failed?$AA@
-      processed: "`string'"
+      processed: '"Convertion failed"'
       offset: 00003CFC
     - name: ??_C@_0CN@CJKP@Resource?5alternative?5at?5the?5head@
-      processed: "`string'"
+      processed: '"Resource alternative at the head"...'
       offset: 00003D10
     - name: ??_C@_09EKPH@?4?4?2idle?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\idle.c"'
       offset: 00003D40
     - name: ??_C@_0DI@HFGA@PoRequestPowerIrp?5wasn?8t?5a?5PDO?5t@
-      processed: "`string'"
+      processed: "\"PoRequestPowerIrp wasn\\'t a PDO t\"..."
       offset: 00003D4C
     - name: 
         ??_C@_0DJ@CBLF@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIPopCompleteRe@
-      processed: "`string'"
+      processed: '"(1) | (1) | (1) ? (PopCompleteRe"...'
       offset: 00003D84
     - name: ??_C@_0M@LJEG@?4?4?2pocall?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\pocall.c"'
       offset: 00003DC0
     - name: ??_C@_0DC@KEPH@Sending?5failure?5to?5ourselves?5in?5@
-      processed: "`string'"
+      processed: '"Sending failure to ourselves in "...'
       offset: 00003DCC
     - name: ??_C@_0DI@OAJE@Let?5me?5complete?5the?5wake?5IRP?5bef@
-      processed: "`string'"
+      processed: '"Let me complete the wake IRP bef"...'
       offset: '00003E00'
     - name: ??_C@_0CG@HJOO@Failing?5conversion?5of?5the?5power?5@
-      processed: "`string'"
+      processed: '"Failing conversion of the power "...'
       offset: '00003E38'
     - name: ??_C@_0BC@BHC@NTKERN?5PO?5WARNS?3?5?$AA@
-      processed: "`string'"
+      processed: '"NTKERN PO WARNS: "'
       offset: '00003E60'
     - name: ??_C@_0DE@EBFM@Invalid?5minor?5function?5in?5PoRequ@
-      processed: "`string'"
+      processed: '"Invalid minor function in PoRequ"...'
       offset: '00003E74'
     - name: ??_C@_0BP@LJDB@PoRequestPowerIrp?5wasn?8t?5a?5PDO?$AA@
-      processed: "`string'"
+      processed: "\"PoRequestPowerIrp wasn\\'t a PDO\""
       offset: 00003EA8
     - name: ??_C@_0DF@PMGP@Get?5PierreYS?5has?5I?5did?5not?5thoug@
-      processed: "`string'"
+      processed: '"Get PierreYS has I did not thoug"...'
       offset: 00003EC8
     - name: ??_C@_0BJ@GPLH@Cancel?5routine?5cleared?$DP?$CB?$AA@
-      processed: "`string'"
+      processed: '"Cancel routine cleared?!"'
       offset: 00003F00
     - name: _IopCacheHitIncrement
       processed: ''
       offset: 00003F1C
     - name: ??_C@_0DG@CHNK@ReadFile?3?5byteoffset?50?0?5behaving@
-      processed: "`string'"
+      processed: '"ReadFile: byteoffset 0, behaving"...'
       offset: 00003F20
     - name: ??_C@_09GLKN@?4?4?2read?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\read.c"'
       offset: 00003F58
     - name: _CmAutoGenName
       processed: ''
@@ -6783,266 +6993,266 @@ appearances:
       processed: ''
       offset: 0000427C
     - name: ??_C@_1BE@CDCI@?$AAU?$AAn?$AAd?$AAe?$AAf?$AAi?$AAn?$AAe?$AAd?$AA?$AA@
-      processed: "`string'"
+      processed: L"Undefined"
       offset: '00004318'
     - name: 
         ??_C@_1BK@ENIN@?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAM?$AAe?$AAm?$AAo?$AAr?$AAy?$AA?$AA@
-      processed: "`string'"
+      processed: L"SystemMemory"
       offset: 0000432C
     - name: 
         ??_C@_1CE@LANH@?$AAN?$AAe?$AAt?$AAw?$AAo?$AAr?$AAk?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"NetworkPeripheral"
       offset: '00004348'
     - name: 
         ??_C@_1BO@CJIF@?$AAL?$AAi?$AAn?$AAe?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"LinePeripheral"
       offset: 0000436C
     - name: 
         ??_C@_1CA@IGFK@?$AAO?$AAt?$AAh?$AAe?$AAr?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"OtherPeripheral"
       offset: 0000438C
     - name: 
         ??_C@_1CG@MDFM@?$AAT?$AAe?$AAr?$AAm?$AAi?$AAn?$AAa?$AAl?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"TerminalPeripheral"
       offset: 000043AC
     - name: 
         ??_C@_1CG@IEKA@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"KeyboardPeripheral"
       offset: 000043D4
     - name: 
         ??_C@_1CE@HDEI@?$AAP?$AAo?$AAi?$AAn?$AAt?$AAe?$AAr?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"PointerPeripheral"
       offset: 000043FC
     - name: 
         ??_C@_1CE@BACN@?$AAP?$AAr?$AAi?$AAn?$AAt?$AAe?$AAr?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"PrinterPeripheral"
       offset: '00004420'
     - name: 
         ??_C@_1CE@FABA@?$AAM?$AAo?$AAn?$AAi?$AAt?$AAo?$AAr?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"MonitorPeripheral"
       offset: '00004444'
     - name: 
         ??_C@_1CA@NODE@?$AAM?$AAo?$AAd?$AAe?$AAm?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"ModemPeripheral"
       offset: '00004468'
     - name: 
         ??_C@_1BO@CGFI@?$AAT?$AAa?$AAp?$AAe?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"TapePeripheral"
       offset: '00004488'
     - name: 
         ??_C@_1CK@JLDJ@?$AAF?$AAl?$AAo?$AAp?$AAp?$AAy?$AAD?$AAi?$AAs?$AAk?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl@
-      processed: "`string'"
+      processed: L"FloppyDiskPeripheral"
       offset: 000044A8
     - name: 
         ??_C@_1BO@PJEO@?$AAD?$AAi?$AAs?$AAk?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"DiskPeripheral"
       offset: 000044D4
     - name: 
         ??_C@_1CA@LKFM@?$AAO?$AAt?$AAh?$AAe?$AAr?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"OtherController"
       offset: 000044F4
     - name: 
         ??_C@_1CA@PEGP@?$AAA?$AAu?$AAd?$AAi?$AAo?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"AudioController"
       offset: '00004514'
     - name: 
         ??_C@_1CG@LIKG@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"KeyboardController"
       offset: '00004534'
     - name: 
         ??_C@_1CE@EPEO@?$AAP?$AAo?$AAi?$AAn?$AAt?$AAe?$AAr?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"PointerController"
       offset: 0000455C
     - name: 
         ??_C@_1CG@PGOM@?$AAP?$AAa?$AAr?$AAa?$AAl?$AAl?$AAe?$AAl?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"ParallelController"
       offset: '00004580'
     - name: 
         ??_C@_1CE@DMFN@?$AAD?$AAi?$AAs?$AAp?$AAl?$AAa?$AAy?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"DisplayController"
       offset: 000045A8
     - name: 
         ??_C@_1CE@IMNB@?$AAN?$AAe?$AAt?$AAw?$AAo?$AAr?$AAk?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"NetworkController"
       offset: 000045CC
     - name: 
         ??_C@_1CC@IGHG@?$AAS?$AAe?$AAr?$AAi?$AAa?$AAl?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"SerialController"
       offset: 000045F0
     - name: 
         ??_C@_1BO@LLNG@?$AAW?$AAo?$AAr?$AAm?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"WormController"
       offset: '00004614'
     - name: 
         ??_C@_1CA@BIAE@?$AAC?$AAd?$AAR?$AAo?$AAm?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"CdRomController"
       offset: '00004634'
     - name: 
         ??_C@_1BO@BKFO@?$AAT?$AAa?$AAp?$AAe?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"TapeController"
       offset: '00004654'
     - name: 
         ??_C@_1BO@MFEI@?$AAD?$AAi?$AAs?$AAk?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"DiskController"
       offset: '00004674'
     - name: 
         ??_C@_1CK@HHAK@?$AAM?$AAu?$AAl?$AAt?$AAi?$AAf?$AAu?$AAn?$AAc?$AAt?$AAi?$AAo?$AAn?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr@
-      processed: "`string'"
+      processed: L"MultifunctionAdapter"
       offset: '00004694'
     - name: ??_C@_1BG@CDDF@?$AAD?$AAt?$AAi?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"DtiAdapter"
       offset: 000046C0
     - name: ??_C@_1BI@MPIK@?$AAS?$AAc?$AAs?$AAi?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"ScsiAdapter"
       offset: 000046D8
     - name: ??_C@_1BE@PJDG@?$AAT?$AAc?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"TcAdapter"
       offset: 000046F0
     - name: ??_C@_1BI@LJGK@?$AAE?$AAi?$AAs?$AAa?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"EisaAdapter"
       offset: '00004704'
     - name: 
         ??_C@_1BO@ECJF@?$AAS?$AAe?$AAc?$AAo?$AAn?$AAd?$AAa?$AAr?$AAy?$AAC?$AAa?$AAc?$AAh?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"SecondaryCache"
       offset: 0000471C
     - name: 
         ??_C@_1CA@EAGJ@?$AAS?$AAe?$AAc?$AAo?$AAn?$AAd?$AAa?$AAr?$AAy?$AAD?$AAC?$AAa?$AAc?$AAh?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"SecondaryDCache"
       offset: 0000473C
     - name: 
         ??_C@_1CA@NPNM@?$AAS?$AAe?$AAc?$AAo?$AAn?$AAd?$AAa?$AAr?$AAy?$AAI?$AAC?$AAa?$AAc?$AAh?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"SecondaryICache"
       offset: 0000475C
     - name: 
         ??_C@_1BM@ENFA@?$AAP?$AAr?$AAi?$AAm?$AAa?$AAr?$AAy?$AAD?$AAC?$AAa?$AAc?$AAh?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"PrimaryDCache"
       offset: 0000477C
     - name: 
         ??_C@_1BM@NCOF@?$AAP?$AAr?$AAi?$AAm?$AAa?$AAr?$AAy?$AAI?$AAC?$AAa?$AAc?$AAh?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"PrimaryICache"
       offset: '00004798'
     - name: 
         ??_C@_1CO@LFBC@?$AAF?$AAl?$AAo?$AAa?$AAt?$AAi?$AAn?$AAg?$AAP?$AAo?$AAi?$AAn?$AAt?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs@
-      processed: "`string'"
+      processed: L"FloatingPointProcess"
       offset: 000047B4
     - name: 
         ??_C@_1CC@MFFM@?$AAC?$AAe?$AAn?$AAt?$AAr?$AAa?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"CentralProcessor"
       offset: '000047E4'
     - name: ??_C@_1O@EPAA@?$AAL?$AAi?$AAn?$AAk?$AAe?$AAd?$AA?$AA@
-      processed: "`string'"
+      processed: L"Linked"
       offset: '00004808'
     - name: 
         ??_C@_1BK@MPEO@?$AA?2?$AAF?$AAi?$AAl?$AAe?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA?2?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\FileSystem\\"
       offset: '00004818'
     - name: ??_C@_1BC@LFKG@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?2?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\Driver\\"
       offset: '00004834'
     - name: ??_C@_1M@GDFC@?$AA_?$AAT?$AAy?$AAp?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"_Type"
       offset: '00004848'
     - name: ??_C@_17PAPH@?$AA_?$AAT?$AA_?$AA?$AA@
-      processed: "`string'"
+      processed: L"_T_"
       offset: '00004854'
     - name: 
         ??_C@_1DE@NFDK@?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?2?$AAS?$AAe?$AAr?$AAv?$AAi?$AAc?$AAe?$AAG?$AAr?$AAo?$AAu?$AAp@
-      processed: "`string'"
+      processed: L"Control\\ServiceGroup"
       offset: 0000485C
     - name: ??_C@_19OFAF@?$AAL?$AAi?$AAs?$AAt?$AA?$AA@
-      processed: "`string'"
+      processed: L"List"
       offset: '00004890'
     - name: ??_C@_17CCKB@?$AAT?$AAa?$AAg?$AA?$AA@
-      processed: "`string'"
+      processed: L"Tag"
       offset: 0000489C
     - name: ??_C@_1O@KHFL@?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA?$AA@
-      processed: "`string'"
+      processed: L"System"
       offset: 000048A4
     - name: ??_C@_17FDLC@?$AAs?$AAy?$AAs?$AA?$AA@
-      processed: "`string'"
+      processed: L"sys"
       offset: 000048B4
     - name: 
         ??_C@_1CO@ECIK@?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?2?$AAG?$AAr?$AAo?$AAu?$AAp?$AAO?$AAr?$AAd?$AAe?$AAr?$AAL?$AAi@
-      processed: "`string'"
+      processed: L"Control\\GroupOrderLi"
       offset: 000048BC
     - name: 
         ??_C@_1DK@LJHF@?$AA?2?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAR?$AAo?$AAo?$AAt?$AA?2?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA3?$AA2@
-      processed: "`string'"
+      processed: L"\\SystemRoot\\System32"
       offset: 000048EC
     - name: ??_C@_1M@EONE@?$AAG?$AAr?$AAo?$AAu?$AAp?$AA?$AA@
-      processed: "`string'"
+      processed: L"Group"
       offset: '00004928'
     - name: ??_C@_1BC@LHCC@?$AAS?$AAe?$AAr?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?$AA@
-      processed: "`string'"
+      processed: L"Services"
       offset: '00004934'
     - name: ??_C@_1BA@DLLE@?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"Control"
       offset: '00004948'
     - name: 
         ??_C@_1CE@KEEI@?$AAC?$AAu?$AAr?$AAr?$AAe?$AAn?$AAt?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAS?$AAe?$AAt?$AA?$AA@
-      processed: "`string'"
+      processed: L"CurrentControlSet"
       offset: '00004958'
     - name: 
         ??_C@_1IC@KIJF@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAy@
-      processed: "`string'"
+      processed: L"\\REGISTRY\\Machine\\Sy"...
       offset: 0000497C
     - name: 
         ??_C@_1GI@EMLC@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAy@
-      processed: "`string'"
+      processed: L"\\REGISTRY\\Machine\\Sy"...
       offset: 00004A00
     - name: 
         ??_C@_1FG@PFNI@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAy@
-      processed: "`string'"
+      processed: L"\\REGISTRY\\Machine\\Sy"...
       offset: 00004A68
     - name: ??_C@_1O@OIBJ@?$AAS?$AAe?$AAr?$AAi?$AAa?$AAl?$AA?$AA@
-      processed: "`string'"
+      processed: L"Serial"
       offset: 00004AC0
     - name: 
         ??_C@_1BK@LJFM@?$AAS?$AAy?$AAm?$AAb?$AAo?$AAl?$AAi?$AAc?$AAL?$AAi?$AAn?$AAk?$AA?$AA@
-      processed: "`string'"
+      processed: L"SymbolicLink"
       offset: 00004AD0
     - name: ??_C@_1BC@HFGN@?$AAR?$AAe?$AAf?$AAC?$AAo?$AAu?$AAn?$AAt?$AA?$AA@
-      processed: "`string'"
+      processed: L"RefCount"
       offset: 00004AEC
     - name: ??_C@_13LEOO@?$AA?$CD?$AA?$AA@
-      processed: "`string'"
+      processed: L"#"
       offset: 00004B00
     - name: 
         ??_C@_1BO@IGPD@?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAs?$AAt?$AAa?$AAn?$AAc?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"DeviceInstance"
       offset: 00004B04
     - name: 
         ??_C@_1CE@KEEA@?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?5?$AAP?$AAa?$AAr?$AAa?$AAm?$AAe?$AAt?$AAe?$AAr?$AAs?$AA?$AA@
-      processed: "`string'"
+      processed: L"Device Parameters"
       offset: 00004B24
     - name: ??_C@_1BC@IKAI@?$AAN?$AAe?$AAx?$AAt?$AAL?$AAU?$AAI?$AAD?$AA?$AA@
-      processed: "`string'"
+      processed: L"NextLUID"
       offset: 00004B48
     - name: 
         ??_C@_1DA@PCOE@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAE?$AAn@
-      processed: "`string'"
+      processed: L"\\REGISTRY\\Machine\\En"
       offset: 00004B5C
     - name: 
         ??_C@_1BO@NKEJ@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAU?$AAs?$AAe?$AAr?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\REGISTRY\\User"
       offset: 00004B8C
     - name: 
         ??_C@_1CE@LJDG@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\REGISTRY\\Machine"
       offset: 00004BAC
     - name: 
         ??_C@_1HE@BCIG@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAy@
-      processed: "`string'"
+      processed: L"\\REGISTRY\\Machine\\Sy"...
       offset: 00004BD0
     - name: 
         ??_C@_1FM@MLDO@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAH?$AAA@
-      processed: "`string'"
+      processed: L"\\REGISTRY\\Machine\\HA"...
       offset: 00004C44
     - name: ??_C@_1BA@JCHI@?$AAA?$AAu?$AAt?$AAo?$AAG?$AAe?$AAn?$AA?$AA@
-      processed: "`string'"
+      processed: L"AutoGen"
       offset: 00004CA0
     - name: ??_C@_0CK@OJMM@?8CreateObject?3?5Created?5new?5objec@
-      processed: "`string'"
+      processed: "\"\\'CreateObject: Created new objec\"..."
       offset: 00004CB0
   - num: '10'
     name: _IDATA
@@ -7095,15 +7305,15 @@ appearances:
       offset: '00000608'
     - name: 
         ??_C@_1EC@FFPO@?$AA?2?$AAC?$AAa?$AAl?$AAl?$AAb?$AAa?$AAc?$AAk?$AA?2?$AAS?$AAu?$AAs?$AAp?$AAe?$AAn?$AAd?$AAH?$AAi?$AAb@
-      processed: "`string'"
+      processed: L"\\Callback\\SuspendHib"...
       offset: '00000628'
     - name: 
         ??_C@_1DO@MHEK@?$AA?2?$AAC?$AAa?$AAl?$AAl?$AAb?$AAa?$AAc?$AAk?$AA?2?$AAS?$AAe?$AAt?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAI@
-      processed: "`string'"
+      processed: L"\\Callback\\SetSystemI"
       offset: 0000066C
     - name: 
         ??_C@_1DA@KHMA@?$AA?2?$AAC?$AAa?$AAl?$AAl?$AAb?$AAa?$AAc?$AAk?$AA?2?$AAS?$AAe?$AAt?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAT@
-      processed: "`string'"
+      processed: L"\\Callback\\SetSystemT"
       offset: 000006AC
     - name: _IoInitSystem@4
       processed: ''
@@ -7120,218 +7330,6 @@ appearances:
     - name: _ICODE__VPOWERD_Register_Power_Handler
       processed: ''
       offset: 00000A9C
-  source_tree:
-  - $D:/NT/private/crt32nt/convert/atox.c
-  - $D:/NT/private/crt32nt/convert/xtoa.c
-  - $D:/NT/private/crt32nt/stdio/fputwc.c
-  - $D:/NT/private/crt32nt/stdio/output.c
-  - 4../../../../../../dos/dos386/vxd/ntkern/inc/macros.h
-  - 5../../../../../../dos/dos386/vxd/ntkern/inc/pregstr.h
-  - apcobj.c
-  - assoc.c
-  - attrib.c
-  - bitmap.c
-  - bugcheck.c
-  - bus.c
-  - callback.c
-  - cnvint.c
-  - connect.c
-  - creasect.c
-  - create.c
-  - dbglog.c
-  - debug.asm
-  - devctrl.c
-  - devnode.c
-  - "'../../../../../../dev/ntddk/inc/ntddk.h"
-  - devquobj.c
-  - '&D:/NT/private/crt32nt/convert/_ctype.c'
-  - "'D:/NT/private/crt32nt/convert/isctype.c"
-  - (D:/NT/private/crt32nt/convert/iswctype.c
-  - '%D:/NT/private/crt32nt/convert/mblen.c'
-  - "'D:/NT/private/crt32nt/convert/_mbslen.c"
-  - (D:/NT/private/crt32nt/convert/mbstowcs.c
-  - '&D:/NT/private/crt32nt/convert/mbtowc.c'
-  - "'D:/NT/private/crt32nt/convert/tolower.c"
-  - "'D:/NT/private/crt32nt/convert/toupper.c"
-  - (D:/NT/private/crt32nt/convert/towlower.c
-  - (D:/NT/private/crt32nt/convert/towupper.c
-  - (D:/NT/private/crt32nt/convert/wcstombs.c
-  - '&D:/NT/private/crt32nt/convert/wctomb.c'
-  - '"D:/NT/private/crt32nt/hack/stubs.c'
-  - '"D:/NT/private/crt32nt/misc/qsort.c'
-  - '!D:/NT/private/crt32nt/misc/rand.c'
-  - '&D:/NT/private/crt32nt/startup/crt0fp.c'
-  - '%D:/NT/private/crt32nt/stdio/_flsbuf.c'
-  - '%D:/NT/private/crt32nt/stdio/sprintf.c'
-  - '&D:/NT/private/crt32nt/stdio/swprintf.c'
-  - '&D:/NT/private/crt32nt/stdio/vsprintf.c'
-  - '&D:/NT/private/crt32nt/stdio/vswprint.c'
-  - '%D:/NT/private/crt32nt/string/wcscat.c'
-  - '%D:/NT/private/crt32nt/string/wcschr.c'
-  - '%D:/NT/private/crt32nt/string/wcscmp.c'
-  - '&D:/NT/private/crt32nt/string/wcscspn.c'
-  - '&D:/NT/private/crt32nt/string/wcsicmp.c'
-  - '%D:/NT/private/crt32nt/string/wcslen.c'
-  - '%D:/NT/private/crt32nt/string/wcslwr.c'
-  - '&D:/NT/private/crt32nt/string/wcsncat.c'
-  - '&D:/NT/private/crt32nt/string/wcsncmp.c'
-  - '&D:/NT/private/crt32nt/string/wcsncpy.c'
-  - "'D:/NT/private/crt32nt/string/wcsnicmp.c"
-  - '&D:/NT/private/crt32nt/string/wcsnset.c'
-  - '&D:/NT/private/crt32nt/string/wcsrchr.c'
-  - '%D:/NT/private/crt32nt/string/wcsrev.c'
-  - '%D:/NT/private/crt32nt/string/wcsspn.c'
-  - '%D:/NT/private/crt32nt/string/wcsstr.c'
-  - '%D:/NT/private/crt32nt/string/wcsupr.c'
-  - drvobj.c
-  - errorlog.c
-  - event.c
-  - eventobj.c
-  - exinit.c
-  - "\t../guid.c"
-  - hal.asm
-  - handle.c
-  - i386/exsup2.asm
-  - i386/exsup3.asm
-  - i386/exsup.asm
-  - i386/memchr.asm
-  - i386/memcmp.asm
-  - i386/strcat.asm
-  - i386/strchr.asm
-  - i386/strcmp.asm
-  - i386/stricmp.asm
-  - i386/strlen.asm
-  - i386/strlwr.asm
-  - i386/strncat.asm
-  - i386/strncmp.asm
-  - i386/strncpy.asm
-  - i386/strnicmp.asm
-  - i386/strnset.asm
-  - i386/strrchr.asm
-  - i386/strrev.asm
-  - i386/strset.asm
-  - i386/strspn.asm
-  - i386/strstr.asm
-  - i386/strupr.asm
-  - "\t../idle.c"
-  - "\t../init.c"
-  - initload.c
-  - internal.c
-  - intrlfst.asm
-  - iodeb.c
-  - ioinit.c
-  - iop.h
-  - iosubs.c
-  - "\t../irql.c"
-  - ixhwsup.c
-  - ixisasup.c
-  - ixphwsup.c
-  - krnasm.asm
-  - largeint.asm
-  - "\tLLDIV.ASM"
-  - "\tLLMUL.ASM"
-  - "\tLLREM.ASM"
-  - "\tLLSHL.ASM"
-  - "\tLLSHR.ASM"
-  - loader.c
-  - loadunld.c
-  - lookasid.c
-  - maperr.c
-  - mapview.c
-  - "\t../misc.c"
-  - mm.c
-  - mminit.c
-  - movemem.asm
-  - msg.asm
-  - "\t../mtrr.c"
-  - mutntobj.c
-  - notify.c
-  - ntapi.c
-  - ntutil.c
-  - obclose.c
-  - obcreate.c
-  - obdir.c
-  - obhandle.c
-  - obinit.c
-  - obinsert.c
-  - objsup.c
-  - oblink.c
-  - obref.c
-  - obtype.c
-  - "\t../open.c"
-  - paction.c
-  - parse.c
-  - pbatt.c
-  - penter.asm
-  - pinfo.c
-  - pnpapi.c
-  - pnpctrl.c
-  - pnpenum.c
-  - pnphdlr.c
-  - pnphirp.c
-  - pnpinit.c
-  - pnpirp.c
-  - pnpmsg.c
-  - pnpsetup.c
-  - pnpstate.c
-  - pnpstr.c
-  - pnputil.c
-  - pocall.c
-  - podebug.c
-  - pohdlr.c
-  - poinit.c
-  - "\t../pool.c"
-  - postate.c
-  - pwork.c
-  - qsinfo.c
-  - raise.c
-  - rdtont2.c
-  - rdtont.c
-  - "\t../read.c"
-  - regstr.c
-  - regutil.c
-  - resource.c
-  - rtl.c
-  - rtlintr.c
-  - seastate.c
-  - sectsup.c
-  - semphobj.c
-  - sertl.c
-  - sidle.c
-  - spinlock.c
-  - switch.c
-  - "\t../test.c"
-  - testob.c
-  - thermal.c
-  - thread.c
-  - threads.c
-  - "\t../time.c"
-  - ULLDIV.ASM
-  - ULLREM.ASM
-  - ULLSHR.ASM
-  - umapview.c
-  - "\t../util.c"
-  - utils.asm
-  - vector.c
-  - w32.asm
-  - "\t../wait.c"
-  - worker.c
-  - write.c
-  - xxhal.c
-  - zw.c
-  - BusAddress.HighPart == 0
-  - guid.c
-  - Ht.Ht
-  - idle.c
-  - irql.c
-  - misc.c
-  - MmCa../creasect.c
-  - open.c
-  - PhysicalAddress.HighPart==0
-  - pool.c
-  - read.c
-  - standardInformation.EndOfFile.HighPart == 0
-  - test.c
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -7739,19 +7737,19 @@ appearances:
       demangled: ''
       offset: 00000A50
     - name: ??_C@_0BB@HLDA@system32?2drivers?$AA@
-      demangled: "`string'"
+      demangled: '"system32\\drivers"'
       offset: 00000A60
     - name: ??_C@_08OGD@system32?$AA@
-      demangled: "`string'"
+      demangled: '"system32"'
       offset: 00000A74
     - name: ??_C@_06GMLA@system?$AA@
-      demangled: "`string'"
+      demangled: '"system"'
       offset: 00000A80
     - name: ??_C@_07NKAG@?$CFs?$CFs?2?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"%s%s\\%s"'
       offset: 00000A88
     - name: ??_C@_0O@BMMI@DllInitialize?$AA@
-      demangled: "`string'"
+      demangled: '"DllInitialize"'
       offset: 00000A90
     - name: _RegistryMapping
       demangled: ''
@@ -7766,49 +7764,49 @@ appearances:
       demangled: ''
       offset: 00000AE4
     - name: ??_C@_0DG@KEAH@MmMapIoSpace?3?5NtKernSetPhysicalC@
-      demangled: "`string'"
+      demangled: '"MmMapIoSpace: NtKernSetPhysicalC"...'
       offset: 00000AE8
     - name: ??_C@_0CP@KEP@MmMapIoSpace?3?5Failed?5to?5set?5rang@
-      demangled: "`string'"
+      demangled: '"MmMapIoSpace: Failed to set rang"...'
       offset: 00000B20
     - name: ??_C@_1BG@OJPP@?$AAD?$AAy?$AAn?$AAa?$AAm?$AAi?$AAc?$AAW?$AAD?$AAM?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DynamicWDM"
       offset: 00000B50
     - name: 
         ??_C@_1GI@DEJO@?$AA?2?$AAR?$AAe?$AAg?$AAi?$AAs?$AAt?$AAr?$AAy?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAY@
-      demangled: "`string'"
+      demangled: L"\\Registry\\Machine\\SY"...
       offset: 00000B68
     - name: 
         ??_C@_1BK@JLBF@?$AAE?$AAr?$AAr?$AAo?$AAr?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"ErrorControl"
       offset: 00000BD0
     - name: ??_C@_1M@HKNH@?$AAS?$AAt?$AAa?$AAr?$AAt?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Start"
       offset: 00000BEC
     - name: ??_C@_19KJIP@?$AAT?$AAy?$AAp?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Type"
       offset: 00000BF8
     - name: ??_C@_1BE@PJND@?$AAI?$AAm?$AAa?$AAg?$AAe?$AAP?$AAa?$AAt?$AAh?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"ImagePath"
       offset: 00000C04
     - name: 
         ??_C@_1IA@PBPA@?$AA?2?$AAR?$AAe?$AAg?$AAi?$AAs?$AAt?$AAr?$AAy?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAY@
-      demangled: "`string'"
+      demangled: L"\\Registry\\Machine\\SY"...
       offset: 00000C18
     - name: _ThreadDataSlot
       demangled: ''
       offset: 00000C98
     - name: ??_C@_0DB@CHBE@?5KTHREAD?5?$CFx?0?5hRing0?5?$CFx?0?5IRQL?5?$CF02@
-      demangled: "`string'"
+      demangled: '" KTHREAD %x, hRing0 %x, IRQL %02"...'
       offset: 00000C9C
     - name: ??_C@_0CB@EMFF@?6Process?5?$CFx?5sys?5?$CFx?5thread?5list?3?6@
-      demangled: "`string'"
+      demangled: '"\nProcess %x sys %x thread list:\n"...'
       offset: 00000CD0
     - name: ??_C@_0BO@GPIB@HARDWARE?2DeviceMap?2InputClass?$AA@
-      demangled: "`string'"
+      demangled: '"HARDWARE\\DeviceMap\\InputClass"'
       offset: 00000CF4
     - name: ??_C@_0BN@KAPE@HARDWARE?2DeviceMap?2InputPort?$AA@
-      demangled: "`string'"
+      demangled: '"HARDWARE\\DeviceMap\\InputPort"'
       offset: 00000D14
     - name: _PathMapArray
       demangled: ''
@@ -7820,34 +7818,34 @@ appearances:
       demangled: ''
       offset: 00000D48
     - name: ??_C@_0M@EPEN@Unspecified?$AA@
-      demangled: "`string'"
+      demangled: '"Unspecified"'
       offset: 00000D54
     - name: ??_C@_07PCLD@Working?$AA@
-      demangled: "`string'"
+      demangled: '"Working"'
       offset: 00000D60
     - name: ??_C@_09GJGM@Sleeping1?$AA@
-      demangled: "`string'"
+      demangled: '"Sleeping1"'
       offset: 00000D68
     - name: ??_C@_09JGNF@Sleeping2?$AA@
-      demangled: "`string'"
+      demangled: '"Sleeping2"'
       offset: 00000D74
     - name: ??_C@_09DMEC@Sleeping3?$AA@
-      demangled: "`string'"
+      demangled: '"Sleeping3"'
       offset: 00000D80
     - name: ??_C@_09NLJB@Hibernate?$AA@
-      demangled: "`string'"
+      demangled: '"Hibernate"'
       offset: 00000D8C
     - name: ??_C@_08DCJK@Shutdown?$AA@
-      demangled: "`string'"
+      demangled: '"Shutdown"'
       offset: 00000D98
     - name: ??_C@_08COLN@USER?4EXE?$AA@
-      demangled: "`string'"
+      demangled: '"USER.EXE"'
       offset: 00000DA4
     - name: ??_C@_0M@BPKL@MESSAGEBEEP?$AA@
-      demangled: "`string'"
+      demangled: '"MESSAGEBEEP"'
       offset: 00000DB0
     - name: ??_C@_0M@FPCA@EXITWINDOWS?$AA@
-      demangled: "`string'"
+      demangled: '"EXITWINDOWS"'
       offset: 00000DBC
     - name: _PopIdleDetectionMode
       demangled: ''
@@ -7946,28 +7944,28 @@ appearances:
       demangled: ''
       offset: 000012AC
     - name: ??_C@_0BB@MKLO@?8EX?5?9?5Rewaiting?6?$AA@
-      demangled: "`string'"
+      demangled: "\"\\'EX - Rewaiting\\n\""
       offset: 000012B0
     - name: ??_C@_0CE@DFPL@?8?5NumberOfExclusiveWaiters?5?$DN?5?$CF04@
-      demangled: "`string'"
+      demangled: "\"\\' NumberOfExclusiveWaiters = %04\"..."
       offset: 000012C4
     - name: ??_C@_0CH@NBOI@?8?5ActiveCount?5?$DN?5?$CF04lx?5?5Flags?5?$DN?5?$CF@
-      demangled: "`string'"
+      demangled: "\"\\' ActiveCount = %04lx  Flags = %\"..."
       offset: '000012E8'
     - name: ??_C@_0BC@EMAC@IsOwnedExclusive?5?$AA@
-      demangled: "`string'"
+      demangled: '"IsOwnedExclusive "'
       offset: '00001310'
     - name: ??_C@_0O@DCBD@SharedWaiter?5?$AA@
-      demangled: "`string'"
+      demangled: '"SharedWaiter "'
       offset: '00001324'
     - name: ??_C@_0BB@PBLJ@ExclusiveWaiter?5?$AA@
-      demangled: "`string'"
+      demangled: '"ExclusiveWaiter "'
       offset: '00001334'
     - name: ??_C@_0BB@MPPP@?8Resource?5?$EA?5?$CFlx?6?$AA@
-      demangled: "`string'"
+      demangled: "\"\\'Resource @ %lx\\n\""
       offset: '00001348'
     - name: ??_C@_0CB@COIA@?8?5?5Thread?5?$DN?5?$CF08lx?0?5Count?5?$DN?5?$CF02x?6@
-      demangled: "`string'"
+      demangled: "\"\\'  Thread = %08lx, Count = %02x\\n\"..."
       offset: 0000135C
     - name: _ExpSemaphoreObjectType
       demangled: ''
@@ -7979,13 +7977,13 @@ appearances:
       demangled: ''
       offset: '00001388'
     - name: ??_C@_1M@BACH@?$AAE?$AAv?$AAe?$AAn?$AAt?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Event"
       offset: '00001398'
     - name: _ExpCallbackMapping
       demangled: ''
       offset: 000013A4
     - name: ??_C@_1BC@NEEN@?$AAC?$AAa?$AAl?$AAl?$AAb?$AAa?$AAc?$AAk?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Callback"
       offset: 000013B4
     - name: _ExpAdjustScanPeriod
       demangled: ''
@@ -8006,10 +8004,10 @@ appearances:
       demangled: ''
       offset: 0000140C
     - name: ??_C@_0DD@HEJB@RtlAssert?3?5Assertion?5?$CI?$CFs?$CJ?5failed@
-      demangled: "`string'"
+      demangled: '"RtlAssert: Assertion (%s) failed"...'
       offset: '00001410'
     - name: ??_C@_0DG@FKJI@RtlAssert?3?5Assertion?5?$CI?$CFs?$CJ?5failed@
-      demangled: "`string'"
+      demangled: '"RtlAssert: Assertion (%s) failed"...'
       offset: '00001444'
     - name: _RtlpBitsClearAnywhere
       demangled: ''
@@ -8024,11 +8022,11 @@ appearances:
       demangled: ''
       offset: 0000177C
     - name: ??_C@_13HMCP@?$AA?2?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\"
       offset: '00001894'
     - name: 
         ??_C@_1CA@NKCK@?$AA?$CK?$AA?$CK?$AA?$CK?$AA?5?$AAU?$AAn?$AAk?$AAn?$AAo?$AAw?$AAn?$AA?5?$AA?$CK?$AA?$CK?$AA?$CK?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"*** Unknown ***"
       offset: '00001898'
     - name: _RtlpRegistryPaths
       demangled: ''
@@ -8038,23 +8036,23 @@ appearances:
       offset: 000018D0
     - name: 
         ??_C@_1BM@CAEM@?$AAU?$AAs?$AAe?$AAr?$AA?2?$AA?4?$AAD?$AAe?$AAf?$AAa?$AAu?$AAl?$AAt?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"User\\.Default"
       offset: '00001938'
     - name: 
         ??_C@_1CG@BHB@?$AAH?$AAa?$AAr?$AAd?$AAw?$AAa?$AAr?$AAe?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAM?$AAa?$AAp?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Hardware\\DeviceMap"
       offset: '00001954'
     - name: 
         ??_C@_1FE@EPLF@?$AAS?$AAo?$AAf?$AAt?$AAw?$AAa?$AAr?$AAe?$AA?2?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt?$AA?2?$AAW@
-      demangled: "`string'"
+      demangled: L"Software\\Microsoft\\W"...
       offset: 0000197C
     - name: 
         ??_C@_1EC@JGOB@?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA?2?$AAC?$AAu?$AAr?$AAr?$AAe?$AAn?$AAt?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo@
-      demangled: "`string'"
+      demangled: L"System\\CurrentContro"...
       offset: 000019D0
     - name: 
         ??_C@_1EE@KIMN@?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA?2?$AAC?$AAu?$AAr?$AAr?$AAe?$AAn?$AAt?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo@
-      demangled: "`string'"
+      demangled: L"System\\CurrentContro"...
       offset: 00001A14
     - name: _RtlpIntegerChars
       demangled: ''
@@ -8087,18 +8085,18 @@ appearances:
       demangled: ''
       offset: 00001DA0
     - name: ??_C@_1BA@NEMI@?$AA?$CF?$AAw?$AAZ?$AA?2?$AA?$CF?$AAw?$AAZ?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"%wZ\\%wZ"
       offset: 00001DA8
     - name: 
         ??_C@_1BI@KHDI@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?2?$AA?$CF?$AAl?$AAu?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Driver\\%lu"
       offset: 00001DB8
     - name: 
         ??_C@_1BI@CICJ@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?2?$AA?$CF?$AAw?$AAZ?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Driver\\%wZ"
       offset: 00001DD0
     - name: ??_C@_13DOBH@?$AA?4?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"."
       offset: 00001DE8
     - name: _Mmp64BitPhysicalAddress
       demangled: ''
@@ -8110,160 +8108,160 @@ appearances:
       demangled: ''
       offset: 00001DF4
     - name: ??_C@_0BI@DHNG@?8IoDriver?5object?5?$CFs?5?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: "\"\\'IoDriver object %s %x\\n\""
       offset: 00001DF8
     - name: ??_C@_0BI@DJND@?8IoDevice?5object?5?$CFs?5?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: "\"\\'IoDevice object %s %x\\n\""
       offset: '00001E10'
     - name: _IopFileMapping
       demangled: ''
       offset: '00001E28'
     - name: ??_C@_1BA@FOJN@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Device"
       offset: '00001E38'
     - name: ??_C@_1BA@BBDO@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Driver"
       offset: '00001E48'
     - name: ??_C@_1BI@EDCJ@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\DosDevices"
       offset: '00001E58'
     - name: ??_C@_19GDCN@?$AAF?$AAi?$AAl?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"File"
       offset: '00001E70'
     - name: ??_C@_1O@IMKM@?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Driver"
       offset: 00001E7C
     - name: ??_C@_1O@MDAP@?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Device"
       offset: 00001E8C
     - name: ??_C@_1BA@PFGJ@?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Adapter"
       offset: 00001E9C
     - name: ??_C@_0CE@KOCD@?8Multiple?5irp?5complete?5requests?5@
-      demangled: "`string'"
+      demangled: "\"\\'Multiple irp complete requests \"..."
       offset: 00001EAC
     - name: 
         ??_C@_1BK@PKEN@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAU?$AA_?$AA?$CF?$AAx?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Device\\U_%x"
       offset: 00001ED0
     - name: 
         ??_C@_1BI@LELB@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA?$CF?$AAw?$AAZ?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Device\\%wZ"
       offset: 00001EEC
     - name: ??_C@_1BA@HANO@?$AA?2?$AA?2?$AA?4?$AA?2?$AA?$CF?$AAw?$AAZ?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\\\.\\%wZ"
       offset: 00001F04
     - name: ??_C@_19JGFB@?$AA?2?$AA?2?$AA?4?$AA?2?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\\\.\\"
       offset: 00001F14
     - name: 
         ??_C@_1BK@LPBE@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\DosDevices\\"
       offset: 00001F20
     - name: 
         ??_C@_1CM@JPOA@?$AA?2?$AA?$CF?$AAs?$AA?2?$AA?$CF?$AA0?$AA8?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?$CD?$AA?$CF?$AAw?$AAZ?$AA?$CF?$AAs?$AA?$CF?$AAw@
-      demangled: "`string'"
+      demangled: L"\\%s\\%08x%08x#%wZ%s%w"
       offset: 00001F3C
     - name: ??_C@_1BG@BJJK@?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DosDevices"
       offset: 00001F68
     - name: ??_C@_15LEKJ@?$AA?2?$AA?4?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\."
       offset: 00001F80
     - name: ??_C@_11A@?$AA?$AA@
-      demangled: "`string'"
+      demangled: L""
       offset: 00001F88
     - name: 
         ??_C@_1BM@PFBL@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?$CF?$AAs?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\DosDevices%s"
       offset: 00001F8C
     - name: ??_C@_1BC@KIOB@?$AA?$CF?$AA0?$AA8?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"%08x%08x"
       offset: 00001FA8
     - name: 
         ??_C@_1BG@PKBH@?$AA?$CF?$AAw?$AAZ?$AA?$CD?$AA?$CF?$AAw?$AAZ?$AA?$CF?$AAw?$AAZ?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"%wZ#%wZ%wZ"
       offset: 00001FBC
     - name: 
         ??_C@_1DM@GGCI@?$AA?2?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAR?$AAo?$AAo?$AAt?$AA?2?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA3?$AA2@
-      demangled: "`string'"
+      demangled: L"\\SystemRoot\\System32"
       offset: 00001FD4
     - name: 
         ??_C@_1BK@CENL@?$AA?2?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAR?$AAo?$AAo?$AAt?$AA?2?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\SystemRoot\\"
       offset: '00002010'
     - name: ??_C@_19BBIN@?$AA?4?$AAS?$AAY?$AAS?$AA?$AA@
-      demangled: "`string'"
+      demangled: L".SYS"
       offset: 0000202C
     - name: ??_C@_1BG@PJKH@?$AAO?$AAb?$AAj?$AAe?$AAc?$AAt?$AAN?$AAa?$AAm?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"ObjectName"
       offset: '00002038'
     - name: ??_C@_15HGOB@?$AA?$CF?$AAS?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"%S"
       offset: '00002050'
     - name: ??_C@_1BG@BNKI@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?2?$AA?$CF?$AAS?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Driver\\%S"
       offset: '00002058'
     - name: ??_C@_0L@HBI@String?3?$CFS?6?$AA@
-      demangled: "`string'"
+      demangled: '"String:%S\n"'
       offset: '00002070'
     - name: ??_C@_0BE@NFBF@NumberOfStrings?3?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: '"NumberOfStrings:%x\n"'
       offset: 0000207C
     - name: ??_C@_0BC@JGKM@IoControlCode?3?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: '"IoControlCode:%x\n"'
       offset: '00002090'
     - name: ??_C@_0BD@JIFC@SequenceNumber?3?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: '"SequenceNumber:%x\n"'
       offset: 000020A4
     - name: ??_C@_0BA@GGNH@FinalStatus?3?$CFd?6?$AA@
-      demangled: "`string'"
+      demangled: '"FinalStatus:%d\n"'
       offset: 000020B8
     - name: ??_C@_0BF@BIHM@UniqueErrorValue?3?$CFd?6?$AA@
-      demangled: "`string'"
+      demangled: '"UniqueErrorValue:%d\n"'
       offset: 000020C8
     - name: ??_C@_0O@HIIA@ErrorCode?3?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: '"ErrorCode:%x\n"'
       offset: '000020E0'
     - name: ??_C@_0BC@CGBB@EventCategory?3?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: '"EventCategory:%x\n"'
       offset: 000020F0
     - name: ??_C@_0BB@IENP@DumpDataSize?3?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: '"DumpDataSize:%x\n"'
       offset: '00002104'
     - name: ??_C@_0BA@EPKC@Retry?5Count?3?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: '"Retry Count:%x\n"'
       offset: '00002118'
     - name: ??_C@_0BI@OMHI@Major?5Function?5Code?3?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: '"Major Function Code:%x\n"'
       offset: '00002128'
     - name: ??_C@_0BA@DBMH@Driver?5Name?3?$CFS?6?$AA@
-      demangled: "`string'"
+      demangled: '"Driver Name:%S\n"'
       offset: '00002140'
     - name: ??_C@_0CC@KNBK@?6IO?5Error?5Log?5Packet?5Information@
-      demangled: "`string'"
+      demangled: '"\nIO Error Log Packet Information"...'
       offset: '00002150'
     - name: ??_C@_13A@?$AA?$AA?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\0"
       offset: '00002174'
     - name: 
         ??_C@_1BK@OIJB@?$AA?2?$AAO?$AAb?$AAj?$AAe?$AAc?$AAt?$AAT?$AAy?$AAp?$AAe?$AAs?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\ObjectTypes"
       offset: '00002178'
     - name: ??_C@_1BE@PPB@?$AAD?$AAi?$AAr?$AAe?$AAc?$AAt?$AAo?$AAr?$AAy?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Directory"
       offset: '00002194'
     - name: ??_C@_0BN@FKCK@?8Symbolic?5link?5object?5?$CFs?5?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: "\"\\'Symbolic link object %s %x\\n\""
       offset: 000021A8
     - name: ??_C@_0BG@NGKK@?8Directory?5object?5?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: "\"\\'Directory object %s\\n\""
       offset: 000021C8
     - name: ??_C@_0BP@OJA@?8Dumping?5the?5object?5directory?6?$AA@
-      demangled: "`string'"
+      demangled: "\"\\'Dumping the object directory\\n\""
       offset: '000021E0'
     - name: ??_C@_0BN@DCAD@?8Dumping?5the?5root?5directory?6?$AA@
-      demangled: "`string'"
+      demangled: "\"\\'Dumping the root directory\\n\""
       offset: '00002200'
     - name: _FSysErr
       demangled: ''
@@ -8278,10 +8276,10 @@ appearances:
       demangled: ''
       offset: '00002250'
     - name: ??_C@_0BI@NKKE@?$CFs?5called?5by?5?$CFx?5?6?$CFs?5?$CFx?6?$AA@
-      demangled: "`string'"
+      demangled: '"%s called by %x \n%s %x\n"'
       offset: '00002274'
     - name: ??_C@_0DB@NGP@?$CFs?5called?5by?5?$CFx?5?6?$CFs?5?$CFx?5?6Paramete@
-      demangled: "`string'"
+      demangled: '"%s called by %x \n%s %x \nParamete"...'
       offset: 0000228C
     - name: _NestCount
       demangled: ''
@@ -8291,10 +8289,10 @@ appearances:
       offset: 000022C4
     - name: 
         ??_C@_1CO@EMLF@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAP?$AAh?$AAy?$AAs?$AAi?$AAc?$AAa?$AAl?$AAM?$AAe?$AAm?$AAo@
-      demangled: "`string'"
+      demangled: L"\\Device\\PhysicalMemo"
       offset: 000022D4
     - name: ??_C@_1BA@GGKP@?$AAS?$AAe?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Section"
       offset: '00002304'
     - name: _MMCONTROL
       demangled: ''
@@ -8303,7 +8301,7 @@ appearances:
       demangled: ''
       offset: '00002318'
     - name: ??_C@_1O@BEJI@?$AAT?$AAh?$AAr?$AAe?$AAa?$AAd?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Thread"
       offset: '00002328'
     - name: ___nullstring
       demangled: ''
@@ -8313,10 +8311,10 @@ appearances:
       offset: '00002340'
     - name: 
         ??_C@_1O@POHA@?$AA?$CI?$AAn?$AAu?$AAl?$AAl?$AA?$CJ?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"(null)\0\0\0\0\0\0\0"
       offset: '00002344'
     - name: ??_C@_06ONKE@?$CInull?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '"(null)"'
       offset: '00002354'
     - name: __pctype
       demangled: ''
@@ -10280,217 +10278,217 @@ appearances:
       demangled: ''
       offset: 00000AF4
     - name: ??_C@_0BA@JFJO@?$CF08x?5?$CF02d?5?$CF08x?5?$AA@
-      demangled: "`string'"
+      demangled: '"%08x %02d %08x "'
       offset: 00000AF8
     - name: ??_C@_0BD@FFDI@?6Enter?5selection?3?5?$AA@
-      demangled: "`string'"
+      demangled: '"\nEnter selection: "'
       offset: 00000B08
     - name: ??_C@_09EMNI@?$CIX?$CJ?5Exit?6?$AA@
-      demangled: "`string'"
+      demangled: '"(X) Exit\n"'
       offset: 00000B1C
     - name: ??_C@_0CC@BABL@?$CII?$CJ?5Dump?5pending?5Irp?5information@
-      demangled: "`string'"
+      demangled: '"(I) Dump pending Irp information"...'
       offset: 00000B28
     - name: ??_C@_0CJ@IEIH@?$CIT?$CJ?5Dump?5thread?5and?5process?5info@
-      demangled: "`string'"
+      demangled: '"(T) Dump thread and process info"...'
       offset: 00000B4C
     - name: ??_C@_0BM@JBCN@?$CIP?$CJ?5Dump?5power?5information?6?$AA@
-      demangled: "`string'"
+      demangled: '"(P) Dump power information\n"'
       offset: 00000B78
     - name: ??_C@_0BN@LOAC@?$CIO?$CJ?5Dump?5object?5information?6?$AA@
-      demangled: "`string'"
+      demangled: '"(O) Dump object information\n"'
       offset: 00000B94
     - name: ??_C@_0BE@JGGN@?$CID?$CJ?5Dump?5trace?5log?6?$AA@
-      demangled: "`string'"
+      demangled: '"(D) Dump trace log\n"'
       offset: 00000BB4
     - name: ??_C@_0BF@ILII@?6NTKERN?5Debug?5menu?6?6?$AA@
-      demangled: "`string'"
+      demangled: '"\nNTKERN Debug menu\n\n"'
       offset: 00000BC8
     - name: ??_C@_01BJG@?6?$AA@
-      demangled: "`string'"
+      demangled: '"\n"'
       offset: 00000BE0
     - name: ??_C@_08HGNB@INVALID?$CB?$AA@
-      demangled: "`string'"
+      demangled: '"INVALID!"'
       offset: 00000BE4
     - name: ??_C@_01FCOA@?5?$AA@
-      demangled: "`string'"
+      demangled: '" "'
       offset: 00000BF0
     - name: ??_C@_0BM@ELLE@?0?5Flags?3?5?$CFd?0?5EventCode?3?5?$CFd?6?$AA@
-      demangled: "`string'"
+      demangled: '", Flags: %d, EventCode: %d\n"'
       offset: 00000BF4
     - name: ??_C@_04COF@None?$AA@
-      demangled: "`string'"
+      demangled: '"None"'
       offset: 00000C10
     - name: ??_C@_08GKAE@Reserved?$AA@
-      demangled: "`string'"
+      demangled: '"Reserved"'
       offset: 00000C18
     - name: ??_C@_05BKOF@Sleep?$AA@
-      demangled: "`string'"
+      demangled: '"Sleep"'
       offset: 00000C24
     - name: ??_C@_0O@CLAD@ShutdownReset?$AA@
-      demangled: "`string'"
+      demangled: '"ShutdownReset"'
       offset: 00000C2C
     - name: ??_C@_0M@EBLN@ShutdownOff?$AA@
-      demangled: "`string'"
+      demangled: '"ShutdownOff"'
       offset: 00000C3C
     - name: ??_C@_09GOGM@?0?5Action?3?$AA@
-      demangled: "`string'"
+      demangled: '", Action:"'
       offset: 00000C48
     - name: ??_C@_0DC@LGLE@?$CFs?0?5Spare?5?$CFd?5?$CFd?5?$CFd?0?5Battery?5leve@
-      demangled: "`string'"
+      demangled: '"%s, Spare %d %d %d, Battery leve"...'
       offset: 00000C54
     - name: ??_C@_08FGLH@Disabled?$AA@
-      demangled: "`string'"
+      demangled: '"Disabled"'
       offset: 00000C88
     - name: ??_C@_07FFME@Enabled?$AA@
-      demangled: "`string'"
+      demangled: '"Enabled"'
       offset: 00000C94
     - name: ??_C@_0P@FCCG@OverThrottled?3?$AA@
-      demangled: "`string'"
+      demangled: '"OverThrottled:"'
       offset: 00000C9C
     - name: ??_C@_0FA@PKOM@Optimize?3?5?$CFs?0?5Fan?5throttle?5toler@
-      demangled: "`string'"
+      demangled: '"Optimize: %s, Fan throttle toler"...'
       offset: 00000CAC
     - name: ??_C@_04BBGC@Life?$AA@
-      demangled: "`string'"
+      demangled: '"Life"'
       offset: 00000CFC
     - name: ??_C@_05EFBF@Power?$AA@
-      demangled: "`string'"
+      demangled: '"Power"'
       offset: 00000D04
     - name: ??_C@_03KLCE@Off?$AA@
-      demangled: "`string'"
+      demangled: '"Off"'
       offset: 00000D0C
     - name: ??_C@_02CCEO@On?$AA@
-      demangled: "`string'"
+      demangled: '"On"'
       offset: 00000D10
     - name: ??_C@_0BE@HGHB@Disk?5spin?5down?3?5?$CFd?6?$AA@
-      demangled: "`string'"
+      demangled: '"Disk spin down: %d\n"'
       offset: 00000D14
     - name: ??_C@_0CP@BILG@Video?5timeout?3?5?$CFd?0?5Video?5reserve@
-      demangled: "`string'"
+      demangled: '"Video timeout: %d, Video reserve"...'
       offset: 00000D28
     - name: ??_C@_0BF@PFDJ@Discharge?5policy?5?$CFd?3?$AA@
-      demangled: "`string'"
+      demangled: '"Discharge policy %d:"'
       offset: 00000D58
     - name: ??_C@_0CD@JFOK@Broadcast?5capacity?5resolution?3?5?$CF@
-      demangled: "`string'"
+      demangled: '"Broadcast capacity resolution: %"...'
       offset: 00000D70
     - name: ??_C@_0CA@KIK@Doze?5spare?3?5?$CFd?0?5S4?5timeout?3?5?$CFd?6?$AA@
-      demangled: "`string'"
+      demangled: '"Doze spare: %d, S4 timeout: %d\n"'
       offset: 00000D94
     - name: ??_C@_0BD@CLIF@WinLogonFlags?3?5?$CFd?6?$AA@
-      demangled: "`string'"
+      demangled: '"WinLogonFlags: %d\n"'
       offset: 00000DB4
     - name: ??_C@_0BH@KNON@?5Reduce?5Latency?5Sleep?3?$AA@
-      demangled: "`string'"
+      demangled: '" Reduce Latency Sleep:"'
       offset: 00000DC8
     - name: ??_C@_0M@BFLH@?5Max?5Sleep?3?$AA@
-      demangled: "`string'"
+      demangled: '" Max Sleep:"'
       offset: 00000DE0
     - name: ??_C@_0L@GEAA@Min?5Sleep?3?$AA@
-      demangled: "`string'"
+      demangled: '"Min Sleep:"'
       offset: 00000DEC
     - name: ??_C@_0DH@MDM@Idle?5timeout?3?5?$CFd?0?5sensitivity?5?$CFd@
-      demangled: "`string'"
+      demangled: '"Idle timeout: %d, sensitivity %d"...'
       offset: 00000DF8
     - name: ??_C@_05BFLF@Idle?3?$AA@
-      demangled: "`string'"
+      demangled: '"Idle:"'
       offset: '00000E30'
     - name: ??_C@_0O@JAMB@Reserved?3?5?$CFd?6?$AA@
-      demangled: "`string'"
+      demangled: '"Reserved: %d\n"'
       offset: '00000E38'
     - name: ??_C@_0P@NGNF@Lid?5open?5wake?3?$AA@
-      demangled: "`string'"
+      demangled: '"Lid open wake:"'
       offset: '00000E48'
     - name: ??_C@_0L@FPGN@Lid?5close?3?$AA@
-      demangled: "`string'"
+      demangled: '"Lid close:"'
       offset: '00000E58'
     - name: ??_C@_0O@CBFB@Sleep?5button?3?$AA@
-      demangled: "`string'"
+      demangled: '"Sleep button:"'
       offset: '00000E64'
     - name: ??_C@_0O@JNKL@Power?5button?3?$AA@
-      demangled: "`string'"
+      demangled: '"Power button:"'
       offset: '00000E74'
     - name: ??_C@_0O@MHLB@Revision?3?5?$CFd?6?$AA@
-      demangled: "`string'"
+      demangled: '"Revision: %d\n"'
       offset: '00000E84'
     - name: ??_C@_0BK@BMCL@Default?5low?5latency?5wake?3?$AA@
-      demangled: "`string'"
+      demangled: '"Default low latency wake:"'
       offset: '00000E94'
     - name: ??_C@_0BL@NEOH@Minimum?5device?5wake?5state?3?$AA@
-      demangled: "`string'"
+      demangled: '"Minimum device wake state:"'
       offset: 00000EB0
     - name: ??_C@_0BG@KNJM@Real?9time?5clock?5wake?3?$AA@
-      demangled: "`string'"
+      demangled: '"Real-time clock wake:"'
       offset: 00000ECC
     - name: ??_C@_0P@HLBA@Soft?5lid?5wake?3?$AA@
-      demangled: "`string'"
+      demangled: '"Soft lid wake:"'
       offset: 00000EE4
     - name: ??_C@_0BB@EIAJ@AC?5on?9line?5wake?3?$AA@
-      demangled: "`string'"
+      demangled: '"AC on-line wake:"'
       offset: 00000EF4
     - name: ??_C@_0CL@MPFN@Battery?5?$CFd?3?5Granularity?3?5?$CFd?0?5Cap@
-      demangled: "`string'"
+      demangled: '"Battery %d: Granularity: %d, Cap"...'
       offset: 00000F08
     - name: ??_C@_0BJ@FEIK@Batteries?3?5?$CFs?0?5Life?3?5?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: '"Batteries: %s, Life: %s\n"'
       offset: 00000F34
     - name: ??_C@_09JCKO@Long?5term?$AA@
-      demangled: "`string'"
+      demangled: '"Long term"'
       offset: 00000F50
     - name: ??_C@_0L@INDI@Short?5term?$AA@
-      demangled: "`string'"
+      demangled: '"Short term"'
       offset: 00000F5C
     - name: ??_C@_0CE@MDDJ@Disk?5spin?5down?3?5?$CFs?0?5Spare?5?$CFd?5?$CFd?5@
-      demangled: "`string'"
+      demangled: '"Disk spin down: %s, Spare %d %d "...'
       offset: 00000F68
     - name: ??_C@_0EK@EBOA@Thermal?5control?3?5?$CFs?0?5Throttle?3?5?$CF@
-      demangled: "`string'"
+      demangled: '"Thermal control: %s, Throttle: %"...'
       offset: 00000F8C
     - name: ??_C@_05MJBI@Can?8t?$AA@
-      demangled: "`string'"
+      demangled: "\"Can\\'t\""
       offset: 00000FD8
     - name: ??_C@_03EGCG@Can?$AA@
-      demangled: "`string'"
+      demangled: '"Can"'
       offset: 00000FE0
     - name: ??_C@_0CK@FBCG@?6Hiberfile?3?5?$CFs?0?5Wake?3?5?$CFs?0?5Spare?5@
-      demangled: "`string'"
+      demangled: '"\nHiberfile: %s, Wake: %s, Spare "...'
       offset: 00000FE4
     - name: ??_C@_08PHKO@Non?9Full?$AA@
-      demangled: "`string'"
+      demangled: '"Non-Full"'
       offset: '00001010'
     - name: ??_C@_04OOPN@Full?$AA@
-      demangled: "`string'"
+      demangled: '"Full"'
       offset: 0000101C
     - name: ??_C@_04DMJH@?5S?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '" S%d"'
       offset: '00001024'
     - name: ??_C@_0O@OFNL@System?5state?3?$AA@
-      demangled: "`string'"
+      demangled: '"System state:"'
       offset: 0000102C
     - name: ??_C@_08FHHB@Lid?3?5?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: '"Lid: %s\n"'
       offset: 0000103C
     - name: ??_C@_0BC@CEHF@Sleep?5button?3?5?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: '"Sleep button: %s\n"'
       offset: '00001048'
     - name: ??_C@_0BC@FHMO@Power?5button?3?5?$CFs?6?$AA@
-      demangled: "`string'"
+      demangled: '"Power button: %s\n"'
       offset: 0000105C
     - name: ??_C@_06OAGO@Absent?$AA@
-      demangled: "`string'"
+      demangled: '"Absent"'
       offset: '00001070'
     - name: ??_C@_07JMEA@Present?$AA@
-      demangled: "`string'"
+      demangled: '"Present"'
       offset: '00001078'
     - name: ??_C@_0BG@LGMD@System?5capabilities?3?6?$AA@
-      demangled: "`string'"
+      demangled: '"System capabilities:\n"'
       offset: '00001080'
     - name: ??_C@_06GAPH@DC?5?$CFc?6?$AA@
-      demangled: "`string'"
+      demangled: '"DC %c\n"'
       offset: '00001098'
     - name: ??_C@_06KDNH@AC?5?$CFc?6?$AA@
-      demangled: "`string'"
+      demangled: '"AC %c\n"'
       offset: 000010A0
   - num: '4'
     name: RARE
@@ -11951,64 +11949,64 @@ appearances:
     offset: 0000D4E0
     symbols:
     - name: ??_C@_00A@?$AA@
-      demangled: "`string'"
+      demangled: '""'
       offset: 0000000C
     - name: _WinDir
       demangled: ''
       offset: 00002CC0
     - name: ??_C@_0L@LLAF@DeviceDesc?$AA@
-      demangled: "`string'"
+      demangled: '"DeviceDesc"'
       offset: 00002CD8
     - name: ??_C@_0N@IOME@FriendlyName?$AA@
-      demangled: "`string'"
+      demangled: '"FriendlyName"'
       offset: 00002CE4
     - name: ??_C@_09CDHI@ClassGUID?$AA@
-      demangled: "`string'"
+      demangled: '"ClassGUID"'
       offset: 00002CF4
     - name: ??_C@_05LCAF@Class?$AA@
-      demangled: "`string'"
+      demangled: '"Class"'
       offset: 00002D00
     - name: ??_C@_06LCIG@Driver?$AA@
-      demangled: "`string'"
+      demangled: '"Driver"'
       offset: 00002D08
     - name: ??_C@_08KDKK@Location?$AA@
-      demangled: "`string'"
+      demangled: '"Location"'
       offset: 00002D10
     - name: ??_C@_03KFJO@Mfg?$AA@
-      demangled: "`string'"
+      demangled: '"Mfg"'
       offset: 00002D1C
     - name: ??_C@_0O@KIHO@CompatibleIDs?$AA@
-      demangled: "`string'"
+      demangled: '"CompatibleIDs"'
       offset: 00002D20
     - name: ??_C@_0L@LPIN@HardwareID?$AA@
-      demangled: "`string'"
+      demangled: '"HardwareID"'
       offset: 00002D30
     - name: ??_C@_0N@IMGC@UpperFilters?$AA@
-      demangled: "`string'"
+      demangled: '"UpperFilters"'
       offset: 00002D40
     - name: ??_C@_0L@MNFF@NTMPDriver?$AA@
-      demangled: "`string'"
+      demangled: '"NTMPDriver"'
       offset: 00002D50
     - name: ??_C@_0N@JGBG@LowerFilters?$AA@
-      demangled: "`string'"
+      demangled: '"LowerFilters"'
       offset: 00002D5C
     - name: _NtPnPDriverObject
       demangled: ''
       offset: 00002D6C
     - name: ??_C@_0PG@KFIC@Please?5make?5a?5bug?5to?5the?5owner?5o@
-      demangled: "`string'"
+      demangled: '"Please make a bug to the owner o"...'
       offset: 00002D70
     - name: ??_C@_0CF@CDAH@Enumerator?5rightfully?5challenged@
-      demangled: "`string'"
+      demangled: '"Enumerator rightfully challenged"...'
       offset: '00002E68'
     - name: ??_C@_0CE@HACN@?$CIcould?5not?5get?5the?5enumerator?5na@
-      demangled: "`string'"
+      demangled: '"(could not get the enumerator na"...'
       offset: '00002E90'
     - name: _fPnPReady
       demangled: ''
       offset: 00002EB4
     - name: ??_C@_0N@KIHN@Capabilities?$AA@
-      demangled: "`string'"
+      demangled: '"Capabilities"'
       offset: 00002EB8
     - name: _Converts
       demangled: ''
@@ -12266,263 +12264,263 @@ appearances:
       demangled: ''
       offset: 0000328C
     - name: ??_C@_1BE@CDCI@?$AAU?$AAn?$AAd?$AAe?$AAf?$AAi?$AAn?$AAe?$AAd?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Undefined"
       offset: '00003328'
     - name: 
         ??_C@_1BK@ENIN@?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAM?$AAe?$AAm?$AAo?$AAr?$AAy?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"SystemMemory"
       offset: 0000333C
     - name: 
         ??_C@_1CE@LANH@?$AAN?$AAe?$AAt?$AAw?$AAo?$AAr?$AAk?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"NetworkPeripheral"
       offset: '00003358'
     - name: 
         ??_C@_1BO@CJIF@?$AAL?$AAi?$AAn?$AAe?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"LinePeripheral"
       offset: 0000337C
     - name: 
         ??_C@_1CA@IGFK@?$AAO?$AAt?$AAh?$AAe?$AAr?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"OtherPeripheral"
       offset: 0000339C
     - name: 
         ??_C@_1CG@MDFM@?$AAT?$AAe?$AAr?$AAm?$AAi?$AAn?$AAa?$AAl?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"TerminalPeripheral"
       offset: 000033BC
     - name: 
         ??_C@_1CG@IEKA@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"KeyboardPeripheral"
       offset: '000033E4'
     - name: 
         ??_C@_1CE@HDEI@?$AAP?$AAo?$AAi?$AAn?$AAt?$AAe?$AAr?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"PointerPeripheral"
       offset: 0000340C
     - name: 
         ??_C@_1CE@BACN@?$AAP?$AAr?$AAi?$AAn?$AAt?$AAe?$AAr?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"PrinterPeripheral"
       offset: '00003430'
     - name: 
         ??_C@_1CE@FABA@?$AAM?$AAo?$AAn?$AAi?$AAt?$AAo?$AAr?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"MonitorPeripheral"
       offset: '00003454'
     - name: 
         ??_C@_1CA@NODE@?$AAM?$AAo?$AAd?$AAe?$AAm?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"ModemPeripheral"
       offset: '00003478'
     - name: 
         ??_C@_1BO@CGFI@?$AAT?$AAa?$AAp?$AAe?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"TapePeripheral"
       offset: '00003498'
     - name: 
         ??_C@_1CK@JLDJ@?$AAF?$AAl?$AAo?$AAp?$AAp?$AAy?$AAD?$AAi?$AAs?$AAk?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl@
-      demangled: "`string'"
+      demangled: L"FloppyDiskPeripheral"
       offset: 000034B8
     - name: 
         ??_C@_1BO@PJEO@?$AAD?$AAi?$AAs?$AAk?$AAP?$AAe?$AAr?$AAi?$AAp?$AAh?$AAe?$AAr?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DiskPeripheral"
       offset: '000034E4'
     - name: 
         ??_C@_1CA@LKFM@?$AAO?$AAt?$AAh?$AAe?$AAr?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"OtherController"
       offset: '00003504'
     - name: 
         ??_C@_1CA@PEGP@?$AAA?$AAu?$AAd?$AAi?$AAo?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"AudioController"
       offset: '00003524'
     - name: 
         ??_C@_1CG@LIKG@?$AAK?$AAe?$AAy?$AAb?$AAo?$AAa?$AAr?$AAd?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"KeyboardController"
       offset: '00003544'
     - name: 
         ??_C@_1CE@EPEO@?$AAP?$AAo?$AAi?$AAn?$AAt?$AAe?$AAr?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"PointerController"
       offset: 0000356C
     - name: 
         ??_C@_1CG@PGOM@?$AAP?$AAa?$AAr?$AAa?$AAl?$AAl?$AAe?$AAl?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"ParallelController"
       offset: '00003590'
     - name: 
         ??_C@_1CE@DMFN@?$AAD?$AAi?$AAs?$AAp?$AAl?$AAa?$AAy?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DisplayController"
       offset: 000035B8
     - name: 
         ??_C@_1CE@IMNB@?$AAN?$AAe?$AAt?$AAw?$AAo?$AAr?$AAk?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"NetworkController"
       offset: 000035DC
     - name: 
         ??_C@_1CC@IGHG@?$AAS?$AAe?$AAr?$AAi?$AAa?$AAl?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"SerialController"
       offset: '00003600'
     - name: 
         ??_C@_1BO@LLNG@?$AAW?$AAo?$AAr?$AAm?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"WormController"
       offset: '00003624'
     - name: 
         ??_C@_1CA@BIAE@?$AAC?$AAd?$AAR?$AAo?$AAm?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"CdRomController"
       offset: '00003644'
     - name: 
         ??_C@_1BO@BKFO@?$AAT?$AAa?$AAp?$AAe?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"TapeController"
       offset: '00003664'
     - name: 
         ??_C@_1BO@MFEI@?$AAD?$AAi?$AAs?$AAk?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAl?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DiskController"
       offset: '00003684'
     - name: 
         ??_C@_1CK@HHAK@?$AAM?$AAu?$AAl?$AAt?$AAi?$AAf?$AAu?$AAn?$AAc?$AAt?$AAi?$AAo?$AAn?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr@
-      demangled: "`string'"
+      demangled: L"MultifunctionAdapter"
       offset: 000036A4
     - name: ??_C@_1BG@CDDF@?$AAD?$AAt?$AAi?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DtiAdapter"
       offset: 000036D0
     - name: ??_C@_1BI@MPIK@?$AAS?$AAc?$AAs?$AAi?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"ScsiAdapter"
       offset: '000036E8'
     - name: ??_C@_1BE@PJDG@?$AAT?$AAc?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"TcAdapter"
       offset: '00003700'
     - name: ??_C@_1BI@LJGK@?$AAE?$AAi?$AAs?$AAa?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"EisaAdapter"
       offset: '00003714'
     - name: 
         ??_C@_1BO@ECJF@?$AAS?$AAe?$AAc?$AAo?$AAn?$AAd?$AAa?$AAr?$AAy?$AAC?$AAa?$AAc?$AAh?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"SecondaryCache"
       offset: 0000372C
     - name: 
         ??_C@_1CA@EAGJ@?$AAS?$AAe?$AAc?$AAo?$AAn?$AAd?$AAa?$AAr?$AAy?$AAD?$AAC?$AAa?$AAc?$AAh?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"SecondaryDCache"
       offset: 0000374C
     - name: 
         ??_C@_1CA@NPNM@?$AAS?$AAe?$AAc?$AAo?$AAn?$AAd?$AAa?$AAr?$AAy?$AAI?$AAC?$AAa?$AAc?$AAh?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"SecondaryICache"
       offset: 0000376C
     - name: 
         ??_C@_1BM@ENFA@?$AAP?$AAr?$AAi?$AAm?$AAa?$AAr?$AAy?$AAD?$AAC?$AAa?$AAc?$AAh?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"PrimaryDCache"
       offset: 0000378C
     - name: 
         ??_C@_1BM@NCOF@?$AAP?$AAr?$AAi?$AAm?$AAa?$AAr?$AAy?$AAI?$AAC?$AAa?$AAc?$AAh?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"PrimaryICache"
       offset: 000037A8
     - name: 
         ??_C@_1CO@LFBC@?$AAF?$AAl?$AAo?$AAa?$AAt?$AAi?$AAn?$AAg?$AAP?$AAo?$AAi?$AAn?$AAt?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs@
-      demangled: "`string'"
+      demangled: L"FloatingPointProcess"
       offset: 000037C4
     - name: 
         ??_C@_1CC@MFFM@?$AAC?$AAe?$AAn?$AAt?$AAr?$AAa?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"CentralProcessor"
       offset: 000037F4
     - name: ??_C@_1O@EPAA@?$AAL?$AAi?$AAn?$AAk?$AAe?$AAd?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Linked"
       offset: '00003818'
     - name: 
         ??_C@_1BK@MPEO@?$AA?2?$AAF?$AAi?$AAl?$AAe?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA?2?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\FileSystem\\"
       offset: '00003828'
     - name: ??_C@_1BC@LFKG@?$AA?2?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AA?2?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Driver\\"
       offset: '00003844'
     - name: ??_C@_1M@GDFC@?$AA_?$AAT?$AAy?$AAp?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"_Type"
       offset: '00003858'
     - name: ??_C@_17PAPH@?$AA_?$AAT?$AA_?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"_T_"
       offset: '00003864'
     - name: 
         ??_C@_1DE@NFDK@?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?2?$AAS?$AAe?$AAr?$AAv?$AAi?$AAc?$AAe?$AAG?$AAr?$AAo?$AAu?$AAp@
-      demangled: "`string'"
+      demangled: L"Control\\ServiceGroup"
       offset: 0000386C
     - name: ??_C@_19OFAF@?$AAL?$AAi?$AAs?$AAt?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"List"
       offset: 000038A0
     - name: ??_C@_17CCKB@?$AAT?$AAa?$AAg?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Tag"
       offset: 000038AC
     - name: ??_C@_1O@KHFL@?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"System"
       offset: 000038B4
     - name: ??_C@_17FDLC@?$AAs?$AAy?$AAs?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"sys"
       offset: 000038C4
     - name: 
         ??_C@_1CO@ECIK@?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?2?$AAG?$AAr?$AAo?$AAu?$AAp?$AAO?$AAr?$AAd?$AAe?$AAr?$AAL?$AAi@
-      demangled: "`string'"
+      demangled: L"Control\\GroupOrderLi"
       offset: 000038CC
     - name: 
         ??_C@_1DK@LJHF@?$AA?2?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAR?$AAo?$AAo?$AAt?$AA?2?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA3?$AA2@
-      demangled: "`string'"
+      demangled: L"\\SystemRoot\\System32"
       offset: 000038FC
     - name: ??_C@_1M@EONE@?$AAG?$AAr?$AAo?$AAu?$AAp?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Group"
       offset: '00003938'
     - name: ??_C@_1BC@LHCC@?$AAS?$AAe?$AAr?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Services"
       offset: '00003944'
     - name: ??_C@_1BA@DLLE@?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Control"
       offset: '00003958'
     - name: 
         ??_C@_1CE@KEEI@?$AAC?$AAu?$AAr?$AAr?$AAe?$AAn?$AAt?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAS?$AAe?$AAt?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"CurrentControlSet"
       offset: '00003968'
     - name: 
         ??_C@_1IC@KIJF@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAy@
-      demangled: "`string'"
+      demangled: L"\\REGISTRY\\Machine\\Sy"...
       offset: 0000398C
     - name: 
         ??_C@_1GI@EMLC@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAy@
-      demangled: "`string'"
+      demangled: L"\\REGISTRY\\Machine\\Sy"...
       offset: 00003A10
     - name: 
         ??_C@_1FG@PFNI@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAy@
-      demangled: "`string'"
+      demangled: L"\\REGISTRY\\Machine\\Sy"...
       offset: 00003A78
     - name: ??_C@_1O@OIBJ@?$AAS?$AAe?$AAr?$AAi?$AAa?$AAl?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Serial"
       offset: 00003AD0
     - name: 
         ??_C@_1BK@LJFM@?$AAS?$AAy?$AAm?$AAb?$AAo?$AAl?$AAi?$AAc?$AAL?$AAi?$AAn?$AAk?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"SymbolicLink"
       offset: 00003AE0
     - name: ??_C@_1BC@HFGN@?$AAR?$AAe?$AAf?$AAC?$AAo?$AAu?$AAn?$AAt?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"RefCount"
       offset: 00003AFC
     - name: ??_C@_13LEOO@?$AA?$CD?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"#"
       offset: 00003B10
     - name: 
         ??_C@_1BO@IGPD@?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAs?$AAt?$AAa?$AAn?$AAc?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DeviceInstance"
       offset: 00003B14
     - name: 
         ??_C@_1CE@KEEA@?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?5?$AAP?$AAa?$AAr?$AAa?$AAm?$AAe?$AAt?$AAe?$AAr?$AAs?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Device Parameters"
       offset: 00003B34
     - name: ??_C@_1BC@IKAI@?$AAN?$AAe?$AAx?$AAt?$AAL?$AAU?$AAI?$AAD?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"NextLUID"
       offset: 00003B58
     - name: 
         ??_C@_1DA@PCOE@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAE?$AAn@
-      demangled: "`string'"
+      demangled: L"\\REGISTRY\\Machine\\En"
       offset: 00003B6C
     - name: 
         ??_C@_1BO@NKEJ@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAU?$AAs?$AAe?$AAr?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\REGISTRY\\User"
       offset: 00003B9C
     - name: 
         ??_C@_1CE@LJDG@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\REGISTRY\\Machine"
       offset: 00003BBC
     - name: 
         ??_C@_1HE@BCIG@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAS?$AAy@
-      demangled: "`string'"
+      demangled: L"\\REGISTRY\\Machine\\Sy"...
       offset: 00003BE0
     - name: 
         ??_C@_1FM@MLDO@?$AA?2?$AAR?$AAE?$AAG?$AAI?$AAS?$AAT?$AAR?$AAY?$AA?2?$AAM?$AAa?$AAc?$AAh?$AAi?$AAn?$AAe?$AA?2?$AAH?$AAA@
-      demangled: "`string'"
+      demangled: L"\\REGISTRY\\Machine\\HA"...
       offset: 00003C54
     - name: ??_C@_1BA@JCHI@?$AAA?$AAu?$AAt?$AAo?$AAG?$AAe?$AAn?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"AutoGen"
       offset: 00003CB0
   - num: '10'
     name: _ITEXT
@@ -12575,15 +12573,15 @@ appearances:
       offset: '00000544'
     - name: 
         ??_C@_1EC@FFPO@?$AA?2?$AAC?$AAa?$AAl?$AAl?$AAb?$AAa?$AAc?$AAk?$AA?2?$AAS?$AAu?$AAs?$AAp?$AAe?$AAn?$AAd?$AAH?$AAi?$AAb@
-      demangled: "`string'"
+      demangled: L"\\Callback\\SuspendHib"...
       offset: '00000564'
     - name: 
         ??_C@_1DO@MHEK@?$AA?2?$AAC?$AAa?$AAl?$AAl?$AAb?$AAa?$AAc?$AAk?$AA?2?$AAS?$AAe?$AAt?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAI@
-      demangled: "`string'"
+      demangled: L"\\Callback\\SetSystemI"
       offset: 000005A8
     - name: 
         ??_C@_1DA@KHMA@?$AA?2?$AAC?$AAa?$AAl?$AAl?$AAb?$AAa?$AAc?$AAk?$AA?2?$AAS?$AAe?$AAt?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAT@
-      demangled: "`string'"
+      demangled: L"\\Callback\\SetSystemT"
       offset: '000005E8'
     - name: _IoInitSystem@4
       demangled: ''

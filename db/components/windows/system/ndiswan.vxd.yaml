@@ -1,10 +1,20 @@
 filename: windows/system/ndiswan.vxd
-#TODO: bring up more details from symdeb
 binary: NDISWAN
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - init.asm
+  - ioctl.c
+  - "\t../link.c"
+  - memory.c
+  - ndisstub.asm
+  - ndistapi.c
+  - ndiswan.c
+  - receive.c
+  - "\t../send.c"
+  - transfer.c
+  - wanif.c
   segments:
   - num: '1'
     name: .bss
@@ -404,18 +414,6 @@ appearances:
     - name: _DbgPrint
       processed: ''
       offset: 0000012A
-  source_tree:
-  - init.asm
-  - ioctl.c
-  - "\t../link.c"
-  - memory.c
-  - ndisstub.asm
-  - ndistapi.c
-  - ndiswan.c
-  - receive.c
-  - "\t../send.c"
-  - transfer.c
-  - wanif.c
 - version: Windows 98 Retail
   source_tree: []
   segments:

@@ -1,10 +1,37 @@
 filename: windows/system/pci.vxd
-#TODO: bring up more details from symdeb
 binary: PCI
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - agp.c
+  - bridgarb.c
+  - busnoarb.c
+  - debug.c
+  - ../../../dev/ddk/inc/pci.inc
+  - enum1dev.c
+  - "\t../fdma.c"
+  - "\t../gart.c"
+  - getroutc.c
+  - ide.c
+  - "\t../init.c"
+  - int1a.c
+  - irqarb.c
+  - "\t../link.c"
+  - miniport.c
+  - "\t../misc.c"
+  - pci.asm
+  - pci_cfg.c
+  - pcienm.c
+  - power.c
+  - rebal.c
+  - registry.c
+  - rmbios.asm
+  - services.c
+  - video.c
+  - gart.c
+  - Yt.h
+  - Yu.h
   segments:
   - num: '1'
     name: .data
@@ -1428,35 +1455,6 @@ appearances:
     - name: _ICODE__ACPI_RegisterOpRegionCookedHandler
       processed: ''
       offset: '00000218'
-  source_tree:
-  - agp.c
-  - bridgarb.c
-  - busnoarb.c
-  - debug.c
-  - ../../../dev/ddk/inc/pci.inc
-  - enum1dev.c
-  - "\t../fdma.c"
-  - "\t../gart.c"
-  - getroutc.c
-  - ide.c
-  - "\t../init.c"
-  - int1a.c
-  - irqarb.c
-  - "\t../link.c"
-  - miniport.c
-  - "\t../misc.c"
-  - pci.asm
-  - pci_cfg.c
-  - pcienm.c
-  - power.c
-  - rebal.c
-  - registry.c
-  - rmbios.asm
-  - services.c
-  - video.c
-  - gart.c
-  - Yt.h
-  - Yu.h
 - version: Windows 98 Retail
   source_tree: []
   segments:

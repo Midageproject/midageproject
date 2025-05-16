@@ -1,10 +1,30 @@
 filename: windows/system/cbss.vxd
-#TODO: bring up more details from symdeb
 binary: CBSS
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - ../binfmt.c
+  - "\t../cbss.c"
+  - cbssmain.asm
+  - cl.c
+  - dbk.c
+  - debug.c
+  - '%../../../../../dev/ddk/inc/vxdwraps.h'
+  - "\t../misc.c"
+  - o2micro.c
+  - "\t../opti.c"
+  - pnp.c
+  - ricoh.c
+  - ti.c
+  - topic.c
+  - $0<0u.h
+  - 8t.h
+  - 9^Ut.h
+  - 9^Yt.h
+  - 9~Yu.h
+  - cbss.c
+  - CBSSt.h
   segments:
   - num: '1'
     name: .text
@@ -960,28 +980,6 @@ appearances:
     - name: _padptTail
       processed: ''
       offset: '00004088'
-  source_tree:
-  - ../binfmt.c
-  - "\t../cbss.c"
-  - cbssmain.asm
-  - cl.c
-  - dbk.c
-  - debug.c
-  - '%../../../../../dev/ddk/inc/vxdwraps.h'
-  - "\t../misc.c"
-  - o2micro.c
-  - "\t../opti.c"
-  - pnp.c
-  - ricoh.c
-  - ti.c
-  - topic.c
-  - $0<0u.h
-  - 8t.h
-  - 9^Ut.h
-  - 9^Yt.h
-  - 9~Yu.h
-  - cbss.c
-  - CBSSt.h
 - version: Windows 98 Retail
   source_tree: []
   segments:

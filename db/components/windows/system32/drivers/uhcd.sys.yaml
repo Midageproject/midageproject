@@ -1,10 +1,23 @@
 filename: windows/system32/drivers/uhcd.sys
-#TODO: bring up more details from symdeb
 binary: UHCD
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - async.c
+  - bandwdth.c
+  - control.c
+  - dbg.c
+  - dscrptor.c
+  - hub.c
+  - int.c
+  - isoch.c
+  - roothub.c
+  - transfer.c
+  - "\t../uhcd.c"
+  - urb.c
+  - uhcd.c
+  - ../../../../wdm10/ddk/inc/wdm.h
   segments:
   - num: '1'
     name: .text
@@ -543,13 +556,13 @@ appearances:
     offset: 00004B30
     symbols:
     - name: ??_C@_0BJ@FPNP@freeCommonBuffer?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"freeCommonBuffer != NULL"'
       offset: 00000BCC
     - name: ??_C@_0CD@PJBI@?4?4?2?4?4?2?4?4?2?4?4?2?4?4?2wdm10?2ddk?2inc?2wdm@
-      processed: "`string'"
+      processed: '"..\\..\\..\\..\\..\\wdm10\\ddk\\inc\\wdm"...'
       offset: 00000BE8
     - name: ??_C@_0BN@IHIP@allocateCommonBuffer?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"allocateCommonBuffer != NULL"'
       offset: 00000D74
     - name: _UHCD_Debug_Trace_Level
       processed: ''
@@ -561,16 +574,16 @@ appearances:
       processed: ''
       offset: 00002D38
     - name: ??_C@_0BJ@BLDF@freeMapRegisters?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"freeMapRegisters != NULL"'
       offset: '00003038'
     - name: ??_C@_0BM@MGEC@flushAdapterBuffers?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"flushAdapterBuffers != NULL"'
       offset: '00003054'
     - name: ??_C@_0BE@CIAH@mapTransfer?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"mapTransfer != NULL"'
       offset: '00003214'
     - name: ??_C@_0BP@OCPD@allocateAdapterChannel?5?$CB?$DN?5NULL?$AA@
-      processed: "`string'"
+      processed: '"allocateAdapterChannel != NULL"'
       offset: 000032A8
     - name: _RH_DeviceDescriptor
       processed: ''
@@ -841,21 +854,6 @@ appearances:
     - name: _UHCD_InitializeCommonBufferPool@16
       processed: ''
       offset: 00001D00
-  source_tree:
-  - async.c
-  - bandwdth.c
-  - control.c
-  - dbg.c
-  - dscrptor.c
-  - hub.c
-  - int.c
-  - isoch.c
-  - roothub.c
-  - transfer.c
-  - "\t../uhcd.c"
-  - urb.c
-  - uhcd.c
-  - ../../../../wdm10/ddk/inc/wdm.h
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -1178,25 +1176,25 @@ appearances:
     symbols:
     - name: 
         ??_C@_1DA@EMCA@?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAS?$AAe?$AAl?$AAe?$AAc?$AAt?$AAi?$AAv?$AAe?$AAS?$AAu?$AAs?$AAp@
-      demangled: "`string'"
+      demangled: L"DisableSelectiveSusp"
       offset: '00000000'
     - name: 
         ??_C@_1DE@EOKK@?$AAr?$AAe?$AAc?$AAo?$AAm?$AAm?$AAe?$AAn?$AAd?$AAe?$AAd?$AAC?$AAl?$AAo?$AAc?$AAk?$AAs?$AAP?$AAe?$AAr@
-      demangled: "`string'"
+      demangled: L"recommendedClocksPer"
       offset: '00000030'
     - name: 
         ??_C@_1CG@IPGH@?$AAF?$AAo?$AAr?$AAc?$AAe?$AAL?$AAo?$AAw?$AAP?$AAo?$AAw?$AAe?$AAr?$AAS?$AAt?$AAa?$AAt?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"ForceLowPowerState"
       offset: '00000064'
     - name: ??_C@_1BE@FLHC@?$AAc?$AAl?$AAa?$AAs?$AAs?$AA?2?$AAu?$AAs?$AAb?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"class\\usb"
       offset: 0000008C
     - name: 
         ??_C@_1BO@OODP@?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAP?$AAI?$AAI?$AAX?$AAU?$AAs?$AAb?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DisablePIIXUsb"
       offset: 000000A0
     - name: ??_C@_17IGND@?$AAu?$AAs?$AAb?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"usb"
       offset: 000000C0
     - name: _TransferDispatchTable
       demangled: ''

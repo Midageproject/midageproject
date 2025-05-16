@@ -1,10 +1,15 @@
 filename: windows/system32/drivers/1394bus.sys
-#TODO: bring up more details from symdeb
 binary: 1394BUS
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - 1394bus.c
+  - busirp.c
+  - busisoch.c
+  - busmap.c
+  - buspnp.c
+  - dbg.c
   segments:
   - num: '1'
     name: .text
@@ -270,618 +275,618 @@ appearances:
       processed: ''
       offset: '00000000'
     - name: ??_C@_0CH@CAC@?8Bus1394RegisterPortDriver?3?5?$CI?$CFx?$CJ@
-      processed: "`string'"
+      processed: "\"\\'Bus1394RegisterPortDriver: (%x)\"..."
       offset: '00000004'
     - name: 
         ??_C@_1CA@MPBH@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
-      processed: "`string'"
+      processed: L"\\Device\\1394BUS"
       offset: 0000002C
     - name: ??_C@_0CE@LGP@?8Bus1394RegisterPortDriver?3?5Entr@
-      processed: "`string'"
+      processed: "\"\\'Bus1394RegisterPortDriver: Entr\"..."
       offset: 0000004C
     - name: ??_C@_0BI@GCND@?8Bus1394PnP?3?5Type?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: Type = %x\\n\""
       offset: '00000070'
     - name: ??_C@_0CO@OGNH@?8Bus1394PnP?3?5MN_QUERY_DEVICE_REL@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: MN_QUERY_DEVICE_REL\"..."
       offset: '00000088'
     - name: ??_C@_0DD@KADH@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5Issuing?5Bus?5Re@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) Issuing Bus Re\"..."
       offset: 000000B8
     - name: ??_C@_0DH@ICDB@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5Create?5Device?5@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) Create Device \"..."
       offset: 000000EC
     - name: ??_C@_0EA@FONA@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5DeviceInformat@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) DeviceInformat\"..."
       offset: '00000124'
     - name: ??_C@_0CI@DA@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5CurrentGenerat@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) CurrentGenerat\"..."
       offset: '00000164'
     - name: ??_C@_0CB@HNGF@?8?5?5Chip?5Id?5Lo?5?5?5?5?5?5?5?5?5?5?5?5?5?$DN?5?$CFx?6?6@
-      processed: "`string'"
+      processed: "\"\\'  Chip Id Lo             = %x\\n\\n\"..."
       offset: 0000018C
     - name: ??_C@_0CA@PIEA@?8?5?5Chip?5Id?5Hi?5?5?5?5?5?5?5?5?5?5?5?5?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Chip Id Hi             = %x\\n\""
       offset: 000001B0
     - name: ??_C@_0CA@BIGC@?8?5?5Node?5Vendor?5Id?5?5?5?5?5?5?5?5?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Node Vendor Id         = %x\\n\""
       offset: 000001D0
     - name: ??_C@_0CA@IODF@?8?5?5Max?5Async?5Payload?5?5?5?5?5?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Max Async Payload      = %x\\n\""
       offset: 000001F0
     - name: ??_C@_0CA@PMAH@?8?5?5Cycle?5Clock?5Accuracy?5?5?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Cycle Clock Accuracy   = %x\\n\""
       offset: '00000210'
     - name: ??_C@_0CA@JNI@?8?5?5Bus?5Mgr?5Capable?5?5?5?5?5?5?5?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Bus Mgr Capable        = %s\\n\""
       offset: '00000230'
     - name: ??_C@_0CA@FMAN@?8?5?5Isoch?5Capable?5?5?5?5?5?5?5?5?5?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Isoch Capable          = %s\\n\""
       offset: '00000250'
     - name: ??_C@_0CA@LPIA@?8?5?5Cycle?5Master?5Capable?5?5?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Cycle Master Capable   = %s\\n\""
       offset: '00000270'
     - name: ??_C@_0CA@LJOE@?8?5?5Isoch?5Rsrc?5Mgr?5Capable?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Isoch Rsrc Mgr Capable = %s\\n\""
       offset: '00000290'
     - name: ??_C@_02JOHD@No?$AA@
-      processed: "`string'"
+      processed: '"No"'
       offset: 000002B0
     - name: ??_C@_03PEHN@Yes?$AA@
-      processed: "`string'"
+      processed: '"Yes"'
       offset: 000002B4
     - name: ??_C@_0CA@GMIG@?8?5?5Signiture?5?5?5?5?5?5?5?5?5?5?5?5?5?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Signiture              = %x\\n\""
       offset: 000002B8
     - name: ??_C@_0CA@JFCA@?8?5?5CRC?5Value?5?5?5?5?5?5?5?5?5?5?5?5?5?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  CRC Value              = %x\\n\""
       offset: 000002D8
     - name: ??_C@_0CA@BOPL@?8?5?5CRC?5Length?5?5?5?5?5?5?5?5?5?5?5?5?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  CRC Length             = %x\\n\""
       offset: 000002F8
     - name: ??_C@_0CA@MIGM@?8?5?5Info?5Length?5?5?5?5?5?5?5?5?5?5?5?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Info Length            = %x\\n\""
       offset: '00000318'
     - name: ??_C@_0BG@OOBO@?8?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'-------------------\\n\""
       offset: '00000338'
     - name: ??_C@_0BJ@KMLN@?8?6?8Node?5?$CFx?8s?5Config?5Rom?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'\\n\\'Node %x\\'s Config Rom\\n\""
       offset: '00000350'
     - name: ??_C@_0BI@BHPH@?8Bus1394PnP?3?5Root?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: Root = %x\\n\""
       offset: 0000036C
     - name: ??_C@_0EO@LPC@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5Enumeration?5Ti@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) Enumeration Ti\"..."
       offset: '00000384'
     - name: ??_C@_0BN@PLBP@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5Type?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) Type = %x\\n\""
       offset: 000003D4
     - name: ??_C@_0DD@FCMA@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5MN_QUERY_DEVIC@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) MN_QUERY_DEVIC\"..."
       offset: 000003F4
     - name: ??_C@_0BJ@CAOF@uniCompatibleIdHi?4Buffer?$AA@
-      processed: "`string'"
+      processed: '"uniCompatibleIdHi.Buffer"'
       offset: '00000428'
     - name: ??_C@_0CE@LCPH@status?5?$CB?$DN?5STATUS_INVALID_GENERAT@
-      processed: "`string'"
+      processed: '"status != STATUS_INVALID_GENERAT"...'
       offset: '00000444'
     - name: ??_C@_0BN@JFLN@?8Bus1394BusPnP?3?5Querying?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusPnP: Querying %s\\n\""
       offset: '00000468'
     - name: ??_C@_0M@PJAE@HardwareIds?$AA@
-      processed: "`string'"
+      processed: '"HardwareIds"'
       offset: '00000488'
     - name: ??_C@_08IHBL@DeviceId?$AA@
-      processed: "`string'"
+      processed: '"DeviceId"'
       offset: '00000494'
     - name: ??_C@_0BJ@JJCC@uniCompatibleIdLo?4Buffer?$AA@
-      processed: "`string'"
+      processed: '"uniCompatibleIdLo.Buffer"'
       offset: 000004A0
     - name: ??_C@_13KOKC@?$AA?$CG?$AA?$AA@
-      processed: "`string'"
+      processed: L"&"
       offset: 000004BC
     - name: ??_C@_1M@KDEH@?$AA1?$AA3?$AA9?$AA4?$AA?2?$AA?$AA@
-      processed: "`string'"
+      processed: L"1394\\"
       offset: 000004C0
     - name: 
         ??_C@_1CG@CFND@?$AA1?$AA3?$AA9?$AA4?$AA?2?$AA0?$AA3?$AA1?$AA8?$AA8?$AA7?$AA?$CG?$AA0?$AA4?$AA0?$AA8?$AA9?$AA2?$AA?$AA@
-      processed: "`string'"
+      processed: L"1394\\031887&040892"
       offset: 000004CC
     - name: ??_C@_0BP@CEGE@DeviceExtension?9?$DOUnitDirectory?$AA@
-      processed: "`string'"
+      processed: '"DeviceExtension->UnitDirectory"'
       offset: 000004F4
     - name: ??_C@_0CI@DOPJ@?8Bus1394BusPnP?3?5Querying?5Compati@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusPnP: Querying Compati\"..."
       offset: '00000514'
     - name: ??_C@_0BF@JOBB@uniUniqueIdHi?4Buffer?$AA@
-      processed: "`string'"
+      processed: '"uniUniqueIdHi.Buffer"'
       offset: 0000053C
     - name: ??_C@_0BF@CHNG@uniUniqueIdLo?4Buffer?$AA@
-      processed: "`string'"
+      processed: '"uniUniqueIdLo.Buffer"'
       offset: '00000554'
     - name: ??_C@_0BL@ELFK@DeviceExtension?9?$DOConfigRom?$AA@
-      processed: "`string'"
+      processed: '"DeviceExtension->ConfigRom"'
       offset: 0000056C
     - name: ??_C@_0CF@GBBF@?8Bus1394BusPnP?3?5Querying?5Instanc@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusPnP: Querying Instanc\"..."
       offset: '00000588'
     - name: ??_C@_0CN@BPBL@DeviceExtension?9?$DOTag?5?$DN?$DN?5DEVICE_E@
-      processed: "`string'"
+      processed: '"DeviceExtension->Tag == DEVICE_E"...'
       offset: 000005B0
     - name: ??_C@_0BO@KIOB@?8Bus1394BusPnP?3?5BUS_QUERY_ID?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusPnP: BUS_QUERY_ID\\n\""
       offset: '000005E0'
     - name: ??_C@_13ECNF@?$AA?5?$AA?$AA@
-      processed: "`string'"
+      processed: L" "
       offset: '00000600'
     - name: ??_C@_0BF@GPA@uniDeviceName?4Buffer?$AA@
-      processed: "`string'"
+      processed: '"uniDeviceName.Buffer"'
       offset: '00000604'
     - name: ??_C@_0CH@LIGF@?8Bus1394BusPnP?3?5BUS_QUERY_DEVICE@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusPnP: BUS_QUERY_DEVICE\"..."
       offset: 0000061C
     - name: ??_C@_0CN@NJKA@?8Bus1394BusPnP?3?5?$CI?$CFx?$CJ?5BUS_QUERY_C@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusPnP: (%x) BUS_QUERY_C\"..."
       offset: '00000644'
     - name: ??_C@_0CP@FDDE@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5MN_QUERY?1CANCE@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) MN_QUERY/CANCE\"..."
       offset: '00000674'
     - name: 
         ??_C@_0EF@DFDI@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIBus1394ForceR@
-      processed: "`string'"
+      processed: '"(1) | (1) | (1) ? (Bus1394ForceR"...'
       offset: 000006A4
     - name: ??_C@_03NNAM@Irb?$AA@
-      processed: "`string'"
+      processed: '"Irb"'
       offset: 000006EC
     - name: ??_C@_08GMFP@StartIrp?$AA@
-      processed: "`string'"
+      processed: '"StartIrp"'
       offset: 000006F0
     - name: ??_C@_0M@CAHN@?4?4?2buspnp?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\buspnp.c"'
       offset: 000006FC
     - name: ??_C@_0CD@MOME@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5MN_START_DEVIC@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) MN_START_DEVIC\"..."
       offset: '00000708'
     - name: ??_C@_0CK@PIEH@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5MN_QUERY_REMOV@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) MN_QUERY_REMOV\"..."
       offset: 0000072C
     - name: ??_C@_0BP@MJNA@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5Removing?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) Removing %x\\n\""
       offset: '00000758'
     - name: ??_C@_0CE@LFK@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5MN_REMOVE_DEVI@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) MN_REMOVE_DEVI\"..."
       offset: '00000778'
     - name: ??_C@_0CL@GIOO@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5MN_CANCEL_REMO@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) MN_CANCEL_REMO\"..."
       offset: 0000079C
     - name: ??_C@_0BP@DABB@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5Stopping?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) Stopping %x\\n\""
       offset: 000007C8
     - name: ??_C@_0CC@OKHN@?8Bus1394PnP?3?5?$CI?$CFx?$CJ?5MN_STOP_DEVICE@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: (%x) MN_STOP_DEVICE\"..."
       offset: '000007E8'
     - name: ??_C@_0DE@HKHJ@?8Bus1394PnP?3?5enter?5with?5DeviceOb@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnP: enter with DeviceOb\"..."
       offset: 0000080C
     - name: ??_C@_0BG@LFGO@?8Bus1394Power?3?5enter?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394Power: enter\\n\""
       offset: '00000840'
     - name: ??_C@_0CM@PPDP@?8Bus1394FindDevice?3?5?$CI?$CFx?$CJ?5Found?5?$CF@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FindDevice: (%x) Found %\"..."
       offset: '00000858'
     - name: ??_C@_0DC@BEEO@?8Bus1394FindDevice?3?5?$CI?$CFx?$CJ?5Never?5f@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FindDevice: (%x) Never f\"..."
       offset: '00000884'
     - name: ??_C@_0DE@LPGD@?8Bus1394FindDevice?3?5Device?5?$CFx?$CFx?5@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FindDevice: Device %x%x \"..."
       offset: 000008B8
     - name: ??_C@_0DG@DGKK@?8Bus1394FindDevice?3?5?$CI?$CFx?$CJ?5Trying?5@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FindDevice: (%x) Trying \"..."
       offset: 000008EC
     - name: ??_C@_09IGBI@ConfigRom?$AA@
-      processed: "`string'"
+      processed: '"ConfigRom"'
       offset: '00000924'
     - name: ??_C@_03CBFC@Irp?$AA@
-      processed: "`string'"
+      processed: '"Irp"'
       offset: '00000930'
     - name: 
         ??_C@_0ED@KALN@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIBus1394PnPEnu@
-      processed: "`string'"
+      processed: '"(1) | (1) | (1) ? (Bus1394PnPEnu"...'
       offset: '00000934'
     - name: ??_C@_0CP@PCEP@?8Bus1394BusReset?3?5?$CI?$CFx?$CJ?5Trying?5to@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusReset: (%x) Trying to\"..."
       offset: '00000978'
     - name: ??_C@_0BK@DLIG@?8?5?5Initiated?5Reset?5?$DN?5?$CFs?6?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Initiated Reset = %s\\n\\n\""
       offset: 000009A8
     - name: ??_C@_0BJ@DKMF@?8?5?5More?5Packets?5?5?5?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  More Packets    = %s\\n\""
       offset: 000009C4
     - name: ??_C@_0BJ@COMA@?8?5?5Port?53?5status?5?5?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Port 3 status   = %s\\n\""
       offset: '000009E0'
     - name: ??_C@_0BJ@PAC@?8?5?5Port?52?5status?5?5?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Port 2 status   = %s\\n\""
       offset: 000009FC
     - name: ??_C@_0BJ@GNEF@?8?5?5Port?51?5status?5?5?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Port 1 status   = %s\\n\""
       offset: 00000A18
     - name: ??_C@_0BI@DAOA@Not?5present?5on?5this?5PHY?$AA@
-      processed: "`string'"
+      processed: '"Not present on this PHY"'
       offset: 00000A34
     - name: ??_C@_0BP@LJJH@Not?5connected?5to?5any?5other?5PHY?$AA@
-      processed: "`string'"
+      processed: '"Not connected to any other PHY"'
       offset: 00000A4C
     - name: ??_C@_0BI@CFHM@Connected?5to?5child?5node?$AA@
-      processed: "`string'"
+      processed: '"Connected to child node"'
       offset: 00000A6C
     - name: ??_C@_0BJ@OMOJ@Connected?5to?5parent?5node?$AA@
-      processed: "`string'"
+      processed: '"Connected to parent node"'
       offset: 00000A84
     - name: ??_C@_0BJ@IBAO@?8?5?5Speed?5?5?5?5?5?5?5?5?5?5?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Speed           = %s\\n\""
       offset: 00000AA0
     - name: ??_C@_0O@KPJP@98?4304?5Mbit?1s?$AA@
-      processed: "`string'"
+      processed: '"98.304 Mbit/s"'
       offset: 00000ABC
     - name: ??_C@_0P@NCNL@196?4608?5Mbit?1s?$AA@
-      processed: "`string'"
+      processed: '"196.608 Mbit/s"'
       offset: 00000ACC
     - name: ??_C@_0BC@KLCJ@Too?5fast?5for?5love?$AA@
-      processed: "`string'"
+      processed: '"Too fast for love"'
       offset: 00000ADC
     - name: ??_C@_0P@EEOL@393?4216?5Mbit?1s?$AA@
-      processed: "`string'"
+      processed: '"393.216 Mbit/s"'
       offset: 00000AF0
     - name: ??_C@_0BJ@OAEL@?8?5?5Contender?5?5?5?5?5?5?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Contender       = %s\\n\""
       offset: 00000B00
     - name: ??_C@_0DF@NPGJ@Powered?5from?5bus?5upto?51W?5and?5nee@
-      processed: "`string'"
+      processed: '"Powered from bus upto 1W and nee"...'
       offset: 00000B1C
     - name: ??_C@_0DF@KOOA@Powered?5from?5bus?5upto?51W?5and?5nee@
-      processed: "`string'"
+      processed: '"Powered from bus upto 1W and nee"...'
       offset: 00000B54
     - name: ??_C@_0DF@GCAF@Powered?5from?5bus?5upto?51W?5and?5nee@
-      processed: "`string'"
+      processed: '"Powered from bus upto 1W and nee"...'
       offset: 00000B8C
     - name: ??_C@_0CE@PDBD@Maybe?5powered?5from?5bus?5and?5using@
-      processed: "`string'"
+      processed: '"Maybe powered from bus and using"...'
       offset: 00000BC4
     - name: ??_C@_0CF@JDIN@Self?5powered?5and?5provides?545W?5to@
-      processed: "`string'"
+      processed: '"Self powered and provides 45W to"...'
       offset: 00000BE8
     - name: ??_C@_0CF@PHKK@Self?5powered?5and?5provides?530W?5to@
-      processed: "`string'"
+      processed: '"Self powered and provides 30W to"...'
       offset: 00000C10
     - name: ??_C@_0CF@CDEG@Self?5powered?5and?5provides?515W?5to@
-      processed: "`string'"
+      processed: '"Self powered and provides 15W to"...'
       offset: 00000C38
     - name: ??_C@_0BO@HIOF@Does?5not?5need?5or?5repeat?5power?$AA@
-      processed: "`string'"
+      processed: '"Does not need or repeat power"'
       offset: 00000C60
     - name: ??_C@_0BJ@NAHL@?8?5?5Link?5Active?5?5?5?5?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Link Active     = %s\\n\""
       offset: 00000C80
     - name: ??_C@_0BJ@KIIC@?8?5?5Gap?5Count?5?5?5?5?5?5?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Gap Count       = %x\\n\""
       offset: 00000C9C
     - name: ??_C@_0BJ@LPMJ@?8?5?5Phy?5Id?5?5?5?5?5?5?5?5?5?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Phy Id          = %x\\n\""
       offset: 00000CB8
     - name: ??_C@_0BH@BLHP@?8?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'--------------------\\n\""
       offset: 00000CD4
     - name: ??_C@_0BE@HMMH@?8?6?8Self?5Id?5?$CFd?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'\\n\\'Self Id %d = %x\\n\""
       offset: 00000CEC
     - name: ??_C@_0DH@EEOJ@?8Bus1394BusReset?3?5Local?5Node?5Add@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusReset: Local Node Add\"..."
       offset: 00000D00
     - name: ??_C@_0BJ@LNFJ@?8?5?5Power?5Class?5?5?5?5?5?$DN?5?$CFs?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'  Power Class     = %s\\n\""
       offset: 00000D38
     - name: ??_C@_0DE@KLJD@?8Bus1394BusReset?3?5?$CI?$CFx?$CJ?5Topology?5@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusReset: (%x) Topology \"..."
       offset: 00000D54
     - name: ??_C@_0DC@CFFL@?8Bus1394BusReset?3?5Setting?5NodesT@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusReset: Setting NodesT\"..."
       offset: 00000D88
     - name: ??_C@_0DE@HAHH@?8Bus1394BusReset?3?5?$CI?$CFx?$CJ?5TopologyM@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusReset: (%x) TopologyM\"..."
       offset: 00000DBC
     - name: ??_C@_0BB@JANF@BusResetWorkItem?$AA@
-      processed: "`string'"
+      processed: '"BusResetWorkItem"'
       offset: 00000DF0
     - name: ??_C@_0DA@NIJM@?8Bus1394BusReset?3?5?$CI?$CFx?$CJ?5Current?5G@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusReset: (%x) Current G\"..."
       offset: '00000E04'
     - name: ??_C@_0DM@ICHE@?8Bus1394BusReset?3?5?$CI?$CFx?$CJ?5IsochMgrN@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusReset: (%x) IsochMgrN\"..."
       offset: '00000E34'
     - name: ??_C@_0DN@CBIA@?8Bus1394BusReset?3?5?$CI?$CFx?$CJ?5IsochMgrN@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusReset: (%x) IsochMgrN\"..."
       offset: '00000E70'
     - name: ??_C@_0DJ@PKIJ@?8Bus1394BusReset?3?5?$CI?$CFx?$CJ?5LocalNode@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusReset: (%x) LocalNode\"..."
       offset: 00000EB0
     - name: ??_C@_0DK@HNPI@?8Bus1394BusReset?3?5?$CI?$CFx?$CJ?5LocalNode@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusReset: (%x) LocalNode\"..."
       offset: 00000EEC
     - name: ??_C@_0CL@FJOA@?8Bus1394BusReset?3?5?$CI?$CFx?$CJ?5BusResetF@
-      processed: "`string'"
+      processed: "\"\\'Bus1394BusReset: (%x) BusResetF\"..."
       offset: 00000F28
     - name: ??_C@_0FB@CABG@?$CI?$CIPPORT_EXTENSION?$CJ?5PortDeviceObj@
-      processed: "`string'"
+      processed: '"((PPORT_EXTENSION) PortDeviceObj"...'
       offset: 00000F54
     - name: ??_C@_0EJ@ONLJ@?8Bus1394PnPEnumCompletionRoutine@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumCompletionRoutine\"..."
       offset: 00000FA8
     - name: ??_C@_0EK@KAMK@?8Bus1394PnPEnumCompletionRoutine@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumCompletionRoutine\"..."
       offset: 00000FF4
     - name: ??_C@_0DM@EONJ@?8Bus1394PnPEnumCompletionRoutine@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumCompletionRoutine\"..."
       offset: '00001040'
     - name: ??_C@_0JI@MPP@?$CI?$CIPNODE_DEVICE_EXTENSION?$CJ?5BusIns@
-      processed: "`string'"
+      processed: '"((PNODE_DEVICE_EXTENSION) BusIns"...'
       offset: 0000107C
     - name: ??_C@_0DD@IDCC@?8Bus1394PnPEnumComp?3?5Array?5?$DN?5?$CFx?5@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumComp: Array = %x \"..."
       offset: '00001114'
     - name: ??_C@_0DO@GKCE@?8Bus1394PnPEnumCompletionRoutine@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumCompletionRoutine\"..."
       offset: '00001148'
     - name: ??_C@_0HH@DILD@?$CI?$CIPCONFIG_ROM_INFO?$CJ?5?$CGIrb?9?$DOBusRes@
-      processed: "`string'"
+      processed: '"((PCONFIG_ROM_INFO) &Irb->BusRes"...'
       offset: '00001188'
     - name: ??_C@_0EA@FJHL@?$CI?$CIPCONFIG_ROM_INFO?$CJ?5?$CGIrb?9?$DOBusRes@
-      processed: "`string'"
+      processed: '"((PCONFIG_ROM_INFO) &Irb->BusRes"...'
       offset: '00001200'
     - name: ??_C@_0DP@CKGK@?8Bus1394PnPEnumCompletionRoutine@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumCompletionRoutine\"..."
       offset: '00001240'
     - name: ??_C@_0DP@EOOI@?8Bus1394PnPEnumCompletionRoutine@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumCompletionRoutine\"..."
       offset: '00001280'
     - name: ??_C@_0DP@EBIJ@?8Bus1394PnPEnumCompletionRoutine@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumCompletionRoutine\"..."
       offset: 000012C0
     - name: ??_C@_0EH@GOKG@?8Bus1394PnPEnumCompletionRoutine@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumCompletionRoutine\"..."
       offset: '00001300'
     - name: ??_C@_0EM@GPJA@?8Bus1394PnPEnumCompletionRoutine@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumCompletionRoutine\"..."
       offset: '00001348'
     - name: ??_C@_0EN@JFEI@?8Bus1394PnPEnumCompletionRoutine@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumCompletionRoutine\"..."
       offset: '00001394'
     - name: ??_C@_0DL@BIFO@?8Bus1394PnPEnumCompletionRoutine@
-      processed: "`string'"
+      processed: "\"\\'Bus1394PnPEnumCompletionRoutine\"..."
       offset: '000013E4'
     - name: ??_C@_0CL@DPJP@?8Bus1394GetConfigurationInformat@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigurationInformat\"..."
       offset: '00001420'
     - name: ??_C@_0DN@PLKD@?8Bus1394GetConfigInfo?3?5Reading?5r@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigInfo: Reading r\"..."
       offset: 0000144C
     - name: ??_C@_0DM@GKFN@?8Bus1394GetConfigInfo?3?5Reading?5f@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigInfo: Reading f\"..."
       offset: 0000148C
     - name: ??_C@_0BC@DNHG@ModelLeafLocation?$AA@
-      processed: "`string'"
+      processed: '"ModelLeafLocation"'
       offset: 000014C8
     - name: ??_C@_0DO@GCIN@?8Bus1394GetConfigInfo?3?5Reading?5r@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigInfo: Reading r\"..."
       offset: 000014DC
     - name: ??_C@_0DN@LMOD@?8Bus1394GetConfigInfo?3?5Reading?5f@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigInfo: Reading f\"..."
       offset: 0000151C
     - name: ??_C@_0EL@GGAO@?8Bus1394GetConfigInfo?3?5Reading?5r@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigInfo: Reading r\"..."
       offset: 0000155C
     - name: ??_C@_0EK@CDLK@?8Bus1394GetConfigInfo?3?5Reading?5f@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigInfo: Reading f\"..."
       offset: 000015A8
     - name: ??_C@_0EB@DEMD@?8Bus1394GetConfigInfo?3?5Reading?5r@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigInfo: Reading r\"..."
       offset: 000015F4
     - name: ??_C@_0BK@MMEC@u?4DirectoryInfo?4DI_Length?$AA@
-      processed: "`string'"
+      processed: '"u.DirectoryInfo.DI_Length"'
       offset: '00001638'
     - name: ??_C@_0FC@NHIO@?8Bus1394GetConfigInfo?3?5Error?5?$CFx?5@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigInfo: Error %x \"..."
       offset: '00001654'
     - name: ??_C@_0FH@BKJM@?8Bus1394GetConfigInfo?3?5UnitDirec@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigInfo: UnitDirec\"..."
       offset: 000016A8
     - name: ??_C@_0DM@CFNP@?8Bus1394GetConfigInfo?3?5Issuing?5f@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigInfo: Issuing f\"..."
       offset: '00001700'
     - name: ??_C@_0IG@EPCC@?$CI?$CIPDEVICE_INFORMATION?$CJ?5DeviceExt@
-      processed: "`string'"
+      processed: '"((PDEVICE_INFORMATION) DeviceExt"...'
       offset: 0000173C
     - name: ??_C@_0EA@MLEG@?8Bus1394GetConfigInfo?3?5Reading?5f@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigInfo: Reading f\"..."
       offset: 000017C4
     - name: ??_C@_0DB@HMEO@?8Bus1394GetConfigurationInformat@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetConfigurationInformat\"..."
       offset: '00001804'
     - name: ??_C@_0CH@LHEM@?8Bus1394SynchCompletionRoutine?3?5@
-      processed: "`string'"
+      processed: "\"\\'Bus1394SynchCompletionRoutine: \"..."
       offset: '00001838'
     - name: ??_C@_01JAP@i?$AA@
-      processed: "`string'"
+      processed: '"i"'
       offset: '00001860'
     - name: ??_C@_0BO@NBBI@?8Bus1394SubmitIrpSynch?3?5exit?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394SubmitIrpSynch: exit\\n\""
       offset: '00001864'
     - name: ??_C@_0DE@MINH@?8Bus1394SubmitIrpSynch?3?5Irp?5is?5p@
-      processed: "`string'"
+      processed: "\"\\'Bus1394SubmitIrpSynch: Irp is p\"..."
       offset: '00001884'
     - name: 
         ??_C@_0EB@LJKN@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIBus1394SynchC@
-      processed: "`string'"
+      processed: '"(1) | (1) | (1) ? (Bus1394SynchC"...'
       offset: 000018B8
     - name: ??_C@_0CE@OGHA@?8Bus1394SubmitIrpSynch?3?5?$CI?$CFx?$CJ?5ent@
-      processed: "`string'"
+      processed: "\"\\'Bus1394SubmitIrpSynch: (%x) ent\"..."
       offset: 000018FC
     - name: 
         ??_C@_0EM@GMKK@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIBus1394Optimi@
-      processed: "`string'"
+      processed: '"(1) | (1) | (1) ? (Bus1394Optimi"...'
       offset: '00001920'
     - name: ??_C@_0EE@FDFP@?8Bus1394OptimizeTopology?3?5final?5@
-      processed: "`string'"
+      processed: "\"\\'Bus1394OptimizeTopology: final \"..."
       offset: 0000196C
     - name: ??_C@_0EA@FGJF@?8Bus1394GetRegistryParameters?3?5s@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetRegistryParameters: s\"..."
       offset: 000019B0
     - name: 
         ??_C@_1CC@MEFB@?$AAO?$AAp?$AAt?$AAi?$AAm?$AAi?$AAz?$AAe?$AAT?$AAo?$AAp?$AAo?$AAl?$AAo?$AAg?$AAy?$AA?$AA@
-      processed: "`string'"
+      processed: L"OptimizeTopology"
       offset: 000019F0
     - name: ??_C@_1BE@HJCI@?$AAC?$AAo?$AAn?$AAf?$AAi?$AAg?$AAR?$AAo?$AAm?$AA?$AA@
-      processed: "`string'"
+      processed: L"ConfigRom"
       offset: 00001A14
     - name: 
         ??_C@_1BO@MLPO@?$AAD?$AAi?$AAa?$AAg?$AAn?$AAo?$AAs?$AAt?$AAi?$AAc?$AAM?$AAo?$AAd?$AAe?$AA?$AA@
-      processed: "`string'"
+      processed: L"DiagnosticMode"
       offset: 00001A28
     - name: 
         ??_C@_1BO@DFIL@?$AAS?$AAu?$AAp?$AAp?$AAo?$AAr?$AAt?$AAN?$AAo?$AAn?$AAC?$AAo?$AAm?$AAp?$AA?$AA@
-      processed: "`string'"
+      processed: L"SupportNonComp"
       offset: 00001A48
     - name: ??_C@_0CE@FDPF@fullInfo?9?$DODataLength?5?$DM?$DN?5?$CKDataLen@
-      processed: "`string'"
+      processed: '"fullInfo->DataLength <= *DataLen"...'
       offset: 00001A68
     - name: ??_C@_0CL@DNHJ@?8Bus1394GetRegistryKeyValue?5buff@
-      processed: "`string'"
+      processed: "\"\\'Bus1394GetRegistryKeyValue buff\"..."
       offset: 00001A8C
     - name: ??_C@_0CO@CMNO@?8Bus1394SignalBusReset?3?5calling?5@
-      processed: "`string'"
+      processed: "\"\\'Bus1394SignalBusReset: calling \"..."
       offset: 00001AB8
     - name: 
         ??_C@_0EE@BDGA@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIBus1394BusRes@
-      processed: "`string'"
+      processed: '"(1) | (1) | (1) ? (Bus1394BusRes"...'
       offset: 00001AE8
     - name: ??_C@_0BF@HEIN@DeviceExtension?9?$DOIrp?$AA@
-      processed: "`string'"
+      processed: '"DeviceExtension->Irp"'
       offset: 00001B2C
     - name: ??_C@_0CF@GHG@?8Bus1394SignalBusReset?3?5?$CI?$CFx?$CJ?5Ent@
-      processed: "`string'"
+      processed: "\"\\'Bus1394SignalBusReset: (%x) Ent\"..."
       offset: 00001B44
     - name: ??_C@_0BE@GMLO@?8Bus1394?3?5Opened?$CB?$CB?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394: Opened!!\\n\""
       offset: 00001B6C
     - name: ??_C@_0BE@IJFN@?8Bus1394?3?5Closed?$CB?$CB?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394: Closed!!\\n\""
       offset: 00001B80
     - name: 
         ??_C@_0EB@PGFC@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIBus1394AsyncC@
-      processed: "`string'"
+      processed: '"(1) | (1) | (1) ? (Bus1394AsyncC"...'
       offset: 00001B94
     - name: ??_C@_0M@GJNO@?4?4?2busirp?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\busirp.c"'
       offset: 00001BD8
     - name: ??_C@_0BG@FPEN@?8Bus1394IOCtl?3?5enter?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394IOCtl: enter\\n\""
       offset: 00001BE4
     - name: ??_C@_0BK@DJDH@StorageEntry?9?$DOSE_Callback?$AA@
-      processed: "`string'"
+      processed: '"StorageEntry->SE_Callback"'
       offset: 00001BFC
     - name: ??_C@_0DH@CIGH@?8Bus1394Indication?3?5Storage?5entr@
-      processed: "`string'"
+      processed: "\"\\'Bus1394Indication: Storage entr\"..."
       offset: 00001C18
     - name: ??_C@_0CM@HMCB@?8Bus1394Indication?3?5First?5storag@
-      processed: "`string'"
+      processed: "\"\\'Bus1394Indication: First storag\"..."
       offset: 00001C50
     - name: ??_C@_0DF@HJDB@?8Bus1394Indication?3?5Node?5attempt@
-      processed: "`string'"
+      processed: "\"\\'Bus1394Indication: Node attempt\"..."
       offset: 00001C7C
     - name: ??_C@_0CO@DFAC@?8Bus1394Indication?3?5RequestPacke@
-      processed: "`string'"
+      processed: "\"\\'Bus1394Indication: RequestPacke\"..."
       offset: 00001CB4
     - name: ??_C@_0CI@GFKP@?8Bus1394Indication?3?5RequestPacke@
-      processed: "`string'"
+      processed: "\"\\'Bus1394Indication: RequestPacke\"..."
       offset: 00001CE4
     - name: ??_C@_0CA@DHGK@?8Bus1394Indication?3?5tCode?5?$DN?5?$CFx?6?$AA@
-      processed: "`string'"
+      processed: "\"\\'Bus1394Indication: tCode = %x\\n\""
       offset: 00001D0C
     - name: ??_C@_0M@NDJM@?4?4?2busmap?4c?$AA@
-      processed: "`string'"
+      processed: '"..\\busmap.c"'
       offset: 00001D2C
     - name: ??_C@_0N@LDEB@StorageEntry?$AA@
-      processed: "`string'"
+      processed: '"StorageEntry"'
       offset: 00001D38
     - name: ??_C@_0N@OBKG@InRangeEntry?$AA@
-      processed: "`string'"
+      processed: '"InRangeEntry"'
       offset: 00001D48
     - name: ??_C@_0DD@OIKH@?8Bus1394AllocAddressRange?3?5This?5@
-      processed: "`string'"
+      processed: "\"\\'Bus1394AllocAddressRange: This \"..."
       offset: 00001D58
     - name: ??_C@_0DG@PHEM@?8Bus1394AllocateAddressRange?3?5?5k@
-      processed: "`string'"
+      processed: "\"\\'Bus1394AllocateAddressRange:  k\"..."
       offset: 00001D8C
     - name: ??_C@_0EI@PAGC@?8Bus1394AllocateAddressRange?3?5St@
-      processed: "`string'"
+      processed: "\"\\'Bus1394AllocateAddressRange: St\"..."
       offset: 00001DC4
     - name: ??_C@_0BJ@PJMD@status?5?$DN?$DN?5STATUS_SUCCESS?$AA@
-      processed: "`string'"
+      processed: '"status == STATUS_SUCCESS"'
       offset: 00001E0C
     - name: ??_C@_0DP@JDMG@?8Bus1394AllocAddressRange?3?5Requi@
-      processed: "`string'"
+      processed: "\"\\'Bus1394AllocAddressRange: Requi\"..."
       offset: '00001E28'
     - name: ??_C@_0CC@CJLC@?8Bus1394AllocAddressRange?3?5enter@
-      processed: "`string'"
+      processed: "\"\\'Bus1394AllocAddressRange: enter\"..."
       offset: '00001E68'
     - name: ??_C@_0CN@BAIP@?8Bus1394FreeAddressRange?3?5return@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FreeAddressRange: return\"..."
       offset: 00001E8C
     - name: ??_C@_0CP@KPIC@?8Bus1394FreeAddressRange?3?5Killin@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FreeAddressRange: Killin\"..."
       offset: 00001EBC
     - name: ??_C@_0DK@CDAJ@?8Bus1394FreeAddressRange?3?5Storag@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FreeAddressRange: Storag\"..."
       offset: 00001EEC
     - name: ??_C@_0DH@BHHN@?8Bus1394FreeAddressRange?3?5Freein@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FreeAddressRange: Freein\"..."
       offset: 00001F28
     - name: ??_C@_0CJ@HLCO@?8Bus1394FreeAddressRange?3?5InRang@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FreeAddressRange: InRang\"..."
       offset: 00001F60
     - name: ??_C@_0CB@DFAH@TempStorageEntry?5?$CB?$DN?5StorageEntry@
-      processed: "`string'"
+      processed: '"TempStorageEntry != StorageEntry"...'
       offset: 00001F8C
     - name: ??_C@_0DC@MHKI@?8Bus1394FreeAddressRange?3?5?5kVal?5@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FreeAddressRange:  kVal \"..."
       offset: 00001FB0
     - name: ??_C@_0EE@GNPG@?8Bus1394FreeAddressRange?3?5Storag@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FreeAddressRange: Storag\"..."
       offset: 00001FE4
     - name: ??_C@_0EG@BCDM@?8Bus1394FreeAddressRange?3?5Free?5A@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FreeAddressRange: Free A\"..."
       offset: '00002028'
     - name: ??_C@_0DB@NCI@?8Bus1394FreeAddressRange?3?5nAddre@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FreeAddressRange: nAddre\"..."
       offset: '00002070'
     - name: ??_C@_0CB@OFIJ@?8Bus1394FreeAddressRange?3?5enter?6@
-      processed: "`string'"
+      processed: "\"\\'Bus1394FreeAddressRange: enter\\n\"..."
       offset: 000020A4
     - name: ??_C@_05LLOB@FALSE?$AA@
-      processed: "`string'"
+      processed: '"FALSE"'
       offset: 000020C8
     - name: ??_C@_0DD@FJD@?8Bus1394NotificationDpc?3?5back?5fr@
-      processed: "`string'"
+      processed: "\"\\'Bus1394NotificationDpc: back fr\"..."
       offset: 000020D0
     - name: ??_C@_0GA@LKG@?8Bus1394NotificationDpc?3?5PostNot@
-      processed: "`string'"
+      processed: "\"\\'Bus1394NotificationDpc: PostNot\"..."
       offset: '00002104'
     - name: ??_C@_1BE@PALB@?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt?$AA?$AA@
-      processed: "`string'"
+      processed: L"Microsoft"
       offset: '00002164'
     - name: ??_C@_1BA@PNAM@?$AA1?$AA3?$AA9?$AA4?$AA?5?$AAP?$AAC?$AA?$AA@
-      processed: "`string'"
+      processed: L"1394 PC"
       offset: '00002178'
     - name: _IsochRtn
       processed: ''
@@ -1098,13 +1103,6 @@ appearances:
     - name: _Bus1394IsochSetChannelBandwidth@16
       processed: ''
       offset: '00004307'
-  source_tree:
-  - 1394bus.c
-  - busirp.c
-  - busisoch.c
-  - busmap.c
-  - buspnp.c
-  - dbg.c
 - version: Windows 98 Retail
   source_tree:
   - 1394bus.c
@@ -1241,137 +1239,137 @@ appearances:
     symbols:
     - name: 
         ??_C@_1CA@MPBH@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Device\\1394BUS"
       offset: '00000000'
     - name: ??_C@_03NNAM@Irb?$AA@
-      demangled: "`string'"
+      demangled: '"Irb"'
       offset: '00000020'
     - name: ??_C@_08GMFP@StartIrp?$AA@
-      demangled: "`string'"
+      demangled: '"StartIrp"'
       offset: '00000024'
     - name: 
         ??_C@_1CG@CFND@?$AA1?$AA3?$AA9?$AA4?$AA?2?$AA0?$AA3?$AA1?$AA8?$AA8?$AA7?$AA?$CG?$AA0?$AA4?$AA0?$AA8?$AA9?$AA2?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"1394\\031887&040892"
       offset: '00000030'
     - name: ??_C@_0CE@LCPH@status?5?$CB?$DN?5STATUS_INVALID_GENERAT@
-      demangled: "`string'"
+      demangled: '"status != STATUS_INVALID_GENERAT"...'
       offset: '00000058'
     - name: ??_C@_0BJ@CAOF@uniCompatibleIdHi?4Buffer?$AA@
-      demangled: "`string'"
+      demangled: '"uniCompatibleIdHi.Buffer"'
       offset: 0000007C
     - name: ??_C@_0BJ@JJCC@uniCompatibleIdLo?4Buffer?$AA@
-      demangled: "`string'"
+      demangled: '"uniCompatibleIdLo.Buffer"'
       offset: '00000098'
     - name: ??_C@_13KOKC@?$AA?$CG?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"&"
       offset: 000000B4
     - name: ??_C@_1M@KDEH@?$AA1?$AA3?$AA9?$AA4?$AA?2?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"1394\\"
       offset: 000000B8
     - name: ??_C@_0BP@CEGE@DeviceExtension?9?$DOUnitDirectory?$AA@
-      demangled: "`string'"
+      demangled: '"DeviceExtension->UnitDirectory"'
       offset: 000000C4
     - name: ??_C@_0BF@JOBB@uniUniqueIdHi?4Buffer?$AA@
-      demangled: "`string'"
+      demangled: '"uniUniqueIdHi.Buffer"'
       offset: '000000E4'
     - name: ??_C@_0BF@CHNG@uniUniqueIdLo?4Buffer?$AA@
-      demangled: "`string'"
+      demangled: '"uniUniqueIdLo.Buffer"'
       offset: 000000FC
     - name: ??_C@_0BL@ELFK@DeviceExtension?9?$DOConfigRom?$AA@
-      demangled: "`string'"
+      demangled: '"DeviceExtension->ConfigRom"'
       offset: '00000114'
     - name: ??_C@_0CN@BPBL@DeviceExtension?9?$DOTag?5?$DN?$DN?5DEVICE_E@
-      demangled: "`string'"
+      demangled: '"DeviceExtension->Tag == DEVICE_E"...'
       offset: '00000130'
     - name: ??_C@_13ECNF@?$AA?5?$AA?$AA@
-      demangled: "`string'"
+      demangled: L" "
       offset: '00000160'
     - name: ??_C@_0BF@GPA@uniDeviceName?4Buffer?$AA@
-      demangled: "`string'"
+      demangled: '"uniDeviceName.Buffer"'
       offset: '00000164'
     - name: ??_C@_0M@CAHN@?4?4?2buspnp?4c?$AA@
-      demangled: "`string'"
+      demangled: '"..\\buspnp.c"'
       offset: 0000017C
     - name: ??_C@_09IGBI@ConfigRom?$AA@
-      demangled: "`string'"
+      demangled: '"ConfigRom"'
       offset: '00000188'
     - name: ??_C@_03CBFC@Irp?$AA@
-      demangled: "`string'"
+      demangled: '"Irp"'
       offset: '00000194'
     - name: ??_C@_0BB@JANF@BusResetWorkItem?$AA@
-      demangled: "`string'"
+      demangled: '"BusResetWorkItem"'
       offset: '00000198'
     - name: ??_C@_0FB@CABG@?$CI?$CIPPORT_EXTENSION?$CJ?5PortDeviceObj@
-      demangled: "`string'"
+      demangled: '"((PPORT_EXTENSION) PortDeviceObj"...'
       offset: 000001AC
     - name: ??_C@_0JI@MPP@?$CI?$CIPNODE_DEVICE_EXTENSION?$CJ?5BusIns@
-      demangled: "`string'"
+      demangled: '"((PNODE_DEVICE_EXTENSION) BusIns"...'
       offset: '00000200'
     - name: ??_C@_0HH@DILD@?$CI?$CIPCONFIG_ROM_INFO?$CJ?5?$CGIrb?9?$DOBusRes@
-      demangled: "`string'"
+      demangled: '"((PCONFIG_ROM_INFO) &Irb->BusRes"...'
       offset: '00000298'
     - name: ??_C@_0EA@FJHL@?$CI?$CIPCONFIG_ROM_INFO?$CJ?5?$CGIrb?9?$DOBusRes@
-      demangled: "`string'"
+      demangled: '"((PCONFIG_ROM_INFO) &Irb->BusRes"...'
       offset: '00000310'
     - name: ??_C@_0BC@DNHG@ModelLeafLocation?$AA@
-      demangled: "`string'"
+      demangled: '"ModelLeafLocation"'
       offset: '00000350'
     - name: ??_C@_0BK@MMEC@u?4DirectoryInfo?4DI_Length?$AA@
-      demangled: "`string'"
+      demangled: '"u.DirectoryInfo.DI_Length"'
       offset: '00000364'
     - name: ??_C@_0IG@EPCC@?$CI?$CIPDEVICE_INFORMATION?$CJ?5DeviceExt@
-      demangled: "`string'"
+      demangled: '"((PDEVICE_INFORMATION) DeviceExt"...'
       offset: '00000380'
     - name: ??_C@_01JAP@i?$AA@
-      demangled: "`string'"
+      demangled: '"i"'
       offset: '00000408'
     - name: 
         ??_C@_1CC@MEFB@?$AAO?$AAp?$AAt?$AAi?$AAm?$AAi?$AAz?$AAe?$AAT?$AAo?$AAp?$AAo?$AAl?$AAo?$AAg?$AAy?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"OptimizeTopology"
       offset: 0000040C
     - name: ??_C@_1BE@HJCI@?$AAC?$AAo?$AAn?$AAf?$AAi?$AAg?$AAR?$AAo?$AAm?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"ConfigRom"
       offset: '00000430'
     - name: 
         ??_C@_1BO@MLPO@?$AAD?$AAi?$AAa?$AAg?$AAn?$AAo?$AAs?$AAt?$AAi?$AAc?$AAM?$AAo?$AAd?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DiagnosticMode"
       offset: '00000444'
     - name: 
         ??_C@_1BO@DFIL@?$AAS?$AAu?$AAp?$AAp?$AAo?$AAr?$AAt?$AAN?$AAo?$AAn?$AAC?$AAo?$AAm?$AAp?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"SupportNonComp"
       offset: '00000464'
     - name: ??_C@_0CE@FDPF@fullInfo?9?$DODataLength?5?$DM?$DN?5?$CKDataLen@
-      demangled: "`string'"
+      demangled: '"fullInfo->DataLength <= *DataLen"...'
       offset: '00000484'
     - name: ??_C@_0BF@HEIN@DeviceExtension?9?$DOIrp?$AA@
-      demangled: "`string'"
+      demangled: '"DeviceExtension->Irp"'
       offset: 000004A8
     - name: ??_C@_0BK@DJDH@StorageEntry?9?$DOSE_Callback?$AA@
-      demangled: "`string'"
+      demangled: '"StorageEntry->SE_Callback"'
       offset: 000004C0
     - name: ??_C@_0M@NDJM@?4?4?2busmap?4c?$AA@
-      demangled: "`string'"
+      demangled: '"..\\busmap.c"'
       offset: 000004DC
     - name: ??_C@_0N@LDEB@StorageEntry?$AA@
-      demangled: "`string'"
+      demangled: '"StorageEntry"'
       offset: '000004E8'
     - name: ??_C@_0N@OBKG@InRangeEntry?$AA@
-      demangled: "`string'"
+      demangled: '"InRangeEntry"'
       offset: 000004F8
     - name: ??_C@_0BJ@PJMD@status?5?$DN?$DN?5STATUS_SUCCESS?$AA@
-      demangled: "`string'"
+      demangled: '"status == STATUS_SUCCESS"'
       offset: '00000508'
     - name: ??_C@_0CB@DFAH@TempStorageEntry?5?$CB?$DN?5StorageEntry@
-      demangled: "`string'"
+      demangled: '"TempStorageEntry != StorageEntry"...'
       offset: '00000524'
     - name: ??_C@_05LLOB@FALSE?$AA@
-      demangled: "`string'"
+      demangled: '"FALSE"'
       offset: '00000548'
     - name: ??_C@_1BE@PALB@?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"Microsoft"
       offset: '00000550'
     - name: ??_C@_1BA@PNAM@?$AA1?$AA3?$AA9?$AA4?$AA?5?$AAP?$AAC?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"1394 PC"
       offset: '00000564'
     - name: _IsochRtn
       demangled: ''

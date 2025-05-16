@@ -1,10 +1,71 @@
 filename: windows/system/unidrv.dll
-#TODO: bring up more details from symdeb
 binary: UNIDRV
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - advdmdlg.c
+  - bandsize.c
+  - bitblt.c
+  - charwdth.c
+  - control.c
+  - devcaps.c
+  - devmode.c
+  - dib2.asm
+  - dib.c
+  - disable.c
+  - djfont.c
+  - dmdlg.c
+  - "\t../dump.c"
+  - dumputil.asm
+  - enable2.c
+  - enable.c
+  - enumobj.c
+  - escutil.asm
+  - fontmap.c
+  - fontsum.c
+  - fontutil.c
+  - hcdump.c
+  - install.c
+  - ldiv.asm
+  - ldump.c
+  - libentry.asm
+  - lmul.asm
+  - lrem.asm
+  - lshl.asm
+  - lshr.asm
+  - message.c
+  - newdib2.c
+  - newdib3.asm
+  - newdib.c
+  - output.c
+  - pcletto.c
+  - pcletto/entry.c
+  - pcletto/pclout.c
+  - pcletto/tt.c
+  - pcletto/tttab.c
+  - physical.c
+  - "\t../pq.asm"
+  - realize.c
+  - sfutils.c
+  - softfont.c
+  - textout.c
+  - tos.c
+  - "\t../trig.c"
+  - ttcapsl.c
+  - ttpcl.c
+  - ttppds.c
+  - "\tuldiv.asm"
+  - "\tulrem.asm"
+  - "\tulshr.asm"
+  - utils.asm
+  - vector.c
+  - voutput.c
+  - wep.c
+  - xcd.asm
+  - HHt.H
+  - NEWID.H
+  - UNIDRV.HLP
   segments:
   - num: '1'
     name: _TEXT
@@ -1455,69 +1516,6 @@ appearances:
     - name: GFNRGB_REALIZEOBJECT
       processed: ''
       offset: 00000DC4
-  source_tree:
-  - advdmdlg.c
-  - bandsize.c
-  - bitblt.c
-  - charwdth.c
-  - control.c
-  - devcaps.c
-  - devmode.c
-  - dib2.asm
-  - dib.c
-  - disable.c
-  - djfont.c
-  - dmdlg.c
-  - "\t../dump.c"
-  - dumputil.asm
-  - enable2.c
-  - enable.c
-  - enumobj.c
-  - escutil.asm
-  - fontmap.c
-  - fontsum.c
-  - fontutil.c
-  - hcdump.c
-  - install.c
-  - ldiv.asm
-  - ldump.c
-  - libentry.asm
-  - lmul.asm
-  - lrem.asm
-  - lshl.asm
-  - lshr.asm
-  - message.c
-  - newdib2.c
-  - newdib3.asm
-  - newdib.c
-  - output.c
-  - pcletto.c
-  - pcletto/entry.c
-  - pcletto/pclout.c
-  - pcletto/tt.c
-  - pcletto/tttab.c
-  - physical.c
-  - "\t../pq.asm"
-  - realize.c
-  - sfutils.c
-  - softfont.c
-  - textout.c
-  - tos.c
-  - "\t../trig.c"
-  - ttcapsl.c
-  - ttpcl.c
-  - ttppds.c
-  - "\tuldiv.asm"
-  - "\tulrem.asm"
-  - "\tulshr.asm"
-  - utils.asm
-  - vector.c
-  - voutput.c
-  - wep.c
-  - xcd.asm
-  - HHt.H
-  - NEWID.H
-  - UNIDRV.HLP
 - version: Windows 98 Retail
   source_tree:
   - advdmdlg.c

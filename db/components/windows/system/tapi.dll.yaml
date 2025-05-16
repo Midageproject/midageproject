@@ -1,10 +1,33 @@
 filename: windows/system/tapi.dll
-#TODO: bring up more details from symdeb
 binary: TAPI
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - crt0fp.asm
+  - dos/crt0dat.asm
+  - dos/crt0msg.asm
+  - dos/nmsghdr.asm
+  - dos/stdalloc.asm
+  - dos/stdenvp.asm
+  - "\tfdata.asm"
+  - fmalloc.asm
+  - freelist.asm
+  - growseg.asm
+  - initseg.asm
+  - linkseg.asm
+  - nearstub.asm
+  - newseg.asm
+  - searchsg.asm
+  - strcpy.asm
+  - strlen.asm
+  - strrchr.asm
+  - thunk.c
+  - windows/crt0.asm
+  - windows/fatal.asm
+  - windows/stubmain.asm
+  - windows/windgrp.asm
+  - windows/windgrpx.c
   segments:
   - num: '1'
     name: THUNK_TEXT
@@ -693,31 +716,6 @@ appearances:
     - name: __end
       processed: ''
       offset: 000014AE
-  source_tree:
-  - crt0fp.asm
-  - dos/crt0dat.asm
-  - dos/crt0msg.asm
-  - dos/nmsghdr.asm
-  - dos/stdalloc.asm
-  - dos/stdenvp.asm
-  - "\tfdata.asm"
-  - fmalloc.asm
-  - freelist.asm
-  - growseg.asm
-  - initseg.asm
-  - linkseg.asm
-  - nearstub.asm
-  - newseg.asm
-  - searchsg.asm
-  - strcpy.asm
-  - strlen.asm
-  - strrchr.asm
-  - thunk.c
-  - windows/crt0.asm
-  - windows/fatal.asm
-  - windows/stubmain.asm
-  - windows/windgrp.asm
-  - windows/windgrpx.c
 - version: Windows 98 Retail
   source_tree:
   - crt0fp.asm

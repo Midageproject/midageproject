@@ -1,10 +1,55 @@
 filename: windows/system/vmm32/configmg.vxd
-#TODO: bring up more details from symdeb
 binary: CONFIGMG
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - $../../../../dev/ddk/inc/configmg.inc
+  - appytime.c
+  - arbitrat.c
+  - branch.c
+  - calldll.c
+  - cmdebug.c
+  - config.c
+  - configmg.asm
+  - "\t../data.c"
+  - depend.c
+  - devnode.c
+  - dynakeys.c
+  - findconf.c
+  - hwprof.c
+  - "\t../init.c"
+  - isapnp.c
+  - loadpnp.c
+  - "\t../lock.c"
+  - memory.c
+  - messages.c
+  - mf.c
+  - msg.asm
+  - nodelist.c
+  - partial.c
+  - power.c
+  - preassgn.c
+  - problems.c
+  - process.c
+  - ranges.c
+  - rangheap.c
+  - rangtrav.c
+  - realinit.asm
+  - registry.c
+  - remove.c
+  - rootenum.c
+  - services.c
+  - str.c
+  - sysctrl.c
+  - thread.c
+  - "\t../time.c"
+  - wakeup.c
+  - "\t../walk.c"
+  - walker.c
+  - sysdm.cpl
+  - SYSDM.CPL
+  - walk.c
   segments:
   - num: '1'
     name: .data
@@ -3005,53 +3050,6 @@ appearances:
     - name: _ICODE__AddFreePhysPage
       processed: ''
       offset: '00000654'
-  source_tree:
-  - $../../../../dev/ddk/inc/configmg.inc
-  - appytime.c
-  - arbitrat.c
-  - branch.c
-  - calldll.c
-  - cmdebug.c
-  - config.c
-  - configmg.asm
-  - "\t../data.c"
-  - depend.c
-  - devnode.c
-  - dynakeys.c
-  - findconf.c
-  - hwprof.c
-  - "\t../init.c"
-  - isapnp.c
-  - loadpnp.c
-  - "\t../lock.c"
-  - memory.c
-  - messages.c
-  - mf.c
-  - msg.asm
-  - nodelist.c
-  - partial.c
-  - power.c
-  - preassgn.c
-  - problems.c
-  - process.c
-  - ranges.c
-  - rangheap.c
-  - rangtrav.c
-  - realinit.asm
-  - registry.c
-  - remove.c
-  - rootenum.c
-  - services.c
-  - str.c
-  - sysctrl.c
-  - thread.c
-  - "\t../time.c"
-  - wakeup.c
-  - "\t../walk.c"
-  - walker.c
-  - sysdm.cpl
-  - SYSDM.CPL
-  - walk.c
 - version: Windows 98 Retail
   source_tree: []
   segments:

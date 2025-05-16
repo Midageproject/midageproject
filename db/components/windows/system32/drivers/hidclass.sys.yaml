@@ -1,10 +1,40 @@
 filename: windows/system32/drivers/hidclass.sys
-#TODO: bring up more details from symdeb
 binary: HIDCLASS
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - complete.c
+  - "\t../data.c"
+  - debug.c
+  - device.c
+  - dispatch.c
+  - driverex.c
+  - fdoext.c
+  - feature.c
+  - "\t../init.c"
+  - "\t../name.c"
+  - physdesc.c
+  - pingpong.c
+  - polled.c
+  - power.c
+  - "\t../read.c"
+  - services.c
+  - "\t../util.c"
+  - write.c
+  - data.c
+  - "dispatch.c\t../data.c"
+  - fdoExtension->deviceDesc.CollectionDescLength > 0
+  - init.c
+  - ISPTR(fdoExt->deviceDesc.CollectionDesc)
+  - (LONG)pingPong->backoffTimerPeriod.HighPart == -1
+  - name.c
+  - "physdesc.c\t../name.c"
+  - "pingpong.c\t../init.c"
+  - read.c
+  - "services.c\t../read.c"
+  - util.c
+  - "write.c\t../util.c"
   segments:
   - num: '1'
     name: .text
@@ -746,38 +776,6 @@ appearances:
     - name: _HidpIrpMajorPower@8
       processed: ''
       offset: 000052F0
-  source_tree:
-  - complete.c
-  - "\t../data.c"
-  - debug.c
-  - device.c
-  - dispatch.c
-  - driverex.c
-  - fdoext.c
-  - feature.c
-  - "\t../init.c"
-  - "\t../name.c"
-  - physdesc.c
-  - pingpong.c
-  - polled.c
-  - power.c
-  - "\t../read.c"
-  - services.c
-  - "\t../util.c"
-  - write.c
-  - data.c
-  - "dispatch.c\t../data.c"
-  - fdoExtension->deviceDesc.CollectionDescLength > 0
-  - init.c
-  - ISPTR(fdoExt->deviceDesc.CollectionDesc)
-  - (LONG)pingPong->backoffTimerPeriod.HighPart == -1
-  - name.c
-  - "physdesc.c\t../name.c"
-  - "pingpong.c\t../init.c"
-  - read.c
-  - "services.c\t../read.c"
-  - util.c
-  - "write.c\t../util.c"
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -977,52 +975,52 @@ appearances:
     offset: 00000CB0
     symbols:
     - name: ??_C@_08FGCI@HIDCLASS?$AA@
-      demangled: "`string'"
+      demangled: '"HIDCLASS"'
       offset: '00000000'
     - name: 
         ??_C@_1CC@DCHC@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA_?$AAH?$AAI?$AAD?$AA?$CF?$AA0?$AA8?$AAx?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Device\\_HID%08x"
       offset: 0000000C
     - name: 
         ??_C@_1CE@DDJL@?$AA?$CF?$AAs?$AA?$CD?$AAC?$AAO?$AAL?$AAL?$AAE?$AAC?$AAT?$AAI?$AAO?$AAN?$AA?$CF?$AA0?$AA8?$AAx?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"%s#COLLECTION%08x"
       offset: '00000030'
     - name: 
         ??_C@_1BI@JEFH@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA?$AA?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"HID_DEVICE\0"
       offset: '00000054'
     - name: 
         ??_C@_1DG@OLOC@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAU?$AAP?$AA?3?$AAX?$AAX?$AAX?$AAX?$AA_?$AAU@
-      demangled: "`string'"
+      demangled: L"HID_DEVICE_UP:XXXX_U"
       offset: 0000006C
     - name: 
         ??_C@_1DC@PBPE@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAM?$AAO@
-      demangled: "`string'"
+      demangled: L"HID_DEVICE_SYSTEM_MO"
       offset: 000000A4
     - name: 
         ??_C@_1DA@PGCK@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAG?$AAA@
-      demangled: "`string'"
+      demangled: L"HID_DEVICE_SYSTEM_GA"
       offset: 000000D8
     - name: 
         ??_C@_1DI@DFJJ@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAK?$AAE@
-      demangled: "`string'"
+      demangled: L"HID_DEVICE_SYSTEM_KE"
       offset: '00000108'
     - name: 
         ??_C@_1DG@PMJG@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAC?$AAO@
-      demangled: "`string'"
+      demangled: L"HID_DEVICE_SYSTEM_CO"
       offset: '00000140'
     - name: 
         ??_C@_1DI@HMGI@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAC?$AAO@
-      demangled: "`string'"
+      demangled: L"HID_DEVICE_SYSTEM_CO"
       offset: '00000178'
     - name: ??_C@_19IKPE@?$AAH?$AAI?$AAD?$AA?2?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"HID\\"
       offset: 000001B0
     - name: ??_C@_19EJEJ@?$AA?$CF?$AA0?$AA4?$AAx?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"%04x"
       offset: 000001BC
     - name: ??_C@_19DDCJ@?$AA0?$AA0?$AA0?$AA0?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"0000"
       offset: 000001C8
     - name: _HidpInitSpinLock
       demangled: ''

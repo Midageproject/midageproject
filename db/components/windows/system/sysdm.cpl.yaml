@@ -1,10 +1,173 @@
 filename: windows/system/sysdm.cpl
-#TODO: bring up more details from symdeb
 binary: SYSDM
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - 0RUNDLL32 SHELL32.DLL,Control_RunDLL SYSDM.CPL,,3
+  - asd.c
+  - asd.c%../../../../../dev/ddk/inc/configmg.h
+  - browse.c
+  - browse.c%../../../../../dev/ddk/inc/configmg.h
+  - classgen.c
+  - classgen.c%../../../../../dev/ddk/inc/configmg.h
+  - compprop.c
+  - compprop.c%../../../../../dev/ddk/inc/configmg.h
+  - cpuid.asm
+  - "CV\tctype.asm"
+  - '%../../../../../dev/ddk/inc/configmg.h'
+  - devdrv.c
+  - devdrv.c%../../../../../dev/ddk/inc/configmg.h
+  - devgen.c
+  - devgen.c%../../../../../dev/ddk/inc/configmg.h
+  - devres.c
+  - devres.c%../../../../../dev/ddk/inc/configmg.h
+  - diskinfo.c
+  - diskinfo.c%../../../../../dev/ddk/inc/configmg.h
+  - dmadddev.c
+  - dmadddev.c%../../../../../dev/ddk/inc/configmg.h
+  - dmaddid.c
+  - dmaddid.c%../../../../../dev/ddk/inc/configmg.h
+  - dmaskcfg.c
+  - dmaskcfg.c%../../../../../dev/ddk/inc/configmg.h
+  - "\t../dm.asm"
+  - dmconfig.c
+  - dmconfig.c%../../../../../dev/ddk/inc/configmg.h
+  - dmconfli.c
+  - dmconfli.c%../../../../../dev/ddk/inc/configmg.h
+  - dmdetect.c
+  - dmdetect.c%../../../../../dev/ddk/inc/configmg.h
+  - dmprint.c
+  - dmprint.c%../../../../../dev/ddk/inc/configmg.h
+  - dmprop.c
+  - dmprop.c%../../../../../dev/ddk/inc/configmg.h
+  - dmreenum.c
+  - dmreenum.c%../../../../../dev/ddk/inc/configmg.h
+  - dmremove.c
+  - dmremove.c%../../../../../dev/ddk/inc/configmg.h
+  - dmremrom.c
+  - dmremrom.c%../../../../../dev/ddk/inc/configmg.h
+  - dmsetup.c
+  - dmsetup.c%../../../../../dev/ddk/inc/configmg.h
+  - dmtree.c
+  - dmtree.c%../../../../../dev/ddk/inc/configmg.h
+  - dmundock.c
+  - dmundock.c%../../../../../dev/ddk/inc/configmg.h
+  - drvadv.c
+  - drvadv.c%../../../../../dev/ddk/inc/configmg.h
+  - drvinf.asm
+  - drvintro.c
+  - drvintro.c%../../../../../dev/ddk/inc/configmg.h
+  - drvwiz.c
+  - drvwiz.c%../../../../../dev/ddk/inc/configmg.h
+  - "\t../dwep.c"
+  - dynapage.asm
+  - fptdlg.c
+  - fptdlg.c%../../../../../dev/ddk/inc/configmg.h
+  - fscompat.c
+  - fscompat.c%../../../../../dev/ddk/inc/configmg.h
+  - fsopt.c
+  - fsopt.c%../../../../../dev/ddk/inc/configmg.h
+  - grfopt.c
+  - grfopt.c%../../../../../dev/ddk/inc/configmg.h
+  - hmemcmp.asm
+  - "hmemcmp.asm\tuldiv.asm"
+  - hmemcpy.asm
+  - hmemset.asm
+  - inetdrv.c
+  - inetdrv.c%../../../../../dev/ddk/inc/configmg.h
+  - irqcnflt.c
+  - irqcnflt.c%../../../../../dev/ddk/inc/configmg.h
+  - joeusr.c
+  - joeusr.c%../../../../../dev/ddk/inc/configmg.h
+  - libentry.asm
+  - lmul.asm
+  - lmul.asm%../../../../../dev/ddk/inc/configmg.h
+  - midebug.c
+  - midebug.c%../../../../../dev/ddk/inc/configmg.h
+  - miscutil.c
+  - miscutil.c%../../../../../dev/ddk/inc/configmg.h
+  - mru.c
+  - mru.c%../../../../../dev/ddk/inc/configmg.h
+  - MThe location you selected does not contain an updated driver for your device.HThe
+    location you selected does not contain a new driver for your device.
+  - mystrtol.asm
+  - ndwanaly.c
+  - ndwanaly.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwask.c
+  - ndwask.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwclass.c
+  - ndwclass.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwconfl.c
+  - ndwconfl.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwdet.c
+  - ndwdet.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwfail.c
+  - ndwfail.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwfin.c
+  - ndwfin.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwintro.c
+  - ndwintro.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwnores.c
+  - ndwnores.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwpnp.c
+  - ndwpnp.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwprob.c
+  - ndwprob.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwprog.c
+  - ndwprog.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwsel.c
+  - ndwsel.c%../../../../../dev/ddk/inc/configmg.h
+  - ndwshowr.c
+  - ndwshowr.c%../../../../../dev/ddk/inc/configmg.h
+  - newdev.c
+  - newdev.c%../../../../../dev/ddk/inc/configmg.h
+  - pcmcia.c
+  - pcmcia.c%../../../../../dev/ddk/inc/configmg.h
+  - perfpage.c
+  - perfpage.c%../../../../../dev/ddk/inc/configmg.h
+  - profile.c
+  - profile.c%../../../../../dev/ddk/inc/configmg.h
+  - proputil.c
+  - proputil.c%../../../../../dev/ddk/inc/configmg.h
+  - RUNDLL32 sysdm.cpl,UpdateDriver_RunDLL %s, %s, 1
+  - selclass.c
+  - "selclass.c%../../../../../dev/ddk/inc/configmg.h\t../dwep.c%../../../../../dev/ddk/inc/configmg.h"
+  - setupapi.c
+  - setupapi.c%../../../../../dev/ddk/inc/configmg.h
+  - '&Shut Down Windows Now.Windows has finished installing your hardware.cWindows
+    has finished installing your hardware. To enable the hardware, restart your computer
+    now.'
+  - strcat.asm
+  - strchr.asm
+  - strcpy.asm
+  - strlen.asm
+  - strnicmp.asm
+  - strrchr.asm
+  - strstr.asm
+  - strtok.asm
+  - strupr.asm
+  - sysdm.c
+  - "sysdm.c%../../../../../dev/ddk/inc/configmg.h\t../dm.asm"
+  - sysdm.cpl
+  - SYSDM.CPL
+  - sysset.c
+  - sysset.c%../../../../../dev/ddk/inc/configmg.h
+  - To modify a setting, click to clear the Use Automatic Settings check box, and
+    then make your changes.cWindows has finished detecting hardware and is ready to
+    install support for all detected devices.
+  - "\tuldiv.asm"
+  - update.c
+  - update.c%../../../../../dev/ddk/inc/configmg.h
+  - verutil.c
+  - verutil.c%../../../../../dev/ddk/inc/configmg.h
+  - virtmem.c
+  - virtmem.c%../../../../../dev/ddk/inc/configmg.h
+  - Windows cannot install this USB device. The device may not be functioning properly.
+    Check to be sure all connections are secure, or contact your hardware vendor for
+    assistance.CA USB device has failed. Check your computer's cabling and devices.
+  - Windows.Hlp>proc4
+  - WINDOWS.HLP>PROC4
   segments:
   - num: '1'
     name: _TEXT
@@ -2168,171 +2331,6 @@ appearances:
     - name: G_RDDATA
       processed: ''
       offset: 00005F92
-  source_tree:
-  - 0RUNDLL32 SHELL32.DLL,Control_RunDLL SYSDM.CPL,,3
-  - asd.c
-  - asd.c%../../../../../dev/ddk/inc/configmg.h
-  - browse.c
-  - browse.c%../../../../../dev/ddk/inc/configmg.h
-  - classgen.c
-  - classgen.c%../../../../../dev/ddk/inc/configmg.h
-  - compprop.c
-  - compprop.c%../../../../../dev/ddk/inc/configmg.h
-  - cpuid.asm
-  - "CV\tctype.asm"
-  - '%../../../../../dev/ddk/inc/configmg.h'
-  - devdrv.c
-  - devdrv.c%../../../../../dev/ddk/inc/configmg.h
-  - devgen.c
-  - devgen.c%../../../../../dev/ddk/inc/configmg.h
-  - devres.c
-  - devres.c%../../../../../dev/ddk/inc/configmg.h
-  - diskinfo.c
-  - diskinfo.c%../../../../../dev/ddk/inc/configmg.h
-  - dmadddev.c
-  - dmadddev.c%../../../../../dev/ddk/inc/configmg.h
-  - dmaddid.c
-  - dmaddid.c%../../../../../dev/ddk/inc/configmg.h
-  - dmaskcfg.c
-  - dmaskcfg.c%../../../../../dev/ddk/inc/configmg.h
-  - "\t../dm.asm"
-  - dmconfig.c
-  - dmconfig.c%../../../../../dev/ddk/inc/configmg.h
-  - dmconfli.c
-  - dmconfli.c%../../../../../dev/ddk/inc/configmg.h
-  - dmdetect.c
-  - dmdetect.c%../../../../../dev/ddk/inc/configmg.h
-  - dmprint.c
-  - dmprint.c%../../../../../dev/ddk/inc/configmg.h
-  - dmprop.c
-  - dmprop.c%../../../../../dev/ddk/inc/configmg.h
-  - dmreenum.c
-  - dmreenum.c%../../../../../dev/ddk/inc/configmg.h
-  - dmremove.c
-  - dmremove.c%../../../../../dev/ddk/inc/configmg.h
-  - dmremrom.c
-  - dmremrom.c%../../../../../dev/ddk/inc/configmg.h
-  - dmsetup.c
-  - dmsetup.c%../../../../../dev/ddk/inc/configmg.h
-  - dmtree.c
-  - dmtree.c%../../../../../dev/ddk/inc/configmg.h
-  - dmundock.c
-  - dmundock.c%../../../../../dev/ddk/inc/configmg.h
-  - drvadv.c
-  - drvadv.c%../../../../../dev/ddk/inc/configmg.h
-  - drvinf.asm
-  - drvintro.c
-  - drvintro.c%../../../../../dev/ddk/inc/configmg.h
-  - drvwiz.c
-  - drvwiz.c%../../../../../dev/ddk/inc/configmg.h
-  - "\t../dwep.c"
-  - dynapage.asm
-  - fptdlg.c
-  - fptdlg.c%../../../../../dev/ddk/inc/configmg.h
-  - fscompat.c
-  - fscompat.c%../../../../../dev/ddk/inc/configmg.h
-  - fsopt.c
-  - fsopt.c%../../../../../dev/ddk/inc/configmg.h
-  - grfopt.c
-  - grfopt.c%../../../../../dev/ddk/inc/configmg.h
-  - hmemcmp.asm
-  - "hmemcmp.asm\tuldiv.asm"
-  - hmemcpy.asm
-  - hmemset.asm
-  - inetdrv.c
-  - inetdrv.c%../../../../../dev/ddk/inc/configmg.h
-  - irqcnflt.c
-  - irqcnflt.c%../../../../../dev/ddk/inc/configmg.h
-  - joeusr.c
-  - joeusr.c%../../../../../dev/ddk/inc/configmg.h
-  - libentry.asm
-  - lmul.asm
-  - lmul.asm%../../../../../dev/ddk/inc/configmg.h
-  - midebug.c
-  - midebug.c%../../../../../dev/ddk/inc/configmg.h
-  - miscutil.c
-  - miscutil.c%../../../../../dev/ddk/inc/configmg.h
-  - mru.c
-  - mru.c%../../../../../dev/ddk/inc/configmg.h
-  - MThe location you selected does not contain an updated driver for your device.HThe
-    location you selected does not contain a new driver for your device.
-  - mystrtol.asm
-  - ndwanaly.c
-  - ndwanaly.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwask.c
-  - ndwask.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwclass.c
-  - ndwclass.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwconfl.c
-  - ndwconfl.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwdet.c
-  - ndwdet.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwfail.c
-  - ndwfail.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwfin.c
-  - ndwfin.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwintro.c
-  - ndwintro.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwnores.c
-  - ndwnores.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwpnp.c
-  - ndwpnp.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwprob.c
-  - ndwprob.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwprog.c
-  - ndwprog.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwsel.c
-  - ndwsel.c%../../../../../dev/ddk/inc/configmg.h
-  - ndwshowr.c
-  - ndwshowr.c%../../../../../dev/ddk/inc/configmg.h
-  - newdev.c
-  - newdev.c%../../../../../dev/ddk/inc/configmg.h
-  - pcmcia.c
-  - pcmcia.c%../../../../../dev/ddk/inc/configmg.h
-  - perfpage.c
-  - perfpage.c%../../../../../dev/ddk/inc/configmg.h
-  - profile.c
-  - profile.c%../../../../../dev/ddk/inc/configmg.h
-  - proputil.c
-  - proputil.c%../../../../../dev/ddk/inc/configmg.h
-  - RUNDLL32 sysdm.cpl,UpdateDriver_RunDLL %s, %s, 1
-  - selclass.c
-  - "selclass.c%../../../../../dev/ddk/inc/configmg.h\t../dwep.c%../../../../../dev/ddk/inc/configmg.h"
-  - setupapi.c
-  - setupapi.c%../../../../../dev/ddk/inc/configmg.h
-  - '&Shut Down Windows Now.Windows has finished installing your hardware.cWindows
-    has finished installing your hardware. To enable the hardware, restart your computer
-    now.'
-  - strcat.asm
-  - strchr.asm
-  - strcpy.asm
-  - strlen.asm
-  - strnicmp.asm
-  - strrchr.asm
-  - strstr.asm
-  - strtok.asm
-  - strupr.asm
-  - sysdm.c
-  - "sysdm.c%../../../../../dev/ddk/inc/configmg.h\t../dm.asm"
-  - sysdm.cpl
-  - SYSDM.CPL
-  - sysset.c
-  - sysset.c%../../../../../dev/ddk/inc/configmg.h
-  - To modify a setting, click to clear the Use Automatic Settings check box, and
-    then make your changes.cWindows has finished detecting hardware and is ready to
-    install support for all detected devices.
-  - "\tuldiv.asm"
-  - update.c
-  - update.c%../../../../../dev/ddk/inc/configmg.h
-  - verutil.c
-  - verutil.c%../../../../../dev/ddk/inc/configmg.h
-  - virtmem.c
-  - virtmem.c%../../../../../dev/ddk/inc/configmg.h
-  - Windows cannot install this USB device. The device may not be functioning properly.
-    Check to be sure all connections are secure, or contact your hardware vendor for
-    assistance.CA USB device has failed. Check your computer's cabling and devices.
-  - Windows.Hlp>proc4
-  - WINDOWS.HLP>PROC4
 - version: Windows 98 Retail
   source_tree: []
   segments:

@@ -1,10 +1,16 @@
 filename: windows/system32/drivers/wmidrv.sys
-#TODO: bring up more details from symdeb
 binary: WMIDRV
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - api.c
+  - notify.c
+  - register.c
+  - wmi.c
+  - cm3ez.asm
+  - '!../../../dev/ddk/lib/vxdwraps.clb#../../../wdm10/ddk/lib/i386/wdm.lib#../../../dev/ntddk/lib/ntoskrnl.lib'
+  - ntk0az.asm
   segments:
   - num: '1'
     name: .text
@@ -444,14 +450,6 @@ appearances:
     - name: _DriverEntry@8
       processed: ''
       offset: '00000000'
-  source_tree:
-  - api.c
-  - notify.c
-  - register.c
-  - wmi.c
-  - cm3ez.asm
-  - '!../../../dev/ddk/lib/vxdwraps.clb#../../../wdm10/ddk/lib/i386/wdm.lib#../../../dev/ntddk/lib/ntoskrnl.lib'
-  - ntk0az.asm
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -510,15 +508,15 @@ appearances:
     offset: '00000380'
     symbols:
     - name: ??_C@_13IKBE@?$AA_?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"_"
       offset: '00000000'
     - name: 
         ??_C@_1DK@KACK@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AAW?$AAM?$AAI?$AAS?$AAe?$AAr?$AAv?$AAi@
-      demangled: "`string'"
+      demangled: L"\\DosDevices\\WMIServi"
       offset: '00000004'
     - name: 
         ??_C@_1CE@LDEL@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAW?$AAM?$AAI?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Device\\WMIDevice"
       offset: '00000040'
     - name: _WmipServiceDeviceObject
       demangled: ''

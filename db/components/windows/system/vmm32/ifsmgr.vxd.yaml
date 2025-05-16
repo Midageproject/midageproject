@@ -1,10 +1,74 @@
 filename: windows/system/vmm32/ifsmgr.vxd
-#TODO: bring up more details from symdeb
 binary: IFSMGR
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - $../../../dos/ifsmgr/src/catchreq.asm
+  - ../../dev/ddk/inc/vxdwraps.h
+  - '"../../../dos/ifsmgr/src/convtime.c'
+  - ' ../../../dos/ifsmgr/src/curdir.c'
+  - ../../dos/ifsmgr/src/dos5f.c
+  - ' ../../../dos/ifsmgr/src/dosdbg.c'
+  - '!../../../dos/ifsmgr/src/dosmisc.c'
+  - '"../../../dos/ifsmgr/src/dosmslot.c'
+  - '!../../../dos/ifsmgr/src/dospipe.c'
+  - ' ../../../dos/ifsmgr/src/dosprt.c'
+  - ' ../../../dos/ifsmgr/src/dosuse.c'
+  - '!../../../dos/ifsmgr/src/ifscpnp.c'
+  - '"../../../dos/ifsmgr/src/ifscsubr.c'
+  - '!../../../dos/ifsmgr/src/ifsdbg2.c'
+  - ' ../../../dos/ifsmgr/src/ifsdbg.c'
+  - '"../../../dos/ifsmgr/src/ifsheap2.c'
+  - '"../../../dos/ifsmgr/src/ifsi21.asm'
+  - '"../../../dos/ifsmgr/src/ifsi2f.asm'
+  - '!../../../dos/ifsmgr/src/ifsinit.c'
+  - '"../../../dos/ifsmgr/src/ifsmgr.asm'
+  - '#../../../dos/ifsmgr/src/ifsmisc.asm'
+  - '"../../../dos/ifsmgr/src/ifspnp.asm'
+  - '"../../../dos/ifsmgr/src/ifsprt.asm'
+  - '#../../../dos/ifsmgr/src/ifssubr.asm'
+  - ' ../../../dos/ifsmgr/src/ifssvc.c'
+  - '#../../../dos/ifsmgr/src/ifstime.asm'
+  - '"../../../dos/ifsmgr/src/ifsvol.asm'
+  - ' ../../../dos/ifsmgr/src/lfnmap.c'
+  - '"../../../dos/ifsmgr/src/mailslot.c'
+  - '"../../../dos/ifsmgr/src/maperror.c'
+  - ' ../../../dos/ifsmgr/src/notify.c'
+  - ../../dos/ifsmgr/src/ocrw.c
+  - ' ../../../dos/ifsmgr/src/r0ocrw.c'
+  - '!../../../dos/ifsmgr/src/ring0.asm'
+  - ' ../../../dos/ifsmgr/src/search.c'
+  - ../../dos/ifsmgr/src/subr.c
+  - '#../../../dos/ifsmgr/src/unicode.asm'
+  - '#../../../dos/ifsmgr/src/unipath.asm'
+  - '!../../../dos/ifsmgr/src/vollock.c'
+  - ../../dos/ifsmgr/src/win32.c
+  - ../../dos/ifsmgr/src/curdir.c
+  - ../../dos/ifsmgr/src/dosdbg.c
+  - ../../dos/ifsmgr/src/dosmisc.c
+  - ../../dos/ifsmgr/src/dosmslot.c
+  - ../../dos/ifsmgr/src/dospipe.c
+  - ../../dos/ifsmgr/src/dosprt.c
+  - ../../dos/ifsmgr/src/dosuse.c
+  - ../../dos/ifsmgr/src/ifsassrt.inc
+  - '../../dos/ifsmgr/src/ifsassrt.incIFS Error: Pagefile not present'
+  - ../../dos/ifsmgr/src/ifscsubr.c
+  - ../../dos/ifsmgr/src/ifssvc.c
+  - ../../dos/ifsmgr/src/lfnmap.c
+  - ../../dos/ifsmgr/src/mailslot.c
+  - ../../dos/ifsmgr/src/maperror.c
+  - ../../dos/ifsmgr/src/notify.c
+  - ../../dos/ifsmgr/src/r0ocrw.c
+  - ../../dos/ifsmgr/src/search.c
+  - ../../dos/ifsmgr/src/vollock.c
+  - Dt.h
+  - IFSI21.ASM
+  - IFSI2F.ASM
+  - IFSMGR.ASM
+  - IFSPNP.ASM
+  - IFSSUBR.ASM
+  - IFSVOL.ASM
   segments:
   - num: '1'
     name: _LGROUP
@@ -3389,72 +3453,6 @@ appearances:
     - name: _CCODE__CONFIGMG_Broadcast_Device_Change_Message
       processed: ''
       offset: '00000000'
-  source_tree:
-  - $../../../dos/ifsmgr/src/catchreq.asm
-  - ../../dev/ddk/inc/vxdwraps.h
-  - '"../../../dos/ifsmgr/src/convtime.c'
-  - ' ../../../dos/ifsmgr/src/curdir.c'
-  - ../../dos/ifsmgr/src/dos5f.c
-  - ' ../../../dos/ifsmgr/src/dosdbg.c'
-  - '!../../../dos/ifsmgr/src/dosmisc.c'
-  - '"../../../dos/ifsmgr/src/dosmslot.c'
-  - '!../../../dos/ifsmgr/src/dospipe.c'
-  - ' ../../../dos/ifsmgr/src/dosprt.c'
-  - ' ../../../dos/ifsmgr/src/dosuse.c'
-  - '!../../../dos/ifsmgr/src/ifscpnp.c'
-  - '"../../../dos/ifsmgr/src/ifscsubr.c'
-  - '!../../../dos/ifsmgr/src/ifsdbg2.c'
-  - ' ../../../dos/ifsmgr/src/ifsdbg.c'
-  - '"../../../dos/ifsmgr/src/ifsheap2.c'
-  - '"../../../dos/ifsmgr/src/ifsi21.asm'
-  - '"../../../dos/ifsmgr/src/ifsi2f.asm'
-  - '!../../../dos/ifsmgr/src/ifsinit.c'
-  - '"../../../dos/ifsmgr/src/ifsmgr.asm'
-  - '#../../../dos/ifsmgr/src/ifsmisc.asm'
-  - '"../../../dos/ifsmgr/src/ifspnp.asm'
-  - '"../../../dos/ifsmgr/src/ifsprt.asm'
-  - '#../../../dos/ifsmgr/src/ifssubr.asm'
-  - ' ../../../dos/ifsmgr/src/ifssvc.c'
-  - '#../../../dos/ifsmgr/src/ifstime.asm'
-  - '"../../../dos/ifsmgr/src/ifsvol.asm'
-  - ' ../../../dos/ifsmgr/src/lfnmap.c'
-  - '"../../../dos/ifsmgr/src/mailslot.c'
-  - '"../../../dos/ifsmgr/src/maperror.c'
-  - ' ../../../dos/ifsmgr/src/notify.c'
-  - ../../dos/ifsmgr/src/ocrw.c
-  - ' ../../../dos/ifsmgr/src/r0ocrw.c'
-  - '!../../../dos/ifsmgr/src/ring0.asm'
-  - ' ../../../dos/ifsmgr/src/search.c'
-  - ../../dos/ifsmgr/src/subr.c
-  - '#../../../dos/ifsmgr/src/unicode.asm'
-  - '#../../../dos/ifsmgr/src/unipath.asm'
-  - '!../../../dos/ifsmgr/src/vollock.c'
-  - ../../dos/ifsmgr/src/win32.c
-  - ../../dos/ifsmgr/src/curdir.c
-  - ../../dos/ifsmgr/src/dosdbg.c
-  - ../../dos/ifsmgr/src/dosmisc.c
-  - ../../dos/ifsmgr/src/dosmslot.c
-  - ../../dos/ifsmgr/src/dospipe.c
-  - ../../dos/ifsmgr/src/dosprt.c
-  - ../../dos/ifsmgr/src/dosuse.c
-  - ../../dos/ifsmgr/src/ifsassrt.inc
-  - '../../dos/ifsmgr/src/ifsassrt.incIFS Error: Pagefile not present'
-  - ../../dos/ifsmgr/src/ifscsubr.c
-  - ../../dos/ifsmgr/src/ifssvc.c
-  - ../../dos/ifsmgr/src/lfnmap.c
-  - ../../dos/ifsmgr/src/mailslot.c
-  - ../../dos/ifsmgr/src/maperror.c
-  - ../../dos/ifsmgr/src/notify.c
-  - ../../dos/ifsmgr/src/r0ocrw.c
-  - ../../dos/ifsmgr/src/search.c
-  - ../../dos/ifsmgr/src/vollock.c
-  - Dt.h
-  - IFSI21.ASM
-  - IFSI2F.ASM
-  - IFSMGR.ASM
-  - IFSPNP.ASM
-  - IFSSUBR.ASM
-  - IFSVOL.ASM
 - version: Windows 98 Retail
   source_tree:
   - $../../../dos/ifsmgr/src/catchreq.asm

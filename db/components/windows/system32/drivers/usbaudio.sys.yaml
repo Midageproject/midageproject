@@ -1,10 +1,22 @@
 filename: windows/system32/drivers/usbaudio.sys
-#TODO: bring up more details from symdeb
 binary: USBAUDIO
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - adapter.c
+  - dalsemi.c
+  - descript.c
+  - input.c
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/ulldiv.asm
+  - mpaudio.c
+  - mpinit.c
+  - pcm2usb.c
+  - property.c
+  - write.c
+  - ksguid.c
   segments:
   - num: '1'
     name: .text
@@ -1513,20 +1525,6 @@ appearances:
     - name: _BUSID_SoftwareDeviceEnumerator
       processed: ''
       offset: '00001380'
-  source_tree:
-  - adapter.c
-  - dalsemi.c
-  - descript.c
-  - input.c
-  - intel/lldiv.asm
-  - intel/llmul.asm
-  - intel/ulldiv.asm
-  - mpaudio.c
-  - mpinit.c
-  - pcm2usb.c
-  - property.c
-  - write.c
-  - ksguid.c
 - version: Windows 98 Retail
   source_tree:
   - intel/lldiv.asm
@@ -1809,7 +1807,7 @@ appearances:
     offset: 00000C50
     symbols:
     - name: ??_C@_1BG@BCBE@?$AAH?$AAW?$AAR?$AAe?$AAv?$AAi?$AAs?$AAi?$AAo?$AAn?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"HWRevision"
       offset: '00000000'
     - name: _MapPropertyToNode
       demangled: ''

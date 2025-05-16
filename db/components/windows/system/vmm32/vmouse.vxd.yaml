@@ -1,10 +1,21 @@
 filename: windows/system/vmm32/vmouse.vxd
-#TODO: bring up more details from symdeb
 binary: VMOUSE
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - busmouse.asm
+  - cursor.asm
+  - inport.asm
+  - ps2.asm
+  - search.asm
+  - serial.asm
+  - vmd.asm
+  - vmdcursr.asm
+  - vmddebug.asm
+  - vmdini.asm
+  - vmdint33.asm
+  - vmdmessg.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -875,19 +886,6 @@ appearances:
     - name: VMD_Real_Init
       processed: ''
       offset: '00000000'
-  source_tree:
-  - busmouse.asm
-  - cursor.asm
-  - inport.asm
-  - ps2.asm
-  - search.asm
-  - serial.asm
-  - vmd.asm
-  - vmdcursr.asm
-  - vmddebug.asm
-  - vmdini.asm
-  - vmdint33.asm
-  - vmdmessg.asm
 - version: Windows 98 Retail
   source_tree:
   - busmouse.asm

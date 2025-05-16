@@ -1,10 +1,30 @@
 filename: windows/system/vfwwdm.drv
-#TODO: bring up more details from symdeb
 binary: VFWWDM
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - cap.c
+  - drvproc.c
+  - flat.asm
+  - initc.c
+  - ldiv.asm
+  - libinit.asm
+  - lmul.asm
+  - lshl.asm
+  - lshr.asm
+  - mapa.asm
+  - "\t../mapc.c"
+  - md.c
+  - muldiv.asm
+  - "\t../rect.c"
+  - "\tuldiv.asm"
+  - "\tulrem.asm"
+  - "\tulshr.asm"
+  - "\t../vmsg.c"
+  - mapc.c
+  - rect.c
+  - vmsg.c
   segments:
   - num: '1'
     name: _TEXT
@@ -404,28 +424,6 @@ appearances:
     - name: _dwVideoClock
       processed: ''
       offset: '00002204'
-  source_tree:
-  - cap.c
-  - drvproc.c
-  - flat.asm
-  - initc.c
-  - ldiv.asm
-  - libinit.asm
-  - lmul.asm
-  - lshl.asm
-  - lshr.asm
-  - mapa.asm
-  - "\t../mapc.c"
-  - md.c
-  - muldiv.asm
-  - "\t../rect.c"
-  - "\tuldiv.asm"
-  - "\tulrem.asm"
-  - "\tulshr.asm"
-  - "\t../vmsg.c"
-  - mapc.c
-  - rect.c
-  - vmsg.c
 - version: Windows 98 Retail
   source_tree:
   - cap.c

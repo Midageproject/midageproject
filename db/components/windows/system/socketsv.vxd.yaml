@@ -1,10 +1,21 @@
 filename: windows/system/socketsv.vxd
-#TODO: bring up more details from symdeb
 binary: SOCKETSV
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - ../binfmt.c
+  - cl.c
+  - debug.c
+  - '%../../../../../dev/ddk/inc/vxdwraps.h'
+  - "\t../king.c"
+  - "\t../misc.c"
+  - pcicss.c
+  - pnp.c
+  - ssmain.asm
+  - vadem.c
+  - "\t../vlsi.c"
+  - 0u.h
   segments:
   - num: '1'
     name: .text
@@ -708,19 +719,6 @@ appearances:
     - name: _padptTail
       processed: ''
       offset: 00002F60
-  source_tree:
-  - ../binfmt.c
-  - cl.c
-  - debug.c
-  - '%../../../../../dev/ddk/inc/vxdwraps.h'
-  - "\t../king.c"
-  - "\t../misc.c"
-  - pcicss.c
-  - pnp.c
-  - ssmain.asm
-  - vadem.c
-  - "\t../vlsi.c"
-  - 0u.h
 - version: Windows 98 Retail
   source_tree: []
   segments:

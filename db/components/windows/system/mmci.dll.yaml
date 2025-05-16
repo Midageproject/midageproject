@@ -1,10 +1,23 @@
 filename: windows/system/mmci.dll
-#TODO: bring up more details from symdeb
 binary: MMCI
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - ../allowins.c
+  - ../libinit.ASM
+  - lshl.asm
+  - ../mminstal.c
+  - ../selbest.c
+  - strchr.asm
+  - strcspn.asm
+  - strspn.asm
+  - strstr.asm
+  - strupr.asm
+  - Device Installed8You may have to restart Windows for your change to work.cSetup
+    has found a newer version of this driver and can install it now to get the best
+    performance.
+  - shell32.dll,Control_RunDLL mmsys.cpl,@0,S
   segments:
   - num: '1'
     name: _TEXT
@@ -263,310 +276,310 @@ appearances:
       processed: ''
       offset: 0000000E
     - name: ?szSTExecFmt@?2??SysTray_EnableService@@9@9
-      processed: "`SysTray_EnableService'::`3'::szSTExecFmt"
+      processed: extern "C" `extern "C" SysTray_EnableService'::`3'::szSTExecFmt
       offset: 0000001C
     - name: ??_C@_0BA@MAHH@SystemTray_Main?$AA@
-      processed: "`string'"
+      processed: '"SystemTray_Main"'
       offset: 0000002C
     - name: ??_C@_0BP@HPJI@system?4ini?0386Enh?0?0?$CCdevice?$DN?$CFs?$CC?$AA@
-      processed: "`string'"
+      processed: '"system.ini,386Enh,,\"device=%s\""'
       offset: 0000003C
     - name: ??_C@_04IBCE@?$FLMCI?$AA@
-      processed: "`string'"
+      processed: '"[MCI"'
       offset: 0000005C
     - name: ??_C@_03MFOG@MCI?$AA@
-      processed: "`string'"
+      processed: '"MCI"'
       offset: '00000062'
     - name: ??_C@_01PCFE@?2?$AA@
-      processed: "`string'"
+      processed: '"\\"'
       offset: '00000066'
     - name: ??_C@_04PLDJ@Wave?$AA@
-      processed: "`string'"
+      processed: '"Wave"'
       offset: '00000068'
     - name: ??_C@_04CCOG@MIDI?$AA@
-      processed: "`string'"
+      processed: '"MIDI"'
       offset: 0000006E
     - name: ??_C@_05JHOC@Mixer?$AA@
-      processed: "`string'"
+      processed: '"Mixer"'
       offset: '00000074'
     - name: ??_C@_03IEAK@Aux?$AA@
-      processed: "`string'"
+      processed: '"Aux"'
       offset: 0000007A
     - name: ??_C@_08GCCE@Joystick?$AA@
-      processed: "`string'"
+      processed: '"Joystick"'
       offset: 0000007E
     - name: ??_C@_07NGLM@MSVIDEO?$AA@
-      processed: "`string'"
+      processed: '"MSVIDEO"'
       offset: '00000088'
     - name: ??_C@_0L@LLFA@WaveMapper?$AA@
-      processed: "`string'"
+      processed: '"WaveMapper"'
       offset: '00000090'
     - name: ??_C@_0L@OIOM@MidiMapper?$AA@
-      processed: "`string'"
+      processed: '"MidiMapper"'
       offset: 0000009C
     - name: ??_C@_06LFAG@MAPPER?$AA@
-      processed: "`string'"
+      processed: '"MAPPER"'
       offset: 000000A8
     - name: ??_C@_04DDDH@VIDC?$AA@
-      processed: "`string'"
+      processed: '"VIDC"'
       offset: 000000B0
     - name: ??_C@_04JKEH@VIDS?$AA@
-      processed: "`string'"
+      processed: '"VIDS"'
       offset: 000000B6
     - name: ??_C@_03CHOA@ICM?$AA@
-      processed: "`string'"
+      processed: '"ICM"'
       offset: 000000BC
     - name: ??_C@_05PBMJ@MSACM?$AA@
-      processed: "`string'"
+      processed: '"MSACM"'
       offset: 000000C0
     - name: ??_C@_03LHFF@ACM?$AA@
-      processed: "`string'"
+      processed: '"ACM"'
       offset: 000000C6
     - name: ??_C@_07CNPM@UNKNOWN?$AA@
-      processed: "`string'"
+      processed: '"UNKNOWN"'
       offset: 000000CA
     - name: ??_C@_0L@MEGC@HKLM?0?$CFs?0?0?0?$AA@
-      processed: "`string'"
+      processed: '"HKLM,%s,,,"'
       offset: 000000D2
     - name: ??_C@_0BF@JNLF@HKLM?0?$CFs?0Driver?0?0?$CC?$CFs?$CC?$AA@
-      processed: "`string'"
+      processed: '"HKLM,%s,Driver,,\"%s\""'
       offset: 000000DE
     - name: ??_C@_0BK@LJDG@HKLM?0?$CFs?0Description?0?0?$CC?$CFs?$CC?$AA@
-      processed: "`string'"
+      processed: '"HKLM,%s,Description,,\"%s\""'
       offset: 000000F4
     - name: ??_C@_0BJ@NJDM@HKLM?0?$CFs?0Parameters?0?0?$CC?$CFs?$CC?$AA@
-      processed: "`string'"
+      processed: '"HKLM,%s,Parameters,,\"%s\""'
       offset: 0000010E
     - name: ??_C@_0BB@PMCK@SourceDisksFiles?$AA@
-      processed: "`string'"
+      processed: '"SourceDisksFiles"'
       offset: '00000128'
     - name: ??_C@_05IPJG@?$CFs?3?$CFs?$AA@
-      processed: "`string'"
+      processed: '"%s:%s"'
       offset: 0000013A
     - name: ??_C@_02MECO@?$CFd?$AA@
-      processed: "`string'"
+      processed: '"%d"'
       offset: '00000140'
     - name: ??_C@_0M@BHNN@?$CFs?5?$DN?5?$CFs?0?$CFs?0?$AA@
-      processed: "`string'"
+      processed: '"%s = %s,%s,"'
       offset: '00000144'
     - name: ??_C@_05DMPF@disks?$AA@
-      processed: "`string'"
+      processed: '"disks"'
       offset: '00000150'
     - name: ??_C@_08NKAM@oemdisks?$AA@
-      processed: "`string'"
+      processed: '"oemdisks"'
       offset: '00000156'
     - name: ??_C@_07PCHH@Unknown?$AA@
-      processed: "`string'"
+      processed: '"Unknown"'
       offset: '00000160'
     - name: ??_C@_08FKFA@Provider?$AA@
-      processed: "`string'"
+      processed: '"Provider"'
       offset: '00000168'
     - name: ??_C@_07BPOH@version?$AA@
-      processed: "`string'"
+      processed: '"version"'
       offset: '00000172'
     - name: ??_C@_07PCHH@OldDrvs?$AA@
-      processed: "`string'"
+      processed: '"OldDrvs"'
       offset: 0000017A
     - name: ??_C@_0N@NONH@Manufacturer?$AA@
-      processed: "`string'"
+      processed: '"Manufacturer"'
       offset: '00000182'
     - name: ??_C@_02PIFG@11?$AA@
-      processed: "`string'"
+      processed: '"11"'
       offset: '00000190'
     - name: ??_C@_0P@KHII@DefaultDestDir?$AA@
-      processed: "`string'"
+      processed: '"DefaultDestDir"'
       offset: '00000194'
     - name: ??_C@_0BA@CKAH@DestinationDirs?$AA@
-      processed: "`string'"
+      processed: '"DestinationDirs"'
       offset: 000001A4
     - name: ??_C@_07FFBB@Strings?$AA@
-      processed: "`string'"
+      processed: '"Strings"'
       offset: 000001B4
     - name: ??_C@_06JCDB@?$CF?$CF?$CFs?$CF?$CF?$AA@
-      processed: "`string'"
+      processed: '"%%%s%%"'
       offset: 000001BC
     - name: ??_C@_04JBBA@?$CC?$CFs?$CC?$AA@
-      processed: "`string'"
+      processed: '"\"%s\""'
       offset: 000001C4
     - name: ??_C@_0N@HPDF@Copyfiles?4?$CFs?$AA@
-      processed: "`string'"
+      processed: '"Copyfiles.%s"'
       offset: 000001CA
     - name: ??_C@_0O@EACA@Updateinis?4?$CFs?$AA@
-      processed: "`string'"
+      processed: '"Updateinis.%s"'
       offset: 000001D8
     - name: ??_C@_09IFNE@AddReg?4?$CFs?$AA@
-      processed: "`string'"
+      processed: '"AddReg.%s"'
       offset: '000001E6'
     - name: ??_C@_0P@NLGL@?0?5Copyfiles?4?$CFs?$AA@
-      processed: "`string'"
+      processed: '", Copyfiles.%s"'
       offset: 000001F0
     - name: ??_C@_0BA@BIE@?0?5Updateinis?4?$CFs?$AA@
-      processed: "`string'"
+      processed: '", Updateinis.%s"'
       offset: '00000200'
     - name: ??_C@_0M@NCCE@?0?5AddReg?4?$CFs?$AA@
-      processed: "`string'"
+      processed: '", AddReg.%s"'
       offset: '00000210'
     - name: ??_C@_09PGDB@CopyFiles?$AA@
-      processed: "`string'"
+      processed: '"CopyFiles"'
       offset: 0000021C
     - name: ??_C@_0L@POOM@Updateinis?$AA@
-      processed: "`string'"
+      processed: '"Updateinis"'
       offset: '00000226'
     - name: ??_C@_06IKJC@AddReg?$AA@
-      processed: "`string'"
+      processed: '"AddReg"'
       offset: '00000232'
     - name: ??_C@_08LOIE@Software?$AA@
-      processed: "`string'"
+      processed: '"Software"'
       offset: 0000023A
     - name: ??_C@_01FBAH@1?$AA@
-      processed: "`string'"
+      processed: '"1"'
       offset: '00000244'
     - name: ??_C@_0FA@NMKJ@Software?2Microsoft?2Active?5Setup?2@
-      processed: "`string'"
+      processed: '"Software\\Microsoft\\Active Setup\\"...'
       offset: '00000246'
     - name: ??_C@_07MNFD@Version?$AA@
-      processed: "`string'"
+      processed: '"Version"'
       offset: '00000296'
     - name: ??_C@_0M@ENIL@?$CFu?0?$CFu?0?$CFu?0?$CFu?$AA@
-      processed: "`string'"
+      processed: '"%u,%u,%u,%u"'
       offset: 0000029E
     - name: ??_C@_08FNF@StubPath?$AA@
-      processed: "`string'"
+      processed: '"StubPath"'
       offset: 000002AA
     - name: ??_C@_0N@EJIA@rundll32?4exe?$AA@
-      processed: "`string'"
+      processed: '"rundll32.exe"'
       offset: 000002B4
     - name: ??_C@_0CK@HHEC@shell32?4dll?0Control_RunDLL?5mmsys@
-      processed: "`string'"
+      processed: '"shell32.dll,Control_RunDLL mmsys"...'
       offset: 000002C2
     - name: ??_C@_01FCOA@?5?$AA@
-      processed: "`string'"
+      processed: '" "'
       offset: 000002EC
     - name: ??_C@_0O@IKHH@EnumPropPages?$AA@
-      processed: "`string'"
+      processed: '"EnumPropPages"'
       offset: 000002EE
     - name: ??_C@_09BHKM@DevLoader?$AA@
-      processed: "`string'"
+      processed: '"DevLoader"'
       offset: 000002FC
     - name: ??_C@_06LCIG@Driver?$AA@
-      processed: "`string'"
+      processed: '"Driver"'
       offset: '00000306'
     - name: ??_C@_0L@MNFF@NTMPDriver?$AA@
-      processed: "`string'"
+      processed: '"NTMPDriver"'
       offset: 0000030E
     - name: ??_C@_0BC@NLBA@AssociatedFilters?$AA@
-      processed: "`string'"
+      processed: '"AssociatedFilters"'
       offset: 0000031A
     - name: ??_C@_04BKDP@FDMA?$AA@
-      processed: "`string'"
+      processed: '"FDMA"'
       offset: 0000032C
     - name: ??_C@_0BD@IFEJ@UnretainedSettings?$AA@
-      processed: "`string'"
+      processed: '"UnretainedSettings"'
       offset: '00000332'
     - name: ??_C@_0L@CMJP@SubClasses?$AA@
-      processed: "`string'"
+      processed: '"SubClasses"'
       offset: '00000346'
     - name: ??_C@_0L@OEGH@NewDrivers?$AA@
-      processed: "`string'"
+      processed: '"NewDrivers"'
       offset: '00000352'
     - name: ??_C@_00A@?$AA@
-      processed: "`string'"
+      processed: '""'
       offset: 0000035E
     - name: ??_C@_0M@CAHD@AlsoInstall?$AA@
-      processed: "`string'"
+      processed: '"AlsoInstall"'
       offset: '00000360'
     - name: ??_C@_01KMAE@?0?$AA@
-      processed: "`string'"
+      processed: '","'
       offset: 0000036C
     - name: ??_C@_02NDAK@?5?$CI?$AA@
-      processed: "`string'"
+      processed: '" ("'
       offset: 0000036E
     - name: ??_C@_02HJJN@?5?$CJ?$AA@
-      processed: "`string'"
+      processed: '" )"'
       offset: '00000372'
     - name: ??_C@_0BL@DMCO@SetupPreferredAudioDevices?$AA@
-      processed: "`string'"
+      processed: '"SetupPreferredAudioDevices"'
       offset: '00000376'
     - name: ??_C@_0DA@KCKP@Software?2Microsoft?2Windows?2Curre@
-      processed: "`string'"
+      processed: '"Software\\Microsoft\\Windows\\Curre"...'
       offset: '00000392'
     - name: ??_C@_07HFM@HWSetup?$AA@
-      processed: "`string'"
+      processed: '"HWSetup"'
       offset: 000003C2
     - name: ??_C@_03IGFG@?5?0?7?$AA@
-      processed: "`string'"
+      processed: '" ,\t"'
       offset: 000003CA
     - name: ??_C@_09BBGE@?2INFBACK?2?$AA@
-      processed: "`string'"
+      processed: '"\\INFBACK\\"'
       offset: 000003CE
     - name: ??_C@_07NKML@?2OTHER?2?$AA@
-      processed: "`string'"
+      processed: '"\\OTHER\\"'
       offset: 000003D8
     - name: ??_C@_07IHKF@strings?$AA@
-      processed: "`string'"
+      processed: '"strings"'
       offset: '000003E0'
     - name: ??_C@_01BJG@?6?$AA@
-      processed: "`string'"
+      processed: '"\n"'
       offset: '000003E8'
     - name: ??_C@_0BD@FGDD@?$CFs?4?$CFu?4?$CFu?4?$CFu?4?$CFu?4?$CFlu?$AA@
-      processed: "`string'"
+      processed: '"%s.%u.%u.%u.%u.%lu"'
       offset: 000003EA
     - name: ??_C@_07PMOP@drivers?$AA@
-      processed: "`string'"
+      processed: '"drivers"'
       offset: 000003FE
     - name: ??_C@_0M@BKAA@update?4list?$AA@
-      processed: "`string'"
+      processed: '"update.list"'
       offset: '00000406'
     - name: ??_C@_0L@DFB@KnownFiles?$AA@
-      processed: "`string'"
+      processed: '"KnownFiles"'
       offset: '00000412'
     - name: ??_C@_07IOPL@Default?$AA@
-      processed: "`string'"
+      processed: '"Default"'
       offset: 0000041E
     - name: ??_C@_04FFPF@HKCR?$AA@
-      processed: "`string'"
+      processed: '"HKCR"'
       offset: '00000426'
     - name: ??_C@_04BA@HKCU?$AA@
-      processed: "`string'"
+      processed: '"HKCU"'
       offset: 0000042C
     - name: ??_C@_04CJNJ@HKLM?$AA@
-      processed: "`string'"
+      processed: '"HKLM"'
       offset: '00000432'
     - name: ??_C@_03DNGK@HKU?$AA@
-      processed: "`string'"
+      processed: '"HKU"'
       offset: '00000438'
     - name: ??_C@_04FGBC@HKCC?$AA@
-      processed: "`string'"
+      processed: '"HKCC"'
       offset: 0000043C
     - name: ??_C@_03GIIP@HKR?$AA@
-      processed: "`string'"
+      processed: '"HKR"'
       offset: '00000442'
     - name: ??_C@_02GIEM@?0?5?$AA@
-      processed: "`string'"
+      processed: '", "'
       offset: '00000446'
     - name: ??_C@_0BA@JMOP@KnownRegEntries?$AA@
-      processed: "`string'"
+      processed: '"KnownRegEntries"'
       offset: 0000044A
     - name: ??_C@_0L@KAFL@DriverDesc?$AA@
-      processed: "`string'"
+      processed: '"DriverDesc"'
       offset: 0000045A
     - name: ??_C@_0L@PKHD@InfSection?$AA@
-      processed: "`string'"
+      processed: '"InfSection"'
       offset: '00000466'
     - name: ??_C@_07EGBM@InfPath?$AA@
-      processed: "`string'"
+      processed: '"InfPath"'
       offset: '00000472'
     - name: ??_C@_0M@HCOO@drivers?4ddb?$AA@
-      processed: "`string'"
+      processed: '"drivers.ddb"'
       offset: 0000047A
     - name: ??_C@_04JDOB@?$CFs?6?6?$AA@
-      processed: "`string'"
+      processed: '"%s\n\n"'
       offset: '00000486'
     - name: ??_C@_04GNEN@?4VXD?$AA@
-      processed: "`string'"
+      processed: '".VXD"'
       offset: 0000048C
     - name: ??_C@_04JNDO@?4SYS?$AA@
-      processed: "`string'"
+      processed: '".SYS"'
       offset: '00000492'
     - name: _ghInstance
       processed: ''
@@ -577,21 +590,6 @@ appearances:
     - name: _SkipCopyIfFilePresent
       processed: ''
       offset: 00000C54
-  source_tree:
-  - ../allowins.c
-  - ../libinit.ASM
-  - lshl.asm
-  - ../mminstal.c
-  - ../selbest.c
-  - strchr.asm
-  - strcspn.asm
-  - strspn.asm
-  - strstr.asm
-  - strupr.asm
-  - Device Installed8You may have to restart Windows for your change to work.cSetup
-    has found a newer version of this driver and can install it now to get the best
-    performance.
-  - shell32.dll,Control_RunDLL mmsys.cpl,@0,S
 - version: Windows 98 Retail
   source_tree:
   - ../allowins.c
@@ -862,310 +860,310 @@ appearances:
       demangled: ''
       offset: 0000000E
     - name: ?szSTExecFmt@?2??SysTray_EnableService@@9@9
-      demangled: "`SysTray_EnableService'::`3'::szSTExecFmt"
+      demangled: extern "C" `extern "C" SysTray_EnableService'::`3'::szSTExecFmt
       offset: 0000001C
     - name: ??_C@_0BA@MAHH@SystemTray_Main?$AA@
-      demangled: "`string'"
+      demangled: '"SystemTray_Main"'
       offset: 0000002C
     - name: ??_C@_0BP@HPJI@system?4ini?0386Enh?0?0?$CCdevice?$DN?$CFs?$CC?$AA@
-      demangled: "`string'"
+      demangled: '"system.ini,386Enh,,\"device=%s\""'
       offset: 0000003C
     - name: ??_C@_04IBCE@?$FLMCI?$AA@
-      demangled: "`string'"
+      demangled: '"[MCI"'
       offset: 0000005C
     - name: ??_C@_03MFOG@MCI?$AA@
-      demangled: "`string'"
+      demangled: '"MCI"'
       offset: '00000062'
     - name: ??_C@_01PCFE@?2?$AA@
-      demangled: "`string'"
+      demangled: '"\\"'
       offset: '00000066'
     - name: ??_C@_04PLDJ@Wave?$AA@
-      demangled: "`string'"
+      demangled: '"Wave"'
       offset: '00000068'
     - name: ??_C@_04CCOG@MIDI?$AA@
-      demangled: "`string'"
+      demangled: '"MIDI"'
       offset: 0000006E
     - name: ??_C@_05JHOC@Mixer?$AA@
-      demangled: "`string'"
+      demangled: '"Mixer"'
       offset: '00000074'
     - name: ??_C@_03IEAK@Aux?$AA@
-      demangled: "`string'"
+      demangled: '"Aux"'
       offset: 0000007A
     - name: ??_C@_08GCCE@Joystick?$AA@
-      demangled: "`string'"
+      demangled: '"Joystick"'
       offset: 0000007E
     - name: ??_C@_07NGLM@MSVIDEO?$AA@
-      demangled: "`string'"
+      demangled: '"MSVIDEO"'
       offset: '00000088'
     - name: ??_C@_0L@LLFA@WaveMapper?$AA@
-      demangled: "`string'"
+      demangled: '"WaveMapper"'
       offset: '00000090'
     - name: ??_C@_0L@OIOM@MidiMapper?$AA@
-      demangled: "`string'"
+      demangled: '"MidiMapper"'
       offset: 0000009C
     - name: ??_C@_06LFAG@MAPPER?$AA@
-      demangled: "`string'"
+      demangled: '"MAPPER"'
       offset: 000000A8
     - name: ??_C@_04DDDH@VIDC?$AA@
-      demangled: "`string'"
+      demangled: '"VIDC"'
       offset: 000000B0
     - name: ??_C@_04JKEH@VIDS?$AA@
-      demangled: "`string'"
+      demangled: '"VIDS"'
       offset: 000000B6
     - name: ??_C@_03CHOA@ICM?$AA@
-      demangled: "`string'"
+      demangled: '"ICM"'
       offset: 000000BC
     - name: ??_C@_05PBMJ@MSACM?$AA@
-      demangled: "`string'"
+      demangled: '"MSACM"'
       offset: 000000C0
     - name: ??_C@_03LHFF@ACM?$AA@
-      demangled: "`string'"
+      demangled: '"ACM"'
       offset: 000000C6
     - name: ??_C@_07CNPM@UNKNOWN?$AA@
-      demangled: "`string'"
+      demangled: '"UNKNOWN"'
       offset: 000000CA
     - name: ??_C@_0L@MEGC@HKLM?0?$CFs?0?0?0?$AA@
-      demangled: "`string'"
+      demangled: '"HKLM,%s,,,"'
       offset: 000000D2
     - name: ??_C@_0BF@JNLF@HKLM?0?$CFs?0Driver?0?0?$CC?$CFs?$CC?$AA@
-      demangled: "`string'"
+      demangled: '"HKLM,%s,Driver,,\"%s\""'
       offset: 000000DE
     - name: ??_C@_0BK@LJDG@HKLM?0?$CFs?0Description?0?0?$CC?$CFs?$CC?$AA@
-      demangled: "`string'"
+      demangled: '"HKLM,%s,Description,,\"%s\""'
       offset: 000000F4
     - name: ??_C@_0BJ@NJDM@HKLM?0?$CFs?0Parameters?0?0?$CC?$CFs?$CC?$AA@
-      demangled: "`string'"
+      demangled: '"HKLM,%s,Parameters,,\"%s\""'
       offset: 0000010E
     - name: ??_C@_0BB@PMCK@SourceDisksFiles?$AA@
-      demangled: "`string'"
+      demangled: '"SourceDisksFiles"'
       offset: '00000128'
     - name: ??_C@_05IPJG@?$CFs?3?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"%s:%s"'
       offset: 0000013A
     - name: ??_C@_02MECO@?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '"%d"'
       offset: '00000140'
     - name: ??_C@_0M@BHNN@?$CFs?5?$DN?5?$CFs?0?$CFs?0?$AA@
-      demangled: "`string'"
+      demangled: '"%s = %s,%s,"'
       offset: '00000144'
     - name: ??_C@_05DMPF@disks?$AA@
-      demangled: "`string'"
+      demangled: '"disks"'
       offset: '00000150'
     - name: ??_C@_08NKAM@oemdisks?$AA@
-      demangled: "`string'"
+      demangled: '"oemdisks"'
       offset: '00000156'
     - name: ??_C@_07PCHH@Unknown?$AA@
-      demangled: "`string'"
+      demangled: '"Unknown"'
       offset: '00000160'
     - name: ??_C@_08FKFA@Provider?$AA@
-      demangled: "`string'"
+      demangled: '"Provider"'
       offset: '00000168'
     - name: ??_C@_07BPOH@version?$AA@
-      demangled: "`string'"
+      demangled: '"version"'
       offset: '00000172'
     - name: ??_C@_07PCHH@OldDrvs?$AA@
-      demangled: "`string'"
+      demangled: '"OldDrvs"'
       offset: 0000017A
     - name: ??_C@_0N@NONH@Manufacturer?$AA@
-      demangled: "`string'"
+      demangled: '"Manufacturer"'
       offset: '00000182'
     - name: ??_C@_02PIFG@11?$AA@
-      demangled: "`string'"
+      demangled: '"11"'
       offset: '00000190'
     - name: ??_C@_0P@KHII@DefaultDestDir?$AA@
-      demangled: "`string'"
+      demangled: '"DefaultDestDir"'
       offset: '00000194'
     - name: ??_C@_0BA@CKAH@DestinationDirs?$AA@
-      demangled: "`string'"
+      demangled: '"DestinationDirs"'
       offset: 000001A4
     - name: ??_C@_07FFBB@Strings?$AA@
-      demangled: "`string'"
+      demangled: '"Strings"'
       offset: 000001B4
     - name: ??_C@_06JCDB@?$CF?$CF?$CFs?$CF?$CF?$AA@
-      demangled: "`string'"
+      demangled: '"%%%s%%"'
       offset: 000001BC
     - name: ??_C@_04JBBA@?$CC?$CFs?$CC?$AA@
-      demangled: "`string'"
+      demangled: '"\"%s\""'
       offset: 000001C4
     - name: ??_C@_0N@HPDF@Copyfiles?4?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"Copyfiles.%s"'
       offset: 000001CA
     - name: ??_C@_0O@EACA@Updateinis?4?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"Updateinis.%s"'
       offset: 000001D8
     - name: ??_C@_09IFNE@AddReg?4?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '"AddReg.%s"'
       offset: '000001E6'
     - name: ??_C@_0P@NLGL@?0?5Copyfiles?4?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '", Copyfiles.%s"'
       offset: 000001F0
     - name: ??_C@_0BA@BIE@?0?5Updateinis?4?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '", Updateinis.%s"'
       offset: '00000200'
     - name: ??_C@_0M@NCCE@?0?5AddReg?4?$CFs?$AA@
-      demangled: "`string'"
+      demangled: '", AddReg.%s"'
       offset: '00000210'
     - name: ??_C@_09PGDB@CopyFiles?$AA@
-      demangled: "`string'"
+      demangled: '"CopyFiles"'
       offset: 0000021C
     - name: ??_C@_0L@POOM@Updateinis?$AA@
-      demangled: "`string'"
+      demangled: '"Updateinis"'
       offset: '00000226'
     - name: ??_C@_06IKJC@AddReg?$AA@
-      demangled: "`string'"
+      demangled: '"AddReg"'
       offset: '00000232'
     - name: ??_C@_08LOIE@Software?$AA@
-      demangled: "`string'"
+      demangled: '"Software"'
       offset: 0000023A
     - name: ??_C@_01FBAH@1?$AA@
-      demangled: "`string'"
+      demangled: '"1"'
       offset: '00000244'
     - name: ??_C@_0FA@NMKJ@Software?2Microsoft?2Active?5Setup?2@
-      demangled: "`string'"
+      demangled: '"Software\\Microsoft\\Active Setup\\"...'
       offset: '00000246'
     - name: ??_C@_07MNFD@Version?$AA@
-      demangled: "`string'"
+      demangled: '"Version"'
       offset: '00000296'
     - name: ??_C@_0M@ENIL@?$CFu?0?$CFu?0?$CFu?0?$CFu?$AA@
-      demangled: "`string'"
+      demangled: '"%u,%u,%u,%u"'
       offset: 0000029E
     - name: ??_C@_08FNF@StubPath?$AA@
-      demangled: "`string'"
+      demangled: '"StubPath"'
       offset: 000002AA
     - name: ??_C@_0N@EJIA@rundll32?4exe?$AA@
-      demangled: "`string'"
+      demangled: '"rundll32.exe"'
       offset: 000002B4
     - name: ??_C@_0CK@HHEC@shell32?4dll?0Control_RunDLL?5mmsys@
-      demangled: "`string'"
+      demangled: '"shell32.dll,Control_RunDLL mmsys"...'
       offset: 000002C2
     - name: ??_C@_01FCOA@?5?$AA@
-      demangled: "`string'"
+      demangled: '" "'
       offset: 000002EC
     - name: ??_C@_0O@IKHH@EnumPropPages?$AA@
-      demangled: "`string'"
+      demangled: '"EnumPropPages"'
       offset: 000002EE
     - name: ??_C@_09BHKM@DevLoader?$AA@
-      demangled: "`string'"
+      demangled: '"DevLoader"'
       offset: 000002FC
     - name: ??_C@_06LCIG@Driver?$AA@
-      demangled: "`string'"
+      demangled: '"Driver"'
       offset: '00000306'
     - name: ??_C@_0L@MNFF@NTMPDriver?$AA@
-      demangled: "`string'"
+      demangled: '"NTMPDriver"'
       offset: 0000030E
     - name: ??_C@_0BC@NLBA@AssociatedFilters?$AA@
-      demangled: "`string'"
+      demangled: '"AssociatedFilters"'
       offset: 0000031A
     - name: ??_C@_04BKDP@FDMA?$AA@
-      demangled: "`string'"
+      demangled: '"FDMA"'
       offset: 0000032C
     - name: ??_C@_0BD@IFEJ@UnretainedSettings?$AA@
-      demangled: "`string'"
+      demangled: '"UnretainedSettings"'
       offset: '00000332'
     - name: ??_C@_0L@CMJP@SubClasses?$AA@
-      demangled: "`string'"
+      demangled: '"SubClasses"'
       offset: '00000346'
     - name: ??_C@_0L@OEGH@NewDrivers?$AA@
-      demangled: "`string'"
+      demangled: '"NewDrivers"'
       offset: '00000352'
     - name: ??_C@_00A@?$AA@
-      demangled: "`string'"
+      demangled: '""'
       offset: 0000035E
     - name: ??_C@_0M@CAHD@AlsoInstall?$AA@
-      demangled: "`string'"
+      demangled: '"AlsoInstall"'
       offset: '00000360'
     - name: ??_C@_01KMAE@?0?$AA@
-      demangled: "`string'"
+      demangled: '","'
       offset: 0000036C
     - name: ??_C@_02NDAK@?5?$CI?$AA@
-      demangled: "`string'"
+      demangled: '" ("'
       offset: 0000036E
     - name: ??_C@_02HJJN@?5?$CJ?$AA@
-      demangled: "`string'"
+      demangled: '" )"'
       offset: '00000372'
     - name: ??_C@_0BL@DMCO@SetupPreferredAudioDevices?$AA@
-      demangled: "`string'"
+      demangled: '"SetupPreferredAudioDevices"'
       offset: '00000376'
     - name: ??_C@_0DA@KCKP@Software?2Microsoft?2Windows?2Curre@
-      demangled: "`string'"
+      demangled: '"Software\\Microsoft\\Windows\\Curre"...'
       offset: '00000392'
     - name: ??_C@_07HFM@HWSetup?$AA@
-      demangled: "`string'"
+      demangled: '"HWSetup"'
       offset: 000003C2
     - name: ??_C@_03IGFG@?5?0?7?$AA@
-      demangled: "`string'"
+      demangled: '" ,\t"'
       offset: 000003CA
     - name: ??_C@_09BBGE@?2INFBACK?2?$AA@
-      demangled: "`string'"
+      demangled: '"\\INFBACK\\"'
       offset: 000003CE
     - name: ??_C@_07NKML@?2OTHER?2?$AA@
-      demangled: "`string'"
+      demangled: '"\\OTHER\\"'
       offset: 000003D8
     - name: ??_C@_07IHKF@strings?$AA@
-      demangled: "`string'"
+      demangled: '"strings"'
       offset: '000003E0'
     - name: ??_C@_01BJG@?6?$AA@
-      demangled: "`string'"
+      demangled: '"\n"'
       offset: '000003E8'
     - name: ??_C@_0BD@FGDD@?$CFs?4?$CFu?4?$CFu?4?$CFu?4?$CFu?4?$CFlu?$AA@
-      demangled: "`string'"
+      demangled: '"%s.%u.%u.%u.%u.%lu"'
       offset: 000003EA
     - name: ??_C@_07PMOP@drivers?$AA@
-      demangled: "`string'"
+      demangled: '"drivers"'
       offset: 000003FE
     - name: ??_C@_0M@BKAA@update?4list?$AA@
-      demangled: "`string'"
+      demangled: '"update.list"'
       offset: '00000406'
     - name: ??_C@_0L@DFB@KnownFiles?$AA@
-      demangled: "`string'"
+      demangled: '"KnownFiles"'
       offset: '00000412'
     - name: ??_C@_07IOPL@Default?$AA@
-      demangled: "`string'"
+      demangled: '"Default"'
       offset: 0000041E
     - name: ??_C@_04FFPF@HKCR?$AA@
-      demangled: "`string'"
+      demangled: '"HKCR"'
       offset: '00000426'
     - name: ??_C@_04BA@HKCU?$AA@
-      demangled: "`string'"
+      demangled: '"HKCU"'
       offset: 0000042C
     - name: ??_C@_04CJNJ@HKLM?$AA@
-      demangled: "`string'"
+      demangled: '"HKLM"'
       offset: '00000432'
     - name: ??_C@_03DNGK@HKU?$AA@
-      demangled: "`string'"
+      demangled: '"HKU"'
       offset: '00000438'
     - name: ??_C@_04FGBC@HKCC?$AA@
-      demangled: "`string'"
+      demangled: '"HKCC"'
       offset: 0000043C
     - name: ??_C@_03GIIP@HKR?$AA@
-      demangled: "`string'"
+      demangled: '"HKR"'
       offset: '00000442'
     - name: ??_C@_02GIEM@?0?5?$AA@
-      demangled: "`string'"
+      demangled: '", "'
       offset: '00000446'
     - name: ??_C@_0BA@JMOP@KnownRegEntries?$AA@
-      demangled: "`string'"
+      demangled: '"KnownRegEntries"'
       offset: 0000044A
     - name: ??_C@_0L@KAFL@DriverDesc?$AA@
-      demangled: "`string'"
+      demangled: '"DriverDesc"'
       offset: 0000045A
     - name: ??_C@_0L@PKHD@InfSection?$AA@
-      demangled: "`string'"
+      demangled: '"InfSection"'
       offset: '00000466'
     - name: ??_C@_07EGBM@InfPath?$AA@
-      demangled: "`string'"
+      demangled: '"InfPath"'
       offset: '00000472'
     - name: ??_C@_0M@HCOO@drivers?4ddb?$AA@
-      demangled: "`string'"
+      demangled: '"drivers.ddb"'
       offset: 0000047A
     - name: ??_C@_04JDOB@?$CFs?6?6?$AA@
-      demangled: "`string'"
+      demangled: '"%s\n\n"'
       offset: '00000486'
     - name: ??_C@_04GNEN@?4VXD?$AA@
-      demangled: "`string'"
+      demangled: '".VXD"'
       offset: 0000048C
     - name: ??_C@_04JNDO@?4SYS?$AA@
-      demangled: "`string'"
+      demangled: '".SYS"'
       offset: '00000492'
     - name: _ghInstance
       demangled: ''

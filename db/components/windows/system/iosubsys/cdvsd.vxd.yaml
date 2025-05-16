@@ -1,10 +1,21 @@
 filename: windows/system/iosubsys/cdvsd.vxd
-#TODO: bring up more details from symdeb
 binary: CDVSD
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - dvdioctl.c
+  - vsdaer.asm
+  - vsd.asm
+  - vsdaudio.asm
+  - vsdco.asm
+  - vsddbg.asm
+  - vsderror.asm
+  - vsdfltr.c
+  - vsdinit.asm
+  - vsdioctl.asm
+  - vsdpix.c
+  - vsdreq.asm
   segments:
   - num: '1'
     name: .bss
@@ -833,19 +844,6 @@ appearances:
     - name: Setup_DRP
       processed: ''
       offset: '00000087'
-  source_tree:
-  - dvdioctl.c
-  - vsdaer.asm
-  - vsd.asm
-  - vsdaudio.asm
-  - vsdco.asm
-  - vsddbg.asm
-  - vsderror.asm
-  - vsdfltr.c
-  - vsdinit.asm
-  - vsdioctl.asm
-  - vsdpix.c
-  - vsdreq.asm
 - version: Windows 98 Retail
   source_tree:
   - dvdioctl.c

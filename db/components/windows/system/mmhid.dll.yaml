@@ -1,10 +1,9 @@
 filename: windows/system/mmhid.dll
-#TODO: bring up more details from symdeb
 binary: MMHID
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree: []
   segments:
   - num: '1'
     name: .text
@@ -162,7 +161,7 @@ appearances:
       offset: 00004F02
     - name: ?QueryInterface@CMmHidClassFactory@@UAGJABU_GUID@@PAPAX@Z
       processed: 'public: virtual long __stdcall CMmHidClassFactory::QueryInterface(struct
-        _GUID const &,void * *)'
+        _GUID const &, void **)'
       offset: 00004F16
     - name: ?AddRef@CMmHidClassFactory@@UAGKXZ
       processed: 'public: virtual unsigned long __stdcall CMmHidClassFactory::AddRef(void)'
@@ -172,13 +171,14 @@ appearances:
       offset: 00004F95
     - name: ?CreateInstance@CMmHidClassFactory@@UAGJPAUIUnknown@@ABU_GUID@@PAPAX@Z
       processed: 'public: virtual long __stdcall CMmHidClassFactory::CreateInstance(struct
-        IUnknown *,struct _GUID const &,void * *)'
+        IUnknown *, struct _GUID const &, void **)'
       offset: 00004FEB
     - name: ?LockServer@CMmHidClassFactory@@UAGJH@Z
       processed: 'public: virtual long __stdcall CMmHidClassFactory::LockServer(int)'
       offset: 000051C6
     - name: ??0CMmHid@@QAE@PAUIUnknown@@P6AXXZ@Z
-      processed: 'public: __thiscall CMmHid::CMmHid(struct IUnknown *,void (__cdecl*)(void))'
+      processed: 'public: __thiscall CMmHid::CMmHid(struct IUnknown *, void (__cdecl
+        *)(void))'
       offset: 000051F3
     - name: ??1CMmHid@@QAE@XZ
       processed: 'public: __thiscall CMmHid::~CMmHid(void)'
@@ -188,7 +188,7 @@ appearances:
       offset: '00005244'
     - name: ?QueryInterface@CMmHid@@UAGJABU_GUID@@PAPAX@Z
       processed: 'public: virtual long __stdcall CMmHid::QueryInterface(struct _GUID
-        const &,void * *)'
+        const &, void **)'
       offset: '00005254'
     - name: ?AddRef@CMmHid@@UAGKXZ
       processed: 'public: virtual unsigned long __stdcall CMmHid::AddRef(void)'
@@ -198,7 +198,7 @@ appearances:
       offset: 000052D3
     - name: ?RegisterConsumerInputClient@CMmHid@@UAGJPAKPAU_CInput_Client@@@Z
       processed: 'public: virtual long __stdcall CMmHid::RegisterConsumerInputClient(unsigned
-        long *,struct _CInput_Client *)'
+        long *, struct _CInput_Client *)'
       offset: '00005338'
     - name: ?DeregisterConsumerInputClient@CMmHid@@UAGJK@Z
       processed: 'public: virtual long __stdcall CMmHid::DeregisterConsumerInputClient(unsigned
@@ -206,7 +206,7 @@ appearances:
       offset: '00005525'
     - name: ?EmitInputReport@CMmHid@@UAGJGGK@Z
       processed: 'public: virtual long __stdcall CMmHid::EmitInputReport(unsigned
-        short,unsigned short,unsigned long)'
+        short, unsigned short, unsigned long)'
       offset: '00005643'
     - name: ?SetMediaFocus@CMmHid@@UAGJK@Z
       processed: 'public: virtual long __stdcall CMmHid::SetMediaFocus(unsigned long)'
@@ -216,20 +216,20 @@ appearances:
       offset: 0000581E
     - name: ?RegisterMediaFocusClient@CMmHid@@UAGJPAKPAX@Z
       processed: 'public: virtual long __stdcall CMmHid::RegisterMediaFocusClient(unsigned
-        long *,void *)'
+        long *, void *)'
       offset: 000058C9
     - name: ?DeregisterMediaFocusClient@CMmHid@@UAGJK@Z
       processed: 'public: virtual long __stdcall CMmHid::DeregisterMediaFocusClient(unsigned
         long)'
       offset: 000059EB
     - name: ??9@YAHABU_GUID@@0@Z
-      processed: int __cdecl operator!=(struct _GUID const &,struct _GUID const &)
+      processed: int __cdecl operator!=(struct _GUID const &, struct _GUID const &)
       offset: 00005AE0
     - name: ??8@YAHABU_GUID@@0@Z
-      processed: int __cdecl operator==(struct _GUID const &,struct _GUID const &)
+      processed: int __cdecl operator==(struct _GUID const &, struct _GUID const &)
       offset: 00005B00
     - name: ??_GCMmHidClassFactory@@QAEPAXI@Z
-      processed: "public: void * __thiscall CMmHidClassFactory::`scalar deleting destructor'(unsigned
+      processed: "public: void * __thiscall CMmHidClassFactory::`scalar deleting dtor'(unsigned
         int)"
       offset: 00005B20
     - name: ??0IClassFactory@@QAE@XZ
@@ -239,7 +239,7 @@ appearances:
       processed: 'public: __thiscall IUnknown::IUnknown(void)'
       offset: 00005B70
     - name: ??_GCMmHid@@QAEPAXI@Z
-      processed: "public: void * __thiscall CMmHid::`scalar deleting destructor'(unsigned
+      processed: "public: void * __thiscall CMmHid::`scalar deleting dtor'(unsigned
         int)"
       offset: 00005B90
     - name: _InsertTailList
@@ -398,7 +398,7 @@ appearances:
       processed: unsigned long g_cLock
       offset: 00001AF8
     - name: ?DefaultUsageList@@3PAGA
-      processed: unsigned short * DefaultUsageList
+      processed: unsigned short *DefaultUsageList
       offset: 00001AFC
     - name: _FocusNotifyClients
       processed: ''
@@ -851,7 +851,7 @@ appearances:
       offset: 00002DDC
     - name: ?QueryInterface@CMmHidClassFactory@@UAGJABU_GUID@@PAPAX@Z
       demangled: 'public: virtual long __stdcall CMmHidClassFactory::QueryInterface(struct
-        _GUID const &,void * *)'
+        _GUID const &, void **)'
       offset: 00002DF0
     - name: ?AddRef@CMmHidClassFactory@@UAGKXZ
       demangled: 'public: virtual unsigned long __stdcall CMmHidClassFactory::AddRef(void)'
@@ -861,13 +861,14 @@ appearances:
       offset: 00002E6F
     - name: ?CreateInstance@CMmHidClassFactory@@UAGJPAUIUnknown@@ABU_GUID@@PAPAX@Z
       demangled: 'public: virtual long __stdcall CMmHidClassFactory::CreateInstance(struct
-        IUnknown *,struct _GUID const &,void * *)'
+        IUnknown *, struct _GUID const &, void **)'
       offset: 00002EC5
     - name: ?LockServer@CMmHidClassFactory@@UAGJH@Z
       demangled: 'public: virtual long __stdcall CMmHidClassFactory::LockServer(int)'
       offset: 00002FAB
     - name: ??0CMmHid@@QAE@PAUIUnknown@@P6AXXZ@Z
-      demangled: 'public: __thiscall CMmHid::CMmHid(struct IUnknown *,void (__cdecl*)(void))'
+      demangled: 'public: __thiscall CMmHid::CMmHid(struct IUnknown *, void (__cdecl
+        *)(void))'
       offset: 00002FD8
     - name: ??1CMmHid@@QAE@XZ
       demangled: 'public: __thiscall CMmHid::~CMmHid(void)'
@@ -877,7 +878,7 @@ appearances:
       offset: '00003029'
     - name: ?QueryInterface@CMmHid@@UAGJABU_GUID@@PAPAX@Z
       demangled: 'public: virtual long __stdcall CMmHid::QueryInterface(struct _GUID
-        const &,void * *)'
+        const &, void **)'
       offset: '00003039'
     - name: ?AddRef@CMmHid@@UAGKXZ
       demangled: 'public: virtual unsigned long __stdcall CMmHid::AddRef(void)'
@@ -887,7 +888,7 @@ appearances:
       offset: 000030B8
     - name: ?RegisterConsumerInputClient@CMmHid@@UAGJPAKPAU_CInput_Client@@@Z
       demangled: 'public: virtual long __stdcall CMmHid::RegisterConsumerInputClient(unsigned
-        long *,struct _CInput_Client *)'
+        long *, struct _CInput_Client *)'
       offset: 0000311D
     - name: ?DeregisterConsumerInputClient@CMmHid@@UAGJK@Z
       demangled: 'public: virtual long __stdcall CMmHid::DeregisterConsumerInputClient(unsigned
@@ -895,7 +896,7 @@ appearances:
       offset: 0000324C
     - name: ?EmitInputReport@CMmHid@@UAGJGGK@Z
       demangled: 'public: virtual long __stdcall CMmHid::EmitInputReport(unsigned
-        short,unsigned short,unsigned long)'
+        short, unsigned short, unsigned long)'
       offset: 000032D2
     - name: ?SetMediaFocus@CMmHid@@UAGJK@Z
       demangled: 'public: virtual long __stdcall CMmHid::SetMediaFocus(unsigned long)'
@@ -905,20 +906,20 @@ appearances:
       offset: 000033B3
     - name: ?RegisterMediaFocusClient@CMmHid@@UAGJPAKPAX@Z
       demangled: 'public: virtual long __stdcall CMmHid::RegisterMediaFocusClient(unsigned
-        long *,void *)'
+        long *, void *)'
       offset: 000033FA
     - name: ?DeregisterMediaFocusClient@CMmHid@@UAGJK@Z
       demangled: 'public: virtual long __stdcall CMmHid::DeregisterMediaFocusClient(unsigned
         long)'
       offset: '00003484'
     - name: ??9@YAHABU_GUID@@0@Z
-      demangled: int __cdecl operator!=(struct _GUID const &,struct _GUID const &)
+      demangled: int __cdecl operator!=(struct _GUID const &, struct _GUID const &)
       offset: '00003510'
     - name: ??8@YAHABU_GUID@@0@Z
-      demangled: int __cdecl operator==(struct _GUID const &,struct _GUID const &)
+      demangled: int __cdecl operator==(struct _GUID const &, struct _GUID const &)
       offset: '00003530'
     - name: ??_GCMmHidClassFactory@@QAEPAXI@Z
-      demangled: "public: void * __thiscall CMmHidClassFactory::`scalar deleting destructor'(unsigned
+      demangled: "public: void * __thiscall CMmHidClassFactory::`scalar deleting dtor'(unsigned
         int)"
       offset: '00003550'
     - name: ??0IClassFactory@@QAE@XZ
@@ -928,7 +929,7 @@ appearances:
       demangled: 'public: __thiscall IUnknown::IUnknown(void)'
       offset: 000035A0
     - name: ??_GCMmHid@@QAEPAXI@Z
-      demangled: "public: void * __thiscall CMmHid::`scalar deleting destructor'(unsigned
+      demangled: "public: void * __thiscall CMmHid::`scalar deleting dtor'(unsigned
         int)"
       offset: 000035C0
     - name: _InsertTailList
@@ -1084,7 +1085,7 @@ appearances:
       demangled: unsigned long g_cLock
       offset: 000000BC
     - name: ?DefaultUsageList@@3PAGA
-      demangled: unsigned short * DefaultUsageList
+      demangled: unsigned short *DefaultUsageList
       offset: 000000C0
     - name: _FocusNotifyClients
       demangled: ''

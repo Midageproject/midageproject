@@ -1,10 +1,26 @@
 filename: windows/system/irenum.vxd
-#TODO: bring up more details from symdeb
 binary: IRENUM
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - cvxdctrl.asm
+  - '"../../../../../dev/ddk/inc/shell.h'
+  - dongle.asm
+  - irlan.c
+  - irpnpset.c
+  - lmpmuxif.c
+  - lmreg.c
+  - lmwrap.asm
+  - loadvxds.c
+  - messages.asm
+  - sirenum.c
+  - sound.asm
+  - statapif.c
+  - str.c
+  - sysctrl.c
+  - ttplib.asm
+  - yieldvmm.asm
   segments:
   - num: '1'
     name: .bss
@@ -847,24 +863,6 @@ appearances:
     - name: _lpszConfigName
       processed: ''
       offset: '00000020'
-  source_tree:
-  - cvxdctrl.asm
-  - '"../../../../../dev/ddk/inc/shell.h'
-  - dongle.asm
-  - irlan.c
-  - irpnpset.c
-  - lmpmuxif.c
-  - lmreg.c
-  - lmwrap.asm
-  - loadvxds.c
-  - messages.asm
-  - sirenum.c
-  - sound.asm
-  - statapif.c
-  - str.c
-  - sysctrl.c
-  - ttplib.asm
-  - yieldvmm.asm
 - version: Windows 98 Retail
   source_tree: []
   segments:

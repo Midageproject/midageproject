@@ -1,10 +1,16 @@
 filename: windows/system32/drivers/usbd.sys
-#TODO: bring up more details from symdeb
 binary: USBD
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - config.c
+  - dbgsrvic.c
+  - device.c
+  - service.c
+  - urb.c
+  - "\t../usbd.c"
+  - usbd.c
   segments:
   - num: '1'
     name: .text
@@ -605,14 +611,6 @@ appearances:
     - name: _USBD_SelectInterface@16
       processed: ''
       offset: 00003DF0
-  source_tree:
-  - config.c
-  - dbgsrvic.c
-  - device.c
-  - service.c
-  - urb.c
-  - "\t../usbd.c"
-  - usbd.c
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -783,45 +781,45 @@ appearances:
     symbols:
     - name: 
         ??_C@_1CC@NPPB@?$AAL?$AAe?$AAg?$AAa?$AAc?$AAy?$AAT?$AAo?$AAs?$AAh?$AAi?$AAb?$AAa?$AAU?$AAS?$AAB?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"LegacyToshibaUSB"
       offset: '00000000'
     - name: ??_C@_17IGND@?$AAu?$AAs?$AAb?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"usb"
       offset: '00000024'
     - name: 
         ??_C@_1CA@BKGH@?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAH?$AAa?$AAc?$AAk?$AAF?$AAl?$AAa?$AAg?$AAs?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DeviceHackFlags"
       offset: 0000002C
     - name: 
         ??_C@_1BO@MLPO@?$AAD?$AAi?$AAa?$AAg?$AAn?$AAo?$AAs?$AAt?$AAi?$AAc?$AAM?$AAo?$AAd?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"DiagnosticMode"
       offset: 0000004C
     - name: 
         ??_C@_1BO@DFIL@?$AAS?$AAu?$AAp?$AAp?$AAo?$AAr?$AAt?$AAN?$AAo?$AAn?$AAC?$AAo?$AAm?$AAp?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"SupportNonComp"
       offset: 0000006C
     - name: _UrbDispatchTable
       demangled: ''
       offset: '00000090'
     - name: 
         ??_C@_1BK@JIID@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAH?$AAC?$AAD?$AA0?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Device\\HCD0"
       offset: '00000288'
     - name: 
         ??_C@_1CC@BFCC@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AAH?$AAC?$AAD?$AA0?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\DosDevices\\HCD0"
       offset: 000002A4
     - name: 
         ??_C@_1BK@HPDD@?$AAU?$AAS?$AAB?$AA?2?$AAR?$AAO?$AAO?$AAT?$AA_?$AAH?$AAU?$AAB?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"USB\\ROOT_HUB"
       offset: 000002C8
     - name: 
         ??_C@_1DG@LMAO@?$AAU?$AAS?$AAB?$AA?2?$AAR?$AAO?$AAO?$AAT?$AA_?$AAH?$AAU?$AAB?$AA?$AA?$AAU?$AAS?$AAB?$AA?2?$AAO?$AAT?$AAH@
-      demangled: "`string'"
+      demangled: L"USB\\ROOT_HUB\0USB\\OTH"
       offset: '000002E4'
     - name: 
         ??_C@_1CA@JCOE@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAU?$AAS?$AAB?$AAP?$AAD?$AAO?$AA?9?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"\\Device\\USBPDO-"
       offset: 0000031C
     - name: _Instance
       demangled: ''

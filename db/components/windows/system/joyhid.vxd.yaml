@@ -1,10 +1,12 @@
 filename: windows/system/joyhid.vxd
-#TODO: bring up more details from symdeb
 binary: JOYHID
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - joyhid.c
+  - shutdown.c
+  - vxd.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -310,10 +312,6 @@ appearances:
     - name: _CCODE_Get_DDB@8
       processed: ''
       offset: '00000054'
-  source_tree:
-  - joyhid.c
-  - shutdown.c
-  - vxd.asm
 - version: Windows 98 Retail
   source_tree:
   - joyhid.c

@@ -1,10 +1,57 @@
 filename: windows/system/pccard.vxd
-#TODO: bring up more details from symdeb
 binary: PCCARD
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - bulkmem.c
+  - cic.c
+  - cicdebug.c
+  - c_init.c
+  - c_int_1a.c
+  - client.c
+  - common.c
+  - config.c
+  - c_status.c
+  - c_tikisr.c
+  - database.c
+  - '"../../../../dev/ddk/inc/pccard.inc'
+  - disks.c
+  - environ1.asm
+  - erase.c
+  - evtmask.c
+  - exclusiv.c
+  - getinfo.c
+  - getstat.c
+  - io.c
+  - irq.c
+  - lconfig.c
+  - memcard.c
+  - memwalk.c
+  - modems.c
+  - mtd.c
+  - pccard.asm
+  - pcdebug.c
+  - pcmaloc.c
+  - pcmcb.c
+  - pcmcom.c
+  - pcmenm.c
+  - pcmmfc.c
+  - pcmmsg.asm
+  - pcmwin.c
+  - queue.c
+  - readconf.c
+  - recog.c
+  - region.c
+  - reset.c
+  - retssent.c
+  - socket.c
+  - ssaddrep.c
+  - timer.c
+  - trans.c
+  - tuple.c
+  - vendor.c
+  - window.c
   segments:
   - num: '1'
     name: .bss
@@ -1718,55 +1765,6 @@ appearances:
     - name: _DbgTbl
       processed: ''
       offset: 00000CE8
-  source_tree:
-  - bulkmem.c
-  - cic.c
-  - cicdebug.c
-  - c_init.c
-  - c_int_1a.c
-  - client.c
-  - common.c
-  - config.c
-  - c_status.c
-  - c_tikisr.c
-  - database.c
-  - '"../../../../dev/ddk/inc/pccard.inc'
-  - disks.c
-  - environ1.asm
-  - erase.c
-  - evtmask.c
-  - exclusiv.c
-  - getinfo.c
-  - getstat.c
-  - io.c
-  - irq.c
-  - lconfig.c
-  - memcard.c
-  - memwalk.c
-  - modems.c
-  - mtd.c
-  - pccard.asm
-  - pcdebug.c
-  - pcmaloc.c
-  - pcmcb.c
-  - pcmcom.c
-  - pcmenm.c
-  - pcmmfc.c
-  - pcmmsg.asm
-  - pcmwin.c
-  - queue.c
-  - readconf.c
-  - recog.c
-  - region.c
-  - reset.c
-  - retssent.c
-  - socket.c
-  - ssaddrep.c
-  - timer.c
-  - trans.c
-  - tuple.c
-  - vendor.c
-  - window.c
 - version: Windows 98 Retail
   source_tree: []
   segments:

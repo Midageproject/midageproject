@@ -1,10 +1,15 @@
 filename: windows/system32/drivers/usbscan.sys
-#TODO: bring up more details from symdeb
 binary: USBSCAN
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - ioctl.c
+  - "\t../ocrw.c"
+  - power.c
+  - usbscan.c
+  - ocrw.c
+  - "power.c\t../ocrw.c"
   segments:
   - num: '1'
     name: .text
@@ -334,13 +339,6 @@ appearances:
     - name: _USPower@8
       processed: ''
       offset: 00002C80
-  source_tree:
-  - ioctl.c
-  - "\t../ocrw.c"
-  - power.c
-  - usbscan.c
-  - ocrw.c
-  - "power.c\t../ocrw.c"
 - version: Windows 98 Retail
   source_tree: []
   segments:
@@ -389,17 +387,17 @@ appearances:
     offset: '00000290'
     symbols:
     - name: ??_C@_0BC@HCGB@?2Device?2Usbscan?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '"\\Device\\Usbscan%d"'
       offset: '00000000'
     - name: ??_C@_0O@LKAB@?2?2?4?2Usbscan?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '"\\\\.\\Usbscan%d"'
       offset: '00000014'
     - name: 
         ??_C@_1BO@KHCE@?$AAC?$AAr?$AAe?$AAa?$AAt?$AAe?$AAF?$AAi?$AAl?$AAe?$AAN?$AAa?$AAm?$AAe?$AA?$AA@
-      demangled: "`string'"
+      demangled: L"CreateFileName"
       offset: '00000024'
     - name: ??_C@_0BG@NJEG@?2DosDevices?2Usbscan?$CFd?$AA@
-      demangled: "`string'"
+      demangled: '"\\DosDevices\\Usbscan%d"'
       offset: '00000044'
     - name: _NextDeviceInstance
       demangled: ''

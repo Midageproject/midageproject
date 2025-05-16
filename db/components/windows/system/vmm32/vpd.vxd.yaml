@@ -1,10 +1,10 @@
 filename: windows/system/vmm32/vpd.vxd
-#TODO: bring up more details from symdeb
 binary: VPD
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - vpd.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -163,8 +163,6 @@ appearances:
     - name: _VPD_Add_Resource
       processed: ''
       offset: '00000000'
-  source_tree:
-  - vpd.asm
 - version: Windows 98 Retail
   source_tree:
   - vpd.asm

@@ -1,10 +1,36 @@
 filename: windows/system/vmm32/vdd.vxd
-#TODO: bring up more details from symdeb
 binary: VDD
 description: ''
 appearances:
 - version: Windows 98 Debug
-  tree: []
+  source_tree:
+  - fileio.asm
+  - mainvdd.h
+  - vddasd.c
+  - vddbeep.c
+  - vddctl.asm
+  - vdddebug.asm
+  - vdddev.c
+  - vddedid.c
+  - vddenum.c
+  - vddfonts.asm
+  - vddgrab.asm
+  - vddint.asm
+  - vddioctl.c
+  - vddoem.asm
+  - vddpci.c
+  - vddphmem.asm
+  - vddpnp.asm
+  - vddproc.asm
+  - vddpwr.c
+  - vddrom.c
+  - vddstate.asm
+  - vddsvc.asm
+  - vddtio.asm
+  - vddvga.asm
+  - vddvmmem.asm
+  - " !\"#%&'(*+,-.../vdddev.c"
+  - vddirp.c
   segments:
   - num: '1'
     name: _LGROUP
@@ -3056,34 +3082,6 @@ appearances:
     - name: _GUID_GPIO_INTERFACE
       processed: ''
       offset: '00000010'
-  source_tree:
-  - fileio.asm
-  - mainvdd.h
-  - vddasd.c
-  - vddbeep.c
-  - vddctl.asm
-  - vdddebug.asm
-  - vdddev.c
-  - vddedid.c
-  - vddenum.c
-  - vddfonts.asm
-  - vddgrab.asm
-  - vddint.asm
-  - vddioctl.c
-  - vddoem.asm
-  - vddpci.c
-  - vddphmem.asm
-  - vddpnp.asm
-  - vddproc.asm
-  - vddpwr.c
-  - vddrom.c
-  - vddstate.asm
-  - vddsvc.asm
-  - vddtio.asm
-  - vddvga.asm
-  - vddvmmem.asm
-  - " !\"#%&'(*+,-.../vdddev.c"
-  - vddirp.c
 - version: Windows 98 Retail
   source_tree:
   - fileio.asm
