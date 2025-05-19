@@ -7,6 +7,7 @@ This project aims to collect and index technical details about Windows 9x intern
 ## Status
 
 Early-stage, explorer is ready and can be used from [here](https://midageproject.github.io)
+[Preprocessed DDK headers here](https://github.com/Midageproject/w9x-ddk-preprocessed)
 
 ## Licensing
 
