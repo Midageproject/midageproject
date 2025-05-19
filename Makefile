@@ -8,7 +8,6 @@ pipeline:
 		python3 tools/extract_symbols.py $(SYMBOL_DIR)
 		python3 tools/fill_db.py $(SYMBOL_DIR)-output
 		python3 tools/pathcrusher.py $(SYMBOL_DIR)
-		make distclean
 		
 clean:
 	rm -rf work
