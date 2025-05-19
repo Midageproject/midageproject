@@ -4,19 +4,18 @@ description: ''
 appearances:
 - version: Windows 98 Debug
   source_tree:
-  - aer.c
-  - debug.c
-  - portaer.asm
-  - portasm.asm
-  - "\t../port.c"
-  - portdbg.asm
-  - portio.asm
+  - ../aer.c
+  - ../debug.c
+  - ../portaer.asm
+  - ../portasm.asm
+  - ../port.c
+  - ../portdbg.asm
+  - ../portio.asm
   - printf.asm
-  - scsiport.asm
-  - utils.asm
-  - 'ScsiPortConvPhysAddrToUlong(): Address.HighPart is non-0'
-  - 'ScsiPortGetDeviceBase(): IoAddress.High is non-0'
-  - 'ScsiPortValidateRange(): IoAddress.High is non-0'
+  - ../scsiport.asm
+  - ../utils.asm
+  - Address.H
+  - IoAddress.H
   segments:
   - num: '1'
     name: _LGROUP
@@ -438,13 +437,13 @@ appearances:
       offset: '00000028'
 - version: Windows 98 Retail
   source_tree:
-  - aer.c
-  - portaer.asm
-  - portasm.asm
-  - "\t../port.c"
-  - portio.asm
-  - scsiport.asm
-  - utils.asm
+  - ../aer.c
+  - ../portaer.asm
+  - ../portasm.asm
+  - ../port.c
+  - ../portio.asm
+  - ../scsiport.asm
+  - ../utils.asm
   segments:
   - num: '1'
     name: _LGROUP

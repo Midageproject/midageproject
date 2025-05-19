@@ -4,57 +4,42 @@ description: ''
 appearances:
 - version: Windows 98 Debug
   source_tree:
-  - INC/sockets/netinet/in.h
-  - ../NBT/hashtbl.c
-  - ../NBT/hndlrs.c
-  - ../NBT/inbound.c
-  - ../NBT/init.c
-  - ../NBT/name.c
-  - ../NBT/namesrv.c
-  - ../NBT/nbtutils.c
-  - ../NBT/parse.c
-  - ../NBT/proxy.c
-  - ../NBT/timer.c
-  - ../NBT/udpsend.c
-  - ../VXD/chicasm.asm
-  - ../VXD/chic.c
-  - ../VXD/cinit.c
-  - ../VXD/client.asm
-  - ../VXD/ctimer.c
-  - ../VXD/cvxdfile.asm
-  - ../VXD/cxport.asm
-  - ../VXD/dns.c
-  - ../VXD/fileio.c
-  - ../VXD/nbtinfo.c
-  - ../VXD/ncb.c
-  - ../VXD/newdns.c
-  - ../VXD/tdiaddr.c
-  - ../VXD/tdicnct.c
-  - ../VXD/tdihndlr.c
-  - ../VXD/tdiout.c
-  - ../VXD/util.c
-  - ../VXD/vnbtd.asm
-  - ../VXD/vxddebug.c
-  - ../VXD/vxdisol.c
-  - 'Nbt.CleanupAfterDisconnect: LowerConn=<%x>, State=<%x>'
-  - 'Nbt.CleanupAfterDisconnect: Originator= %X, pLowerConn=%X'
-  - 'Nbt.CleanupConnectingState: Cleanup in the Connecting State %X'
-  - 'Nbt.CleanupConnectingState: Found NameQuery on Lmhost Context: pConnEle %X'
-  - 'Nbt.CleanupConnectingState: Found NameQuery on Lmhost Q: pConnEle %X'
-  - 'Nbt.CleanupConnectingState: Got Cleanup During Active NameQuery: pConnEle %X'
-  - 'Nbt.CompleteSessionSetup: Accepted Connection %X LowerConn=%X'
-  - 'Nbt.CompleteSessionSetup: Could not send the Session Response to TCP status =
-    %X'
-  - 'Nbt.ContinueQueryNameOnNet: Query failed - bad retcode from UdpSendNsBcast =
-    %X'
-  - 'Nbt.CreateHashTable: Unable to create hash table'
-  - '!NbtSetEventHandler( (tCLIENTELE*)tdiRequest.Handle.AddressHandle, ((USHORT)1),
-    VxdDisconnectHandler, (tCLIENTELE*)tdiRequest.Handle.AddressHandle)'
-  - '!NbtSetEventHandler( (tCLIENTELE*)tdiRequest.Handle.AddressHandle, ((USHORT)3),
-    ReceiveAnyHandler, (tCLIENTELE*)tdiRequest.Handle.AddressHandle )'
-  - (pTracker->SendBuffer.HdrLength + pTracker->SendBuffer.Length) == 4
-  - '!((status==0)||(status==0xff)) || (SentSize == (SendBuff.tBuff.HdrLength + SendBuff.tBuff.Length
-    + SendBuff.Length2))'
+  - ../INC/sockets/netinet/in.h
+  - ../../NBT/hashtbl.c
+  - ../../NBT/hndlrs.c
+  - ../../NBT/inbound.c
+  - ../../NBT/init.c
+  - ../../NBT/name.c
+  - ../../NBT/namesrv.c
+  - ../../NBT/nbtutils.c
+  - ../../NBT/parse.c
+  - ../../NBT/proxy.c
+  - ../../NBT/timer.c
+  - ../../NBT/udpsend.c
+  - ../../VXD/chicasm.asm
+  - ../../VXD/chic.c
+  - ../../VXD/cinit.c
+  - ../../VXD/client.asm
+  - ../../VXD/ctimer.c
+  - ../../VXD/cvxdfile.asm
+  - ../../VXD/cxport.asm
+  - ../../VXD/dns.c
+  - ../../VXD/fileio.c
+  - ../../VXD/nbtinfo.c
+  - ../../VXD/ncb.c
+  - ../../VXD/newdns.c
+  - ../../VXD/tdiaddr.c
+  - ../../VXD/tdicnct.c
+  - ../../VXD/tdihndlr.c
+  - ../../VXD/tdiout.c
+  - ../../VXD/util.c
+  - ../../VXD/vnbtd.asm
+  - ../../VXD/vxddebug.c
+  - ../../VXD/vxdisol.c
+  - Nbt.C
+  - SendBuffer.H
+  - SendBuff.tBuff.H
+  - tdiRequest.H
   - Yt.h
   segments:
   - num: '1'

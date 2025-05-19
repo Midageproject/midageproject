@@ -4,25 +4,17 @@ description: ''
 appearances:
 - version: Windows 98 Debug
   source_tree:
-  - async.c
-  - dbg.c
-  - ohciroot.c
+  - ../async.c
+  - ../dbg.c
+  - ../ohciroot.c
+  - ../ohciurb.c
+  - ../ohcixfer.c
+  - ../openhci.c
+  - hca.H
+  - HcED.H
   - ohciurb.c
-  - ohcixfer.c
-  - openhci.c
-  - (Ed->HcED.HeadP & ~0X0F) == Ed->HcED.TailP
-  - (ed->HcED.HeadP & ~15) == ed->HcED.TailP
-  - (ed->HcED.HeadP & ~HcEDHeadP_FLAGS) == nextTd->PhysicalAddress
-  - ed->HcED.HeadP & HcEDHeadP_HALT
-  - (Ed->HcED.HeadP & HcEDHeadP_HALT) || Ed->HcED.sKip
-  - endpoint == transfer->hca.HcdEndpoint
-  - "'ohciurb.c: _OpenEndpoint: Non serial call! %d"
-  - PagePhys.HighPart == 0
-  - transfer->hca.HcdEndpoint == endpoint
-  - transfer->hca.HcdIrp->Cancel == FALSE
-  - transfer->hca.HcdListEntry.Flink == NULL
-  - Trans->hca.HcdEndpoint == Endpoint
-  - ../../../../wdm10/ddk/inc/wdm.h
+  - PagePhys.H
+  - ../../../../../wdm10/ddk/inc/wdm.h
   segments:
   - num: '1'
     name: .text

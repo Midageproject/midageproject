@@ -4,20 +4,18 @@ description: ''
 appearances:
 - version: Windows 98 Debug
   source_tree:
-  - ../allowins.c
-  - ../libinit.ASM
+  - ../../allowins.c
+  - ../../libinit.ASM
   - lshl.asm
-  - ../mminstal.c
-  - ../selbest.c
+  - ../../mminstal.c
+  - ../../selbest.c
   - strchr.asm
   - strcspn.asm
   - strspn.asm
   - strstr.asm
   - strupr.asm
-  - Device Installed8You may have to restart Windows for your change to work.cSetup
-    has found a newer version of this driver and can install it now to get the best
-    performance.
-  - shell32.dll,Control_RunDLL mmsys.cpl,@0,S
+  - mmsys.c
+  - work.c
   segments:
   - num: '1'
     name: _TEXT
@@ -592,11 +590,11 @@ appearances:
       offset: 00000C54
 - version: Windows 98 Retail
   source_tree:
-  - ../allowins.c
-  - ../libinit.ASM
+  - ../../allowins.c
+  - ../../libinit.ASM
   - lshl.asm
-  - ../mminstal.c
-  - ../selbest.c
+  - ../../mminstal.c
+  - ../../selbest.c
   - strchr.asm
   - strcspn.asm
   - strspn.asm
