@@ -7,7 +7,7 @@ from pathlib import Path
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python script.py <symbol_directory>")
+        print("Usage: python extract_symbols.py <symbol_directory>")
         sys.exit(1)
 
     input_dir = Path(sys.argv[1])

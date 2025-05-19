@@ -55,7 +55,6 @@ for component in config['include']:
 
     except Exception as e:
         print(f"Error processing component {component}")
-        print
         continue
 
 
@@ -69,7 +68,7 @@ for i in versions:
            continue  # skip intermediate dirs like vmm32
          if path.is_dir():
             dirs.append(str(path.relative_to(root)))
-            rendered = selection.render(data=dirs, title="files")
+            rendered = selection.render(data=dirs, title="Files")
             rendered = main.render(data=config, content_block=rendered)
             with open(f'{output_dir}/explorer/{i}/index.html', 'w') as f:
                 f.write(rendered)
