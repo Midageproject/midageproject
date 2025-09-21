@@ -32,8 +32,10 @@ def main():
         (output_dir / Path(entry).parent).mkdir(parents=True, exist_ok=True)
 
         if not sym_file.is_file():
-            print(f"Missing: {sym_file}")
-            continue
+            sym_file = input_dir / f"{name}.sym".upper()
+            if not sym_file.is_file():
+                print(f"Missing: {sym_file}")
+                continue
 
         cmd = ["work/symread32", str(sym_file), "-o", str(csv_file)]
         print("Running:", " ".join(cmd))
