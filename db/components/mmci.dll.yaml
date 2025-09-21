@@ -1,0 +1,2322 @@
+filename: mmci.dll
+binary: MMCI
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../../allowins.c
+  - ../../libinit.ASM
+  - lshl.asm
+  - ../../mminstal.c
+  - ../../selbest.c
+  - strchr.asm
+  - strcspn.asm
+  - strspn.asm
+  - strstr.asm
+  - strupr.asm
+  - mmsys.c
+  - work.c
+  segments:
+  - num: '1'
+    name: _TEXT
+    offset: 000011B0
+    symbols:
+    - name: LibEntry
+      processed: ''
+      offset: '00000000'
+    - name: WEP
+      processed: ''
+      offset: '00000021'
+    - name: _aszMRClassDrvr
+      processed: ''
+      offset: '000001E5'
+    - name: _aszMessageSvr
+      processed: ''
+      offset: 0000021F
+    - name: _aszConfigured
+      processed: ''
+      offset: '00000241'
+    - name: _aszDriverKey
+      processed: ''
+      offset: 0000024C
+    - name: _aszDriversSec
+      processed: ''
+      offset: 0000025A
+    - name: _aszJoyClass
+      processed: ''
+      offset: '00000262'
+    - name: _aszAuxClass
+      processed: ''
+      offset: 0000026B
+    - name: _aszMixerClass
+      processed: ''
+      offset: 0000026F
+    - name: _aszMidiClass
+      processed: ''
+      offset: '00000275'
+    - name: _aszWaveClass
+      processed: ''
+      offset: 0000027A
+    - name: _aszSWKey
+      processed: ''
+      offset: 0000027F
+    - name: _aszMediaType
+      processed: ''
+      offset: 0000028B
+    - name: _aszMediaResKey
+      processed: ''
+      offset: '00000295'
+    - name: _aszNewDrvKey
+      processed: ''
+      offset: 000002CC
+    - name: _aszNULL
+      processed: ''
+      offset: '00000315'
+    - name: _aszSection
+      processed: ''
+      offset: '00000316'
+    - name: LibMain
+      processed: ''
+      offset: '00000410'
+    - name: _MMInfDoUpdateInis
+      processed: ''
+      offset: '00000908'
+    - name: _MMInfDoAddReg
+      processed: ''
+      offset: '00000990'
+    - name: _MMInfDoCopyFiles
+      processed: ''
+      offset: 00000C76
+    - name: _MMGetDisksInfo
+      processed: ''
+      offset: 00000EB4
+    - name: MEDIA_CONVERTOLDINF
+      processed: ''
+      offset: 00000FEA
+    - name: MEDIA_SELECTDEVICE
+      processed: ''
+      offset: 0000134C
+    - name: INITDRVCONFIGINFO
+      processed: ''
+      offset: 0000139E
+    - name: CONFIGUREDRIVER
+      processed: ''
+      offset: 000013C6
+    - name: CONFIGURENEWDRIVERS
+      processed: ''
+      offset: '00001426'
+    - name: _ParseVersion
+      processed: ''
+      offset: 00001C18
+    - name: _PerUserSetupPreferredAudioDevices
+      processed: ''
+      offset: 00001D2A
+    - name: _SetupPreferredAudioDevices
+      processed: ''
+      offset: 00001E0C
+    - name: REMOVERING3REGENTRIES
+      processed: ''
+      offset: 000020DE
+    - name: REMOVEDEVICE
+      processed: ''
+      offset: '00002362'
+    - name: MEDIA_INSTALLSOFTWAREDEVICE
+      processed: ''
+      offset: '00002656'
+    - name: DIINSTALLDEVICEUICALLBACKPROC
+      processed: ''
+      offset: '00002766'
+    - name: MEDIA_INSTALLDEVICESECTION
+      processed: ''
+      offset: 0000284A
+    - name: _FindPathToOtherInf
+      processed: ''
+      offset: '00002930'
+    - name: MEDIA_INSTALLOTHERDEVICES
+      processed: ''
+      offset: 000029B6
+    - name: MEDIA_INSTALLHARDWAREDEVICE
+      processed: ''
+      offset: 00002ABA
+    - name: MEDIATYPEISSOFTWARE
+      processed: ''
+      offset: 00002C3C
+    - name: MEDIA_INSTALLDEVICE
+      processed: ''
+      offset: 00002C7A
+    - name: CLASSINSTALL
+      processed: ''
+      offset: 00002CE8
+    - name: __aFlshl
+      processed: ''
+      offset: 00002DA4
+    - name: __fstrchr
+      processed: ''
+      offset: 00002DB0
+    - name: __fstrupr
+      processed: ''
+      offset: 00002DE2
+    - name: __fstrcspn
+      processed: ''
+      offset: '00002E06'
+    - name: __fstrspn
+      processed: ''
+      offset: '00002E62'
+    - name: __fstrstr
+      processed: ''
+      offset: 00002EBE
+  - num: '2'
+    name: ALLOWINS_TEXT
+    offset: '00001990'
+    symbols:
+    - name: FILEEXISTS
+      processed: ''
+      offset: '00000074'
+    - name: MYSTRTOK
+      processed: ''
+      offset: '00000098'
+    - name: _LPSTRtoDWORD
+      processed: ''
+      offset: 0000012E
+    - name: FILENAMEFROMPATH
+      processed: ''
+      offset: 000001A0
+    - name: _GetFileVersion
+      processed: ''
+      offset: 000001F6
+    - name: ISINFSHIPPEDWITHWINDOWS
+      processed: ''
+      offset: 000002EA
+    - name: _FindPathToInf
+      processed: ''
+      offset: '00000482'
+    - name: _ProcessDDBKey
+      processed: ''
+      offset: '00000532'
+    - name: _GetUpgradeWarningFromDDB
+      processed: ''
+      offset: '00000680'
+    - name: _SearchDDB
+      processed: ''
+      offset: '00000738'
+    - name: GETUPGRADEWARNINGSENUM
+      processed: ''
+      offset: '00000914'
+    - name: _IsInRegistry
+      processed: ''
+      offset: '00000986'
+    - name: _RegTestsTrue
+      processed: ''
+      offset: 00000D06
+    - name: _ProcessKnownRegSection
+      processed: ''
+      offset: 00000DD6
+    - name: SEARCHINFREGWARNINGS
+      processed: ''
+      offset: 00000EAA
+    - name: GETUPGRADEWARNINGS
+      processed: ''
+      offset: 00000F22
+    - name: GETEXISTINGDRIVERINFO
+      processed: ''
+      offset: '00001076'
+    - name: GETNEWDRIVERINFO
+      processed: ''
+      offset: 000011DE
+    - name: INITDRVUPGRADEINFO
+      processed: ''
+      offset: 0000123E
+    - name: ALLOWDRIVERINSTALL
+      processed: ''
+      offset: 000012B2
+  - num: '3'
+    name: SELBEST_TEXT
+    offset: 00001C40
+    symbols:
+    - name: GETDRIVERTYPEENUM
+      processed: ''
+      offset: '00000034'
+    - name: _GetDriverType
+      processed: ''
+      offset: 000000C8
+    - name: BETTERDRIVER
+      processed: ''
+      offset: 000001BE
+    - name: _GetExistingDriverMatchParams
+      processed: ''
+      offset: 000002CC
+    - name: PICKBESTDRIVER
+      processed: ''
+      offset: '00000394'
+    - name: SELECTBESTCOMPATDRV
+      processed: ''
+      offset: '000004E4'
+  - num: '4'
+    name: DGROUP
+    offset: '00000000'
+    symbols:
+    - name: rsrvptrs
+      processed: ''
+      offset: '00000006'
+    - name: pLocalHeap
+      processed: ''
+      offset: '00000006'
+    - name: pAtomTable
+      processed: ''
+      offset: '00000008'
+    - name: pStackTop
+      processed: ''
+      offset: 0000000A
+    - name: pStackMin
+      processed: ''
+      offset: 0000000C
+    - name: pStackBot
+      processed: ''
+      offset: 0000000E
+    - name: ?szSTExecFmt@?2??SysTray_EnableService@@9@9
+      processed: extern "C" `extern "C" SysTray_EnableService'::`3'::szSTExecFmt
+      offset: 0000001C
+    - name: ??_C@_0BA@MAHH@SystemTray_Main?$AA@
+      processed: '"SystemTray_Main"'
+      offset: 0000002C
+    - name: ??_C@_0BP@HPJI@system?4ini?0386Enh?0?0?$CCdevice?$DN?$CFs?$CC?$AA@
+      processed: '"system.ini,386Enh,,\"device=%s\""'
+      offset: 0000003C
+    - name: ??_C@_04IBCE@?$FLMCI?$AA@
+      processed: '"[MCI"'
+      offset: 0000005C
+    - name: ??_C@_03MFOG@MCI?$AA@
+      processed: '"MCI"'
+      offset: '00000062'
+    - name: ??_C@_01PCFE@?2?$AA@
+      processed: '"\\"'
+      offset: '00000066'
+    - name: ??_C@_04PLDJ@Wave?$AA@
+      processed: '"Wave"'
+      offset: '00000068'
+    - name: ??_C@_04CCOG@MIDI?$AA@
+      processed: '"MIDI"'
+      offset: 0000006E
+    - name: ??_C@_05JHOC@Mixer?$AA@
+      processed: '"Mixer"'
+      offset: '00000074'
+    - name: ??_C@_03IEAK@Aux?$AA@
+      processed: '"Aux"'
+      offset: 0000007A
+    - name: ??_C@_08GCCE@Joystick?$AA@
+      processed: '"Joystick"'
+      offset: 0000007E
+    - name: ??_C@_07NGLM@MSVIDEO?$AA@
+      processed: '"MSVIDEO"'
+      offset: '00000088'
+    - name: ??_C@_0L@LLFA@WaveMapper?$AA@
+      processed: '"WaveMapper"'
+      offset: '00000090'
+    - name: ??_C@_0L@OIOM@MidiMapper?$AA@
+      processed: '"MidiMapper"'
+      offset: 0000009C
+    - name: ??_C@_06LFAG@MAPPER?$AA@
+      processed: '"MAPPER"'
+      offset: 000000A8
+    - name: ??_C@_04DDDH@VIDC?$AA@
+      processed: '"VIDC"'
+      offset: 000000B0
+    - name: ??_C@_04JKEH@VIDS?$AA@
+      processed: '"VIDS"'
+      offset: 000000B6
+    - name: ??_C@_03CHOA@ICM?$AA@
+      processed: '"ICM"'
+      offset: 000000BC
+    - name: ??_C@_05PBMJ@MSACM?$AA@
+      processed: '"MSACM"'
+      offset: 000000C0
+    - name: ??_C@_03LHFF@ACM?$AA@
+      processed: '"ACM"'
+      offset: 000000C6
+    - name: ??_C@_07CNPM@UNKNOWN?$AA@
+      processed: '"UNKNOWN"'
+      offset: 000000CA
+    - name: ??_C@_0L@MEGC@HKLM?0?$CFs?0?0?0?$AA@
+      processed: '"HKLM,%s,,,"'
+      offset: 000000D2
+    - name: ??_C@_0BF@JNLF@HKLM?0?$CFs?0Driver?0?0?$CC?$CFs?$CC?$AA@
+      processed: '"HKLM,%s,Driver,,\"%s\""'
+      offset: 000000DE
+    - name: ??_C@_0BK@LJDG@HKLM?0?$CFs?0Description?0?0?$CC?$CFs?$CC?$AA@
+      processed: '"HKLM,%s,Description,,\"%s\""'
+      offset: 000000F4
+    - name: ??_C@_0BJ@NJDM@HKLM?0?$CFs?0Parameters?0?0?$CC?$CFs?$CC?$AA@
+      processed: '"HKLM,%s,Parameters,,\"%s\""'
+      offset: 0000010E
+    - name: ??_C@_0BB@PMCK@SourceDisksFiles?$AA@
+      processed: '"SourceDisksFiles"'
+      offset: '00000128'
+    - name: ??_C@_05IPJG@?$CFs?3?$CFs?$AA@
+      processed: '"%s:%s"'
+      offset: 0000013A
+    - name: ??_C@_02MECO@?$CFd?$AA@
+      processed: '"%d"'
+      offset: '00000140'
+    - name: ??_C@_0M@BHNN@?$CFs?5?$DN?5?$CFs?0?$CFs?0?$AA@
+      processed: '"%s = %s,%s,"'
+      offset: '00000144'
+    - name: ??_C@_05DMPF@disks?$AA@
+      processed: '"disks"'
+      offset: '00000150'
+    - name: ??_C@_08NKAM@oemdisks?$AA@
+      processed: '"oemdisks"'
+      offset: '00000156'
+    - name: ??_C@_07PCHH@Unknown?$AA@
+      processed: '"Unknown"'
+      offset: '00000160'
+    - name: ??_C@_08FKFA@Provider?$AA@
+      processed: '"Provider"'
+      offset: '00000168'
+    - name: ??_C@_07BPOH@version?$AA@
+      processed: '"version"'
+      offset: '00000172'
+    - name: ??_C@_07PCHH@OldDrvs?$AA@
+      processed: '"OldDrvs"'
+      offset: 0000017A
+    - name: ??_C@_0N@NONH@Manufacturer?$AA@
+      processed: '"Manufacturer"'
+      offset: '00000182'
+    - name: ??_C@_02PIFG@11?$AA@
+      processed: '"11"'
+      offset: '00000190'
+    - name: ??_C@_0P@KHII@DefaultDestDir?$AA@
+      processed: '"DefaultDestDir"'
+      offset: '00000194'
+    - name: ??_C@_0BA@CKAH@DestinationDirs?$AA@
+      processed: '"DestinationDirs"'
+      offset: 000001A4
+    - name: ??_C@_07FFBB@Strings?$AA@
+      processed: '"Strings"'
+      offset: 000001B4
+    - name: ??_C@_06JCDB@?$CF?$CF?$CFs?$CF?$CF?$AA@
+      processed: '"%%%s%%"'
+      offset: 000001BC
+    - name: ??_C@_04JBBA@?$CC?$CFs?$CC?$AA@
+      processed: '"\"%s\""'
+      offset: 000001C4
+    - name: ??_C@_0N@HPDF@Copyfiles?4?$CFs?$AA@
+      processed: '"Copyfiles.%s"'
+      offset: 000001CA
+    - name: ??_C@_0O@EACA@Updateinis?4?$CFs?$AA@
+      processed: '"Updateinis.%s"'
+      offset: 000001D8
+    - name: ??_C@_09IFNE@AddReg?4?$CFs?$AA@
+      processed: '"AddReg.%s"'
+      offset: '000001E6'
+    - name: ??_C@_0P@NLGL@?0?5Copyfiles?4?$CFs?$AA@
+      processed: '", Copyfiles.%s"'
+      offset: 000001F0
+    - name: ??_C@_0BA@BIE@?0?5Updateinis?4?$CFs?$AA@
+      processed: '", Updateinis.%s"'
+      offset: '00000200'
+    - name: ??_C@_0M@NCCE@?0?5AddReg?4?$CFs?$AA@
+      processed: '", AddReg.%s"'
+      offset: '00000210'
+    - name: ??_C@_09PGDB@CopyFiles?$AA@
+      processed: '"CopyFiles"'
+      offset: 0000021C
+    - name: ??_C@_0L@POOM@Updateinis?$AA@
+      processed: '"Updateinis"'
+      offset: '00000226'
+    - name: ??_C@_06IKJC@AddReg?$AA@
+      processed: '"AddReg"'
+      offset: '00000232'
+    - name: ??_C@_08LOIE@Software?$AA@
+      processed: '"Software"'
+      offset: 0000023A
+    - name: ??_C@_01FBAH@1?$AA@
+      processed: '"1"'
+      offset: '00000244'
+    - name: ??_C@_0FA@NMKJ@Software?2Microsoft?2Active?5Setup?2@
+      processed: '"Software\\Microsoft\\Active Setup\\"...'
+      offset: '00000246'
+    - name: ??_C@_07MNFD@Version?$AA@
+      processed: '"Version"'
+      offset: '00000296'
+    - name: ??_C@_0M@ENIL@?$CFu?0?$CFu?0?$CFu?0?$CFu?$AA@
+      processed: '"%u,%u,%u,%u"'
+      offset: 0000029E
+    - name: ??_C@_08FNF@StubPath?$AA@
+      processed: '"StubPath"'
+      offset: 000002AA
+    - name: ??_C@_0N@EJIA@rundll32?4exe?$AA@
+      processed: '"rundll32.exe"'
+      offset: 000002B4
+    - name: ??_C@_0CK@HHEC@shell32?4dll?0Control_RunDLL?5mmsys@
+      processed: '"shell32.dll,Control_RunDLL mmsys"...'
+      offset: 000002C2
+    - name: ??_C@_01FCOA@?5?$AA@
+      processed: '" "'
+      offset: 000002EC
+    - name: ??_C@_0O@IKHH@EnumPropPages?$AA@
+      processed: '"EnumPropPages"'
+      offset: 000002EE
+    - name: ??_C@_09BHKM@DevLoader?$AA@
+      processed: '"DevLoader"'
+      offset: 000002FC
+    - name: ??_C@_06LCIG@Driver?$AA@
+      processed: '"Driver"'
+      offset: '00000306'
+    - name: ??_C@_0L@MNFF@NTMPDriver?$AA@
+      processed: '"NTMPDriver"'
+      offset: 0000030E
+    - name: ??_C@_0BC@NLBA@AssociatedFilters?$AA@
+      processed: '"AssociatedFilters"'
+      offset: 0000031A
+    - name: ??_C@_04BKDP@FDMA?$AA@
+      processed: '"FDMA"'
+      offset: 0000032C
+    - name: ??_C@_0BD@IFEJ@UnretainedSettings?$AA@
+      processed: '"UnretainedSettings"'
+      offset: '00000332'
+    - name: ??_C@_0L@CMJP@SubClasses?$AA@
+      processed: '"SubClasses"'
+      offset: '00000346'
+    - name: ??_C@_0L@OEGH@NewDrivers?$AA@
+      processed: '"NewDrivers"'
+      offset: '00000352'
+    - name: ??_C@_00A@?$AA@
+      processed: '""'
+      offset: 0000035E
+    - name: ??_C@_0M@CAHD@AlsoInstall?$AA@
+      processed: '"AlsoInstall"'
+      offset: '00000360'
+    - name: ??_C@_01KMAE@?0?$AA@
+      processed: '","'
+      offset: 0000036C
+    - name: ??_C@_02NDAK@?5?$CI?$AA@
+      processed: '" ("'
+      offset: 0000036E
+    - name: ??_C@_02HJJN@?5?$CJ?$AA@
+      processed: '" )"'
+      offset: '00000372'
+    - name: ??_C@_0BL@DMCO@SetupPreferredAudioDevices?$AA@
+      processed: '"SetupPreferredAudioDevices"'
+      offset: '00000376'
+    - name: ??_C@_0DA@KCKP@Software?2Microsoft?2Windows?2Curre@
+      processed: '"Software\\Microsoft\\Windows\\Curre"...'
+      offset: '00000392'
+    - name: ??_C@_07HFM@HWSetup?$AA@
+      processed: '"HWSetup"'
+      offset: 000003C2
+    - name: ??_C@_03IGFG@?5?0?7?$AA@
+      processed: '" ,\t"'
+      offset: 000003CA
+    - name: ??_C@_09BBGE@?2INFBACK?2?$AA@
+      processed: '"\\INFBACK\\"'
+      offset: 000003CE
+    - name: ??_C@_07NKML@?2OTHER?2?$AA@
+      processed: '"\\OTHER\\"'
+      offset: 000003D8
+    - name: ??_C@_07IHKF@strings?$AA@
+      processed: '"strings"'
+      offset: '000003E0'
+    - name: ??_C@_01BJG@?6?$AA@
+      processed: '"\n"'
+      offset: '000003E8'
+    - name: ??_C@_0BD@FGDD@?$CFs?4?$CFu?4?$CFu?4?$CFu?4?$CFu?4?$CFlu?$AA@
+      processed: '"%s.%u.%u.%u.%u.%lu"'
+      offset: 000003EA
+    - name: ??_C@_07PMOP@drivers?$AA@
+      processed: '"drivers"'
+      offset: 000003FE
+    - name: ??_C@_0M@BKAA@update?4list?$AA@
+      processed: '"update.list"'
+      offset: '00000406'
+    - name: ??_C@_0L@DFB@KnownFiles?$AA@
+      processed: '"KnownFiles"'
+      offset: '00000412'
+    - name: ??_C@_07IOPL@Default?$AA@
+      processed: '"Default"'
+      offset: 0000041E
+    - name: ??_C@_04FFPF@HKCR?$AA@
+      processed: '"HKCR"'
+      offset: '00000426'
+    - name: ??_C@_04BA@HKCU?$AA@
+      processed: '"HKCU"'
+      offset: 0000042C
+    - name: ??_C@_04CJNJ@HKLM?$AA@
+      processed: '"HKLM"'
+      offset: '00000432'
+    - name: ??_C@_03DNGK@HKU?$AA@
+      processed: '"HKU"'
+      offset: '00000438'
+    - name: ??_C@_04FGBC@HKCC?$AA@
+      processed: '"HKCC"'
+      offset: 0000043C
+    - name: ??_C@_03GIIP@HKR?$AA@
+      processed: '"HKR"'
+      offset: '00000442'
+    - name: ??_C@_02GIEM@?0?5?$AA@
+      processed: '", "'
+      offset: '00000446'
+    - name: ??_C@_0BA@JMOP@KnownRegEntries?$AA@
+      processed: '"KnownRegEntries"'
+      offset: 0000044A
+    - name: ??_C@_0L@KAFL@DriverDesc?$AA@
+      processed: '"DriverDesc"'
+      offset: 0000045A
+    - name: ??_C@_0L@PKHD@InfSection?$AA@
+      processed: '"InfSection"'
+      offset: '00000466'
+    - name: ??_C@_07EGBM@InfPath?$AA@
+      processed: '"InfPath"'
+      offset: '00000472'
+    - name: ??_C@_0M@HCOO@drivers?4ddb?$AA@
+      processed: '"drivers.ddb"'
+      offset: 0000047A
+    - name: ??_C@_04JDOB@?$CFs?6?6?$AA@
+      processed: '"%s\n\n"'
+      offset: '00000486'
+    - name: ??_C@_04GNEN@?4VXD?$AA@
+      processed: '".VXD"'
+      offset: 0000048C
+    - name: ??_C@_04JNDO@?4SYS?$AA@
+      processed: '".SYS"'
+      offset: '00000492'
+    - name: _ghInstance
+      processed: ''
+      offset: 00000C50
+    - name: _IsMaintenanceMode
+      processed: ''
+      offset: 00000C52
+    - name: _SkipCopyIfFilePresent
+      processed: ''
+      offset: 00000C54
+- version: Windows 98 Retail
+  source_tree:
+  - ../../allowins.c
+  - ../../libinit.ASM
+  - lshl.asm
+  - ../../mminstal.c
+  - ../../selbest.c
+  - strchr.asm
+  - strcspn.asm
+  - strspn.asm
+  - strstr.asm
+  - strupr.asm
+  segments:
+  - num: '1'
+    name: _TEXT
+    offset: 000011B0
+    symbols:
+    - name: LibEntry
+      demangled: ''
+      offset: '00000000'
+    - name: WEP
+      demangled: ''
+      offset: '00000021'
+    - name: _aszMRClassDrvr
+      demangled: ''
+      offset: 000001EC
+    - name: _aszMessageSvr
+      demangled: ''
+      offset: '00000226'
+    - name: _aszConfigured
+      demangled: ''
+      offset: '00000248'
+    - name: _aszDriverKey
+      demangled: ''
+      offset: '00000253'
+    - name: _aszDriversSec
+      demangled: ''
+      offset: 0000025A
+    - name: _aszJoyClass
+      demangled: ''
+      offset: '00000262'
+    - name: _aszAuxClass
+      demangled: ''
+      offset: 0000026B
+    - name: _aszMixerClass
+      demangled: ''
+      offset: 0000026F
+    - name: _aszMidiClass
+      demangled: ''
+      offset: '00000275'
+    - name: _aszWaveClass
+      demangled: ''
+      offset: '00000281'
+    - name: _aszSWKey
+      demangled: ''
+      offset: '00000286'
+    - name: _aszMediaType
+      demangled: ''
+      offset: '00000292'
+    - name: _aszMediaResKey
+      demangled: ''
+      offset: 0000029C
+    - name: _aszNewDrvKey
+      demangled: ''
+      offset: 000002CC
+    - name: _aszNULL
+      demangled: ''
+      offset: '00000315'
+    - name: _aszSection
+      demangled: ''
+      offset: '00000316'
+    - name: LibMain
+      demangled: ''
+      offset: '00000410'
+    - name: _MMInfDoUpdateInis
+      demangled: ''
+      offset: '00000908'
+    - name: _MMInfDoAddReg
+      demangled: ''
+      offset: '00000990'
+    - name: _MMInfDoCopyFiles
+      demangled: ''
+      offset: 00000C76
+    - name: _MMGetDisksInfo
+      demangled: ''
+      offset: 00000EB4
+    - name: MEDIA_CONVERTOLDINF
+      demangled: ''
+      offset: 00000FEA
+    - name: MEDIA_SELECTDEVICE
+      demangled: ''
+      offset: 0000134C
+    - name: INITDRVCONFIGINFO
+      demangled: ''
+      offset: 0000139E
+    - name: CONFIGUREDRIVER
+      demangled: ''
+      offset: 000013C6
+    - name: CONFIGURENEWDRIVERS
+      demangled: ''
+      offset: '00001426'
+    - name: _ParseVersion
+      demangled: ''
+      offset: 00001C18
+    - name: _PerUserSetupPreferredAudioDevices
+      demangled: ''
+      offset: 00001D2A
+    - name: _SetupPreferredAudioDevices
+      demangled: ''
+      offset: 00001E0C
+    - name: REMOVERING3REGENTRIES
+      demangled: ''
+      offset: 000020DE
+    - name: REMOVEDEVICE
+      demangled: ''
+      offset: '00002362'
+    - name: MEDIA_INSTALLSOFTWAREDEVICE
+      demangled: ''
+      offset: '00002656'
+    - name: DIINSTALLDEVICEUICALLBACKPROC
+      demangled: ''
+      offset: '00002766'
+    - name: MEDIA_INSTALLDEVICESECTION
+      demangled: ''
+      offset: 0000284A
+    - name: _FindPathToOtherInf
+      demangled: ''
+      offset: '00002930'
+    - name: MEDIA_INSTALLOTHERDEVICES
+      demangled: ''
+      offset: 000029B6
+    - name: MEDIA_INSTALLHARDWAREDEVICE
+      demangled: ''
+      offset: 00002ABA
+    - name: MEDIATYPEISSOFTWARE
+      demangled: ''
+      offset: 00002C3C
+    - name: MEDIA_INSTALLDEVICE
+      demangled: ''
+      offset: 00002C7A
+    - name: CLASSINSTALL
+      demangled: ''
+      offset: 00002CE8
+    - name: __aFlshl
+      demangled: ''
+      offset: 00002DA4
+    - name: __fstrchr
+      demangled: ''
+      offset: 00002DB0
+    - name: __fstrupr
+      demangled: ''
+      offset: 00002DE2
+    - name: __fstrcspn
+      demangled: ''
+      offset: '00002E06'
+    - name: __fstrspn
+      demangled: ''
+      offset: '00002E62'
+    - name: __fstrstr
+      demangled: ''
+      offset: 00002EBE
+  - num: '2'
+    name: ALLOWINS_TEXT
+    offset: '00001990'
+    symbols:
+    - name: FILEEXISTS
+      demangled: ''
+      offset: '00000074'
+    - name: MYSTRTOK
+      demangled: ''
+      offset: '00000098'
+    - name: _LPSTRtoDWORD
+      demangled: ''
+      offset: 0000012E
+    - name: FILENAMEFROMPATH
+      demangled: ''
+      offset: 000001A0
+    - name: _GetFileVersion
+      demangled: ''
+      offset: 000001F6
+    - name: ISINFSHIPPEDWITHWINDOWS
+      demangled: ''
+      offset: 000002EA
+    - name: _FindPathToInf
+      demangled: ''
+      offset: '00000482'
+    - name: _ProcessDDBKey
+      demangled: ''
+      offset: '00000532'
+    - name: _GetUpgradeWarningFromDDB
+      demangled: ''
+      offset: '00000680'
+    - name: _SearchDDB
+      demangled: ''
+      offset: '00000738'
+    - name: GETUPGRADEWARNINGSENUM
+      demangled: ''
+      offset: '00000914'
+    - name: _IsInRegistry
+      demangled: ''
+      offset: '00000986'
+    - name: _RegTestsTrue
+      demangled: ''
+      offset: 00000D06
+    - name: _ProcessKnownRegSection
+      demangled: ''
+      offset: 00000DD6
+    - name: SEARCHINFREGWARNINGS
+      demangled: ''
+      offset: 00000EAA
+    - name: GETUPGRADEWARNINGS
+      demangled: ''
+      offset: 00000F22
+    - name: GETEXISTINGDRIVERINFO
+      demangled: ''
+      offset: '00001076'
+    - name: GETNEWDRIVERINFO
+      demangled: ''
+      offset: 000011DE
+    - name: INITDRVUPGRADEINFO
+      demangled: ''
+      offset: 0000123E
+    - name: ALLOWDRIVERINSTALL
+      demangled: ''
+      offset: 000012B2
+  - num: '3'
+    name: SELBEST_TEXT
+    offset: 00001C40
+    symbols:
+    - name: GETDRIVERTYPEENUM
+      demangled: ''
+      offset: '00000034'
+    - name: _GetDriverType
+      demangled: ''
+      offset: 000000C8
+    - name: BETTERDRIVER
+      demangled: ''
+      offset: 000001BE
+    - name: _GetExistingDriverMatchParams
+      demangled: ''
+      offset: 000002CC
+    - name: PICKBESTDRIVER
+      demangled: ''
+      offset: '00000394'
+    - name: SELECTBESTCOMPATDRV
+      demangled: ''
+      offset: '000004E4'
+  - num: '4'
+    name: DGROUP
+    offset: '00000000'
+    symbols:
+    - name: rsrvptrs
+      demangled: ''
+      offset: '00000006'
+    - name: pLocalHeap
+      demangled: ''
+      offset: '00000006'
+    - name: pAtomTable
+      demangled: ''
+      offset: '00000008'
+    - name: pStackTop
+      demangled: ''
+      offset: 0000000A
+    - name: pStackMin
+      demangled: ''
+      offset: 0000000C
+    - name: pStackBot
+      demangled: ''
+      offset: 0000000E
+    - name: ?szSTExecFmt@?2??SysTray_EnableService@@9@9
+      demangled: extern "C" `extern "C" SysTray_EnableService'::`3'::szSTExecFmt
+      offset: 0000001C
+    - name: ??_C@_0BA@MAHH@SystemTray_Main?$AA@
+      demangled: '"SystemTray_Main"'
+      offset: 0000002C
+    - name: ??_C@_0BP@HPJI@system?4ini?0386Enh?0?0?$CCdevice?$DN?$CFs?$CC?$AA@
+      demangled: '"system.ini,386Enh,,\"device=%s\""'
+      offset: 0000003C
+    - name: ??_C@_04IBCE@?$FLMCI?$AA@
+      demangled: '"[MCI"'
+      offset: 0000005C
+    - name: ??_C@_03MFOG@MCI?$AA@
+      demangled: '"MCI"'
+      offset: '00000062'
+    - name: ??_C@_01PCFE@?2?$AA@
+      demangled: '"\\"'
+      offset: '00000066'
+    - name: ??_C@_04PLDJ@Wave?$AA@
+      demangled: '"Wave"'
+      offset: '00000068'
+    - name: ??_C@_04CCOG@MIDI?$AA@
+      demangled: '"MIDI"'
+      offset: 0000006E
+    - name: ??_C@_05JHOC@Mixer?$AA@
+      demangled: '"Mixer"'
+      offset: '00000074'
+    - name: ??_C@_03IEAK@Aux?$AA@
+      demangled: '"Aux"'
+      offset: 0000007A
+    - name: ??_C@_08GCCE@Joystick?$AA@
+      demangled: '"Joystick"'
+      offset: 0000007E
+    - name: ??_C@_07NGLM@MSVIDEO?$AA@
+      demangled: '"MSVIDEO"'
+      offset: '00000088'
+    - name: ??_C@_0L@LLFA@WaveMapper?$AA@
+      demangled: '"WaveMapper"'
+      offset: '00000090'
+    - name: ??_C@_0L@OIOM@MidiMapper?$AA@
+      demangled: '"MidiMapper"'
+      offset: 0000009C
+    - name: ??_C@_06LFAG@MAPPER?$AA@
+      demangled: '"MAPPER"'
+      offset: 000000A8
+    - name: ??_C@_04DDDH@VIDC?$AA@
+      demangled: '"VIDC"'
+      offset: 000000B0
+    - name: ??_C@_04JKEH@VIDS?$AA@
+      demangled: '"VIDS"'
+      offset: 000000B6
+    - name: ??_C@_03CHOA@ICM?$AA@
+      demangled: '"ICM"'
+      offset: 000000BC
+    - name: ??_C@_05PBMJ@MSACM?$AA@
+      demangled: '"MSACM"'
+      offset: 000000C0
+    - name: ??_C@_03LHFF@ACM?$AA@
+      demangled: '"ACM"'
+      offset: 000000C6
+    - name: ??_C@_07CNPM@UNKNOWN?$AA@
+      demangled: '"UNKNOWN"'
+      offset: 000000CA
+    - name: ??_C@_0L@MEGC@HKLM?0?$CFs?0?0?0?$AA@
+      demangled: '"HKLM,%s,,,"'
+      offset: 000000D2
+    - name: ??_C@_0BF@JNLF@HKLM?0?$CFs?0Driver?0?0?$CC?$CFs?$CC?$AA@
+      demangled: '"HKLM,%s,Driver,,\"%s\""'
+      offset: 000000DE
+    - name: ??_C@_0BK@LJDG@HKLM?0?$CFs?0Description?0?0?$CC?$CFs?$CC?$AA@
+      demangled: '"HKLM,%s,Description,,\"%s\""'
+      offset: 000000F4
+    - name: ??_C@_0BJ@NJDM@HKLM?0?$CFs?0Parameters?0?0?$CC?$CFs?$CC?$AA@
+      demangled: '"HKLM,%s,Parameters,,\"%s\""'
+      offset: 0000010E
+    - name: ??_C@_0BB@PMCK@SourceDisksFiles?$AA@
+      demangled: '"SourceDisksFiles"'
+      offset: '00000128'
+    - name: ??_C@_05IPJG@?$CFs?3?$CFs?$AA@
+      demangled: '"%s:%s"'
+      offset: 0000013A
+    - name: ??_C@_02MECO@?$CFd?$AA@
+      demangled: '"%d"'
+      offset: '00000140'
+    - name: ??_C@_0M@BHNN@?$CFs?5?$DN?5?$CFs?0?$CFs?0?$AA@
+      demangled: '"%s = %s,%s,"'
+      offset: '00000144'
+    - name: ??_C@_05DMPF@disks?$AA@
+      demangled: '"disks"'
+      offset: '00000150'
+    - name: ??_C@_08NKAM@oemdisks?$AA@
+      demangled: '"oemdisks"'
+      offset: '00000156'
+    - name: ??_C@_07PCHH@Unknown?$AA@
+      demangled: '"Unknown"'
+      offset: '00000160'
+    - name: ??_C@_08FKFA@Provider?$AA@
+      demangled: '"Provider"'
+      offset: '00000168'
+    - name: ??_C@_07BPOH@version?$AA@
+      demangled: '"version"'
+      offset: '00000172'
+    - name: ??_C@_07PCHH@OldDrvs?$AA@
+      demangled: '"OldDrvs"'
+      offset: 0000017A
+    - name: ??_C@_0N@NONH@Manufacturer?$AA@
+      demangled: '"Manufacturer"'
+      offset: '00000182'
+    - name: ??_C@_02PIFG@11?$AA@
+      demangled: '"11"'
+      offset: '00000190'
+    - name: ??_C@_0P@KHII@DefaultDestDir?$AA@
+      demangled: '"DefaultDestDir"'
+      offset: '00000194'
+    - name: ??_C@_0BA@CKAH@DestinationDirs?$AA@
+      demangled: '"DestinationDirs"'
+      offset: 000001A4
+    - name: ??_C@_07FFBB@Strings?$AA@
+      demangled: '"Strings"'
+      offset: 000001B4
+    - name: ??_C@_06JCDB@?$CF?$CF?$CFs?$CF?$CF?$AA@
+      demangled: '"%%%s%%"'
+      offset: 000001BC
+    - name: ??_C@_04JBBA@?$CC?$CFs?$CC?$AA@
+      demangled: '"\"%s\""'
+      offset: 000001C4
+    - name: ??_C@_0N@HPDF@Copyfiles?4?$CFs?$AA@
+      demangled: '"Copyfiles.%s"'
+      offset: 000001CA
+    - name: ??_C@_0O@EACA@Updateinis?4?$CFs?$AA@
+      demangled: '"Updateinis.%s"'
+      offset: 000001D8
+    - name: ??_C@_09IFNE@AddReg?4?$CFs?$AA@
+      demangled: '"AddReg.%s"'
+      offset: '000001E6'
+    - name: ??_C@_0P@NLGL@?0?5Copyfiles?4?$CFs?$AA@
+      demangled: '", Copyfiles.%s"'
+      offset: 000001F0
+    - name: ??_C@_0BA@BIE@?0?5Updateinis?4?$CFs?$AA@
+      demangled: '", Updateinis.%s"'
+      offset: '00000200'
+    - name: ??_C@_0M@NCCE@?0?5AddReg?4?$CFs?$AA@
+      demangled: '", AddReg.%s"'
+      offset: '00000210'
+    - name: ??_C@_09PGDB@CopyFiles?$AA@
+      demangled: '"CopyFiles"'
+      offset: 0000021C
+    - name: ??_C@_0L@POOM@Updateinis?$AA@
+      demangled: '"Updateinis"'
+      offset: '00000226'
+    - name: ??_C@_06IKJC@AddReg?$AA@
+      demangled: '"AddReg"'
+      offset: '00000232'
+    - name: ??_C@_08LOIE@Software?$AA@
+      demangled: '"Software"'
+      offset: 0000023A
+    - name: ??_C@_01FBAH@1?$AA@
+      demangled: '"1"'
+      offset: '00000244'
+    - name: ??_C@_0FA@NMKJ@Software?2Microsoft?2Active?5Setup?2@
+      demangled: '"Software\\Microsoft\\Active Setup\\"...'
+      offset: '00000246'
+    - name: ??_C@_07MNFD@Version?$AA@
+      demangled: '"Version"'
+      offset: '00000296'
+    - name: ??_C@_0M@ENIL@?$CFu?0?$CFu?0?$CFu?0?$CFu?$AA@
+      demangled: '"%u,%u,%u,%u"'
+      offset: 0000029E
+    - name: ??_C@_08FNF@StubPath?$AA@
+      demangled: '"StubPath"'
+      offset: 000002AA
+    - name: ??_C@_0N@EJIA@rundll32?4exe?$AA@
+      demangled: '"rundll32.exe"'
+      offset: 000002B4
+    - name: ??_C@_0CK@HHEC@shell32?4dll?0Control_RunDLL?5mmsys@
+      demangled: '"shell32.dll,Control_RunDLL mmsys"...'
+      offset: 000002C2
+    - name: ??_C@_01FCOA@?5?$AA@
+      demangled: '" "'
+      offset: 000002EC
+    - name: ??_C@_0O@IKHH@EnumPropPages?$AA@
+      demangled: '"EnumPropPages"'
+      offset: 000002EE
+    - name: ??_C@_09BHKM@DevLoader?$AA@
+      demangled: '"DevLoader"'
+      offset: 000002FC
+    - name: ??_C@_06LCIG@Driver?$AA@
+      demangled: '"Driver"'
+      offset: '00000306'
+    - name: ??_C@_0L@MNFF@NTMPDriver?$AA@
+      demangled: '"NTMPDriver"'
+      offset: 0000030E
+    - name: ??_C@_0BC@NLBA@AssociatedFilters?$AA@
+      demangled: '"AssociatedFilters"'
+      offset: 0000031A
+    - name: ??_C@_04BKDP@FDMA?$AA@
+      demangled: '"FDMA"'
+      offset: 0000032C
+    - name: ??_C@_0BD@IFEJ@UnretainedSettings?$AA@
+      demangled: '"UnretainedSettings"'
+      offset: '00000332'
+    - name: ??_C@_0L@CMJP@SubClasses?$AA@
+      demangled: '"SubClasses"'
+      offset: '00000346'
+    - name: ??_C@_0L@OEGH@NewDrivers?$AA@
+      demangled: '"NewDrivers"'
+      offset: '00000352'
+    - name: ??_C@_00A@?$AA@
+      demangled: '""'
+      offset: 0000035E
+    - name: ??_C@_0M@CAHD@AlsoInstall?$AA@
+      demangled: '"AlsoInstall"'
+      offset: '00000360'
+    - name: ??_C@_01KMAE@?0?$AA@
+      demangled: '","'
+      offset: 0000036C
+    - name: ??_C@_02NDAK@?5?$CI?$AA@
+      demangled: '" ("'
+      offset: 0000036E
+    - name: ??_C@_02HJJN@?5?$CJ?$AA@
+      demangled: '" )"'
+      offset: '00000372'
+    - name: ??_C@_0BL@DMCO@SetupPreferredAudioDevices?$AA@
+      demangled: '"SetupPreferredAudioDevices"'
+      offset: '00000376'
+    - name: ??_C@_0DA@KCKP@Software?2Microsoft?2Windows?2Curre@
+      demangled: '"Software\\Microsoft\\Windows\\Curre"...'
+      offset: '00000392'
+    - name: ??_C@_07HFM@HWSetup?$AA@
+      demangled: '"HWSetup"'
+      offset: 000003C2
+    - name: ??_C@_03IGFG@?5?0?7?$AA@
+      demangled: '" ,\t"'
+      offset: 000003CA
+    - name: ??_C@_09BBGE@?2INFBACK?2?$AA@
+      demangled: '"\\INFBACK\\"'
+      offset: 000003CE
+    - name: ??_C@_07NKML@?2OTHER?2?$AA@
+      demangled: '"\\OTHER\\"'
+      offset: 000003D8
+    - name: ??_C@_07IHKF@strings?$AA@
+      demangled: '"strings"'
+      offset: '000003E0'
+    - name: ??_C@_01BJG@?6?$AA@
+      demangled: '"\n"'
+      offset: '000003E8'
+    - name: ??_C@_0BD@FGDD@?$CFs?4?$CFu?4?$CFu?4?$CFu?4?$CFu?4?$CFlu?$AA@
+      demangled: '"%s.%u.%u.%u.%u.%lu"'
+      offset: 000003EA
+    - name: ??_C@_07PMOP@drivers?$AA@
+      demangled: '"drivers"'
+      offset: 000003FE
+    - name: ??_C@_0M@BKAA@update?4list?$AA@
+      demangled: '"update.list"'
+      offset: '00000406'
+    - name: ??_C@_0L@DFB@KnownFiles?$AA@
+      demangled: '"KnownFiles"'
+      offset: '00000412'
+    - name: ??_C@_07IOPL@Default?$AA@
+      demangled: '"Default"'
+      offset: 0000041E
+    - name: ??_C@_04FFPF@HKCR?$AA@
+      demangled: '"HKCR"'
+      offset: '00000426'
+    - name: ??_C@_04BA@HKCU?$AA@
+      demangled: '"HKCU"'
+      offset: 0000042C
+    - name: ??_C@_04CJNJ@HKLM?$AA@
+      demangled: '"HKLM"'
+      offset: '00000432'
+    - name: ??_C@_03DNGK@HKU?$AA@
+      demangled: '"HKU"'
+      offset: '00000438'
+    - name: ??_C@_04FGBC@HKCC?$AA@
+      demangled: '"HKCC"'
+      offset: 0000043C
+    - name: ??_C@_03GIIP@HKR?$AA@
+      demangled: '"HKR"'
+      offset: '00000442'
+    - name: ??_C@_02GIEM@?0?5?$AA@
+      demangled: '", "'
+      offset: '00000446'
+    - name: ??_C@_0BA@JMOP@KnownRegEntries?$AA@
+      demangled: '"KnownRegEntries"'
+      offset: 0000044A
+    - name: ??_C@_0L@KAFL@DriverDesc?$AA@
+      demangled: '"DriverDesc"'
+      offset: 0000045A
+    - name: ??_C@_0L@PKHD@InfSection?$AA@
+      demangled: '"InfSection"'
+      offset: '00000466'
+    - name: ??_C@_07EGBM@InfPath?$AA@
+      demangled: '"InfPath"'
+      offset: '00000472'
+    - name: ??_C@_0M@HCOO@drivers?4ddb?$AA@
+      demangled: '"drivers.ddb"'
+      offset: 0000047A
+    - name: ??_C@_04JDOB@?$CFs?6?6?$AA@
+      demangled: '"%s\n\n"'
+      offset: '00000486'
+    - name: ??_C@_04GNEN@?4VXD?$AA@
+      demangled: '".VXD"'
+      offset: 0000048C
+    - name: ??_C@_04JNDO@?4SYS?$AA@
+      demangled: '".SYS"'
+      offset: '00000492'
+    - name: _ghInstance
+      demangled: ''
+      offset: 00000C50
+    - name: _IsMaintenanceMode
+      demangled: ''
+      offset: 00000C52
+    - name: _SkipCopyIfFilePresent
+      demangled: ''
+      offset: 00000C54
+- version: Windows 98SE Debug
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _TEXT
+    offset: '000011E0'
+    symbols:
+    - name: LibEntry
+      demangled: ''
+      offset: '00000000'
+    - name: WEP
+      demangled: ''
+      offset: '00000021'
+    - name: _aszMRClassDrvr
+      demangled: ''
+      offset: 000000AE
+    - name: _aszMessageSvr
+      demangled: ''
+      offset: '000000E8'
+    - name: _aszConfigured
+      demangled: ''
+      offset: 0000010A
+    - name: _aszDriverKey
+      demangled: ''
+      offset: 0000011D
+    - name: _aszDriversSec
+      demangled: ''
+      offset: 0000012F
+    - name: _aszJoyClass
+      demangled: ''
+      offset: '00000137'
+    - name: _aszAuxClass
+      demangled: ''
+      offset: '00000140'
+    - name: _aszMixerClass
+      demangled: ''
+      offset: '00000173'
+    - name: _aszMidiClass
+      demangled: ''
+      offset: '00000179'
+    - name: _aszWaveClass
+      demangled: ''
+      offset: 0000017E
+    - name: _aszSWKey
+      demangled: ''
+      offset: '00000183'
+    - name: _aszMediaType
+      demangled: ''
+      offset: 0000018F
+    - name: _aszMediaResKey
+      demangled: ''
+      offset: 000001A2
+    - name: _aszNewDrvKey
+      demangled: ''
+      offset: '000001E1'
+    - name: _aszNULL
+      demangled: ''
+      offset: 0000022B
+    - name: _aszSection
+      demangled: ''
+      offset: 0000022C
+    - name: LibMain
+      demangled: ''
+      offset: '00000410'
+    - name: _MMInfDoUpdateInis
+      demangled: ''
+      offset: '00000908'
+    - name: _MMInfDoAddReg
+      demangled: ''
+      offset: '00000990'
+    - name: _MMInfDoCopyFiles
+      demangled: ''
+      offset: 00000C76
+    - name: _MMGetDisksInfo
+      demangled: ''
+      offset: 00000EB4
+    - name: MEDIA_CONVERTOLDINF
+      demangled: ''
+      offset: 00000FEA
+    - name: MEDIA_SELECTDEVICE
+      demangled: ''
+      offset: 0000134C
+    - name: INITDRVCONFIGINFO
+      demangled: ''
+      offset: 0000139E
+    - name: CONFIGUREDRIVER
+      demangled: ''
+      offset: 000013C6
+    - name: CONFIGURENEWDRIVERS
+      demangled: ''
+      offset: '00001426'
+    - name: _ParseVersion
+      demangled: ''
+      offset: 00001C18
+    - name: _PerUserSetupPreferredAudioDevices
+      demangled: ''
+      offset: 00001D2A
+    - name: _SetupPreferredAudioDevices
+      demangled: ''
+      offset: 00001E0C
+    - name: REMOVERING3REGENTRIES
+      demangled: ''
+      offset: 000020DE
+    - name: REMOVEDEVICE
+      demangled: ''
+      offset: '00002362'
+    - name: MEDIA_INSTALLSOFTWAREDEVICE
+      demangled: ''
+      offset: '00002656'
+    - name: DIINSTALLDEVICEUICALLBACKPROC
+      demangled: ''
+      offset: '00002766'
+    - name: MEDIA_INSTALLDEVICESECTION
+      demangled: ''
+      offset: 0000284A
+    - name: _FindPathToOtherInf
+      demangled: ''
+      offset: '00002930'
+    - name: MEDIA_INSTALLOTHERDEVICES
+      demangled: ''
+      offset: 000029B6
+    - name: MEDIA_INSTALLHARDWAREDEVICE
+      demangled: ''
+      offset: 00002ABA
+    - name: MEDIATYPEISSOFTWARE
+      demangled: ''
+      offset: 00002CAC
+    - name: MEDIA_INSTALLDEVICE
+      demangled: ''
+      offset: 00002CEA
+    - name: CLASSINSTALL
+      demangled: ''
+      offset: 00002D58
+    - name: __aFlshl
+      demangled: ''
+      offset: '00002E14'
+    - name: __fstrchr
+      demangled: ''
+      offset: '00002E20'
+    - name: __fstrupr
+      demangled: ''
+      offset: '00002E52'
+    - name: __fstrcspn
+      demangled: ''
+      offset: '00002E76'
+    - name: __fstrspn
+      demangled: ''
+      offset: 00002ED2
+    - name: __fstrstr
+      demangled: ''
+      offset: 00002F2E
+  - num: '2'
+    name: ALLOWINS_TEXT
+    offset: 000019C0
+    symbols:
+    - name: FILEEXISTS
+      demangled: ''
+      offset: '00000074'
+    - name: MYSTRTOK
+      demangled: ''
+      offset: '00000098'
+    - name: _LPSTRtoDWORD
+      demangled: ''
+      offset: 0000012E
+    - name: FILENAMEFROMPATH
+      demangled: ''
+      offset: 000001A0
+    - name: _GetFileVersion
+      demangled: ''
+      offset: 000001F6
+    - name: ISINFSHIPPEDWITHWINDOWS
+      demangled: ''
+      offset: 000002EA
+    - name: _FindPathToInf
+      demangled: ''
+      offset: '00000482'
+    - name: _ProcessDDBKey
+      demangled: ''
+      offset: '00000532'
+    - name: _GetUpgradeWarningFromDDB
+      demangled: ''
+      offset: '00000680'
+    - name: _SearchDDB
+      demangled: ''
+      offset: '00000738'
+    - name: GETUPGRADEWARNINGSENUM
+      demangled: ''
+      offset: '00000914'
+    - name: _IsInRegistry
+      demangled: ''
+      offset: '00000986'
+    - name: _RegTestsTrue
+      demangled: ''
+      offset: 00000D06
+    - name: _ProcessKnownRegSection
+      demangled: ''
+      offset: 00000DD6
+    - name: SEARCHINFREGWARNINGS
+      demangled: ''
+      offset: 00000EAA
+    - name: GETUPGRADEWARNINGS
+      demangled: ''
+      offset: 00000F22
+    - name: GETEXISTINGDRIVERINFO
+      demangled: ''
+      offset: '00001076'
+    - name: GETNEWDRIVERINFO
+      demangled: ''
+      offset: 000011DE
+    - name: INITDRVUPGRADEINFO
+      demangled: ''
+      offset: 0000123E
+    - name: ALLOWDRIVERINSTALL
+      demangled: ''
+      offset: 000012B2
+  - num: '3'
+    name: SELBEST_TEXT
+    offset: 00001C70
+    symbols:
+    - name: GETDRIVERTYPEENUM
+      demangled: ''
+      offset: '00000034'
+    - name: _GetDriverType
+      demangled: ''
+      offset: 000000C8
+    - name: BETTERDRIVER
+      demangled: ''
+      offset: 000001BE
+    - name: _GetExistingDriverMatchParams
+      demangled: ''
+      offset: 000002CC
+    - name: PICKBESTDRIVER
+      demangled: ''
+      offset: '00000394'
+    - name: SELECTBESTCOMPATDRV
+      demangled: ''
+      offset: '000004E4'
+  - num: '4'
+    name: DGROUP
+    offset: '00000000'
+    symbols:
+    - name: rsrvptrs
+      demangled: ''
+      offset: '00000006'
+    - name: pLocalHeap
+      demangled: ''
+      offset: '00000006'
+    - name: pAtomTable
+      demangled: ''
+      offset: '00000008'
+    - name: pStackTop
+      demangled: ''
+      offset: 0000000A
+    - name: pStackMin
+      demangled: ''
+      offset: 0000000C
+    - name: pStackBot
+      demangled: ''
+      offset: 0000000E
+    - name: ?szSTExecFmt@?2??SysTray_EnableService@@9@9
+      demangled: extern "C" `extern "C" SysTray_EnableService'::`3'::szSTExecFmt
+      offset: 0000001C
+    - name: ??_C@_0BA@MAHH@SystemTray_Main?$AA@
+      demangled: '"SystemTray_Main"'
+      offset: 0000002C
+    - name: ??_C@_0BP@HPJI@system?4ini?0386Enh?0?0?$CCdevice?$DN?$CFs?$CC?$AA@
+      demangled: '"system.ini,386Enh,,\"device=%s\""'
+      offset: 0000003C
+    - name: ??_C@_04IBCE@?$FLMCI?$AA@
+      demangled: '"[MCI"'
+      offset: 0000005C
+    - name: ??_C@_03MFOG@MCI?$AA@
+      demangled: '"MCI"'
+      offset: '00000062'
+    - name: ??_C@_01PCFE@?2?$AA@
+      demangled: '"\\"'
+      offset: '00000066'
+    - name: ??_C@_04PLDJ@Wave?$AA@
+      demangled: '"Wave"'
+      offset: '00000068'
+    - name: ??_C@_04CCOG@MIDI?$AA@
+      demangled: '"MIDI"'
+      offset: 0000006E
+    - name: ??_C@_05JHOC@Mixer?$AA@
+      demangled: '"Mixer"'
+      offset: '00000074'
+    - name: ??_C@_03IEAK@Aux?$AA@
+      demangled: '"Aux"'
+      offset: 0000007A
+    - name: ??_C@_08GCCE@Joystick?$AA@
+      demangled: '"Joystick"'
+      offset: 0000007E
+    - name: ??_C@_07NGLM@MSVIDEO?$AA@
+      demangled: '"MSVIDEO"'
+      offset: '00000088'
+    - name: ??_C@_0L@LLFA@WaveMapper?$AA@
+      demangled: '"WaveMapper"'
+      offset: '00000090'
+    - name: ??_C@_0L@OIOM@MidiMapper?$AA@
+      demangled: '"MidiMapper"'
+      offset: 0000009C
+    - name: ??_C@_06LFAG@MAPPER?$AA@
+      demangled: '"MAPPER"'
+      offset: 000000A8
+    - name: ??_C@_04DDDH@VIDC?$AA@
+      demangled: '"VIDC"'
+      offset: 000000B0
+    - name: ??_C@_04JKEH@VIDS?$AA@
+      demangled: '"VIDS"'
+      offset: 000000B6
+    - name: ??_C@_03CHOA@ICM?$AA@
+      demangled: '"ICM"'
+      offset: 000000BC
+    - name: ??_C@_05PBMJ@MSACM?$AA@
+      demangled: '"MSACM"'
+      offset: 000000C0
+    - name: ??_C@_03LHFF@ACM?$AA@
+      demangled: '"ACM"'
+      offset: 000000C6
+    - name: ??_C@_07CNPM@UNKNOWN?$AA@
+      demangled: '"UNKNOWN"'
+      offset: 000000CA
+    - name: ??_C@_0L@MEGC@HKLM?0?$CFs?0?0?0?$AA@
+      demangled: '"HKLM,%s,,,"'
+      offset: 000000D2
+    - name: ??_C@_0BF@JNLF@HKLM?0?$CFs?0Driver?0?0?$CC?$CFs?$CC?$AA@
+      demangled: '"HKLM,%s,Driver,,\"%s\""'
+      offset: 000000DE
+    - name: ??_C@_0BK@LJDG@HKLM?0?$CFs?0Description?0?0?$CC?$CFs?$CC?$AA@
+      demangled: '"HKLM,%s,Description,,\"%s\""'
+      offset: 000000F4
+    - name: ??_C@_0BJ@NJDM@HKLM?0?$CFs?0Parameters?0?0?$CC?$CFs?$CC?$AA@
+      demangled: '"HKLM,%s,Parameters,,\"%s\""'
+      offset: 0000010E
+    - name: ??_C@_0BB@PMCK@SourceDisksFiles?$AA@
+      demangled: '"SourceDisksFiles"'
+      offset: '00000128'
+    - name: ??_C@_05IPJG@?$CFs?3?$CFs?$AA@
+      demangled: '"%s:%s"'
+      offset: 0000013A
+    - name: ??_C@_02MECO@?$CFd?$AA@
+      demangled: '"%d"'
+      offset: '00000140'
+    - name: ??_C@_0M@BHNN@?$CFs?5?$DN?5?$CFs?0?$CFs?0?$AA@
+      demangled: '"%s = %s,%s,"'
+      offset: '00000144'
+    - name: ??_C@_05DMPF@disks?$AA@
+      demangled: '"disks"'
+      offset: '00000150'
+    - name: ??_C@_08NKAM@oemdisks?$AA@
+      demangled: '"oemdisks"'
+      offset: '00000156'
+    - name: ??_C@_07PCHH@Unknown?$AA@
+      demangled: '"Unknown"'
+      offset: '00000160'
+    - name: ??_C@_08FKFA@Provider?$AA@
+      demangled: '"Provider"'
+      offset: '00000168'
+    - name: ??_C@_07BPOH@version?$AA@
+      demangled: '"version"'
+      offset: '00000172'
+    - name: ??_C@_07PCHH@OldDrvs?$AA@
+      demangled: '"OldDrvs"'
+      offset: 0000017A
+    - name: ??_C@_0N@NONH@Manufacturer?$AA@
+      demangled: '"Manufacturer"'
+      offset: '00000182'
+    - name: ??_C@_02PIFG@11?$AA@
+      demangled: '"11"'
+      offset: '00000190'
+    - name: ??_C@_0P@KHII@DefaultDestDir?$AA@
+      demangled: '"DefaultDestDir"'
+      offset: '00000194'
+    - name: ??_C@_0BA@CKAH@DestinationDirs?$AA@
+      demangled: '"DestinationDirs"'
+      offset: 000001A4
+    - name: ??_C@_07FFBB@Strings?$AA@
+      demangled: '"Strings"'
+      offset: 000001B4
+    - name: ??_C@_06JCDB@?$CF?$CF?$CFs?$CF?$CF?$AA@
+      demangled: '"%%%s%%"'
+      offset: 000001BC
+    - name: ??_C@_04JBBA@?$CC?$CFs?$CC?$AA@
+      demangled: '"\"%s\""'
+      offset: 000001C4
+    - name: ??_C@_0N@HPDF@Copyfiles?4?$CFs?$AA@
+      demangled: '"Copyfiles.%s"'
+      offset: 000001CA
+    - name: ??_C@_0O@EACA@Updateinis?4?$CFs?$AA@
+      demangled: '"Updateinis.%s"'
+      offset: 000001D8
+    - name: ??_C@_09IFNE@AddReg?4?$CFs?$AA@
+      demangled: '"AddReg.%s"'
+      offset: '000001E6'
+    - name: ??_C@_0P@NLGL@?0?5Copyfiles?4?$CFs?$AA@
+      demangled: '", Copyfiles.%s"'
+      offset: 000001F0
+    - name: ??_C@_0BA@BIE@?0?5Updateinis?4?$CFs?$AA@
+      demangled: '", Updateinis.%s"'
+      offset: '00000200'
+    - name: ??_C@_0M@NCCE@?0?5AddReg?4?$CFs?$AA@
+      demangled: '", AddReg.%s"'
+      offset: '00000210'
+    - name: ??_C@_09PGDB@CopyFiles?$AA@
+      demangled: '"CopyFiles"'
+      offset: 0000021C
+    - name: ??_C@_0L@POOM@Updateinis?$AA@
+      demangled: '"Updateinis"'
+      offset: '00000226'
+    - name: ??_C@_06IKJC@AddReg?$AA@
+      demangled: '"AddReg"'
+      offset: '00000232'
+    - name: ??_C@_08LOIE@Software?$AA@
+      demangled: '"Software"'
+      offset: 0000023A
+    - name: ??_C@_01FBAH@1?$AA@
+      demangled: '"1"'
+      offset: '00000244'
+    - name: ??_C@_0FA@NMKJ@Software?2Microsoft?2Active?5Setup?2@
+      demangled: '"Software\\Microsoft\\Active Setup\\"...'
+      offset: '00000246'
+    - name: ??_C@_07MNFD@Version?$AA@
+      demangled: '"Version"'
+      offset: '00000296'
+    - name: ??_C@_0M@ENIL@?$CFu?0?$CFu?0?$CFu?0?$CFu?$AA@
+      demangled: '"%u,%u,%u,%u"'
+      offset: 0000029E
+    - name: ??_C@_08FNF@StubPath?$AA@
+      demangled: '"StubPath"'
+      offset: 000002AA
+    - name: ??_C@_0N@EJIA@rundll32?4exe?$AA@
+      demangled: '"rundll32.exe"'
+      offset: 000002B4
+    - name: ??_C@_0CK@HHEC@shell32?4dll?0Control_RunDLL?5mmsys@
+      demangled: '"shell32.dll,Control_RunDLL mmsys"...'
+      offset: 000002C2
+    - name: ??_C@_01FCOA@?5?$AA@
+      demangled: '" "'
+      offset: 000002EC
+    - name: ??_C@_0O@IKHH@EnumPropPages?$AA@
+      demangled: '"EnumPropPages"'
+      offset: 000002EE
+    - name: ??_C@_09BHKM@DevLoader?$AA@
+      demangled: '"DevLoader"'
+      offset: 000002FC
+    - name: ??_C@_06LCIG@Driver?$AA@
+      demangled: '"Driver"'
+      offset: '00000306'
+    - name: ??_C@_0L@MNFF@NTMPDriver?$AA@
+      demangled: '"NTMPDriver"'
+      offset: 0000030E
+    - name: ??_C@_0BC@NLBA@AssociatedFilters?$AA@
+      demangled: '"AssociatedFilters"'
+      offset: 0000031A
+    - name: ??_C@_04BKDP@FDMA?$AA@
+      demangled: '"FDMA"'
+      offset: 0000032C
+    - name: ??_C@_0BD@IFEJ@UnretainedSettings?$AA@
+      demangled: '"UnretainedSettings"'
+      offset: '00000332'
+    - name: ??_C@_0L@CMJP@SubClasses?$AA@
+      demangled: '"SubClasses"'
+      offset: '00000346'
+    - name: ??_C@_0L@OEGH@NewDrivers?$AA@
+      demangled: '"NewDrivers"'
+      offset: '00000352'
+    - name: ??_C@_00A@?$AA@
+      demangled: '""'
+      offset: 0000035E
+    - name: ??_C@_0M@CAHD@AlsoInstall?$AA@
+      demangled: '"AlsoInstall"'
+      offset: '00000360'
+    - name: ??_C@_01KMAE@?0?$AA@
+      demangled: '","'
+      offset: 0000036C
+    - name: ??_C@_02NDAK@?5?$CI?$AA@
+      demangled: '" ("'
+      offset: 0000036E
+    - name: ??_C@_02HJJN@?5?$CJ?$AA@
+      demangled: '" )"'
+      offset: '00000372'
+    - name: ??_C@_0BL@DMCO@SetupPreferredAudioDevices?$AA@
+      demangled: '"SetupPreferredAudioDevices"'
+      offset: '00000376'
+    - name: ??_C@_0DA@KCKP@Software?2Microsoft?2Windows?2Curre@
+      demangled: '"Software\\Microsoft\\Windows\\Curre"...'
+      offset: '00000392'
+    - name: ??_C@_07HFM@HWSetup?$AA@
+      demangled: '"HWSetup"'
+      offset: 000003C2
+    - name: ??_C@_03IGFG@?5?0?7?$AA@
+      demangled: '" ,\t"'
+      offset: 000003CA
+    - name: ??_C@_09BBGE@?2INFBACK?2?$AA@
+      demangled: '"\\INFBACK\\"'
+      offset: 000003CE
+    - name: ??_C@_07NKML@?2OTHER?2?$AA@
+      demangled: '"\\OTHER\\"'
+      offset: 000003D8
+    - name: ??_C@_07IHKF@strings?$AA@
+      demangled: '"strings"'
+      offset: '000003E0'
+    - name: ??_C@_01BJG@?6?$AA@
+      demangled: '"\n"'
+      offset: '000003E8'
+    - name: ??_C@_0BD@FGDD@?$CFs?4?$CFu?4?$CFu?4?$CFu?4?$CFu?4?$CFlu?$AA@
+      demangled: '"%s.%u.%u.%u.%u.%lu"'
+      offset: 000003EA
+    - name: ??_C@_07PMOP@drivers?$AA@
+      demangled: '"drivers"'
+      offset: 000003FE
+    - name: ??_C@_0M@BKAA@update?4list?$AA@
+      demangled: '"update.list"'
+      offset: '00000406'
+    - name: ??_C@_0L@DFB@KnownFiles?$AA@
+      demangled: '"KnownFiles"'
+      offset: '00000412'
+    - name: ??_C@_07IOPL@Default?$AA@
+      demangled: '"Default"'
+      offset: 0000041E
+    - name: ??_C@_04FFPF@HKCR?$AA@
+      demangled: '"HKCR"'
+      offset: '00000426'
+    - name: ??_C@_04BA@HKCU?$AA@
+      demangled: '"HKCU"'
+      offset: 0000042C
+    - name: ??_C@_04CJNJ@HKLM?$AA@
+      demangled: '"HKLM"'
+      offset: '00000432'
+    - name: ??_C@_03DNGK@HKU?$AA@
+      demangled: '"HKU"'
+      offset: '00000438'
+    - name: ??_C@_04FGBC@HKCC?$AA@
+      demangled: '"HKCC"'
+      offset: 0000043C
+    - name: ??_C@_03GIIP@HKR?$AA@
+      demangled: '"HKR"'
+      offset: '00000442'
+    - name: ??_C@_02GIEM@?0?5?$AA@
+      demangled: '", "'
+      offset: '00000446'
+    - name: ??_C@_0BA@JMOP@KnownRegEntries?$AA@
+      demangled: '"KnownRegEntries"'
+      offset: 0000044A
+    - name: ??_C@_0L@KAFL@DriverDesc?$AA@
+      demangled: '"DriverDesc"'
+      offset: 0000045A
+    - name: ??_C@_0L@PKHD@InfSection?$AA@
+      demangled: '"InfSection"'
+      offset: '00000466'
+    - name: ??_C@_07EGBM@InfPath?$AA@
+      demangled: '"InfPath"'
+      offset: '00000472'
+    - name: ??_C@_0M@HCOO@drivers?4ddb?$AA@
+      demangled: '"drivers.ddb"'
+      offset: 0000047A
+    - name: ??_C@_04JDOB@?$CFs?6?6?$AA@
+      demangled: '"%s\n\n"'
+      offset: '00000486'
+    - name: ??_C@_04GNEN@?4VXD?$AA@
+      demangled: '".VXD"'
+      offset: 0000048C
+    - name: ??_C@_04JNDO@?4SYS?$AA@
+      demangled: '".SYS"'
+      offset: '00000492'
+    - name: _ghInstance
+      demangled: ''
+      offset: 00000C50
+    - name: _IsMaintenanceMode
+      demangled: ''
+      offset: 00000C52
+    - name: _SkipCopyIfFilePresent
+      demangled: ''
+      offset: 00000C54
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _TEXT
+    offset: '000011E0'
+    symbols:
+    - name: LibEntry
+      demangled: ''
+      offset: '00000000'
+    - name: WEP
+      demangled: ''
+      offset: '00000021'
+    - name: _aszMRClassDrvr
+      demangled: ''
+      offset: 000000AE
+    - name: _aszMessageSvr
+      demangled: ''
+      offset: '000000E8'
+    - name: _aszConfigured
+      demangled: ''
+      offset: 0000010A
+    - name: _aszDriverKey
+      demangled: ''
+      offset: 0000011D
+    - name: _aszDriversSec
+      demangled: ''
+      offset: 0000012F
+    - name: _aszJoyClass
+      demangled: ''
+      offset: '00000137'
+    - name: _aszAuxClass
+      demangled: ''
+      offset: '00000140'
+    - name: _aszMixerClass
+      demangled: ''
+      offset: '00000173'
+    - name: _aszMidiClass
+      demangled: ''
+      offset: '00000179'
+    - name: _aszWaveClass
+      demangled: ''
+      offset: 0000017E
+    - name: _aszSWKey
+      demangled: ''
+      offset: '00000183'
+    - name: _aszMediaType
+      demangled: ''
+      offset: 0000018F
+    - name: _aszMediaResKey
+      demangled: ''
+      offset: 000001A2
+    - name: _aszNewDrvKey
+      demangled: ''
+      offset: '000001E1'
+    - name: _aszNULL
+      demangled: ''
+      offset: 0000022B
+    - name: _aszSection
+      demangled: ''
+      offset: 0000022C
+    - name: LibMain
+      demangled: ''
+      offset: '00000410'
+    - name: _MMInfDoUpdateInis
+      demangled: ''
+      offset: '00000908'
+    - name: _MMInfDoAddReg
+      demangled: ''
+      offset: '00000990'
+    - name: _MMInfDoCopyFiles
+      demangled: ''
+      offset: 00000C76
+    - name: _MMGetDisksInfo
+      demangled: ''
+      offset: 00000EB4
+    - name: MEDIA_CONVERTOLDINF
+      demangled: ''
+      offset: 00000FEA
+    - name: MEDIA_SELECTDEVICE
+      demangled: ''
+      offset: 0000134C
+    - name: INITDRVCONFIGINFO
+      demangled: ''
+      offset: 0000139E
+    - name: CONFIGUREDRIVER
+      demangled: ''
+      offset: 000013C6
+    - name: CONFIGURENEWDRIVERS
+      demangled: ''
+      offset: '00001426'
+    - name: _ParseVersion
+      demangled: ''
+      offset: 00001C18
+    - name: _PerUserSetupPreferredAudioDevices
+      demangled: ''
+      offset: 00001D2A
+    - name: _SetupPreferredAudioDevices
+      demangled: ''
+      offset: 00001E0C
+    - name: REMOVERING3REGENTRIES
+      demangled: ''
+      offset: 000020DE
+    - name: REMOVEDEVICE
+      demangled: ''
+      offset: '00002362'
+    - name: MEDIA_INSTALLSOFTWAREDEVICE
+      demangled: ''
+      offset: '00002656'
+    - name: DIINSTALLDEVICEUICALLBACKPROC
+      demangled: ''
+      offset: '00002766'
+    - name: MEDIA_INSTALLDEVICESECTION
+      demangled: ''
+      offset: 0000284A
+    - name: _FindPathToOtherInf
+      demangled: ''
+      offset: '00002930'
+    - name: MEDIA_INSTALLOTHERDEVICES
+      demangled: ''
+      offset: 000029B6
+    - name: MEDIA_INSTALLHARDWAREDEVICE
+      demangled: ''
+      offset: 00002ABA
+    - name: MEDIATYPEISSOFTWARE
+      demangled: ''
+      offset: 00002CAC
+    - name: MEDIA_INSTALLDEVICE
+      demangled: ''
+      offset: 00002CEA
+    - name: CLASSINSTALL
+      demangled: ''
+      offset: 00002D58
+    - name: __aFlshl
+      demangled: ''
+      offset: '00002E14'
+    - name: __fstrchr
+      demangled: ''
+      offset: '00002E20'
+    - name: __fstrupr
+      demangled: ''
+      offset: '00002E52'
+    - name: __fstrcspn
+      demangled: ''
+      offset: '00002E76'
+    - name: __fstrspn
+      demangled: ''
+      offset: 00002ED2
+    - name: __fstrstr
+      demangled: ''
+      offset: 00002F2E
+  - num: '2'
+    name: ALLOWINS_TEXT
+    offset: 000019C0
+    symbols:
+    - name: FILEEXISTS
+      demangled: ''
+      offset: '00000074'
+    - name: MYSTRTOK
+      demangled: ''
+      offset: '00000098'
+    - name: _LPSTRtoDWORD
+      demangled: ''
+      offset: 0000012E
+    - name: FILENAMEFROMPATH
+      demangled: ''
+      offset: 000001A0
+    - name: _GetFileVersion
+      demangled: ''
+      offset: 000001F6
+    - name: ISINFSHIPPEDWITHWINDOWS
+      demangled: ''
+      offset: 000002EA
+    - name: _FindPathToInf
+      demangled: ''
+      offset: '00000482'
+    - name: _ProcessDDBKey
+      demangled: ''
+      offset: '00000532'
+    - name: _GetUpgradeWarningFromDDB
+      demangled: ''
+      offset: '00000680'
+    - name: _SearchDDB
+      demangled: ''
+      offset: '00000738'
+    - name: GETUPGRADEWARNINGSENUM
+      demangled: ''
+      offset: '00000914'
+    - name: _IsInRegistry
+      demangled: ''
+      offset: '00000986'
+    - name: _RegTestsTrue
+      demangled: ''
+      offset: 00000D06
+    - name: _ProcessKnownRegSection
+      demangled: ''
+      offset: 00000DD6
+    - name: SEARCHINFREGWARNINGS
+      demangled: ''
+      offset: 00000EAA
+    - name: GETUPGRADEWARNINGS
+      demangled: ''
+      offset: 00000F22
+    - name: GETEXISTINGDRIVERINFO
+      demangled: ''
+      offset: '00001076'
+    - name: GETNEWDRIVERINFO
+      demangled: ''
+      offset: 000011DE
+    - name: INITDRVUPGRADEINFO
+      demangled: ''
+      offset: 0000123E
+    - name: ALLOWDRIVERINSTALL
+      demangled: ''
+      offset: 000012B2
+  - num: '3'
+    name: SELBEST_TEXT
+    offset: 00001C70
+    symbols:
+    - name: GETDRIVERTYPEENUM
+      demangled: ''
+      offset: '00000034'
+    - name: _GetDriverType
+      demangled: ''
+      offset: 000000C8
+    - name: BETTERDRIVER
+      demangled: ''
+      offset: 000001BE
+    - name: _GetExistingDriverMatchParams
+      demangled: ''
+      offset: 000002CC
+    - name: PICKBESTDRIVER
+      demangled: ''
+      offset: '00000394'
+    - name: SELECTBESTCOMPATDRV
+      demangled: ''
+      offset: '000004E4'
+  - num: '4'
+    name: DGROUP
+    offset: '00000000'
+    symbols:
+    - name: rsrvptrs
+      demangled: ''
+      offset: '00000006'
+    - name: pLocalHeap
+      demangled: ''
+      offset: '00000006'
+    - name: pAtomTable
+      demangled: ''
+      offset: '00000008'
+    - name: pStackTop
+      demangled: ''
+      offset: 0000000A
+    - name: pStackMin
+      demangled: ''
+      offset: 0000000C
+    - name: pStackBot
+      demangled: ''
+      offset: 0000000E
+    - name: ?szSTExecFmt@?2??SysTray_EnableService@@9@9
+      demangled: extern "C" `extern "C" SysTray_EnableService'::`3'::szSTExecFmt
+      offset: 0000001C
+    - name: ??_C@_0BA@MAHH@SystemTray_Main?$AA@
+      demangled: '"SystemTray_Main"'
+      offset: 0000002C
+    - name: ??_C@_0BP@HPJI@system?4ini?0386Enh?0?0?$CCdevice?$DN?$CFs?$CC?$AA@
+      demangled: '"system.ini,386Enh,,\"device=%s\""'
+      offset: 0000003C
+    - name: ??_C@_04IBCE@?$FLMCI?$AA@
+      demangled: '"[MCI"'
+      offset: 0000005C
+    - name: ??_C@_03MFOG@MCI?$AA@
+      demangled: '"MCI"'
+      offset: '00000062'
+    - name: ??_C@_01PCFE@?2?$AA@
+      demangled: '"\\"'
+      offset: '00000066'
+    - name: ??_C@_04PLDJ@Wave?$AA@
+      demangled: '"Wave"'
+      offset: '00000068'
+    - name: ??_C@_04CCOG@MIDI?$AA@
+      demangled: '"MIDI"'
+      offset: 0000006E
+    - name: ??_C@_05JHOC@Mixer?$AA@
+      demangled: '"Mixer"'
+      offset: '00000074'
+    - name: ??_C@_03IEAK@Aux?$AA@
+      demangled: '"Aux"'
+      offset: 0000007A
+    - name: ??_C@_08GCCE@Joystick?$AA@
+      demangled: '"Joystick"'
+      offset: 0000007E
+    - name: ??_C@_07NGLM@MSVIDEO?$AA@
+      demangled: '"MSVIDEO"'
+      offset: '00000088'
+    - name: ??_C@_0L@LLFA@WaveMapper?$AA@
+      demangled: '"WaveMapper"'
+      offset: '00000090'
+    - name: ??_C@_0L@OIOM@MidiMapper?$AA@
+      demangled: '"MidiMapper"'
+      offset: 0000009C
+    - name: ??_C@_06LFAG@MAPPER?$AA@
+      demangled: '"MAPPER"'
+      offset: 000000A8
+    - name: ??_C@_04DDDH@VIDC?$AA@
+      demangled: '"VIDC"'
+      offset: 000000B0
+    - name: ??_C@_04JKEH@VIDS?$AA@
+      demangled: '"VIDS"'
+      offset: 000000B6
+    - name: ??_C@_03CHOA@ICM?$AA@
+      demangled: '"ICM"'
+      offset: 000000BC
+    - name: ??_C@_05PBMJ@MSACM?$AA@
+      demangled: '"MSACM"'
+      offset: 000000C0
+    - name: ??_C@_03LHFF@ACM?$AA@
+      demangled: '"ACM"'
+      offset: 000000C6
+    - name: ??_C@_07CNPM@UNKNOWN?$AA@
+      demangled: '"UNKNOWN"'
+      offset: 000000CA
+    - name: ??_C@_0L@MEGC@HKLM?0?$CFs?0?0?0?$AA@
+      demangled: '"HKLM,%s,,,"'
+      offset: 000000D2
+    - name: ??_C@_0BF@JNLF@HKLM?0?$CFs?0Driver?0?0?$CC?$CFs?$CC?$AA@
+      demangled: '"HKLM,%s,Driver,,\"%s\""'
+      offset: 000000DE
+    - name: ??_C@_0BK@LJDG@HKLM?0?$CFs?0Description?0?0?$CC?$CFs?$CC?$AA@
+      demangled: '"HKLM,%s,Description,,\"%s\""'
+      offset: 000000F4
+    - name: ??_C@_0BJ@NJDM@HKLM?0?$CFs?0Parameters?0?0?$CC?$CFs?$CC?$AA@
+      demangled: '"HKLM,%s,Parameters,,\"%s\""'
+      offset: 0000010E
+    - name: ??_C@_0BB@PMCK@SourceDisksFiles?$AA@
+      demangled: '"SourceDisksFiles"'
+      offset: '00000128'
+    - name: ??_C@_05IPJG@?$CFs?3?$CFs?$AA@
+      demangled: '"%s:%s"'
+      offset: 0000013A
+    - name: ??_C@_02MECO@?$CFd?$AA@
+      demangled: '"%d"'
+      offset: '00000140'
+    - name: ??_C@_0M@BHNN@?$CFs?5?$DN?5?$CFs?0?$CFs?0?$AA@
+      demangled: '"%s = %s,%s,"'
+      offset: '00000144'
+    - name: ??_C@_05DMPF@disks?$AA@
+      demangled: '"disks"'
+      offset: '00000150'
+    - name: ??_C@_08NKAM@oemdisks?$AA@
+      demangled: '"oemdisks"'
+      offset: '00000156'
+    - name: ??_C@_07PCHH@Unknown?$AA@
+      demangled: '"Unknown"'
+      offset: '00000160'
+    - name: ??_C@_08FKFA@Provider?$AA@
+      demangled: '"Provider"'
+      offset: '00000168'
+    - name: ??_C@_07BPOH@version?$AA@
+      demangled: '"version"'
+      offset: '00000172'
+    - name: ??_C@_07PCHH@OldDrvs?$AA@
+      demangled: '"OldDrvs"'
+      offset: 0000017A
+    - name: ??_C@_0N@NONH@Manufacturer?$AA@
+      demangled: '"Manufacturer"'
+      offset: '00000182'
+    - name: ??_C@_02PIFG@11?$AA@
+      demangled: '"11"'
+      offset: '00000190'
+    - name: ??_C@_0P@KHII@DefaultDestDir?$AA@
+      demangled: '"DefaultDestDir"'
+      offset: '00000194'
+    - name: ??_C@_0BA@CKAH@DestinationDirs?$AA@
+      demangled: '"DestinationDirs"'
+      offset: 000001A4
+    - name: ??_C@_07FFBB@Strings?$AA@
+      demangled: '"Strings"'
+      offset: 000001B4
+    - name: ??_C@_06JCDB@?$CF?$CF?$CFs?$CF?$CF?$AA@
+      demangled: '"%%%s%%"'
+      offset: 000001BC
+    - name: ??_C@_04JBBA@?$CC?$CFs?$CC?$AA@
+      demangled: '"\"%s\""'
+      offset: 000001C4
+    - name: ??_C@_0N@HPDF@Copyfiles?4?$CFs?$AA@
+      demangled: '"Copyfiles.%s"'
+      offset: 000001CA
+    - name: ??_C@_0O@EACA@Updateinis?4?$CFs?$AA@
+      demangled: '"Updateinis.%s"'
+      offset: 000001D8
+    - name: ??_C@_09IFNE@AddReg?4?$CFs?$AA@
+      demangled: '"AddReg.%s"'
+      offset: '000001E6'
+    - name: ??_C@_0P@NLGL@?0?5Copyfiles?4?$CFs?$AA@
+      demangled: '", Copyfiles.%s"'
+      offset: 000001F0
+    - name: ??_C@_0BA@BIE@?0?5Updateinis?4?$CFs?$AA@
+      demangled: '", Updateinis.%s"'
+      offset: '00000200'
+    - name: ??_C@_0M@NCCE@?0?5AddReg?4?$CFs?$AA@
+      demangled: '", AddReg.%s"'
+      offset: '00000210'
+    - name: ??_C@_09PGDB@CopyFiles?$AA@
+      demangled: '"CopyFiles"'
+      offset: 0000021C
+    - name: ??_C@_0L@POOM@Updateinis?$AA@
+      demangled: '"Updateinis"'
+      offset: '00000226'
+    - name: ??_C@_06IKJC@AddReg?$AA@
+      demangled: '"AddReg"'
+      offset: '00000232'
+    - name: ??_C@_08LOIE@Software?$AA@
+      demangled: '"Software"'
+      offset: 0000023A
+    - name: ??_C@_01FBAH@1?$AA@
+      demangled: '"1"'
+      offset: '00000244'
+    - name: ??_C@_0FA@NMKJ@Software?2Microsoft?2Active?5Setup?2@
+      demangled: '"Software\\Microsoft\\Active Setup\\"...'
+      offset: '00000246'
+    - name: ??_C@_07MNFD@Version?$AA@
+      demangled: '"Version"'
+      offset: '00000296'
+    - name: ??_C@_0M@ENIL@?$CFu?0?$CFu?0?$CFu?0?$CFu?$AA@
+      demangled: '"%u,%u,%u,%u"'
+      offset: 0000029E
+    - name: ??_C@_08FNF@StubPath?$AA@
+      demangled: '"StubPath"'
+      offset: 000002AA
+    - name: ??_C@_0N@EJIA@rundll32?4exe?$AA@
+      demangled: '"rundll32.exe"'
+      offset: 000002B4
+    - name: ??_C@_0CK@HHEC@shell32?4dll?0Control_RunDLL?5mmsys@
+      demangled: '"shell32.dll,Control_RunDLL mmsys"...'
+      offset: 000002C2
+    - name: ??_C@_01FCOA@?5?$AA@
+      demangled: '" "'
+      offset: 000002EC
+    - name: ??_C@_0O@IKHH@EnumPropPages?$AA@
+      demangled: '"EnumPropPages"'
+      offset: 000002EE
+    - name: ??_C@_09BHKM@DevLoader?$AA@
+      demangled: '"DevLoader"'
+      offset: 000002FC
+    - name: ??_C@_06LCIG@Driver?$AA@
+      demangled: '"Driver"'
+      offset: '00000306'
+    - name: ??_C@_0L@MNFF@NTMPDriver?$AA@
+      demangled: '"NTMPDriver"'
+      offset: 0000030E
+    - name: ??_C@_0BC@NLBA@AssociatedFilters?$AA@
+      demangled: '"AssociatedFilters"'
+      offset: 0000031A
+    - name: ??_C@_04BKDP@FDMA?$AA@
+      demangled: '"FDMA"'
+      offset: 0000032C
+    - name: ??_C@_0BD@IFEJ@UnretainedSettings?$AA@
+      demangled: '"UnretainedSettings"'
+      offset: '00000332'
+    - name: ??_C@_0L@CMJP@SubClasses?$AA@
+      demangled: '"SubClasses"'
+      offset: '00000346'
+    - name: ??_C@_0L@OEGH@NewDrivers?$AA@
+      demangled: '"NewDrivers"'
+      offset: '00000352'
+    - name: ??_C@_00A@?$AA@
+      demangled: '""'
+      offset: 0000035E
+    - name: ??_C@_0M@CAHD@AlsoInstall?$AA@
+      demangled: '"AlsoInstall"'
+      offset: '00000360'
+    - name: ??_C@_01KMAE@?0?$AA@
+      demangled: '","'
+      offset: 0000036C
+    - name: ??_C@_02NDAK@?5?$CI?$AA@
+      demangled: '" ("'
+      offset: 0000036E
+    - name: ??_C@_02HJJN@?5?$CJ?$AA@
+      demangled: '" )"'
+      offset: '00000372'
+    - name: ??_C@_0BL@DMCO@SetupPreferredAudioDevices?$AA@
+      demangled: '"SetupPreferredAudioDevices"'
+      offset: '00000376'
+    - name: ??_C@_0DA@KCKP@Software?2Microsoft?2Windows?2Curre@
+      demangled: '"Software\\Microsoft\\Windows\\Curre"...'
+      offset: '00000392'
+    - name: ??_C@_07HFM@HWSetup?$AA@
+      demangled: '"HWSetup"'
+      offset: 000003C2
+    - name: ??_C@_03IGFG@?5?0?7?$AA@
+      demangled: '" ,\t"'
+      offset: 000003CA
+    - name: ??_C@_09BBGE@?2INFBACK?2?$AA@
+      demangled: '"\\INFBACK\\"'
+      offset: 000003CE
+    - name: ??_C@_07NKML@?2OTHER?2?$AA@
+      demangled: '"\\OTHER\\"'
+      offset: 000003D8
+    - name: ??_C@_07IHKF@strings?$AA@
+      demangled: '"strings"'
+      offset: '000003E0'
+    - name: ??_C@_01BJG@?6?$AA@
+      demangled: '"\n"'
+      offset: '000003E8'
+    - name: ??_C@_0BD@FGDD@?$CFs?4?$CFu?4?$CFu?4?$CFu?4?$CFu?4?$CFlu?$AA@
+      demangled: '"%s.%u.%u.%u.%u.%lu"'
+      offset: 000003EA
+    - name: ??_C@_07PMOP@drivers?$AA@
+      demangled: '"drivers"'
+      offset: 000003FE
+    - name: ??_C@_0M@BKAA@update?4list?$AA@
+      demangled: '"update.list"'
+      offset: '00000406'
+    - name: ??_C@_0L@DFB@KnownFiles?$AA@
+      demangled: '"KnownFiles"'
+      offset: '00000412'
+    - name: ??_C@_07IOPL@Default?$AA@
+      demangled: '"Default"'
+      offset: 0000041E
+    - name: ??_C@_04FFPF@HKCR?$AA@
+      demangled: '"HKCR"'
+      offset: '00000426'
+    - name: ??_C@_04BA@HKCU?$AA@
+      demangled: '"HKCU"'
+      offset: 0000042C
+    - name: ??_C@_04CJNJ@HKLM?$AA@
+      demangled: '"HKLM"'
+      offset: '00000432'
+    - name: ??_C@_03DNGK@HKU?$AA@
+      demangled: '"HKU"'
+      offset: '00000438'
+    - name: ??_C@_04FGBC@HKCC?$AA@
+      demangled: '"HKCC"'
+      offset: 0000043C
+    - name: ??_C@_03GIIP@HKR?$AA@
+      demangled: '"HKR"'
+      offset: '00000442'
+    - name: ??_C@_02GIEM@?0?5?$AA@
+      demangled: '", "'
+      offset: '00000446'
+    - name: ??_C@_0BA@JMOP@KnownRegEntries?$AA@
+      demangled: '"KnownRegEntries"'
+      offset: 0000044A
+    - name: ??_C@_0L@KAFL@DriverDesc?$AA@
+      demangled: '"DriverDesc"'
+      offset: 0000045A
+    - name: ??_C@_0L@PKHD@InfSection?$AA@
+      demangled: '"InfSection"'
+      offset: '00000466'
+    - name: ??_C@_07EGBM@InfPath?$AA@
+      demangled: '"InfPath"'
+      offset: '00000472'
+    - name: ??_C@_0M@HCOO@drivers?4ddb?$AA@
+      demangled: '"drivers.ddb"'
+      offset: 0000047A
+    - name: ??_C@_04JDOB@?$CFs?6?6?$AA@
+      demangled: '"%s\n\n"'
+      offset: '00000486'
+    - name: ??_C@_04GNEN@?4VXD?$AA@
+      demangled: '".VXD"'
+      offset: 0000048C
+    - name: ??_C@_04JNDO@?4SYS?$AA@
+      demangled: '".SYS"'
+      offset: '00000492'
+    - name: _ghInstance
+      demangled: ''
+      offset: 00000C50
+    - name: _IsMaintenanceMode
+      demangled: ''
+      offset: 00000C52
+    - name: _SkipCopyIfFilePresent
+      demangled: ''
+      offset: 00000C54

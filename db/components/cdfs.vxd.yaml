@@ -1,0 +1,3707 @@
+filename: cdfs.vxd
+binary: CDFS
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../cdapi.c
+  - ../cdapisr.c
+  - ../cdcache.c
+  - ../cdcannon.c
+  - ../cddir.c
+  - ../cdfs.asm
+  - ../cdhandle.c
+  - ../cdios.c
+  - ../cdlock.c
+  - ../cdmctrl.c
+  - ../cdmount.c
+  - ../cdpath.c
+  - ../cdpref.c
+  - ../cdread.c
+  - ../cdsched.c
+  - ../cdstate.c
+  - ../cdvcd.c
+  - ../../../../dev/ddk/inc/vmm.h
+  - 1vsR2vsR3vsR../cdlock.c
+  - Track00.c
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 00000AF0
+    symbols:
+    - name: _CDFS_Int2FHook
+      processed: ''
+      offset: '00000000'
+    - name: CDFS_Control
+      processed: ''
+      offset: 000000A0
+    - name: _CDFS_Control_Dispatch_Ext
+      processed: ''
+      offset: 000000B4
+    - name: _DebPrintf
+      processed: ''
+      offset: 000000C2
+    - name: _DebPrintfStep
+      processed: ''
+      offset: 000000DC
+    - name: _VMM_BlockOnID
+      processed: ''
+      offset: '00000101'
+    - name: _VMM_SignalID
+      processed: ''
+      offset: '00000107'
+    - name: _CDFS_CDQuery
+      processed: ''
+      offset: 0000010D
+    - name: _CDFS_Flush
+      processed: ''
+      offset: '00000120'
+    - name: _CDFS_Disconnect
+      processed: ''
+      offset: '00000140'
+    - name: _CDFS_Close
+      processed: ''
+      offset: '00000170'
+    - name: _CDFS_FindClose
+      processed: ''
+      offset: 000001A0
+    - name: _CDFSBeginLockedAccess
+      processed: ''
+      offset: 000001D0
+    - name: _CDFSEndLockedAccess
+      processed: ''
+      offset: '00000410'
+    - name: _CDFSBeginNestedLockedAccess
+      processed: ''
+      offset: '00000450'
+    - name: _CDFSLazyUnlockTick
+      processed: ''
+      offset: '00000480'
+    - name: _CDFSLazyUnlockEvent
+      processed: ''
+      offset: '00000500'
+    - name: _CDFSAsyncEvent
+      processed: ''
+      offset: 000007F0
+    - name: _cdfsSetFirstDriveLetter
+      processed: ''
+      offset: 00000AF0
+    - name: _CMDumpLRU
+      processed: ''
+      offset: 00000B30
+    - name: _MY_CallWhenNotCritical
+      processed: ''
+      offset: 00000DA0
+    - name: CDFS_DDB
+      processed: ''
+      offset: 00000DD0
+    - name: _pcdcVerifyHead
+      processed: ''
+      offset: 00000ED4
+    - name: _SubUnitNext
+      processed: ''
+      offset: 00000ED8
+    - name: _DefaultSvdSense
+      processed: ''
+      offset: 00000EDC
+    - name: _fTearDown
+      processed: ''
+      offset: 00000EE0
+    - name: _fShowVersions
+      processed: ''
+      offset: 00000EE4
+    - name: _fCDFSMisc
+      processed: ''
+      offset: 00000EE8
+    - name: _pSysDevVCD
+      processed: ''
+      offset: 00000EEC
+    - name: _fpVCD
+      processed: ''
+      offset: 00000EF0
+    - name: _pcdfsinfo
+      processed: ''
+      offset: 00000EF4
+    - name: _hUnlockEvent
+      processed: ''
+      offset: 00000EF8
+    - name: _hsemLocking
+      processed: ''
+      offset: 00000EFC
+    - name: _cLockCDFS
+      processed: ''
+      offset: 00000F00
+    - name: _cLockWait
+      processed: ''
+      offset: 00000F04
+    - name: _fLockFlags
+      processed: ''
+      offset: 00000F08
+    - name: _strAssertFailure
+      processed: ''
+      offset: 00000F0C
+    - name: _strWarnBadMaster
+      processed: ''
+      offset: 00000F48
+    - name: _strWarnMemory
+      processed: ''
+      offset: 00000F88
+    - name: _ilbCDFS
+      processed: ''
+      offset: 00000FC8
+    - name: _cddispCDFS
+      processed: ''
+      offset: 00000FFC
+    - name: _hmDispMisc
+      processed: ''
+      offset: 0000101C
+    - name: _hmDispFind
+      processed: ''
+      offset: '00001040'
+    - name: _volDispVolume
+      processed: ''
+      offset: '00001064'
+    - name: _cdfsDev_GetFunction
+      processed: ''
+      offset: '00001490'
+    - name: _PAEP_rpm_inquiry
+      processed: ''
+      offset: 000015F0
+    - name: _PAEP_rpm_change
+      processed: ''
+      offset: 000015F4
+    - name: _PAEP_3mode_config
+      processed: ''
+      offset: 000015F8
+  - num: '2'
+    name: _IGROUP
+    offset: 000010C0
+    symbols:
+    - name: CDFS_Dynamic_Device_Init
+      processed: ''
+      offset: 000000AD
+    - name: _cdfsGetRegistry
+      processed: ''
+      offset: 0000020C
+    - name: _cdfsSetRegDefaults
+      processed: ''
+      offset: '000005E0'
+    - name: _CDPrefPreInit
+      processed: ''
+      offset: 000006D0
+    - name: _drpCDFS
+      processed: ''
+      offset: 0000073C
+  - num: '3'
+    name: _PGROUP
+    offset: '00008230'
+    symbols:
+    - name: _cdfsTearDown
+      processed: ''
+      offset: '00000000'
+    - name: _CMInitCache
+      processed: ''
+      offset: '000000E0'
+    - name: _CMFreeCache
+      processed: ''
+      offset: 000004B0
+    - name: _MY_PageAllocate
+      processed: ''
+      offset: '00000540'
+    - name: _CDFS_Query
+      processed: ''
+      offset: '00000580'
+    - name: _cdfsDevIO_RdDevHdr
+      processed: ''
+      offset: '00000630'
+    - name: _cdfsDevIO_RdErrorStat
+      processed: ''
+      offset: '00000650'
+    - name: _cdfsDevIO_RdAudChanInfo
+      processed: ''
+      offset: '00000680'
+    - name: _cdfsDevIO_RdDriveBytes
+      processed: ''
+      offset: '00000710'
+    - name: _cdfsDevIO_RdSectSize
+      processed: ''
+      offset: '00000740'
+    - name: _cdfsDevIO_RdVolSize
+      processed: ''
+      offset: 000007A0
+    - name: _cdfsDevIO_RdMedChanged
+      processed: ''
+      offset: '00000820'
+    - name: _cdfsDevIO_RdAudDiskInfo
+      processed: ''
+      offset: '00000880'
+    - name: _cdfsDevIO_RdAudTrackInfo
+      processed: ''
+      offset: '000008E0'
+    - name: _cdfsDevIO_RdAudSubInfo
+      processed: ''
+      offset: '00000940'
+    - name: _cdfsDevIO_RdAudQUPC
+      processed: ''
+      offset: 000009B0
+    - name: _cdfsDevIO_WtEject
+      processed: ''
+      offset: 00000A10
+    - name: _cdfsDevIO_WtLockUnlock
+      processed: ''
+      offset: 00000A40
+    - name: _cdfsDevIO_WtReset
+      processed: ''
+      offset: 00000A80
+    - name: _cdfsDevIO_WtAudChanCtrl
+      processed: ''
+      offset: 00000AC0
+    - name: _cdfsDevIO_WtDevCtrlStr
+      processed: ''
+      offset: 00000B50
+    - name: _cdfsDevIO_WtCloseTray
+      processed: ''
+      offset: 00000B80
+    - name: _cdfsDevIFL
+      processed: ''
+      offset: 00000BB0
+    - name: _cdfsDevOPN
+      processed: ''
+      offset: 00000BF0
+    - name: _cdfsDevCDReadLongPre
+      processed: ''
+      offset: 00000C30
+    - name: _cdfsDevCDSeek
+      processed: ''
+      offset: 00000C50
+    - name: _cdfsDevCDPlayAudio
+      processed: ''
+      offset: 00000CA0
+    - name: _cdfsDevCDStopAudio
+      processed: ''
+      offset: '00000E10'
+    - name: _cdfsDevCDResumeAudio
+      processed: ''
+      offset: '00000E40'
+    - name: _cdfsAbsReadCall
+      processed: ''
+      offset: '00000E70'
+    - name: _cdfsAbsReadRet
+      processed: ''
+      offset: 00000F20
+    - name: _upcs
+      processed: ''
+      offset: '00001000'
+    - name: _CDFS2f_GetVTOCFileName
+      processed: ''
+      offset: '00001030'
+    - name: _CDFS2f_ReadVTOC
+      processed: ''
+      offset: '00001160'
+    - name: _CDFS2f_Dbg
+      processed: ''
+      offset: 000012A0
+    - name: _CDFS2f_AbsDiskRead
+      processed: ''
+      offset: 000012B0
+    - name: _CDFS2f_AbsDiskWrite
+      processed: ''
+      offset: 000013D0
+    - name: _CDFS2f_Unload
+      processed: ''
+      offset: 000013F0
+    - name: _CDFS2f_VDSPreference
+      processed: ''
+      offset: '00001400'
+    - name: _CDFS2f_GetDirEntry
+      processed: ''
+      offset: '00001530'
+    - name: _cdfsGetVTOCNameStart
+      processed: ''
+      offset: 000016B0
+    - name: _cdfsGetVTOCNameDone
+      processed: ''
+      offset: 000016D0
+    - name: _cdfsGetDirEntStart
+      processed: ''
+      offset: 000017C0
+    - name: _cdfsGetDirEntDone
+      processed: ''
+      offset: '00001930'
+    - name: _CDFS_MountVolume
+      processed: ''
+      offset: 00001AD0
+    - name: _cdfsTryVerifyFromMount
+      processed: ''
+      offset: 00001B60
+    - name: _CDFS_Delete
+      processed: ''
+      offset: 00001C10
+    - name: _CDFS_IOCTL16Drive
+      processed: ''
+      offset: 00001C30
+    - name: _CDFS_Commit
+      processed: ''
+      offset: 00001C40
+    - name: _CDFS_FileLocks
+      processed: ''
+      offset: 00001C50
+    - name: _cdfsCDDATest
+      processed: ''
+      offset: 00001C60
+    - name: _cdfsUnmount
+      processed: ''
+      offset: 00001CD0
+    - name: _cdfsVerifyStart
+      processed: ''
+      offset: 00001D20
+    - name: _cdfsVerifyDone
+      processed: ''
+      offset: 00001DE0
+    - name: _diskFree
+      processed: ''
+      offset: 00001F60
+    - name: _GetISO2022CPID
+      processed: ''
+      offset: 00001FC0
+    - name: _cdfsDiskAlloc
+      processed: ''
+      offset: '00002010'
+    - name: _cdfsDiskAllocEndTag
+      processed: ''
+      offset: '00002190'
+    - name: _cdfsSesInfoStart
+      processed: ''
+      offset: 000021A0
+    - name: _cdfsSesInfoDone
+      processed: ''
+      offset: '00002260'
+    - name: _cdfsVRSSampCall
+      processed: ''
+      offset: 000023A0
+    - name: _cdfsVRSSampStart
+      processed: ''
+      offset: '00002440'
+    - name: _cdfsVRSSampDone
+      processed: ''
+      offset: '00002460'
+    - name: _cdfsVRSSampRet
+      processed: ''
+      offset: 000027B0
+    - name: _cdfsVolAlloc
+      processed: ''
+      offset: 000028A0
+    - name: _cdfsPTInitCall
+      processed: ''
+      offset: 00002D10
+    - name: _cdfsPTInitStart
+      processed: ''
+      offset: '00002E20'
+    - name: _cdfsPTInitDone
+      processed: ''
+      offset: 00002F90
+    - name: _cdfsPTInitRet
+      processed: ''
+      offset: 000036A0
+    - name: _cdfsRootInitCall
+      processed: ''
+      offset: 000036C0
+    - name: _cdfsRootInitStart
+      processed: ''
+      offset: '000036E0'
+    - name: _cdfsRootInitDone
+      processed: ''
+      offset: '00003710'
+    - name: _cdfsRootInitRet
+      processed: ''
+      offset: '00003760'
+    - name: _cdfsMountDone
+      processed: ''
+      offset: '00003790'
+    - name: _cdfsMountDoneEndTag
+      processed: ''
+      offset: 000038B0
+    - name: _cdfsMountFail
+      processed: ''
+      offset: 000038C0
+    - name: _cdfsSendIOCTL
+      processed: ''
+      offset: '00003920'
+    - name: _cdfsSetBusyStatus
+      processed: ''
+      offset: 000039D0
+    - name: _IFS_CDROM_Attach
+      processed: ''
+      offset: 00003A50
+    - name: _IFS_CDROM_Detach
+      processed: ''
+      offset: 00003A56
+    - name: _CDFS_VCDStrategy
+      processed: ''
+      offset: 00003A5C
+    - name: _CDFS_VCDInterrupt
+      processed: ''
+      offset: 00003A67
+    - name: _CDFS2f_SendDriveRequest
+      processed: ''
+      offset: 00003A70
+    - name: _CDFSVCD_Strategy
+      processed: ''
+      offset: 00003B00
+    - name: _cdfsDevIO_RdHeadLoc
+      processed: ''
+      offset: 00003B80
+    - name: _cdfsDevIO_RdDevStatus
+      processed: ''
+      offset: 00003BE0
+    - name: _cdfsDevIO_RdAudQInfo
+      processed: ''
+      offset: 00003C30
+    - name: _cdfsDevIO_RdAudStatus
+      processed: ''
+      offset: 00003CC0
+    - name: _cdfsDevCDReadLong
+      processed: ''
+      offset: 00003D20
+    - name: _cdfsAttachDrive
+      processed: ''
+      offset: 00003EA0
+    - name: _cdfsDetachDrive
+      processed: ''
+      offset: 00003ED0
+    - name: _cdfsDevIO_Init
+      processed: ''
+      offset: 00003EF0
+    - name: _cdfsDevIO_UnInit
+      processed: ''
+      offset: 00003F70
+    - name: _cdfsIORAllocIOCTL
+      processed: ''
+      offset: 00003F90
+    - name: _cdfsIORFreeIOCTL
+      processed: ''
+      offset: '00004030'
+    - name: _cdfsSubmitIOCTL
+      processed: ''
+      offset: '00004060'
+    - name: _cdfsSetDevError
+      processed: ''
+      offset: 000040D0
+    - name: _cdfsMapToNotReady
+      processed: ''
+      offset: 000041B0
+    - name: _cdfsUnitToDrive
+      processed: ''
+      offset: 000041D0
+    - name: _CDFS2f_GetNumDrives
+      processed: ''
+      offset: '00004210'
+    - name: _CDFS2f_GetDevList
+      processed: ''
+      offset: '00004260'
+    - name: _CDFS2f_DriveCheck
+      processed: ''
+      offset: 000042B0
+    - name: _CDFS2f_GetVersion
+      processed: ''
+      offset: 000042F0
+    - name: _CDFS2f_GetDriveLetters
+      processed: ''
+      offset: '00004310'
+    - name: _CDFS_Dir
+      processed: ''
+      offset: '00004360'
+    - name: _CDFS_FileAttrib
+      processed: ''
+      offset: '00004390'
+    - name: _CDFS_Open
+      processed: ''
+      offset: 000043C0
+    - name: _CDFS_ReadFile
+      processed: ''
+      offset: '00004410'
+    - name: _CDFS_Seek
+      processed: ''
+      offset: '00004440'
+    - name: _CDFS_FileTimes
+      processed: ''
+      offset: '00004460'
+    - name: _CDFS_EnumHandle
+      processed: ''
+      offset: 000044D0
+    - name: _CDFS_ReturnError
+      processed: ''
+      offset: '00004500'
+    - name: _cdfsChDirStart
+      processed: ''
+      offset: '00004520'
+    - name: _cdfsChDirDone
+      processed: ''
+      offset: '00004590'
+    - name: _cdfsGetAttrStart
+      processed: ''
+      offset: '00004650'
+    - name: _cdfsGetAttrDone
+      processed: ''
+      offset: 000046B0
+    - name: _cdfsFlush
+      processed: ''
+      offset: 000046F0
+    - name: _cdfsOpenStart
+      processed: ''
+      offset: '00004740'
+    - name: _cdfsReadFileStart
+      processed: ''
+      offset: 000047A0
+    - name: _cdfsReadFileDone
+      processed: ''
+      offset: 00004A80
+    - name: _cdfsSeekFile
+      processed: ''
+      offset: 00004AE0
+    - name: _cdfsCloseFile
+      processed: ''
+      offset: 00004B50
+    - name: _cdfsFileTime
+      processed: ''
+      offset: 00004B80
+    - name: _cdfsHandleInfo
+      processed: ''
+      offset: 00004C70
+    - name: _MY_HeapAllocate
+      processed: ''
+      offset: 00004D40
+    - name: _cdmftAllocInit
+      processed: ''
+      offset: 00004D60
+    - name: _cdmftActivate
+      processed: ''
+      offset: 00004F40
+    - name: _cdmftActivateEndTag
+      processed: ''
+      offset: 00004F70
+    - name: _cdmftFindFromIndex
+      processed: ''
+      offset: 00004F80
+    - name: _cdmftFindFromIndexEndTag
+      processed: ''
+      offset: 00004FE0
+    - name: _cdsftAllocInit
+      processed: ''
+      offset: 00004FF0
+    - name: _cdsftActivate
+      processed: ''
+      offset: 000050B0
+    - name: _cdsftActivateEndTag
+      processed: ''
+      offset: '00005100'
+    - name: _cdvFree
+      processed: ''
+      offset: '00005110'
+    - name: _cdvFreeEndTag
+      processed: ''
+      offset: 000051F0
+    - name: _cdmftFree
+      processed: ''
+      offset: '00005200'
+    - name: _cdmftFreeEndTag
+      processed: ''
+      offset: 000052D0
+    - name: _cdsftFree
+      processed: ''
+      offset: '000052E0'
+    - name: _cdsftFreeEndTag
+      processed: ''
+      offset: '00005390'
+    - name: _IFS_Win32ToDosTime
+      processed: ''
+      offset: 000053A0
+    - name: _cdfsLocalToGMTTime
+      processed: ''
+      offset: 000053BB
+    - name: _DirTimeToDOSTime
+      processed: ''
+      offset: 000053DD
+    - name: _IFS_CreateBasis
+      processed: ''
+      offset: 000053FF
+    - name: _IFS_AppendBasisTail
+      processed: ''
+      offset: 0000544E
+    - name: _IFS_FcbToShort
+      processed: ''
+      offset: '00005454'
+    - name: _IFS_MetaMatch
+      processed: ''
+      offset: 0000545A
+    - name: _IFS_BCSToUni
+      processed: ''
+      offset: '00005460'
+    - name: _IFS_UniToBCS
+      processed: ''
+      offset: '00005466'
+    - name: _IFS_ShortToFcb
+      processed: ''
+      offset: 0000546C
+    - name: _cdfsAttrMatch
+      processed: ''
+      offset: 000054BE
+    - name: _CDFS_GetDiskInfo
+      processed: ''
+      offset: '000054E0'
+    - name: _CDFS_Search
+      processed: ''
+      offset: '00005590'
+    - name: _CDFS_FindOpen
+      processed: ''
+      offset: 000055B0
+    - name: _CDFS_FindNextFile
+      processed: ''
+      offset: 000055D0
+    - name: _cdfsFindOpenStart
+      processed: ''
+      offset: 000055F0
+    - name: _cdfsSearchStart
+      processed: ''
+      offset: '00005610'
+    - name: _cdfsSearchDone
+      processed: ''
+      offset: '00005780'
+    - name: _cdfsFindNextStart
+      processed: ''
+      offset: 000058C0
+    - name: _cdfsFindNextDone
+      processed: ''
+      offset: 00005A90
+    - name: _MY_LinPageLock
+      processed: ''
+      offset: 00005DA0
+    - name: _MY_LinPageUnLock
+      processed: ''
+      offset: 00005DD0
+    - name: _MY_LinToPhys
+      processed: ''
+      offset: '00005E00'
+    - name: _TwoDigits
+      processed: ''
+      offset: '00005E70'
+    - name: _ISOToWin32Time
+      processed: ''
+      offset: '00005E90'
+    - name: _DirToWin32Time
+      processed: ''
+      offset: 00005F70
+    - name: _Win32TimeWorker
+      processed: ''
+      offset: '00006010'
+    - name: _cdfsInPathGet
+      processed: ''
+      offset: '00006110'
+    - name: _cdfsFreePaths
+      processed: ''
+      offset: '00006240'
+    - name: _cdfsRunAPI
+      processed: ''
+      offset: '00006290'
+    - name: _cdcInit
+      processed: ''
+      offset: '00006320'
+    - name: _cdfsLockSec
+      processed: ''
+      offset: 000064A0
+    - name: _pPLTextStart
+      processed: ''
+      offset: '00006560'
+    - name: _MY_IOS_SendCommand
+      processed: ''
+      offset: '00006560'
+    - name: _MY_IOSMapIORSToI21
+      processed: ''
+      offset: 0000658F
+    - name: _MY_Meet_Criteria_Stub
+      processed: ''
+      offset: '00006599'
+    - name: _MY_Map_Flat
+      processed: ''
+      offset: 000065C2
+    - name: _MY_PageFree
+      processed: ''
+      offset: 000065CC
+    - name: _MY_Simulate_Far_Call
+      processed: ''
+      offset: 000065D2
+    - name: _MY_Simulate_Far_Ret
+      processed: ''
+      offset: '000065E2'
+    - name: _cdfsIOCTLPassThrough
+      processed: ''
+      offset: '000065E8'
+    - name: _MapV86Flat
+      processed: ''
+      offset: 0000671B
+    - name: _cdfsSemRequest
+      processed: ''
+      offset: '00006734'
+    - name: _cdfsSemRelease
+      processed: ''
+      offset: 0000679B
+    - name: _SafeMemCpyC
+      processed: ''
+      offset: 000067CD
+    - name: _cdfsAudioS1611025
+      processed: ''
+      offset: '000067E3'
+    - name: _cdfsAudioS1622050
+      processed: ''
+      offset: '000067E6'
+    - name: _cdfsAudioS1644100
+      processed: ''
+      offset: '000067E9'
+    - name: _cdfsAudioS811025
+      processed: ''
+      offset: 000067ED
+    - name: _cdfsAudioS822050
+      processed: ''
+      offset: 000067F0
+    - name: _cdfsAudioS844100
+      processed: ''
+      offset: 000067F3
+    - name: _cdfsAudioM1611025
+      processed: ''
+      offset: '00006808'
+    - name: _cdfsAudioM1622050
+      processed: ''
+      offset: 0000680B
+    - name: _cdfsAudioM1644100
+      processed: ''
+      offset: 0000680E
+    - name: _cdfsAudioM811025
+      processed: ''
+      offset: '00006820'
+    - name: _cdfsAudioM822050
+      processed: ''
+      offset: '00006823'
+    - name: _cdfsAudioM844100
+      processed: ''
+      offset: '00006826'
+    - name: _cdfsLockSecCall
+      processed: ''
+      offset: '00006840'
+    - name: _cdfsLockSecRet
+      processed: ''
+      offset: 000068C0
+    - name: _cdfsLockSecNB
+      processed: ''
+      offset: '00006930'
+    - name: _cdfsReadSecStart
+      processed: ''
+      offset: 00006A00
+    - name: _cdfsReadSecDone
+      processed: ''
+      offset: 00006B30
+    - name: _cdfsReadStart
+      processed: ''
+      offset: 00006BE0
+    - name: _cdfsReadFast
+      processed: ''
+      offset: 00006F70
+    - name: _cdfsReadDone
+      processed: ''
+      offset: '00007230'
+    - name: _cdfsSGReadStart
+      processed: ''
+      offset: 000072B0
+    - name: _cdfsSGReadDone
+      processed: ''
+      offset: '00007590'
+    - name: _cdfsMoveData
+      processed: ''
+      offset: '00007690'
+    - name: _cdfsAbsReadStart
+      processed: ''
+      offset: 000078D0
+    - name: _cdfsAbsReadDone
+      processed: ''
+      offset: '00007930'
+    - name: _IORCheck
+      processed: ''
+      offset: 000079C0
+    - name: _IORAlloc
+      processed: ''
+      offset: 00007A00
+    - name: _IORFree
+      processed: ''
+      offset: 00007B20
+    - name: _LogBase2
+      processed: ''
+      offset: 00007B60
+    - name: _cdfsSerial
+      processed: ''
+      offset: 00007BB0
+    - name: _CDPrefPreLock
+      processed: ''
+      offset: 00007C30
+    - name: _CDPrefSectorHit
+      processed: ''
+      offset: 00007D30
+    - name: _CDBeginPrefetch
+      processed: ''
+      offset: 000080F0
+    - name: _cdfsPrefStart
+      processed: ''
+      offset: '00008160'
+    - name: _cdfsPrefDone
+      processed: ''
+      offset: 000083A0
+    - name: _CDPrefLockEvent
+      processed: ''
+      offset: '00008540'
+    - name: _CMFindBlock
+      processed: ''
+      offset: 000086B0
+    - name: _CMLockBlock
+      processed: ''
+      offset: '00008720'
+    - name: _cdfsClearSector
+      processed: ''
+      offset: 00008C20
+    - name: _CMValidateBlock
+      processed: ''
+      offset: 00008D00
+    - name: _CMInvalidateBlock
+      processed: ''
+      offset: 00008D90
+    - name: _CMUnLockBlock
+      processed: ''
+      offset: 00008DB0
+    - name: _CMAllocVolume
+      processed: ''
+      offset: 00008ED0
+    - name: _CMFlushVolume
+      processed: ''
+      offset: 00008EE0
+    - name: _CMAddNewVolume
+      processed: ''
+      offset: 00008FB0
+    - name: _CMRemoveVolume
+      processed: ''
+      offset: '00009020'
+    - name: _CMChDir
+      processed: ''
+      offset: '00009080'
+    - name: _cmHashRemove
+      processed: ''
+      offset: '00009110'
+    - name: _CMDowngradePref
+      processed: ''
+      offset: '00009160'
+    - name: _cmLRUReclaim
+      processed: ''
+      offset: '00009220'
+    - name: _cmLRURemove
+      processed: ''
+      offset: '000092E0'
+    - name: _cmLRUAdd
+      processed: ''
+      offset: 000093F0
+    - name: _cmSubtractCount
+      processed: ''
+      offset: '00009850'
+    - name: _cmAddCount
+      processed: ''
+      offset: '00009970'
+    - name: _cmPrefAgressRaise
+      processed: ''
+      offset: 00009A40
+    - name: _cmGetCMCH
+      processed: ''
+      offset: 00009B20
+    - name: _cmBlockToCE
+      processed: ''
+      offset: 00009B40
+    - name: _cmEmergencyUnlock
+      processed: ''
+      offset: 00009B70
+    - name: _CMAssertLocked
+      processed: ''
+      offset: 00009C70
+    - name: _cdfsOpenDone
+      processed: ''
+      offset: 00009D40
+    - name: _CallState
+      processed: ''
+      offset: 0000A210
+    - name: _RetState
+      processed: ''
+      offset: 0000A240
+    - name: _RunTaskStates
+      processed: ''
+      offset: 0000A280
+    - name: _RunGEHStates
+      processed: ''
+      offset: 0000A330
+    - name: _SetGEHWait
+      processed: ''
+      offset: 0000A430
+    - name: _RemoveCdc
+      processed: ''
+      offset: 0000A450
+    - name: _MainGEH
+      processed: ''
+      offset: 0000A490
+    - name: _DevCallback
+      processed: ''
+      offset: 0000A4C0
+    - name: _cdfsSemReq
+      processed: ''
+      offset: 0000A540
+    - name: _cdfsSemReqRetry
+      processed: ''
+      offset: 0000A5A0
+    - name: _cdfsSleep
+      processed: ''
+      offset: 0000A5E0
+    - name: _cdfsWakeAll
+      processed: ''
+      offset: 0000A600
+    - name: _MY_Create_Semaphore
+      processed: ''
+      offset: 0000A640
+    - name: _MY_Destroy_Semaphore
+      processed: ''
+      offset: 0000A660
+    - name: _MY_Signal_Semaphore
+      processed: ''
+      offset: 0000A670
+    - name: _MY_Wait_Semaphore
+      processed: ''
+      offset: 0000A680
+    - name: _MY_Schedule_Global_Event
+      processed: ''
+      offset: 0000A6A0
+    - name: _MY_HeapFree
+      processed: ''
+      offset: 0000A6C0
+    - name: _cdfsDone
+      processed: ''
+      offset: 0000A730
+    - name: _cdfsPanic
+      processed: ''
+      offset: 0000A740
+    - name: _cdfsNotImp
+      processed: ''
+      offset: 0000A750
+    - name: _cdfsErrorRet
+      processed: ''
+      offset: 0000A780
+    - name: _cdfsGetNamesFromRDE
+      processed: ''
+      offset: 0000A7A0
+    - name: _cdfsGetNamesFromRPTE
+      processed: ''
+      offset: 0000A820
+    - name: _cdfsGetNamesFromCDV
+      processed: ''
+      offset: 0000A890
+    - name: _cdfsGetLFNName
+      processed: ''
+      offset: 0000A8C0
+    - name: _cdfsGetOEMName
+      processed: ''
+      offset: 0000AA80
+    - name: _cdfsMetaCompare
+      processed: ''
+      offset: 0000AC30
+    - name: _cdfsCheckSemi
+      processed: ''
+      offset: 0000AD70
+    - name: _cdfsDirScanCall
+      processed: ''
+      offset: 0000AE00
+    - name: _cdfsDirScanStart
+      processed: ''
+      offset: 0000B0D0
+    - name: _cdfsDirScanDone
+      processed: ''
+      offset: 0000B120
+    - name: _cdfsDirScanRet
+      processed: ''
+      offset: 0000B5F0
+    - name: _cdfsGetAttrFromRDE
+      processed: ''
+      offset: 0000B690
+    - name: _GetAttrFromISOFlags
+      processed: ''
+      offset: 0000B6C0
+    - name: _cdfsAccumFileSize
+      processed: ''
+      offset: 0000B6E0
+    - name: _cdfsGetXASysUseArea
+      processed: ''
+      offset: 0000B7E0
+    - name: _cdfsGetExtentSize
+      processed: ''
+      offset: 0000B820
+    - name: _cdfsLocateExtentVolume
+      processed: ''
+      offset: 0000B890
+    - name: _cdfsPTScanCall
+      processed: ''
+      offset: 0000B8D0
+    - name: _cdfsPTScanStart
+      processed: ''
+      offset: 0000BA00
+    - name: _cdfsPTScanDone
+      processed: ''
+      offset: 0000BA50
+    - name: _cdfsPreInitIOREQ
+      processed: ''
+      offset: 0000BDF0
+    - name: _cdfsAttachResource
+      processed: ''
+      offset: 0000BE70
+    - name: _cdfsDetachResource
+      processed: ''
+      offset: 0000BED0
+    - name: _pcdcHead
+      processed: ''
+      offset: 0000BF10
+    - name: _pPLDataStart
+      processed: ''
+      offset: 0000BF10
+    - name: _pPLTextEnd
+      processed: ''
+      offset: 0000BF10
+    - name: _pcdcSleepHead
+      processed: ''
+      offset: 0000BF14
+    - name: _smsCDFS
+      processed: ''
+      offset: 0000BF18
+    - name: _pcdvHead
+      processed: ''
+      offset: 0000BF20
+    - name: _GEHHandle
+      processed: ''
+      offset: 0000BF24
+    - name: _pcmchCooked
+      processed: ''
+      offset: 0000BF28
+    - name: _pcmchRaw
+      processed: ''
+      offset: 0000BF2C
+    - name: _pcmchRawTmp
+      processed: ''
+      offset: 0000BF30
+    - name: _NextVolumeID
+      processed: ''
+      offset: 0000BF34
+    - name: _ExtendedErrors
+      processed: ''
+      offset: 0000BF38
+    - name: _CDXCompatNames
+      processed: ''
+      offset: 0000BF3C
+    - name: _In_Mctrl
+      processed: ''
+      offset: 0000BF40
+    - name: _afCdMediaChgd
+      processed: ''
+      offset: 0000BF44
+    - name: _fNoPreLockNeeded
+      processed: ''
+      offset: 0000BF48
+    - name: _MSCDEXVersion
+      processed: ''
+      offset: 0000BF4C
+    - name: _CDFSCacheSize
+      processed: ''
+      offset: 0000BF50
+    - name: _CDFSPrefetch
+      processed: ''
+      offset: 0000BF54
+    - name: _CDFSPrefetchTail
+      processed: ''
+      offset: 0000BF58
+    - name: _CDFSRawCache
+      processed: ''
+      offset: 0000BF5C
+    - name: _cpidOEM
+      processed: ''
+      offset: 0000BF60
+    - name: _pcdpiCache
+      processed: ''
+      offset: 0000BF64
+    - name: _pMountDispSave
+      processed: ''
+      offset: 0000BF68
+    - name: _pSystemClock
+      processed: ''
+      offset: 0000BF6C
+    - name: _cdperf
+      processed: ''
+      offset: 0000BF70
+    - name: _pcdperf
+      processed: ''
+      offset: 0000BFC4
+    - name: _PrefClock
+      processed: ''
+      offset: 0000BFC8
+    - name: _SectorPrefNext
+      processed: ''
+      offset: 0000BFCC
+    - name: _pcdvPrefNext
+      processed: ''
+      offset: 0000BFD0
+    - name: _SectorPrefLast
+      processed: ''
+      offset: 0000BFD4
+    - name: _PrefFlags
+      processed: ''
+      offset: 0000BFD8
+    - name: _cdcPref
+      processed: ''
+      offset: 0000BFDC
+    - name: _sgiPref
+      processed: ''
+      offset: 0000C0A0
+    - name: _apfnMSCDEXInt2f
+      processed: ''
+      offset: 0000C130
+    - name: _apfnCdRdIoctl
+      processed: ''
+      offset: 0000C174
+    - name: _apfnCdWtIoctl
+      processed: ''
+      offset: 0000C1B4
+    - name: _apfnCdDev128
+      processed: ''
+      offset: 0000C1CC
+    - name: _VolIdPattern
+      processed: ''
+      offset: 0000C1F0
+    - name: _wchDot
+      processed: ''
+      offset: 0000C210
+    - name: _wchDotDot
+      processed: ''
+      offset: 0000C214
+    - name: _MonDays
+      processed: ''
+      offset: 0000C218
+    - name: _achForeignLabel
+      processed: ''
+      offset: 0000C230
+    - name: _achAudioLabel
+      processed: ''
+      offset: 0000C250
+    - name: _AudioRootDe
+      processed: ''
+      offset: 0000C270
+    - name: _AudioPhile
+      processed: ''
+      offset: 0000C294
+    - name: _AudioPhileHeader
+      processed: ''
+      offset: 0000C2CC
+    - name: _AudioPlayHeader
+      processed: ''
+      offset: 0000C2F8
+    - name: _XAFileHeader
+      processed: ''
+      offset: 0000C324
+    - name: _AudioPhilePathTable
+      processed: ''
+      offset: 0000C350
+    - name: _acdptiForeign
+      processed: ''
+      offset: 0000C35C
+    - name: _acdptiAudioPhile
+      processed: ''
+      offset: 0000C380
+    - name: _aapreCopyAudio
+      processed: ''
+      offset: 0000C3A4
+    - name: _aste
+      processed: ''
+      offset: 0000CB24
+    - name: _pPLDataEnd
+      processed: ''
+      offset: 0000CF3C
+  - num: '4'
+    name: _SGROUP
+    offset: '00000000'
+    symbols:
+    - name: _pHeapFreeHead
+      processed: ''
+      offset: '00000000'
+    - name: _CDFSLoaded
+      processed: ''
+      offset: '00000004'
+    - name: _SafeMemCpyEH
+      processed: ''
+      offset: '00000008'
+    - name: _pfnCDPrefLockEvent
+      processed: ''
+      offset: '00000018'
+    - name: _pfnCDFSLazyUnlockEvent
+      processed: ''
+      offset: 0000001C
+    - name: _CDPrefLockEventStatic
+      processed: ''
+      offset: '00000020'
+    - name: _HeapFreeEventStatic
+      processed: ''
+      offset: '00000046'
+    - name: _CDFSLazyUnlockEventStatic
+      processed: ''
+      offset: '00000078'
+    - name: _SafeMemCpyAsm
+      processed: ''
+      offset: 000000A1
+    - name: WARN_CD_App_Bad_Read_Address
+      processed: ''
+      offset: 000000D6
+- version: Windows 98 Retail
+  source_tree:
+  - ../cdapi.c
+  - ../cdapisr.c
+  - ../cdcache.c
+  - ../cdcannon.c
+  - ../cddir.c
+  - ../cdfs.asm
+  - ../cdhandle.c
+  - ../cdios.c
+  - ../cdlock.c
+  - ../cdmctrl.c
+  - ../cdmount.c
+  - ../cdpath.c
+  - ../cdpref.c
+  - ../cdread.c
+  - ../cdsched.c
+  - ../cdstate.c
+  - ../cdvcd.c
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00000830'
+    symbols:
+    - name: _CDFS_Int2FHook
+      demangled: ''
+      offset: '00000000'
+    - name: CDFS_Control
+      demangled: ''
+      offset: 0000004D
+    - name: _CDFS_Control_Dispatch_Ext
+      demangled: ''
+      offset: '00000061'
+    - name: _VMM_BlockOnID
+      demangled: ''
+      offset: '00000063'
+    - name: _VMM_SignalID
+      demangled: ''
+      offset: '00000069'
+    - name: _CDFS_CDQuery
+      demangled: ''
+      offset: 0000006F
+    - name: _CDFS_Flush
+      demangled: ''
+      offset: '00000090'
+    - name: _CDFS_Disconnect
+      demangled: ''
+      offset: 000000B0
+    - name: _CDFS_Close
+      demangled: ''
+      offset: '000000E0'
+    - name: _CDFS_FindClose
+      demangled: ''
+      offset: '00000110'
+    - name: _CDFSBeginLockedAccess
+      demangled: ''
+      offset: '00000140'
+    - name: _CDFSEndLockedAccess
+      demangled: ''
+      offset: '00000330'
+    - name: _CDFSBeginNestedLockedAccess
+      demangled: ''
+      offset: '00000350'
+    - name: _CDFSLazyUnlockTick
+      demangled: ''
+      offset: '00000360'
+    - name: _CDFSLazyUnlockEvent
+      demangled: ''
+      offset: '000003E0'
+    - name: _CDFSAsyncEvent
+      demangled: ''
+      offset: '00000570'
+    - name: _cdfsSetFirstDriveLetter
+      demangled: ''
+      offset: 000007C0
+    - name: _MY_CallWhenNotCritical
+      demangled: ''
+      offset: '00000800'
+    - name: CDFS_DDB
+      demangled: ''
+      offset: '00000830'
+    - name: _pcdcVerifyHead
+      demangled: ''
+      offset: '00000880'
+    - name: _SubUnitNext
+      demangled: ''
+      offset: '00000884'
+    - name: _DefaultSvdSense
+      demangled: ''
+      offset: '00000888'
+    - name: _fTearDown
+      demangled: ''
+      offset: 0000088C
+    - name: _fShowVersions
+      demangled: ''
+      offset: '00000890'
+    - name: _fCDFSMisc
+      demangled: ''
+      offset: '00000894'
+    - name: _pSysDevVCD
+      demangled: ''
+      offset: '00000898'
+    - name: _fpVCD
+      demangled: ''
+      offset: 0000089C
+    - name: _pcdfsinfo
+      demangled: ''
+      offset: 000008A0
+    - name: _hUnlockEvent
+      demangled: ''
+      offset: 000008A4
+    - name: _hsemLocking
+      demangled: ''
+      offset: 000008A8
+    - name: _cLockCDFS
+      demangled: ''
+      offset: 000008AC
+    - name: _cLockWait
+      demangled: ''
+      offset: 000008B0
+    - name: _fLockFlags
+      demangled: ''
+      offset: 000008B4
+    - name: _ilbCDFS
+      demangled: ''
+      offset: 000008B8
+    - name: _cddispCDFS
+      demangled: ''
+      offset: 000008EC
+    - name: _hmDispMisc
+      demangled: ''
+      offset: 0000090C
+    - name: _hmDispFind
+      demangled: ''
+      offset: '00000930'
+    - name: _volDispVolume
+      demangled: ''
+      offset: '00000954'
+    - name: _cdfsDev_GetFunction
+      demangled: ''
+      offset: 000009A0
+    - name: _PAEP_rpm_inquiry
+      demangled: ''
+      offset: 00000AF0
+    - name: _PAEP_rpm_change
+      demangled: ''
+      offset: 00000AF4
+    - name: _PAEP_3mode_config
+      demangled: ''
+      offset: 00000AF8
+  - num: '2'
+    name: _IGROUP
+    offset: '00000E00'
+    symbols:
+    - name: CDFS_Dynamic_Device_Init
+      demangled: ''
+      offset: 000000AD
+    - name: _cdfsGetRegistry
+      demangled: ''
+      offset: 0000020C
+    - name: _cdfsSetRegDefaults
+      demangled: ''
+      offset: '000005E0'
+    - name: _CDPrefPreInit
+      demangled: ''
+      offset: 000006D0
+    - name: _drpCDFS
+      demangled: ''
+      offset: '00000720'
+  - num: '3'
+    name: _PGROUP
+    offset: '00007870'
+    symbols:
+    - name: _cdfsTearDown
+      demangled: ''
+      offset: '00000000'
+    - name: _CMInitCache
+      demangled: ''
+      offset: 000000B0
+    - name: _CMFreeCache
+      demangled: ''
+      offset: '00000450'
+    - name: _MY_PageAllocate
+      demangled: ''
+      offset: '000004E0'
+    - name: _CDFS_Query
+      demangled: ''
+      offset: '00000520'
+    - name: _cdfsDevIO_RdDevHdr
+      demangled: ''
+      offset: '000005E0'
+    - name: _cdfsDevIO_RdErrorStat
+      demangled: ''
+      offset: '00000600'
+    - name: _cdfsDevIO_RdAudChanInfo
+      demangled: ''
+      offset: '00000630'
+    - name: _cdfsDevIO_RdDriveBytes
+      demangled: ''
+      offset: 000006D0
+    - name: _cdfsDevIO_RdSectSize
+      demangled: ''
+      offset: '00000700'
+    - name: _cdfsDevIO_RdVolSize
+      demangled: ''
+      offset: '00000760'
+    - name: _cdfsDevIO_RdMedChanged
+      demangled: ''
+      offset: 000007F0
+    - name: _cdfsDevIO_RdAudDiskInfo
+      demangled: ''
+      offset: '00000860'
+    - name: _cdfsDevIO_RdAudTrackInfo
+      demangled: ''
+      offset: 000008D0
+    - name: _cdfsDevIO_RdAudSubInfo
+      demangled: ''
+      offset: '00000940'
+    - name: _cdfsDevIO_RdAudQUPC
+      demangled: ''
+      offset: 000009C0
+    - name: _cdfsDevIO_WtEject
+      demangled: ''
+      offset: 00000A20
+    - name: _cdfsDevIO_WtLockUnlock
+      demangled: ''
+      offset: 00000A50
+    - name: _cdfsDevIO_WtReset
+      demangled: ''
+      offset: 00000A90
+    - name: _cdfsDevIO_WtAudChanCtrl
+      demangled: ''
+      offset: 00000AC0
+    - name: _cdfsDevIO_WtDevCtrlStr
+      demangled: ''
+      offset: 00000B50
+    - name: _cdfsDevIO_WtCloseTray
+      demangled: ''
+      offset: 00000B80
+    - name: _cdfsDevIFL
+      demangled: ''
+      offset: 00000BB0
+    - name: _cdfsDevOPN
+      demangled: ''
+      offset: 00000BE0
+    - name: _cdfsDevCDReadLongPre
+      demangled: ''
+      offset: 00000C10
+    - name: _cdfsDevCDSeek
+      demangled: ''
+      offset: 00000C20
+    - name: _cdfsDevCDPlayAudio
+      demangled: ''
+      offset: 00000C70
+    - name: _cdfsDevCDStopAudio
+      demangled: ''
+      offset: '00000E00'
+    - name: _cdfsDevCDResumeAudio
+      demangled: ''
+      offset: '00000E30'
+    - name: _cdfsAbsReadCall
+      demangled: ''
+      offset: '00000E60'
+    - name: _cdfsAbsReadRet
+      demangled: ''
+      offset: 00000F10
+    - name: _upcs
+      demangled: ''
+      offset: 00000FF0
+    - name: _CDFS2f_GetVTOCFileName
+      demangled: ''
+      offset: '00001020'
+    - name: _CDFS2f_ReadVTOC
+      demangled: ''
+      offset: '00001100'
+    - name: _CDFS2f_Dbg
+      demangled: ''
+      offset: '00001230'
+    - name: _CDFS2f_AbsDiskRead
+      demangled: ''
+      offset: '00001240'
+    - name: _CDFS2f_AbsDiskWrite
+      demangled: ''
+      offset: '00001350'
+    - name: _CDFS2f_Unload
+      demangled: ''
+      offset: '00001370'
+    - name: _CDFS2f_VDSPreference
+      demangled: ''
+      offset: '00001380'
+    - name: _CDFS2f_GetDirEntry
+      demangled: ''
+      offset: '00001470'
+    - name: _cdfsGetVTOCNameStart
+      demangled: ''
+      offset: 000015D0
+    - name: _cdfsGetVTOCNameDone
+      demangled: ''
+      offset: 000015F0
+    - name: _cdfsGetDirEntStart
+      demangled: ''
+      offset: 000016D0
+    - name: _cdfsGetDirEntDone
+      demangled: ''
+      offset: 000017D0
+    - name: _CDFS_MountVolume
+      demangled: ''
+      offset: '00001970'
+    - name: _cdfsTryVerifyFromMount
+      demangled: ''
+      offset: 00001A10
+    - name: _CDFS_Delete
+      demangled: ''
+      offset: 00001AC0
+    - name: _CDFS_IOCTL16Drive
+      demangled: ''
+      offset: 00001AD0
+    - name: _CDFS_Commit
+      demangled: ''
+      offset: 00001AE0
+    - name: _CDFS_FileLocks
+      demangled: ''
+      offset: 00001AF0
+    - name: _cdfsCDDATest
+      demangled: ''
+      offset: 00001B00
+    - name: _cdfsUnmount
+      demangled: ''
+      offset: 00001B70
+    - name: _cdfsVerifyStart
+      demangled: ''
+      offset: 00001BC0
+    - name: _cdfsVerifyDone
+      demangled: ''
+      offset: 00001C60
+    - name: _diskFree
+      demangled: ''
+      offset: 00001DE0
+    - name: _GetISO2022CPID
+      demangled: ''
+      offset: '00001E20'
+    - name: _cdfsDiskAlloc
+      demangled: ''
+      offset: '00001E70'
+    - name: _cdfsDiskAllocEndTag
+      demangled: ''
+      offset: 00001F80
+    - name: _cdfsSesInfoStart
+      demangled: ''
+      offset: 00001F90
+    - name: _cdfsSesInfoDone
+      demangled: ''
+      offset: '00002040'
+    - name: _cdfsVRSSampCall
+      demangled: ''
+      offset: '00002150'
+    - name: _cdfsVRSSampStart
+      demangled: ''
+      offset: 000021B0
+    - name: _cdfsVRSSampDone
+      demangled: ''
+      offset: 000021C0
+    - name: _cdfsVRSSampRet
+      demangled: ''
+      offset: '00002390'
+    - name: _cdfsVolAlloc
+      demangled: ''
+      offset: '000023E0'
+    - name: _cdfsPTInitCall
+      demangled: ''
+      offset: 000027C0
+    - name: _cdfsPTInitStart
+      demangled: ''
+      offset: '00002860'
+    - name: _cdfsPTInitDone
+      demangled: ''
+      offset: '00002950'
+    - name: _cdfsPTInitRet
+      demangled: ''
+      offset: 00002EC0
+    - name: _cdfsRootInitCall
+      demangled: ''
+      offset: 00002EE0
+    - name: _cdfsRootInitStart
+      demangled: ''
+      offset: 00002F00
+    - name: _cdfsRootInitDone
+      demangled: ''
+      offset: 00002F20
+    - name: _cdfsRootInitRet
+      demangled: ''
+      offset: 00002F50
+    - name: _cdfsMountDone
+      demangled: ''
+      offset: 00002F70
+    - name: _cdfsMountDoneEndTag
+      demangled: ''
+      offset: '00003090'
+    - name: _cdfsMountFail
+      demangled: ''
+      offset: 000030A0
+    - name: _cdfsSendIOCTL
+      demangled: ''
+      offset: '00003100'
+    - name: _cdfsSetBusyStatus
+      demangled: ''
+      offset: 000031A0
+    - name: _IFS_CDROM_Attach
+      demangled: ''
+      offset: 000031F0
+    - name: _IFS_CDROM_Detach
+      demangled: ''
+      offset: 000031F6
+    - name: _CDFS_VCDStrategy
+      demangled: ''
+      offset: 000031FC
+    - name: _CDFS_VCDInterrupt
+      demangled: ''
+      offset: '00003207'
+    - name: _CDFS2f_SendDriveRequest
+      demangled: ''
+      offset: '00003210'
+    - name: _CDFSVCD_Strategy
+      demangled: ''
+      offset: '00003280'
+    - name: _cdfsDevIO_RdHeadLoc
+      demangled: ''
+      offset: '000032E0'
+    - name: _cdfsDevIO_RdDevStatus
+      demangled: ''
+      offset: '00003340'
+    - name: _cdfsDevIO_RdAudQInfo
+      demangled: ''
+      offset: '00003390'
+    - name: _cdfsDevIO_RdAudStatus
+      demangled: ''
+      offset: '00003430'
+    - name: _cdfsDevCDReadLong
+      demangled: ''
+      offset: '00003490'
+    - name: _cdfsAttachDrive
+      demangled: ''
+      offset: '00003630'
+    - name: _cdfsDetachDrive
+      demangled: ''
+      offset: '00003660'
+    - name: _cdfsDevIO_Init
+      demangled: ''
+      offset: '00003680'
+    - name: _cdfsDevIO_UnInit
+      demangled: ''
+      offset: '00003700'
+    - name: _cdfsIORAllocIOCTL
+      demangled: ''
+      offset: '00003720'
+    - name: _cdfsIORFreeIOCTL
+      demangled: ''
+      offset: 000037C0
+    - name: _cdfsSubmitIOCTL
+      demangled: ''
+      offset: 000037F0
+    - name: _cdfsSetDevError
+      demangled: ''
+      offset: '00003860'
+    - name: _cdfsMapToNotReady
+      demangled: ''
+      offset: '00003940'
+    - name: _cdfsUnitToDrive
+      demangled: ''
+      offset: '00003960'
+    - name: _CDFS2f_GetNumDrives
+      demangled: ''
+      offset: '00003990'
+    - name: _CDFS2f_GetDevList
+      demangled: ''
+      offset: '000039E0'
+    - name: _CDFS2f_DriveCheck
+      demangled: ''
+      offset: 00003A30
+    - name: _CDFS2f_GetVersion
+      demangled: ''
+      offset: 00003A70
+    - name: _CDFS2f_GetDriveLetters
+      demangled: ''
+      offset: 00003A90
+    - name: _CDFS_Dir
+      demangled: ''
+      offset: 00003AE0
+    - name: _CDFS_FileAttrib
+      demangled: ''
+      offset: 00003B10
+    - name: _CDFS_Open
+      demangled: ''
+      offset: 00003B40
+    - name: _CDFS_ReadFile
+      demangled: ''
+      offset: 00003B90
+    - name: _CDFS_Seek
+      demangled: ''
+      offset: 00003BC0
+    - name: _CDFS_FileTimes
+      demangled: ''
+      offset: 00003BE0
+    - name: _CDFS_EnumHandle
+      demangled: ''
+      offset: 00003C50
+    - name: _CDFS_ReturnError
+      demangled: ''
+      offset: 00003C80
+    - name: _cdfsChDirStart
+      demangled: ''
+      offset: 00003C90
+    - name: _cdfsChDirDone
+      demangled: ''
+      offset: 00003D00
+    - name: _cdfsGetAttrStart
+      demangled: ''
+      offset: 00003DC0
+    - name: _cdfsGetAttrDone
+      demangled: ''
+      offset: '00003E10'
+    - name: _cdfsFlush
+      demangled: ''
+      offset: '00003E50'
+    - name: _cdfsOpenStart
+      demangled: ''
+      offset: 00003EA0
+    - name: _cdfsReadFileStart
+      demangled: ''
+      offset: 00003EF0
+    - name: _cdfsReadFileDone
+      demangled: ''
+      offset: 000041C0
+    - name: _cdfsSeekFile
+      demangled: ''
+      offset: '00004220'
+    - name: _cdfsCloseFile
+      demangled: ''
+      offset: '00004280'
+    - name: _cdfsFileTime
+      demangled: ''
+      offset: 000042B0
+    - name: _cdfsHandleInfo
+      demangled: ''
+      offset: '00004360'
+    - name: _MY_HeapAllocate
+      demangled: ''
+      offset: '00004420'
+    - name: _cdmftAllocInit
+      demangled: ''
+      offset: '00004440'
+    - name: _cdmftActivate
+      demangled: ''
+      offset: '00004590'
+    - name: _cdmftActivateEndTag
+      demangled: ''
+      offset: 000045C0
+    - name: _cdmftFindFromIndex
+      demangled: ''
+      offset: 000045D0
+    - name: _cdmftFindFromIndexEndTag
+      demangled: ''
+      offset: '00004620'
+    - name: _cdsftAllocInit
+      demangled: ''
+      offset: '00004630'
+    - name: _cdsftActivate
+      demangled: ''
+      offset: '00004690'
+    - name: _cdsftActivateEndTag
+      demangled: ''
+      offset: 000046C0
+    - name: _cdvFree
+      demangled: ''
+      offset: 000046D0
+    - name: _cdvFreeEndTag
+      demangled: ''
+      offset: '00004790'
+    - name: _cdmftFree
+      demangled: ''
+      offset: 000047A0
+    - name: _cdmftFreeEndTag
+      demangled: ''
+      offset: '00004820'
+    - name: _cdsftFree
+      demangled: ''
+      offset: '00004830'
+    - name: _cdsftFreeEndTag
+      demangled: ''
+      offset: 000048B0
+    - name: _IFS_Win32ToDosTime
+      demangled: ''
+      offset: 000048C0
+    - name: _cdfsLocalToGMTTime
+      demangled: ''
+      offset: 000048DB
+    - name: _DirTimeToDOSTime
+      demangled: ''
+      offset: 000048FD
+    - name: _IFS_CreateBasis
+      demangled: ''
+      offset: 0000491F
+    - name: _IFS_AppendBasisTail
+      demangled: ''
+      offset: 0000496E
+    - name: _IFS_FcbToShort
+      demangled: ''
+      offset: '00004974'
+    - name: _IFS_MetaMatch
+      demangled: ''
+      offset: 0000497A
+    - name: _IFS_BCSToUni
+      demangled: ''
+      offset: '00004980'
+    - name: _IFS_UniToBCS
+      demangled: ''
+      offset: '00004986'
+    - name: _IFS_ShortToFcb
+      demangled: ''
+      offset: 0000498C
+    - name: _cdfsAttrMatch
+      demangled: ''
+      offset: 000049DE
+    - name: _CDFS_GetDiskInfo
+      demangled: ''
+      offset: 00004A00
+    - name: _CDFS_Search
+      demangled: ''
+      offset: 00004A70
+    - name: _CDFS_FindOpen
+      demangled: ''
+      offset: 00004A90
+    - name: _CDFS_FindNextFile
+      demangled: ''
+      offset: 00004AB0
+    - name: _cdfsFindOpenStart
+      demangled: ''
+      offset: 00004AD0
+    - name: _cdfsSearchStart
+      demangled: ''
+      offset: 00004AF0
+    - name: _cdfsSearchDone
+      demangled: ''
+      offset: 00004C30
+    - name: _cdfsFindNextStart
+      demangled: ''
+      offset: 00004D70
+    - name: _cdfsFindNextDone
+      demangled: ''
+      offset: 00004F00
+    - name: _MY_LinPageLock
+      demangled: ''
+      offset: 000051C0
+    - name: _MY_LinPageUnLock
+      demangled: ''
+      offset: 000051F0
+    - name: _MY_LinToPhys
+      demangled: ''
+      offset: '00005220'
+    - name: _TwoDigits
+      demangled: ''
+      offset: '00005270'
+    - name: _ISOToWin32Time
+      demangled: ''
+      offset: '00005290'
+    - name: _DirToWin32Time
+      demangled: ''
+      offset: '00005370'
+    - name: _Win32TimeWorker
+      demangled: ''
+      offset: '00005410'
+    - name: _cdfsInPathGet
+      demangled: ''
+      offset: '00005510'
+    - name: _cdfsFreePaths
+      demangled: ''
+      offset: '00005600'
+    - name: _cdfsRunAPI
+      demangled: ''
+      offset: '00005650'
+    - name: _cdcInit
+      demangled: ''
+      offset: 000056F0
+    - name: _cdfsLockSec
+      demangled: ''
+      offset: '000057E0'
+    - name: _pPLTextStart
+      demangled: ''
+      offset: '00005850'
+    - name: _MY_IOS_SendCommand
+      demangled: ''
+      offset: '00005850'
+    - name: _MY_IOSMapIORSToI21
+      demangled: ''
+      offset: '00005865'
+    - name: _MY_Map_Flat
+      demangled: ''
+      offset: 0000586F
+    - name: _MY_PageFree
+      demangled: ''
+      offset: '00005879'
+    - name: _MY_Simulate_Far_Call
+      demangled: ''
+      offset: 0000587F
+    - name: _MY_Simulate_Far_Ret
+      demangled: ''
+      offset: 0000588F
+    - name: _cdfsIOCTLPassThrough
+      demangled: ''
+      offset: '00005895'
+    - name: _MapV86Flat
+      demangled: ''
+      offset: 000059C8
+    - name: _cdfsSemRequest
+      demangled: ''
+      offset: '000059E1'
+    - name: _cdfsSemRelease
+      demangled: ''
+      offset: 00005A48
+    - name: _SafeMemCpyC
+      demangled: ''
+      offset: 00005A7A
+    - name: _cdfsAudioS1611025
+      demangled: ''
+      offset: 00005A90
+    - name: _cdfsAudioS1622050
+      demangled: ''
+      offset: 00005A93
+    - name: _cdfsAudioS1644100
+      demangled: ''
+      offset: 00005A96
+    - name: _cdfsAudioS811025
+      demangled: ''
+      offset: 00005A9A
+    - name: _cdfsAudioS822050
+      demangled: ''
+      offset: 00005A9D
+    - name: _cdfsAudioS844100
+      demangled: ''
+      offset: 00005AA0
+    - name: _cdfsAudioM1611025
+      demangled: ''
+      offset: 00005AB5
+    - name: _cdfsAudioM1622050
+      demangled: ''
+      offset: 00005AB8
+    - name: _cdfsAudioM1644100
+      demangled: ''
+      offset: 00005ABB
+    - name: _cdfsAudioM811025
+      demangled: ''
+      offset: 00005ACD
+    - name: _cdfsAudioM822050
+      demangled: ''
+      offset: 00005AD0
+    - name: _cdfsAudioM844100
+      demangled: ''
+      offset: 00005AD3
+    - name: _cdfsLockSecCall
+      demangled: ''
+      offset: 00005AF0
+    - name: _cdfsLockSecRet
+      demangled: ''
+      offset: 00005B10
+    - name: _cdfsLockSecNB
+      demangled: ''
+      offset: 00005B50
+    - name: _cdfsReadSecStart
+      demangled: ''
+      offset: 00005C00
+    - name: _cdfsReadSecDone
+      demangled: ''
+      offset: 00005CD0
+    - name: _cdfsReadStart
+      demangled: ''
+      offset: 00005D40
+    - name: _cdfsReadFast
+      demangled: ''
+      offset: '00006000'
+    - name: _cdfsReadDone
+      demangled: ''
+      offset: '00006200'
+    - name: _cdfsSGReadStart
+      demangled: ''
+      offset: '00006270'
+    - name: _cdfsSGReadDone
+      demangled: ''
+      offset: '00006410'
+    - name: _cdfsMoveData
+      demangled: ''
+      offset: 000064A0
+    - name: _cdfsAbsReadStart
+      demangled: ''
+      offset: '00006680'
+    - name: _cdfsAbsReadDone
+      demangled: ''
+      offset: '000066E0'
+    - name: _IORCheck
+      demangled: ''
+      offset: '00006770'
+    - name: _IORAlloc
+      demangled: ''
+      offset: '00006790'
+    - name: _IORFree
+      demangled: ''
+      offset: '00006890'
+    - name: _LogBase2
+      demangled: ''
+      offset: 000068D0
+    - name: _cdfsSerial
+      demangled: ''
+      offset: '00006900'
+    - name: _CDPrefPreLock
+      demangled: ''
+      offset: '00006940'
+    - name: _CDPrefSectorHit
+      demangled: ''
+      offset: 00006A20
+    - name: _CDBeginPrefetch
+      demangled: ''
+      offset: 00006D20
+    - name: _cdfsPrefStart
+      demangled: ''
+      offset: 00006D90
+    - name: _cdfsPrefDone
+      demangled: ''
+      offset: 00006FB0
+    - name: _CDPrefLockEvent
+      demangled: ''
+      offset: 000070C0
+    - name: _CMFindBlock
+      demangled: ''
+      offset: '000071E0'
+    - name: _CMLockBlock
+      demangled: ''
+      offset: '00007230'
+    - name: _cdfsClearSector
+      demangled: ''
+      offset: '00007620'
+    - name: _CMValidateBlock
+      demangled: ''
+      offset: '00007680'
+    - name: _CMInvalidateBlock
+      demangled: ''
+      offset: '000076E0'
+    - name: _CMUnLockBlock
+      demangled: ''
+      offset: '00007700'
+    - name: _CMAllocVolume
+      demangled: ''
+      offset: '00007790'
+    - name: _CMFlushVolume
+      demangled: ''
+      offset: 000077A0
+    - name: _CMAddNewVolume
+      demangled: ''
+      offset: '00007820'
+    - name: _CMRemoveVolume
+      demangled: ''
+      offset: '00007870'
+    - name: _CMChDir
+      demangled: ''
+      offset: 000078B0
+    - name: _cmHashRemove
+      demangled: ''
+      offset: '00007910'
+    - name: _CMDowngradePref
+      demangled: ''
+      offset: '00007960'
+    - name: _cmLRUReclaim
+      demangled: ''
+      offset: 00007A10
+    - name: _cmLRURemove
+      demangled: ''
+      offset: 00007A90
+    - name: _cmLRUAdd
+      demangled: ''
+      offset: 00007B20
+    - name: _cmSubtractCount
+      demangled: ''
+      offset: 00007D80
+    - name: _cmAddCount
+      demangled: ''
+      offset: 00007DE0
+    - name: _cmPrefAgressRaise
+      demangled: ''
+      offset: '00007E80'
+    - name: _cmGetCMCH
+      demangled: ''
+      offset: 00007F60
+    - name: _cmBlockToCE
+      demangled: ''
+      offset: 00007F80
+    - name: _cmEmergencyUnlock
+      demangled: ''
+      offset: 00007FA0
+    - name: _cdfsOpenDone
+      demangled: ''
+      offset: '00008020'
+    - name: _CallState
+      demangled: ''
+      offset: 000083F0
+    - name: _RetState
+      demangled: ''
+      offset: '00008420'
+    - name: _RunTaskStates
+      demangled: ''
+      offset: '00008440'
+    - name: _RunGEHStates
+      demangled: ''
+      offset: 000084B0
+    - name: _SetGEHWait
+      demangled: ''
+      offset: '00008560'
+    - name: _RemoveCdc
+      demangled: ''
+      offset: '00008580'
+    - name: _MainGEH
+      demangled: ''
+      offset: 000085C0
+    - name: _DevCallback
+      demangled: ''
+      offset: 000085F0
+    - name: _cdfsSemReq
+      demangled: ''
+      offset: '00008640'
+    - name: _cdfsSemReqRetry
+      demangled: ''
+      offset: 000086A0
+    - name: _cdfsSleep
+      demangled: ''
+      offset: '000086E0'
+    - name: _cdfsWakeAll
+      demangled: ''
+      offset: '00008700'
+    - name: _MY_Create_Semaphore
+      demangled: ''
+      offset: '00008740'
+    - name: _MY_Destroy_Semaphore
+      demangled: ''
+      offset: '00008760'
+    - name: _MY_Signal_Semaphore
+      demangled: ''
+      offset: '00008770'
+    - name: _MY_Wait_Semaphore
+      demangled: ''
+      offset: '00008780'
+    - name: _MY_Schedule_Global_Event
+      demangled: ''
+      offset: 000087A0
+    - name: _MY_HeapFree
+      demangled: ''
+      offset: 000087C0
+    - name: _cdfsDone
+      demangled: ''
+      offset: '00008830'
+    - name: _cdfsPanic
+      demangled: ''
+      offset: '00008840'
+    - name: _cdfsNotImp
+      demangled: ''
+      offset: '00008850'
+    - name: _cdfsErrorRet
+      demangled: ''
+      offset: '00008860'
+    - name: _cdfsGetNamesFromRDE
+      demangled: ''
+      offset: '00008880'
+    - name: _cdfsGetNamesFromRPTE
+      demangled: ''
+      offset: 000088D0
+    - name: _cdfsGetNamesFromCDV
+      demangled: ''
+      offset: '00008920'
+    - name: _cdfsGetLFNName
+      demangled: ''
+      offset: '00008950'
+    - name: _cdfsGetOEMName
+      demangled: ''
+      offset: 00008B20
+    - name: _cdfsMetaCompare
+      demangled: ''
+      offset: 00008CC0
+    - name: _cdfsCheckSemi
+      demangled: ''
+      offset: '00008E00'
+    - name: _cdfsDirScanCall
+      demangled: ''
+      offset: '00008E90'
+    - name: _cdfsDirScanStart
+      demangled: ''
+      offset: 000090A0
+    - name: _cdfsDirScanDone
+      demangled: ''
+      offset: 000090F0
+    - name: _cdfsDirScanRet
+      demangled: ''
+      offset: '000094E0'
+    - name: _cdfsGetAttrFromRDE
+      demangled: ''
+      offset: '00009540'
+    - name: _GetAttrFromISOFlags
+      demangled: ''
+      offset: '00009570'
+    - name: _cdfsAccumFileSize
+      demangled: ''
+      offset: '00009590'
+    - name: _cdfsGetXASysUseArea
+      demangled: ''
+      offset: '00009690'
+    - name: _cdfsGetExtentSize
+      demangled: ''
+      offset: 000096C0
+    - name: _cdfsLocateExtentVolume
+      demangled: ''
+      offset: '00009720'
+    - name: _cdfsPTScanCall
+      demangled: ''
+      offset: '00009760'
+    - name: _cdfsPTScanStart
+      demangled: ''
+      offset: '00009830'
+    - name: _cdfsPTScanDone
+      demangled: ''
+      offset: '00009880'
+    - name: _cdfsPreInitIOREQ
+      demangled: ''
+      offset: 00009B30
+    - name: _cdfsAttachResource
+      demangled: ''
+      offset: 00009BB0
+    - name: _cdfsDetachResource
+      demangled: ''
+      offset: 00009C10
+    - name: _pPLDataStart
+      demangled: ''
+      offset: 00009C30
+    - name: _pcdcHead
+      demangled: ''
+      offset: 00009C30
+    - name: _pPLTextEnd
+      demangled: ''
+      offset: 00009C30
+    - name: _pcdcSleepHead
+      demangled: ''
+      offset: 00009C34
+    - name: _smsCDFS
+      demangled: ''
+      offset: 00009C38
+    - name: _pcdvHead
+      demangled: ''
+      offset: 00009C40
+    - name: _GEHHandle
+      demangled: ''
+      offset: 00009C44
+    - name: _pcmchCooked
+      demangled: ''
+      offset: 00009C48
+    - name: _pcmchRaw
+      demangled: ''
+      offset: 00009C4C
+    - name: _pcmchRawTmp
+      demangled: ''
+      offset: 00009C50
+    - name: _NextVolumeID
+      demangled: ''
+      offset: 00009C54
+    - name: _ExtendedErrors
+      demangled: ''
+      offset: 00009C58
+    - name: _CDXCompatNames
+      demangled: ''
+      offset: 00009C5C
+    - name: _In_Mctrl
+      demangled: ''
+      offset: 00009C60
+    - name: _afCdMediaChgd
+      demangled: ''
+      offset: 00009C64
+    - name: _fNoPreLockNeeded
+      demangled: ''
+      offset: 00009C68
+    - name: _MSCDEXVersion
+      demangled: ''
+      offset: 00009C6C
+    - name: _CDFSCacheSize
+      demangled: ''
+      offset: 00009C70
+    - name: _CDFSPrefetch
+      demangled: ''
+      offset: 00009C74
+    - name: _CDFSPrefetchTail
+      demangled: ''
+      offset: 00009C78
+    - name: _CDFSRawCache
+      demangled: ''
+      offset: 00009C7C
+    - name: _cpidOEM
+      demangled: ''
+      offset: 00009C80
+    - name: _pcdpiCache
+      demangled: ''
+      offset: 00009C84
+    - name: _pMountDispSave
+      demangled: ''
+      offset: 00009C88
+    - name: _pSystemClock
+      demangled: ''
+      offset: 00009C8C
+    - name: _cdperf
+      demangled: ''
+      offset: 00009C90
+    - name: _pcdperf
+      demangled: ''
+      offset: 00009CE4
+    - name: _PrefClock
+      demangled: ''
+      offset: 00009CE8
+    - name: _SectorPrefNext
+      demangled: ''
+      offset: 00009CEC
+    - name: _pcdvPrefNext
+      demangled: ''
+      offset: 00009CF0
+    - name: _SectorPrefLast
+      demangled: ''
+      offset: 00009CF4
+    - name: _PrefFlags
+      demangled: ''
+      offset: 00009CF8
+    - name: _cdcPref
+      demangled: ''
+      offset: 00009CFC
+    - name: _sgiPref
+      demangled: ''
+      offset: 00009DC0
+    - name: _apfnMSCDEXInt2f
+      demangled: ''
+      offset: '00009E50'
+    - name: _apfnCdRdIoctl
+      demangled: ''
+      offset: '00009E94'
+    - name: _apfnCdWtIoctl
+      demangled: ''
+      offset: 00009ED4
+    - name: _apfnCdDev128
+      demangled: ''
+      offset: 00009EEC
+    - name: _VolIdPattern
+      demangled: ''
+      offset: 00009F10
+    - name: _wchDot
+      demangled: ''
+      offset: 00009F30
+    - name: _wchDotDot
+      demangled: ''
+      offset: 00009F34
+    - name: _MonDays
+      demangled: ''
+      offset: 00009F38
+    - name: _achForeignLabel
+      demangled: ''
+      offset: 00009F50
+    - name: _achAudioLabel
+      demangled: ''
+      offset: 00009F70
+    - name: _AudioRootDe
+      demangled: ''
+      offset: 00009F90
+    - name: _AudioPhile
+      demangled: ''
+      offset: 00009FB4
+    - name: _AudioPhileHeader
+      demangled: ''
+      offset: 00009FEC
+    - name: _AudioPlayHeader
+      demangled: ''
+      offset: 0000A018
+    - name: _XAFileHeader
+      demangled: ''
+      offset: 0000A044
+    - name: _AudioPhilePathTable
+      demangled: ''
+      offset: 0000A070
+    - name: _acdptiForeign
+      demangled: ''
+      offset: 0000A07C
+    - name: _acdptiAudioPhile
+      demangled: ''
+      offset: 0000A0A0
+    - name: _aapreCopyAudio
+      demangled: ''
+      offset: 0000A0C4
+    - name: _aste
+      demangled: ''
+      offset: 0000A11C
+    - name: _pPLDataEnd
+      demangled: ''
+      offset: 0000A3A4
+  - num: '4'
+    name: _SGROUP
+    offset: '00000000'
+    symbols:
+    - name: _pHeapFreeHead
+      demangled: ''
+      offset: '00000000'
+    - name: _CDFSLoaded
+      demangled: ''
+      offset: '00000004'
+    - name: _SafeMemCpyEH
+      demangled: ''
+      offset: '00000008'
+    - name: _pfnCDPrefLockEvent
+      demangled: ''
+      offset: '00000018'
+    - name: _pfnCDFSLazyUnlockEvent
+      demangled: ''
+      offset: 0000001C
+    - name: _CDPrefLockEventStatic
+      demangled: ''
+      offset: '00000020'
+    - name: _HeapFreeEventStatic
+      demangled: ''
+      offset: '00000046'
+    - name: _CDFSLazyUnlockEventStatic
+      demangled: ''
+      offset: '00000078'
+    - name: _SafeMemCpyAsm
+      demangled: ''
+      offset: 000000A1
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00000830'
+    symbols:
+    - name: _CDFS_Int2FHook
+      demangled: ''
+      offset: '00000000'
+    - name: CDFS_Control
+      demangled: ''
+      offset: 0000004D
+    - name: _CDFS_Control_Dispatch_Ext
+      demangled: ''
+      offset: '00000061'
+    - name: _VMM_BlockOnID
+      demangled: ''
+      offset: '00000063'
+    - name: _VMM_SignalID
+      demangled: ''
+      offset: '00000069'
+    - name: _CDFS_CDQuery
+      demangled: ''
+      offset: 0000006F
+    - name: _CDFS_Flush
+      demangled: ''
+      offset: '00000090'
+    - name: _CDFS_Disconnect
+      demangled: ''
+      offset: 000000B0
+    - name: _CDFS_Close
+      demangled: ''
+      offset: '000000E0'
+    - name: _CDFS_FindClose
+      demangled: ''
+      offset: '00000110'
+    - name: _CDFSBeginLockedAccess
+      demangled: ''
+      offset: '00000140'
+    - name: _CDFSEndLockedAccess
+      demangled: ''
+      offset: '00000330'
+    - name: _CDFSBeginNestedLockedAccess
+      demangled: ''
+      offset: '00000350'
+    - name: _CDFSLazyUnlockTick
+      demangled: ''
+      offset: '00000360'
+    - name: _CDFSLazyUnlockEvent
+      demangled: ''
+      offset: '000003E0'
+    - name: _CDFSAsyncEvent
+      demangled: ''
+      offset: '00000570'
+    - name: _cdfsSetFirstDriveLetter
+      demangled: ''
+      offset: 000007C0
+    - name: _MY_CallWhenNotCritical
+      demangled: ''
+      offset: '00000800'
+    - name: CDFS_DDB
+      demangled: ''
+      offset: '00000830'
+    - name: _pcdcVerifyHead
+      demangled: ''
+      offset: '00000880'
+    - name: _SubUnitNext
+      demangled: ''
+      offset: '00000884'
+    - name: _DefaultSvdSense
+      demangled: ''
+      offset: '00000888'
+    - name: _fTearDown
+      demangled: ''
+      offset: 0000088C
+    - name: _fShowVersions
+      demangled: ''
+      offset: '00000890'
+    - name: _fCDFSMisc
+      demangled: ''
+      offset: '00000894'
+    - name: _pSysDevVCD
+      demangled: ''
+      offset: '00000898'
+    - name: _fpVCD
+      demangled: ''
+      offset: 0000089C
+    - name: _pcdfsinfo
+      demangled: ''
+      offset: 000008A0
+    - name: _hUnlockEvent
+      demangled: ''
+      offset: 000008A4
+    - name: _hsemLocking
+      demangled: ''
+      offset: 000008A8
+    - name: _cLockCDFS
+      demangled: ''
+      offset: 000008AC
+    - name: _cLockWait
+      demangled: ''
+      offset: 000008B0
+    - name: _fLockFlags
+      demangled: ''
+      offset: 000008B4
+    - name: _ilbCDFS
+      demangled: ''
+      offset: 000008B8
+    - name: _cddispCDFS
+      demangled: ''
+      offset: 000008EC
+    - name: _hmDispMisc
+      demangled: ''
+      offset: 0000090C
+    - name: _hmDispFind
+      demangled: ''
+      offset: '00000930'
+    - name: _volDispVolume
+      demangled: ''
+      offset: '00000954'
+    - name: _cdfsDev_GetFunction
+      demangled: ''
+      offset: 000009A0
+    - name: _PAEP_rpm_inquiry
+      demangled: ''
+      offset: 00000AF0
+    - name: _PAEP_rpm_change
+      demangled: ''
+      offset: 00000AF4
+    - name: _PAEP_3mode_config
+      demangled: ''
+      offset: 00000AF8
+  - num: '2'
+    name: _IGROUP
+    offset: '00000E00'
+    symbols:
+    - name: CDFS_Dynamic_Device_Init
+      demangled: ''
+      offset: 000000AD
+    - name: _cdfsGetRegistry
+      demangled: ''
+      offset: 0000020C
+    - name: _cdfsSetRegDefaults
+      demangled: ''
+      offset: '000005E0'
+    - name: _CDPrefPreInit
+      demangled: ''
+      offset: 000006D0
+    - name: _drpCDFS
+      demangled: ''
+      offset: '00000720'
+  - num: '3'
+    name: _PGROUP
+    offset: '00007870'
+    symbols:
+    - name: _cdfsTearDown
+      demangled: ''
+      offset: '00000000'
+    - name: _CMInitCache
+      demangled: ''
+      offset: 000000B0
+    - name: _CMFreeCache
+      demangled: ''
+      offset: '00000450'
+    - name: _MY_PageAllocate
+      demangled: ''
+      offset: '000004E0'
+    - name: _CDFS_Query
+      demangled: ''
+      offset: '00000520'
+    - name: _cdfsDevIO_RdDevHdr
+      demangled: ''
+      offset: '000005E0'
+    - name: _cdfsDevIO_RdErrorStat
+      demangled: ''
+      offset: '00000600'
+    - name: _cdfsDevIO_RdAudChanInfo
+      demangled: ''
+      offset: '00000630'
+    - name: _cdfsDevIO_RdDriveBytes
+      demangled: ''
+      offset: 000006D0
+    - name: _cdfsDevIO_RdSectSize
+      demangled: ''
+      offset: '00000700'
+    - name: _cdfsDevIO_RdVolSize
+      demangled: ''
+      offset: '00000760'
+    - name: _cdfsDevIO_RdMedChanged
+      demangled: ''
+      offset: 000007F0
+    - name: _cdfsDevIO_RdAudDiskInfo
+      demangled: ''
+      offset: '00000860'
+    - name: _cdfsDevIO_RdAudTrackInfo
+      demangled: ''
+      offset: 000008D0
+    - name: _cdfsDevIO_RdAudSubInfo
+      demangled: ''
+      offset: '00000940'
+    - name: _cdfsDevIO_RdAudQUPC
+      demangled: ''
+      offset: 000009C0
+    - name: _cdfsDevIO_WtEject
+      demangled: ''
+      offset: 00000A20
+    - name: _cdfsDevIO_WtLockUnlock
+      demangled: ''
+      offset: 00000A50
+    - name: _cdfsDevIO_WtReset
+      demangled: ''
+      offset: 00000A90
+    - name: _cdfsDevIO_WtAudChanCtrl
+      demangled: ''
+      offset: 00000AC0
+    - name: _cdfsDevIO_WtDevCtrlStr
+      demangled: ''
+      offset: 00000B50
+    - name: _cdfsDevIO_WtCloseTray
+      demangled: ''
+      offset: 00000B80
+    - name: _cdfsDevIFL
+      demangled: ''
+      offset: 00000BB0
+    - name: _cdfsDevOPN
+      demangled: ''
+      offset: 00000BE0
+    - name: _cdfsDevCDReadLongPre
+      demangled: ''
+      offset: 00000C10
+    - name: _cdfsDevCDSeek
+      demangled: ''
+      offset: 00000C20
+    - name: _cdfsDevCDPlayAudio
+      demangled: ''
+      offset: 00000C70
+    - name: _cdfsDevCDStopAudio
+      demangled: ''
+      offset: '00000E00'
+    - name: _cdfsDevCDResumeAudio
+      demangled: ''
+      offset: '00000E30'
+    - name: _cdfsAbsReadCall
+      demangled: ''
+      offset: '00000E60'
+    - name: _cdfsAbsReadRet
+      demangled: ''
+      offset: 00000F10
+    - name: _upcs
+      demangled: ''
+      offset: 00000FF0
+    - name: _CDFS2f_GetVTOCFileName
+      demangled: ''
+      offset: '00001020'
+    - name: _CDFS2f_ReadVTOC
+      demangled: ''
+      offset: '00001100'
+    - name: _CDFS2f_Dbg
+      demangled: ''
+      offset: '00001230'
+    - name: _CDFS2f_AbsDiskRead
+      demangled: ''
+      offset: '00001240'
+    - name: _CDFS2f_AbsDiskWrite
+      demangled: ''
+      offset: '00001350'
+    - name: _CDFS2f_Unload
+      demangled: ''
+      offset: '00001370'
+    - name: _CDFS2f_VDSPreference
+      demangled: ''
+      offset: '00001380'
+    - name: _CDFS2f_GetDirEntry
+      demangled: ''
+      offset: '00001470'
+    - name: _cdfsGetVTOCNameStart
+      demangled: ''
+      offset: 000015D0
+    - name: _cdfsGetVTOCNameDone
+      demangled: ''
+      offset: 000015F0
+    - name: _cdfsGetDirEntStart
+      demangled: ''
+      offset: 000016D0
+    - name: _cdfsGetDirEntDone
+      demangled: ''
+      offset: 000017D0
+    - name: _CDFS_MountVolume
+      demangled: ''
+      offset: '00001970'
+    - name: _cdfsTryVerifyFromMount
+      demangled: ''
+      offset: 00001A10
+    - name: _CDFS_Delete
+      demangled: ''
+      offset: 00001AC0
+    - name: _CDFS_IOCTL16Drive
+      demangled: ''
+      offset: 00001AD0
+    - name: _CDFS_Commit
+      demangled: ''
+      offset: 00001AE0
+    - name: _CDFS_FileLocks
+      demangled: ''
+      offset: 00001AF0
+    - name: _cdfsCDDATest
+      demangled: ''
+      offset: 00001B00
+    - name: _cdfsUnmount
+      demangled: ''
+      offset: 00001B70
+    - name: _cdfsVerifyStart
+      demangled: ''
+      offset: 00001BC0
+    - name: _cdfsVerifyDone
+      demangled: ''
+      offset: 00001C60
+    - name: _diskFree
+      demangled: ''
+      offset: 00001DE0
+    - name: _GetISO2022CPID
+      demangled: ''
+      offset: '00001E20'
+    - name: _cdfsDiskAlloc
+      demangled: ''
+      offset: '00001E70'
+    - name: _cdfsDiskAllocEndTag
+      demangled: ''
+      offset: 00001F80
+    - name: _cdfsSesInfoStart
+      demangled: ''
+      offset: 00001F90
+    - name: _cdfsSesInfoDone
+      demangled: ''
+      offset: '00002040'
+    - name: _cdfsVRSSampCall
+      demangled: ''
+      offset: '00002150'
+    - name: _cdfsVRSSampStart
+      demangled: ''
+      offset: 000021B0
+    - name: _cdfsVRSSampDone
+      demangled: ''
+      offset: 000021C0
+    - name: _cdfsVRSSampRet
+      demangled: ''
+      offset: '00002390'
+    - name: _cdfsVolAlloc
+      demangled: ''
+      offset: '000023E0'
+    - name: _cdfsPTInitCall
+      demangled: ''
+      offset: 000027C0
+    - name: _cdfsPTInitStart
+      demangled: ''
+      offset: '00002860'
+    - name: _cdfsPTInitDone
+      demangled: ''
+      offset: '00002950'
+    - name: _cdfsPTInitRet
+      demangled: ''
+      offset: 00002EC0
+    - name: _cdfsRootInitCall
+      demangled: ''
+      offset: 00002EE0
+    - name: _cdfsRootInitStart
+      demangled: ''
+      offset: 00002F00
+    - name: _cdfsRootInitDone
+      demangled: ''
+      offset: 00002F20
+    - name: _cdfsRootInitRet
+      demangled: ''
+      offset: 00002F50
+    - name: _cdfsMountDone
+      demangled: ''
+      offset: 00002F70
+    - name: _cdfsMountDoneEndTag
+      demangled: ''
+      offset: '00003090'
+    - name: _cdfsMountFail
+      demangled: ''
+      offset: 000030A0
+    - name: _cdfsSendIOCTL
+      demangled: ''
+      offset: '00003100'
+    - name: _cdfsSetBusyStatus
+      demangled: ''
+      offset: 000031A0
+    - name: _IFS_CDROM_Attach
+      demangled: ''
+      offset: 000031F0
+    - name: _IFS_CDROM_Detach
+      demangled: ''
+      offset: 000031F6
+    - name: _CDFS_VCDStrategy
+      demangled: ''
+      offset: 000031FC
+    - name: _CDFS_VCDInterrupt
+      demangled: ''
+      offset: '00003207'
+    - name: _CDFS2f_SendDriveRequest
+      demangled: ''
+      offset: '00003210'
+    - name: _CDFSVCD_Strategy
+      demangled: ''
+      offset: '00003280'
+    - name: _cdfsDevIO_RdHeadLoc
+      demangled: ''
+      offset: '000032E0'
+    - name: _cdfsDevIO_RdDevStatus
+      demangled: ''
+      offset: '00003340'
+    - name: _cdfsDevIO_RdAudQInfo
+      demangled: ''
+      offset: '00003390'
+    - name: _cdfsDevIO_RdAudStatus
+      demangled: ''
+      offset: '00003430'
+    - name: _cdfsDevCDReadLong
+      demangled: ''
+      offset: '00003490'
+    - name: _cdfsAttachDrive
+      demangled: ''
+      offset: '00003630'
+    - name: _cdfsDetachDrive
+      demangled: ''
+      offset: '00003660'
+    - name: _cdfsDevIO_Init
+      demangled: ''
+      offset: '00003680'
+    - name: _cdfsDevIO_UnInit
+      demangled: ''
+      offset: '00003700'
+    - name: _cdfsIORAllocIOCTL
+      demangled: ''
+      offset: '00003720'
+    - name: _cdfsIORFreeIOCTL
+      demangled: ''
+      offset: 000037C0
+    - name: _cdfsSubmitIOCTL
+      demangled: ''
+      offset: 000037F0
+    - name: _cdfsSetDevError
+      demangled: ''
+      offset: '00003860'
+    - name: _cdfsMapToNotReady
+      demangled: ''
+      offset: '00003940'
+    - name: _cdfsUnitToDrive
+      demangled: ''
+      offset: '00003960'
+    - name: _CDFS2f_GetNumDrives
+      demangled: ''
+      offset: '00003990'
+    - name: _CDFS2f_GetDevList
+      demangled: ''
+      offset: '000039E0'
+    - name: _CDFS2f_DriveCheck
+      demangled: ''
+      offset: 00003A30
+    - name: _CDFS2f_GetVersion
+      demangled: ''
+      offset: 00003A70
+    - name: _CDFS2f_GetDriveLetters
+      demangled: ''
+      offset: 00003A90
+    - name: _CDFS_Dir
+      demangled: ''
+      offset: 00003AE0
+    - name: _CDFS_FileAttrib
+      demangled: ''
+      offset: 00003B10
+    - name: _CDFS_Open
+      demangled: ''
+      offset: 00003B40
+    - name: _CDFS_ReadFile
+      demangled: ''
+      offset: 00003B90
+    - name: _CDFS_Seek
+      demangled: ''
+      offset: 00003BC0
+    - name: _CDFS_FileTimes
+      demangled: ''
+      offset: 00003BE0
+    - name: _CDFS_EnumHandle
+      demangled: ''
+      offset: 00003C50
+    - name: _CDFS_ReturnError
+      demangled: ''
+      offset: 00003C80
+    - name: _cdfsChDirStart
+      demangled: ''
+      offset: 00003C90
+    - name: _cdfsChDirDone
+      demangled: ''
+      offset: 00003D00
+    - name: _cdfsGetAttrStart
+      demangled: ''
+      offset: 00003DC0
+    - name: _cdfsGetAttrDone
+      demangled: ''
+      offset: '00003E10'
+    - name: _cdfsFlush
+      demangled: ''
+      offset: '00003E50'
+    - name: _cdfsOpenStart
+      demangled: ''
+      offset: 00003EA0
+    - name: _cdfsReadFileStart
+      demangled: ''
+      offset: 00003EF0
+    - name: _cdfsReadFileDone
+      demangled: ''
+      offset: 000041C0
+    - name: _cdfsSeekFile
+      demangled: ''
+      offset: '00004220'
+    - name: _cdfsCloseFile
+      demangled: ''
+      offset: '00004280'
+    - name: _cdfsFileTime
+      demangled: ''
+      offset: 000042B0
+    - name: _cdfsHandleInfo
+      demangled: ''
+      offset: '00004360'
+    - name: _MY_HeapAllocate
+      demangled: ''
+      offset: '00004420'
+    - name: _cdmftAllocInit
+      demangled: ''
+      offset: '00004440'
+    - name: _cdmftActivate
+      demangled: ''
+      offset: '00004590'
+    - name: _cdmftActivateEndTag
+      demangled: ''
+      offset: 000045C0
+    - name: _cdmftFindFromIndex
+      demangled: ''
+      offset: 000045D0
+    - name: _cdmftFindFromIndexEndTag
+      demangled: ''
+      offset: '00004620'
+    - name: _cdsftAllocInit
+      demangled: ''
+      offset: '00004630'
+    - name: _cdsftActivate
+      demangled: ''
+      offset: '00004690'
+    - name: _cdsftActivateEndTag
+      demangled: ''
+      offset: 000046C0
+    - name: _cdvFree
+      demangled: ''
+      offset: 000046D0
+    - name: _cdvFreeEndTag
+      demangled: ''
+      offset: '00004790'
+    - name: _cdmftFree
+      demangled: ''
+      offset: 000047A0
+    - name: _cdmftFreeEndTag
+      demangled: ''
+      offset: '00004820'
+    - name: _cdsftFree
+      demangled: ''
+      offset: '00004830'
+    - name: _cdsftFreeEndTag
+      demangled: ''
+      offset: 000048B0
+    - name: _IFS_Win32ToDosTime
+      demangled: ''
+      offset: 000048C0
+    - name: _cdfsLocalToGMTTime
+      demangled: ''
+      offset: 000048DB
+    - name: _DirTimeToDOSTime
+      demangled: ''
+      offset: 000048FD
+    - name: _IFS_CreateBasis
+      demangled: ''
+      offset: 0000491F
+    - name: _IFS_AppendBasisTail
+      demangled: ''
+      offset: 0000496E
+    - name: _IFS_FcbToShort
+      demangled: ''
+      offset: '00004974'
+    - name: _IFS_MetaMatch
+      demangled: ''
+      offset: 0000497A
+    - name: _IFS_BCSToUni
+      demangled: ''
+      offset: '00004980'
+    - name: _IFS_UniToBCS
+      demangled: ''
+      offset: '00004986'
+    - name: _IFS_ShortToFcb
+      demangled: ''
+      offset: 0000498C
+    - name: _cdfsAttrMatch
+      demangled: ''
+      offset: 000049DE
+    - name: _CDFS_GetDiskInfo
+      demangled: ''
+      offset: 00004A00
+    - name: _CDFS_Search
+      demangled: ''
+      offset: 00004A70
+    - name: _CDFS_FindOpen
+      demangled: ''
+      offset: 00004A90
+    - name: _CDFS_FindNextFile
+      demangled: ''
+      offset: 00004AB0
+    - name: _cdfsFindOpenStart
+      demangled: ''
+      offset: 00004AD0
+    - name: _cdfsSearchStart
+      demangled: ''
+      offset: 00004AF0
+    - name: _cdfsSearchDone
+      demangled: ''
+      offset: 00004C30
+    - name: _cdfsFindNextStart
+      demangled: ''
+      offset: 00004D70
+    - name: _cdfsFindNextDone
+      demangled: ''
+      offset: 00004F00
+    - name: _MY_LinPageLock
+      demangled: ''
+      offset: 000051C0
+    - name: _MY_LinPageUnLock
+      demangled: ''
+      offset: 000051F0
+    - name: _MY_LinToPhys
+      demangled: ''
+      offset: '00005220'
+    - name: _TwoDigits
+      demangled: ''
+      offset: '00005270'
+    - name: _ISOToWin32Time
+      demangled: ''
+      offset: '00005290'
+    - name: _DirToWin32Time
+      demangled: ''
+      offset: '00005370'
+    - name: _Win32TimeWorker
+      demangled: ''
+      offset: '00005410'
+    - name: _cdfsInPathGet
+      demangled: ''
+      offset: '00005510'
+    - name: _cdfsFreePaths
+      demangled: ''
+      offset: '00005600'
+    - name: _cdfsRunAPI
+      demangled: ''
+      offset: '00005650'
+    - name: _cdcInit
+      demangled: ''
+      offset: 000056F0
+    - name: _cdfsLockSec
+      demangled: ''
+      offset: '000057E0'
+    - name: _pPLTextStart
+      demangled: ''
+      offset: '00005850'
+    - name: _MY_IOS_SendCommand
+      demangled: ''
+      offset: '00005850'
+    - name: _MY_IOSMapIORSToI21
+      demangled: ''
+      offset: '00005865'
+    - name: _MY_Map_Flat
+      demangled: ''
+      offset: 0000586F
+    - name: _MY_PageFree
+      demangled: ''
+      offset: '00005879'
+    - name: _MY_Simulate_Far_Call
+      demangled: ''
+      offset: 0000587F
+    - name: _MY_Simulate_Far_Ret
+      demangled: ''
+      offset: 0000588F
+    - name: _cdfsIOCTLPassThrough
+      demangled: ''
+      offset: '00005895'
+    - name: _MapV86Flat
+      demangled: ''
+      offset: 000059C8
+    - name: _cdfsSemRequest
+      demangled: ''
+      offset: '000059E1'
+    - name: _cdfsSemRelease
+      demangled: ''
+      offset: 00005A48
+    - name: _SafeMemCpyC
+      demangled: ''
+      offset: 00005A7A
+    - name: _cdfsAudioS1611025
+      demangled: ''
+      offset: 00005A90
+    - name: _cdfsAudioS1622050
+      demangled: ''
+      offset: 00005A93
+    - name: _cdfsAudioS1644100
+      demangled: ''
+      offset: 00005A96
+    - name: _cdfsAudioS811025
+      demangled: ''
+      offset: 00005A9A
+    - name: _cdfsAudioS822050
+      demangled: ''
+      offset: 00005A9D
+    - name: _cdfsAudioS844100
+      demangled: ''
+      offset: 00005AA0
+    - name: _cdfsAudioM1611025
+      demangled: ''
+      offset: 00005AB5
+    - name: _cdfsAudioM1622050
+      demangled: ''
+      offset: 00005AB8
+    - name: _cdfsAudioM1644100
+      demangled: ''
+      offset: 00005ABB
+    - name: _cdfsAudioM811025
+      demangled: ''
+      offset: 00005ACD
+    - name: _cdfsAudioM822050
+      demangled: ''
+      offset: 00005AD0
+    - name: _cdfsAudioM844100
+      demangled: ''
+      offset: 00005AD3
+    - name: _cdfsLockSecCall
+      demangled: ''
+      offset: 00005AF0
+    - name: _cdfsLockSecRet
+      demangled: ''
+      offset: 00005B10
+    - name: _cdfsLockSecNB
+      demangled: ''
+      offset: 00005B50
+    - name: _cdfsReadSecStart
+      demangled: ''
+      offset: 00005C00
+    - name: _cdfsReadSecDone
+      demangled: ''
+      offset: 00005CD0
+    - name: _cdfsReadStart
+      demangled: ''
+      offset: 00005D40
+    - name: _cdfsReadFast
+      demangled: ''
+      offset: '00006000'
+    - name: _cdfsReadDone
+      demangled: ''
+      offset: '00006200'
+    - name: _cdfsSGReadStart
+      demangled: ''
+      offset: '00006270'
+    - name: _cdfsSGReadDone
+      demangled: ''
+      offset: '00006410'
+    - name: _cdfsMoveData
+      demangled: ''
+      offset: 000064A0
+    - name: _cdfsAbsReadStart
+      demangled: ''
+      offset: '00006680'
+    - name: _cdfsAbsReadDone
+      demangled: ''
+      offset: '000066E0'
+    - name: _IORCheck
+      demangled: ''
+      offset: '00006770'
+    - name: _IORAlloc
+      demangled: ''
+      offset: '00006790'
+    - name: _IORFree
+      demangled: ''
+      offset: '00006890'
+    - name: _LogBase2
+      demangled: ''
+      offset: 000068D0
+    - name: _cdfsSerial
+      demangled: ''
+      offset: '00006900'
+    - name: _CDPrefPreLock
+      demangled: ''
+      offset: '00006940'
+    - name: _CDPrefSectorHit
+      demangled: ''
+      offset: 00006A20
+    - name: _CDBeginPrefetch
+      demangled: ''
+      offset: 00006D20
+    - name: _cdfsPrefStart
+      demangled: ''
+      offset: 00006D90
+    - name: _cdfsPrefDone
+      demangled: ''
+      offset: 00006FB0
+    - name: _CDPrefLockEvent
+      demangled: ''
+      offset: 000070C0
+    - name: _CMFindBlock
+      demangled: ''
+      offset: '000071E0'
+    - name: _CMLockBlock
+      demangled: ''
+      offset: '00007230'
+    - name: _cdfsClearSector
+      demangled: ''
+      offset: '00007620'
+    - name: _CMValidateBlock
+      demangled: ''
+      offset: '00007680'
+    - name: _CMInvalidateBlock
+      demangled: ''
+      offset: '000076E0'
+    - name: _CMUnLockBlock
+      demangled: ''
+      offset: '00007700'
+    - name: _CMAllocVolume
+      demangled: ''
+      offset: '00007790'
+    - name: _CMFlushVolume
+      demangled: ''
+      offset: 000077A0
+    - name: _CMAddNewVolume
+      demangled: ''
+      offset: '00007820'
+    - name: _CMRemoveVolume
+      demangled: ''
+      offset: '00007870'
+    - name: _CMChDir
+      demangled: ''
+      offset: 000078B0
+    - name: _cmHashRemove
+      demangled: ''
+      offset: '00007910'
+    - name: _CMDowngradePref
+      demangled: ''
+      offset: '00007960'
+    - name: _cmLRUReclaim
+      demangled: ''
+      offset: 00007A10
+    - name: _cmLRURemove
+      demangled: ''
+      offset: 00007A90
+    - name: _cmLRUAdd
+      demangled: ''
+      offset: 00007B20
+    - name: _cmSubtractCount
+      demangled: ''
+      offset: 00007D80
+    - name: _cmAddCount
+      demangled: ''
+      offset: 00007DE0
+    - name: _cmPrefAgressRaise
+      demangled: ''
+      offset: '00007E80'
+    - name: _cmGetCMCH
+      demangled: ''
+      offset: 00007F60
+    - name: _cmBlockToCE
+      demangled: ''
+      offset: 00007F80
+    - name: _cmEmergencyUnlock
+      demangled: ''
+      offset: 00007FA0
+    - name: _cdfsOpenDone
+      demangled: ''
+      offset: '00008020'
+    - name: _CallState
+      demangled: ''
+      offset: 000083F0
+    - name: _RetState
+      demangled: ''
+      offset: '00008420'
+    - name: _RunTaskStates
+      demangled: ''
+      offset: '00008440'
+    - name: _RunGEHStates
+      demangled: ''
+      offset: 000084B0
+    - name: _SetGEHWait
+      demangled: ''
+      offset: '00008560'
+    - name: _RemoveCdc
+      demangled: ''
+      offset: '00008580'
+    - name: _MainGEH
+      demangled: ''
+      offset: 000085C0
+    - name: _DevCallback
+      demangled: ''
+      offset: 000085F0
+    - name: _cdfsSemReq
+      demangled: ''
+      offset: '00008640'
+    - name: _cdfsSemReqRetry
+      demangled: ''
+      offset: 000086A0
+    - name: _cdfsSleep
+      demangled: ''
+      offset: '000086E0'
+    - name: _cdfsWakeAll
+      demangled: ''
+      offset: '00008700'
+    - name: _MY_Create_Semaphore
+      demangled: ''
+      offset: '00008740'
+    - name: _MY_Destroy_Semaphore
+      demangled: ''
+      offset: '00008760'
+    - name: _MY_Signal_Semaphore
+      demangled: ''
+      offset: '00008770'
+    - name: _MY_Wait_Semaphore
+      demangled: ''
+      offset: '00008780'
+    - name: _MY_Schedule_Global_Event
+      demangled: ''
+      offset: 000087A0
+    - name: _MY_HeapFree
+      demangled: ''
+      offset: 000087C0
+    - name: _cdfsDone
+      demangled: ''
+      offset: '00008830'
+    - name: _cdfsPanic
+      demangled: ''
+      offset: '00008840'
+    - name: _cdfsNotImp
+      demangled: ''
+      offset: '00008850'
+    - name: _cdfsErrorRet
+      demangled: ''
+      offset: '00008860'
+    - name: _cdfsGetNamesFromRDE
+      demangled: ''
+      offset: '00008880'
+    - name: _cdfsGetNamesFromRPTE
+      demangled: ''
+      offset: 000088D0
+    - name: _cdfsGetNamesFromCDV
+      demangled: ''
+      offset: '00008920'
+    - name: _cdfsGetLFNName
+      demangled: ''
+      offset: '00008950'
+    - name: _cdfsGetOEMName
+      demangled: ''
+      offset: 00008B20
+    - name: _cdfsMetaCompare
+      demangled: ''
+      offset: 00008CC0
+    - name: _cdfsCheckSemi
+      demangled: ''
+      offset: '00008E00'
+    - name: _cdfsDirScanCall
+      demangled: ''
+      offset: '00008E90'
+    - name: _cdfsDirScanStart
+      demangled: ''
+      offset: 000090A0
+    - name: _cdfsDirScanDone
+      demangled: ''
+      offset: 000090F0
+    - name: _cdfsDirScanRet
+      demangled: ''
+      offset: '000094E0'
+    - name: _cdfsGetAttrFromRDE
+      demangled: ''
+      offset: '00009540'
+    - name: _GetAttrFromISOFlags
+      demangled: ''
+      offset: '00009570'
+    - name: _cdfsAccumFileSize
+      demangled: ''
+      offset: '00009590'
+    - name: _cdfsGetXASysUseArea
+      demangled: ''
+      offset: '00009690'
+    - name: _cdfsGetExtentSize
+      demangled: ''
+      offset: 000096C0
+    - name: _cdfsLocateExtentVolume
+      demangled: ''
+      offset: '00009720'
+    - name: _cdfsPTScanCall
+      demangled: ''
+      offset: '00009760'
+    - name: _cdfsPTScanStart
+      demangled: ''
+      offset: '00009830'
+    - name: _cdfsPTScanDone
+      demangled: ''
+      offset: '00009880'
+    - name: _cdfsPreInitIOREQ
+      demangled: ''
+      offset: 00009B30
+    - name: _cdfsAttachResource
+      demangled: ''
+      offset: 00009BB0
+    - name: _cdfsDetachResource
+      demangled: ''
+      offset: 00009C10
+    - name: _pPLDataStart
+      demangled: ''
+      offset: 00009C30
+    - name: _pcdcHead
+      demangled: ''
+      offset: 00009C30
+    - name: _pPLTextEnd
+      demangled: ''
+      offset: 00009C30
+    - name: _pcdcSleepHead
+      demangled: ''
+      offset: 00009C34
+    - name: _smsCDFS
+      demangled: ''
+      offset: 00009C38
+    - name: _pcdvHead
+      demangled: ''
+      offset: 00009C40
+    - name: _GEHHandle
+      demangled: ''
+      offset: 00009C44
+    - name: _pcmchCooked
+      demangled: ''
+      offset: 00009C48
+    - name: _pcmchRaw
+      demangled: ''
+      offset: 00009C4C
+    - name: _pcmchRawTmp
+      demangled: ''
+      offset: 00009C50
+    - name: _NextVolumeID
+      demangled: ''
+      offset: 00009C54
+    - name: _ExtendedErrors
+      demangled: ''
+      offset: 00009C58
+    - name: _CDXCompatNames
+      demangled: ''
+      offset: 00009C5C
+    - name: _In_Mctrl
+      demangled: ''
+      offset: 00009C60
+    - name: _afCdMediaChgd
+      demangled: ''
+      offset: 00009C64
+    - name: _fNoPreLockNeeded
+      demangled: ''
+      offset: 00009C68
+    - name: _MSCDEXVersion
+      demangled: ''
+      offset: 00009C6C
+    - name: _CDFSCacheSize
+      demangled: ''
+      offset: 00009C70
+    - name: _CDFSPrefetch
+      demangled: ''
+      offset: 00009C74
+    - name: _CDFSPrefetchTail
+      demangled: ''
+      offset: 00009C78
+    - name: _CDFSRawCache
+      demangled: ''
+      offset: 00009C7C
+    - name: _cpidOEM
+      demangled: ''
+      offset: 00009C80
+    - name: _pcdpiCache
+      demangled: ''
+      offset: 00009C84
+    - name: _pMountDispSave
+      demangled: ''
+      offset: 00009C88
+    - name: _pSystemClock
+      demangled: ''
+      offset: 00009C8C
+    - name: _cdperf
+      demangled: ''
+      offset: 00009C90
+    - name: _pcdperf
+      demangled: ''
+      offset: 00009CE4
+    - name: _PrefClock
+      demangled: ''
+      offset: 00009CE8
+    - name: _SectorPrefNext
+      demangled: ''
+      offset: 00009CEC
+    - name: _pcdvPrefNext
+      demangled: ''
+      offset: 00009CF0
+    - name: _SectorPrefLast
+      demangled: ''
+      offset: 00009CF4
+    - name: _PrefFlags
+      demangled: ''
+      offset: 00009CF8
+    - name: _cdcPref
+      demangled: ''
+      offset: 00009CFC
+    - name: _sgiPref
+      demangled: ''
+      offset: 00009DC0
+    - name: _apfnMSCDEXInt2f
+      demangled: ''
+      offset: '00009E50'
+    - name: _apfnCdRdIoctl
+      demangled: ''
+      offset: '00009E94'
+    - name: _apfnCdWtIoctl
+      demangled: ''
+      offset: 00009ED4
+    - name: _apfnCdDev128
+      demangled: ''
+      offset: 00009EEC
+    - name: _VolIdPattern
+      demangled: ''
+      offset: 00009F10
+    - name: _wchDot
+      demangled: ''
+      offset: 00009F30
+    - name: _wchDotDot
+      demangled: ''
+      offset: 00009F34
+    - name: _MonDays
+      demangled: ''
+      offset: 00009F38
+    - name: _achForeignLabel
+      demangled: ''
+      offset: 00009F50
+    - name: _achAudioLabel
+      demangled: ''
+      offset: 00009F70
+    - name: _AudioRootDe
+      demangled: ''
+      offset: 00009F90
+    - name: _AudioPhile
+      demangled: ''
+      offset: 00009FB4
+    - name: _AudioPhileHeader
+      demangled: ''
+      offset: 00009FEC
+    - name: _AudioPlayHeader
+      demangled: ''
+      offset: 0000A018
+    - name: _XAFileHeader
+      demangled: ''
+      offset: 0000A044
+    - name: _AudioPhilePathTable
+      demangled: ''
+      offset: 0000A070
+    - name: _acdptiForeign
+      demangled: ''
+      offset: 0000A07C
+    - name: _acdptiAudioPhile
+      demangled: ''
+      offset: 0000A0A0
+    - name: _aapreCopyAudio
+      demangled: ''
+      offset: 0000A0C4
+    - name: _aste
+      demangled: ''
+      offset: 0000A11C
+    - name: _pPLDataEnd
+      demangled: ''
+      offset: 0000A3A4
+  - num: '4'
+    name: _SGROUP
+    offset: '00000000'
+    symbols:
+    - name: _pHeapFreeHead
+      demangled: ''
+      offset: '00000000'
+    - name: _CDFSLoaded
+      demangled: ''
+      offset: '00000004'
+    - name: _SafeMemCpyEH
+      demangled: ''
+      offset: '00000008'
+    - name: _pfnCDPrefLockEvent
+      demangled: ''
+      offset: '00000018'
+    - name: _pfnCDFSLazyUnlockEvent
+      demangled: ''
+      offset: 0000001C
+    - name: _CDPrefLockEventStatic
+      demangled: ''
+      offset: '00000020'
+    - name: _HeapFreeEventStatic
+      demangled: ''
+      offset: '00000046'
+    - name: _CDFSLazyUnlockEventStatic
+      demangled: ''
+      offset: '00000078'
+    - name: _SafeMemCpyAsm
+      demangled: ''
+      offset: 000000A1

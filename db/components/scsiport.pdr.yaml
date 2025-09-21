@@ -1,0 +1,1632 @@
+filename: scsiport.pdr
+binary: SCSIPORT
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../aer.c
+  - ../debug.c
+  - ../portaer.asm
+  - ../portasm.asm
+  - ../port.c
+  - ../portdbg.asm
+  - ../portio.asm
+  - printf.asm
+  - ../scsiport.asm
+  - ../utils.asm
+  - Address.H
+  - IoAddress.H
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 00002D60
+    symbols:
+    - name: _ScsiPortReadPortUchar@4
+      processed: ''
+      offset: '00000000'
+    - name: _ScsiPortReadPortUshort@4
+      processed: ''
+      offset: '00000008'
+    - name: _ScsiPortReadPortUlong@4
+      processed: ''
+      offset: '00000012'
+    - name: _ScsiPortReadPortBufferUchar
+      processed: ''
+      offset: 0000001B
+    - name: _ScsiPortReadPortBufferUlong
+      processed: ''
+      offset: '00000022'
+    - name: _ScsiPortWritePortBufferUchar
+      processed: ''
+      offset: 0000002E
+    - name: _ScsiPortWritePortBufferUshort
+      processed: ''
+      offset: '00000035'
+    - name: _ScsiPortWritePortBufferUlong
+      processed: ''
+      offset: '00000040'
+    - name: _ScsiPortReadRegisterBufferUchar@12
+      processed: ''
+      offset: 0000004C
+    - name: _ScsiPortWriteRegisterBufferUchar@12
+      processed: ''
+      offset: '00000053'
+    - name: _ScsiPortReadRegisterBufferUshort@12
+      processed: ''
+      offset: 0000005A
+    - name: _ScsiPortWriteRegisterBufferUshort@12
+      processed: ''
+      offset: '00000066'
+    - name: _ScsiPortReadRegisterBufferUlong@12
+      processed: ''
+      offset: '00000072'
+    - name: _ScsiPortWriteRegisterBufferUlong@12
+      processed: ''
+      offset: 0000007F
+    - name: _ScsiPortReadPortBufferUshort
+      processed: ''
+      offset: '00000092'
+    - name: _TransferPortBufferShell@12
+      processed: ''
+      offset: 0000009B
+    - name: _ScsiPortGetVirtualAddress@12
+      processed: ''
+      offset: 0000045C
+    - name: _ScsiPortGetPhysicalAddress@16
+      processed: ''
+      offset: '00000561'
+    - name: _ScsiPortWritePortUchar@8
+      processed: ''
+      offset: 000005F1
+    - name: _ScsiPortWritePortUshort@8
+      processed: ''
+      offset: 000005FE
+    - name: _ScsiPortWritePortUlong@8
+      processed: ''
+      offset: 0000060D
+    - name: _ScsiPortReadRegisterUchar@4
+      processed: ''
+      offset: '00000619'
+    - name: _ScsiPortReadRegisterUshort@4
+      processed: ''
+      offset: '00000622'
+    - name: _ScsiPortReadRegisterUlong@4
+      processed: ''
+      offset: 0000062D
+    - name: _ScsiPortWriteRegisterUchar@8
+      processed: ''
+      offset: '00000637'
+    - name: _ScsiPortWriteRegisterUshort@8
+      processed: ''
+      offset: '00000644'
+    - name: _ScsiPortWriteRegisterUlong@8
+      processed: ''
+      offset: '00000653'
+    - name: _ScsiPortStallExecution@4
+      processed: ''
+      offset: '00000660'
+    - name: _ScsiPortNotification
+      processed: ''
+      offset: 0000067C
+    - name: MiniportTimerWentOff
+      processed: ''
+      offset: 00000B35
+    - name: _IOSSendCommandInternal
+      processed: ''
+      offset: 00000BC6
+    - name: Port_Issue_Request_Sense
+      processed: ''
+      offset: 00000BD9
+    - name: _Port_ISR
+      processed: ''
+      offset: '00000E92'
+    - name: Port_Request
+      processed: ''
+      offset: 00000FAA
+    - name: Port_Dequeue_IOP
+      processed: ''
+      offset: 000011B7
+    - name: Port_Start_IO
+      processed: ''
+      offset: '00001315'
+    - name: Port_Dispatch
+      processed: ''
+      offset: 000015B7
+    - name: Port_Get_Logical_Unit
+      processed: ''
+      offset: 000017BF
+    - name: _ScsiPortGetLogicalUnit@16
+      processed: ''
+      offset: '00001806'
+    - name: _ScsiPortGetSrb@20
+      processed: ''
+      offset: 0000183C
+    - name: _ScsiPortCompleteRequest@20
+      processed: ''
+      offset: '00001902'
+    - name: Port_Setup_Iop
+      processed: ''
+      offset: 00001A05
+    - name: Port_Sense_Callback
+      processed: ''
+      offset: 00001CCC
+    - name: _Port_Initialize_Sys_DMA@4
+      processed: ''
+      offset: 00001EAC
+    - name: _ScsiPortIoMapTransfer@16
+      processed: ''
+      offset: 0000203D
+    - name: _ScsiPortFlushDma@4
+      processed: ''
+      offset: 000020D7
+    - name: CopyMapBuffer
+      processed: ''
+      offset: 0000217C
+    - name: IOMapTransferEvent
+      processed: ''
+      offset: 000022D6
+    - name: Port_Process_error
+      processed: ''
+      offset: '00002485'
+    - name: SCSIPORT_Control
+      processed: ''
+      offset: '00002594'
+    - name: _DebugOut@4
+      processed: ''
+      offset: 000025B0
+    - name: _memcpy@12
+      processed: ''
+      offset: 000025C1
+    - name: _strcat@8
+      processed: ''
+      offset: 000025EB
+    - name: _memcmp@12
+      processed: ''
+      offset: 0000261A
+    - name: _memset@12
+      processed: ''
+      offset: '00002642'
+    - name: _strcmp@8
+      processed: ''
+      offset: '00002676'
+    - name: _strcpy@8
+      processed: ''
+      offset: 000026AE
+    - name: _getmem@4
+      processed: ''
+      offset: 000026D6
+    - name: _freemem@4
+      processed: ''
+      offset: '000026E8'
+    - name: Async_Event_Handler
+      processed: ''
+      offset: 000026FC
+    - name: _AER_IOPTimeout
+      processed: ''
+      offset: 0000278B
+    - name: _AER_BootComplete
+      processed: ''
+      offset: '00002889'
+    - name: Port_Check_Special_Drives
+      processed: ''
+      offset: 0000288A
+    - name: get_trace_ptr
+      processed: ''
+      offset: '00002940'
+    - name: _AER_DotCommand
+      processed: ''
+      offset: '00002966'
+    - name: port_dump_help
+      processed: ''
+      offset: 0000298E
+    - name: port_trace_dump
+      processed: ''
+      offset: 0000299D
+    - name: PrintFunc
+      processed: ''
+      offset: 00002AF0
+    - name: PortCurQueueTag
+      processed: ''
+      offset: 00002DB0
+    - name: VTDPeriodCount
+      processed: ''
+      offset: 00002DB1
+    - name: ResetVTDTimeout
+      processed: ''
+      offset: 00002DB5
+    - name: SCSIPORT_DDB
+      processed: ''
+      offset: 000048B0
+    - name: hCurrentVM
+      processed: ''
+      offset: '00004900'
+    - name: pActiveSRBList
+      processed: ''
+      offset: '00004904'
+    - name: TimerLoopsPer65536uSec
+      processed: ''
+      offset: '00004908'
+    - name: _port_ilb
+      processed: ''
+      offset: 0000490C
+    - name: _ScsiportGlobalFlags
+      processed: ''
+      offset: '00004940'
+    - name: _ScsiPortLogError@28
+      processed: ''
+      offset: 0000CC60
+    - name: _ScsiPortMoveMemory@12
+      processed: ''
+      offset: 0000CCF4
+    - name: _ScsiPortConvUlongToPhysAddr@4
+      processed: ''
+      offset: 0000CD49
+    - name: _ScsiPortConvPhysAddrToUlong@8
+      processed: ''
+      offset: 0000CD84
+    - name: _PortDebugPrint
+      processed: ''
+      offset: 0000CDC6
+    - name: _CheckStructure@8
+      processed: ''
+      offset: 0000CE20
+    - name: _ltoa@12
+      processed: ''
+      offset: 0000CE6F
+    - name: _ultoa@12
+      processed: ''
+      offset: 0000CF3D
+    - name: _strlen@4
+      processed: ''
+      offset: 0000CFE1
+    - name: _DebugStr
+      processed: ''
+      offset: 0000D019
+    - name: _FakeConfig
+      processed: ''
+      offset: 0000D5AC
+    - name: _ScsiDebug
+      processed: ''
+      offset: 0000DAEC
+    - name: _szDeviceName
+      processed: ''
+      offset: 0000DAF0
+    - name: _pDigits
+      processed: ''
+      offset: 0000DB24
+    - name: _PAEP_rpm_inquiry
+      processed: ''
+      offset: 0000DB5C
+    - name: _PAEP_rpm_change
+      processed: ''
+      offset: 0000DB60
+    - name: _PAEP_3mode_config
+      processed: ''
+      offset: 0000DB64
+  - num: '3'
+    name: _PGROUP
+    offset: '00004400'
+    symbols:
+    - name: _Port_Set_IRQ_Handler@12
+      processed: ''
+      offset: '00000000'
+    - name: _Port_Setup_Config@8
+      processed: ''
+      offset: 000000D8
+    - name: _Port_Get_User_Switches@12
+      processed: ''
+      offset: '00000258'
+    - name: _Port_Check_PCI_Match@8
+      processed: ''
+      offset: 000002A2
+    - name: _Port_Check_Dup@4
+      processed: ''
+      offset: 000003CE
+    - name: Port_Turn_Off_Disc_Reg
+      processed: ''
+      offset: 000003FD
+    - name: Port_Turn_Off_Sync_Reg
+      processed: ''
+      offset: '00000446'
+    - name: _ScsiPortGetBusData@24
+      processed: ''
+      offset: 0000048F
+    - name: _ScsiPortSetBusDataByOffset@28
+      processed: ''
+      offset: 0000063D
+    - name: _ScsiPortGetUncachedExtension@12
+      processed: ''
+      offset: 0000069A
+    - name: _PortDestroyUncachedExt@4
+      processed: ''
+      offset: '00000729'
+    - name: _Port_Check_Polling@12
+      processed: ''
+      offset: '00000783'
+    - name: _Port_Check_Reboot@8
+      processed: ''
+      offset: 000007EB
+    - name: Port_Check_Reboot_Event
+      processed: ''
+      offset: '00000848'
+    - name: SCSIPORT_Device_Init
+      processed: ''
+      offset: 0000089C
+    - name: SCSIPORT_Device_Exit
+      processed: ''
+      offset: 0000095C
+    - name: SCSIPORT_InitializeMiniport
+      processed: ''
+      offset: 0000098A
+    - name: _Port_Allocate_Miniport_Ext@0
+      processed: ''
+      offset: 000009A0
+    - name: _Port_Register_Miniport@8
+      processed: ''
+      offset: 000009B6
+    - name: _ScsiPortInitialize@16
+      processed: ''
+      offset: 00000A40
+    - name: _ScsiPortFreeDeviceBase@8
+      processed: ''
+      offset: 00000CC1
+    - name: _ScsiPortGetDeviceBase@28
+      processed: ''
+      offset: 00000CD3
+    - name: _ScsiPortValidateRange@28
+      processed: ''
+      offset: 00000D15
+    - name: _AER_Initialize
+      processed: ''
+      offset: '00000E60'
+    - name: _AER_Bad
+      processed: ''
+      offset: '00001723'
+    - name: _AER_DeviceInquiry
+      processed: ''
+      offset: 0000172E
+    - name: _AER_ResetPerfview
+      processed: ''
+      offset: 00001D01
+    - name: _AER_ConfigPhysical
+      processed: ''
+      offset: 00001D1C
+    - name: _AER_Shutdown
+      processed: ''
+      offset: 00001F11
+    - name: _AER_CritShutdown
+      processed: ''
+      offset: '00002067'
+    - name: Port_Restore_State
+      processed: ''
+      offset: '00002078'
+    - name: _AER_Uninitialize
+      processed: ''
+      offset: 000020B7
+  - num: '4'
+    name: _PDATA
+    offset: '00004440'
+    symbols:
+    - name: DiscString
+      processed: ''
+      offset: 0000098C
+    - name: SyncString
+      processed: ''
+      offset: '00000997'
+  - num: '5'
+    name: _RARE
+    offset: '00000000'
+    symbols:
+    - name: _CCODE__CONFIGMG_Query_Arbitrator_Free_Data
+      processed: ''
+      offset: '00000000'
+    - name: _CCODE__CONFIGMG_Create_Range_List
+      processed: ''
+      offset: '00000008'
+    - name: _CCODE__CONFIGMG_Test_Range_Available
+      processed: ''
+      offset: '00000010'
+    - name: _CCODE__CONFIGMG_Free_Range_List
+      processed: ''
+      offset: '00000018'
+    - name: _CCODE__CONFIGMG_Invert_Range_List
+      processed: ''
+      offset: '00000020'
+    - name: _CCODE__CONFIGMG_Get_Bus_Info
+      processed: ''
+      offset: '00000028'
+- version: Windows 98 Retail
+  source_tree:
+  - ../aer.c
+  - ../portaer.asm
+  - ../portasm.asm
+  - ../port.c
+  - ../portio.asm
+  - ../scsiport.asm
+  - ../utils.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00002150'
+    symbols:
+    - name: _ScsiPortReadPortUchar@4
+      demangled: ''
+      offset: '00000000'
+    - name: _ScsiPortReadPortUshort@4
+      demangled: ''
+      offset: '00000008'
+    - name: _ScsiPortReadPortUlong@4
+      demangled: ''
+      offset: '00000011'
+    - name: _ScsiPortReadPortBufferUchar
+      demangled: ''
+      offset: '00000019'
+    - name: _ScsiPortReadPortBufferUlong
+      demangled: ''
+      offset: '00000020'
+    - name: _ScsiPortWritePortBufferUchar
+      demangled: ''
+      offset: 0000002C
+    - name: _ScsiPortWritePortBufferUshort
+      demangled: ''
+      offset: '00000033'
+    - name: _ScsiPortWritePortBufferUlong
+      demangled: ''
+      offset: 0000003E
+    - name: _ScsiPortReadRegisterBufferUchar@12
+      demangled: ''
+      offset: 0000004A
+    - name: _ScsiPortWriteRegisterBufferUchar@12
+      demangled: ''
+      offset: '00000051'
+    - name: _ScsiPortReadRegisterBufferUshort@12
+      demangled: ''
+      offset: '00000058'
+    - name: _ScsiPortWriteRegisterBufferUshort@12
+      demangled: ''
+      offset: '00000063'
+    - name: _ScsiPortReadRegisterBufferUlong@12
+      demangled: ''
+      offset: 0000006E
+    - name: _ScsiPortWriteRegisterBufferUlong@12
+      demangled: ''
+      offset: 0000007A
+    - name: _ScsiPortReadPortBufferUshort
+      demangled: ''
+      offset: 0000008C
+    - name: _TransferPortBufferShell@12
+      demangled: ''
+      offset: '00000095'
+    - name: _ScsiPortGetVirtualAddress@12
+      demangled: ''
+      offset: '00000346'
+    - name: _ScsiPortGetPhysicalAddress@16
+      demangled: ''
+      offset: 000003A6
+    - name: _ScsiPortWritePortUchar@8
+      demangled: ''
+      offset: '00000436'
+    - name: _ScsiPortWritePortUshort@8
+      demangled: ''
+      offset: '00000442'
+    - name: _ScsiPortWritePortUlong@8
+      demangled: ''
+      offset: '00000450'
+    - name: _ScsiPortReadRegisterUchar@4
+      demangled: ''
+      offset: 0000045C
+    - name: _ScsiPortReadRegisterUshort@4
+      demangled: ''
+      offset: '00000465'
+    - name: _ScsiPortReadRegisterUlong@4
+      demangled: ''
+      offset: 0000046F
+    - name: _ScsiPortWriteRegisterUchar@8
+      demangled: ''
+      offset: '00000478'
+    - name: _ScsiPortWriteRegisterUshort@8
+      demangled: ''
+      offset: '00000485'
+    - name: _ScsiPortWriteRegisterUlong@8
+      demangled: ''
+      offset: '00000494'
+    - name: _ScsiPortStallExecution@4
+      demangled: ''
+      offset: 000004A1
+    - name: _ScsiPortNotification
+      demangled: ''
+      offset: 000004BC
+    - name: MiniportTimerWentOff
+      demangled: ''
+      offset: 000006A6
+    - name: _IOSSendCommandInternal
+      demangled: ''
+      offset: 000006DE
+    - name: Port_Issue_Request_Sense
+      demangled: ''
+      offset: 000006F1
+    - name: _Port_ISR
+      demangled: ''
+      offset: 0000078D
+    - name: Port_Request
+      demangled: ''
+      offset: 000007C9
+    - name: Port_Dequeue_IOP
+      demangled: ''
+      offset: 0000088B
+    - name: Port_Start_IO
+      demangled: ''
+      offset: 000008DC
+    - name: Port_Dispatch
+      demangled: ''
+      offset: 00000A1D
+    - name: Port_Get_Logical_Unit
+      demangled: ''
+      offset: 00000B07
+    - name: _ScsiPortGetLogicalUnit@16
+      demangled: ''
+      offset: 00000B19
+    - name: _ScsiPortGetSrb@20
+      demangled: ''
+      offset: 00000B42
+    - name: _ScsiPortCompleteRequest@20
+      demangled: ''
+      offset: 00000B79
+    - name: Port_Setup_Iop
+      demangled: ''
+      offset: 00000BDF
+    - name: Port_Sense_Callback
+      demangled: ''
+      offset: 00000D42
+    - name: _Port_Initialize_Sys_DMA@4
+      demangled: ''
+      offset: 00000DFB
+    - name: _ScsiPortIoMapTransfer@16
+      demangled: ''
+      offset: 00000F1D
+    - name: _ScsiPortFlushDma@4
+      demangled: ''
+      offset: 00000F40
+    - name: CopyMapBuffer
+      demangled: ''
+      offset: 00000F6E
+    - name: IOMapTransferEvent
+      demangled: ''
+      offset: '00001004'
+    - name: Port_Process_error
+      demangled: ''
+      offset: 000010CC
+    - name: SCSIPORT_Control
+      demangled: ''
+      offset: '00001148'
+    - name: _memcpy@12
+      demangled: ''
+      offset: '00001164'
+    - name: Async_Event_Handler
+      demangled: ''
+      offset: '00001190'
+    - name: _AER_IOPTimeout
+      demangled: ''
+      offset: 0000121F
+    - name: _AER_BootComplete
+      demangled: ''
+      offset: 000012A5
+    - name: Port_Check_Special_Drives
+      demangled: ''
+      offset: 000012A6
+    - name: PortCurQueueTag
+      demangled: ''
+      offset: '00001344'
+    - name: VTDPeriodCount
+      demangled: ''
+      offset: '00001345'
+    - name: ResetVTDTimeout
+      demangled: ''
+      offset: '00001349'
+    - name: SCSIPORT_DDB
+      demangled: ''
+      offset: '00001350'
+    - name: hCurrentVM
+      demangled: ''
+      offset: 000013A0
+    - name: pActiveSRBList
+      demangled: ''
+      offset: 000013A4
+    - name: TimerLoopsPer65536uSec
+      demangled: ''
+      offset: 000013A8
+    - name: _port_ilb
+      demangled: ''
+      offset: 000013AC
+    - name: _ScsiportGlobalFlags
+      demangled: ''
+      offset: '000013E0'
+    - name: _ScsiPortLogError@28
+      demangled: ''
+      offset: 000013F0
+    - name: _ScsiPortMoveMemory@12
+      demangled: ''
+      offset: 000013FD
+    - name: _ScsiPortConvUlongToPhysAddr@4
+      demangled: ''
+      offset: 0000141B
+    - name: _ScsiPortConvPhysAddrToUlong@8
+      demangled: ''
+      offset: '00001443'
+    - name: _PortDebugPrint
+      demangled: ''
+      offset: '00001458'
+    - name: _FakeConfig
+      demangled: ''
+      offset: '00001470'
+    - name: _PAEP_rpm_inquiry
+      demangled: ''
+      offset: '00001474'
+    - name: _PAEP_rpm_change
+      demangled: ''
+      offset: '00001478'
+    - name: _PAEP_3mode_config
+      demangled: ''
+      offset: 0000147C
+  - num: '2'
+    name: _IGROUP
+    offset: '00003860'
+    symbols:
+    - name: _Port_Set_IRQ_Handler@12
+      demangled: ''
+      offset: '00000000'
+    - name: _Port_Setup_Config@8
+      demangled: ''
+      offset: 000000BA
+    - name: _Port_Get_User_Switches@12
+      demangled: ''
+      offset: '00000213'
+    - name: _Port_Check_PCI_Match@8
+      demangled: ''
+      offset: '00000255'
+    - name: _Port_Check_Dup@4
+      demangled: ''
+      offset: 0000033C
+    - name: Port_Turn_Off_Disc_Reg
+      demangled: ''
+      offset: '00000363'
+    - name: Port_Turn_Off_Sync_Reg
+      demangled: ''
+      offset: '00000391'
+    - name: _ScsiPortGetBusData@24
+      demangled: ''
+      offset: 000003BF
+    - name: _ScsiPortSetBusDataByOffset@28
+      demangled: ''
+      offset: 0000050A
+    - name: _ScsiPortGetUncachedExtension@12
+      demangled: ''
+      offset: '00000546'
+    - name: _PortDestroyUncachedExt@4
+      demangled: ''
+      offset: 000005C7
+    - name: _Port_Check_Polling@12
+      demangled: ''
+      offset: '00000606'
+    - name: _Port_Check_Reboot@8
+      demangled: ''
+      offset: '00000650'
+    - name: Port_Check_Reboot_Event
+      demangled: ''
+      offset: 000006A2
+    - name: SCSIPORT_Device_Init
+      demangled: ''
+      offset: 000006EC
+    - name: SCSIPORT_Device_Exit
+      demangled: ''
+      offset: '00000780'
+    - name: SCSIPORT_InitializeMiniport
+      demangled: ''
+      offset: 000007A6
+    - name: _Port_Allocate_Miniport_Ext@0
+      demangled: ''
+      offset: 000007B4
+    - name: _Port_Register_Miniport@8
+      demangled: ''
+      offset: 000007C2
+    - name: _ScsiPortInitialize@16
+      demangled: ''
+      offset: '00000840'
+    - name: _ScsiPortFreeDeviceBase@8
+      demangled: ''
+      offset: 00000AC1
+    - name: _ScsiPortGetDeviceBase@28
+      demangled: ''
+      offset: 00000AD3
+    - name: _ScsiPortValidateRange@28
+      demangled: ''
+      offset: 00000AE8
+    - name: _AER_Initialize
+      demangled: ''
+      offset: 00000BF0
+    - name: _AER_Bad
+      demangled: ''
+      offset: '00001329'
+    - name: _AER_DeviceInquiry
+      demangled: ''
+      offset: '00001334'
+    - name: _AER_ResetPerfview
+      demangled: ''
+      offset: '00001899'
+    - name: _strcat@8
+      demangled: ''
+      offset: 000018A4
+    - name: _memcmp@12
+      demangled: ''
+      offset: 000018D3
+    - name: _memset@12
+      demangled: ''
+      offset: 000018FB
+    - name: _strcmp@8
+      demangled: ''
+      offset: 0000192F
+    - name: _strcpy@8
+      demangled: ''
+      offset: '00001967'
+    - name: _getmem@4
+      demangled: ''
+      offset: 0000198F
+    - name: _freemem@4
+      demangled: ''
+      offset: 000019A1
+    - name: _AER_ConfigPhysical
+      demangled: ''
+      offset: 000019B4
+    - name: _AER_Shutdown
+      demangled: ''
+      offset: 00001B5C
+    - name: _AER_CritShutdown
+      demangled: ''
+      offset: 00001BB2
+    - name: Port_Restore_State
+      demangled: ''
+      offset: 00001BBB
+    - name: _AER_Uninitialize
+      demangled: ''
+      offset: 00001BD4
+  - num: '3'
+    name: _PDATA
+    offset: 000038A0
+    symbols:
+    - name: DiscString
+      demangled: ''
+      offset: 000006F4
+    - name: SyncString
+      demangled: ''
+      offset: 000006FF
+  - num: '4'
+    name: _RARE
+    offset: '00000000'
+    symbols:
+    - name: _CCODE__CONFIGMG_Query_Arbitrator_Free_Data
+      demangled: ''
+      offset: '00000000'
+    - name: _CCODE__CONFIGMG_Create_Range_List
+      demangled: ''
+      offset: '00000008'
+    - name: _CCODE__CONFIGMG_Test_Range_Available
+      demangled: ''
+      offset: '00000010'
+    - name: _CCODE__CONFIGMG_Free_Range_List
+      demangled: ''
+      offset: '00000018'
+    - name: _CCODE__CONFIGMG_Invert_Range_List
+      demangled: ''
+      offset: '00000020'
+    - name: _CCODE__CONFIGMG_Get_Bus_Info
+      demangled: ''
+      offset: '00000028'
+- version: Windows 95
+  source_tree:
+  - Address.H
+  - IoAddress.H
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00000000'
+    symbols:
+    - name: SCSIPORT_DDB
+      demangled: ''
+      offset: '00004878'
+    - name: _ScsiDebug
+      demangled: ''
+      offset: 0000DA80
+- version: Windows 98SE Debug
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 00002D50
+    symbols:
+    - name: _ScsiPortReadPortUchar@4
+      demangled: ''
+      offset: '00000000'
+    - name: _ScsiPortReadPortUshort@4
+      demangled: ''
+      offset: '00000008'
+    - name: _ScsiPortReadPortUlong@4
+      demangled: ''
+      offset: '00000012'
+    - name: _ScsiPortReadPortBufferUchar
+      demangled: ''
+      offset: 0000001B
+    - name: _ScsiPortReadPortBufferUlong
+      demangled: ''
+      offset: '00000022'
+    - name: _ScsiPortWritePortBufferUchar
+      demangled: ''
+      offset: 0000002E
+    - name: _ScsiPortWritePortBufferUshort
+      demangled: ''
+      offset: '00000035'
+    - name: _ScsiPortWritePortBufferUlong
+      demangled: ''
+      offset: '00000040'
+    - name: _ScsiPortReadRegisterBufferUchar@12
+      demangled: ''
+      offset: 0000004C
+    - name: _ScsiPortWriteRegisterBufferUchar@12
+      demangled: ''
+      offset: '00000053'
+    - name: _ScsiPortReadRegisterBufferUshort@12
+      demangled: ''
+      offset: 0000005A
+    - name: _ScsiPortWriteRegisterBufferUshort@12
+      demangled: ''
+      offset: '00000066'
+    - name: _ScsiPortReadRegisterBufferUlong@12
+      demangled: ''
+      offset: '00000072'
+    - name: _ScsiPortWriteRegisterBufferUlong@12
+      demangled: ''
+      offset: 0000007F
+    - name: _ScsiPortReadPortBufferUshort
+      demangled: ''
+      offset: '00000092'
+    - name: _TransferPortBufferShell@12
+      demangled: ''
+      offset: 0000009B
+    - name: _ScsiPortGetVirtualAddress@12
+      demangled: ''
+      offset: 0000047E
+    - name: _ScsiPortGetPhysicalAddress@16
+      demangled: ''
+      offset: 000005A5
+    - name: _ScsiPortWritePortUchar@8
+      demangled: ''
+      offset: '00000635'
+    - name: _ScsiPortWritePortUshort@8
+      demangled: ''
+      offset: '00000642'
+    - name: _ScsiPortWritePortUlong@8
+      demangled: ''
+      offset: '00000651'
+    - name: _ScsiPortReadRegisterUchar@4
+      demangled: ''
+      offset: 0000065D
+    - name: _ScsiPortReadRegisterUshort@4
+      demangled: ''
+      offset: '00000666'
+    - name: _ScsiPortReadRegisterUlong@4
+      demangled: ''
+      offset: '00000671'
+    - name: _ScsiPortWriteRegisterUchar@8
+      demangled: ''
+      offset: 0000067B
+    - name: _ScsiPortWriteRegisterUshort@8
+      demangled: ''
+      offset: '00000688'
+    - name: _ScsiPortWriteRegisterUlong@8
+      demangled: ''
+      offset: '00000697'
+    - name: _ScsiPortStallExecution@4
+      demangled: ''
+      offset: 000006A4
+    - name: _ScsiPortNotification
+      demangled: ''
+      offset: 000006C0
+    - name: MiniportTimerWentOff
+      demangled: ''
+      offset: 00000BBD
+    - name: _IOSSendCommandInternal
+      demangled: ''
+      offset: 00000C4E
+    - name: Port_Issue_Request_Sense
+      demangled: ''
+      offset: 00000C61
+    - name: _Port_ISR
+      demangled: ''
+      offset: 00000FA2
+    - name: Port_Request
+      demangled: ''
+      offset: 000010BA
+    - name: Port_Dequeue_IOP
+      demangled: ''
+      offset: '000012E9'
+    - name: Port_Start_IO
+      demangled: ''
+      offset: 0000147A
+    - name: Port_Dispatch
+      demangled: ''
+      offset: 0000174F
+    - name: Port_Get_Logical_Unit
+      demangled: ''
+      offset: 0000197D
+    - name: _ScsiPortGetLogicalUnit@16
+      demangled: ''
+      offset: 000019C4
+    - name: _ScsiPortGetSrb@20
+      demangled: ''
+      offset: 000019FA
+    - name: _ScsiPortCompleteRequest@20
+      demangled: ''
+      offset: 00001AD1
+    - name: Port_Setup_Iop
+      demangled: ''
+      offset: 00001BE4
+    - name: Port_Sense_Callback
+      demangled: ''
+      offset: 00001F14
+    - name: _Port_Initialize_Sys_DMA@4
+      demangled: ''
+      offset: 0000215E
+    - name: _ScsiPortIoMapTransfer@16
+      demangled: ''
+      offset: 000022EF
+    - name: _ScsiPortFlushDma@4
+      demangled: ''
+      offset: 0000239A
+    - name: CopyMapBuffer
+      demangled: ''
+      offset: '00002450'
+    - name: IOMapTransferEvent
+      demangled: ''
+      offset: 000025CC
+    - name: Port_Process_error
+      demangled: ''
+      offset: 0000279D
+    - name: SCSIPORT_Control
+      demangled: ''
+      offset: 000028BC
+    - name: _DebugOut@4
+      demangled: ''
+      offset: 000028D8
+    - name: _memcpy@12
+      demangled: ''
+      offset: '000028E9'
+    - name: _strcat@8
+      demangled: ''
+      offset: '00002913'
+    - name: _memcmp@12
+      demangled: ''
+      offset: '00002942'
+    - name: _memset@12
+      demangled: ''
+      offset: 0000296A
+    - name: _strcmp@8
+      demangled: ''
+      offset: 0000299E
+    - name: _strcpy@8
+      demangled: ''
+      offset: 000029D6
+    - name: _getmem@4
+      demangled: ''
+      offset: 000029FE
+    - name: _freemem@4
+      demangled: ''
+      offset: 00002A10
+    - name: Async_Event_Handler
+      demangled: ''
+      offset: 00002A24
+    - name: _AER_IOPTimeout
+      demangled: ''
+      offset: 00002AB3
+    - name: _AER_BootComplete
+      demangled: ''
+      offset: 00002BD3
+    - name: Port_Check_Special_Drives
+      demangled: ''
+      offset: 00002BD4
+    - name: get_trace_ptr
+      demangled: ''
+      offset: 00002C88
+    - name: _AER_DotCommand
+      demangled: ''
+      offset: 00002CAE
+    - name: port_dump_help
+      demangled: ''
+      offset: 00002CD6
+    - name: port_trace_dump
+      demangled: ''
+      offset: 00002CE5
+    - name: PrintFunc
+      demangled: ''
+      offset: '00002E38'
+    - name: PortCurQueueTag
+      demangled: ''
+      offset: 0000317C
+    - name: VTDPeriodCount
+      demangled: ''
+      offset: 0000317D
+    - name: ResetVTDTimeout
+      demangled: ''
+      offset: '00003181'
+    - name: SCSIPORT_DDB
+      demangled: ''
+      offset: '00005208'
+    - name: hCurrentVM
+      demangled: ''
+      offset: '00005258'
+    - name: pActiveSRBList
+      demangled: ''
+      offset: 0000525C
+    - name: _port_ilb
+      demangled: ''
+      offset: '00005260'
+    - name: _ScsiportGlobalFlags
+      demangled: ''
+      offset: '00005294'
+    - name: _ScsiPortLogError@28
+      demangled: ''
+      offset: 0000D5F0
+    - name: _ScsiPortMoveMemory@12
+      demangled: ''
+      offset: 0000D684
+    - name: _ScsiPortConvUlongToPhysAddr@4
+      demangled: ''
+      offset: 0000D6D9
+    - name: _ScsiPortConvPhysAddrToUlong@8
+      demangled: ''
+      offset: 0000D714
+    - name: _PortDebugPrint
+      demangled: ''
+      offset: 0000D756
+    - name: _CheckStructure@8
+      demangled: ''
+      offset: 0000D7B0
+    - name: _ltoa@12
+      demangled: ''
+      offset: 0000D7FF
+    - name: _ultoa@12
+      demangled: ''
+      offset: 0000D8CD
+    - name: _strlen@4
+      demangled: ''
+      offset: 0000D971
+    - name: _DebugStr
+      demangled: ''
+      offset: 0000D9A9
+    - name: _FakeConfig
+      demangled: ''
+      offset: 0000DE54
+    - name: _ScsiDebug
+      demangled: ''
+      offset: '0000E394'
+    - name: _szDeviceName
+      demangled: ''
+      offset: '0000E398'
+    - name: _pDigits
+      demangled: ''
+      offset: 0000E3CC
+    - name: _PAEP_rpm_inquiry
+      demangled: ''
+      offset: '0000E404'
+    - name: _PAEP_rpm_change
+      demangled: ''
+      offset: '0000E408'
+    - name: _PAEP_3mode_config
+      demangled: ''
+      offset: 0000E40C
+  - num: '3'
+    name: _PGROUP
+    offset: 000043F0
+    symbols:
+    - name: _Port_Set_IRQ_Handler@12
+      demangled: ''
+      offset: '00000000'
+    - name: _Port_Setup_Config@8
+      demangled: ''
+      offset: 000000D8
+    - name: _Port_Get_User_Switches@12
+      demangled: ''
+      offset: '00000258'
+    - name: _Port_Check_PCI_Match@8
+      demangled: ''
+      offset: 000002A2
+    - name: _Port_Check_Dup@4
+      demangled: ''
+      offset: 000003CE
+    - name: Port_Turn_Off_Disc_Reg
+      demangled: ''
+      offset: 000003FD
+    - name: Port_Turn_Off_Sync_Reg
+      demangled: ''
+      offset: '00000446'
+    - name: _ScsiPortGetBusData@24
+      demangled: ''
+      offset: 0000048F
+    - name: _ScsiPortSetBusDataByOffset@28
+      demangled: ''
+      offset: 0000063D
+    - name: _ScsiPortGetUncachedExtension@12
+      demangled: ''
+      offset: 0000069A
+    - name: _PortDestroyUncachedExt@4
+      demangled: ''
+      offset: '00000729'
+    - name: _Port_Check_Polling@12
+      demangled: ''
+      offset: '00000783'
+    - name: _Port_Check_Reboot@8
+      demangled: ''
+      offset: 000007EB
+    - name: Port_Check_Reboot_Event
+      demangled: ''
+      offset: '00000848'
+    - name: SCSIPORT_Device_Init
+      demangled: ''
+      offset: 0000089C
+    - name: SCSIPORT_Device_Exit
+      demangled: ''
+      offset: 0000095C
+    - name: SCSIPORT_InitializeMiniport
+      demangled: ''
+      offset: 0000098A
+    - name: _Port_Allocate_Miniport_Ext@0
+      demangled: ''
+      offset: 000009A0
+    - name: _Port_Register_Miniport@8
+      demangled: ''
+      offset: 000009B6
+    - name: _ScsiPortInitialize@16
+      demangled: ''
+      offset: 00000A40
+    - name: _ScsiPortFreeDeviceBase@8
+      demangled: ''
+      offset: 00000CC1
+    - name: _ScsiPortGetDeviceBase@28
+      demangled: ''
+      offset: 00000CD3
+    - name: _ScsiPortValidateRange@28
+      demangled: ''
+      offset: 00000D15
+    - name: _AER_Initialize
+      demangled: ''
+      offset: '00000E60'
+    - name: _AER_Bad
+      demangled: ''
+      offset: 0000172C
+    - name: _AER_DeviceInquiry
+      demangled: ''
+      offset: '00001737'
+    - name: _AER_ResetPerfview
+      demangled: ''
+      offset: 00001D0A
+    - name: _AER_ConfigPhysical
+      demangled: ''
+      offset: 00001D24
+    - name: _AER_Shutdown
+      demangled: ''
+      offset: 00001F19
+    - name: _AER_CritShutdown
+      demangled: ''
+      offset: 000020A2
+    - name: Port_Restore_State
+      demangled: ''
+      offset: 000020B3
+    - name: _AER_Uninitialize
+      demangled: ''
+      offset: 000020F2
+  - num: '4'
+    name: _PDATA
+    offset: '00004430'
+    symbols:
+    - name: DiscString
+      demangled: ''
+      offset: 0000098C
+    - name: SyncString
+      demangled: ''
+      offset: '00000997'
+  - num: '5'
+    name: _RARE
+    offset: '00000000'
+    symbols:
+    - name: _CCODE__CONFIGMG_Query_Arbitrator_Free_Data
+      demangled: ''
+      offset: '00000000'
+    - name: _CCODE__CONFIGMG_Create_Range_List
+      demangled: ''
+      offset: '00000008'
+    - name: _CCODE__CONFIGMG_Test_Range_Available
+      demangled: ''
+      offset: '00000010'
+    - name: _CCODE__CONFIGMG_Free_Range_List
+      demangled: ''
+      offset: '00000018'
+    - name: _CCODE__CONFIGMG_Invert_Range_List
+      demangled: ''
+      offset: '00000020'
+    - name: _CCODE__CONFIGMG_Get_Bus_Info
+      demangled: ''
+      offset: '00000028'
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00002130'
+    symbols:
+    - name: _ScsiPortReadPortUchar@4
+      demangled: ''
+      offset: '00000000'
+    - name: _ScsiPortReadPortUshort@4
+      demangled: ''
+      offset: '00000008'
+    - name: _ScsiPortReadPortUlong@4
+      demangled: ''
+      offset: '00000011'
+    - name: _ScsiPortReadPortBufferUchar
+      demangled: ''
+      offset: '00000019'
+    - name: _ScsiPortReadPortBufferUlong
+      demangled: ''
+      offset: '00000020'
+    - name: _ScsiPortWritePortBufferUchar
+      demangled: ''
+      offset: 0000002C
+    - name: _ScsiPortWritePortBufferUshort
+      demangled: ''
+      offset: '00000033'
+    - name: _ScsiPortWritePortBufferUlong
+      demangled: ''
+      offset: 0000003E
+    - name: _ScsiPortReadRegisterBufferUchar@12
+      demangled: ''
+      offset: 0000004A
+    - name: _ScsiPortWriteRegisterBufferUchar@12
+      demangled: ''
+      offset: '00000051'
+    - name: _ScsiPortReadRegisterBufferUshort@12
+      demangled: ''
+      offset: '00000058'
+    - name: _ScsiPortWriteRegisterBufferUshort@12
+      demangled: ''
+      offset: '00000063'
+    - name: _ScsiPortReadRegisterBufferUlong@12
+      demangled: ''
+      offset: 0000006E
+    - name: _ScsiPortWriteRegisterBufferUlong@12
+      demangled: ''
+      offset: 0000007A
+    - name: _ScsiPortReadPortBufferUshort
+      demangled: ''
+      offset: 0000008C
+    - name: _TransferPortBufferShell@12
+      demangled: ''
+      offset: '00000095'
+    - name: _ScsiPortGetVirtualAddress@12
+      demangled: ''
+      offset: '00000346'
+    - name: _ScsiPortGetPhysicalAddress@16
+      demangled: ''
+      offset: 000003A6
+    - name: _ScsiPortWritePortUchar@8
+      demangled: ''
+      offset: '00000436'
+    - name: _ScsiPortWritePortUshort@8
+      demangled: ''
+      offset: '00000442'
+    - name: _ScsiPortWritePortUlong@8
+      demangled: ''
+      offset: '00000450'
+    - name: _ScsiPortReadRegisterUchar@4
+      demangled: ''
+      offset: 0000045C
+    - name: _ScsiPortReadRegisterUshort@4
+      demangled: ''
+      offset: '00000465'
+    - name: _ScsiPortReadRegisterUlong@4
+      demangled: ''
+      offset: 0000046F
+    - name: _ScsiPortWriteRegisterUchar@8
+      demangled: ''
+      offset: '00000478'
+    - name: _ScsiPortWriteRegisterUshort@8
+      demangled: ''
+      offset: '00000485'
+    - name: _ScsiPortWriteRegisterUlong@8
+      demangled: ''
+      offset: '00000494'
+    - name: _ScsiPortStallExecution@4
+      demangled: ''
+      offset: 000004A1
+    - name: _ScsiPortNotification
+      demangled: ''
+      offset: 000004BC
+    - name: MiniportTimerWentOff
+      demangled: ''
+      offset: 000006A6
+    - name: _IOSSendCommandInternal
+      demangled: ''
+      offset: 000006DE
+    - name: Port_Issue_Request_Sense
+      demangled: ''
+      offset: 000006F1
+    - name: _Port_ISR
+      demangled: ''
+      offset: 0000078D
+    - name: Port_Request
+      demangled: ''
+      offset: 000007C9
+    - name: Port_Dequeue_IOP
+      demangled: ''
+      offset: 0000088B
+    - name: Port_Start_IO
+      demangled: ''
+      offset: 000008DC
+    - name: Port_Dispatch
+      demangled: ''
+      offset: 00000A1D
+    - name: Port_Get_Logical_Unit
+      demangled: ''
+      offset: 00000B07
+    - name: _ScsiPortGetLogicalUnit@16
+      demangled: ''
+      offset: 00000B19
+    - name: _ScsiPortGetSrb@20
+      demangled: ''
+      offset: 00000B42
+    - name: _ScsiPortCompleteRequest@20
+      demangled: ''
+      offset: 00000B79
+    - name: Port_Setup_Iop
+      demangled: ''
+      offset: 00000BDF
+    - name: Port_Sense_Callback
+      demangled: ''
+      offset: 00000D42
+    - name: _Port_Initialize_Sys_DMA@4
+      demangled: ''
+      offset: 00000DFB
+    - name: _ScsiPortIoMapTransfer@16
+      demangled: ''
+      offset: 00000F1D
+    - name: _ScsiPortFlushDma@4
+      demangled: ''
+      offset: 00000F40
+    - name: CopyMapBuffer
+      demangled: ''
+      offset: 00000F6E
+    - name: IOMapTransferEvent
+      demangled: ''
+      offset: '00001004'
+    - name: Port_Process_error
+      demangled: ''
+      offset: 000010CC
+    - name: SCSIPORT_Control
+      demangled: ''
+      offset: '00001148'
+    - name: _memcpy@12
+      demangled: ''
+      offset: '00001164'
+    - name: Async_Event_Handler
+      demangled: ''
+      offset: '00001190'
+    - name: _AER_IOPTimeout
+      demangled: ''
+      offset: 0000121F
+    - name: _AER_BootComplete
+      demangled: ''
+      offset: 000012A5
+    - name: Port_Check_Special_Drives
+      demangled: ''
+      offset: 000012A6
+    - name: PortCurQueueTag
+      demangled: ''
+      offset: '00001344'
+    - name: VTDPeriodCount
+      demangled: ''
+      offset: '00001345'
+    - name: ResetVTDTimeout
+      demangled: ''
+      offset: '00001349'
+    - name: SCSIPORT_DDB
+      demangled: ''
+      offset: '00001350'
+    - name: hCurrentVM
+      demangled: ''
+      offset: 000013A0
+    - name: pActiveSRBList
+      demangled: ''
+      offset: 000013A4
+    - name: _port_ilb
+      demangled: ''
+      offset: 000013A8
+    - name: _ScsiportGlobalFlags
+      demangled: ''
+      offset: 000013DC
+    - name: _ScsiPortLogError@28
+      demangled: ''
+      offset: '000013E0'
+    - name: _ScsiPortMoveMemory@12
+      demangled: ''
+      offset: 000013ED
+    - name: _ScsiPortConvUlongToPhysAddr@4
+      demangled: ''
+      offset: 0000140B
+    - name: _ScsiPortConvPhysAddrToUlong@8
+      demangled: ''
+      offset: '00001433'
+    - name: _PortDebugPrint
+      demangled: ''
+      offset: '00001448'
+    - name: _FakeConfig
+      demangled: ''
+      offset: '00001460'
+    - name: _PAEP_rpm_inquiry
+      demangled: ''
+      offset: '00001464'
+    - name: _PAEP_rpm_change
+      demangled: ''
+      offset: '00001468'
+    - name: _PAEP_3mode_config
+      demangled: ''
+      offset: 0000146C
+  - num: '2'
+    name: _IGROUP
+    offset: '00003840'
+    symbols:
+    - name: _Port_Set_IRQ_Handler@12
+      demangled: ''
+      offset: '00000000'
+    - name: _Port_Setup_Config@8
+      demangled: ''
+      offset: 000000BA
+    - name: _Port_Get_User_Switches@12
+      demangled: ''
+      offset: '00000213'
+    - name: _Port_Check_PCI_Match@8
+      demangled: ''
+      offset: '00000255'
+    - name: _Port_Check_Dup@4
+      demangled: ''
+      offset: 0000033C
+    - name: Port_Turn_Off_Disc_Reg
+      demangled: ''
+      offset: '00000363'
+    - name: Port_Turn_Off_Sync_Reg
+      demangled: ''
+      offset: '00000391'
+    - name: _ScsiPortGetBusData@24
+      demangled: ''
+      offset: 000003BF
+    - name: _ScsiPortSetBusDataByOffset@28
+      demangled: ''
+      offset: 0000050A
+    - name: _ScsiPortGetUncachedExtension@12
+      demangled: ''
+      offset: '00000546'
+    - name: _PortDestroyUncachedExt@4
+      demangled: ''
+      offset: 000005C7
+    - name: _Port_Check_Polling@12
+      demangled: ''
+      offset: '00000606'
+    - name: _Port_Check_Reboot@8
+      demangled: ''
+      offset: '00000650'
+    - name: Port_Check_Reboot_Event
+      demangled: ''
+      offset: 000006A2
+    - name: SCSIPORT_Device_Init
+      demangled: ''
+      offset: 000006EC
+    - name: SCSIPORT_Device_Exit
+      demangled: ''
+      offset: '00000780'
+    - name: SCSIPORT_InitializeMiniport
+      demangled: ''
+      offset: 000007A6
+    - name: _Port_Allocate_Miniport_Ext@0
+      demangled: ''
+      offset: 000007B4
+    - name: _Port_Register_Miniport@8
+      demangled: ''
+      offset: 000007C2
+    - name: _ScsiPortInitialize@16
+      demangled: ''
+      offset: '00000840'
+    - name: _ScsiPortFreeDeviceBase@8
+      demangled: ''
+      offset: 00000AC1
+    - name: _ScsiPortGetDeviceBase@28
+      demangled: ''
+      offset: 00000AD3
+    - name: _ScsiPortValidateRange@28
+      demangled: ''
+      offset: 00000AE8
+    - name: _AER_Initialize
+      demangled: ''
+      offset: 00000BF0
+    - name: _AER_Bad
+      demangled: ''
+      offset: 0000133E
+    - name: _AER_DeviceInquiry
+      demangled: ''
+      offset: '00001349'
+    - name: _AER_ResetPerfview
+      demangled: ''
+      offset: 000018AE
+    - name: _strcat@8
+      demangled: ''
+      offset: 000018BC
+    - name: _memcmp@12
+      demangled: ''
+      offset: 000018EB
+    - name: _memset@12
+      demangled: ''
+      offset: '00001913'
+    - name: _strcmp@8
+      demangled: ''
+      offset: '00001947'
+    - name: _strcpy@8
+      demangled: ''
+      offset: 0000197F
+    - name: _getmem@4
+      demangled: ''
+      offset: 000019A7
+    - name: _freemem@4
+      demangled: ''
+      offset: 000019B9
+    - name: _AER_ConfigPhysical
+      demangled: ''
+      offset: 000019CC
+    - name: _AER_Shutdown
+      demangled: ''
+      offset: 00001B74
+    - name: _AER_CritShutdown
+      demangled: ''
+      offset: 00001BCA
+    - name: Port_Restore_State
+      demangled: ''
+      offset: 00001BD3
+    - name: _AER_Uninitialize
+      demangled: ''
+      offset: 00001BEC
+  - num: '3'
+    name: _PDATA
+    offset: '00003880'
+    symbols:
+    - name: DiscString
+      demangled: ''
+      offset: 000006F4
+    - name: SyncString
+      demangled: ''
+      offset: 000006FF
+  - num: '4'
+    name: _RARE
+    offset: '00000000'
+    symbols:
+    - name: _CCODE__CONFIGMG_Query_Arbitrator_Free_Data
+      demangled: ''
+      offset: '00000000'
+    - name: _CCODE__CONFIGMG_Create_Range_List
+      demangled: ''
+      offset: '00000008'
+    - name: _CCODE__CONFIGMG_Test_Range_Available
+      demangled: ''
+      offset: '00000010'
+    - name: _CCODE__CONFIGMG_Free_Range_List
+      demangled: ''
+      offset: '00000018'
+    - name: _CCODE__CONFIGMG_Invert_Range_List
+      demangled: ''
+      offset: '00000020'
+    - name: _CCODE__CONFIGMG_Get_Bus_Info
+      demangled: ''
+      offset: '00000028'

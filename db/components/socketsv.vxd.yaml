@@ -1,0 +1,2043 @@
+filename: socketsv.vxd
+binary: SOCKETSV
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../../binfmt.c
+  - ../cl.c
+  - ../debug.c
+  - ../../../../../dev/ddk/inc/vxdwraps.h
+  - ../king.c
+  - ../misc.c
+  - ../pcicss.c
+  - ../pnp.c
+  - ../ssmain.asm
+  - ../vadem.c
+  - ../vlsi.c
+  - 0u.h
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00000F40
+    symbols:
+    - name: SOCKETSV_DDB
+      processed: ''
+      offset: 0000024C
+    - name: _szDefSep
+      processed: ''
+      offset: 000002CC
+    - name: _szDefOffsetFmt
+      processed: ''
+      offset: 000002D0
+    - name: _FmtFuncTable
+      processed: ''
+      offset: 000002D8
+    - name: _giTraceLevel
+      processed: ''
+      offset: '000002E8'
+    - name: _giIndent
+      processed: ''
+      offset: 000002EC
+    - name: _aszTrigPtBuff
+      processed: ''
+      offset: 000002F0
+    - name: _dwfTrace
+      processed: ''
+      offset: '00000430'
+    - name: _dwcTriggers
+      processed: ''
+      offset: '00000434'
+    - name: _padptSelect
+      processed: ''
+      offset: '00000438'
+    - name: _bSktSelect
+      processed: ''
+      offset: 0000043C
+    - name: _szNoAdapter
+      processed: ''
+      offset: '00000440'
+    - name: _szReserved
+      processed: ''
+      offset: 0000045C
+    - name: _szDecFmt
+      processed: ''
+      offset: '00000468'
+    - name: _szHexFmt
+      processed: ''
+      offset: 0000046C
+    - name: _szByteFmt
+      processed: ''
+      offset: '00000470'
+    - name: _szWordFmt
+      processed: ''
+      offset: '00000478'
+    - name: _szDWordFmt
+      processed: ''
+      offset: '00000480'
+    - name: _ppszIDRegNames
+      processed: ''
+      offset: '00000488'
+    - name: _fmt1IDRevReg
+      processed: ''
+      offset: '00000494'
+    - name: _fmt2IDRevReg
+      processed: ''
+      offset: 000004C0
+    - name: _ppszISRegNames
+      processed: ''
+      offset: '000004E0'
+    - name: _fmtISReg
+      processed: ''
+      offset: '00000500'
+    - name: _ppszPwrRegNames1
+      processed: ''
+      offset: '00000524'
+    - name: _ppszPwrRegNames2
+      processed: ''
+      offset: '00000534'
+    - name: _ppszPwrRegNames3
+      processed: ''
+      offset: '00000540'
+    - name: _fmt1PwrReg
+      processed: ''
+      offset: 0000054C
+    - name: _fmt2PwrReg
+      processed: ''
+      offset: '00000570'
+    - name: _fmt3PwrReg
+      processed: ''
+      offset: 0000059C
+    - name: _ppszIntCtrlRegNames
+      processed: ''
+      offset: 000005C8
+    - name: _fmt1IntCtrlReg
+      processed: ''
+      offset: 000005D8
+    - name: _fmt2IntCtrlReg
+      processed: ''
+      offset: 000005FC
+    - name: _ppszCSCRegNames
+      processed: ''
+      offset: 0000061C
+    - name: _fmtCSCReg
+      processed: ''
+      offset: 0000062C
+    - name: _ppszCSCIntCfgRegNames
+      processed: ''
+      offset: '00000650'
+    - name: _fmt1CSCIntCfgReg
+      processed: ''
+      offset: '00000660'
+    - name: _fmt2CSCIntCfgReg
+      processed: ''
+      offset: '00000680'
+    - name: _ppszWinEnableRegNames
+      processed: ''
+      offset: 000006A4
+    - name: _fmtWinEnableReg
+      processed: ''
+      offset: 000006C4
+    - name: _ppszIOCtrlRegNames
+      processed: ''
+      offset: '000006E8'
+    - name: _fmtIOCtrlReg
+      processed: ''
+      offset: '00000708'
+    - name: _fmtHexWord
+      processed: ''
+      offset: 0000072C
+    - name: _ppszMemStartNames
+      processed: ''
+      offset: 0000074C
+    - name: _ppszMemOffsetNames
+      processed: ''
+      offset: '00000754'
+    - name: _fmtMemAddr
+      processed: ''
+      offset: 0000075C
+    - name: _fmtMemStartReg
+      processed: ''
+      offset: 0000077C
+    - name: _fmtMemEndReg
+      processed: ''
+      offset: 000007A0
+    - name: _fmt1MemOffsetReg
+      processed: ''
+      offset: 000007C0
+    - name: _fmt2MemOffsetReg
+      processed: ''
+      offset: '000007E0'
+    - name: _szLabelReserved
+      processed: ''
+      offset: '00000804'
+    - name: _afmtExCARegs
+      processed: ''
+      offset: 0000081C
+    - name: _fmtHexDWord
+      processed: ''
+      offset: '000009E4'
+    - name: _fmt4HexDWord
+      processed: ''
+      offset: 00000A04
+    - name: _fmtHexByte
+      processed: ''
+      offset: 00000A24
+    - name: _fmtSignature
+      processed: ''
+      offset: 00000A44
+    - name: _ppszAdptFlagNames
+      processed: ''
+      offset: 00000A5C
+    - name: _fmtAdptFlags
+      processed: ''
+      offset: 00000A84
+    - name: _fmtIOBase
+      processed: ''
+      offset: 00000AA8
+    - name: _fmtRegBase
+      processed: ''
+      offset: 00000AC8
+    - name: _fmtDecNum
+      processed: ''
+      offset: 00000AE8
+    - name: _ppszDevTypeNames
+      processed: ''
+      offset: 00000B08
+    - name: _fmtDevType
+      processed: ''
+      offset: 00000B20
+    - name: _fmtIRQMap
+      processed: ''
+      offset: 00000B4C
+    - name: _afmtAdapter
+      processed: ''
+      offset: 00000B6C
+    - name: _DebugCmds
+      processed: ''
+      offset: 00000C54
+    - name: _ReadRegByte
+      processed: ''
+      offset: '00001E70'
+    - name: _WriteRegByte
+      processed: ''
+      offset: 00001EEB
+    - name: _ReadRegWord
+      processed: ''
+      offset: 00001F6A
+    - name: _WriteRegWord
+      processed: ''
+      offset: '00002001'
+    - name: _SSAckInt
+      processed: ''
+      offset: 0000209C
+    - name: SSControl
+      processed: ''
+      offset: '00002228'
+    - name: SSEntry
+      processed: ''
+      offset: '00002254'
+    - name: _BinPrintf
+      processed: ''
+      offset: 000022DD
+    - name: _BinSprintf
+      processed: ''
+      offset: 000023FA
+    - name: _FormatNum
+      processed: ''
+      offset: 000025B9
+    - name: _FormatEnum
+      processed: ''
+      offset: '00002667'
+    - name: _FormatBits
+      processed: ''
+      offset: '00002731'
+    - name: _FormatString
+      processed: ''
+      offset: 0000283B
+    - name: _GetData
+      processed: ''
+      offset: 0000290C
+    - name: _PrintData
+      processed: ''
+      offset: 000029A9
+    - name: _TraceIndent
+      processed: ''
+      offset: 00002A55
+    - name: _IsTraceOn
+      processed: ''
+      offset: 00002A81
+    - name: _IsTrigPt
+      processed: ''
+      offset: 00002AE1
+    - name: _InStr
+      processed: ''
+      offset: 00002B18
+    - name: _SSDebug@0
+      processed: ''
+      offset: 00002B63
+    - name: _DebugShowAll
+      processed: ''
+      offset: 00002B72
+    - name: _DebugPickSocket
+      processed: ''
+      offset: 00002BC3
+    - name: _DebugShowSocket
+      processed: ''
+      offset: 00002CE5
+    - name: _DebugShowAdapterData
+      processed: ''
+      offset: 00002D04
+    - name: _DebugShowInfo
+      processed: ''
+      offset: 00002D23
+    - name: _DebugShowExCAReg
+      processed: ''
+      offset: 00002D42
+    - name: _DebugSetTraceLevel
+      processed: ''
+      offset: 00002D61
+    - name: _DebugToggleTrigMode
+      processed: ''
+      offset: 00002D8B
+    - name: _DebugClearTrigPts
+      processed: ''
+      offset: 00002DBF
+    - name: _DebugAddTrigPt
+      processed: ''
+      offset: 00002DDC
+    - name: _DebugZapTrigPt
+      processed: ''
+      offset: 00002E5F
+    - name: _ShowSocket
+      processed: ''
+      offset: 00002F0B
+    - name: _ShowAdapterData
+      processed: ''
+      offset: 00002F61
+    - name: _ShowInfo
+      processed: ''
+      offset: 00002FF6
+    - name: _ShowExCAReg
+      processed: ''
+      offset: '00003319'
+    - name: _ReadExCARegs
+      processed: ''
+      offset: 000033C7
+    - name: _LCODE__Debug_Printf_Service
+      processed: ''
+      offset: 000033F8
+    - name: '@CMDMenu@8'
+      processed: ''
+      offset: '00003410'
+    - name: '@CMDReadNumber@12'
+      processed: ''
+      offset: 000034D0
+    - name: '@CMDGetString@16'
+      processed: ''
+      offset: 000035D0
+    - name: '@CMDInChar@0'
+      processed: ''
+      offset: '00003680'
+    - name: _LCODE__lstrlen
+      processed: ''
+      offset: '00003688'
+  - num: '2'
+    name: PNP
+    offset: 00002D30
+    symbols:
+    - name: _DetectCL
+      processed: ''
+      offset: '00000000'
+    - name: _InitCL
+      processed: ''
+      offset: 000000DB
+    - name: _InitCLRegs
+      processed: ''
+      offset: 000002AB
+    - name: _CLSetPower
+      processed: ''
+      offset: 0000034B
+    - name: _CLGetPower
+      processed: ''
+      offset: 000004FB
+    - name: _CLGetCardType
+      processed: ''
+      offset: 000005F6
+    - name: _CLPCIGetCardType
+      processed: ''
+      offset: '00000686'
+    - name: _CLPCISetWinHi
+      processed: ''
+      offset: '00000729'
+    - name: _CLPCIGetWinHi
+      processed: ''
+      offset: 000007D4
+    - name: _CLSetZV
+      processed: ''
+      offset: 0000087A
+    - name: _CLResetZV
+      processed: ''
+      offset: 0000090D
+    - name: _DetectVLSI_ELC
+      processed: ''
+      offset: 000009A0
+    - name: _InitVLSI_ELC
+      processed: ''
+      offset: 00000A82
+    - name: _VLSISetPower
+      processed: ''
+      offset: 00000B4C
+    - name: _VLSIGetPower
+      processed: ''
+      offset: 00000CB6
+    - name: _VLSIGetCardType
+      processed: ''
+      offset: 00000DD7
+    - name: _DetectVADEM_VG469
+      processed: ''
+      offset: 00000E6D
+    - name: _InitVADEM_VG469
+      processed: ''
+      offset: 00000F8A
+    - name: _VADEMSetPower
+      processed: ''
+      offset: 0000102A
+    - name: _VADEMGetPower
+      processed: ''
+      offset: 000011D2
+    - name: _VADEMGetCardType
+      processed: ''
+      offset: 000012D2
+    - name: _DetectIBMKing
+      processed: ''
+      offset: '00001366'
+    - name: _InitIBMKing
+      processed: ''
+      offset: 000013D2
+    - name: _KINGSetPower
+      processed: ''
+      offset: '00001438'
+    - name: _KINGGetPower
+      processed: ''
+      offset: 000015BD
+    - name: _KINGGetCardType
+      processed: ''
+      offset: 000016CE
+    - name: _CreateIRQMap
+      processed: ''
+      offset: 0000175D
+    - name: _IsBadCLMask
+      processed: ''
+      offset: 000018CF
+    - name: _ValidateIRQ
+      processed: ''
+      offset: 0000195B
+    - name: _DetectIRQMap
+      processed: ''
+      offset: 00001B23
+    - name: _ToggleIRQLine
+      processed: ''
+      offset: 00001C86
+    - name: _GetPICIRR
+      processed: ''
+      offset: 00001DED
+    - name: _SetSktPwr
+      processed: ''
+      offset: 00001E5A
+    - name: _GetSktPwr
+      processed: ''
+      offset: '00002060'
+    - name: _PCICSetPower
+      processed: ''
+      offset: '00002150'
+    - name: _PCICGetPower
+      processed: ''
+      offset: '00002278'
+    - name: _PCICGetCardType
+      processed: ''
+      offset: '00002396'
+    - name: _ReadDevID
+      processed: ''
+      offset: 000023FC
+    - name: _ValidateID
+      processed: ''
+      offset: 000024C6
+    - name: _InitSockets
+      processed: ''
+      offset: '00002543'
+    - name: _InitRegs
+      processed: ''
+      offset: '00002669'
+    - name: _SSGetSSInfo
+      processed: ''
+      offset: '00002701'
+    - name: _SSInqAdapter
+      processed: ''
+      offset: 0000277C
+    - name: _SSGetAdapter
+      processed: ''
+      offset: '00002828'
+    - name: _SSSetAdapter
+      processed: ''
+      offset: 0000289D
+    - name: _SSInqWindow
+      processed: ''
+      offset: 000029CC
+    - name: _SSGetWindow
+      processed: ''
+      offset: 00002AE1
+    - name: _SSSetWindow
+      processed: ''
+      offset: 00002D36
+    - name: _SSGetPage
+      processed: ''
+      offset: '000030E3'
+    - name: _SSSetPage
+      processed: ''
+      offset: 0000326A
+    - name: _SSInqSocket
+      processed: ''
+      offset: 0000343B
+    - name: _SSGetSocket
+      processed: ''
+      offset: '00003540'
+    - name: _SSSetSocket
+      processed: ''
+      offset: '00003665'
+    - name: _SSGetStatus
+      processed: ''
+      offset: 00003A54
+    - name: _GetStatusCommon
+      processed: ''
+      offset: 00003B64
+    - name: _SSResetSocket
+      processed: ''
+      offset: 00003C59
+    - name: _SSGetVendorInfo
+      processed: ''
+      offset: 00003E1E
+    - name: _ValidateWindow32
+      processed: ''
+      offset: 00003F14
+    - name: _ConvertSpeedToWait
+      processed: ''
+      offset: '00004036'
+    - name: _EnableDisableWindow
+      processed: ''
+      offset: 0000414C
+    - name: _CopyToUserBuff
+      processed: ''
+      offset: 000041F6
+    - name: _SSInit@0
+      processed: ''
+      offset: 0000427A
+    - name: _SSNewDevnode@8
+      processed: ''
+      offset: 0000430B
+    - name: _SSPnPHandler
+      processed: ''
+      offset: '00004463'
+    - name: _FilterConfigs
+      processed: ''
+      offset: 000048DF
+    - name: _InitAdapterData
+      processed: ''
+      offset: 0000498D
+    - name: _InitAdapter
+      processed: ''
+      offset: 00004A33
+    - name: _ChkELCAlias
+      processed: ''
+      offset: 00004DBE
+    - name: _ChkAliasSocket
+      processed: ''
+      offset: 00004E5F
+    - name: _ResumeRegOK
+      processed: ''
+      offset: 00004F6A
+    - name: _InitContextBuffs
+      processed: ''
+      offset: 00004FF0
+    - name: _AllocContextBuff
+      processed: ''
+      offset: 0000512F
+    - name: _ReadRegBuffer
+      processed: ''
+      offset: 000051EF
+    - name: _RestoreEXCARegs
+      processed: ''
+      offset: 000052C2
+    - name: _SaveEXCARegs
+      processed: ''
+      offset: '00005412'
+    - name: _RestoreCLExtRegs
+      processed: ''
+      offset: '00005561'
+    - name: _SaveCLExtRegs
+      processed: ''
+      offset: 000056C2
+    - name: _RegWithCS
+      processed: ''
+      offset: '00005824'
+    - name: _AddAdapter
+      processed: ''
+      offset: '00005862'
+    - name: _RemoveAdapter
+      processed: ''
+      offset: '00005892'
+    - name: _CCODE__CONFIGMG_Get_Bus_Info
+      processed: ''
+      offset: 000058D8
+    - name: _CCODE__Debug_Printf_Service
+      processed: ''
+      offset: '000058E0'
+    - name: _CCODE__CONFIGMG_Yield
+      processed: ''
+      offset: 000058F4
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      processed: ''
+      offset: 000058FC
+    - name: _CCODE__LinRegionUnLock
+      processed: ''
+      offset: '00005904'
+    - name: _CCODE__LinRegionLock
+      processed: ''
+      offset: 0000590C
+    - name: _CCODE__VPICD_Clear_IR_Bits
+      processed: ''
+      offset: '00005914'
+    - name: _CCODE__lstrlen
+      processed: ''
+      offset: 0000591C
+    - name: _CCODE__HeapFree
+      processed: ''
+      offset: '00005924'
+    - name: _CCODE__CONFIGMG_Set_DevNode_PowerCapabilities
+      processed: ''
+      offset: 0000592C
+    - name: _CCODE__CONFIGMG_Register_Device_Driver
+      processed: ''
+      offset: '00005934'
+    - name: _CCODE__HeapAllocate
+      processed: ''
+      offset: 0000593C
+    - name: _CCODE__CONFIGMG_Set_Device_Driver_Private_DWord
+      processed: ''
+      offset: '00005944'
+    - name: _CCODE__CONFIGMG_Get_Next_Log_Conf
+      processed: ''
+      offset: 0000594C
+    - name: _CCODE__CONFIGMG_Get_Next_Res_Des
+      processed: ''
+      offset: '00005954'
+    - name: _CCODE__CONFIGMG_Get_First_Log_Conf
+      processed: ''
+      offset: 0000595C
+    - name: _CCODE__lstrcpyn
+      processed: ''
+      offset: '00005964'
+    - name: _CCODE__Sprintf
+      processed: ''
+      offset: 0000596C
+  - num: '3'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: _gpszVendorDesc
+      processed: ''
+      offset: '00000000'
+    - name: _gpszIRQMap
+      processed: ''
+      offset: '00000004'
+    - name: _gpszOptions
+      processed: ''
+      offset: '00000008'
+    - name: _gpszFlags
+      processed: ''
+      offset: 0000000C
+    - name: _gpszEXCASave
+      processed: ''
+      offset: '00000010'
+    - name: _gpszCLExtSave
+      processed: ''
+      offset: '00000014'
+    - name: _PCICInfo
+      processed: ''
+      offset: '00000018'
+    - name: _PCIC33VInfo
+      processed: ''
+      offset: 0000002C
+    - name: _VLSIInfo
+      processed: ''
+      offset: '00000040'
+    - name: _PCICSktChr
+      processed: ''
+      offset: '00000054'
+    - name: _PCIC33VSktChr
+      processed: ''
+      offset: '00000068'
+    - name: _MemWinInfo
+      processed: ''
+      offset: 0000007C
+    - name: _BigMemWinInfo
+      processed: ''
+      offset: 0000009C
+    - name: _IOWinTable
+      processed: ''
+      offset: 000000BC
+    - name: _abWaitToSpeedTable
+      processed: ''
+      offset: 000000D4
+    - name: _abDevSpeedTable
+      processed: ''
+      offset: 000000D8
+    - name: _abResumeRegTable
+      processed: ''
+      offset: '000000E0'
+    - name: _DevTable
+      processed: ''
+      offset: '000000E4'
+    - name: _abInitDataCL
+      processed: ''
+      offset: 000001A4
+    - name: _abInitDataCLPCI
+      processed: ''
+      offset: 000001B0
+    - name: _abInitData
+      processed: ''
+      offset: 000001BC
+    - name: _argDefEXCASave
+      processed: ''
+      offset: 000001F4
+    - name: _argDefCLExtSave
+      processed: ''
+      offset: 000001FC
+    - name: _padptHead
+      processed: ''
+      offset: 00002F5C
+    - name: _padptTail
+      processed: ''
+      offset: 00002F60
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000110'
+    symbols:
+    - name: SOCKETSV_DDB
+      demangled: ''
+      offset: '00000058'
+    - name: _ReadRegByte
+      demangled: ''
+      offset: '00000110'
+    - name: _WriteRegByte
+      demangled: ''
+      offset: 0000012B
+    - name: _ReadRegWord
+      demangled: ''
+      offset: '00000145'
+    - name: _WriteRegWord
+      demangled: ''
+      offset: 0000017E
+    - name: _SSAckInt
+      demangled: ''
+      offset: 000001B5
+    - name: SSControl
+      demangled: ''
+      offset: '00000294'
+    - name: SSEntry
+      demangled: ''
+      offset: 000002C0
+    - name: '@CMDMenu@8'
+      demangled: ''
+      offset: '00000340'
+    - name: '@CMDReadNumber@12'
+      demangled: ''
+      offset: '00000400'
+    - name: _LCODE__Debug_Printf_Service
+      demangled: ''
+      offset: 000004F4
+    - name: '@CMDInChar@0'
+      demangled: ''
+      offset: '00000510'
+  - num: '2'
+    name: _DB1CODE
+    offset: '000006E0'
+    symbols:
+    - name: _BinPrintf
+      demangled: ''
+      offset: '00000000'
+    - name: _BinSprintf
+      demangled: ''
+      offset: 000000A9
+    - name: _FormatNum
+      demangled: ''
+      offset: '00000206'
+    - name: _FormatEnum
+      demangled: ''
+      offset: '00000259'
+    - name: _FormatBits
+      demangled: ''
+      offset: 000002C8
+    - name: _FormatString
+      demangled: ''
+      offset: 0000036F
+    - name: _GetData
+      demangled: ''
+      offset: 000003DF
+    - name: _PrintData
+      demangled: ''
+      offset: '00000410'
+    - name: _SSDebug@0
+      demangled: ''
+      offset: '00000459'
+    - name: _DebugShowAll
+      demangled: ''
+      offset: '00000468'
+    - name: _DebugPickSocket
+      demangled: ''
+      offset: 000004B9
+    - name: _DebugShowSocket
+      demangled: ''
+      offset: 000005DB
+    - name: _DebugShowAdapterData
+      demangled: ''
+      offset: 000005FA
+    - name: _DebugShowInfo
+      demangled: ''
+      offset: '00000619'
+    - name: _DebugShowExCAReg
+      demangled: ''
+      offset: '00000638'
+    - name: _ShowSocket
+      demangled: ''
+      offset: '00000657'
+    - name: _ShowAdapterData
+      demangled: ''
+      offset: 000006AD
+    - name: _ShowInfo
+      demangled: ''
+      offset: 000006FB
+    - name: _ShowExCAReg
+      demangled: ''
+      offset: 00000A1E
+    - name: _ReadExCARegs
+      demangled: ''
+      offset: 00000AA4
+    - name: _szDefSep
+      demangled: ''
+      offset: 00000AD8
+    - name: _szDefOffsetFmt
+      demangled: ''
+      offset: 00000ADC
+    - name: _FmtFuncTable
+      demangled: ''
+      offset: 00000AE4
+    - name: _padptSelect
+      demangled: ''
+      offset: 00000AF4
+    - name: _bSktSelect
+      demangled: ''
+      offset: 00000AF8
+    - name: _szNoAdapter
+      demangled: ''
+      offset: 00000AFC
+    - name: _szReserved
+      demangled: ''
+      offset: 00000B18
+    - name: _szDecFmt
+      demangled: ''
+      offset: 00000B24
+    - name: _szHexFmt
+      demangled: ''
+      offset: 00000B28
+    - name: _szByteFmt
+      demangled: ''
+      offset: 00000B2C
+    - name: _szWordFmt
+      demangled: ''
+      offset: 00000B34
+    - name: _szDWordFmt
+      demangled: ''
+      offset: 00000B3C
+    - name: _ppszIDRegNames
+      demangled: ''
+      offset: 00000B44
+    - name: _fmt1IDRevReg
+      demangled: ''
+      offset: 00000B50
+    - name: _fmt2IDRevReg
+      demangled: ''
+      offset: 00000B7C
+    - name: _ppszISRegNames
+      demangled: ''
+      offset: 00000B9C
+    - name: _fmtISReg
+      demangled: ''
+      offset: 00000BBC
+    - name: _ppszPwrRegNames1
+      demangled: ''
+      offset: 00000BE0
+    - name: _ppszPwrRegNames2
+      demangled: ''
+      offset: 00000BF0
+    - name: _ppszPwrRegNames3
+      demangled: ''
+      offset: 00000BFC
+    - name: _fmt1PwrReg
+      demangled: ''
+      offset: 00000C08
+    - name: _fmt2PwrReg
+      demangled: ''
+      offset: 00000C2C
+    - name: _fmt3PwrReg
+      demangled: ''
+      offset: 00000C58
+    - name: _ppszIntCtrlRegNames
+      demangled: ''
+      offset: 00000C84
+    - name: _fmt1IntCtrlReg
+      demangled: ''
+      offset: 00000C94
+    - name: _fmt2IntCtrlReg
+      demangled: ''
+      offset: 00000CB8
+    - name: _ppszCSCRegNames
+      demangled: ''
+      offset: 00000CD8
+    - name: _fmtCSCReg
+      demangled: ''
+      offset: 00000CE8
+    - name: _ppszCSCIntCfgRegNames
+      demangled: ''
+      offset: 00000D0C
+    - name: _fmt1CSCIntCfgReg
+      demangled: ''
+      offset: 00000D1C
+    - name: _fmt2CSCIntCfgReg
+      demangled: ''
+      offset: 00000D3C
+    - name: _ppszWinEnableRegNames
+      demangled: ''
+      offset: 00000D60
+    - name: _fmtWinEnableReg
+      demangled: ''
+      offset: 00000D80
+    - name: _ppszIOCtrlRegNames
+      demangled: ''
+      offset: 00000DA4
+    - name: _fmtIOCtrlReg
+      demangled: ''
+      offset: 00000DC4
+    - name: _fmtHexWord
+      demangled: ''
+      offset: 00000DE8
+    - name: _ppszMemStartNames
+      demangled: ''
+      offset: '00000E08'
+    - name: _ppszMemOffsetNames
+      demangled: ''
+      offset: '00000E10'
+    - name: _fmtMemAddr
+      demangled: ''
+      offset: '00000E18'
+    - name: _fmtMemStartReg
+      demangled: ''
+      offset: '00000E38'
+    - name: _fmtMemEndReg
+      demangled: ''
+      offset: 00000E5C
+    - name: _fmt1MemOffsetReg
+      demangled: ''
+      offset: 00000E7C
+    - name: _fmt2MemOffsetReg
+      demangled: ''
+      offset: 00000E9C
+    - name: _szLabelReserved
+      demangled: ''
+      offset: 00000EC0
+    - name: _afmtExCARegs
+      demangled: ''
+      offset: 00000ED8
+    - name: _fmtHexDWord
+      demangled: ''
+      offset: 000010A0
+    - name: _fmt4HexDWord
+      demangled: ''
+      offset: 000010C0
+    - name: _fmtHexByte
+      demangled: ''
+      offset: '000010E0'
+    - name: _fmtSignature
+      demangled: ''
+      offset: '00001100'
+    - name: _ppszAdptFlagNames
+      demangled: ''
+      offset: '00001118'
+    - name: _fmtAdptFlags
+      demangled: ''
+      offset: '00001140'
+    - name: _fmtIOBase
+      demangled: ''
+      offset: '00001164'
+    - name: _fmtRegBase
+      demangled: ''
+      offset: '00001184'
+    - name: _fmtDecNum
+      demangled: ''
+      offset: 000011A4
+    - name: _ppszDevTypeNames
+      demangled: ''
+      offset: 000011C4
+    - name: _fmtDevType
+      demangled: ''
+      offset: 000011DC
+    - name: _fmtIRQMap
+      demangled: ''
+      offset: '00001208'
+    - name: _afmtAdapter
+      demangled: ''
+      offset: '00001228'
+    - name: _DebugCmds
+      demangled: ''
+      offset: '00001310'
+  - num: '3'
+    name: PNP
+    offset: 00000F00
+    symbols:
+    - name: _DetectCL
+      demangled: ''
+      offset: '00000000'
+    - name: _InitCL
+      demangled: ''
+      offset: '00000089'
+    - name: _InitCLRegs
+      demangled: ''
+      offset: '000001E8'
+    - name: _CLSetPower
+      demangled: ''
+      offset: '00000232'
+    - name: _CLGetPower
+      demangled: ''
+      offset: '00000330'
+    - name: _CLGetCardType
+      demangled: ''
+      offset: '00000399'
+    - name: _CLPCIGetCardType
+      demangled: ''
+      offset: 000003BE
+    - name: _CLPCISetWinHi
+      demangled: ''
+      offset: '00000400'
+    - name: _CLPCIGetWinHi
+      demangled: ''
+      offset: 0000043F
+    - name: _CLSetZV
+      demangled: ''
+      offset: 0000047A
+    - name: _CLResetZV
+      demangled: ''
+      offset: 000004AD
+    - name: _DetectVLSI_ELC
+      demangled: ''
+      offset: '000004E0'
+    - name: _InitVLSI_ELC
+      demangled: ''
+      offset: '00000570'
+    - name: _VLSISetPower
+      demangled: ''
+      offset: 000005EC
+    - name: _VLSIGetPower
+      demangled: ''
+      offset: 000006AE
+    - name: _VLSIGetCardType
+      demangled: ''
+      offset: 0000070E
+    - name: _DetectVADEM_VG469
+      demangled: ''
+      offset: '00000739'
+    - name: _InitVADEM_VG469
+      demangled: ''
+      offset: '00000804'
+    - name: _VADEMSetPower
+      demangled: ''
+      offset: '00000831'
+    - name: _VADEMGetPower
+      demangled: ''
+      offset: '00000921'
+    - name: _VADEMGetCardType
+      demangled: ''
+      offset: 0000098F
+    - name: _DetectIBMKing
+      demangled: ''
+      offset: 000009BC
+    - name: _InitIBMKing
+      demangled: ''
+      offset: 000009D0
+    - name: _KINGSetPower
+      demangled: ''
+      offset: '000009E6'
+    - name: _KINGGetPower
+      demangled: ''
+      offset: 00000ABF
+    - name: _KINGGetCardType
+      demangled: ''
+      offset: 00000B3B
+    - name: _CreateIRQMap
+      demangled: ''
+      offset: 00000B66
+    - name: _IsBadCLMask
+      demangled: ''
+      offset: 00000C87
+    - name: _ValidateIRQ
+      demangled: ''
+      offset: 00000CC0
+    - name: _DetectIRQMap
+      demangled: ''
+      offset: 00000E3C
+    - name: _ToggleIRQLine
+      demangled: ''
+      offset: 00000F47
+    - name: _GetPICIRR
+      demangled: ''
+      offset: '00001058'
+    - name: _SetSktPwr
+      demangled: ''
+      offset: '00001074'
+    - name: _GetSktPwr
+      demangled: ''
+      offset: '00001195'
+    - name: _PCICSetPower
+      demangled: ''
+      offset: 0000121E
+    - name: _PCICGetPower
+      demangled: ''
+      offset: 000012D1
+    - name: _PCICGetCardType
+      demangled: ''
+      offset: '00001333'
+    - name: _ReadDevID
+      demangled: ''
+      offset: '00001336'
+    - name: _ValidateID
+      demangled: ''
+      offset: 000013A7
+    - name: _InitSockets
+      demangled: ''
+      offset: 000013C6
+    - name: _InitRegs
+      demangled: ''
+      offset: 0000149E
+    - name: _SSGetSSInfo
+      demangled: ''
+      offset: '000014E2'
+    - name: _SSInqAdapter
+      demangled: ''
+      offset: '00001500'
+    - name: _SSGetAdapter
+      demangled: ''
+      offset: 0000154A
+    - name: _SSSetAdapter
+      demangled: ''
+      offset: '00001567'
+    - name: _SSInqWindow
+      demangled: ''
+      offset: '00001617'
+    - name: _SSGetWindow
+      demangled: ''
+      offset: '00001690'
+    - name: _SSSetWindow
+      demangled: ''
+      offset: '00001855'
+    - name: _SSGetPage
+      demangled: ''
+      offset: 00001ABC
+    - name: _SSSetPage
+      demangled: ''
+      offset: 00001B91
+    - name: _SSInqSocket
+      demangled: ''
+      offset: 00001C71
+    - name: _SSGetSocket
+      demangled: ''
+      offset: 00001CE2
+    - name: _SSSetSocket
+      demangled: ''
+      offset: 00001D64
+    - name: _SSGetStatus
+      demangled: ''
+      offset: 00001F71
+    - name: _GetStatusCommon
+      demangled: ''
+      offset: 00001FE9
+    - name: _SSResetSocket
+      demangled: ''
+      offset: '00002084'
+    - name: _SSGetVendorInfo
+      demangled: ''
+      offset: 000021AE
+    - name: _ValidateWindow32
+      demangled: ''
+      offset: '00002215'
+    - name: _ConvertSpeedToWait
+      demangled: ''
+      offset: 0000226C
+    - name: _EnableDisableWindow
+      demangled: ''
+      offset: 000022D6
+    - name: _CopyToUserBuff
+      demangled: ''
+      offset: '00002323'
+    - name: _SSInit@0
+      demangled: ''
+      offset: '00002352'
+    - name: _SSNewDevnode@8
+      demangled: ''
+      offset: 0000236B
+    - name: _SSPnPHandler
+      demangled: ''
+      offset: 000023F9
+    - name: _FilterConfigs
+      demangled: ''
+      offset: 000026AF
+    - name: _InitAdapterData
+      demangled: ''
+      offset: 0000270E
+    - name: _InitAdapter
+      demangled: ''
+      offset: 0000273A
+    - name: _ChkELCAlias
+      demangled: ''
+      offset: 000029BF
+    - name: _ChkAliasSocket
+      demangled: ''
+      offset: 00002A01
+    - name: _ResumeRegOK
+      demangled: ''
+      offset: 00002AAC
+    - name: _InitContextBuffs
+      demangled: ''
+      offset: 00002ADA
+    - name: _AllocContextBuff
+      demangled: ''
+      offset: 00002B51
+    - name: _ReadRegBuffer
+      demangled: ''
+      offset: 00002BB1
+    - name: _RestoreEXCARegs
+      demangled: ''
+      offset: 00002C19
+    - name: _SaveEXCARegs
+      demangled: ''
+      offset: 00002CB5
+    - name: _RestoreCLExtRegs
+      demangled: ''
+      offset: 00002D50
+    - name: _SaveCLExtRegs
+      demangled: ''
+      offset: 00002DF4
+    - name: _RegWithCS
+      demangled: ''
+      offset: '00002E98'
+    - name: _AddAdapter
+      demangled: ''
+      offset: 00002ECE
+    - name: _RemoveAdapter
+      demangled: ''
+      offset: 00002EFA
+    - name: _CCODE__CONFIGMG_Get_Bus_Info
+      demangled: ''
+      offset: 00002F3C
+    - name: _CCODE__CONFIGMG_Yield
+      demangled: ''
+      offset: 00002F44
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      demangled: ''
+      offset: 00002F4C
+    - name: _CCODE__LinRegionUnLock
+      demangled: ''
+      offset: 00002F54
+    - name: _CCODE__LinRegionLock
+      demangled: ''
+      offset: 00002F5C
+    - name: _CCODE__VPICD_Clear_IR_Bits
+      demangled: ''
+      offset: 00002F64
+    - name: _CCODE__lstrlen
+      demangled: ''
+      offset: 00002F6C
+    - name: _CCODE__HeapFree
+      demangled: ''
+      offset: 00002F74
+    - name: _CCODE__CONFIGMG_Set_DevNode_PowerCapabilities
+      demangled: ''
+      offset: 00002F7C
+    - name: _CCODE__CONFIGMG_Register_Device_Driver
+      demangled: ''
+      offset: 00002F84
+    - name: _CCODE__HeapAllocate
+      demangled: ''
+      offset: 00002F8C
+    - name: _CCODE__CONFIGMG_Set_Device_Driver_Private_DWord
+      demangled: ''
+      offset: 00002F94
+    - name: _CCODE__CONFIGMG_Get_Next_Log_Conf
+      demangled: ''
+      offset: 00002F9C
+    - name: _CCODE__CONFIGMG_Get_Next_Res_Des
+      demangled: ''
+      offset: 00002FA4
+    - name: _CCODE__CONFIGMG_Get_First_Log_Conf
+      demangled: ''
+      offset: 00002FAC
+    - name: _CCODE__Debug_Printf_Service
+      demangled: ''
+      offset: 00002FB4
+    - name: _CCODE__lstrcpyn
+      demangled: ''
+      offset: 00002FC8
+    - name: _CCODE__Sprintf
+      demangled: ''
+      offset: 00002FD0
+  - num: '4'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: _gpszVendorDesc
+      demangled: ''
+      offset: '00000000'
+    - name: _gpszIRQMap
+      demangled: ''
+      offset: '00000004'
+    - name: _gpszOptions
+      demangled: ''
+      offset: '00000008'
+    - name: _gpszFlags
+      demangled: ''
+      offset: 0000000C
+    - name: _gpszEXCASave
+      demangled: ''
+      offset: '00000010'
+    - name: _gpszCLExtSave
+      demangled: ''
+      offset: '00000014'
+    - name: _PCICInfo
+      demangled: ''
+      offset: '00000018'
+    - name: _PCIC33VInfo
+      demangled: ''
+      offset: 0000002C
+    - name: _VLSIInfo
+      demangled: ''
+      offset: '00000040'
+    - name: _PCICSktChr
+      demangled: ''
+      offset: '00000054'
+    - name: _PCIC33VSktChr
+      demangled: ''
+      offset: '00000068'
+    - name: _MemWinInfo
+      demangled: ''
+      offset: 0000007C
+    - name: _BigMemWinInfo
+      demangled: ''
+      offset: 0000009C
+    - name: _IOWinTable
+      demangled: ''
+      offset: 000000BC
+    - name: _abWaitToSpeedTable
+      demangled: ''
+      offset: 000000D4
+    - name: _abDevSpeedTable
+      demangled: ''
+      offset: 000000D8
+    - name: _abResumeRegTable
+      demangled: ''
+      offset: '000000E0'
+    - name: _DevTable
+      demangled: ''
+      offset: '000000E4'
+    - name: _abInitDataCL
+      demangled: ''
+      offset: 000001A4
+    - name: _abInitDataCLPCI
+      demangled: ''
+      offset: 000001B0
+    - name: _abInitData
+      demangled: ''
+      offset: 000001BC
+    - name: _argDefEXCASave
+      demangled: ''
+      offset: 000001F4
+    - name: _argDefCLExtSave
+      demangled: ''
+      offset: 000001FC
+    - name: _padptHead
+      demangled: ''
+      offset: 000002A0
+    - name: _padptTail
+      demangled: ''
+      offset: 000002A4
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000110'
+    symbols:
+    - name: SOCKETSV_DDB
+      demangled: ''
+      offset: '00000058'
+    - name: _ReadRegByte
+      demangled: ''
+      offset: '00000110'
+    - name: _WriteRegByte
+      demangled: ''
+      offset: 0000012B
+    - name: _ReadRegWord
+      demangled: ''
+      offset: '00000145'
+    - name: _WriteRegWord
+      demangled: ''
+      offset: 0000017E
+    - name: _SSAckInt
+      demangled: ''
+      offset: 000001B5
+    - name: SSControl
+      demangled: ''
+      offset: '00000294'
+    - name: SSEntry
+      demangled: ''
+      offset: 000002C0
+    - name: '@CMDMenu@8'
+      demangled: ''
+      offset: '00000340'
+    - name: '@CMDReadNumber@12'
+      demangled: ''
+      offset: '00000400'
+    - name: _LCODE__Debug_Printf_Service
+      demangled: ''
+      offset: 000004F4
+    - name: '@CMDInChar@0'
+      demangled: ''
+      offset: '00000510'
+  - num: '2'
+    name: _DB1CODE
+    offset: '000006E0'
+    symbols:
+    - name: _BinPrintf
+      demangled: ''
+      offset: '00000000'
+    - name: _BinSprintf
+      demangled: ''
+      offset: 000000A9
+    - name: _FormatNum
+      demangled: ''
+      offset: '00000206'
+    - name: _FormatEnum
+      demangled: ''
+      offset: '00000259'
+    - name: _FormatBits
+      demangled: ''
+      offset: 000002C8
+    - name: _FormatString
+      demangled: ''
+      offset: 0000036F
+    - name: _GetData
+      demangled: ''
+      offset: 000003DF
+    - name: _PrintData
+      demangled: ''
+      offset: '00000410'
+    - name: _SSDebug@0
+      demangled: ''
+      offset: '00000459'
+    - name: _DebugShowAll
+      demangled: ''
+      offset: '00000468'
+    - name: _DebugPickSocket
+      demangled: ''
+      offset: 000004B9
+    - name: _DebugShowSocket
+      demangled: ''
+      offset: 000005DB
+    - name: _DebugShowAdapterData
+      demangled: ''
+      offset: 000005FA
+    - name: _DebugShowInfo
+      demangled: ''
+      offset: '00000619'
+    - name: _DebugShowExCAReg
+      demangled: ''
+      offset: '00000638'
+    - name: _ShowSocket
+      demangled: ''
+      offset: '00000657'
+    - name: _ShowAdapterData
+      demangled: ''
+      offset: 000006AD
+    - name: _ShowInfo
+      demangled: ''
+      offset: 000006FB
+    - name: _ShowExCAReg
+      demangled: ''
+      offset: 00000A1E
+    - name: _ReadExCARegs
+      demangled: ''
+      offset: 00000AA4
+    - name: _szDefSep
+      demangled: ''
+      offset: 00000AD8
+    - name: _szDefOffsetFmt
+      demangled: ''
+      offset: 00000ADC
+    - name: _FmtFuncTable
+      demangled: ''
+      offset: 00000AE4
+    - name: _padptSelect
+      demangled: ''
+      offset: 00000AF4
+    - name: _bSktSelect
+      demangled: ''
+      offset: 00000AF8
+    - name: _szNoAdapter
+      demangled: ''
+      offset: 00000AFC
+    - name: _szReserved
+      demangled: ''
+      offset: 00000B18
+    - name: _szDecFmt
+      demangled: ''
+      offset: 00000B24
+    - name: _szHexFmt
+      demangled: ''
+      offset: 00000B28
+    - name: _szByteFmt
+      demangled: ''
+      offset: 00000B2C
+    - name: _szWordFmt
+      demangled: ''
+      offset: 00000B34
+    - name: _szDWordFmt
+      demangled: ''
+      offset: 00000B3C
+    - name: _ppszIDRegNames
+      demangled: ''
+      offset: 00000B44
+    - name: _fmt1IDRevReg
+      demangled: ''
+      offset: 00000B50
+    - name: _fmt2IDRevReg
+      demangled: ''
+      offset: 00000B7C
+    - name: _ppszISRegNames
+      demangled: ''
+      offset: 00000B9C
+    - name: _fmtISReg
+      demangled: ''
+      offset: 00000BBC
+    - name: _ppszPwrRegNames1
+      demangled: ''
+      offset: 00000BE0
+    - name: _ppszPwrRegNames2
+      demangled: ''
+      offset: 00000BF0
+    - name: _ppszPwrRegNames3
+      demangled: ''
+      offset: 00000BFC
+    - name: _fmt1PwrReg
+      demangled: ''
+      offset: 00000C08
+    - name: _fmt2PwrReg
+      demangled: ''
+      offset: 00000C2C
+    - name: _fmt3PwrReg
+      demangled: ''
+      offset: 00000C58
+    - name: _ppszIntCtrlRegNames
+      demangled: ''
+      offset: 00000C84
+    - name: _fmt1IntCtrlReg
+      demangled: ''
+      offset: 00000C94
+    - name: _fmt2IntCtrlReg
+      demangled: ''
+      offset: 00000CB8
+    - name: _ppszCSCRegNames
+      demangled: ''
+      offset: 00000CD8
+    - name: _fmtCSCReg
+      demangled: ''
+      offset: 00000CE8
+    - name: _ppszCSCIntCfgRegNames
+      demangled: ''
+      offset: 00000D0C
+    - name: _fmt1CSCIntCfgReg
+      demangled: ''
+      offset: 00000D1C
+    - name: _fmt2CSCIntCfgReg
+      demangled: ''
+      offset: 00000D3C
+    - name: _ppszWinEnableRegNames
+      demangled: ''
+      offset: 00000D60
+    - name: _fmtWinEnableReg
+      demangled: ''
+      offset: 00000D80
+    - name: _ppszIOCtrlRegNames
+      demangled: ''
+      offset: 00000DA4
+    - name: _fmtIOCtrlReg
+      demangled: ''
+      offset: 00000DC4
+    - name: _fmtHexWord
+      demangled: ''
+      offset: 00000DE8
+    - name: _ppszMemStartNames
+      demangled: ''
+      offset: '00000E08'
+    - name: _ppszMemOffsetNames
+      demangled: ''
+      offset: '00000E10'
+    - name: _fmtMemAddr
+      demangled: ''
+      offset: '00000E18'
+    - name: _fmtMemStartReg
+      demangled: ''
+      offset: '00000E38'
+    - name: _fmtMemEndReg
+      demangled: ''
+      offset: 00000E5C
+    - name: _fmt1MemOffsetReg
+      demangled: ''
+      offset: 00000E7C
+    - name: _fmt2MemOffsetReg
+      demangled: ''
+      offset: 00000E9C
+    - name: _szLabelReserved
+      demangled: ''
+      offset: 00000EC0
+    - name: _afmtExCARegs
+      demangled: ''
+      offset: 00000ED8
+    - name: _fmtHexDWord
+      demangled: ''
+      offset: 000010A0
+    - name: _fmt4HexDWord
+      demangled: ''
+      offset: 000010C0
+    - name: _fmtHexByte
+      demangled: ''
+      offset: '000010E0'
+    - name: _fmtSignature
+      demangled: ''
+      offset: '00001100'
+    - name: _ppszAdptFlagNames
+      demangled: ''
+      offset: '00001118'
+    - name: _fmtAdptFlags
+      demangled: ''
+      offset: '00001140'
+    - name: _fmtIOBase
+      demangled: ''
+      offset: '00001164'
+    - name: _fmtRegBase
+      demangled: ''
+      offset: '00001184'
+    - name: _fmtDecNum
+      demangled: ''
+      offset: 000011A4
+    - name: _ppszDevTypeNames
+      demangled: ''
+      offset: 000011C4
+    - name: _fmtDevType
+      demangled: ''
+      offset: 000011DC
+    - name: _fmtIRQMap
+      demangled: ''
+      offset: '00001208'
+    - name: _afmtAdapter
+      demangled: ''
+      offset: '00001228'
+    - name: _DebugCmds
+      demangled: ''
+      offset: '00001310'
+  - num: '3'
+    name: PNP
+    offset: 00000F00
+    symbols:
+    - name: _DetectCL
+      demangled: ''
+      offset: '00000000'
+    - name: _InitCL
+      demangled: ''
+      offset: '00000089'
+    - name: _InitCLRegs
+      demangled: ''
+      offset: '000001E8'
+    - name: _CLSetPower
+      demangled: ''
+      offset: '00000232'
+    - name: _CLGetPower
+      demangled: ''
+      offset: '00000330'
+    - name: _CLGetCardType
+      demangled: ''
+      offset: '00000399'
+    - name: _CLPCIGetCardType
+      demangled: ''
+      offset: 000003BE
+    - name: _CLPCISetWinHi
+      demangled: ''
+      offset: '00000400'
+    - name: _CLPCIGetWinHi
+      demangled: ''
+      offset: 0000043F
+    - name: _CLSetZV
+      demangled: ''
+      offset: 0000047A
+    - name: _CLResetZV
+      demangled: ''
+      offset: 000004AD
+    - name: _DetectVLSI_ELC
+      demangled: ''
+      offset: '000004E0'
+    - name: _InitVLSI_ELC
+      demangled: ''
+      offset: '00000570'
+    - name: _VLSISetPower
+      demangled: ''
+      offset: 000005EC
+    - name: _VLSIGetPower
+      demangled: ''
+      offset: 000006AE
+    - name: _VLSIGetCardType
+      demangled: ''
+      offset: 0000070E
+    - name: _DetectVADEM_VG469
+      demangled: ''
+      offset: '00000739'
+    - name: _InitVADEM_VG469
+      demangled: ''
+      offset: '00000804'
+    - name: _VADEMSetPower
+      demangled: ''
+      offset: '00000831'
+    - name: _VADEMGetPower
+      demangled: ''
+      offset: '00000921'
+    - name: _VADEMGetCardType
+      demangled: ''
+      offset: 0000098F
+    - name: _DetectIBMKing
+      demangled: ''
+      offset: 000009BC
+    - name: _InitIBMKing
+      demangled: ''
+      offset: 000009D0
+    - name: _KINGSetPower
+      demangled: ''
+      offset: '000009E6'
+    - name: _KINGGetPower
+      demangled: ''
+      offset: 00000ABF
+    - name: _KINGGetCardType
+      demangled: ''
+      offset: 00000B3B
+    - name: _CreateIRQMap
+      demangled: ''
+      offset: 00000B66
+    - name: _IsBadCLMask
+      demangled: ''
+      offset: 00000C87
+    - name: _ValidateIRQ
+      demangled: ''
+      offset: 00000CC0
+    - name: _DetectIRQMap
+      demangled: ''
+      offset: 00000E3C
+    - name: _ToggleIRQLine
+      demangled: ''
+      offset: 00000F47
+    - name: _GetPICIRR
+      demangled: ''
+      offset: '00001058'
+    - name: _SetSktPwr
+      demangled: ''
+      offset: '00001074'
+    - name: _GetSktPwr
+      demangled: ''
+      offset: '00001195'
+    - name: _PCICSetPower
+      demangled: ''
+      offset: 0000121E
+    - name: _PCICGetPower
+      demangled: ''
+      offset: 000012D1
+    - name: _PCICGetCardType
+      demangled: ''
+      offset: '00001333'
+    - name: _ReadDevID
+      demangled: ''
+      offset: '00001336'
+    - name: _ValidateID
+      demangled: ''
+      offset: 000013A7
+    - name: _InitSockets
+      demangled: ''
+      offset: 000013C6
+    - name: _InitRegs
+      demangled: ''
+      offset: 0000149E
+    - name: _SSGetSSInfo
+      demangled: ''
+      offset: '000014E2'
+    - name: _SSInqAdapter
+      demangled: ''
+      offset: '00001500'
+    - name: _SSGetAdapter
+      demangled: ''
+      offset: 0000154A
+    - name: _SSSetAdapter
+      demangled: ''
+      offset: '00001567'
+    - name: _SSInqWindow
+      demangled: ''
+      offset: '00001617'
+    - name: _SSGetWindow
+      demangled: ''
+      offset: '00001690'
+    - name: _SSSetWindow
+      demangled: ''
+      offset: '00001855'
+    - name: _SSGetPage
+      demangled: ''
+      offset: 00001ABC
+    - name: _SSSetPage
+      demangled: ''
+      offset: 00001B91
+    - name: _SSInqSocket
+      demangled: ''
+      offset: 00001C71
+    - name: _SSGetSocket
+      demangled: ''
+      offset: 00001CE2
+    - name: _SSSetSocket
+      demangled: ''
+      offset: 00001D64
+    - name: _SSGetStatus
+      demangled: ''
+      offset: 00001F71
+    - name: _GetStatusCommon
+      demangled: ''
+      offset: 00001FE9
+    - name: _SSResetSocket
+      demangled: ''
+      offset: '00002084'
+    - name: _SSGetVendorInfo
+      demangled: ''
+      offset: 000021AE
+    - name: _ValidateWindow32
+      demangled: ''
+      offset: '00002215'
+    - name: _ConvertSpeedToWait
+      demangled: ''
+      offset: 0000226C
+    - name: _EnableDisableWindow
+      demangled: ''
+      offset: 000022D6
+    - name: _CopyToUserBuff
+      demangled: ''
+      offset: '00002323'
+    - name: _SSInit@0
+      demangled: ''
+      offset: '00002352'
+    - name: _SSNewDevnode@8
+      demangled: ''
+      offset: 0000236B
+    - name: _SSPnPHandler
+      demangled: ''
+      offset: 000023F9
+    - name: _FilterConfigs
+      demangled: ''
+      offset: 000026AF
+    - name: _InitAdapterData
+      demangled: ''
+      offset: 0000270E
+    - name: _InitAdapter
+      demangled: ''
+      offset: 0000273A
+    - name: _ChkELCAlias
+      demangled: ''
+      offset: 000029BF
+    - name: _ChkAliasSocket
+      demangled: ''
+      offset: 00002A01
+    - name: _ResumeRegOK
+      demangled: ''
+      offset: 00002AAC
+    - name: _InitContextBuffs
+      demangled: ''
+      offset: 00002ADA
+    - name: _AllocContextBuff
+      demangled: ''
+      offset: 00002B51
+    - name: _ReadRegBuffer
+      demangled: ''
+      offset: 00002BB1
+    - name: _RestoreEXCARegs
+      demangled: ''
+      offset: 00002C19
+    - name: _SaveEXCARegs
+      demangled: ''
+      offset: 00002CB5
+    - name: _RestoreCLExtRegs
+      demangled: ''
+      offset: 00002D50
+    - name: _SaveCLExtRegs
+      demangled: ''
+      offset: 00002DF4
+    - name: _RegWithCS
+      demangled: ''
+      offset: '00002E98'
+    - name: _AddAdapter
+      demangled: ''
+      offset: 00002ECE
+    - name: _RemoveAdapter
+      demangled: ''
+      offset: 00002EFA
+    - name: _CCODE__CONFIGMG_Get_Bus_Info
+      demangled: ''
+      offset: 00002F3C
+    - name: _CCODE__CONFIGMG_Yield
+      demangled: ''
+      offset: 00002F44
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      demangled: ''
+      offset: 00002F4C
+    - name: _CCODE__LinRegionUnLock
+      demangled: ''
+      offset: 00002F54
+    - name: _CCODE__LinRegionLock
+      demangled: ''
+      offset: 00002F5C
+    - name: _CCODE__VPICD_Clear_IR_Bits
+      demangled: ''
+      offset: 00002F64
+    - name: _CCODE__lstrlen
+      demangled: ''
+      offset: 00002F6C
+    - name: _CCODE__HeapFree
+      demangled: ''
+      offset: 00002F74
+    - name: _CCODE__CONFIGMG_Set_DevNode_PowerCapabilities
+      demangled: ''
+      offset: 00002F7C
+    - name: _CCODE__CONFIGMG_Register_Device_Driver
+      demangled: ''
+      offset: 00002F84
+    - name: _CCODE__HeapAllocate
+      demangled: ''
+      offset: 00002F8C
+    - name: _CCODE__CONFIGMG_Set_Device_Driver_Private_DWord
+      demangled: ''
+      offset: 00002F94
+    - name: _CCODE__CONFIGMG_Get_Next_Log_Conf
+      demangled: ''
+      offset: 00002F9C
+    - name: _CCODE__CONFIGMG_Get_Next_Res_Des
+      demangled: ''
+      offset: 00002FA4
+    - name: _CCODE__CONFIGMG_Get_First_Log_Conf
+      demangled: ''
+      offset: 00002FAC
+    - name: _CCODE__Debug_Printf_Service
+      demangled: ''
+      offset: 00002FB4
+    - name: _CCODE__lstrcpyn
+      demangled: ''
+      offset: 00002FC8
+    - name: _CCODE__Sprintf
+      demangled: ''
+      offset: 00002FD0
+  - num: '4'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: _gpszVendorDesc
+      demangled: ''
+      offset: '00000000'
+    - name: _gpszIRQMap
+      demangled: ''
+      offset: '00000004'
+    - name: _gpszOptions
+      demangled: ''
+      offset: '00000008'
+    - name: _gpszFlags
+      demangled: ''
+      offset: 0000000C
+    - name: _gpszEXCASave
+      demangled: ''
+      offset: '00000010'
+    - name: _gpszCLExtSave
+      demangled: ''
+      offset: '00000014'
+    - name: _PCICInfo
+      demangled: ''
+      offset: '00000018'
+    - name: _PCIC33VInfo
+      demangled: ''
+      offset: 0000002C
+    - name: _VLSIInfo
+      demangled: ''
+      offset: '00000040'
+    - name: _PCICSktChr
+      demangled: ''
+      offset: '00000054'
+    - name: _PCIC33VSktChr
+      demangled: ''
+      offset: '00000068'
+    - name: _MemWinInfo
+      demangled: ''
+      offset: 0000007C
+    - name: _BigMemWinInfo
+      demangled: ''
+      offset: 0000009C
+    - name: _IOWinTable
+      demangled: ''
+      offset: 000000BC
+    - name: _abWaitToSpeedTable
+      demangled: ''
+      offset: 000000D4
+    - name: _abDevSpeedTable
+      demangled: ''
+      offset: 000000D8
+    - name: _abResumeRegTable
+      demangled: ''
+      offset: '000000E0'
+    - name: _DevTable
+      demangled: ''
+      offset: '000000E4'
+    - name: _abInitDataCL
+      demangled: ''
+      offset: 000001A4
+    - name: _abInitDataCLPCI
+      demangled: ''
+      offset: 000001B0
+    - name: _abInitData
+      demangled: ''
+      offset: 000001BC
+    - name: _argDefEXCASave
+      demangled: ''
+      offset: 000001F4
+    - name: _argDefCLExtSave
+      demangled: ''
+      offset: 000001FC
+    - name: _padptHead
+      demangled: ''
+      offset: 000002A0
+    - name: _padptTail
+      demangled: ''
+      offset: 000002A4

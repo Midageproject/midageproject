@@ -1,0 +1,5226 @@
+filename: vfat.vxd
+binary: VFAT
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../cache.asm
+  - ../debug.asm
+  - ../dircache.asm
+  - ../dirsubr.asm
+  - ../diskstub.asm
+  - ../excllock.asm
+  - ../fat.asm
+  - ../fatcheck.asm
+  - ../fatfcn2.asm
+  - ../fatfcn.asm
+  - ../fatioctl.asm
+  - ../fsdata.asm
+  - ../fsinit.asm
+  - ../iosubr.asm
+  - ../lazy.asm
+  - ../lfn.asm
+  - ../lfnsubr.asm
+  - ../lock.asm
+  - ../misc.asm
+  - ../notify.asm
+  - ../pfc.asm
+  - ../registry.asm
+  - ../subr.asm
+  - ../tasking.asm
+  - ../vfataer.asm
+  - ../vfatios.asm
+  - ../vfatw32.asm
+  - ../vxdinit.asm
+  segments:
+  - num: '1'
+    name: _LDATA
+    offset: 0001B5C0
+    symbols:
+    - name: RdAhead_Active
+      processed: ''
+      offset: '00000008'
+    - name: cpgLoaderRAMax
+      processed: ''
+      offset: 0000000C
+    - name: RdbFActive
+      processed: ''
+      offset: '00000188'
+    - name: RdbFBuffHdr
+      processed: ''
+      offset: 0000018C
+    - name: RdbFDesc
+      processed: ''
+      offset: '00000190'
+    - name: NABActive
+      processed: ''
+      offset: '00000194'
+    - name: NABDesc
+      processed: ''
+      offset: '00000198'
+    - name: Flw_Desc
+      processed: ''
+      offset: 0000019C
+    - name: vfatcBufCleaned
+      processed: ''
+      offset: 000001A0
+    - name: NABActiveThreadID
+      processed: ''
+      offset: 000001A4
+    - name: cachecattab
+      processed: ''
+      offset: '00000254'
+    - name: oldcachecat
+      processed: ''
+      offset: 0000025D
+    - name: vfatSecDebug
+      processed: ''
+      offset: 0000025E
+    - name: VbsCount
+      processed: ''
+      offset: '00000294'
+    - name: VbsCall
+      processed: ''
+      offset: '00000295'
+    - name: VbsFull
+      processed: ''
+      offset: '00000299'
+    - name: vfat_vcsh_relqpage
+      processed: ''
+      offset: '00000370'
+    - name: vfat_mustUnzap
+      processed: ''
+      offset: '00000374'
+    - name: BugTyp
+      processed: ''
+      offset: 000003BC
+    - name: BugLev
+      processed: ''
+      offset: 000003BE
+    - name: DebKey
+      processed: ''
+      offset: '000003E0'
+    - name: DebWait
+      processed: ''
+      offset: '000003E4'
+    - name: DebBrk
+      processed: ''
+      offset: '000003E8'
+    - name: DebClr
+      processed: ''
+      offset: '000003E9'
+    - name: FastFOld
+      processed: ''
+      offset: '00000478'
+    - name: Dir_Hash_Time
+      processed: ''
+      offset: 000004FC
+    - name: Dir_Hash_Tab
+      processed: ''
+      offset: '00000500'
+    - name: UniToUpperDelta
+      processed: ''
+      offset: '00000504'
+    - name: UniToUpperTable
+      processed: ''
+      offset: '00000508'
+    - name: cIosPending
+      processed: ''
+      offset: 00000B74
+    - name: ForceWriteErr
+      processed: ''
+      offset: 00000B78
+    - name: BadSec_List
+      processed: ''
+      offset: 00000BA4
+    - name: pk_buf
+      processed: ''
+      offset: 00000C60
+    - name: pk_secwanted
+      processed: ''
+      offset: 00000C64
+    - name: pk_secbuf
+      processed: ''
+      offset: 00000C68
+    - name: pk_addr
+      processed: ''
+      offset: 00000C6C
+    - name: upk_buf
+      processed: ''
+      offset: 00000C70
+    - name: upk_secwanted
+      processed: ''
+      offset: 00000C74
+    - name: upk_secbuf
+      processed: ''
+      offset: 00000C78
+    - name: upk_addr
+      processed: ''
+      offset: 00000C7C
+    - name: FATOpWait
+      processed: ''
+      offset: 00000C80
+    - name: fWalkChain
+      processed: ''
+      offset: 00000F38
+    - name: vfatWaitIOR
+      processed: ''
+      offset: 00000F80
+    - name: TagWait
+      processed: ''
+      offset: 0000123C
+    - name: VFAT_CacheID
+      processed: ''
+      offset: 0000148C
+    - name: LWHead
+      processed: ''
+      offset: '00001490'
+    - name: OftHead
+      processed: ''
+      offset: 000014B4
+    - name: DirtBits
+      processed: ''
+      offset: 000014C8
+    - name: DirtBits2
+      processed: ''
+      offset: 000014CC
+    - name: DirtOrd
+      processed: ''
+      offset: 000014D0
+    - name: VolChain
+      processed: ''
+      offset: '000014E0'
+    - name: cbufDirty
+      processed: ''
+      offset: '000014E8'
+    - name: pDPB
+      processed: ''
+      offset: 000014EC
+    - name: pPageFileSFT
+      processed: ''
+      offset: 000014F0
+    - name: MMSwapCB
+      processed: ''
+      offset: 000014F4
+    - name: VfatStats
+      processed: ''
+      offset: 000014F8
+    - name: vfatfDebug
+      processed: ''
+      offset: 00001A04
+    - name: FastFile
+      processed: ''
+      offset: 00001A08
+    - name: VFATMounting
+      processed: ''
+      offset: 00001A23
+    - name: MemMgrMutex
+      processed: ''
+      offset: 00001A27
+    - name: NAMECACHECOUNT2
+      processed: ''
+      offset: 00001A2B
+    - name: FatEntryBadChild
+      processed: ''
+      offset: 00001C30
+    - name: RWCnt
+      processed: ''
+      offset: 000024A0
+    - name: GoftLock
+      processed: ''
+      offset: 000024C0
+    - name: GoftWait
+      processed: ''
+      offset: 000024C4
+    - name: LazyTime
+      processed: ''
+      offset: 000024EC
+    - name: IntrTime
+      processed: ''
+      offset: 000024F0
+    - name: DIdleTime
+      processed: ''
+      offset: 000024F4
+    - name: Lazy_IO_Active
+      processed: ''
+      offset: 000024F8
+    - name: LazyIdleTime
+      processed: ''
+      offset: 000024FC
+    - name: Lazy_Pending
+      processed: ''
+      offset: '00002510'
+    - name: ScaleShifts
+      processed: ''
+      offset: '00002514'
+    - name: LWShift
+      processed: ''
+      offset: '00002525'
+    - name: LTO_Handle
+      processed: ''
+      offset: '00002526'
+    - name: LTO_ID
+      processed: ''
+      offset: 0000252A
+    - name: LTO_nID
+      processed: ''
+      offset: 0000252E
+    - name: ITPPageOuts
+      processed: ''
+      offset: 0000253A
+    - name: ITPFlags
+      processed: ''
+      offset: 0000253E
+    - name: FtoVolF
+      processed: ''
+      offset: '00002544'
+    - name: FtoLock
+      processed: ''
+      offset: '00002545'
+    - name: wltime
+      processed: ''
+      offset: '00002548'
+    - name: wlmutex
+      processed: ''
+      offset: 0000254C
+    - name: wlactive
+      processed: ''
+      offset: '00002554'
+    - name: pLfnInfoCache
+      processed: ''
+      offset: 000025D4
+    - name: LNLenOffsetTable
+      processed: ''
+      offset: 000025D8
+    - name: CompatFileSysFlags
+      processed: ''
+      offset: 00002B58
+    - name: DriveWriteBehindFlags
+      processed: ''
+      offset: 00002B5C
+    - name: TunnelAuth
+      processed: ''
+      offset: 00002B60
+    - name: VolIdleTimeout
+      processed: ''
+      offset: 00002B64
+    - name: BuffIdleTimeout
+      processed: ''
+      offset: 00002B68
+    - name: BuffAgeTimeout
+      processed: ''
+      offset: 00002B6C
+    - name: PathCacheCount
+      processed: ''
+      offset: 00002B70
+    - name: NameCacheCount
+      processed: ''
+      offset: 00002B74
+    - name: ContigFileAllocSize
+      processed: ''
+      offset: 00002B78
+    - name: NameNumericTail
+      processed: ''
+      offset: 00002B7C
+    - name: ReadAheadThreshold
+      processed: ''
+      offset: 00002B80
+    - name: pNoVolTrackPatRecTable
+      processed: ''
+      offset: 00002B84
+    - name: MaxFAT32TotalSpace
+      processed: ''
+      offset: 00002B88
+    - name: MaxFAT32FreeSpace
+      processed: ''
+      offset: 00002B8C
+    - name: MaxFAT32TotalClust
+      processed: ''
+      offset: 00002B90
+    - name: MaxFAT32FreeClust
+      processed: ''
+      offset: 00002B94
+    - name: fShutdownStatus
+      processed: ''
+      offset: 00002B98
+    - name: DriveLDSBdcastDisableFlags
+      processed: ''
+      offset: 00002B9C
+    - name: LogFlag
+      processed: ''
+      offset: 00002BA0
+    - name: FullHold
+      processed: ''
+      offset: 00002BD0
+    - name: FullLock
+      processed: ''
+      offset: 00002BD4
+    - name: VfatFullLockThrdID
+      processed: ''
+      offset: 00002BD8
+    - name: SwapperActive
+      processed: ''
+      offset: 00002BDC
+    - name: FullLockSem
+      processed: ''
+      offset: 00002BE0
+    - name: FullHoldSem
+      processed: ''
+      offset: 00002BE4
+    - name: VFAT_ilb
+      processed: ''
+      offset: 00002C78
+    - name: IOPSpareState
+      processed: ''
+      offset: 00002CAC
+    - name: IOPSpareAddr
+      processed: ''
+      offset: 00002CB0
+    - name: IOPSparePhysAddr
+      processed: ''
+      offset: 00002CB4
+    - name: IOPSpareDesc
+      processed: ''
+      offset: 00002CB8
+    - name: VolDrive
+      processed: ''
+      offset: 00002D00
+    - name: hfindHead
+      processed: ''
+      offset: 00002D04
+    - name: FindVectors
+      processed: ''
+      offset: 00002D0C
+    - name: SpareLNInfoState
+      processed: ''
+      offset: '00003130'
+    - name: SpareLNInfoDesc
+      processed: ''
+      offset: '00003134'
+    - name: SpareLNInfo
+      processed: ''
+      offset: '00003138'
+    - name: VFAT_DDB
+      processed: ''
+      offset: '00003614'
+    - name: VFAT_SystemExit
+      processed: ''
+      offset: '00003664'
+    - name: RmmDefault_Vol_Flags
+      processed: ''
+      offset: 0000366C
+    - name: VFAT_CacheBlockMapped
+      processed: ''
+      offset: '00003670'
+    - name: fVfatInitComplete
+      processed: ''
+      offset: '00003674'
+    - name: APITable
+      processed: ''
+      offset: '00003675'
+    - name: OffsetThrInVfatCount
+      processed: ''
+      offset: 000036A0
+    - name: STATSDesc
+      processed: ''
+      offset: 000037F8
+    - name: LogPtr
+      processed: ''
+      offset: '00004318'
+    - name: LogFWA
+      processed: ''
+      offset: 0000431C
+    - name: LogEnd
+      processed: ''
+      offset: 0000E31C
+    - name: VFAT_Discard
+      processed: ''
+      offset: '0000E320'
+    - name: UnlockBufferValid
+      processed: ''
+      offset: 0000E3E1
+    - name: UnlockBuffer
+      processed: ''
+      offset: 0000E3E5
+    - name: fdb30
+      processed: ''
+      offset: 0000E3FB
+    - name: Find_Buffer
+      processed: ''
+      offset: '0000E408'
+    - name: fdb20
+      processed: ''
+      offset: '0000E432'
+    - name: VFAT_FindBlockAlign
+      processed: ''
+      offset: '0000E433'
+    - name: VFAT_FindBlock
+      processed: ''
+      offset: '0000E450'
+    - name: VFAT_FindBlockSub
+      processed: ''
+      offset: '0000E477'
+    - name: Test_Buffer
+      processed: ''
+      offset: '0000E594'
+    - name: tdb20
+      processed: ''
+      offset: 0000E5C3
+    - name: WL_Test_Buffer
+      processed: ''
+      offset: 0000E5D4
+    - name: RdBuf
+      processed: ''
+      offset: '0000E634'
+    - name: RdBufB
+      processed: ''
+      offset: 0000E8FC
+    - name: NABWait
+      processed: ''
+      offset: 0000E9A8
+    - name: NeedABuf
+      processed: ''
+      offset: 0000E9C8
+    - name: mkba
+      processed: ''
+      offset: 0000EA8D
+    - name: mkb10
+      processed: ''
+      offset: 0000EA95
+    - name: MakeBuf
+      processed: ''
+      offset: 0000EAB4
+    - name: mkb60
+      processed: ''
+      offset: 0000EAF7
+    - name: mkb70
+      processed: ''
+      offset: 0000EB0C
+    - name: mkb100
+      processed: ''
+      offset: 0000EB9C
+    - name: mkb180
+      processed: ''
+      offset: 0000EBD4
+    - name: BufferToDirtyChain
+      processed: ''
+      offset: 0000EBE9
+    - name: BufferToDirtyChainNoTag
+      processed: ''
+      offset: 0000EC0A
+    - name: SetDirt
+      processed: ''
+      offset: 0000ECE5
+    - name: SetDirtySector
+      processed: ''
+      offset: 0000ED08
+    - name: SetMRWMask
+      processed: ''
+      offset: 0000ED9F
+    - name: SetDirtySectors
+      processed: ''
+      offset: 0000EDC2
+    - name: WriteSectorNow
+      processed: ''
+      offset: 0000EE3A
+    - name: WriteSectorsNow
+      processed: ''
+      offset: 0000EE96
+    - name: ChkDirt
+      processed: ''
+      offset: 0000EFB8
+    - name: WBUlk
+      processed: ''
+      offset: 0000EFD0
+    - name: wbu2
+      processed: ''
+      offset: 0000EFFD
+    - name: FlushBuf_Async
+      processed: ''
+      offset: 0000F005
+    - name: FlushBufTag_Async
+      processed: ''
+      offset: 0000F017
+    - name: flb1
+      processed: ''
+      offset: 0000F034
+    - name: flb5
+      processed: ''
+      offset: 0000F03B
+    - name: flb10
+      processed: ''
+      offset: 0000F064
+    - name: flb15
+      processed: ''
+      offset: 0000F06B
+    - name: FlushBuf_Sync
+      processed: ''
+      offset: 0000F07F
+    - name: FlushBufTag_Sync
+      processed: ''
+      offset: 0000F08C
+    - name: flb55
+      processed: ''
+      offset: 0000F098
+    - name: flb57
+      processed: ''
+      offset: 0000F0A9
+    - name: flb90
+      processed: ''
+      offset: 0000F0D5
+    - name: FlushTag
+      processed: ''
+      offset: 0000F0D7
+    - name: GetDirtyBufCount
+      processed: ''
+      offset: 0000F120
+    - name: VBS
+      processed: ''
+      offset: 0000F13C
+    - name: vbsx22
+      processed: ''
+      offset: 0000F182
+    - name: vbsx25
+      processed: ''
+      offset: 0000F190
+    - name: vbsx27
+      processed: ''
+      offset: 0000F195
+    - name: vbsx60
+      processed: ''
+      offset: 0000F1AA
+    - name: VBS_Check
+      processed: ''
+      offset: 0000F1B9
+    - name: VFAT_CleanZappedPage
+      processed: ''
+      offset: 0000F2C4
+    - name: ProgRdAhead
+      processed: ''
+      offset: 0000F2EB
+    - name: DoZap
+      processed: ''
+      offset: 0000F48C
+    - name: rdbz12
+      processed: ''
+      offset: 0000F4E1
+    - name: dozapx
+      processed: ''
+      offset: 0000F4F7
+    - name: ZapFunc
+      processed: ''
+      offset: 0000F4F9
+    - name: DoLogHcnt
+      processed: ''
+      offset: 0000F587
+    - name: TestBuffHold
+      processed: ''
+      offset: 0000F59E
+    - name: UniQueryDirCache
+      processed: ''
+      offset: 0000F5DC
+    - name: UniInsertDirCache
+      processed: ''
+      offset: 0000F6FD
+    - name: UniRemoveDirCache
+      processed: ''
+      offset: 0000F846
+    - name: UniQueryNameCache
+      processed: ''
+      offset: 0000F90C
+    - name: QueryNameCache
+      processed: ''
+      offset: 0000F97B
+    - name: InsertNameCache
+      processed: ''
+      offset: 0000FA07
+    - name: _UniRemoveNameCache@16
+      processed: ''
+      offset: 0000FB2E
+    - name: _RemoveNameCache@16
+      processed: ''
+      offset: 0000FB7E
+    - name: HashStr
+      processed: ''
+      offset: 0000FC33
+    - name: HashiStr
+      processed: ''
+      offset: 0000FC58
+    - name: QueryDirFATCache
+      processed: ''
+      offset: 0000FC9C
+    - name: GetEntry
+      processed: ''
+      offset: 0000FD6D
+    - name: GetEnt
+      processed: ''
+      offset: 0000FD70
+    - name: GetEntrySub
+      processed: ''
+      offset: 0000FDFB
+    - name: ge10
+      processed: ''
+      offset: 0000FE34
+    - name: FreeEnt
+      processed: ''
+      offset: 0000FE4D
+    - name: NextEntry
+      processed: ''
+      offset: 0000FEB7
+    - name: LNNewEntrys
+      processed: ''
+      offset: 0000FF62
+    - name: NewDir
+      processed: ''
+      offset: 0001053F
+    - name: ndi5
+      processed: ''
+      offset: 0001061B
+    - name: ndi10
+      processed: ''
+      offset: '00010637'
+    - name: IsCompressedClusterClean
+      processed: ''
+      offset: '00010647'
+    - name: SetRootSrch
+      processed: ''
+      offset: 0001068E
+    - name: SetDirSrchFromDirent
+      processed: ''
+      offset: 000106CA
+    - name: SetDirSrch
+      processed: ''
+      offset: 000106EA
+    - name: CommitDirent
+      processed: ''
+      offset: '00010714'
+    - name: cmd90
+      processed: ''
+      offset: 000107D4
+    - name: cmd91
+      processed: ''
+      offset: 000107D5
+    - name: cmd92
+      processed: ''
+      offset: 000107DF
+    - name: DirFromOft
+      processed: ''
+      offset: '000107E1'
+    - name: dfsx
+      processed: ''
+      offset: '00010823'
+    - name: FillDirDateFields
+      processed: ''
+      offset: '00010824'
+    - name: ValidateAccessDate
+      processed: ''
+      offset: 000108FD
+    - name: ValidateCreateDateTime
+      processed: ''
+      offset: '00010919'
+    - name: Win32DateTimetoDosDateTime
+      processed: ''
+      offset: '00010965'
+    - name: DskRead
+      processed: ''
+      offset: 000109AC
+    - name: DskReadLocked
+      processed: ''
+      offset: 000109B5
+    - name: drf15
+      processed: ''
+      offset: 00010A36
+    - name: drd20
+      processed: ''
+      offset: 00010A48
+    - name: drd25
+      processed: ''
+      offset: 00010A57
+    - name: VolLock
+      processed: ''
+      offset: 00010A6C
+    - name: VolUnlock
+      processed: ''
+      offset: 00010A7B
+    - name: Qlck_Note
+      processed: ''
+      offset: 00010AEA
+    - name: Qras_Note
+      processed: ''
+      offset: 00010AF9
+    - name: qwn5
+      processed: ''
+      offset: 00010B13
+    - name: qwn30
+      processed: ''
+      offset: 00010B1F
+    - name: Debug_Force_Error
+      processed: ''
+      offset: 00010B37
+    - name: dfe10
+      processed: ''
+      offset: 00010B4A
+    - name: dfe20
+      processed: ''
+      offset: 00010B50
+    - name: dfe90
+      processed: ''
+      offset: 00010B67
+    - name: DskWrite
+      processed: ''
+      offset: 00010B6C
+    - name: DskWriteLocked
+      processed: ''
+      offset: 00010B7B
+    - name: dwd20
+      processed: ''
+      offset: 00010C7C
+    - name: dwd25
+      processed: ''
+      offset: 00010C8A
+    - name: SyncRead
+      processed: ''
+      offset: 00010CA8
+    - name: SyncReadSub
+      processed: ''
+      offset: 00010D38
+    - name: SCR_Note
+      processed: ''
+      offset: '00010E85'
+    - name: AsyncRead
+      processed: ''
+      offset: 00010EAC
+    - name: acr0
+      processed: ''
+      offset: 00010F26
+    - name: acr99
+      processed: ''
+      offset: 00010F6C
+    - name: AsyncReadNotify
+      processed: ''
+      offset: 00010F6D
+    - name: CallStrat2
+      processed: ''
+      offset: '00011006'
+    - name: cwdx
+      processed: ''
+      offset: 000110FE
+    - name: CheckWriteData
+      processed: ''
+      offset: 000110FF
+    - name: cwd10
+      processed: ''
+      offset: '00011114'
+    - name: cwd50
+      processed: ''
+      offset: '00011129'
+    - name: cwd55
+      processed: ''
+      offset: 0001112F
+    - name: cwd60
+      processed: ''
+      offset: '00011139'
+    - name: cwd100
+      processed: ''
+      offset: 0001114D
+    - name: RegeneratePath
+      processed: ''
+      offset: '00011154'
+    - name: rep10
+      processed: ''
+      offset: 000111BB
+    - name: rep90
+      processed: ''
+      offset: '00011261'
+    - name: rep91
+      processed: ''
+      offset: 0001126E
+    - name: rep95
+      processed: ''
+      offset: '00011273'
+    - name: rep96
+      processed: ''
+      offset: '00011280'
+    - name: EnumPathNames
+      processed: ''
+      offset: '00011285'
+    - name: epn10
+      processed: ''
+      offset: 000112CD
+    - name: epn90
+      processed: ''
+      offset: '00011309'
+    - name: epn99
+      processed: ''
+      offset: 0001130E
+    - name: BackwalkDir
+      processed: ''
+      offset: '00011313'
+    - name: UpdateShutdownFlags
+      processed: ''
+      offset: '00011428'
+    - name: MarkVolumeDirty
+      processed: ''
+      offset: 000114AA
+    - name: MarkVolumeClean
+      processed: ''
+      offset: 000114D5
+    - name: MarkVolumeBroken
+      processed: ''
+      offset: '00011502'
+    - name: vfatClusDebug
+      processed: ''
+      offset: 0001152D
+    - name: Pack
+      processed: ''
+      offset: '00011531'
+    - name: UnPack
+      processed: ''
+      offset: '00011788'
+    - name: IsEof
+      processed: ''
+      offset: 000119F2
+    - name: DetectCycle
+      processed: ''
+      offset: 00011A22
+    - name: GrowFatCache
+      processed: ''
+      offset: 00011A72
+    - name: Extend_Cache_Mem
+      processed: ''
+      offset: 00011B32
+    - name: GetPhysCluster
+      processed: ''
+      offset: 00011BED
+    - name: SFTesiCheck
+      processed: ''
+      offset: 00011C10
+    - name: DoInitIOSTK
+      processed: ''
+      offset: 00011C17
+    - name: SftCheck
+      processed: ''
+      offset: 00011C30
+    - name: DirEntChk
+      processed: ''
+      offset: 00011C70
+    - name: OftCheck
+      processed: ''
+      offset: 00011CC4
+    - name: StkChkRW
+      processed: ''
+      offset: 00011DE7
+    - name: StkChkOC
+      processed: ''
+      offset: 00011DEE
+    - name: StkCheck
+      processed: ''
+      offset: 00011DF5
+    - name: A_VOLTAB
+      processed: ''
+      offset: '00011E32'
+    - name: A_VOLTABedi
+      processed: ''
+      offset: '00011E63'
+    - name: A_BUF
+      processed: ''
+      offset: 00011E6B
+    - name: A_BUF_esi
+      processed: ''
+      offset: 00011F78
+    - name: FatEntry
+      processed: ''
+      offset: 00011F84
+    - name: NetVectors
+      processed: ''
+      offset: 00011FC4
+    - name: abMediaErrors
+      processed: ''
+      offset: 00011FE8
+    - name: VFAT_Dir
+      processed: ''
+      offset: 00011FEC
+    - name: ndir10
+      processed: ''
+      offset: '00012048'
+    - name: ndir20
+      processed: ''
+      offset: '00012063'
+    - name: mkd900
+      processed: ''
+      offset: '00012081'
+    - name: Fat_QueryDir
+      processed: ''
+      offset: '00012088'
+    - name: Fat_Chdir
+      processed: ''
+      offset: 000120B7
+    - name: fch90
+      processed: ''
+      offset: '000120E3'
+    - name: fch95
+      processed: ''
+      offset: '000120E5'
+    - name: Fat_Mkdir
+      processed: ''
+      offset: 000120EA
+    - name: Fat_Rmdir
+      processed: ''
+      offset: 000122AA
+    - name: frd5
+      processed: ''
+      offset: 0001239E
+    - name: frd10
+      processed: ''
+      offset: '00012480'
+    - name: VFAT_OpenFile
+      processed: ''
+      offset: 000124A1
+    - name: ope2
+      processed: ''
+      offset: '00012561'
+    - name: ope3
+      processed: ''
+      offset: 000125AE
+    - name: ope4
+      processed: ''
+      offset: 000125DB
+    - name: ope5
+      processed: ''
+      offset: 000125F7
+    - name: Fat_Open
+      processed: ''
+      offset: 0001276A
+    - name: fop12
+      processed: ''
+      offset: 000128B4
+    - name: Fat_Create
+      processed: ''
+      offset: 000128BC
+    - name: VFAT_DeleteFile
+      processed: ''
+      offset: 00012B50
+    - name: fdel10
+      processed: ''
+      offset: 00012C00
+    - name: fdel11
+      processed: ''
+      offset: 00012C1A
+    - name: fdel13
+      processed: ''
+      offset: 00012CAE
+    - name: fdel15
+      processed: ''
+      offset: 00012CB0
+    - name: fdel16
+      processed: ''
+      offset: 00012CC5
+    - name: fdel17
+      processed: ''
+      offset: 00012CDD
+    - name: fdel20
+      processed: ''
+      offset: 00012CE9
+    - name: fdel40
+      processed: ''
+      offset: 00012D25
+    - name: fdel50
+      processed: ''
+      offset: 00012D38
+    - name: fdel60
+      processed: ''
+      offset: 00012D59
+    - name: fdel70
+      processed: ''
+      offset: 00012D7C
+    - name: fdel95
+      processed: ''
+      offset: 00012DD8
+    - name: VFAT_FileAttributes
+      processed: ''
+      offset: 00012DF1
+    - name: GetCompressedSize
+      processed: ''
+      offset: '00013067'
+    - name: NetExtAttrib
+      processed: ''
+      offset: 000130D5
+    - name: nea75
+      processed: ''
+      offset: '00013269'
+    - name: NetSearch
+      processed: ''
+      offset: 0001330A
+    - name: Fat_Find_First
+      processed: ''
+      offset: 000133A5
+    - name: FindFirstSub
+      processed: ''
+      offset: 000133DD
+    - name: Fat_Find_Next
+      processed: ''
+      offset: '00013524'
+    - name: VFAT_RenameFile
+      processed: ''
+      offset: '00013684'
+    - name: RenameMove
+      processed: ''
+      offset: '00013715'
+    - name: RenameMeta
+      processed: ''
+      offset: 00013CD7
+    - name: RenameInPlace
+      processed: ''
+      offset: '00014152'
+    - name: VFAT_Unmount
+      processed: ''
+      offset: 000143C4
+    - name: vun21
+      processed: ''
+      offset: '00014673'
+    - name: UnmountSub
+      processed: ''
+      offset: 0001475F
+    - name: VFAT_DiskInfo
+      processed: ''
+      offset: 000147A6
+    - name: UpdateFSInfo
+      processed: ''
+      offset: '00014927'
+    - name: AllFileSizesOkay
+      processed: ''
+      offset: '00014980'
+    - name: VFAT_FlushFile
+      processed: ''
+      offset: 000149BA
+    - name: NetFlush
+      processed: ''
+      offset: 000149BA
+    - name: SetPathFlags
+      processed: ''
+      offset: 00014A63
+    - name: IsShortNameLossy
+      processed: ''
+      offset: 00014AC8
+    - name: ReinitOFTPosInfo
+      processed: ''
+      offset: 00014AFE
+    - name: CompressIOCTL
+      processed: ''
+      offset: 00014B63
+    - name: IOSSend
+      processed: ''
+      offset: 00014B74
+    - name: VFAT_IORDone
+      processed: ''
+      offset: 00014C0B
+    - name: PRet_OK
+      processed: ''
+      offset: 00014C1C
+    - name: PRet_Err
+      processed: ''
+      offset: 00014C1E
+    - name: Ret_BadHandMem
+      processed: ''
+      offset: 00014C71
+    - name: Ret_BadHand
+      processed: ''
+      offset: 00014C76
+    - name: Ret_OK
+      processed: ''
+      offset: 00014C7C
+    - name: Ret_Err
+      processed: ''
+      offset: 00014C7E
+    - name: Ret_Errax
+      processed: ''
+      offset: 00014C81
+    - name: Ret_Err_NoCleanup
+      processed: ''
+      offset: 00014DAE
+    - name: DoTrap
+      processed: ''
+      offset: '00014E62'
+    - name: VFAT_LockFile
+      processed: ''
+      offset: 00014E6C
+    - name: NetFileLocks
+      processed: ''
+      offset: 00014E6C
+    - name: nfl100
+      processed: ''
+      offset: 00014F3A
+    - name: VFAT_FileTime
+      processed: ''
+      offset: 00014F56
+    - name: vfatPosDebug
+      processed: ''
+      offset: '00015122'
+    - name: VFAT_ReadFile
+      processed: ''
+      offset: '00015126'
+    - name: NetRead
+      processed: ''
+      offset: '00015126'
+    - name: drf70
+      processed: ''
+      offset: '00015205'
+    - name: drf180
+      processed: ''
+      offset: '00015326'
+    - name: VFAT_WriteFile
+      processed: ''
+      offset: '00015360'
+    - name: VFAT_CloseFile
+      processed: ''
+      offset: 000159C4
+    - name: ncl5
+      processed: ''
+      offset: 00015AD7
+    - name: ncl10
+      processed: ''
+      offset: 00015B07
+    - name: ncl20
+      processed: ''
+      offset: 00015B36
+    - name: ncl25
+      processed: ''
+      offset: 00015B42
+    - name: ncl30
+      processed: ''
+      offset: 00015B4C
+    - name: ncl40
+      processed: ''
+      offset: 00015B89
+    - name: ncl45
+      processed: ''
+      offset: 00015BAA
+    - name: ncl50
+      processed: ''
+      offset: 00015BD8
+    - name: ncl60
+      processed: ''
+      offset: 00015BDE
+    - name: VFAT_CommitFile
+      processed: ''
+      offset: 00015BE8
+    - name: NetCommit
+      processed: ''
+      offset: 00015BE8
+    - name: NetSeek
+      processed: ''
+      offset: 00015C9A
+    - name: sek10
+      processed: ''
+      offset: 00015D2F
+    - name: sek20
+      processed: ''
+      offset: 00015D32
+    - name: VFAT_DasdIO
+      processed: ''
+      offset: 00015D3D
+    - name: VFAT_EnterLeaveVolLock
+      processed: ''
+      offset: 00015DAF
+    - name: VFAT_FormatHelpers
+      processed: ''
+      offset: 00015ECF
+    - name: VFHSetAllocInfo
+      processed: ''
+      offset: 00015F0C
+    - name: VFHForceMediaChng
+      processed: ''
+      offset: 00015F75
+    - name: VFHSetDPBFrmBPB
+      processed: ''
+      offset: 00015F75
+    - name: VFHGetSetActFATandMirr
+      processed: ''
+      offset: 00015F7C
+    - name: VFHGetSetRootDirClus
+      processed: ''
+      offset: 000160C5
+    - name: CopyFAT
+      processed: ''
+      offset: '00016188'
+    - name: UpdateBoot
+      processed: ''
+      offset: 0001620C
+    - name: VFAT_ReadSectors
+      processed: ''
+      offset: 0001625E
+    - name: VFAT_WriteSectors
+      processed: ''
+      offset: '00016335'
+    - name: WriteExtent
+      processed: ''
+      offset: 000164ED
+    - name: FindDPB
+      processed: ''
+      offset: '00016661'
+    - name: MakeExtDPB
+      processed: ''
+      offset: '00016695'
+    - name: VFAT_GetDPB
+      processed: ''
+      offset: 000167A4
+    - name: MapI25Error
+      processed: ''
+      offset: 000168CB
+    - name: GetFreeEstimate
+      processed: ''
+      offset: '000168E6'
+    - name: GuaranteeOneCluster
+      processed: ''
+      offset: '00016986'
+    - name: GetFreeGuarantee
+      processed: ''
+      offset: 0001698E
+    - name: InvalidateFreeCounts
+      processed: ''
+      offset: 00016A13
+    - name: ZeroFreeCounts
+      processed: ''
+      offset: 00016A18
+    - name: GetFreeCount
+      processed: ''
+      offset: 00016A39
+    - name: DirtySector
+      processed: ''
+      offset: 00016AE0
+    - name: DirtyBuffer
+      processed: ''
+      offset: 00016AFC
+    - name: SetWriteThrough
+      processed: ''
+      offset: 00016B2C
+    - name: CheckWriteThrough
+      processed: ''
+      offset: 00016B9A
+    - name: WriteAsyncSwapPage
+      processed: ''
+      offset: 00016BCB
+    - name: InvalidateFAT2Sectors
+      processed: ''
+      offset: 00016D29
+    - name: VFAT_IOCtl
+      processed: ''
+      offset: 00016E6C
+    - name: passioctl_down
+      processed: ''
+      offset: 00016EB6
+    - name: VFAT_SetMediaID
+      processed: ''
+      offset: 00016F9B
+    - name: VFAT_GetMediaID
+      processed: ''
+      offset: 0001705F
+    - name: VFAT_GetDiskFreeSpaceRatio
+      processed: ''
+      offset: 000170DF
+    - name: VFAT_SetDiskFreeSpaceRatio
+      processed: ''
+      offset: '00017104'
+    - name: pioc_440d_rw_track
+      processed: ''
+      offset: '00017175'
+    - name: VFAT_CVMIOCTL
+      processed: ''
+      offset: 0001719B
+    - name: VFATMountTab
+      processed: ''
+      offset: '00017258'
+    - name: Mount_Fat
+      processed: ''
+      offset: '00017274'
+    - name: mount10
+      processed: ''
+      offset: 000172B6
+    - name: mountx
+      processed: ''
+      offset: 000172FD
+    - name: mount20
+      processed: ''
+      offset: '00017306'
+    - name: mount30
+      processed: ''
+      offset: 0001730D
+    - name: MFS
+      processed: ''
+      offset: '00017398'
+    - name: mfs5
+      processed: ''
+      offset: 000174F2
+    - name: mfs9
+      processed: ''
+      offset: '00017571'
+    - name: mfs10
+      processed: ''
+      offset: '00017584'
+    - name: AllocNameHashTable
+      processed: ''
+      offset: 000175F6
+    - name: AllocCountArray
+      processed: ''
+      offset: '00017676'
+    - name: VFS
+      processed: ''
+      offset: 000176B6
+    - name: MountChild
+      processed: ''
+      offset: '00017818'
+    - name: VFAT_FailOp
+      processed: ''
+      offset: '000179E2'
+    - name: VFAT_UnmountBadChild
+      processed: ''
+      offset: 000179FB
+    - name: CmpVol
+      processed: ''
+      offset: 00017A1E
+    - name: MakeVol
+      processed: ''
+      offset: 00017AB6
+    - name: IsCompressedVol
+      processed: ''
+      offset: 000180B6
+    - name: UpdateBootVolLabel
+      processed: ''
+      offset: '00018129'
+    - name: VolLabelLen
+      processed: ''
+      offset: 000181BF
+    - name: ValidateVolGeometry
+      processed: ''
+      offset: 000181D6
+    - name: SetDiskFreeSpaceThreshold
+      processed: ''
+      offset: '00018464'
+    - name: DoRead
+      processed: ''
+      offset: 000184D0
+    - name: drd3
+      processed: ''
+      offset: 000184EA
+    - name: drd4
+      processed: ''
+      offset: '00018504'
+    - name: drd5
+      processed: ''
+      offset: '00018535'
+    - name: drd7
+      processed: ''
+      offset: 0001853E
+    - name: drd40
+      processed: ''
+      offset: 0001853E
+    - name: drd44
+      processed: ''
+      offset: '00018562'
+    - name: drd390
+      processed: ''
+      offset: '00018590'
+    - name: drd400
+      processed: ''
+      offset: '00018591'
+    - name: SwapperReadExtent
+      processed: ''
+      offset: '00018593'
+    - name: sre20
+      processed: ''
+      offset: 0001861B
+    - name: SwapperWrite
+      processed: ''
+      offset: '00018666'
+    - name: SwapperWriteExtent
+      processed: ''
+      offset: 000186F4
+    - name: ReadExtent
+      processed: ''
+      offset: '00018725'
+    - name: rx5
+      processed: ''
+      offset: 000187BD
+    - name: ReadExtentSub
+      processed: ''
+      offset: 000187F2
+    - name: rx10
+      processed: ''
+      offset: '00018874'
+    - name: ExtentCached
+      processed: ''
+      offset: 00018C00
+    - name: ReadCB
+      processed: ''
+      offset: 00018C2D
+    - name: RxAllocBfr
+      processed: ''
+      offset: 00018DC3
+    - name: BufWrt
+      processed: ''
+      offset: 00018DEA
+    - name: bwr3
+      processed: ''
+      offset: '00018E24'
+    - name: bwr4
+      processed: ''
+      offset: '00018E29'
+    - name: bwr5
+      processed: ''
+      offset: '00018E48'
+    - name: bwr20
+      processed: ''
+      offset: '00018E98'
+    - name: bwr25
+      processed: ''
+      offset: 00018E9B
+    - name: CompRunLen
+      processed: ''
+      offset: 00018E9D
+    - name: BreakDown
+      processed: ''
+      offset: 00018F81
+    - name: bdwn10
+      processed: ''
+      offset: 00018FAD
+    - name: Fat_IO_Setup_Async
+      processed: ''
+      offset: 00018FDA
+    - name: Fat_IO_Setup
+      processed: ''
+      offset: 00018FDE
+    - name: fisx
+      processed: ''
+      offset: '00019039'
+    - name: FreeHint
+      processed: ''
+      offset: 0001903E
+    - name: Allocate
+      processed: ''
+      offset: 0001911A
+    - name: AllocateContig
+      processed: ''
+      offset: 000196AC
+    - name: AddToFATCache
+      processed: ''
+      offset: 0001977A
+    - name: ResetFATCache
+      processed: ''
+      offset: 000197B4
+    - name: ResetFATCacheNoCheck
+      processed: ''
+      offset: 000197C5
+    - name: IsLastCluster
+      processed: ''
+      offset: 000197FF
+    - name: Release
+      processed: ''
+      offset: '00019852'
+    - name: Truncate
+      processed: ''
+      offset: '00019854'
+    - name: FigRec
+      processed: ''
+      offset: 000199F8
+    - name: fig90
+      processed: ''
+      offset: 00019A1B
+    - name: FillSft
+      processed: ''
+      offset: 00019A1D
+    - name: fsf10
+      processed: ''
+      offset: 00019A62
+    - name: fsf90
+      processed: ''
+      offset: 00019AAC
+    - name: FileMapped
+      processed: ''
+      offset: 00019AAD
+    - name: FndClus
+      processed: ''
+      offset: 00019B70
+    - name: EnumSFT
+      processed: ''
+      offset: 00019BD2
+    - name: FindOFT
+      processed: ''
+      offset: 00019C08
+    - name: GOFT
+      processed: ''
+      offset: 00019C8E
+    - name: beginDoOpMove
+      processed: ''
+      offset: 00019F2F
+    - name: DoOpMove
+      processed: ''
+      offset: 00019F2F
+    - name: dom01
+      processed: ''
+      offset: 00019F6A
+    - name: DoOpMovePage
+      processed: ''
+      offset: 00019F89
+    - name: dom15
+      processed: ''
+      offset: 00019FBA
+    - name: dom20
+      processed: ''
+      offset: 00019FD0
+    - name: endDoOpMove
+      processed: ''
+      offset: 00019FDB
+    - name: DoOpMoveExcept
+      processed: ''
+      offset: 00019FDB
+    - name: MarkOFTInvalid
+      processed: ''
+      offset: 00019FE6
+    - name: ftox
+      processed: ''
+      offset: 0001A004
+    - name: Flush_Timed_Out
+      processed: ''
+      offset: 0001A005
+    - name: fto1
+      processed: ''
+      offset: 0001A026
+    - name: fto2
+      processed: ''
+      offset: 0001A035
+    - name: fto3
+      processed: ''
+      offset: 0001A04B
+    - name: fto5
+      processed: ''
+      offset: 0001A094
+    - name: fto10
+      processed: ''
+      offset: 0001A097
+    - name: fto15
+      processed: ''
+      offset: 0001A0CD
+    - name: fto20
+      processed: ''
+      offset: 0001A155
+    - name: fto22
+      processed: ''
+      offset: 0001A160
+    - name: fto30
+      processed: ''
+      offset: 0001A18F
+    - name: fto40
+      processed: ''
+      offset: 0001A1A0
+    - name: fto50
+      processed: ''
+      offset: 0001A1AF
+    - name: fto100
+      processed: ''
+      offset: 0001A1C2
+    - name: fto110
+      processed: ''
+      offset: 0001A1CF
+    - name: fto120
+      processed: ''
+      offset: 0001A200
+    - name: wlmask
+      processed: ''
+      offset: 0001A202
+    - name: Write_List
+      processed: ''
+      offset: 0001A20A
+    - name: Write_List_Int
+      processed: ''
+      offset: 0001A25C
+    - name: NeedPopup
+      processed: ''
+      offset: 0001A690
+    - name: wln105
+      processed: ''
+      offset: 0001A6D9
+    - name: WL_Note
+      processed: ''
+      offset: 0001A74B
+    - name: wln0
+      processed: ''
+      offset: 0001A77C
+    - name: wln5
+      processed: ''
+      offset: 0001A7A5
+    - name: wln10
+      processed: ''
+      offset: 0001A7FD
+    - name: wln20
+      processed: ''
+      offset: 0001A891
+    - name: wln30
+      processed: ''
+      offset: 0001A8C7
+    - name: wln50
+      processed: ''
+      offset: 0001A905
+    - name: wln60
+      processed: ''
+      offset: 0001A91A
+    - name: wln200
+      processed: ''
+      offset: 0001A98B
+    - name: WriteMore
+      processed: ''
+      offset: 0001AA0E
+    - name: Call_Write_List
+      processed: ''
+      offset: 0001AA80
+    - name: Call_Write_List_Int
+      processed: ''
+      offset: 0001AA85
+    - name: CleanBuf
+      processed: ''
+      offset: 0001AAA9
+    - name: clb10
+      processed: ''
+      offset: 0001AAE2
+    - name: clb20
+      processed: ''
+      offset: 0001AAEE
+    - name: clb30
+      processed: ''
+      offset: 0001AAF7
+    - name: clb40
+      processed: ''
+      offset: 0001AB1C
+    - name: IncWrite
+      processed: ''
+      offset: 0001AB29
+    - name: DecWrite
+      processed: ''
+      offset: 0001AB64
+    - name: CheckUnlock
+      processed: ''
+      offset: 0001AB8A
+    - name: ScaleEvent
+      processed: ''
+      offset: 0001ABDC
+    - name: Lazy_Idle
+      processed: ''
+      offset: 0001AC4B
+    - name: lid5
+      processed: ''
+      offset: 0001AD3B
+    - name: lid10
+      processed: ''
+      offset: 0001ADCB
+    - name: Observe_Lazy_Idle
+      processed: ''
+      offset: 0001ADFE
+    - name: Write_Lazy
+      processed: ''
+      offset: 0001AE38
+    - name: wlz10
+      processed: ''
+      offset: 0001AE88
+    - name: wlz15
+      processed: ''
+      offset: 0001AED8
+    - name: wlz20
+      processed: ''
+      offset: 0001AF02
+    - name: wlz25
+      processed: ''
+      offset: 0001AF28
+    - name: wlz30
+      processed: ''
+      offset: 0001AF2B
+    - name: wlz190
+      processed: ''
+      offset: 0001B06B
+    - name: wlz200
+      processed: ''
+      offset: 0001B079
+    - name: Lazy_New_Thread
+      processed: ''
+      offset: 0001B085
+    - name: Force_Write_Lazy
+      processed: ''
+      offset: 0001B0C3
+    - name: fwlx
+      processed: ''
+      offset: 0001B0F0
+    - name: FcbChecksum
+      processed: ''
+      offset: 0001B0F4
+    - name: LNInitLNInfo
+      processed: ''
+      offset: 0001B10C
+    - name: LNUpdateColl
+      processed: ''
+      offset: 0001B241
+    - name: luc01
+      processed: ''
+      offset: 0001B28A
+    - name: luc02
+      processed: ''
+      offset: 0001B292
+    - name: LNScanColl
+      processed: ''
+      offset: 0001B293
+    - name: lsc01
+      processed: ''
+      offset: 0001B2E3
+    - name: lsc02
+      processed: ''
+      offset: 0001B307
+    - name: lsc90
+      processed: ''
+      offset: 0001B30C
+    - name: lsc99
+      processed: ''
+      offset: 0001B32F
+    - name: PackOemUniNames
+      processed: ''
+      offset: 0001B331
+    - name: TunnelCreationDateTime
+      processed: ''
+      offset: 0001B5C8
+    - name: SelectShortName
+      processed: ''
+      offset: 0001B5EC
+    - name: GetNumTailHint
+      processed: ''
+      offset: 0001B662
+    - name: UniFatGetPath
+      processed: ''
+      offset: 0001B6B4
+    - name: UniFindEntry
+      processed: ''
+      offset: 0001B8BE
+    - name: ReturnPathElem
+      processed: ''
+      offset: 0001C187
+    - name: UpdateFreeDirOrds
+      processed: ''
+      offset: 0001C258
+    - name: LNFreeEntrys
+      processed: ''
+      offset: 0001C2B9
+    - name: AutoGenerateBasisName
+      processed: ''
+      offset: 0001C381
+    - name: VerifyNameAssoc
+      processed: ''
+      offset: 0001C4C5
+    - name: DirentNameToUniFcbAndShortName
+      processed: ''
+      offset: 0001C571
+    - name: CheckFileLock
+      processed: ''
+      offset: 0001C61C
+    - name: CreateSFT
+      processed: ''
+      offset: 0001C660
+    - name: csftx
+      processed: ''
+      offset: 0001C687
+    - name: Date32
+      processed: ''
+      offset: 0001C688
+    - name: MemPageLock
+      processed: ''
+      offset: 0001C694
+    - name: mp10
+      processed: ''
+      offset: 0001C6E8
+    - name: mp20
+      processed: ''
+      offset: 0001C703
+    - name: mpl90
+      processed: ''
+      offset: 0001C792
+    - name: LogMPL
+      processed: ''
+      offset: 0001C804
+    - name: MemPageUnlock
+      processed: ''
+      offset: 0001C86D
+    - name: mpux
+      processed: ''
+      offset: 0001C8E9
+    - name: PackName
+      processed: ''
+      offset: 0001C8EA
+    - name: pakn5
+      processed: ''
+      offset: 0001C8F7
+    - name: pakn15
+      processed: ''
+      offset: 0001C907
+    - name: pakn20
+      processed: ''
+      offset: 0001C90D
+    - name: pakn25
+      processed: ''
+      offset: 0001C913
+    - name: SetTimes
+      processed: ''
+      offset: 0001C917
+    - name: RelOFToc
+      processed: ''
+      offset: 0001C974
+    - name: RelOftFatCache
+      processed: ''
+      offset: 0001CA1D
+    - name: RelOFT
+      processed: ''
+      offset: 0001CA5A
+    - name: RelOftNoChk
+      processed: ''
+      offset: 0001CA79
+    - name: vfatcclusMin
+      processed: ''
+      offset: 0001CB00
+    - name: ComputeExtents
+      processed: ''
+      offset: 0001CB04
+    - name: loft0
+      processed: ''
+      offset: 0001CB5A
+    - name: loft01
+      processed: ''
+      offset: 0001CB6E
+    - name: LockOFT
+      processed: ''
+      offset: 0001CB92
+    - name: loft10
+      processed: ''
+      offset: 0001CBC1
+    - name: loft20
+      processed: ''
+      offset: 0001CC10
+    - name: UnLockOFT
+      processed: ''
+      offset: 0001CC11
+    - name: UnLockOFT2
+      processed: ''
+      offset: 0001CC17
+    - name: ulck2
+      processed: ''
+      offset: 0001CC3D
+    - name: HoldOFT
+      processed: ''
+      offset: 0001CC47
+    - name: hof3
+      processed: ''
+      offset: 0001CC6F
+    - name: UnHoldOFT
+      processed: ''
+      offset: 0001CC97
+    - name: ChkHoldOFT
+      processed: ''
+      offset: 0001CCC4
+    - name: cho10
+      processed: ''
+      offset: 0001CCFA
+    - name: cho11
+      processed: ''
+      offset: 0001CCFB
+    - name: CommitFileData
+      processed: ''
+      offset: 0001CCFC
+    - name: CAS
+      processed: ''
+      offset: 0001CE64
+    - name: CCS
+      processed: ''
+      offset: 0001CE8C
+    - name: A_HEAP
+      processed: ''
+      offset: 0001CEAA
+    - name: MarkHeapPerm
+      processed: ''
+      offset: 0001CEAB
+    - name: UMFSHeapChk
+      processed: ''
+      offset: 0001CEAC
+    - name: AGHSD
+      processed: ''
+      offset: 0001CEAD
+    - name: APGHS
+      processed: ''
+      offset: 0001CF08
+    - name: FHS
+      processed: ''
+      offset: 0001CF68
+    - name: DoLogRec
+      processed: ''
+      offset: 0001CF90
+    - name: dlr4
+      processed: ''
+      offset: 0001CFB6
+    - name: dlr20
+      processed: ''
+      offset: 0001CFE9
+    - name: Block
+      processed: ''
+      offset: 0001CFF0
+    - name: Wakeup
+      processed: ''
+      offset: 0001D08C
+    - name: Wakeupi
+      processed: ''
+      offset: 0001D08C
+    - name: Yield
+      processed: ''
+      offset: 0001D0BC
+    - name: Yield_Wake
+      processed: ''
+      offset: 0001D107
+    - name: FullCrit
+      processed: ''
+      offset: 0001D126
+    - name: ffc10
+      processed: ''
+      offset: 0001D1EC
+    - name: ffc20
+      processed: ''
+      offset: 0001D226
+    - name: ffc30
+      processed: ''
+      offset: 0001D232
+    - name: RelFullCrit
+      processed: ''
+      offset: 0001D2A2
+    - name: rfc10
+      processed: ''
+      offset: 0001D37F
+    - name: rfc20
+      processed: ''
+      offset: 0001D3A3
+    - name: DoFFHold
+      processed: ''
+      offset: 0001D3E0
+    - name: UnHoldFF
+      processed: ''
+      offset: 0001D493
+    - name: uhff10
+      processed: ''
+      offset: 0001D523
+    - name: VFAT_async_event
+      processed: ''
+      offset: 0001D524
+    - name: GetSGIOHdrEvtTime
+      processed: ''
+      offset: 0001D530
+    - name: GetIOHdrEvtTime
+      processed: ''
+      offset: 0001D544
+    - name: GetIOHdr
+      processed: ''
+      offset: 0001D54E
+    - name: AllocIOHdr
+      processed: ''
+      offset: 0001D5D5
+    - name: RetIOHdr
+      processed: ''
+      offset: 0001D648
+    - name: CreateIOR
+      processed: ''
+      offset: 0001D685
+    - name: AIH
+      processed: ''
+      offset: 0001D6BA
+    - name: DIH
+      processed: ''
+      offset: 0001D6E2
+    - name: SatisfyDevDmds
+      processed: ''
+      offset: 0001D6FC
+    - name: GetSerial
+      processed: ''
+      offset: 0001D718
+    - name: PutSerial
+      processed: ''
+      offset: 0001D73D
+    - name: GetVolLabel
+      processed: ''
+      offset: 0001D75B
+    - name: InvalidateCache
+      processed: ''
+      offset: 0001D939
+    - name: InvalidateCacheSub
+      processed: ''
+      offset: 0001D9B1
+    - name: IsVolTrackExempt
+      processed: ''
+      offset: 0001DA03
+    - name: VFAT_FindOpen
+      processed: ''
+      offset: 0001DA4C
+    - name: VFAT_FindNext
+      processed: ''
+      offset: 0001DBD8
+    - name: VFAT_FindClose
+      processed: ''
+      offset: 0001DCF2
+    - name: FindComplete
+      processed: ''
+      offset: 0001DD79
+    - name: TerminateHFind
+      processed: ''
+      offset: 0001DEFF
+    - name: VFAT_GetVolInfo
+      processed: ''
+      offset: 0001DF2A
+    - name: VFAT_GetInfoByHandle
+      processed: ''
+      offset: 0001DFFC
+    - name: GetPathNameByFileHandle
+      processed: ''
+      offset: '0001E138'
+    - name: ResyncHandle
+      processed: ''
+      offset: 0001E2E8
+    - name: reh1
+      processed: ''
+      offset: 0001E3A4
+    - name: reh2
+      processed: ''
+      offset: 0001E3AF
+    - name: reh9
+      processed: ''
+      offset: 0001E45D
+    - name: reh90
+      processed: ''
+      offset: '0001E499'
+    - name: reh91
+      processed: ''
+      offset: 0001E4C1
+    - name: reh95
+      processed: ''
+      offset: 0001E4C7
+    - name: reh96
+      processed: ''
+      offset: 0001E4D9
+    - name: reh97
+      processed: ''
+      offset: 0001E4EB
+    - name: reh98
+      processed: ''
+      offset: '0001E506'
+    - name: reh99
+      processed: ''
+      offset: '0001E526'
+    - name: VFAT_MapCacheBlock
+      processed: ''
+      offset: 0001E53D
+    - name: VFAT_UnmapCacheBlock
+      processed: ''
+      offset: '0001E668'
+    - name: AllocLNInfo
+      processed: ''
+      offset: 0001E6DC
+    - name: FreeLNInfo
+      processed: ''
+      offset: 0001E71A
+    - name: OpenOpenFile
+      processed: ''
+      offset: '0001E764'
+    - name: RemountVol
+      processed: ''
+      offset: 0001E7A3
+    - name: VFAT_Control
+      processed: ''
+      offset: '0001E924'
+    - name: VFAT_DevIOControl
+      processed: ''
+      offset: 0001E95A
+    - name: VFAT_SignalSystemExit
+      processed: ''
+      offset: '0001E971'
+    - name: VFAT_Dump_Debug
+      processed: ''
+      offset: '0001E979'
+    - name: Clear_Stats
+      processed: ''
+      offset: '0001E991'
+    - name: VFAT_VM_Terminate
+      processed: ''
+      offset: 0001E9A1
+    - name: VFAT_Query_Destroy
+      processed: ''
+      offset: 0001E9A3
+    - name: VFAT_API_Proc
+      processed: ''
+      offset: 0001E9A5
+    - name: VFAT_API_GetInfo
+      processed: ''
+      offset: 0001E9DE
+    - name: VFAT_API_GetTimers
+      processed: ''
+      offset: 0001EA00
+    - name: VFAT_API_SetTimers
+      processed: ''
+      offset: 0001EA4B
+    - name: VFAT_API_GetStats
+      processed: ''
+      offset: 0001EA73
+    - name: VFAT_API_SetStats
+      processed: ''
+      offset: 0001EAF0
+    - name: VFAT_API_GetDrives
+      processed: ''
+      offset: 0001EB3B
+    - name: VFATStatsIOCTL
+      processed: ''
+      offset: 0001EB70
+    - name: VFATDumpStats
+      processed: ''
+      offset: 0001EBCF
+    - name: SchedDiskSpaceBroadcast
+      processed: ''
+      offset: 0001EC18
+    - name: _AppyBroadcastLowDiskSpace
+      processed: ''
+      offset: 0001EC41
+  - num: '2'
+    name: _LMSG$1
+    offset: 0001B600
+    symbols:
+    - name: '@MSG_LAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      processed: ''
+      offset: '00000064'
+  - num: '3'
+    name: _DB1CODE
+    offset: 0001C240
+    symbols:
+    - name: Dump_OFT
+      processed: ''
+      offset: '00000000'
+    - name: doft10
+      processed: ''
+      offset: '00000013'
+    - name: doft20
+      processed: ''
+      offset: '00000083'
+    - name: doft900
+      processed: ''
+      offset: 000000A1
+    - name: VFAT_Printf
+      processed: ''
+      offset: '00000259'
+    - name: VFAT_Dump_Debug2
+      processed: ''
+      offset: 0000027A
+    - name: Toggle_Zero_Suppress
+      processed: ''
+      offset: '00000353'
+    - name: Dump_Log
+      processed: ''
+      offset: '00000373'
+    - name: Flush_Log
+      processed: ''
+      offset: '00000568'
+    - name: Set_Log_Mask
+      processed: ''
+      offset: 0000057D
+    - name: Dump_Threads
+      processed: ''
+      offset: 000005AE
+    - name: VolTabDesc
+      processed: ''
+      offset: '00000667'
+    - name: BUFNODEDesc
+      processed: ''
+      offset: 00000A90
+    - name: BUFSHORTDesc
+      processed: ''
+      offset: 00000B68
+    - name: DIR_CACHEDesc
+      processed: ''
+      offset: 00000BDA
+    - name: FCHDesc
+      processed: ''
+      offset: 00000C49
+    - name: IOREQDesc
+      processed: ''
+      offset: 00000CAF
+    - name: IOSTKDesc
+      processed: ''
+      offset: 00000D7D
+    - name: fdRWDesc
+      processed: ''
+      offset: 00000DD3
+    - name: fdOCDesc
+      processed: ''
+      offset: 00000EDA
+    - name: OFTDesc
+      processed: ''
+      offset: 00000FF6
+    - name: SFTDesc
+      processed: ''
+      offset: 000011B5
+    - name: Dump_Vol
+      processed: ''
+      offset: 000013F5
+    - name: Dump_Dir_Cache
+      processed: ''
+      offset: 000014B0
+    - name: Dump_BufNode
+      processed: ''
+      offset: '00001505'
+    - name: Dump_BufChain
+      processed: ''
+      offset: '00001517'
+    - name: w_BufChain
+      processed: ''
+      offset: '00001529'
+    - name: Dump_BufDirty
+      processed: ''
+      offset: '00001538'
+    - name: w_BufDirty
+      processed: ''
+      offset: 0000154A
+    - name: Dump_IOREQ
+      processed: ''
+      offset: '00001561'
+    - name: Dump_OFTChain
+      processed: ''
+      offset: '00001628'
+    - name: Dump_SFT
+      processed: ''
+      offset: '00001665'
+    - name: Dump_Stats
+      processed: ''
+      offset: 000016BF
+    - name: SFTToPackedName
+      processed: ''
+      offset: 000016CF
+  - num: '4'
+    name: _RCODE
+    offset: 0001C2B0
+    symbols:
+    - name: RealmodeInit
+      processed: ''
+      offset: '00000000'
+  - num: '5'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: Init_CompatFileSysFlags
+      processed: ''
+      offset: '000000E4'
+    - name: Drv_Reg_Pkt
+      processed: ''
+      offset: '00000450'
+    - name: IFSMGRVER
+      processed: ''
+      offset: '000005E0'
+    - name: FSInit
+      processed: ''
+      offset: 000005F2
+    - name: ReadVFATRegistry
+      processed: ''
+      offset: '00000724'
+    - name: ReadVFATNoVolTrackPatterns
+      processed: ''
+      offset: 000007FB
+    - name: ReadVFATIni
+      processed: ''
+      offset: '00000949'
+    - name: TaskInit
+      processed: ''
+      offset: '00000974'
+    - name: VFAT_Sys_Critical_Init
+      processed: ''
+      offset: '00000978'
+    - name: VFAT_Device_Init
+      processed: ''
+      offset: 0000097A
+    - name: vdi11
+      processed: ''
+      offset: 00000A0F
+    - name: vdi12
+      processed: ''
+      offset: 00000A20
+    - name: vdix
+      processed: ''
+      offset: 00000B82
+    - name: VFAT_Init_Complete
+      processed: ''
+      offset: 00000BAF
+    - name: Vfat_IOS_Reg
+      processed: ''
+      offset: '00000E00'
+    - name: VFAT_Register_MMCallBack
+      processed: ''
+      offset: 00000E2E
+    - name: VFAT_Install_Async_Manager
+      processed: ''
+      offset: 00000E4A
+- version: Windows 98 Retail
+  source_tree:
+  - ../cache.asm
+  - ../debug.asm
+  - ../dircache.asm
+  - ../dirsubr.asm
+  - ../diskstub.asm
+  - ../excllock.asm
+  - ../fat.asm
+  - ../fatfcn2.asm
+  - ../fatfcn.asm
+  - ../fatioctl.asm
+  - ../fsdata.asm
+  - ../fsinit.asm
+  - ../iosubr.asm
+  - ../lazy.asm
+  - ../lfn.asm
+  - ../lfnsubr.asm
+  - ../lock.asm
+  - ../misc.asm
+  - ../notify.asm
+  - ../pfc.asm
+  - ../registry.asm
+  - ../subr.asm
+  - ../tasking.asm
+  - ../vfataer.asm
+  - ../vfatios.asm
+  - VFAT_ReadSectors.h
+  - ../vfatw32.asm
+  - ../vxdinit.asm
+  segments:
+  - num: '1'
+    name: _LDATA
+    offset: 0000F600
+    symbols:
+    - name: RdAhead_Active
+      demangled: ''
+      offset: '00000008'
+    - name: cpgLoaderRAMax
+      demangled: ''
+      offset: 0000000C
+    - name: RdbFActive
+      demangled: ''
+      offset: '00000010'
+    - name: RdbFBuffHdr
+      demangled: ''
+      offset: '00000014'
+    - name: RdbFDesc
+      demangled: ''
+      offset: '00000018'
+    - name: NABActive
+      demangled: ''
+      offset: 0000001C
+    - name: NABDesc
+      demangled: ''
+      offset: '00000020'
+    - name: Flw_Desc
+      demangled: ''
+      offset: '00000024'
+    - name: vfatcBufCleaned
+      demangled: ''
+      offset: '00000028'
+    - name: NABActiveThreadID
+      demangled: ''
+      offset: 0000002C
+    - name: Dir_Hash_Time
+      demangled: ''
+      offset: 000000C4
+    - name: Dir_Hash_Tab
+      demangled: ''
+      offset: 000000C8
+    - name: UniToUpperDelta
+      demangled: ''
+      offset: 000000CC
+    - name: UniToUpperTable
+      demangled: ''
+      offset: 000000D0
+    - name: cIosPending
+      demangled: ''
+      offset: 000004D4
+    - name: pk_buf
+      demangled: ''
+      offset: 000004D8
+    - name: upk_buf
+      demangled: ''
+      offset: '000004E8'
+    - name: FATOpWait
+      demangled: ''
+      offset: 000004F8
+    - name: vfatWaitIOR
+      demangled: ''
+      offset: 000004FC
+    - name: TagWait
+      demangled: ''
+      offset: '00000500'
+    - name: VFAT_CacheID
+      demangled: ''
+      offset: '00000504'
+    - name: LWHead
+      demangled: ''
+      offset: '00000508'
+    - name: OftHead
+      demangled: ''
+      offset: 0000052C
+    - name: DirtBits
+      demangled: ''
+      offset: 0000053C
+    - name: DirtBits2
+      demangled: ''
+      offset: '00000540'
+    - name: DirtOrd
+      demangled: ''
+      offset: '00000544'
+    - name: VolChain
+      demangled: ''
+      offset: '00000554'
+    - name: cbufDirty
+      demangled: ''
+      offset: 0000055C
+    - name: pDPB
+      demangled: ''
+      offset: '00000560'
+    - name: pPageFileSFT
+      demangled: ''
+      offset: '00000564'
+    - name: MMSwapCB
+      demangled: ''
+      offset: '00000568'
+    - name: VfatStats
+      demangled: ''
+      offset: 0000056C
+    - name: VFATMounting
+      demangled: ''
+      offset: '00000592'
+    - name: MemMgrMutex
+      demangled: ''
+      offset: '00000596'
+    - name: FatEntryBadChild
+      demangled: ''
+      offset: 0000079C
+    - name: RWCnt
+      demangled: ''
+      offset: 000007DC
+    - name: GoftLock
+      demangled: ''
+      offset: 000007FC
+    - name: GoftWait
+      demangled: ''
+      offset: '00000800'
+    - name: LWShift
+      demangled: ''
+      offset: '00000829'
+    - name: LTO_Handle
+      demangled: ''
+      offset: 0000082A
+    - name: ITPPageOuts
+      demangled: ''
+      offset: 0000083E
+    - name: ITPFlags
+      demangled: ''
+      offset: '00000842'
+    - name: pLfnInfoCache
+      demangled: ''
+      offset: '00000858'
+    - name: LNLenOffsetTable
+      demangled: ''
+      offset: 0000085C
+    - name: CompatFileSysFlags
+      demangled: ''
+      offset: 0000087C
+    - name: DriveWriteBehindFlags
+      demangled: ''
+      offset: '00000880'
+    - name: TunnelAuth
+      demangled: ''
+      offset: '00000884'
+    - name: VolIdleTimeout
+      demangled: ''
+      offset: '00000888'
+    - name: BuffIdleTimeout
+      demangled: ''
+      offset: 0000088C
+    - name: BuffAgeTimeout
+      demangled: ''
+      offset: '00000890'
+    - name: PathCacheCount
+      demangled: ''
+      offset: '00000894'
+    - name: NameCacheCount
+      demangled: ''
+      offset: '00000898'
+    - name: ContigFileAllocSize
+      demangled: ''
+      offset: 0000089C
+    - name: NameNumericTail
+      demangled: ''
+      offset: 000008A0
+    - name: ReadAheadThreshold
+      demangled: ''
+      offset: 000008A4
+    - name: pNoVolTrackPatRecTable
+      demangled: ''
+      offset: 000008A8
+    - name: MaxFAT32TotalSpace
+      demangled: ''
+      offset: 000008AC
+    - name: MaxFAT32FreeSpace
+      demangled: ''
+      offset: 000008B0
+    - name: MaxFAT32TotalClust
+      demangled: ''
+      offset: 000008B4
+    - name: MaxFAT32FreeClust
+      demangled: ''
+      offset: 000008B8
+    - name: fShutdownStatus
+      demangled: ''
+      offset: 000008BC
+    - name: DriveLDSBdcastDisableFlags
+      demangled: ''
+      offset: 000008C0
+    - name: FullHold
+      demangled: ''
+      offset: 000008C4
+    - name: FullLock
+      demangled: ''
+      offset: 000008C8
+    - name: VfatFullLockThrdID
+      demangled: ''
+      offset: 000008CC
+    - name: FullLockSem
+      demangled: ''
+      offset: 000008D0
+    - name: FullHoldSem
+      demangled: ''
+      offset: 000008D4
+    - name: VFAT_ilb
+      demangled: ''
+      offset: 000008D8
+    - name: IOPSpareState
+      demangled: ''
+      offset: 0000090C
+    - name: IOPSpareAddr
+      demangled: ''
+      offset: '00000910'
+    - name: IOPSparePhysAddr
+      demangled: ''
+      offset: '00000914'
+    - name: IOPSpareDesc
+      demangled: ''
+      offset: '00000918'
+    - name: VolDrive
+      demangled: ''
+      offset: 0000092C
+    - name: hfindHead
+      demangled: ''
+      offset: '00000930'
+    - name: FindVectors
+      demangled: ''
+      offset: '00000938'
+    - name: SpareLNInfoState
+      demangled: ''
+      offset: 0000095C
+    - name: SpareLNInfoDesc
+      demangled: ''
+      offset: '00000960'
+    - name: SpareLNInfo
+      demangled: ''
+      offset: '00000964'
+    - name: VFAT_DDB
+      demangled: ''
+      offset: 00000D38
+    - name: VFAT_SystemExit
+      demangled: ''
+      offset: 00000D88
+    - name: RmmDefault_Vol_Flags
+      demangled: ''
+      offset: 00000D90
+    - name: VFAT_CacheBlockMapped
+      demangled: ''
+      offset: 00000D94
+    - name: fVfatInitComplete
+      demangled: ''
+      offset: 00000D98
+    - name: OffsetThrInVfatCount
+      demangled: ''
+      offset: 00000DAC
+    - name: VFAT_Discard
+      demangled: ''
+      offset: 00000F8C
+    - name: UnlockBufferValid
+      demangled: ''
+      offset: 00000FD0
+    - name: UnlockBuffer
+      demangled: ''
+      offset: 00000FD4
+    - name: Find_Buffer
+      demangled: ''
+      offset: 00000FEC
+    - name: VFAT_FindBlockAlign
+      demangled: ''
+      offset: 00000FFD
+    - name: VFAT_FindBlock
+      demangled: ''
+      offset: '00001009'
+    - name: VFAT_FindBlockSub
+      demangled: ''
+      offset: '00001027'
+    - name: Test_Buffer
+      demangled: ''
+      offset: '00001090'
+    - name: WL_Test_Buffer
+      demangled: ''
+      offset: 000010A0
+    - name: RdBuf
+      demangled: ''
+      offset: 000010BC
+    - name: RdBufB
+      demangled: ''
+      offset: '00001248'
+    - name: NABWait
+      demangled: ''
+      offset: 000012D2
+    - name: NeedABuf
+      demangled: ''
+      offset: 000012EA
+    - name: mkba
+      demangled: ''
+      offset: 0000135A
+    - name: MakeBuf
+      demangled: ''
+      offset: '00001370'
+    - name: BufferToDirtyChain
+      demangled: ''
+      offset: 000013DC
+    - name: BufferToDirtyChainNoTag
+      demangled: ''
+      offset: 000013F1
+    - name: SetDirt
+      demangled: ''
+      offset: '00001464'
+    - name: SetDirtySector
+      demangled: ''
+      offset: 0000146B
+    - name: SetMRWMask
+      demangled: ''
+      offset: 000014B1
+    - name: SetDirtySectors
+      demangled: ''
+      offset: 000014C8
+    - name: WriteSectorNow
+      demangled: ''
+      offset: 000014F9
+    - name: WriteSectorsNow
+      demangled: ''
+      offset: '00001548'
+    - name: WBUlk
+      demangled: ''
+      offset: 0000162F
+    - name: FlushBuf_Async
+      demangled: ''
+      offset: '00001657'
+    - name: FlushBufTag_Async
+      demangled: ''
+      offset: 0000165C
+    - name: FlushBuf_Sync
+      demangled: ''
+      offset: 0000168C
+    - name: FlushBufTag_Sync
+      demangled: ''
+      offset: '00001691'
+    - name: FlushTag
+      demangled: ''
+      offset: 000016C8
+    - name: GetDirtyBufCount
+      demangled: ''
+      offset: 000016FB
+    - name: ProgRdAhead
+      demangled: ''
+      offset: '00001717'
+    - name: UniQueryDirCache
+      demangled: ''
+      offset: '00001870'
+    - name: UniInsertDirCache
+      demangled: ''
+      offset: 0000194F
+    - name: UniRemoveDirCache
+      demangled: ''
+      offset: 00001A5E
+    - name: UniQueryNameCache
+      demangled: ''
+      offset: 00001AE0
+    - name: QueryNameCache
+      demangled: ''
+      offset: 00001B15
+    - name: InsertNameCache
+      demangled: ''
+      offset: 00001B69
+    - name: _UniRemoveNameCache@16
+      demangled: ''
+      offset: 00001C5D
+    - name: _RemoveNameCache@16
+      demangled: ''
+      offset: 00001C98
+    - name: HashStr
+      demangled: ''
+      offset: 00001D1B
+    - name: HashiStr
+      demangled: ''
+      offset: 00001D34
+    - name: QueryDirFATCache
+      demangled: ''
+      offset: 00001D6C
+    - name: GetEntry
+      demangled: ''
+      offset: 00001E1A
+    - name: GetEnt
+      demangled: ''
+      offset: 00001E1D
+    - name: GetEntrySub
+      demangled: ''
+      offset: 00001E9D
+    - name: FreeEnt
+      demangled: ''
+      offset: 00001EE2
+    - name: NextEntry
+      demangled: ''
+      offset: 00001F2F
+    - name: LNNewEntrys
+      demangled: ''
+      offset: 00001FBF
+    - name: NewDir
+      demangled: ''
+      offset: '00002325'
+    - name: IsCompressedClusterClean
+      demangled: ''
+      offset: 000023F3
+    - name: SetRootSrch
+      demangled: ''
+      offset: '00002421'
+    - name: SetDirSrchFromDirent
+      demangled: ''
+      offset: '00002451'
+    - name: SetDirSrch
+      demangled: ''
+      offset: '00002465'
+    - name: CommitDirent
+      demangled: ''
+      offset: 0000248A
+    - name: DirFromOft
+      demangled: ''
+      offset: 0000252A
+    - name: FillDirDateFields
+      demangled: ''
+      offset: '00002549'
+    - name: ValidateAccessDate
+      demangled: ''
+      offset: '00002613'
+    - name: ValidateCreateDateTime
+      demangled: ''
+      offset: 0000262F
+    - name: Win32DateTimetoDosDateTime
+      demangled: ''
+      offset: 0000267B
+    - name: DskRead
+      demangled: ''
+      offset: 000026B8
+    - name: DskReadLocked
+      demangled: ''
+      offset: 000026B8
+    - name: VolLock
+      demangled: ''
+      offset: '00002748'
+    - name: VolUnlock
+      demangled: ''
+      offset: '00002757'
+    - name: Qlck_Note
+      demangled: ''
+      offset: 000027A4
+    - name: Qras_Note
+      demangled: ''
+      offset: 000027AB
+    - name: DskWrite
+      demangled: ''
+      offset: 000027D0
+    - name: DskWriteLocked
+      demangled: ''
+      offset: 000027D0
+    - name: SyncRead
+      demangled: ''
+      offset: 0000287F
+    - name: SyncReadSub
+      demangled: ''
+      offset: 000028D5
+    - name: SCR_Note
+      demangled: ''
+      offset: 000029D7
+    - name: AsyncRead
+      demangled: ''
+      offset: 000029FC
+    - name: AsyncReadNotify
+      demangled: ''
+      offset: 00002A64
+    - name: CallStrat2
+      demangled: ''
+      offset: 00002AD8
+    - name: RegeneratePath
+      demangled: ''
+      offset: 00002B0C
+    - name: EnumPathNames
+      demangled: ''
+      offset: 00002C1E
+    - name: BackwalkDir
+      demangled: ''
+      offset: 00002C92
+    - name: UpdateShutdownFlags
+      demangled: ''
+      offset: 00002D4C
+    - name: MarkVolumeDirty
+      demangled: ''
+      offset: 00002DB5
+    - name: MarkVolumeClean
+      demangled: ''
+      offset: 00002DC9
+    - name: MarkVolumeBroken
+      demangled: ''
+      offset: 00002DDF
+    - name: Pack
+      demangled: ''
+      offset: 00002DF3
+    - name: UnPack
+      demangled: ''
+      offset: 00002FD8
+    - name: IsEof
+      demangled: ''
+      offset: 000031B4
+    - name: DetectCycle
+      demangled: ''
+      offset: 000031DB
+    - name: GrowFatCache
+      demangled: ''
+      offset: '00003217'
+    - name: Extend_Cache_Mem
+      demangled: ''
+      offset: 000032A3
+    - name: GetPhysCluster
+      demangled: ''
+      offset: '00003320'
+    - name: FatEntry
+      demangled: ''
+      offset: '00003334'
+    - name: NetVectors
+      demangled: ''
+      offset: '00003374'
+    - name: abMediaErrors
+      demangled: ''
+      offset: '00003398'
+    - name: VFAT_Dir
+      demangled: ''
+      offset: 0000339C
+    - name: Fat_QueryDir
+      demangled: ''
+      offset: '00003411'
+    - name: Fat_Chdir
+      demangled: ''
+      offset: '00003433'
+    - name: Fat_Mkdir
+      demangled: ''
+      offset: '00003459'
+    - name: Fat_Rmdir
+      demangled: ''
+      offset: 000035F8
+    - name: VFAT_OpenFile
+      demangled: ''
+      offset: 000037C2
+    - name: Fat_Open
+      demangled: ''
+      offset: 00003A09
+    - name: Fat_Create
+      demangled: ''
+      offset: 00003B32
+    - name: VFAT_DeleteFile
+      demangled: ''
+      offset: 00003D67
+    - name: VFAT_FileAttributes
+      demangled: ''
+      offset: 00003F91
+    - name: GetCompressedSize
+      demangled: ''
+      offset: 0000419B
+    - name: NetExtAttrib
+      demangled: ''
+      offset: 000041F6
+    - name: NetSearch
+      demangled: ''
+      offset: 000043EB
+    - name: Fat_Find_First
+      demangled: ''
+      offset: 0000444E
+    - name: FindFirstSub
+      demangled: ''
+      offset: '00004463'
+    - name: Fat_Find_Next
+      demangled: ''
+      offset: '00004577'
+    - name: VFAT_RenameFile
+      demangled: ''
+      offset: 0000467E
+    - name: RenameMove
+      demangled: ''
+      offset: 000046D3
+    - name: RenameMeta
+      demangled: ''
+      offset: 00004B9B
+    - name: RenameInPlace
+      demangled: ''
+      offset: 00004F40
+    - name: VFAT_Unmount
+      demangled: ''
+      offset: 000050CD
+    - name: UnmountSub
+      demangled: ''
+      offset: 0000539E
+    - name: VFAT_DiskInfo
+      demangled: ''
+      offset: 000053C6
+    - name: UpdateFSInfo
+      demangled: ''
+      offset: 000054FA
+    - name: AllFileSizesOkay
+      demangled: ''
+      offset: '00005550'
+    - name: NetFlush
+      demangled: ''
+      offset: 0000557B
+    - name: VFAT_FlushFile
+      demangled: ''
+      offset: 0000557B
+    - name: SetPathFlags
+      demangled: ''
+      offset: '00005601'
+    - name: IsShortNameLossy
+      demangled: ''
+      offset: '00005652'
+    - name: ReinitOFTPosInfo
+      demangled: ''
+      offset: '00005688'
+    - name: CompressIOCTL
+      demangled: ''
+      offset: 000056D8
+    - name: IOSSend
+      demangled: ''
+      offset: '000056E9'
+    - name: VFAT_IORDone
+      demangled: ''
+      offset: '00005772'
+    - name: PRet_OK
+      demangled: ''
+      offset: '00005780'
+    - name: PRet_Err
+      demangled: ''
+      offset: '00005782'
+    - name: Ret_BadHandMem
+      demangled: ''
+      offset: 000057AC
+    - name: Ret_BadHand
+      demangled: ''
+      offset: 000057B1
+    - name: Ret_OK
+      demangled: ''
+      offset: 000057B8
+    - name: Ret_Err
+      demangled: ''
+      offset: 000057BA
+    - name: Ret_Errax
+      demangled: ''
+      offset: 000057BD
+    - name: Ret_Err_NoCleanup
+      demangled: ''
+      offset: 0000587D
+    - name: DoTrap
+      demangled: ''
+      offset: 000058AC
+    - name: NetFileLocks
+      demangled: ''
+      offset: 000058B4
+    - name: VFAT_LockFile
+      demangled: ''
+      offset: 000058B4
+    - name: VFAT_FileTime
+      demangled: ''
+      offset: 0000592A
+    - name: NetRead
+      demangled: ''
+      offset: 00005A86
+    - name: VFAT_ReadFile
+      demangled: ''
+      offset: 00005A86
+    - name: VFAT_WriteFile
+      demangled: ''
+      offset: 00005BF9
+    - name: VFAT_CloseFile
+      demangled: ''
+      offset: 000060EC
+    - name: VFAT_CommitFile
+      demangled: ''
+      offset: '00006266'
+    - name: NetCommit
+      demangled: ''
+      offset: '00006266'
+    - name: NetSeek
+      demangled: ''
+      offset: '000062E9'
+    - name: VFAT_DasdIO
+      demangled: ''
+      offset: '00006351'
+    - name: VFAT_EnterLeaveVolLock
+      demangled: ''
+      offset: 000063C3
+    - name: VFAT_FormatHelpers
+      demangled: ''
+      offset: 000064BD
+    - name: VFHSetAllocInfo
+      demangled: ''
+      offset: 000064F8
+    - name: VFHForceMediaChng
+      demangled: ''
+      offset: '00006554'
+    - name: VFHSetDPBFrmBPB
+      demangled: ''
+      offset: '00006554'
+    - name: VFHGetSetActFATandMirr
+      demangled: ''
+      offset: 0000655B
+    - name: VFHGetSetRootDirClus
+      demangled: ''
+      offset: '00006660'
+    - name: CopyFAT
+      demangled: ''
+      offset: '00006704'
+    - name: UpdateBoot
+      demangled: ''
+      offset: '00006762'
+    - name: VFAT_ReadSectors
+      demangled: ''
+      offset: 0000679D
+    - name: VFAT_WriteSectors
+      demangled: ''
+      offset: 0000682E
+    - name: WriteExtent
+      demangled: ''
+      offset: 0000694D
+    - name: FindDPB
+      demangled: ''
+      offset: 00006A85
+    - name: MakeExtDPB
+      demangled: ''
+      offset: 00006AB9
+    - name: VFAT_GetDPB
+      demangled: ''
+      offset: 00006BBD
+    - name: MapI25Error
+      demangled: ''
+      offset: 00006CB9
+    - name: GetFreeEstimate
+      demangled: ''
+      offset: 00006CD4
+    - name: GuaranteeOneCluster
+      demangled: ''
+      offset: 00006D54
+    - name: GetFreeGuarantee
+      demangled: ''
+      offset: 00006D5C
+    - name: InvalidateFreeCounts
+      demangled: ''
+      offset: 00006D9E
+    - name: ZeroFreeCounts
+      demangled: ''
+      offset: 00006DA3
+    - name: GetFreeCount
+      demangled: ''
+      offset: 00006DBF
+    - name: DirtySector
+      demangled: ''
+      offset: '00006E48'
+    - name: DirtyBuffer
+      demangled: ''
+      offset: 00006E5F
+    - name: SetWriteThrough
+      demangled: ''
+      offset: '00006E80'
+    - name: CheckWriteThrough
+      demangled: ''
+      offset: 00006ECF
+    - name: WriteAsyncSwapPage
+      demangled: ''
+      offset: 00006EF6
+    - name: InvalidateFAT2Sectors
+      demangled: ''
+      offset: 00006FE1
+    - name: VFAT_IOCtl
+      demangled: ''
+      offset: 000070BC
+    - name: passioctl_down
+      demangled: ''
+      offset: 000070FE
+    - name: VFAT_SetMediaID
+      demangled: ''
+      offset: 000071D0
+    - name: VFAT_GetMediaID
+      demangled: ''
+      offset: '00007280'
+    - name: VFAT_GetDiskFreeSpaceRatio
+      demangled: ''
+      offset: 000072F2
+    - name: VFAT_SetDiskFreeSpaceRatio
+      demangled: ''
+      offset: '00007312'
+    - name: pioc_440d_rw_track
+      demangled: ''
+      offset: 0000737E
+    - name: VFAT_CVMIOCTL
+      demangled: ''
+      offset: 0000739F
+    - name: VFATMountTab
+      demangled: ''
+      offset: '00007444'
+    - name: Mount_Fat
+      demangled: ''
+      offset: '00007460'
+    - name: MFS
+      demangled: ''
+      offset: '00007544'
+    - name: AllocNameHashTable
+      demangled: ''
+      offset: '00007768'
+    - name: AllocCountArray
+      demangled: ''
+      offset: 000077CD
+    - name: VFS
+      demangled: ''
+      offset: 0000780A
+    - name: MountChild
+      demangled: ''
+      offset: '00007954'
+    - name: VFAT_FailOp
+      demangled: ''
+      offset: 00007AE6
+    - name: VFAT_UnmountBadChild
+      demangled: ''
+      offset: 00007AF4
+    - name: CmpVol
+      demangled: ''
+      offset: 00007B09
+    - name: MakeVol
+      demangled: ''
+      offset: 00007B9E
+    - name: IsCompressedVol
+      demangled: ''
+      offset: 000080C1
+    - name: UpdateBootVolLabel
+      demangled: ''
+      offset: '00008121'
+    - name: VolLabelLen
+      demangled: ''
+      offset: 000081A8
+    - name: ValidateVolGeometry
+      demangled: ''
+      offset: 000081BF
+    - name: SetDiskFreeSpaceThreshold
+      demangled: ''
+      offset: 000082C9
+    - name: DoRead
+      demangled: ''
+      offset: '00008334'
+    - name: SwapperReadExtent
+      demangled: ''
+      offset: 000083D0
+    - name: SwapperWrite
+      demangled: ''
+      offset: '00008425'
+    - name: SwapperWriteExtent
+      demangled: ''
+      offset: '00008458'
+    - name: ReadExtent
+      demangled: ''
+      offset: '00008475'
+    - name: ReadExtentSub
+      demangled: ''
+      offset: '00008500'
+    - name: ExtentCached
+      demangled: ''
+      offset: '00008857'
+    - name: ReadCB
+      demangled: ''
+      offset: 0000887F
+    - name: RxAllocBfr
+      demangled: ''
+      offset: 000089F0
+    - name: BufWrt
+      demangled: ''
+      offset: 00008A0C
+    - name: CompRunLen
+      demangled: ''
+      offset: 00008A9E
+    - name: BreakDown
+      demangled: ''
+      offset: 00008B00
+    - name: Fat_IO_Setup_Async
+      demangled: ''
+      offset: 00008B4A
+    - name: Fat_IO_Setup
+      demangled: ''
+      offset: 00008B4E
+    - name: FreeHint
+      demangled: ''
+      offset: 00008B97
+    - name: Allocate
+      demangled: ''
+      offset: 00008C25
+    - name: AllocateContig
+      demangled: ''
+      offset: '00009043'
+    - name: AddToFATCache
+      demangled: ''
+      offset: 000090EB
+    - name: ResetFATCacheNoCheck
+      demangled: ''
+      offset: '00009120'
+    - name: ResetFATCache
+      demangled: ''
+      offset: '00009120'
+    - name: IsLastCluster
+      demangled: ''
+      offset: '00009150'
+    - name: Release
+      demangled: ''
+      offset: 000091A1
+    - name: Truncate
+      demangled: ''
+      offset: 000091A3
+    - name: FigRec
+      demangled: ''
+      offset: '000092E3'
+    - name: FillSft
+      demangled: ''
+      offset: 000092FE
+    - name: FileMapped
+      demangled: ''
+      offset: 0000936F
+    - name: FndClus
+      demangled: ''
+      offset: '000093E7'
+    - name: EnumSFT
+      demangled: ''
+      offset: '00009424'
+    - name: FindOFT
+      demangled: ''
+      offset: 0000945A
+    - name: GOFT
+      demangled: ''
+      offset: 000094BE
+    - name: beginDoOpMove
+      demangled: ''
+      offset: 0000970C
+    - name: DoOpMove
+      demangled: ''
+      offset: 0000970C
+    - name: DoOpMovePage
+      demangled: ''
+      offset: '00009735'
+    - name: DoOpMoveExcept
+      demangled: ''
+      offset: 0000977A
+    - name: endDoOpMove
+      demangled: ''
+      offset: 0000977A
+    - name: MarkOFTInvalid
+      demangled: ''
+      offset: '00009780'
+    - name: Flush_Timed_Out
+      demangled: ''
+      offset: 0000979D
+    - name: Write_List
+      demangled: ''
+      offset: 000098FE
+    - name: Write_List_Int
+      demangled: ''
+      offset: '00009925'
+    - name: NeedPopup
+      demangled: ''
+      offset: 00009C2C
+    - name: WL_Note
+      demangled: ''
+      offset: 00009C98
+    - name: WriteMore
+      demangled: ''
+      offset: '00009E27'
+    - name: Call_Write_List
+      demangled: ''
+      offset: 00009E5C
+    - name: CleanBuf
+      demangled: ''
+      offset: '00009E74'
+    - name: IncWrite
+      demangled: ''
+      offset: 00009EB5
+    - name: DecWrite
+      demangled: ''
+      offset: 00009ED5
+    - name: CheckUnlock
+      demangled: ''
+      offset: 00009EDB
+    - name: ScaleEvent
+      demangled: ''
+      offset: 00009F06
+    - name: Lazy_Idle
+      demangled: ''
+      offset: 00009F4B
+    - name: Observe_Lazy_Idle
+      demangled: ''
+      offset: 0000A024
+    - name: Write_Lazy
+      demangled: ''
+      offset: 0000A05E
+    - name: Lazy_New_Thread
+      demangled: ''
+      offset: 0000A194
+    - name: Force_Write_Lazy
+      demangled: ''
+      offset: 0000A1B4
+    - name: FcbChecksum
+      demangled: ''
+      offset: 0000A1DC
+    - name: LNInitLNInfo
+      demangled: ''
+      offset: 0000A1E8
+    - name: LNUpdateColl
+      demangled: ''
+      offset: 0000A2FA
+    - name: LNScanColl
+      demangled: ''
+      offset: 0000A340
+    - name: PackOemUniNames
+      demangled: ''
+      offset: 0000A3D2
+    - name: TunnelCreationDateTime
+      demangled: ''
+      offset: 0000A539
+    - name: SelectShortName
+      demangled: ''
+      offset: 0000A55D
+    - name: GetNumTailHint
+      demangled: ''
+      offset: 0000A5C4
+    - name: UniFatGetPath
+      demangled: ''
+      offset: 0000A60C
+    - name: UniFindEntry
+      demangled: ''
+      offset: 0000A7B8
+    - name: ReturnPathElem
+      demangled: ''
+      offset: 0000AE8B
+    - name: UpdateFreeDirOrds
+      demangled: ''
+      offset: 0000AF12
+    - name: LNFreeEntrys
+      demangled: ''
+      offset: 0000AF6A
+    - name: AutoGenerateBasisName
+      demangled: ''
+      offset: 0000B01B
+    - name: VerifyNameAssoc
+      demangled: ''
+      offset: 0000B13D
+    - name: DirentNameToUniFcbAndShortName
+      demangled: ''
+      offset: 0000B1C9
+    - name: CheckFileLock
+      demangled: ''
+      offset: 0000B274
+    - name: CreateSFT
+      demangled: ''
+      offset: 0000B2B0
+    - name: Date32
+      demangled: ''
+      offset: 0000B2CC
+    - name: MemPageLock
+      demangled: ''
+      offset: 0000B2D8
+    - name: MemPageUnlock
+      demangled: ''
+      offset: 0000B390
+    - name: PackName
+      demangled: ''
+      offset: 0000B3B6
+    - name: SetTimes
+      demangled: ''
+      offset: 0000B3E3
+    - name: RelOFToc
+      demangled: ''
+      offset: 0000B43B
+    - name: RelOftFatCache
+      demangled: ''
+      offset: 0000B464
+    - name: RelOFT
+      demangled: ''
+      offset: 0000B488
+    - name: RelOftNoChk
+      demangled: ''
+      offset: 0000B48E
+    - name: LockOFT
+      demangled: ''
+      offset: 0000B4CB
+    - name: UnLockOFT2
+      demangled: ''
+      offset: 0000B4F9
+    - name: UnLockOFT
+      demangled: ''
+      offset: 0000B4F9
+    - name: HoldOFT
+      demangled: ''
+      offset: 0000B50E
+    - name: UnHoldOFT
+      demangled: ''
+      offset: 0000B51F
+    - name: ChkHoldOFT
+      demangled: ''
+      offset: 0000B525
+    - name: CommitFileData
+      demangled: ''
+      offset: 0000B53C
+    - name: CAS
+      demangled: ''
+      offset: 0000B67C
+    - name: AGHSD
+      demangled: ''
+      offset: 0000B6A2
+    - name: APGHS
+      demangled: ''
+      offset: 0000B6B4
+    - name: FHS
+      demangled: ''
+      offset: 0000B6CC
+    - name: Block
+      demangled: ''
+      offset: 0000B6E0
+    - name: Wakeup
+      demangled: ''
+      offset: 0000B718
+    - name: Wakeupi
+      demangled: ''
+      offset: 0000B718
+    - name: FullCrit
+      demangled: ''
+      offset: 0000B72B
+    - name: RelFullCrit
+      demangled: ''
+      offset: 0000B78E
+    - name: DoFFHold
+      demangled: ''
+      offset: 0000B7D8
+    - name: UnHoldFF
+      demangled: ''
+      offset: 0000B821
+    - name: VFAT_async_event
+      demangled: ''
+      offset: 0000B850
+    - name: GetSGIOHdrEvtTime
+      demangled: ''
+      offset: 0000B85C
+    - name: GetIOHdrEvtTime
+      demangled: ''
+      offset: 0000B86F
+    - name: GetIOHdr
+      demangled: ''
+      offset: 0000B879
+    - name: AllocIOHdr
+      demangled: ''
+      offset: 0000B8FB
+    - name: RetIOHdr
+      demangled: ''
+      offset: 0000B96E
+    - name: CreateIOR
+      demangled: ''
+      offset: 0000B9A1
+    - name: AIH
+      demangled: ''
+      offset: 0000B9D6
+    - name: DIH
+      demangled: ''
+      offset: 0000B9FE
+    - name: SatisfyDevDmds
+      demangled: ''
+      offset: 0000BA18
+    - name: GetSerial
+      demangled: ''
+      offset: 0000BA34
+    - name: PutSerial
+      demangled: ''
+      offset: 0000BA59
+    - name: GetVolLabel
+      demangled: ''
+      offset: 0000BA77
+    - name: InvalidateCache
+      demangled: ''
+      offset: 0000BBF0
+    - name: InvalidateCacheSub
+      demangled: ''
+      offset: 0000BC4F
+    - name: IsVolTrackExempt
+      demangled: ''
+      offset: 0000BC79
+    - name: VFAT_FindOpen
+      demangled: ''
+      offset: 0000BCC0
+    - name: VFAT_FindNext
+      demangled: ''
+      offset: 0000BE02
+    - name: VFAT_FindClose
+      demangled: ''
+      offset: 0000BEC5
+    - name: FindComplete
+      demangled: ''
+      offset: 0000BEFF
+    - name: TerminateHFind
+      demangled: ''
+      offset: 0000C02A
+    - name: VFAT_GetVolInfo
+      demangled: ''
+      offset: 0000C052
+    - name: VFAT_GetInfoByHandle
+      demangled: ''
+      offset: 0000C0F8
+    - name: GetPathNameByFileHandle
+      demangled: ''
+      offset: 0000C1CF
+    - name: ResyncHandle
+      demangled: ''
+      offset: 0000C2CC
+    - name: VFAT_MapCacheBlock
+      demangled: ''
+      offset: 0000C472
+    - name: VFAT_UnmapCacheBlock
+      demangled: ''
+      offset: 0000C567
+    - name: AllocLNInfo
+      demangled: ''
+      offset: 0000C57D
+    - name: FreeLNInfo
+      demangled: ''
+      offset: 0000C5BB
+    - name: OpenOpenFile
+      demangled: ''
+      offset: 0000C5E5
+    - name: RemountVol
+      demangled: ''
+      offset: 0000C624
+    - name: VFAT_Control
+      demangled: ''
+      offset: 0000C75C
+    - name: VFAT_DevIOControl
+      demangled: ''
+      offset: 0000C792
+    - name: VFAT_SignalSystemExit
+      demangled: ''
+      offset: 0000C7AA
+    - name: VFAT_Dump_Debug
+      demangled: ''
+      offset: 0000C7B2
+    - name: Clear_Stats
+      demangled: ''
+      offset: 0000C7CA
+    - name: VFAT_VM_Terminate
+      demangled: ''
+      offset: 0000C7DA
+    - name: VFAT_Query_Destroy
+      demangled: ''
+      offset: 0000C7DC
+    - name: SchedDiskSpaceBroadcast
+      demangled: ''
+      offset: 0000C7E0
+    - name: _AppyBroadcastLowDiskSpace
+      demangled: ''
+      offset: 0000C809
+  - num: '2'
+    name: _LMSG$1
+    offset: 0000F640
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000064'
+  - num: '3'
+    name: _DB1CODE
+    offset: 0000FFF0
+    symbols:
+    - name: Dump_OFT
+      demangled: ''
+      offset: '00000000'
+    - name: VFAT_Printf
+      demangled: ''
+      offset: '00000258'
+    - name: VFAT_Dump_Debug2
+      demangled: ''
+      offset: '00000279'
+    - name: Toggle_Zero_Suppress
+      demangled: ''
+      offset: 0000032A
+    - name: Dump_Log
+      demangled: ''
+      offset: 0000034A
+    - name: Flush_Log
+      demangled: ''
+      offset: '00000358'
+    - name: Set_Log_Mask
+      demangled: ''
+      offset: '00000359'
+    - name: Dump_Threads
+      demangled: ''
+      offset: 0000035A
+    - name: VolTabDesc
+      demangled: ''
+      offset: '00000413'
+    - name: BUFNODEDesc
+      demangled: ''
+      offset: 0000082F
+    - name: BUFSHORTDesc
+      demangled: ''
+      offset: '00000907'
+    - name: DIR_CACHEDesc
+      demangled: ''
+      offset: '00000979'
+    - name: FCHDesc
+      demangled: ''
+      offset: '000009E8'
+    - name: IOREQDesc
+      demangled: ''
+      offset: 00000A4E
+    - name: IOSTKDesc
+      demangled: ''
+      offset: 00000B1C
+    - name: fdRWDesc
+      demangled: ''
+      offset: 00000B66
+    - name: fdOCDesc
+      demangled: ''
+      offset: 00000C6D
+    - name: OFTDesc
+      demangled: ''
+      offset: 00000D89
+    - name: SFTDesc
+      demangled: ''
+      offset: 00000F3B
+    - name: STATSDesc
+      demangled: ''
+      offset: 00000FE6
+    - name: Dump_Vol
+      demangled: ''
+      offset: 000011AD
+    - name: Dump_Dir_Cache
+      demangled: ''
+      offset: '00001265'
+    - name: Dump_BufNode
+      demangled: ''
+      offset: 000012BA
+    - name: Dump_BufChain
+      demangled: ''
+      offset: 000012CC
+    - name: w_BufChain
+      demangled: ''
+      offset: 000012DE
+    - name: Dump_BufDirty
+      demangled: ''
+      offset: 000012ED
+    - name: w_BufDirty
+      demangled: ''
+      offset: 000012FF
+    - name: Dump_IOREQ
+      demangled: ''
+      offset: '00001316'
+    - name: Dump_OFTChain
+      demangled: ''
+      offset: 000013DD
+    - name: Dump_SFT
+      demangled: ''
+      offset: 0000141A
+    - name: Dump_Stats
+      demangled: ''
+      offset: '00001474'
+    - name: SFTToPackedName
+      demangled: ''
+      offset: '00001484'
+  - num: '4'
+    name: _RCODE
+    offset: '00010060'
+    symbols:
+    - name: RealmodeInit
+      demangled: ''
+      offset: '00000000'
+  - num: '5'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: Init_CompatFileSysFlags
+      demangled: ''
+      offset: '00000000'
+    - name: Drv_Reg_Pkt
+      demangled: ''
+      offset: 000002FC
+    - name: FSInit
+      demangled: ''
+      offset: '00000342'
+    - name: ReadVFATRegistry
+      demangled: ''
+      offset: 000003F4
+    - name: ReadVFATNoVolTrackPatterns
+      demangled: ''
+      offset: '00000499'
+    - name: ReadVFATIni
+      demangled: ''
+      offset: 000005DD
+    - name: TaskInit
+      demangled: ''
+      offset: 000005FC
+    - name: VFAT_Sys_Critical_Init
+      demangled: ''
+      offset: '00000600'
+    - name: VFAT_Device_Init
+      demangled: ''
+      offset: '00000602'
+    - name: VFAT_Init_Complete
+      demangled: ''
+      offset: 000007C4
+    - name: Vfat_IOS_Reg
+      demangled: ''
+      offset: 00000A06
+    - name: VFAT_Register_MMCallBack
+      demangled: ''
+      offset: 00000A34
+    - name: VFAT_Install_Async_Manager
+      demangled: ''
+      offset: 00000A50
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LDATA
+    offset: 0000F600
+    symbols:
+    - name: RdAhead_Active
+      demangled: ''
+      offset: '00000008'
+    - name: cpgLoaderRAMax
+      demangled: ''
+      offset: 0000000C
+    - name: RdbFActive
+      demangled: ''
+      offset: '00000010'
+    - name: RdbFBuffHdr
+      demangled: ''
+      offset: '00000014'
+    - name: RdbFDesc
+      demangled: ''
+      offset: '00000018'
+    - name: NABActive
+      demangled: ''
+      offset: 0000001C
+    - name: NABDesc
+      demangled: ''
+      offset: '00000020'
+    - name: Flw_Desc
+      demangled: ''
+      offset: '00000024'
+    - name: vfatcBufCleaned
+      demangled: ''
+      offset: '00000028'
+    - name: NABActiveThreadID
+      demangled: ''
+      offset: 0000002C
+    - name: Dir_Hash_Time
+      demangled: ''
+      offset: 000000C4
+    - name: Dir_Hash_Tab
+      demangled: ''
+      offset: 000000C8
+    - name: UniToUpperDelta
+      demangled: ''
+      offset: 000000CC
+    - name: UniToUpperTable
+      demangled: ''
+      offset: 000000D0
+    - name: cIosPending
+      demangled: ''
+      offset: 000004D4
+    - name: pk_buf
+      demangled: ''
+      offset: 000004D8
+    - name: upk_buf
+      demangled: ''
+      offset: '000004E8'
+    - name: FATOpWait
+      demangled: ''
+      offset: 000004F8
+    - name: vfatWaitIOR
+      demangled: ''
+      offset: 000004FC
+    - name: TagWait
+      demangled: ''
+      offset: '00000500'
+    - name: VFAT_CacheID
+      demangled: ''
+      offset: '00000504'
+    - name: LWHead
+      demangled: ''
+      offset: '00000508'
+    - name: OftHead
+      demangled: ''
+      offset: 0000052C
+    - name: DirtBits
+      demangled: ''
+      offset: 0000053C
+    - name: DirtBits2
+      demangled: ''
+      offset: '00000540'
+    - name: DirtOrd
+      demangled: ''
+      offset: '00000544'
+    - name: VolChain
+      demangled: ''
+      offset: '00000554'
+    - name: cbufDirty
+      demangled: ''
+      offset: 0000055C
+    - name: pDPB
+      demangled: ''
+      offset: '00000560'
+    - name: pPageFileSFT
+      demangled: ''
+      offset: '00000564'
+    - name: MMSwapCB
+      demangled: ''
+      offset: '00000568'
+    - name: VfatStats
+      demangled: ''
+      offset: 0000056C
+    - name: VFATMounting
+      demangled: ''
+      offset: '00000592'
+    - name: MemMgrMutex
+      demangled: ''
+      offset: '00000596'
+    - name: FatEntryBadChild
+      demangled: ''
+      offset: 0000079C
+    - name: RWCnt
+      demangled: ''
+      offset: 000007DC
+    - name: GoftLock
+      demangled: ''
+      offset: 000007FC
+    - name: GoftWait
+      demangled: ''
+      offset: '00000800'
+    - name: LWShift
+      demangled: ''
+      offset: '00000829'
+    - name: LTO_Handle
+      demangled: ''
+      offset: 0000082A
+    - name: ITPPageOuts
+      demangled: ''
+      offset: 0000083E
+    - name: ITPFlags
+      demangled: ''
+      offset: '00000842'
+    - name: pLfnInfoCache
+      demangled: ''
+      offset: '00000858'
+    - name: LNLenOffsetTable
+      demangled: ''
+      offset: 0000085C
+    - name: CompatFileSysFlags
+      demangled: ''
+      offset: 0000087C
+    - name: DriveWriteBehindFlags
+      demangled: ''
+      offset: '00000880'
+    - name: TunnelAuth
+      demangled: ''
+      offset: '00000884'
+    - name: VolIdleTimeout
+      demangled: ''
+      offset: '00000888'
+    - name: BuffIdleTimeout
+      demangled: ''
+      offset: 0000088C
+    - name: BuffAgeTimeout
+      demangled: ''
+      offset: '00000890'
+    - name: PathCacheCount
+      demangled: ''
+      offset: '00000894'
+    - name: NameCacheCount
+      demangled: ''
+      offset: '00000898'
+    - name: ContigFileAllocSize
+      demangled: ''
+      offset: 0000089C
+    - name: NameNumericTail
+      demangled: ''
+      offset: 000008A0
+    - name: ReadAheadThreshold
+      demangled: ''
+      offset: 000008A4
+    - name: pNoVolTrackPatRecTable
+      demangled: ''
+      offset: 000008A8
+    - name: MaxFAT32TotalSpace
+      demangled: ''
+      offset: 000008AC
+    - name: MaxFAT32FreeSpace
+      demangled: ''
+      offset: 000008B0
+    - name: MaxFAT32TotalClust
+      demangled: ''
+      offset: 000008B4
+    - name: MaxFAT32FreeClust
+      demangled: ''
+      offset: 000008B8
+    - name: fShutdownStatus
+      demangled: ''
+      offset: 000008BC
+    - name: DriveLDSBdcastDisableFlags
+      demangled: ''
+      offset: 000008C0
+    - name: FullHold
+      demangled: ''
+      offset: 000008C4
+    - name: FullLock
+      demangled: ''
+      offset: 000008C8
+    - name: VfatFullLockThrdID
+      demangled: ''
+      offset: 000008CC
+    - name: FullLockSem
+      demangled: ''
+      offset: 000008D0
+    - name: FullHoldSem
+      demangled: ''
+      offset: 000008D4
+    - name: VFAT_ilb
+      demangled: ''
+      offset: 000008D8
+    - name: IOPSpareState
+      demangled: ''
+      offset: 0000090C
+    - name: IOPSpareAddr
+      demangled: ''
+      offset: '00000910'
+    - name: IOPSparePhysAddr
+      demangled: ''
+      offset: '00000914'
+    - name: IOPSpareDesc
+      demangled: ''
+      offset: '00000918'
+    - name: VolDrive
+      demangled: ''
+      offset: 0000092C
+    - name: hfindHead
+      demangled: ''
+      offset: '00000930'
+    - name: FindVectors
+      demangled: ''
+      offset: '00000938'
+    - name: SpareLNInfoState
+      demangled: ''
+      offset: 0000095C
+    - name: SpareLNInfoDesc
+      demangled: ''
+      offset: '00000960'
+    - name: SpareLNInfo
+      demangled: ''
+      offset: '00000964'
+    - name: VFAT_DDB
+      demangled: ''
+      offset: 00000D38
+    - name: VFAT_SystemExit
+      demangled: ''
+      offset: 00000D88
+    - name: RmmDefault_Vol_Flags
+      demangled: ''
+      offset: 00000D90
+    - name: VFAT_CacheBlockMapped
+      demangled: ''
+      offset: 00000D94
+    - name: fVfatInitComplete
+      demangled: ''
+      offset: 00000D98
+    - name: OffsetThrInVfatCount
+      demangled: ''
+      offset: 00000DAC
+    - name: VFAT_Discard
+      demangled: ''
+      offset: 00000F8C
+    - name: UnlockBufferValid
+      demangled: ''
+      offset: 00000FD0
+    - name: UnlockBuffer
+      demangled: ''
+      offset: 00000FD4
+    - name: Find_Buffer
+      demangled: ''
+      offset: 00000FEC
+    - name: VFAT_FindBlockAlign
+      demangled: ''
+      offset: 00000FFD
+    - name: VFAT_FindBlock
+      demangled: ''
+      offset: '00001009'
+    - name: VFAT_FindBlockSub
+      demangled: ''
+      offset: '00001027'
+    - name: Test_Buffer
+      demangled: ''
+      offset: '00001090'
+    - name: WL_Test_Buffer
+      demangled: ''
+      offset: 000010A0
+    - name: RdBuf
+      demangled: ''
+      offset: 000010BC
+    - name: RdBufB
+      demangled: ''
+      offset: '00001248'
+    - name: NABWait
+      demangled: ''
+      offset: 000012D2
+    - name: NeedABuf
+      demangled: ''
+      offset: 000012EA
+    - name: mkba
+      demangled: ''
+      offset: 0000135A
+    - name: MakeBuf
+      demangled: ''
+      offset: '00001370'
+    - name: BufferToDirtyChain
+      demangled: ''
+      offset: 000013DC
+    - name: BufferToDirtyChainNoTag
+      demangled: ''
+      offset: 000013F1
+    - name: SetDirt
+      demangled: ''
+      offset: '00001464'
+    - name: SetDirtySector
+      demangled: ''
+      offset: 0000146B
+    - name: SetMRWMask
+      demangled: ''
+      offset: 000014B1
+    - name: SetDirtySectors
+      demangled: ''
+      offset: 000014C8
+    - name: WriteSectorNow
+      demangled: ''
+      offset: 000014F9
+    - name: WriteSectorsNow
+      demangled: ''
+      offset: '00001548'
+    - name: WBUlk
+      demangled: ''
+      offset: 0000162F
+    - name: FlushBuf_Async
+      demangled: ''
+      offset: '00001657'
+    - name: FlushBufTag_Async
+      demangled: ''
+      offset: 0000165C
+    - name: FlushBuf_Sync
+      demangled: ''
+      offset: 0000168C
+    - name: FlushBufTag_Sync
+      demangled: ''
+      offset: '00001691'
+    - name: FlushTag
+      demangled: ''
+      offset: 000016C8
+    - name: GetDirtyBufCount
+      demangled: ''
+      offset: 000016FB
+    - name: ProgRdAhead
+      demangled: ''
+      offset: '00001717'
+    - name: UniQueryDirCache
+      demangled: ''
+      offset: '00001870'
+    - name: UniInsertDirCache
+      demangled: ''
+      offset: 0000194F
+    - name: UniRemoveDirCache
+      demangled: ''
+      offset: 00001A5E
+    - name: UniQueryNameCache
+      demangled: ''
+      offset: 00001AE0
+    - name: QueryNameCache
+      demangled: ''
+      offset: 00001B15
+    - name: InsertNameCache
+      demangled: ''
+      offset: 00001B69
+    - name: _UniRemoveNameCache@16
+      demangled: ''
+      offset: 00001C5D
+    - name: _RemoveNameCache@16
+      demangled: ''
+      offset: 00001C98
+    - name: HashStr
+      demangled: ''
+      offset: 00001D1B
+    - name: HashiStr
+      demangled: ''
+      offset: 00001D34
+    - name: QueryDirFATCache
+      demangled: ''
+      offset: 00001D6C
+    - name: GetEntry
+      demangled: ''
+      offset: 00001E1A
+    - name: GetEnt
+      demangled: ''
+      offset: 00001E1D
+    - name: GetEntrySub
+      demangled: ''
+      offset: 00001E9D
+    - name: FreeEnt
+      demangled: ''
+      offset: 00001EE2
+    - name: NextEntry
+      demangled: ''
+      offset: 00001F2F
+    - name: LNNewEntrys
+      demangled: ''
+      offset: 00001FBF
+    - name: NewDir
+      demangled: ''
+      offset: '00002325'
+    - name: IsCompressedClusterClean
+      demangled: ''
+      offset: 000023F3
+    - name: SetRootSrch
+      demangled: ''
+      offset: '00002421'
+    - name: SetDirSrchFromDirent
+      demangled: ''
+      offset: '00002451'
+    - name: SetDirSrch
+      demangled: ''
+      offset: '00002465'
+    - name: CommitDirent
+      demangled: ''
+      offset: 0000248A
+    - name: DirFromOft
+      demangled: ''
+      offset: 0000252A
+    - name: FillDirDateFields
+      demangled: ''
+      offset: '00002549'
+    - name: ValidateAccessDate
+      demangled: ''
+      offset: '00002613'
+    - name: ValidateCreateDateTime
+      demangled: ''
+      offset: 0000262F
+    - name: Win32DateTimetoDosDateTime
+      demangled: ''
+      offset: 0000267B
+    - name: DskRead
+      demangled: ''
+      offset: 000026B8
+    - name: DskReadLocked
+      demangled: ''
+      offset: 000026B8
+    - name: VolLock
+      demangled: ''
+      offset: '00002748'
+    - name: VolUnlock
+      demangled: ''
+      offset: '00002757'
+    - name: Qlck_Note
+      demangled: ''
+      offset: 000027A4
+    - name: Qras_Note
+      demangled: ''
+      offset: 000027AB
+    - name: DskWrite
+      demangled: ''
+      offset: 000027D0
+    - name: DskWriteLocked
+      demangled: ''
+      offset: 000027D0
+    - name: SyncRead
+      demangled: ''
+      offset: 0000287F
+    - name: SyncReadSub
+      demangled: ''
+      offset: 000028D5
+    - name: SCR_Note
+      demangled: ''
+      offset: 000029D7
+    - name: AsyncRead
+      demangled: ''
+      offset: 000029FC
+    - name: AsyncReadNotify
+      demangled: ''
+      offset: 00002A64
+    - name: CallStrat2
+      demangled: ''
+      offset: 00002AD8
+    - name: RegeneratePath
+      demangled: ''
+      offset: 00002B0C
+    - name: EnumPathNames
+      demangled: ''
+      offset: 00002C1E
+    - name: BackwalkDir
+      demangled: ''
+      offset: 00002C92
+    - name: UpdateShutdownFlags
+      demangled: ''
+      offset: 00002D4C
+    - name: MarkVolumeDirty
+      demangled: ''
+      offset: 00002DB5
+    - name: MarkVolumeClean
+      demangled: ''
+      offset: 00002DC9
+    - name: MarkVolumeBroken
+      demangled: ''
+      offset: 00002DDF
+    - name: Pack
+      demangled: ''
+      offset: 00002DF3
+    - name: UnPack
+      demangled: ''
+      offset: 00002FD8
+    - name: IsEof
+      demangled: ''
+      offset: 000031B4
+    - name: DetectCycle
+      demangled: ''
+      offset: 000031DB
+    - name: GrowFatCache
+      demangled: ''
+      offset: '00003217'
+    - name: Extend_Cache_Mem
+      demangled: ''
+      offset: 000032A3
+    - name: GetPhysCluster
+      demangled: ''
+      offset: '00003320'
+    - name: FatEntry
+      demangled: ''
+      offset: '00003334'
+    - name: NetVectors
+      demangled: ''
+      offset: '00003374'
+    - name: abMediaErrors
+      demangled: ''
+      offset: '00003398'
+    - name: VFAT_Dir
+      demangled: ''
+      offset: 0000339C
+    - name: Fat_QueryDir
+      demangled: ''
+      offset: '00003411'
+    - name: Fat_Chdir
+      demangled: ''
+      offset: '00003433'
+    - name: Fat_Mkdir
+      demangled: ''
+      offset: '00003459'
+    - name: Fat_Rmdir
+      demangled: ''
+      offset: 000035F8
+    - name: VFAT_OpenFile
+      demangled: ''
+      offset: 000037C2
+    - name: Fat_Open
+      demangled: ''
+      offset: 00003A09
+    - name: Fat_Create
+      demangled: ''
+      offset: 00003B32
+    - name: VFAT_DeleteFile
+      demangled: ''
+      offset: 00003D67
+    - name: VFAT_FileAttributes
+      demangled: ''
+      offset: 00003F91
+    - name: GetCompressedSize
+      demangled: ''
+      offset: 0000419B
+    - name: NetExtAttrib
+      demangled: ''
+      offset: 000041F6
+    - name: NetSearch
+      demangled: ''
+      offset: 000043EB
+    - name: Fat_Find_First
+      demangled: ''
+      offset: 0000444E
+    - name: FindFirstSub
+      demangled: ''
+      offset: '00004463'
+    - name: Fat_Find_Next
+      demangled: ''
+      offset: '00004577'
+    - name: VFAT_RenameFile
+      demangled: ''
+      offset: 0000467E
+    - name: RenameMove
+      demangled: ''
+      offset: 000046D3
+    - name: RenameMeta
+      demangled: ''
+      offset: 00004B9B
+    - name: RenameInPlace
+      demangled: ''
+      offset: 00004F40
+    - name: VFAT_Unmount
+      demangled: ''
+      offset: 000050CD
+    - name: UnmountSub
+      demangled: ''
+      offset: 0000539E
+    - name: VFAT_DiskInfo
+      demangled: ''
+      offset: 000053C6
+    - name: UpdateFSInfo
+      demangled: ''
+      offset: 000054FA
+    - name: AllFileSizesOkay
+      demangled: ''
+      offset: '00005550'
+    - name: NetFlush
+      demangled: ''
+      offset: 0000557B
+    - name: VFAT_FlushFile
+      demangled: ''
+      offset: 0000557B
+    - name: SetPathFlags
+      demangled: ''
+      offset: '00005601'
+    - name: IsShortNameLossy
+      demangled: ''
+      offset: '00005652'
+    - name: ReinitOFTPosInfo
+      demangled: ''
+      offset: '00005688'
+    - name: CompressIOCTL
+      demangled: ''
+      offset: 000056D8
+    - name: IOSSend
+      demangled: ''
+      offset: '000056E9'
+    - name: VFAT_IORDone
+      demangled: ''
+      offset: '00005772'
+    - name: PRet_OK
+      demangled: ''
+      offset: '00005780'
+    - name: PRet_Err
+      demangled: ''
+      offset: '00005782'
+    - name: Ret_BadHandMem
+      demangled: ''
+      offset: 000057AC
+    - name: Ret_BadHand
+      demangled: ''
+      offset: 000057B1
+    - name: Ret_OK
+      demangled: ''
+      offset: 000057B8
+    - name: Ret_Err
+      demangled: ''
+      offset: 000057BA
+    - name: Ret_Errax
+      demangled: ''
+      offset: 000057BD
+    - name: Ret_Err_NoCleanup
+      demangled: ''
+      offset: 0000587D
+    - name: DoTrap
+      demangled: ''
+      offset: 000058AC
+    - name: NetFileLocks
+      demangled: ''
+      offset: 000058B4
+    - name: VFAT_LockFile
+      demangled: ''
+      offset: 000058B4
+    - name: VFAT_FileTime
+      demangled: ''
+      offset: 0000592A
+    - name: NetRead
+      demangled: ''
+      offset: 00005A86
+    - name: VFAT_ReadFile
+      demangled: ''
+      offset: 00005A86
+    - name: VFAT_WriteFile
+      demangled: ''
+      offset: 00005BF9
+    - name: VFAT_CloseFile
+      demangled: ''
+      offset: 000060EC
+    - name: VFAT_CommitFile
+      demangled: ''
+      offset: '00006266'
+    - name: NetCommit
+      demangled: ''
+      offset: '00006266'
+    - name: NetSeek
+      demangled: ''
+      offset: '000062E9'
+    - name: VFAT_DasdIO
+      demangled: ''
+      offset: '00006351'
+    - name: VFAT_EnterLeaveVolLock
+      demangled: ''
+      offset: 000063C3
+    - name: VFAT_FormatHelpers
+      demangled: ''
+      offset: 000064BD
+    - name: VFHSetAllocInfo
+      demangled: ''
+      offset: 000064F8
+    - name: VFHForceMediaChng
+      demangled: ''
+      offset: '00006554'
+    - name: VFHSetDPBFrmBPB
+      demangled: ''
+      offset: '00006554'
+    - name: VFHGetSetActFATandMirr
+      demangled: ''
+      offset: 0000655B
+    - name: VFHGetSetRootDirClus
+      demangled: ''
+      offset: '00006660'
+    - name: CopyFAT
+      demangled: ''
+      offset: '00006704'
+    - name: UpdateBoot
+      demangled: ''
+      offset: '00006762'
+    - name: VFAT_ReadSectors
+      demangled: ''
+      offset: 0000679D
+    - name: VFAT_WriteSectors
+      demangled: ''
+      offset: 0000682E
+    - name: WriteExtent
+      demangled: ''
+      offset: 0000694D
+    - name: FindDPB
+      demangled: ''
+      offset: 00006A85
+    - name: MakeExtDPB
+      demangled: ''
+      offset: 00006AB9
+    - name: VFAT_GetDPB
+      demangled: ''
+      offset: 00006BBD
+    - name: MapI25Error
+      demangled: ''
+      offset: 00006CB9
+    - name: GetFreeEstimate
+      demangled: ''
+      offset: 00006CD4
+    - name: GuaranteeOneCluster
+      demangled: ''
+      offset: 00006D54
+    - name: GetFreeGuarantee
+      demangled: ''
+      offset: 00006D5C
+    - name: InvalidateFreeCounts
+      demangled: ''
+      offset: 00006D9E
+    - name: ZeroFreeCounts
+      demangled: ''
+      offset: 00006DA3
+    - name: GetFreeCount
+      demangled: ''
+      offset: 00006DBF
+    - name: DirtySector
+      demangled: ''
+      offset: '00006E48'
+    - name: DirtyBuffer
+      demangled: ''
+      offset: 00006E5F
+    - name: SetWriteThrough
+      demangled: ''
+      offset: '00006E80'
+    - name: CheckWriteThrough
+      demangled: ''
+      offset: 00006ECF
+    - name: WriteAsyncSwapPage
+      demangled: ''
+      offset: 00006EF6
+    - name: InvalidateFAT2Sectors
+      demangled: ''
+      offset: 00006FE1
+    - name: VFAT_IOCtl
+      demangled: ''
+      offset: 000070BC
+    - name: passioctl_down
+      demangled: ''
+      offset: 000070FE
+    - name: VFAT_SetMediaID
+      demangled: ''
+      offset: 000071D0
+    - name: VFAT_GetMediaID
+      demangled: ''
+      offset: '00007280'
+    - name: VFAT_GetDiskFreeSpaceRatio
+      demangled: ''
+      offset: 000072F2
+    - name: VFAT_SetDiskFreeSpaceRatio
+      demangled: ''
+      offset: '00007312'
+    - name: pioc_440d_rw_track
+      demangled: ''
+      offset: 0000737E
+    - name: VFAT_CVMIOCTL
+      demangled: ''
+      offset: 0000739F
+    - name: VFATMountTab
+      demangled: ''
+      offset: '00007444'
+    - name: Mount_Fat
+      demangled: ''
+      offset: '00007460'
+    - name: MFS
+      demangled: ''
+      offset: '00007544'
+    - name: AllocNameHashTable
+      demangled: ''
+      offset: '00007768'
+    - name: AllocCountArray
+      demangled: ''
+      offset: 000077CD
+    - name: VFS
+      demangled: ''
+      offset: 0000780A
+    - name: MountChild
+      demangled: ''
+      offset: '00007954'
+    - name: VFAT_FailOp
+      demangled: ''
+      offset: 00007AE6
+    - name: VFAT_UnmountBadChild
+      demangled: ''
+      offset: 00007AF4
+    - name: CmpVol
+      demangled: ''
+      offset: 00007B09
+    - name: MakeVol
+      demangled: ''
+      offset: 00007B9E
+    - name: IsCompressedVol
+      demangled: ''
+      offset: 000080C1
+    - name: UpdateBootVolLabel
+      demangled: ''
+      offset: '00008121'
+    - name: VolLabelLen
+      demangled: ''
+      offset: 000081A8
+    - name: ValidateVolGeometry
+      demangled: ''
+      offset: 000081BF
+    - name: SetDiskFreeSpaceThreshold
+      demangled: ''
+      offset: 000082C9
+    - name: DoRead
+      demangled: ''
+      offset: '00008334'
+    - name: SwapperReadExtent
+      demangled: ''
+      offset: 000083D0
+    - name: SwapperWrite
+      demangled: ''
+      offset: '00008425'
+    - name: SwapperWriteExtent
+      demangled: ''
+      offset: '00008458'
+    - name: ReadExtent
+      demangled: ''
+      offset: '00008475'
+    - name: ReadExtentSub
+      demangled: ''
+      offset: '00008500'
+    - name: ExtentCached
+      demangled: ''
+      offset: '00008857'
+    - name: ReadCB
+      demangled: ''
+      offset: 0000887F
+    - name: RxAllocBfr
+      demangled: ''
+      offset: 000089F0
+    - name: BufWrt
+      demangled: ''
+      offset: 00008A0C
+    - name: CompRunLen
+      demangled: ''
+      offset: 00008A9E
+    - name: BreakDown
+      demangled: ''
+      offset: 00008B00
+    - name: Fat_IO_Setup_Async
+      demangled: ''
+      offset: 00008B4A
+    - name: Fat_IO_Setup
+      demangled: ''
+      offset: 00008B4E
+    - name: FreeHint
+      demangled: ''
+      offset: 00008B97
+    - name: Allocate
+      demangled: ''
+      offset: 00008C25
+    - name: AllocateContig
+      demangled: ''
+      offset: '00009043'
+    - name: AddToFATCache
+      demangled: ''
+      offset: 000090EB
+    - name: ResetFATCacheNoCheck
+      demangled: ''
+      offset: '00009120'
+    - name: ResetFATCache
+      demangled: ''
+      offset: '00009120'
+    - name: IsLastCluster
+      demangled: ''
+      offset: '00009150'
+    - name: Release
+      demangled: ''
+      offset: 000091A1
+    - name: Truncate
+      demangled: ''
+      offset: 000091A3
+    - name: FigRec
+      demangled: ''
+      offset: '000092E3'
+    - name: FillSft
+      demangled: ''
+      offset: 000092FE
+    - name: FileMapped
+      demangled: ''
+      offset: 0000936F
+    - name: FndClus
+      demangled: ''
+      offset: '000093E7'
+    - name: EnumSFT
+      demangled: ''
+      offset: '00009424'
+    - name: FindOFT
+      demangled: ''
+      offset: 0000945A
+    - name: GOFT
+      demangled: ''
+      offset: 000094BE
+    - name: beginDoOpMove
+      demangled: ''
+      offset: 0000970C
+    - name: DoOpMove
+      demangled: ''
+      offset: 0000970C
+    - name: DoOpMovePage
+      demangled: ''
+      offset: '00009735'
+    - name: DoOpMoveExcept
+      demangled: ''
+      offset: 0000977A
+    - name: endDoOpMove
+      demangled: ''
+      offset: 0000977A
+    - name: MarkOFTInvalid
+      demangled: ''
+      offset: '00009780'
+    - name: Flush_Timed_Out
+      demangled: ''
+      offset: 0000979D
+    - name: Write_List
+      demangled: ''
+      offset: 000098FE
+    - name: Write_List_Int
+      demangled: ''
+      offset: '00009925'
+    - name: NeedPopup
+      demangled: ''
+      offset: 00009C2C
+    - name: WL_Note
+      demangled: ''
+      offset: 00009C98
+    - name: WriteMore
+      demangled: ''
+      offset: '00009E27'
+    - name: Call_Write_List
+      demangled: ''
+      offset: 00009E5C
+    - name: CleanBuf
+      demangled: ''
+      offset: '00009E74'
+    - name: IncWrite
+      demangled: ''
+      offset: 00009EB5
+    - name: DecWrite
+      demangled: ''
+      offset: 00009ED5
+    - name: CheckUnlock
+      demangled: ''
+      offset: 00009EDB
+    - name: ScaleEvent
+      demangled: ''
+      offset: 00009F06
+    - name: Lazy_Idle
+      demangled: ''
+      offset: 00009F4B
+    - name: Observe_Lazy_Idle
+      demangled: ''
+      offset: 0000A024
+    - name: Write_Lazy
+      demangled: ''
+      offset: 0000A05E
+    - name: Lazy_New_Thread
+      demangled: ''
+      offset: 0000A194
+    - name: Force_Write_Lazy
+      demangled: ''
+      offset: 0000A1B4
+    - name: FcbChecksum
+      demangled: ''
+      offset: 0000A1DC
+    - name: LNInitLNInfo
+      demangled: ''
+      offset: 0000A1E8
+    - name: LNUpdateColl
+      demangled: ''
+      offset: 0000A2FA
+    - name: LNScanColl
+      demangled: ''
+      offset: 0000A340
+    - name: PackOemUniNames
+      demangled: ''
+      offset: 0000A3D2
+    - name: TunnelCreationDateTime
+      demangled: ''
+      offset: 0000A539
+    - name: SelectShortName
+      demangled: ''
+      offset: 0000A55D
+    - name: GetNumTailHint
+      demangled: ''
+      offset: 0000A5C4
+    - name: UniFatGetPath
+      demangled: ''
+      offset: 0000A60C
+    - name: UniFindEntry
+      demangled: ''
+      offset: 0000A7B8
+    - name: ReturnPathElem
+      demangled: ''
+      offset: 0000AE8B
+    - name: UpdateFreeDirOrds
+      demangled: ''
+      offset: 0000AF12
+    - name: LNFreeEntrys
+      demangled: ''
+      offset: 0000AF6A
+    - name: AutoGenerateBasisName
+      demangled: ''
+      offset: 0000B01B
+    - name: VerifyNameAssoc
+      demangled: ''
+      offset: 0000B13D
+    - name: DirentNameToUniFcbAndShortName
+      demangled: ''
+      offset: 0000B1C9
+    - name: CheckFileLock
+      demangled: ''
+      offset: 0000B274
+    - name: CreateSFT
+      demangled: ''
+      offset: 0000B2B0
+    - name: Date32
+      demangled: ''
+      offset: 0000B2CC
+    - name: MemPageLock
+      demangled: ''
+      offset: 0000B2D8
+    - name: MemPageUnlock
+      demangled: ''
+      offset: 0000B390
+    - name: PackName
+      demangled: ''
+      offset: 0000B3B6
+    - name: SetTimes
+      demangled: ''
+      offset: 0000B3E3
+    - name: RelOFToc
+      demangled: ''
+      offset: 0000B43B
+    - name: RelOftFatCache
+      demangled: ''
+      offset: 0000B464
+    - name: RelOFT
+      demangled: ''
+      offset: 0000B488
+    - name: RelOftNoChk
+      demangled: ''
+      offset: 0000B48E
+    - name: LockOFT
+      demangled: ''
+      offset: 0000B4CB
+    - name: UnLockOFT2
+      demangled: ''
+      offset: 0000B4F9
+    - name: UnLockOFT
+      demangled: ''
+      offset: 0000B4F9
+    - name: HoldOFT
+      demangled: ''
+      offset: 0000B50E
+    - name: UnHoldOFT
+      demangled: ''
+      offset: 0000B51F
+    - name: ChkHoldOFT
+      demangled: ''
+      offset: 0000B525
+    - name: CommitFileData
+      demangled: ''
+      offset: 0000B53C
+    - name: CAS
+      demangled: ''
+      offset: 0000B67C
+    - name: AGHSD
+      demangled: ''
+      offset: 0000B6A2
+    - name: APGHS
+      demangled: ''
+      offset: 0000B6B4
+    - name: FHS
+      demangled: ''
+      offset: 0000B6CC
+    - name: Block
+      demangled: ''
+      offset: 0000B6E0
+    - name: Wakeup
+      demangled: ''
+      offset: 0000B718
+    - name: Wakeupi
+      demangled: ''
+      offset: 0000B718
+    - name: FullCrit
+      demangled: ''
+      offset: 0000B72B
+    - name: RelFullCrit
+      demangled: ''
+      offset: 0000B78E
+    - name: DoFFHold
+      demangled: ''
+      offset: 0000B7D8
+    - name: UnHoldFF
+      demangled: ''
+      offset: 0000B821
+    - name: VFAT_async_event
+      demangled: ''
+      offset: 0000B850
+    - name: GetSGIOHdrEvtTime
+      demangled: ''
+      offset: 0000B85C
+    - name: GetIOHdrEvtTime
+      demangled: ''
+      offset: 0000B86F
+    - name: GetIOHdr
+      demangled: ''
+      offset: 0000B879
+    - name: AllocIOHdr
+      demangled: ''
+      offset: 0000B8FB
+    - name: RetIOHdr
+      demangled: ''
+      offset: 0000B96E
+    - name: CreateIOR
+      demangled: ''
+      offset: 0000B9A1
+    - name: AIH
+      demangled: ''
+      offset: 0000B9D6
+    - name: DIH
+      demangled: ''
+      offset: 0000B9FE
+    - name: SatisfyDevDmds
+      demangled: ''
+      offset: 0000BA18
+    - name: GetSerial
+      demangled: ''
+      offset: 0000BA34
+    - name: PutSerial
+      demangled: ''
+      offset: 0000BA59
+    - name: GetVolLabel
+      demangled: ''
+      offset: 0000BA77
+    - name: InvalidateCache
+      demangled: ''
+      offset: 0000BBF0
+    - name: InvalidateCacheSub
+      demangled: ''
+      offset: 0000BC4F
+    - name: IsVolTrackExempt
+      demangled: ''
+      offset: 0000BC79
+    - name: VFAT_FindOpen
+      demangled: ''
+      offset: 0000BCC0
+    - name: VFAT_FindNext
+      demangled: ''
+      offset: 0000BE02
+    - name: VFAT_FindClose
+      demangled: ''
+      offset: 0000BEC5
+    - name: FindComplete
+      demangled: ''
+      offset: 0000BEFF
+    - name: TerminateHFind
+      demangled: ''
+      offset: 0000C02A
+    - name: VFAT_GetVolInfo
+      demangled: ''
+      offset: 0000C052
+    - name: VFAT_GetInfoByHandle
+      demangled: ''
+      offset: 0000C0F8
+    - name: GetPathNameByFileHandle
+      demangled: ''
+      offset: 0000C1CF
+    - name: ResyncHandle
+      demangled: ''
+      offset: 0000C2CC
+    - name: VFAT_MapCacheBlock
+      demangled: ''
+      offset: 0000C472
+    - name: VFAT_UnmapCacheBlock
+      demangled: ''
+      offset: 0000C567
+    - name: AllocLNInfo
+      demangled: ''
+      offset: 0000C57D
+    - name: FreeLNInfo
+      demangled: ''
+      offset: 0000C5BB
+    - name: OpenOpenFile
+      demangled: ''
+      offset: 0000C5E5
+    - name: RemountVol
+      demangled: ''
+      offset: 0000C624
+    - name: VFAT_Control
+      demangled: ''
+      offset: 0000C75C
+    - name: VFAT_DevIOControl
+      demangled: ''
+      offset: 0000C792
+    - name: VFAT_SignalSystemExit
+      demangled: ''
+      offset: 0000C7AA
+    - name: VFAT_Dump_Debug
+      demangled: ''
+      offset: 0000C7B2
+    - name: Clear_Stats
+      demangled: ''
+      offset: 0000C7CA
+    - name: VFAT_VM_Terminate
+      demangled: ''
+      offset: 0000C7DA
+    - name: VFAT_Query_Destroy
+      demangled: ''
+      offset: 0000C7DC
+    - name: SchedDiskSpaceBroadcast
+      demangled: ''
+      offset: 0000C7E0
+    - name: _AppyBroadcastLowDiskSpace
+      demangled: ''
+      offset: 0000C809
+  - num: '2'
+    name: _LMSG$1
+    offset: 0000F640
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000064'
+  - num: '3'
+    name: _DB1CODE
+    offset: 0000FFF0
+    symbols:
+    - name: Dump_OFT
+      demangled: ''
+      offset: '00000000'
+    - name: VFAT_Printf
+      demangled: ''
+      offset: '00000258'
+    - name: VFAT_Dump_Debug2
+      demangled: ''
+      offset: '00000279'
+    - name: Toggle_Zero_Suppress
+      demangled: ''
+      offset: 0000032A
+    - name: Dump_Log
+      demangled: ''
+      offset: 0000034A
+    - name: Flush_Log
+      demangled: ''
+      offset: '00000358'
+    - name: Set_Log_Mask
+      demangled: ''
+      offset: '00000359'
+    - name: Dump_Threads
+      demangled: ''
+      offset: 0000035A
+    - name: VolTabDesc
+      demangled: ''
+      offset: '00000413'
+    - name: BUFNODEDesc
+      demangled: ''
+      offset: 0000082F
+    - name: BUFSHORTDesc
+      demangled: ''
+      offset: '00000907'
+    - name: DIR_CACHEDesc
+      demangled: ''
+      offset: '00000979'
+    - name: FCHDesc
+      demangled: ''
+      offset: '000009E8'
+    - name: IOREQDesc
+      demangled: ''
+      offset: 00000A4E
+    - name: IOSTKDesc
+      demangled: ''
+      offset: 00000B1C
+    - name: fdRWDesc
+      demangled: ''
+      offset: 00000B66
+    - name: fdOCDesc
+      demangled: ''
+      offset: 00000C6D
+    - name: OFTDesc
+      demangled: ''
+      offset: 00000D89
+    - name: SFTDesc
+      demangled: ''
+      offset: 00000F3B
+    - name: STATSDesc
+      demangled: ''
+      offset: 00000FE6
+    - name: Dump_Vol
+      demangled: ''
+      offset: 000011AD
+    - name: Dump_Dir_Cache
+      demangled: ''
+      offset: '00001265'
+    - name: Dump_BufNode
+      demangled: ''
+      offset: 000012BA
+    - name: Dump_BufChain
+      demangled: ''
+      offset: 000012CC
+    - name: w_BufChain
+      demangled: ''
+      offset: 000012DE
+    - name: Dump_BufDirty
+      demangled: ''
+      offset: 000012ED
+    - name: w_BufDirty
+      demangled: ''
+      offset: 000012FF
+    - name: Dump_IOREQ
+      demangled: ''
+      offset: '00001316'
+    - name: Dump_OFTChain
+      demangled: ''
+      offset: 000013DD
+    - name: Dump_SFT
+      demangled: ''
+      offset: 0000141A
+    - name: Dump_Stats
+      demangled: ''
+      offset: '00001474'
+    - name: SFTToPackedName
+      demangled: ''
+      offset: '00001484'
+  - num: '4'
+    name: _RCODE
+    offset: '00010060'
+    symbols:
+    - name: RealmodeInit
+      demangled: ''
+      offset: '00000000'
+  - num: '5'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: Init_CompatFileSysFlags
+      demangled: ''
+      offset: '00000000'
+    - name: Drv_Reg_Pkt
+      demangled: ''
+      offset: 000002FC
+    - name: FSInit
+      demangled: ''
+      offset: '00000342'
+    - name: ReadVFATRegistry
+      demangled: ''
+      offset: 000003F4
+    - name: ReadVFATNoVolTrackPatterns
+      demangled: ''
+      offset: '00000499'
+    - name: ReadVFATIni
+      demangled: ''
+      offset: 000005DD
+    - name: TaskInit
+      demangled: ''
+      offset: 000005FC
+    - name: VFAT_Sys_Critical_Init
+      demangled: ''
+      offset: '00000600'
+    - name: VFAT_Device_Init
+      demangled: ''
+      offset: '00000602'
+    - name: VFAT_Init_Complete
+      demangled: ''
+      offset: 000007C4
+    - name: Vfat_IOS_Reg
+      demangled: ''
+      offset: 00000A06
+    - name: VFAT_Register_MMCallBack
+      demangled: ''
+      offset: 00000A34
+    - name: VFAT_Install_Async_Manager
+      demangled: ''
+      offset: 00000A50

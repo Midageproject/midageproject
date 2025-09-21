@@ -1,0 +1,3999 @@
+filename: udf.vxd
+binary: UDF
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../udfapi.c
+  - ../udf.asm
+  - ../udfdbg.asm
+  - ../udffind.c
+  - ../udfios.c
+  - ../udfmount.c
+  - ../udfobj.c
+  - ../udfsem.c
+  - hui_Seek.h
+  segments:
+  - num: '1'
+    name: .bss
+    offset: 00001DF0
+    symbols:
+    - name: _PAEP_rpm_change
+      processed: ''
+      offset: '00000000'
+    - name: _udfasrchDOS
+      processed: ''
+      offset: '00000010'
+    - name: _PAEP_3mode_config
+      processed: ''
+      offset: '00000090'
+    - name: _udfaphusDOS
+      processed: ''
+      offset: 000000A0
+    - name: _udfasi
+      processed: ''
+      offset: '00000120'
+    - name: _udfisiFree
+      processed: ''
+      offset: '00001110'
+    - name: _PAEP_rpm_inquiry
+      processed: ''
+      offset: '00001114'
+    - name: _fTearDown
+      processed: ''
+      offset: '00001118'
+    - name: _UDF_VCACHE_fsdid
+      processed: ''
+      offset: 0000111C
+    - name: _smsGlobal
+      processed: ''
+      offset: '00001120'
+    - name: _pdetailCached
+      processed: ''
+      offset: 0000112C
+    - name: _pirCached
+      processed: ''
+      offset: '00001130'
+    - name: _udfsrchDOS
+      processed: ''
+      offset: '00001134'
+    - name: _udffDebug
+      processed: ''
+      offset: '00001138'
+    - name: _udfStat
+      processed: ''
+      offset: 0000113C
+    - name: _LOGCBHWSECTOR
+      processed: ''
+      offset: '000011E4'
+    - name: _CBHWSECTOR
+      processed: ''
+      offset: '000011E8'
+    - name: _CCACHEHWSEC
+      processed: ''
+      offset: 000011EC
+    - name: _CBRAMAX
+      processed: ''
+      offset: 000011F0
+    - name: _CBRAMAX2
+      processed: ''
+      offset: 000011F4
+    - name: _CBRAMIN
+      processed: ''
+      offset: 000011F8
+    - name: _CCACHERA
+      processed: ''
+      offset: 000011FC
+    - name: _udfsecDebug
+      processed: ''
+      offset: '00001200'
+    - name: _volfuncUDF
+      processed: ''
+      offset: '00001204'
+    - name: _hndlmiscUDFFind
+      processed: ''
+      offset: '00001244'
+    - name: _hndlmiscUDFFile
+      processed: ''
+      offset: '00001268'
+    - name: _strAssertFailure
+      processed: ''
+      offset: 0000128C
+    - name: _strWarnBadMaster
+      processed: ''
+      offset: 000012C8
+    - name: _strWarnMemory
+      processed: ''
+      offset: '00001304'
+    - name: _MonthToDays
+      processed: ''
+      offset: 00001B18
+    - name: _asCRC
+      processed: ''
+      offset: 000026B4
+    - name: _regid_part_contid_nsr02
+      processed: ''
+      offset: 000028B4
+    - name: _regid_UDF_DomainID
+      processed: ''
+      offset: 000028D4
+    - name: _ilbUDF
+      processed: ''
+      offset: 000028F4
+    - name: _hueEOFMarker
+      processed: ''
+      offset: '00002928'
+    - name: _OSTAUnicode
+      processed: ''
+      offset: '00002944'
+    - name: _DefaultVolID
+      processed: ''
+      offset: '00002984'
+    - name: _UDF_IOS_aer
+      processed: ''
+      offset: '00002990'
+    - name: udfLockable_Debug_Flags
+      processed: ''
+      offset: 00002A04
+    - name: UDF_DDB
+      processed: ''
+      offset: 00002A08
+    - name: udfipageLockable
+      processed: ''
+      offset: 00002A58
+    - name: udfcpageLockable
+      processed: ''
+      offset: 00002A5C
+    - name: udfcCodeLocks
+      processed: ''
+      offset: 00002A60
+    - name: udfpHeapFree
+      processed: ''
+      offset: 00002A64
+    - name: _udfhuvHead
+      processed: ''
+      offset: 00002A68
+    - name: _udfirHead
+      processed: ''
+      offset: 00002A80
+    - name: udfcentLogMinus1
+      processed: ''
+      offset: 00002C88
+    - name: udfpLogBuffer
+      processed: ''
+      offset: 00002C8C
+    - name: udfHeapHdr
+      processed: ''
+      offset: 00002C90
+    - name: STATDesc
+      processed: ''
+      offset: 00002F58
+    - name: UDF_Control
+      processed: ''
+      offset: 0000328C
+    - name: _UDF_ReturnError
+      processed: ''
+      offset: '00003332'
+    - name: _UDF_Dispatcher
+      processed: ''
+      offset: '00003332'
+    - name: _UDF_MountVolume
+      processed: ''
+      offset: '00003336'
+    - name: _UDF_Delete
+      processed: ''
+      offset: 0000333A
+    - name: _UDF_Dir
+      processed: ''
+      offset: 0000333E
+    - name: _UDF_FileAttrib
+      processed: ''
+      offset: '00003342'
+    - name: _UDF_Flush
+      processed: ''
+      offset: '00003346'
+    - name: _UDF_GetDiskInfo
+      processed: ''
+      offset: 0000334A
+    - name: _UDF_Open
+      processed: ''
+      offset: 0000334E
+    - name: _UDF_Rename
+      processed: ''
+      offset: '00003352'
+    - name: _UDF_Search
+      processed: ''
+      offset: '00003356'
+    - name: _UDF_Query
+      processed: ''
+      offset: 0000335A
+    - name: _UDF_Disconnect
+      processed: ''
+      offset: 0000335E
+    - name: _UDF_UNCPipeReq
+      processed: ''
+      offset: '00003362'
+    - name: _UDF_IOCTL16Drive
+      processed: ''
+      offset: '00003366'
+    - name: _UDF_GetDiskParms
+      processed: ''
+      offset: 0000336A
+    - name: _UDF_FindOpen
+      processed: ''
+      offset: 0000336E
+    - name: _UDF_DASDIO
+      processed: ''
+      offset: '00003372'
+    - name: _UDF_ReadFile
+      processed: ''
+      offset: '00003376'
+    - name: _UDF_WriteFile
+      processed: ''
+      offset: 0000337A
+    - name: _UDF_Seek
+      processed: ''
+      offset: 0000337E
+    - name: _UDF_Close
+      processed: ''
+      offset: '00003382'
+    - name: _UDF_Commit
+      processed: ''
+      offset: '00003386'
+    - name: _UDF_FileLocks
+      processed: ''
+      offset: 0000338A
+    - name: _UDF_FileTimes
+      processed: ''
+      offset: 0000338E
+    - name: _UDF_PipeRequest
+      processed: ''
+      offset: '00003392'
+    - name: _UDF_HandleInfo
+      processed: ''
+      offset: '00003396'
+    - name: _UDF_EnumHandle
+      processed: ''
+      offset: 0000339A
+    - name: _UDF_FindNextFile
+      processed: ''
+      offset: 0000339E
+    - name: _UDF_FindClose
+      processed: ''
+      offset: 000033A2
+    - name: _UDF_FindNextFail
+      processed: ''
+      offset: 000033A6
+    - name: _UDF_Entry
+      processed: ''
+      offset: 000033AE
+    - name: _UDF_Exit
+      processed: ''
+      offset: 000033B3
+    - name: UDF_DevIOControl
+      processed: ''
+      offset: 000033B4
+    - name: _printf
+      processed: ''
+      offset: 000033CB
+    - name: _printf_Stop
+      processed: ''
+      offset: 000033DF
+    - name: _UDF_VCACHE_CheckAvail@4
+      processed: ''
+      offset: '00003402'
+    - name: _UDFGetCacheStats@4
+      processed: ''
+      offset: 0000341D
+    - name: UDF_VCACHE_Discard
+      processed: ''
+      offset: '00003482'
+    - name: _UDF_VCACHE_FindBlock@16
+      processed: ''
+      offset: 000034A3
+    - name: _UDF_VCACHE_FreeBlock@4
+      processed: ''
+      offset: '00003545'
+    - name: _UDF_VCACHE_MakeMRU@4
+      processed: ''
+      offset: '00003558'
+    - name: _UDF_VCACHE_Hold@4
+      processed: ''
+      offset: 0000356B
+    - name: _UDF_VCACHE_Unhold@4
+      processed: ''
+      offset: 0000357F
+    - name: _UDF_VCACHE_Destroy@4
+      processed: ''
+      offset: '00003598'
+    - name: _UDF_VCACHE_Enum@12
+      processed: ''
+      offset: 000035B8
+    - name: _UDF_VCACHE_Enum_CBStub
+      processed: ''
+      offset: '000035E2'
+    - name: _UDF_VMM_PageFree
+      processed: ''
+      offset: 000035F1
+    - name: _UDF_VMM_BlockOnID
+      processed: ''
+      offset: 000035F7
+    - name: _UDF_VMM_SignalID
+      processed: ''
+      offset: 000035FD
+    - name: _UDF_VMM_GetSystemTime
+      processed: ''
+      offset: '00003603'
+    - name: _UDF_VMM_HeapAllocate@8
+      processed: ''
+      offset: '00003609'
+    - name: _UDF_VMM_HeapFree@12
+      processed: ''
+      offset: '00003685'
+    - name: _UDF_VMM_MapFlatDSDX
+      processed: ''
+      offset: 0000371F
+    - name: _UDF_VMM_LinPageLock
+      processed: ''
+      offset: '00003729'
+    - name: _UDF_VMM_LinPageUnlock
+      processed: ''
+      offset: 0000372F
+    - name: _UDF_IOS_Meet_Criteria
+      processed: ''
+      offset: '00003735'
+    - name: _UDF_IOS_SendCommand@4
+      processed: ''
+      offset: 0000373B
+    - name: __UDF_IOS_Callback@0
+      processed: ''
+      offset: 0000378A
+    - name: __UDF_IOS_ReadAheadDone@0
+      processed: ''
+      offset: 000037B3
+    - name: _UDF_IOS_Service
+      processed: ''
+      offset: 000037F2
+    - name: _UDF_IOS_MapIORSToI21@4
+      processed: ''
+      offset: 000037F8
+    - name: _UDF_IOS_QueryUDFMount
+      processed: ''
+      offset: '00003805'
+    - name: _UDF_Safe_memcpy@12
+      processed: ''
+      offset: 0000380B
+    - name: _udfTearDown
+      processed: ''
+      offset: '00003823'
+    - name: _UDF_IFS_Win32ToDosTime@4
+      processed: ''
+      offset: '00003825'
+    - name: _UDF_IFS_CreateBasis@12
+      processed: ''
+      offset: 0000383B
+    - name: _UDF_IFS_AppendBasisTail
+      processed: ''
+      offset: 0000389A
+    - name: _UDF_IFS_FcbToShort
+      processed: ''
+      offset: 000038A0
+    - name: _UDF_IFS_GetTimeZoneBias@0
+      processed: ''
+      offset: 000038A6
+    - name: _UDF_IFS_MetaMatch
+      processed: ''
+      offset: 000038AC
+    - name: _UDF_IFS_BCSToUni
+      processed: ''
+      offset: 000038B2
+    - name: _UDF_IFS_UniToBCS
+      processed: ''
+      offset: 000038B8
+    - name: _UDF_IFS_CheckAccessConflict
+      processed: ''
+      offset: 000038BE
+    - name: _UDF_IFS_LockFile
+      processed: ''
+      offset: 000038C4
+    - name: _UDF_IFS_UnlockFile
+      processed: ''
+      offset: 000038CA
+    - name: _UDF_IFS_RemoveLocks
+      processed: ''
+      offset: 000038D0
+    - name: _UDF_IFS_CheckLocks
+      processed: ''
+      offset: 000038D6
+    - name: _UDF_IFS_ShortToFCB
+      processed: ''
+      offset: 000038DC
+    - name: _QMATH_Above@8
+      processed: ''
+      offset: 0000392E
+    - name: _UDF_SemReq@16
+      processed: ''
+      offset: '00003952'
+    - name: _UDF_SemClear@8
+      processed: ''
+      offset: 00003BA8
+    - name: _UDF_SemDowngrade@8
+      processed: ''
+      offset: 00003C0D
+    - name: _UDFLinkHUV@4
+      processed: ''
+      offset: 00003C5F
+    - name: _UDFUnlinkHUV@4
+      processed: ''
+      offset: 00003C8B
+    - name: _UDFLinkIOREQ@4
+      processed: ''
+      offset: 00003CB0
+    - name: _UDFUnlinkIOREQ@4
+      processed: ''
+      offset: 00003CDC
+    - name: _UDFResetNomount@0
+      processed: ''
+      offset: 00003CF6
+    - name: _UDFLockCode
+      processed: ''
+      offset: 00003D38
+    - name: _UDFUnlockCode
+      processed: ''
+      offset: 00003D7B
+    - name: _UDFPrintf
+      processed: ''
+      offset: 00003DC4
+    - name: UDF_Debug
+      processed: ''
+      offset: 00003DE4
+    - name: _UDFCheckHeap
+      processed: ''
+      offset: 00003E8D
+    - name: _UDFPrintUnicode@4
+      processed: ''
+      offset: 00003ECB
+    - name: CheckRegsUsed
+      processed: ''
+      offset: 00003F38
+    - name: _UDFLog@12
+      processed: ''
+      offset: 00003F7F
+    - name: UDFClearStats
+      processed: ''
+      offset: 0000400E
+    - name: _UDFResetStats@0
+      processed: ''
+      offset: 0000404B
+    - name: _UDFReturnStats@8
+      processed: ''
+      offset: '00004057'
+    - name: UDFDBGDumpStats
+      processed: ''
+      offset: 0000406B
+    - name: UDFStatsIOCTL
+      processed: ''
+      offset: 000040B5
+    - name: _UDFInitSEMINFO@0
+      processed: ''
+      offset: '00004117'
+    - name: _UDFGetSEMINFO@12
+      processed: ''
+      offset: '00004135'
+    - name: _UDFFreeSEMINFO@4
+      processed: ''
+      offset: '00004257'
+    - name: _UDFDerefSEMINFO@8
+      processed: ''
+      offset: 000043DE
+    - name: _UDFCheckSemHierarchy@8
+      processed: ''
+      offset: 000044DA
+    - name: _UDFCheckDeadlock@8
+      processed: ''
+      offset: '000045E7'
+    - name: _UDFAssertSemaphoreOwned@8
+      processed: ''
+      offset: 000047A3
+  - num: '2'
+    name: _DB1CODE
+    offset: 00002C50
+    symbols:
+    - name: UDFDumpLog
+      processed: ''
+      offset: '00000000'
+    - name: UDFGetChar
+      processed: ''
+      offset: '00000110'
+    - name: UDFEvalExp
+      processed: ''
+      offset: 0000011A
+    - name: UDFToggleZeroSuppress
+      processed: ''
+      offset: 0000017C
+    - name: UDFDumpStruct
+      processed: ''
+      offset: 0000019C
+    - name: UDFDumpBySig
+      processed: ''
+      offset: 000004D4
+    - name: UDFDumpBySigSub
+      processed: ''
+      offset: 000004F4
+    - name: UDFDumpHeap
+      processed: ''
+      offset: 0000053E
+    - name: UDFDumpHUE
+      processed: ''
+      offset: 0000059F
+    - name: UDFDumpHUESub
+      processed: ''
+      offset: 000005A6
+    - name: HUFDesc
+      processed: ''
+      offset: 0000068E
+    - name: UDFDumpHUF
+      processed: ''
+      offset: 000007F4
+    - name: UDFDumpHUFSub
+      processed: ''
+      offset: 000007FB
+    - name: HUODesc
+      processed: ''
+      offset: '00000821'
+    - name: UDFDumpHUOTree
+      processed: ''
+      offset: 00000B1B
+    - name: UDFDumpHUOSub
+      processed: ''
+      offset: 00000B59
+    - name: HUPDesc
+      processed: ''
+      offset: 00000B80
+    - name: UDFDumpHUP
+      processed: ''
+      offset: 00000D97
+    - name: UDFDumpHUPSub
+      processed: ''
+      offset: 00000D9E
+    - name: HUSDesc
+      processed: ''
+      offset: 00000DC4
+    - name: UDFDumpHUS
+      processed: ''
+      offset: 00000F41
+    - name: UDFDumpHUSSub
+      processed: ''
+      offset: 00000F48
+    - name: HUVDesc
+      processed: ''
+      offset: 00000F6E
+    - name: UDFDumpHUV
+      processed: ''
+      offset: '00001128'
+    - name: UDFDumpHUVSub
+      processed: ''
+      offset: 0000116D
+    - name: CBHDesc
+      processed: ''
+      offset: '00001194'
+    - name: UDFDumpCBH
+      processed: ''
+      offset: 000012B2
+    - name: UDFDumpCBHSub
+      processed: ''
+      offset: 000012D8
+    - name: HUIDesc
+      processed: ''
+      offset: 0000130E
+    - name: UDFDumpHUI
+      processed: ''
+      offset: 000013F0
+    - name: SEMINFODesc
+      processed: ''
+      offset: 0000141D
+    - name: UDFDumpSEMINFO
+      processed: ''
+      offset: '00001491'
+    - name: UDFSetHWSEC
+      processed: ''
+      offset: 000014D2
+    - name: DESTAGDesc
+      processed: ''
+      offset: 0000154D
+    - name: UDFDumpDESTAG
+      processed: ''
+      offset: 000015DE
+    - name: DETDesc
+      processed: ''
+      offset: 0000160B
+    - name: UDFDumpDET
+      processed: ''
+      offset: 000017BC
+    - name: UDFDumpDETSub
+      processed: ''
+      offset: 000017C3
+    - name: FIDDesc
+      processed: ''
+      offset: '000017E9'
+    - name: UDFDumpFID
+      processed: ''
+      offset: 000018B0
+    - name: UDFDumpFIDSub
+      processed: ''
+      offset: 000018B7
+    - name: ICBFILEDesc
+      processed: ''
+      offset: '000018E7'
+    - name: UDFDumpICBFILE
+      processed: ''
+      offset: 00001B49
+    - name: UDFDumpICBFILESub
+      processed: ''
+      offset: 00001B50
+    - name: ICBTAGDesc
+      processed: ''
+      offset: 00001C08
+    - name: UDFDumpICBTAG
+      processed: ''
+      offset: 00001D1C
+    - name: UDFDumpICBTAGSub
+      processed: ''
+      offset: 00001D23
+    - name: IOREQDesc
+      processed: ''
+      offset: 00001E1C
+    - name: UDFDumpIOREQ
+      processed: ''
+      offset: 00001FAA
+    - name: UDFDumpIOREQSub
+      processed: ''
+      offset: 00001FD5
+    - name: REGIDDesc
+      processed: ''
+      offset: 00001FFB
+    - name: UDFDumpREGID
+      processed: ''
+      offset: 0000206B
+    - name: UDFDumpStats
+      processed: ''
+      offset: '00002098'
+    - name: UDFDumpStatsSub
+      processed: ''
+      offset: 0000209D
+    - name: UDFMarkLog
+      processed: ''
+      offset: 000020B4
+    - name: UDFDumpUnicodePath
+      processed: ''
+      offset: 000020DB
+    - name: UDFDumpUnicodePathSub
+      processed: ''
+      offset: '000020E4'
+    - name: UDFDumpUnicode
+      processed: ''
+      offset: '00002140'
+    - name: udfLogIndex
+      processed: ''
+      offset: '00002174'
+    - name: udfiMark
+      processed: ''
+      offset: '00002178'
+    - name: udffContinue
+      processed: ''
+      offset: 0000217C
+    - name: udfpPrev
+      processed: ''
+      offset: 0000217D
+  - num: '3'
+    name: _STEXT
+    offset: 00002D90
+    symbols:
+    - name: _pHeapFreeHead
+      processed: ''
+      offset: '00000000'
+    - name: _UDFLoaded
+      processed: ''
+      offset: '00000004'
+    - name: _UDF_Safe_memcpy_EH
+      processed: ''
+      offset: '00000008'
+    - name: _UDF_ASM_Safe_memcpy
+      processed: ''
+      offset: '00000018'
+    - name: UDF_WARN_App_Bad_Read_Address
+      processed: ''
+      offset: 0000004D
+  - num: '4'
+    name: L0CKABLE_BEGIN
+    offset: '00006520'
+    symbols:
+    - name: udfLockable
+      processed: ''
+      offset: '00000000'
+    - name: _UDFRunAPI@8
+      processed: ''
+      offset: '00000004'
+    - name: _UFS_OpenFile@4
+      processed: ''
+      offset: 000002F4
+    - name: _UFS_CloseFile@4
+      processed: ''
+      offset: '00000434'
+    - name: _UFS_ReadFile@4
+      processed: ''
+      offset: 000005A2
+    - name: _UFS_Query@4
+      processed: ''
+      offset: 0000076A
+    - name: _UFS_SeekFile@4
+      processed: ''
+      offset: '00000855'
+    - name: _UFS_FileAttributes@4
+      processed: ''
+      offset: 0000093E
+    - name: _UFS_GetDiskInfo@4
+      processed: ''
+      offset: 00000B31
+    - name: _UFS_Search@4
+      processed: ''
+      offset: 00000C49
+    - name: _UFS_FileTimes@4
+      processed: ''
+      offset: 00000C7D
+    - name: _UFS_Flush@4
+      processed: ''
+      offset: 00000DB3
+    - name: _UFS_EnumHandle@4
+      processed: ''
+      offset: '00000E95'
+    - name: _UFS_IOCTL@4
+      processed: ''
+      offset: '00001009'
+    - name: _UFS_DASDIO@4
+      processed: ''
+      offset: '00001517'
+    - name: _UFS_FileLocks@4
+      processed: ''
+      offset: '00001659'
+    - name: _UDFGetBaseAddress@4
+      processed: ''
+      offset: '00001845'
+    - name: _UDFMatchHUV@8
+      processed: ''
+      offset: '00001923'
+    - name: _UDFMakeHUV@12
+      processed: ''
+      offset: 00001AA4
+    - name: _UDFVerifyVolume@4
+      processed: ''
+      offset: 000021D0
+    - name: _UFS_Mount@4
+      processed: ''
+      offset: 0000236D
+    - name: _UFS_Unmount@4
+      processed: ''
+      offset: 0000258A
+    - name: _ufs_SetPartition@8
+      processed: ''
+      offset: 000026DA
+    - name: _ufs_GetPrevailing@12
+      processed: ''
+      offset: '00002775'
+    - name: _ufs_InitPartList@8
+      processed: ''
+      offset: 00002A7D
+    - name: _ufs_FreePartList@4
+      processed: ''
+      offset: 00002B54
+    - name: _ufs_RegIDValidate@8
+      processed: ''
+      offset: 00002BA2
+    - name: _ufs_HighBit@4
+      processed: ''
+      offset: 00002BDC
+    - name: _ufs_Serial@8
+      processed: ''
+      offset: 00002BF3
+    - name: _ufs_TerminateDstring@8
+      processed: ''
+      offset: 00002C6F
+    - name: _UDFOpenPath@12
+      processed: ''
+      offset: 00002CF0
+    - name: _UFS_OpenObj@16
+      processed: ''
+      offset: 00002EBA
+    - name: _UDFLockMem@12
+      processed: ''
+      offset: 0000321D
+    - name: _UDFLockMem2@8
+      processed: ''
+      offset: 000032A2
+    - name: _UDFUnlockMem@12
+      processed: ''
+      offset: 000032D9
+    - name: _UDFUnlockMem2@8
+      processed: ''
+      offset: '00003358'
+    - name: _UDFCheckCache@12
+      processed: ''
+      offset: '00003384'
+    - name: _UDFReadSectors@12
+      processed: ''
+      offset: 0000345C
+    - name: _UDFRead@12
+      processed: ''
+      offset: '00003856'
+    - name: _UFS_Read@12
+      processed: ''
+      offset: 00003B4D
+    - name: _UFS_Locate@12
+      processed: ''
+      offset: 00003C4D
+    - name: _ufs_Extent@16
+      processed: ''
+      offset: '00003E56'
+    - name: _ufs_BuildExtents@8
+      processed: ''
+      offset: 0000421B
+    - name: _ufs_FlushExtents@8
+      processed: ''
+      offset: 0000438D
+    - name: _ufs_FindICB@16
+      processed: ''
+      offset: 000043FB
+    - name: _ufs_WalkICBTree@20
+      processed: ''
+      offset: 000044CD
+    - name: _ufs_OpenFromDetails@12
+      processed: ''
+      offset: 000046A0
+    - name: _UDFEnumerateHUF
+      processed: ''
+      offset: '00004926'
+    - name: _UDFFindPath@12
+      processed: ''
+      offset: 000049FA
+    - name: _UDFFillFindBuffer@8
+      processed: ''
+      offset: 00004B37
+    - name: _UDFFindSub@8
+      processed: ''
+      offset: 00004CA2
+    - name: _UFS_FindOpen@4
+      processed: ''
+      offset: 00004E1E
+    - name: _UFS_FindNext@4
+      processed: ''
+      offset: '00005150'
+    - name: _UFS_FindClose@4
+      processed: ''
+      offset: '00005237'
+    - name: _UFS_Dir@4
+      processed: ''
+      offset: '000052E8'
+    - name: _UFS_OpenObjAsFile@12
+      processed: ''
+      offset: '00005536'
+    - name: _UFS_OpenSearch@16
+      processed: ''
+      offset: '00005600'
+    - name: _UDFMakeAltNames@4
+      processed: ''
+      offset: 000056AD
+    - name: _UDFMakeAltVolLabels@4
+      processed: ''
+      offset: 000057BD
+    - name: _UFS_GetDetails@8
+      processed: ''
+      offset: '00005862'
+    - name: _UFS_NextEntry@8
+      processed: ''
+      offset: 00005D59
+    - name: _UDFCloseHandle@12
+      processed: ''
+      offset: '00005E21'
+    - name: _ufs_MetaMatch@8
+      processed: ''
+      offset: 000061A9
+    - name: _ufs_NameMatch@12
+      processed: ''
+      offset: '000062E2'
+    - name: _ufs_CanonUnicode@16
+      processed: ''
+      offset: 000063BB
+    - name: _ufs_DescriptorCRC@8
+      processed: ''
+      offset: 000064CF
+    - name: _ufs_VerifyDesTag@20
+      processed: ''
+      offset: 0000650E
+    - name: _ufs_UDFToWin32GMT@8
+      processed: ''
+      offset: 000065BA
+    - name: _ufs_GetXAFileTime@12
+      processed: ''
+      offset: 000069FE
+    - name: _ufs_GetXABody@8
+      processed: ''
+      offset: 00006AFC
+    - name: _UDFNewDOSSearchHandle@8
+      processed: ''
+      offset: 00006B8A
+    - name: _UDFGetDOSSearch@12
+      processed: ''
+      offset: 00006C85
+    - name: _UDFFillFindDOS@12
+      processed: ''
+      offset: 00006D25
+    - name: _UDFFindDOSSub@8
+      processed: ''
+      offset: 00006E6A
+    - name: _UDFFindFirstDOS@4
+      processed: ''
+      offset: '00007003'
+    - name: _UDFFindNextDOS@4
+      processed: ''
+      offset: 000072FD
+    - name: _UDFCleanupDOSSearches@4
+      processed: ''
+      offset: 0000740B
+    - name: _UDF_HeapAlloc@8
+      processed: ''
+      offset: '00007541'
+    - name: _UDF_HeapFree@8
+      processed: ''
+      offset: 000075CA
+    - name: _UDF_HUF_Free@4
+      processed: ''
+      offset: '00007608'
+    - name: _UDF_HUO_Free@4
+      processed: ''
+      offset: '00007642'
+    - name: _UDF_HUP_Free@4
+      processed: ''
+      offset: 000076A1
+    - name: _UDF_HUS_Free@4
+      processed: ''
+      offset: 000076DE
+    - name: _UDF_HUV_Free@8
+      processed: ''
+      offset: 0000771B
+    - name: _udf_AllocDetails@4
+      processed: ''
+      offset: '00007857'
+    - name: _udf_FreeDetails@4
+      processed: ''
+      offset: 000078C3
+    - name: _UDFAllocIOREQ@0
+      processed: ''
+      offset: '00007907'
+    - name: _UDFFreeIOREQ@8
+      processed: ''
+      offset: '00007965'
+    - name: _UDF_Global_SemReq@8
+      processed: ''
+      offset: 000079EF
+    - name: _UDF_Global_SemClear@4
+      processed: ''
+      offset: 00007A4D
+    - name: _UDF_HUV_SemReq@12
+      processed: ''
+      offset: 00007AA6
+    - name: _UDF_HUV_SemClear@8
+      processed: ''
+      offset: 00007B44
+    - name: _UDF_HUO_SemReq@12
+      processed: ''
+      offset: 00007BDC
+    - name: _UDF_HUO_SemClear@8
+      processed: ''
+      offset: 00007C7A
+    - name: _UDF_HUF_SemReq@12
+      processed: ''
+      offset: 00007D12
+    - name: _UDF_HUF_SemClear@8
+      processed: ''
+      offset: 00007DB3
+    - name: _UDF_HUS_SemReq@12
+      processed: ''
+      offset: 00007E4B
+    - name: _UDF_HUS_SemClear@8
+      processed: ''
+      offset: 00007EEC
+    - name: _UDF_CBH_SemReq@12
+      processed: ''
+      offset: 00007F84
+    - name: _UDF_CBH_SemClear@8
+      processed: ''
+      offset: 00007FE5
+    - name: _UDF_IOS_AllocIOR@4
+      processed: ''
+      offset: '00008040'
+    - name: _UDF_IOS_FreeIOR@4
+      processed: ''
+      offset: 0000812D
+    - name: _UDF_IOS_AllocIOCTL@4
+      processed: ''
+      offset: 0000814D
+    - name: _UDF_IOS_FreeIOCTL@4
+      processed: ''
+      offset: 000081CD
+    - name: _UDFStartRead@16
+      processed: ''
+      offset: 0000821B
+    - name: _UDFWaitIO@4
+      processed: ''
+      offset: 000082F8
+    - name: _UDF_IOS_Callback@4
+      processed: ''
+      offset: 000083C7
+    - name: _udf_AbsoluteSector@8
+      processed: ''
+      offset: 000083F5
+    - name: _UDF_lbn_Get@12
+      processed: ''
+      offset: '00008430'
+    - name: _UDF_Sector_Get@8
+      processed: ''
+      offset: 0000844C
+    - name: _UDFReadAhead@12
+      processed: ''
+      offset: 00008D03
+    - name: _UDFNextReadAhead@4
+      processed: ''
+      offset: '00009221'
+    - name: _UDFReadAheadDone@4
+      processed: ''
+      offset: '00009658'
+    - name: _UDF_Sector_Release@4
+      processed: ''
+      offset: 0000990C
+    - name: _UDF_Sector_Unhold@4
+      processed: ''
+      offset: 000099C8
+    - name: _UDFInvalidateCBH@16
+      processed: ''
+      offset: 00009AD9
+    - name: _UDFInvalidateCache@8
+      processed: ''
+      offset: 00009B35
+    - name: _UDF_IOS_FlushDrive@8
+      processed: ''
+      offset: 00009B59
+    - name: udfEndLockable
+      processed: ''
+      offset: 00009BB4
+  - num: '5'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _drpUDF
+      processed: ''
+      offset: '00000078'
+    - name: UDF_Dynamic_Device_Init
+      processed: ''
+      offset: 000000B0
+    - name: _udfGetRegistry
+      processed: ''
+      offset: 0000020D
+    - name: UDFGetProfileInt
+      processed: ''
+      offset: 000002A5
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: '000009E0'
+    symbols:
+    - name: _udfasrchDOS
+      demangled: ''
+      offset: '00000000'
+    - name: _udfaphusDOS
+      demangled: ''
+      offset: '00000080'
+    - name: _fTearDown
+      demangled: ''
+      offset: '00000100'
+    - name: _UDF_VCACHE_fsdid
+      demangled: ''
+      offset: '00000104'
+    - name: _smsGlobal
+      demangled: ''
+      offset: '00000108'
+    - name: _pdetailCached
+      demangled: ''
+      offset: '00000110'
+    - name: _pirCached
+      demangled: ''
+      offset: '00000114'
+    - name: _udfsrchDOS
+      demangled: ''
+      offset: '00000118'
+    - name: _udffDebug
+      demangled: ''
+      offset: 0000011C
+    - name: _volfuncUDF
+      demangled: ''
+      offset: '00000120'
+    - name: _hndlmiscUDFFind
+      demangled: ''
+      offset: '00000160'
+    - name: _hndlmiscUDFFile
+      demangled: ''
+      offset: '00000184'
+    - name: _MonthToDays
+      demangled: ''
+      offset: '00000204'
+    - name: _asCRC
+      demangled: ''
+      offset: 0000023C
+    - name: _regid_part_contid_nsr02
+      demangled: ''
+      offset: 0000043C
+    - name: _regid_UDF_DomainID
+      demangled: ''
+      offset: 0000045C
+    - name: _ilbUDF
+      demangled: ''
+      offset: 0000047C
+    - name: _hueEOFMarker
+      demangled: ''
+      offset: 000004B0
+    - name: _OSTAUnicode
+      demangled: ''
+      offset: 000004CC
+    - name: _DefaultVolID
+      demangled: ''
+      offset: 0000050C
+    - name: _UDF_IOS_aer
+      demangled: ''
+      offset: '00000518'
+    - name: UDF_DDB
+      demangled: ''
+      offset: '00000588'
+    - name: udfipageLockable
+      demangled: ''
+      offset: 000005D8
+    - name: udfcpageLockable
+      demangled: ''
+      offset: 000005DC
+    - name: udfcCodeLocks
+      demangled: ''
+      offset: '000005E0'
+    - name: udfpHeapFree
+      demangled: ''
+      offset: '000005E4'
+    - name: _udfhuvHead
+      demangled: ''
+      offset: '000005E8'
+    - name: _udfirHead
+      demangled: ''
+      offset: 000005FC
+    - name: UDF_Control
+      demangled: ''
+      offset: '00000808'
+    - name: _UDF_ReturnError
+      demangled: ''
+      offset: 000008AE
+    - name: _UDF_Dispatcher
+      demangled: ''
+      offset: 000008AE
+    - name: _UDF_MountVolume
+      demangled: ''
+      offset: 000008B2
+    - name: _UDF_Delete
+      demangled: ''
+      offset: 000008B6
+    - name: _UDF_Dir
+      demangled: ''
+      offset: 000008BA
+    - name: _UDF_FileAttrib
+      demangled: ''
+      offset: 000008BE
+    - name: _UDF_Flush
+      demangled: ''
+      offset: 000008C2
+    - name: _UDF_GetDiskInfo
+      demangled: ''
+      offset: 000008C6
+    - name: _UDF_Open
+      demangled: ''
+      offset: 000008CA
+    - name: _UDF_Rename
+      demangled: ''
+      offset: 000008CE
+    - name: _UDF_Search
+      demangled: ''
+      offset: 000008D2
+    - name: _UDF_Query
+      demangled: ''
+      offset: 000008D6
+    - name: _UDF_Disconnect
+      demangled: ''
+      offset: 000008DA
+    - name: _UDF_UNCPipeReq
+      demangled: ''
+      offset: 000008DE
+    - name: _UDF_IOCTL16Drive
+      demangled: ''
+      offset: '000008E2'
+    - name: _UDF_GetDiskParms
+      demangled: ''
+      offset: '000008E6'
+    - name: _UDF_FindOpen
+      demangled: ''
+      offset: 000008EA
+    - name: _UDF_DASDIO
+      demangled: ''
+      offset: 000008EE
+    - name: _UDF_ReadFile
+      demangled: ''
+      offset: 000008F2
+    - name: _UDF_WriteFile
+      demangled: ''
+      offset: 000008F6
+    - name: _UDF_Seek
+      demangled: ''
+      offset: 000008FA
+    - name: _UDF_Close
+      demangled: ''
+      offset: 000008FE
+    - name: _UDF_Commit
+      demangled: ''
+      offset: '00000902'
+    - name: _UDF_FileLocks
+      demangled: ''
+      offset: '00000906'
+    - name: _UDF_FileTimes
+      demangled: ''
+      offset: 0000090A
+    - name: _UDF_PipeRequest
+      demangled: ''
+      offset: 0000090E
+    - name: _UDF_HandleInfo
+      demangled: ''
+      offset: '00000912'
+    - name: _UDF_EnumHandle
+      demangled: ''
+      offset: '00000916'
+    - name: _UDF_FindNextFile
+      demangled: ''
+      offset: 0000091A
+    - name: _UDF_FindClose
+      demangled: ''
+      offset: 0000091E
+    - name: _UDF_FindNextFail
+      demangled: ''
+      offset: '00000922'
+    - name: _UDF_Entry
+      demangled: ''
+      offset: 0000092A
+    - name: _UDF_Exit
+      demangled: ''
+      offset: 0000092F
+    - name: UDF_DevIOControl
+      demangled: ''
+      offset: '00000930'
+    - name: _UDF_VCACHE_CheckAvail@4
+      demangled: ''
+      offset: '00000948'
+    - name: UDF_VCACHE_Discard
+      demangled: ''
+      offset: '00000963'
+    - name: _UDF_VCACHE_FindBlock@16
+      demangled: ''
+      offset: '00000964'
+    - name: _UDF_VCACHE_FreeBlock@4
+      demangled: ''
+      offset: 000009BA
+    - name: _UDF_VCACHE_MakeMRU@4
+      demangled: ''
+      offset: 000009CD
+    - name: _UDF_VCACHE_Hold@4
+      demangled: ''
+      offset: '000009E0'
+    - name: _UDF_VCACHE_Unhold@4
+      demangled: ''
+      offset: 000009F3
+    - name: _UDF_VCACHE_Destroy@4
+      demangled: ''
+      offset: 00000A0C
+    - name: _UDF_VCACHE_Enum@12
+      demangled: ''
+      offset: 00000A2C
+    - name: _UDF_VCACHE_Enum_CBStub
+      demangled: ''
+      offset: 00000A56
+    - name: _UDF_VMM_PageFree
+      demangled: ''
+      offset: 00000A65
+    - name: _UDF_VMM_BlockOnID
+      demangled: ''
+      offset: 00000A6B
+    - name: _UDF_VMM_SignalID
+      demangled: ''
+      offset: 00000A71
+    - name: _UDF_VMM_GetSystemTime
+      demangled: ''
+      offset: 00000A77
+    - name: _UDF_VMM_HeapAllocate@8
+      demangled: ''
+      offset: 00000A7D
+    - name: _UDF_VMM_HeapFree@12
+      demangled: ''
+      offset: 00000AB2
+    - name: _UDF_VMM_MapFlatDSDX
+      demangled: ''
+      offset: 00000AE7
+    - name: _UDF_VMM_LinPageLock
+      demangled: ''
+      offset: 00000AF1
+    - name: _UDF_VMM_LinPageUnlock
+      demangled: ''
+      offset: 00000AF7
+    - name: _UDF_IOS_Meet_Criteria
+      demangled: ''
+      offset: 00000AFD
+    - name: _UDF_IOS_SendCommand@4
+      demangled: ''
+      offset: 00000B03
+    - name: __UDF_IOS_Callback@0
+      demangled: ''
+      offset: 00000B1F
+    - name: __UDF_IOS_ReadAheadDone@0
+      demangled: ''
+      offset: 00000B26
+    - name: _UDF_IOS_Service
+      demangled: ''
+      offset: 00000B43
+    - name: _UDF_IOS_MapIORSToI21@4
+      demangled: ''
+      offset: 00000B49
+    - name: _UDF_IOS_QueryUDFMount
+      demangled: ''
+      offset: 00000B56
+    - name: _UDF_Safe_memcpy@12
+      demangled: ''
+      offset: 00000B5C
+    - name: _udfTearDown
+      demangled: ''
+      offset: 00000B74
+    - name: _UDF_IFS_Win32ToDosTime@4
+      demangled: ''
+      offset: 00000B75
+    - name: _UDF_IFS_CreateBasis@12
+      demangled: ''
+      offset: 00000B8B
+    - name: _UDF_IFS_AppendBasisTail
+      demangled: ''
+      offset: 00000BEA
+    - name: _UDF_IFS_FcbToShort
+      demangled: ''
+      offset: 00000BF0
+    - name: _UDF_IFS_GetTimeZoneBias@0
+      demangled: ''
+      offset: 00000BF6
+    - name: _UDF_IFS_MetaMatch
+      demangled: ''
+      offset: 00000BFC
+    - name: _UDF_IFS_BCSToUni
+      demangled: ''
+      offset: 00000C02
+    - name: _UDF_IFS_UniToBCS
+      demangled: ''
+      offset: 00000C08
+    - name: _UDF_IFS_CheckAccessConflict
+      demangled: ''
+      offset: 00000C0E
+    - name: _UDF_IFS_LockFile
+      demangled: ''
+      offset: 00000C14
+    - name: _UDF_IFS_UnlockFile
+      demangled: ''
+      offset: 00000C1A
+    - name: _UDF_IFS_RemoveLocks
+      demangled: ''
+      offset: 00000C20
+    - name: _UDF_IFS_CheckLocks
+      demangled: ''
+      offset: 00000C26
+    - name: _UDF_IFS_ShortToFCB
+      demangled: ''
+      offset: 00000C2C
+    - name: _QMATH_Above@8
+      demangled: ''
+      offset: 00000C7E
+    - name: _UDF_SemReq@16
+      demangled: ''
+      offset: 00000CA2
+    - name: _UDF_SemClear@8
+      demangled: ''
+      offset: 00000D61
+    - name: _UDF_SemDowngrade@8
+      demangled: ''
+      offset: 00000DA8
+    - name: _UDFLinkHUV@4
+      demangled: ''
+      offset: 00000DE0
+    - name: _UDFUnlinkHUV@4
+      demangled: ''
+      offset: 00000DFA
+    - name: _UDFLinkIOREQ@4
+      demangled: ''
+      offset: 00000E0D
+    - name: _UDFUnlinkIOREQ@4
+      demangled: ''
+      offset: '00000E27'
+    - name: _UDFResetNomount@0
+      demangled: ''
+      offset: 00000E3A
+    - name: _UDFLockCode
+      demangled: ''
+      offset: 00000E7B
+    - name: _UDFUnlockCode
+      demangled: ''
+      offset: 00000EAD
+    - name: _UDFPrintf
+      demangled: ''
+      offset: 00000EDC
+    - name: UDF_Debug
+      demangled: ''
+      offset: 00000EFC
+    - name: UDFClearStats
+      demangled: ''
+      offset: 00000FA2
+  - num: '2'
+    name: _DB1CODE
+    offset: 00000DC0
+    symbols:
+    - name: UDFDumpLog
+      demangled: ''
+      offset: '00000000'
+    - name: UDFSorry
+      demangled: ''
+      offset: '00000000'
+    - name: UDFGetChar
+      demangled: ''
+      offset: 0000000E
+    - name: UDFEvalExp
+      demangled: ''
+      offset: '00000018'
+    - name: UDFToggleZeroSuppress
+      demangled: ''
+      offset: 0000007A
+    - name: UDFDumpStruct
+      demangled: ''
+      offset: 0000009A
+    - name: UDFDumpBySig
+      demangled: ''
+      offset: 000003C4
+    - name: UDFDumpBySigSub
+      demangled: ''
+      offset: '000003E4'
+    - name: UDFDumpHeap
+      demangled: ''
+      offset: 0000042E
+    - name: UDFDumpHUE
+      demangled: ''
+      offset: '00000433'
+    - name: UDFDumpHUESub
+      demangled: ''
+      offset: 0000043A
+    - name: HUFDesc
+      demangled: ''
+      offset: '00000522'
+    - name: UDFDumpHUF
+      demangled: ''
+      offset: '00000634'
+    - name: UDFDumpHUFSub
+      demangled: ''
+      offset: 0000063B
+    - name: HUODesc
+      demangled: ''
+      offset: '00000661'
+    - name: UDFDumpHUOTree
+      demangled: ''
+      offset: '00000946'
+    - name: UDFDumpHUOSub
+      demangled: ''
+      offset: '00000984'
+    - name: HUPDesc
+      demangled: ''
+      offset: 000009AB
+    - name: UDFDumpHUP
+      demangled: ''
+      offset: 00000BAD
+    - name: UDFDumpHUPSub
+      demangled: ''
+      offset: 00000BB4
+    - name: HUSDesc
+      demangled: ''
+      offset: 00000BDA
+    - name: UDFDumpHUS
+      demangled: ''
+      offset: 00000D42
+    - name: UDFDumpHUSSub
+      demangled: ''
+      offset: 00000D49
+    - name: HUVDesc
+      demangled: ''
+      offset: 00000D6F
+    - name: UDFDumpHUV
+      demangled: ''
+      offset: 00000F14
+    - name: UDFDumpHUVSub
+      demangled: ''
+      offset: 00000F59
+    - name: CBHDesc
+      demangled: ''
+      offset: 00000F80
+    - name: UDFDumpCBH
+      demangled: ''
+      offset: '00001089'
+    - name: UDFDumpCBHSub
+      demangled: ''
+      offset: 000010AF
+    - name: HUIDesc
+      demangled: ''
+      offset: '000010E5'
+    - name: UDFDumpHUI
+      demangled: ''
+      offset: 000011C7
+    - name: SEMINFODesc
+      demangled: ''
+      offset: 000011F4
+    - name: UDFDumpSEMINFO
+      demangled: ''
+      offset: '00001205'
+    - name: DESTAGDesc
+      demangled: ''
+      offset: 0000120A
+    - name: UDFDumpDESTAG
+      demangled: ''
+      offset: 0000129B
+    - name: DETDesc
+      demangled: ''
+      offset: 000012C8
+    - name: UDFDumpDET
+      demangled: ''
+      offset: '00001479'
+    - name: UDFDumpDETSub
+      demangled: ''
+      offset: '00001480'
+    - name: FIDDesc
+      demangled: ''
+      offset: 000014A6
+    - name: UDFDumpFID
+      demangled: ''
+      offset: 0000156D
+    - name: UDFDumpFIDSub
+      demangled: ''
+      offset: '00001574'
+    - name: ICBFILEDesc
+      demangled: ''
+      offset: 000015A4
+    - name: UDFDumpICBFILE
+      demangled: ''
+      offset: '00001806'
+    - name: UDFDumpICBFILESub
+      demangled: ''
+      offset: 0000180D
+    - name: ICBTAGDesc
+      demangled: ''
+      offset: 000018C5
+    - name: UDFDumpICBTAG
+      demangled: ''
+      offset: 000019D9
+    - name: UDFDumpICBTAGSub
+      demangled: ''
+      offset: '000019E0'
+    - name: IOREQDesc
+      demangled: ''
+      offset: 00001AD9
+    - name: UDFDumpIOREQ
+      demangled: ''
+      offset: 00001C49
+    - name: UDFDumpIOREQSub
+      demangled: ''
+      offset: 00001C74
+    - name: REGIDDesc
+      demangled: ''
+      offset: 00001C9A
+    - name: UDFDumpREGID
+      demangled: ''
+      offset: 00001D0A
+    - name: UDFDumpStats
+      demangled: ''
+      offset: 00001D37
+    - name: UDFMarkLog
+      demangled: ''
+      offset: 00001D38
+    - name: UDFDumpUnicodePath
+      demangled: ''
+      offset: 00001D3D
+    - name: UDFDumpUnicodePathSub
+      demangled: ''
+      offset: 00001D46
+    - name: UDFDumpUnicode
+      demangled: ''
+      offset: 00001D99
+    - name: udfpPrev
+      demangled: ''
+      offset: 00001DCC
+  - num: '3'
+    name: _STEXT
+    offset: '00000E30'
+    symbols:
+    - name: _pHeapFreeHead
+      demangled: ''
+      offset: '00000000'
+    - name: _UDFLoaded
+      demangled: ''
+      offset: '00000004'
+    - name: _UDF_Safe_memcpy_EH
+      demangled: ''
+      offset: '00000008'
+    - name: _UDF_ASM_Safe_memcpy
+      demangled: ''
+      offset: '00000018'
+  - num: '4'
+    name: L0CKABLE_BEGIN
+    offset: '00001850'
+    symbols:
+    - name: udfLockable
+      demangled: ''
+      offset: '00000000'
+    - name: _UDFRunAPI@8
+      demangled: ''
+      offset: '00000004'
+    - name: _UFS_OpenFile@4
+      demangled: ''
+      offset: 000001A0
+    - name: _UFS_CloseFile@4
+      demangled: ''
+      offset: 000002D0
+    - name: _UFS_ReadFile@4
+      demangled: ''
+      offset: '00000364'
+    - name: _UFS_Query@4
+      demangled: ''
+      offset: '00000445'
+    - name: _UFS_SeekFile@4
+      demangled: ''
+      offset: '000004E1'
+    - name: _UFS_FileAttributes@4
+      demangled: ''
+      offset: '00000578'
+    - name: _UFS_GetDiskInfo@4
+      demangled: ''
+      offset: 000006C6
+    - name: _UFS_Search@4
+      demangled: ''
+      offset: 0000078D
+    - name: _UFS_FileTimes@4
+      demangled: ''
+      offset: 000007B6
+    - name: _UFS_Flush@4
+      demangled: ''
+      offset: 000008D0
+    - name: _UFS_EnumHandle@4
+      demangled: ''
+      offset: 0000093E
+    - name: _UFS_IOCTL@4
+      demangled: ''
+      offset: 00000A0C
+    - name: _UFS_DASDIO@4
+      demangled: ''
+      offset: 00000CF1
+    - name: _UFS_FileLocks@4
+      demangled: ''
+      offset: 00000D8F
+    - name: _UDFGetBaseAddress@4
+      demangled: ''
+      offset: 00000E0B
+    - name: _UDFMatchHUV@8
+      demangled: ''
+      offset: '00000E98'
+    - name: _UDFMakeHUV@12
+      demangled: ''
+      offset: 00000FF9
+    - name: _UDFVerifyVolume@4
+      demangled: ''
+      offset: 0000164D
+    - name: _UFS_Mount@4
+      demangled: ''
+      offset: 000016ED
+    - name: _UFS_Unmount@4
+      demangled: ''
+      offset: '00001868'
+    - name: _ufs_SetPartition@8
+      demangled: ''
+      offset: 000018F3
+    - name: _ufs_GetPrevailing@12
+      demangled: ''
+      offset: '00001923'
+    - name: _ufs_InitPartList@8
+      demangled: ''
+      offset: 00001B96
+    - name: _ufs_FreePartList@4
+      demangled: ''
+      offset: 00001C4D
+    - name: _ufs_RegIDValidate@8
+      demangled: ''
+      offset: 00001C76
+    - name: _ufs_HighBit@4
+      demangled: ''
+      offset: 00001CAE
+    - name: _ufs_Serial@8
+      demangled: ''
+      offset: 00001CC4
+    - name: _ufs_TerminateDstring@8
+      demangled: ''
+      offset: 00001CFE
+    - name: _UDFOpenPath@12
+      demangled: ''
+      offset: 00001D61
+    - name: _UFS_OpenObj@16
+      demangled: ''
+      offset: '00001E89'
+    - name: _UDFLockMem@12
+      demangled: ''
+      offset: 00001FD8
+    - name: _UDFLockMem2@8
+      demangled: ''
+      offset: 0000201D
+    - name: _UDFUnlockMem@12
+      demangled: ''
+      offset: '00002052'
+    - name: _UDFUnlockMem2@8
+      demangled: ''
+      offset: 0000208D
+    - name: _UDFCheckCache@12
+      demangled: ''
+      offset: 000020B8
+    - name: _UDFReadSectors@12
+      demangled: ''
+      offset: 0000211C
+    - name: _UDFRead@12
+      demangled: ''
+      offset: 0000238F
+    - name: _UFS_Read@12
+      demangled: ''
+      offset: 0000254D
+    - name: _UFS_Locate@12
+      demangled: ''
+      offset: 000025F2
+    - name: _ufs_Extent@16
+      demangled: ''
+      offset: '00002737'
+    - name: _ufs_BuildExtents@8
+      demangled: ''
+      offset: 00002A3E
+    - name: _ufs_FlushExtents@8
+      demangled: ''
+      offset: 00002B2B
+    - name: _ufs_FindICB@16
+      demangled: ''
+      offset: 00002B54
+    - name: _ufs_WalkICBTree@20
+      demangled: ''
+      offset: 00002B9B
+    - name: _ufs_OpenFromDetails@12
+      demangled: ''
+      offset: 00002CDA
+    - name: _UDFEnumerateHUF
+      demangled: ''
+      offset: 00002E3B
+    - name: _UDFFindPath@12
+      demangled: ''
+      offset: '00002E86'
+    - name: _UDFFillFindBuffer@8
+      demangled: ''
+      offset: 00002F18
+    - name: _UDFFindSub@8
+      demangled: ''
+      offset: 00002FF0
+    - name: _UFS_FindOpen@4
+      demangled: ''
+      offset: '00003073'
+    - name: _UFS_FindNext@4
+      demangled: ''
+      offset: 0000330A
+    - name: _UFS_FindClose@4
+      demangled: ''
+      offset: 0000336C
+    - name: _UFS_Dir@4
+      demangled: ''
+      offset: 000033A6
+    - name: _UFS_OpenObjAsFile@12
+      demangled: ''
+      offset: '00003513'
+    - name: _UFS_OpenSearch@16
+      demangled: ''
+      offset: '00003594'
+    - name: _UDFMakeAltNames@4
+      demangled: ''
+      offset: '00003606'
+    - name: _UDFMakeAltVolLabels@4
+      demangled: ''
+      offset: 000036D4
+    - name: _UFS_GetDetails@8
+      demangled: ''
+      offset: '00003744'
+    - name: _UFS_NextEntry@8
+      demangled: ''
+      offset: 00003AB3
+    - name: _UDFCloseHandle@12
+      demangled: ''
+      offset: 00003B23
+    - name: _ufs_MetaMatch@8
+      demangled: ''
+      offset: 00003C9F
+    - name: _ufs_NameMatch@12
+      demangled: ''
+      offset: 00003D35
+    - name: _ufs_CanonUnicode@16
+      demangled: ''
+      offset: 00003DA6
+    - name: _ufs_DescriptorCRC@8
+      demangled: ''
+      offset: 00003E5F
+    - name: _ufs_VerifyDesTag@20
+      demangled: ''
+      offset: 00003E9C
+    - name: _ufs_UDFToWin32GMT@8
+      demangled: ''
+      offset: 00003F2A
+    - name: _ufs_GetXAFileTime@12
+      demangled: ''
+      offset: '00004124'
+    - name: _ufs_GetXABody@8
+      demangled: ''
+      offset: 000041A2
+    - name: _UDFNewDOSSearchHandle@8
+      demangled: ''
+      offset: 000041FC
+    - name: _UDFGetDOSSearch@12
+      demangled: ''
+      offset: 0000427C
+    - name: _UDFFillFindDOS@12
+      demangled: ''
+      offset: 000042C7
+    - name: _UDFFindDOSSub@8
+      demangled: ''
+      offset: '00004360'
+    - name: _UDFFindFirstDOS@4
+      demangled: ''
+      offset: 000043FF
+    - name: _UDFFindNextDOS@4
+      demangled: ''
+      offset: '00004630'
+    - name: _UDFCleanupDOSSearches@4
+      demangled: ''
+      offset: 000046D8
+    - name: _UDF_HeapAlloc@8
+      demangled: ''
+      offset: '00004727'
+    - name: _UDF_HeapFree@8
+      demangled: ''
+      offset: 0000473F
+    - name: _UDF_HUV_Free@8
+      demangled: ''
+      offset: '00004753'
+    - name: _udf_AllocDetails@4
+      demangled: ''
+      offset: 000047BB
+    - name: _udf_FreeDetails@4
+      demangled: ''
+      offset: '00004827'
+    - name: _UDFAllocIOREQ@0
+      demangled: ''
+      offset: 0000486B
+    - name: _UDFFreeIOREQ@8
+      demangled: ''
+      offset: 000048C2
+    - name: _UDF_Global_SemReq@8
+      demangled: ''
+      offset: '00004900'
+    - name: _UDF_Global_SemClear@4
+      demangled: ''
+      offset: '00004917'
+    - name: _UDF_HUV_SemReq@12
+      demangled: ''
+      offset: '00004928'
+    - name: _UDF_HUV_SemClear@8
+      demangled: ''
+      offset: '00004941'
+    - name: _UDF_HUO_SemReq@12
+      demangled: ''
+      offset: '00004955'
+    - name: _UDF_HUO_SemClear@8
+      demangled: ''
+      offset: '00004970'
+    - name: _UDF_HUF_SemReq@12
+      demangled: ''
+      offset: '00004984'
+    - name: _UDF_HUF_SemClear@8
+      demangled: ''
+      offset: 000049A2
+    - name: _UDF_HUS_SemReq@12
+      demangled: ''
+      offset: 000049B6
+    - name: _UDF_HUS_SemClear@8
+      demangled: ''
+      offset: 000049D4
+    - name: _UDF_CBH_SemReq@12
+      demangled: ''
+      offset: '000049E8'
+    - name: _UDF_CBH_SemClear@8
+      demangled: ''
+      offset: 00004A03
+    - name: _UDF_IOS_AllocIOR@4
+      demangled: ''
+      offset: 00004A17
+    - name: _UDF_IOS_FreeIOR@4
+      demangled: ''
+      offset: 00004B04
+    - name: _UDF_IOS_AllocIOCTL@4
+      demangled: ''
+      offset: 00004B21
+    - name: _UDF_IOS_FreeIOCTL@4
+      demangled: ''
+      offset: 00004BA1
+    - name: _UDFStartRead@16
+      demangled: ''
+      offset: 00004BC6
+    - name: _UDFWaitIO@4
+      demangled: ''
+      offset: 00004C09
+    - name: _UDF_IOS_Callback@4
+      demangled: ''
+      offset: 00004C43
+    - name: _udf_AbsoluteSector@8
+      demangled: ''
+      offset: 00004C5C
+    - name: _UDF_lbn_Get@12
+      demangled: ''
+      offset: 00004C6A
+    - name: _UDF_Sector_Get@8
+      demangled: ''
+      offset: 00004C84
+    - name: _UDFReadAhead@12
+      demangled: ''
+      offset: '00005154'
+    - name: _UDFNextReadAhead@4
+      demangled: ''
+      offset: 0000551B
+    - name: _UDFReadAheadDone@4
+      demangled: ''
+      offset: '00005729'
+    - name: _UDF_Sector_Release@4
+      demangled: ''
+      offset: 0000584B
+    - name: _UDF_Sector_Unhold@4
+      demangled: ''
+      offset: '00005864'
+    - name: _UDFInvalidateCBH@16
+      demangled: ''
+      offset: 000058BF
+    - name: _UDFInvalidateCache@8
+      demangled: ''
+      offset: 000058D5
+    - name: _UDF_IOS_FlushDrive@8
+      demangled: ''
+      offset: 000058F7
+    - name: udfEndLockable
+      demangled: ''
+      offset: '00005944'
+  - num: '5'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _drpUDF
+      demangled: ''
+      offset: '00000060'
+    - name: UDF_Dynamic_Device_Init
+      demangled: ''
+      offset: '00000098'
+    - name: _udfGetRegistry
+      demangled: ''
+      offset: 000001A8
+    - name: UDFGetProfileInt
+      demangled: ''
+      offset: '00000240'
+- version: Windows 98SE Debug
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: 00001DF0
+    symbols:
+    - name: _PAEP_rpm_change
+      demangled: ''
+      offset: '00000000'
+    - name: _udfasrchDOS
+      demangled: ''
+      offset: '00000010'
+    - name: _PAEP_3mode_config
+      demangled: ''
+      offset: '00000090'
+    - name: _udfaphusDOS
+      demangled: ''
+      offset: 000000A0
+    - name: _udfasi
+      demangled: ''
+      offset: '00000120'
+    - name: _udfisiFree
+      demangled: ''
+      offset: '00001110'
+    - name: _PAEP_rpm_inquiry
+      demangled: ''
+      offset: '00001114'
+    - name: _fTearDown
+      demangled: ''
+      offset: '00001118'
+    - name: _UDF_VCACHE_fsdid
+      demangled: ''
+      offset: 0000111C
+    - name: _smsGlobal
+      demangled: ''
+      offset: '00001120'
+    - name: _pdetailCached
+      demangled: ''
+      offset: 0000112C
+    - name: _pirCached
+      demangled: ''
+      offset: '00001130'
+    - name: _udfsrchDOS
+      demangled: ''
+      offset: '00001134'
+    - name: _udffDebug
+      demangled: ''
+      offset: '00001138'
+    - name: _udfStat
+      demangled: ''
+      offset: 0000113C
+    - name: _LOGCBHWSECTOR
+      demangled: ''
+      offset: '000011E4'
+    - name: _CBHWSECTOR
+      demangled: ''
+      offset: '000011E8'
+    - name: _CCACHEHWSEC
+      demangled: ''
+      offset: 000011EC
+    - name: _CBRAMAX
+      demangled: ''
+      offset: 000011F0
+    - name: _CBRAMAX2
+      demangled: ''
+      offset: 000011F4
+    - name: _CBRAMIN
+      demangled: ''
+      offset: 000011F8
+    - name: _CCACHERA
+      demangled: ''
+      offset: 000011FC
+    - name: _udfsecDebug
+      demangled: ''
+      offset: '00001200'
+    - name: _volfuncUDF
+      demangled: ''
+      offset: '00001204'
+    - name: _hndlmiscUDFFind
+      demangled: ''
+      offset: '00001244'
+    - name: _hndlmiscUDFFile
+      demangled: ''
+      offset: '00001268'
+    - name: _strAssertFailure
+      demangled: ''
+      offset: 0000128C
+    - name: _strWarnBadMaster
+      demangled: ''
+      offset: 000012C8
+    - name: _strWarnMemory
+      demangled: ''
+      offset: '00001304'
+    - name: _MonthToDays
+      demangled: ''
+      offset: 00001B18
+    - name: _asCRC
+      demangled: ''
+      offset: 000026B4
+    - name: _regid_part_contid_nsr02
+      demangled: ''
+      offset: 000028B4
+    - name: _regid_UDF_DomainID
+      demangled: ''
+      offset: 000028D4
+    - name: _ilbUDF
+      demangled: ''
+      offset: 000028F4
+    - name: _hueEOFMarker
+      demangled: ''
+      offset: '00002928'
+    - name: _OSTAUnicode
+      demangled: ''
+      offset: '00002944'
+    - name: _DefaultVolID
+      demangled: ''
+      offset: '00002984'
+    - name: _UDF_IOS_aer
+      demangled: ''
+      offset: '00002990'
+    - name: udfLockable_Debug_Flags
+      demangled: ''
+      offset: 00002A04
+    - name: UDF_DDB
+      demangled: ''
+      offset: 00002A08
+    - name: udfipageLockable
+      demangled: ''
+      offset: 00002A58
+    - name: udfcpageLockable
+      demangled: ''
+      offset: 00002A5C
+    - name: udfcCodeLocks
+      demangled: ''
+      offset: 00002A60
+    - name: udfpHeapFree
+      demangled: ''
+      offset: 00002A64
+    - name: _udfhuvHead
+      demangled: ''
+      offset: 00002A68
+    - name: _udfirHead
+      demangled: ''
+      offset: 00002A80
+    - name: udfcentLogMinus1
+      demangled: ''
+      offset: 00002C88
+    - name: udfpLogBuffer
+      demangled: ''
+      offset: 00002C8C
+    - name: udfHeapHdr
+      demangled: ''
+      offset: 00002C90
+    - name: STATDesc
+      demangled: ''
+      offset: 00002F58
+    - name: UDF_Control
+      demangled: ''
+      offset: 0000328C
+    - name: _UDF_ReturnError
+      demangled: ''
+      offset: '00003332'
+    - name: _UDF_Dispatcher
+      demangled: ''
+      offset: '00003332'
+    - name: _UDF_MountVolume
+      demangled: ''
+      offset: '00003336'
+    - name: _UDF_Delete
+      demangled: ''
+      offset: 0000333A
+    - name: _UDF_Dir
+      demangled: ''
+      offset: 0000333E
+    - name: _UDF_FileAttrib
+      demangled: ''
+      offset: '00003342'
+    - name: _UDF_Flush
+      demangled: ''
+      offset: '00003346'
+    - name: _UDF_GetDiskInfo
+      demangled: ''
+      offset: 0000334A
+    - name: _UDF_Open
+      demangled: ''
+      offset: 0000334E
+    - name: _UDF_Rename
+      demangled: ''
+      offset: '00003352'
+    - name: _UDF_Search
+      demangled: ''
+      offset: '00003356'
+    - name: _UDF_Query
+      demangled: ''
+      offset: 0000335A
+    - name: _UDF_Disconnect
+      demangled: ''
+      offset: 0000335E
+    - name: _UDF_UNCPipeReq
+      demangled: ''
+      offset: '00003362'
+    - name: _UDF_IOCTL16Drive
+      demangled: ''
+      offset: '00003366'
+    - name: _UDF_GetDiskParms
+      demangled: ''
+      offset: 0000336A
+    - name: _UDF_FindOpen
+      demangled: ''
+      offset: 0000336E
+    - name: _UDF_DASDIO
+      demangled: ''
+      offset: '00003372'
+    - name: _UDF_ReadFile
+      demangled: ''
+      offset: '00003376'
+    - name: _UDF_WriteFile
+      demangled: ''
+      offset: 0000337A
+    - name: _UDF_Seek
+      demangled: ''
+      offset: 0000337E
+    - name: _UDF_Close
+      demangled: ''
+      offset: '00003382'
+    - name: _UDF_Commit
+      demangled: ''
+      offset: '00003386'
+    - name: _UDF_FileLocks
+      demangled: ''
+      offset: 0000338A
+    - name: _UDF_FileTimes
+      demangled: ''
+      offset: 0000338E
+    - name: _UDF_PipeRequest
+      demangled: ''
+      offset: '00003392'
+    - name: _UDF_HandleInfo
+      demangled: ''
+      offset: '00003396'
+    - name: _UDF_EnumHandle
+      demangled: ''
+      offset: 0000339A
+    - name: _UDF_FindNextFile
+      demangled: ''
+      offset: 0000339E
+    - name: _UDF_FindClose
+      demangled: ''
+      offset: 000033A2
+    - name: _UDF_FindNextFail
+      demangled: ''
+      offset: 000033A6
+    - name: _UDF_Entry
+      demangled: ''
+      offset: 000033AE
+    - name: _UDF_Exit
+      demangled: ''
+      offset: 000033B3
+    - name: UDF_DevIOControl
+      demangled: ''
+      offset: 000033B4
+    - name: _printf
+      demangled: ''
+      offset: 000033CB
+    - name: _printf_Stop
+      demangled: ''
+      offset: 000033DF
+    - name: _UDF_VCACHE_CheckAvail@4
+      demangled: ''
+      offset: '00003402'
+    - name: _UDFGetCacheStats@4
+      demangled: ''
+      offset: 0000341D
+    - name: UDF_VCACHE_Discard
+      demangled: ''
+      offset: '00003482'
+    - name: _UDF_VCACHE_FindBlock@16
+      demangled: ''
+      offset: 000034A3
+    - name: _UDF_VCACHE_FreeBlock@4
+      demangled: ''
+      offset: '00003545'
+    - name: _UDF_VCACHE_MakeMRU@4
+      demangled: ''
+      offset: '00003558'
+    - name: _UDF_VCACHE_Hold@4
+      demangled: ''
+      offset: 0000356B
+    - name: _UDF_VCACHE_Unhold@4
+      demangled: ''
+      offset: 0000357F
+    - name: _UDF_VCACHE_Destroy@4
+      demangled: ''
+      offset: '00003598'
+    - name: _UDF_VCACHE_Enum@12
+      demangled: ''
+      offset: 000035B8
+    - name: _UDF_VCACHE_Enum_CBStub
+      demangled: ''
+      offset: '000035E2'
+    - name: _UDF_VMM_PageFree
+      demangled: ''
+      offset: 000035F1
+    - name: _UDF_VMM_BlockOnID
+      demangled: ''
+      offset: 000035F7
+    - name: _UDF_VMM_SignalID
+      demangled: ''
+      offset: 000035FD
+    - name: _UDF_VMM_GetSystemTime
+      demangled: ''
+      offset: '00003603'
+    - name: _UDF_VMM_HeapAllocate@8
+      demangled: ''
+      offset: '00003609'
+    - name: _UDF_VMM_HeapFree@12
+      demangled: ''
+      offset: '00003685'
+    - name: _UDF_VMM_MapFlatDSDX
+      demangled: ''
+      offset: 0000371F
+    - name: _UDF_VMM_LinPageLock
+      demangled: ''
+      offset: '00003729'
+    - name: _UDF_VMM_LinPageUnlock
+      demangled: ''
+      offset: 0000372F
+    - name: _UDF_IOS_Meet_Criteria
+      demangled: ''
+      offset: '00003735'
+    - name: _UDF_IOS_SendCommand@4
+      demangled: ''
+      offset: 0000373B
+    - name: __UDF_IOS_Callback@0
+      demangled: ''
+      offset: 0000378A
+    - name: __UDF_IOS_ReadAheadDone@0
+      demangled: ''
+      offset: 000037B3
+    - name: _UDF_IOS_Service
+      demangled: ''
+      offset: 000037F2
+    - name: _UDF_IOS_MapIORSToI21@4
+      demangled: ''
+      offset: 000037F8
+    - name: _UDF_IOS_QueryUDFMount
+      demangled: ''
+      offset: '00003805'
+    - name: _UDF_Safe_memcpy@12
+      demangled: ''
+      offset: 0000380B
+    - name: _udfTearDown
+      demangled: ''
+      offset: '00003823'
+    - name: _UDF_IFS_Win32ToDosTime@4
+      demangled: ''
+      offset: '00003825'
+    - name: _UDF_IFS_CreateBasis@12
+      demangled: ''
+      offset: 0000383B
+    - name: _UDF_IFS_AppendBasisTail
+      demangled: ''
+      offset: 0000389A
+    - name: _UDF_IFS_FcbToShort
+      demangled: ''
+      offset: 000038A0
+    - name: _UDF_IFS_GetTimeZoneBias@0
+      demangled: ''
+      offset: 000038A6
+    - name: _UDF_IFS_MetaMatch
+      demangled: ''
+      offset: 000038AC
+    - name: _UDF_IFS_BCSToUni
+      demangled: ''
+      offset: 000038B2
+    - name: _UDF_IFS_UniToBCS
+      demangled: ''
+      offset: 000038B8
+    - name: _UDF_IFS_CheckAccessConflict
+      demangled: ''
+      offset: 000038BE
+    - name: _UDF_IFS_LockFile
+      demangled: ''
+      offset: 000038C4
+    - name: _UDF_IFS_UnlockFile
+      demangled: ''
+      offset: 000038CA
+    - name: _UDF_IFS_RemoveLocks
+      demangled: ''
+      offset: 000038D0
+    - name: _UDF_IFS_CheckLocks
+      demangled: ''
+      offset: 000038D6
+    - name: _UDF_IFS_ShortToFCB
+      demangled: ''
+      offset: 000038DC
+    - name: _QMATH_Above@8
+      demangled: ''
+      offset: 0000392E
+    - name: _UDF_SemReq@16
+      demangled: ''
+      offset: '00003952'
+    - name: _UDF_SemClear@8
+      demangled: ''
+      offset: 00003BA8
+    - name: _UDF_SemDowngrade@8
+      demangled: ''
+      offset: 00003C0D
+    - name: _UDFLinkHUV@4
+      demangled: ''
+      offset: 00003C5F
+    - name: _UDFUnlinkHUV@4
+      demangled: ''
+      offset: 00003C8B
+    - name: _UDFLinkIOREQ@4
+      demangled: ''
+      offset: 00003CB0
+    - name: _UDFUnlinkIOREQ@4
+      demangled: ''
+      offset: 00003CDC
+    - name: _UDFResetNomount@0
+      demangled: ''
+      offset: 00003CF6
+    - name: _UDFLockCode
+      demangled: ''
+      offset: 00003D38
+    - name: _UDFUnlockCode
+      demangled: ''
+      offset: 00003D7B
+    - name: _UDFPrintf
+      demangled: ''
+      offset: 00003DC4
+    - name: UDF_Debug
+      demangled: ''
+      offset: 00003DE4
+    - name: _UDFCheckHeap
+      demangled: ''
+      offset: 00003E8D
+    - name: _UDFPrintUnicode@4
+      demangled: ''
+      offset: 00003ECB
+    - name: CheckRegsUsed
+      demangled: ''
+      offset: 00003F38
+    - name: _UDFLog@12
+      demangled: ''
+      offset: 00003F7F
+    - name: UDFClearStats
+      demangled: ''
+      offset: 0000400E
+    - name: _UDFResetStats@0
+      demangled: ''
+      offset: 0000404B
+    - name: _UDFReturnStats@8
+      demangled: ''
+      offset: '00004057'
+    - name: UDFDBGDumpStats
+      demangled: ''
+      offset: 0000406B
+    - name: UDFStatsIOCTL
+      demangled: ''
+      offset: 000040B5
+    - name: _UDFInitSEMINFO@0
+      demangled: ''
+      offset: '00004117'
+    - name: _UDFGetSEMINFO@12
+      demangled: ''
+      offset: '00004135'
+    - name: _UDFFreeSEMINFO@4
+      demangled: ''
+      offset: '00004257'
+    - name: _UDFDerefSEMINFO@8
+      demangled: ''
+      offset: 000043DE
+    - name: _UDFCheckSemHierarchy@8
+      demangled: ''
+      offset: 000044DA
+    - name: _UDFCheckDeadlock@8
+      demangled: ''
+      offset: '000045E7'
+    - name: _UDFAssertSemaphoreOwned@8
+      demangled: ''
+      offset: 000047A3
+  - num: '2'
+    name: _DB1CODE
+    offset: 00002C50
+    symbols:
+    - name: UDFDumpLog
+      demangled: ''
+      offset: '00000000'
+    - name: UDFGetChar
+      demangled: ''
+      offset: '00000110'
+    - name: UDFEvalExp
+      demangled: ''
+      offset: 0000011A
+    - name: UDFToggleZeroSuppress
+      demangled: ''
+      offset: 0000017C
+    - name: UDFDumpStruct
+      demangled: ''
+      offset: 0000019C
+    - name: UDFDumpBySig
+      demangled: ''
+      offset: 000004D4
+    - name: UDFDumpBySigSub
+      demangled: ''
+      offset: 000004F4
+    - name: UDFDumpHeap
+      demangled: ''
+      offset: 0000053E
+    - name: UDFDumpHUE
+      demangled: ''
+      offset: 0000059F
+    - name: UDFDumpHUESub
+      demangled: ''
+      offset: 000005A6
+    - name: HUFDesc
+      demangled: ''
+      offset: 0000068E
+    - name: UDFDumpHUF
+      demangled: ''
+      offset: 000007F4
+    - name: UDFDumpHUFSub
+      demangled: ''
+      offset: 000007FB
+    - name: HUODesc
+      demangled: ''
+      offset: '00000821'
+    - name: UDFDumpHUOTree
+      demangled: ''
+      offset: 00000B1B
+    - name: UDFDumpHUOSub
+      demangled: ''
+      offset: 00000B59
+    - name: HUPDesc
+      demangled: ''
+      offset: 00000B80
+    - name: UDFDumpHUP
+      demangled: ''
+      offset: 00000D97
+    - name: UDFDumpHUPSub
+      demangled: ''
+      offset: 00000D9E
+    - name: HUSDesc
+      demangled: ''
+      offset: 00000DC4
+    - name: UDFDumpHUS
+      demangled: ''
+      offset: 00000F41
+    - name: UDFDumpHUSSub
+      demangled: ''
+      offset: 00000F48
+    - name: HUVDesc
+      demangled: ''
+      offset: 00000F6E
+    - name: UDFDumpHUV
+      demangled: ''
+      offset: '00001128'
+    - name: UDFDumpHUVSub
+      demangled: ''
+      offset: 0000116D
+    - name: CBHDesc
+      demangled: ''
+      offset: '00001194'
+    - name: UDFDumpCBH
+      demangled: ''
+      offset: 000012B2
+    - name: UDFDumpCBHSub
+      demangled: ''
+      offset: 000012D8
+    - name: HUIDesc
+      demangled: ''
+      offset: 0000130E
+    - name: UDFDumpHUI
+      demangled: ''
+      offset: 000013F0
+    - name: SEMINFODesc
+      demangled: ''
+      offset: 0000141D
+    - name: UDFDumpSEMINFO
+      demangled: ''
+      offset: '00001491'
+    - name: UDFSetHWSEC
+      demangled: ''
+      offset: 000014D2
+    - name: DESTAGDesc
+      demangled: ''
+      offset: 0000154D
+    - name: UDFDumpDESTAG
+      demangled: ''
+      offset: 000015DE
+    - name: DETDesc
+      demangled: ''
+      offset: 0000160B
+    - name: UDFDumpDET
+      demangled: ''
+      offset: 000017BC
+    - name: UDFDumpDETSub
+      demangled: ''
+      offset: 000017C3
+    - name: FIDDesc
+      demangled: ''
+      offset: '000017E9'
+    - name: UDFDumpFID
+      demangled: ''
+      offset: 000018B0
+    - name: UDFDumpFIDSub
+      demangled: ''
+      offset: 000018B7
+    - name: ICBFILEDesc
+      demangled: ''
+      offset: '000018E7'
+    - name: UDFDumpICBFILE
+      demangled: ''
+      offset: 00001B49
+    - name: UDFDumpICBFILESub
+      demangled: ''
+      offset: 00001B50
+    - name: ICBTAGDesc
+      demangled: ''
+      offset: 00001C08
+    - name: UDFDumpICBTAG
+      demangled: ''
+      offset: 00001D1C
+    - name: UDFDumpICBTAGSub
+      demangled: ''
+      offset: 00001D23
+    - name: IOREQDesc
+      demangled: ''
+      offset: 00001E1C
+    - name: UDFDumpIOREQ
+      demangled: ''
+      offset: 00001FAA
+    - name: UDFDumpIOREQSub
+      demangled: ''
+      offset: 00001FD5
+    - name: REGIDDesc
+      demangled: ''
+      offset: 00001FFB
+    - name: UDFDumpREGID
+      demangled: ''
+      offset: 0000206B
+    - name: UDFDumpStats
+      demangled: ''
+      offset: '00002098'
+    - name: UDFDumpStatsSub
+      demangled: ''
+      offset: 0000209D
+    - name: UDFMarkLog
+      demangled: ''
+      offset: 000020B4
+    - name: UDFDumpUnicodePath
+      demangled: ''
+      offset: 000020DB
+    - name: UDFDumpUnicodePathSub
+      demangled: ''
+      offset: '000020E4'
+    - name: UDFDumpUnicode
+      demangled: ''
+      offset: '00002140'
+    - name: udfLogIndex
+      demangled: ''
+      offset: '00002174'
+    - name: udfiMark
+      demangled: ''
+      offset: '00002178'
+    - name: udffContinue
+      demangled: ''
+      offset: 0000217C
+    - name: udfpPrev
+      demangled: ''
+      offset: 0000217D
+  - num: '3'
+    name: _STEXT
+    offset: 00002D90
+    symbols:
+    - name: _pHeapFreeHead
+      demangled: ''
+      offset: '00000000'
+    - name: _UDFLoaded
+      demangled: ''
+      offset: '00000004'
+    - name: _UDF_Safe_memcpy_EH
+      demangled: ''
+      offset: '00000008'
+    - name: _UDF_ASM_Safe_memcpy
+      demangled: ''
+      offset: '00000018'
+    - name: UDF_WARN_App_Bad_Read_Address
+      demangled: ''
+      offset: 0000004D
+  - num: '4'
+    name: L0CKABLE_BEGIN
+    offset: '00006530'
+    symbols:
+    - name: udfLockable
+      demangled: ''
+      offset: '00000000'
+    - name: _UDFRunAPI@8
+      demangled: ''
+      offset: '00000004'
+    - name: _UFS_OpenFile@4
+      demangled: ''
+      offset: 000002F4
+    - name: _UFS_CloseFile@4
+      demangled: ''
+      offset: '00000434'
+    - name: _UFS_ReadFile@4
+      demangled: ''
+      offset: 000005A2
+    - name: _UFS_Query@4
+      demangled: ''
+      offset: 0000076A
+    - name: _UFS_SeekFile@4
+      demangled: ''
+      offset: '00000855'
+    - name: _UFS_FileAttributes@4
+      demangled: ''
+      offset: 0000093E
+    - name: _UFS_GetDiskInfo@4
+      demangled: ''
+      offset: 00000B31
+    - name: _UFS_Search@4
+      demangled: ''
+      offset: 00000C49
+    - name: _UFS_FileTimes@4
+      demangled: ''
+      offset: 00000C7D
+    - name: _UFS_Flush@4
+      demangled: ''
+      offset: 00000DB3
+    - name: _UFS_EnumHandle@4
+      demangled: ''
+      offset: '00000E95'
+    - name: _UFS_IOCTL@4
+      demangled: ''
+      offset: '00001009'
+    - name: _UFS_DASDIO@4
+      demangled: ''
+      offset: '00001517'
+    - name: _UFS_FileLocks@4
+      demangled: ''
+      offset: '00001659'
+    - name: _UDFGetBaseAddress@4
+      demangled: ''
+      offset: '00001845'
+    - name: _UDFMatchHUV@8
+      demangled: ''
+      offset: '00001923'
+    - name: _UDFMakeHUV@12
+      demangled: ''
+      offset: 00001AA4
+    - name: _UDFVerifyVolume@4
+      demangled: ''
+      offset: 000021D5
+    - name: _UFS_Mount@4
+      demangled: ''
+      offset: '00002372'
+    - name: _UFS_Unmount@4
+      demangled: ''
+      offset: 0000258F
+    - name: _ufs_SetPartition@8
+      demangled: ''
+      offset: 000026DF
+    - name: _ufs_GetPrevailing@12
+      demangled: ''
+      offset: 0000277A
+    - name: _ufs_InitPartList@8
+      demangled: ''
+      offset: 00002A82
+    - name: _ufs_FreePartList@4
+      demangled: ''
+      offset: 00002B59
+    - name: _ufs_RegIDValidate@8
+      demangled: ''
+      offset: 00002BA7
+    - name: _ufs_HighBit@4
+      demangled: ''
+      offset: 00002BE1
+    - name: _ufs_Serial@8
+      demangled: ''
+      offset: 00002BF8
+    - name: _ufs_TerminateDstring@8
+      demangled: ''
+      offset: 00002C74
+    - name: _UDFOpenPath@12
+      demangled: ''
+      offset: 00002CF5
+    - name: _UFS_OpenObj@16
+      demangled: ''
+      offset: 00002EBF
+    - name: _UDFLockMem@12
+      demangled: ''
+      offset: '00003222'
+    - name: _UDFLockMem2@8
+      demangled: ''
+      offset: 000032A7
+    - name: _UDFUnlockMem@12
+      demangled: ''
+      offset: 000032DE
+    - name: _UDFUnlockMem2@8
+      demangled: ''
+      offset: 0000335D
+    - name: _UDFCheckCache@12
+      demangled: ''
+      offset: '00003389'
+    - name: _UDFReadSectors@12
+      demangled: ''
+      offset: '00003461'
+    - name: _UDFRead@12
+      demangled: ''
+      offset: 0000385B
+    - name: _UFS_Read@12
+      demangled: ''
+      offset: 00003B52
+    - name: _UFS_Locate@12
+      demangled: ''
+      offset: 00003C52
+    - name: _ufs_Extent@16
+      demangled: ''
+      offset: 00003E5B
+    - name: _ufs_BuildExtents@8
+      demangled: ''
+      offset: '00004220'
+    - name: _ufs_FlushExtents@8
+      demangled: ''
+      offset: '00004392'
+    - name: _ufs_FindICB@16
+      demangled: ''
+      offset: '00004400'
+    - name: _ufs_WalkICBTree@20
+      demangled: ''
+      offset: 000044D2
+    - name: _ufs_OpenFromDetails@12
+      demangled: ''
+      offset: 000046A5
+    - name: _UDFEnumerateHUF
+      demangled: ''
+      offset: 0000492B
+    - name: _UDFFindPath@12
+      demangled: ''
+      offset: 000049FF
+    - name: _UDFFillFindBuffer@8
+      demangled: ''
+      offset: 00004B3C
+    - name: _UDFFindSub@8
+      demangled: ''
+      offset: 00004CA7
+    - name: _UFS_FindOpen@4
+      demangled: ''
+      offset: '00004E23'
+    - name: _UFS_FindNext@4
+      demangled: ''
+      offset: '00005155'
+    - name: _UFS_FindClose@4
+      demangled: ''
+      offset: 0000523C
+    - name: _UFS_Dir@4
+      demangled: ''
+      offset: 000052ED
+    - name: _UFS_OpenObjAsFile@12
+      demangled: ''
+      offset: 0000553B
+    - name: _UFS_OpenSearch@16
+      demangled: ''
+      offset: '00005605'
+    - name: _UDFMakeAltNames@4
+      demangled: ''
+      offset: 000056B2
+    - name: _UDFMakeAltVolLabels@4
+      demangled: ''
+      offset: 000057C2
+    - name: _UFS_GetDetails@8
+      demangled: ''
+      offset: '00005867'
+    - name: _UFS_NextEntry@8
+      demangled: ''
+      offset: 00005D5E
+    - name: _UDFCloseHandle@12
+      demangled: ''
+      offset: '00005E26'
+    - name: _ufs_MetaMatch@8
+      demangled: ''
+      offset: 000061AE
+    - name: _ufs_NameMatch@12
+      demangled: ''
+      offset: '000062E7'
+    - name: _ufs_CanonUnicode@16
+      demangled: ''
+      offset: 000063C0
+    - name: _ufs_DescriptorCRC@8
+      demangled: ''
+      offset: 000064D4
+    - name: _ufs_VerifyDesTag@20
+      demangled: ''
+      offset: '00006513'
+    - name: _ufs_UDFToWin32GMT@8
+      demangled: ''
+      offset: 000065BF
+    - name: _ufs_GetXAFileTime@12
+      demangled: ''
+      offset: 00006A03
+    - name: _ufs_GetXABody@8
+      demangled: ''
+      offset: 00006B01
+    - name: _UDFNewDOSSearchHandle@8
+      demangled: ''
+      offset: 00006B8F
+    - name: _UDFGetDOSSearch@12
+      demangled: ''
+      offset: 00006C8A
+    - name: _UDFFillFindDOS@12
+      demangled: ''
+      offset: 00006D2A
+    - name: _UDFFindDOSSub@8
+      demangled: ''
+      offset: 00006E6F
+    - name: _UDFFindFirstDOS@4
+      demangled: ''
+      offset: '00007008'
+    - name: _UDFFindNextDOS@4
+      demangled: ''
+      offset: '00007302'
+    - name: _UDFCleanupDOSSearches@4
+      demangled: ''
+      offset: '00007410'
+    - name: _UDF_HeapAlloc@8
+      demangled: ''
+      offset: '00007546'
+    - name: _UDF_HeapFree@8
+      demangled: ''
+      offset: 000075CF
+    - name: _UDF_HUF_Free@4
+      demangled: ''
+      offset: 0000760D
+    - name: _UDF_HUO_Free@4
+      demangled: ''
+      offset: '00007647'
+    - name: _UDF_HUP_Free@4
+      demangled: ''
+      offset: 000076A6
+    - name: _UDF_HUS_Free@4
+      demangled: ''
+      offset: '000076E3'
+    - name: _UDF_HUV_Free@8
+      demangled: ''
+      offset: '00007720'
+    - name: _udf_AllocDetails@4
+      demangled: ''
+      offset: 0000785C
+    - name: _udf_FreeDetails@4
+      demangled: ''
+      offset: 000078C8
+    - name: _UDFAllocIOREQ@0
+      demangled: ''
+      offset: 0000790C
+    - name: _UDFFreeIOREQ@8
+      demangled: ''
+      offset: 0000796A
+    - name: _UDF_Global_SemReq@8
+      demangled: ''
+      offset: 000079F4
+    - name: _UDF_Global_SemClear@4
+      demangled: ''
+      offset: 00007A52
+    - name: _UDF_HUV_SemReq@12
+      demangled: ''
+      offset: 00007AAB
+    - name: _UDF_HUV_SemClear@8
+      demangled: ''
+      offset: 00007B49
+    - name: _UDF_HUO_SemReq@12
+      demangled: ''
+      offset: 00007BE1
+    - name: _UDF_HUO_SemClear@8
+      demangled: ''
+      offset: 00007C7F
+    - name: _UDF_HUF_SemReq@12
+      demangled: ''
+      offset: 00007D17
+    - name: _UDF_HUF_SemClear@8
+      demangled: ''
+      offset: 00007DB8
+    - name: _UDF_HUS_SemReq@12
+      demangled: ''
+      offset: '00007E50'
+    - name: _UDF_HUS_SemClear@8
+      demangled: ''
+      offset: 00007EF1
+    - name: _UDF_CBH_SemReq@12
+      demangled: ''
+      offset: 00007F89
+    - name: _UDF_CBH_SemClear@8
+      demangled: ''
+      offset: 00007FEA
+    - name: _UDF_IOS_AllocIOR@4
+      demangled: ''
+      offset: '00008045'
+    - name: _UDF_IOS_FreeIOR@4
+      demangled: ''
+      offset: '00008132'
+    - name: _UDF_IOS_AllocIOCTL@4
+      demangled: ''
+      offset: '00008152'
+    - name: _UDF_IOS_FreeIOCTL@4
+      demangled: ''
+      offset: 000081D2
+    - name: _UDFStartRead@16
+      demangled: ''
+      offset: '00008220'
+    - name: _UDFWaitIO@4
+      demangled: ''
+      offset: 000082FD
+    - name: _UDF_IOS_Callback@4
+      demangled: ''
+      offset: 000083CC
+    - name: _udf_AbsoluteSector@8
+      demangled: ''
+      offset: 000083FA
+    - name: _UDF_lbn_Get@12
+      demangled: ''
+      offset: '00008435'
+    - name: _UDF_Sector_Get@8
+      demangled: ''
+      offset: '00008451'
+    - name: _UDFReadAhead@12
+      demangled: ''
+      offset: 00008D08
+    - name: _UDFNextReadAhead@4
+      demangled: ''
+      offset: '00009226'
+    - name: _UDFReadAheadDone@4
+      demangled: ''
+      offset: 0000965D
+    - name: _UDF_Sector_Release@4
+      demangled: ''
+      offset: '00009911'
+    - name: _UDF_Sector_Unhold@4
+      demangled: ''
+      offset: 000099CD
+    - name: _UDFInvalidateCBH@16
+      demangled: ''
+      offset: 00009ADE
+    - name: _UDFInvalidateCache@8
+      demangled: ''
+      offset: 00009B3A
+    - name: _UDF_IOS_FlushDrive@8
+      demangled: ''
+      offset: 00009B5E
+    - name: udfEndLockable
+      demangled: ''
+      offset: 00009BBC
+  - num: '5'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _drpUDF
+      demangled: ''
+      offset: '00000078'
+    - name: UDF_Dynamic_Device_Init
+      demangled: ''
+      offset: 000000B0
+    - name: _udfGetRegistry
+      demangled: ''
+      offset: 0000020D
+    - name: UDFGetProfileInt
+      demangled: ''
+      offset: 000002A5
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: '000009E0'
+    symbols:
+    - name: _udfasrchDOS
+      demangled: ''
+      offset: '00000000'
+    - name: _udfaphusDOS
+      demangled: ''
+      offset: '00000080'
+    - name: _fTearDown
+      demangled: ''
+      offset: '00000100'
+    - name: _UDF_VCACHE_fsdid
+      demangled: ''
+      offset: '00000104'
+    - name: _smsGlobal
+      demangled: ''
+      offset: '00000108'
+    - name: _pdetailCached
+      demangled: ''
+      offset: '00000110'
+    - name: _pirCached
+      demangled: ''
+      offset: '00000114'
+    - name: _udfsrchDOS
+      demangled: ''
+      offset: '00000118'
+    - name: _udffDebug
+      demangled: ''
+      offset: 0000011C
+    - name: _volfuncUDF
+      demangled: ''
+      offset: '00000120'
+    - name: _hndlmiscUDFFind
+      demangled: ''
+      offset: '00000160'
+    - name: _hndlmiscUDFFile
+      demangled: ''
+      offset: '00000184'
+    - name: _MonthToDays
+      demangled: ''
+      offset: '00000204'
+    - name: _asCRC
+      demangled: ''
+      offset: 0000023C
+    - name: _regid_part_contid_nsr02
+      demangled: ''
+      offset: 0000043C
+    - name: _regid_UDF_DomainID
+      demangled: ''
+      offset: 0000045C
+    - name: _ilbUDF
+      demangled: ''
+      offset: 0000047C
+    - name: _hueEOFMarker
+      demangled: ''
+      offset: 000004B0
+    - name: _OSTAUnicode
+      demangled: ''
+      offset: 000004CC
+    - name: _DefaultVolID
+      demangled: ''
+      offset: 0000050C
+    - name: _UDF_IOS_aer
+      demangled: ''
+      offset: '00000518'
+    - name: UDF_DDB
+      demangled: ''
+      offset: '00000588'
+    - name: udfipageLockable
+      demangled: ''
+      offset: 000005D8
+    - name: udfcpageLockable
+      demangled: ''
+      offset: 000005DC
+    - name: udfcCodeLocks
+      demangled: ''
+      offset: '000005E0'
+    - name: udfpHeapFree
+      demangled: ''
+      offset: '000005E4'
+    - name: _udfhuvHead
+      demangled: ''
+      offset: '000005E8'
+    - name: _udfirHead
+      demangled: ''
+      offset: 000005FC
+    - name: UDF_Control
+      demangled: ''
+      offset: '00000808'
+    - name: _UDF_ReturnError
+      demangled: ''
+      offset: 000008AE
+    - name: _UDF_Dispatcher
+      demangled: ''
+      offset: 000008AE
+    - name: _UDF_MountVolume
+      demangled: ''
+      offset: 000008B2
+    - name: _UDF_Delete
+      demangled: ''
+      offset: 000008B6
+    - name: _UDF_Dir
+      demangled: ''
+      offset: 000008BA
+    - name: _UDF_FileAttrib
+      demangled: ''
+      offset: 000008BE
+    - name: _UDF_Flush
+      demangled: ''
+      offset: 000008C2
+    - name: _UDF_GetDiskInfo
+      demangled: ''
+      offset: 000008C6
+    - name: _UDF_Open
+      demangled: ''
+      offset: 000008CA
+    - name: _UDF_Rename
+      demangled: ''
+      offset: 000008CE
+    - name: _UDF_Search
+      demangled: ''
+      offset: 000008D2
+    - name: _UDF_Query
+      demangled: ''
+      offset: 000008D6
+    - name: _UDF_Disconnect
+      demangled: ''
+      offset: 000008DA
+    - name: _UDF_UNCPipeReq
+      demangled: ''
+      offset: 000008DE
+    - name: _UDF_IOCTL16Drive
+      demangled: ''
+      offset: '000008E2'
+    - name: _UDF_GetDiskParms
+      demangled: ''
+      offset: '000008E6'
+    - name: _UDF_FindOpen
+      demangled: ''
+      offset: 000008EA
+    - name: _UDF_DASDIO
+      demangled: ''
+      offset: 000008EE
+    - name: _UDF_ReadFile
+      demangled: ''
+      offset: 000008F2
+    - name: _UDF_WriteFile
+      demangled: ''
+      offset: 000008F6
+    - name: _UDF_Seek
+      demangled: ''
+      offset: 000008FA
+    - name: _UDF_Close
+      demangled: ''
+      offset: 000008FE
+    - name: _UDF_Commit
+      demangled: ''
+      offset: '00000902'
+    - name: _UDF_FileLocks
+      demangled: ''
+      offset: '00000906'
+    - name: _UDF_FileTimes
+      demangled: ''
+      offset: 0000090A
+    - name: _UDF_PipeRequest
+      demangled: ''
+      offset: 0000090E
+    - name: _UDF_HandleInfo
+      demangled: ''
+      offset: '00000912'
+    - name: _UDF_EnumHandle
+      demangled: ''
+      offset: '00000916'
+    - name: _UDF_FindNextFile
+      demangled: ''
+      offset: 0000091A
+    - name: _UDF_FindClose
+      demangled: ''
+      offset: 0000091E
+    - name: _UDF_FindNextFail
+      demangled: ''
+      offset: '00000922'
+    - name: _UDF_Entry
+      demangled: ''
+      offset: 0000092A
+    - name: _UDF_Exit
+      demangled: ''
+      offset: 0000092F
+    - name: UDF_DevIOControl
+      demangled: ''
+      offset: '00000930'
+    - name: _UDF_VCACHE_CheckAvail@4
+      demangled: ''
+      offset: '00000948'
+    - name: UDF_VCACHE_Discard
+      demangled: ''
+      offset: '00000963'
+    - name: _UDF_VCACHE_FindBlock@16
+      demangled: ''
+      offset: '00000964'
+    - name: _UDF_VCACHE_FreeBlock@4
+      demangled: ''
+      offset: 000009BA
+    - name: _UDF_VCACHE_MakeMRU@4
+      demangled: ''
+      offset: 000009CD
+    - name: _UDF_VCACHE_Hold@4
+      demangled: ''
+      offset: '000009E0'
+    - name: _UDF_VCACHE_Unhold@4
+      demangled: ''
+      offset: 000009F3
+    - name: _UDF_VCACHE_Destroy@4
+      demangled: ''
+      offset: 00000A0C
+    - name: _UDF_VCACHE_Enum@12
+      demangled: ''
+      offset: 00000A2C
+    - name: _UDF_VCACHE_Enum_CBStub
+      demangled: ''
+      offset: 00000A56
+    - name: _UDF_VMM_PageFree
+      demangled: ''
+      offset: 00000A65
+    - name: _UDF_VMM_BlockOnID
+      demangled: ''
+      offset: 00000A6B
+    - name: _UDF_VMM_SignalID
+      demangled: ''
+      offset: 00000A71
+    - name: _UDF_VMM_GetSystemTime
+      demangled: ''
+      offset: 00000A77
+    - name: _UDF_VMM_HeapAllocate@8
+      demangled: ''
+      offset: 00000A7D
+    - name: _UDF_VMM_HeapFree@12
+      demangled: ''
+      offset: 00000AB2
+    - name: _UDF_VMM_MapFlatDSDX
+      demangled: ''
+      offset: 00000AE7
+    - name: _UDF_VMM_LinPageLock
+      demangled: ''
+      offset: 00000AF1
+    - name: _UDF_VMM_LinPageUnlock
+      demangled: ''
+      offset: 00000AF7
+    - name: _UDF_IOS_Meet_Criteria
+      demangled: ''
+      offset: 00000AFD
+    - name: _UDF_IOS_SendCommand@4
+      demangled: ''
+      offset: 00000B03
+    - name: __UDF_IOS_Callback@0
+      demangled: ''
+      offset: 00000B1F
+    - name: __UDF_IOS_ReadAheadDone@0
+      demangled: ''
+      offset: 00000B26
+    - name: _UDF_IOS_Service
+      demangled: ''
+      offset: 00000B43
+    - name: _UDF_IOS_MapIORSToI21@4
+      demangled: ''
+      offset: 00000B49
+    - name: _UDF_IOS_QueryUDFMount
+      demangled: ''
+      offset: 00000B56
+    - name: _UDF_Safe_memcpy@12
+      demangled: ''
+      offset: 00000B5C
+    - name: _udfTearDown
+      demangled: ''
+      offset: 00000B74
+    - name: _UDF_IFS_Win32ToDosTime@4
+      demangled: ''
+      offset: 00000B75
+    - name: _UDF_IFS_CreateBasis@12
+      demangled: ''
+      offset: 00000B8B
+    - name: _UDF_IFS_AppendBasisTail
+      demangled: ''
+      offset: 00000BEA
+    - name: _UDF_IFS_FcbToShort
+      demangled: ''
+      offset: 00000BF0
+    - name: _UDF_IFS_GetTimeZoneBias@0
+      demangled: ''
+      offset: 00000BF6
+    - name: _UDF_IFS_MetaMatch
+      demangled: ''
+      offset: 00000BFC
+    - name: _UDF_IFS_BCSToUni
+      demangled: ''
+      offset: 00000C02
+    - name: _UDF_IFS_UniToBCS
+      demangled: ''
+      offset: 00000C08
+    - name: _UDF_IFS_CheckAccessConflict
+      demangled: ''
+      offset: 00000C0E
+    - name: _UDF_IFS_LockFile
+      demangled: ''
+      offset: 00000C14
+    - name: _UDF_IFS_UnlockFile
+      demangled: ''
+      offset: 00000C1A
+    - name: _UDF_IFS_RemoveLocks
+      demangled: ''
+      offset: 00000C20
+    - name: _UDF_IFS_CheckLocks
+      demangled: ''
+      offset: 00000C26
+    - name: _UDF_IFS_ShortToFCB
+      demangled: ''
+      offset: 00000C2C
+    - name: _QMATH_Above@8
+      demangled: ''
+      offset: 00000C7E
+    - name: _UDF_SemReq@16
+      demangled: ''
+      offset: 00000CA2
+    - name: _UDF_SemClear@8
+      demangled: ''
+      offset: 00000D61
+    - name: _UDF_SemDowngrade@8
+      demangled: ''
+      offset: 00000DA8
+    - name: _UDFLinkHUV@4
+      demangled: ''
+      offset: 00000DE0
+    - name: _UDFUnlinkHUV@4
+      demangled: ''
+      offset: 00000DFA
+    - name: _UDFLinkIOREQ@4
+      demangled: ''
+      offset: 00000E0D
+    - name: _UDFUnlinkIOREQ@4
+      demangled: ''
+      offset: '00000E27'
+    - name: _UDFResetNomount@0
+      demangled: ''
+      offset: 00000E3A
+    - name: _UDFLockCode
+      demangled: ''
+      offset: 00000E7B
+    - name: _UDFUnlockCode
+      demangled: ''
+      offset: 00000EAD
+    - name: _UDFPrintf
+      demangled: ''
+      offset: 00000EDC
+    - name: UDF_Debug
+      demangled: ''
+      offset: 00000EFC
+    - name: UDFClearStats
+      demangled: ''
+      offset: 00000FA2
+  - num: '2'
+    name: _DB1CODE
+    offset: 00000DC0
+    symbols:
+    - name: UDFDumpLog
+      demangled: ''
+      offset: '00000000'
+    - name: UDFSorry
+      demangled: ''
+      offset: '00000000'
+    - name: UDFGetChar
+      demangled: ''
+      offset: 0000000E
+    - name: UDFEvalExp
+      demangled: ''
+      offset: '00000018'
+    - name: UDFToggleZeroSuppress
+      demangled: ''
+      offset: 0000007A
+    - name: UDFDumpStruct
+      demangled: ''
+      offset: 0000009A
+    - name: UDFDumpBySig
+      demangled: ''
+      offset: 000003C4
+    - name: UDFDumpBySigSub
+      demangled: ''
+      offset: '000003E4'
+    - name: UDFDumpHeap
+      demangled: ''
+      offset: 0000042E
+    - name: UDFDumpHUE
+      demangled: ''
+      offset: '00000433'
+    - name: UDFDumpHUESub
+      demangled: ''
+      offset: 0000043A
+    - name: HUFDesc
+      demangled: ''
+      offset: '00000522'
+    - name: UDFDumpHUF
+      demangled: ''
+      offset: '00000634'
+    - name: UDFDumpHUFSub
+      demangled: ''
+      offset: 0000063B
+    - name: HUODesc
+      demangled: ''
+      offset: '00000661'
+    - name: UDFDumpHUOTree
+      demangled: ''
+      offset: '00000946'
+    - name: UDFDumpHUOSub
+      demangled: ''
+      offset: '00000984'
+    - name: HUPDesc
+      demangled: ''
+      offset: 000009AB
+    - name: UDFDumpHUP
+      demangled: ''
+      offset: 00000BAD
+    - name: UDFDumpHUPSub
+      demangled: ''
+      offset: 00000BB4
+    - name: HUSDesc
+      demangled: ''
+      offset: 00000BDA
+    - name: UDFDumpHUS
+      demangled: ''
+      offset: 00000D42
+    - name: UDFDumpHUSSub
+      demangled: ''
+      offset: 00000D49
+    - name: HUVDesc
+      demangled: ''
+      offset: 00000D6F
+    - name: UDFDumpHUV
+      demangled: ''
+      offset: 00000F14
+    - name: UDFDumpHUVSub
+      demangled: ''
+      offset: 00000F59
+    - name: CBHDesc
+      demangled: ''
+      offset: 00000F80
+    - name: UDFDumpCBH
+      demangled: ''
+      offset: '00001089'
+    - name: UDFDumpCBHSub
+      demangled: ''
+      offset: 000010AF
+    - name: HUIDesc
+      demangled: ''
+      offset: '000010E5'
+    - name: UDFDumpHUI
+      demangled: ''
+      offset: 000011C7
+    - name: SEMINFODesc
+      demangled: ''
+      offset: 000011F4
+    - name: UDFDumpSEMINFO
+      demangled: ''
+      offset: '00001205'
+    - name: DESTAGDesc
+      demangled: ''
+      offset: 0000120A
+    - name: UDFDumpDESTAG
+      demangled: ''
+      offset: 0000129B
+    - name: DETDesc
+      demangled: ''
+      offset: 000012C8
+    - name: UDFDumpDET
+      demangled: ''
+      offset: '00001479'
+    - name: UDFDumpDETSub
+      demangled: ''
+      offset: '00001480'
+    - name: FIDDesc
+      demangled: ''
+      offset: 000014A6
+    - name: UDFDumpFID
+      demangled: ''
+      offset: 0000156D
+    - name: UDFDumpFIDSub
+      demangled: ''
+      offset: '00001574'
+    - name: ICBFILEDesc
+      demangled: ''
+      offset: 000015A4
+    - name: UDFDumpICBFILE
+      demangled: ''
+      offset: '00001806'
+    - name: UDFDumpICBFILESub
+      demangled: ''
+      offset: 0000180D
+    - name: ICBTAGDesc
+      demangled: ''
+      offset: 000018C5
+    - name: UDFDumpICBTAG
+      demangled: ''
+      offset: 000019D9
+    - name: UDFDumpICBTAGSub
+      demangled: ''
+      offset: '000019E0'
+    - name: IOREQDesc
+      demangled: ''
+      offset: 00001AD9
+    - name: UDFDumpIOREQ
+      demangled: ''
+      offset: 00001C49
+    - name: UDFDumpIOREQSub
+      demangled: ''
+      offset: 00001C74
+    - name: REGIDDesc
+      demangled: ''
+      offset: 00001C9A
+    - name: UDFDumpREGID
+      demangled: ''
+      offset: 00001D0A
+    - name: UDFDumpStats
+      demangled: ''
+      offset: 00001D37
+    - name: UDFMarkLog
+      demangled: ''
+      offset: 00001D38
+    - name: UDFDumpUnicodePath
+      demangled: ''
+      offset: 00001D3D
+    - name: UDFDumpUnicodePathSub
+      demangled: ''
+      offset: 00001D46
+    - name: UDFDumpUnicode
+      demangled: ''
+      offset: 00001D99
+    - name: udfpPrev
+      demangled: ''
+      offset: 00001DCC
+  - num: '3'
+    name: _STEXT
+    offset: '00000E30'
+    symbols:
+    - name: _pHeapFreeHead
+      demangled: ''
+      offset: '00000000'
+    - name: _UDFLoaded
+      demangled: ''
+      offset: '00000004'
+    - name: _UDF_Safe_memcpy_EH
+      demangled: ''
+      offset: '00000008'
+    - name: _UDF_ASM_Safe_memcpy
+      demangled: ''
+      offset: '00000018'
+  - num: '4'
+    name: L0CKABLE_BEGIN
+    offset: '00001850'
+    symbols:
+    - name: udfLockable
+      demangled: ''
+      offset: '00000000'
+    - name: _UDFRunAPI@8
+      demangled: ''
+      offset: '00000004'
+    - name: _UFS_OpenFile@4
+      demangled: ''
+      offset: 000001A0
+    - name: _UFS_CloseFile@4
+      demangled: ''
+      offset: 000002D0
+    - name: _UFS_ReadFile@4
+      demangled: ''
+      offset: '00000364'
+    - name: _UFS_Query@4
+      demangled: ''
+      offset: '00000445'
+    - name: _UFS_SeekFile@4
+      demangled: ''
+      offset: '000004E1'
+    - name: _UFS_FileAttributes@4
+      demangled: ''
+      offset: '00000578'
+    - name: _UFS_GetDiskInfo@4
+      demangled: ''
+      offset: 000006C6
+    - name: _UFS_Search@4
+      demangled: ''
+      offset: 0000078D
+    - name: _UFS_FileTimes@4
+      demangled: ''
+      offset: 000007B6
+    - name: _UFS_Flush@4
+      demangled: ''
+      offset: 000008D0
+    - name: _UFS_EnumHandle@4
+      demangled: ''
+      offset: 0000093E
+    - name: _UFS_IOCTL@4
+      demangled: ''
+      offset: 00000A0C
+    - name: _UFS_DASDIO@4
+      demangled: ''
+      offset: 00000CF1
+    - name: _UFS_FileLocks@4
+      demangled: ''
+      offset: 00000D8F
+    - name: _UDFGetBaseAddress@4
+      demangled: ''
+      offset: 00000E0B
+    - name: _UDFMatchHUV@8
+      demangled: ''
+      offset: '00000E98'
+    - name: _UDFMakeHUV@12
+      demangled: ''
+      offset: 00000FF9
+    - name: _UDFVerifyVolume@4
+      demangled: ''
+      offset: '00001652'
+    - name: _UFS_Mount@4
+      demangled: ''
+      offset: 000016F2
+    - name: _UFS_Unmount@4
+      demangled: ''
+      offset: 0000186D
+    - name: _ufs_SetPartition@8
+      demangled: ''
+      offset: 000018F8
+    - name: _ufs_GetPrevailing@12
+      demangled: ''
+      offset: '00001928'
+    - name: _ufs_InitPartList@8
+      demangled: ''
+      offset: 00001B9B
+    - name: _ufs_FreePartList@4
+      demangled: ''
+      offset: 00001C52
+    - name: _ufs_RegIDValidate@8
+      demangled: ''
+      offset: 00001C7B
+    - name: _ufs_HighBit@4
+      demangled: ''
+      offset: 00001CB3
+    - name: _ufs_Serial@8
+      demangled: ''
+      offset: 00001CC9
+    - name: _ufs_TerminateDstring@8
+      demangled: ''
+      offset: 00001D03
+    - name: _UDFOpenPath@12
+      demangled: ''
+      offset: 00001D66
+    - name: _UFS_OpenObj@16
+      demangled: ''
+      offset: 00001E8E
+    - name: _UDFLockMem@12
+      demangled: ''
+      offset: 00001FDD
+    - name: _UDFLockMem2@8
+      demangled: ''
+      offset: '00002022'
+    - name: _UDFUnlockMem@12
+      demangled: ''
+      offset: '00002057'
+    - name: _UDFUnlockMem2@8
+      demangled: ''
+      offset: '00002092'
+    - name: _UDFCheckCache@12
+      demangled: ''
+      offset: 000020BD
+    - name: _UDFReadSectors@12
+      demangled: ''
+      offset: '00002121'
+    - name: _UDFRead@12
+      demangled: ''
+      offset: '00002394'
+    - name: _UFS_Read@12
+      demangled: ''
+      offset: '00002552'
+    - name: _UFS_Locate@12
+      demangled: ''
+      offset: 000025F7
+    - name: _ufs_Extent@16
+      demangled: ''
+      offset: 0000273C
+    - name: _ufs_BuildExtents@8
+      demangled: ''
+      offset: 00002A43
+    - name: _ufs_FlushExtents@8
+      demangled: ''
+      offset: 00002B30
+    - name: _ufs_FindICB@16
+      demangled: ''
+      offset: 00002B59
+    - name: _ufs_WalkICBTree@20
+      demangled: ''
+      offset: 00002BA0
+    - name: _ufs_OpenFromDetails@12
+      demangled: ''
+      offset: 00002CDF
+    - name: _UDFEnumerateHUF
+      demangled: ''
+      offset: '00002E40'
+    - name: _UDFFindPath@12
+      demangled: ''
+      offset: 00002E8B
+    - name: _UDFFillFindBuffer@8
+      demangled: ''
+      offset: 00002F1D
+    - name: _UDFFindSub@8
+      demangled: ''
+      offset: 00002FF5
+    - name: _UFS_FindOpen@4
+      demangled: ''
+      offset: '00003078'
+    - name: _UFS_FindNext@4
+      demangled: ''
+      offset: 0000330F
+    - name: _UFS_FindClose@4
+      demangled: ''
+      offset: '00003371'
+    - name: _UFS_Dir@4
+      demangled: ''
+      offset: 000033AB
+    - name: _UFS_OpenObjAsFile@12
+      demangled: ''
+      offset: '00003518'
+    - name: _UFS_OpenSearch@16
+      demangled: ''
+      offset: '00003599'
+    - name: _UDFMakeAltNames@4
+      demangled: ''
+      offset: 0000360B
+    - name: _UDFMakeAltVolLabels@4
+      demangled: ''
+      offset: 000036D9
+    - name: _UFS_GetDetails@8
+      demangled: ''
+      offset: '00003749'
+    - name: _UFS_NextEntry@8
+      demangled: ''
+      offset: 00003AB8
+    - name: _UDFCloseHandle@12
+      demangled: ''
+      offset: 00003B28
+    - name: _ufs_MetaMatch@8
+      demangled: ''
+      offset: 00003CA4
+    - name: _ufs_NameMatch@12
+      demangled: ''
+      offset: 00003D3A
+    - name: _ufs_CanonUnicode@16
+      demangled: ''
+      offset: 00003DAB
+    - name: _ufs_DescriptorCRC@8
+      demangled: ''
+      offset: '00003E64'
+    - name: _ufs_VerifyDesTag@20
+      demangled: ''
+      offset: 00003EA1
+    - name: _ufs_UDFToWin32GMT@8
+      demangled: ''
+      offset: 00003F2F
+    - name: _ufs_GetXAFileTime@12
+      demangled: ''
+      offset: '00004129'
+    - name: _ufs_GetXABody@8
+      demangled: ''
+      offset: 000041A7
+    - name: _UDFNewDOSSearchHandle@8
+      demangled: ''
+      offset: '00004201'
+    - name: _UDFGetDOSSearch@12
+      demangled: ''
+      offset: '00004281'
+    - name: _UDFFillFindDOS@12
+      demangled: ''
+      offset: 000042CC
+    - name: _UDFFindDOSSub@8
+      demangled: ''
+      offset: '00004365'
+    - name: _UDFFindFirstDOS@4
+      demangled: ''
+      offset: '00004404'
+    - name: _UDFFindNextDOS@4
+      demangled: ''
+      offset: '00004635'
+    - name: _UDFCleanupDOSSearches@4
+      demangled: ''
+      offset: 000046DD
+    - name: _UDF_HeapAlloc@8
+      demangled: ''
+      offset: 0000472C
+    - name: _UDF_HeapFree@8
+      demangled: ''
+      offset: '00004744'
+    - name: _UDF_HUV_Free@8
+      demangled: ''
+      offset: '00004758'
+    - name: _udf_AllocDetails@4
+      demangled: ''
+      offset: 000047C0
+    - name: _udf_FreeDetails@4
+      demangled: ''
+      offset: 0000482C
+    - name: _UDFAllocIOREQ@0
+      demangled: ''
+      offset: '00004870'
+    - name: _UDFFreeIOREQ@8
+      demangled: ''
+      offset: 000048C7
+    - name: _UDF_Global_SemReq@8
+      demangled: ''
+      offset: '00004905'
+    - name: _UDF_Global_SemClear@4
+      demangled: ''
+      offset: 0000491C
+    - name: _UDF_HUV_SemReq@12
+      demangled: ''
+      offset: 0000492D
+    - name: _UDF_HUV_SemClear@8
+      demangled: ''
+      offset: '00004946'
+    - name: _UDF_HUO_SemReq@12
+      demangled: ''
+      offset: 0000495A
+    - name: _UDF_HUO_SemClear@8
+      demangled: ''
+      offset: '00004975'
+    - name: _UDF_HUF_SemReq@12
+      demangled: ''
+      offset: '00004989'
+    - name: _UDF_HUF_SemClear@8
+      demangled: ''
+      offset: 000049A7
+    - name: _UDF_HUS_SemReq@12
+      demangled: ''
+      offset: 000049BB
+    - name: _UDF_HUS_SemClear@8
+      demangled: ''
+      offset: 000049D9
+    - name: _UDF_CBH_SemReq@12
+      demangled: ''
+      offset: 000049ED
+    - name: _UDF_CBH_SemClear@8
+      demangled: ''
+      offset: 00004A08
+    - name: _UDF_IOS_AllocIOR@4
+      demangled: ''
+      offset: 00004A1C
+    - name: _UDF_IOS_FreeIOR@4
+      demangled: ''
+      offset: 00004B09
+    - name: _UDF_IOS_AllocIOCTL@4
+      demangled: ''
+      offset: 00004B26
+    - name: _UDF_IOS_FreeIOCTL@4
+      demangled: ''
+      offset: 00004BA6
+    - name: _UDFStartRead@16
+      demangled: ''
+      offset: 00004BCB
+    - name: _UDFWaitIO@4
+      demangled: ''
+      offset: 00004C0E
+    - name: _UDF_IOS_Callback@4
+      demangled: ''
+      offset: 00004C48
+    - name: _udf_AbsoluteSector@8
+      demangled: ''
+      offset: 00004C61
+    - name: _UDF_lbn_Get@12
+      demangled: ''
+      offset: 00004C6F
+    - name: _UDF_Sector_Get@8
+      demangled: ''
+      offset: 00004C89
+    - name: _UDFReadAhead@12
+      demangled: ''
+      offset: '00005159'
+    - name: _UDFNextReadAhead@4
+      demangled: ''
+      offset: '00005520'
+    - name: _UDFReadAheadDone@4
+      demangled: ''
+      offset: 0000572E
+    - name: _UDF_Sector_Release@4
+      demangled: ''
+      offset: '00005850'
+    - name: _UDF_Sector_Unhold@4
+      demangled: ''
+      offset: '00005869'
+    - name: _UDFInvalidateCBH@16
+      demangled: ''
+      offset: 000058C4
+    - name: _UDFInvalidateCache@8
+      demangled: ''
+      offset: 000058DA
+    - name: _UDF_IOS_FlushDrive@8
+      demangled: ''
+      offset: 000058FC
+    - name: udfEndLockable
+      demangled: ''
+      offset: '00005948'
+  - num: '5'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _drpUDF
+      demangled: ''
+      offset: '00000060'
+    - name: UDF_Dynamic_Device_Init
+      demangled: ''
+      offset: '00000098'
+    - name: _udfGetRegistry
+      demangled: ''
+      offset: 000001A8
+    - name: UDFGetProfileInt
+      demangled: ''
+      offset: '00000240'

@@ -1,0 +1,1091 @@
+filename: cmbatt.sys
+binary: CMBATT
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../cmbatt.c
+  - ../cmbpnp.c
+  - ../cmexe.c
+  - ../cmhndlr.c
+  - ../vxd.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00000EB0
+    symbols:
+    - name: _CmBattIoCompletion@12
+      processed: ''
+      offset: '00000000'
+    - name: _CmBattSynchronousRequest@12
+      processed: ''
+      offset: '00000040'
+    - name: _CmBattAddDevice@8
+      processed: ''
+      offset: 000000A0
+    - name: _CmBattAddBattery@8
+      processed: ''
+      offset: '00000260'
+    - name: _CmBattAddAcAdapter@8
+      processed: ''
+      offset: 000004B0
+    - name: _CmBattGetAcpiInterfaces@4
+      processed: ''
+      offset: 000006D0
+    - name: _CmBattCreateFdo@12
+      processed: ''
+      offset: '00000850'
+    - name: _CmBattPnpDispatch@8
+      processed: ''
+      offset: 00000A50
+    - name: _CmBattPowerDispatch@8
+      processed: ''
+      offset: 00000DF0
+    - name: _CmBattForwardRequest@8
+      processed: ''
+      offset: 00000F90
+    - name: _CmBattStartDevice@8
+      processed: ''
+      offset: '00001000'
+    - name: _CmBattStopDevice@8
+      processed: ''
+      offset: '00001220'
+    - name: _CmBattVerifyStaticInfo@8
+      processed: ''
+      offset: 000013B0
+    - name: _CmBattGetPsrData@8
+      processed: ''
+      offset: '00001610'
+    - name: _CmBattGetBifData@8
+      processed: ''
+      offset: '00001720'
+    - name: _CmBattGetBstData@8
+      processed: ''
+      offset: 00001C80
+    - name: _GetDwordElement@8
+      processed: ''
+      offset: 00001EF0
+    - name: _GetStringElement@8
+      processed: ''
+      offset: 00001F40
+    - name: _CmBattNotifyHandler@8
+      processed: ''
+      offset: 00001FF0
+    - name: _CmBattPowerNotifyHandler@8
+      processed: ''
+      offset: 000021D0
+    - name: _CmBattNotifyVPOWERDOfPowerChange@4
+      processed: ''
+      offset: '00002240'
+    - name: _BatteryClassInitializeDevice@8
+      processed: ''
+      offset: '00002276'
+    - name: _BatteryClassUnload@4
+      processed: ''
+      offset: 0000227C
+    - name: _BatteryClassIoctl@8
+      processed: ''
+      offset: '00002282'
+    - name: _BatteryClassStatusNotify@4
+      processed: ''
+      offset: '00002288'
+    - name: _KeSetEvent@12
+      processed: ''
+      offset: 0000228E
+    - name: _DbgPrint
+      processed: ''
+      offset: '00002294'
+    - name: _RtlAssert@16
+      processed: ''
+      offset: 0000229A
+    - name: _RtlCompareUnicodeString@12
+      processed: ''
+      offset: 000022A0
+    - name: _RtlInitUnicodeString@8
+      processed: ''
+      offset: 000022A6
+    - name: _IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: 000022AC
+    - name: _ExFreePool@4
+      processed: ''
+      offset: 000022B2
+    - name: _IoCreateDevice@28
+      processed: ''
+      offset: 000022B8
+    - name: _RtlAppendUnicodeToString@8
+      processed: ''
+      offset: 000022BE
+    - name: _ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 000022C4
+    - name: _IoFreeIrp@4
+      processed: ''
+      offset: 000022CA
+    - name: '@IofCallDriver@8'
+      processed: ''
+      offset: 000022D0
+    - name: _IoAllocateIrp@8
+      processed: ''
+      offset: 000022D6
+    - name: _IoGetAttachedDeviceReference@4
+      processed: ''
+      offset: 000022DC
+    - name: _RtlIntegerToUnicodeString@12
+      processed: ''
+      offset: '000022E2'
+    - name: '@IofCompleteRequest@8'
+      processed: ''
+      offset: '000022E8'
+    - name: _PoCallDriver@8
+      processed: ''
+      offset: 000022EE
+    - name: _PoStartNextPowerIrp@4
+      processed: ''
+      offset: 000022F4
+    - name: _KeWaitForSingleObject@20
+      processed: ''
+      offset: 000022FA
+    - name: _KeInitializeEvent@12
+      processed: ''
+      offset: '00002300'
+    - name: _IoDeleteDevice@4
+      processed: ''
+      offset: '00002306'
+    - name: _RtlAppendUnicodeStringToString@8
+      processed: ''
+      offset: 0000230C
+    - name: _RtlAnsiStringToUnicodeString@12
+      processed: ''
+      offset: '00002312'
+    - name: _RtlInitAnsiString@8
+      processed: ''
+      offset: '00002318'
+    - name: _KeGetCurrentThread@0
+      processed: ''
+      offset: 0000231E
+    - name: _IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: '00002324'
+    - name: _IoGetDeviceProperty@20
+      processed: ''
+      offset: 0000232A
+    - name: _KeGetCurrentIrql@0
+      processed: ''
+      offset: '00002330'
+  - num: '2'
+    name: .rdata
+    offset: '000010E0'
+    symbols:
+    - name: _GUID_HWPROFILE_QUERY_CHANGE
+      processed: ''
+      offset: '00000058'
+    - name: _GUID_HWPROFILE_CHANGE_CANCELLED
+      processed: ''
+      offset: '00000068'
+    - name: _GUID_HWPROFILE_CHANGE_COMPLETE
+      processed: ''
+      offset: '00000078'
+    - name: _GUID_DEVICE_INTERFACE_ARRIVAL
+      processed: ''
+      offset: '00000088'
+    - name: _GUID_DEVICE_INTERFACE_REMOVAL
+      processed: ''
+      offset: '00000098'
+    - name: _GUID_TARGET_DEVICE_QUERY_REMOVE
+      processed: ''
+      offset: 000000A8
+    - name: _GUID_TARGET_DEVICE_REMOVE_CANCELLED
+      processed: ''
+      offset: 000000B8
+    - name: _GUID_TARGET_DEVICE_REMOVE_COMPLETE
+      processed: ''
+      offset: 000000C8
+    - name: _GUID_BUS_INTERFACE_STANDARD
+      processed: ''
+      offset: 000000D8
+    - name: _GUID_PCI_BUS_INTERFACE_STANDARD
+      processed: ''
+      offset: '000000E8'
+    - name: _GUID_ARBITER_INTERFACE_STANDARD
+      processed: ''
+      offset: 000000F8
+    - name: _GUID_TRANSLATOR_INTERFACE_STANDARD
+      processed: ''
+      offset: '00000108'
+    - name: _GUID_ACPI_INTERFACE_STANDARD
+      processed: ''
+      offset: '00000118'
+    - name: _GUID_BUS_TYPE_PCMCIA
+      processed: ''
+      offset: '00000128'
+    - name: _GUID_BUS_TYPE_PCI
+      processed: ''
+      offset: '00000138'
+  - num: '3'
+    name: .data
+    offset: 000011B0
+    symbols:
+    - name: _HidCmBattery
+      processed: ''
+      offset: '00000000'
+    - name: _HidAcAdapter
+      processed: ''
+      offset: '00000004'
+    - name: _CmBattDeviceName
+      processed: ''
+      offset: '00000008'
+    - name: _AcAdapterName
+      processed: ''
+      offset: 0000000C
+    - name: _CmBattDebug
+      processed: ''
+      offset: 00000CFC
+    - name: _CmBattPrevPowerSource
+      processed: ''
+      offset: 00000D00
+    - name: _LowerPdo
+      processed: ''
+      offset: 000021B8
+    - name: _AcAdapterPdo
+      processed: ''
+      offset: 000021BC
+    - name: _AcpiInterfaces
+      processed: ''
+      offset: 000021D0
+  - num: '4'
+    name: .idata$2
+    offset: '00001700'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_BATTC
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTPNP
+      processed: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000050'
+    - name: __imp__BatteryClassUnload@4
+      processed: ''
+      offset: 000000F4
+    - name: __imp__BatteryClassIoctl@8
+      processed: ''
+      offset: 000000F8
+    - name: __imp__BatteryClassStatusNotify@4
+      processed: ''
+      offset: 000000FC
+    - name: __imp__BatteryClassInitializeDevice@8
+      processed: ''
+      offset: '00000100'
+    - name: \177BATTC_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000104'
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: '00000108'
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000010C
+    - name: __imp__IoGetDeviceProperty@20
+      processed: ''
+      offset: '00000110'
+    - name: \177NTPNP_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000114'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '00000118'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: 0000011C
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: '00000120'
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: '00000124'
+    - name: __imp__RtlAppendUnicodeToString@8
+      processed: ''
+      offset: '00000128'
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 0000012C
+    - name: __imp__IoFreeIrp@4
+      processed: ''
+      offset: '00000130'
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '00000134'
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: '00000138'
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: 0000013C
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: '00000140'
+    - name: __imp__RtlCompareUnicodeString@12
+      processed: ''
+      offset: '00000144'
+    - name: __imp__PoCallDriver@8
+      processed: ''
+      offset: '00000148'
+    - name: __imp__PoStartNextPowerIrp@4
+      processed: ''
+      offset: 0000014C
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: '00000150'
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '00000154'
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: '00000158'
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      processed: ''
+      offset: 0000015C
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      processed: ''
+      offset: '00000160'
+    - name: __imp__RtlInitAnsiString@8
+      processed: ''
+      offset: '00000164'
+    - name: __imp__KeGetCurrentThread@0
+      processed: ''
+      offset: '00000168'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: 0000016C
+    - name: __imp__RtlIntegerToUnicodeString@12
+      processed: ''
+      offset: '00000170'
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: '00000174'
+    - name: __imp__IoAllocateIrp@8
+      processed: ''
+      offset: '00000178'
+    - name: __imp__IoGetAttachedDeviceReference@4
+      processed: ''
+      offset: 0000017C
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000180'
+  - num: '5'
+    name: PAGE
+    offset: 00001DD0
+    symbols:
+    - name: _CmBattUnload@4
+      processed: ''
+      offset: '00000000'
+    - name: _CmBattOpenClose@8
+      processed: ''
+      offset: 000000D0
+    - name: _CmBattIoctl@8
+      processed: ''
+      offset: '00000160'
+    - name: _CmBattQueryTag@8
+      processed: ''
+      offset: '00000210'
+    - name: _CmBattQueryInformation@28
+      processed: ''
+      offset: '00000370'
+    - name: _CmBattQueryStatus@12
+      processed: ''
+      offset: 000007C0
+    - name: _CmBattSetStatusNotify@12
+      processed: ''
+      offset: 000008A0
+    - name: _CmBattDisableStatusNotify@4
+      processed: ''
+      offset: 00000B80
+    - name: _CmBattGetApiBatteryInfo@4
+      processed: ''
+      offset: 00000C10
+    - name: _CmBattGetBatteryStatus@8
+      processed: ''
+      offset: 00000D60
+    - name: _CmBattSendDownStreamIrp@24
+      processed: ''
+      offset: 000010C0
+    - name: _CmBattGetUniqueId@8
+      processed: ''
+      offset: '00001220'
+    - name: _CmBattGetStaData@8
+      processed: ''
+      offset: '00001330'
+    - name: _CmBattSetTripPpoint@8
+      processed: ''
+      offset: '00001440'
+  - num: '6'
+    name: INIT
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000270'
+    symbols:
+    - name: _CmBattIoCompletion@12
+      demangled: ''
+      offset: '00000000'
+    - name: _CmBattSynchronousRequest@12
+      demangled: ''
+      offset: '00000016'
+    - name: _CmBattAddDevice@8
+      demangled: ''
+      offset: 0000001E
+    - name: _CmBattAddBattery@8
+      demangled: ''
+      offset: 000000CD
+    - name: _CmBattAddAcAdapter@8
+      demangled: ''
+      offset: 000001AC
+    - name: _CmBattGetAcpiInterfaces@4
+      demangled: ''
+      offset: '00000281'
+    - name: _CmBattCreateFdo@12
+      demangled: ''
+      offset: '00000311'
+    - name: _CmBattPnpDispatch@8
+      demangled: ''
+      offset: 000003F9
+    - name: _CmBattPowerDispatch@8
+      demangled: ''
+      offset: 000004C1
+    - name: _CmBattForwardRequest@8
+      demangled: ''
+      offset: '00000504'
+    - name: _CmBattStartDevice@8
+      demangled: ''
+      offset: '00000546'
+    - name: _CmBattStopDevice@8
+      demangled: ''
+      offset: 000005DB
+    - name: _CmBattVerifyStaticInfo@8
+      demangled: ''
+      offset: '00000662'
+    - name: _CmBattGetPsrData@8
+      demangled: ''
+      offset: 0000071E
+    - name: _CmBattGetBifData@8
+      demangled: ''
+      offset: '00000765'
+    - name: _CmBattGetBstData@8
+      demangled: ''
+      offset: '00000984'
+    - name: _GetDwordElement@8
+      demangled: ''
+      offset: 00000A70
+    - name: _GetStringElement@8
+      demangled: ''
+      offset: 00000A8D
+    - name: _CmBattNotifyHandler@8
+      demangled: ''
+      offset: 00000AD8
+    - name: _CmBattPowerNotifyHandler@8
+      demangled: ''
+      offset: 00000B0D
+    - name: _CmBattNotifyVPOWERDOfPowerChange@4
+      demangled: ''
+      offset: 00000B33
+  - num: '2'
+    name: .rdata
+    offset: 000004A0
+    symbols:
+    - name: _GUID_HWPROFILE_QUERY_CHANGE
+      demangled: ''
+      offset: '00000000'
+    - name: _GUID_HWPROFILE_CHANGE_CANCELLED
+      demangled: ''
+      offset: '00000010'
+    - name: _GUID_HWPROFILE_CHANGE_COMPLETE
+      demangled: ''
+      offset: '00000020'
+    - name: _GUID_DEVICE_INTERFACE_ARRIVAL
+      demangled: ''
+      offset: '00000030'
+    - name: _GUID_DEVICE_INTERFACE_REMOVAL
+      demangled: ''
+      offset: '00000040'
+    - name: _GUID_TARGET_DEVICE_QUERY_REMOVE
+      demangled: ''
+      offset: '00000050'
+    - name: _GUID_TARGET_DEVICE_REMOVE_CANCELLED
+      demangled: ''
+      offset: '00000060'
+    - name: _GUID_TARGET_DEVICE_REMOVE_COMPLETE
+      demangled: ''
+      offset: '00000070'
+    - name: _GUID_BUS_INTERFACE_STANDARD
+      demangled: ''
+      offset: '00000080'
+    - name: _GUID_PCI_BUS_INTERFACE_STANDARD
+      demangled: ''
+      offset: '00000090'
+    - name: _GUID_ARBITER_INTERFACE_STANDARD
+      demangled: ''
+      offset: 000000A0
+    - name: _GUID_TRANSLATOR_INTERFACE_STANDARD
+      demangled: ''
+      offset: 000000B0
+    - name: _GUID_ACPI_INTERFACE_STANDARD
+      demangled: ''
+      offset: 000000C0
+    - name: _GUID_BUS_TYPE_PCMCIA
+      demangled: ''
+      offset: 000000D0
+    - name: _GUID_BUS_TYPE_PCI
+      demangled: ''
+      offset: '000000E0'
+  - num: '3'
+    name: .data
+    offset: '00000740'
+    symbols:
+    - name: _HidCmBattery
+      demangled: ''
+      offset: '00000000'
+    - name: _HidAcAdapter
+      demangled: ''
+      offset: '00000004'
+    - name: _CmBattDeviceName
+      demangled: ''
+      offset: '00000008'
+    - name: _AcAdapterName
+      demangled: ''
+      offset: 0000000C
+    - name: 
+        ??_C@_1CE@CEK@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAA?$AAc?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
+      demangled: L"\\Device\\AcAdapter"
+      offset: '00000010'
+    - name: 
+        ??_C@_1DK@CMFE@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAM?$AAe?$AAt?$AAh?$AAo@
+      demangled: L"\\Device\\ControlMetho"
+      offset: '00000034'
+    - name: 
+        ??_C@_1BM@MJID@?$AAA?$AAC?$AAP?$AAI?$AA?2?$AAA?$AAC?$AAP?$AAI?$AA0?$AA0?$AA0?$AA3?$AA?$AA@
+      demangled: L"ACPI\\ACPI0003"
+      offset: '00000070'
+    - name: 
+        ??_C@_1CO@IPPJ@?$AAA?$AAC?$AAP?$AAI?$AA?2?$AA?$CK?$AAP?$AAN?$AAP?$AA0?$AAC?$AA0?$AAA?$AA?0?$AA?$CK?$AAP?$AAN?$AAP?$AA0?$AAC@
+      demangled: L"ACPI\\*PNP0C0A,*PNP0C"
+      offset: 0000008C
+    - name: _CmBattDebug
+      demangled: ''
+      offset: 000000BC
+    - name: _CmBattPrevPowerSource
+      demangled: ''
+      offset: 000000C0
+    - name: _LowerPdo
+      demangled: ''
+      offset: 000000C4
+    - name: _AcAdapterPdo
+      demangled: ''
+      offset: 000000C8
+    - name: _AcpiInterfaces
+      demangled: ''
+      offset: 000000D0
+  - num: '4'
+    name: .idata$2
+    offset: 00000BF0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_BATTC
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTPNP
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__BatteryClassInitializeDevice@8
+      demangled: ''
+      offset: 000000CC
+    - name: __imp__BatteryClassUnload@4
+      demangled: ''
+      offset: 000000D0
+    - name: __imp__BatteryClassIoctl@8
+      demangled: ''
+      offset: 000000D4
+    - name: __imp__BatteryClassStatusNotify@4
+      demangled: ''
+      offset: 000000D8
+    - name: \177BATTC_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000DC
+    - name: __imp__IoGetDeviceProperty@20
+      demangled: ''
+      offset: '000000E0'
+    - name: \177NTPNP_NULL_THUNK_DATA
+      demangled: ''
+      offset: '000000E4'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '000000E8'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 000000EC
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 000000F0
+    - name: __imp__RtlCompareUnicodeString@12
+      demangled: ''
+      offset: 000000F4
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: 000000F8
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 000000FC
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000100'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000104'
+    - name: __imp__RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: '00000108'
+    - name: __imp__IoGetAttachedDeviceReference@4
+      demangled: ''
+      offset: 0000010C
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000110'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000114'
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: '00000118'
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 0000011C
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000120'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000124'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000128'
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      demangled: ''
+      offset: '00000130'
+    - name: __imp__RtlInitAnsiString@8
+      demangled: ''
+      offset: '00000134'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '00000138'
+    - name: __imp__RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: 0000013C
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000140'
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000144'
+  - num: '5'
+    name: PAGE
+    offset: 00000D80
+    symbols:
+    - name: _CmBattUnload@4
+      demangled: ''
+      offset: '00000000'
+    - name: _CmBattOpenClose@8
+      demangled: ''
+      offset: '00000060'
+    - name: _CmBattIoctl@8
+      demangled: ''
+      offset: '00000079'
+    - name: _CmBattQueryTag@8
+      demangled: ''
+      offset: 000000AF
+    - name: _CmBattQueryInformation@28
+      demangled: ''
+      offset: '00000111'
+    - name: _CmBattQueryStatus@12
+      demangled: ''
+      offset: 000002EC
+    - name: _CmBattSetStatusNotify@12
+      demangled: ''
+      offset: '00000321'
+    - name: _CmBattDisableStatusNotify@4
+      demangled: ''
+      offset: 000003D4
+    - name: _CmBattGetApiBatteryInfo@4
+      demangled: ''
+      offset: '000003E4'
+    - name: _CmBattGetBatteryStatus@8
+      demangled: ''
+      offset: 0000044D
+    - name: _CmBattSendDownStreamIrp@24
+      demangled: ''
+      offset: '00000537'
+    - name: _CmBattGetUniqueId@8
+      demangled: ''
+      offset: 000005B8
+    - name: _CmBattGetStaData@8
+      demangled: ''
+      offset: 000005FF
+    - name: _CmBattSetTripPpoint@8
+      demangled: ''
+      offset: '00000646'
+  - num: '6'
+    name: INIT
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000270'
+    symbols:
+    - name: _CmBattIoCompletion@12
+      demangled: ''
+      offset: '00000000'
+    - name: _CmBattSynchronousRequest@12
+      demangled: ''
+      offset: '00000016'
+    - name: _CmBattAddDevice@8
+      demangled: ''
+      offset: 0000001E
+    - name: _CmBattAddBattery@8
+      demangled: ''
+      offset: 000000CD
+    - name: _CmBattAddAcAdapter@8
+      demangled: ''
+      offset: 000001AC
+    - name: _CmBattGetAcpiInterfaces@4
+      demangled: ''
+      offset: '00000281'
+    - name: _CmBattCreateFdo@12
+      demangled: ''
+      offset: '00000311'
+    - name: _CmBattPnpDispatch@8
+      demangled: ''
+      offset: 000003F9
+    - name: _CmBattPowerDispatch@8
+      demangled: ''
+      offset: 000004C1
+    - name: _CmBattForwardRequest@8
+      demangled: ''
+      offset: '00000504'
+    - name: _CmBattStartDevice@8
+      demangled: ''
+      offset: '00000546'
+    - name: _CmBattStopDevice@8
+      demangled: ''
+      offset: 000005DB
+    - name: _CmBattVerifyStaticInfo@8
+      demangled: ''
+      offset: '00000662'
+    - name: _CmBattGetPsrData@8
+      demangled: ''
+      offset: 0000071E
+    - name: _CmBattGetBifData@8
+      demangled: ''
+      offset: '00000765'
+    - name: _CmBattGetBstData@8
+      demangled: ''
+      offset: '00000984'
+    - name: _GetDwordElement@8
+      demangled: ''
+      offset: 00000A70
+    - name: _GetStringElement@8
+      demangled: ''
+      offset: 00000A8D
+    - name: _CmBattNotifyHandler@8
+      demangled: ''
+      offset: 00000AD8
+    - name: _CmBattPowerNotifyHandler@8
+      demangled: ''
+      offset: 00000B0D
+    - name: _CmBattNotifyVPOWERDOfPowerChange@4
+      demangled: ''
+      offset: 00000B33
+  - num: '2'
+    name: .rdata
+    offset: 000004A0
+    symbols:
+    - name: _GUID_HWPROFILE_QUERY_CHANGE
+      demangled: ''
+      offset: '00000000'
+    - name: _GUID_HWPROFILE_CHANGE_CANCELLED
+      demangled: ''
+      offset: '00000010'
+    - name: _GUID_HWPROFILE_CHANGE_COMPLETE
+      demangled: ''
+      offset: '00000020'
+    - name: _GUID_DEVICE_INTERFACE_ARRIVAL
+      demangled: ''
+      offset: '00000030'
+    - name: _GUID_DEVICE_INTERFACE_REMOVAL
+      demangled: ''
+      offset: '00000040'
+    - name: _GUID_TARGET_DEVICE_QUERY_REMOVE
+      demangled: ''
+      offset: '00000050'
+    - name: _GUID_TARGET_DEVICE_REMOVE_CANCELLED
+      demangled: ''
+      offset: '00000060'
+    - name: _GUID_TARGET_DEVICE_REMOVE_COMPLETE
+      demangled: ''
+      offset: '00000070'
+    - name: _GUID_BUS_INTERFACE_STANDARD
+      demangled: ''
+      offset: '00000080'
+    - name: _GUID_PCI_BUS_INTERFACE_STANDARD
+      demangled: ''
+      offset: '00000090'
+    - name: _GUID_ARBITER_INTERFACE_STANDARD
+      demangled: ''
+      offset: 000000A0
+    - name: _GUID_TRANSLATOR_INTERFACE_STANDARD
+      demangled: ''
+      offset: 000000B0
+    - name: _GUID_ACPI_INTERFACE_STANDARD
+      demangled: ''
+      offset: 000000C0
+    - name: _GUID_BUS_TYPE_PCMCIA
+      demangled: ''
+      offset: 000000D0
+    - name: _GUID_BUS_TYPE_PCI
+      demangled: ''
+      offset: '000000E0'
+  - num: '3'
+    name: .data
+    offset: '00000740'
+    symbols:
+    - name: _HidCmBattery
+      demangled: ''
+      offset: '00000000'
+    - name: _HidAcAdapter
+      demangled: ''
+      offset: '00000004'
+    - name: _CmBattDeviceName
+      demangled: ''
+      offset: '00000008'
+    - name: _AcAdapterName
+      demangled: ''
+      offset: 0000000C
+    - name: 
+        ??_C@_1CE@CEK@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAA?$AAc?$AAA?$AAd?$AAa?$AAp?$AAt?$AAe?$AAr?$AA?$AA@
+      demangled: L"\\Device\\AcAdapter"
+      offset: '00000010'
+    - name: 
+        ??_C@_1DK@CMFE@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AAM?$AAe?$AAt?$AAh?$AAo@
+      demangled: L"\\Device\\ControlMetho"
+      offset: '00000034'
+    - name: 
+        ??_C@_1BM@MJID@?$AAA?$AAC?$AAP?$AAI?$AA?2?$AAA?$AAC?$AAP?$AAI?$AA0?$AA0?$AA0?$AA3?$AA?$AA@
+      demangled: L"ACPI\\ACPI0003"
+      offset: '00000070'
+    - name: 
+        ??_C@_1CO@IPPJ@?$AAA?$AAC?$AAP?$AAI?$AA?2?$AA?$CK?$AAP?$AAN?$AAP?$AA0?$AAC?$AA0?$AAA?$AA?0?$AA?$CK?$AAP?$AAN?$AAP?$AA0?$AAC@
+      demangled: L"ACPI\\*PNP0C0A,*PNP0C"
+      offset: 0000008C
+    - name: _CmBattDebug
+      demangled: ''
+      offset: 000000BC
+    - name: _CmBattPrevPowerSource
+      demangled: ''
+      offset: 000000C0
+    - name: _LowerPdo
+      demangled: ''
+      offset: 000000C4
+    - name: _AcAdapterPdo
+      demangled: ''
+      offset: 000000C8
+    - name: _AcpiInterfaces
+      demangled: ''
+      offset: 000000D0
+  - num: '4'
+    name: .idata$2
+    offset: 00000BF0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_BATTC
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTPNP
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__BatteryClassInitializeDevice@8
+      demangled: ''
+      offset: 000000CC
+    - name: __imp__BatteryClassUnload@4
+      demangled: ''
+      offset: 000000D0
+    - name: __imp__BatteryClassIoctl@8
+      demangled: ''
+      offset: 000000D4
+    - name: __imp__BatteryClassStatusNotify@4
+      demangled: ''
+      offset: 000000D8
+    - name: \177BATTC_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000DC
+    - name: __imp__IoGetDeviceProperty@20
+      demangled: ''
+      offset: '000000E0'
+    - name: \177NTPNP_NULL_THUNK_DATA
+      demangled: ''
+      offset: '000000E4'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '000000E8'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 000000EC
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 000000F0
+    - name: __imp__RtlCompareUnicodeString@12
+      demangled: ''
+      offset: 000000F4
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: 000000F8
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 000000FC
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000100'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000104'
+    - name: __imp__RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: '00000108'
+    - name: __imp__IoGetAttachedDeviceReference@4
+      demangled: ''
+      offset: 0000010C
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000110'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000114'
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: '00000118'
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 0000011C
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000120'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000124'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000128'
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      demangled: ''
+      offset: '00000130'
+    - name: __imp__RtlInitAnsiString@8
+      demangled: ''
+      offset: '00000134'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '00000138'
+    - name: __imp__RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: 0000013C
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000140'
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000144'
+  - num: '5'
+    name: PAGE
+    offset: 00000D80
+    symbols:
+    - name: _CmBattUnload@4
+      demangled: ''
+      offset: '00000000'
+    - name: _CmBattOpenClose@8
+      demangled: ''
+      offset: '00000060'
+    - name: _CmBattIoctl@8
+      demangled: ''
+      offset: '00000079'
+    - name: _CmBattQueryTag@8
+      demangled: ''
+      offset: 000000AF
+    - name: _CmBattQueryInformation@28
+      demangled: ''
+      offset: '00000111'
+    - name: _CmBattQueryStatus@12
+      demangled: ''
+      offset: 000002EC
+    - name: _CmBattSetStatusNotify@12
+      demangled: ''
+      offset: '00000321'
+    - name: _CmBattDisableStatusNotify@4
+      demangled: ''
+      offset: 000003D4
+    - name: _CmBattGetApiBatteryInfo@4
+      demangled: ''
+      offset: '000003E4'
+    - name: _CmBattGetBatteryStatus@8
+      demangled: ''
+      offset: 0000044D
+    - name: _CmBattSendDownStreamIrp@24
+      demangled: ''
+      offset: '00000537'
+    - name: _CmBattGetUniqueId@8
+      demangled: ''
+      offset: 000005B8
+    - name: _CmBattGetStaData@8
+      demangled: ''
+      offset: 000005FF
+    - name: _CmBattSetTripPpoint@8
+      demangled: ''
+      offset: '00000646'
+  - num: '6'
+    name: INIT
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'

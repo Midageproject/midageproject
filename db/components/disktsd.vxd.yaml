@@ -1,0 +1,1036 @@
+filename: disktsd.vxd
+binary: DISKTSD
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../tsdaer.asm
+  - ../tsd.asm
+  - ../tsdinit.asm
+  - ../tsdpart.asm
+  - ../tsdreq.asm
+  - ../tsdsubs.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00000510'
+    symbols:
+    - name: tsd_async_event
+      processed: ''
+      offset: 0000000C
+    - name: tsd_ilb
+      processed: ''
+      offset: '00000050'
+    - name: tsd_request
+      processed: ''
+      offset: '00000084'
+    - name: tsd_disk_io
+      processed: ''
+      offset: '00000125'
+    - name: tsd_issue_request
+      processed: ''
+      offset: 0000014D
+    - name: tsd_ioctl_callback
+      processed: ''
+      offset: 0000019D
+    - name: tsd_ioc_cb_event_callback
+      processed: ''
+      offset: 0000029C
+    - name: tsd_init_cd_ptr
+      processed: ''
+      offset: 000002B3
+    - name: DiskTSD_DDB
+      processed: ''
+      offset: 000002D0
+    - name: number_disks
+      processed: ''
+      offset: '00000320'
+    - name: number_floppys
+      processed: ''
+      offset: '00000321'
+    - name: number_logical
+      processed: ''
+      offset: '00000322'
+    - name: tsd_bds_head
+      processed: ''
+      offset: '00000323'
+    - name: FlpFlags
+      processed: ''
+      offset: '00000327'
+    - name: MixedFloppyType
+      processed: ''
+      offset: 0000032B
+    - name: GetDevParmsIoctl
+      processed: ''
+      offset: 0000032C
+  - num: '2'
+    name: _IGROUP
+    offset: '00000680'
+    symbols:
+    - name: DiskTSD_Device_Init
+      processed: ''
+      offset: '00000000'
+    - name: ReadDISKTSDRegistry
+      processed: ''
+      offset: 0000003C
+    - name: Drv_Reg_Pkt
+      processed: ''
+      offset: '00000155'
+  - num: '3'
+    name: _PTEXT
+    offset: '00000000'
+    symbols:
+    - name: initialize
+      processed: ''
+      offset: '00000000'
+    - name: DISKTSD_config_physical
+      processed: ''
+      offset: '00000094'
+    - name: DISKTSD_unconfig_physical
+      processed: ''
+      offset: '00000184'
+    - name: DISKTSD_init_complete
+      processed: ''
+      offset: 0000027B
+    - name: Setup_Floppy_Numbers
+      processed: ''
+      offset: 0000029C
+    - name: GetNextPCD
+      processed: ''
+      offset: 000002C6
+    - name: DISKTSD_Recompute
+      processed: ''
+      offset: 000002F6
+    - name: Config_Floppy
+      processed: ''
+      offset: 0000033F
+    - name: CheckMonolithic
+      processed: ''
+      offset: 000004A6
+    - name: CheckIorangesinPAN
+      processed: ''
+      offset: '000005E5'
+    - name: tsd_segoff_to_lin
+      processed: ''
+      offset: 0000061F
+    - name: tsd_setup_a_b
+      processed: ''
+      offset: '00000641'
+    - name: set_floppy_fake_bpb
+      processed: ''
+      offset: '00000688'
+    - name: tsd_recompute
+      processed: ''
+      offset: 000006EC
+    - name: tsd_compute_disk_geom
+      processed: ''
+      offset: 0000076C
+    - name: TSD_assign_more_letters
+      processed: ''
+      offset: 00000CAF
+    - name: Make_And_Assoc_Logical_Floppy_DCB
+      processed: ''
+      offset: 00000D0F
+    - name: malfd_do_assoc
+      processed: ''
+      offset: 00000D2A
+    - name: tsd_setup_extended_volumes
+      processed: ''
+      offset: 00000D58
+    - name: tsd_build_logical_dcb
+      processed: ''
+      offset: 00000EC7
+    - name: tsd_match_rmd_with_dcb
+      processed: ''
+      offset: '000014E0'
+    - name: tsd_make_log_dcb
+      processed: ''
+      offset: 0000154E
+    - name: tsd_match_logical_dcbs
+      processed: ''
+      offset: 000015BE
+    - name: tsd_find_extended_partition
+      processed: ''
+      offset: 0000179D
+    - name: tsd_find_volume
+      processed: ''
+      offset: 000017C4
+    - name: SetApparentForFloptical
+      processed: ''
+      offset: '00001811'
+    - name: tsd_ioctl_440d
+      processed: ''
+      offset: 0000191F
+    - name: tsd_440d_sense_media
+      processed: ''
+      offset: 0000194E
+    - name: tsd_ioctl_query_device
+      processed: ''
+      offset: '00001963'
+    - name: tsd_440d_format_track
+      processed: ''
+      offset: '00001998'
+    - name: tsd_440d_write_track
+      processed: ''
+      offset: 00001B3B
+    - name: tsd_440d_verify_track
+      processed: ''
+      offset: 00001D52
+    - name: tsd_440d_set_param
+      processed: ''
+      offset: 00001DFE
+    - name: tsd_ioctl_stub
+      processed: ''
+      offset: 00001FEF
+    - name: tsd_ioctl_dev_type
+      processed: ''
+      offset: '00002017'
+    - name: tsd_440d_get_param
+      processed: ''
+      offset: '00002066'
+    - name: tsd_gp_no_changeline
+      processed: ''
+      offset: 0000209D
+    - name: tsd_gp_removeable
+      processed: ''
+      offset: 000020A7
+    - name: tsd_gp_store_attrs
+      processed: ''
+      offset: 000020B8
+    - name: tsd_gp_copy_bpb
+      processed: ''
+      offset: 000020DA
+    - name: tsd_gp_big_bpb
+      processed: ''
+      offset: 000020FC
+    - name: tsd_gp_exit
+      processed: ''
+      offset: '00002117'
+    - name: tsd_gp_cook_big_bpb
+      processed: ''
+      offset: 0000211A
+    - name: tsd_gp_bad_call
+      processed: ''
+      offset: 0000214B
+    - name: tsd_process_boot
+      processed: ''
+      offset: '00002160'
+    - name: tsd_alloc_mem
+      processed: ''
+      offset: 000021C1
+    - name: tsd_dealloc_mem
+      processed: ''
+      offset: '00002204'
+    - name: CHS_to_RBA
+      processed: ''
+      offset: '00002226'
+    - name: FloppyBPBFromTable
+      processed: ''
+      offset: '000022E1'
+    - name: BPBFromTable
+      processed: ''
+      offset: '000023E5'
+    - name: CalcSecPerFat
+      processed: ''
+      offset: 0000267E
+    - name: tsd_internal_request
+      processed: ''
+      offset: 0000275E
+    - name: tsd_set_bds_in_dcb
+      processed: ''
+      offset: 0000283E
+    - name: tsd_get_dcb
+      processed: ''
+      offset: 000028B4
+    - name: TSD_pick_drive_letter
+      processed: ''
+      offset: 000028DE
+    - name: TSD_associate_dcb
+      processed: ''
+      offset: 0000290A
+    - name: TSD_destroy_dcb
+      processed: ''
+      offset: '00002931'
+    - name: TSD_create_logical_dcb
+      processed: ''
+      offset: '00002964'
+    - name: TSDMapFlat
+      processed: ''
+      offset: 0000299D
+    - name: CopyCDList
+      processed: ''
+      offset: 000029B5
+    - name: tsd_find_i13_bds
+      processed: ''
+      offset: 00002A06
+- version: Windows 98 Retail
+  source_tree:
+  - ../tsdaer.asm
+  - ../tsd.asm
+  - ../tsdinit.asm
+  - ../tsdpart.asm
+  - ../tsdreq.asm
+  - ../tsdsubs.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 000004D0
+    symbols:
+    - name: tsd_async_event
+      demangled: ''
+      offset: 0000000C
+    - name: tsd_ilb
+      demangled: ''
+      offset: '00000050'
+    - name: tsd_request
+      demangled: ''
+      offset: '00000084'
+    - name: tsd_disk_io
+      demangled: ''
+      offset: '00000120'
+    - name: tsd_issue_request
+      demangled: ''
+      offset: '00000135'
+    - name: tsd_ioctl_callback
+      demangled: ''
+      offset: 0000016F
+    - name: tsd_ioc_cb_event_callback
+      demangled: ''
+      offset: '00000231'
+    - name: tsd_init_cd_ptr
+      demangled: ''
+      offset: '00000248'
+    - name: DiskTSD_DDB
+      demangled: ''
+      offset: '00000264'
+    - name: number_disks
+      demangled: ''
+      offset: 000002B4
+    - name: number_floppys
+      demangled: ''
+      offset: 000002B5
+    - name: number_logical
+      demangled: ''
+      offset: 000002B6
+    - name: tsd_bds_head
+      demangled: ''
+      offset: 000002B7
+    - name: FlpFlags
+      demangled: ''
+      offset: 000002BB
+    - name: MixedFloppyType
+      demangled: ''
+      offset: 000002BF
+    - name: GetDevParmsIoctl
+      demangled: ''
+      offset: 000002C0
+  - num: '2'
+    name: _IGROUP
+    offset: '00000640'
+    symbols:
+    - name: DiskTSD_Device_Init
+      demangled: ''
+      offset: '00000000'
+    - name: ReadDISKTSDRegistry
+      demangled: ''
+      offset: 0000003C
+    - name: Drv_Reg_Pkt
+      demangled: ''
+      offset: '00000139'
+  - num: '3'
+    name: _PTEXT
+    offset: '00000000'
+    symbols:
+    - name: initialize
+      demangled: ''
+      offset: '00000000'
+    - name: DISKTSD_config_physical
+      demangled: ''
+      offset: 0000008C
+    - name: DISKTSD_unconfig_physical
+      demangled: ''
+      offset: '00000155'
+    - name: DISKTSD_init_complete
+      demangled: ''
+      offset: 0000022B
+    - name: Setup_Floppy_Numbers
+      demangled: ''
+      offset: '00000244'
+    - name: GetNextPCD
+      demangled: ''
+      offset: '00000266'
+    - name: DISKTSD_Recompute
+      demangled: ''
+      offset: 0000028B
+    - name: Config_Floppy
+      demangled: ''
+      offset: 000002B9
+    - name: CheckMonolithic
+      demangled: ''
+      offset: 000003C9
+    - name: CheckIorangesinPAN
+      demangled: ''
+      offset: 000004FD
+    - name: tsd_segoff_to_lin
+      demangled: ''
+      offset: 0000052F
+    - name: tsd_setup_a_b
+      demangled: ''
+      offset: '00000549'
+    - name: set_floppy_fake_bpb
+      demangled: ''
+      offset: '00000575'
+    - name: tsd_recompute
+      demangled: ''
+      offset: 000005B8
+    - name: tsd_compute_disk_geom
+      demangled: ''
+      offset: 000005EE
+    - name: TSD_assign_more_letters
+      demangled: ''
+      offset: 00000A26
+    - name: Make_And_Assoc_Logical_Floppy_DCB
+      demangled: ''
+      offset: 00000A6B
+    - name: malfd_do_assoc
+      demangled: ''
+      offset: 00000A7E
+    - name: tsd_setup_extended_volumes
+      demangled: ''
+      offset: 00000AAC
+    - name: tsd_build_logical_dcb
+      demangled: ''
+      offset: 00000BB6
+    - name: tsd_match_rmd_with_dcb
+      demangled: ''
+      offset: '00001051'
+    - name: tsd_make_log_dcb
+      demangled: ''
+      offset: 000010B7
+    - name: tsd_match_logical_dcbs
+      demangled: ''
+      offset: '000010E6'
+    - name: tsd_find_extended_partition
+      demangled: ''
+      offset: 000011F5
+    - name: tsd_find_volume
+      demangled: ''
+      offset: '00001214'
+    - name: SetApparentForFloptical
+      demangled: ''
+      offset: '00001259'
+    - name: tsd_ioctl_440d
+      demangled: ''
+      offset: 0000135F
+    - name: tsd_440d_sense_media
+      demangled: ''
+      offset: 0000137E
+    - name: tsd_ioctl_query_device
+      demangled: ''
+      offset: 0000138B
+    - name: tsd_440d_format_track
+      demangled: ''
+      offset: 000013AD
+    - name: tsd_440d_write_track
+      demangled: ''
+      offset: 000014DC
+    - name: tsd_440d_verify_track
+      demangled: ''
+      offset: '00001662'
+    - name: tsd_440d_set_param
+      demangled: ''
+      offset: 000016D7
+    - name: tsd_ioctl_stub
+      demangled: ''
+      offset: 0000189F
+    - name: tsd_ioctl_dev_type
+      demangled: ''
+      offset: 000018BF
+    - name: tsd_440d_get_param
+      demangled: ''
+      offset: '00001903'
+    - name: tsd_gp_no_changeline
+      demangled: ''
+      offset: '00001932'
+    - name: tsd_gp_removeable
+      demangled: ''
+      offset: 0000193C
+    - name: tsd_gp_store_attrs
+      demangled: ''
+      offset: 0000194D
+    - name: tsd_gp_copy_bpb
+      demangled: ''
+      offset: 0000196F
+    - name: tsd_gp_big_bpb
+      demangled: ''
+      offset: '00001991'
+    - name: tsd_gp_exit
+      demangled: ''
+      offset: 000019A7
+    - name: tsd_gp_cook_big_bpb
+      demangled: ''
+      offset: 000019AA
+    - name: tsd_gp_bad_call
+      demangled: ''
+      offset: 000019DB
+    - name: tsd_process_boot
+      demangled: ''
+      offset: 000019F0
+    - name: tsd_alloc_mem
+      demangled: ''
+      offset: 00001A49
+    - name: tsd_dealloc_mem
+      demangled: ''
+      offset: 00001A75
+    - name: CHS_to_RBA
+      demangled: ''
+      offset: 00001A8F
+    - name: FloppyBPBFromTable
+      demangled: ''
+      offset: 00001B49
+    - name: BPBFromTable
+      demangled: ''
+      offset: 00001C44
+    - name: CalcSecPerFat
+      demangled: ''
+      offset: 00001E4A
+    - name: tsd_internal_request
+      demangled: ''
+      offset: 00001EEB
+    - name: tsd_set_bds_in_dcb
+      demangled: ''
+      offset: 00001FBD
+    - name: tsd_get_dcb
+      demangled: ''
+      offset: 0000201B
+    - name: TSD_pick_drive_letter
+      demangled: ''
+      offset: 0000203D
+    - name: TSD_associate_dcb
+      demangled: ''
+      offset: '00002061'
+    - name: TSD_destroy_dcb
+      demangled: ''
+      offset: '00002080'
+    - name: TSD_create_logical_dcb
+      demangled: ''
+      offset: '00002098'
+    - name: TSDMapFlat
+      demangled: ''
+      offset: 000020C9
+    - name: CopyCDList
+      demangled: ''
+      offset: 000020D9
+    - name: tsd_find_i13_bds
+      demangled: ''
+      offset: 0000211C
+- version: Windows 98SE Debug
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00000510'
+    symbols:
+    - name: tsd_async_event
+      demangled: ''
+      offset: 0000000C
+    - name: tsd_ilb
+      demangled: ''
+      offset: '00000050'
+    - name: tsd_request
+      demangled: ''
+      offset: '00000084'
+    - name: tsd_disk_io
+      demangled: ''
+      offset: '00000125'
+    - name: tsd_issue_request
+      demangled: ''
+      offset: 0000014D
+    - name: tsd_ioctl_callback
+      demangled: ''
+      offset: 0000019D
+    - name: tsd_ioc_cb_event_callback
+      demangled: ''
+      offset: 0000029C
+    - name: tsd_init_cd_ptr
+      demangled: ''
+      offset: 000002B3
+    - name: DiskTSD_DDB
+      demangled: ''
+      offset: 000002D0
+    - name: number_disks
+      demangled: ''
+      offset: '00000320'
+    - name: number_floppys
+      demangled: ''
+      offset: '00000321'
+    - name: number_logical
+      demangled: ''
+      offset: '00000322'
+    - name: tsd_bds_head
+      demangled: ''
+      offset: '00000323'
+    - name: FlpFlags
+      demangled: ''
+      offset: '00000327'
+    - name: MixedFloppyType
+      demangled: ''
+      offset: 0000032B
+    - name: GetDevParmsIoctl
+      demangled: ''
+      offset: 0000032C
+  - num: '2'
+    name: _IGROUP
+    offset: '00000680'
+    symbols:
+    - name: DiskTSD_Device_Init
+      demangled: ''
+      offset: '00000000'
+    - name: ReadDISKTSDRegistry
+      demangled: ''
+      offset: 0000003C
+    - name: Drv_Reg_Pkt
+      demangled: ''
+      offset: '00000155'
+  - num: '3'
+    name: _PTEXT
+    offset: '00000000'
+    symbols:
+    - name: initialize
+      demangled: ''
+      offset: '00000000'
+    - name: DISKTSD_config_physical
+      demangled: ''
+      offset: '00000094'
+    - name: DISKTSD_unconfig_physical
+      demangled: ''
+      offset: '00000184'
+    - name: DISKTSD_init_complete
+      demangled: ''
+      offset: 0000027B
+    - name: Setup_Floppy_Numbers
+      demangled: ''
+      offset: 0000029C
+    - name: GetNextPCD
+      demangled: ''
+      offset: 000002C6
+    - name: DISKTSD_Recompute
+      demangled: ''
+      offset: 000002F6
+    - name: Config_Floppy
+      demangled: ''
+      offset: 0000033F
+    - name: CheckMonolithic
+      demangled: ''
+      offset: 000004A6
+    - name: CheckIorangesinPAN
+      demangled: ''
+      offset: '000005E5'
+    - name: tsd_segoff_to_lin
+      demangled: ''
+      offset: 0000061F
+    - name: tsd_setup_a_b
+      demangled: ''
+      offset: '00000641'
+    - name: set_floppy_fake_bpb
+      demangled: ''
+      offset: '00000688'
+    - name: tsd_recompute
+      demangled: ''
+      offset: 000006EC
+    - name: tsd_compute_disk_geom
+      demangled: ''
+      offset: 0000077D
+    - name: TSD_assign_more_letters
+      demangled: ''
+      offset: 00000CC0
+    - name: Make_And_Assoc_Logical_Floppy_DCB
+      demangled: ''
+      offset: 00000D20
+    - name: malfd_do_assoc
+      demangled: ''
+      offset: 00000D3B
+    - name: tsd_setup_extended_volumes
+      demangled: ''
+      offset: 00000D69
+    - name: tsd_build_logical_dcb
+      demangled: ''
+      offset: 00000EDC
+    - name: tsd_match_rmd_with_dcb
+      demangled: ''
+      offset: 000014F5
+    - name: tsd_make_log_dcb
+      demangled: ''
+      offset: '00001563'
+    - name: tsd_match_logical_dcbs
+      demangled: ''
+      offset: 000015D3
+    - name: tsd_find_extended_partition
+      demangled: ''
+      offset: 000017B2
+    - name: tsd_find_volume
+      demangled: ''
+      offset: 000017D9
+    - name: SetApparentForFloptical
+      demangled: ''
+      offset: '00001826'
+    - name: tsd_ioctl_440d
+      demangled: ''
+      offset: '00001937'
+    - name: tsd_440d_sense_media
+      demangled: ''
+      offset: '00001966'
+    - name: tsd_ioctl_query_device
+      demangled: ''
+      offset: 0000197B
+    - name: tsd_440d_format_track
+      demangled: ''
+      offset: 000019B0
+    - name: tsd_440d_write_track
+      demangled: ''
+      offset: 00001B6B
+    - name: tsd_440d_verify_track
+      demangled: ''
+      offset: 00001DA4
+    - name: tsd_440d_set_param
+      demangled: ''
+      offset: '00001E61'
+    - name: tsd_ioctl_stub
+      demangled: ''
+      offset: '00002051'
+    - name: tsd_ioctl_dev_type
+      demangled: ''
+      offset: '00002079'
+    - name: tsd_440d_get_param
+      demangled: ''
+      offset: 000020C8
+    - name: tsd_gp_no_changeline
+      demangled: ''
+      offset: 000020FF
+    - name: tsd_gp_removeable
+      demangled: ''
+      offset: '00002109'
+    - name: tsd_gp_store_attrs
+      demangled: ''
+      offset: 0000211A
+    - name: tsd_gp_copy_bpb
+      demangled: ''
+      offset: 0000213C
+    - name: tsd_gp_big_bpb
+      demangled: ''
+      offset: 0000215E
+    - name: tsd_gp_exit
+      demangled: ''
+      offset: '00002179'
+    - name: tsd_gp_cook_big_bpb
+      demangled: ''
+      offset: 0000217C
+    - name: tsd_gp_bad_call
+      demangled: ''
+      offset: 000021AD
+    - name: tsd_process_boot
+      demangled: ''
+      offset: 000021C4
+    - name: tsd_alloc_mem
+      demangled: ''
+      offset: '00002225'
+    - name: tsd_dealloc_mem
+      demangled: ''
+      offset: '00002268'
+    - name: CHS_to_RBA
+      demangled: ''
+      offset: 0000228A
+    - name: FloppyBPBFromTable
+      demangled: ''
+      offset: '00002345'
+    - name: BPBFromTable
+      demangled: ''
+      offset: '00002449'
+    - name: CalcSecPerFat
+      demangled: ''
+      offset: '000026E2'
+    - name: tsd_internal_request
+      demangled: ''
+      offset: 000027C2
+    - name: tsd_set_bds_in_dcb
+      demangled: ''
+      offset: 000028A2
+    - name: tsd_get_dcb
+      demangled: ''
+      offset: '00002918'
+    - name: TSD_pick_drive_letter
+      demangled: ''
+      offset: '00002942'
+    - name: TSD_associate_dcb
+      demangled: ''
+      offset: 0000296E
+    - name: TSD_destroy_dcb
+      demangled: ''
+      offset: '00002995'
+    - name: TSD_create_logical_dcb
+      demangled: ''
+      offset: 000029C8
+    - name: TSDMapFlat
+      demangled: ''
+      offset: 00002A01
+    - name: CopyCDList
+      demangled: ''
+      offset: 00002A19
+    - name: tsd_find_i13_bds
+      demangled: ''
+      offset: 00002A6A
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 000004D0
+    symbols:
+    - name: tsd_async_event
+      demangled: ''
+      offset: 0000000C
+    - name: tsd_ilb
+      demangled: ''
+      offset: '00000050'
+    - name: tsd_request
+      demangled: ''
+      offset: '00000084'
+    - name: tsd_disk_io
+      demangled: ''
+      offset: '00000120'
+    - name: tsd_issue_request
+      demangled: ''
+      offset: '00000135'
+    - name: tsd_ioctl_callback
+      demangled: ''
+      offset: 0000016F
+    - name: tsd_ioc_cb_event_callback
+      demangled: ''
+      offset: '00000231'
+    - name: tsd_init_cd_ptr
+      demangled: ''
+      offset: '00000248'
+    - name: DiskTSD_DDB
+      demangled: ''
+      offset: '00000264'
+    - name: number_disks
+      demangled: ''
+      offset: 000002B4
+    - name: number_floppys
+      demangled: ''
+      offset: 000002B5
+    - name: number_logical
+      demangled: ''
+      offset: 000002B6
+    - name: tsd_bds_head
+      demangled: ''
+      offset: 000002B7
+    - name: FlpFlags
+      demangled: ''
+      offset: 000002BB
+    - name: MixedFloppyType
+      demangled: ''
+      offset: 000002BF
+    - name: GetDevParmsIoctl
+      demangled: ''
+      offset: 000002C0
+  - num: '2'
+    name: _IGROUP
+    offset: '00000640'
+    symbols:
+    - name: DiskTSD_Device_Init
+      demangled: ''
+      offset: '00000000'
+    - name: ReadDISKTSDRegistry
+      demangled: ''
+      offset: 0000003C
+    - name: Drv_Reg_Pkt
+      demangled: ''
+      offset: '00000139'
+  - num: '3'
+    name: _PTEXT
+    offset: '00000000'
+    symbols:
+    - name: initialize
+      demangled: ''
+      offset: '00000000'
+    - name: DISKTSD_config_physical
+      demangled: ''
+      offset: 0000008C
+    - name: DISKTSD_unconfig_physical
+      demangled: ''
+      offset: '00000155'
+    - name: DISKTSD_init_complete
+      demangled: ''
+      offset: 0000022B
+    - name: Setup_Floppy_Numbers
+      demangled: ''
+      offset: '00000244'
+    - name: GetNextPCD
+      demangled: ''
+      offset: '00000266'
+    - name: DISKTSD_Recompute
+      demangled: ''
+      offset: 0000028B
+    - name: Config_Floppy
+      demangled: ''
+      offset: 000002B9
+    - name: CheckMonolithic
+      demangled: ''
+      offset: 000003C9
+    - name: CheckIorangesinPAN
+      demangled: ''
+      offset: 000004FD
+    - name: tsd_segoff_to_lin
+      demangled: ''
+      offset: 0000052F
+    - name: tsd_setup_a_b
+      demangled: ''
+      offset: '00000549'
+    - name: set_floppy_fake_bpb
+      demangled: ''
+      offset: '00000575'
+    - name: tsd_recompute
+      demangled: ''
+      offset: 000005B8
+    - name: tsd_compute_disk_geom
+      demangled: ''
+      offset: 000005EE
+    - name: TSD_assign_more_letters
+      demangled: ''
+      offset: 00000A26
+    - name: Make_And_Assoc_Logical_Floppy_DCB
+      demangled: ''
+      offset: 00000A6B
+    - name: malfd_do_assoc
+      demangled: ''
+      offset: 00000A7E
+    - name: tsd_setup_extended_volumes
+      demangled: ''
+      offset: 00000AAC
+    - name: tsd_build_logical_dcb
+      demangled: ''
+      offset: 00000BBA
+    - name: tsd_match_rmd_with_dcb
+      demangled: ''
+      offset: '00001055'
+    - name: tsd_make_log_dcb
+      demangled: ''
+      offset: 000010BB
+    - name: tsd_match_logical_dcbs
+      demangled: ''
+      offset: 000010EA
+    - name: tsd_find_extended_partition
+      demangled: ''
+      offset: 000011F9
+    - name: tsd_find_volume
+      demangled: ''
+      offset: '00001218'
+    - name: SetApparentForFloptical
+      demangled: ''
+      offset: 0000125D
+    - name: tsd_ioctl_440d
+      demangled: ''
+      offset: '00001363'
+    - name: tsd_440d_sense_media
+      demangled: ''
+      offset: '00001382'
+    - name: tsd_ioctl_query_device
+      demangled: ''
+      offset: 0000138F
+    - name: tsd_440d_format_track
+      demangled: ''
+      offset: 000013B1
+    - name: tsd_440d_write_track
+      demangled: ''
+      offset: '000014E0'
+    - name: tsd_440d_verify_track
+      demangled: ''
+      offset: '00001666'
+    - name: tsd_440d_set_param
+      demangled: ''
+      offset: 000016DB
+    - name: tsd_ioctl_stub
+      demangled: ''
+      offset: 000018A3
+    - name: tsd_ioctl_dev_type
+      demangled: ''
+      offset: 000018C3
+    - name: tsd_440d_get_param
+      demangled: ''
+      offset: '00001907'
+    - name: tsd_gp_no_changeline
+      demangled: ''
+      offset: '00001936'
+    - name: tsd_gp_removeable
+      demangled: ''
+      offset: '00001940'
+    - name: tsd_gp_store_attrs
+      demangled: ''
+      offset: '00001951'
+    - name: tsd_gp_copy_bpb
+      demangled: ''
+      offset: '00001973'
+    - name: tsd_gp_big_bpb
+      demangled: ''
+      offset: '00001995'
+    - name: tsd_gp_exit
+      demangled: ''
+      offset: 000019AB
+    - name: tsd_gp_cook_big_bpb
+      demangled: ''
+      offset: 000019AE
+    - name: tsd_gp_bad_call
+      demangled: ''
+      offset: 000019DF
+    - name: tsd_process_boot
+      demangled: ''
+      offset: 000019F4
+    - name: tsd_alloc_mem
+      demangled: ''
+      offset: 00001A4D
+    - name: tsd_dealloc_mem
+      demangled: ''
+      offset: 00001A79
+    - name: CHS_to_RBA
+      demangled: ''
+      offset: 00001A93
+    - name: FloppyBPBFromTable
+      demangled: ''
+      offset: 00001B4D
+    - name: BPBFromTable
+      demangled: ''
+      offset: 00001C48
+    - name: CalcSecPerFat
+      demangled: ''
+      offset: 00001E4E
+    - name: tsd_internal_request
+      demangled: ''
+      offset: 00001EEF
+    - name: tsd_set_bds_in_dcb
+      demangled: ''
+      offset: 00001FC1
+    - name: tsd_get_dcb
+      demangled: ''
+      offset: 0000201F
+    - name: TSD_pick_drive_letter
+      demangled: ''
+      offset: '00002041'
+    - name: TSD_associate_dcb
+      demangled: ''
+      offset: '00002065'
+    - name: TSD_destroy_dcb
+      demangled: ''
+      offset: '00002084'
+    - name: TSD_create_logical_dcb
+      demangled: ''
+      offset: 0000209C
+    - name: TSDMapFlat
+      demangled: ''
+      offset: 000020CD
+    - name: CopyCDList
+      demangled: ''
+      offset: 000020DD
+    - name: tsd_find_i13_bds
+      demangled: ''
+      offset: '00002120'

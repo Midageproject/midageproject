@@ -1,0 +1,5735 @@
+filename: vnbt.386
+binary: VNBT
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../INC/sockets/netinet/in.h
+  - ../../NBT/hashtbl.c
+  - ../../NBT/hndlrs.c
+  - ../../NBT/inbound.c
+  - ../../NBT/init.c
+  - ../../NBT/name.c
+  - ../../NBT/namesrv.c
+  - ../../NBT/nbtutils.c
+  - ../../NBT/parse.c
+  - ../../NBT/proxy.c
+  - ../../NBT/timer.c
+  - ../../NBT/udpsend.c
+  - ../../VXD/chicasm.asm
+  - ../../VXD/chic.c
+  - ../../VXD/cinit.c
+  - ../../VXD/client.asm
+  - ../../VXD/ctimer.c
+  - ../../VXD/cvxdfile.asm
+  - ../../VXD/cxport.asm
+  - ../../VXD/dns.c
+  - ../../VXD/fileio.c
+  - ../../VXD/nbtinfo.c
+  - ../../VXD/ncb.c
+  - ../../VXD/newdns.c
+  - ../../VXD/tdiaddr.c
+  - ../../VXD/tdicnct.c
+  - ../../VXD/tdihndlr.c
+  - ../../VXD/tdiout.c
+  - ../../VXD/util.c
+  - ../../VXD/vnbtd.asm
+  - ../../VXD/vxddebug.c
+  - ../../VXD/vxdisol.c
+  - Nbt.C
+  - SendBuffer.H
+  - SendBuff.tBuff.H
+  - tdiRequest.H
+  - Yt.h
+  segments:
+  - num: '1'
+    name: .bss
+    offset: 0000D950
+    symbols:
+    - name: _tanb_global
+      processed: ''
+      offset: '00000000'
+    - name: _szOutput
+      processed: ''
+      offset: '00000020'
+    - name: _TimerQ
+      processed: ''
+      offset: '00000420'
+    - name: _DomainNames
+      processed: ''
+      offset: '00000440'
+    - name: _LmHostQueries
+      processed: ''
+      offset: '00000460'
+    - name: _LanaTable
+      processed: ''
+      offset: '00000480'
+    - name: _UsedIrps
+      processed: ''
+      offset: 000004A0
+    - name: _DefaultDisconnectTimeout
+      processed: ''
+      offset: 000004A8
+    - name: _NodeType
+      processed: ''
+      offset: 000004AC
+    - name: _NbtConfig
+      processed: ''
+      offset: 000004C0
+    - name: _StreamsStack
+      processed: ''
+      offset: '00000619'
+    - name: _NameStatsInfo
+      processed: ''
+      offset: '00000620'
+    - name: _UsedTrackers
+      processed: ''
+      offset: 000006B8
+    - name: _CachePrimed
+      processed: ''
+      offset: 000006C0
+    - name: _NbtMemoryAllocated
+      processed: ''
+      offset: 000006C4
+    - name: _TimeoutTimer
+      processed: ''
+      offset: '000006E0'
+    - name: _abVecTbl
+      processed: ''
+      offset: '00000700'
+    - name: _TdiDispatch
+      processed: ''
+      offset: '00000800'
+    - name: _DBOut
+      processed: ''
+      offset: '00000820'
+    - name: _LanaBase
+      processed: ''
+      offset: '00001820'
+    - name: _DbgLeakCheck
+      processed: ''
+      offset: '00001824'
+    - name: _DbgMemList
+      processed: ''
+      offset: '00001828'
+    - name: _GlobalNdisHandle
+      processed: ''
+      offset: '00001840'
+    - name: _fGlobalsInitialized
+      processed: ''
+      offset: '00001844'
+    - name: _iLanaOffset
+      processed: ''
+      offset: '00001848'
+    - name: _fInInit
+      processed: ''
+      offset: '00002210'
+    - name: _NbtDebug
+      processed: ''
+      offset: '00002214'
+    - name: _iCurPos
+      processed: ''
+      offset: '00002218'
+    - name: _CurrentIP
+      processed: ''
+      offset: 0000221C
+    - name: _OptionMapping
+      processed: ''
+      offset: '00002220'
+    - name: _pFileBuff
+      processed: ''
+      offset: '00002898'
+    - name: _pFilePath
+      processed: ''
+      offset: 0000289C
+    - name: _pNbtGlobConfig
+      processed: ''
+      offset: 00003F68
+    - name: _Decoration
+      processed: ''
+      offset: '00006830'
+    - name: _Directive
+      processed: ''
+      offset: '00006870'
+    - name: _Suffix
+      processed: ''
+      offset: 000068B0
+    - name: _szXportName
+      processed: ''
+      offset: 0000A730
+    - name: _htonl
+      processed: ''
+      offset: 0000A778
+    - name: _ReadNameServersFromRegistry
+      processed: ''
+      offset: 0000A79B
+    - name: _GetProfileHex
+      processed: ''
+      offset: 0000A8A2
+    - name: _InterlockedExchangeAdd
+      processed: ''
+      offset: 0000A8BB
+    - name: _NbtPrintDebug
+      processed: ''
+      offset: 0000A8CC
+    - name: _ParseDomainNames
+      processed: ''
+      offset: 0000A914
+    - name: _CheckForTimedoutNCBs
+      processed: ''
+      offset: 0000AA58
+    - name: _StartRefreshTimer
+      processed: ''
+      offset: 0000ABE8
+    - name: _StopTimeoutTimer
+      processed: ''
+      offset: 0000AC45
+    - name: _DnsCompletion
+      processed: ''
+      offset: 0000AC54
+    - name: _DoDnsResolve
+      processed: ''
+      offset: 0000AEAB
+    - name: _DnsStoreName
+      processed: ''
+      offset: 0000B01D
+    - name: _DnsExtractName
+      processed: ''
+      offset: 0000B0C6
+    - name: _domnamelen
+      processed: ''
+      offset: 0000B167
+    - name: _ProcessDnsResponse
+      processed: ''
+      offset: 0000B181
+    - name: _VxdInitLmHostsSupport
+      processed: ''
+      offset: 0000B4C3
+    - name: _AddNotFoundToHashTable
+      processed: ''
+      offset: 0000B521
+    - name: _AddRecordToHashTable
+      processed: ''
+      offset: 0000B561
+    - name: _AddToHashTable
+      processed: ''
+      offset: 0000B5BD
+    - name: _DeleteFromHashTable
+      processed: ''
+      offset: 0000B80B
+    - name: _ChgStateOfScopedNameInHashTable
+      processed: ''
+      offset: 0000B84F
+    - name: _FindInHashTable
+      processed: ''
+      offset: 0000B8A2
+    - name: _RcvHandlrNotOs
+      processed: ''
+      offset: 0000B94C
+    - name: _Inbound
+      processed: ''
+      offset: 0000BC6E
+    - name: _ClearConnStructures
+      processed: ''
+      offset: 0000BF48
+    - name: _CompleteSessionSetup
+      processed: ''
+      offset: 0000BF8E
+    - name: _Outbound
+      processed: ''
+      offset: 0000C070
+    - name: _GetIrpIfNotCancelled2
+      processed: ''
+      offset: 0000C345
+    - name: _GetIrpIfNotCancelled
+      processed: ''
+      offset: 0000C377
+    - name: _RejectAnyData
+      processed: ''
+      offset: 0000C3A8
+    - name: _RejectSession
+      processed: ''
+      offset: 0000C3D7
+    - name: _FindSessionEndPoint
+      processed: ''
+      offset: 0000C4AC
+    - name: _MakeRemoteAddressStructure
+      processed: ''
+      offset: 0000C604
+    - name: _ConnectHndlrNotOs
+      processed: ''
+      offset: 0000C6A0
+    - name: _DisconnectHndlrNotOs
+      processed: ''
+      offset: 0000C7AA
+    - name: _CleanupAfterDisconnect
+      processed: ''
+      offset: 0000CE04
+    - name: _AllocLowerConn
+      processed: ''
+      offset: 0000CECF
+    - name: _DelayedAllocLowerConn
+      processed: ''
+      offset: 0000CF2B
+    - name: _DelayedAllocLowerConnSpecial
+      processed: ''
+      offset: 0000CF68
+    - name: _AddToRemoteHashTbl
+      processed: ''
+      offset: 0000CFDB
+    - name: _DgramHndlrNotOs
+      processed: ''
+      offset: 0000D0C3
+    - name: _ProxyDoDgramDist
+      processed: ''
+      offset: 0000D61A
+    - name: _NameSrvHndlrNotOs
+      processed: ''
+      offset: 0000D6FA
+    - name: _DoNothingComplete
+      processed: ''
+      offset: 0000D7EB
+    - name: _QueryFromNet
+      processed: ''
+      offset: 0000D7EC
+    - name: _RegResponseFromNet
+      processed: ''
+      offset: 0000DFC6
+    - name: _CheckRegistrationFromNet
+      processed: ''
+      offset: '0000E220'
+    - name: _NameReleaseFromNet
+      processed: ''
+      offset: '0000E553'
+    - name: _WackFromNet
+      processed: ''
+      offset: '0000E892'
+    - name: _SetupRefreshTtl
+      processed: ''
+      offset: '0000E974'
+    - name: _DecodeNodeStatusResponse
+      processed: ''
+      offset: 0000EACE
+    - name: _GetDestType
+      processed: ''
+      offset: 0000ECD3
+    - name: _ExtractServerName
+      processed: ''
+      offset: 0000ED11
+    - name: _SendNodeStatusResponse
+      processed: ''
+      offset: 0000F00B
+    - name: _UpdateNameState
+      processed: ''
+      offset: 0000F296
+    - name: _MakeList
+      processed: ''
+      offset: 0000F3F2
+    - name: _ChooseBestIpAddress
+      processed: ''
+      offset: 0000F4EB
+    - name: _IsNameServerForDevice
+      processed: ''
+      offset: 0000F6EA
+    - name: _SrcIsNameServer
+      processed: ''
+      offset: 0000F721
+    - name: _SrcIsUs
+      processed: ''
+      offset: 0000F75D
+    - name: _SwitchToBackup
+      processed: ''
+      offset: 0000F77E
+    - name: _GetNbFlags
+      processed: ''
+      offset: 0000F7F8
+    - name: _FindOnPendingList
+      processed: ''
+      offset: 0000F835
+    - name: _ChkIfValidRsp
+      processed: ''
+      offset: 0000F892
+    - name: _NbtOpenAddress
+      processed: ''
+      offset: 0000F8B7
+    - name: _NbtRegisterCompletion
+      processed: ''
+      offset: 0000FE24
+    - name: _LockedRemoveFromList
+      processed: ''
+      offset: '00010156'
+    - name: _NbtAssociateAddress
+      processed: ''
+      offset: '00010187'
+    - name: _NbtDisassociateAddress
+      processed: ''
+      offset: 0001026D
+    - name: _NbtCloseAddress
+      processed: ''
+      offset: 000103D2
+    - name: _NbtCleanUpAddress
+      processed: ''
+      offset: '00010433'
+    - name: _NbtCloseConnection
+      processed: ''
+      offset: 0001085A
+    - name: _NbtCleanUpConnection
+      processed: ''
+      offset: 000108A7
+    - name: _FreeRcvBuffers
+      processed: ''
+      offset: 00010B41
+    - name: _CheckListForTracker
+      processed: ''
+      offset: 00010BB0
+    - name: _CleanupConnectingState
+      processed: ''
+      offset: 00010BF1
+    - name: _ReConnect
+      processed: ''
+      offset: '00010E57'
+    - name: _NbtConnect
+      processed: ''
+      offset: 00010F6B
+    - name: _NbtConnectCommon
+      processed: ''
+      offset: 00010FC9
+    - name: _CleanUpPartialConnection
+      processed: ''
+      offset: 000116DF
+    - name: _SessionSetupContinue
+      processed: ''
+      offset: 000117A5
+    - name: _QueueCleanup
+      processed: ''
+      offset: 0001190D
+    - name: _StartSessionTimer
+      processed: ''
+      offset: 00011A0F
+    - name: _SessionStartupContinue
+      processed: ''
+      offset: 00011A9F
+    - name: _SessionStartupCompletion
+      processed: ''
+      offset: 00011D2A
+    - name: _SessionTimedOut
+      processed: ''
+      offset: 00011E7A
+    - name: _RelistConnection
+      processed: ''
+      offset: 00011FA0
+    - name: _NbtSend
+      processed: ''
+      offset: 00011FF7
+    - name: _NbtListen
+      processed: ''
+      offset: '00012011'
+    - name: _NbtDisconnect
+      processed: ''
+      offset: 000120A7
+    - name: _DisconnectLower
+      processed: ''
+      offset: '00012525'
+    - name: _NbtAccept
+      processed: ''
+      offset: 000125A4
+    - name: _NbtReceiveDatagram
+      processed: ''
+      offset: '00012629'
+    - name: _FindNameOrQuery
+      processed: ''
+      offset: 000126C3
+    - name: _FindNameRemoteThenLocal
+      processed: ''
+      offset: 000129B0
+    - name: _SendToResolvingName
+      processed: ''
+      offset: 00012A07
+    - name: _GetTransactId
+      processed: ''
+      offset: 00012B00
+    - name: _GetTransactIdLocked
+      processed: ''
+      offset: 00012B30
+    - name: _CTECountedAllocMem
+      processed: ''
+      offset: 00012B4B
+    - name: _CTECountedFreeMem
+      processed: ''
+      offset: 00012B99
+    - name: _SendDgramContinue
+      processed: ''
+      offset: 00012C01
+    - name: _SendDgram
+      processed: ''
+      offset: 00012CCB
+    - name: _SendDgramDist
+      processed: ''
+      offset: 00012D5E
+    - name: _SendDgramCompletion
+      processed: ''
+      offset: 00012DC4
+    - name: _DgramDistTimeout
+      processed: ''
+      offset: 00012EA6
+    - name: _DatagramDistribution
+      processed: ''
+      offset: 00012FB0
+    - name: _DgramSendCleanupTracker
+      processed: ''
+      offset: '00013098'
+    - name: _NbtSetEventHandler
+      processed: ''
+      offset: '000130E3'
+    - name: _NbtSendNodeStatus
+      processed: ''
+      offset: 0001325C
+    - name: _QueryNameCompletion
+      processed: ''
+      offset: '00013518'
+    - name: _SendNodeStatusContinue
+      processed: ''
+      offset: 0001359C
+    - name: _NodeStatusDone
+      processed: ''
+      offset: 000136CB
+    - name: _CopyFindNameData
+      processed: ''
+      offset: 0001372D
+    - name: _FreeTracker
+      processed: ''
+      offset: 000138A5
+    - name: _DereferenceIfNotInRcvHandler
+      processed: ''
+      offset: '00013972'
+    - name: _NbtQueryAdapterStatus
+      processed: ''
+      offset: 0001397D
+    - name: _NbtQueryConnectionList
+      processed: ''
+      offset: 00013C85
+    - name: _NbtQueryBcastVsWins
+      processed: ''
+      offset: 00013F44
+    - name: _NbtNewDhcpAddress
+      processed: ''
+      offset: 00013FC2
+    - name: _NbtDereferenceClient
+      processed: ''
+      offset: '00014145'
+    - name: _GetNextDeviceContext
+      processed: ''
+      offset: 000142A0
+    - name: _NbtDereferenceAddress
+      processed: ''
+      offset: 000142FB
+    - name: _LockedDereferenceName
+      processed: ''
+      offset: 0001456C
+    - name: _NbtDereferenceName
+      processed: ''
+      offset: '00014599'
+    - name: _NbtDereferenceConnection
+      processed: ''
+      offset: 000146AE
+    - name: _NbtDereferenceLowerConnection
+      processed: ''
+      offset: '00014820'
+    - name: _NbtDeleteLowerConn
+      processed: ''
+      offset: 000148AD
+    - name: _WipeOutLowerconn
+      processed: ''
+      offset: 0001491D
+    - name: _FindName
+      processed: ''
+      offset: '00014965'
+    - name: _AddToPendingList
+      processed: ''
+      offset: 000149B6
+    - name: _QueryNameOnNet
+      processed: ''
+      offset: 00014A1F
+    - name: _ContinueQueryNameOnNet
+      processed: ''
+      offset: 00014D40
+    - name: _MSnodeCompletion
+      processed: ''
+      offset: 0001505E
+    - name: _SetWinsDownFlag
+      processed: ''
+      offset: 000153EF
+    - name: _WinsDownTimeout
+      processed: ''
+      offset: 0001543D
+    - name: _CompleteClientReq
+      processed: ''
+      offset: 0001546A
+    - name: _NbtRegisterName
+      processed: ''
+      offset: '00015537'
+    - name: _MSnodeRegCompletion
+      processed: ''
+      offset: '000158E6'
+    - name: _NodeStatusCompletion
+      processed: ''
+      offset: 00015B03
+    - name: _RefreshRegCompletion
+      processed: ''
+      offset: 00015C17
+    - name: _ReleaseNameOnNet
+      processed: ''
+      offset: 00015CA5
+    - name: _ReleaseCompletion
+      processed: ''
+      offset: '00015E25'
+    - name: _NameReleaseDoneOnDynIf
+      processed: ''
+      offset: 00015EEC
+    - name: _NameReleaseDone
+      processed: ''
+      offset: 00015F25
+    - name: _DereferenceTracker
+      processed: ''
+      offset: 00015FB7
+    - name: _DereferenceTrackerNoLock
+      processed: ''
+      offset: 00015FED
+    - name: _DereferenceTrackerDelete
+      processed: ''
+      offset: '00016001'
+    - name: _StartRefresh
+      processed: ''
+      offset: '00016037'
+    - name: _GetNextName
+      processed: ''
+      offset: '00016227'
+    - name: _NextRefresh
+      processed: ''
+      offset: 000162C0
+    - name: _NextRefreshNonDispatch
+      processed: ''
+      offset: 000162DC
+    - name: _RefreshTimeout
+      processed: ''
+      offset: '00016562'
+    - name: _RefreshBegin
+      processed: ''
+      offset: 000165F5
+    - name: _RemoteHashTimeout
+      processed: ''
+      offset: 000167F0
+    - name: _NextKeepAlive
+      processed: ''
+      offset: '00016897'
+    - name: _GetNextKeepAlive
+      processed: ''
+      offset: '00016915'
+    - name: _SessionKeepAliveTimeout
+      processed: ''
+      offset: 00016A1D
+    - name: _IncrementNameStats
+      processed: ''
+      offset: 00016A41
+    - name: _SaveBcastNameResolved
+      processed: ''
+      offset: 00016A60
+    - name: _IsBrowserName
+      processed: ''
+      offset: 00016A92
+    - name: _AppropriateNodeType
+      processed: ''
+      offset: 00016AAC
+    - name: _DoDnsResolveDirect
+      processed: ''
+      offset: 00016ACE
+    - name: _UdpSendDNSBcastDirect
+      processed: ''
+      offset: 00016C47
+    - name: _SendDNSBcastDoneDirect
+      processed: ''
+      offset: 00016D49
+    - name: _DoDnsCancelDirect
+      processed: ''
+      offset: 00016D54
+    - name: _DnsCompletionDirect
+      processed: ''
+      offset: 00016DAF
+    - name: _DnsActualCompletionDirect
+      processed: ''
+      offset: 00016F1A
+    - name: _DnsUnlinkAndCompleteDirect
+      processed: ''
+      offset: 00016F88
+    - name: _ProcessDnsResponseDirect
+      processed: ''
+      offset: 00016FAE
+    - name: _CreateSendContextDirect
+      processed: ''
+      offset: 000171D8
+    - name: _FindContextDirect
+      processed: ''
+      offset: 000172EB
+    - name: _IpToAscii
+      processed: ''
+      offset: 0001730B
+    - name: _AddrChngNotification
+      processed: ''
+      offset: 0001738C
+    - name: _CloseAddressesWithTransport
+      processed: ''
+      offset: '00017583'
+    - name: _IsValidDevice
+      processed: ''
+      offset: 000176FB
+    - name: _NbtFreeAddressObj
+      processed: ''
+      offset: '00017747'
+    - name: _NbtNonDpcFreeAddrObj
+      processed: ''
+      offset: '00017763'
+    - name: _NbtFreeClientObj
+      processed: ''
+      offset: '00017783'
+    - name: _FreeConnectionObj
+      processed: ''
+      offset: '00017797'
+    - name: _NbtAllocateClientBlock
+      processed: ''
+      offset: 000177BE
+    - name: _NbtAddPermanentName
+      processed: ''
+      offset: '00017882'
+    - name: _NbtRemovePermanentName
+      processed: ''
+      offset: 00017A18
+    - name: _NbtInitQ
+      processed: ''
+      offset: 00017A70
+    - name: _NbtInitTrackerQ
+      processed: ''
+      offset: 00017AA9
+    - name: _NbtAllocTracker
+      processed: ''
+      offset: 00017AF5
+    - name: _NbtGetBuffer
+      processed: ''
+      offset: 00017B7F
+    - name: _GetNetBiosNameFromTransportAddress
+      processed: ''
+      offset: 00017BE5
+    - name: _ConvertToAscii
+      processed: ''
+      offset: 00017C18
+    - name: _ConvertToHalfAscii
+      processed: ''
+      offset: 00017CAA
+    - name: _Nbt_inet_addr
+      processed: ''
+      offset: 00017CFE
+    - name: _GetTracker
+      processed: ''
+      offset: 00017DAA
+    - name: _CountLocalNames
+      processed: ''
+      offset: '00017E88'
+    - name: _CountUpperConnections
+      processed: ''
+      offset: 00017EB9
+    - name: _DisableInboundConnections
+      processed: ''
+      offset: 00017F67
+    - name: _EnableInboundConnections
+      processed: ''
+      offset: 00017FCE
+    - name: _MarkForCloseLowerConnections
+      processed: ''
+      offset: '00018004'
+    - name: _NbtInitConnQ
+      processed: ''
+      offset: 000181BC
+    - name: _ReRegisterLocalNames
+      processed: ''
+      offset: '00018285'
+    - name: _LockedStopTimer
+      processed: ''
+      offset: '00018391'
+    - name: _VNBT_NCB_X@20
+      processed: ''
+      offset: 000183D2
+    - name: _GetDeviceContext
+      processed: ''
+      offset: 000189B8
+    - name: _NbtWouldLoopback
+      processed: ''
+      offset: 000189F2
+    - name: _VNBT_LANA_MASK@0
+      processed: ''
+      offset: 00018A18
+    - name: _MapTDIStatus2NCBErr
+      processed: ''
+      offset: 00018A5B
+    - name: _FindInDomainList
+      processed: ''
+      offset: 00018C2B
+    - name: _MakeNewListCurrent
+      processed: ''
+      offset: 00018C5B
+    - name: _StartIpAddrToSrvName
+      processed: ''
+      offset: 00018CD1
+    - name: _StartConnWithBestAddr
+      processed: ''
+      offset: 00018DC6
+    - name: _ChangeStateInRemoteTable
+      processed: ''
+      offset: 00018F0A
+    - name: _PreloadEntry
+      processed: ''
+      offset: 00018F64
+    - name: _RemovePreloads
+      processed: ''
+      offset: '00019059'
+    - name: _GetContext
+      processed: ''
+      offset: 000190CD
+    - name: _ChangeStateOfName
+      processed: ''
+      offset: '00019106'
+    - name: _LmHostTimeout
+      processed: ''
+      offset: 000191A6
+    - name: _TimeoutQEntries
+      processed: ''
+      offset: '00019250'
+    - name: _StartLmHostTimer
+      processed: ''
+      offset: 0001929B
+    - name: _LmHostQueueRequest
+      processed: ''
+      offset: 0001930A
+    - name: _GetNameToFind
+      processed: ''
+      offset: 000193AE
+    - name: _RemoveNameAndCompleteReq
+      processed: ''
+      offset: 0001943B
+    - name: _RemoveName
+      processed: ''
+      offset: '00019490'
+    - name: _strchr
+      processed: ''
+      offset: 000194CE
+    - name: _RegOrQueryFromNet
+      processed: ''
+      offset: 000194F4
+    - name: _ProxyTimerComplFn
+      processed: ''
+      offset: 0001955B
+    - name: _ProxyClientCompletion
+      processed: ''
+      offset: 0001964F
+    - name: _NbtTdiOpenAddress
+      processed: ''
+      offset: '00019650'
+    - name: _NbtTdiOpenConnection
+      processed: ''
+      offset: '00019835'
+    - name: _NbtTdiAssociateConnection
+      processed: ''
+      offset: 000198F4
+    - name: _TdiOpenandAssocConnection
+      processed: ''
+      offset: '00019964'
+    - name: _NbtTdiCloseConnection
+      processed: ''
+      offset: 00019B0C
+    - name: _NbtTdiCloseAddress
+      processed: ''
+      offset: 00019BAA
+    - name: _CloseAddress
+      processed: ''
+      offset: 00019BEB
+    - name: _DummyCompletion
+      processed: ''
+      offset: 00019C4F
+    - name: _TdiReceiveHandler
+      processed: ''
+      offset: 00019C50
+    - name: _ReceiveAnyHandler
+      processed: ''
+      offset: 0001AB15
+    - name: _CompletionRcv
+      processed: ''
+      offset: 0001AC13
+    - name: _NewSessionCompletionRoutine
+      processed: ''
+      offset: 0001B2A3
+    - name: _Reindicate
+      processed: ''
+      offset: 0001B3FD
+    - name: _TdiConnectHandler
+      processed: ''
+      offset: 0001B66A
+    - name: _AcceptCompletionRoutine
+      processed: ''
+      offset: 0001B73D
+    - name: _TdiDisconnectHandler
+      processed: ''
+      offset: 0001B84D
+    - name: _VxdDisconnectHandler
+      processed: ''
+      offset: 0001B933
+    - name: _TdiRcvDatagramHandler
+      processed: ''
+      offset: 0001BC41
+    - name: _TdiRcvNameSrvHandler
+      processed: ''
+      offset: 0001BD2F
+    - name: _CompletionRcvDgram
+      processed: ''
+      offset: 0001BD7A
+    - name: _TdiErrorHandler
+      processed: ''
+      offset: 0001BF0C
+    - name: _TdiSendDatagram
+      processed: ''
+      offset: 0001BF43
+    - name: _SendComplete
+      processed: ''
+      offset: 0001C0D5
+    - name: _TdiConnect
+      processed: ''
+      offset: 0001C1AC
+    - name: _TdiDisconnect
+      processed: ''
+      offset: 0001C348
+    - name: _TdiSend
+      processed: ''
+      offset: 0001C4E5
+    - name: _VxdScheduleDelayedCall
+      processed: ''
+      offset: 0001C76F
+    - name: _VxdDelayedCallHandler
+      processed: ''
+      offset: 0001C8D2
+    - name: _CancelAllDelayedEvents
+      processed: ''
+      offset: 0001C95B
+    - name: _InitTimerQ
+      processed: ''
+      offset: 0001CA11
+    - name: _InitQ
+      processed: ''
+      offset: 0001CA25
+    - name: _StopTimerAndCallCompletion
+      processed: ''
+      offset: 0001CA8F
+    - name: _InterlockedCallCompletion
+      processed: ''
+      offset: 0001CAE2
+    - name: _GetEntry
+      processed: ''
+      offset: 0001CB3D
+    - name: _LockedStartTimer
+      processed: ''
+      offset: 0001CB96
+    - name: _StartTimer
+      processed: ''
+      offset: 0001CC10
+    - name: _DereferenceTimer
+      processed: ''
+      offset: 0001CCE1
+    - name: _StopTimer
+      processed: ''
+      offset: 0001CD5B
+    - name: _TimerExpiry
+      processed: ''
+      offset: 0001CDD4
+    - name: _ExpireTimer
+      processed: ''
+      offset: 0001CE94
+    - name: _UdpSendNSBcast
+      processed: ''
+      offset: 0001CF61
+    - name: _CreatePdu
+      processed: ''
+      offset: 0001D246
+    - name: _NsDgramSendCompleted
+      processed: ''
+      offset: 0001D450
+    - name: _NameDgramSendCompleted
+      processed: ''
+      offset: 0001D462
+    - name: _NDgramSendCompleted
+      processed: ''
+      offset: 0001D46D
+    - name: _UdpSendResponse
+      processed: ''
+      offset: 0001D47B
+    - name: _QueryRespDone
+      processed: ''
+      offset: 0001D895
+    - name: _UdpSendDatagram
+      processed: ''
+      offset: 0001D8A3
+    - name: _TcpSessionStart
+      processed: ''
+      offset: 0001D96A
+    - name: _TcpSendSessionResponse
+      processed: ''
+      offset: 0001DA38
+    - name: _TcpSendSession
+      processed: ''
+      offset: 0001DADE
+    - name: _SessionRespDone
+      processed: ''
+      offset: 0001DB19
+    - name: _SendTcpDisconnect
+      processed: ''
+      offset: 0001DB27
+    - name: _TcpDisconnect
+      processed: ''
+      offset: 0001DB5C
+    - name: _DisconnectDone
+      processed: ''
+      offset: 0001DB9A
+    - name: _VxdPrintf
+      processed: ''
+      offset: 0001DD04
+    - name: _VxdCopyToDBOut
+      processed: ''
+      offset: 0001DD4D
+    - name: _VxdVsprintf
+      processed: ''
+      offset: 0001DDC6
+    - name: _VxdSprintf
+      processed: ''
+      offset: 0001DFBB
+    - name: _VxdAssert
+      processed: ''
+      offset: 0001DFD1
+    - name: _DbgAllocMem
+      processed: ''
+      offset: 0001DFFC
+    - name: _DbgFreeMem
+      processed: ''
+      offset: '0001E036'
+    - name: _VxdDgramSend
+      processed: ''
+      offset: '0001E078'
+    - name: _VxdDgramReceive
+      processed: ''
+      offset: '0001E219'
+    - name: _VxdCall
+      processed: ''
+      offset: '0001E314'
+    - name: _VxdSend
+      processed: ''
+      offset: 0001E38C
+    - name: _VxdReceiveAny
+      processed: ''
+      offset: 0001E61F
+    - name: _VxdReceive
+      processed: ''
+      offset: 0001E9C4
+    - name: _VxdHangup
+      processed: ''
+      offset: 0001EDDD
+    - name: _VxdListen
+      processed: ''
+      offset: 0001F0AD
+    - name: _VxdOpenName
+      processed: ''
+      offset: 0001F120
+    - name: _VxdCloseName
+      processed: ''
+      offset: 0001F24D
+    - name: _ActiveSessions
+      processed: ''
+      offset: 0001F2CC
+    - name: _VxdCleanupAddress
+      processed: ''
+      offset: 0001F2EB
+    - name: _VxdAccept
+      processed: ''
+      offset: 0001F619
+    - name: _VxdAdapterStatus
+      processed: ''
+      offset: 0001F6F5
+    - name: _VxdFindName
+      processed: ''
+      offset: 0001F7E2
+    - name: _VxdSessionStatus
+      processed: ''
+      offset: 0001F88F
+    - name: _VxdCopySessionStatus
+      processed: ''
+      offset: 0001FAF7
+    - name: _VxdReset
+      processed: ''
+      offset: 0001FC6E
+    - name: _VxdResetContinue
+      processed: ''
+      offset: 0001FDCB
+    - name: _VxdCancel
+      processed: ''
+      offset: 0001FFD0
+    - name: _VxdIoComplete
+      processed: ''
+      offset: '00020576'
+    - name: _VxdInitSessionSetup
+      processed: ''
+      offset: '000212E6'
+    - name: _VxdFindClientElement
+      processed: ''
+      offset: '00021491'
+    - name: _VxdFindConnectElement
+      processed: ''
+      offset: '00021552'
+    - name: _VxdFindLSN
+      processed: ''
+      offset: '00021654'
+    - name: _VxdFindNameNum
+      processed: ''
+      offset: 000216EE
+    - name: _VxdNameToClient
+      processed: ''
+      offset: '00021770'
+    - name: _NBRegister
+      processed: ''
+      offset: '00021875'
+    - name: _NBUnregister
+      processed: ''
+      offset: '00021923'
+    - name: _VxdCompleteSessionNcbs
+      processed: ''
+      offset: '00021967'
+    - name: _VxdTearDownSession
+      processed: ''
+      offset: 00021B0A
+    - name: _AllocSessSetupContext
+      processed: ''
+      offset: 00021CCC
+    - name: _FreeSessSetupContext
+      processed: ''
+      offset: 00021D7A
+    - name: _DelayedSessEstablish
+      processed: ''
+      offset: 00021DAE
+    - name: _VxdApiWorker
+      processed: ''
+      offset: 00021DD4
+    - name: _CTEAllocInitMem
+      processed: ''
+      offset: 0002206A
+    - name: CTETotalMem
+      processed: ''
+      offset: '00022114'
+    - name: __vxdhandle__
+      processed: ''
+      offset: '00022134'
+    - name: _VNBT_Get_Version
+      processed: ''
+      offset: '00022194'
+    - name: VNBT_DDB
+      processed: ''
+      offset: '00022198'
+    - name: _RegisterLana2
+      processed: ''
+      offset: '00022248'
+    - name: _DeregisterLana
+      processed: ''
+      offset: 0002227D
+    - name: _IPRegisterAddrChangeHandler
+      processed: ''
+      offset: 0002228C
+    - name: __VxdMapSegmentOffsetToFlat
+      processed: ''
+      offset: 000222A0
+    - name: __VxdLockBuffer
+      processed: ''
+      offset: '000222E8'
+    - name: __VxdUnlockBuffer
+      processed: ''
+      offset: 0002233A
+    - name: __VxdValidateBuffer
+      processed: ''
+      offset: 0002238D
+    - name: _CTEStartTimer
+      processed: ''
+      offset: 000223D4
+    - name: _CTEStopTimer
+      processed: ''
+      offset: 000223DA
+    - name: _CTESystemUpTime
+      processed: ''
+      offset: '000223E0'
+    - name: __ICTEGetLock
+      processed: ''
+      offset: '000223E6'
+    - name: __ICTEFreeLock
+      processed: ''
+      offset: 000223EC
+    - name: _CTEScheduleEvent
+      processed: ''
+      offset: 000223F2
+    - name: _CTEScheduleEvent_N
+      processed: ''
+      offset: 000223F8
+    - name: _CTECancelEvent
+      processed: ''
+      offset: 000223FE
+    - name: _CTEAllocMem
+      processed: ''
+      offset: '00022404'
+    - name: _CTEFreeMem
+      processed: ''
+      offset: '00022448'
+    - name: _CTERefillMem
+      processed: ''
+      offset: '00022460'
+    - name: _CTEBlock
+      processed: ''
+      offset: '00022466'
+    - name: _CTEBlock1
+      processed: ''
+      offset: 0002246C
+    - name: _CTESignal
+      processed: ''
+      offset: '00022472'
+    - name: __CTECheckMem
+      processed: ''
+      offset: '00022478'
+    - name: _CTEPrint
+      processed: ''
+      offset: 0002247E
+    - name: _CTEPrintNum
+      processed: ''
+      offset: '00022490'
+    - name: _CTEPrintCRLF
+      processed: ''
+      offset: 000224D9
+    - name: _CTEUnload
+      processed: ''
+      offset: '000224E9'
+    - name: _CTESetLoadNotifyProc
+      processed: ''
+      offset: 000224F4
+    - name: _CTESetUnloadNotifyProc
+      processed: ''
+      offset: 000224FF
+    - name: NCB_Handler
+      processed: ''
+      offset: 0002250C
+    - name: _DhcpQueryOption
+      processed: ''
+      offset: '00022519'
+    - name: VNBT_Get_Version
+      processed: ''
+      offset: 0002254B
+    - name: VNBT_Control
+      processed: ''
+      offset: '00022563'
+    - name: VNBT_DeviceIoControl
+      processed: ''
+      offset: '00022585'
+    - name: _ReconfigureDevnode
+      processed: ''
+      offset: '00022625'
+    - name: _GetInDosFlag
+      processed: ''
+      offset: 0002264F
+    - name: _VxdRtlCompareMemory
+      processed: ''
+      offset: 0002266C
+    - name: VNBT_Api_Handler
+      processed: ''
+      offset: 000226B0
+    - name: _VNBT_GetTdiDispatchTbl
+      processed: ''
+      offset: 0002277B
+    - name: _NbtCTEPrint
+      processed: ''
+      offset: 000227B3
+  - num: '2'
+    name: _PTEXT
+    offset: 0000FB10
+    symbols:
+    - name: _IPNotification
+      processed: ''
+      offset: '00000000'
+    - name: _DestroyDeviceObject
+      processed: ''
+      offset: 0000029A
+    - name: _SaveNameDnsServerAddrs
+      processed: ''
+      offset: 0000065D
+    - name: _GetDnsServerAddress
+      processed: ''
+      offset: 0000075E
+    - name: _GetNameServerAddress
+      processed: ''
+      offset: 000008A7
+    - name: _GetMacAddr
+      processed: ''
+      offset: 000009DD
+    - name: _VxdReadIniString
+      processed: ''
+      offset: 00000EC9
+    - name: _GetProfileInt
+      processed: ''
+      offset: 00000F2A
+    - name: _VxdOpenNdis
+      processed: ''
+      offset: 00000F9B
+    - name: _GetNdisParam
+      processed: ''
+      offset: '00001041'
+    - name: _VxdCloseNdis
+      processed: ''
+      offset: '00001102'
+    - name: _StopAllNameQueries
+      processed: ''
+      offset: '00001162'
+    - name: _VxdUnload
+      processed: ''
+      offset: 000013F3
+    - name: _ReleaseNbtConfigMem
+      processed: ''
+      offset: 000014DF
+    - name: _NbtReadRegistry
+      processed: ''
+      offset: '00001884'
+    - name: _GetDNSInfo
+      processed: ''
+      offset: '00001953'
+    - name: _CreateDeviceObject
+      processed: ''
+      offset: 00001A5B
+    - name: _GetDhcpOption
+      processed: ''
+      offset: 00001D7E
+    - name: _VxdFileOpen
+      processed: ''
+      offset: 00001F24
+    - name: _VxdFileRead
+      processed: ''
+      offset: 00001F5E
+    - name: _VxdFileClose
+      processed: ''
+      offset: 00001FA0
+    - name: _VxdWindowsPath
+      processed: ''
+      offset: 00001FE5
+    - name: _LmCloseFile
+      processed: ''
+      offset: '00002010'
+    - name: _LmFgets
+      processed: ''
+      offset: 000020A6
+    - name: _GetNextChar
+      processed: ''
+      offset: '00002235'
+    - name: _LmOpenFile
+      processed: ''
+      offset: 000022A0
+    - name: _BackupCurrentData
+      processed: ''
+      offset: 0000240B
+    - name: _RestoreOldData
+      processed: ''
+      offset: '00002449'
+    - name: _CopyNodeStatusResponse
+      processed: ''
+      offset: 0000247A
+    - name: _InitTimersNotOs
+      processed: ''
+      offset: 0000265D
+    - name: _StopInitTimers
+      processed: ''
+      offset: 000027A9
+    - name: _ReadParameters
+      processed: ''
+      offset: 0000280F
+    - name: _ReadParameters2
+      processed: ''
+      offset: 00002C48
+    - name: _ReadScope
+      processed: ''
+      offset: 00002D03
+    - name: _ReadLmHostFile
+      processed: ''
+      offset: 00002E3F
+    - name: _NbtOpenConnection
+      processed: ''
+      offset: 00002ECC
+    - name: _NbtOpenAndAssocConnection
+      processed: ''
+      offset: 00002FE1
+    - name: _NbtSendDatagram
+      processed: ''
+      offset: 000030A1
+    - name: _BuildSendDgramHdr
+      processed: ''
+      offset: 000032FE
+    - name: _NbtQueryFindName
+      processed: ''
+      offset: '00003483'
+    - name: _NbtResyncRemoteCache
+      processed: ''
+      offset: 000035FF
+    - name: _SessionKeepAliveNonDispatch
+      processed: ''
+      offset: 0000366B
+    - name: _ConvertDottedDecimalToUlong
+      processed: ''
+      offset: '00003722'
+    - name: _CloseLowerConnections
+      processed: ''
+      offset: 000037B4
+    - name: _LmGetIpAddr
+      processed: ''
+      offset: 000037FF
+    - name: _HandleSpecial
+      processed: ''
+      offset: 00003A62
+    - name: _LmpGetTokens
+      processed: ''
+      offset: 00003AEC
+    - name: _LmpIsKeyWord
+      processed: ''
+      offset: 00003D86
+    - name: _LmpBreakRecursion
+      processed: ''
+      offset: 00003DDC
+    - name: _AddToDomainList
+      processed: ''
+      offset: 00003F06
+    - name: _LmExpandName
+      processed: ''
+      offset: 0000403B
+    - name: _LmInclude
+      processed: ''
+      offset: '00004133'
+    - name: _PrimeCache
+      processed: ''
+      offset: '00004175'
+    - name: _ScanLmHostFile
+      processed: ''
+      offset: 000043FC
+    - name: _NbtCreateAddressObjects
+      processed: ''
+      offset: 000045B8
+    - name: _NdisOpenProtocolConfiguration@12
+      processed: ''
+      offset: 000047AC
+    - name: _NdisCloseConfiguration@4
+      processed: ''
+      offset: 000047B2
+    - name: _NdisReadConfiguration@20
+      processed: ''
+      offset: 000047B8
+    - name: VNBT_Device_PostProc
+      processed: ''
+      offset: 000047BE
+    - name: VNBT_ConfigCalls
+      processed: ''
+      offset: 000047D1
+    - name: _PostInit_Proc
+      processed: ''
+      offset: '00004896'
+  - num: '4'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _Init
+      processed: ''
+      offset: '00000044'
+    - name: _CTEInitialize
+      processed: ''
+      offset: '00000258'
+    - name: _CreateHashTable
+      processed: ''
+      offset: '00000278'
+    - name: _InitRemoteHashTable
+      processed: ''
+      offset: 000002F9
+    - name: _InitNotOs
+      processed: ''
+      offset: '00000327'
+    - name: _strrchr
+      processed: ''
+      offset: 000005F7
+    - name: VNBT_Device_Init
+      processed: ''
+      offset: 0000061A
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: '00002110'
+    symbols:
+    - name: _tanb_global
+      demangled: ''
+      offset: '00000000'
+    - name: _TimerQ
+      demangled: ''
+      offset: '00000020'
+    - name: _DomainNames
+      demangled: ''
+      offset: '00000038'
+    - name: _LmHostQueries
+      demangled: ''
+      offset: '00000040'
+    - name: _LanaTable
+      demangled: ''
+      offset: '00000060'
+    - name: _UsedIrps
+      demangled: ''
+      offset: '00000080'
+    - name: _DefaultDisconnectTimeout
+      demangled: ''
+      offset: '00000088'
+    - name: _NodeType
+      demangled: ''
+      offset: 0000008C
+    - name: _NbtConfig
+      demangled: ''
+      offset: 000000A0
+    - name: _StreamsStack
+      demangled: ''
+      offset: 000001ED
+    - name: _NameStatsInfo
+      demangled: ''
+      offset: '00000200'
+    - name: _UsedTrackers
+      demangled: ''
+      offset: '00000298'
+    - name: _CachePrimed
+      demangled: ''
+      offset: 000002A0
+    - name: _NbtMemoryAllocated
+      demangled: ''
+      offset: 000002A4
+    - name: _TimeoutTimer
+      demangled: ''
+      offset: 000002C0
+    - name: _TdiDispatch
+      demangled: ''
+      offset: 000002D8
+    - name: _LanaBase
+      demangled: ''
+      offset: 000002DC
+    - name: _GlobalNdisHandle
+      demangled: ''
+      offset: 000002F0
+    - name: _fGlobalsInitialized
+      demangled: ''
+      offset: 000002F4
+    - name: _iLanaOffset
+      demangled: ''
+      offset: 000002F8
+    - name: _fInInit
+      demangled: ''
+      offset: '00000338'
+    - name: _CurrentIP
+      demangled: ''
+      offset: 0000033C
+    - name: _OptionMapping
+      demangled: ''
+      offset: '00000340'
+    - name: _pFileBuff
+      demangled: ''
+      offset: 000003C4
+    - name: _pFilePath
+      demangled: ''
+      offset: 000003C8
+    - name: _pNbtGlobConfig
+      demangled: ''
+      offset: '00000660'
+    - name: _Decoration
+      demangled: ''
+      offset: 000006D0
+    - name: _Directive
+      demangled: ''
+      offset: '00000710'
+    - name: _Suffix
+      demangled: ''
+      offset: '00000750'
+    - name: _szXportName
+      demangled: ''
+      offset: 0000081C
+    - name: _htonl
+      demangled: ''
+      offset: '00000864'
+    - name: _ReadNameServersFromRegistry
+      demangled: ''
+      offset: '00000887'
+    - name: _GetProfileHex
+      demangled: ''
+      offset: '00000949'
+    - name: _InterlockedExchangeAdd
+      demangled: ''
+      offset: '00000962'
+    - name: _ParseDomainNames
+      demangled: ''
+      offset: '00000974'
+    - name: _CheckForTimedoutNCBs
+      demangled: ''
+      offset: 00000AB8
+    - name: _StartRefreshTimer
+      demangled: ''
+      offset: 00000B92
+    - name: _StopTimeoutTimer
+      demangled: ''
+      offset: 00000BEF
+    - name: _DnsCompletion
+      demangled: ''
+      offset: 00000BFC
+    - name: _DoDnsResolve
+      demangled: ''
+      offset: 00000DA8
+    - name: _DnsStoreName
+      demangled: ''
+      offset: 00000EF2
+    - name: _DnsExtractName
+      demangled: ''
+      offset: 00000F9B
+    - name: _domnamelen
+      demangled: ''
+      offset: '00001014'
+    - name: _ProcessDnsResponse
+      demangled: ''
+      offset: 0000102E
+    - name: _VxdInitLmHostsSupport
+      demangled: ''
+      offset: 0000124C
+    - name: _AddNotFoundToHashTable
+      demangled: ''
+      offset: '00001277'
+    - name: _AddRecordToHashTable
+      demangled: ''
+      offset: 000012B7
+    - name: _AddToHashTable
+      demangled: ''
+      offset: '00001313'
+    - name: _DeleteFromHashTable
+      demangled: ''
+      offset: 000014F9
+    - name: _ChgStateOfScopedNameInHashTable
+      demangled: ''
+      offset: 0000153D
+    - name: _FindInHashTable
+      demangled: ''
+      offset: '00001590'
+    - name: _RcvHandlrNotOs
+      demangled: ''
+      offset: 0000163A
+    - name: _Inbound
+      demangled: ''
+      offset: 000017B8
+    - name: _ClearConnStructures
+      demangled: ''
+      offset: '00001993'
+    - name: _CompleteSessionSetup
+      demangled: ''
+      offset: 000019D9
+    - name: _Outbound
+      demangled: ''
+      offset: 00001A79
+    - name: _GetIrpIfNotCancelled2
+      demangled: ''
+      offset: 00001C9F
+    - name: _GetIrpIfNotCancelled
+      demangled: ''
+      offset: 00001CB1
+    - name: _RejectAnyData
+      demangled: ''
+      offset: 00001CC1
+    - name: _RejectSession
+      demangled: ''
+      offset: 00001CCE
+    - name: _FindSessionEndPoint
+      demangled: ''
+      offset: 00001D36
+    - name: _MakeRemoteAddressStructure
+      demangled: ''
+      offset: '00001E58'
+    - name: _ConnectHndlrNotOs
+      demangled: ''
+      offset: 00001EF4
+    - name: _DisconnectHndlrNotOs
+      demangled: ''
+      offset: 00001FB5
+    - name: _CleanupAfterDisconnect
+      demangled: ''
+      offset: '00002311'
+    - name: _AllocLowerConn
+      demangled: ''
+      offset: 0000236D
+    - name: _DelayedAllocLowerConn
+      demangled: ''
+      offset: 000023C9
+    - name: _DelayedAllocLowerConnSpecial
+      demangled: ''
+      offset: '000023E3'
+    - name: _AddToRemoteHashTbl
+      demangled: ''
+      offset: 0000241B
+    - name: _DgramHndlrNotOs
+      demangled: ''
+      offset: '000024E1'
+    - name: _ProxyDoDgramDist
+      demangled: ''
+      offset: 000028EE
+    - name: _NameSrvHndlrNotOs
+      demangled: ''
+      offset: '00002976'
+    - name: _DoNothingComplete
+      demangled: ''
+      offset: 00002A2C
+    - name: _QueryFromNet
+      demangled: ''
+      offset: 00002A2D
+    - name: _RegResponseFromNet
+      demangled: ''
+      offset: 000030A0
+    - name: _CheckRegistrationFromNet
+      demangled: ''
+      offset: 0000327F
+    - name: _NameReleaseFromNet
+      demangled: ''
+      offset: '00003499'
+    - name: _WackFromNet
+      demangled: ''
+      offset: '00003724'
+    - name: _SetupRefreshTtl
+      demangled: ''
+      offset: 000037CD
+    - name: _DecodeNodeStatusResponse
+      demangled: ''
+      offset: 000038F1
+    - name: _GetDestType
+      demangled: ''
+      offset: 00003A43
+    - name: _ExtractServerName
+      demangled: ''
+      offset: 00003A6B
+    - name: _SendNodeStatusResponse
+      demangled: ''
+      offset: 00003CA6
+    - name: _UpdateNameState
+      demangled: ''
+      offset: 00003EDA
+    - name: _MakeList
+      demangled: ''
+      offset: '00004022'
+    - name: _ChooseBestIpAddress
+      demangled: ''
+      offset: 0000411B
+    - name: _IsNameServerForDevice
+      demangled: ''
+      offset: 000042C5
+    - name: _SrcIsNameServer
+      demangled: ''
+      offset: 000042FC
+    - name: _SrcIsUs
+      demangled: ''
+      offset: '00004338'
+    - name: _SwitchToBackup
+      demangled: ''
+      offset: '00004359'
+    - name: _GetNbFlags
+      demangled: ''
+      offset: '00004389'
+    - name: _FindOnPendingList
+      demangled: ''
+      offset: 000043C6
+    - name: _ChkIfValidRsp
+      demangled: ''
+      offset: '00004423'
+    - name: _NbtOpenAddress
+      demangled: ''
+      offset: '00004448'
+    - name: _NbtRegisterCompletion
+      demangled: ''
+      offset: '00004832'
+    - name: _LockedRemoveFromList
+      demangled: ''
+      offset: 00004A39
+    - name: _NbtAssociateAddress
+      demangled: ''
+      offset: 00004A48
+    - name: _NbtDisassociateAddress
+      demangled: ''
+      offset: 00004A9A
+    - name: _NbtCloseAddress
+      demangled: ''
+      offset: 00004B7D
+    - name: _NbtCleanUpAddress
+      demangled: ''
+      offset: 00004BBC
+    - name: _NbtCloseConnection
+      demangled: ''
+      offset: 00004D80
+    - name: _NbtCleanUpConnection
+      demangled: ''
+      offset: 00004DB3
+    - name: _FreeRcvBuffers
+      demangled: ''
+      offset: 00004EEB
+    - name: _CheckListForTracker
+      demangled: ''
+      offset: 00004F1D
+    - name: _CleanupConnectingState
+      demangled: ''
+      offset: 00004F5E
+    - name: _ReConnect
+      demangled: ''
+      offset: 000050D8
+    - name: _NbtConnect
+      demangled: ''
+      offset: 0000517B
+    - name: _NbtConnectCommon
+      demangled: ''
+      offset: 000051D9
+    - name: _CleanUpPartialConnection
+      demangled: ''
+      offset: 0000571B
+    - name: _SessionSetupContinue
+      demangled: ''
+      offset: 000057AC
+    - name: _QueueCleanup
+      demangled: ''
+      offset: 0000588D
+    - name: _StartSessionTimer
+      demangled: ''
+      offset: 000058EC
+    - name: _SessionStartupContinue
+      demangled: ''
+      offset: 0000593F
+    - name: _SessionStartupCompletion
+      demangled: ''
+      offset: 00005AE5
+    - name: _SessionTimedOut
+      demangled: ''
+      offset: 00005BBA
+    - name: _RelistConnection
+      demangled: ''
+      offset: 00005C2A
+    - name: _NbtSend
+      demangled: ''
+      offset: 00005C59
+    - name: _NbtListen
+      demangled: ''
+      offset: 00005C5C
+    - name: _NbtDisconnect
+      demangled: ''
+      offset: 00005CD2
+    - name: _DisconnectLower
+      demangled: ''
+      offset: 00005EE9
+    - name: _NbtAccept
+      demangled: ''
+      offset: 00005F54
+    - name: _NbtReceiveDatagram
+      demangled: ''
+      offset: 00005FA4
+    - name: _FindNameOrQuery
+      demangled: ''
+      offset: '00006004'
+    - name: _FindNameRemoteThenLocal
+      demangled: ''
+      offset: '00006264'
+    - name: _SendToResolvingName
+      demangled: ''
+      offset: 000062BB
+    - name: _GetTransactId
+      demangled: ''
+      offset: '00006338'
+    - name: _GetTransactIdLocked
+      demangled: ''
+      offset: 0000633D
+    - name: _CTECountedAllocMem
+      demangled: ''
+      offset: '00006358'
+    - name: _CTECountedFreeMem
+      demangled: ''
+      offset: '00006385'
+    - name: _SendDgramContinue
+      demangled: ''
+      offset: 000063AB
+    - name: _SendDgram
+      demangled: ''
+      offset: '00006446'
+    - name: _SendDgramDist
+      demangled: ''
+      offset: 000064D9
+    - name: _SendDgramCompletion
+      demangled: ''
+      offset: '00006518'
+    - name: _DgramDistTimeout
+      demangled: ''
+      offset: 000065BA
+    - name: _DatagramDistribution
+      demangled: ''
+      offset: 0000663B
+    - name: _DgramSendCleanupTracker
+      demangled: ''
+      offset: '00006701'
+    - name: _NbtSetEventHandler
+      demangled: ''
+      offset: 0000672A
+    - name: _NbtSendNodeStatus
+      demangled: ''
+      offset: '00006813'
+    - name: _QueryNameCompletion
+      demangled: ''
+      offset: 00006A64
+    - name: _SendNodeStatusContinue
+      demangled: ''
+      offset: 00006AB9
+    - name: _NodeStatusDone
+      demangled: ''
+      offset: 00006BA8
+    - name: _CopyFindNameData
+      demangled: ''
+      offset: 00006BEB
+    - name: _FreeTracker
+      demangled: ''
+      offset: 00006D41
+    - name: _DereferenceIfNotInRcvHandler
+      demangled: ''
+      offset: 00006DB1
+    - name: _NbtQueryAdapterStatus
+      demangled: ''
+      offset: 00006DBC
+    - name: _NbtQueryConnectionList
+      demangled: ''
+      offset: '00007099'
+    - name: _NbtQueryBcastVsWins
+      demangled: ''
+      offset: '00007299'
+    - name: _NbtNewDhcpAddress
+      demangled: ''
+      offset: '00007317'
+    - name: _NbtDereferenceClient
+      demangled: ''
+      offset: 000073CB
+    - name: _GetNextDeviceContext
+      demangled: ''
+      offset: '00007449'
+    - name: _NbtDereferenceAddress
+      demangled: ''
+      offset: 000074A4
+    - name: _LockedDereferenceName
+      demangled: ''
+      offset: 000075A1
+    - name: _NbtDereferenceName
+      demangled: ''
+      offset: 000075AC
+    - name: _NbtDereferenceConnection
+      demangled: ''
+      offset: 0000760B
+    - name: _NbtDereferenceLowerConnection
+      demangled: ''
+      offset: '00007642'
+    - name: _NbtDeleteLowerConn
+      demangled: ''
+      offset: 0000766D
+    - name: _WipeOutLowerconn
+      demangled: ''
+      offset: 0000769E
+    - name: _FindName
+      demangled: ''
+      offset: 000076CC
+    - name: _AddToPendingList
+      demangled: ''
+      offset: 0000771D
+    - name: _QueryNameOnNet
+      demangled: ''
+      offset: '00007786'
+    - name: _ContinueQueryNameOnNet
+      demangled: ''
+      offset: 00007A3E
+    - name: _MSnodeCompletion
+      demangled: ''
+      offset: 00007CB8
+    - name: _SetWinsDownFlag
+      demangled: ''
+      offset: 00007FCC
+    - name: _WinsDownTimeout
+      demangled: ''
+      offset: 0000801A
+    - name: _CompleteClientReq
+      demangled: ''
+      offset: '00008033'
+    - name: _NbtRegisterName
+      demangled: ''
+      offset: '000080E3'
+    - name: _MSnodeRegCompletion
+      demangled: ''
+      offset: 000083FC
+    - name: _NodeStatusCompletion
+      demangled: ''
+      offset: '00008601'
+    - name: _RefreshRegCompletion
+      demangled: ''
+      offset: 000086EC
+    - name: _ReleaseNameOnNet
+      demangled: ''
+      offset: '00008742'
+    - name: _ReleaseCompletion
+      demangled: ''
+      offset: '00008868'
+    - name: _NameReleaseDoneOnDynIf
+      demangled: ''
+      offset: 0000892F
+    - name: _NameReleaseDone
+      demangled: ''
+      offset: '00008946'
+    - name: _DereferenceTracker
+      demangled: ''
+      offset: 000089A0
+    - name: _DereferenceTrackerNoLock
+      demangled: ''
+      offset: 000089B4
+    - name: _DereferenceTrackerDelete
+      demangled: ''
+      offset: 000089C8
+    - name: _StartRefresh
+      demangled: ''
+      offset: 000089DC
+    - name: _GetNextName
+      demangled: ''
+      offset: 00008B38
+    - name: _NextRefresh
+      demangled: ''
+      offset: 00008BD1
+    - name: _NextRefreshNonDispatch
+      demangled: ''
+      offset: 00008BED
+    - name: _RefreshTimeout
+      demangled: ''
+      offset: 00008D5F
+    - name: _RefreshBegin
+      demangled: ''
+      offset: 00008DB6
+    - name: _RemoteHashTimeout
+      demangled: ''
+      offset: 00008F3F
+    - name: _NextKeepAlive
+      demangled: ''
+      offset: 00008FBC
+    - name: _GetNextKeepAlive
+      demangled: ''
+      offset: '00009016'
+    - name: _SessionKeepAliveTimeout
+      demangled: ''
+      offset: '00009098'
+    - name: _IncrementNameStats
+      demangled: ''
+      offset: 000090BC
+    - name: _SaveBcastNameResolved
+      demangled: ''
+      offset: 000090DB
+    - name: _IsBrowserName
+      demangled: ''
+      offset: 0000910D
+    - name: _AppropriateNodeType
+      demangled: ''
+      offset: '00009127'
+    - name: _DoDnsResolveDirect
+      demangled: ''
+      offset: '00009149'
+    - name: _UdpSendDNSBcastDirect
+      demangled: ''
+      offset: 000092A5
+    - name: _SendDNSBcastDoneDirect
+      demangled: ''
+      offset: '00009369'
+    - name: _DoDnsCancelDirect
+      demangled: ''
+      offset: '00009374'
+    - name: _DnsCompletionDirect
+      demangled: ''
+      offset: 000093A9
+    - name: _DnsActualCompletionDirect
+      demangled: ''
+      offset: 000094BA
+    - name: _DnsUnlinkAndCompleteDirect
+      demangled: ''
+      offset: '00009528'
+    - name: _ProcessDnsResponseDirect
+      demangled: ''
+      offset: 0000954E
+    - name: _CreateSendContextDirect
+      demangled: ''
+      offset: 000096C2
+    - name: _FindContextDirect
+      demangled: ''
+      offset: 000097D5
+    - name: _IpToAscii
+      demangled: ''
+      offset: 000097F5
+    - name: _AddrChngNotification
+      demangled: ''
+      offset: '00009876'
+    - name: _CloseAddressesWithTransport
+      demangled: ''
+      offset: 0000996D
+    - name: _IsValidDevice
+      demangled: ''
+      offset: 00009A02
+    - name: _NbtFreeAddressObj
+      demangled: ''
+      offset: 00009A20
+    - name: _NbtNonDpcFreeAddrObj
+      demangled: ''
+      offset: 00009A3C
+    - name: _NbtFreeClientObj
+      demangled: ''
+      offset: 00009A5C
+    - name: _FreeConnectionObj
+      demangled: ''
+      offset: 00009A70
+    - name: _NbtAllocateClientBlock
+      demangled: ''
+      offset: 00009A97
+    - name: _NbtAddPermanentName
+      demangled: ''
+      offset: 00009B3E
+    - name: _NbtRemovePermanentName
+      demangled: ''
+      offset: 00009C72
+    - name: _NbtInitQ
+      demangled: ''
+      offset: 00009C9A
+    - name: _NbtInitTrackerQ
+      demangled: ''
+      offset: 00009CD3
+    - name: _NbtAllocTracker
+      demangled: ''
+      offset: 00009D1F
+    - name: _NbtGetBuffer
+      demangled: ''
+      offset: 00009DA9
+    - name: _GetNetBiosNameFromTransportAddress
+      demangled: ''
+      offset: 00009E0F
+    - name: _ConvertToAscii
+      demangled: ''
+      offset: '00009E42'
+    - name: _ConvertToHalfAscii
+      demangled: ''
+      offset: 00009ED4
+    - name: _Nbt_inet_addr
+      demangled: ''
+      offset: 00009F28
+    - name: _GetTracker
+      demangled: ''
+      offset: 00009FD4
+    - name: _CountLocalNames
+      demangled: ''
+      offset: 0000A063
+    - name: _CountUpperConnections
+      demangled: ''
+      offset: 0000A094
+    - name: _DisableInboundConnections
+      demangled: ''
+      offset: 0000A0EA
+    - name: _EnableInboundConnections
+      demangled: ''
+      offset: 0000A132
+    - name: _MarkForCloseLowerConnections
+      demangled: ''
+      offset: 0000A148
+    - name: _NbtInitConnQ
+      demangled: ''
+      offset: 0000A25C
+    - name: _ReRegisterLocalNames
+      demangled: ''
+      offset: 0000A2E3
+    - name: _LockedStopTimer
+      demangled: ''
+      offset: 0000A3B6
+    - name: _VNBT_NCB_X@20
+      demangled: ''
+      offset: 0000A3D5
+    - name: _GetDeviceContext
+      demangled: ''
+      offset: 0000A6E6
+    - name: _NbtWouldLoopback
+      demangled: ''
+      offset: 0000A720
+    - name: _VNBT_LANA_MASK@0
+      demangled: ''
+      offset: 0000A746
+    - name: _MapTDIStatus2NCBErr
+      demangled: ''
+      offset: 0000A789
+    - name: _FindInDomainList
+      demangled: ''
+      offset: 0000A852
+    - name: _MakeNewListCurrent
+      demangled: ''
+      offset: 0000A882
+    - name: _StartIpAddrToSrvName
+      demangled: ''
+      offset: 0000A8D5
+    - name: _StartConnWithBestAddr
+      demangled: ''
+      offset: 0000A986
+    - name: _ChangeStateInRemoteTable
+      demangled: ''
+      offset: 0000AA59
+    - name: _PreloadEntry
+      demangled: ''
+      offset: 0000AA92
+    - name: _RemovePreloads
+      demangled: ''
+      offset: 0000AB67
+    - name: _GetContext
+      demangled: ''
+      offset: 0000ABBB
+    - name: _ChangeStateOfName
+      demangled: ''
+      offset: 0000ABD2
+    - name: _LmHostTimeout
+      demangled: ''
+      offset: 0000AC56
+    - name: _TimeoutQEntries
+      demangled: ''
+      offset: 0000ACEC
+    - name: _StartLmHostTimer
+      demangled: ''
+      offset: 0000AD37
+    - name: _LmHostQueueRequest
+      demangled: ''
+      offset: 0000AD86
+    - name: _GetNameToFind
+      demangled: ''
+      offset: 0000AE04
+    - name: _RemoveNameAndCompleteReq
+      demangled: ''
+      offset: 0000AE5D
+    - name: _RemoveName
+      demangled: ''
+      offset: 0000AEB2
+    - name: _strchr
+      demangled: ''
+      offset: 0000AECE
+    - name: _RegOrQueryFromNet
+      demangled: ''
+      offset: 0000AEF4
+    - name: _ProxyTimerComplFn
+      demangled: ''
+      offset: 0000AF39
+    - name: _ProxyClientCompletion
+      demangled: ''
+      offset: 0000B000
+    - name: _NbtTdiOpenAddress
+      demangled: ''
+      offset: 0000B001
+    - name: _NbtTdiOpenConnection
+      demangled: ''
+      offset: 0000B0F5
+    - name: _NbtTdiAssociateConnection
+      demangled: ''
+      offset: 0000B14D
+    - name: _TdiOpenandAssocConnection
+      demangled: ''
+      offset: 0000B16C
+    - name: _NbtTdiCloseConnection
+      demangled: ''
+      offset: 0000B258
+    - name: _NbtTdiCloseAddress
+      demangled: ''
+      offset: 0000B281
+    - name: _CloseAddress
+      demangled: ''
+      offset: 0000B28F
+    - name: _DummyCompletion
+      demangled: ''
+      offset: 0000B2B5
+    - name: _TdiReceiveHandler
+      demangled: ''
+      offset: 0000B2B6
+    - name: _ReceiveAnyHandler
+      demangled: ''
+      offset: 0000B616
+    - name: _CompletionRcv
+      demangled: ''
+      offset: 0000B651
+    - name: _NewSessionCompletionRoutine
+      demangled: ''
+      offset: 0000B768
+    - name: _Reindicate
+      demangled: ''
+      offset: 0000B7F1
+    - name: _TdiConnectHandler
+      demangled: ''
+      offset: 0000B87E
+    - name: _AcceptCompletionRoutine
+      demangled: ''
+      offset: 0000B8CC
+    - name: _TdiDisconnectHandler
+      demangled: ''
+      offset: 0000B90E
+    - name: _VxdDisconnectHandler
+      demangled: ''
+      offset: 0000B93E
+    - name: _TdiRcvDatagramHandler
+      demangled: ''
+      offset: 0000BA20
+    - name: _TdiRcvNameSrvHandler
+      demangled: ''
+      offset: 0000BAEB
+    - name: _CompletionRcvDgram
+      demangled: ''
+      offset: 0000BB13
+    - name: _TdiErrorHandler
+      demangled: ''
+      offset: 0000BC85
+    - name: _TdiSendDatagram
+      demangled: ''
+      offset: 0000BC8B
+    - name: _SendComplete
+      demangled: ''
+      offset: 0000BD73
+    - name: _TdiConnect
+      demangled: ''
+      offset: 0000BDAB
+    - name: _TdiDisconnect
+      demangled: ''
+      offset: 0000BDE4
+    - name: _TdiSend
+      demangled: ''
+      offset: 0000BE02
+    - name: _VxdScheduleDelayedCall
+      demangled: ''
+      offset: 0000BF58
+    - name: _VxdDelayedCallHandler
+      demangled: ''
+      offset: 0000C017
+    - name: _CancelAllDelayedEvents
+      demangled: ''
+      offset: 0000C030
+    - name: _InitTimerQ
+      demangled: ''
+      offset: 0000C08A
+    - name: _InitQ
+      demangled: ''
+      offset: 0000C09E
+    - name: _StopTimerAndCallCompletion
+      demangled: ''
+      offset: 0000C0EE
+    - name: _InterlockedCallCompletion
+      demangled: ''
+      offset: 0000C123
+    - name: _GetEntry
+      demangled: ''
+      offset: 0000C14D
+    - name: _LockedStartTimer
+      demangled: ''
+      offset: 0000C192
+    - name: _StartTimer
+      demangled: ''
+      offset: 0000C1E5
+    - name: _DereferenceTimer
+      demangled: ''
+      offset: 0000C29D
+    - name: _StopTimer
+      demangled: ''
+      offset: 0000C2FE
+    - name: _TimerExpiry
+      demangled: ''
+      offset: 0000C377
+    - name: _ExpireTimer
+      demangled: ''
+      offset: 0000C3FA
+    - name: _UdpSendNSBcast
+      demangled: ''
+      offset: 0000C495
+    - name: _CreatePdu
+      demangled: ''
+      offset: 0000C6CC
+    - name: _NsDgramSendCompleted
+      demangled: ''
+      offset: 0000C8D6
+    - name: _NameDgramSendCompleted
+      demangled: ''
+      offset: 0000C8E8
+    - name: _NDgramSendCompleted
+      demangled: ''
+      offset: 0000C8F3
+    - name: _UdpSendResponse
+      demangled: ''
+      offset: 0000C901
+    - name: _QueryRespDone
+      demangled: ''
+      offset: 0000CCEB
+    - name: _UdpSendDatagram
+      demangled: ''
+      offset: 0000CCF9
+    - name: _TcpSessionStart
+      demangled: ''
+      offset: 0000CDC0
+    - name: _TcpSendSessionResponse
+      demangled: ''
+      offset: 0000CE62
+    - name: _TcpSendSession
+      demangled: ''
+      offset: 0000CF08
+    - name: _SessionRespDone
+      demangled: ''
+      offset: 0000CF43
+    - name: _SendTcpDisconnect
+      demangled: ''
+      offset: 0000CF51
+    - name: _TcpDisconnect
+      demangled: ''
+      offset: 0000CF86
+    - name: _DisconnectDone
+      demangled: ''
+      offset: 0000CFC4
+    - name: _VxdDgramSend
+      demangled: ''
+      offset: 0000D08C
+    - name: _VxdDgramReceive
+      demangled: ''
+      offset: 0000D14F
+    - name: _VxdCall
+      demangled: ''
+      offset: 0000D229
+    - name: _VxdSend
+      demangled: ''
+      offset: 0000D2A1
+    - name: _VxdReceiveAny
+      demangled: ''
+      offset: 0000D402
+    - name: _VxdReceive
+      demangled: ''
+      offset: 0000D58C
+    - name: _VxdHangup
+      demangled: ''
+      offset: 0000D72E
+    - name: _VxdListen
+      demangled: ''
+      offset: 0000D844
+    - name: _VxdOpenName
+      demangled: ''
+      offset: 0000D8B7
+    - name: _VxdCloseName
+      demangled: ''
+      offset: 0000D997
+    - name: _ActiveSessions
+      demangled: ''
+      offset: 0000DA16
+    - name: _VxdCleanupAddress
+      demangled: ''
+      offset: 0000DA35
+    - name: _VxdAccept
+      demangled: ''
+      offset: 0000DB8A
+    - name: _VxdAdapterStatus
+      demangled: ''
+      offset: 0000DBB8
+    - name: _VxdFindName
+      demangled: ''
+      offset: 0000DC6C
+    - name: _VxdSessionStatus
+      demangled: ''
+      offset: 0000DCE8
+    - name: _VxdCopySessionStatus
+      demangled: ''
+      offset: 0000DF05
+    - name: _VxdReset
+      demangled: ''
+      offset: '0000E022'
+    - name: _VxdResetContinue
+      demangled: ''
+      offset: '0000E136'
+    - name: _VxdCancel
+      demangled: ''
+      offset: 0000E29A
+    - name: _VxdIoComplete
+      demangled: ''
+      offset: 0000E5A4
+    - name: _VxdInitSessionSetup
+      demangled: ''
+      offset: '0000E990'
+    - name: _VxdFindClientElement
+      demangled: ''
+      offset: 0000EB0E
+    - name: _VxdFindConnectElement
+      demangled: ''
+      offset: 0000EBB4
+    - name: _VxdFindLSN
+      demangled: ''
+      offset: 0000EC21
+    - name: _VxdFindNameNum
+      demangled: ''
+      offset: 0000EC57
+    - name: _VxdNameToClient
+      demangled: ''
+      offset: 0000EC94
+    - name: _NBRegister
+      demangled: ''
+      offset: 0000ED14
+    - name: _NBUnregister
+      demangled: ''
+      offset: 0000EDA8
+    - name: _VxdCompleteSessionNcbs
+      demangled: ''
+      offset: 0000EDEC
+    - name: _VxdTearDownSession
+      demangled: ''
+      offset: 0000EEAB
+    - name: _AllocSessSetupContext
+      demangled: ''
+      offset: 0000EEF2
+    - name: _FreeSessSetupContext
+      demangled: ''
+      offset: 0000EFA0
+    - name: _DelayedSessEstablish
+      demangled: ''
+      offset: 0000EFD4
+    - name: _VxdApiWorker
+      demangled: ''
+      offset: 0000EFFA
+    - name: _CTEAllocInitMem
+      demangled: ''
+      offset: 0000F290
+    - name: __vxdhandle__
+      demangled: ''
+      offset: 0000F2B8
+    - name: _VNBT_Get_Version
+      demangled: ''
+      offset: 0000F2BC
+    - name: VNBT_DDB
+      demangled: ''
+      offset: 0000F2C0
+    - name: _RegisterLana2
+      demangled: ''
+      offset: 0000F318
+    - name: _DeregisterLana
+      demangled: ''
+      offset: 0000F34D
+    - name: _IPRegisterAddrChangeHandler
+      demangled: ''
+      offset: 0000F35C
+    - name: __VxdMapSegmentOffsetToFlat
+      demangled: ''
+      offset: 0000F370
+    - name: __VxdLockBuffer
+      demangled: ''
+      offset: 0000F3B8
+    - name: __VxdUnlockBuffer
+      demangled: ''
+      offset: 0000F3FF
+    - name: __VxdValidateBuffer
+      demangled: ''
+      offset: 0000F447
+    - name: _CTEStartTimer
+      demangled: ''
+      offset: 0000F490
+    - name: _CTEStopTimer
+      demangled: ''
+      offset: 0000F496
+    - name: _CTESystemUpTime
+      demangled: ''
+      offset: 0000F49C
+    - name: _CTEScheduleEvent
+      demangled: ''
+      offset: 0000F4A2
+    - name: _CTEScheduleEvent_N
+      demangled: ''
+      offset: 0000F4A8
+    - name: _CTECancelEvent
+      demangled: ''
+      offset: 0000F4AE
+    - name: _CTEAllocMem
+      demangled: ''
+      offset: 0000F4B4
+    - name: _CTEFreeMem
+      demangled: ''
+      offset: 0000F4BA
+    - name: _CTERefillMem
+      demangled: ''
+      offset: 0000F4C0
+    - name: _CTEBlock
+      demangled: ''
+      offset: 0000F4C6
+    - name: _CTEBlock1
+      demangled: ''
+      offset: 0000F4CC
+    - name: _CTESignal
+      demangled: ''
+      offset: 0000F4D2
+    - name: _CTEUnload
+      demangled: ''
+      offset: 0000F4D8
+    - name: _CTESetLoadNotifyProc
+      demangled: ''
+      offset: 0000F4E3
+    - name: _CTESetUnloadNotifyProc
+      demangled: ''
+      offset: 0000F4EE
+    - name: NCB_Handler
+      demangled: ''
+      offset: 0000F4FC
+    - name: _DhcpQueryOption
+      demangled: ''
+      offset: 0000F509
+    - name: VNBT_Get_Version
+      demangled: ''
+      offset: 0000F535
+    - name: VNBT_Control
+      demangled: ''
+      offset: 0000F545
+    - name: VNBT_DeviceIoControl
+      demangled: ''
+      offset: 0000F567
+    - name: _ReconfigureDevnode
+      demangled: ''
+      offset: 0000F5FC
+    - name: _GetInDosFlag
+      demangled: ''
+      offset: 0000F626
+    - name: _VxdRtlCompareMemory
+      demangled: ''
+      offset: 0000F643
+    - name: VNBT_Api_Handler
+      demangled: ''
+      offset: 0000F687
+    - name: _VNBT_GetTdiDispatchTbl
+      demangled: ''
+      offset: 0000F752
+    - name: _NbtCTEPrint
+      demangled: ''
+      offset: 0000F77F
+  - num: '2'
+    name: _PTEXT
+    offset: '00002650'
+    symbols:
+    - name: _IPNotification
+      demangled: ''
+      offset: '00000000'
+    - name: _DestroyDeviceObject
+      demangled: ''
+      offset: '00000194'
+    - name: _SaveNameDnsServerAddrs
+      demangled: ''
+      offset: 000003FE
+    - name: _GetDnsServerAddress
+      demangled: ''
+      offset: 000004BA
+    - name: _GetNameServerAddress
+      demangled: ''
+      offset: '00000547'
+    - name: _GetMacAddr
+      demangled: ''
+      offset: 000005D4
+    - name: _VxdReadIniString
+      demangled: ''
+      offset: 000009BE
+    - name: _GetProfileInt
+      demangled: ''
+      offset: 000009FF
+    - name: _VxdOpenNdis
+      demangled: ''
+      offset: 00000A3F
+    - name: _GetNdisParam
+      demangled: ''
+      offset: 00000A8A
+    - name: _VxdCloseNdis
+      demangled: ''
+      offset: 00000B1E
+    - name: _StopAllNameQueries
+      demangled: ''
+      offset: 00000B35
+    - name: _VxdUnload
+      demangled: ''
+      offset: 00000C55
+    - name: _ReleaseNbtConfigMem
+      demangled: ''
+      offset: 00000CE8
+    - name: _NbtReadRegistry
+      demangled: ''
+      offset: '00001004'
+    - name: _GetDNSInfo
+      demangled: ''
+      offset: 000010BF
+    - name: _CreateDeviceObject
+      demangled: ''
+      offset: 000011B7
+    - name: _GetDhcpOption
+      demangled: ''
+      offset: '00001477'
+    - name: _VxdFileOpen
+      demangled: ''
+      offset: '00001540'
+    - name: _VxdFileRead
+      demangled: ''
+      offset: '00001572'
+    - name: _VxdFileClose
+      demangled: ''
+      offset: 000015AC
+    - name: _VxdWindowsPath
+      demangled: ''
+      offset: 000015DE
+    - name: _LmCloseFile
+      demangled: ''
+      offset: '00001600'
+    - name: _LmFgets
+      demangled: ''
+      offset: '00001621'
+    - name: _GetNextChar
+      demangled: ''
+      offset: 000016A8
+    - name: _LmOpenFile
+      demangled: ''
+      offset: 000016FF
+    - name: _BackupCurrentData
+      demangled: ''
+      offset: 000017AF
+    - name: _RestoreOldData
+      demangled: ''
+      offset: 000017D8
+    - name: _CopyNodeStatusResponse
+      demangled: ''
+      offset: 000017F5
+    - name: _InitTimersNotOs
+      demangled: ''
+      offset: 000019C8
+    - name: _StopInitTimers
+      demangled: ''
+      offset: 00001B03
+    - name: _ReadParameters
+      demangled: ''
+      offset: 00001B54
+    - name: _ReadParameters2
+      demangled: ''
+      offset: 00001F68
+    - name: _ReadScope
+      demangled: ''
+      offset: '00002010'
+    - name: _ReadLmHostFile
+      demangled: ''
+      offset: 0000213C
+    - name: _NbtOpenConnection
+      demangled: ''
+      offset: 0000219F
+    - name: _NbtOpenAndAssocConnection
+      demangled: ''
+      offset: '00002265'
+    - name: _NbtSendDatagram
+      demangled: ''
+      offset: 000022C8
+    - name: _BuildSendDgramHdr
+      demangled: ''
+      offset: '00002458'
+    - name: _NbtQueryFindName
+      demangled: ''
+      offset: 000025CD
+    - name: _NbtResyncRemoteCache
+      demangled: ''
+      offset: 000026CA
+    - name: _SessionKeepAliveNonDispatch
+      demangled: ''
+      offset: '00002726'
+    - name: _ConvertDottedDecimalToUlong
+      demangled: ''
+      offset: 000027CD
+    - name: _CloseLowerConnections
+      demangled: ''
+      offset: 0000284F
+    - name: _LmGetIpAddr
+      demangled: ''
+      offset: '00002889'
+    - name: _HandleSpecial
+      demangled: ''
+      offset: 00002A2F
+    - name: _LmpGetTokens
+      demangled: ''
+      offset: 00002AAD
+    - name: _LmpIsKeyWord
+      demangled: ''
+      offset: 00002CD7
+    - name: _LmpBreakRecursion
+      demangled: ''
+      offset: 00002D1B
+    - name: _AddToDomainList
+      demangled: ''
+      offset: 00002DFC
+    - name: _LmExpandName
+      demangled: ''
+      offset: 00002F21
+    - name: _LmInclude
+      demangled: ''
+      offset: 00002FC9
+    - name: _PrimeCache
+      demangled: ''
+      offset: 00002FFA
+    - name: _ScanLmHostFile
+      demangled: ''
+      offset: 000031F4
+    - name: _NbtCreateAddressObjects
+      demangled: ''
+      offset: '00003354'
+    - name: _NdisOpenProtocolConfiguration@12
+      demangled: ''
+      offset: 000034A4
+    - name: _NdisCloseConfiguration@4
+      demangled: ''
+      offset: 000034AA
+    - name: _NdisReadConfiguration@20
+      demangled: ''
+      offset: 000034B0
+    - name: VNBT_Device_PostProc
+      demangled: ''
+      offset: 000034B6
+    - name: VNBT_ConfigCalls
+      demangled: ''
+      offset: 000034C1
+    - name: _PostInit_Proc
+      demangled: ''
+      offset: 0000357E
+  - num: '3'
+    name: _ITEXT
+    offset: '00000000'
+    symbols:
+    - name: _Init
+      demangled: ''
+      offset: '00000000'
+    - name: _CTEInitialize
+      demangled: ''
+      offset: 000000F8
+    - name: _CreateHashTable
+      demangled: ''
+      offset: '00000118'
+    - name: _InitRemoteHashTable
+      demangled: ''
+      offset: 0000016F
+    - name: _InitNotOs
+      demangled: ''
+      offset: 0000018A
+    - name: _strrchr
+      demangled: ''
+      offset: '00000412'
+    - name: VNBT_Device_Init
+      demangled: ''
+      offset: '00000436'
+- version: Windows 98SE Debug
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: '0000E350'
+    symbols:
+    - name: _tanb_global
+      demangled: ''
+      offset: '00000000'
+    - name: _szOutput
+      demangled: ''
+      offset: '00000020'
+    - name: _TimerQ
+      demangled: ''
+      offset: '00000420'
+    - name: _DomainNames
+      demangled: ''
+      offset: '00000440'
+    - name: _LmHostQueries
+      demangled: ''
+      offset: '00000460'
+    - name: _LanaTable
+      demangled: ''
+      offset: '00000480'
+    - name: _UsedIrps
+      demangled: ''
+      offset: 000004A0
+    - name: _DefaultDisconnectTimeout
+      demangled: ''
+      offset: 000004A8
+    - name: _NodeType
+      demangled: ''
+      offset: 000004AC
+    - name: _NbtConfig
+      demangled: ''
+      offset: 000004C0
+    - name: _StreamsStack
+      demangled: ''
+      offset: '00000626'
+    - name: _NameStatsInfo
+      demangled: ''
+      offset: '00000640'
+    - name: _UsedTrackers
+      demangled: ''
+      offset: 000006D8
+    - name: _CachePrimed
+      demangled: ''
+      offset: '000006E0'
+    - name: _NbtMemoryAllocated
+      demangled: ''
+      offset: '000006E4'
+    - name: _TimeoutTimer
+      demangled: ''
+      offset: '00000700'
+    - name: _abVecTbl
+      demangled: ''
+      offset: '00000720'
+    - name: _TdiDispatch
+      demangled: ''
+      offset: '00000820'
+    - name: _DBOut
+      demangled: ''
+      offset: '00000840'
+    - name: _PMNotificationHandle
+      demangled: ''
+      offset: '00001840'
+    - name: _LanaBase
+      demangled: ''
+      offset: '00001844'
+    - name: _DbgLeakCheck
+      demangled: ''
+      offset: '00001848'
+    - name: _DbgMemList
+      demangled: ''
+      offset: '00001850'
+    - name: _GlobalNdisHandle
+      demangled: ''
+      offset: '00001868'
+    - name: _fGlobalsInitialized
+      demangled: ''
+      offset: 0000186C
+    - name: _iLanaOffset
+      demangled: ''
+      offset: '00001870'
+    - name: _fInInit
+      demangled: ''
+      offset: '00002238'
+    - name: _NbtDebug
+      demangled: ''
+      offset: 0000223C
+    - name: _iCurPos
+      demangled: ''
+      offset: '00002240'
+    - name: _CurrentIP
+      demangled: ''
+      offset: '00002244'
+    - name: _OptionMapping
+      demangled: ''
+      offset: '00002248'
+    - name: _pFileBuff
+      demangled: ''
+      offset: '00002950'
+    - name: _pFilePath
+      demangled: ''
+      offset: '00002954'
+    - name: _pNbtGlobConfig
+      demangled: ''
+      offset: '00004114'
+    - name: _gSystemSuspended
+      demangled: ''
+      offset: 000067F0
+    - name: _Decoration
+      demangled: ''
+      offset: 00006B8C
+    - name: _Directive
+      demangled: ''
+      offset: 00006BCC
+    - name: _Suffix
+      demangled: ''
+      offset: 00006C0C
+    - name: _szXportName
+      demangled: ''
+      offset: 0000ABC4
+    - name: _htonl
+      demangled: ''
+      offset: 0000AC0C
+    - name: _WakeupTimerNotification
+      demangled: ''
+      offset: 0000AC2F
+    - name: _ReadNameServersFromRegistry
+      demangled: ''
+      offset: 0000AC62
+    - name: _GetProfileHex
+      demangled: ''
+      offset: 0000AD69
+    - name: _InterlockedExchangeAdd
+      demangled: ''
+      offset: 0000AD82
+    - name: _NbtPrintDebug
+      demangled: ''
+      offset: 0000AD94
+    - name: _ParseDomainNames
+      demangled: ''
+      offset: 0000ADDC
+    - name: _CheckForTimedoutNCBs
+      demangled: ''
+      offset: 0000AF20
+    - name: _StartRefreshTimer
+      demangled: ''
+      offset: 0000B0B0
+    - name: _StopTimeoutTimer
+      demangled: ''
+      offset: 0000B10D
+    - name: _DnsCompletion
+      demangled: ''
+      offset: 0000B11C
+    - name: _DoDnsResolve
+      demangled: ''
+      offset: 0000B37C
+    - name: _DnsStoreName
+      demangled: ''
+      offset: 0000B4EE
+    - name: _DnsExtractName
+      demangled: ''
+      offset: 0000B597
+    - name: _domnamelen
+      demangled: ''
+      offset: 0000B638
+    - name: _ProcessDnsResponse
+      demangled: ''
+      offset: 0000B652
+    - name: _VxdInitLmHostsSupport
+      demangled: ''
+      offset: 0000B9F1
+    - name: _AddNotFoundToHashTable
+      demangled: ''
+      offset: 0000BA4F
+    - name: _AddRecordToHashTable
+      demangled: ''
+      offset: 0000BA8F
+    - name: _AddToHashTable
+      demangled: ''
+      offset: 0000BAEB
+    - name: _DeleteFromHashTable
+      demangled: ''
+      offset: 0000BD2A
+    - name: _ChgStateOfScopedNameInHashTable
+      demangled: ''
+      offset: 0000BD6E
+    - name: _FindInHashTable
+      demangled: ''
+      offset: 0000BDC1
+    - name: _RcvHandlrNotOs
+      demangled: ''
+      offset: 0000BE6B
+    - name: _Inbound
+      demangled: ''
+      offset: 0000C18D
+    - name: _ClearConnStructures
+      demangled: ''
+      offset: 0000C467
+    - name: _CompleteSessionSetup
+      demangled: ''
+      offset: 0000C4AD
+    - name: _Outbound
+      demangled: ''
+      offset: 0000C58F
+    - name: _GetIrpIfNotCancelled2
+      demangled: ''
+      offset: 0000C875
+    - name: _GetIrpIfNotCancelled
+      demangled: ''
+      offset: 0000C8A7
+    - name: _RejectAnyData
+      demangled: ''
+      offset: 0000C8D8
+    - name: _RejectSession
+      demangled: ''
+      offset: 0000C907
+    - name: _FindSessionEndPoint
+      demangled: ''
+      offset: 0000C9DC
+    - name: _MakeRemoteAddressStructure
+      demangled: ''
+      offset: 0000CB34
+    - name: _ConnectHndlrNotOs
+      demangled: ''
+      offset: 0000CBD0
+    - name: _DisconnectHndlrNotOs
+      demangled: ''
+      offset: 0000CCDA
+    - name: _CleanupAfterDisconnect
+      demangled: ''
+      offset: 0000D334
+    - name: _AllocLowerConn
+      demangled: ''
+      offset: 0000D3FF
+    - name: _DelayedAllocLowerConn
+      demangled: ''
+      offset: 0000D45B
+    - name: _DelayedAllocLowerConnSpecial
+      demangled: ''
+      offset: 0000D498
+    - name: _AddToRemoteHashTbl
+      demangled: ''
+      offset: 0000D50B
+    - name: _DgramHndlrNotOs
+      demangled: ''
+      offset: 0000D5F3
+    - name: _ProxyDoDgramDist
+      demangled: ''
+      offset: 0000DB43
+    - name: _NameSrvHndlrNotOs
+      demangled: ''
+      offset: 0000DC23
+    - name: _DoNothingComplete
+      demangled: ''
+      offset: 0000DD14
+    - name: _QueryFromNet
+      demangled: ''
+      offset: 0000DD15
+    - name: _RegResponseFromNet
+      demangled: ''
+      offset: 0000E4EE
+    - name: _CheckRegistrationFromNet
+      demangled: ''
+      offset: '0000E748'
+    - name: _NameReleaseFromNet
+      demangled: ''
+      offset: 0000EA7B
+    - name: _WackFromNet
+      demangled: ''
+      offset: 0000EDBA
+    - name: _SetupRefreshTtl
+      demangled: ''
+      offset: 0000EE9F
+    - name: _DecodeNodeStatusResponse
+      demangled: ''
+      offset: 0000EFF9
+    - name: _GetDestType
+      demangled: ''
+      offset: 0000F1FE
+    - name: _ExtractServerName
+      demangled: ''
+      offset: 0000F23C
+    - name: _SendNodeStatusResponse
+      demangled: ''
+      offset: 0000F535
+    - name: _UpdateNameState
+      demangled: ''
+      offset: 0000F7C0
+    - name: _MakeList
+      demangled: ''
+      offset: 0000F91B
+    - name: _ChooseBestIpAddress
+      demangled: ''
+      offset: 0000FA14
+    - name: _IsNameServerForDevice
+      demangled: ''
+      offset: 0000FC13
+    - name: _SrcIsNameServer
+      demangled: ''
+      offset: 0000FC4A
+    - name: _SrcIsUs
+      demangled: ''
+      offset: 0000FC86
+    - name: _SwitchToBackup
+      demangled: ''
+      offset: 0000FCA7
+    - name: _GetNbFlags
+      demangled: ''
+      offset: 0000FD21
+    - name: _FindOnPendingList
+      demangled: ''
+      offset: 0000FD5E
+    - name: _ChkIfValidRsp
+      demangled: ''
+      offset: 0000FDBB
+    - name: _NbtOpenAddress
+      demangled: ''
+      offset: 0000FDE0
+    - name: _NbtRegisterCompletion
+      demangled: ''
+      offset: 0001038A
+    - name: _LockedRemoveFromList
+      demangled: ''
+      offset: 000106B9
+    - name: _NbtAssociateAddress
+      demangled: ''
+      offset: 000106EA
+    - name: _NbtDisassociateAddress
+      demangled: ''
+      offset: 000107D0
+    - name: _NbtCloseAddress
+      demangled: ''
+      offset: '00010935'
+    - name: _NbtCleanUpAddress
+      demangled: ''
+      offset: '00010996'
+    - name: _NbtCloseConnection
+      demangled: ''
+      offset: 00010DBD
+    - name: _NbtCleanUpConnection
+      demangled: ''
+      offset: 00010E0A
+    - name: _FreeRcvBuffers
+      demangled: ''
+      offset: 000110A4
+    - name: _CheckListForTracker
+      demangled: ''
+      offset: '00011113'
+    - name: _CleanupConnectingState
+      demangled: ''
+      offset: '00011154'
+    - name: _ReConnect
+      demangled: ''
+      offset: 000113BA
+    - name: _NbtConnect
+      demangled: ''
+      offset: 000114CE
+    - name: _NbtConnectCommon
+      demangled: ''
+      offset: 0001152C
+    - name: _CleanUpPartialConnection
+      demangled: ''
+      offset: 00011C1D
+    - name: _SessionSetupContinue
+      demangled: ''
+      offset: 00011CE3
+    - name: _QueueCleanup
+      demangled: ''
+      offset: '00011E47'
+    - name: _StartSessionTimer
+      demangled: ''
+      offset: 00011F49
+    - name: _SessionStartupContinue
+      demangled: ''
+      offset: 00011FD9
+    - name: _SessionStartupCompletion
+      demangled: ''
+      offset: 0001229B
+    - name: _SessionTimedOut
+      demangled: ''
+      offset: 000123FD
+    - name: _RelistConnection
+      demangled: ''
+      offset: '00012523'
+    - name: _NbtSend
+      demangled: ''
+      offset: 0001257A
+    - name: _NbtListen
+      demangled: ''
+      offset: '00012594'
+    - name: _NbtDisconnect
+      demangled: ''
+      offset: 0001262A
+    - name: _DisconnectLower
+      demangled: ''
+      offset: 00012AA8
+    - name: _NbtAccept
+      demangled: ''
+      offset: 00012B27
+    - name: _NbtReceiveDatagram
+      demangled: ''
+      offset: 00012BAC
+    - name: _FindNameOrQuery
+      demangled: ''
+      offset: 00012C46
+    - name: _FindNameRemoteThenLocal
+      demangled: ''
+      offset: 00012F30
+    - name: _SendToResolvingName
+      demangled: ''
+      offset: 00012F87
+    - name: _GetTransactId
+      demangled: ''
+      offset: '00013080'
+    - name: _GetTransactIdLocked
+      demangled: ''
+      offset: 000130B0
+    - name: _CTECountedAllocMem
+      demangled: ''
+      offset: 000130CB
+    - name: _CTECountedFreeMem
+      demangled: ''
+      offset: '00013119'
+    - name: _SendDgramContinue
+      demangled: ''
+      offset: '00013181'
+    - name: _SendDgram
+      demangled: ''
+      offset: 0001324B
+    - name: _SendDgramDist
+      demangled: ''
+      offset: 000132DE
+    - name: _SendDgramCompletion
+      demangled: ''
+      offset: '00013344'
+    - name: _DgramDistTimeout
+      demangled: ''
+      offset: '00013426'
+    - name: _DatagramDistribution
+      demangled: ''
+      offset: '00013536'
+    - name: _DgramSendCleanupTracker
+      demangled: ''
+      offset: 0001361E
+    - name: _NbtSetEventHandler
+      demangled: ''
+      offset: '00013669'
+    - name: _NbtSendNodeStatus
+      demangled: ''
+      offset: '000137E2'
+    - name: _QueryNameCompletion
+      demangled: ''
+      offset: 00013A9E
+    - name: _SendNodeStatusContinue
+      demangled: ''
+      offset: 00013B22
+    - name: _NodeStatusDone
+      demangled: ''
+      offset: 00013C51
+    - name: _CopyFindNameData
+      demangled: ''
+      offset: 00013CB3
+    - name: _FreeTracker
+      demangled: ''
+      offset: 00013E2B
+    - name: _DereferenceIfNotInRcvHandler
+      demangled: ''
+      offset: 00013F09
+    - name: _NbtQueryAdapterStatus
+      demangled: ''
+      offset: 00013F14
+    - name: _NbtQueryConnectionList
+      demangled: ''
+      offset: 0001421C
+    - name: _NbtQueryBcastVsWins
+      demangled: ''
+      offset: 000144DB
+    - name: _NbtNewDhcpAddress
+      demangled: ''
+      offset: '00014559'
+    - name: _NbtDereferenceClient
+      demangled: ''
+      offset: 000146DC
+    - name: _GetNextDeviceContext
+      demangled: ''
+      offset: 0001485D
+    - name: _NbtDereferenceAddress
+      demangled: ''
+      offset: 000148B8
+    - name: _LockedDereferenceName
+      demangled: ''
+      offset: 00014B29
+    - name: _NbtDereferenceName
+      demangled: ''
+      offset: 00014B56
+    - name: _NbtDereferenceConnection
+      demangled: ''
+      offset: 00014C59
+    - name: _NbtDereferenceLowerConnection
+      demangled: ''
+      offset: 00014DCB
+    - name: _NbtDeleteLowerConn
+      demangled: ''
+      offset: '00014E55'
+    - name: _WipeOutLowerconn
+      demangled: ''
+      offset: 00014EC5
+    - name: _FindName
+      demangled: ''
+      offset: 00014F11
+    - name: _AddToPendingList
+      demangled: ''
+      offset: 00014F62
+    - name: _QueryNameOnNet
+      demangled: ''
+      offset: 00014FCA
+    - name: _ContinueQueryNameOnNet
+      demangled: ''
+      offset: '00015334'
+    - name: _MSnodeCompletion
+      demangled: ''
+      offset: '00015586'
+    - name: _SetWinsDownFlag
+      demangled: ''
+      offset: 0001591E
+    - name: _WinsDownTimeout
+      demangled: ''
+      offset: 0001596C
+    - name: _CompleteClientReq
+      demangled: ''
+      offset: '00015999'
+    - name: _NbtRegisterName
+      demangled: ''
+      offset: 00015A66
+    - name: _MSnodeRegTimeout
+      demangled: ''
+      offset: '00015E15'
+    - name: _NodeStatusCompletion
+      demangled: ''
+      offset: 0001603E
+    - name: _RefreshRegCompletion
+      demangled: ''
+      offset: '00016155'
+    - name: _ReleaseNameOnNet
+      demangled: ''
+      offset: '000161E6'
+    - name: _ReleaseCompletion
+      demangled: ''
+      offset: '00016366'
+    - name: _NameReleaseDoneOnDynIf
+      demangled: ''
+      offset: '00016430'
+    - name: _NameReleaseDone
+      demangled: ''
+      offset: '00016469'
+    - name: _DereferenceTracker
+      demangled: ''
+      offset: 000164FB
+    - name: _DereferenceTrackerNoLock
+      demangled: ''
+      offset: '00016531'
+    - name: _DereferenceTrackerDelete
+      demangled: ''
+      offset: '00016545'
+    - name: _StartRefresh
+      demangled: ''
+      offset: 0001657B
+    - name: _GetNextName
+      demangled: ''
+      offset: 0001676B
+    - name: _NextRefresh
+      demangled: ''
+      offset: '00016804'
+    - name: _NextRefreshNonDispatch
+      demangled: ''
+      offset: '00016820'
+    - name: _RefreshTimeout
+      demangled: ''
+      offset: 00016AA6
+    - name: _RefreshBegin
+      demangled: ''
+      offset: 00016B43
+    - name: _RemoteHashTimeout
+      demangled: ''
+      offset: 00016DDF
+    - name: _NextKeepAlive
+      demangled: ''
+      offset: '00016E89'
+    - name: _GetNextKeepAlive
+      demangled: ''
+      offset: 00016F07
+    - name: _SessionKeepAliveTimeout
+      demangled: ''
+      offset: 0001700F
+    - name: _IncrementNameStats
+      demangled: ''
+      offset: '00017036'
+    - name: _SaveBcastNameResolved
+      demangled: ''
+      offset: '00017055'
+    - name: _IsBrowserName
+      demangled: ''
+      offset: '00017087'
+    - name: _AppropriateNodeType
+      demangled: ''
+      offset: 000170A1
+    - name: _DoDnsResolveDirect
+      demangled: ''
+      offset: 000170C3
+    - name: _UdpSendDNSBcastDirect
+      demangled: ''
+      offset: 0001723C
+    - name: _SendDNSBcastDoneDirect
+      demangled: ''
+      offset: 0001733E
+    - name: _DoDnsCancelDirect
+      demangled: ''
+      offset: '00017349'
+    - name: _DnsCompletionDirect
+      demangled: ''
+      offset: 000173A4
+    - name: _DnsActualCompletionDirect
+      demangled: ''
+      offset: 0001751B
+    - name: _DnsUnlinkAndCompleteDirect
+      demangled: ''
+      offset: '00017589'
+    - name: _ProcessDnsResponseDirect
+      demangled: ''
+      offset: 000175AF
+    - name: _CreateSendContextDirect
+      demangled: ''
+      offset: '00017859'
+    - name: _FindContextDirect
+      demangled: ''
+      offset: 0001796C
+    - name: _IpToAscii
+      demangled: ''
+      offset: 0001798C
+    - name: _AddrChngNotification
+      demangled: ''
+      offset: 00017A0D
+    - name: _CloseAddressesWithTransport
+      demangled: ''
+      offset: 00017C04
+    - name: _IsValidDevice
+      demangled: ''
+      offset: 00017D7C
+    - name: _NbtFreeAddressObj
+      demangled: ''
+      offset: 00017DC8
+    - name: _NbtNonDpcFreeAddrObj
+      demangled: ''
+      offset: 00017DE4
+    - name: _NbtFreeClientObj
+      demangled: ''
+      offset: '00017E04'
+    - name: _FreeConnectionObj
+      demangled: ''
+      offset: '00017E18'
+    - name: _NbtAllocateClientBlock
+      demangled: ''
+      offset: 00017E3F
+    - name: _NbtAddPermanentName
+      demangled: ''
+      offset: 00017F03
+    - name: _NbtRemovePermanentName
+      demangled: ''
+      offset: '00018099'
+    - name: _NbtInitQ
+      demangled: ''
+      offset: 000180F1
+    - name: _NbtInitTrackerQ
+      demangled: ''
+      offset: 0001812A
+    - name: _NbtAllocTracker
+      demangled: ''
+      offset: '00018176'
+    - name: _NbtGetBuffer
+      demangled: ''
+      offset: '00018200'
+    - name: _GetNetBiosNameFromTransportAddress
+      demangled: ''
+      offset: '00018266'
+    - name: _ConvertToAscii
+      demangled: ''
+      offset: '00018299'
+    - name: _ConvertToHalfAscii
+      demangled: ''
+      offset: 0001832B
+    - name: _Nbt_inet_addr
+      demangled: ''
+      offset: 0001837F
+    - name: _GetTracker
+      demangled: ''
+      offset: 0001842B
+    - name: _CountLocalNames
+      demangled: ''
+      offset: 0001850E
+    - name: _CountUpperConnections
+      demangled: ''
+      offset: 0001853F
+    - name: _DisableInboundConnections
+      demangled: ''
+      offset: 000185ED
+    - name: _EnableInboundConnections
+      demangled: ''
+      offset: '00018654'
+    - name: _MarkForCloseLowerConnections
+      demangled: ''
+      offset: 0001868A
+    - name: _NbtInitConnQ
+      demangled: ''
+      offset: '00018842'
+    - name: _ReRegisterLocalNames
+      demangled: ''
+      offset: 0001890B
+    - name: _LockedStopTimer
+      demangled: ''
+      offset: 00018A17
+    - name: _WakeupRefreshTimeout
+      demangled: ''
+      offset: 00018A58
+    - name: _NbtSetPowerHandler
+      demangled: ''
+      offset: 00018A71
+    - name: _CheckSetWakeupPattern
+      demangled: ''
+      offset: 00018C4B
+    - name: _VNBT_NCB_X@20
+      demangled: ''
+      offset: 00018DFB
+    - name: _GetDeviceContext
+      demangled: ''
+      offset: '000193E1'
+    - name: _NbtWouldLoopback
+      demangled: ''
+      offset: 0001941B
+    - name: _VNBT_LANA_MASK@0
+      demangled: ''
+      offset: '00019441'
+    - name: _MapTDIStatus2NCBErr
+      demangled: ''
+      offset: '00019484'
+    - name: _FindInDomainList
+      demangled: ''
+      offset: '00019654'
+    - name: _MakeNewListCurrent
+      demangled: ''
+      offset: '00019684'
+    - name: _StartIpAddrToSrvName
+      demangled: ''
+      offset: 000196FA
+    - name: _StartConnWithBestAddr
+      demangled: ''
+      offset: 0001980D
+    - name: _ChangeStateInRemoteTable
+      demangled: ''
+      offset: '00019971'
+    - name: _PreloadEntry
+      demangled: ''
+      offset: 000199CB
+    - name: _RemovePreloads
+      demangled: ''
+      offset: 00019AC0
+    - name: _GetContext
+      demangled: ''
+      offset: 00019B34
+    - name: _ChangeStateOfName
+      demangled: ''
+      offset: 00019B6D
+    - name: _LmHostTimeout
+      demangled: ''
+      offset: 00019C0D
+    - name: _TimeoutQEntries
+      demangled: ''
+      offset: 00019CBD
+    - name: _StartLmHostTimer
+      demangled: ''
+      offset: 00019D08
+    - name: _LmHostQueueRequest
+      demangled: ''
+      offset: 00019D77
+    - name: _GetNameToFind
+      demangled: ''
+      offset: 00019E1B
+    - name: _RemoveNameAndCompleteReq
+      demangled: ''
+      offset: 00019EA8
+    - name: _RemoveName
+      demangled: ''
+      offset: 00019EFD
+    - name: _strchr
+      demangled: ''
+      offset: 00019F3B
+    - name: _RegOrQueryFromNet
+      demangled: ''
+      offset: 00019F61
+    - name: _ProxyTimerComplFn
+      demangled: ''
+      offset: 00019FC8
+    - name: _ProxyClientCompletion
+      demangled: ''
+      offset: 0001A0BF
+    - name: _NbtTdiOpenAddress
+      demangled: ''
+      offset: 0001A0C0
+    - name: _NbtTdiOpenConnection
+      demangled: ''
+      offset: 0001A2A5
+    - name: _NbtTdiAssociateConnection
+      demangled: ''
+      offset: 0001A364
+    - name: _TdiOpenandAssocConnection
+      demangled: ''
+      offset: 0001A3D4
+    - name: _NbtTdiCloseConnection
+      demangled: ''
+      offset: 0001A586
+    - name: _NbtTdiCloseAddress
+      demangled: ''
+      offset: 0001A624
+    - name: _CloseAddress
+      demangled: ''
+      offset: 0001A665
+    - name: _DummyCompletion
+      demangled: ''
+      offset: 0001A6C9
+    - name: _TdiReceiveHandler
+      demangled: ''
+      offset: 0001A6CA
+    - name: _ReceiveAnyHandler
+      demangled: ''
+      offset: 0001B592
+    - name: _CompletionRcv
+      demangled: ''
+      offset: 0001B690
+    - name: _NewSessionCompletionRoutine
+      demangled: ''
+      offset: 0001BD20
+    - name: _Reindicate
+      demangled: ''
+      offset: 0001BE7A
+    - name: _TdiConnectHandler
+      demangled: ''
+      offset: 0001C0E7
+    - name: _AcceptCompletionRoutine
+      demangled: ''
+      offset: 0001C1BA
+    - name: _TdiDisconnectHandler
+      demangled: ''
+      offset: 0001C2CA
+    - name: _VxdDisconnectHandler
+      demangled: ''
+      offset: 0001C3B0
+    - name: _TdiRcvDatagramHandler
+      demangled: ''
+      offset: 0001C6BE
+    - name: _TdiRcvNameSrvHandler
+      demangled: ''
+      offset: 0001C7AC
+    - name: _CompletionRcvDgram
+      demangled: ''
+      offset: 0001C7F7
+    - name: _TdiErrorHandler
+      demangled: ''
+      offset: 0001C989
+    - name: _TdiSendDatagram
+      demangled: ''
+      offset: 0001C9C0
+    - name: _SendComplete
+      demangled: ''
+      offset: 0001CB52
+    - name: _TdiConnect
+      demangled: ''
+      offset: 0001CC29
+    - name: _TdiDisconnect
+      demangled: ''
+      offset: 0001CDC5
+    - name: _TdiSend
+      demangled: ''
+      offset: 0001CF62
+    - name: _VxdScheduleDelayedCall
+      demangled: ''
+      offset: 0001D1EC
+    - name: _VxdDelayedCallHandler
+      demangled: ''
+      offset: 0001D34F
+    - name: _CancelAllDelayedEvents
+      demangled: ''
+      offset: 0001D3D8
+    - name: _WakeupTimerExpiry@16
+      demangled: ''
+      offset: 0001D48E
+    - name: _NbtStartWakeupTimer
+      demangled: ''
+      offset: 0001D4DB
+    - name: _NbtStopWakeupTimer
+      demangled: ''
+      offset: 0001D5BE
+    - name: _NbtStopTimer
+      demangled: ''
+      offset: 0001D66F
+    - name: _InitTimerQ
+      demangled: ''
+      offset: 0001D67E
+    - name: _InitQ
+      demangled: ''
+      offset: 0001D695
+    - name: _StopTimerAndCallCompletion
+      demangled: ''
+      offset: 0001D700
+    - name: _InterlockedCallCompletion
+      demangled: ''
+      offset: 0001D753
+    - name: _GetEntry
+      demangled: ''
+      offset: 0001D7AE
+    - name: _LockedStartTimer
+      demangled: ''
+      offset: 0001D804
+    - name: _StartTimer
+      demangled: ''
+      offset: 0001D87E
+    - name: _DereferenceTimer
+      demangled: ''
+      offset: 0001D963
+    - name: _StopTimer
+      demangled: ''
+      offset: 0001D9FA
+    - name: _TimerExpiry
+      demangled: ''
+      offset: 0001DA95
+    - name: _ExpireTimer
+      demangled: ''
+      offset: 0001DB82
+    - name: _UdpSendNSBcast
+      demangled: ''
+      offset: 0001DC78
+    - name: _CreatePdu
+      demangled: ''
+      offset: 0001DF5D
+    - name: _NsDgramSendCompleted
+      demangled: ''
+      offset: '0001E167'
+    - name: _NameDgramSendCompleted
+      demangled: ''
+      offset: '0001E179'
+    - name: _NDgramSendCompleted
+      demangled: ''
+      offset: '0001E184'
+    - name: _UdpSendResponse
+      demangled: ''
+      offset: '0001E192'
+    - name: _QueryRespDone
+      demangled: ''
+      offset: 0001E5AC
+    - name: _UdpSendDatagram
+      demangled: ''
+      offset: 0001E5BA
+    - name: _TcpSessionStart
+      demangled: ''
+      offset: '0001E681'
+    - name: _TcpSendSessionResponse
+      demangled: ''
+      offset: 0001E74F
+    - name: _TcpSendSession
+      demangled: ''
+      offset: 0001E7F5
+    - name: _SessionRespDone
+      demangled: ''
+      offset: '0001E830'
+    - name: _SendTcpDisconnect
+      demangled: ''
+      offset: 0001E83E
+    - name: _TcpDisconnect
+      demangled: ''
+      offset: '0001E873'
+    - name: _DisconnectDone
+      demangled: ''
+      offset: 0001E8B1
+    - name: _VxdPrintf
+      demangled: ''
+      offset: 0001EA1C
+    - name: _VxdCopyToDBOut
+      demangled: ''
+      offset: 0001EA65
+    - name: _VxdVsprintf
+      demangled: ''
+      offset: 0001EADE
+    - name: _VxdSprintf
+      demangled: ''
+      offset: 0001ECD3
+    - name: _VxdAssert
+      demangled: ''
+      offset: 0001ECE9
+    - name: _DbgAllocMem
+      demangled: ''
+      offset: 0001ED14
+    - name: _DbgFreeMem
+      demangled: ''
+      offset: 0001ED4E
+    - name: _VxdDgramSend
+      demangled: ''
+      offset: 0001ED90
+    - name: _VxdDgramReceive
+      demangled: ''
+      offset: 0001EF31
+    - name: _VxdCall
+      demangled: ''
+      offset: 0001F02C
+    - name: _VxdSend
+      demangled: ''
+      offset: 0001F0A4
+    - name: _VxdReceiveAny
+      demangled: ''
+      offset: 0001F337
+    - name: _VxdReceive
+      demangled: ''
+      offset: 0001F6DC
+    - name: _VxdHangup
+      demangled: ''
+      offset: 0001FAF5
+    - name: _VxdListen
+      demangled: ''
+      offset: 0001FDC5
+    - name: _VxdOpenName
+      demangled: ''
+      offset: 0001FE38
+    - name: _VxdCloseName
+      demangled: ''
+      offset: 0001FF65
+    - name: _ActiveSessions
+      demangled: ''
+      offset: 0001FFE4
+    - name: _VxdCleanupAddress
+      demangled: ''
+      offset: '00020003'
+    - name: _VxdAccept
+      demangled: ''
+      offset: '00020331'
+    - name: _VxdAdapterStatus
+      demangled: ''
+      offset: 0002040D
+    - name: _VxdFindName
+      demangled: ''
+      offset: 000204FA
+    - name: _VxdSessionStatus
+      demangled: ''
+      offset: 000205A7
+    - name: _VxdCopySessionStatus
+      demangled: ''
+      offset: 0002080F
+    - name: _VxdReset
+      demangled: ''
+      offset: '00020986'
+    - name: _VxdResetContinue
+      demangled: ''
+      offset: 00020AE3
+    - name: _VxdCancel
+      demangled: ''
+      offset: 00020CE8
+    - name: _VxdIoComplete
+      demangled: ''
+      offset: 0002128E
+    - name: _VxdInitSessionSetup
+      demangled: ''
+      offset: 00021FFE
+    - name: _VxdFindClientElement
+      demangled: ''
+      offset: 000221A9
+    - name: _VxdFindConnectElement
+      demangled: ''
+      offset: 0002226A
+    - name: _VxdFindLSN
+      demangled: ''
+      offset: 0002236C
+    - name: _VxdFindNameNum
+      demangled: ''
+      offset: '00022406'
+    - name: _VxdNameToClient
+      demangled: ''
+      offset: '00022488'
+    - name: _NBRegister
+      demangled: ''
+      offset: 0002258D
+    - name: _NBUnregister
+      demangled: ''
+      offset: 0002263B
+    - name: _VxdCompleteSessionNcbs
+      demangled: ''
+      offset: 0002267F
+    - name: _VxdTearDownSession
+      demangled: ''
+      offset: '00022822'
+    - name: _AllocSessSetupContext
+      demangled: ''
+      offset: '000229E4'
+    - name: _FreeSessSetupContext
+      demangled: ''
+      offset: 00022A92
+    - name: _DelayedSessEstablish
+      demangled: ''
+      offset: 00022AC6
+    - name: _VxdApiWorker
+      demangled: ''
+      offset: 00022AEC
+    - name: _CTEAllocInitMem
+      demangled: ''
+      offset: 00022D82
+    - name: CTETotalMem
+      demangled: ''
+      offset: 00022E2C
+    - name: __vxdhandle__
+      demangled: ''
+      offset: 00022E4C
+    - name: _VNBT_Get_Version
+      demangled: ''
+      offset: 00022EAC
+    - name: VNBT_DDB
+      demangled: ''
+      offset: 00022EB0
+    - name: _RegisterLana2
+      demangled: ''
+      offset: 00022F60
+    - name: _DeregisterLana
+      demangled: ''
+      offset: 00022F95
+    - name: _IPRegisterAddrChangeHandler
+      demangled: ''
+      offset: 00022FA4
+    - name: _IPRegisterWakeupTimerHandler
+      demangled: ''
+      offset: 00022FB8
+    - name: _IPQueryPnPCapability
+      demangled: ''
+      offset: 00022FCC
+    - name: _NbtRegisterWakeupPattern
+      demangled: ''
+      offset: 00022FE0
+    - name: _VWIN32_KeInitializeDpc
+      demangled: ''
+      offset: 00022FF9
+    - name: _VWIN32_KeInitializeTimer
+      demangled: ''
+      offset: '00023011'
+    - name: _VWIN32_R0SetWaitableTimer
+      demangled: ''
+      offset: '00023023'
+    - name: _VWIN32_RtlExtendedIntegerMultiply
+      demangled: ''
+      offset: 0002303D
+    - name: _VWIN32_KeCancelTimer
+      demangled: ''
+      offset: '00023055'
+    - name: __VxdMapSegmentOffsetToFlat
+      demangled: ''
+      offset: '00023068'
+    - name: __VxdLockBuffer
+      demangled: ''
+      offset: 000230B0
+    - name: __VxdUnlockBuffer
+      demangled: ''
+      offset: '00023102'
+    - name: __VxdValidateBuffer
+      demangled: ''
+      offset: '00023155'
+    - name: _CTEStartTimer
+      demangled: ''
+      offset: 0002319C
+    - name: _CTEStopTimer
+      demangled: ''
+      offset: 000231A2
+    - name: _CTESystemUpTime
+      demangled: ''
+      offset: 000231A8
+    - name: __ICTEGetLock
+      demangled: ''
+      offset: 000231AE
+    - name: __ICTEFreeLock
+      demangled: ''
+      offset: 000231B4
+    - name: _CTEScheduleEvent
+      demangled: ''
+      offset: 000231BA
+    - name: _CTEScheduleEvent_N
+      demangled: ''
+      offset: 000231C0
+    - name: _CTECancelEvent
+      demangled: ''
+      offset: 000231C6
+    - name: _CTEAllocMem
+      demangled: ''
+      offset: 000231CC
+    - name: _CTEFreeMem
+      demangled: ''
+      offset: '00023210'
+    - name: _CTERefillMem
+      demangled: ''
+      offset: '00023228'
+    - name: _CTEBlock
+      demangled: ''
+      offset: 0002322E
+    - name: _CTEBlock1
+      demangled: ''
+      offset: '00023234'
+    - name: _CTESignal
+      demangled: ''
+      offset: 0002323A
+    - name: __CTECheckMem
+      demangled: ''
+      offset: '00023240'
+    - name: _CTEPrint
+      demangled: ''
+      offset: '00023246'
+    - name: _CTEPrintNum
+      demangled: ''
+      offset: '00023258'
+    - name: _CTEPrintCRLF
+      demangled: ''
+      offset: 000232A1
+    - name: _CTEUnload
+      demangled: ''
+      offset: 000232B1
+    - name: _CTESetLoadNotifyProc
+      demangled: ''
+      offset: 000232BC
+    - name: _CTESetUnloadNotifyProc
+      demangled: ''
+      offset: 000232C7
+    - name: NCB_Handler
+      demangled: ''
+      offset: 000232D4
+    - name: _DhcpQueryOption
+      demangled: ''
+      offset: '000232E1'
+    - name: VNBT_Get_Version
+      demangled: ''
+      offset: '00023313'
+    - name: VNBT_Control
+      demangled: ''
+      offset: 0002332B
+    - name: VNBT_DeviceIoControl
+      demangled: ''
+      offset: 0002334D
+    - name: _ReconfigureDevnode
+      demangled: ''
+      offset: 000233ED
+    - name: _GetInDosFlag
+      demangled: ''
+      offset: '00023417'
+    - name: _VxdRtlCompareMemory
+      demangled: ''
+      offset: '00023434'
+    - name: VNBT_Api_Handler
+      demangled: ''
+      offset: '00023478'
+    - name: _VNBT_GetTdiDispatchTbl
+      demangled: ''
+      offset: '00023543'
+    - name: _NbtCTEPrint
+      demangled: ''
+      offset: 0002357B
+    - name: __RegCloseKey
+      demangled: ''
+      offset: '00023590'
+    - name: __RegQueryValueEx
+      demangled: ''
+      offset: '00023598'
+    - name: __RegOpenKey
+      demangled: ''
+      offset: 000235A0
+  - num: '2'
+    name: _PTEXT
+    offset: '00010570'
+    symbols:
+    - name: _IPNotification
+      demangled: ''
+      offset: '00000000'
+    - name: _DestroyDeviceObject
+      demangled: ''
+      offset: 000002B7
+    - name: _SaveNameDnsServerAddrs
+      demangled: ''
+      offset: '00000677'
+    - name: _GetDnsServerAddress
+      demangled: ''
+      offset: '00000778'
+    - name: _GetNameServerAddress
+      demangled: ''
+      offset: 000008C1
+    - name: _GetMacAddr
+      demangled: ''
+      offset: 000009F7
+    - name: _VxdReadIniString
+      demangled: ''
+      offset: 00000EE3
+    - name: _GetProfileInt
+      demangled: ''
+      offset: 00000F44
+    - name: _VxdOpenNdis
+      demangled: ''
+      offset: 00000FB5
+    - name: _GetNdisParam
+      demangled: ''
+      offset: 0000105B
+    - name: _VxdCloseNdis
+      demangled: ''
+      offset: '00001121'
+    - name: _StopAllNameQueries
+      demangled: ''
+      offset: '00001181'
+    - name: _VxdUnload
+      demangled: ''
+      offset: '00001412'
+    - name: _ReleaseNbtConfigMem
+      demangled: ''
+      offset: 0000150B
+    - name: _NbtReadRegistry
+      demangled: ''
+      offset: 000018AC
+    - name: _GetDNSInfo
+      demangled: ''
+      offset: 0000197C
+    - name: _CreateDeviceObject
+      demangled: ''
+      offset: 00001A84
+    - name: _GetDhcpOption
+      demangled: ''
+      offset: 00001DEB
+    - name: _VxdFileOpen
+      demangled: ''
+      offset: 00001F90
+    - name: _VxdFileRead
+      demangled: ''
+      offset: 00001FCA
+    - name: _VxdFileClose
+      demangled: ''
+      offset: 0000200C
+    - name: _VxdWindowsPath
+      demangled: ''
+      offset: '00002051'
+    - name: _LmCloseFile
+      demangled: ''
+      offset: 0000207C
+    - name: _LmFgets
+      demangled: ''
+      offset: '00002112'
+    - name: _GetNextChar
+      demangled: ''
+      offset: 000022A1
+    - name: _LmOpenFile
+      demangled: ''
+      offset: 0000230C
+    - name: _BackupCurrentData
+      demangled: ''
+      offset: '00002477'
+    - name: _RestoreOldData
+      demangled: ''
+      offset: 000024B5
+    - name: _CopyNodeStatusResponse
+      demangled: ''
+      offset: '000024E6'
+    - name: _InitTimersNotOs
+      demangled: ''
+      offset: 000026C9
+    - name: _StopInitTimers
+      demangled: ''
+      offset: '00002821'
+    - name: _ReadParameters
+      demangled: ''
+      offset: '00002887'
+    - name: _ReadParameters2
+      demangled: ''
+      offset: 00002D8D
+    - name: _ReadScope
+      demangled: ''
+      offset: '00002E48'
+    - name: _ReadLmHostFile
+      demangled: ''
+      offset: 00002F84
+    - name: _NbtOpenConnection
+      demangled: ''
+      offset: '00003011'
+    - name: _NbtOpenAndAssocConnection
+      demangled: ''
+      offset: '00003126'
+    - name: _NbtSendDatagram
+      demangled: ''
+      offset: '000031E6'
+    - name: _BuildSendDgramHdr
+      demangled: ''
+      offset: '00003443'
+    - name: _NbtQueryFindName
+      demangled: ''
+      offset: 000035C7
+    - name: _NbtResyncRemoteCache
+      demangled: ''
+      offset: '00003743'
+    - name: _SessionKeepAliveNonDispatch
+      demangled: ''
+      offset: 000037B5
+    - name: _ConvertDottedDecimalToUlong
+      demangled: ''
+      offset: 0000386C
+    - name: _CloseLowerConnections
+      demangled: ''
+      offset: 000038FE
+    - name: _LmGetIpAddr
+      demangled: ''
+      offset: '00003949'
+    - name: _HandleSpecial
+      demangled: ''
+      offset: 00003BAC
+    - name: _LmpGetTokens
+      demangled: ''
+      offset: 00003C36
+    - name: _LmpIsKeyWord
+      demangled: ''
+      offset: 00003ED0
+    - name: _LmpBreakRecursion
+      demangled: ''
+      offset: 00003F26
+    - name: _AddToDomainList
+      demangled: ''
+      offset: '00004050'
+    - name: _LmExpandName
+      demangled: ''
+      offset: 0000417D
+    - name: _LmInclude
+      demangled: ''
+      offset: '00004275'
+    - name: _PrimeCache
+      demangled: ''
+      offset: 000042B7
+    - name: _ScanLmHostFile
+      demangled: ''
+      offset: 0000453E
+    - name: _NbtCreateAddressObjects
+      demangled: ''
+      offset: 000046FA
+    - name: _NdisOpenProtocolConfiguration@12
+      demangled: ''
+      offset: 000048F0
+    - name: _NdisCloseConfiguration@4
+      demangled: ''
+      offset: 000048F6
+    - name: _NdisReadConfiguration@20
+      demangled: ''
+      offset: 000048FC
+    - name: VNBT_Device_PostProc
+      demangled: ''
+      offset: '00004902'
+    - name: VNBT_ConfigCalls
+      demangled: ''
+      offset: '00004915'
+    - name: _PostInit_Proc
+      demangled: ''
+      offset: 000049DF
+  - num: '4'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _Init
+      demangled: ''
+      offset: '00000044'
+    - name: _CTEInitialize
+      demangled: ''
+      offset: 000002EC
+    - name: _CreateHashTable
+      demangled: ''
+      offset: 0000030C
+    - name: _InitRemoteHashTable
+      demangled: ''
+      offset: 0000038D
+    - name: _InitNotOs
+      demangled: ''
+      offset: 000003BB
+    - name: _strrchr
+      demangled: ''
+      offset: 0000068B
+    - name: VNBT_Device_Init
+      demangled: ''
+      offset: 000006AE
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: '00002330'
+    symbols:
+    - name: _tanb_global
+      demangled: ''
+      offset: '00000000'
+    - name: _TimerQ
+      demangled: ''
+      offset: '00000020'
+    - name: _DomainNames
+      demangled: ''
+      offset: '00000038'
+    - name: _LmHostQueries
+      demangled: ''
+      offset: '00000040'
+    - name: _LanaTable
+      demangled: ''
+      offset: '00000060'
+    - name: _UsedIrps
+      demangled: ''
+      offset: '00000080'
+    - name: _DefaultDisconnectTimeout
+      demangled: ''
+      offset: '00000088'
+    - name: _NodeType
+      demangled: ''
+      offset: 0000008C
+    - name: _NbtConfig
+      demangled: ''
+      offset: 000000A0
+    - name: _StreamsStack
+      demangled: ''
+      offset: 000001FA
+    - name: _NameStatsInfo
+      demangled: ''
+      offset: '00000200'
+    - name: _UsedTrackers
+      demangled: ''
+      offset: '00000298'
+    - name: _CachePrimed
+      demangled: ''
+      offset: 000002A0
+    - name: _NbtMemoryAllocated
+      demangled: ''
+      offset: 000002A4
+    - name: _TimeoutTimer
+      demangled: ''
+      offset: 000002C0
+    - name: _TdiDispatch
+      demangled: ''
+      offset: 000002D8
+    - name: _PMNotificationHandle
+      demangled: ''
+      offset: 000002DC
+    - name: _LanaBase
+      demangled: ''
+      offset: '000002E0'
+    - name: _GlobalNdisHandle
+      demangled: ''
+      offset: 000002F4
+    - name: _fGlobalsInitialized
+      demangled: ''
+      offset: 000002F8
+    - name: _iLanaOffset
+      demangled: ''
+      offset: 000002FC
+    - name: _fInInit
+      demangled: ''
+      offset: 0000033C
+    - name: _CurrentIP
+      demangled: ''
+      offset: '00000340'
+    - name: _OptionMapping
+      demangled: ''
+      offset: '00000344'
+    - name: _pFileBuff
+      demangled: ''
+      offset: 000003C8
+    - name: _pFilePath
+      demangled: ''
+      offset: 000003CC
+    - name: _pNbtGlobConfig
+      demangled: ''
+      offset: 000006B4
+    - name: _gSystemSuspended
+      demangled: ''
+      offset: '00000714'
+    - name: _Decoration
+      demangled: ''
+      offset: '00000738'
+    - name: _Directive
+      demangled: ''
+      offset: '00000778'
+    - name: _Suffix
+      demangled: ''
+      offset: 000007B8
+    - name: _szXportName
+      demangled: ''
+      offset: '00000884'
+    - name: _htonl
+      demangled: ''
+      offset: 000008CC
+    - name: _WakeupTimerNotification
+      demangled: ''
+      offset: 000008EF
+    - name: _ReadNameServersFromRegistry
+      demangled: ''
+      offset: '00000922'
+    - name: _GetProfileHex
+      demangled: ''
+      offset: '000009E4'
+    - name: _InterlockedExchangeAdd
+      demangled: ''
+      offset: 000009FD
+    - name: _ParseDomainNames
+      demangled: ''
+      offset: 00000A0C
+    - name: _CheckForTimedoutNCBs
+      demangled: ''
+      offset: 00000B50
+    - name: _StartRefreshTimer
+      demangled: ''
+      offset: 00000C2A
+    - name: _StopTimeoutTimer
+      demangled: ''
+      offset: 00000C87
+    - name: _DnsCompletion
+      demangled: ''
+      offset: 00000C94
+    - name: _DoDnsResolve
+      demangled: ''
+      offset: '00000E49'
+    - name: _DnsStoreName
+      demangled: ''
+      offset: 00000F93
+    - name: _DnsExtractName
+      demangled: ''
+      offset: 0000103C
+    - name: _domnamelen
+      demangled: ''
+      offset: 000010B5
+    - name: _ProcessDnsResponse
+      demangled: ''
+      offset: 000010CF
+    - name: _VxdInitLmHostsSupport
+      demangled: ''
+      offset: '00001308'
+    - name: _AddNotFoundToHashTable
+      demangled: ''
+      offset: '00001333'
+    - name: _AddRecordToHashTable
+      demangled: ''
+      offset: '00001373'
+    - name: _AddToHashTable
+      demangled: ''
+      offset: 000013CF
+    - name: _DeleteFromHashTable
+      demangled: ''
+      offset: 000015A6
+    - name: _ChgStateOfScopedNameInHashTable
+      demangled: ''
+      offset: 000015EA
+    - name: _FindInHashTable
+      demangled: ''
+      offset: 0000163D
+    - name: _RcvHandlrNotOs
+      demangled: ''
+      offset: '000016E7'
+    - name: _Inbound
+      demangled: ''
+      offset: '00001865'
+    - name: _ClearConnStructures
+      demangled: ''
+      offset: 00001A40
+    - name: _CompleteSessionSetup
+      demangled: ''
+      offset: 00001A86
+    - name: _Outbound
+      demangled: ''
+      offset: 00001B26
+    - name: _GetIrpIfNotCancelled2
+      demangled: ''
+      offset: 00001D77
+    - name: _GetIrpIfNotCancelled
+      demangled: ''
+      offset: 00001D89
+    - name: _RejectAnyData
+      demangled: ''
+      offset: 00001D99
+    - name: _RejectSession
+      demangled: ''
+      offset: 00001DA6
+    - name: _FindSessionEndPoint
+      demangled: ''
+      offset: 00001E0E
+    - name: _MakeRemoteAddressStructure
+      demangled: ''
+      offset: 00001F30
+    - name: _ConnectHndlrNotOs
+      demangled: ''
+      offset: 00001FCC
+    - name: _DisconnectHndlrNotOs
+      demangled: ''
+      offset: 0000208D
+    - name: _CleanupAfterDisconnect
+      demangled: ''
+      offset: '000023E9'
+    - name: _AllocLowerConn
+      demangled: ''
+      offset: '00002445'
+    - name: _DelayedAllocLowerConn
+      demangled: ''
+      offset: 000024A1
+    - name: _DelayedAllocLowerConnSpecial
+      demangled: ''
+      offset: 000024BB
+    - name: _AddToRemoteHashTbl
+      demangled: ''
+      offset: 000024F3
+    - name: _DgramHndlrNotOs
+      demangled: ''
+      offset: 000025B9
+    - name: _ProxyDoDgramDist
+      demangled: ''
+      offset: 000029C8
+    - name: _NameSrvHndlrNotOs
+      demangled: ''
+      offset: 00002A50
+    - name: _DoNothingComplete
+      demangled: ''
+      offset: 00002B06
+    - name: _QueryFromNet
+      demangled: ''
+      offset: 00002B07
+    - name: _RegResponseFromNet
+      demangled: ''
+      offset: '00003177'
+    - name: _CheckRegistrationFromNet
+      demangled: ''
+      offset: '00003356'
+    - name: _NameReleaseFromNet
+      demangled: ''
+      offset: '00003570'
+    - name: _WackFromNet
+      demangled: ''
+      offset: 000037FB
+    - name: _SetupRefreshTtl
+      demangled: ''
+      offset: 000038A7
+    - name: _DecodeNodeStatusResponse
+      demangled: ''
+      offset: 000039CB
+    - name: _GetDestType
+      demangled: ''
+      offset: 00003B1D
+    - name: _ExtractServerName
+      demangled: ''
+      offset: 00003B45
+    - name: _SendNodeStatusResponse
+      demangled: ''
+      offset: 00003D7F
+    - name: _UpdateNameState
+      demangled: ''
+      offset: 00003FB3
+    - name: _MakeList
+      demangled: ''
+      offset: 000040FA
+    - name: _ChooseBestIpAddress
+      demangled: ''
+      offset: 000041F3
+    - name: _IsNameServerForDevice
+      demangled: ''
+      offset: 0000439D
+    - name: _SrcIsNameServer
+      demangled: ''
+      offset: 000043D4
+    - name: _SrcIsUs
+      demangled: ''
+      offset: '00004410'
+    - name: _SwitchToBackup
+      demangled: ''
+      offset: '00004431'
+    - name: _GetNbFlags
+      demangled: ''
+      offset: '00004461'
+    - name: _FindOnPendingList
+      demangled: ''
+      offset: 0000449E
+    - name: _ChkIfValidRsp
+      demangled: ''
+      offset: 000044FB
+    - name: _NbtOpenAddress
+      demangled: ''
+      offset: '00004520'
+    - name: _NbtRegisterCompletion
+      demangled: ''
+      offset: '00004943'
+    - name: _LockedRemoveFromList
+      demangled: ''
+      offset: 00004B4A
+    - name: _NbtAssociateAddress
+      demangled: ''
+      offset: 00004B59
+    - name: _NbtDisassociateAddress
+      demangled: ''
+      offset: 00004BAB
+    - name: _NbtCloseAddress
+      demangled: ''
+      offset: 00004C8E
+    - name: _NbtCleanUpAddress
+      demangled: ''
+      offset: 00004CCD
+    - name: _NbtCloseConnection
+      demangled: ''
+      offset: '00004E91'
+    - name: _NbtCleanUpConnection
+      demangled: ''
+      offset: 00004EC4
+    - name: _FreeRcvBuffers
+      demangled: ''
+      offset: 00004FFC
+    - name: _CheckListForTracker
+      demangled: ''
+      offset: 0000502E
+    - name: _CleanupConnectingState
+      demangled: ''
+      offset: 0000506F
+    - name: _ReConnect
+      demangled: ''
+      offset: '000051E9'
+    - name: _NbtConnect
+      demangled: ''
+      offset: 0000528C
+    - name: _NbtConnectCommon
+      demangled: ''
+      offset: 000052EA
+    - name: _CleanUpPartialConnection
+      demangled: ''
+      offset: '00005813'
+    - name: _SessionSetupContinue
+      demangled: ''
+      offset: 000058A4
+    - name: _QueueCleanup
+      demangled: ''
+      offset: '00005981'
+    - name: _StartSessionTimer
+      demangled: ''
+      offset: '000059E0'
+    - name: _SessionStartupContinue
+      demangled: ''
+      offset: 00005A33
+    - name: _SessionStartupCompletion
+      demangled: ''
+      offset: 00005BF1
+    - name: _SessionTimedOut
+      demangled: ''
+      offset: 00005CE1
+    - name: _RelistConnection
+      demangled: ''
+      offset: 00005D51
+    - name: _NbtSend
+      demangled: ''
+      offset: 00005D80
+    - name: _NbtListen
+      demangled: ''
+      offset: 00005D83
+    - name: _NbtDisconnect
+      demangled: ''
+      offset: 00005DF9
+    - name: _DisconnectLower
+      demangled: ''
+      offset: '00006010'
+    - name: _NbtAccept
+      demangled: ''
+      offset: 0000607B
+    - name: _NbtReceiveDatagram
+      demangled: ''
+      offset: 000060CB
+    - name: _FindNameOrQuery
+      demangled: ''
+      offset: 0000612B
+    - name: _FindNameRemoteThenLocal
+      demangled: ''
+      offset: '00006388'
+    - name: _SendToResolvingName
+      demangled: ''
+      offset: 000063DF
+    - name: _GetTransactId
+      demangled: ''
+      offset: 0000645C
+    - name: _GetTransactIdLocked
+      demangled: ''
+      offset: '00006461'
+    - name: _CTECountedAllocMem
+      demangled: ''
+      offset: 0000647C
+    - name: _CTECountedFreeMem
+      demangled: ''
+      offset: 000064A9
+    - name: _SendDgramContinue
+      demangled: ''
+      offset: 000064CF
+    - name: _SendDgram
+      demangled: ''
+      offset: 0000656A
+    - name: _SendDgramDist
+      demangled: ''
+      offset: 000065FD
+    - name: _SendDgramCompletion
+      demangled: ''
+      offset: 0000663C
+    - name: _DgramDistTimeout
+      demangled: ''
+      offset: 000066DE
+    - name: _DatagramDistribution
+      demangled: ''
+      offset: '00006762'
+    - name: _DgramSendCleanupTracker
+      demangled: ''
+      offset: '00006828'
+    - name: _NbtSetEventHandler
+      demangled: ''
+      offset: '00006851'
+    - name: _NbtSendNodeStatus
+      demangled: ''
+      offset: 0000693A
+    - name: _QueryNameCompletion
+      demangled: ''
+      offset: 00006B8B
+    - name: _SendNodeStatusContinue
+      demangled: ''
+      offset: 00006BE0
+    - name: _NodeStatusDone
+      demangled: ''
+      offset: 00006CCF
+    - name: _CopyFindNameData
+      demangled: ''
+      offset: 00006D12
+    - name: _FreeTracker
+      demangled: ''
+      offset: '00006E68'
+    - name: _DereferenceIfNotInRcvHandler
+      demangled: ''
+      offset: 00006EEA
+    - name: _NbtQueryAdapterStatus
+      demangled: ''
+      offset: 00006EF5
+    - name: _NbtQueryConnectionList
+      demangled: ''
+      offset: 000071D2
+    - name: _NbtQueryBcastVsWins
+      demangled: ''
+      offset: 000073D2
+    - name: _NbtNewDhcpAddress
+      demangled: ''
+      offset: '00007450'
+    - name: _NbtDereferenceClient
+      demangled: ''
+      offset: '00007504'
+    - name: _GetNextDeviceContext
+      demangled: ''
+      offset: 000075A4
+    - name: _NbtDereferenceAddress
+      demangled: ''
+      offset: 000075FF
+    - name: _LockedDereferenceName
+      demangled: ''
+      offset: 000076FC
+    - name: _NbtDereferenceName
+      demangled: ''
+      offset: '00007707'
+    - name: _NbtDereferenceConnection
+      demangled: ''
+      offset: '00007754'
+    - name: _NbtDereferenceLowerConnection
+      demangled: ''
+      offset: 0000778B
+    - name: _NbtDeleteLowerConn
+      demangled: ''
+      offset: 000077B3
+    - name: _WipeOutLowerconn
+      demangled: ''
+      offset: '000077E4'
+    - name: _FindName
+      demangled: ''
+      offset: '00007816'
+    - name: _AddToPendingList
+      demangled: ''
+      offset: '00007867'
+    - name: _QueryNameOnNet
+      demangled: ''
+      offset: 000078CF
+    - name: _ContinueQueryNameOnNet
+      demangled: ''
+      offset: 00007BD0
+    - name: _MSnodeCompletion
+      demangled: ''
+      offset: 00007D5C
+    - name: _SetWinsDownFlag
+      demangled: ''
+      offset: '00008077'
+    - name: _WinsDownTimeout
+      demangled: ''
+      offset: 000080C5
+    - name: _CompleteClientReq
+      demangled: ''
+      offset: 000080DE
+    - name: _NbtRegisterName
+      demangled: ''
+      offset: 0000818E
+    - name: _MSnodeRegTimeout
+      demangled: ''
+      offset: 000084A7
+    - name: _NodeStatusCompletion
+      demangled: ''
+      offset: 000086B8
+    - name: _RefreshRegCompletion
+      demangled: ''
+      offset: 000087A6
+    - name: _ReleaseNameOnNet
+      demangled: ''
+      offset: 000087FF
+    - name: _ReleaseCompletion
+      demangled: ''
+      offset: '00008925'
+    - name: _NameReleaseDoneOnDynIf
+      demangled: ''
+      offset: 000089EF
+    - name: _NameReleaseDone
+      demangled: ''
+      offset: 00008A06
+    - name: _DereferenceTracker
+      demangled: ''
+      offset: 00008A60
+    - name: _DereferenceTrackerNoLock
+      demangled: ''
+      offset: 00008A74
+    - name: _DereferenceTrackerDelete
+      demangled: ''
+      offset: 00008A88
+    - name: _StartRefresh
+      demangled: ''
+      offset: 00008A9C
+    - name: _GetNextName
+      demangled: ''
+      offset: 00008BF8
+    - name: _NextRefresh
+      demangled: ''
+      offset: 00008C91
+    - name: _NextRefreshNonDispatch
+      demangled: ''
+      offset: 00008CAD
+    - name: _RefreshTimeout
+      demangled: ''
+      offset: 00008E1D
+    - name: _RefreshBegin
+      demangled: ''
+      offset: 00008E7A
+    - name: _RemoteHashTimeout
+      demangled: ''
+      offset: 000090A6
+    - name: _NextKeepAlive
+      demangled: ''
+      offset: '00009126'
+    - name: _GetNextKeepAlive
+      demangled: ''
+      offset: '00009180'
+    - name: _SessionKeepAliveTimeout
+      demangled: ''
+      offset: '00009202'
+    - name: _IncrementNameStats
+      demangled: ''
+      offset: '00009229'
+    - name: _SaveBcastNameResolved
+      demangled: ''
+      offset: '00009248'
+    - name: _IsBrowserName
+      demangled: ''
+      offset: 0000927A
+    - name: _AppropriateNodeType
+      demangled: ''
+      offset: '00009294'
+    - name: _DoDnsResolveDirect
+      demangled: ''
+      offset: 000092B6
+    - name: _UdpSendDNSBcastDirect
+      demangled: ''
+      offset: '00009412'
+    - name: _SendDNSBcastDoneDirect
+      demangled: ''
+      offset: 000094D6
+    - name: _DoDnsCancelDirect
+      demangled: ''
+      offset: '000094E1'
+    - name: _DnsCompletionDirect
+      demangled: ''
+      offset: '00009516'
+    - name: _DnsActualCompletionDirect
+      demangled: ''
+      offset: '00009633'
+    - name: _DnsUnlinkAndCompleteDirect
+      demangled: ''
+      offset: 000096A1
+    - name: _ProcessDnsResponseDirect
+      demangled: ''
+      offset: 000096C7
+    - name: _CreateSendContextDirect
+      demangled: ''
+      offset: '00009878'
+    - name: _FindContextDirect
+      demangled: ''
+      offset: 0000998B
+    - name: _IpToAscii
+      demangled: ''
+      offset: 000099AB
+    - name: _AddrChngNotification
+      demangled: ''
+      offset: 00009A2C
+    - name: _CloseAddressesWithTransport
+      demangled: ''
+      offset: 00009B23
+    - name: _IsValidDevice
+      demangled: ''
+      offset: 00009BB8
+    - name: _NbtFreeAddressObj
+      demangled: ''
+      offset: 00009BD6
+    - name: _NbtNonDpcFreeAddrObj
+      demangled: ''
+      offset: 00009BF2
+    - name: _NbtFreeClientObj
+      demangled: ''
+      offset: 00009C12
+    - name: _FreeConnectionObj
+      demangled: ''
+      offset: 00009C26
+    - name: _NbtAllocateClientBlock
+      demangled: ''
+      offset: 00009C4D
+    - name: _NbtAddPermanentName
+      demangled: ''
+      offset: 00009CF4
+    - name: _NbtRemovePermanentName
+      demangled: ''
+      offset: '00009E28'
+    - name: _NbtInitQ
+      demangled: ''
+      offset: '00009E50'
+    - name: _NbtInitTrackerQ
+      demangled: ''
+      offset: '00009E89'
+    - name: _NbtAllocTracker
+      demangled: ''
+      offset: 00009ED5
+    - name: _NbtGetBuffer
+      demangled: ''
+      offset: 00009F5F
+    - name: _GetNetBiosNameFromTransportAddress
+      demangled: ''
+      offset: 00009FC5
+    - name: _ConvertToAscii
+      demangled: ''
+      offset: 00009FF8
+    - name: _ConvertToHalfAscii
+      demangled: ''
+      offset: 0000A08A
+    - name: _Nbt_inet_addr
+      demangled: ''
+      offset: 0000A0DE
+    - name: _GetTracker
+      demangled: ''
+      offset: 0000A18A
+    - name: _CountLocalNames
+      demangled: ''
+      offset: 0000A21E
+    - name: _CountUpperConnections
+      demangled: ''
+      offset: 0000A24F
+    - name: _DisableInboundConnections
+      demangled: ''
+      offset: 0000A2A5
+    - name: _EnableInboundConnections
+      demangled: ''
+      offset: 0000A2ED
+    - name: _MarkForCloseLowerConnections
+      demangled: ''
+      offset: 0000A303
+    - name: _NbtInitConnQ
+      demangled: ''
+      offset: 0000A417
+    - name: _ReRegisterLocalNames
+      demangled: ''
+      offset: 0000A49E
+    - name: _LockedStopTimer
+      demangled: ''
+      offset: 0000A571
+    - name: _WakeupRefreshTimeout
+      demangled: ''
+      offset: 0000A590
+    - name: _NbtSetPowerHandler
+      demangled: ''
+      offset: 0000A5A9
+    - name: _CheckSetWakeupPattern
+      demangled: ''
+      offset: 0000A700
+    - name: _VNBT_NCB_X@20
+      demangled: ''
+      offset: 0000A836
+    - name: _GetDeviceContext
+      demangled: ''
+      offset: 0000AB47
+    - name: _NbtWouldLoopback
+      demangled: ''
+      offset: 0000AB81
+    - name: _VNBT_LANA_MASK@0
+      demangled: ''
+      offset: 0000ABA7
+    - name: _MapTDIStatus2NCBErr
+      demangled: ''
+      offset: 0000ABEA
+    - name: _FindInDomainList
+      demangled: ''
+      offset: 0000ACB3
+    - name: _MakeNewListCurrent
+      demangled: ''
+      offset: 0000ACE3
+    - name: _StartIpAddrToSrvName
+      demangled: ''
+      offset: 0000AD36
+    - name: _StartConnWithBestAddr
+      demangled: ''
+      offset: 0000AE05
+    - name: _ChangeStateInRemoteTable
+      demangled: ''
+      offset: 0000AEF5
+    - name: _PreloadEntry
+      demangled: ''
+      offset: 0000AF2E
+    - name: _RemovePreloads
+      demangled: ''
+      offset: 0000B003
+    - name: _GetContext
+      demangled: ''
+      offset: 0000B057
+    - name: _ChangeStateOfName
+      demangled: ''
+      offset: 0000B06E
+    - name: _LmHostTimeout
+      demangled: ''
+      offset: 0000B0F2
+    - name: _TimeoutQEntries
+      demangled: ''
+      offset: 0000B18E
+    - name: _StartLmHostTimer
+      demangled: ''
+      offset: 0000B1D9
+    - name: _LmHostQueueRequest
+      demangled: ''
+      offset: 0000B228
+    - name: _GetNameToFind
+      demangled: ''
+      offset: 0000B2A6
+    - name: _RemoveNameAndCompleteReq
+      demangled: ''
+      offset: 0000B2FF
+    - name: _RemoveName
+      demangled: ''
+      offset: 0000B354
+    - name: _strchr
+      demangled: ''
+      offset: 0000B370
+    - name: _RegOrQueryFromNet
+      demangled: ''
+      offset: 0000B396
+    - name: _ProxyTimerComplFn
+      demangled: ''
+      offset: 0000B3DB
+    - name: _ProxyClientCompletion
+      demangled: ''
+      offset: 0000B4A5
+    - name: _NbtTdiOpenAddress
+      demangled: ''
+      offset: 0000B4A6
+    - name: _NbtTdiOpenConnection
+      demangled: ''
+      offset: 0000B59A
+    - name: _NbtTdiAssociateConnection
+      demangled: ''
+      offset: 0000B5F2
+    - name: _TdiOpenandAssocConnection
+      demangled: ''
+      offset: 0000B611
+    - name: _NbtTdiCloseConnection
+      demangled: ''
+      offset: 0000B707
+    - name: _NbtTdiCloseAddress
+      demangled: ''
+      offset: 0000B730
+    - name: _CloseAddress
+      demangled: ''
+      offset: 0000B73E
+    - name: _DummyCompletion
+      demangled: ''
+      offset: 0000B764
+    - name: _TdiReceiveHandler
+      demangled: ''
+      offset: 0000B765
+    - name: _ReceiveAnyHandler
+      demangled: ''
+      offset: 0000BAC5
+    - name: _CompletionRcv
+      demangled: ''
+      offset: 0000BB00
+    - name: _NewSessionCompletionRoutine
+      demangled: ''
+      offset: 0000BC17
+    - name: _Reindicate
+      demangled: ''
+      offset: 0000BCA0
+    - name: _TdiConnectHandler
+      demangled: ''
+      offset: 0000BD2D
+    - name: _AcceptCompletionRoutine
+      demangled: ''
+      offset: 0000BD7B
+    - name: _TdiDisconnectHandler
+      demangled: ''
+      offset: 0000BDBD
+    - name: _VxdDisconnectHandler
+      demangled: ''
+      offset: 0000BDED
+    - name: _TdiRcvDatagramHandler
+      demangled: ''
+      offset: 0000BECF
+    - name: _TdiRcvNameSrvHandler
+      demangled: ''
+      offset: 0000BF9A
+    - name: _CompletionRcvDgram
+      demangled: ''
+      offset: 0000BFC2
+    - name: _TdiErrorHandler
+      demangled: ''
+      offset: 0000C134
+    - name: _TdiSendDatagram
+      demangled: ''
+      offset: 0000C13A
+    - name: _SendComplete
+      demangled: ''
+      offset: 0000C222
+    - name: _TdiConnect
+      demangled: ''
+      offset: 0000C25A
+    - name: _TdiDisconnect
+      demangled: ''
+      offset: 0000C293
+    - name: _TdiSend
+      demangled: ''
+      offset: 0000C2B1
+    - name: _VxdScheduleDelayedCall
+      demangled: ''
+      offset: 0000C407
+    - name: _VxdDelayedCallHandler
+      demangled: ''
+      offset: 0000C4C6
+    - name: _CancelAllDelayedEvents
+      demangled: ''
+      offset: 0000C4DF
+    - name: _WakeupTimerExpiry@16
+      demangled: ''
+      offset: 0000C539
+    - name: _NbtStartWakeupTimer
+      demangled: ''
+      offset: 0000C565
+    - name: _NbtStopWakeupTimer
+      demangled: ''
+      offset: 0000C609
+    - name: _NbtStopTimer
+      demangled: ''
+      offset: 0000C674
+    - name: _InitTimerQ
+      demangled: ''
+      offset: 0000C683
+    - name: _InitQ
+      demangled: ''
+      offset: 0000C69A
+    - name: _StopTimerAndCallCompletion
+      demangled: ''
+      offset: 0000C6EB
+    - name: _InterlockedCallCompletion
+      demangled: ''
+      offset: 0000C720
+    - name: _GetEntry
+      demangled: ''
+      offset: 0000C74A
+    - name: _LockedStartTimer
+      demangled: ''
+      offset: 0000C78C
+    - name: _StartTimer
+      demangled: ''
+      offset: 0000C7DF
+    - name: _DereferenceTimer
+      demangled: ''
+      offset: 0000C8AB
+    - name: _StopTimer
+      demangled: ''
+      offset: 0000C8FE
+    - name: _TimerExpiry
+      demangled: ''
+      offset: 0000C97D
+    - name: _ExpireTimer
+      demangled: ''
+      offset: 0000CA09
+    - name: _UdpSendNSBcast
+      demangled: ''
+      offset: 0000CAB2
+    - name: _CreatePdu
+      demangled: ''
+      offset: 0000CCE9
+    - name: _NsDgramSendCompleted
+      demangled: ''
+      offset: 0000CEF3
+    - name: _NameDgramSendCompleted
+      demangled: ''
+      offset: 0000CF05
+    - name: _NDgramSendCompleted
+      demangled: ''
+      offset: 0000CF10
+    - name: _UdpSendResponse
+      demangled: ''
+      offset: 0000CF1E
+    - name: _QueryRespDone
+      demangled: ''
+      offset: 0000D30B
+    - name: _UdpSendDatagram
+      demangled: ''
+      offset: 0000D319
+    - name: _TcpSessionStart
+      demangled: ''
+      offset: 0000D3E0
+    - name: _TcpSendSessionResponse
+      demangled: ''
+      offset: 0000D482
+    - name: _TcpSendSession
+      demangled: ''
+      offset: 0000D528
+    - name: _SessionRespDone
+      demangled: ''
+      offset: 0000D563
+    - name: _SendTcpDisconnect
+      demangled: ''
+      offset: 0000D571
+    - name: _TcpDisconnect
+      demangled: ''
+      offset: 0000D5A6
+    - name: _DisconnectDone
+      demangled: ''
+      offset: 0000D5E4
+    - name: _VxdDgramSend
+      demangled: ''
+      offset: 0000D6AC
+    - name: _VxdDgramReceive
+      demangled: ''
+      offset: 0000D76F
+    - name: _VxdCall
+      demangled: ''
+      offset: 0000D849
+    - name: _VxdSend
+      demangled: ''
+      offset: 0000D8C1
+    - name: _VxdReceiveAny
+      demangled: ''
+      offset: 0000DA22
+    - name: _VxdReceive
+      demangled: ''
+      offset: 0000DBAC
+    - name: _VxdHangup
+      demangled: ''
+      offset: 0000DD4E
+    - name: _VxdListen
+      demangled: ''
+      offset: 0000DE64
+    - name: _VxdOpenName
+      demangled: ''
+      offset: 0000DED7
+    - name: _VxdCloseName
+      demangled: ''
+      offset: 0000DFB7
+    - name: _ActiveSessions
+      demangled: ''
+      offset: '0000E036'
+    - name: _VxdCleanupAddress
+      demangled: ''
+      offset: '0000E055'
+    - name: _VxdAccept
+      demangled: ''
+      offset: 0000E1AA
+    - name: _VxdAdapterStatus
+      demangled: ''
+      offset: 0000E1D8
+    - name: _VxdFindName
+      demangled: ''
+      offset: 0000E28C
+    - name: _VxdSessionStatus
+      demangled: ''
+      offset: '0000E308'
+    - name: _VxdCopySessionStatus
+      demangled: ''
+      offset: '0000E525'
+    - name: _VxdReset
+      demangled: ''
+      offset: '0000E642'
+    - name: _VxdResetContinue
+      demangled: ''
+      offset: '0000E756'
+    - name: _VxdCancel
+      demangled: ''
+      offset: 0000E8BA
+    - name: _VxdIoComplete
+      demangled: ''
+      offset: 0000EBC4
+    - name: _VxdInitSessionSetup
+      demangled: ''
+      offset: 0000EFB0
+    - name: _VxdFindClientElement
+      demangled: ''
+      offset: 0000F12E
+    - name: _VxdFindConnectElement
+      demangled: ''
+      offset: 0000F1D4
+    - name: _VxdFindLSN
+      demangled: ''
+      offset: 0000F241
+    - name: _VxdFindNameNum
+      demangled: ''
+      offset: 0000F277
+    - name: _VxdNameToClient
+      demangled: ''
+      offset: 0000F2B4
+    - name: _NBRegister
+      demangled: ''
+      offset: 0000F334
+    - name: _NBUnregister
+      demangled: ''
+      offset: 0000F3C8
+    - name: _VxdCompleteSessionNcbs
+      demangled: ''
+      offset: 0000F40C
+    - name: _VxdTearDownSession
+      demangled: ''
+      offset: 0000F4CB
+    - name: _AllocSessSetupContext
+      demangled: ''
+      offset: 0000F512
+    - name: _FreeSessSetupContext
+      demangled: ''
+      offset: 0000F5C0
+    - name: _DelayedSessEstablish
+      demangled: ''
+      offset: 0000F5F4
+    - name: _VxdApiWorker
+      demangled: ''
+      offset: 0000F61A
+    - name: _CTEAllocInitMem
+      demangled: ''
+      offset: 0000F8B0
+    - name: __vxdhandle__
+      demangled: ''
+      offset: 0000F8D8
+    - name: _VNBT_Get_Version
+      demangled: ''
+      offset: 0000F8DC
+    - name: VNBT_DDB
+      demangled: ''
+      offset: 0000F8E0
+    - name: _RegisterLana2
+      demangled: ''
+      offset: 0000F938
+    - name: _DeregisterLana
+      demangled: ''
+      offset: 0000F96D
+    - name: _IPRegisterAddrChangeHandler
+      demangled: ''
+      offset: 0000F97C
+    - name: _IPRegisterWakeupTimerHandler
+      demangled: ''
+      offset: 0000F990
+    - name: _IPQueryPnPCapability
+      demangled: ''
+      offset: 0000F9A4
+    - name: _NbtRegisterWakeupPattern
+      demangled: ''
+      offset: 0000F9B8
+    - name: _VWIN32_KeInitializeDpc
+      demangled: ''
+      offset: 0000F9D1
+    - name: _VWIN32_KeInitializeTimer
+      demangled: ''
+      offset: 0000F9E9
+    - name: _VWIN32_R0SetWaitableTimer
+      demangled: ''
+      offset: 0000F9FB
+    - name: _VWIN32_RtlExtendedIntegerMultiply
+      demangled: ''
+      offset: 0000FA15
+    - name: _VWIN32_KeCancelTimer
+      demangled: ''
+      offset: 0000FA2D
+    - name: __VxdMapSegmentOffsetToFlat
+      demangled: ''
+      offset: 0000FA40
+    - name: __VxdLockBuffer
+      demangled: ''
+      offset: 0000FA88
+    - name: __VxdUnlockBuffer
+      demangled: ''
+      offset: 0000FACF
+    - name: __VxdValidateBuffer
+      demangled: ''
+      offset: 0000FB17
+    - name: _CTEStartTimer
+      demangled: ''
+      offset: 0000FB60
+    - name: _CTEStopTimer
+      demangled: ''
+      offset: 0000FB66
+    - name: _CTESystemUpTime
+      demangled: ''
+      offset: 0000FB6C
+    - name: _CTEScheduleEvent
+      demangled: ''
+      offset: 0000FB72
+    - name: _CTEScheduleEvent_N
+      demangled: ''
+      offset: 0000FB78
+    - name: _CTECancelEvent
+      demangled: ''
+      offset: 0000FB7E
+    - name: _CTEAllocMem
+      demangled: ''
+      offset: 0000FB84
+    - name: _CTEFreeMem
+      demangled: ''
+      offset: 0000FB8A
+    - name: _CTERefillMem
+      demangled: ''
+      offset: 0000FB90
+    - name: _CTEBlock
+      demangled: ''
+      offset: 0000FB96
+    - name: _CTEBlock1
+      demangled: ''
+      offset: 0000FB9C
+    - name: _CTESignal
+      demangled: ''
+      offset: 0000FBA2
+    - name: _CTEUnload
+      demangled: ''
+      offset: 0000FBA8
+    - name: _CTESetLoadNotifyProc
+      demangled: ''
+      offset: 0000FBB3
+    - name: _CTESetUnloadNotifyProc
+      demangled: ''
+      offset: 0000FBBE
+    - name: NCB_Handler
+      demangled: ''
+      offset: 0000FBCC
+    - name: _DhcpQueryOption
+      demangled: ''
+      offset: 0000FBD9
+    - name: VNBT_Get_Version
+      demangled: ''
+      offset: 0000FC05
+    - name: VNBT_Control
+      demangled: ''
+      offset: 0000FC15
+    - name: VNBT_DeviceIoControl
+      demangled: ''
+      offset: 0000FC37
+    - name: _ReconfigureDevnode
+      demangled: ''
+      offset: 0000FCCC
+    - name: _GetInDosFlag
+      demangled: ''
+      offset: 0000FCF6
+    - name: _VxdRtlCompareMemory
+      demangled: ''
+      offset: 0000FD13
+    - name: VNBT_Api_Handler
+      demangled: ''
+      offset: 0000FD57
+    - name: _VNBT_GetTdiDispatchTbl
+      demangled: ''
+      offset: 0000FE22
+    - name: _NbtCTEPrint
+      demangled: ''
+      offset: 0000FE4F
+    - name: __RegCloseKey
+      demangled: ''
+      offset: 0000FE64
+    - name: __RegQueryValueEx
+      demangled: ''
+      offset: 0000FE6C
+    - name: __RegOpenKey
+      demangled: ''
+      offset: 0000FE74
+  - num: '2'
+    name: _PTEXT
+    offset: '00002870'
+    symbols:
+    - name: _IPNotification
+      demangled: ''
+      offset: '00000000'
+    - name: _DestroyDeviceObject
+      demangled: ''
+      offset: 000001AB
+    - name: _SaveNameDnsServerAddrs
+      demangled: ''
+      offset: '00000413'
+    - name: _GetDnsServerAddress
+      demangled: ''
+      offset: 000004CF
+    - name: _GetNameServerAddress
+      demangled: ''
+      offset: 0000055C
+    - name: _GetMacAddr
+      demangled: ''
+      offset: '000005E9'
+    - name: _VxdReadIniString
+      demangled: ''
+      offset: 000009D3
+    - name: _GetProfileInt
+      demangled: ''
+      offset: 00000A14
+    - name: _VxdOpenNdis
+      demangled: ''
+      offset: 00000A54
+    - name: _GetNdisParam
+      demangled: ''
+      offset: 00000A9F
+    - name: _VxdCloseNdis
+      demangled: ''
+      offset: 00000B38
+    - name: _StopAllNameQueries
+      demangled: ''
+      offset: 00000B4F
+    - name: _VxdUnload
+      demangled: ''
+      offset: 00000C6F
+    - name: _ReleaseNbtConfigMem
+      demangled: ''
+      offset: 00000D0F
+    - name: _NbtReadRegistry
+      demangled: ''
+      offset: '00001028'
+    - name: _GetDNSInfo
+      demangled: ''
+      offset: '000010E4'
+    - name: _CreateDeviceObject
+      demangled: ''
+      offset: 000011DC
+    - name: _GetDhcpOption
+      demangled: ''
+      offset: 000014DD
+    - name: _VxdFileOpen
+      demangled: ''
+      offset: 000015A4
+    - name: _VxdFileRead
+      demangled: ''
+      offset: 000015D6
+    - name: _VxdFileClose
+      demangled: ''
+      offset: '00001610'
+    - name: _VxdWindowsPath
+      demangled: ''
+      offset: '00001642'
+    - name: _LmCloseFile
+      demangled: ''
+      offset: '00001664'
+    - name: _LmFgets
+      demangled: ''
+      offset: '00001685'
+    - name: _GetNextChar
+      demangled: ''
+      offset: 0000170C
+    - name: _LmOpenFile
+      demangled: ''
+      offset: '00001763'
+    - name: _BackupCurrentData
+      demangled: ''
+      offset: '00001813'
+    - name: _RestoreOldData
+      demangled: ''
+      offset: 0000183C
+    - name: _CopyNodeStatusResponse
+      demangled: ''
+      offset: '00001859'
+    - name: _InitTimersNotOs
+      demangled: ''
+      offset: 00001A2C
+    - name: _StopInitTimers
+      demangled: ''
+      offset: 00001B73
+    - name: _ReadParameters
+      demangled: ''
+      offset: 00001BC4
+    - name: _ReadParameters2
+      demangled: ''
+      offset: 0000206E
+    - name: _ReadScope
+      demangled: ''
+      offset: '00002116'
+    - name: _ReadLmHostFile
+      demangled: ''
+      offset: '00002242'
+    - name: _NbtOpenConnection
+      demangled: ''
+      offset: 000022A5
+    - name: _NbtOpenAndAssocConnection
+      demangled: ''
+      offset: 0000236B
+    - name: _NbtSendDatagram
+      demangled: ''
+      offset: 000023CE
+    - name: _BuildSendDgramHdr
+      demangled: ''
+      offset: 0000255E
+    - name: _NbtQueryFindName
+      demangled: ''
+      offset: 000026D3
+    - name: _NbtResyncRemoteCache
+      demangled: ''
+      offset: 000027D0
+    - name: _SessionKeepAliveNonDispatch
+      demangled: ''
+      offset: '00002832'
+    - name: _ConvertDottedDecimalToUlong
+      demangled: ''
+      offset: 000028D9
+    - name: _CloseLowerConnections
+      demangled: ''
+      offset: 0000295B
+    - name: _LmGetIpAddr
+      demangled: ''
+      offset: '00002995'
+    - name: _HandleSpecial
+      demangled: ''
+      offset: 00002B3B
+    - name: _LmpGetTokens
+      demangled: ''
+      offset: 00002BB9
+    - name: _LmpIsKeyWord
+      demangled: ''
+      offset: 00002DE3
+    - name: _LmpBreakRecursion
+      demangled: ''
+      offset: '00002E27'
+    - name: _AddToDomainList
+      demangled: ''
+      offset: 00002F08
+    - name: _LmExpandName
+      demangled: ''
+      offset: '00003025'
+    - name: _LmInclude
+      demangled: ''
+      offset: 000030CD
+    - name: _PrimeCache
+      demangled: ''
+      offset: 000030FE
+    - name: _ScanLmHostFile
+      demangled: ''
+      offset: 000032F8
+    - name: _NbtCreateAddressObjects
+      demangled: ''
+      offset: '00003458'
+    - name: _NdisOpenProtocolConfiguration@12
+      demangled: ''
+      offset: 000035A8
+    - name: _NdisCloseConfiguration@4
+      demangled: ''
+      offset: 000035AE
+    - name: _NdisReadConfiguration@20
+      demangled: ''
+      offset: 000035B4
+    - name: VNBT_Device_PostProc
+      demangled: ''
+      offset: 000035BA
+    - name: VNBT_ConfigCalls
+      demangled: ''
+      offset: 000035C5
+    - name: _PostInit_Proc
+      demangled: ''
+      offset: '00003687'
+  - num: '3'
+    name: _ITEXT
+    offset: '00000000'
+    symbols:
+    - name: _Init
+      demangled: ''
+      offset: '00000000'
+    - name: _CTEInitialize
+      demangled: ''
+      offset: '00000140'
+    - name: _CreateHashTable
+      demangled: ''
+      offset: '00000160'
+    - name: _InitRemoteHashTable
+      demangled: ''
+      offset: 000001B7
+    - name: _InitNotOs
+      demangled: ''
+      offset: 000001D2
+    - name: _strrchr
+      demangled: ''
+      offset: 0000045A
+    - name: VNBT_Device_Init
+      demangled: ''
+      offset: 0000047E

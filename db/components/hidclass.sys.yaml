@@ -1,0 +1,2803 @@
+filename: hidclass.sys
+binary: HIDCLASS
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../complete.c
+  - ../data.c
+  - ../debug.c
+  - ../device.c
+  - ../dispatch.c
+  - ../driverex.c
+  - ../fdoext.c
+  - ../feature.c
+  - ../init.c
+  - ../name.c
+  - ../physdesc.c
+  - ../pingpong.c
+  - ../polled.c
+  - ../power.c
+  - ../read.c
+  - ../services.c
+  - ../util.c
+  - ../write.c
+  - backoffTimerPeriod.H
+  - deviceDesc.C
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00002210'
+    symbols:
+    - name: _HidpSetMaxReportSize@4
+      processed: ''
+      offset: '00000000'
+    - name: _CompleteAllPendingReadsForFileExtension@8
+      processed: ''
+      offset: 000000B0
+    - name: _CompleteAllPendingReads@4
+      processed: ''
+      offset: '00000240'
+    - name: _HidpDestroyCollection@8
+      processed: ''
+      offset: '00000300'
+    - name: _HidpQueryCapsCompletion@12
+      processed: ''
+      offset: 000003D0
+    - name: _HidpCallDriver@8
+      processed: ''
+      offset: '00000410'
+    - name: _HidpSynchronousCallCompletion@12
+      processed: ''
+      offset: '00000580'
+    - name: _HidpMajorHandler@8
+      processed: ''
+      offset: 000005C0
+    - name: _HidpIrpMajorClose@8
+      processed: ''
+      offset: '00000720'
+    - name: _HidpSubmitInterruptRead@8
+      processed: ''
+      offset: '000009E0'
+    - name: _HidpProcessInterruptReport@12
+      processed: ''
+      offset: 00000BF0
+    - name: _HidpDistributeInterruptReport@12
+      processed: ''
+      offset: 00000EF0
+    - name: _GetPingPongFromIrp@8
+      processed: ''
+      offset: 00000F60
+    - name: _HidpInterruptReadComplete@12
+      processed: ''
+      offset: 00000FF0
+    - name: _CancelAllPingPongIrps@4
+      processed: ''
+      offset: '000014E0'
+    - name: _DestroyPingPongs@4
+      processed: ''
+      offset: '000015E0'
+    - name: _HidpPingpongBackoffTimerDpc@16
+      processed: ''
+      offset: 000016A0
+    - name: _HidpCancelReadIrp@8
+      processed: ''
+      offset: '00001760'
+    - name: _HidpIrpMajorRead@8
+      processed: ''
+      offset: 00001A10
+    - name: _HidpCopyInputReportToUser@16
+      processed: ''
+      offset: 00001EC0
+    - name: _HidpDequeueNextReport@8
+      processed: ''
+      offset: 00001FC0
+    - name: _HidpDestroyFileExtension@8
+      processed: ''
+      offset: 000020A0
+    - name: _HidpFlushReportQueue@4
+      processed: ''
+      offset: '00002110'
+    - name: _HidpGetCollectionInformation@16
+      processed: ''
+      offset: '00002180'
+    - name: _HidpGetCollectionDescriptor@16
+      processed: ''
+      offset: '00002280'
+    - name: _GetReportIdentifier@8
+      processed: ''
+      offset: '00002330'
+    - name: _GetCollectionDesc@8
+      processed: ''
+      offset: 000023C0
+    - name: _GetHidclassCollection@8
+      processed: ''
+      offset: '00002450'
+    - name: _MemDup@8
+      processed: ''
+      offset: '00002500'
+    - name: _WStrLen@4
+      processed: ''
+      offset: '00002560'
+    - name: _WStrCpy@8
+      processed: ''
+      offset: 000025A0
+    - name: _WStrCompareN@12
+      processed: ''
+      offset: 000025F0
+    - name: _HidpNumberToString@8
+      processed: ''
+      offset: '00002670'
+    - name: _CopyDeviceRelations@4
+      processed: ''
+      offset: 000026D0
+    - name: _AllClientPDOsInitialized@8
+      processed: ''
+      offset: '00002710'
+    - name: _HidpDeleteDeviceObjects@4
+      processed: ''
+      offset: '00002790'
+    - name: _HidpInterruptWriteComplete@12
+      processed: ''
+      offset: '00002930'
+    - name: _HidpIrpMajorWrite@8
+      processed: ''
+      offset: '000029E0'
+    - name: _HidpGetIndexedString@16
+      processed: ''
+      offset: 00002C70
+    - name: _CompleteQueuedIrpsForPolled@16
+      processed: ''
+      offset: 00002D60
+    - name: _HidpPolledReadComplete@12
+      processed: ''
+      offset: 00002F90
+    - name: _HidpPolledTimerDpc@16
+      processed: ''
+      offset: '00003270'
+    - name: _StartPollingLoop@12
+      processed: ''
+      offset: '00003540'
+    - name: _StopPollingLoop@8
+      processed: ''
+      offset: '00003600'
+    - name: _PolledReadCancelRoutine@8
+      processed: ''
+      offset: '00003710'
+    - name: _EnqueueFdoExt@4
+      processed: ''
+      offset: '00003940'
+    - name: _DequeueFdoExt@4
+      processed: ''
+      offset: 000039C0
+    - name: _SubmitWaitWakeIrp@4
+      processed: ''
+      offset: 00003A60
+    - name: _HidpPowerCompletion@12
+      processed: ''
+      offset: 00003B00
+    - name: _PowerRequestCompletion@20
+      processed: ''
+      offset: 00003C10
+    - name: _HidpWaitWakeComplete@20
+      processed: ''
+      offset: 00003C90
+    - name: _CheckReportPowerEvent@16
+      processed: ''
+      offset: 00003D00
+    - name: _EnqueuePowerEventIrp@8
+      processed: ''
+      offset: 00003DE0
+    - name: _DequeuePowerEventIrp@4
+      processed: ''
+      offset: 00003EE0
+    - name: _HidpCancelPowerEventIrp@8
+      processed: ''
+      offset: 00003FA0
+    - name: _DbgCommonEntryExit@4
+      processed: ''
+      offset: 000040D0
+    - name: _InitFdoExtDebugInfo@4
+      processed: ''
+      offset: '00004120'
+    - name: _DbgLogIntStart@0
+      processed: ''
+      offset: '00004170'
+    - name: _DbgLogIntEnd@0
+      processed: ''
+      offset: '00004240'
+    - name: _DbgTestGetDeviceStringCompletion@12
+      processed: ''
+      offset: '00004310'
+    - name: _DbgTestGetDeviceString@4
+      processed: ''
+      offset: '00004360'
+    - name: _DbgTestGetIndexedString@4
+      processed: ''
+      offset: 000044A0
+    - name: _DbgRecordDevObj@8
+      processed: ''
+      offset: '000045E0'
+    - name: _DbgRecordFeature@12
+      processed: ''
+      offset: 000046A0
+    - name: _DbgRecordRead@16
+      processed: ''
+      offset: '00004820'
+    - name: _DbgLogPnpIrp@20
+      processed: ''
+      offset: '00004970'
+    - name: _HidP_SysPowerCaps@8
+      processed: ''
+      offset: 00004CF4
+    - name: _HidP_GetCollectionDescription@16
+      processed: ''
+      offset: 00004CFA
+    - name: _HidP_FreeCollectionDescription@4
+      processed: ''
+      offset: 00004D00
+    - name: _HidP_SysPowerEvent@16
+      processed: ''
+      offset: 00004D06
+    - name: '@IofCompleteRequest@8'
+      processed: ''
+      offset: 00004D0C
+    - name: '@InterlockedExchange@8'
+      processed: ''
+      offset: 00004D12
+    - name: '@KfReleaseSpinLock@8'
+      processed: ''
+      offset: 00004D18
+    - name: '@KfAcquireSpinLock@4'
+      processed: ''
+      offset: 00004D1E
+    - name: _RtlAssert@16
+      processed: ''
+      offset: 00004D24
+    - name: _DbgBreakPoint@0
+      processed: ''
+      offset: 00004D2A
+    - name: _DbgPrint
+      processed: ''
+      offset: 00004D30
+    - name: _KeSetEvent@12
+      processed: ''
+      offset: 00004D36
+    - name: '@InterlockedCompareExchange@12'
+      processed: ''
+      offset: 00004D3C
+    - name: _KeGetCurrentIrql@0
+      processed: ''
+      offset: 00004D42
+    - name: _KeBugCheckEx@20
+      processed: ''
+      offset: 00004D48
+    - name: _KeWaitForSingleObject@20
+      processed: ''
+      offset: 00004D4E
+    - name: _KeInitializeEvent@12
+      processed: ''
+      offset: 00004D54
+    - name: _RtlFreeUnicodeString@4
+      processed: ''
+      offset: 00004D5A
+    - name: '@ExfInterlockedInsertHeadList@12'
+      processed: ''
+      offset: 00004D60
+    - name: _KeInitializeSpinLock@4
+      processed: ''
+      offset: 00004D66
+    - name: _ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 00004D6C
+    - name: _IoGetDeviceProperty@20
+      processed: ''
+      offset: 00004D72
+    - name: _MmMapLockedPages@8
+      processed: ''
+      offset: 00004D78
+    - name: '@ObfReferenceObject@4'
+      processed: ''
+      offset: 00004D7E
+    - name: _IoAllocateIrp@8
+      processed: ''
+      offset: 00004D84
+    - name: _KeInitializeDpc@12
+      processed: ''
+      offset: 00004D8A
+    - name: _KeInitializeTimer@4
+      processed: ''
+      offset: 00004D90
+    - name: _ExFreePool@4
+      processed: ''
+      offset: 00004D96
+    - name: _KeSetTimer@16
+      processed: ''
+      offset: 00004D9C
+    - name: _KeCancelTimer@4
+      processed: ''
+      offset: 00004DA2
+    - name: _IoCancelIrp@4
+      processed: ''
+      offset: 00004DA8
+    - name: _IoFreeIrp@4
+      processed: ''
+      offset: 00004DAE
+    - name: _IoReleaseCancelSpinLock@4
+      processed: ''
+      offset: 00004DB4
+    - name: _IoAllocateDriverObjectExtension@16
+      processed: ''
+      offset: 00004DBA
+    - name: _IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: 00004DC0
+    - name: _IoCreateDevice@28
+      processed: ''
+      offset: 00004DC6
+    - name: _RtlInitUnicodeString@8
+      processed: ''
+      offset: 00004DCC
+    - name: _swprintf
+      processed: ''
+      offset: 00004DD2
+    - name: '@InterlockedIncrement@4'
+      processed: ''
+      offset: 00004DD8
+    - name: _IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: 00004DDE
+    - name: _IoSetDeviceInterfaceState@8
+      processed: ''
+      offset: 00004DE4
+    - name: _IoRegisterDeviceInterface@16
+      processed: ''
+      offset: 00004DEA
+    - name: _IoDeleteDevice@4
+      processed: ''
+      offset: 00004DF0
+    - name: '@ObfDereferenceObject@4'
+      processed: ''
+      offset: 00004DF6
+    - name: '@IofCallDriver@8'
+      processed: ''
+      offset: 00004DFC
+    - name: _IoInvalidateDeviceRelations@8
+      processed: ''
+      offset: '00004E02'
+    - name: _IoDetachDevice@4
+      processed: ''
+      offset: '00004E08'
+    - name: '@ExReleaseFastMutex@4'
+      processed: ''
+      offset: 00004E0E
+    - name: '@ExAcquireFastMutex@4'
+      processed: ''
+      offset: '00004E14'
+    - name: _PoStartNextPowerIrp@4
+      processed: ''
+      offset: 00004E1A
+    - name: _PoRequestPowerIrp@24
+      processed: ''
+      offset: '00004E20'
+    - name: _KeQuerySystemTime@4
+      processed: ''
+      offset: '00004E26'
+  - num: '2'
+    name: .rdata
+    offset: '00002260'
+    symbols:
+    - name: _GUID_CLASS_INPUT
+      processed: ''
+      offset: '00000070'
+    - name: _GUID_DEVICE_SYS_BUTTON
+      processed: ''
+      offset: '00000080'
+  - num: '3'
+    name: .data
+    offset: '00002430'
+    symbols:
+    - name: _dbgMinInterruptDelta
+      processed: ''
+      offset: 00003B20
+    - name: _dbgShortestInt
+      processed: ''
+      offset: 00003B24
+    - name: _HidpInitSpinLock
+      processed: ''
+      offset: 00003F7C
+    - name: _allFdoExtensions
+      processed: ''
+      offset: 00003F80
+    - name: _dbgLastEntry
+      processed: ''
+      offset: 00003F88
+    - name: _dbgInHidclass
+      processed: ''
+      offset: 00003F8C
+    - name: _dbgMaxInterruptsPerSecond
+      processed: ''
+      offset: 00003F90
+    - name: _dbgLongestInt
+      processed: ''
+      offset: 00003F94
+    - name: _dbgLastIntStart
+      processed: ''
+      offset: 00003F98
+    - name: _dbgAveIntTime
+      processed: ''
+      offset: 00003FA0
+    - name: _dbgDevObjs
+      processed: ''
+      offset: 00003FB8
+    - name: _dbgFeatures
+      processed: ''
+      offset: 000045F8
+    - name: _dbgReads
+      processed: ''
+      offset: '00008478'
+    - name: _dbgPnPIrps
+      processed: ''
+      offset: 0000C2F8
+    - name: _dbgDumpPnp
+      processed: ''
+      offset: '00010178'
+    - name: _driverExtListMutex
+      processed: ''
+      offset: '00010190'
+    - name: _driverExtList
+      processed: ''
+      offset: 000101B0
+    - name: _allFdoExtensionsSpinLock
+      processed: ''
+      offset: 000101B8
+    - name: _HidpNextHidNumber
+      processed: ''
+      offset: 000101BC
+  - num: '4'
+    name: .idata$2
+    offset: 00002BC0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HIDPARSE
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __imp_@ExAcquireFastMutex@4
+      processed: ''
+      offset: 0000012C
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: '00000130'
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: '00000134'
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: '00000138'
+    - name: __imp_@ExReleaseFastMutex@4
+      processed: ''
+      offset: 0000013C
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000140'
+    - name: __imp__HidP_GetCollectionDescription@16
+      processed: ''
+      offset: '00000144'
+    - name: __imp__HidP_SysPowerEvent@16
+      processed: ''
+      offset: '00000148'
+    - name: __imp__HidP_FreeCollectionDescription@4
+      processed: ''
+      offset: 0000014C
+    - name: __imp__HidP_SysPowerCaps@8
+      processed: ''
+      offset: '00000150'
+    - name: \177HIDPARSE_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000154'
+    - name: __imp__IoFreeIrp@4
+      processed: ''
+      offset: '00000158'
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: 0000015C
+    - name: __imp_@InterlockedCompareExchange@12
+      processed: ''
+      offset: '00000160'
+    - name: __imp__DbgBreakPoint@0
+      processed: ''
+      offset: '00000164'
+    - name: __imp__KeBugCheckEx@20
+      processed: ''
+      offset: '00000168'
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: 0000016C
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '00000170'
+    - name: __imp__RtlFreeUnicodeString@4
+      processed: ''
+      offset: '00000174'
+    - name: __imp_@ExfInterlockedInsertHeadList@12
+      processed: ''
+      offset: '00000178'
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: 0000017C
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000180'
+    - name: __imp__IoGetDeviceProperty@20
+      processed: ''
+      offset: '00000184'
+    - name: __imp__MmMapLockedPages@8
+      processed: ''
+      offset: '00000188'
+    - name: __imp_@ObfReferenceObject@4
+      processed: ''
+      offset: 0000018C
+    - name: __imp__IoAllocateIrp@8
+      processed: ''
+      offset: '00000190'
+    - name: __imp__KeInitializeDpc@12
+      processed: ''
+      offset: '00000194'
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: '00000198'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: 0000019C
+    - name: __imp__KeSetTimer@16
+      processed: ''
+      offset: 000001A0
+    - name: __imp__KeCancelTimer@4
+      processed: ''
+      offset: 000001A4
+    - name: __imp__IoCancelIrp@4
+      processed: ''
+      offset: 000001A8
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: 000001AC
+    - name: __imp__IoReleaseCancelSpinLock@4
+      processed: ''
+      offset: 000001B0
+    - name: __imp__IoAllocateDriverObjectExtension@16
+      processed: ''
+      offset: 000001B4
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: 000001B8
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: 000001BC
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: 000001C0
+    - name: __imp__swprintf
+      processed: ''
+      offset: 000001C4
+    - name: __imp_@InterlockedIncrement@4
+      processed: ''
+      offset: 000001C8
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: 000001CC
+    - name: __imp__IoSetDeviceInterfaceState@8
+      processed: ''
+      offset: 000001D0
+    - name: __imp__IoRegisterDeviceInterface@16
+      processed: ''
+      offset: 000001D4
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: 000001D8
+    - name: __imp_@ObfDereferenceObject@4
+      processed: ''
+      offset: 000001DC
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '000001E0'
+    - name: __imp__IoInvalidateDeviceRelations@8
+      processed: ''
+      offset: '000001E4'
+    - name: __imp__IoDetachDevice@4
+      processed: ''
+      offset: '000001E8'
+    - name: __imp_@InterlockedExchange@8
+      processed: ''
+      offset: 000001EC
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: 000001F0
+    - name: __imp__PoStartNextPowerIrp@4
+      processed: ''
+      offset: 000001F4
+    - name: __imp__PoRequestPowerIrp@24
+      processed: ''
+      offset: 000001F8
+    - name: __imp__KeQuerySystemTime@4
+      processed: ''
+      offset: 000001FC
+    - name: __imp__KeInitializeTimer@4
+      processed: ''
+      offset: '00000200'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000204'
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HidpInitializeData@0
+      processed: ''
+      offset: '00000000'
+    - name: _HidpCallDriverSynchronous@8
+      processed: ''
+      offset: '00000070'
+    - name: _HidpIrpMajorDefault@8
+      processed: ''
+      offset: 000001B0
+    - name: _HidpIrpMajorCreate@8
+      processed: ''
+      offset: 000002B0
+    - name: _HidpIrpMajorDeviceControl@8
+      processed: ''
+      offset: '00000620'
+    - name: _HidpIrpMajorINTERNALDeviceControl@8
+      processed: ''
+      offset: '00000E50'
+    - name: _HidpIrpMajorPnp@8
+      processed: ''
+      offset: '00001020'
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00001510'
+    - name: _HidpInitializePingPongIrps@4
+      processed: ''
+      offset: '00001540'
+    - name: _HidpReallocPingPongIrps@8
+      processed: ''
+      offset: '00001810'
+    - name: _HidpStartAllPingPongs@4
+      processed: ''
+      offset: '00001940'
+    - name: _HidRegisterMinidriver@4
+      processed: ''
+      offset: 00001A20
+    - name: _HidpAddDevice@8
+      processed: ''
+      offset: 00001C70
+    - name: _HidpDriverUnload@4
+      processed: ''
+      offset: '00002080'
+    - name: _HidpBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: '00002120'
+    - name: _HidpGetDeviceDescriptor@4
+      processed: ''
+      offset: '000021E0'
+    - name: _HidpCreateSymbolicLink@16
+      processed: ''
+      offset: 000025C0
+    - name: _MakeClientPDOName@8
+      processed: ''
+      offset: 000027F0
+    - name: _HidpCreateClientPDOs@4
+      processed: ''
+      offset: 000028C0
+    - name: _HidpQueryDeviceRelations@8
+      processed: ''
+      offset: 00002C40
+    - name: _HidpQueryCollectionCapabilities@8
+      processed: ''
+      offset: 00002DA0
+    - name: _BuildCompatibleID@4
+      processed: ''
+      offset: 00002F10
+    - name: _SubstituteBusNames@4
+      processed: ''
+      offset: '00003200'
+    - name: _HidpQueryIdForClientPdo@8
+      processed: ''
+      offset: 000033C0
+    - name: _HidpQueryDeviceCapabilities@8
+      processed: ''
+      offset: '00003880'
+    - name: _HidpGetSetFeature@16
+      processed: ''
+      offset: 00003A20
+    - name: _HidpGetDeviceString@16
+      processed: ''
+      offset: '00003E40'
+    - name: _HidpGetPhysicalDescriptor@8
+      processed: ''
+      offset: 00003F80
+    - name: _AllocDeviceResources@4
+      processed: ''
+      offset: '00004080'
+    - name: _FreeDeviceResources@4
+      processed: ''
+      offset: 000041C0
+    - name: _AllocCollectionResources@8
+      processed: ''
+      offset: '00004330'
+    - name: _FreeCollectionResources@8
+      processed: ''
+      offset: '00004540'
+    - name: _InitializeCollection@8
+      processed: ''
+      offset: 000046A0
+    - name: _HidpStartCollectionPDO@12
+      processed: ''
+      offset: '00004850'
+    - name: _HidpStartDevice@8
+      processed: ''
+      offset: 00004A10
+    - name: _HidpRemoveDevice@8
+      processed: ''
+      offset: 00004BF0
+    - name: _HidpRemoveCollection@12
+      processed: ''
+      offset: '00004E30'
+    - name: _InitDriverExtData@0
+      processed: ''
+      offset: 00004EF0
+    - name: _EnqueueDriverExt@4
+      processed: ''
+      offset: 00004F80
+    - name: _RefDriverExt@4
+      processed: ''
+      offset: '00005090'
+    - name: _DerefDriverExt@4
+      processed: ''
+      offset: '00005190'
+    - name: _HidpIrpMajorPower@8
+      processed: ''
+      offset: 000052F0
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '000006E0'
+    symbols:
+    - name: _HidpSetMaxReportSize@4
+      demangled: ''
+      offset: '00000000'
+    - name: _CompleteAllPendingReadsForFileExtension@8
+      demangled: ''
+      offset: 0000004C
+    - name: _CompleteAllPendingReads@4
+      demangled: ''
+      offset: 000000F7
+    - name: _HidpDestroyCollection@8
+      demangled: ''
+      offset: '00000155'
+    - name: _HidpQueryCapsCompletion@12
+      demangled: ''
+      offset: '00000182'
+    - name: _HidpCallDriver@8
+      demangled: ''
+      offset: '00000198'
+    - name: _HidpSynchronousCallCompletion@12
+      demangled: ''
+      offset: 000001D8
+    - name: _HidpMajorHandler@8
+      demangled: ''
+      offset: 000001FB
+    - name: _HidpIrpMajorClose@8
+      demangled: ''
+      offset: '00000283'
+    - name: _HidpSubmitInterruptRead@8
+      demangled: ''
+      offset: '00000396'
+    - name: _HidpProcessInterruptReport@12
+      demangled: ''
+      offset: '000003E3'
+    - name: _HidpDistributeInterruptReport@12
+      demangled: ''
+      offset: '00000520'
+    - name: _GetPingPongFromIrp@8
+      demangled: ''
+      offset: '00000567'
+    - name: _HidpInterruptReadComplete@12
+      demangled: ''
+      offset: 0000059D
+    - name: _CancelAllPingPongIrps@4
+      demangled: ''
+      offset: 0000076F
+    - name: _DestroyPingPongs@4
+      demangled: ''
+      offset: '000007E1'
+    - name: _HidpPingpongBackoffTimerDpc@16
+      demangled: ''
+      offset: '00000838'
+    - name: _HidpCancelReadIrp@8
+      demangled: ''
+      offset: '00000867'
+    - name: _HidpIrpMajorRead@8
+      demangled: ''
+      offset: '00000975'
+    - name: _HidpCopyInputReportToUser@16
+      demangled: ''
+      offset: 00000BA9
+    - name: _HidpDequeueNextReport@8
+      demangled: ''
+      offset: 00000C27
+    - name: _HidpDestroyFileExtension@8
+      demangled: ''
+      offset: 00000C56
+    - name: _HidpFlushReportQueue@4
+      demangled: ''
+      offset: 00000C81
+    - name: _HidpGetCollectionInformation@16
+      demangled: ''
+      offset: 00000CC1
+    - name: _HidpGetCollectionDescriptor@16
+      demangled: ''
+      offset: 00000D59
+    - name: _GetReportIdentifier@8
+      demangled: ''
+      offset: 00000DA3
+    - name: _GetCollectionDesc@8
+      demangled: ''
+      offset: 00000DDA
+    - name: _GetHidclassCollection@8
+      demangled: ''
+      offset: '00000E16'
+    - name: _MemDup@8
+      demangled: ''
+      offset: 00000E5C
+    - name: _WStrLen@4
+      demangled: ''
+      offset: '00000E90'
+    - name: _WStrCpy@8
+      demangled: ''
+      offset: 00000EA6
+    - name: _HidpNumberToString@8
+      demangled: ''
+      offset: 00000ECA
+    - name: _CopyDeviceRelations@4
+      demangled: ''
+      offset: 00000EF4
+    - name: _AllClientPDOsInitialized@8
+      demangled: ''
+      offset: 00000F13
+    - name: _HidpDeleteDeviceObjects@4
+      demangled: ''
+      offset: 00000F65
+    - name: _HidpInterruptWriteComplete@12
+      demangled: ''
+      offset: '00001041'
+    - name: _HidpIrpMajorWrite@8
+      demangled: ''
+      offset: '00001073'
+    - name: _HidpGetIndexedString@16
+      demangled: ''
+      offset: '00001174'
+    - name: _CompleteQueuedIrpsForPolled@16
+      demangled: ''
+      offset: 000011D6
+    - name: _HidpPolledReadComplete@12
+      demangled: ''
+      offset: 000012A6
+    - name: _HidpPolledTimerDpc@16
+      demangled: ''
+      offset: 0000137C
+    - name: _StartPollingLoop@12
+      demangled: ''
+      offset: '00001499'
+    - name: _StopPollingLoop@8
+      demangled: ''
+      offset: 0000150B
+    - name: _PolledReadCancelRoutine@8
+      demangled: ''
+      offset: '00001577'
+    - name: _EnqueueFdoExt@4
+      demangled: ''
+      offset: '00001649'
+    - name: _DequeueFdoExt@4
+      demangled: ''
+      offset: '00001692'
+    - name: _SubmitWaitWakeIrp@4
+      demangled: ''
+      offset: 000016F3
+    - name: _HidpPowerCompletion@12
+      demangled: ''
+      offset: '00001724'
+    - name: _PowerRequestCompletion@20
+      demangled: ''
+      offset: 0000178A
+    - name: _HidpWaitWakeComplete@20
+      demangled: ''
+      offset: 000017AD
+    - name: _CheckReportPowerEvent@16
+      demangled: ''
+      offset: 000017D7
+    - name: _EnqueuePowerEventIrp@8
+      demangled: ''
+      offset: '00001828'
+    - name: _DequeuePowerEventIrp@4
+      demangled: ''
+      offset: 000018A7
+    - name: _HidpCancelPowerEventIrp@8
+      demangled: ''
+      offset: '00001920'
+    - name: _HidP_SysPowerCaps@8
+      demangled: ''
+      offset: 0000199A
+    - name: _HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: 000019A0
+    - name: _HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: 000019A6
+    - name: _HidP_SysPowerEvent@16
+      demangled: ''
+      offset: 000019AC
+    - name: _swprintf
+      demangled: ''
+      offset: 000019B2
+  - num: '2'
+    name: .rdata
+    offset: '00000730'
+    symbols:
+    - name: _GUID_CLASS_INPUT
+      demangled: ''
+      offset: '00000000'
+    - name: _GUID_DEVICE_SYS_BUTTON
+      demangled: ''
+      offset: '00000010'
+  - num: '3'
+    name: .data
+    offset: 00000CB0
+    symbols:
+    - name: ??_C@_08FGCI@HIDCLASS?$AA@
+      demangled: '"HIDCLASS"'
+      offset: '00000000'
+    - name: 
+        ??_C@_1CC@DCHC@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA_?$AAH?$AAI?$AAD?$AA?$CF?$AA0?$AA8?$AAx?$AA?$AA@
+      demangled: L"\\Device\\_HID%08x"
+      offset: 0000000C
+    - name: 
+        ??_C@_1CE@DDJL@?$AA?$CF?$AAs?$AA?$CD?$AAC?$AAO?$AAL?$AAL?$AAE?$AAC?$AAT?$AAI?$AAO?$AAN?$AA?$CF?$AA0?$AA8?$AAx?$AA?$AA@
+      demangled: L"%s#COLLECTION%08x"
+      offset: '00000030'
+    - name: 
+        ??_C@_1BI@JEFH@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA?$AA?$AA?$AA@
+      demangled: L"HID_DEVICE\0"
+      offset: '00000054'
+    - name: 
+        ??_C@_1DG@OLOC@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAU?$AAP?$AA?3?$AAX?$AAX?$AAX?$AAX?$AA_?$AAU@
+      demangled: L"HID_DEVICE_UP:XXXX_U"
+      offset: 0000006C
+    - name: 
+        ??_C@_1DC@PBPE@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAM?$AAO@
+      demangled: L"HID_DEVICE_SYSTEM_MO"
+      offset: 000000A4
+    - name: 
+        ??_C@_1DA@PGCK@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAG?$AAA@
+      demangled: L"HID_DEVICE_SYSTEM_GA"
+      offset: 000000D8
+    - name: 
+        ??_C@_1DI@DFJJ@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAK?$AAE@
+      demangled: L"HID_DEVICE_SYSTEM_KE"
+      offset: '00000108'
+    - name: 
+        ??_C@_1DG@PMJG@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAC?$AAO@
+      demangled: L"HID_DEVICE_SYSTEM_CO"
+      offset: '00000140'
+    - name: 
+        ??_C@_1DI@HMGI@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAC?$AAO@
+      demangled: L"HID_DEVICE_SYSTEM_CO"
+      offset: '00000178'
+    - name: ??_C@_19IKPE@?$AAH?$AAI?$AAD?$AA?2?$AA?$AA@
+      demangled: L"HID\\"
+      offset: 000001B0
+    - name: ??_C@_19EJEJ@?$AA?$CF?$AA0?$AA4?$AAx?$AA?$AA@
+      demangled: L"%04x"
+      offset: 000001BC
+    - name: ??_C@_19DDCJ@?$AA0?$AA0?$AA0?$AA0?$AA?$AA@
+      demangled: L"0000"
+      offset: 000001C8
+    - name: _HidpInitSpinLock
+      demangled: ''
+      offset: 000001D8
+    - name: _allFdoExtensions
+      demangled: ''
+      offset: 000001DC
+    - name: _driverExtListMutex
+      demangled: ''
+      offset: 000001F0
+    - name: _driverExtList
+      demangled: ''
+      offset: '00000210'
+    - name: _allFdoExtensionsSpinLock
+      demangled: ''
+      offset: '00000218'
+    - name: _HidpNextHidNumber
+      demangled: ''
+      offset: 0000021C
+  - num: '4'
+    name: .idata$2
+    offset: 000013B0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HIDPARSE
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp_@ExAcquireFastMutex@4
+      demangled: ''
+      offset: '00000118'
+    - name: __imp_@ExReleaseFastMutex@4
+      demangled: ''
+      offset: 0000011C
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '00000120'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000124'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000128'
+    - name: __imp__HidP_SysPowerEvent@16
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__HidP_SysPowerCaps@8
+      demangled: ''
+      offset: '00000130'
+    - name: __imp__HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: '00000134'
+    - name: __imp__HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: '00000138'
+    - name: \177HIDPARSE_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000013C
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000140'
+    - name: __imp__KeBugCheckEx@20
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000148'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: '00000150'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000154'
+    - name: __imp_@InterlockedCompareExchange@12
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__IoGetDeviceProperty@20
+      demangled: ''
+      offset: '00000160'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: '00000164'
+    - name: __imp_@ObfReferenceObject@4
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: 0000016C
+    - name: __imp_@ExfInterlockedInsertHeadList@12
+      demangled: ''
+      offset: '00000170'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000174'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000178'
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: 0000017C
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__IoAllocateDriverObjectExtension@16
+      demangled: ''
+      offset: '00000190'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__swprintf
+      demangled: ''
+      offset: 000001A0
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: 000001A8
+    - name: __imp__IoSetDeviceInterfaceState@8
+      demangled: ''
+      offset: 000001AC
+    - name: __imp__IoRegisterDeviceInterface@16
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: 000001B4
+    - name: __imp_@ObfDereferenceObject@4
+      demangled: ''
+      offset: 000001B8
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__IoInvalidateDeviceRelations@8
+      demangled: ''
+      offset: 000001C0
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 000001CC
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: 000001D4
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: 000001D8
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000001DC
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HidpInitializeData@0
+      demangled: ''
+      offset: '00000000'
+    - name: _HidpCallDriverSynchronous@8
+      demangled: ''
+      offset: '00000042'
+    - name: _HidpIrpMajorDefault@8
+      demangled: ''
+      offset: '00000099'
+    - name: _HidpIrpMajorCreate@8
+      demangled: ''
+      offset: '000000E4'
+    - name: _HidpIrpMajorDeviceControl@8
+      demangled: ''
+      offset: '00000271'
+    - name: _HidpIrpMajorINTERNALDeviceControl@8
+      demangled: ''
+      offset: 000005B5
+    - name: _HidpIrpMajorPnp@8
+      demangled: ''
+      offset: '00000618'
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000849'
+    - name: _HidpInitializePingPongIrps@4
+      demangled: ''
+      offset: 0000084E
+    - name: _HidpReallocPingPongIrps@8
+      demangled: ''
+      offset: 0000094B
+    - name: _HidpStartAllPingPongs@4
+      demangled: ''
+      offset: 000009AB
+    - name: _HidRegisterMinidriver@4
+      demangled: ''
+      offset: 000009EB
+    - name: _HidpAddDevice@8
+      demangled: ''
+      offset: 00000AE0
+    - name: _HidpDriverUnload@4
+      demangled: ''
+      offset: 00000C3B
+    - name: _HidpBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: 00000C51
+    - name: _HidpGetDeviceDescriptor@4
+      demangled: ''
+      offset: 00000C8C
+    - name: _HidpCreateSymbolicLink@16
+      demangled: ''
+      offset: 00000DB1
+    - name: _MakeClientPDOName@8
+      demangled: ''
+      offset: 00000ED0
+    - name: _HidpCreateClientPDOs@4
+      demangled: ''
+      offset: 00000F31
+    - name: _HidpQueryDeviceRelations@8
+      demangled: ''
+      offset: '00001117'
+    - name: _HidpQueryCollectionCapabilities@8
+      demangled: ''
+      offset: '00001192'
+    - name: _BuildCompatibleID@4
+      demangled: ''
+      offset: 000011D7
+    - name: _SubstituteBusNames@4
+      demangled: ''
+      offset: 000012FA
+    - name: _HidpQueryIdForClientPdo@8
+      demangled: ''
+      offset: 000013BF
+    - name: _HidpQueryDeviceCapabilities@8
+      demangled: ''
+      offset: '00001627'
+    - name: _HidpGetSetFeature@16
+      demangled: ''
+      offset: 000016C2
+    - name: _HidpGetDeviceString@16
+      demangled: ''
+      offset: '00001824'
+    - name: _HidpGetPhysicalDescriptor@8
+      demangled: ''
+      offset: 000018B4
+    - name: _AllocDeviceResources@4
+      demangled: ''
+      offset: '00001908'
+    - name: _FreeDeviceResources@4
+      demangled: ''
+      offset: 0000196F
+    - name: _AllocCollectionResources@8
+      demangled: ''
+      offset: 000019BC
+    - name: _FreeCollectionResources@8
+      demangled: ''
+      offset: 00001A8C
+    - name: _InitializeCollection@8
+      demangled: ''
+      offset: 00001AEC
+    - name: _HidpStartCollectionPDO@12
+      demangled: ''
+      offset: 00001B6A
+    - name: _HidpStartDevice@8
+      demangled: ''
+      offset: 00001C41
+    - name: _HidpRemoveDevice@8
+      demangled: ''
+      offset: 00001CED
+    - name: _HidpRemoveCollection@12
+      demangled: ''
+      offset: 00001DBB
+    - name: _InitDriverExtData@0
+      demangled: ''
+      offset: 00001DF4
+    - name: _EnqueueDriverExt@4
+      demangled: ''
+      offset: '00001E26'
+    - name: _RefDriverExt@4
+      demangled: ''
+      offset: 00001E8E
+    - name: _DerefDriverExt@4
+      demangled: ''
+      offset: 00001EDC
+    - name: _HidpIrpMajorPower@8
+      demangled: ''
+      offset: 00001F36
+- version: Windows 98SE Debug
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00003380'
+    symbols:
+    - name: _HidpSetMaxReportSize@4
+      demangled: ''
+      offset: '00000000'
+    - name: _CompleteAllPendingReadsForFileExtension@8
+      demangled: ''
+      offset: 000000A0
+    - name: _CompleteAllPendingReadsForCollection@4
+      demangled: ''
+      offset: '00000260'
+    - name: _CompleteAllPendingReadsForDevice@4
+      demangled: ''
+      offset: 000003B0
+    - name: _HidpDestroyCollection@8
+      demangled: ''
+      offset: '00000410'
+    - name: _HidpQueryCapsCompletion@12
+      demangled: ''
+      offset: '00000610'
+    - name: _HidpCallDriver@8
+      demangled: ''
+      offset: '00000650'
+    - name: _HidpSynchronousCallCompletion@12
+      demangled: ''
+      offset: 000007C0
+    - name: _HidpMajorHandler@8
+      demangled: ''
+      offset: '00000820'
+    - name: _HidpIrpMajorClose@8
+      demangled: ''
+      offset: 000009D0
+    - name: _HidpIrpMajorDeviceControl@8
+      demangled: ''
+      offset: 00000D80
+    - name: _HidpIrpMajorINTERNALDeviceControl@8
+      demangled: ''
+      offset: '00001860'
+    - name: _HidpSubmitInterruptRead@12
+      demangled: ''
+      offset: 00001A30
+    - name: _HidpProcessInterruptReport@16
+      demangled: ''
+      offset: 00001C70
+    - name: _HidpDistributeInterruptReport@12
+      demangled: ''
+      offset: '00002090'
+    - name: _GetPingPongFromIrp@8
+      demangled: ''
+      offset: 000021C0
+    - name: _HidpInterruptReadComplete@12
+      demangled: ''
+      offset: '00002240'
+    - name: _CancelAllPingPongIrps@4
+      demangled: ''
+      offset: 000027F0
+    - name: _DestroyPingPongs@4
+      demangled: ''
+      offset: 000029B0
+    - name: _HidpPingpongBackoffTimerDpc@16
+      demangled: ''
+      offset: 00002A60
+    - name: _HidpCancelReadIrp@8
+      demangled: ''
+      offset: 00002B30
+    - name: _HidpIrpMajorRead@8
+      demangled: ''
+      offset: '00002E10'
+    - name: _HidpCopyInputReportToUser@16
+      demangled: ''
+      offset: '00003430'
+    - name: _HidpDequeueNextReport@8
+      demangled: ''
+      offset: '00003530'
+    - name: _HidpDestroyFileExtension@8
+      demangled: ''
+      offset: '00003610'
+    - name: _HidpFlushReportQueue@4
+      demangled: ''
+      offset: '00003680'
+    - name: _HidpGetCollectionInformation@16
+      demangled: ''
+      offset: 000036F0
+    - name: _HidpGetCollectionDescriptor@16
+      demangled: ''
+      offset: 000037D0
+    - name: _GetReportIdentifier@8
+      demangled: ''
+      offset: '00003880'
+    - name: _GetCollectionDesc@8
+      demangled: ''
+      offset: '00003920'
+    - name: _GetHidclassCollection@8
+      demangled: ''
+      offset: 000039B0
+    - name: _MemDup@8
+      demangled: ''
+      offset: 00003A50
+    - name: _WStrLen@4
+      demangled: ''
+      offset: 00003AB0
+    - name: _WStrCpy@8
+      demangled: ''
+      offset: 00003AF0
+    - name: _WStrCompareN@12
+      demangled: ''
+      offset: 00003B40
+    - name: _HidpNumberToString@8
+      demangled: ''
+      offset: 00003BC0
+    - name: _CopyDeviceRelations@4
+      demangled: ''
+      offset: 00003C20
+    - name: _AllClientPDOsInitialized@8
+      demangled: ''
+      offset: 00003C60
+    - name: _HidpDeleteDeviceObjects@4
+      demangled: ''
+      offset: 00003D10
+    - name: _CheckReportPowerEvent@16
+      demangled: ''
+      offset: 00003EA0
+    - name: _ReadDeviceFlagsFromRegistry@8
+      demangled: ''
+      offset: 00003FF0
+    - name: _WStrNCmpI@12
+      demangled: ''
+      offset: 000041F0
+    - name: _LAtoX@4
+      demangled: ''
+      offset: 000042B0
+    - name: _WStrNCpy@12
+      demangled: ''
+      offset: '000043E0'
+    - name: _OpenSubkey@16
+      demangled: ''
+      offset: '00004440'
+    - name: _HidpInterruptWriteComplete@12
+      demangled: ''
+      offset: '000044E0'
+    - name: _HidpIrpMajorWrite@8
+      demangled: ''
+      offset: 000045C0
+    - name: _HidpGetSetFeature@16
+      demangled: ''
+      offset: 000048C0
+    - name: _HidpGetIndexedString@16
+      demangled: ''
+      offset: 00004D50
+    - name: _CompleteQueuedIrpsForPolled@20
+      demangled: ''
+      offset: '00004E40'
+    - name: _HidpPolledReadComplete@12
+      demangled: ''
+      offset: '00005110'
+    - name: _HidpPolledReadComplete_TimerDriven@12
+      demangled: ''
+      offset: 000053B0
+    - name: _ReadPolledDevice@8
+      demangled: ''
+      offset: '00005460'
+    - name: _HidpPolledTimerDpc@16
+      demangled: ''
+      offset: '00005650'
+    - name: _StartPollingLoop@12
+      demangled: ''
+      offset: '00005780'
+    - name: _StopPollingLoop@8
+      demangled: ''
+      offset: '00005840'
+    - name: _PolledReadCancelRoutine@8
+      demangled: ''
+      offset: '00005950'
+    - name: _EnqueueFdoExt@4
+      demangled: ''
+      offset: 00005B70
+    - name: _DequeueFdoExt@4
+      demangled: ''
+      offset: 00005BF0
+    - name: _HidpIrpMajorPower@8
+      demangled: ''
+      offset: 00005C90
+    - name: _SubmitWaitWakeIrp@4
+      demangled: ''
+      offset: 000062F0
+    - name: _HidpPowerCompletion@12
+      demangled: ''
+      offset: '00006390'
+    - name: _PowerRequestCompletion@20
+      demangled: ''
+      offset: '00006510'
+    - name: _HidpWaitWakeComplete@20
+      demangled: ''
+      offset: '00006590'
+    - name: _QueuePowerEventIrp@8
+      demangled: ''
+      offset: 000066C0
+    - name: _PowerEventCancelRoutine@8
+      demangled: ''
+      offset: '000067E0'
+    - name: _CollectionWaitWakeIrpCancelRoutine@8
+      demangled: ''
+      offset: '000068E0'
+    - name: _CompleteAllCollectionWaitWakeIrps@8
+      demangled: ''
+      offset: 00006AE0
+    - name: _MyPrivilegeCheck@4
+      demangled: ''
+      offset: 00006BD0
+    - name: _DbgCommonEntryExit@4
+      demangled: ''
+      offset: 00006BF0
+    - name: _InitFdoExtDebugInfo@4
+      demangled: ''
+      offset: 00006C40
+    - name: _DbgLogIntStart@0
+      demangled: ''
+      offset: 00006C90
+    - name: _DbgLogIntEnd@0
+      demangled: ''
+      offset: 00006D60
+    - name: _DbgTestGetDeviceStringCompletion@12
+      demangled: ''
+      offset: '00006E30'
+    - name: _DbgTestGetDeviceString@4
+      demangled: ''
+      offset: '00006E80'
+    - name: _DbgTestGetIndexedString@4
+      demangled: ''
+      offset: 00006FC0
+    - name: _DbgRecordDevObj@8
+      demangled: ''
+      offset: '00007100'
+    - name: _DbgRecordFeature@12
+      demangled: ''
+      offset: 000071C0
+    - name: _DbgRecordRead@16
+      demangled: ''
+      offset: '00007320'
+    - name: _DbgLogIrpMajor@20
+      demangled: ''
+      offset: '00007470'
+    - name: _DbgLogPnpIrp@20
+      demangled: ''
+      offset: 000076D0
+    - name: _DbgLogPowerIrp@28
+      demangled: ''
+      offset: 00007A80
+    - name: _DbgLogReport@24
+      demangled: ''
+      offset: 00007C00
+    - name: _DbgLogIoctl@12
+      demangled: ''
+      offset: 00007D50
+    - name: _HidP_SysPowerCaps@8
+      demangled: ''
+      offset: 00007F92
+    - name: _HidP_SysPowerEvent@16
+      demangled: ''
+      offset: 00007F98
+    - name: _HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: 00007F9E
+    - name: _HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: 00007FA4
+    - name: '@IofCompleteRequest@8'
+      demangled: ''
+      offset: 00007FAA
+    - name: _DbgPrint
+      demangled: ''
+      offset: 00007FB0
+    - name: '@InterlockedExchange@8'
+      demangled: ''
+      offset: 00007FB6
+    - name: '@KfReleaseSpinLock@8'
+      demangled: ''
+      offset: 00007FBC
+    - name: '@KfAcquireSpinLock@4'
+      demangled: ''
+      offset: 00007FC2
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: 00007FC8
+    - name: _DbgBreakPoint@0
+      demangled: ''
+      offset: 00007FCE
+    - name: _KeSetEvent@12
+      demangled: ''
+      offset: 00007FD4
+    - name: '@InterlockedCompareExchange@12'
+      demangled: ''
+      offset: 00007FDA
+    - name: _KeGetCurrentIrql@0
+      demangled: ''
+      offset: 00007FE0
+    - name: _KeBugCheckEx@20
+      demangled: ''
+      offset: 00007FE6
+    - name: _KeWaitForSingleObject@20
+      demangled: ''
+      offset: 00007FEC
+    - name: _KeInitializeEvent@12
+      demangled: ''
+      offset: 00007FF2
+    - name: _RtlFreeUnicodeString@4
+      demangled: ''
+      offset: 00007FF8
+    - name: '@ExfInterlockedInsertHeadList@12'
+      demangled: ''
+      offset: 00007FFE
+    - name: _KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00008004'
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000800A
+    - name: _IoGetDeviceProperty@20
+      demangled: ''
+      offset: '00008010'
+    - name: _MmMapLockedPages@8
+      demangled: ''
+      offset: '00008016'
+    - name: _ProbeForWrite@12
+      demangled: ''
+      offset: 0000801C
+    - name: __except_handler3
+      demangled: ''
+      offset: 0000802C
+    - name: __seh_longjmp_unwind@4
+      demangled: ''
+      offset: 000080DA
+    - name: '@ObfReferenceObject@4'
+      demangled: ''
+      offset: 000080F6
+    - name: _IoAllocateIrp@8
+      demangled: ''
+      offset: 000080FC
+    - name: _KeInitializeDpc@12
+      demangled: ''
+      offset: '00008102'
+    - name: _KeInitializeTimer@4
+      demangled: ''
+      offset: '00008108'
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: 0000810E
+    - name: _KeSetTimer@16
+      demangled: ''
+      offset: '00008114'
+    - name: _KeCancelTimer@4
+      demangled: ''
+      offset: 0000811A
+    - name: _IoCancelIrp@4
+      demangled: ''
+      offset: '00008120'
+    - name: _IoFreeIrp@4
+      demangled: ''
+      offset: '00008126'
+    - name: _IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: 0000812C
+    - name: _IoAllocateDriverObjectExtension@16
+      demangled: ''
+      offset: '00008132'
+    - name: _IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00008138'
+    - name: _IoCreateDevice@28
+      demangled: ''
+      offset: 0000813E
+    - name: _RtlInitUnicodeString@8
+      demangled: ''
+      offset: '00008144'
+    - name: _swprintf
+      demangled: ''
+      offset: 0000814A
+    - name: '@InterlockedIncrement@4'
+      demangled: ''
+      offset: '00008150'
+    - name: _IoSetDeviceInterfaceState@8
+      demangled: ''
+      offset: '00008156'
+    - name: _IoRegisterDeviceInterface@16
+      demangled: ''
+      offset: 0000815C
+    - name: _IoDeleteDevice@4
+      demangled: ''
+      offset: '00008162'
+    - name: '@ObfDereferenceObject@4'
+      demangled: ''
+      offset: '00008168'
+    - name: '@IofCallDriver@8'
+      demangled: ''
+      offset: 0000816E
+    - name: _ZwClose@4
+      demangled: ''
+      offset: '00008174'
+    - name: _ZwEnumerateValueKey@24
+      demangled: ''
+      offset: 0000817A
+    - name: _IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: '00008180'
+    - name: _ZwOpenKey@12
+      demangled: ''
+      offset: '00008186'
+    - name: _IoInvalidateDeviceRelations@8
+      demangled: ''
+      offset: 0000818C
+    - name: _IoDetachDevice@4
+      demangled: ''
+      offset: '00008192'
+    - name: '@ExReleaseFastMutex@4'
+      demangled: ''
+      offset: '00008198'
+    - name: '@ExAcquireFastMutex@4'
+      demangled: ''
+      offset: 0000819E
+    - name: _PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 000081A4
+    - name: _PoRequestPowerIrp@24
+      demangled: ''
+      offset: 000081AA
+    - name: _KeQuerySystemTime@4
+      demangled: ''
+      offset: 000081B0
+    - name: __global_unwind2
+      demangled: ''
+      offset: 000081B8
+    - name: __local_unwind2
+      demangled: ''
+      offset: 000081FA
+    - name: __abnormal_termination
+      demangled: ''
+      offset: '00008254'
+    - name: _RtlUnwind@16
+      demangled: ''
+      offset: '00008278'
+  - num: '2'
+    name: .rdata
+    offset: 000033D0
+    symbols:
+    - name: _GUID_DEVICE_SYS_BUTTON
+      demangled: ''
+      offset: '00000070'
+    - name: _GUID_CLASS_INPUT
+      demangled: ''
+      offset: '00000080'
+  - num: '3'
+    name: .data
+    offset: '00003620'
+    symbols:
+    - name: _dbgMinInterruptDelta
+      demangled: ''
+      offset: '000055E4'
+    - name: _dbgShortestInt
+      demangled: ''
+      offset: '000055E8'
+    - name: _HidpInitSpinLock
+      demangled: ''
+      offset: 0000618C
+    - name: _allFdoExtensions
+      demangled: ''
+      offset: '00006190'
+    - name: _dbgTrapOnWarn
+      demangled: ''
+      offset: 000061A0
+    - name: _dbgVerbose
+      demangled: ''
+      offset: 000061A4
+    - name: _dbgSkipSecurity
+      demangled: ''
+      offset: 000061A8
+    - name: _dbgTrapOnHiccup
+      demangled: ''
+      offset: 000061AC
+    - name: _dbgLastEntry
+      demangled: ''
+      offset: 000061B0
+    - name: _dbgInHidclass
+      demangled: ''
+      offset: 000061B4
+    - name: _dbgMaxInterruptsPerSecond
+      demangled: ''
+      offset: 000061B8
+    - name: _dbgLongestInt
+      demangled: ''
+      offset: 000061BC
+    - name: _dbgLastIntStart
+      demangled: ''
+      offset: 000061C0
+    - name: _dbgAveIntTime
+      demangled: ''
+      offset: 000061C8
+    - name: _dbgDevObjs
+      demangled: ''
+      offset: '000061E0'
+    - name: _dbgFeatures
+      demangled: ''
+      offset: '00006820'
+    - name: _dbgReads
+      demangled: ''
+      offset: 0000A6A0
+    - name: _dbgPnPIrps
+      demangled: ''
+      offset: '0000E520'
+    - name: _dbgReportRecords
+      demangled: ''
+      offset: 000123A0
+    - name: _dbgCurrentReportRecord
+      demangled: ''
+      offset: 000133A0
+    - name: _driverExtListMutex
+      demangled: ''
+      offset: 000133B0
+    - name: _driverExtList
+      demangled: ''
+      offset: 000133D0
+    - name: _allFdoExtensionsSpinLock
+      demangled: ''
+      offset: 000133D8
+    - name: _HidpNextHidNumber
+      demangled: ''
+      offset: 000133DC
+  - num: '4'
+    name: .idata$2
+    offset: '00003E30'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HIDPARSE
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp_@ExAcquireFastMutex@4
+      demangled: ''
+      offset: '00000140'
+    - name: __imp_@ExReleaseFastMutex@4
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '00000148'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: 0000014C
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000150'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000154'
+    - name: __imp__HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__HidP_SysPowerCaps@8
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: '00000160'
+    - name: __imp__HidP_SysPowerEvent@16
+      demangled: ''
+      offset: '00000164'
+    - name: \177HIDPARSE_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: 0000016C
+    - name: __imp_@InterlockedCompareExchange@12
+      demangled: ''
+      offset: '00000170'
+    - name: __imp__DbgBreakPoint@0
+      demangled: ''
+      offset: '00000174'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000178'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: 0000017C
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: '00000188'
+    - name: __imp_@ExfInterlockedInsertHeadList@12
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000190'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__IoGetDeviceProperty@20
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__ProbeForWrite@12
+      demangled: ''
+      offset: 000001A0
+    - name: __imp_@ObfReferenceObject@4
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: 000001A8
+    - name: __imp__KeBugCheckEx@20
+      demangled: ''
+      offset: 000001AC
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 000001B4
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: 000001B8
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: 000001C0
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__IoAllocateDriverObjectExtension@16
+      demangled: ''
+      offset: 000001CC
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: 000001D4
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__swprintf
+      demangled: ''
+      offset: 000001DC
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp__IoSetDeviceInterfaceState@8
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp__IoRegisterDeviceInterface@16
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: 000001EC
+    - name: __imp_@ObfDereferenceObject@4
+      demangled: ''
+      offset: 000001F0
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 000001F4
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__ZwEnumerateValueKey@24
+      demangled: ''
+      offset: 000001FC
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: '00000200'
+    - name: __imp__ZwOpenKey@12
+      demangled: ''
+      offset: '00000204'
+    - name: __imp__IoInvalidateDeviceRelations@8
+      demangled: ''
+      offset: '00000208'
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: 0000020C
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000210'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000214'
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00000218'
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: 0000021C
+    - name: __imp__KeQuerySystemTime@4
+      demangled: ''
+      offset: '00000220'
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: '00000224'
+    - name: __imp__RtlUnwind@16
+      demangled: ''
+      offset: '00000228'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000022C
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HidpInitializeData@0
+      demangled: ''
+      offset: '00000000'
+    - name: _HidpCallDriverSynchronous@8
+      demangled: ''
+      offset: '00000070'
+    - name: _HidpIrpMajorDefault@8
+      demangled: ''
+      offset: 000001F0
+    - name: _HidpIrpMajorCreate@8
+      demangled: ''
+      offset: 000002D0
+    - name: _HidpIrpMajorPnp@8
+      demangled: ''
+      offset: 00000A90
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00001070'
+    - name: _HidpInitializePingPongIrps@4
+      demangled: ''
+      offset: 000010A0
+    - name: _HidpReallocPingPongIrps@8
+      demangled: ''
+      offset: '00001370'
+    - name: _HidpStartAllPingPongs@4
+      demangled: ''
+      offset: 000014C0
+    - name: _HidRegisterMinidriver@4
+      demangled: ''
+      offset: '00001670'
+    - name: _HidpAddDevice@8
+      demangled: ''
+      offset: '00001910'
+    - name: _HidpDriverUnload@4
+      demangled: ''
+      offset: 00001D30
+    - name: _HidpGetDeviceDescriptor@4
+      demangled: ''
+      offset: 00001DD0
+    - name: _HidpCreateSymbolicLink@16
+      demangled: ''
+      offset: '00002190'
+    - name: _MakeClientPDOName@8
+      demangled: ''
+      offset: 000023B0
+    - name: _HidpCreateClientPDOs@4
+      demangled: ''
+      offset: '00002480'
+    - name: _HidpQueryDeviceRelations@8
+      demangled: ''
+      offset: '00002800'
+    - name: _HidpQueryCollectionCapabilities@8
+      demangled: ''
+      offset: '00002980'
+    - name: _BuildCompatibleID@4
+      demangled: ''
+      offset: 00002B70
+    - name: _SubstituteBusNames@4
+      demangled: ''
+      offset: '00002E50'
+    - name: _HidpQueryIdForClientPdo@8
+      demangled: ''
+      offset: '00003010'
+    - name: _HidpQueryDeviceCapabilities@8
+      demangled: ''
+      offset: 000034D0
+    - name: _HidpGetDeviceString@16
+      demangled: ''
+      offset: '00003680'
+    - name: _HidpGetPhysicalDescriptor@8
+      demangled: ''
+      offset: 000037F0
+    - name: _AllocDeviceResources@4
+      demangled: ''
+      offset: '000038E0'
+    - name: _FreeDeviceResources@4
+      demangled: ''
+      offset: 00003A00
+    - name: _AllocCollectionResources@8
+      demangled: ''
+      offset: 00003AE0
+    - name: _FreeCollectionResources@8
+      demangled: ''
+      offset: 00003D20
+    - name: _InitializeCollection@8
+      demangled: ''
+      offset: '00003E60'
+    - name: _HidpStartCollectionPDO@12
+      demangled: ''
+      offset: '00004000'
+    - name: _HidpStartDevice@8
+      demangled: ''
+      offset: '00004240'
+    - name: _HidpRemoveDevice@8
+      demangled: ''
+      offset: '00004550'
+    - name: _HidpRemoveCollection@12
+      demangled: ''
+      offset: '00004770'
+    - name: _InitDriverExtData@0
+      demangled: ''
+      offset: 000048C0
+    - name: _EnqueueDriverExt@4
+      demangled: ''
+      offset: '00004950'
+    - name: _RefDriverExt@4
+      demangled: ''
+      offset: 00004A60
+    - name: _DerefDriverExt@4
+      demangled: ''
+      offset: 00004B60
+    - name: _EnqueueCollectionWaitWakeIrp@8
+      demangled: ''
+      offset: 00004CC0
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00000B40
+    symbols:
+    - name: _HidpSetMaxReportSize@4
+      demangled: ''
+      offset: '00000000'
+    - name: _CompleteAllPendingReadsForFileExtension@8
+      demangled: ''
+      offset: 0000004C
+    - name: _CompleteAllPendingReadsForCollection@4
+      demangled: ''
+      offset: 000000FF
+    - name: _CompleteAllPendingReadsForDevice@4
+      demangled: ''
+      offset: 000001A6
+    - name: _HidpDestroyCollection@8
+      demangled: ''
+      offset: 000001D3
+    - name: _HidpQueryCapsCompletion@12
+      demangled: ''
+      offset: '00000267'
+    - name: _HidpCallDriver@8
+      demangled: ''
+      offset: 0000027D
+    - name: _HidpSynchronousCallCompletion@12
+      demangled: ''
+      offset: 000002BD
+    - name: _HidpMajorHandler@8
+      demangled: ''
+      offset: 000002D3
+    - name: _HidpIrpMajorClose@8
+      demangled: ''
+      offset: 0000035B
+    - name: _HidpIrpMajorDeviceControl@8
+      demangled: ''
+      offset: '00000480'
+    - name: _HidpIrpMajorINTERNALDeviceControl@8
+      demangled: ''
+      offset: 000008F0
+    - name: _HidpSubmitInterruptRead@12
+      demangled: ''
+      offset: '00000960'
+    - name: _HidpProcessInterruptReport@16
+      demangled: ''
+      offset: 00000A37
+    - name: _HidpDistributeInterruptReport@12
+      demangled: ''
+      offset: 00000BB9
+    - name: _GetPingPongFromIrp@8
+      demangled: ''
+      offset: 00000C05
+    - name: _HidpInterruptReadComplete@12
+      demangled: ''
+      offset: 00000C3F
+    - name: _CancelAllPingPongIrps@4
+      demangled: ''
+      offset: 00000E3D
+    - name: _DestroyPingPongs@4
+      demangled: ''
+      offset: 00000EF2
+    - name: _HidpPingpongBackoffTimerDpc@16
+      demangled: ''
+      offset: 00000F4D
+    - name: _HidpCancelReadIrp@8
+      demangled: ''
+      offset: 00000F8C
+    - name: _HidpIrpMajorRead@8
+      demangled: ''
+      offset: '00001092'
+    - name: _HidpCopyInputReportToUser@16
+      demangled: ''
+      offset: '00001382'
+    - name: _HidpDequeueNextReport@8
+      demangled: ''
+      offset: '00001400'
+    - name: _HidpDestroyFileExtension@8
+      demangled: ''
+      offset: 0000142F
+    - name: _HidpFlushReportQueue@4
+      demangled: ''
+      offset: 0000145A
+    - name: _HidpGetCollectionInformation@16
+      demangled: ''
+      offset: 0000149A
+    - name: _HidpGetCollectionDescriptor@16
+      demangled: ''
+      offset: '00001523'
+    - name: _GetReportIdentifier@8
+      demangled: ''
+      offset: '00001581'
+    - name: _GetCollectionDesc@8
+      demangled: ''
+      offset: 000015B8
+    - name: _GetHidclassCollection@8
+      demangled: ''
+      offset: 000015F4
+    - name: _MemDup@8
+      demangled: ''
+      offset: 0000163C
+    - name: _WStrLen@4
+      demangled: ''
+      offset: '00001670'
+    - name: _WStrCpy@8
+      demangled: ''
+      offset: '00001686'
+    - name: _HidpNumberToString@8
+      demangled: ''
+      offset: 000016AA
+    - name: _CopyDeviceRelations@4
+      demangled: ''
+      offset: 000016D4
+    - name: _AllClientPDOsInitialized@8
+      demangled: ''
+      offset: 000016F3
+    - name: _HidpDeleteDeviceObjects@4
+      demangled: ''
+      offset: 0000175D
+    - name: _CheckReportPowerEvent@16
+      demangled: ''
+      offset: '00001839'
+    - name: _ReadDeviceFlagsFromRegistry@8
+      demangled: ''
+      offset: 000018CE
+    - name: _WStrNCmpI@12
+      demangled: ''
+      offset: 000019B5
+    - name: _LAtoX@4
+      demangled: ''
+      offset: 00001A0E
+    - name: _WStrNCpy@12
+      demangled: ''
+      offset: 00001A72
+    - name: _OpenSubkey@16
+      demangled: ''
+      offset: 00001A9D
+    - name: _HidpInterruptWriteComplete@12
+      demangled: ''
+      offset: 00001AD9
+    - name: _HidpIrpMajorWrite@8
+      demangled: ''
+      offset: 00001B18
+    - name: _HidpGetSetFeature@16
+      demangled: ''
+      offset: 00001C58
+    - name: _HidpGetIndexedString@16
+      demangled: ''
+      offset: '00001E17'
+    - name: _CompleteQueuedIrpsForPolled@20
+      demangled: ''
+      offset: '00001E79'
+    - name: _HidpPolledReadComplete@12
+      demangled: ''
+      offset: 00001F8E
+    - name: _HidpPolledReadComplete_TimerDriven@12
+      demangled: ''
+      offset: '00002085'
+    - name: _ReadPolledDevice@8
+      demangled: ''
+      offset: 000020D8
+    - name: _HidpPolledTimerDpc@16
+      demangled: ''
+      offset: '00002194'
+    - name: _StartPollingLoop@12
+      demangled: ''
+      offset: 0000221E
+    - name: _StopPollingLoop@8
+      demangled: ''
+      offset: '00002290'
+    - name: _PolledReadCancelRoutine@8
+      demangled: ''
+      offset: 000022FC
+    - name: _EnqueueFdoExt@4
+      demangled: ''
+      offset: 000023D2
+    - name: _DequeueFdoExt@4
+      demangled: ''
+      offset: 0000241B
+    - name: _HidpIrpMajorPower@8
+      demangled: ''
+      offset: 0000247C
+    - name: _SubmitWaitWakeIrp@4
+      demangled: ''
+      offset: '00002659'
+    - name: _HidpPowerCompletion@12
+      demangled: ''
+      offset: 0000268A
+    - name: _PowerRequestCompletion@20
+      demangled: ''
+      offset: 000026F0
+    - name: _HidpWaitWakeComplete@20
+      demangled: ''
+      offset: '00002713'
+    - name: _QueuePowerEventIrp@8
+      demangled: ''
+      offset: '00002736'
+    - name: _PowerEventCancelRoutine@8
+      demangled: ''
+      offset: 000027C2
+    - name: _CollectionWaitWakeIrpCancelRoutine@8
+      demangled: ''
+      offset: '00002838'
+    - name: _CompleteAllCollectionWaitWakeIrps@8
+      demangled: ''
+      offset: '000028E6'
+    - name: _MyPrivilegeCheck@4
+      demangled: ''
+      offset: '00002974'
+    - name: _HidP_SysPowerCaps@8
+      demangled: ''
+      offset: 0000297A
+    - name: _HidP_SysPowerEvent@16
+      demangled: ''
+      offset: '00002980'
+    - name: _HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: '00002986'
+    - name: _HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: 0000298C
+    - name: __except_handler3
+      demangled: ''
+      offset: 0000299C
+    - name: __seh_longjmp_unwind@4
+      demangled: ''
+      offset: 00002A4A
+    - name: _swprintf
+      demangled: ''
+      offset: 00002A66
+    - name: __global_unwind2
+      demangled: ''
+      offset: 00002A6C
+    - name: __local_unwind2
+      demangled: ''
+      offset: 00002AAE
+    - name: __abnormal_termination
+      demangled: ''
+      offset: 00002B08
+    - name: _RtlUnwind@16
+      demangled: ''
+      offset: 00002B2C
+  - num: '2'
+    name: .rdata
+    offset: 00000B90
+    symbols:
+    - name: _GUID_DEVICE_SYS_BUTTON
+      demangled: ''
+      offset: '00000000'
+    - name: _GUID_CLASS_INPUT
+      demangled: ''
+      offset: '00000010'
+  - num: '3'
+    name: .data
+    offset: '00001200'
+    symbols:
+    - name: ??_C@_08FGCI@HIDCLASS?$AA@
+      demangled: '"HIDCLASS"'
+      offset: '00000000'
+    - name: 
+        ??_C@_1CC@DCHC@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA_?$AAH?$AAI?$AAD?$AA?$CF?$AA0?$AA8?$AAx?$AA?$AA@
+      demangled: L"\\Device\\_HID%08x"
+      offset: 0000000C
+    - name: 
+        ??_C@_1CE@DDJL@?$AA?$CF?$AAs?$AA?$CD?$AAC?$AAO?$AAL?$AAL?$AAE?$AAC?$AAT?$AAI?$AAO?$AAN?$AA?$CF?$AA0?$AA8?$AAx?$AA?$AA@
+      demangled: L"%s#COLLECTION%08x"
+      offset: '00000030'
+    - name: 
+        ??_C@_1BI@JEFH@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA?$AA?$AA?$AA@
+      demangled: L"HID_DEVICE\0"
+      offset: '00000054'
+    - name: 
+        ??_C@_1DG@OLOC@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAU?$AAP?$AA?3?$AAX?$AAX?$AAX?$AAX?$AA_?$AAU@
+      demangled: L"HID_DEVICE_UP:XXXX_U"
+      offset: 0000006C
+    - name: 
+        ??_C@_1DC@PBPE@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAM?$AAO@
+      demangled: L"HID_DEVICE_SYSTEM_MO"
+      offset: 000000A4
+    - name: 
+        ??_C@_1DA@PGCK@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAG?$AAA@
+      demangled: L"HID_DEVICE_SYSTEM_GA"
+      offset: 000000D8
+    - name: 
+        ??_C@_1DI@DFJJ@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAK?$AAE@
+      demangled: L"HID_DEVICE_SYSTEM_KE"
+      offset: '00000108'
+    - name: 
+        ??_C@_1DG@PMJG@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAC?$AAO@
+      demangled: L"HID_DEVICE_SYSTEM_CO"
+      offset: '00000140'
+    - name: 
+        ??_C@_1DI@HMGI@?$AAH?$AAI?$AAD?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAS?$AAY?$AAS?$AAT?$AAE?$AAM?$AA_?$AAC?$AAO@
+      demangled: L"HID_DEVICE_SYSTEM_CO"
+      offset: '00000178'
+    - name: ??_C@_19IKPE@?$AAH?$AAI?$AAD?$AA?2?$AA?$AA@
+      demangled: L"HID\\"
+      offset: 000001B0
+    - name: ??_C@_19EJEJ@?$AA?$CF?$AA0?$AA4?$AAx?$AA?$AA@
+      demangled: L"%04x"
+      offset: 000001BC
+    - name: ??_C@_19DDCJ@?$AA0?$AA0?$AA0?$AA0?$AA?$AA@
+      demangled: L"0000"
+      offset: 000001C8
+    - name: 
+        ??_C@_1EG@PDPO@?$AAA?$AAl?$AAl?$AAo?$AAw?$AAF?$AAe?$AAa?$AAt?$AAu?$AAr?$AAe?$AAO?$AAn?$AAN?$AAo?$AAn?$AAF?$AAe?$AAa@
+      demangled: L"AllowFeatureOnNonFea"...
+      offset: 000001D4
+    - name: 
+        ??_C@_1CI@LEPB@?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAS?$AAp?$AAe?$AAc?$AAi?$AAf?$AAi?$AAc?$AAF?$AAl?$AAa?$AAg?$AAs?$AA?$AA@
+      demangled: L"DeviceSpecificFlags"
+      offset: 0000021C
+    - name: _HidpInitSpinLock
+      demangled: ''
+      offset: '00000248'
+    - name: _allFdoExtensions
+      demangled: ''
+      offset: 0000024C
+    - name: _driverExtListMutex
+      demangled: ''
+      offset: '00000260'
+    - name: _driverExtList
+      demangled: ''
+      offset: '00000280'
+    - name: _allFdoExtensionsSpinLock
+      demangled: ''
+      offset: '00000288'
+    - name: _HidpNextHidNumber
+      demangled: ''
+      offset: 0000028C
+  - num: '4'
+    name: .idata$2
+    offset: '00001980'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HIDPARSE
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp_@ExAcquireFastMutex@4
+      demangled: ''
+      offset: 0000012C
+    - name: __imp_@ExReleaseFastMutex@4
+      demangled: ''
+      offset: '00000130'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '00000134'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000138'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000013C
+    - name: __imp__HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: '00000140'
+    - name: __imp__HidP_SysPowerCaps@8
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: '00000148'
+    - name: __imp__HidP_SysPowerEvent@16
+      demangled: ''
+      offset: 0000014C
+    - name: \177HIDPARSE_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000150'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000154'
+    - name: __imp__KeBugCheckEx@20
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000160'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000164'
+    - name: __imp_@ExfInterlockedInsertHeadList@12
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: 0000016C
+    - name: __imp_@InterlockedCompareExchange@12
+      demangled: ''
+      offset: '00000170'
+    - name: __imp__IoGetDeviceProperty@20
+      demangled: ''
+      offset: '00000174'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: '00000178'
+    - name: __imp__ProbeForWrite@12
+      demangled: ''
+      offset: 0000017C
+    - name: __imp_@ObfReferenceObject@4
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000190'
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: 000001A0
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__IoAllocateDriverObjectExtension@16
+      demangled: ''
+      offset: 000001A8
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 000001AC
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 000001B4
+    - name: __imp__swprintf
+      demangled: ''
+      offset: 000001B8
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__IoSetDeviceInterfaceState@8
+      demangled: ''
+      offset: 000001C0
+    - name: __imp__IoRegisterDeviceInterface@16
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: 000001C8
+    - name: __imp_@ObfDereferenceObject@4
+      demangled: ''
+      offset: 000001CC
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: 000001D4
+    - name: __imp__ZwEnumerateValueKey@24
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 000001DC
+    - name: __imp__ZwOpenKey@12
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp__IoInvalidateDeviceRelations@8
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: 000001EC
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: 000001F0
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 000001F4
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: 000001FC
+    - name: __imp__RtlUnwind@16
+      demangled: ''
+      offset: '00000200'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000204'
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HidpInitializeData@0
+      demangled: ''
+      offset: '00000000'
+    - name: _HidpCallDriverSynchronous@8
+      demangled: ''
+      offset: '00000042'
+    - name: _HidpIrpMajorDefault@8
+      demangled: ''
+      offset: '00000092'
+    - name: _HidpIrpMajorCreate@8
+      demangled: ''
+      offset: 000000D8
+    - name: _HidpIrpMajorPnp@8
+      demangled: ''
+      offset: 0000030A
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000597'
+    - name: _HidpInitializePingPongIrps@4
+      demangled: ''
+      offset: 0000059C
+    - name: _HidpReallocPingPongIrps@8
+      demangled: ''
+      offset: 000006DB
+    - name: _HidpStartAllPingPongs@4
+      demangled: ''
+      offset: 0000073B
+    - name: _HidRegisterMinidriver@4
+      demangled: ''
+      offset: 0000078A
+    - name: _HidpAddDevice@8
+      demangled: ''
+      offset: '00000891'
+    - name: _HidpDriverUnload@4
+      demangled: ''
+      offset: 00000A1F
+    - name: _HidpGetDeviceDescriptor@4
+      demangled: ''
+      offset: 00000A35
+    - name: _HidpCreateSymbolicLink@16
+      demangled: ''
+      offset: 00000B73
+    - name: _MakeClientPDOName@8
+      demangled: ''
+      offset: 00000CA7
+    - name: _HidpCreateClientPDOs@4
+      demangled: ''
+      offset: 00000D08
+    - name: _HidpQueryDeviceRelations@8
+      demangled: ''
+      offset: 00000F01
+    - name: _HidpQueryCollectionCapabilities@8
+      demangled: ''
+      offset: 00000F87
+    - name: _BuildCompatibleID@4
+      demangled: ''
+      offset: 00000FCD
+    - name: _SubstituteBusNames@4
+      demangled: ''
+      offset: 000010F0
+    - name: _HidpQueryIdForClientPdo@8
+      demangled: ''
+      offset: 000011B5
+    - name: _HidpQueryDeviceCapabilities@8
+      demangled: ''
+      offset: 0000141D
+    - name: _HidpGetDeviceString@16
+      demangled: ''
+      offset: 000014BF
+    - name: _HidpGetPhysicalDescriptor@8
+      demangled: ''
+      offset: '00001561'
+    - name: _AllocDeviceResources@4
+      demangled: ''
+      offset: 000015B5
+    - name: _FreeDeviceResources@4
+      demangled: ''
+      offset: 0000161C
+    - name: _AllocCollectionResources@8
+      demangled: ''
+      offset: '00001669'
+    - name: _FreeCollectionResources@8
+      demangled: ''
+      offset: '00001747'
+    - name: _InitializeCollection@8
+      demangled: ''
+      offset: 000017BA
+    - name: _HidpStartCollectionPDO@12
+      demangled: ''
+      offset: 0000183C
+    - name: _HidpStartDevice@8
+      demangled: ''
+      offset: '00001958'
+    - name: _HidpRemoveDevice@8
+      demangled: ''
+      offset: 00001A18
+    - name: _HidpRemoveCollection@12
+      demangled: ''
+      offset: 00001AE6
+    - name: _InitDriverExtData@0
+      demangled: ''
+      offset: 00001B21
+    - name: _EnqueueDriverExt@4
+      demangled: ''
+      offset: 00001B53
+    - name: _RefDriverExt@4
+      demangled: ''
+      offset: 00001BBB
+    - name: _DerefDriverExt@4
+      demangled: ''
+      offset: 00001C09
+    - name: _EnqueueCollectionWaitWakeIrp@8
+      demangled: ''
+      offset: 00001C63

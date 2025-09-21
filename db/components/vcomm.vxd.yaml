@@ -1,0 +1,2922 @@
+filename: vcomm.vxd
+binary: VCOMM
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../vcommapi.asm
+  - ../vcomm.asm
+  - ../vcommpnp.asm
+  - ../vcommsrv.asm
+  - ../vcommw32.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 00000D30
+    symbols:
+    - name: VCOMM_Control
+      processed: ''
+      offset: '00000000'
+    - name: VCOMM_Debug
+      processed: ''
+      offset: '00000022'
+    - name: VCOMMDbg_Get_PortNames
+      processed: ''
+      offset: '00000246'
+    - name: VCOMM_Display_Profile
+      processed: ''
+      offset: '00000273'
+    - name: _VCOMM_Comm_Notify
+      processed: ''
+      offset: 000002B0
+    - name: PostMsgEvent
+      processed: ''
+      offset: '00000303'
+    - name: _VCOMM_ClearCommError
+      processed: ''
+      offset: 0000036A
+    - name: _VCOMM_GetModemStatus
+      processed: ''
+      offset: 0000037F
+    - name: _VCOMM_TransmitCommChar
+      processed: ''
+      offset: '00000394'
+    - name: _VCOMM_WriteComm
+      processed: ''
+      offset: 000003A9
+    - name: _VCOMM_ReadComm
+      processed: ''
+      offset: 000003C8
+    - name: _VCOMM_GetCommEventMask
+      processed: ''
+      offset: '000003E4'
+    - name: _VCOMM_EscapeCommFunction
+      processed: ''
+      offset: 000003F6
+    - name: _VCOMM_GetCommQueueStatus
+      processed: ''
+      offset: '00000408'
+    - name: _VCOMM_PurgeComm
+      processed: ''
+      offset: 0000041A
+    - name: _VCOMM_GetLastError
+      processed: ''
+      offset: 0000042C
+    - name: _VCOMM_SetCommState
+      processed: ''
+      offset: '00000442'
+    - name: VCOMM_Common
+      processed: ''
+      offset: 0000044E
+    - name: VCOMM_Request_Satisfied
+      processed: ''
+      offset: '00000482'
+    - name: _VCOMM_Request_Satisfied
+      processed: ''
+      offset: '00000482'
+    - name: AssertHandleEDI
+      processed: ''
+      offset: 0000051B
+    - name: AssertThread
+      processed: ''
+      offset: '00000523'
+    - name: FillOverlappedStruct
+      processed: ''
+      offset: '00000530'
+    - name: CheckEvent
+      processed: ''
+      offset: '00000534'
+    - name: AssertHandle
+      processed: ''
+      offset: '00000538'
+    - name: VCOMMW32_Completion_Routine
+      processed: ''
+      offset: '00000544'
+    - name: VCOMMW32_Event_Completion_Routine
+      processed: ''
+      offset: '00000561'
+    - name: _VCOMMW32_Event_Completion_Routine
+      processed: ''
+      offset: '00000561'
+    - name: VCOMMW32_Event_Complete_Return_Values
+      processed: ''
+      offset: 000005A1
+    - name: _VCOMM_Get_Version
+      processed: ''
+      offset: '000005E4'
+    - name: __VCOMM_Register_Port_Driver
+      processed: ''
+      offset: '000005E8'
+    - name: __VCOMM_Acquire_Port
+      processed: ''
+      offset: 000005EC
+    - name: __VCOMM_Release_Port
+      processed: ''
+      offset: 000005F0
+    - name: __VCOMM_OpenComm
+      processed: ''
+      offset: 000005F4
+    - name: __VCOMM_SetCommState
+      processed: ''
+      offset: 000005F8
+    - name: __VCOMM_GetCommState
+      processed: ''
+      offset: 000005FC
+    - name: __VCOMM_SetupComm
+      processed: ''
+      offset: '00000600'
+    - name: __VCOMM_TransmitCommChar
+      processed: ''
+      offset: '00000604'
+    - name: __VCOMM_CloseComm
+      processed: ''
+      offset: '00000608'
+    - name: __VCOMM_GetCommQueueStatus
+      processed: ''
+      offset: 0000060C
+    - name: __VCOMM_ClearCommError
+      processed: ''
+      offset: '00000610'
+    - name: __VCOMM_GetModemStatus
+      processed: ''
+      offset: '00000614'
+    - name: __VCOMM_GetCommProperties
+      processed: ''
+      offset: '00000618'
+    - name: __VCOMM_EscapeCommFunction
+      processed: ''
+      offset: 0000061C
+    - name: __VCOMM_PurgeComm
+      processed: ''
+      offset: '00000620'
+    - name: __VCOMM_SetCommEventMask
+      processed: ''
+      offset: '00000624'
+    - name: __VCOMM_GetCommEventMask
+      processed: ''
+      offset: '00000628'
+    - name: __VCOMM_WriteComm
+      processed: ''
+      offset: 0000062C
+    - name: __VCOMM_ReadComm
+      processed: ''
+      offset: '00000630'
+    - name: __VCOMM_EnableCommNotification
+      processed: ''
+      offset: '00000634'
+    - name: __VCOMM_GetLastError
+      processed: ''
+      offset: '00000638'
+    - name: __VCOMM_Steal_Port
+      processed: ''
+      offset: 0000063C
+    - name: __VCOMM_SetReadCallBack
+      processed: ''
+      offset: '00000640'
+    - name: __VCOMM_SetWriteCallBack
+      processed: ''
+      offset: '00000644'
+    - name: __VCOMM_Add_Port
+      processed: ''
+      offset: '00000648'
+    - name: __VCOMM_GetSetCommTimeouts
+      processed: ''
+      offset: 0000064C
+    - name: __VCOMM_SetWriteRequest
+      processed: ''
+      offset: '00000650'
+    - name: __VCOMM_SetReadRequest
+      processed: ''
+      offset: '00000654'
+    - name: __VCOMM_Dequeue_Request
+      processed: ''
+      offset: '00000658'
+    - name: __VCOMM_Enumerate_DevNodes
+      processed: ''
+      offset: 0000065C
+    - name: _VCOMM_Map_Win32DCB_To_Ring0
+      processed: ''
+      offset: '00000660'
+    - name: _VCOMM_Map_Ring0DCB_To_Win32
+      processed: ''
+      offset: '00000664'
+    - name: __VCOMM_Get_Contention_Handler
+      processed: ''
+      offset: '00000668'
+    - name: __VCOMM_Map_Name_To_Resource
+      processed: ''
+      offset: 0000066C
+    - name: __VCOMM_PowerOnOffComm
+      processed: ''
+      offset: '00000670'
+    - name: VCOMM_DDB
+      processed: ''
+      offset: '00000674'
+    - name: Asserting
+      processed: ''
+      offset: 00000F3C
+    - name: NonzeroReads
+      processed: ''
+      offset: 00000F4C
+    - name: ReadProfile
+      processed: ''
+      offset: 00000F50
+    - name: GlobalPageLockCount
+      processed: ''
+      offset: '00001350'
+    - name: WriteProfile
+      processed: ''
+      offset: '00001354'
+    - name: IOReqCompleteCount
+      processed: ''
+      offset: '00001674'
+    - name: EventCompleteCount
+      processed: ''
+      offset: '00001678'
+  - num: '2'
+    name: _LMGROUP
+    offset: 00000D70
+    symbols:
+    - name: '@MSG_LAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      processed: ''
+      offset: '00000018'
+  - num: '3'
+    name: _IGROUP
+    offset: 00000F80
+    symbols:
+    - name: VCOMM_Device_Init
+      processed: ''
+      offset: '00000000'
+    - name: VCOMMsrv_Device_Init
+      processed: ''
+      offset: '00000048'
+    - name: VCOMMW32_Device_Init
+      processed: ''
+      offset: 0000005C
+    - name: VCOMMPNP_Initialize
+      processed: ''
+      offset: '00000070'
+    - name: VCOMMPNP_Init_Complete
+      processed: ''
+      offset: 000000A7
+  - num: '4'
+    name: _PTEXT
+    offset: '00003700'
+    symbols:
+    - name: VCOMM_Get_Version
+      processed: ''
+      offset: '00000006'
+    - name: _VCOMM_Register_Port_Driver
+      processed: ''
+      offset: 0000001B
+    - name: _VCOMM_Add_Port
+      processed: ''
+      offset: '00000063'
+    - name: _VCOMM_Acquire_Port
+      processed: ''
+      offset: 000000DE
+    - name: Contention_Dlg
+      processed: ''
+      offset: '00000194'
+    - name: _VCOMM_Release_Port
+      processed: ''
+      offset: 000001C3
+    - name: _VCOMM_Steal_Port
+      processed: ''
+      offset: '00000204'
+    - name: VCOMM_PM_API
+      processed: ''
+      offset: '00000234'
+    - name: VCOMM_PM_Open
+      processed: ''
+      offset: '00000253'
+    - name: VCOMM_PM_SetCom
+      processed: ''
+      offset: 000002B9
+    - name: VCOMM_PM_Setup
+      processed: ''
+      offset: '00000358'
+    - name: VCOMM_PM_ctx
+      processed: ''
+      offset: '000003E4'
+    - name: VCOMM_PM_TrmCom
+      processed: ''
+      offset: '00000406'
+    - name: VCOMM_PM_Stacom
+      processed: ''
+      offset: 0000041C
+    - name: VCOMM_PM_cextnfcn
+      processed: ''
+      offset: '00000477'
+    - name: VCOMM_PM_cFlush
+      processed: ''
+      offset: 000004AB
+    - name: VCOMM_PM_cevt
+      processed: ''
+      offset: 000004CD
+    - name: VCOMM_PM_cevtget
+      processed: ''
+      offset: 000004FA
+    - name: VCOMM_PM_SetMSRShadow
+      processed: ''
+      offset: '00000527'
+    - name: VCOMM_PM_WriteString
+      processed: ''
+      offset: 0000054E
+    - name: VCOMM_PM_ReadString
+      processed: ''
+      offset: 0000058E
+    - name: VCOMM_PM_EnableNotify
+      processed: ''
+      offset: 000005D9
+    - name: StrCmp
+      processed: ''
+      offset: '00000644'
+    - name: _PowerThisDamnPortOn
+      processed: ''
+      offset: '00000673'
+    - name: _VCOMM_PowerOnOffComm
+      processed: ''
+      offset: 000006FF
+    - name: _VCOMM_OpenComm
+      processed: ''
+      offset: 000007DF
+    - name: _VCOMM_GetCommState
+      processed: ''
+      offset: 000009CC
+    - name: _VCOMM_SetupComm
+      processed: ''
+      offset: '000009E1'
+    - name: _VCOMM_CloseComm
+      processed: ''
+      offset: 000009F6
+    - name: _SetPState
+      processed: ''
+      offset: 00000A9F
+    - name: _VCOMM_GetCommProperties
+      processed: ''
+      offset: 00000AF7
+    - name: _VCOMM_EnableCommNotification
+      processed: ''
+      offset: 00000B0C
+    - name: _VCOMM_SetReadCallBack
+      processed: ''
+      offset: 00000B21
+    - name: _VCOMM_SetWriteCallBack
+      processed: ''
+      offset: 00000B36
+    - name: _VCOMM_SetCommEventMask
+      processed: ''
+      offset: 00000B4B
+    - name: _VCOMM_GetSetCommTimeouts
+      processed: ''
+      offset: 00000B60
+    - name: _VCOMM_SetWriteRequest
+      processed: ''
+      offset: 00000BAC
+    - name: QueueUpRequest
+      processed: ''
+      offset: 00000C89
+    - name: _VCOMM_SetReadRequest
+      processed: ''
+      offset: 00000CBC
+    - name: FreeRequests
+      processed: ''
+      offset: '00000E16'
+    - name: _VCOMM_WriteRequestComplete
+      processed: ''
+      offset: '00000E57'
+    - name: VCOMM_ReadRequestComplete
+      processed: ''
+      offset: 00000EFC
+    - name: CallIORoutineAndCleanup
+      processed: ''
+      offset: 00000F53
+    - name: List_Get_First_Async
+      processed: ''
+      offset: 00000F70
+    - name: List_Remove_First_Async
+      processed: ''
+      offset: 00000F84
+    - name: ReadIntervalTOHandler
+      processed: ''
+      offset: 00000F98
+    - name: ReadTotalTOHandler
+      processed: ''
+      offset: 00000FDD
+    - name: WriteTotalTOHandler
+      processed: ''
+      offset: 0000100D
+    - name: SetReadCommTimeouts
+      processed: ''
+      offset: '00001026'
+    - name: SetWriteCommTimeouts
+      processed: ''
+      offset: '00001067'
+    - name: VCOMM_SetNextRequest
+      processed: ''
+      offset: '00001091'
+    - name: _VCOMM_SetNextRequest
+      processed: ''
+      offset: '00001091'
+    - name: MyPageUnlock
+      processed: ''
+      offset: '00001117'
+    - name: _VCOMM_Dequeue_Request
+      processed: ''
+      offset: '00001153'
+    - name: __VCOMMGetVersion@8
+      processed: ''
+      offset: '00001164'
+    - name: __VCOMMOpenComm@12
+      processed: ''
+      offset: '00001180'
+    - name: __VCOMMSetupComm@20
+      processed: ''
+      offset: 0000119C
+    - name: __VCOMMEscapeCommFunction@16
+      processed: ''
+      offset: 000011B8
+    - name: __VCOMMGetCommMask@16
+      processed: ''
+      offset: 000011D4
+    - name: __VCOMMGetCommProp@16
+      processed: ''
+      offset: 000011F0
+    - name: __VCOMMGetCommState@16
+      processed: ''
+      offset: 0000120C
+    - name: __VCOMMGetCommTimeouts@16
+      processed: ''
+      offset: '00001228'
+    - name: __VCOMMPurgeComm@16
+      processed: ''
+      offset: '00001244'
+    - name: __VCOMMSetCommMask@16
+      processed: ''
+      offset: '00001260'
+    - name: __VCOMMSetCommState@16
+      processed: ''
+      offset: 0000127C
+    - name: __VCOMMSetCommTimeouts@16
+      processed: ''
+      offset: '00001298'
+    - name: __VCOMMTransmitCommChar@16
+      processed: ''
+      offset: 000012B4
+    - name: __VCOMMWaitCommEvent@24
+      processed: ''
+      offset: 000012D0
+    - name: __VCOMMGetCommModemStatus@16
+      processed: ''
+      offset: 000012EC
+    - name: __VCOMMWriteComm@32
+      processed: ''
+      offset: '00001308'
+    - name: __VCOMMReadComm@32
+      processed: ''
+      offset: '00001324'
+    - name: __VCOMMClearCommError@20
+      processed: ''
+      offset: '00001340'
+    - name: __VCOMMCloseComm@12
+      processed: ''
+      offset: 0000135C
+    - name: __VCOMMGetLastError@12
+      processed: ''
+      offset: '00001378'
+    - name: __VCOMMDequeueRequest@16
+      processed: ''
+      offset: '00001394'
+    - name: __VCOMMQueryFriendlyName@12
+      processed: ''
+      offset: 000013B0
+    - name: __VCOMMGetCommConfig@20
+      processed: ''
+      offset: 000013CC
+    - name: __VCOMMSetCommConfig@20
+      processed: ''
+      offset: '000013E8'
+    - name: __VCOMMGetWin32Error@16
+      processed: ''
+      offset: '00001404'
+    - name: __VCOMMFlushFileBuffers@12
+      processed: ''
+      offset: '00001420'
+    - name: __VCOMMDeviceIOControl@40
+      processed: ''
+      offset: 0000143C
+    - name: _GetAllocBase
+      processed: ''
+      offset: '00001458'
+    - name: WriteRegValueHardware
+      processed: ''
+      offset: 000014A9
+    - name: WriteRegDeviceMap
+      processed: ''
+      offset: 000014CA
+    - name: NamePort
+      processed: ''
+      offset: '00001538'
+    - name: _NamePort
+      processed: ''
+      offset: '00001538'
+    - name: StrCopy
+      processed: ''
+      offset: '00001768'
+    - name: GetEntryFromReg
+      processed: ''
+      offset: 0000177F
+    - name: AddDriverEntry
+      processed: ''
+      offset: 000017B1
+    - name: _MapName
+      processed: ''
+      offset: '00001826'
+    - name: _MapNameFree
+      processed: ''
+      offset: 000018C2
+    - name: MatchName
+      processed: ''
+      offset: '000018E1'
+    - name: _MatchName
+      processed: ''
+      offset: '000018E1'
+    - name: CompareNames
+      processed: ''
+      offset: 0000199C
+    - name: _VCOMMLoadDevice
+      processed: ''
+      offset: 00001A65
+    - name: VCOMMLoadVxD
+      processed: ''
+      offset: 00001AEA
+    - name: VCOMMUnLoadDevice
+      processed: ''
+      offset: 00001B0C
+    - name: PNP_Register
+      processed: ''
+      offset: 00001B7C
+    - name: _VCOMM_Enumerate_DevNodes
+      processed: ''
+      offset: 00001BF2
+    - name: _VCOMM_Get_Contention_Handler
+      processed: ''
+      offset: 00001C06
+    - name: _VCOMM_Map_Name_To_Resource
+      processed: ''
+      offset: 00001C44
+    - name: _VCOMM_Map_Name_To_Res
+      processed: ''
+      offset: 00001C8E
+    - name: _VCOMM_Contention_Manager
+      processed: ''
+      offset: 00001C97
+    - name: _VCOMM_Acquire_Resource
+      processed: ''
+      offset: 00001CB2
+    - name: _VCOMM_Release_Resource
+      processed: ''
+      offset: 00001D16
+    - name: _VCOMM_Steal_Resource
+      processed: ''
+      offset: 00001D53
+    - name: _VCOMM_Add_Resource
+      processed: ''
+      offset: 00001DA1
+    - name: _VCOMM_Remove_Resource
+      processed: ''
+      offset: 00001DAD
+    - name: DestroyPortInstance
+      processed: ''
+      offset: 00001DB6
+    - name: PowerManagePorts
+      processed: ''
+      offset: 00001DF2
+    - name: IsThisAnACPIMachine
+      processed: ''
+      offset: 00001F35
+  - num: '5'
+    name: _PDATA
+    offset: 000037D0
+    symbols:
+    - name: PDListHead
+      processed: ''
+      offset: '00000000'
+    - name: ProtocolHead
+      processed: ''
+      offset: '00000008'
+    - name: ExtComStat
+      processed: ''
+      offset: '00000098'
+    - name: SavedWaits
+      processed: ''
+      offset: 000002C0
+    - name: APIProfile
+      processed: ''
+      offset: 000002C4
+    - name: CurrentPortInstance
+      processed: ''
+      offset: '00000304'
+    - name: OverrideDriver
+      processed: ''
+      offset: 0000030C
+    - name: DisablePM
+      processed: ''
+      offset: 000003DA
+    - name: PortList
+      processed: ''
+      offset: 0000058A
+    - name: GlobalFlags
+      processed: ''
+      offset: 0000059B
+    - name: numKnownPorts
+      processed: ''
+      offset: '000005E9'
+  - num: '6'
+    name: _RARE
+    offset: 000042A0
+    symbols:
+    - name: _W32_VCOMMGetVersion
+      processed: ''
+      offset: '00000000'
+    - name: _W32_VCOMMOpenComm
+      processed: ''
+      offset: 0000000E
+    - name: _W32_VCOMMSetupComm
+      processed: ''
+      offset: '00000057'
+    - name: _W32_VCOMMEscapeCommFunction
+      processed: ''
+      offset: '00000096'
+    - name: _W32_VCOMMGetCommMask
+      processed: ''
+      offset: 000000C0
+    - name: _W32_VCOMMGetCommProp
+      processed: ''
+      offset: 000000DE
+    - name: VCOMM_Map_Ring0DCB_To_Win32
+      processed: ''
+      offset: 000000F2
+    - name: _W32_VCOMMGetCommState
+      processed: ''
+      offset: 000001BF
+    - name: _W32_VCOMMGetCommTimeouts
+      processed: ''
+      offset: 000001F6
+    - name: _W32_VCOMMPurgeComm
+      processed: ''
+      offset: '00000218'
+    - name: _W32_VCOMMSetCommMask
+      processed: ''
+      offset: '00000299'
+    - name: VCOMM_Map_Win32DCB_To_Ring0
+      processed: ''
+      offset: 000002DF
+    - name: _W32_VCOMMSetCommState
+      processed: ''
+      offset: 000003A4
+    - name: _W32_VCOMMSetCommTimeouts
+      processed: ''
+      offset: 000003D6
+    - name: _W32_VCOMMTransmitCommChar
+      processed: ''
+      offset: 000003FD
+    - name: _W32_VCOMMWaitCommEvent
+      processed: ''
+      offset: 0000040B
+    - name: _W32_VCOMMGetCommModemStatus
+      processed: ''
+      offset: '00000475'
+    - name: _W32_VCOMMWriteCOMM
+      processed: ''
+      offset: '00000489'
+    - name: MyPageLock
+      processed: ''
+      offset: '00000509'
+    - name: _W32_VCOMMReadCOMM
+      processed: ''
+      offset: '00000552'
+    - name: _W32_VCOMMClearCommError
+      processed: ''
+      offset: 000005A5
+    - name: _W32_VCOMMCloseComm
+      processed: ''
+      offset: 000005B9
+    - name: _W32_VCOMMGetLastError
+      processed: ''
+      offset: 000005DB
+    - name: _W32_VCOMMDequeueRequest
+      processed: ''
+      offset: 000005EF
+    - name: _W32_VCOMMQueryFriendlyName
+      processed: ''
+      offset: 000005F8
+    - name: _W32_VCOMMGetCommConfig
+      processed: ''
+      offset: 0000060E
+    - name: _W32_VCOMMSetCommConfig
+      processed: ''
+      offset: 0000061E
+    - name: _W32_VCOMMGetWin32Error
+      processed: ''
+      offset: 0000062E
+    - name: _W32_VCOMMFlushFileBuffers
+      processed: ''
+      offset: '00000670'
+    - name: _W32_VCOMMDeviceIOControl
+      processed: ''
+      offset: 000006B4
+    - name: _VCOMM_DIOC_Complete
+      processed: ''
+      offset: '00000735'
+    - name: VCOMM_DIOC_Return_Values
+      processed: ''
+      offset: 0000075D
+  - num: '7'
+    name: _VMDESTROY
+    offset: '00000000'
+    symbols:
+    - name: _DoCallOut
+      processed: ''
+      offset: '00000000'
+    - name: AskUserToClosePort
+      processed: ''
+      offset: 000000BE
+    - name: _VCOMM_Pnp_Driver
+      processed: ''
+      offset: '00000119'
+    - name: VCOMM_New_DevNode
+      processed: ''
+      offset: 000004EA
+- version: Windows 98 Retail
+  source_tree:
+  - ../vcommapi.asm
+  - ../vcomm.asm
+  - ../vcommpnp.asm
+  - ../vcommsrv.asm
+  - ../vcommw32.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 00000A10
+    symbols:
+    - name: VCOMM_Control
+      demangled: ''
+      offset: '00000000'
+    - name: _VCOMM_Comm_Notify
+      demangled: ''
+      offset: '00000020'
+    - name: PostMsgEvent
+      demangled: ''
+      offset: 0000004B
+    - name: _VCOMM_ClearCommError
+      demangled: ''
+      offset: 000000AC
+    - name: _VCOMM_GetModemStatus
+      demangled: ''
+      offset: 000000B0
+    - name: _VCOMM_TransmitCommChar
+      demangled: ''
+      offset: 000000B4
+    - name: _VCOMM_WriteComm
+      demangled: ''
+      offset: 000000B8
+    - name: _VCOMM_ReadComm
+      demangled: ''
+      offset: 000000C6
+    - name: _VCOMM_GetCommEventMask
+      demangled: ''
+      offset: 000000D4
+    - name: _VCOMM_EscapeCommFunction
+      demangled: ''
+      offset: 000000D8
+    - name: _VCOMM_GetCommQueueStatus
+      demangled: ''
+      offset: 000000DC
+    - name: _VCOMM_PurgeComm
+      demangled: ''
+      offset: '000000E0'
+    - name: _VCOMM_GetLastError
+      demangled: ''
+      offset: '000000E4'
+    - name: _VCOMM_SetCommState
+      demangled: ''
+      offset: 000000EC
+    - name: VCOMM_Common
+      demangled: ''
+      offset: 000000F0
+    - name: VCOMM_Request_Satisfied
+      demangled: ''
+      offset: '00000124'
+    - name: _VCOMM_Request_Satisfied
+      demangled: ''
+      offset: '00000124'
+    - name: AssertHandleEDI
+      demangled: ''
+      offset: 000001BD
+    - name: AssertThread
+      demangled: ''
+      offset: 000001C5
+    - name: FillOverlappedStruct
+      demangled: ''
+      offset: 000001D2
+    - name: CheckEvent
+      demangled: ''
+      offset: 000001D6
+    - name: AssertHandle
+      demangled: ''
+      offset: 000001DA
+    - name: VCOMMW32_Completion_Routine
+      demangled: ''
+      offset: '000001E8'
+    - name: _VCOMMW32_Event_Completion_Routine
+      demangled: ''
+      offset: 000001FF
+    - name: VCOMMW32_Event_Completion_Routine
+      demangled: ''
+      offset: 000001FF
+    - name: VCOMMW32_Event_Complete_Return_Values
+      demangled: ''
+      offset: 0000023F
+    - name: _VCOMM_Get_Version
+      demangled: ''
+      offset: 0000027C
+    - name: __VCOMM_Register_Port_Driver
+      demangled: ''
+      offset: '00000280'
+    - name: __VCOMM_Acquire_Port
+      demangled: ''
+      offset: '00000284'
+    - name: __VCOMM_Release_Port
+      demangled: ''
+      offset: '00000288'
+    - name: __VCOMM_OpenComm
+      demangled: ''
+      offset: 0000028C
+    - name: __VCOMM_SetCommState
+      demangled: ''
+      offset: '00000290'
+    - name: __VCOMM_GetCommState
+      demangled: ''
+      offset: '00000294'
+    - name: __VCOMM_SetupComm
+      demangled: ''
+      offset: '00000298'
+    - name: __VCOMM_TransmitCommChar
+      demangled: ''
+      offset: 0000029C
+    - name: __VCOMM_CloseComm
+      demangled: ''
+      offset: 000002A0
+    - name: __VCOMM_GetCommQueueStatus
+      demangled: ''
+      offset: 000002A4
+    - name: __VCOMM_ClearCommError
+      demangled: ''
+      offset: 000002A8
+    - name: __VCOMM_GetModemStatus
+      demangled: ''
+      offset: 000002AC
+    - name: __VCOMM_GetCommProperties
+      demangled: ''
+      offset: 000002B0
+    - name: __VCOMM_EscapeCommFunction
+      demangled: ''
+      offset: 000002B4
+    - name: __VCOMM_PurgeComm
+      demangled: ''
+      offset: 000002B8
+    - name: __VCOMM_SetCommEventMask
+      demangled: ''
+      offset: 000002BC
+    - name: __VCOMM_GetCommEventMask
+      demangled: ''
+      offset: 000002C0
+    - name: __VCOMM_WriteComm
+      demangled: ''
+      offset: 000002C4
+    - name: __VCOMM_ReadComm
+      demangled: ''
+      offset: 000002C8
+    - name: __VCOMM_EnableCommNotification
+      demangled: ''
+      offset: 000002CC
+    - name: __VCOMM_GetLastError
+      demangled: ''
+      offset: 000002D0
+    - name: __VCOMM_Steal_Port
+      demangled: ''
+      offset: 000002D4
+    - name: __VCOMM_SetReadCallBack
+      demangled: ''
+      offset: 000002D8
+    - name: __VCOMM_SetWriteCallBack
+      demangled: ''
+      offset: 000002DC
+    - name: __VCOMM_Add_Port
+      demangled: ''
+      offset: '000002E0'
+    - name: __VCOMM_GetSetCommTimeouts
+      demangled: ''
+      offset: '000002E4'
+    - name: __VCOMM_SetWriteRequest
+      demangled: ''
+      offset: '000002E8'
+    - name: __VCOMM_SetReadRequest
+      demangled: ''
+      offset: 000002EC
+    - name: __VCOMM_Dequeue_Request
+      demangled: ''
+      offset: 000002F0
+    - name: __VCOMM_Enumerate_DevNodes
+      demangled: ''
+      offset: 000002F4
+    - name: _VCOMM_Map_Win32DCB_To_Ring0
+      demangled: ''
+      offset: 000002F8
+    - name: _VCOMM_Map_Ring0DCB_To_Win32
+      demangled: ''
+      offset: 000002FC
+    - name: __VCOMM_Get_Contention_Handler
+      demangled: ''
+      offset: '00000300'
+    - name: __VCOMM_Map_Name_To_Resource
+      demangled: ''
+      offset: '00000304'
+    - name: __VCOMM_PowerOnOffComm
+      demangled: ''
+      offset: '00000308'
+    - name: VCOMM_DDB
+      demangled: ''
+      offset: 0000030C
+    - name: Asserting
+      demangled: ''
+      offset: '00000884'
+  - num: '2'
+    name: _LMGROUP
+    offset: 00000A50
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000018'
+  - num: '3'
+    name: _IGROUP
+    offset: 00000C60
+    symbols:
+    - name: VCOMM_Device_Init
+      demangled: ''
+      offset: '00000000'
+    - name: VCOMMsrv_Device_Init
+      demangled: ''
+      offset: '00000048'
+    - name: VCOMMW32_Device_Init
+      demangled: ''
+      offset: 0000005C
+    - name: VCOMMPNP_Initialize
+      demangled: ''
+      offset: '00000070'
+    - name: VCOMMPNP_Init_Complete
+      demangled: ''
+      offset: 000000A7
+  - num: '4'
+    name: _PTEXT
+    offset: '00003200'
+    symbols:
+    - name: VCOMM_Get_Version
+      demangled: ''
+      offset: '00000000'
+    - name: _VCOMM_Register_Port_Driver
+      demangled: ''
+      offset: '00000007'
+    - name: _VCOMM_Add_Port
+      demangled: ''
+      offset: '00000041'
+    - name: _VCOMM_Acquire_Port
+      demangled: ''
+      offset: '00000094'
+    - name: Contention_Dlg
+      demangled: ''
+      offset: '00000142'
+    - name: _VCOMM_Release_Port
+      demangled: ''
+      offset: '00000163'
+    - name: _VCOMM_Steal_Port
+      demangled: ''
+      offset: '00000196'
+    - name: VCOMM_PM_API
+      demangled: ''
+      offset: 000001AC
+    - name: VCOMM_PM_Open
+      demangled: ''
+      offset: 000001C3
+    - name: VCOMM_PM_SetCom
+      demangled: ''
+      offset: '00000221'
+    - name: VCOMM_PM_Setup
+      demangled: ''
+      offset: 000002B8
+    - name: VCOMM_PM_ctx
+      demangled: ''
+      offset: '00000329'
+    - name: VCOMM_PM_TrmCom
+      demangled: ''
+      offset: '00000343'
+    - name: VCOMM_PM_Stacom
+      demangled: ''
+      offset: '00000351'
+    - name: VCOMM_PM_cextnfcn
+      demangled: ''
+      offset: 000003A4
+    - name: VCOMM_PM_cFlush
+      demangled: ''
+      offset: 000003D0
+    - name: VCOMM_PM_cevt
+      demangled: ''
+      offset: 000003EA
+    - name: VCOMM_PM_cevtget
+      demangled: ''
+      offset: 0000040F
+    - name: VCOMM_PM_SetMSRShadow
+      demangled: ''
+      offset: '00000434'
+    - name: VCOMM_PM_WriteString
+      demangled: ''
+      offset: '00000453'
+    - name: VCOMM_PM_ReadString
+      demangled: ''
+      offset: 0000048B
+    - name: VCOMM_PM_EnableNotify
+      demangled: ''
+      offset: 000004CE
+    - name: StrCmp
+      demangled: ''
+      offset: '00000534'
+    - name: _PowerThisDamnPortOn
+      demangled: ''
+      offset: 0000055B
+    - name: _VCOMM_PowerOnOffComm
+      demangled: ''
+      offset: 000005CE
+    - name: _VCOMM_OpenComm
+      demangled: ''
+      offset: '00000675'
+    - name: _VCOMM_GetCommState
+      demangled: ''
+      offset: '00000849'
+    - name: _VCOMM_SetupComm
+      demangled: ''
+      offset: '00000850'
+    - name: _VCOMM_CloseComm
+      demangled: ''
+      offset: '00000857'
+    - name: _SetPState
+      demangled: ''
+      offset: 000008F7
+    - name: _VCOMM_GetCommProperties
+      demangled: ''
+      offset: '00000929'
+    - name: _VCOMM_EnableCommNotification
+      demangled: ''
+      offset: '00000930'
+    - name: _VCOMM_SetReadCallBack
+      demangled: ''
+      offset: '00000937'
+    - name: _VCOMM_SetWriteCallBack
+      demangled: ''
+      offset: 0000093E
+    - name: _VCOMM_SetCommEventMask
+      demangled: ''
+      offset: '00000945'
+    - name: _VCOMM_GetSetCommTimeouts
+      demangled: ''
+      offset: 0000094C
+    - name: _VCOMM_SetWriteRequest
+      demangled: ''
+      offset: 0000098A
+    - name: QueueUpRequest
+      demangled: ''
+      offset: 00000A5F
+    - name: _VCOMM_SetReadRequest
+      demangled: ''
+      offset: 00000A8C
+    - name: FreeRequests
+      demangled: ''
+      offset: 00000BB4
+    - name: _VCOMM_WriteRequestComplete
+      demangled: ''
+      offset: 00000BED
+    - name: VCOMM_ReadRequestComplete
+      demangled: ''
+      offset: 00000C8A
+    - name: CallIORoutineAndCleanup
+      demangled: ''
+      offset: 00000CD9
+    - name: List_Get_First_Async
+      demangled: ''
+      offset: 00000CEE
+    - name: List_Remove_First_Async
+      demangled: ''
+      offset: 00000CFA
+    - name: ReadIntervalTOHandler
+      demangled: ''
+      offset: 00000D06
+    - name: ReadTotalTOHandler
+      demangled: ''
+      offset: 00000D43
+    - name: WriteTotalTOHandler
+      demangled: ''
+      offset: 00000D6B
+    - name: SetReadCommTimeouts
+      demangled: ''
+      offset: 00000D7C
+    - name: SetWriteCommTimeouts
+      demangled: ''
+      offset: 00000DBD
+    - name: VCOMM_SetNextRequest
+      demangled: ''
+      offset: 00000DE7
+    - name: _VCOMM_SetNextRequest
+      demangled: ''
+      offset: 00000DE7
+    - name: MyPageUnlock
+      demangled: ''
+      offset: '00000E65'
+    - name: _VCOMM_Dequeue_Request
+      demangled: ''
+      offset: 00000E8D
+    - name: __VCOMMGetVersion@8
+      demangled: ''
+      offset: '00000E94'
+    - name: __VCOMMOpenComm@12
+      demangled: ''
+      offset: 00000EA8
+    - name: __VCOMMSetupComm@20
+      demangled: ''
+      offset: 00000EBC
+    - name: __VCOMMEscapeCommFunction@16
+      demangled: ''
+      offset: 00000ED0
+    - name: __VCOMMGetCommMask@16
+      demangled: ''
+      offset: 00000EE4
+    - name: __VCOMMGetCommProp@16
+      demangled: ''
+      offset: 00000EF8
+    - name: __VCOMMGetCommState@16
+      demangled: ''
+      offset: 00000F0C
+    - name: __VCOMMGetCommTimeouts@16
+      demangled: ''
+      offset: 00000F20
+    - name: __VCOMMPurgeComm@16
+      demangled: ''
+      offset: 00000F34
+    - name: __VCOMMSetCommMask@16
+      demangled: ''
+      offset: 00000F48
+    - name: __VCOMMSetCommState@16
+      demangled: ''
+      offset: 00000F5C
+    - name: __VCOMMSetCommTimeouts@16
+      demangled: ''
+      offset: 00000F70
+    - name: __VCOMMTransmitCommChar@16
+      demangled: ''
+      offset: 00000F84
+    - name: __VCOMMWaitCommEvent@24
+      demangled: ''
+      offset: 00000F98
+    - name: __VCOMMGetCommModemStatus@16
+      demangled: ''
+      offset: 00000FAC
+    - name: __VCOMMWriteComm@32
+      demangled: ''
+      offset: 00000FC0
+    - name: __VCOMMReadComm@32
+      demangled: ''
+      offset: 00000FD4
+    - name: __VCOMMClearCommError@20
+      demangled: ''
+      offset: 00000FE8
+    - name: __VCOMMCloseComm@12
+      demangled: ''
+      offset: 00000FFC
+    - name: __VCOMMGetLastError@12
+      demangled: ''
+      offset: '00001010'
+    - name: __VCOMMDequeueRequest@16
+      demangled: ''
+      offset: '00001024'
+    - name: __VCOMMQueryFriendlyName@12
+      demangled: ''
+      offset: '00001038'
+    - name: __VCOMMGetCommConfig@20
+      demangled: ''
+      offset: 0000104C
+    - name: __VCOMMSetCommConfig@20
+      demangled: ''
+      offset: '00001060'
+    - name: __VCOMMGetWin32Error@16
+      demangled: ''
+      offset: '00001074'
+    - name: __VCOMMFlushFileBuffers@12
+      demangled: ''
+      offset: '00001088'
+    - name: __VCOMMDeviceIOControl@40
+      demangled: ''
+      offset: 0000109C
+    - name: _GetAllocBase
+      demangled: ''
+      offset: 000010B0
+    - name: WriteRegValueHardware
+      demangled: ''
+      offset: 000010F9
+    - name: WriteRegDeviceMap
+      demangled: ''
+      offset: '00001112'
+    - name: _NamePort
+      demangled: ''
+      offset: '00001158'
+    - name: NamePort
+      demangled: ''
+      offset: '00001158'
+    - name: StrCopy
+      demangled: ''
+      offset: '00001380'
+    - name: GetEntryFromReg
+      demangled: ''
+      offset: 0000138F
+    - name: AddDriverEntry
+      demangled: ''
+      offset: 000013B9
+    - name: _MapName
+      demangled: ''
+      offset: '00001426'
+    - name: _MapNameFree
+      demangled: ''
+      offset: 000014BA
+    - name: _MatchName
+      demangled: ''
+      offset: 000014D1
+    - name: MatchName
+      demangled: ''
+      offset: 000014D1
+    - name: CompareNames
+      demangled: ''
+      offset: '00001584'
+    - name: _VCOMMLoadDevice
+      demangled: ''
+      offset: '00001645'
+    - name: VCOMMLoadVxD
+      demangled: ''
+      offset: 000016C2
+    - name: VCOMMUnLoadDevice
+      demangled: ''
+      offset: 000016DC
+    - name: PNP_Register
+      demangled: ''
+      offset: '00001744'
+    - name: _VCOMM_Enumerate_DevNodes
+      demangled: ''
+      offset: 000017A7
+    - name: _VCOMM_Get_Contention_Handler
+      demangled: ''
+      offset: 000017AD
+    - name: _VCOMM_Map_Name_To_Resource
+      demangled: ''
+      offset: 000017CB
+    - name: _VCOMM_Map_Name_To_Res
+      demangled: ''
+      offset: 0000180A
+    - name: _VCOMM_Contention_Manager
+      demangled: ''
+      offset: 0000180B
+    - name: _VCOMM_Acquire_Resource
+      demangled: ''
+      offset: 0000181E
+    - name: _VCOMM_Release_Resource
+      demangled: ''
+      offset: 0000187A
+    - name: _VCOMM_Steal_Resource
+      demangled: ''
+      offset: 000018AF
+    - name: _VCOMM_Add_Resource
+      demangled: ''
+      offset: 000018F2
+    - name: _VCOMM_Remove_Resource
+      demangled: ''
+      offset: 000018F6
+    - name: DestroyPortInstance
+      demangled: ''
+      offset: 000018F7
+    - name: PowerManagePorts
+      demangled: ''
+      offset: '00001925'
+    - name: IsThisAnACPIMachine
+      demangled: ''
+      offset: 00001A34
+  - num: '5'
+    name: _PDATA
+    offset: 000032A0
+    symbols:
+    - name: PDListHead
+      demangled: ''
+      offset: '00000000'
+    - name: ProtocolHead
+      demangled: ''
+      offset: '00000008'
+    - name: ExtComStat
+      demangled: ''
+      offset: 0000003C
+    - name: CurrentPortInstance
+      demangled: ''
+      offset: 000000B4
+    - name: OverrideDriver
+      demangled: ''
+      offset: 000000BC
+    - name: DisablePM
+      demangled: ''
+      offset: 0000018A
+    - name: PortList
+      demangled: ''
+      offset: 0000033A
+    - name: GlobalFlags
+      demangled: ''
+      offset: 0000034B
+  - num: '6'
+    name: _RARE
+    offset: 00003C90
+    symbols:
+    - name: _W32_VCOMMGetVersion
+      demangled: ''
+      offset: '00000000'
+    - name: _W32_VCOMMOpenComm
+      demangled: ''
+      offset: '00000006'
+    - name: _W32_VCOMMSetupComm
+      demangled: ''
+      offset: '00000041'
+    - name: _W32_VCOMMEscapeCommFunction
+      demangled: ''
+      offset: '00000072'
+    - name: _W32_VCOMMGetCommMask
+      demangled: ''
+      offset: 0000008E
+    - name: _W32_VCOMMGetCommProp
+      demangled: ''
+      offset: 0000009E
+    - name: VCOMM_Map_Ring0DCB_To_Win32
+      demangled: ''
+      offset: 000000A4
+    - name: _W32_VCOMMGetCommState
+      demangled: ''
+      offset: '00000169'
+    - name: _W32_VCOMMGetCommTimeouts
+      demangled: ''
+      offset: '00000192'
+    - name: _W32_VCOMMPurgeComm
+      demangled: ''
+      offset: 000001A6
+    - name: _W32_VCOMMSetCommMask
+      demangled: ''
+      offset: '00000219'
+    - name: VCOMM_Map_Win32DCB_To_Ring0
+      demangled: ''
+      offset: 0000024B
+    - name: _W32_VCOMMSetCommState
+      demangled: ''
+      offset: '00000308'
+    - name: _W32_VCOMMSetCommTimeouts
+      demangled: ''
+      offset: 0000032C
+    - name: _W32_VCOMMTransmitCommChar
+      demangled: ''
+      offset: '00000345'
+    - name: _W32_VCOMMWaitCommEvent
+      demangled: ''
+      offset: 0000034B
+    - name: _W32_VCOMMGetCommModemStatus
+      demangled: ''
+      offset: 000003A1
+    - name: _W32_VCOMMWriteCOMM
+      demangled: ''
+      offset: 000003A7
+    - name: MyPageLock
+      demangled: ''
+      offset: '00000409'
+    - name: _W32_VCOMMReadCOMM
+      demangled: ''
+      offset: '00000441'
+    - name: _W32_VCOMMClearCommError
+      demangled: ''
+      offset: 0000048C
+    - name: _W32_VCOMMCloseComm
+      demangled: ''
+      offset: '00000492'
+    - name: _W32_VCOMMGetLastError
+      demangled: ''
+      offset: 000004AC
+    - name: _W32_VCOMMDequeueRequest
+      demangled: ''
+      offset: 000004B2
+    - name: _W32_VCOMMQueryFriendlyName
+      demangled: ''
+      offset: 000004B3
+    - name: _W32_VCOMMGetCommConfig
+      demangled: ''
+      offset: 000004C1
+    - name: _W32_VCOMMSetCommConfig
+      demangled: ''
+      offset: 000004C9
+    - name: _W32_VCOMMGetWin32Error
+      demangled: ''
+      offset: 000004D1
+    - name: _W32_VCOMMFlushFileBuffers
+      demangled: ''
+      offset: '00000505'
+    - name: _W32_VCOMMDeviceIOControl
+      demangled: ''
+      offset: '00000541'
+    - name: _VCOMM_DIOC_Complete
+      demangled: ''
+      offset: 000005BA
+    - name: VCOMM_DIOC_Return_Values
+      demangled: ''
+      offset: 000005DA
+  - num: '7'
+    name: _VMDESTROY
+    offset: '00000000'
+    symbols:
+    - name: _DoCallOut
+      demangled: ''
+      offset: '00000000'
+    - name: AskUserToClosePort
+      demangled: ''
+      offset: 000000B6
+    - name: _VCOMM_Pnp_Driver
+      demangled: ''
+      offset: '00000109'
+    - name: VCOMM_New_DevNode
+      demangled: ''
+      offset: 000004BE
+- version: Windows 98SE Debug
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 00000D30
+    symbols:
+    - name: VCOMM_Control
+      demangled: ''
+      offset: '00000000'
+    - name: VCOMM_Debug
+      demangled: ''
+      offset: '00000022'
+    - name: VCOMMDbg_Get_PortNames
+      demangled: ''
+      offset: '00000246'
+    - name: VCOMM_Display_Profile
+      demangled: ''
+      offset: '00000273'
+    - name: _VCOMM_Comm_Notify
+      demangled: ''
+      offset: 000002B0
+    - name: PostMsgEvent
+      demangled: ''
+      offset: '00000303'
+    - name: _VCOMM_ClearCommError
+      demangled: ''
+      offset: 0000036A
+    - name: _VCOMM_GetModemStatus
+      demangled: ''
+      offset: 0000037F
+    - name: _VCOMM_TransmitCommChar
+      demangled: ''
+      offset: '00000394'
+    - name: _VCOMM_WriteComm
+      demangled: ''
+      offset: 000003A9
+    - name: _VCOMM_ReadComm
+      demangled: ''
+      offset: 000003C8
+    - name: _VCOMM_GetCommEventMask
+      demangled: ''
+      offset: '000003E4'
+    - name: _VCOMM_EscapeCommFunction
+      demangled: ''
+      offset: 000003F6
+    - name: _VCOMM_GetCommQueueStatus
+      demangled: ''
+      offset: '00000408'
+    - name: _VCOMM_PurgeComm
+      demangled: ''
+      offset: 0000041A
+    - name: _VCOMM_GetLastError
+      demangled: ''
+      offset: 0000042C
+    - name: _VCOMM_SetCommState
+      demangled: ''
+      offset: '00000442'
+    - name: VCOMM_Common
+      demangled: ''
+      offset: 0000044E
+    - name: VCOMM_Request_Satisfied
+      demangled: ''
+      offset: '00000482'
+    - name: _VCOMM_Request_Satisfied
+      demangled: ''
+      offset: '00000482'
+    - name: AssertHandleEDI
+      demangled: ''
+      offset: 0000051B
+    - name: AssertThread
+      demangled: ''
+      offset: '00000523'
+    - name: FillOverlappedStruct
+      demangled: ''
+      offset: '00000530'
+    - name: CheckEvent
+      demangled: ''
+      offset: '00000534'
+    - name: AssertHandle
+      demangled: ''
+      offset: '00000538'
+    - name: VCOMMW32_Completion_Routine
+      demangled: ''
+      offset: '00000544'
+    - name: VCOMMW32_Event_Completion_Routine
+      demangled: ''
+      offset: '00000561'
+    - name: _VCOMMW32_Event_Completion_Routine
+      demangled: ''
+      offset: '00000561'
+    - name: VCOMMW32_Event_Complete_Return_Values
+      demangled: ''
+      offset: 000005A1
+    - name: _VCOMM_Get_Version
+      demangled: ''
+      offset: '000005E4'
+    - name: __VCOMM_Register_Port_Driver
+      demangled: ''
+      offset: '000005E8'
+    - name: __VCOMM_Acquire_Port
+      demangled: ''
+      offset: 000005EC
+    - name: __VCOMM_Release_Port
+      demangled: ''
+      offset: 000005F0
+    - name: __VCOMM_OpenComm
+      demangled: ''
+      offset: 000005F4
+    - name: __VCOMM_SetCommState
+      demangled: ''
+      offset: 000005F8
+    - name: __VCOMM_GetCommState
+      demangled: ''
+      offset: 000005FC
+    - name: __VCOMM_SetupComm
+      demangled: ''
+      offset: '00000600'
+    - name: __VCOMM_TransmitCommChar
+      demangled: ''
+      offset: '00000604'
+    - name: __VCOMM_CloseComm
+      demangled: ''
+      offset: '00000608'
+    - name: __VCOMM_GetCommQueueStatus
+      demangled: ''
+      offset: 0000060C
+    - name: __VCOMM_ClearCommError
+      demangled: ''
+      offset: '00000610'
+    - name: __VCOMM_GetModemStatus
+      demangled: ''
+      offset: '00000614'
+    - name: __VCOMM_GetCommProperties
+      demangled: ''
+      offset: '00000618'
+    - name: __VCOMM_EscapeCommFunction
+      demangled: ''
+      offset: 0000061C
+    - name: __VCOMM_PurgeComm
+      demangled: ''
+      offset: '00000620'
+    - name: __VCOMM_SetCommEventMask
+      demangled: ''
+      offset: '00000624'
+    - name: __VCOMM_GetCommEventMask
+      demangled: ''
+      offset: '00000628'
+    - name: __VCOMM_WriteComm
+      demangled: ''
+      offset: 0000062C
+    - name: __VCOMM_ReadComm
+      demangled: ''
+      offset: '00000630'
+    - name: __VCOMM_EnableCommNotification
+      demangled: ''
+      offset: '00000634'
+    - name: __VCOMM_GetLastError
+      demangled: ''
+      offset: '00000638'
+    - name: __VCOMM_Steal_Port
+      demangled: ''
+      offset: 0000063C
+    - name: __VCOMM_SetReadCallBack
+      demangled: ''
+      offset: '00000640'
+    - name: __VCOMM_SetWriteCallBack
+      demangled: ''
+      offset: '00000644'
+    - name: __VCOMM_Add_Port
+      demangled: ''
+      offset: '00000648'
+    - name: __VCOMM_GetSetCommTimeouts
+      demangled: ''
+      offset: 0000064C
+    - name: __VCOMM_SetWriteRequest
+      demangled: ''
+      offset: '00000650'
+    - name: __VCOMM_SetReadRequest
+      demangled: ''
+      offset: '00000654'
+    - name: __VCOMM_Dequeue_Request
+      demangled: ''
+      offset: '00000658'
+    - name: __VCOMM_Enumerate_DevNodes
+      demangled: ''
+      offset: 0000065C
+    - name: _VCOMM_Map_Win32DCB_To_Ring0
+      demangled: ''
+      offset: '00000660'
+    - name: _VCOMM_Map_Ring0DCB_To_Win32
+      demangled: ''
+      offset: '00000664'
+    - name: __VCOMM_Get_Contention_Handler
+      demangled: ''
+      offset: '00000668'
+    - name: __VCOMM_Map_Name_To_Resource
+      demangled: ''
+      offset: 0000066C
+    - name: __VCOMM_PowerOnOffComm
+      demangled: ''
+      offset: '00000670'
+    - name: VCOMM_DDB
+      demangled: ''
+      offset: '00000674'
+    - name: Asserting
+      demangled: ''
+      offset: 00000F3C
+    - name: NonzeroReads
+      demangled: ''
+      offset: 00000F4C
+    - name: ReadProfile
+      demangled: ''
+      offset: 00000F50
+    - name: GlobalPageLockCount
+      demangled: ''
+      offset: '00001350'
+    - name: WriteProfile
+      demangled: ''
+      offset: '00001354'
+    - name: IOReqCompleteCount
+      demangled: ''
+      offset: '00001674'
+    - name: EventCompleteCount
+      demangled: ''
+      offset: '00001678'
+  - num: '2'
+    name: _LMGROUP
+    offset: 00000D70
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000018'
+  - num: '3'
+    name: _IGROUP
+    offset: 00000F80
+    symbols:
+    - name: VCOMM_Device_Init
+      demangled: ''
+      offset: '00000000'
+    - name: VCOMMsrv_Device_Init
+      demangled: ''
+      offset: '00000048'
+    - name: VCOMMW32_Device_Init
+      demangled: ''
+      offset: 0000005C
+    - name: VCOMMPNP_Initialize
+      demangled: ''
+      offset: '00000070'
+    - name: VCOMMPNP_Init_Complete
+      demangled: ''
+      offset: 000000A7
+  - num: '4'
+    name: _PTEXT
+    offset: '00003700'
+    symbols:
+    - name: VCOMM_Get_Version
+      demangled: ''
+      offset: '00000006'
+    - name: _VCOMM_Register_Port_Driver
+      demangled: ''
+      offset: 0000001B
+    - name: _VCOMM_Add_Port
+      demangled: ''
+      offset: '00000063'
+    - name: _VCOMM_Acquire_Port
+      demangled: ''
+      offset: 000000DE
+    - name: Contention_Dlg
+      demangled: ''
+      offset: '00000194'
+    - name: _VCOMM_Release_Port
+      demangled: ''
+      offset: 000001C3
+    - name: _VCOMM_Steal_Port
+      demangled: ''
+      offset: '00000204'
+    - name: VCOMM_PM_API
+      demangled: ''
+      offset: '00000234'
+    - name: VCOMM_PM_Open
+      demangled: ''
+      offset: '00000253'
+    - name: VCOMM_PM_SetCom
+      demangled: ''
+      offset: 000002B9
+    - name: VCOMM_PM_Setup
+      demangled: ''
+      offset: '00000358'
+    - name: VCOMM_PM_ctx
+      demangled: ''
+      offset: '000003E4'
+    - name: VCOMM_PM_TrmCom
+      demangled: ''
+      offset: '00000406'
+    - name: VCOMM_PM_Stacom
+      demangled: ''
+      offset: 0000041C
+    - name: VCOMM_PM_cextnfcn
+      demangled: ''
+      offset: '00000477'
+    - name: VCOMM_PM_cFlush
+      demangled: ''
+      offset: 000004AB
+    - name: VCOMM_PM_cevt
+      demangled: ''
+      offset: 000004CD
+    - name: VCOMM_PM_cevtget
+      demangled: ''
+      offset: 000004FA
+    - name: VCOMM_PM_SetMSRShadow
+      demangled: ''
+      offset: '00000527'
+    - name: VCOMM_PM_WriteString
+      demangled: ''
+      offset: 0000054E
+    - name: VCOMM_PM_ReadString
+      demangled: ''
+      offset: 0000058E
+    - name: VCOMM_PM_EnableNotify
+      demangled: ''
+      offset: 000005D9
+    - name: StrCmp
+      demangled: ''
+      offset: '00000644'
+    - name: _PowerThisDamnPortOn
+      demangled: ''
+      offset: '00000673'
+    - name: _VCOMM_PowerOnOffComm
+      demangled: ''
+      offset: 000006FF
+    - name: _VCOMM_OpenComm
+      demangled: ''
+      offset: 000007DF
+    - name: _VCOMM_GetCommState
+      demangled: ''
+      offset: 000009CC
+    - name: _VCOMM_SetupComm
+      demangled: ''
+      offset: '000009E1'
+    - name: _VCOMM_CloseComm
+      demangled: ''
+      offset: 000009F6
+    - name: _SetPState
+      demangled: ''
+      offset: 00000A9F
+    - name: _VCOMM_GetCommProperties
+      demangled: ''
+      offset: 00000AF7
+    - name: _VCOMM_EnableCommNotification
+      demangled: ''
+      offset: 00000B0C
+    - name: _VCOMM_SetReadCallBack
+      demangled: ''
+      offset: 00000B21
+    - name: _VCOMM_SetWriteCallBack
+      demangled: ''
+      offset: 00000B36
+    - name: _VCOMM_SetCommEventMask
+      demangled: ''
+      offset: 00000B4B
+    - name: _VCOMM_GetSetCommTimeouts
+      demangled: ''
+      offset: 00000B60
+    - name: _VCOMM_SetWriteRequest
+      demangled: ''
+      offset: 00000BAC
+    - name: QueueUpRequest
+      demangled: ''
+      offset: 00000C89
+    - name: _VCOMM_SetReadRequest
+      demangled: ''
+      offset: 00000CBC
+    - name: FreeRequests
+      demangled: ''
+      offset: '00000E16'
+    - name: _VCOMM_WriteRequestComplete
+      demangled: ''
+      offset: '00000E57'
+    - name: VCOMM_ReadRequestComplete
+      demangled: ''
+      offset: 00000EFC
+    - name: CallIORoutineAndCleanup
+      demangled: ''
+      offset: 00000F53
+    - name: List_Get_First_Async
+      demangled: ''
+      offset: 00000F70
+    - name: List_Remove_First_Async
+      demangled: ''
+      offset: 00000F84
+    - name: ReadIntervalTOHandler
+      demangled: ''
+      offset: 00000F98
+    - name: ReadTotalTOHandler
+      demangled: ''
+      offset: 00000FDD
+    - name: WriteTotalTOHandler
+      demangled: ''
+      offset: 0000100D
+    - name: SetReadCommTimeouts
+      demangled: ''
+      offset: '00001026'
+    - name: SetWriteCommTimeouts
+      demangled: ''
+      offset: '00001067'
+    - name: VCOMM_SetNextRequest
+      demangled: ''
+      offset: '00001091'
+    - name: _VCOMM_SetNextRequest
+      demangled: ''
+      offset: '00001091'
+    - name: MyPageUnlock
+      demangled: ''
+      offset: '00001117'
+    - name: _VCOMM_Dequeue_Request
+      demangled: ''
+      offset: '00001153'
+    - name: __VCOMMGetVersion@8
+      demangled: ''
+      offset: '00001164'
+    - name: __VCOMMOpenComm@12
+      demangled: ''
+      offset: '00001180'
+    - name: __VCOMMSetupComm@20
+      demangled: ''
+      offset: 0000119C
+    - name: __VCOMMEscapeCommFunction@16
+      demangled: ''
+      offset: 000011B8
+    - name: __VCOMMGetCommMask@16
+      demangled: ''
+      offset: 000011D4
+    - name: __VCOMMGetCommProp@16
+      demangled: ''
+      offset: 000011F0
+    - name: __VCOMMGetCommState@16
+      demangled: ''
+      offset: 0000120C
+    - name: __VCOMMGetCommTimeouts@16
+      demangled: ''
+      offset: '00001228'
+    - name: __VCOMMPurgeComm@16
+      demangled: ''
+      offset: '00001244'
+    - name: __VCOMMSetCommMask@16
+      demangled: ''
+      offset: '00001260'
+    - name: __VCOMMSetCommState@16
+      demangled: ''
+      offset: 0000127C
+    - name: __VCOMMSetCommTimeouts@16
+      demangled: ''
+      offset: '00001298'
+    - name: __VCOMMTransmitCommChar@16
+      demangled: ''
+      offset: 000012B4
+    - name: __VCOMMWaitCommEvent@24
+      demangled: ''
+      offset: 000012D0
+    - name: __VCOMMGetCommModemStatus@16
+      demangled: ''
+      offset: 000012EC
+    - name: __VCOMMWriteComm@32
+      demangled: ''
+      offset: '00001308'
+    - name: __VCOMMReadComm@32
+      demangled: ''
+      offset: '00001324'
+    - name: __VCOMMClearCommError@20
+      demangled: ''
+      offset: '00001340'
+    - name: __VCOMMCloseComm@12
+      demangled: ''
+      offset: 0000135C
+    - name: __VCOMMGetLastError@12
+      demangled: ''
+      offset: '00001378'
+    - name: __VCOMMDequeueRequest@16
+      demangled: ''
+      offset: '00001394'
+    - name: __VCOMMQueryFriendlyName@12
+      demangled: ''
+      offset: 000013B0
+    - name: __VCOMMGetCommConfig@20
+      demangled: ''
+      offset: 000013CC
+    - name: __VCOMMSetCommConfig@20
+      demangled: ''
+      offset: '000013E8'
+    - name: __VCOMMGetWin32Error@16
+      demangled: ''
+      offset: '00001404'
+    - name: __VCOMMFlushFileBuffers@12
+      demangled: ''
+      offset: '00001420'
+    - name: __VCOMMDeviceIOControl@40
+      demangled: ''
+      offset: 0000143C
+    - name: _GetAllocBase
+      demangled: ''
+      offset: '00001458'
+    - name: WriteRegValueHardware
+      demangled: ''
+      offset: 000014A9
+    - name: WriteRegDeviceMap
+      demangled: ''
+      offset: 000014CA
+    - name: NamePort
+      demangled: ''
+      offset: '00001538'
+    - name: _NamePort
+      demangled: ''
+      offset: '00001538'
+    - name: StrCopy
+      demangled: ''
+      offset: '00001777'
+    - name: GetEntryFromReg
+      demangled: ''
+      offset: 0000178E
+    - name: AddDriverEntry
+      demangled: ''
+      offset: 000017C0
+    - name: _MapName
+      demangled: ''
+      offset: '00001835'
+    - name: _MapNameFree
+      demangled: ''
+      offset: 000018D1
+    - name: MatchName
+      demangled: ''
+      offset: 000018F0
+    - name: _MatchName
+      demangled: ''
+      offset: 000018F0
+    - name: CompareNames
+      demangled: ''
+      offset: 000019AB
+    - name: _VCOMMLoadDevice
+      demangled: ''
+      offset: 00001A74
+    - name: VCOMMLoadVxD
+      demangled: ''
+      offset: 00001AF9
+    - name: VCOMMUnLoadDevice
+      demangled: ''
+      offset: 00001B1B
+    - name: PNP_Register
+      demangled: ''
+      offset: 00001B8B
+    - name: _VCOMM_Enumerate_DevNodes
+      demangled: ''
+      offset: 00001C01
+    - name: _VCOMM_Get_Contention_Handler
+      demangled: ''
+      offset: 00001C15
+    - name: _VCOMM_Map_Name_To_Resource
+      demangled: ''
+      offset: 00001C53
+    - name: _VCOMM_Map_Name_To_Res
+      demangled: ''
+      offset: 00001C9D
+    - name: _VCOMM_Contention_Manager
+      demangled: ''
+      offset: 00001CA6
+    - name: _VCOMM_Acquire_Resource
+      demangled: ''
+      offset: 00001CC1
+    - name: _VCOMM_Release_Resource
+      demangled: ''
+      offset: 00001D25
+    - name: _VCOMM_Steal_Resource
+      demangled: ''
+      offset: 00001D62
+    - name: _VCOMM_Add_Resource
+      demangled: ''
+      offset: 00001DB0
+    - name: _VCOMM_Remove_Resource
+      demangled: ''
+      offset: 00001DBC
+    - name: DestroyPortInstance
+      demangled: ''
+      offset: 00001DC5
+    - name: PowerManagePorts
+      demangled: ''
+      offset: '00001E01'
+    - name: IsThisAnACPIMachine
+      demangled: ''
+      offset: 00001F44
+  - num: '5'
+    name: _PDATA
+    offset: 000037D0
+    symbols:
+    - name: PDListHead
+      demangled: ''
+      offset: '00000000'
+    - name: ProtocolHead
+      demangled: ''
+      offset: '00000008'
+    - name: ExtComStat
+      demangled: ''
+      offset: '00000098'
+    - name: SavedWaits
+      demangled: ''
+      offset: 000002C0
+    - name: APIProfile
+      demangled: ''
+      offset: 000002C4
+    - name: CurrentPortInstance
+      demangled: ''
+      offset: '00000304'
+    - name: OverrideDriver
+      demangled: ''
+      offset: 0000030C
+    - name: DisablePM
+      demangled: ''
+      offset: 000003DA
+    - name: PortList
+      demangled: ''
+      offset: 0000058A
+    - name: GlobalFlags
+      demangled: ''
+      offset: 0000059B
+    - name: numKnownPorts
+      demangled: ''
+      offset: '000005E9'
+  - num: '6'
+    name: _RARE
+    offset: 000042A0
+    symbols:
+    - name: _W32_VCOMMGetVersion
+      demangled: ''
+      offset: '00000000'
+    - name: _W32_VCOMMOpenComm
+      demangled: ''
+      offset: 0000000E
+    - name: _W32_VCOMMSetupComm
+      demangled: ''
+      offset: '00000057'
+    - name: _W32_VCOMMEscapeCommFunction
+      demangled: ''
+      offset: '00000096'
+    - name: _W32_VCOMMGetCommMask
+      demangled: ''
+      offset: 000000C0
+    - name: _W32_VCOMMGetCommProp
+      demangled: ''
+      offset: 000000DE
+    - name: VCOMM_Map_Ring0DCB_To_Win32
+      demangled: ''
+      offset: 000000F2
+    - name: _W32_VCOMMGetCommState
+      demangled: ''
+      offset: 000001BF
+    - name: _W32_VCOMMGetCommTimeouts
+      demangled: ''
+      offset: 000001F6
+    - name: _W32_VCOMMPurgeComm
+      demangled: ''
+      offset: '00000218'
+    - name: _W32_VCOMMSetCommMask
+      demangled: ''
+      offset: '00000299'
+    - name: VCOMM_Map_Win32DCB_To_Ring0
+      demangled: ''
+      offset: 000002DF
+    - name: _W32_VCOMMSetCommState
+      demangled: ''
+      offset: 000003A4
+    - name: _W32_VCOMMSetCommTimeouts
+      demangled: ''
+      offset: 000003D6
+    - name: _W32_VCOMMTransmitCommChar
+      demangled: ''
+      offset: 000003FD
+    - name: _W32_VCOMMWaitCommEvent
+      demangled: ''
+      offset: 0000040B
+    - name: _W32_VCOMMGetCommModemStatus
+      demangled: ''
+      offset: '00000475'
+    - name: _W32_VCOMMWriteCOMM
+      demangled: ''
+      offset: '00000489'
+    - name: MyPageLock
+      demangled: ''
+      offset: '00000509'
+    - name: _W32_VCOMMReadCOMM
+      demangled: ''
+      offset: '00000552'
+    - name: _W32_VCOMMClearCommError
+      demangled: ''
+      offset: 000005A5
+    - name: _W32_VCOMMCloseComm
+      demangled: ''
+      offset: 000005B9
+    - name: _W32_VCOMMGetLastError
+      demangled: ''
+      offset: 000005DB
+    - name: _W32_VCOMMDequeueRequest
+      demangled: ''
+      offset: 000005EF
+    - name: _W32_VCOMMQueryFriendlyName
+      demangled: ''
+      offset: 000005F8
+    - name: _W32_VCOMMGetCommConfig
+      demangled: ''
+      offset: 0000060E
+    - name: _W32_VCOMMSetCommConfig
+      demangled: ''
+      offset: 0000061E
+    - name: _W32_VCOMMGetWin32Error
+      demangled: ''
+      offset: 0000062E
+    - name: _W32_VCOMMFlushFileBuffers
+      demangled: ''
+      offset: '00000670'
+    - name: _W32_VCOMMDeviceIOControl
+      demangled: ''
+      offset: 000006B4
+    - name: _VCOMM_DIOC_Complete
+      demangled: ''
+      offset: '00000735'
+    - name: VCOMM_DIOC_Return_Values
+      demangled: ''
+      offset: 0000075D
+  - num: '7'
+    name: _VMDESTROY
+    offset: '00000000'
+    symbols:
+    - name: _DoCallOut
+      demangled: ''
+      offset: '00000000'
+    - name: AskUserToClosePort
+      demangled: ''
+      offset: 000000BE
+    - name: _VCOMM_Pnp_Driver
+      demangled: ''
+      offset: '00000119'
+    - name: VCOMM_New_DevNode
+      demangled: ''
+      offset: 000004EA
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 00000A10
+    symbols:
+    - name: VCOMM_Control
+      demangled: ''
+      offset: '00000000'
+    - name: _VCOMM_Comm_Notify
+      demangled: ''
+      offset: '00000020'
+    - name: PostMsgEvent
+      demangled: ''
+      offset: 0000004B
+    - name: _VCOMM_ClearCommError
+      demangled: ''
+      offset: 000000AC
+    - name: _VCOMM_GetModemStatus
+      demangled: ''
+      offset: 000000B0
+    - name: _VCOMM_TransmitCommChar
+      demangled: ''
+      offset: 000000B4
+    - name: _VCOMM_WriteComm
+      demangled: ''
+      offset: 000000B8
+    - name: _VCOMM_ReadComm
+      demangled: ''
+      offset: 000000C6
+    - name: _VCOMM_GetCommEventMask
+      demangled: ''
+      offset: 000000D4
+    - name: _VCOMM_EscapeCommFunction
+      demangled: ''
+      offset: 000000D8
+    - name: _VCOMM_GetCommQueueStatus
+      demangled: ''
+      offset: 000000DC
+    - name: _VCOMM_PurgeComm
+      demangled: ''
+      offset: '000000E0'
+    - name: _VCOMM_GetLastError
+      demangled: ''
+      offset: '000000E4'
+    - name: _VCOMM_SetCommState
+      demangled: ''
+      offset: 000000EC
+    - name: VCOMM_Common
+      demangled: ''
+      offset: 000000F0
+    - name: VCOMM_Request_Satisfied
+      demangled: ''
+      offset: '00000124'
+    - name: _VCOMM_Request_Satisfied
+      demangled: ''
+      offset: '00000124'
+    - name: AssertHandleEDI
+      demangled: ''
+      offset: 000001BD
+    - name: AssertThread
+      demangled: ''
+      offset: 000001C5
+    - name: FillOverlappedStruct
+      demangled: ''
+      offset: 000001D2
+    - name: CheckEvent
+      demangled: ''
+      offset: 000001D6
+    - name: AssertHandle
+      demangled: ''
+      offset: 000001DA
+    - name: VCOMMW32_Completion_Routine
+      demangled: ''
+      offset: '000001E8'
+    - name: _VCOMMW32_Event_Completion_Routine
+      demangled: ''
+      offset: 000001FF
+    - name: VCOMMW32_Event_Completion_Routine
+      demangled: ''
+      offset: 000001FF
+    - name: VCOMMW32_Event_Complete_Return_Values
+      demangled: ''
+      offset: 0000023F
+    - name: _VCOMM_Get_Version
+      demangled: ''
+      offset: 0000027C
+    - name: __VCOMM_Register_Port_Driver
+      demangled: ''
+      offset: '00000280'
+    - name: __VCOMM_Acquire_Port
+      demangled: ''
+      offset: '00000284'
+    - name: __VCOMM_Release_Port
+      demangled: ''
+      offset: '00000288'
+    - name: __VCOMM_OpenComm
+      demangled: ''
+      offset: 0000028C
+    - name: __VCOMM_SetCommState
+      demangled: ''
+      offset: '00000290'
+    - name: __VCOMM_GetCommState
+      demangled: ''
+      offset: '00000294'
+    - name: __VCOMM_SetupComm
+      demangled: ''
+      offset: '00000298'
+    - name: __VCOMM_TransmitCommChar
+      demangled: ''
+      offset: 0000029C
+    - name: __VCOMM_CloseComm
+      demangled: ''
+      offset: 000002A0
+    - name: __VCOMM_GetCommQueueStatus
+      demangled: ''
+      offset: 000002A4
+    - name: __VCOMM_ClearCommError
+      demangled: ''
+      offset: 000002A8
+    - name: __VCOMM_GetModemStatus
+      demangled: ''
+      offset: 000002AC
+    - name: __VCOMM_GetCommProperties
+      demangled: ''
+      offset: 000002B0
+    - name: __VCOMM_EscapeCommFunction
+      demangled: ''
+      offset: 000002B4
+    - name: __VCOMM_PurgeComm
+      demangled: ''
+      offset: 000002B8
+    - name: __VCOMM_SetCommEventMask
+      demangled: ''
+      offset: 000002BC
+    - name: __VCOMM_GetCommEventMask
+      demangled: ''
+      offset: 000002C0
+    - name: __VCOMM_WriteComm
+      demangled: ''
+      offset: 000002C4
+    - name: __VCOMM_ReadComm
+      demangled: ''
+      offset: 000002C8
+    - name: __VCOMM_EnableCommNotification
+      demangled: ''
+      offset: 000002CC
+    - name: __VCOMM_GetLastError
+      demangled: ''
+      offset: 000002D0
+    - name: __VCOMM_Steal_Port
+      demangled: ''
+      offset: 000002D4
+    - name: __VCOMM_SetReadCallBack
+      demangled: ''
+      offset: 000002D8
+    - name: __VCOMM_SetWriteCallBack
+      demangled: ''
+      offset: 000002DC
+    - name: __VCOMM_Add_Port
+      demangled: ''
+      offset: '000002E0'
+    - name: __VCOMM_GetSetCommTimeouts
+      demangled: ''
+      offset: '000002E4'
+    - name: __VCOMM_SetWriteRequest
+      demangled: ''
+      offset: '000002E8'
+    - name: __VCOMM_SetReadRequest
+      demangled: ''
+      offset: 000002EC
+    - name: __VCOMM_Dequeue_Request
+      demangled: ''
+      offset: 000002F0
+    - name: __VCOMM_Enumerate_DevNodes
+      demangled: ''
+      offset: 000002F4
+    - name: _VCOMM_Map_Win32DCB_To_Ring0
+      demangled: ''
+      offset: 000002F8
+    - name: _VCOMM_Map_Ring0DCB_To_Win32
+      demangled: ''
+      offset: 000002FC
+    - name: __VCOMM_Get_Contention_Handler
+      demangled: ''
+      offset: '00000300'
+    - name: __VCOMM_Map_Name_To_Resource
+      demangled: ''
+      offset: '00000304'
+    - name: __VCOMM_PowerOnOffComm
+      demangled: ''
+      offset: '00000308'
+    - name: VCOMM_DDB
+      demangled: ''
+      offset: 0000030C
+    - name: Asserting
+      demangled: ''
+      offset: '00000884'
+  - num: '2'
+    name: _LMGROUP
+    offset: 00000A50
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000018'
+  - num: '3'
+    name: _IGROUP
+    offset: 00000C60
+    symbols:
+    - name: VCOMM_Device_Init
+      demangled: ''
+      offset: '00000000'
+    - name: VCOMMsrv_Device_Init
+      demangled: ''
+      offset: '00000048'
+    - name: VCOMMW32_Device_Init
+      demangled: ''
+      offset: 0000005C
+    - name: VCOMMPNP_Initialize
+      demangled: ''
+      offset: '00000070'
+    - name: VCOMMPNP_Init_Complete
+      demangled: ''
+      offset: 000000A7
+  - num: '4'
+    name: _PTEXT
+    offset: '00003200'
+    symbols:
+    - name: VCOMM_Get_Version
+      demangled: ''
+      offset: '00000000'
+    - name: _VCOMM_Register_Port_Driver
+      demangled: ''
+      offset: '00000007'
+    - name: _VCOMM_Add_Port
+      demangled: ''
+      offset: '00000041'
+    - name: _VCOMM_Acquire_Port
+      demangled: ''
+      offset: '00000094'
+    - name: Contention_Dlg
+      demangled: ''
+      offset: '00000142'
+    - name: _VCOMM_Release_Port
+      demangled: ''
+      offset: '00000163'
+    - name: _VCOMM_Steal_Port
+      demangled: ''
+      offset: '00000196'
+    - name: VCOMM_PM_API
+      demangled: ''
+      offset: 000001AC
+    - name: VCOMM_PM_Open
+      demangled: ''
+      offset: 000001C3
+    - name: VCOMM_PM_SetCom
+      demangled: ''
+      offset: '00000221'
+    - name: VCOMM_PM_Setup
+      demangled: ''
+      offset: 000002B8
+    - name: VCOMM_PM_ctx
+      demangled: ''
+      offset: '00000329'
+    - name: VCOMM_PM_TrmCom
+      demangled: ''
+      offset: '00000343'
+    - name: VCOMM_PM_Stacom
+      demangled: ''
+      offset: '00000351'
+    - name: VCOMM_PM_cextnfcn
+      demangled: ''
+      offset: 000003A4
+    - name: VCOMM_PM_cFlush
+      demangled: ''
+      offset: 000003D0
+    - name: VCOMM_PM_cevt
+      demangled: ''
+      offset: 000003EA
+    - name: VCOMM_PM_cevtget
+      demangled: ''
+      offset: 0000040F
+    - name: VCOMM_PM_SetMSRShadow
+      demangled: ''
+      offset: '00000434'
+    - name: VCOMM_PM_WriteString
+      demangled: ''
+      offset: '00000453'
+    - name: VCOMM_PM_ReadString
+      demangled: ''
+      offset: 0000048B
+    - name: VCOMM_PM_EnableNotify
+      demangled: ''
+      offset: 000004CE
+    - name: StrCmp
+      demangled: ''
+      offset: '00000534'
+    - name: _PowerThisDamnPortOn
+      demangled: ''
+      offset: 0000055B
+    - name: _VCOMM_PowerOnOffComm
+      demangled: ''
+      offset: 000005CE
+    - name: _VCOMM_OpenComm
+      demangled: ''
+      offset: '00000675'
+    - name: _VCOMM_GetCommState
+      demangled: ''
+      offset: '00000849'
+    - name: _VCOMM_SetupComm
+      demangled: ''
+      offset: '00000850'
+    - name: _VCOMM_CloseComm
+      demangled: ''
+      offset: '00000857'
+    - name: _SetPState
+      demangled: ''
+      offset: 000008F7
+    - name: _VCOMM_GetCommProperties
+      demangled: ''
+      offset: '00000929'
+    - name: _VCOMM_EnableCommNotification
+      demangled: ''
+      offset: '00000930'
+    - name: _VCOMM_SetReadCallBack
+      demangled: ''
+      offset: '00000937'
+    - name: _VCOMM_SetWriteCallBack
+      demangled: ''
+      offset: 0000093E
+    - name: _VCOMM_SetCommEventMask
+      demangled: ''
+      offset: '00000945'
+    - name: _VCOMM_GetSetCommTimeouts
+      demangled: ''
+      offset: 0000094C
+    - name: _VCOMM_SetWriteRequest
+      demangled: ''
+      offset: 0000098A
+    - name: QueueUpRequest
+      demangled: ''
+      offset: 00000A5F
+    - name: _VCOMM_SetReadRequest
+      demangled: ''
+      offset: 00000A8C
+    - name: FreeRequests
+      demangled: ''
+      offset: 00000BB4
+    - name: _VCOMM_WriteRequestComplete
+      demangled: ''
+      offset: 00000BED
+    - name: VCOMM_ReadRequestComplete
+      demangled: ''
+      offset: 00000C8A
+    - name: CallIORoutineAndCleanup
+      demangled: ''
+      offset: 00000CD9
+    - name: List_Get_First_Async
+      demangled: ''
+      offset: 00000CEE
+    - name: List_Remove_First_Async
+      demangled: ''
+      offset: 00000CFA
+    - name: ReadIntervalTOHandler
+      demangled: ''
+      offset: 00000D06
+    - name: ReadTotalTOHandler
+      demangled: ''
+      offset: 00000D43
+    - name: WriteTotalTOHandler
+      demangled: ''
+      offset: 00000D6B
+    - name: SetReadCommTimeouts
+      demangled: ''
+      offset: 00000D7C
+    - name: SetWriteCommTimeouts
+      demangled: ''
+      offset: 00000DBD
+    - name: VCOMM_SetNextRequest
+      demangled: ''
+      offset: 00000DE7
+    - name: _VCOMM_SetNextRequest
+      demangled: ''
+      offset: 00000DE7
+    - name: MyPageUnlock
+      demangled: ''
+      offset: '00000E65'
+    - name: _VCOMM_Dequeue_Request
+      demangled: ''
+      offset: 00000E8D
+    - name: __VCOMMGetVersion@8
+      demangled: ''
+      offset: '00000E94'
+    - name: __VCOMMOpenComm@12
+      demangled: ''
+      offset: 00000EA8
+    - name: __VCOMMSetupComm@20
+      demangled: ''
+      offset: 00000EBC
+    - name: __VCOMMEscapeCommFunction@16
+      demangled: ''
+      offset: 00000ED0
+    - name: __VCOMMGetCommMask@16
+      demangled: ''
+      offset: 00000EE4
+    - name: __VCOMMGetCommProp@16
+      demangled: ''
+      offset: 00000EF8
+    - name: __VCOMMGetCommState@16
+      demangled: ''
+      offset: 00000F0C
+    - name: __VCOMMGetCommTimeouts@16
+      demangled: ''
+      offset: 00000F20
+    - name: __VCOMMPurgeComm@16
+      demangled: ''
+      offset: 00000F34
+    - name: __VCOMMSetCommMask@16
+      demangled: ''
+      offset: 00000F48
+    - name: __VCOMMSetCommState@16
+      demangled: ''
+      offset: 00000F5C
+    - name: __VCOMMSetCommTimeouts@16
+      demangled: ''
+      offset: 00000F70
+    - name: __VCOMMTransmitCommChar@16
+      demangled: ''
+      offset: 00000F84
+    - name: __VCOMMWaitCommEvent@24
+      demangled: ''
+      offset: 00000F98
+    - name: __VCOMMGetCommModemStatus@16
+      demangled: ''
+      offset: 00000FAC
+    - name: __VCOMMWriteComm@32
+      demangled: ''
+      offset: 00000FC0
+    - name: __VCOMMReadComm@32
+      demangled: ''
+      offset: 00000FD4
+    - name: __VCOMMClearCommError@20
+      demangled: ''
+      offset: 00000FE8
+    - name: __VCOMMCloseComm@12
+      demangled: ''
+      offset: 00000FFC
+    - name: __VCOMMGetLastError@12
+      demangled: ''
+      offset: '00001010'
+    - name: __VCOMMDequeueRequest@16
+      demangled: ''
+      offset: '00001024'
+    - name: __VCOMMQueryFriendlyName@12
+      demangled: ''
+      offset: '00001038'
+    - name: __VCOMMGetCommConfig@20
+      demangled: ''
+      offset: 0000104C
+    - name: __VCOMMSetCommConfig@20
+      demangled: ''
+      offset: '00001060'
+    - name: __VCOMMGetWin32Error@16
+      demangled: ''
+      offset: '00001074'
+    - name: __VCOMMFlushFileBuffers@12
+      demangled: ''
+      offset: '00001088'
+    - name: __VCOMMDeviceIOControl@40
+      demangled: ''
+      offset: 0000109C
+    - name: _GetAllocBase
+      demangled: ''
+      offset: 000010B0
+    - name: WriteRegValueHardware
+      demangled: ''
+      offset: 000010F9
+    - name: WriteRegDeviceMap
+      demangled: ''
+      offset: '00001112'
+    - name: _NamePort
+      demangled: ''
+      offset: '00001158'
+    - name: NamePort
+      demangled: ''
+      offset: '00001158'
+    - name: StrCopy
+      demangled: ''
+      offset: 0000138F
+    - name: GetEntryFromReg
+      demangled: ''
+      offset: 0000139E
+    - name: AddDriverEntry
+      demangled: ''
+      offset: 000013C8
+    - name: _MapName
+      demangled: ''
+      offset: '00001435'
+    - name: _MapNameFree
+      demangled: ''
+      offset: 000014C9
+    - name: _MatchName
+      demangled: ''
+      offset: '000014E0'
+    - name: MatchName
+      demangled: ''
+      offset: '000014E0'
+    - name: CompareNames
+      demangled: ''
+      offset: '00001593'
+    - name: _VCOMMLoadDevice
+      demangled: ''
+      offset: '00001654'
+    - name: VCOMMLoadVxD
+      demangled: ''
+      offset: 000016D1
+    - name: VCOMMUnLoadDevice
+      demangled: ''
+      offset: 000016EB
+    - name: PNP_Register
+      demangled: ''
+      offset: '00001753'
+    - name: _VCOMM_Enumerate_DevNodes
+      demangled: ''
+      offset: 000017B6
+    - name: _VCOMM_Get_Contention_Handler
+      demangled: ''
+      offset: 000017BC
+    - name: _VCOMM_Map_Name_To_Resource
+      demangled: ''
+      offset: 000017DA
+    - name: _VCOMM_Map_Name_To_Res
+      demangled: ''
+      offset: '00001819'
+    - name: _VCOMM_Contention_Manager
+      demangled: ''
+      offset: 0000181A
+    - name: _VCOMM_Acquire_Resource
+      demangled: ''
+      offset: 0000182D
+    - name: _VCOMM_Release_Resource
+      demangled: ''
+      offset: '00001889'
+    - name: _VCOMM_Steal_Resource
+      demangled: ''
+      offset: 000018BE
+    - name: _VCOMM_Add_Resource
+      demangled: ''
+      offset: '00001901'
+    - name: _VCOMM_Remove_Resource
+      demangled: ''
+      offset: '00001905'
+    - name: DestroyPortInstance
+      demangled: ''
+      offset: '00001906'
+    - name: PowerManagePorts
+      demangled: ''
+      offset: '00001934'
+    - name: IsThisAnACPIMachine
+      demangled: ''
+      offset: 00001A43
+  - num: '5'
+    name: _PDATA
+    offset: 000032A0
+    symbols:
+    - name: PDListHead
+      demangled: ''
+      offset: '00000000'
+    - name: ProtocolHead
+      demangled: ''
+      offset: '00000008'
+    - name: ExtComStat
+      demangled: ''
+      offset: 0000003C
+    - name: CurrentPortInstance
+      demangled: ''
+      offset: 000000B4
+    - name: OverrideDriver
+      demangled: ''
+      offset: 000000BC
+    - name: DisablePM
+      demangled: ''
+      offset: 0000018A
+    - name: PortList
+      demangled: ''
+      offset: 0000033A
+    - name: GlobalFlags
+      demangled: ''
+      offset: 0000034B
+  - num: '6'
+    name: _RARE
+    offset: 00003C90
+    symbols:
+    - name: _W32_VCOMMGetVersion
+      demangled: ''
+      offset: '00000000'
+    - name: _W32_VCOMMOpenComm
+      demangled: ''
+      offset: '00000006'
+    - name: _W32_VCOMMSetupComm
+      demangled: ''
+      offset: '00000041'
+    - name: _W32_VCOMMEscapeCommFunction
+      demangled: ''
+      offset: '00000072'
+    - name: _W32_VCOMMGetCommMask
+      demangled: ''
+      offset: 0000008E
+    - name: _W32_VCOMMGetCommProp
+      demangled: ''
+      offset: 0000009E
+    - name: VCOMM_Map_Ring0DCB_To_Win32
+      demangled: ''
+      offset: 000000A4
+    - name: _W32_VCOMMGetCommState
+      demangled: ''
+      offset: '00000169'
+    - name: _W32_VCOMMGetCommTimeouts
+      demangled: ''
+      offset: '00000192'
+    - name: _W32_VCOMMPurgeComm
+      demangled: ''
+      offset: 000001A6
+    - name: _W32_VCOMMSetCommMask
+      demangled: ''
+      offset: '00000219'
+    - name: VCOMM_Map_Win32DCB_To_Ring0
+      demangled: ''
+      offset: 0000024B
+    - name: _W32_VCOMMSetCommState
+      demangled: ''
+      offset: '00000308'
+    - name: _W32_VCOMMSetCommTimeouts
+      demangled: ''
+      offset: 0000032C
+    - name: _W32_VCOMMTransmitCommChar
+      demangled: ''
+      offset: '00000345'
+    - name: _W32_VCOMMWaitCommEvent
+      demangled: ''
+      offset: 0000034B
+    - name: _W32_VCOMMGetCommModemStatus
+      demangled: ''
+      offset: 000003A1
+    - name: _W32_VCOMMWriteCOMM
+      demangled: ''
+      offset: 000003A7
+    - name: MyPageLock
+      demangled: ''
+      offset: '00000409'
+    - name: _W32_VCOMMReadCOMM
+      demangled: ''
+      offset: '00000441'
+    - name: _W32_VCOMMClearCommError
+      demangled: ''
+      offset: 0000048C
+    - name: _W32_VCOMMCloseComm
+      demangled: ''
+      offset: '00000492'
+    - name: _W32_VCOMMGetLastError
+      demangled: ''
+      offset: 000004AC
+    - name: _W32_VCOMMDequeueRequest
+      demangled: ''
+      offset: 000004B2
+    - name: _W32_VCOMMQueryFriendlyName
+      demangled: ''
+      offset: 000004B3
+    - name: _W32_VCOMMGetCommConfig
+      demangled: ''
+      offset: 000004C1
+    - name: _W32_VCOMMSetCommConfig
+      demangled: ''
+      offset: 000004C9
+    - name: _W32_VCOMMGetWin32Error
+      demangled: ''
+      offset: 000004D1
+    - name: _W32_VCOMMFlushFileBuffers
+      demangled: ''
+      offset: '00000505'
+    - name: _W32_VCOMMDeviceIOControl
+      demangled: ''
+      offset: '00000541'
+    - name: _VCOMM_DIOC_Complete
+      demangled: ''
+      offset: 000005BA
+    - name: VCOMM_DIOC_Return_Values
+      demangled: ''
+      offset: 000005DA
+  - num: '7'
+    name: _VMDESTROY
+    offset: '00000000'
+    symbols:
+    - name: _DoCallOut
+      demangled: ''
+      offset: '00000000'
+    - name: AskUserToClosePort
+      demangled: ''
+      offset: 000000B6
+    - name: _VCOMM_Pnp_Driver
+      demangled: ''
+      offset: '00000109'
+    - name: VCOMM_New_DevNode
+      demangled: ''
+      offset: 000004BE

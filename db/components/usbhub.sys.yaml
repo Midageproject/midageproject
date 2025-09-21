@@ -1,0 +1,3877 @@
+filename: usbhub.sys
+binary: USBHUB
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../dbg.c
+  - ../hubpwr.c
+  - intel/lldiv.asm
+  - ../ioctli.c
+  - ../parent.c
+  - ../pnppower.c
+  - ../sync.c
+  - ../usbhub.c
+  - ../globals.c
+  - UrbSelectConfiguration.C
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00002800'
+    symbols:
+    - name: _USBH_ShowPortState@8
+      processed: ''
+      offset: '00000000'
+    - name: _USBH_CompleteIrp@8
+      processed: ''
+      offset: '00000110'
+    - name: _USBH_PassIrp@8
+      processed: ''
+      offset: '00000130'
+    - name: _USBH_FdoDispatch@8
+      processed: ''
+      offset: '00000190'
+    - name: _USBH_HubDispatch@8
+      processed: ''
+      offset: '000004E0'
+    - name: _USBH_DriverUnload@4
+      processed: ''
+      offset: '00000580'
+    - name: _USBH_AbortInterruptPipe@4
+      processed: ''
+      offset: 000005A0
+    - name: _IsBitSet@8
+      processed: ''
+      offset: '00000690'
+    - name: _USBH_OpenConfiguration@4
+      processed: ''
+      offset: '000006E0'
+    - name: _USBH_CloseConfiguration@4
+      processed: ''
+      offset: '000007E0'
+    - name: _USBH_SubmitInterruptTransfer@4
+      processed: ''
+      offset: '00000880'
+    - name: _USBH_ChangeIndication@12
+      processed: ''
+      offset: 00000A90
+    - name: _USBH_ChangeIndicationQueryChange@16
+      processed: ''
+      offset: '00000E30'
+    - name: _USBH_ChangeIndicationProcessChange@12
+      processed: ''
+      offset: '00001080'
+    - name: _USBH_ChangeIndicationAckChange@16
+      processed: ''
+      offset: '00001260'
+    - name: _USBH_ChangeIndicationAckChangeComplete@12
+      processed: ''
+      offset: '00001400'
+    - name: _USBH_AddDevice@8
+      processed: ''
+      offset: 000014C0
+    - name: _USBH_PnPIrp_Complete@12
+      processed: ''
+      offset: '00001610'
+    - name: _USBH_FdoPnP@12
+      processed: ''
+      offset: '000016E0'
+    - name: _USBH_DeferIrpCompletion@12
+      processed: ''
+      offset: '00001920'
+    - name: _USBH_ResetInterruptPipe@4
+      processed: ''
+      offset: '00001950'
+    - name: _USBH_GetPortStatus@8
+      processed: ''
+      offset: 00001A20
+    - name: _USBH_EnableParentPort@4
+      processed: ''
+      offset: 00001B60
+    - name: _USBH_ResetHub@4
+      processed: ''
+      offset: 00001C90
+    - name: _USBH_WriteRegistryKeyValue@16
+      processed: ''
+      offset: 00001D00
+    - name: _USBH_WriteFailReason@8
+      processed: ''
+      offset: 00001D90
+    - name: _USBH_DeviceStateChangeWorker@4
+      processed: ''
+      offset: '00001E40'
+    - name: _UsbhWorkItemTimeoutDpc@16
+      processed: ''
+      offset: 00001FC0
+    - name: _USBH_InvalidateHubDeviceState@4
+      processed: ''
+      offset: 00001FF0
+    - name: _USBH_InvalidatePortDeviceState@12
+      processed: ''
+      offset: '00002110'
+    - name: _USBH_FlushPortChange@4
+      processed: ''
+      offset: '000021E0'
+    - name: _UsbhTimeoutDPC@16
+      processed: ''
+      offset: 000022C0
+    - name: _UsbhGetConnectionStatus@4
+      processed: ''
+      offset: '00002310'
+    - name: _USBH_PdoUrbFilter@8
+      processed: ''
+      offset: '00002380'
+    - name: _GetString@8
+      processed: ''
+      offset: 000025C0
+    - name: _USBH_PdoStopDevice@8
+      processed: ''
+      offset: '00002660'
+    - name: _USBH_PdoDispatch@8
+      processed: ''
+      offset: 000027B0
+    - name: _USBH_ResetDevice@12
+      processed: ''
+      offset: 00002B40
+    - name: _USBH_RestoreDevice@8
+      processed: ''
+      offset: 000030C0
+    - name: _USBH_SymbolicLink@8
+      processed: ''
+      offset: 000031C0
+    - name: _USBH_Assert@16
+      processed: ''
+      offset: '00003260'
+    - name: _USBH_KdPrintX
+      processed: ''
+      offset: 000032A0
+    - name: _UsbhWarning@12
+      processed: ''
+      offset: '00003340'
+    - name: _UsbhInfo@4
+      processed: ''
+      offset: 000033B0
+    - name: _UsbhGetHeap@16
+      processed: ''
+      offset: '00003590'
+    - name: _UsbhRetHeap@12
+      processed: ''
+      offset: 000035C0
+    - name: _USBH_Debug_LogEntry@20
+      processed: ''
+      offset: '000035E0'
+    - name: _USBH_LogInit@0
+      processed: ''
+      offset: 000036F0
+    - name: _USBH_LogFree@0
+      processed: ''
+      offset: '00003750'
+    - name: _USBH_PdoIoctlResetPort@8
+      processed: ''
+      offset: '00003770'
+    - name: _USBH_PdoIoctlCyclePort@8
+      processed: ''
+      offset: 000039B0
+    - name: _USBH_ParentWaitWakeCancel@8
+      processed: ''
+      offset: 00003AA0
+    - name: _USBH_FunctionPdoPower@12
+      processed: ''
+      offset: 00003B50
+    - name: _USBH_ParentPnP@12
+      processed: ''
+      offset: '00003E70'
+    - name: _USBH_ParentPower@12
+      processed: ''
+      offset: '00004050'
+    - name: _USBH_ParentDispatch@8
+      processed: ''
+      offset: '00004330'
+    - name: _USBH_FunctionUrbFilter@8
+      processed: ''
+      offset: '00004510'
+    - name: _USBH_FunctionPdoDispatch@8
+      processed: ''
+      offset: 000048D0
+    - name: _USBH_BuildFunctionConfigurationDescriptor@16
+      processed: ''
+      offset: 00004B30
+    - name: _USBH_ParentCompleteFunctionWakeIrps@8
+      processed: ''
+      offset: 00004CD0
+    - name: _USBH_ParentPoRequestD0Completion@20
+      processed: ''
+      offset: 00004DA0
+    - name: _USBH_ParentWaitWakeIrpCompletion@20
+      processed: ''
+      offset: '00004E40'
+    - name: _USBH_ParentSubmitWaitWakeIrp@4
+      processed: ''
+      offset: 00004EE0
+    - name: _USBH_CompletePowerIrp@12
+      processed: ''
+      offset: 00004FA0
+    - name: _USBH_WaitWakeCancel@8
+      processed: ''
+      offset: '00005050'
+    - name: _USBH_PdoWaitWake@8
+      processed: ''
+      offset: '00005110'
+    - name: _USBH_PoweIrpCompletion@12
+      processed: ''
+      offset: '00005330'
+    - name: _USBH_FdoDeferPoRequestCompletion@20
+      processed: ''
+      offset: '00005400'
+    - name: _USBH_FdoPoRequestD0Completion@20
+      processed: ''
+      offset: 000054B0
+    - name: _USBH_FdoWaitWakeIrpCompletion@20
+      processed: ''
+      offset: 000055C0
+    - name: _USBH_FdoSubmitWaitWakeIrp@4
+      processed: ''
+      offset: '00005720'
+    - name: _USBD_CreateConfigurationRequestEx@8
+      processed: ''
+      offset: '000057E2'
+    - name: _USBD_ParseConfigurationDescriptorEx@28
+      processed: ''
+      offset: '000057E8'
+    - name: _USBD_GetPdoRegistryParameter@20
+      processed: ''
+      offset: 000057EE
+    - name: _USBD_RemoveDevice@12
+      processed: ''
+      offset: 000057F4
+    - name: _USBD_ParseDescriptors@16
+      processed: ''
+      offset: 000057FA
+    - name: _USBD_InitializeDevice@16
+      processed: ''
+      offset: '00005800'
+    - name: _USBD_CreateDevice@20
+      processed: ''
+      offset: '00005806'
+    - name: _USBD_MakePdoName@8
+      processed: ''
+      offset: 0000580C
+    - name: _USBD_RestoreDevice@12
+      processed: ''
+      offset: '00005812'
+    - name: _USBD_GetDeviceInformation@12
+      processed: ''
+      offset: '00005818'
+    - name: _USBD_GetInterfaceLength@8
+      processed: ''
+      offset: 0000581E
+    - name: '@IofCompleteRequest@8'
+      processed: ''
+      offset: '00005824'
+    - name: '@IofCallDriver@8'
+      processed: ''
+      offset: 0000582A
+    - name: _KeWaitForSingleObject@20
+      processed: ''
+      offset: '00005830'
+    - name: _ExFreePool@4
+      processed: ''
+      offset: '00005836'
+    - name: _KeResetEvent@4
+      processed: ''
+      offset: 0000583C
+    - name: _RtlAssert@16
+      processed: ''
+      offset: '00005842'
+    - name: _IoInitializeIrp@12
+      processed: ''
+      offset: '00005848'
+    - name: _DbgPrint
+      processed: ''
+      offset: 0000584E
+    - name: _KeSetEvent@12
+      processed: ''
+      offset: '00005854'
+    - name: _ExQueueWorkItem@8
+      processed: ''
+      offset: 0000585A
+    - name: '@InterlockedIncrement@4'
+      processed: ''
+      offset: '00005860'
+    - name: '@InterlockedDecrement@4'
+      processed: ''
+      offset: '00005866'
+    - name: _KeReleaseSemaphore@16
+      processed: ''
+      offset: 0000586C
+    - name: _KeGetCurrentIrql@0
+      processed: ''
+      offset: '00005872'
+    - name: _IoInvalidateDeviceRelations@8
+      processed: ''
+      offset: '00005878'
+    - name: _ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 0000587E
+    - name: _IoGetDeviceProperty@20
+      processed: ''
+      offset: '00005884'
+    - name: _IoDeleteDevice@4
+      processed: ''
+      offset: 0000588A
+    - name: _IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '00005890'
+    - name: _IoCreateDevice@28
+      processed: ''
+      offset: '00005896'
+    - name: _IoFreeIrp@4
+      processed: ''
+      offset: 0000589C
+    - name: _KeInitializeEvent@12
+      processed: ''
+      offset: 000058A2
+    - name: _IoAllocateIrp@8
+      processed: ''
+      offset: 000058A8
+    - name: _KeInitializeSemaphore@12
+      processed: ''
+      offset: 000058AE
+    - name: _IoCancelIrp@4
+      processed: ''
+      offset: 000058B4
+    - name: _IoDetachDevice@4
+      processed: ''
+      offset: 000058BA
+    - name: '@ObfReferenceObject@4'
+      processed: ''
+      offset: 000058C0
+    - name: _IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: 000058C6
+    - name: _ZwSetValueKey@24
+      processed: ''
+      offset: 000058CC
+    - name: _RtlInitUnicodeString@8
+      processed: ''
+      offset: 000058D2
+    - name: _ZwClose@4
+      processed: ''
+      offset: 000058D8
+    - name: _IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: 000058DE
+    - name: _IoInvalidateDeviceState@4
+      processed: ''
+      offset: '000058E4'
+    - name: _KeSetTimer@16
+      processed: ''
+      offset: 000058EA
+    - name: _KeInitializeDpc@12
+      processed: ''
+      offset: 000058F0
+    - name: _KeInitializeTimer@4
+      processed: ''
+      offset: 000058F6
+    - name: _KeDelayExecutionThread@12
+      processed: ''
+      offset: 000058FC
+    - name: _KeCancelTimer@4
+      processed: ''
+      offset: '00005902'
+    - name: _KeQueryPerformanceCounter@4
+      processed: ''
+      offset: '00005908'
+    - name: __alldiv
+      processed: ''
+      offset: '00005910'
+    - name: _RtlIntegerToUnicodeString@12
+      processed: ''
+      offset: 000059BA
+    - name: _RtlFreeUnicodeString@4
+      processed: ''
+      offset: 000059C0
+    - name: _IoSetDeviceInterfaceState@8
+      processed: ''
+      offset: 000059C6
+    - name: _IoRegisterDeviceInterface@16
+      processed: ''
+      offset: 000059CC
+    - name: '@KefReleaseSpinLockFromDpcLevel@4'
+      processed: ''
+      offset: 000059D2
+    - name: '@KfReleaseSpinLock@8'
+      processed: ''
+      offset: 000059D8
+    - name: '@KefAcquireSpinLockAtDpcLevel@4'
+      processed: ''
+      offset: 000059DE
+    - name: '@KfAcquireSpinLock@4'
+      processed: ''
+      offset: '000059E4'
+    - name: _KeInitializeSpinLock@4
+      processed: ''
+      offset: 000059EA
+    - name: _PoStartNextPowerIrp@4
+      processed: ''
+      offset: 000059F0
+    - name: _IoReleaseCancelSpinLock@4
+      processed: ''
+      offset: 000059F6
+    - name: '@InterlockedExchange@8'
+      processed: ''
+      offset: 000059FC
+    - name: _IoAcquireCancelSpinLock@4
+      processed: ''
+      offset: 00005A02
+    - name: _PoRequestPowerIrp@24
+      processed: ''
+      offset: 00005A08
+    - name: _PoCallDriver@8
+      processed: ''
+      offset: 00005A0E
+  - num: '2'
+    name: .rdata
+    offset: '00002840'
+    symbols:
+    - name: _GUID_CLASS_USBHUB
+      processed: ''
+      offset: '00000070'
+  - num: '3'
+    name: .data
+    offset: 000029F0
+    symbols:
+    - name: _USBH_PostResetDelay
+      processed: ''
+      offset: '00002278'
+    - name: _Nibble
+      processed: ''
+      offset: 000031D0
+    - name: _VidPidRevString
+      processed: ''
+      offset: '000031E0'
+    - name: _VidPidString
+      processed: ''
+      offset: '00003230'
+    - name: _pwchUsbSlash
+      processed: ''
+      offset: 000043C4
+    - name: _pwchVid
+      processed: ''
+      offset: 000043C8
+    - name: _pwchPid
+      processed: ''
+      offset: 000043CC
+    - name: _pwchRev
+      processed: ''
+      offset: 000043D0
+    - name: _pwchDevClass
+      processed: ''
+      offset: 000043D4
+    - name: _pwchClass
+      processed: ''
+      offset: 000043D8
+    - name: _pwchComposite
+      processed: ''
+      offset: 000043DC
+    - name: _pwchSubClass
+      processed: ''
+      offset: '000043E0'
+    - name: _pwchMultiInterface
+      processed: ''
+      offset: '000043E4'
+    - name: _pwchProt
+      processed: ''
+      offset: '000043E8'
+    - name: _USBH_Debug_Trace_Level
+      processed: ''
+      offset: 000043EC
+    - name: _LogMask
+      processed: ''
+      offset: '00004490'
+    - name: _UsbhDriverObject
+      processed: ''
+      offset: '00007400'
+    - name: _UsbhHeapCount
+      processed: ''
+      offset: '00007404'
+    - name: _UsbhPnpTest
+      processed: ''
+      offset: '00007408'
+    - name: _HubLStart
+      processed: ''
+      offset: 0000740C
+    - name: _HubLEnd
+      processed: ''
+      offset: '00007410'
+    - name: _LogSpinLock
+      processed: ''
+      offset: '00007414'
+    - name: _HubLPtr
+      processed: ''
+      offset: '00007418'
+  - num: '4'
+    name: .idata$2
+    offset: '00003350'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_USBD
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: '00000160'
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: '00000164'
+    - name: __imp__KeQueryPerformanceCounter@4
+      processed: ''
+      offset: '00000168'
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: 0000016C
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000170'
+    - name: __imp__IoAllocateIrp@8
+      processed: ''
+      offset: '00000174'
+    - name: __imp__IoDetachDevice@4
+      processed: ''
+      offset: '00000178'
+    - name: __imp__IoCancelIrp@4
+      processed: ''
+      offset: 0000017C
+    - name: __imp__PoCallDriver@8
+      processed: ''
+      offset: '00000180'
+    - name: __imp__PoRequestPowerIrp@24
+      processed: ''
+      offset: '00000184'
+    - name: __imp__IoAcquireCancelSpinLock@4
+      processed: ''
+      offset: '00000188'
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: 0000018C
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '00000190'
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: '00000194'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000198'
+    - name: __imp__KeResetEvent@4
+      processed: ''
+      offset: 0000019C
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: 000001A0
+    - name: __imp__IoInitializeIrp@12
+      processed: ''
+      offset: 000001A4
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: 000001A8
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: 000001AC
+    - name: __imp__ExQueueWorkItem@8
+      processed: ''
+      offset: 000001B0
+    - name: __imp_@InterlockedIncrement@4
+      processed: ''
+      offset: 000001B4
+    - name: __imp_@InterlockedDecrement@4
+      processed: ''
+      offset: 000001B8
+    - name: __imp__KeReleaseSemaphore@16
+      processed: ''
+      offset: 000001BC
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: 000001C0
+    - name: __imp__IoInvalidateDeviceRelations@8
+      processed: ''
+      offset: 000001C4
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 000001C8
+    - name: __imp__IoGetDeviceProperty@20
+      processed: ''
+      offset: 000001CC
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: 000001D0
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: 000001D4
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: 000001D8
+    - name: __imp__IoFreeIrp@4
+      processed: ''
+      offset: 000001DC
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '000001E0'
+    - name: __imp__KeDelayExecutionThread@12
+      processed: ''
+      offset: '000001E4'
+    - name: __imp__KeInitializeSemaphore@12
+      processed: ''
+      offset: '000001E8'
+    - name: __imp_@InterlockedExchange@8
+      processed: ''
+      offset: 000001EC
+    - name: __imp__KeCancelTimer@4
+      processed: ''
+      offset: 000001F0
+    - name: __imp_@ObfReferenceObject@4
+      processed: ''
+      offset: 000001F4
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: 000001F8
+    - name: __imp__ZwSetValueKey@24
+      processed: ''
+      offset: 000001FC
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: '00000200'
+    - name: __imp__ZwClose@4
+      processed: ''
+      offset: '00000204'
+    - name: __imp__RtlFreeUnicodeString@4
+      processed: ''
+      offset: '00000208'
+    - name: __imp__IoInvalidateDeviceState@4
+      processed: ''
+      offset: 0000020C
+    - name: __imp__KeSetTimer@16
+      processed: ''
+      offset: '00000210'
+    - name: __imp__KeInitializeDpc@12
+      processed: ''
+      offset: '00000214'
+    - name: __imp__KeInitializeTimer@4
+      processed: ''
+      offset: '00000218'
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      processed: ''
+      offset: 0000021C
+    - name: __imp__IoRegisterDeviceInterface@16
+      processed: ''
+      offset: '00000220'
+    - name: __imp__IoReleaseCancelSpinLock@4
+      processed: ''
+      offset: '00000224'
+    - name: __imp__RtlIntegerToUnicodeString@12
+      processed: ''
+      offset: '00000228'
+    - name: __imp__IoSetDeviceInterfaceState@8
+      processed: ''
+      offset: 0000022C
+    - name: __imp__PoStartNextPowerIrp@4
+      processed: ''
+      offset: '00000230'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      processed: ''
+      offset: '00000234'
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: '00000238'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000023C
+    - name: __imp__USBD_RemoveDevice@12
+      processed: ''
+      offset: '00000240'
+    - name: __imp__USBD_GetPdoRegistryParameter@20
+      processed: ''
+      offset: '00000244'
+    - name: __imp__USBD_ParseDescriptors@16
+      processed: ''
+      offset: '00000248'
+    - name: __imp__USBD_InitializeDevice@16
+      processed: ''
+      offset: 0000024C
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      processed: ''
+      offset: '00000250'
+    - name: __imp__USBD_GetInterfaceLength@8
+      processed: ''
+      offset: '00000254'
+    - name: __imp__USBD_GetDeviceInformation@12
+      processed: ''
+      offset: '00000258'
+    - name: __imp__USBD_RestoreDevice@12
+      processed: ''
+      offset: 0000025C
+    - name: __imp__USBD_MakePdoName@8
+      processed: ''
+      offset: '00000260'
+    - name: __imp__USBD_CreateDevice@20
+      processed: ''
+      offset: '00000264'
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      processed: ''
+      offset: '00000268'
+    - name: \177USBD_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000026C
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+    - name: _USBH_ChangeIndicationWorker@4
+      processed: ''
+      offset: 000000B0
+    - name: _USBH_ProcessHubStateChange@8
+      processed: ''
+      offset: 000004D0
+    - name: _USBH_ProcessPortStateChange@12
+      processed: ''
+      offset: '00000720'
+    - name: _USBH_GetNameFromPdo@8
+      processed: ''
+      offset: 00000D80
+    - name: _USBH_FdoStartDevice@8
+      processed: ''
+      offset: 00000ED0
+    - name: _USBH_QueryCapabilities@8
+      processed: ''
+      offset: 00000FD0
+    - name: _USBH_HubIsBusPowered@8
+      processed: ''
+      offset: 000011D0
+    - name: _USBH_FdoHubStartDevice@8
+      processed: ''
+      offset: 000012B0
+    - name: _UsbhFdoCleanup@4
+      processed: ''
+      offset: '00001950'
+    - name: _USBH_FdoStopDevice@8
+      processed: ''
+      offset: 00001CC0
+    - name: _USBH_FdoRemoveDevice@8
+      processed: ''
+      offset: '00001E90'
+    - name: _USBH_FdoQueryBusRelations@8
+      processed: ''
+      offset: '000020E0'
+    - name: _UsbhWait@4
+      processed: ''
+      offset: '00002800'
+    - name: _USBH_SyncSubmitUrb@8
+      processed: ''
+      offset: '00002880'
+    - name: _USBH_SyncGetRootHubPdo@16
+      processed: ''
+      offset: 00002A60
+    - name: _USBH_FdoSyncSubmitUrb@8
+      processed: ''
+      offset: 00002BD0
+    - name: _USBH_Transact@40
+      processed: ''
+      offset: 00002CA0
+    - name: _USBH_SyncGetPortStatus@16
+      processed: ''
+      offset: 00002EB0
+    - name: _USBH_SyncGetHubStatus@12
+      processed: ''
+      offset: 00002F80
+    - name: _USBH_SyncClearHubStatus@8
+      processed: ''
+      offset: '00003000'
+    - name: _USBH_SyncClearPortStatus@12
+      processed: ''
+      offset: '00003070'
+    - name: _USBH_SyncPowerOnPort@8
+      processed: ''
+      offset: 000030F0
+    - name: _USBH_SyncPowerOnPorts@4
+      processed: ''
+      offset: 000032B0
+    - name: _USBH_SyncSuspendPort@8
+      processed: ''
+      offset: 000033A0
+    - name: _USBH_SyncDisablePort@8
+      processed: ''
+      offset: '00003470'
+    - name: _USBH_SyncEnablePort@8
+      processed: ''
+      offset: '00003550'
+    - name: _USBH_SyncPowerOffPort@8
+      processed: ''
+      offset: '00003610'
+    - name: _USBH_SyncResumePort@8
+      processed: ''
+      offset: '00003710'
+    - name: _USBH_SyncResetPort@8
+      processed: ''
+      offset: '00003810'
+    - name: _USBH_SyncGetDeviceConfigurationDescriptor@16
+      processed: ''
+      offset: 00003A60
+    - name: _USBH_GetConfigurationDescriptor@8
+      processed: ''
+      offset: 00003BE0
+    - name: _USBH_SyncGetStringDescriptor@28
+      processed: ''
+      offset: 00003D60
+    - name: _USBH_CheckDeviceLanguage@8
+      processed: ''
+      offset: 00003ED0
+    - name: _USBH_GetSerialNumberString@20
+      processed: ''
+      offset: '00004060'
+    - name: _USBH_SyncGetStatus@16
+      processed: ''
+      offset: '00004210'
+    - name: _USBH_GetDeviceDescriptor@8
+      processed: ''
+      offset: '00004330'
+    - name: _USBH_SyncGetHubDescriptor@4
+      processed: ''
+      offset: '00004440'
+    - name: _USBH_SyncFeatureRequest@20
+      processed: ''
+      offset: '00004680'
+    - name: _USBH_BuildDeviceID@12
+      processed: ''
+      offset: '00004800'
+    - name: _USBH_BuildHardwareIDs@16
+      processed: ''
+      offset: 00004A50
+    - name: _USBH_BuildCompatibleIDs@16
+      processed: ''
+      offset: '00004E70'
+    - name: _USBH_BuildInstanceID@8
+      processed: ''
+      offset: 000063A0
+    - name: _USBH_ProcessDeviceInformation@4
+      processed: ''
+      offset: '00006440'
+    - name: _USBH_CreateDevice@12
+      processed: ''
+      offset: '000066E0'
+    - name: _USBH_PdoQueryId@8
+      processed: ''
+      offset: 00006B00
+    - name: _USBH_PdoRemoveDevice@8
+      processed: ''
+      offset: 00006DE0
+    - name: _USBH_PdoQueryCapabilities@8
+      processed: ''
+      offset: '00007040'
+    - name: _USBH_PdoPnP@12
+      processed: ''
+      offset: '00007240'
+    - name: _USBH_PdoQueryDeviceText@8
+      processed: ''
+      offset: '00007690'
+    - name: _USBH_IoctlGetNodeInformation@8
+      processed: ''
+      offset: 000078A0
+    - name: _USBH_IoctlGetNodeConnectionDriverKeyName@8
+      processed: ''
+      offset: '00007990'
+    - name: _USBH_IoctlGetNodeConnectionInformation@8
+      processed: ''
+      offset: 00007B10
+    - name: _USBH_IoctlGetNodeName@8
+      processed: ''
+      offset: '00007E30'
+    - name: _USBH_PdoIoctlGetPortStatus@8
+      processed: ''
+      offset: '00008100'
+    - name: _USBH_PdoIoctlEnablePort@8
+      processed: ''
+      offset: '00008340'
+    - name: _USBH_IoctlGetDescriptorForPDO@8
+      processed: ''
+      offset: '00008550'
+    - name: _UsbhParentFdoCleanup@4
+      processed: ''
+      offset: '00008710'
+    - name: _USBH_ParentFdoRemoveDevice@8
+      processed: ''
+      offset: '00008900'
+    - name: _USBH_ParentCreateFunctionList@12
+      processed: ''
+      offset: 000089C0
+    - name: _USBH_ParentFdoStopDevice@8
+      processed: ''
+      offset: '00008E60'
+    - name: _USBH_ParentFdoStartDevice@12
+      processed: ''
+      offset: 00008F00
+    - name: _USBH_ParentQueryBusRelations@8
+      processed: ''
+      offset: 000095C0
+    - name: _USBH_FunctionPdoQueryId@8
+      processed: ''
+      offset: 000097A0
+    - name: _USBH_FunctionPdoPnP@12
+      processed: ''
+      offset: '00009960'
+    - name: _USBH_SetPowerD3@8
+      processed: ''
+      offset: 00009C30
+    - name: _USBH_SetPowerD0@8
+      processed: ''
+      offset: '00009E00'
+    - name: _USBH_SetPowerD1orD2@8
+      processed: ''
+      offset: 0000A180
+    - name: _USBH_PdoQueryPower@8
+      processed: ''
+      offset: 0000A350
+    - name: _USBH_PdoSetPower@8
+      processed: ''
+      offset: 0000A500
+    - name: _USBH_PdoPower@12
+      processed: ''
+      offset: 0000A710
+    - name: _USBH_FdoPower@12
+      processed: ''
+      offset: 0000A880
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: 000007D0
+    symbols:
+    - name: _USBH_CompleteIrp@8
+      demangled: ''
+      offset: '00000000'
+    - name: _USBH_PassIrp@8
+      demangled: ''
+      offset: '00000016'
+    - name: _USBH_FdoDispatch@8
+      demangled: ''
+      offset: 0000002E
+    - name: _USBH_HubDispatch@8
+      demangled: ''
+      offset: '00000138'
+    - name: _USBH_DriverUnload@4
+      demangled: ''
+      offset: '00000198'
+    - name: _USBH_AbortInterruptPipe@4
+      demangled: ''
+      offset: 0000019B
+    - name: _IsBitSet@8
+      demangled: ''
+      offset: '00000201'
+    - name: _USBH_OpenConfiguration@4
+      demangled: ''
+      offset: '00000222'
+    - name: _USBH_CloseConfiguration@4
+      demangled: ''
+      offset: 000002B2
+    - name: _USBH_SubmitInterruptTransfer@4
+      demangled: ''
+      offset: 000002FA
+    - name: _USBH_ChangeIndication@12
+      demangled: ''
+      offset: 000003A5
+    - name: _USBH_ChangeIndicationQueryChange@16
+      demangled: ''
+      offset: 000004D9
+    - name: _USBH_ChangeIndicationProcessChange@12
+      demangled: ''
+      offset: 000005B7
+    - name: _USBH_ChangeIndicationAckChange@16
+      demangled: ''
+      offset: '00000646'
+    - name: _USBH_ChangeIndicationAckChangeComplete@12
+      demangled: ''
+      offset: '000006E8'
+    - name: _USBH_AddDevice@8
+      demangled: ''
+      offset: '00000725'
+    - name: _USBH_PnPIrp_Complete@12
+      demangled: ''
+      offset: 000007AA
+    - name: _USBH_FdoPnP@12
+      demangled: ''
+      offset: 000007D4
+    - name: _USBH_DeferIrpCompletion@12
+      demangled: ''
+      offset: '00000871'
+    - name: _USBH_ResetInterruptPipe@4
+      demangled: ''
+      offset: '00000887'
+    - name: _USBH_GetPortStatus@8
+      demangled: ''
+      offset: '000008E0'
+    - name: _USBH_EnableParentPort@4
+      demangled: ''
+      offset: '00000951'
+    - name: _USBH_ResetHub@4
+      demangled: ''
+      offset: 000009B5
+    - name: _USBH_WriteRegistryKeyValue@16
+      demangled: ''
+      offset: 000009F5
+    - name: _USBH_WriteFailReason@8
+      demangled: ''
+      offset: 00000A22
+    - name: _USBH_DeviceStateChangeWorker@4
+      demangled: ''
+      offset: 00000A75
+    - name: _UsbhWorkItemTimeoutDpc@16
+      demangled: ''
+      offset: 00000AD1
+    - name: _USBH_InvalidateHubDeviceState@4
+      demangled: ''
+      offset: 00000AE0
+    - name: _USBH_InvalidatePortDeviceState@12
+      demangled: ''
+      offset: 00000B54
+    - name: _USBH_FlushPortChange@4
+      demangled: ''
+      offset: 00000B91
+    - name: _UsbhTimeoutDPC@16
+      demangled: ''
+      offset: 00000BCA
+    - name: _UsbhGetConnectionStatus@4
+      demangled: ''
+      offset: 00000BD7
+    - name: _USBH_PdoUrbFilter@8
+      demangled: ''
+      offset: 00000C0B
+    - name: _GetString@8
+      demangled: ''
+      offset: 00000CA0
+    - name: _USBH_PdoStopDevice@8
+      demangled: ''
+      offset: 00000CFF
+    - name: _USBH_PdoDispatch@8
+      demangled: ''
+      offset: 00000D78
+    - name: _USBH_ResetDevice@12
+      demangled: ''
+      offset: '00000E88'
+    - name: _USBH_RestoreDevice@8
+      demangled: ''
+      offset: 00000FE9
+    - name: _USBH_SymbolicLink@8
+      demangled: ''
+      offset: '00001046'
+    - name: _USBH_PdoIoctlResetPort@8
+      demangled: ''
+      offset: 000010AF
+    - name: _USBH_PdoIoctlCyclePort@8
+      demangled: ''
+      offset: 0000114A
+    - name: _USBH_ParentWaitWakeCancel@8
+      demangled: ''
+      offset: '00001178'
+    - name: _USBH_FunctionPdoPower@12
+      demangled: ''
+      offset: 000011B5
+    - name: _USBH_ParentPnP@12
+      demangled: ''
+      offset: 000012A3
+    - name: _USBH_ParentPower@12
+      demangled: ''
+      offset: '00001323'
+    - name: _USBH_ParentDispatch@8
+      demangled: ''
+      offset: 000013D8
+    - name: _USBH_FunctionUrbFilter@8
+      demangled: ''
+      offset: 0000144A
+    - name: _USBH_FunctionPdoDispatch@8
+      demangled: ''
+      offset: 0000160B
+    - name: _USBH_BuildFunctionConfigurationDescriptor@16
+      demangled: ''
+      offset: '00001699'
+    - name: _USBH_ParentCompleteFunctionWakeIrps@8
+      demangled: ''
+      offset: 0000176F
+    - name: _USBH_ParentPoRequestD0Completion@20
+      demangled: ''
+      offset: 000017D4
+    - name: _USBH_ParentWaitWakeIrpCompletion@20
+      demangled: ''
+      offset: '00001809'
+    - name: _USBH_ParentSubmitWaitWakeIrp@4
+      demangled: ''
+      offset: '00001851'
+    - name: _USBH_CompletePowerIrp@12
+      demangled: ''
+      offset: '00001899'
+    - name: _USBH_WaitWakeCancel@8
+      demangled: ''
+      offset: 000018DD
+    - name: _USBH_PdoWaitWake@8
+      demangled: ''
+      offset: '00001914'
+    - name: _USBH_PoweIrpCompletion@12
+      demangled: ''
+      offset: 000019AB
+    - name: _USBH_FdoDeferPoRequestCompletion@20
+      demangled: ''
+      offset: 000019ED
+    - name: _USBH_FdoPoRequestD0Completion@20
+      demangled: ''
+      offset: 00001A30
+    - name: _USBH_FdoWaitWakeIrpCompletion@20
+      demangled: ''
+      offset: 00001A6E
+    - name: _USBH_FdoSubmitWaitWakeIrp@4
+      demangled: ''
+      offset: 00001ACC
+    - name: _USBD_GetPdoRegistryParameter@20
+      demangled: ''
+      offset: 00001B1A
+    - name: _USBD_GetInterfaceLength@8
+      demangled: ''
+      offset: 00001B20
+  - num: '2'
+    name: .rdata
+    offset: '00000810'
+    symbols:
+    - name: _GUID_CLASS_USBHUB
+      demangled: ''
+      offset: '00000000'
+  - num: '3'
+    name: .data
+    offset: 00000CC0
+    symbols:
+    - name: 
+        ??_C@_1CI@GJLP@?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAR?$AAe?$AAm?$AAo?$AAt?$AAe?$AAW?$AAa?$AAk?$AAe?$AAu?$AAp?$AA?$AA@
+      demangled: L"DisableRemoteWakeup"
+      offset: '00000000'
+    - name: 
+        ??_C@_1BK@JLND@?$AAF?$AAa?$AAi?$AAl?$AAR?$AAe?$AAa?$AAs?$AAo?$AAn?$AAI?$AAD?$AA?$AA@
+      demangled: L"FailReasonID"
+      offset: '00000028'
+    - name: _USBH_PostResetDelay
+      demangled: ''
+      offset: '00000044'
+    - name: _Nibble
+      demangled: ''
+      offset: '00000048'
+    - name: _VidPidRevString
+      demangled: ''
+      offset: '00000058'
+    - name: _VidPidString
+      demangled: ''
+      offset: 000000A8
+    - name: 
+        ??_C@_1BK@KPFG@?$AAU?$AAS?$AAB?$AA?2?$AAU?$AAN?$AAK?$AAN?$AAO?$AAW?$AAN?$AA?$AA?$AA?$AA@
+      demangled: L"USB\\UNKNOWN\0"
+      offset: '000000E0'
+    - name: _pwchUsbSlash
+      demangled: ''
+      offset: 000000FC
+    - name: _pwchVid
+      demangled: ''
+      offset: '00000100'
+    - name: _pwchPid
+      demangled: ''
+      offset: '00000104'
+    - name: _pwchRev
+      demangled: ''
+      offset: '00000108'
+    - name: _pwchDevClass
+      demangled: ''
+      offset: 0000010C
+    - name: _pwchClass
+      demangled: ''
+      offset: '00000110'
+    - name: _pwchComposite
+      demangled: ''
+      offset: '00000114'
+    - name: _pwchSubClass
+      demangled: ''
+      offset: '00000118'
+    - name: _pwchMultiInterface
+      demangled: ''
+      offset: 0000011C
+    - name: _pwchProt
+      demangled: ''
+      offset: '00000120'
+    - name: ??_C@_1M@LPKD@?$AAP?$AAr?$AAo?$AAt?$AA_?$AA?$AA@
+      demangled: L"Prot_"
+      offset: '00000124'
+    - name: ??_C@_1O@JGHH@?$AAU?$AAS?$AAB?$AA?2?$AAM?$AAI?$AA?$AA@
+      demangled: L"USB\\MI"
+      offset: '00000130'
+    - name: ??_C@_1BE@MAJL@?$AAS?$AAu?$AAb?$AAC?$AAl?$AAa?$AAs?$AAs?$AA_?$AA?$AA@
+      demangled: L"SubClass_"
+      offset: '00000140'
+    - name: 
+        ??_C@_1BM@GHDD@?$AAU?$AAS?$AAB?$AA?2?$AAC?$AAO?$AAM?$AAP?$AAO?$AAS?$AAI?$AAT?$AAE?$AA?$AA@
+      demangled: L"USB\\COMPOSITE"
+      offset: '00000154'
+    - name: ??_C@_1O@DFCL@?$AAC?$AAl?$AAa?$AAs?$AAs?$AA_?$AA?$AA@
+      demangled: L"Class_"
+      offset: '00000170'
+    - name: ??_C@_1BE@LJDF@?$AAD?$AAe?$AAv?$AAC?$AAl?$AAa?$AAs?$AAs?$AA_?$AA?$AA@
+      demangled: L"DevClass_"
+      offset: '00000180'
+    - name: ??_C@_19JEGG@?$AAR?$AAe?$AAv?$AA_?$AA?$AA@
+      demangled: L"Rev_"
+      offset: '00000194'
+    - name: ??_C@_19JMBC@?$AAP?$AAi?$AAd?$AA_?$AA?$AA@
+      demangled: L"Pid_"
+      offset: 000001A0
+    - name: ??_C@_19BBKC@?$AAV?$AAi?$AAd?$AA_?$AA?$AA@
+      demangled: L"Vid_"
+      offset: 000001AC
+    - name: ??_C@_19HHFM@?$AAU?$AAS?$AAB?$AA?2?$AA?$AA@
+      demangled: L"USB\\"
+      offset: 000001B8
+    - name: _UsbhDriverObject
+      demangled: ''
+      offset: 000001C4
+  - num: '4'
+    name: .idata$2
+    offset: 000014C0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000028'
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000124'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000128'
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: '00000130'
+    - name: __imp__IoAcquireCancelSpinLock@4
+      demangled: ''
+      offset: '00000134'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000138'
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: 0000013C
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00000140'
+    - name: __imp__IoRegisterDeviceInterface@16
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__IoSetDeviceInterfaceState@8
+      demangled: ''
+      offset: '00000148'
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: 0000014C
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000150'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000154'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000160'
+    - name: __imp__KeResetEvent@4
+      demangled: ''
+      offset: '00000164'
+    - name: __imp__IoInitializeIrp@12
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: 0000016C
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: '00000170'
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000174'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: '00000178'
+    - name: __imp__KeReleaseSemaphore@16
+      demangled: ''
+      offset: 0000017C
+    - name: __imp__IoInvalidateDeviceRelations@8
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__IoGetDeviceProperty@20
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: '00000190'
+    - name: __imp__RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__KeInitializeSemaphore@12
+      demangled: ''
+      offset: 000001A0
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: 000001A8
+    - name: __imp_@ObfReferenceObject@4
+      demangled: ''
+      offset: 000001AC
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__ZwSetValueKey@24
+      demangled: ''
+      offset: 000001B4
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 000001B8
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 000001C0
+    - name: __imp__IoInvalidateDeviceState@4
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: 000001CC
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__KeDelayExecutionThread@12
+      demangled: ''
+      offset: 000001D4
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__USBD_GetInterfaceLength@8
+      demangled: ''
+      offset: 000001DC
+    - name: __imp__USBD_GetDeviceInformation@12
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp__USBD_RestoreDevice@12
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp__USBD_MakePdoName@8
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__USBD_CreateDevice@20
+      demangled: ''
+      offset: 000001EC
+    - name: __imp__USBD_InitializeDevice@16
+      demangled: ''
+      offset: 000001F0
+    - name: __imp__USBD_ParseDescriptors@16
+      demangled: ''
+      offset: 000001F4
+    - name: __imp__USBD_RemoveDevice@12
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__USBD_GetPdoRegistryParameter@20
+      demangled: ''
+      offset: 000001FC
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: '00000200'
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: '00000204'
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000208'
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _USBH_ChangeIndicationWorker@4
+      demangled: ''
+      offset: '00000042'
+    - name: _USBH_ProcessHubStateChange@8
+      demangled: ''
+      offset: '00000153'
+    - name: _USBH_ProcessPortStateChange@12
+      demangled: ''
+      offset: 000001D1
+    - name: _USBH_FdoStartDevice@8
+      demangled: ''
+      offset: 000002C6
+    - name: _USBH_QueryCapabilities@8
+      demangled: ''
+      offset: 0000030A
+    - name: _USBH_HubIsBusPowered@8
+      demangled: ''
+      offset: 0000038D
+    - name: _USBH_FdoHubStartDevice@8
+      demangled: ''
+      offset: 000003C9
+    - name: _UsbhFdoCleanup@4
+      demangled: ''
+      offset: '00000670'
+    - name: _USBH_FdoStopDevice@8
+      demangled: ''
+      offset: 0000076A
+    - name: _USBH_FdoRemoveDevice@8
+      demangled: ''
+      offset: 000007DD
+    - name: _USBH_FdoQueryBusRelations@8
+      demangled: ''
+      offset: '00000872'
+    - name: _UsbhWait@4
+      demangled: ''
+      offset: 00000AB1
+    - name: _USBH_SyncSubmitUrb@8
+      demangled: ''
+      offset: 00000ADC
+    - name: _USBH_SyncGetRootHubPdo@16
+      demangled: ''
+      offset: 00000BA0
+    - name: _USBH_FdoSyncSubmitUrb@8
+      demangled: ''
+      offset: 00000C34
+    - name: _USBH_Transact@40
+      demangled: ''
+      offset: 00000C4A
+    - name: _USBH_SyncGetPortStatus@16
+      demangled: ''
+      offset: 00000D41
+    - name: _USBH_SyncGetHubStatus@12
+      demangled: ''
+      offset: 00000D66
+    - name: _USBH_SyncClearHubStatus@8
+      demangled: ''
+      offset: 00000D88
+    - name: _USBH_SyncClearPortStatus@12
+      demangled: ''
+      offset: 00000DA6
+    - name: _USBH_SyncPowerOnPort@8
+      demangled: ''
+      offset: 00000DC7
+    - name: _USBH_SyncPowerOnPorts@4
+      demangled: ''
+      offset: '00000E21'
+    - name: _USBH_SyncSuspendPort@8
+      demangled: ''
+      offset: '00000E57'
+    - name: _USBH_SyncDisablePort@8
+      demangled: ''
+      offset: 00000E8D
+    - name: _USBH_SyncEnablePort@8
+      demangled: ''
+      offset: 00000EC5
+    - name: _USBH_SyncResumePort@8
+      demangled: ''
+      offset: 00000EFB
+    - name: _USBH_SyncResetPort@8
+      demangled: ''
+      offset: 00000F50
+    - name: _USBH_SyncGetDeviceConfigurationDescriptor@16
+      demangled: ''
+      offset: 00000FC8
+    - name: _USBH_GetConfigurationDescriptor@8
+      demangled: ''
+      offset: '00001076'
+    - name: _USBH_SyncGetStringDescriptor@28
+      demangled: ''
+      offset: 0000112D
+    - name: _USBH_CheckDeviceLanguage@8
+      demangled: ''
+      offset: 000011C6
+    - name: _USBH_GetSerialNumberString@20
+      demangled: ''
+      offset: 0000123E
+    - name: _USBH_SyncGetStatus@16
+      demangled: ''
+      offset: 0000130F
+    - name: _USBH_GetDeviceDescriptor@8
+      demangled: ''
+      offset: '00001380'
+    - name: _USBH_SyncGetHubDescriptor@4
+      demangled: ''
+      offset: '000013E9'
+    - name: _USBH_SyncFeatureRequest@20
+      demangled: ''
+      offset: 000014F9
+    - name: _USBH_BuildDeviceID@12
+      demangled: ''
+      offset: 0000158C
+    - name: _USBH_BuildHardwareIDs@16
+      demangled: ''
+      offset: '00001690'
+    - name: _USBH_BuildCompatibleIDs@16
+      demangled: ''
+      offset: 0000189A
+    - name: _USBH_BuildInstanceID@8
+      demangled: ''
+      offset: 000020FA
+    - name: _USBH_ProcessDeviceInformation@4
+      demangled: ''
+      offset: 0000212E
+    - name: _USBH_CreateDevice@12
+      demangled: ''
+      offset: '000021E5'
+    - name: _USBH_PdoQueryId@8
+      demangled: ''
+      offset: '00002368'
+    - name: _USBH_PdoRemoveDevice@8
+      demangled: ''
+      offset: '00002480'
+    - name: _USBH_PdoQueryCapabilities@8
+      demangled: ''
+      offset: 0000253E
+    - name: _USBH_PdoPnP@12
+      demangled: ''
+      offset: 000025B1
+    - name: _USBH_PdoQueryDeviceText@8
+      demangled: ''
+      offset: 000026D8
+    - name: _USBH_IoctlGetNodeInformation@8
+      demangled: ''
+      offset: 000027D6
+    - name: _USBH_IoctlGetNodeConnectionDriverKeyName@8
+      demangled: ''
+      offset: '00002835'
+    - name: _USBH_IoctlGetNodeConnectionInformation@8
+      demangled: ''
+      offset: 000028DF
+    - name: _USBH_IoctlGetNodeName@8
+      demangled: ''
+      offset: 000029A3
+    - name: _USBH_PdoIoctlGetPortStatus@8
+      demangled: ''
+      offset: 00002ADF
+    - name: _USBH_PdoIoctlEnablePort@8
+      demangled: ''
+      offset: 00002B6D
+    - name: _USBH_IoctlGetDescriptorForPDO@8
+      demangled: ''
+      offset: 00002C05
+    - name: _UsbhParentFdoCleanup@4
+      demangled: ''
+      offset: 00002CCD
+    - name: _USBH_ParentFdoRemoveDevice@8
+      demangled: ''
+      offset: 00002D48
+    - name: _USBH_ParentCreateFunctionList@12
+      demangled: ''
+      offset: 00002D84
+    - name: _USBH_ParentFdoStopDevice@8
+      demangled: ''
+      offset: 00002F79
+    - name: _USBH_ParentFdoStartDevice@12
+      demangled: ''
+      offset: 00002F94
+    - name: _USBH_ParentQueryBusRelations@8
+      demangled: ''
+      offset: 0000325F
+    - name: _USBH_FunctionPdoQueryId@8
+      demangled: ''
+      offset: 000032D7
+    - name: _USBH_FunctionPdoPnP@12
+      demangled: ''
+      offset: '00003386'
+    - name: _USBH_SetPowerD3@8
+      demangled: ''
+      offset: '00003449'
+    - name: _USBH_SetPowerD0@8
+      demangled: ''
+      offset: 000034DA
+    - name: _USBH_SetPowerD1orD2@8
+      demangled: ''
+      offset: '00003621'
+    - name: _USBH_PdoQueryPower@8
+      demangled: ''
+      offset: 000036B5
+    - name: _USBH_PdoSetPower@8
+      demangled: ''
+      offset: '00003700'
+    - name: _USBH_PdoPower@12
+      demangled: ''
+      offset: 0000376E
+    - name: _USBH_FdoPower@12
+      demangled: ''
+      offset: 000037CB
+- version: Windows 98SE Debug
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00003AA0
+    symbols:
+    - name: _USBH_GetConfigValue@24
+      demangled: ''
+      offset: '00000000'
+    - name: _USBH_RegWriteUSBSerNumGenFlag@4
+      demangled: ''
+      offset: '00000080'
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: 000000D0
+    - name: _USBH_ShowPortState@8
+      demangled: ''
+      offset: 000003A0
+    - name: _USBH_CompleteIrp@8
+      demangled: ''
+      offset: 000004B0
+    - name: _USBH_PassIrp@8
+      demangled: ''
+      offset: 000004D0
+    - name: _USBH_FdoDispatch@8
+      demangled: ''
+      offset: '00000530'
+    - name: _USBH_HubDispatch@8
+      demangled: ''
+      offset: '00000880'
+    - name: _USBH_DriverUnload@4
+      demangled: ''
+      offset: '00000920'
+    - name: _USBH_AbortInterruptPipe@4
+      demangled: ''
+      offset: '00000960'
+    - name: _IsBitSet@8
+      demangled: ''
+      offset: 00000A50
+    - name: _USBH_OpenConfiguration@4
+      demangled: ''
+      offset: 00000AA0
+    - name: _USBH_CloseConfiguration@4
+      demangled: ''
+      offset: 00000BA0
+    - name: _USBH_SubmitInterruptTransfer@4
+      demangled: ''
+      offset: 00000C40
+    - name: _USBH_QueryCapsComplete@12
+      demangled: ''
+      offset: '00000E50'
+    - name: _USBH_ChangeIndication@12
+      demangled: ''
+      offset: 00000F20
+    - name: _USBH_ChangeIndicationQueryChange@16
+      demangled: ''
+      offset: 000012B0
+    - name: _USBH_ChangeIndicationProcessChange@12
+      demangled: ''
+      offset: '00001500'
+    - name: _USBH_ChangeIndicationAckChange@16
+      demangled: ''
+      offset: '000016E0'
+    - name: _USBH_ChangeIndicationAckChangeComplete@12
+      demangled: ''
+      offset: '00001880'
+    - name: _USBH_FlushPortChange@4
+      demangled: ''
+      offset: '00001940'
+    - name: _USBH_AddDevice@8
+      demangled: ''
+      offset: 00001A20
+    - name: _USBH_PnPIrp_Complete@12
+      demangled: ''
+      offset: 00001BF0
+    - name: _USBH_HubPnPIrp_Complete@12
+      demangled: ''
+      offset: 00001CC0
+    - name: _USBH_FdoPnP@12
+      demangled: ''
+      offset: 00001DB0
+    - name: _USBH_DeferIrpCompletion@12
+      demangled: ''
+      offset: '00002140'
+    - name: _USBH_ResetInterruptPipe@4
+      demangled: ''
+      offset: '00002170'
+    - name: _USBH_GetPortStatus@8
+      demangled: ''
+      offset: '00002240'
+    - name: _USBH_EnableParentPort@4
+      demangled: ''
+      offset: '00002380'
+    - name: _USBH_ResetHub@4
+      demangled: ''
+      offset: '00002490'
+    - name: _USBH_WriteRegistryKeyValue@16
+      demangled: ''
+      offset: '00002500'
+    - name: _USBH_WriteFailReason@8
+      demangled: ''
+      offset: '00002590'
+    - name: _USBH_InvalidatePortDeviceState@12
+      demangled: ''
+      offset: '00002630'
+    - name: _UsbhTimeoutDPC@16
+      demangled: ''
+      offset: '00002750'
+    - name: _USBH_SyncIrp_Complete@12
+      demangled: ''
+      offset: 000027F0
+    - name: _USBH_SyncGetControllerInfo@16
+      demangled: ''
+      offset: '00002870'
+    - name: _USBH_SyncGetHubName@12
+      demangled: ''
+      offset: 000029C0
+    - name: _UsbhGetConnectionStatus@4
+      demangled: ''
+      offset: 00002B00
+    - name: _USBH_BandwidthTimeoutWorker@4
+      demangled: ''
+      offset: 00002B80
+    - name: _USBH_PortTimeoutDPC@16
+      demangled: ''
+      offset: 00002BE0
+    - name: _USBH_SelectConfigOrInterface_Complete@12
+      demangled: ''
+      offset: 00002C90
+    - name: _USBH_PdoUrbFilter@8
+      demangled: ''
+      offset: 00002EF0
+    - name: _GetString@8
+      demangled: ''
+      offset: 000032F0
+    - name: _USBH_PdoStopDevice@8
+      demangled: ''
+      offset: '00003390'
+    - name: _USBH_ResetPortWorker@4
+      demangled: ''
+      offset: '000034E0'
+    - name: _USBH_PdoDispatch@8
+      demangled: ''
+      offset: '00003530'
+    - name: _USBH_ResetDevice@12
+      demangled: ''
+      offset: 00003AB0
+    - name: _USBH_RestoreDevice@8
+      demangled: ''
+      offset: '00004040'
+    - name: _USBH_SymbolicLink@12
+      demangled: ''
+      offset: 000041B0
+    - name: _USBH_SetPdoRegistryParameter@28
+      demangled: ''
+      offset: '00004270'
+    - name: _USBH_SetRegistryKeyValue@20
+      demangled: ''
+      offset: '00004330'
+    - name: _USBH_Assert@16
+      demangled: ''
+      offset: 000043C0
+    - name: _USBH_KdPrintX
+      demangled: ''
+      offset: '00004400'
+    - name: _UsbhWarning@12
+      demangled: ''
+      offset: 000044A0
+    - name: _UsbhInfo@4
+      demangled: ''
+      offset: '00004510'
+    - name: _UsbhGetHeap@16
+      demangled: ''
+      offset: 000046F0
+    - name: _UsbhRetHeap@12
+      demangled: ''
+      offset: '00004720'
+    - name: _USBH_Debug_LogEntry@20
+      demangled: ''
+      offset: '00004740'
+    - name: _USBH_LogInit@0
+      demangled: ''
+      offset: '00004850'
+    - name: _USBH_LogFree@0
+      demangled: ''
+      offset: 000048B0
+    - name: _USBH_IoctlHubSymbolicName@8
+      demangled: ''
+      offset: 000048D0
+    - name: _USBH_PdoIoctlResetPort@8
+      demangled: ''
+      offset: 00004B00
+    - name: _USBH_PdoIoctlCyclePort@8
+      demangled: ''
+      offset: 00004D40
+    - name: _USBH_BuildConnectionNotification@12
+      demangled: ''
+      offset: '00004E40'
+    - name: _USBH_PdoEvent@8
+      demangled: ''
+      offset: 00004FC0
+    - name: _USBH_GetPortPdoExtension@8
+      demangled: ''
+      offset: '00005090'
+    - name: _USBH_SetWmiDataBlock@24
+      demangled: ''
+      offset: '00005150'
+    - name: _USBH_QueryWmiDataBlock@32
+      demangled: ''
+      offset: 000051C0
+    - name: _USBH_ResetPortOvercurrent@12
+      demangled: ''
+      offset: '00005290'
+    - name: _USBH_CalculateInterfaceBandwidth@12
+      demangled: ''
+      offset: '00005350'
+    - name: _USBH_ParentWaitWakeCancel@8
+      demangled: ''
+      offset: '00005400'
+    - name: _USBH_FunctionPdoPower@12
+      demangled: ''
+      offset: 000054B0
+    - name: _USBH_ParentQCapsComplete@12
+      demangled: ''
+      offset: '000057E0'
+    - name: _USBH_ParentPnP@12
+      demangled: ''
+      offset: '00005820'
+    - name: _USBH_ParentPower@12
+      demangled: ''
+      offset: 00005AE0
+    - name: _USBH_ParentDispatch@8
+      demangled: ''
+      offset: 00005DE0
+    - name: _USBH_FunctionUrbFilter@8
+      demangled: ''
+      offset: 00005FD0
+    - name: _USBH_CancelAllIrpsInList@4
+      demangled: ''
+      offset: 000063B0
+    - name: _USBH_CompResetTimeoutWorker@4
+      demangled: ''
+      offset: '00006430'
+    - name: _USBH_CompResetTimeoutDPC@16
+      demangled: ''
+      offset: 000064F0
+    - name: _USBH_ListReadyForReset@4
+      demangled: ''
+      offset: '000065E0'
+    - name: _USBH_ResetParentPort@4
+      demangled: ''
+      offset: '00006640'
+    - name: _USBH_CompositeResetPortWorker@4
+      demangled: ''
+      offset: 000066F0
+    - name: _USBH_FunctionPdoDispatch@8
+      demangled: ''
+      offset: '00006820'
+    - name: _USBH_BuildFunctionConfigurationDescriptor@16
+      demangled: ''
+      offset: 00006D70
+    - name: _USBH_ParentCompleteFunctionWakeIrps@8
+      demangled: ''
+      offset: 00006EF0
+    - name: _USBH_ParentPoRequestD0Completion@20
+      demangled: ''
+      offset: 00006FC0
+    - name: _USBH_ParentWaitWakeIrpCompletion@20
+      demangled: ''
+      offset: '00007060'
+    - name: _USBH_ParentSubmitWaitWakeIrp@4
+      demangled: ''
+      offset: '00007110'
+    - name: _USBH_CompletePowerIrp@12
+      demangled: ''
+      offset: '000071E0'
+    - name: _USBH_SetPowerD3@8
+      demangled: ''
+      offset: '00007290'
+    - name: _USBH_PdoQueryPower@8
+      demangled: ''
+      offset: '00007460'
+    - name: _USBH_WaitWakeCancel@8
+      demangled: ''
+      offset: '00007630'
+    - name: _USBH_PdoWaitWake@8
+      demangled: ''
+      offset: 000076F0
+    - name: _USBH_PowerIrpCompletion@12
+      demangled: ''
+      offset: '00007910'
+    - name: _USBH_FdoDeferPoRequestCompletion@20
+      demangled: ''
+      offset: '000079E0'
+    - name: _USBH_HubCompletePortWakeIrps@8
+      demangled: ''
+      offset: 00007A90
+    - name: _USBH_FdoPoRequestD0Completion@20
+      demangled: ''
+      offset: 00007C50
+    - name: _USBH_FdoWaitWakeIrpCompletion@20
+      demangled: ''
+      offset: 00007DB0
+    - name: _USBH_FdoSubmitWaitWakeIrp@4
+      demangled: ''
+      offset: 00007F10
+    - name: _USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: 00007FD2
+    - name: _USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: 00007FD8
+    - name: _USBD_RemoveDevice@12
+      demangled: ''
+      offset: 00007FDE
+    - name: _USBD_InitializeDevice@24
+      demangled: ''
+      offset: 00007FE4
+    - name: _USBD_CreateDevice@20
+      demangled: ''
+      offset: 00007FEA
+    - name: _USBD_MakePdoName@8
+      demangled: ''
+      offset: 00007FF0
+    - name: _USBD_RestoreDevice@12
+      demangled: ''
+      offset: 00007FF6
+    - name: _USBD_GetDeviceInformation@12
+      demangled: ''
+      offset: 00007FFC
+    - name: _USBD_CalculateUsbBandwidth@12
+      demangled: ''
+      offset: '00008002'
+    - name: _USBD_ParseDescriptors@16
+      demangled: ''
+      offset: '00008008'
+    - name: _USBD_GetInterfaceLength@8
+      demangled: ''
+      offset: 0000800E
+    - name: _USBD_GetPdoRegistryParameter@20
+      demangled: ''
+      offset: '00008014'
+    - name: _WmiFireEvent@20
+      demangled: ''
+      offset: 0000801A
+    - name: _WmiSystemControl@16
+      demangled: ''
+      offset: '00008020'
+    - name: _WmiCompleteRequest@20
+      demangled: ''
+      offset: '00008026'
+    - name: _DbgPrint
+      demangled: ''
+      offset: 0000802C
+    - name: _RtlQueryRegistryValues@20
+      demangled: ''
+      offset: '00008032'
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: '00008038'
+    - name: _KeGetCurrentIrql@0
+      demangled: ''
+      offset: 0000803E
+    - name: _RtlWriteRegistryValue@24
+      demangled: ''
+      offset: '00008044'
+    - name: _KeInitializeEvent@12
+      demangled: ''
+      offset: 0000804A
+    - name: _memmove
+      demangled: ''
+      offset: '00008050'
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00008056'
+    - name: '@IofCompleteRequest@8'
+      demangled: ''
+      offset: 0000805C
+    - name: '@IofCallDriver@8'
+      demangled: ''
+      offset: '00008062'
+    - name: _KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00008068'
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: 0000806E
+    - name: _KeResetEvent@4
+      demangled: ''
+      offset: '00008074'
+    - name: _IoInitializeIrp@12
+      demangled: ''
+      offset: 0000807A
+    - name: _KeSetEvent@12
+      demangled: ''
+      offset: '00008080'
+    - name: _ExQueueWorkItem@8
+      demangled: ''
+      offset: '00008086'
+    - name: '@InterlockedIncrement@4'
+      demangled: ''
+      offset: 0000808C
+    - name: '@InterlockedDecrement@4'
+      demangled: ''
+      offset: '00008092'
+    - name: _KeReleaseSemaphore@16
+      demangled: ''
+      offset: '00008098'
+    - name: _IoInvalidateDeviceRelations@8
+      demangled: ''
+      offset: 0000809E
+    - name: _IoGetDeviceProperty@20
+      demangled: ''
+      offset: 000080A4
+    - name: _IoDeleteDevice@4
+      demangled: ''
+      offset: 000080AA
+    - name: _IoWMIRegistrationControl@8
+      demangled: ''
+      offset: 000080B0
+    - name: _IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 000080B6
+    - name: _IoCreateDevice@28
+      demangled: ''
+      offset: 000080BC
+    - name: _IoFreeIrp@4
+      demangled: ''
+      offset: 000080C2
+    - name: _IoAllocateIrp@8
+      demangled: ''
+      offset: 000080C8
+    - name: _KeInitializeSemaphore@12
+      demangled: ''
+      offset: 000080CE
+    - name: _IoCancelIrp@4
+      demangled: ''
+      offset: 000080D4
+    - name: _IoDetachDevice@4
+      demangled: ''
+      offset: 000080DA
+    - name: '@ObfReferenceObject@4'
+      demangled: ''
+      offset: '000080E0'
+    - name: _IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '000080E6'
+    - name: _ZwSetValueKey@24
+      demangled: ''
+      offset: 000080EC
+    - name: _RtlInitUnicodeString@8
+      demangled: ''
+      offset: 000080F2
+    - name: _ZwClose@4
+      demangled: ''
+      offset: 000080F8
+    - name: _IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 000080FE
+    - name: _IoInvalidateDeviceState@4
+      demangled: ''
+      offset: '00008104'
+    - name: _KeDelayExecutionThread@12
+      demangled: ''
+      offset: 0000810A
+    - name: _KeQueryTimeIncrement@0
+      demangled: ''
+      offset: '00008110'
+    - name: '@KfReleaseSpinLock@8'
+      demangled: ''
+      offset: '00008116'
+    - name: '@KfAcquireSpinLock@4'
+      demangled: ''
+      offset: 0000811C
+    - name: _KeCancelTimer@4
+      demangled: ''
+      offset: '00008122'
+    - name: _KeSetTimer@16
+      demangled: ''
+      offset: '00008128'
+    - name: _KeInitializeDpc@12
+      demangled: ''
+      offset: 0000812E
+    - name: _KeInitializeTimer@4
+      demangled: ''
+      offset: '00008134'
+    - name: _KeInitializeSpinLock@4
+      demangled: ''
+      offset: 0000813A
+    - name: _KeQueryPerformanceCounter@4
+      demangled: ''
+      offset: '00008140'
+    - name: __alldiv
+      demangled: ''
+      offset: '00008150'
+    - name: '@ExReleaseFastMutex@4'
+      demangled: ''
+      offset: 000081FA
+    - name: _swprintf
+      demangled: ''
+      offset: '00008200'
+    - name: '@ExAcquireFastMutex@4'
+      demangled: ''
+      offset: '00008206'
+    - name: _RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: 0000820C
+    - name: _RtlFreeUnicodeString@4
+      demangled: ''
+      offset: '00008212'
+    - name: _IoSetDeviceInterfaceState@8
+      demangled: ''
+      offset: '00008218'
+    - name: _IoRegisterDeviceInterface@16
+      demangled: ''
+      offset: 0000821E
+    - name: '@KefReleaseSpinLockFromDpcLevel@4'
+      demangled: ''
+      offset: '00008224'
+    - name: '@KefAcquireSpinLockAtDpcLevel@4'
+      demangled: ''
+      offset: 0000822A
+    - name: __except_handler3
+      demangled: ''
+      offset: '00008238'
+    - name: __seh_longjmp_unwind@4
+      demangled: ''
+      offset: '000082E6'
+    - name: _PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00008302'
+    - name: _IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: '00008308'
+    - name: '@InterlockedExchange@8'
+      demangled: ''
+      offset: 0000830E
+    - name: _IoAcquireCancelSpinLock@4
+      demangled: ''
+      offset: '00008314'
+    - name: _PoRequestPowerIrp@24
+      demangled: ''
+      offset: 0000831A
+    - name: _PoCallDriver@8
+      demangled: ''
+      offset: '00008320'
+    - name: __global_unwind2
+      demangled: ''
+      offset: '00008328'
+    - name: __local_unwind2
+      demangled: ''
+      offset: 0000836A
+    - name: __abnormal_termination
+      demangled: ''
+      offset: 000083C4
+    - name: _RtlUnwind@16
+      demangled: ''
+      offset: '000083E8'
+  - num: '2'
+    name: .rdata
+    offset: 00003D50
+    symbols:
+    - name: _GUID_HWPROFILE_QUERY_CHANGE
+      demangled: ''
+      offset: '00000070'
+    - name: _GUID_HWPROFILE_CHANGE_CANCELLED
+      demangled: ''
+      offset: '00000080'
+    - name: _GUID_HWPROFILE_CHANGE_COMPLETE
+      demangled: ''
+      offset: '00000090'
+    - name: _GUID_DEVICE_INTERFACE_ARRIVAL
+      demangled: ''
+      offset: 000000A0
+    - name: _GUID_DEVICE_INTERFACE_REMOVAL
+      demangled: ''
+      offset: 000000B0
+    - name: _GUID_TARGET_DEVICE_QUERY_REMOVE
+      demangled: ''
+      offset: 000000C0
+    - name: _GUID_TARGET_DEVICE_REMOVE_CANCELLED
+      demangled: ''
+      offset: 000000D0
+    - name: _GUID_TARGET_DEVICE_REMOVE_COMPLETE
+      demangled: ''
+      offset: '000000E0'
+    - name: _GUID_BUS_INTERFACE_STANDARD
+      demangled: ''
+      offset: 000000F0
+    - name: _GUID_PCI_BUS_INTERFACE_STANDARD
+      demangled: ''
+      offset: '00000100'
+    - name: _GUID_ARBITER_INTERFACE_STANDARD
+      demangled: ''
+      offset: '00000110'
+    - name: _GUID_TRANSLATOR_INTERFACE_STANDARD
+      demangled: ''
+      offset: '00000120'
+    - name: _GUID_ACPI_INTERFACE_STANDARD
+      demangled: ''
+      offset: '00000130'
+    - name: _GUID_BUS_TYPE_PCMCIA
+      demangled: ''
+      offset: '00000140'
+    - name: _GUID_BUS_TYPE_PCI
+      demangled: ''
+      offset: '00000150'
+    - name: _GUID_BUS_TYPE_USB
+      demangled: ''
+      offset: '00000160'
+    - name: _GUID_CLASS_USBHUB
+      demangled: ''
+      offset: '00000170'
+    - name: _GUID_CLASS_USB_DEVICE
+      demangled: ''
+      offset: '00000180'
+    - name: _GUID_USB_WMI_STD_DATA
+      demangled: ''
+      offset: '00000190'
+    - name: _GUID_USB_WMI_STD_NOTIFICATION
+      demangled: ''
+      offset: 000001A0
+  - num: '3'
+    name: .data
+    offset: 00003F80
+    symbols:
+    - name: _EnableSerNumGen
+      demangled: ''
+      offset: '00000000'
+    - name: _USBH_PostResetDelay
+      demangled: ''
+      offset: '00002630'
+    - name: _Nibble
+      demangled: ''
+      offset: 00003A90
+    - name: _VidPidRevString
+      demangled: ''
+      offset: 00003AA0
+    - name: _VidPidString
+      demangled: ''
+      offset: 00003AF0
+    - name: _pwchUsbSlash
+      demangled: ''
+      offset: '00005120'
+    - name: _pwchVid
+      demangled: ''
+      offset: '00005124'
+    - name: _pwchPid
+      demangled: ''
+      offset: '00005128'
+    - name: _pwchRev
+      demangled: ''
+      offset: 0000512C
+    - name: _pwchDevClass
+      demangled: ''
+      offset: '00005130'
+    - name: _pwchClass
+      demangled: ''
+      offset: '00005134'
+    - name: _pwchComposite
+      demangled: ''
+      offset: '00005138'
+    - name: _pwchSubClass
+      demangled: ''
+      offset: 0000513C
+    - name: _pwchMultiInterface
+      demangled: ''
+      offset: '00005140'
+    - name: _pwchProt
+      demangled: ''
+      offset: '00005144'
+    - name: _USBH_Debug_Trace_Level
+      demangled: ''
+      offset: '00005148'
+    - name: _LogMask
+      demangled: ''
+      offset: 000051EC
+    - name: _UsbhDriverObject
+      demangled: ''
+      offset: 00008DF0
+    - name: _UsbhSerialNumberTable
+      demangled: ''
+      offset: 00008DF8
+    - name: _UsbhHeapCount
+      demangled: ''
+      offset: '00008E24'
+    - name: _UsbhPnpTest
+      demangled: ''
+      offset: '00008E28'
+    - name: _HubLStart
+      demangled: ''
+      offset: 00008E2C
+    - name: _USBH_DescriptorPatchList
+      demangled: ''
+      offset: '00008E30'
+    - name: _HubLEnd
+      demangled: ''
+      offset: '00008E34'
+    - name: _LogSpinLock
+      demangled: ''
+      offset: '00008E38'
+    - name: _HubLPtr
+      demangled: ''
+      offset: 00008E3C
+    - name: _UsbhRegistryPath
+      demangled: ''
+      offset: '00008E40'
+    - name: _USB_WmiGuidList
+      demangled: ''
+      offset: '00008E60'
+  - num: '4'
+    name: .idata$2
+    offset: 00004AB0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_WMILIB
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000050'
+    - name: __imp_@ExAcquireFastMutex@4
+      demangled: ''
+      offset: 000001AC
+    - name: __imp_@ExReleaseFastMutex@4
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__KeQueryPerformanceCounter@4
+      demangled: ''
+      offset: 000001B4
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: 000001B8
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: 000001C0
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: 000001CC
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: 000001D4
+    - name: __imp__IoAcquireCancelSpinLock@4
+      demangled: ''
+      offset: 000001D8
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: 000001DC
+    - name: __imp__RtlUnwind@16
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: 000001EC
+    - name: __imp__RtlQueryRegistryValues@20
+      demangled: ''
+      offset: 000001F0
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: 000001F4
+    - name: __imp_@ObfReferenceObject@4
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__RtlWriteRegistryValue@24
+      demangled: ''
+      offset: 000001FC
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000200'
+    - name: __imp__memmove
+      demangled: ''
+      offset: '00000204'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000208'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: 0000020C
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000210'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000214'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000218'
+    - name: __imp__KeResetEvent@4
+      demangled: ''
+      offset: 0000021C
+    - name: __imp__IoInitializeIrp@12
+      demangled: ''
+      offset: '00000220'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000224'
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: '00000228'
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: 0000022C
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: '00000230'
+    - name: __imp__KeReleaseSemaphore@16
+      demangled: ''
+      offset: '00000234'
+    - name: __imp__IoInvalidateDeviceRelations@8
+      demangled: ''
+      offset: '00000238'
+    - name: __imp__IoGetDeviceProperty@20
+      demangled: ''
+      offset: 0000023C
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000240'
+    - name: __imp__IoWMIRegistrationControl@8
+      demangled: ''
+      offset: '00000244'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00000248'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      demangled: ''
+      offset: 0000024C
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: '00000250'
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00000254'
+    - name: __imp__KeInitializeSemaphore@12
+      demangled: ''
+      offset: '00000258'
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: 0000025C
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: '00000260'
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: '00000264'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '00000268'
+    - name: __imp__ZwSetValueKey@24
+      demangled: ''
+      offset: 0000026C
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: '00000270'
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: '00000274'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: '00000278'
+    - name: __imp__IoInvalidateDeviceState@4
+      demangled: ''
+      offset: 0000027C
+    - name: __imp__KeDelayExecutionThread@12
+      demangled: ''
+      offset: '00000280'
+    - name: __imp__KeQueryTimeIncrement@0
+      demangled: ''
+      offset: '00000284'
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      demangled: ''
+      offset: '00000288'
+    - name: __imp__IoRegisterDeviceInterface@16
+      demangled: ''
+      offset: 0000028C
+    - name: __imp__IoSetDeviceInterfaceState@8
+      demangled: ''
+      offset: '00000290'
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: '00000294'
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: '00000298'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 0000029C
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: 000002A0
+    - name: __imp__swprintf
+      demangled: ''
+      offset: 000002A4
+    - name: __imp__RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: 000002A8
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000002AC
+    - name: __imp__USBD_RemoveDevice@12
+      demangled: ''
+      offset: 000002B0
+    - name: __imp__USBD_GetDeviceInformation@12
+      demangled: ''
+      offset: 000002B4
+    - name: __imp__USBD_ParseDescriptors@16
+      demangled: ''
+      offset: 000002B8
+    - name: __imp__USBD_CreateDevice@20
+      demangled: ''
+      offset: 000002BC
+    - name: __imp__USBD_InitializeDevice@24
+      demangled: ''
+      offset: 000002C0
+    - name: __imp__USBD_RestoreDevice@12
+      demangled: ''
+      offset: 000002C4
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: 000002C8
+    - name: __imp__USBD_MakePdoName@8
+      demangled: ''
+      offset: 000002CC
+    - name: __imp__USBD_GetPdoRegistryParameter@20
+      demangled: ''
+      offset: 000002D0
+    - name: __imp__USBD_GetInterfaceLength@8
+      demangled: ''
+      offset: 000002D4
+    - name: __imp__USBD_CalculateUsbBandwidth@12
+      demangled: ''
+      offset: 000002D8
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: 000002DC
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '000002E0'
+    - name: __imp__WmiSystemControl@16
+      demangled: ''
+      offset: '000002E4'
+    - name: __imp__WmiCompleteRequest@20
+      demangled: ''
+      offset: '000002E8'
+    - name: __imp__WmiFireEvent@20
+      demangled: ''
+      offset: 000002EC
+    - name: \177WMILIB_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000002F0
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _USBH_RegQueryUSBSerNumGenFlag@4
+      demangled: ''
+      offset: '00000000'
+    - name: _USBH_RegQueryUpgradeInstallFlag@4
+      demangled: ''
+      offset: '000000E0'
+    - name: _USBH_ChangeIndicationWorker@4
+      demangled: ''
+      offset: 000001C0
+    - name: _USBH_ProcessHubStateChange@8
+      demangled: ''
+      offset: '000005E0'
+    - name: _USBH_ProcessPortStateChange@12
+      demangled: ''
+      offset: '00000830'
+    - name: _USBH_GetNameFromPdo@8
+      demangled: ''
+      offset: 00000EE0
+    - name: _USBH_FdoStartDevice@8
+      demangled: ''
+      offset: '00001030'
+    - name: _USBH_QueryCapabilities@8
+      demangled: ''
+      offset: '00001130'
+    - name: _USBH_HubIsBusPowered@8
+      demangled: ''
+      offset: '00001330'
+    - name: _USBH_FdoHubStartDevice@8
+      demangled: ''
+      offset: '00001410'
+    - name: _UsbhFdoCleanup@4
+      demangled: ''
+      offset: 00001AA0
+    - name: _USBH_FdoStopDevice@8
+      demangled: ''
+      offset: '00001E10'
+    - name: _USBH_FdoRemoveDevice@8
+      demangled: ''
+      offset: 00001FF0
+    - name: _USBH_FdoQueryBusRelations@8
+      demangled: ''
+      offset: '00002240'
+    - name: _UsbhWait@4
+      demangled: ''
+      offset: 000029B0
+    - name: _USBH_SyncSubmitUrb@8
+      demangled: ''
+      offset: 00002A30
+    - name: _USBH_SyncGetRootHubPdo@16
+      demangled: ''
+      offset: 00002D70
+    - name: _USBH_FdoSyncSubmitUrb@8
+      demangled: ''
+      offset: 00002EE0
+    - name: _USBH_Transact@40
+      demangled: ''
+      offset: 00002FB0
+    - name: _USBH_SyncGetPortStatus@16
+      demangled: ''
+      offset: 000031C0
+    - name: _USBH_SyncGetHubStatus@12
+      demangled: ''
+      offset: '00003290'
+    - name: _USBH_SyncClearHubStatus@8
+      demangled: ''
+      offset: '00003310'
+    - name: _USBH_SyncClearPortStatus@12
+      demangled: ''
+      offset: '00003380'
+    - name: _USBH_SyncPowerOnPort@8
+      demangled: ''
+      offset: '00003400'
+    - name: _USBH_SyncPowerOnPorts@4
+      demangled: ''
+      offset: 000035C0
+    - name: _USBH_SyncSuspendPort@8
+      demangled: ''
+      offset: 000036B0
+    - name: _USBH_SyncDisablePort@8
+      demangled: ''
+      offset: '00003780'
+    - name: _USBH_SyncEnablePort@8
+      demangled: ''
+      offset: '00003860'
+    - name: _USBH_SyncPowerOffPort@8
+      demangled: ''
+      offset: '00003930'
+    - name: _USBH_SyncResumePort@8
+      demangled: ''
+      offset: 00003A30
+    - name: _USBH_SyncResetPort@8
+      demangled: ''
+      offset: 00003B30
+    - name: _USBH_SyncGetDeviceConfigurationDescriptor@16
+      demangled: ''
+      offset: '00003E30'
+    - name: _USBH_GetConfigurationDescriptor@8
+      demangled: ''
+      offset: 00003FB0
+    - name: _USBH_SyncGetStringDescriptor@28
+      demangled: ''
+      offset: '00004130'
+    - name: _USBH_CheckDeviceLanguage@8
+      demangled: ''
+      offset: 000042A0
+    - name: _USBH_GetSerialNumberString@20
+      demangled: ''
+      offset: '00004430'
+    - name: _USBH_GenerateSerialNumberString@20
+      demangled: ''
+      offset: '000045E0'
+    - name: _USBH_DeleteGeneratedSerialNumberString@12
+      demangled: ''
+      offset: 000048F0
+    - name: _USBH_SyncGetStatus@16
+      demangled: ''
+      offset: 000049F0
+    - name: _USBH_GetDeviceDescriptor@8
+      demangled: ''
+      offset: 00004B10
+    - name: _USBH_SyncGetHubDescriptor@4
+      demangled: ''
+      offset: 00004C20
+    - name: _USBH_SyncFeatureRequest@20
+      demangled: ''
+      offset: 00004EA0
+    - name: _USBH_BuildDeviceID@12
+      demangled: ''
+      offset: '00005020'
+    - name: _USBH_BuildHardwareIDs@16
+      demangled: ''
+      offset: '00005270'
+    - name: _USBH_BuildCompatibleIDs@16
+      demangled: ''
+      offset: '00005690'
+    - name: _USBH_BuildInstanceID@8
+      demangled: ''
+      offset: 00006BC0
+    - name: _USBH_SilentClassesQueryRoutine@24
+      demangled: ''
+      offset: 00006C60
+    - name: _USBH_QuerySilentClasses@0
+      demangled: ''
+      offset: 00006CC0
+    - name: _USBH_AllInterfacesSilent@4
+      demangled: ''
+      offset: '00006E10'
+    - name: _USBH_ProcessDeviceInformation@4
+      demangled: ''
+      offset: '00007040'
+    - name: _USBH_CreateDevice@12
+      demangled: ''
+      offset: 000072D0
+    - name: _USBH_PdoQueryId@8
+      demangled: ''
+      offset: '00007770'
+    - name: _USBH_PdoRemoveDevice@12
+      demangled: ''
+      offset: 00007A50
+    - name: _USBH_PdoQueryCapabilities@8
+      demangled: ''
+      offset: 00007D00
+    - name: _USBH_PdoPnP@12
+      demangled: ''
+      offset: 00007F30
+    - name: _USBH_PdoQueryDeviceText@8
+      demangled: ''
+      offset: '00008420'
+    - name: _USBH_IoctlGetNodeInformation@8
+      demangled: ''
+      offset: '00008660'
+    - name: _USBH_IoctlGetNodeConnectionDriverKeyName@8
+      demangled: ''
+      offset: 000087B0
+    - name: _USBH_IoctlGetNodeConnectionInformation@8
+      demangled: ''
+      offset: 000089C0
+    - name: _USBH_IoctlGetNodeName@8
+      demangled: ''
+      offset: 00008D90
+    - name: _USBH_PdoIoctlGetPortStatus@8
+      demangled: ''
+      offset: '00009120'
+    - name: _USBH_PdoIoctlEnablePort@8
+      demangled: ''
+      offset: '00009390'
+    - name: _USBH_IoctlGetDescriptorForPDO@8
+      demangled: ''
+      offset: 000095A0
+    - name: _USBH_SystemControl@8
+      demangled: ''
+      offset: '00009900'
+    - name: _USBH_ExecuteWmiMethod@32
+      demangled: ''
+      offset: 000099C0
+    - name: _USBH_QueryWmiRegInfo@24
+      demangled: ''
+      offset: 00009F20
+    - name: _UsbhParentFdoCleanup@4
+      demangled: ''
+      offset: 00009F60
+    - name: _USBH_ParentFdoRemoveDevice@8
+      demangled: ''
+      offset: 0000A150
+    - name: _USBH_ParentCreateFunctionList@12
+      demangled: ''
+      offset: 0000A220
+    - name: _USBH_ParentFdoStopDevice@8
+      demangled: ''
+      offset: 0000A6E0
+    - name: _USBH_ParentFdoStartDevice@12
+      demangled: ''
+      offset: 0000A780
+    - name: _USBH_ParentQueryBusRelations@8
+      demangled: ''
+      offset: 0000AE70
+    - name: _USBH_FunctionPdoQueryId@8
+      demangled: ''
+      offset: 0000B060
+    - name: _USBH_FunctionPdoQueryDeviceText@8
+      demangled: ''
+      offset: 0000B230
+    - name: _USBH_FunctionPdoPnP@12
+      demangled: ''
+      offset: 0000B490
+    - name: _USBH_SetPowerD0@8
+      demangled: ''
+      offset: 0000B790
+    - name: _USBH_SetPowerD1orD2@8
+      demangled: ''
+      offset: 0000BA50
+    - name: _USBH_PdoSetPower@8
+      demangled: ''
+      offset: 0000BC50
+    - name: _USBH_PdoPower@12
+      demangled: ''
+      offset: 0000BE80
+    - name: _USBH_FdoPower@12
+      demangled: ''
+      offset: 0000BFF0
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000E80'
+    symbols:
+    - name: _USBH_GetConfigValue@24
+      demangled: ''
+      offset: '00000000'
+    - name: _USBH_RegWriteUSBSerNumGenFlag@4
+      demangled: ''
+      offset: '00000031'
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: 0000004F
+    - name: _USBH_CompleteIrp@8
+      demangled: ''
+      offset: 000001C7
+    - name: _USBH_PassIrp@8
+      demangled: ''
+      offset: 000001DD
+    - name: _USBH_FdoDispatch@8
+      demangled: ''
+      offset: 000001F5
+    - name: _USBH_HubDispatch@8
+      demangled: ''
+      offset: 0000030D
+    - name: _USBH_DriverUnload@4
+      demangled: ''
+      offset: 0000036D
+    - name: _USBH_AbortInterruptPipe@4
+      demangled: ''
+      offset: '00000380'
+    - name: _IsBitSet@8
+      demangled: ''
+      offset: '000003E6'
+    - name: _USBH_OpenConfiguration@4
+      demangled: ''
+      offset: '00000407'
+    - name: _USBH_CloseConfiguration@4
+      demangled: ''
+      offset: '00000497'
+    - name: _USBH_SubmitInterruptTransfer@4
+      demangled: ''
+      offset: 000004DF
+    - name: _USBH_QueryCapsComplete@12
+      demangled: ''
+      offset: 0000058A
+    - name: _USBH_ChangeIndication@12
+      demangled: ''
+      offset: 0000059E
+    - name: _USBH_ChangeIndicationQueryChange@16
+      demangled: ''
+      offset: 000006CC
+    - name: _USBH_ChangeIndicationProcessChange@12
+      demangled: ''
+      offset: 000007AA
+    - name: _USBH_ChangeIndicationAckChange@16
+      demangled: ''
+      offset: '00000839'
+    - name: _USBH_ChangeIndicationAckChangeComplete@12
+      demangled: ''
+      offset: 000008DB
+    - name: _USBH_FlushPortChange@4
+      demangled: ''
+      offset: 0000091B
+    - name: _USBH_AddDevice@8
+      demangled: ''
+      offset: '00000954'
+    - name: _USBH_PnPIrp_Complete@12
+      demangled: ''
+      offset: 00000A14
+    - name: _USBH_HubPnPIrp_Complete@12
+      demangled: ''
+      offset: 00000A3E
+    - name: _USBH_FdoPnP@12
+      demangled: ''
+      offset: 00000A74
+    - name: _USBH_DeferIrpCompletion@12
+      demangled: ''
+      offset: 00000B65
+    - name: _USBH_ResetInterruptPipe@4
+      demangled: ''
+      offset: 00000B7B
+    - name: _USBH_GetPortStatus@8
+      demangled: ''
+      offset: 00000BD4
+    - name: _USBH_EnableParentPort@4
+      demangled: ''
+      offset: 00000C45
+    - name: _USBH_ResetHub@4
+      demangled: ''
+      offset: 00000CA9
+    - name: _USBH_WriteRegistryKeyValue@16
+      demangled: ''
+      offset: 00000CE9
+    - name: _USBH_WriteFailReason@8
+      demangled: ''
+      offset: 00000D16
+    - name: _USBH_InvalidatePortDeviceState@12
+      demangled: ''
+      offset: 00000D56
+    - name: _UsbhTimeoutDPC@16
+      demangled: ''
+      offset: 00000DC3
+    - name: _USBH_SyncIrp_Complete@12
+      demangled: ''
+      offset: '00000E02'
+    - name: _USBH_SyncGetControllerInfo@16
+      demangled: ''
+      offset: '00000E50'
+    - name: _USBH_SyncGetHubName@12
+      demangled: ''
+      offset: 00000ECA
+    - name: _UsbhGetConnectionStatus@4
+      demangled: ''
+      offset: 00000F3C
+    - name: _USBH_BandwidthTimeoutWorker@4
+      demangled: ''
+      offset: 00000F79
+    - name: _USBH_PortTimeoutDPC@16
+      demangled: ''
+      offset: 00000F99
+    - name: _USBH_SelectConfigOrInterface_Complete@12
+      demangled: ''
+      offset: 00000FE2
+    - name: _USBH_PdoUrbFilter@8
+      demangled: ''
+      offset: 000010DE
+    - name: _GetString@8
+      demangled: ''
+      offset: 000011C3
+    - name: _USBH_PdoStopDevice@8
+      demangled: ''
+      offset: '00001222'
+    - name: _USBH_ResetPortWorker@4
+      demangled: ''
+      offset: 0000129C
+    - name: _USBH_PdoDispatch@8
+      demangled: ''
+      offset: 000012BE
+    - name: _USBH_ResetDevice@12
+      demangled: ''
+      offset: 000014A2
+    - name: _USBH_RestoreDevice@8
+      demangled: ''
+      offset: 000015DB
+    - name: _USBH_SymbolicLink@12
+      demangled: ''
+      offset: 0000164A
+    - name: _USBH_SetPdoRegistryParameter@28
+      demangled: ''
+      offset: 000016C7
+    - name: _USBH_SetRegistryKeyValue@20
+      demangled: ''
+      offset: 0000171A
+    - name: _USBH_IoctlHubSymbolicName@8
+      demangled: ''
+      offset: '00001738'
+    - name: _USBH_PdoIoctlResetPort@8
+      demangled: ''
+      offset: '00001832'
+    - name: _USBH_PdoIoctlCyclePort@8
+      demangled: ''
+      offset: 000018D0
+    - name: _USBH_BuildConnectionNotification@12
+      demangled: ''
+      offset: 0000190A
+    - name: _USBH_PdoEvent@8
+      demangled: ''
+      offset: 000019D8
+    - name: _USBH_GetPortPdoExtension@8
+      demangled: ''
+      offset: 00001A20
+    - name: _USBH_SetWmiDataBlock@24
+      demangled: ''
+      offset: 00001A64
+    - name: _USBH_QueryWmiDataBlock@32
+      demangled: ''
+      offset: 00001A8B
+    - name: _USBH_ResetPortOvercurrent@12
+      demangled: ''
+      offset: 00001AC0
+    - name: _USBH_CalculateInterfaceBandwidth@12
+      demangled: ''
+      offset: 00001B00
+    - name: _USBH_ParentWaitWakeCancel@8
+      demangled: ''
+      offset: 00001B4A
+    - name: _USBH_FunctionPdoPower@12
+      demangled: ''
+      offset: 00001B87
+    - name: _USBH_ParentQCapsComplete@12
+      demangled: ''
+      offset: 00001CA1
+    - name: _USBH_ParentPnP@12
+      demangled: ''
+      offset: 00001CB4
+    - name: _USBH_ParentPower@12
+      demangled: ''
+      offset: 00001D60
+    - name: _USBH_ParentDispatch@8
+      demangled: ''
+      offset: '00001E15'
+    - name: _USBH_FunctionUrbFilter@8
+      demangled: ''
+      offset: 00001E8B
+    - name: _USBH_CancelAllIrpsInList@4
+      demangled: ''
+      offset: 0000204A
+    - name: _USBH_CompResetTimeoutWorker@4
+      demangled: ''
+      offset: '00002074'
+    - name: _USBH_CompResetTimeoutDPC@16
+      demangled: ''
+      offset: 000020B2
+    - name: _USBH_ListReadyForReset@4
+      demangled: ''
+      offset: 0000211E
+    - name: _USBH_ResetParentPort@4
+      demangled: ''
+      offset: 0000213C
+    - name: _USBH_CompositeResetPortWorker@4
+      demangled: ''
+      offset: 000021A0
+    - name: _USBH_FunctionPdoDispatch@8
+      demangled: ''
+      offset: 000021FA
+    - name: _USBH_BuildFunctionConfigurationDescriptor@16
+      demangled: ''
+      offset: 000023C1
+    - name: _USBH_ParentCompleteFunctionWakeIrps@8
+      demangled: ''
+      offset: 0000249A
+    - name: _USBH_ParentPoRequestD0Completion@20
+      demangled: ''
+      offset: 000024FF
+    - name: _USBH_ParentWaitWakeIrpCompletion@20
+      demangled: ''
+      offset: '00002534'
+    - name: _USBH_ParentSubmitWaitWakeIrp@4
+      demangled: ''
+      offset: 0000257C
+    - name: _USBH_CompletePowerIrp@12
+      demangled: ''
+      offset: 000025C5
+    - name: _USBH_SetPowerD3@8
+      demangled: ''
+      offset: '00002609'
+    - name: _USBH_PdoQueryPower@8
+      demangled: ''
+      offset: 000026A6
+    - name: _USBH_WaitWakeCancel@8
+      demangled: ''
+      offset: '00002700'
+    - name: _USBH_PdoWaitWake@8
+      demangled: ''
+      offset: 0000272E
+    - name: _USBH_PowerIrpCompletion@12
+      demangled: ''
+      offset: 000027D1
+    - name: _USBH_FdoDeferPoRequestCompletion@20
+      demangled: ''
+      offset: '00002816'
+    - name: _USBH_HubCompletePortWakeIrps@8
+      demangled: ''
+      offset: '00002859'
+    - name: _USBH_FdoPoRequestD0Completion@20
+      demangled: ''
+      offset: '00002912'
+    - name: _USBH_FdoWaitWakeIrpCompletion@20
+      demangled: ''
+      offset: 0000296A
+    - name: _USBH_FdoSubmitWaitWakeIrp@4
+      demangled: ''
+      offset: 000029C8
+    - name: _USBD_GetInterfaceLength@8
+      demangled: ''
+      offset: 00002A16
+    - name: _USBD_GetPdoRegistryParameter@20
+      demangled: ''
+      offset: 00002A1C
+    - name: _WmiFireEvent@20
+      demangled: ''
+      offset: 00002A22
+    - name: _WmiSystemControl@16
+      demangled: ''
+      offset: 00002A28
+    - name: _WmiCompleteRequest@20
+      demangled: ''
+      offset: 00002A2E
+    - name: _memmove
+      demangled: ''
+      offset: 00002A34
+    - name: _swprintf
+      demangled: ''
+      offset: 00002A3A
+    - name: __except_handler3
+      demangled: ''
+      offset: 00002A48
+    - name: __seh_longjmp_unwind@4
+      demangled: ''
+      offset: 00002AF6
+    - name: __global_unwind2
+      demangled: ''
+      offset: 00002B14
+    - name: __local_unwind2
+      demangled: ''
+      offset: 00002B56
+    - name: __abnormal_termination
+      demangled: ''
+      offset: 00002BB0
+    - name: _RtlUnwind@16
+      demangled: ''
+      offset: 00002BD4
+  - num: '2'
+    name: .rdata
+    offset: '00001130'
+    symbols:
+    - name: _GUID_HWPROFILE_QUERY_CHANGE
+      demangled: ''
+      offset: '00000000'
+    - name: _GUID_HWPROFILE_CHANGE_CANCELLED
+      demangled: ''
+      offset: '00000010'
+    - name: _GUID_HWPROFILE_CHANGE_COMPLETE
+      demangled: ''
+      offset: '00000020'
+    - name: _GUID_DEVICE_INTERFACE_ARRIVAL
+      demangled: ''
+      offset: '00000030'
+    - name: _GUID_DEVICE_INTERFACE_REMOVAL
+      demangled: ''
+      offset: '00000040'
+    - name: _GUID_TARGET_DEVICE_QUERY_REMOVE
+      demangled: ''
+      offset: '00000050'
+    - name: _GUID_TARGET_DEVICE_REMOVE_CANCELLED
+      demangled: ''
+      offset: '00000060'
+    - name: _GUID_TARGET_DEVICE_REMOVE_COMPLETE
+      demangled: ''
+      offset: '00000070'
+    - name: _GUID_BUS_INTERFACE_STANDARD
+      demangled: ''
+      offset: '00000080'
+    - name: _GUID_PCI_BUS_INTERFACE_STANDARD
+      demangled: ''
+      offset: '00000090'
+    - name: _GUID_ARBITER_INTERFACE_STANDARD
+      demangled: ''
+      offset: 000000A0
+    - name: _GUID_TRANSLATOR_INTERFACE_STANDARD
+      demangled: ''
+      offset: 000000B0
+    - name: _GUID_ACPI_INTERFACE_STANDARD
+      demangled: ''
+      offset: 000000C0
+    - name: _GUID_BUS_TYPE_PCMCIA
+      demangled: ''
+      offset: 000000D0
+    - name: _GUID_BUS_TYPE_PCI
+      demangled: ''
+      offset: '000000E0'
+    - name: _GUID_BUS_TYPE_USB
+      demangled: ''
+      offset: 000000F0
+    - name: _GUID_CLASS_USBHUB
+      demangled: ''
+      offset: '00000100'
+    - name: _GUID_CLASS_USB_DEVICE
+      demangled: ''
+      offset: '00000110'
+    - name: _GUID_USB_WMI_STD_DATA
+      demangled: ''
+      offset: '00000120'
+    - name: _GUID_USB_WMI_STD_NOTIFICATION
+      demangled: ''
+      offset: '00000130'
+  - num: '3'
+    name: .data
+    offset: '00001950'
+    symbols:
+    - name: _EnableSerNumGen
+      demangled: ''
+      offset: '00000000'
+    - name: ??_C@_17IGND@?$AAu?$AAs?$AAb?$AA?$AA@
+      demangled: L"usb"
+      offset: '00000004'
+    - name: 
+        ??_C@_1DK@HFFM@?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AAS?$AAe?$AAr?$AAi?$AAa?$AAl?$AAN?$AAu?$AAm?$AAb?$AAe?$AAr?$AAG?$AAe@
+      demangled: L"EnableSerialNumberGe"
+      offset: 0000000C
+    - name: ??_C@_1BA@DPID@?$AAU?$AAp?$AAg?$AAr?$AAa?$AAd?$AAe?$AA?$AA@
+      demangled: L"Upgrade"
+      offset: '00000048'
+    - name: ??_C@_1M@MJCE@?$AAS?$AAe?$AAt?$AAu?$AAp?$AA?$AA@
+      demangled: L"Setup"
+      offset: '00000058'
+    - name: 
+        ??_C@_1BK@JLND@?$AAF?$AAa?$AAi?$AAl?$AAR?$AAe?$AAa?$AAs?$AAo?$AAn?$AAI?$AAD?$AA?$AA@
+      demangled: L"FailReasonID"
+      offset: '00000064'
+    - name: _USBH_PostResetDelay
+      demangled: ''
+      offset: '00000080'
+    - name: ??_C@_1BA@IPDB@?$AAI?$AAn?$AAs?$AAt?$AA?5?$AA?$CF?$AAd?$AA?$AA@
+      demangled: L"Inst %d"
+      offset: '00000084'
+    - name: _Nibble
+      demangled: ''
+      offset: '00000098'
+    - name: _VidPidRevString
+      demangled: ''
+      offset: 000000A8
+    - name: _VidPidString
+      demangled: ''
+      offset: 000000F8
+    - name: 
+        ??_C@_1CE@HMFC@?$AAU?$AAS?$AAB?$AA?2?$AAS?$AAi?$AAl?$AAe?$AAn?$AAt?$AAC?$AAl?$AAa?$AAs?$AAs?$AAe?$AAs?$AA?$AA@
+      demangled: L"USB\\SilentClasses"
+      offset: '00000130'
+    - name: 
+        ??_C@_1BK@KPFG@?$AAU?$AAS?$AAB?$AA?2?$AAU?$AAN?$AAK?$AAN?$AAO?$AAW?$AAN?$AA?$AA?$AA?$AA@
+      demangled: L"USB\\UNKNOWN\0"
+      offset: '00000154'
+    - name: ??_C@_1BG@NEKG@?$AAU?$AAS?$AAB?$AA?5?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?$AA@
+      demangled: L"USB Device"
+      offset: '00000170'
+    - name: 
+        ??_C@_1BK@NFMM@?$AAS?$AAy?$AAm?$AAb?$AAo?$AAl?$AAi?$AAc?$AAN?$AAa?$AAm?$AAe?$AA?$AA@
+      demangled: L"SymbolicName"
+      offset: '00000188'
+    - name: _pwchUsbSlash
+      demangled: ''
+      offset: 000001A4
+    - name: _pwchVid
+      demangled: ''
+      offset: 000001A8
+    - name: _pwchPid
+      demangled: ''
+      offset: 000001AC
+    - name: _pwchRev
+      demangled: ''
+      offset: 000001B0
+    - name: _pwchDevClass
+      demangled: ''
+      offset: 000001B4
+    - name: _pwchClass
+      demangled: ''
+      offset: 000001B8
+    - name: _pwchComposite
+      demangled: ''
+      offset: 000001BC
+    - name: _pwchSubClass
+      demangled: ''
+      offset: 000001C0
+    - name: _pwchMultiInterface
+      demangled: ''
+      offset: 000001C4
+    - name: _pwchProt
+      demangled: ''
+      offset: 000001C8
+    - name: ??_C@_1M@LPKD@?$AAP?$AAr?$AAo?$AAt?$AA_?$AA?$AA@
+      demangled: L"Prot_"
+      offset: 000001CC
+    - name: ??_C@_1O@JGHH@?$AAU?$AAS?$AAB?$AA?2?$AAM?$AAI?$AA?$AA@
+      demangled: L"USB\\MI"
+      offset: 000001D8
+    - name: ??_C@_1BE@MAJL@?$AAS?$AAu?$AAb?$AAC?$AAl?$AAa?$AAs?$AAs?$AA_?$AA?$AA@
+      demangled: L"SubClass_"
+      offset: '000001E8'
+    - name: 
+        ??_C@_1BM@GHDD@?$AAU?$AAS?$AAB?$AA?2?$AAC?$AAO?$AAM?$AAP?$AAO?$AAS?$AAI?$AAT?$AAE?$AA?$AA@
+      demangled: L"USB\\COMPOSITE"
+      offset: 000001FC
+    - name: ??_C@_1O@DFCL@?$AAC?$AAl?$AAa?$AAs?$AAs?$AA_?$AA?$AA@
+      demangled: L"Class_"
+      offset: '00000218'
+    - name: ??_C@_1BE@LJDF@?$AAD?$AAe?$AAv?$AAC?$AAl?$AAa?$AAs?$AAs?$AA_?$AA?$AA@
+      demangled: L"DevClass_"
+      offset: '00000228'
+    - name: ??_C@_19JEGG@?$AAR?$AAe?$AAv?$AA_?$AA?$AA@
+      demangled: L"Rev_"
+      offset: 0000023C
+    - name: ??_C@_19JMBC@?$AAP?$AAi?$AAd?$AA_?$AA?$AA@
+      demangled: L"Pid_"
+      offset: '00000248'
+    - name: ??_C@_19BBKC@?$AAV?$AAi?$AAd?$AA_?$AA?$AA@
+      demangled: L"Vid_"
+      offset: '00000254'
+    - name: ??_C@_19HHFM@?$AAU?$AAS?$AAB?$AA?2?$AA?$AA@
+      demangled: L"USB\\"
+      offset: '00000260'
+    - name: 
+        ??_C@_1CK@JGFL@?$AAC?$AAo?$AAm?$AAp?$AAo?$AAs?$AAi?$AAt?$AAe?$AA?5?$AAU?$AAS?$AAB?$AA?5?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe@
+      demangled: L"Composite USB Device"
+      offset: 0000026C
+    - name: 
+        ??_C@_1CI@GJLP@?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAR?$AAe?$AAm?$AAo?$AAt?$AAe?$AAW?$AAa?$AAk?$AAe?$AAu?$AAp?$AA?$AA@
+      demangled: L"DisableRemoteWakeup"
+      offset: '00000298'
+    - name: _UsbhDriverObject
+      demangled: ''
+      offset: 000002C0
+    - name: _UsbhSerialNumberTable
+      demangled: ''
+      offset: 000002C8
+    - name: _USBH_DescriptorPatchList
+      demangled: ''
+      offset: 000002F4
+    - name: _UsbhRegistryPath
+      demangled: ''
+      offset: 000002F8
+    - name: _USB_WmiGuidList
+      demangled: ''
+      offset: '00000300'
+  - num: '4'
+    name: .idata$2
+    offset: '00002410'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_WMILIB
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000050'
+    - name: __imp_@ExAcquireFastMutex@4
+      demangled: ''
+      offset: 0000019C
+    - name: __imp_@ExReleaseFastMutex@4
+      demangled: ''
+      offset: 000001A0
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: 000001A4
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: 000001A8
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000001AC
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: 000001B4
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: 000001B8
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: 000001C0
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__IoAcquireCancelSpinLock@4
+      demangled: ''
+      offset: 000001CC
+    - name: __imp__RtlUnwind@16
+      demangled: ''
+      offset: 000001D0
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      demangled: ''
+      offset: 000001D4
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__RtlQueryRegistryValues@20
+      demangled: ''
+      offset: 000001DC
+    - name: __imp__RtlWriteRegistryValue@24
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp__memmove
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 000001EC
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: 000001F0
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 000001F4
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 000001FC
+    - name: __imp__KeResetEvent@4
+      demangled: ''
+      offset: '00000200'
+    - name: __imp__IoInitializeIrp@12
+      demangled: ''
+      offset: '00000204'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000208'
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: 0000020C
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000210'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: '00000214'
+    - name: __imp__KeReleaseSemaphore@16
+      demangled: ''
+      offset: '00000218'
+    - name: __imp__IoInvalidateDeviceRelations@8
+      demangled: ''
+      offset: 0000021C
+    - name: __imp__IoGetDeviceProperty@20
+      demangled: ''
+      offset: '00000220'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000224'
+    - name: __imp__IoWMIRegistrationControl@8
+      demangled: ''
+      offset: '00000228'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 0000022C
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000230'
+    - name: __imp__KeQueryTimeIncrement@0
+      demangled: ''
+      offset: '00000234'
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00000238'
+    - name: __imp__KeInitializeSemaphore@12
+      demangled: ''
+      offset: 0000023C
+    - name: __imp__IoSetDeviceInterfaceState@8
+      demangled: ''
+      offset: '00000240'
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: '00000244'
+    - name: __imp_@ObfReferenceObject@4
+      demangled: ''
+      offset: '00000248'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: 0000024C
+    - name: __imp__ZwSetValueKey@24
+      demangled: ''
+      offset: '00000250'
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: '00000254'
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: '00000258'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 0000025C
+    - name: __imp__IoInvalidateDeviceState@4
+      demangled: ''
+      offset: '00000260'
+    - name: __imp__KeDelayExecutionThread@12
+      demangled: ''
+      offset: '00000264'
+    - name: __imp__IoRegisterDeviceInterface@16
+      demangled: ''
+      offset: '00000268'
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: 0000026C
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000270'
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: '00000274'
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: '00000278'
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: 0000027C
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: '00000280'
+    - name: __imp__swprintf
+      demangled: ''
+      offset: '00000284'
+    - name: __imp__RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: '00000288'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000028C
+    - name: __imp__USBD_RemoveDevice@12
+      demangled: ''
+      offset: '00000290'
+    - name: __imp__USBD_InitializeDevice@24
+      demangled: ''
+      offset: '00000294'
+    - name: __imp__USBD_GetDeviceInformation@12
+      demangled: ''
+      offset: '00000298'
+    - name: __imp__USBD_CreateDevice@20
+      demangled: ''
+      offset: 0000029C
+    - name: __imp__USBD_GetPdoRegistryParameter@20
+      demangled: ''
+      offset: 000002A0
+    - name: __imp__USBD_MakePdoName@8
+      demangled: ''
+      offset: 000002A4
+    - name: __imp__USBD_CalculateUsbBandwidth@12
+      demangled: ''
+      offset: 000002A8
+    - name: __imp__USBD_GetInterfaceLength@8
+      demangled: ''
+      offset: 000002AC
+    - name: __imp__USBD_ParseDescriptors@16
+      demangled: ''
+      offset: 000002B0
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: 000002B4
+    - name: __imp__USBD_RestoreDevice@12
+      demangled: ''
+      offset: 000002B8
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: 000002BC
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000002C0
+    - name: __imp__WmiSystemControl@16
+      demangled: ''
+      offset: 000002C4
+    - name: __imp__WmiCompleteRequest@20
+      demangled: ''
+      offset: 000002C8
+    - name: __imp__WmiFireEvent@20
+      demangled: ''
+      offset: 000002CC
+    - name: \177WMILIB_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000002D0
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _USBH_RegQueryUSBSerNumGenFlag@4
+      demangled: ''
+      offset: '00000000'
+    - name: _USBH_RegQueryUpgradeInstallFlag@4
+      demangled: ''
+      offset: 0000004F
+    - name: _USBH_ChangeIndicationWorker@4
+      demangled: ''
+      offset: 0000009D
+    - name: _USBH_ProcessHubStateChange@8
+      demangled: ''
+      offset: 000001A5
+    - name: _USBH_ProcessPortStateChange@12
+      demangled: ''
+      offset: 0000021D
+    - name: _USBH_FdoStartDevice@8
+      demangled: ''
+      offset: '00000336'
+    - name: _USBH_QueryCapabilities@8
+      demangled: ''
+      offset: 0000037A
+    - name: _USBH_HubIsBusPowered@8
+      demangled: ''
+      offset: '00000404'
+    - name: _USBH_FdoHubStartDevice@8
+      demangled: ''
+      offset: '00000440'
+    - name: _UsbhFdoCleanup@4
+      demangled: ''
+      offset: 000006D7
+    - name: _USBH_FdoStopDevice@8
+      demangled: ''
+      offset: 000007D1
+    - name: _USBH_FdoRemoveDevice@8
+      demangled: ''
+      offset: '00000848'
+    - name: _USBH_FdoQueryBusRelations@8
+      demangled: ''
+      offset: '000008E4'
+    - name: _UsbhWait@4
+      demangled: ''
+      offset: 00000B16
+    - name: _USBH_SyncSubmitUrb@8
+      demangled: ''
+      offset: 00000B48
+    - name: _USBH_SyncGetRootHubPdo@16
+      demangled: ''
+      offset: 00000C5C
+    - name: _USBH_FdoSyncSubmitUrb@8
+      demangled: ''
+      offset: 00000CF0
+    - name: _USBH_Transact@40
+      demangled: ''
+      offset: 00000D06
+    - name: _USBH_SyncGetPortStatus@16
+      demangled: ''
+      offset: 00000DFD
+    - name: _USBH_SyncGetHubStatus@12
+      demangled: ''
+      offset: '00000E22'
+    - name: _USBH_SyncClearHubStatus@8
+      demangled: ''
+      offset: '00000E44'
+    - name: _USBH_SyncClearPortStatus@12
+      demangled: ''
+      offset: '00000E62'
+    - name: _USBH_SyncPowerOnPort@8
+      demangled: ''
+      offset: '00000E83'
+    - name: _USBH_SyncPowerOnPorts@4
+      demangled: ''
+      offset: 00000EE0
+    - name: _USBH_SyncSuspendPort@8
+      demangled: ''
+      offset: 00000F16
+    - name: _USBH_SyncDisablePort@8
+      demangled: ''
+      offset: 00000F4F
+    - name: _USBH_SyncEnablePort@8
+      demangled: ''
+      offset: 00000F8A
+    - name: _USBH_SyncResumePort@8
+      demangled: ''
+      offset: 00000FC3
+    - name: _USBH_SyncResetPort@8
+      demangled: ''
+      offset: '00001018'
+    - name: _USBH_SyncGetDeviceConfigurationDescriptor@16
+      demangled: ''
+      offset: 000010C1
+    - name: _USBH_GetConfigurationDescriptor@8
+      demangled: ''
+      offset: 0000116F
+    - name: _USBH_SyncGetStringDescriptor@28
+      demangled: ''
+      offset: '00001226'
+    - name: _USBH_CheckDeviceLanguage@8
+      demangled: ''
+      offset: 000012BF
+    - name: _USBH_GetSerialNumberString@20
+      demangled: ''
+      offset: '00001337'
+    - name: _USBH_GenerateSerialNumberString@20
+      demangled: ''
+      offset: '00001408'
+    - name: _USBH_DeleteGeneratedSerialNumberString@12
+      demangled: ''
+      offset: '00001546'
+    - name: _USBH_SyncGetStatus@16
+      demangled: ''
+      offset: 0000158C
+    - name: _USBH_GetDeviceDescriptor@8
+      demangled: ''
+      offset: 000015FD
+    - name: _USBH_SyncGetHubDescriptor@4
+      demangled: ''
+      offset: '00001666'
+    - name: _USBH_SyncFeatureRequest@20
+      demangled: ''
+      offset: 0000179C
+    - name: _USBH_BuildDeviceID@12
+      demangled: ''
+      offset: 0000182F
+    - name: _USBH_BuildHardwareIDs@16
+      demangled: ''
+      offset: '00001933'
+    - name: _USBH_BuildCompatibleIDs@16
+      demangled: ''
+      offset: 00001B3D
+    - name: _USBH_BuildInstanceID@8
+      demangled: ''
+      offset: 0000239D
+    - name: _USBH_SilentClassesQueryRoutine@24
+      demangled: ''
+      offset: 000023D1
+    - name: _USBH_QuerySilentClasses@0
+      demangled: ''
+      offset: 000023FF
+    - name: _USBH_AllInterfacesSilent@4
+      demangled: ''
+      offset: 000024AE
+    - name: _USBH_ProcessDeviceInformation@4
+      demangled: ''
+      offset: '00002579'
+    - name: _USBH_CreateDevice@12
+      demangled: ''
+      offset: 0000263B
+    - name: _USBH_PdoQueryId@8
+      demangled: ''
+      offset: 0000281C
+    - name: _USBH_PdoRemoveDevice@12
+      demangled: ''
+      offset: '00002934'
+    - name: _USBH_PdoQueryCapabilities@8
+      demangled: ''
+      offset: 00002A24
+    - name: _USBH_PdoPnP@12
+      demangled: ''
+      offset: 00002AB0
+    - name: _USBH_PdoQueryDeviceText@8
+      demangled: ''
+      offset: 00002C2C
+    - name: _USBH_IoctlGetNodeInformation@8
+      demangled: ''
+      offset: 00002D50
+    - name: _USBH_IoctlGetNodeConnectionDriverKeyName@8
+      demangled: ''
+      offset: 00002DFF
+    - name: _USBH_IoctlGetNodeConnectionInformation@8
+      demangled: ''
+      offset: 00002F08
+    - name: _USBH_IoctlGetNodeName@8
+      demangled: ''
+      offset: '00003059'
+    - name: _USBH_PdoIoctlGetPortStatus@8
+      demangled: ''
+      offset: '00003218'
+    - name: _USBH_PdoIoctlEnablePort@8
+      demangled: ''
+      offset: 000032CF
+    - name: _USBH_IoctlGetDescriptorForPDO@8
+      demangled: ''
+      offset: '00003367'
+    - name: _USBH_SystemControl@8
+      demangled: ''
+      offset: '00003516'
+    - name: _USBH_ExecuteWmiMethod@32
+      demangled: ''
+      offset: '00003561'
+    - name: _USBH_QueryWmiRegInfo@24
+      demangled: ''
+      offset: 000036EB
+    - name: _UsbhParentFdoCleanup@4
+      demangled: ''
+      offset: '00003714'
+    - name: _USBH_ParentFdoRemoveDevice@8
+      demangled: ''
+      offset: '00003792'
+    - name: _USBH_ParentCreateFunctionList@12
+      demangled: ''
+      offset: 000037DA
+    - name: _USBH_ParentFdoStopDevice@8
+      demangled: ''
+      offset: 000039D9
+    - name: _USBH_ParentFdoStartDevice@12
+      demangled: ''
+      offset: 000039F4
+    - name: _USBH_ParentQueryBusRelations@8
+      demangled: ''
+      offset: 00003CDF
+    - name: _USBH_FunctionPdoQueryId@8
+      demangled: ''
+      offset: 00003D50
+    - name: _USBH_FunctionPdoQueryDeviceText@8
+      demangled: ''
+      offset: '00003E08'
+    - name: _USBH_FunctionPdoPnP@12
+      demangled: ''
+      offset: 00003F35
+    - name: _USBH_SetPowerD0@8
+      demangled: ''
+      offset: '00004004'
+    - name: _USBH_SetPowerD1orD2@8
+      demangled: ''
+      offset: 0000412A
+    - name: _USBH_PdoSetPower@8
+      demangled: ''
+      offset: 000041CA
+    - name: _USBH_PdoPower@12
+      demangled: ''
+      offset: '00004231'
+    - name: _USBH_FdoPower@12
+      demangled: ''
+      offset: 0000428E

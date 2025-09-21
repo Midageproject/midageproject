@@ -1,0 +1,6518 @@
+filename: vip.386
+binary: VIP
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - /f/ndis31/mac/common/ndisdbg.asm
+  - /f/ndis31/mac/common/ndisos.asm
+  - /f/ndis31/mac/common/ndisprot.asm
+  - ../../../../../../net/vxd/tcpip/ip/arp.c
+  - ../../../../../../net/vxd/tcpip/ip/chicfg.c
+  - ../../../../../../net/vxd/tcpip/ip/icmp.c
+  - ../../../../../../net/vxd/tcpip/ip/igmp.c
+  - ../../../../../../net/vxd/tcpip/ip/info.c
+  - ../../../../../../net/vxd/tcpip/ip/init.c
+  - ../../../../../../net/vxd/tcpip/ip/iploop.c
+  - ../../../../../../net/vxd/tcpip/ip/iprcv.c
+  - ../../../../../../net/vxd/tcpip/ip/iproute.c
+  - ../../../../../../net/vxd/tcpip/ip/ipxmit.c
+  - ../../../../../../net/vxd/tcpip/ip/vip.asm
+  - /../../../../../../net/vxd/tcpip/vtdi/cxport.asm
+  - iprcv.c
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 0000A550
+    symbols:
+    - name: _CTEStartTimer
+      processed: ''
+      offset: '00000000'
+    - name: _CTEStopTimer
+      processed: ''
+      offset: '00000006'
+    - name: _CTESystemUpTime
+      processed: ''
+      offset: 0000000C
+    - name: __ICTEGetLock
+      processed: ''
+      offset: '00000012'
+    - name: __ICTEFreeLock
+      processed: ''
+      offset: '00000018'
+    - name: _CTEScheduleEvent
+      processed: ''
+      offset: 0000001E
+    - name: _CTEScheduleEvent_N
+      processed: ''
+      offset: '00000024'
+    - name: _CTECancelEvent
+      processed: ''
+      offset: 0000002A
+    - name: _CTEAllocMem
+      processed: ''
+      offset: '00000030'
+    - name: _CTEFreeMem
+      processed: ''
+      offset: '00000074'
+    - name: _CTERefillMem
+      processed: ''
+      offset: 0000008C
+    - name: _CTEBlock
+      processed: ''
+      offset: '00000092'
+    - name: _CTEBlock1
+      processed: ''
+      offset: '00000098'
+    - name: _CTESignal
+      processed: ''
+      offset: 0000009E
+    - name: __CTECheckMem
+      processed: ''
+      offset: 000000A4
+    - name: _CTEPrint
+      processed: ''
+      offset: 000000AA
+    - name: _CTEPrintNum
+      processed: ''
+      offset: 000000BC
+    - name: _CTEPrintCRLF
+      processed: ''
+      offset: '00000105'
+    - name: _CTEUnload
+      processed: ''
+      offset: '00000115'
+    - name: _CTESetLoadNotifyProc
+      processed: ''
+      offset: '00000120'
+    - name: _CTESetUnloadNotifyProc
+      processed: ''
+      offset: 0000012B
+    - name: VIP_Get_Version
+      processed: ''
+      offset: 0000013E
+    - name: _GetTime
+      processed: ''
+      offset: 0000014C
+    - name: _RequestDHCPAddr
+      processed: ''
+      offset: 000001C2
+    - name: VIP_Register_Addr_Change
+      processed: ''
+      offset: 000001D7
+    - name: VIP_Register_Addr_ChangeEx
+      processed: ''
+      offset: 000001EA
+    - name: VIP_Register_Rt_Change_Handler
+      processed: ''
+      offset: 000001FD
+    - name: VIP_Register_Interface_Change
+      processed: ''
+      offset: '00000210'
+    - name: _NotifyOfUnload
+      processed: ''
+      offset: 0000021D
+    - name: RefillEvent
+      processed: ''
+      offset: '00000233'
+    - name: _RefillReasmMem
+      processed: ''
+      offset: '00000243'
+    - name: VIP_Get_Net_Info
+      processed: ''
+      offset: '00000270'
+    - name: VIP_Register_Protocol
+      processed: ''
+      offset: '00000283'
+    - name: VIP_Register_Driver
+      processed: ''
+      offset: '00000296'
+    - name: VIP_Set_Addr
+      processed: ''
+      offset: 000002A6
+    - name: VIP_Set_Addr_Ex
+      processed: ''
+      offset: 000002B9
+    - name: VIP_Set_DHCP_Interface
+      processed: ''
+      offset: 000002CC
+    - name: VIP_LookupRoute
+      processed: ''
+      offset: 000002DF
+    - name: VIP_IP_Add_Interface
+      processed: ''
+      offset: 000002F2
+    - name: VIP_IP_Delete_Interface
+      processed: ''
+      offset: '00000305'
+    - name: ConvertPtr
+      processed: ''
+      offset: '00000312'
+    - name: PingDone
+      processed: ''
+      offset: '00000348'
+    - name: VIP_V86_API
+      processed: ''
+      offset: 000003D2
+    - name: VIP_ICMP_Echo
+      processed: ''
+      offset: 000004C8
+    - name: _DisplayPopup
+      processed: ''
+      offset: 000004D5
+    - name: _NotifyConflictProc
+      processed: ''
+      offset: 000004D6
+    - name: _DisplayConflictPopup
+      processed: ''
+      offset: 000004EC
+    - name: _EnableInts
+      processed: ''
+      offset: 0000054B
+    - name: VIP_Terminate
+      processed: ''
+      offset: '00000551'
+    - name: VIP_Device_Exit
+      processed: ''
+      offset: 0000055D
+    - name: VIP_Control
+      processed: ''
+      offset: 0000055F
+    - name: VIP_DeviceIoControl
+      processed: ''
+      offset: '00000582'
+    - name: _SetDHCPNTE
+      processed: ''
+      offset: '00000648'
+    - name: _IsDHCPInterface
+      processed: ''
+      offset: 000006CC
+    - name: _CloseNets
+      processed: ''
+      offset: '000006E4'
+    - name: _IPRegisterProtocol
+      processed: ''
+      offset: '00000704'
+    - name: _IPSetMCastAddr
+      processed: ''
+      offset: 000007B0
+    - name: _IPGetAddrType
+      processed: ''
+      offset: 0000080C
+    - name: _IPGetLocalMTU
+      processed: ''
+      offset: 0000081C
+    - name: _IPUpdateRcvdOptions
+      processed: ''
+      offset: '00000868'
+    - name: _ValidRouteOption
+      processed: ''
+      offset: 00000AA8
+    - name: _IPInitOptions
+      processed: ''
+      offset: 00000ADC
+    - name: _IPCopyOptions
+      processed: ''
+      offset: 00000B08
+    - name: _IPFreeOptions
+      processed: ''
+      offset: 00000ED8
+    - name: _IPGetInfo
+      processed: ''
+      offset: 00000F08
+    - name: _IPTimeout
+      processed: ''
+      offset: 00000FAC
+    - name: _IPpSetNTEAddr
+      processed: ''
+      offset: '00001090'
+    - name: _IPSetNTEAddr
+      processed: ''
+      offset: 000012A8
+    - name: _IPSetNTEAddrEx
+      processed: ''
+      offset: 0000131C
+    - name: _InitNTE
+      processed: ''
+      offset: '00001394'
+    - name: _InitInterface
+      processed: ''
+      offset: 0000141C
+    - name: _RegisterAddrNotify
+      processed: ''
+      offset: 000016A4
+    - name: _RegisterAddrNotifyEx
+      processed: ''
+      offset: '00001700'
+    - name: _RegisterRtNotify
+      processed: ''
+      offset: '00001740'
+    - name: _NotifyInterfaceChange
+      processed: ''
+      offset: '00001784'
+    - name: _RegisterInterfaceNotify
+      processed: ''
+      offset: 000017B4
+    - name: _NotifyAddrChange
+      processed: ''
+      offset: 000017F4
+    - name: _RtChangeNotify
+      processed: ''
+      offset: '00001834'
+    - name: _VipApiHandler
+      processed: ''
+      offset: '00001860'
+    - name: _IPAddNTE
+      processed: ''
+      offset: 00001AF0
+    - name: _IPAddInterface@24
+      processed: ''
+      offset: 00001D48
+    - name: _IPDelNTE
+      processed: ''
+      offset: 000022A8
+    - name: _IPDeleteDynamicNTE
+      processed: ''
+      offset: '00002424'
+    - name: _IPGetNTEInfo
+      processed: ''
+      offset: 000024F4
+    - name: _IPDelInterface@4
+      processed: ''
+      offset: '00002590'
+    - name: _DoNDISRequest
+      processed: ''
+      offset: 0000282C
+    - name: _FreeARPBuffer
+      processed: ''
+      offset: 000028C0
+    - name: _GrowARPHeaders
+      processed: ''
+      offset: '00002920'
+    - name: _GetARPBuffer
+      processed: ''
+      offset: 00002A74
+    - name: _BitSwap
+      processed: ''
+      offset: 00002BAC
+    - name: _SendARPPacket
+      processed: ''
+      offset: 00002BE4
+    - name: _SendARPRequest
+      processed: ''
+      offset: 00002D48
+    - name: _SendARPReply
+      processed: ''
+      offset: '00003018'
+    - name: _ARPRemoveRCE
+      processed: ''
+      offset: 0000322C
+    - name: _ARPLookup
+      processed: ''
+      offset: '00003290'
+    - name: _IsBCastOnIF
+      processed: ''
+      offset: '000032E4'
+    - name: _ARPSendBCast
+      processed: ''
+      offset: 0000337C
+    - name: _ARPSendData
+      processed: ''
+      offset: '00003690'
+    - name: _CreateARPTableEntry
+      processed: ''
+      offset: '000038E4'
+    - name: _ARPTransmit@16
+      processed: ''
+      offset: 00003A28
+    - name: _RemoveARPTableEntry
+      processed: ''
+      offset: 00003C18
+    - name: _ARPXferData@28
+      processed: ''
+      offset: 00003C40
+    - name: _ARPClose@4
+      processed: ''
+      offset: 00003C78
+    - name: _ARPInvalidate@8
+      processed: ''
+      offset: 00003D20
+    - name: _ARPSetMCastList
+      processed: ''
+      offset: 00003DAC
+    - name: _ARPFindMCast
+      processed: ''
+      offset: '00004004'
+    - name: _ARPDelMCast
+      processed: ''
+      offset: 0000402C
+    - name: _ARPAddMCast
+      processed: ''
+      offset: 000040F0
+    - name: _ARPAddAddr@20
+      processed: ''
+      offset: '00004208'
+    - name: _ARPDeleteAddr@16
+      processed: ''
+      offset: 000043BC
+    - name: _ARPTimeout
+      processed: ''
+      offset: 000044F4
+    - name: _IsLocalAddr
+      processed: ''
+      offset: 000047CC
+    - name: _ARPLocalAddr
+      processed: ''
+      offset: '00004820'
+    - name: _DisplayConflictProc
+      processed: ''
+      offset: 000048EC
+    - name: _HandleARPPacket
+      processed: ''
+      offset: 000049F0
+    - name: _InitAdapter
+      processed: ''
+      offset: 0000503C
+    - name: _ARPOAComplete@12
+      processed: ''
+      offset: 0000513C
+    - name: _ARPCAComplete@8
+      processed: ''
+      offset: '00005158'
+    - name: _ARPSendComplete@12
+      processed: ''
+      offset: '00005174'
+    - name: _ARPTDComplete@16
+      processed: ''
+      offset: '00005230'
+    - name: _ARPResetComplete@8
+      processed: ''
+      offset: 0000524C
+    - name: _ARPRequestComplete@12
+      processed: ''
+      offset: '00005250'
+    - name: _ARPRcv@28
+      processed: ''
+      offset: 0000526C
+    - name: _ARPRcvComplete@4
+      processed: ''
+      offset: 000053B0
+    - name: _ARPStatus@16
+      processed: ''
+      offset: 000053B8
+    - name: _ARPStatusComplete@4
+      processed: ''
+      offset: 000053D8
+    - name: _ARPReadNext
+      processed: ''
+      offset: 000053DC
+    - name: _ARPValidateContext
+      processed: ''
+      offset: '00005500'
+    - name: _ARPQueryInfo@20
+      processed: ''
+      offset: '00005584'
+    - name: _ARPSetInfo@16
+      processed: ''
+      offset: 00005B08
+    - name: _FreeARPInterface
+      processed: ''
+      offset: 00005FD8
+    - name: _ARPOpen@4
+      processed: ''
+      offset: '00006150'
+    - name: _ARPGetEList@12
+      processed: ''
+      offset: '00006160'
+    - name: _ARPRegister
+      processed: ''
+      offset: '00006204'
+    - name: _ARPDynRegister@20
+      processed: ''
+      offset: '00006788'
+    - name: _ARPBindAdapter@20
+      processed: ''
+      offset: 000067A8
+    - name: _ARPUnbindAdapter@12
+      processed: ''
+      offset: 000068FC
+    - name: _ARPUnloadProtocol@0
+      processed: ''
+      offset: 000069EC
+    - name: _FindUserRcv
+      processed: ''
+      offset: 00006A1C
+    - name: _IPRcvComplete@0
+      processed: ''
+      offset: 00006A84
+    - name: _FindRH
+      processed: ''
+      offset: 00006AAC
+    - name: _ParseRcvdOptions
+      processed: ''
+      offset: 00006AF8
+    - name: _BCastRcv
+      processed: ''
+      offset: 00006BCC
+    - name: _DeliverToUser
+      processed: ''
+      offset: 00006C5C
+    - name: _FreeRH
+      processed: ''
+      offset: 00006D4C
+    - name: _ReassembleFragment
+      processed: ''
+      offset: 00006D78
+    - name: _RATDComplete
+      processed: ''
+      offset: '000071E8'
+    - name: _IPReassemble
+      processed: ''
+      offset: '00007274'
+    - name: _CheckLocalOptions
+      processed: ''
+      offset: 0000746C
+    - name: _TDUserRcv
+      processed: ''
+      offset: 000074FC
+    - name: _IPRcv@28
+      processed: ''
+      offset: '00007600'
+    - name: _IPTDComplete@16
+      processed: ''
+      offset: 00007A04
+    - name: _FreeIPHdrBuffer
+      processed: ''
+      offset: 00007A50
+    - name: _FreeIPBufferChain
+      processed: ''
+      offset: 00007A64
+    - name: _FreeIPPacket
+      processed: ''
+      offset: 00007A90
+    - name: _GrowIPPacketList
+      processed: ''
+      offset: 00007C34
+    - name: _GrowHdrBufList
+      processed: ''
+      offset: 00007D4C
+    - name: _GetIPPacket
+      processed: ''
+      offset: 00007E7C
+    - name: _GetIPHdrBuffer
+      processed: ''
+      offset: '00007E98'
+    - name: _GetIPHeader
+      processed: ''
+      offset: 00007EB8
+    - name: _ReferenceBuffer
+      processed: ''
+      offset: 00007EF8
+    - name: _IPSendComplete@12
+      processed: ''
+      offset: 00007F34
+    - name: _xsum
+      processed: ''
+      offset: 00007FDC
+    - name: _SendIPPacket
+      processed: ''
+      offset: '00008028'
+    - name: _SendDHCPPacket
+      processed: ''
+      offset: '00008130'
+    - name: _IPCopyBuffer
+      processed: ''
+      offset: '00008178'
+    - name: _IPFragment
+      processed: ''
+      offset: '00008220'
+    - name: _UpdateRouteOption
+      processed: ''
+      offset: 000085A8
+    - name: _UpdateOptions
+      processed: ''
+      offset: 000085DC
+    - name: _SendIPBCast
+      processed: ''
+      offset: '00008764'
+    - name: _IPTransmit
+      processed: ''
+      offset: 00008C98
+    - name: _FindULStatus
+      processed: ''
+      offset: '00009490'
+    - name: _ULMTUNotify
+      processed: ''
+      offset: 000094DC
+    - name: _IPULUnloadNotify
+      processed: ''
+      offset: 0000955C
+    - name: _IPStatus@16
+      processed: ''
+      offset: '00009598'
+    - name: _DummyXmit@16
+      processed: ''
+      offset: 0000968C
+    - name: _DummyXfer@28
+      processed: ''
+      offset: 000096C4
+    - name: _DummyClose@4
+      processed: ''
+      offset: '00009700'
+    - name: _DummyInvalidate@8
+      processed: ''
+      offset: '00009738'
+    - name: _DummyQInfo@20
+      processed: ''
+      offset: '00009770'
+    - name: _DummySetInfo@16
+      processed: ''
+      offset: 000097AC
+    - name: _DummyAddAddr@20
+      processed: ''
+      offset: '000097E8'
+    - name: _DummyDelAddr@16
+      processed: ''
+      offset: '00009818'
+    - name: _DummyGetEList@12
+      processed: ''
+      offset: '00009854'
+    - name: _DerefIF
+      processed: ''
+      offset: 0000988C
+    - name: _LockedDerefIF
+      processed: ''
+      offset: '000098E0'
+    - name: _GetHashMask
+      processed: ''
+      offset: '00009930'
+    - name: _AddrOnIF
+      processed: ''
+      offset: '00009964'
+    - name: _BestNTEForIF
+      processed: ''
+      offset: '00009994'
+    - name: _IsBCastOnNTE
+      processed: ''
+      offset: 00009A10
+    - name: _InvalidSourceAddress
+      processed: ''
+      offset: 00009B10
+    - name: _FlushATCache
+      processed: ''
+      offset: 00009BB0
+    - name: _GetAddrType
+      processed: ''
+      offset: 00009BDC
+    - name: _IPHash
+      processed: ''
+      offset: 00009D08
+    - name: _GetLocalNTE
+      processed: ''
+      offset: 00009D28
+    - name: _FindSpecificRTE
+      processed: ''
+      offset: 00009E5C
+    - name: _IsRouteICMP
+      processed: ''
+      offset: 00009EEC
+    - name: _FindRTE
+      processed: ''
+      offset: 00009F34
+    - name: _ValidateDefaultGWs
+      processed: ''
+      offset: 0000A010
+    - name: _InvalidateRCEChain
+      processed: ''
+      offset: 0000A074
+    - name: _FindValidIFForRTE
+      processed: ''
+      offset: 0000A16C
+    - name: _LookupRTE
+      processed: ''
+      offset: 0000A230
+    - name: _GetRouteContext
+      processed: ''
+      offset: 0000A2C0
+    - name: _FindInsertPoint
+      processed: ''
+      offset: 0000A30C
+    - name: _LookupNextHop
+      processed: ''
+      offset: 0000A35C
+    - name: _LookupNextHopWithBuffer
+      processed: ''
+      offset: 0000A3E4
+    - name: _RTReadNext
+      processed: ''
+      offset: 0000A4A4
+    - name: _RTRead
+      processed: ''
+      offset: 0000A5B8
+    - name: _LookupRoute
+      processed: ''
+      offset: 0000A6C4
+    - name: _RTValidateContext
+      processed: ''
+      offset: 0000A6FC
+    - name: _DeleteRTE
+      processed: ''
+      offset: 0000A784
+    - name: _DeleteRTEOnIF
+      processed: ''
+      offset: 0000A7D8
+    - name: _InvalidateRCEOnIF
+      processed: ''
+      offset: 0000A7F8
+    - name: _SetMTUOnIF
+      processed: ''
+      offset: 0000A814
+    - name: _SetMTUToAddr
+      processed: ''
+      offset: 0000A830
+    - name: _RTWalk
+      processed: ''
+      offset: 0000A850
+    - name: _AttachRCEToRTE
+      processed: ''
+      offset: 0000A8C4
+    - name: _IPGetPInfo
+      processed: ''
+      offset: 0000AB9C
+    - name: _IPCheckRoute
+      processed: ''
+      offset: 0000AC0C
+    - name: _FindRCE
+      processed: ''
+      offset: 0000ADF4
+    - name: _OpenRCE
+      processed: ''
+      offset: 0000AE48
+    - name: _CloseRCE
+      processed: ''
+      offset: 0000B0B8
+    - name: _LockedAddRoute
+      processed: ''
+      offset: 0000B210
+    - name: _AddRoute
+      processed: ''
+      offset: 0000B66C
+    - name: _DeleteRoute
+      processed: ''
+      offset: 0000B6F0
+    - name: _Redirect
+      processed: ''
+      offset: 0000B79C
+    - name: _GetRaisedMTU
+      processed: ''
+      offset: 0000B98C
+    - name: _GuessNewMTU
+      processed: ''
+      offset: 0000B9B4
+    - name: _RouteFragNeeded
+      processed: ''
+      offset: 0000B9D8
+    - name: _IPRouteTimeout
+      processed: ''
+      offset: 0000BB04
+    - name: _FreeFWPacket
+      processed: ''
+      offset: 0000BCB0
+    - name: _GrowFWPackets
+      processed: ''
+      offset: 0000BD80
+    - name: _GrowFWBuffer
+      processed: ''
+      offset: 0000BF1C
+    - name: _FWSendComplete
+      processed: ''
+      offset: 0000C04C
+    - name: _TransmitFWPacket
+      processed: ''
+      offset: 0000C1B0
+    - name: _SendFWPacket
+      processed: ''
+      offset: 0000C30C
+    - name: _RemoveRandomFWPacket
+      processed: ''
+      offset: 0000C3CC
+    - name: _GetFWBuffer
+      processed: ''
+      offset: 0000C4B8
+    - name: _GetFWPacket
+      processed: ''
+      offset: 0000C74C
+    - name: _IPForward
+      processed: ''
+      offset: 0000C808
+    - name: _AddNTERoutes
+      processed: ''
+      offset: 0000CE84
+    - name: _InitNTERouting
+      processed: ''
+      offset: 0000CFD8
+    - name: _UpdateICMPStats
+      processed: ''
+      offset: 0000D0AC
+    - name: _GetICMPBuffer
+      processed: ''
+      offset: 0000D164
+    - name: _FreeICMPBuffer
+      processed: ''
+      offset: 0000D280
+    - name: _DeleteEC
+      processed: ''
+      offset: 0000D334
+    - name: _ICMPSendComplete
+      processed: ''
+      offset: 0000D38C
+    - name: _XsumBufChain
+      processed: ''
+      offset: 0000D3D0
+    - name: _SendEcho
+      processed: ''
+      offset: 0000D42C
+    - name: _SendICMPMsg
+      processed: ''
+      offset: 0000D68C
+    - name: _SendICMPErr
+      processed: ''
+      offset: 0000D780
+    - name: _ICMPTimer
+      processed: ''
+      offset: 0000D868
+    - name: _CompleteEcho
+      processed: ''
+      offset: 0000D8F4
+    - name: _ICMPStatus
+      processed: ''
+      offset: 0000D940
+    - name: _ICMPMapStatus
+      processed: ''
+      offset: 0000D988
+    - name: _SendRouterSolicitation
+      processed: ''
+      offset: 0000DA48
+    - name: _ICMPRouterTimer
+      processed: ''
+      offset: 0000DA6C
+    - name: _ProcessRouterAdvertisement
+      processed: ''
+      offset: 0000DB44
+    - name: _ICMPRcv
+      processed: ''
+      offset: 0000DD00
+    - name: _ICMPEcho
+      processed: ''
+      offset: 0000E1C0
+    - name: _ICMPEchoRequest
+      processed: ''
+      offset: '0000E428'
+    - name: _ICMPEchoComplete
+      processed: ''
+      offset: 0000E53C
+    - name: _VXDEchoComplete
+      processed: ''
+      offset: '0000E764'
+    - name: _VXDEchoRequest
+      processed: ''
+      offset: '0000E798'
+    - name: _LoopXmitRtn
+      processed: ''
+      offset: '0000E854'
+    - name: _LoopXmit@16
+      processed: ''
+      offset: 0000EA20
+    - name: _LoopXfer@28
+      processed: ''
+      offset: 0000EAC0
+    - name: _LoopClose@4
+      processed: ''
+      offset: 0000EC1C
+    - name: _LoopInvalidate@8
+      processed: ''
+      offset: 0000EC20
+    - name: _LoopQInfo@20
+      processed: ''
+      offset: 0000EC24
+    - name: _LoopSetInfo@16
+      processed: ''
+      offset: 0000ED70
+    - name: _LoopAddAddr@20
+      processed: ''
+      offset: 0000EDF0
+    - name: _LoopDelAddr@16
+      processed: ''
+      offset: 0000EDF8
+    - name: _LoopGetEList@12
+      processed: ''
+      offset: 0000EE00
+    - name: _IGMPRandomTicks
+      processed: ''
+      offset: 0000EE68
+    - name: _FindIGMPAddr
+      processed: ''
+      offset: 0000EEB0
+    - name: _IGMPRcv
+      processed: ''
+      offset: 0000EED8
+    - name: _SendIGMPReport
+      processed: ''
+      offset: 0000F154
+    - name: _IGMPAddrChange
+      processed: ''
+      offset: 0000F298
+    - name: _IGMPTimer
+      processed: ''
+      offset: 0000F620
+    - name: _InitIGMPForNTE
+      processed: ''
+      offset: 0000F6F4
+    - name: _StopIGMPForNTE
+      processed: ''
+      offset: 0000F768
+    - name: _CopyToNdis
+      processed: ''
+      offset: 0000F784
+    - name: _IPQueryInfo
+      processed: ''
+      offset: 0000F89C
+    - name: _IPSetInfo
+      processed: ''
+      offset: 0000FDBC
+    - name: _IPGetEList
+      processed: ''
+      offset: 000100C4
+    - name: _VxdMapSegmentOffsetToFlat
+      processed: ''
+      offset: 0001018C
+    - name: _VxdLockBuffer
+      processed: ''
+      offset: 000101D4
+    - name: _VxdUnlockBuffer
+      processed: ''
+      offset: '00010226'
+    - name: _VxdValidateBuffer
+      processed: ''
+      offset: '00010279'
+    - name: _IPGetConfig
+      processed: ''
+      offset: 000102C0
+    - name: _OpenIFConfig
+      processed: ''
+      offset: 000105C0
+    - name: _GetArpCacheLife
+      processed: ''
+      offset: 000105F0
+    - name: _GetArpRetryCount
+      processed: ''
+      offset: 000105F8
+    - name: _IsLLInterfaceValueNull
+      processed: ''
+      offset: '00010600'
+    - name: _String2Addr
+      processed: ''
+      offset: '00010654'
+    - name: _GetGeneralIFConfig
+      processed: ''
+      offset: '00010700'
+    - name: _GetIFAddrList
+      processed: ''
+      offset: '00010840'
+    - name: _CloseIFConfig
+      processed: ''
+      offset: 00010A0C
+    - name: _IPFreeConfig
+      processed: ''
+      offset: 00010A18
+    - name: _UseEtherSNAP
+      processed: ''
+      offset: 00010A28
+    - name: _GetAlwaysSourceRoute
+      processed: ''
+      offset: 00010A30
+    - name: _IPDelNTEContextList
+      processed: ''
+      offset: 00010A4C
+    - name: _IPAddNTEContextList
+      processed: ''
+      offset: 00010A50
+    - name: _NdisRegisterProtocol@16
+      processed: ''
+      offset: 00010A54
+    - name: _NdisDeregisterProtocol@8
+      processed: ''
+      offset: 00010A5A
+    - name: _NdisOpenAdapter@44
+      processed: ''
+      offset: 00010A60
+    - name: _NdisCloseAdapter@8
+      processed: ''
+      offset: 00010A66
+    - name: _NdisSend@12
+      processed: ''
+      offset: 00010A6C
+    - name: _NdisTransferData@28
+      processed: ''
+      offset: 00010A72
+    - name: _NdisReset@8
+      processed: ''
+      offset: 00010A78
+    - name: _NdisRequest@12
+      processed: ''
+      offset: 00010A7E
+    - name: _NdisQueryGlobalStatistics@16
+      processed: ''
+      offset: 00010A84
+    - name: _NdisOpenProtocolConfiguration@12
+      processed: ''
+      offset: 00010A8A
+    - name: _NdisCompleteBindAdapter@12
+      processed: ''
+      offset: 00010A90
+    - name: _NdisCompleteUnbindAdapter@8
+      processed: ''
+      offset: 00010A96
+    - name: _NdisGetVersion@0
+      processed: ''
+      offset: 00010A9C
+    - name: _NdisSetTimer@8
+      processed: ''
+      offset: 00010AA2
+    - name: _NdisCancelTimer@8
+      processed: ''
+      offset: 00010AA8
+    - name: _NdisInitializeInterrupt@40
+      processed: ''
+      offset: 00010AAE
+    - name: _NdisRemoveInterrupt@4
+      processed: ''
+      offset: 00010AB4
+    - name: _NdisSynchronizeWithInterrupt@12
+      processed: ''
+      offset: 00010ABA
+    - name: _NdisStallExecution@4
+      processed: ''
+      offset: 00010AC0
+    - name: _NdisAllocateMemory@16
+      processed: ''
+      offset: 00010AC6
+    - name: _NdisFreeMemory@12
+      processed: ''
+      offset: 00010ACC
+    - name: _NdisAllocatePacketPool@16
+      processed: ''
+      offset: 00010AD2
+    - name: _NdisFreePacketPool@4
+      processed: ''
+      offset: 00010AD8
+    - name: _NdisAllocatePacket@12
+      processed: ''
+      offset: 00010ADE
+    - name: _NdisReinitializePacket@4
+      processed: ''
+      offset: 00010AE4
+    - name: _NdisFreePacket@4
+      processed: ''
+      offset: 00010AEA
+    - name: _NdisQueryPacket@20
+      processed: ''
+      offset: 00010AF0
+    - name: _NdisAllocateBufferPool@12
+      processed: ''
+      offset: 00010AF6
+    - name: _NdisFreeBufferPool@4
+      processed: ''
+      offset: 00010AFC
+    - name: _NdisAllocateBuffer@20
+      processed: ''
+      offset: 00010B02
+    - name: _NdisCopyBuffer@24
+      processed: ''
+      offset: 00010B08
+    - name: _NdisFreeBuffer@4
+      processed: ''
+      offset: 00010B0E
+    - name: _NdisQueryBuffer@12
+      processed: ''
+      offset: 00010B14
+    - name: _NdisGetBufferPhysicalAddress@12
+      processed: ''
+      offset: 00010B1A
+    - name: _NdisChainBufferAtFront@8
+      processed: ''
+      offset: 00010B20
+    - name: _NdisChainBufferAtBack@8
+      processed: ''
+      offset: 00010B26
+    - name: _NdisUnchainBufferAtFront@8
+      processed: ''
+      offset: 00010B2C
+    - name: _NdisUnchainBufferAtBack@8
+      processed: ''
+      offset: 00010B32
+    - name: _NdisGetNextBuffer@8
+      processed: ''
+      offset: 00010B38
+    - name: _NdisCopyFromPacketToPacket@24
+      processed: ''
+      offset: 00010B3E
+    - name: _NdisOpenConfiguration@12
+      processed: ''
+      offset: 00010B44
+    - name: _NdisReadConfiguration@20
+      processed: ''
+      offset: 00010B4A
+    - name: _NdisCloseConfiguration@4
+      processed: ''
+      offset: 00010B50
+    - name: _NdisEqualString@12
+      processed: ''
+      offset: 00010B56
+    - name: _NdisOpenFile@20
+      processed: ''
+      offset: 00010B5C
+    - name: _NdisMapFile@12
+      processed: ''
+      offset: 00010B62
+    - name: _NdisUnmapFile@4
+      processed: ''
+      offset: 00010B68
+    - name: _NdisCloseFile@4
+      processed: ''
+      offset: 00010B6E
+    - name: _NdisAllocateDmaChannel@20
+      processed: ''
+      offset: 00010B74
+    - name: _NdisSetupDmaTransfer@24
+      processed: ''
+      offset: 00010B7A
+    - name: _NdisCompleteDmaTransfer@24
+      processed: ''
+      offset: 00010B80
+    - name: _NdisReadDmaCounter@4
+      processed: ''
+      offset: 00010B86
+    - name: _NdisFreeDmaChannel@4
+      processed: ''
+      offset: 00010B8C
+    - name: _NdisMapIoSpace@20
+      processed: ''
+      offset: 00010B92
+    - name: _NdisWriteErrorLogEntry
+      processed: ''
+      offset: 00010B98
+    - name: _NdisRegAdaptShutdown@12
+      processed: ''
+      offset: 00010B9E
+    - name: _NdisDeregAdaptShutdown@4
+      processed: ''
+      offset: 00010BA4
+    - name: _DbgPrint
+      processed: ''
+      offset: 00010BAC
+    - name: CTETotalMem
+      processed: ''
+      offset: 00010BCC
+    - name: __vxdhandle__
+      processed: ''
+      offset: 00010BEC
+    - name: _VIP_Get_Version
+      processed: ''
+      offset: 00010C4C
+    - name: _VIP_Get_Net_Info
+      processed: ''
+      offset: 00010C50
+    - name: _VIP_Register_Protocol
+      processed: ''
+      offset: 00010C54
+    - name: _VIP_Register_Driver
+      processed: ''
+      offset: 00010C58
+    - name: _VIP_Set_Addr
+      processed: ''
+      offset: 00010C5C
+    - name: _VIP_ICMP_Echo
+      processed: ''
+      offset: 00010C60
+    - name: _VIP_Register_Addr_Change
+      processed: ''
+      offset: 00010C64
+    - name: _VIP_Register_Interface_Change
+      processed: ''
+      offset: 00010C68
+    - name: _VIP_Set_DHCP_Interface
+      processed: ''
+      offset: 00010C6C
+    - name: _VIP_IP_Add_Interface
+      processed: ''
+      offset: 00010C70
+    - name: _VIP_IP_Delete_Interface
+      processed: ''
+      offset: 00010C74
+    - name: _VIP_Set_Addr_Ex
+      processed: ''
+      offset: 00010C78
+    - name: _VIP_Register_Rt_Change_Handler
+      processed: ''
+      offset: 00010C7C
+    - name: _VIP_Register_Addr_ChangeEx
+      processed: ''
+      offset: 00010C80
+    - name: VIP_DDB
+      processed: ''
+      offset: 00010C84
+    - name: RefillEventSched
+      processed: ''
+      offset: 00010D77
+    - name: _VIPTerminate
+      processed: ''
+      offset: 00010D7B
+    - name: _UniqueIfNumber
+      processed: ''
+      offset: 00010D80
+    - name: _ifuniadapter
+      processed: ''
+      offset: 00010D84
+    - name: _RawPI
+      processed: ''
+      offset: 00010D88
+    - name: _TrRii
+      processed: ''
+      offset: 00010D8C
+    - name: _DHCPActivityCount
+      processed: ''
+      offset: 00010D90
+    - name: _DHCPNTE
+      processed: ''
+      offset: 00010D94
+    - name: _UniAdapter
+      processed: ''
+      offset: 00010FF8
+    - name: _TRFunctionalMcast
+      processed: ''
+      offset: '00011038'
+    - name: _SwapTableLo
+      processed: ''
+      offset: 0001107C
+    - name: _SwapTableHi
+      processed: ''
+      offset: 0001108C
+    - name: _IFieldSize
+      processed: ''
+      offset: 0001109C
+    - name: _RcvFile
+      processed: ''
+      offset: 000113B0
+    - name: _dbg_hdrincl
+      processed: ''
+      offset: 000113B8
+    - name: _HdrBufList
+      processed: ''
+      offset: 000113BC
+    - name: _PacketPoolList
+      processed: ''
+      offset: 000113C0
+    - name: _HdrPoolList
+      processed: ''
+      offset: 000113C4
+    - name: _CurrentPacketCount
+      processed: ''
+      offset: 000113C8
+    - name: _MaxPacketCount
+      processed: ''
+      offset: 000113CC
+    - name: _CurrentHdrBufCount
+      processed: ''
+      offset: 000113D0
+    - name: _MaxHdrBufCount
+      processed: ''
+      offset: 000113D4
+    - name: _Rcefailures
+      processed: ''
+      offset: '00011638'
+    - name: _RtPI
+      processed: ''
+      offset: 0001163C
+    - name: _IPMaskTable
+      processed: ''
+      offset: '00011640'
+    - name: _MTUTable
+      processed: ''
+      offset: '00011680'
+    - name: _BCastMinMTU
+      processed: ''
+      offset: 000116AC
+    - name: _IcmpEchoPendingCnt
+      processed: ''
+      offset: '00012600'
+    - name: _IcmpErrPendingCnt
+      processed: ''
+      offset: '00012604'
+    - name: _LoopXmitHead
+      processed: ''
+      offset: 000127FC
+    - name: _LoopXmitTail
+      processed: ''
+      offset: '00012800'
+    - name: _LoopXmitRtnRunning
+      processed: ''
+      offset: '00012804'
+    - name: _LoopName
+      processed: ''
+      offset: '00012808'
+    - name: _LoopEntityType
+      processed: ''
+      offset: '00012824'
+    - name: _GlobalConfigTable
+      processed: ''
+      offset: 00012BF8
+    - name: _IFConfigTable
+      processed: ''
+      offset: 00012D74
+    - name: __IPAlwaysSR
+      processed: ''
+      offset: 00012EAC
+    - name: _ICMPOutStats
+      processed: ''
+      offset: 00012EB0
+    - name: _RouteTableLock
+      processed: ''
+      offset: 00012EE4
+    - name: _DummyInterface
+      processed: ''
+      offset: 00012EEC
+    - name: _ForwardPackets
+      processed: ''
+      offset: 00012FA8
+    - name: _LoopInstance
+      processed: ''
+      offset: 00012FAC
+    - name: __LLInterface
+      processed: ''
+      offset: 00012FB0
+    - name: _FWPacketFree
+      processed: ''
+      offset: 00012FB4
+    - name: _ICMPInStats
+      processed: ''
+      offset: 00012FB8
+    - name: _ARPHandle
+      processed: ''
+      offset: 00012FEC
+    - name: _LastPI
+      processed: ''
+      offset: 00012FF0
+    - name: _RATimeout
+      processed: ''
+      offset: 00012FF4
+    - name: _Seed
+      processed: ''
+      offset: 00012FF8
+    - name: _RandomValue
+      processed: ''
+      offset: 00012FFC
+    - name: _MaxFWBufferSize
+      processed: ''
+      offset: '00013000'
+    - name: _ArpRetryCount
+      processed: ''
+      offset: '00013004'
+    - name: _IPProtInfo
+      processed: ''
+      offset: '00013008'
+    - name: _IGMPProtInfo
+      processed: ''
+      offset: 0001306C
+    - name: _LoopNTE
+      processed: ''
+      offset: '00013070'
+    - name: _NumIF
+      processed: ''
+      offset: '00013074'
+    - name: _IFBitMask
+      processed: ''
+      offset: '00013078'
+    - name: _FWBufFree
+      processed: ''
+      offset: '00013080'
+    - name: _PMTUDiscovery
+      processed: ''
+      offset: '00013084'
+    - name: _CurrentICMPHeaders
+      processed: ''
+      offset: '00013088'
+    - name: _ArpCacheLife
+      processed: ''
+      offset: 0001308C
+    - name: _HeaderLock
+      processed: ''
+      offset: '00013090'
+    - name: _NextPI
+      processed: ''
+      offset: '00013098'
+    - name: _AddrNotifyTable
+      processed: ''
+      offset: 0001309C
+    - name: __ArpRetryCount
+      processed: ''
+      offset: 000130BC
+    - name: _IPID
+      processed: ''
+      offset: 000130C0
+    - name: _ICMPHeaderLock
+      processed: ''
+      offset: 000130C4
+    - name: _NetTableList
+      processed: ''
+      offset: 000130CC
+    - name: _TSFlag
+      processed: ''
+      offset: 000130D0
+    - name: _LoopXmitEvent
+      processed: ''
+      offset: 000130D4
+    - name: _MaxICMPHeaders
+      processed: ''
+      offset: '000130E8'
+    - name: _FWPacketFreeLock
+      processed: ''
+      offset: 000130EC
+    - name: _IGMPBlockList
+      processed: ''
+      offset: 000130F4
+    - name: _ATCache
+      processed: ''
+      offset: 000130F8
+    - name: _FWBufFreeLock
+      processed: ''
+      offset: '00013128'
+    - name: _IFList
+      processed: ''
+      offset: '00013130'
+    - name: _LoopInterface
+      processed: ''
+      offset: '00013134'
+    - name: _AddChangeNotifyQueue
+      processed: ''
+      offset: 000131F0
+    - name: _ATCIndex
+      processed: ''
+      offset: 000131F8
+    - name: _CurrentFWPackets
+      processed: ''
+      offset: 000131FC
+    - name: _IGMPLock
+      processed: ''
+      offset: '00013200'
+    - name: _ClientNotifyQueue
+      processed: ''
+      offset: '00013208'
+    - name: _IPRouteTimer
+      processed: ''
+      offset: '00013210'
+    - name: _InterfaceSize
+      processed: ''
+      offset: '00013228'
+    - name: _sIPAlwaysSourceRoute
+      processed: ''
+      offset: 0001322C
+    - name: _LoopIndex
+      processed: ''
+      offset: '00013230'
+    - name: __UseEtherSNAP
+      processed: ''
+      offset: '00013234'
+    - name: _BCastRSQ
+      processed: ''
+      offset: '00013238'
+    - name: _ICMPInstance
+      processed: ''
+      offset: 0001323C
+    - name: _RtChangeNotifyQueue
+      processed: ''
+      offset: '00013240'
+    - name: _ForwardFilterPtr
+      processed: ''
+      offset: '00013248'
+    - name: _ForwardBCast
+      processed: ''
+      offset: 0001324C
+    - name: _NumNTE
+      processed: ''
+      offset: '00013250'
+    - name: _DefaultTTL
+      processed: ''
+      offset: '00013254'
+    - name: _DeadGWDetect
+      processed: ''
+      offset: '00013258'
+    - name: _LoopIFE
+      processed: ''
+      offset: 0001325C
+    - name: _NextNTEContext
+      processed: ''
+      offset: 000132B9
+    - name: _MaxFWPackets
+      processed: ''
+      offset: 000132BC
+    - name: _FirstIF
+      processed: ''
+      offset: 000132C0
+    - name: _DefGWConfigured
+      processed: ''
+      offset: 000132C4
+    - name: _TimeStamp
+      processed: ''
+      offset: 000132C8
+    - name: _RouterConfigured
+      processed: ''
+      offset: 000132CC
+    - name: _IPSInfo
+      processed: ''
+      offset: 000132D0
+    - name: __TRSingleRoute
+      processed: ''
+      offset: 0001332C
+    - name: _DefaultTOS
+      processed: ''
+      offset: '00013330'
+    - name: _IPInstance
+      processed: ''
+      offset: '00013334'
+    - name: __AlwaysSR
+      processed: ''
+      offset: '00013338'
+    - name: _ICMPHeaderList
+      processed: ''
+      offset: 0001333C
+    - name: _RtNotifyTable
+      processed: ''
+      offset: '00013340'
+    - name: _ClientNotifyQueueLock
+      processed: ''
+      offset: '00013360'
+    - name: _RouteTable
+      processed: ''
+      offset: '00013368'
+    - name: _DODCallout
+      processed: ''
+      offset: '000133E8'
+    - name: _DefGWActive
+      processed: ''
+      offset: 000133EC
+    - name: _InterfaceNotifyTable
+      processed: ''
+      offset: 000133F0
+    - name: _LoopLock
+      processed: ''
+      offset: '00013410'
+    - name: __ArpCacheLife
+      processed: ''
+      offset: '00013418'
+    - name: _sArpAlwaysSourceRoute
+      processed: ''
+      offset: 0001341C
+    - name: _PacketList
+      processed: ''
+      offset: '00013420'
+    - name: _IGMPBlockFlag
+      processed: ''
+      offset: '00013424'
+    - name: _BufferPool
+      processed: ''
+      offset: '00013428'
+    - name: _IGMPLevel
+      processed: ''
+      offset: 0001342C
+    - name: _CurrentFWBufferSize
+      processed: ''
+      offset: '00013430'
+    - name: _AddrNotifyTableEx
+      processed: ''
+      offset: '00013434'
+    - name: _BSSDataEnd
+      processed: ''
+      offset: '00013454'
+    - name: _BSSBegin
+      processed: ''
+      offset: '00013454'
+  - num: '2'
+    name: _LMGROUP
+    offset: 0000A590
+    symbols:
+    - name: '@MSG_LAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      processed: ''
+      offset: '00000014'
+  - num: '3'
+    name: _IGROUP
+    offset: '00000000'
+    symbols:
+    - name: _CTEInitialize
+      processed: ''
+      offset: '00000000'
+    - name: VIP_Device_Init
+      processed: ''
+      offset: '00000020'
+    - name: GetNextInterface
+      processed: ''
+      offset: '00000045'
+    - name: ConvertBoolean
+      processed: ''
+      offset: '00000089'
+    - name: ConvertDecimal
+      processed: ''
+      offset: '00000094'
+    - name: SkipWS
+      processed: ''
+      offset: 000000A9
+    - name: ConvertIPAddress
+      processed: ''
+      offset: 000000BC
+    - name: atol
+      processed: ''
+      offset: 0000012E
+    - name: _GetGMTDelta
+      processed: ''
+      offset: 0000014A
+    - name: _InitTimestamp
+      processed: ''
+      offset: 000001DC
+    - name: _FreeNets
+      processed: ''
+      offset: '00000240'
+    - name: _IPInit
+      processed: ''
+      offset: '00000260'
+    - name: _ARPInit
+      processed: ''
+      offset: 000004F0
+    - name: _InitRouting
+      processed: ''
+      offset: 000005BC
+    - name: _InitGateway
+      processed: ''
+      offset: 000006EC
+    - name: _ICMPInit
+      processed: ''
+      offset: 00000A44
+    - name: _InitLoopback
+      processed: ''
+      offset: 00000ABC
+    - name: _IGMPInit
+      processed: ''
+      offset: 00000C8C
+- version: Windows 98 Retail
+  source_tree:
+  - /f/ndis31/mac/common/ndisdbg.asm
+  - /f/ndis31/mac/common/ndisos.asm
+  - /f/ndis31/mac/common/ndisprot.asm
+  - ../../../../../../net/vxd/tcpip/ip/arp.c
+  - ../../../../../../net/vxd/tcpip/ip/chicfg.c
+  - ../../../../../../net/vxd/tcpip/ip/icmp.c
+  - ../../../../../../net/vxd/tcpip/ip/igmp.c
+  - ../../../../../../net/vxd/tcpip/ip/info.c
+  - ../../../../../../net/vxd/tcpip/ip/init.c
+  - ../../../../../../net/vxd/tcpip/ip/iploop.c
+  - ../../../../../../net/vxd/tcpip/ip/iprcv.c
+  - ../../../../../../net/vxd/tcpip/ip/iproute.c
+  - ../../../../../../net/vxd/tcpip/ip/ipxmit.c
+  - ../../../../../../net/vxd/tcpip/ip/vip.asm
+  - /../../../../../../net/vxd/tcpip/vtdi/cxport.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 000090D0
+    symbols:
+    - name: _CTEStartTimer
+      demangled: ''
+      offset: '00000000'
+    - name: _CTEStopTimer
+      demangled: ''
+      offset: '00000006'
+    - name: _CTESystemUpTime
+      demangled: ''
+      offset: 0000000C
+    - name: _CTEScheduleEvent
+      demangled: ''
+      offset: '00000012'
+    - name: _CTEScheduleEvent_N
+      demangled: ''
+      offset: '00000018'
+    - name: _CTECancelEvent
+      demangled: ''
+      offset: 0000001E
+    - name: _CTEAllocMem
+      demangled: ''
+      offset: '00000024'
+    - name: _CTEFreeMem
+      demangled: ''
+      offset: 0000002A
+    - name: _CTERefillMem
+      demangled: ''
+      offset: '00000030'
+    - name: _CTEBlock
+      demangled: ''
+      offset: '00000036'
+    - name: _CTEBlock1
+      demangled: ''
+      offset: 0000003C
+    - name: _CTESignal
+      demangled: ''
+      offset: '00000042'
+    - name: _CTEUnload
+      demangled: ''
+      offset: '00000048'
+    - name: _CTESetLoadNotifyProc
+      demangled: ''
+      offset: '00000053'
+    - name: _CTESetUnloadNotifyProc
+      demangled: ''
+      offset: 0000005E
+    - name: VIP_Get_Version
+      demangled: ''
+      offset: 0000006C
+    - name: _GetTime
+      demangled: ''
+      offset: '00000072'
+    - name: _RequestDHCPAddr
+      demangled: ''
+      offset: '000000E8'
+    - name: VIP_Register_Addr_Change
+      demangled: ''
+      offset: 000000F7
+    - name: VIP_Register_Addr_ChangeEx
+      demangled: ''
+      offset: 000000FC
+    - name: VIP_Register_Rt_Change_Handler
+      demangled: ''
+      offset: '00000101'
+    - name: VIP_Register_Interface_Change
+      demangled: ''
+      offset: '00000106'
+    - name: _NotifyOfUnload
+      demangled: ''
+      offset: 0000010B
+    - name: RefillEvent
+      demangled: ''
+      offset: '00000121'
+    - name: _RefillReasmMem
+      demangled: ''
+      offset: '00000131'
+    - name: VIP_Get_Net_Info
+      demangled: ''
+      offset: '00000158'
+    - name: VIP_Register_Protocol
+      demangled: ''
+      offset: 0000015D
+    - name: VIP_Register_Driver
+      demangled: ''
+      offset: '00000162'
+    - name: VIP_Set_Addr
+      demangled: ''
+      offset: '00000164'
+    - name: VIP_Set_Addr_Ex
+      demangled: ''
+      offset: '00000169'
+    - name: VIP_Set_DHCP_Interface
+      demangled: ''
+      offset: 0000016E
+    - name: VIP_LookupRoute
+      demangled: ''
+      offset: '00000173'
+    - name: VIP_IP_Add_Interface
+      demangled: ''
+      offset: '00000178'
+    - name: VIP_IP_Delete_Interface
+      demangled: ''
+      offset: 0000017D
+    - name: ConvertPtr
+      demangled: ''
+      offset: '00000182'
+    - name: PingDone
+      demangled: ''
+      offset: 000001B8
+    - name: VIP_V86_API
+      demangled: ''
+      offset: 0000023B
+    - name: VIP_ICMP_Echo
+      demangled: ''
+      offset: 0000032B
+    - name: _DisplayPopup
+      demangled: ''
+      offset: '00000330'
+    - name: _NotifyConflictProc
+      demangled: ''
+      offset: '00000331'
+    - name: _DisplayConflictPopup
+      demangled: ''
+      offset: '00000347'
+    - name: _EnableInts
+      demangled: ''
+      offset: 000003A6
+    - name: VIP_Terminate
+      demangled: ''
+      offset: 000003AC
+    - name: VIP_Device_Exit
+      demangled: ''
+      offset: 000003B8
+    - name: VIP_Control
+      demangled: ''
+      offset: 000003BA
+    - name: VIP_DeviceIoControl
+      demangled: ''
+      offset: 000003DD
+    - name: _SetDHCPNTE
+      demangled: ''
+      offset: 000004A4
+    - name: _IsDHCPInterface
+      demangled: ''
+      offset: 000004F8
+    - name: _CloseNets
+      demangled: ''
+      offset: '00000510'
+    - name: _IPRegisterProtocol
+      demangled: ''
+      offset: '00000530'
+    - name: _IPSetMCastAddr
+      demangled: ''
+      offset: 000005DC
+    - name: _IPGetAddrType
+      demangled: ''
+      offset: '00000638'
+    - name: _IPGetLocalMTU
+      demangled: ''
+      offset: '00000648'
+    - name: _IPUpdateRcvdOptions
+      demangled: ''
+      offset: '00000694'
+    - name: _ValidRouteOption
+      demangled: ''
+      offset: 000008D8
+    - name: _IPInitOptions
+      demangled: ''
+      offset: 0000090C
+    - name: _IPCopyOptions
+      demangled: ''
+      offset: '00000938'
+    - name: _IPFreeOptions
+      demangled: ''
+      offset: 00000D10
+    - name: _IPGetInfo
+      demangled: ''
+      offset: 00000D40
+    - name: _IPTimeout
+      demangled: ''
+      offset: 00000DE4
+    - name: _IPpSetNTEAddr
+      demangled: ''
+      offset: 00000E9C
+    - name: _IPSetNTEAddr
+      demangled: ''
+      offset: '00001048'
+    - name: _IPSetNTEAddrEx
+      demangled: ''
+      offset: 0000109C
+    - name: _InitNTE
+      demangled: ''
+      offset: 000010F4
+    - name: _InitInterface
+      demangled: ''
+      offset: 0000117C
+    - name: _RegisterAddrNotify
+      demangled: ''
+      offset: 0000139C
+    - name: _RegisterAddrNotifyEx
+      demangled: ''
+      offset: 000013F8
+    - name: _RegisterRtNotify
+      demangled: ''
+      offset: 0000143C
+    - name: _NotifyInterfaceChange
+      demangled: ''
+      offset: 0000147C
+    - name: _RegisterInterfaceNotify
+      demangled: ''
+      offset: 000014AC
+    - name: _NotifyAddrChange
+      demangled: ''
+      offset: 000014F0
+    - name: _RtChangeNotify
+      demangled: ''
+      offset: '00001530'
+    - name: _VipApiHandler
+      demangled: ''
+      offset: 0000155C
+    - name: _IPAddNTE
+      demangled: ''
+      offset: '00001780'
+    - name: _IPAddInterface@24
+      demangled: ''
+      offset: '00001988'
+    - name: _IPDelNTE
+      demangled: ''
+      offset: 00001E9C
+    - name: _IPDeleteDynamicNTE
+      demangled: ''
+      offset: 00001F80
+    - name: _IPGetNTEInfo
+      demangled: ''
+      offset: 00001FC4
+    - name: _IPDelInterface@4
+      demangled: ''
+      offset: '00002034'
+    - name: _DoNDISRequest
+      demangled: ''
+      offset: '00002208'
+    - name: _FreeARPBuffer
+      demangled: ''
+      offset: 0000229C
+    - name: _GrowARPHeaders
+      demangled: ''
+      offset: 000022CC
+    - name: _GetARPBuffer
+      demangled: ''
+      offset: 000023D0
+    - name: _BitSwap
+      demangled: ''
+      offset: 000024BC
+    - name: _SendARPPacket
+      demangled: ''
+      offset: 000024F4
+    - name: _SendARPRequest
+      demangled: ''
+      offset: '00002624'
+    - name: _SendARPReply
+      demangled: ''
+      offset: 000028FC
+    - name: _ARPRemoveRCE
+      demangled: ''
+      offset: 00002B24
+    - name: _ARPLookup
+      demangled: ''
+      offset: 00002B54
+    - name: _IsBCastOnIF
+      demangled: ''
+      offset: 00002B7C
+    - name: _ARPSendBCast
+      demangled: ''
+      offset: 00002C14
+    - name: _ARPSendData
+      demangled: ''
+      offset: 00002EF4
+    - name: _CreateARPTableEntry
+      demangled: ''
+      offset: 000030A4
+    - name: _ARPTransmit@16
+      demangled: ''
+      offset: '00003188'
+    - name: _RemoveARPTableEntry
+      demangled: ''
+      offset: 000032EC
+    - name: _ARPXferData@28
+      demangled: ''
+      offset: '00003314'
+    - name: _ARPClose@4
+      demangled: ''
+      offset: 0000334C
+    - name: _ARPInvalidate@8
+      demangled: ''
+      offset: 000033B8
+    - name: _ARPSetMCastList
+      demangled: ''
+      offset: 000033DC
+    - name: _ARPFindMCast
+      demangled: ''
+      offset: '00003590'
+    - name: _ARPDelMCast
+      demangled: ''
+      offset: 000035B8
+    - name: _ARPAddMCast
+      demangled: ''
+      offset: '00003638'
+    - name: _ARPAddAddr@20
+      demangled: ''
+      offset: 000036FC
+    - name: _ARPDeleteAddr@16
+      demangled: ''
+      offset: '00003860'
+    - name: _ARPTimeout
+      demangled: ''
+      offset: 0000392C
+    - name: _IsLocalAddr
+      demangled: ''
+      offset: 00003ACC
+    - name: _ARPLocalAddr
+      demangled: ''
+      offset: 00003AEC
+    - name: _DisplayConflictProc
+      demangled: ''
+      offset: 00003B7C
+    - name: _HandleARPPacket
+      demangled: ''
+      offset: 00003C80
+    - name: _InitAdapter
+      demangled: ''
+      offset: '00004214'
+    - name: _ARPOAComplete@12
+      demangled: ''
+      offset: 000042C0
+    - name: _ARPCAComplete@8
+      demangled: ''
+      offset: 000042DC
+    - name: _ARPSendComplete@12
+      demangled: ''
+      offset: 000042F8
+    - name: _ARPTDComplete@16
+      demangled: ''
+      offset: '00004378'
+    - name: _ARPResetComplete@8
+      demangled: ''
+      offset: '00004394'
+    - name: _ARPRequestComplete@12
+      demangled: ''
+      offset: '00004398'
+    - name: _ARPRcv@28
+      demangled: ''
+      offset: 000043B4
+    - name: _ARPRcvComplete@4
+      demangled: ''
+      offset: 000044F8
+    - name: _ARPStatus@16
+      demangled: ''
+      offset: '00004500'
+    - name: _ARPStatusComplete@4
+      demangled: ''
+      offset: '00004520'
+    - name: _ARPReadNext
+      demangled: ''
+      offset: '00004524'
+    - name: _ARPValidateContext
+      demangled: ''
+      offset: '00004628'
+    - name: _ARPQueryInfo@20
+      demangled: ''
+      offset: 000046AC
+    - name: _ARPSetInfo@16
+      demangled: ''
+      offset: 00004BA8
+    - name: _FreeARPInterface
+      demangled: ''
+      offset: 00004FFC
+    - name: _ARPOpen@4
+      demangled: ''
+      offset: '00005140'
+    - name: _ARPGetEList@12
+      demangled: ''
+      offset: '00005150'
+    - name: _ARPRegister
+      demangled: ''
+      offset: 000051F4
+    - name: _ARPDynRegister@20
+      demangled: ''
+      offset: 0000577C
+    - name: _ARPBindAdapter@20
+      demangled: ''
+      offset: 0000579C
+    - name: _ARPUnbindAdapter@12
+      demangled: ''
+      offset: 000058F0
+    - name: _ARPUnloadProtocol@0
+      demangled: ''
+      offset: 000059B4
+    - name: _FindUserRcv
+      demangled: ''
+      offset: '000059E4'
+    - name: _IPRcvComplete@0
+      demangled: ''
+      offset: 00005A4C
+    - name: _FindRH
+      demangled: ''
+      offset: 00005A74
+    - name: _ParseRcvdOptions
+      demangled: ''
+      offset: 00005AC0
+    - name: _BCastRcv
+      demangled: ''
+      offset: 00005B94
+    - name: _DeliverToUser
+      demangled: ''
+      offset: 00005C24
+    - name: _FreeRH
+      demangled: ''
+      offset: 00005D10
+    - name: _ReassembleFragment
+      demangled: ''
+      offset: 00005D3C
+    - name: _RATDComplete
+      demangled: ''
+      offset: '00006124'
+    - name: _IPReassemble
+      demangled: ''
+      offset: 0000618C
+    - name: _CheckLocalOptions
+      demangled: ''
+      offset: '00006358'
+    - name: _TDUserRcv
+      demangled: ''
+      offset: 000063D8
+    - name: _IPRcv@28
+      demangled: ''
+      offset: 000064B8
+    - name: _IPTDComplete@16
+      demangled: ''
+      offset: '00006828'
+    - name: _FreeIPHdrBuffer
+      demangled: ''
+      offset: '00006874'
+    - name: _FreeIPBufferChain
+      demangled: ''
+      offset: '00006888'
+    - name: _FreeIPPacket
+      demangled: ''
+      offset: 000068B4
+    - name: _GrowIPPacketList
+      demangled: ''
+      offset: 000069A0
+    - name: _GrowHdrBufList
+      demangled: ''
+      offset: 00006A60
+    - name: _GetIPPacket
+      demangled: ''
+      offset: 00006B4C
+    - name: _GetIPHdrBuffer
+      demangled: ''
+      offset: 00006B68
+    - name: _GetIPHeader
+      demangled: ''
+      offset: 00006B88
+    - name: _ReferenceBuffer
+      demangled: ''
+      offset: 00006BC8
+    - name: _IPSendComplete@12
+      demangled: ''
+      offset: 00006BD8
+    - name: _xsum
+      demangled: ''
+      offset: 00006C54
+    - name: _SendIPPacket
+      demangled: ''
+      offset: 00006CA0
+    - name: _SendDHCPPacket
+      demangled: ''
+      offset: 00006DA8
+    - name: _IPCopyBuffer
+      demangled: ''
+      offset: 00006DF0
+    - name: _IPFragment
+      demangled: ''
+      offset: '00006E98'
+    - name: _UpdateRouteOption
+      demangled: ''
+      offset: '00007284'
+    - name: _UpdateOptions
+      demangled: ''
+      offset: 000072B8
+    - name: _SendIPBCast
+      demangled: ''
+      offset: '00007440'
+    - name: _IPTransmit
+      demangled: ''
+      offset: 000079C0
+    - name: _FindULStatus
+      demangled: ''
+      offset: '000081E4'
+    - name: _ULMTUNotify
+      demangled: ''
+      offset: '00008230'
+    - name: _IPULUnloadNotify
+      demangled: ''
+      offset: 000082B0
+    - name: _IPStatus@16
+      demangled: ''
+      offset: 000082EC
+    - name: _DummyXmit@16
+      demangled: ''
+      offset: '000083E0'
+    - name: _DummyXfer@28
+      demangled: ''
+      offset: 000083F4
+    - name: _DummyClose@4
+      demangled: ''
+      offset: 0000840C
+    - name: _DummyInvalidate@8
+      demangled: ''
+      offset: 0000841C
+    - name: _DummyQInfo@20
+      demangled: ''
+      offset: 0000842C
+    - name: _DummySetInfo@16
+      demangled: ''
+      offset: '00008444'
+    - name: _DummyAddAddr@20
+      demangled: ''
+      offset: 0000845C
+    - name: _DummyDelAddr@16
+      demangled: ''
+      offset: '00008464'
+    - name: _DummyGetEList@12
+      demangled: ''
+      offset: 0000847C
+    - name: _DerefIF
+      demangled: ''
+      offset: '00008490'
+    - name: _LockedDerefIF
+      demangled: ''
+      offset: 000084B0
+    - name: _GetHashMask
+      demangled: ''
+      offset: 000084CC
+    - name: _AddrOnIF
+      demangled: ''
+      offset: '00008500'
+    - name: _BestNTEForIF
+      demangled: ''
+      offset: '00008530'
+    - name: _IsBCastOnNTE
+      demangled: ''
+      offset: 000085AC
+    - name: _InvalidSourceAddress
+      demangled: ''
+      offset: '00008664'
+    - name: _FlushATCache
+      demangled: ''
+      offset: '00008704'
+    - name: _GetAddrType
+      demangled: ''
+      offset: '00008730'
+    - name: _IPHash
+      demangled: ''
+      offset: 0000885C
+    - name: _GetLocalNTE
+      demangled: ''
+      offset: 0000887C
+    - name: _FindSpecificRTE
+      demangled: ''
+      offset: 000089B0
+    - name: _IsRouteICMP
+      demangled: ''
+      offset: 00008A40
+    - name: _FindRTE
+      demangled: ''
+      offset: 00008A88
+    - name: _ValidateDefaultGWs
+      demangled: ''
+      offset: 00008B64
+    - name: _InvalidateRCEChain
+      demangled: ''
+      offset: 00008BC8
+    - name: _FindValidIFForRTE
+      demangled: ''
+      offset: 00008C1C
+    - name: _LookupRTE
+      demangled: ''
+      offset: 00008CB4
+    - name: _GetRouteContext
+      demangled: ''
+      offset: 00008D44
+    - name: _FindInsertPoint
+      demangled: ''
+      offset: 00008D64
+    - name: _LookupNextHop
+      demangled: ''
+      offset: 00008DB4
+    - name: _LookupNextHopWithBuffer
+      demangled: ''
+      offset: 00008DFC
+    - name: _RTReadNext
+      demangled: ''
+      offset: 00008E6C
+    - name: _RTRead
+      demangled: ''
+      offset: 00008F80
+    - name: _LookupRoute
+      demangled: ''
+      offset: 0000904C
+    - name: _RTValidateContext
+      demangled: ''
+      offset: '00009060'
+    - name: _DeleteRTE
+      demangled: ''
+      offset: '000090E8'
+    - name: _DeleteRTEOnIF
+      demangled: ''
+      offset: 0000913C
+    - name: _InvalidateRCEOnIF
+      demangled: ''
+      offset: 0000915C
+    - name: _SetMTUOnIF
+      demangled: ''
+      offset: '00009178'
+    - name: _SetMTUToAddr
+      demangled: ''
+      offset: '00009194'
+    - name: _RTWalk
+      demangled: ''
+      offset: 000091B4
+    - name: _AttachRCEToRTE
+      demangled: ''
+      offset: '00009204'
+    - name: _IPGetPInfo
+      demangled: ''
+      offset: '00009370'
+    - name: _IPCheckRoute
+      demangled: ''
+      offset: 000093B0
+    - name: _FindRCE
+      demangled: ''
+      offset: 000094B4
+    - name: _OpenRCE
+      demangled: ''
+      offset: 000094DC
+    - name: _CloseRCE
+      demangled: ''
+      offset: '00009690'
+    - name: _LockedAddRoute
+      demangled: ''
+      offset: 000096F8
+    - name: _AddRoute
+      demangled: ''
+      offset: 00009AB8
+    - name: _DeleteRoute
+      demangled: ''
+      offset: 00009B00
+    - name: _Redirect
+      demangled: ''
+      offset: 00009B6C
+    - name: _GetRaisedMTU
+      demangled: ''
+      offset: 00009C40
+    - name: _GuessNewMTU
+      demangled: ''
+      offset: 00009C68
+    - name: _RouteFragNeeded
+      demangled: ''
+      offset: 00009C8C
+    - name: _IPRouteTimeout
+      demangled: ''
+      offset: 00009D78
+    - name: _FreeFWPacket
+      demangled: ''
+      offset: 00009ED8
+    - name: _GrowFWPackets
+      demangled: ''
+      offset: 00009F58
+    - name: _GrowFWBuffer
+      demangled: ''
+      offset: 0000A05C
+    - name: _FWSendComplete
+      demangled: ''
+      offset: 0000A110
+    - name: _TransmitFWPacket
+      demangled: ''
+      offset: 0000A198
+    - name: _SendFWPacket
+      demangled: ''
+      offset: 0000A290
+    - name: _RemoveRandomFWPacket
+      demangled: ''
+      offset: 0000A308
+    - name: _GetFWBuffer
+      demangled: ''
+      offset: 0000A36C
+    - name: _GetFWPacket
+      demangled: ''
+      offset: 0000A514
+    - name: _IPForward
+      demangled: ''
+      offset: 0000A584
+    - name: _AddNTERoutes
+      demangled: ''
+      offset: 0000ABA4
+    - name: _InitNTERouting
+      demangled: ''
+      offset: 0000ACB8
+    - name: _UpdateICMPStats
+      demangled: ''
+      offset: 0000AD8C
+    - name: _GetICMPBuffer
+      demangled: ''
+      offset: 0000AE44
+    - name: _FreeICMPBuffer
+      demangled: ''
+      offset: 0000AF0C
+    - name: _DeleteEC
+      demangled: ''
+      offset: 0000AFA4
+    - name: _ICMPSendComplete
+      demangled: ''
+      offset: 0000AFD0
+    - name: _XsumBufChain
+      demangled: ''
+      offset: 0000B010
+    - name: _SendEcho
+      demangled: ''
+      offset: 0000B04C
+    - name: _SendICMPMsg
+      demangled: ''
+      offset: 0000B244
+    - name: _SendICMPErr
+      demangled: ''
+      offset: 0000B338
+    - name: _ICMPTimer
+      demangled: ''
+      offset: 0000B420
+    - name: _CompleteEcho
+      demangled: ''
+      offset: 0000B484
+    - name: _ICMPStatus
+      demangled: ''
+      offset: 0000B4D0
+    - name: _ICMPMapStatus
+      demangled: ''
+      offset: 0000B518
+    - name: _SendRouterSolicitation
+      demangled: ''
+      offset: 0000B5D8
+    - name: _ICMPRouterTimer
+      demangled: ''
+      offset: 0000B5FC
+    - name: _ProcessRouterAdvertisement
+      demangled: ''
+      offset: 0000B6B4
+    - name: _ICMPRcv
+      demangled: ''
+      offset: 0000B850
+    - name: _ICMPEcho
+      demangled: ''
+      offset: 0000BD0C
+    - name: _ICMPEchoRequest
+      demangled: ''
+      offset: 0000BF0C
+    - name: _ICMPEchoComplete
+      demangled: ''
+      offset: 0000C020
+    - name: _VXDEchoComplete
+      demangled: ''
+      offset: 0000C1A0
+    - name: _VXDEchoRequest
+      demangled: ''
+      offset: 0000C1D4
+    - name: _LoopXmitRtn
+      demangled: ''
+      offset: 0000C268
+    - name: _LoopXmit@16
+      demangled: ''
+      offset: 0000C3C4
+    - name: _LoopXfer@28
+      demangled: ''
+      offset: 0000C434
+    - name: _LoopClose@4
+      demangled: ''
+      offset: 0000C588
+    - name: _LoopInvalidate@8
+      demangled: ''
+      offset: 0000C58C
+    - name: _LoopQInfo@20
+      demangled: ''
+      offset: 0000C590
+    - name: _LoopSetInfo@16
+      demangled: ''
+      offset: 0000C6DC
+    - name: _LoopAddAddr@20
+      demangled: ''
+      offset: 0000C75C
+    - name: _LoopDelAddr@16
+      demangled: ''
+      offset: 0000C764
+    - name: _LoopGetEList@12
+      demangled: ''
+      offset: 0000C76C
+    - name: _IGMPRandomTicks
+      demangled: ''
+      offset: 0000C7D4
+    - name: _FindIGMPAddr
+      demangled: ''
+      offset: 0000C81C
+    - name: _IGMPRcv
+      demangled: ''
+      offset: 0000C844
+    - name: _SendIGMPReport
+      demangled: ''
+      offset: 0000CA14
+    - name: _IGMPAddrChange
+      demangled: ''
+      offset: 0000CB1C
+    - name: _IGMPTimer
+      demangled: ''
+      offset: 0000CDC8
+    - name: _InitIGMPForNTE
+      demangled: ''
+      offset: 0000CE4C
+    - name: _StopIGMPForNTE
+      demangled: ''
+      offset: 0000CEC0
+    - name: _CopyToNdis
+      demangled: ''
+      offset: 0000CEDC
+    - name: _IPQueryInfo
+      demangled: ''
+      offset: 0000CF78
+    - name: _IPSetInfo
+      demangled: ''
+      offset: 0000D43C
+    - name: _IPGetEList
+      demangled: ''
+      offset: 0000D744
+    - name: _VxdMapSegmentOffsetToFlat
+      demangled: ''
+      offset: 0000D80C
+    - name: _VxdLockBuffer
+      demangled: ''
+      offset: 0000D854
+    - name: _VxdUnlockBuffer
+      demangled: ''
+      offset: 0000D89B
+    - name: _VxdValidateBuffer
+      demangled: ''
+      offset: 0000D8E3
+    - name: _IPGetConfig
+      demangled: ''
+      offset: 0000D92C
+    - name: _OpenIFConfig
+      demangled: ''
+      offset: 0000DC2C
+    - name: _GetArpCacheLife
+      demangled: ''
+      offset: 0000DC5C
+    - name: _GetArpRetryCount
+      demangled: ''
+      offset: 0000DC64
+    - name: _IsLLInterfaceValueNull
+      demangled: ''
+      offset: 0000DC6C
+    - name: _String2Addr
+      demangled: ''
+      offset: 0000DCC0
+    - name: _GetGeneralIFConfig
+      demangled: ''
+      offset: 0000DD6C
+    - name: _GetIFAddrList
+      demangled: ''
+      offset: 0000DEAC
+    - name: _CloseIFConfig
+      demangled: ''
+      offset: '0000E078'
+    - name: _IPFreeConfig
+      demangled: ''
+      offset: '0000E084'
+    - name: _UseEtherSNAP
+      demangled: ''
+      offset: '0000E094'
+    - name: _GetAlwaysSourceRoute
+      demangled: ''
+      offset: 0000E09C
+    - name: _IPDelNTEContextList
+      demangled: ''
+      offset: 0000E0B8
+    - name: _IPAddNTEContextList
+      demangled: ''
+      offset: 0000E0BC
+    - name: _NdisRegisterProtocol@16
+      demangled: ''
+      offset: 0000E0C0
+    - name: _NdisDeregisterProtocol@8
+      demangled: ''
+      offset: 0000E0C6
+    - name: _NdisOpenAdapter@44
+      demangled: ''
+      offset: 0000E0CC
+    - name: _NdisCloseAdapter@8
+      demangled: ''
+      offset: 0000E0D2
+    - name: _NdisSend@12
+      demangled: ''
+      offset: 0000E0D8
+    - name: _NdisTransferData@28
+      demangled: ''
+      offset: 0000E0DE
+    - name: _NdisReset@8
+      demangled: ''
+      offset: 0000E0E4
+    - name: _NdisRequest@12
+      demangled: ''
+      offset: 0000E0EA
+    - name: _NdisQueryGlobalStatistics@16
+      demangled: ''
+      offset: 0000E0F0
+    - name: _NdisOpenProtocolConfiguration@12
+      demangled: ''
+      offset: 0000E0F6
+    - name: _NdisCompleteBindAdapter@12
+      demangled: ''
+      offset: 0000E0FC
+    - name: _NdisCompleteUnbindAdapter@8
+      demangled: ''
+      offset: '0000E102'
+    - name: _NdisGetVersion@0
+      demangled: ''
+      offset: '0000E108'
+    - name: _NdisSetTimer@8
+      demangled: ''
+      offset: 0000E10E
+    - name: _NdisCancelTimer@8
+      demangled: ''
+      offset: '0000E114'
+    - name: _NdisInitializeInterrupt@40
+      demangled: ''
+      offset: 0000E11A
+    - name: _NdisRemoveInterrupt@4
+      demangled: ''
+      offset: '0000E120'
+    - name: _NdisSynchronizeWithInterrupt@12
+      demangled: ''
+      offset: '0000E126'
+    - name: _NdisStallExecution@4
+      demangled: ''
+      offset: 0000E12C
+    - name: _NdisAllocateMemory@16
+      demangled: ''
+      offset: '0000E132'
+    - name: _NdisFreeMemory@12
+      demangled: ''
+      offset: '0000E138'
+    - name: _NdisAllocatePacketPool@16
+      demangled: ''
+      offset: 0000E13E
+    - name: _NdisFreePacketPool@4
+      demangled: ''
+      offset: '0000E144'
+    - name: _NdisAllocatePacket@12
+      demangled: ''
+      offset: 0000E14A
+    - name: _NdisReinitializePacket@4
+      demangled: ''
+      offset: '0000E150'
+    - name: _NdisFreePacket@4
+      demangled: ''
+      offset: '0000E156'
+    - name: _NdisQueryPacket@20
+      demangled: ''
+      offset: 0000E15C
+    - name: _NdisAllocateBufferPool@12
+      demangled: ''
+      offset: '0000E162'
+    - name: _NdisFreeBufferPool@4
+      demangled: ''
+      offset: '0000E168'
+    - name: _NdisAllocateBuffer@20
+      demangled: ''
+      offset: 0000E16E
+    - name: _NdisCopyBuffer@24
+      demangled: ''
+      offset: '0000E174'
+    - name: _NdisFreeBuffer@4
+      demangled: ''
+      offset: 0000E17A
+    - name: _NdisQueryBuffer@12
+      demangled: ''
+      offset: '0000E180'
+    - name: _NdisGetBufferPhysicalAddress@12
+      demangled: ''
+      offset: '0000E186'
+    - name: _NdisChainBufferAtFront@8
+      demangled: ''
+      offset: 0000E18C
+    - name: _NdisChainBufferAtBack@8
+      demangled: ''
+      offset: '0000E192'
+    - name: _NdisUnchainBufferAtFront@8
+      demangled: ''
+      offset: '0000E198'
+    - name: _NdisUnchainBufferAtBack@8
+      demangled: ''
+      offset: 0000E19E
+    - name: _NdisGetNextBuffer@8
+      demangled: ''
+      offset: 0000E1A4
+    - name: _NdisCopyFromPacketToPacket@24
+      demangled: ''
+      offset: 0000E1AA
+    - name: _NdisOpenConfiguration@12
+      demangled: ''
+      offset: 0000E1B0
+    - name: _NdisReadConfiguration@20
+      demangled: ''
+      offset: 0000E1B6
+    - name: _NdisCloseConfiguration@4
+      demangled: ''
+      offset: 0000E1BC
+    - name: _NdisEqualString@12
+      demangled: ''
+      offset: 0000E1C2
+    - name: _NdisOpenFile@20
+      demangled: ''
+      offset: 0000E1C8
+    - name: _NdisMapFile@12
+      demangled: ''
+      offset: 0000E1CE
+    - name: _NdisUnmapFile@4
+      demangled: ''
+      offset: 0000E1D4
+    - name: _NdisCloseFile@4
+      demangled: ''
+      offset: 0000E1DA
+    - name: _NdisAllocateDmaChannel@20
+      demangled: ''
+      offset: 0000E1E0
+    - name: _NdisSetupDmaTransfer@24
+      demangled: ''
+      offset: 0000E1E6
+    - name: _NdisCompleteDmaTransfer@24
+      demangled: ''
+      offset: 0000E1EC
+    - name: _NdisReadDmaCounter@4
+      demangled: ''
+      offset: 0000E1F2
+    - name: _NdisFreeDmaChannel@4
+      demangled: ''
+      offset: 0000E1F8
+    - name: _NdisMapIoSpace@20
+      demangled: ''
+      offset: 0000E1FE
+    - name: _NdisWriteErrorLogEntry
+      demangled: ''
+      offset: '0000E204'
+    - name: _NdisRegAdaptShutdown@12
+      demangled: ''
+      offset: 0000E20A
+    - name: _NdisDeregAdaptShutdown@4
+      demangled: ''
+      offset: '0000E210'
+    - name: _DbgPrint
+      demangled: ''
+      offset: '0000E218'
+    - name: __vxdhandle__
+      demangled: ''
+      offset: '0000E238'
+    - name: _VIP_Get_Version
+      demangled: ''
+      offset: 0000E23C
+    - name: _VIP_Get_Net_Info
+      demangled: ''
+      offset: '0000E240'
+    - name: _VIP_Register_Protocol
+      demangled: ''
+      offset: '0000E244'
+    - name: _VIP_Register_Driver
+      demangled: ''
+      offset: '0000E248'
+    - name: _VIP_Set_Addr
+      demangled: ''
+      offset: 0000E24C
+    - name: _VIP_ICMP_Echo
+      demangled: ''
+      offset: '0000E250'
+    - name: _VIP_Register_Addr_Change
+      demangled: ''
+      offset: '0000E254'
+    - name: _VIP_Register_Interface_Change
+      demangled: ''
+      offset: '0000E258'
+    - name: _VIP_Set_DHCP_Interface
+      demangled: ''
+      offset: 0000E25C
+    - name: _VIP_IP_Add_Interface
+      demangled: ''
+      offset: '0000E260'
+    - name: _VIP_IP_Delete_Interface
+      demangled: ''
+      offset: '0000E264'
+    - name: _VIP_Set_Addr_Ex
+      demangled: ''
+      offset: '0000E268'
+    - name: _VIP_Register_Rt_Change_Handler
+      demangled: ''
+      offset: 0000E26C
+    - name: _VIP_Register_Addr_ChangeEx
+      demangled: ''
+      offset: '0000E270'
+    - name: VIP_DDB
+      demangled: ''
+      offset: '0000E274'
+    - name: RefillEventSched
+      demangled: ''
+      offset: '0000E367'
+    - name: _VIPTerminate
+      demangled: ''
+      offset: 0000E36B
+    - name: _UniqueIfNumber
+      demangled: ''
+      offset: '0000E370'
+    - name: _ifuniadapter
+      demangled: ''
+      offset: '0000E374'
+    - name: _RawPI
+      demangled: ''
+      offset: '0000E378'
+    - name: _TrRii
+      demangled: ''
+      offset: 0000E37C
+    - name: _DHCPActivityCount
+      demangled: ''
+      offset: '0000E380'
+    - name: _DHCPNTE
+      demangled: ''
+      offset: '0000E384'
+    - name: _UniAdapter
+      demangled: ''
+      offset: '0000E388'
+    - name: _TRFunctionalMcast
+      demangled: ''
+      offset: 0000E3C8
+    - name: _SwapTableLo
+      demangled: ''
+      offset: 0000E40C
+    - name: _SwapTableHi
+      demangled: ''
+      offset: 0000E41C
+    - name: _IFieldSize
+      demangled: ''
+      offset: 0000E42C
+    - name: _dbg_hdrincl
+      demangled: ''
+      offset: '0000E448'
+    - name: _HdrBufList
+      demangled: ''
+      offset: 0000E44C
+    - name: _PacketPoolList
+      demangled: ''
+      offset: '0000E450'
+    - name: _HdrPoolList
+      demangled: ''
+      offset: '0000E454'
+    - name: _CurrentPacketCount
+      demangled: ''
+      offset: '0000E458'
+    - name: _MaxPacketCount
+      demangled: ''
+      offset: 0000E45C
+    - name: _CurrentHdrBufCount
+      demangled: ''
+      offset: '0000E460'
+    - name: _MaxHdrBufCount
+      demangled: ''
+      offset: '0000E464'
+    - name: _Rcefailures
+      demangled: ''
+      offset: '0000E468'
+    - name: _RtPI
+      demangled: ''
+      offset: 0000E46C
+    - name: _IPMaskTable
+      demangled: ''
+      offset: '0000E470'
+    - name: _MTUTable
+      demangled: ''
+      offset: 0000E4B0
+    - name: _BCastMinMTU
+      demangled: ''
+      offset: 0000E4DC
+    - name: _IcmpEchoPendingCnt
+      demangled: ''
+      offset: '0000E620'
+    - name: _IcmpErrPendingCnt
+      demangled: ''
+      offset: '0000E624'
+    - name: _LoopXmitHead
+      demangled: ''
+      offset: '0000E654'
+    - name: _LoopXmitTail
+      demangled: ''
+      offset: '0000E658'
+    - name: _LoopXmitRtnRunning
+      demangled: ''
+      offset: 0000E65C
+    - name: _LoopName
+      demangled: ''
+      offset: '0000E660'
+    - name: _LoopEntityType
+      demangled: ''
+      offset: 0000E67C
+    - name: _GlobalConfigTable
+      demangled: ''
+      offset: '0000E754'
+    - name: _IFConfigTable
+      demangled: ''
+      offset: 0000E8D0
+    - name: __IPAlwaysSR
+      demangled: ''
+      offset: 0000EA08
+    - name: _ICMPOutStats
+      demangled: ''
+      offset: 0000EA0C
+    - name: _ForwardPackets
+      demangled: ''
+      offset: 0000EA40
+    - name: _DummyInterface
+      demangled: ''
+      offset: 0000EA44
+    - name: _LoopInstance
+      demangled: ''
+      offset: 0000EAF0
+    - name: __LLInterface
+      demangled: ''
+      offset: 0000EAF4
+    - name: _FWPacketFree
+      demangled: ''
+      offset: 0000EAF8
+    - name: _ICMPInStats
+      demangled: ''
+      offset: 0000EAFC
+    - name: _ARPHandle
+      demangled: ''
+      offset: 0000EB30
+    - name: _LastPI
+      demangled: ''
+      offset: 0000EB34
+    - name: _RATimeout
+      demangled: ''
+      offset: 0000EB38
+    - name: _Seed
+      demangled: ''
+      offset: 0000EB3C
+    - name: _RandomValue
+      demangled: ''
+      offset: 0000EB40
+    - name: _MaxFWBufferSize
+      demangled: ''
+      offset: 0000EB44
+    - name: _ArpRetryCount
+      demangled: ''
+      offset: 0000EB48
+    - name: _IPProtInfo
+      demangled: ''
+      offset: 0000EB4C
+    - name: _IGMPProtInfo
+      demangled: ''
+      offset: 0000EBB0
+    - name: _LoopNTE
+      demangled: ''
+      offset: 0000EBB4
+    - name: _NumIF
+      demangled: ''
+      offset: 0000EBB8
+    - name: _IFBitMask
+      demangled: ''
+      offset: 0000EBBC
+    - name: _FWBufFree
+      demangled: ''
+      offset: 0000EBC4
+    - name: _PMTUDiscovery
+      demangled: ''
+      offset: 0000EBC8
+    - name: _CurrentICMPHeaders
+      demangled: ''
+      offset: 0000EBCC
+    - name: _ArpCacheLife
+      demangled: ''
+      offset: 0000EBD0
+    - name: _NextPI
+      demangled: ''
+      offset: 0000EBD4
+    - name: _AddrNotifyTable
+      demangled: ''
+      offset: 0000EBD8
+    - name: __ArpRetryCount
+      demangled: ''
+      offset: 0000EBF8
+    - name: _IPID
+      demangled: ''
+      offset: 0000EBFC
+    - name: _NetTableList
+      demangled: ''
+      offset: 0000EC00
+    - name: _TSFlag
+      demangled: ''
+      offset: 0000EC04
+    - name: _LoopXmitEvent
+      demangled: ''
+      offset: 0000EC08
+    - name: _MaxICMPHeaders
+      demangled: ''
+      offset: 0000EC1C
+    - name: _IGMPBlockList
+      demangled: ''
+      offset: 0000EC20
+    - name: _ATCache
+      demangled: ''
+      offset: 0000EC24
+    - name: _IFList
+      demangled: ''
+      offset: 0000EC54
+    - name: _LoopInterface
+      demangled: ''
+      offset: 0000EC58
+    - name: _AddChangeNotifyQueue
+      demangled: ''
+      offset: 0000ED04
+    - name: _ATCIndex
+      demangled: ''
+      offset: 0000ED0C
+    - name: _CurrentFWPackets
+      demangled: ''
+      offset: 0000ED10
+    - name: _ClientNotifyQueue
+      demangled: ''
+      offset: 0000ED14
+    - name: _IPRouteTimer
+      demangled: ''
+      offset: 0000ED1C
+    - name: _InterfaceSize
+      demangled: ''
+      offset: 0000ED34
+    - name: _sIPAlwaysSourceRoute
+      demangled: ''
+      offset: 0000ED38
+    - name: _LoopIndex
+      demangled: ''
+      offset: 0000ED3C
+    - name: __UseEtherSNAP
+      demangled: ''
+      offset: 0000ED40
+    - name: _BCastRSQ
+      demangled: ''
+      offset: 0000ED44
+    - name: _ICMPInstance
+      demangled: ''
+      offset: 0000ED48
+    - name: _RtChangeNotifyQueue
+      demangled: ''
+      offset: 0000ED4C
+    - name: _ForwardFilterPtr
+      demangled: ''
+      offset: 0000ED54
+    - name: _ForwardBCast
+      demangled: ''
+      offset: 0000ED58
+    - name: _NumNTE
+      demangled: ''
+      offset: 0000ED5C
+    - name: _DefaultTTL
+      demangled: ''
+      offset: 0000ED60
+    - name: _DeadGWDetect
+      demangled: ''
+      offset: 0000ED64
+    - name: _LoopIFE
+      demangled: ''
+      offset: 0000ED68
+    - name: _NextNTEContext
+      demangled: ''
+      offset: 0000EDC5
+    - name: _MaxFWPackets
+      demangled: ''
+      offset: 0000EDC8
+    - name: _FirstIF
+      demangled: ''
+      offset: 0000EDCC
+    - name: _DefGWConfigured
+      demangled: ''
+      offset: 0000EDD0
+    - name: _TimeStamp
+      demangled: ''
+      offset: 0000EDD4
+    - name: _RouterConfigured
+      demangled: ''
+      offset: 0000EDD8
+    - name: _IPSInfo
+      demangled: ''
+      offset: 0000EDDC
+    - name: __TRSingleRoute
+      demangled: ''
+      offset: 0000EE38
+    - name: _DefaultTOS
+      demangled: ''
+      offset: 0000EE3C
+    - name: _IPInstance
+      demangled: ''
+      offset: 0000EE40
+    - name: __AlwaysSR
+      demangled: ''
+      offset: 0000EE44
+    - name: _ICMPHeaderList
+      demangled: ''
+      offset: 0000EE48
+    - name: _RtNotifyTable
+      demangled: ''
+      offset: 0000EE4C
+    - name: _RouteTable
+      demangled: ''
+      offset: 0000EE6C
+    - name: _DODCallout
+      demangled: ''
+      offset: 0000EEEC
+    - name: _DefGWActive
+      demangled: ''
+      offset: 0000EEF0
+    - name: _InterfaceNotifyTable
+      demangled: ''
+      offset: 0000EEF4
+    - name: __ArpCacheLife
+      demangled: ''
+      offset: 0000EF14
+    - name: _sArpAlwaysSourceRoute
+      demangled: ''
+      offset: 0000EF18
+    - name: _PacketList
+      demangled: ''
+      offset: 0000EF1C
+    - name: _IGMPBlockFlag
+      demangled: ''
+      offset: 0000EF20
+    - name: _BufferPool
+      demangled: ''
+      offset: 0000EF24
+    - name: _IGMPLevel
+      demangled: ''
+      offset: 0000EF28
+    - name: _CurrentFWBufferSize
+      demangled: ''
+      offset: 0000EF2C
+    - name: _AddrNotifyTableEx
+      demangled: ''
+      offset: 0000EF30
+    - name: _BSSBegin
+      demangled: ''
+      offset: 0000EF50
+    - name: _BSSDataEnd
+      demangled: ''
+      offset: 0000EF50
+  - num: '2'
+    name: _LMGROUP
+    offset: '00009110'
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000014'
+  - num: '3'
+    name: _IGROUP
+    offset: '00000000'
+    symbols:
+    - name: _CTEInitialize
+      demangled: ''
+      offset: '00000000'
+    - name: VIP_Device_Init
+      demangled: ''
+      offset: '00000020'
+    - name: GetNextInterface
+      demangled: ''
+      offset: '00000045'
+    - name: ConvertBoolean
+      demangled: ''
+      offset: '00000089'
+    - name: ConvertDecimal
+      demangled: ''
+      offset: '00000094'
+    - name: SkipWS
+      demangled: ''
+      offset: 000000A9
+    - name: ConvertIPAddress
+      demangled: ''
+      offset: 000000BC
+    - name: atol
+      demangled: ''
+      offset: 0000012E
+    - name: _GetGMTDelta
+      demangled: ''
+      offset: 0000014A
+    - name: _InitTimestamp
+      demangled: ''
+      offset: 000001DC
+    - name: _FreeNets
+      demangled: ''
+      offset: '00000240'
+    - name: _IPInit
+      demangled: ''
+      offset: '00000260'
+    - name: _ARPInit
+      demangled: ''
+      offset: 000004B8
+    - name: _InitRouting
+      demangled: ''
+      offset: '00000584'
+    - name: _InitGateway
+      demangled: ''
+      offset: 000006A8
+    - name: _ICMPInit
+      demangled: ''
+      offset: 000009C4
+    - name: _InitLoopback
+      demangled: ''
+      offset: 00000A30
+    - name: _IGMPInit
+      demangled: ''
+      offset: 00000BF0
+- version: Windows 98SE Debug
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: 0000B080
+    symbols:
+    - name: _CTEStartTimer
+      demangled: ''
+      offset: '00000000'
+    - name: _CTEStopTimer
+      demangled: ''
+      offset: '00000006'
+    - name: _CTESystemUpTime
+      demangled: ''
+      offset: 0000000C
+    - name: __ICTEGetLock
+      demangled: ''
+      offset: '00000012'
+    - name: __ICTEFreeLock
+      demangled: ''
+      offset: '00000018'
+    - name: _CTEScheduleEvent
+      demangled: ''
+      offset: 0000001E
+    - name: _CTEScheduleEvent_N
+      demangled: ''
+      offset: '00000024'
+    - name: _CTECancelEvent
+      demangled: ''
+      offset: 0000002A
+    - name: _CTEAllocMem
+      demangled: ''
+      offset: '00000030'
+    - name: _CTEFreeMem
+      demangled: ''
+      offset: '00000074'
+    - name: _CTERefillMem
+      demangled: ''
+      offset: 0000008C
+    - name: _CTEBlock
+      demangled: ''
+      offset: '00000092'
+    - name: _CTEBlock1
+      demangled: ''
+      offset: '00000098'
+    - name: _CTESignal
+      demangled: ''
+      offset: 0000009E
+    - name: __CTECheckMem
+      demangled: ''
+      offset: 000000A4
+    - name: _CTEPrint
+      demangled: ''
+      offset: 000000AA
+    - name: _CTEPrintNum
+      demangled: ''
+      offset: 000000BC
+    - name: _CTEPrintCRLF
+      demangled: ''
+      offset: '00000105'
+    - name: _CTEUnload
+      demangled: ''
+      offset: '00000115'
+    - name: _CTESetLoadNotifyProc
+      demangled: ''
+      offset: '00000120'
+    - name: _CTESetUnloadNotifyProc
+      demangled: ''
+      offset: 0000012B
+    - name: VIP_Get_Version
+      demangled: ''
+      offset: 0000013E
+    - name: _GetTime
+      demangled: ''
+      offset: 0000014C
+    - name: _RequestDHCPAddr
+      demangled: ''
+      offset: 000001C2
+    - name: _NdisCompletePnPEvent
+      demangled: ''
+      offset: 000001D1
+    - name: _WrapperLoadSysDriver@4
+      demangled: ''
+      offset: 000001D7
+    - name: VIP_Register_Addr_Change
+      demangled: ''
+      offset: '000001E3'
+    - name: VIP_Register_PNP_Change
+      demangled: ''
+      offset: 000001F6
+    - name: VIP_Register_Addr_ChangeEx
+      demangled: ''
+      offset: '00000209'
+    - name: VIP_Register_Rt_Change_Handler
+      demangled: ''
+      offset: 0000021C
+    - name: VIP_Register_Interface_Change
+      demangled: ''
+      offset: 0000022F
+    - name: _NotifyOfUnload
+      demangled: ''
+      offset: 0000023C
+    - name: RefillEvent
+      demangled: ''
+      offset: '00000252'
+    - name: _RefillReasmMem
+      demangled: ''
+      offset: '00000262'
+    - name: VIP_Get_Net_Info
+      demangled: ''
+      offset: 0000028F
+    - name: VIP_Get_PNP_Cap
+      demangled: ''
+      offset: 000002A2
+    - name: VIP_Get_PNP_Ctxt
+      demangled: ''
+      offset: 000002B5
+    - name: VIP_Register_Protocol
+      demangled: ''
+      offset: 000002C8
+    - name: VIP_Register_Driver
+      demangled: ''
+      offset: 000002DB
+    - name: VIP_Set_Addr
+      demangled: ''
+      offset: 000002EB
+    - name: VIP_Set_Addr_Ex
+      demangled: ''
+      offset: 000002FE
+    - name: VIP_IPRegisterARP
+      demangled: ''
+      offset: '00000311'
+    - name: VIP_IPDeregisterARP
+      demangled: ''
+      offset: '00000324'
+    - name: VIP_IPWakeup_Pattern
+      demangled: ''
+      offset: '00000337'
+    - name: VIP_Register_PMNotify
+      demangled: ''
+      offset: 0000034A
+    - name: VIP_Set_DHCP_Interface
+      demangled: ''
+      offset: 0000035D
+    - name: VIP_LookupRoute
+      demangled: ''
+      offset: '00000370'
+    - name: VIP_IP_Add_Interface
+      demangled: ''
+      offset: '00000383'
+    - name: VIP_IP_Delete_Interface
+      demangled: ''
+      offset: '00000396'
+    - name: ConvertPtr
+      demangled: ''
+      offset: 000003A3
+    - name: PingDone
+      demangled: ''
+      offset: 000003D9
+    - name: VIP_V86_API
+      demangled: ''
+      offset: '00000463'
+    - name: VIP_ICMP_Echo
+      demangled: ''
+      offset: '00000559'
+    - name: _DisplayPopup
+      demangled: ''
+      offset: '00000566'
+    - name: _NotifyConflictProc
+      demangled: ''
+      offset: '00000567'
+    - name: _DisplayConflictPopup
+      demangled: ''
+      offset: 0000057D
+    - name: _EnableInts
+      demangled: ''
+      offset: 000005DC
+    - name: VIP_Terminate
+      demangled: ''
+      offset: '000005E2'
+    - name: VIP_Device_Exit
+      demangled: ''
+      offset: 000005EE
+    - name: VIP_Control
+      demangled: ''
+      offset: 000005F0
+    - name: VIP_DeviceIoControl
+      demangled: ''
+      offset: '00000613'
+    - name: _SetDHCPNTE
+      demangled: ''
+      offset: 000006D8
+    - name: _IsDHCPInterface
+      demangled: ''
+      offset: 0000075C
+    - name: _CloseNets
+      demangled: ''
+      offset: '00000774'
+    - name: _IPBindComplete@8
+      demangled: ''
+      offset: '00000794'
+    - name: _IPRegisterARP@28
+      demangled: ''
+      offset: 000007A8
+    - name: _IPDeregisterARP@4
+      demangled: ''
+      offset: '00000854'
+    - name: _IPLookupArpModule
+      demangled: ''
+      offset: '000008E8'
+    - name: _IPBindAdapter@20
+      demangled: ''
+      offset: '00000970'
+    - name: _IPRegisterProtocol
+      demangled: ''
+      offset: 00000B60
+    - name: _IPSetMCastAddr
+      demangled: ''
+      offset: 00000C0C
+    - name: _IPGetAddrType
+      demangled: ''
+      offset: 00000C68
+    - name: _IPGetLocalMTU
+      demangled: ''
+      offset: 00000C78
+    - name: _IPUpdateRcvdOptions
+      demangled: ''
+      offset: 00000CC4
+    - name: _ValidRouteOption
+      demangled: ''
+      offset: 00000F08
+    - name: _IPInitOptions
+      demangled: ''
+      offset: 00000F3C
+    - name: _IPCopyOptions
+      demangled: ''
+      offset: 00000F68
+    - name: _IPFreeOptions
+      demangled: ''
+      offset: '00001338'
+    - name: _IPGetInfo
+      demangled: ''
+      offset: '00001368'
+    - name: _IPTimeout
+      demangled: ''
+      offset: 0000140C
+    - name: _IPpSetNTEAddr
+      demangled: ''
+      offset: 000014F0
+    - name: _IPSetNTEAddr
+      demangled: ''
+      offset: 0000175C
+    - name: _IPSetNTEAddrEx
+      demangled: ''
+      offset: 000017D0
+    - name: _InitNTE
+      demangled: ''
+      offset: '00001848'
+    - name: _InitInterface
+      demangled: ''
+      offset: 000018D0
+    - name: _RegisterAddrNotify
+      demangled: ''
+      offset: 00001B5C
+    - name: _RegisterAddrNotifyEx
+      demangled: ''
+      offset: 00001BB8
+    - name: _RegisterRtNotify
+      demangled: ''
+      offset: 00001BFC
+    - name: _RegisterPNPNotify
+      demangled: ''
+      offset: 00001C3C
+    - name: _NotifyInterfaceChange
+      demangled: ''
+      offset: 00001C80
+    - name: _RegisterInterfaceNotify
+      demangled: ''
+      offset: 00001CB0
+    - name: _NotifyAddrChange
+      demangled: ''
+      offset: 00001CF4
+    - name: _RtChangeNotify
+      demangled: ''
+      offset: 00001D34
+    - name: _PNPChangeNotify
+      demangled: ''
+      offset: 00001D60
+    - name: _VipApiHandler
+      demangled: ''
+      offset: 00001D8C
+    - name: _IPAddNTE
+      demangled: ''
+      offset: 0000201C
+    - name: _IPAddInterface@24
+      demangled: ''
+      offset: '00002274'
+    - name: _IPDelNTE
+      demangled: ''
+      offset: '00002804'
+    - name: _IPDeleteDynamicNTE
+      demangled: ''
+      offset: '00002980'
+    - name: _IPGetNTEInfo
+      demangled: ''
+      offset: 00002A4C
+    - name: _IPDelInterface@4
+      demangled: ''
+      offset: 00002AE4
+    - name: _DoNDISRequest
+      demangled: ''
+      offset: 00002D84
+    - name: _FreeARPBuffer
+      demangled: ''
+      offset: 00002E2C
+    - name: _GrowARPHeaders
+      demangled: ''
+      offset: 00002E8C
+    - name: _GetARPBuffer
+      demangled: ''
+      offset: 00002FE0
+    - name: _BitSwap
+      demangled: ''
+      offset: '00003118'
+    - name: _SendARPPacket
+      demangled: ''
+      offset: '00003150'
+    - name: _SendARPRequest
+      demangled: ''
+      offset: 000032B4
+    - name: _SendARPReply
+      demangled: ''
+      offset: '00003584'
+    - name: _ARPRemoveRCE
+      demangled: ''
+      offset: '00003798'
+    - name: _ARPLookup
+      demangled: ''
+      offset: 000037FC
+    - name: _IsBCastOnIF
+      demangled: ''
+      offset: '00003850'
+    - name: _ARPSendBCast
+      demangled: ''
+      offset: '000038E8'
+    - name: _ARPSendData
+      demangled: ''
+      offset: 00003BFC
+    - name: _CreateARPTableEntry
+      demangled: ''
+      offset: '00003E50'
+    - name: _ARPTransmit@16
+      demangled: ''
+      offset: 00003F90
+    - name: _RemoveARPTableEntry
+      demangled: ''
+      offset: '00004180'
+    - name: _ARPXferData@28
+      demangled: ''
+      offset: 000041A8
+    - name: _ARPClose@4
+      demangled: ''
+      offset: '000041E0'
+    - name: _ARPInvalidate@8
+      demangled: ''
+      offset: '00004288'
+    - name: _ARPSetMCastList
+      demangled: ''
+      offset: '00004314'
+    - name: _ARPFindMCast
+      demangled: ''
+      offset: 0000458C
+    - name: _ARPDelMCast
+      demangled: ''
+      offset: 000045B4
+    - name: _ARPAddMCast
+      demangled: ''
+      offset: '00004678'
+    - name: _ARPAddAddr@20
+      demangled: ''
+      offset: '00004790'
+    - name: _ARPDeleteAddr@16
+      demangled: ''
+      offset: '00004950'
+    - name: _DoWakeupPattern@16
+      demangled: ''
+      offset: 00004A94
+    - name: _ARPWakeupPattern@12
+      demangled: ''
+      offset: 00004D28
+    - name: _ARPTimeout
+      demangled: ''
+      offset: 00004E0C
+    - name: _IsLocalAddr
+      demangled: ''
+      offset: '000050E4'
+    - name: _ARPLocalAddr
+      demangled: ''
+      offset: '00005138'
+    - name: _DisplayConflictProc
+      demangled: ''
+      offset: '00005204'
+    - name: _HandleARPPacket
+      demangled: ''
+      offset: '00005308'
+    - name: _InitAdapter
+      demangled: ''
+      offset: '00005954'
+    - name: _ARPOAComplete@12
+      demangled: ''
+      offset: 00005A54
+    - name: _ARPCAComplete@8
+      demangled: ''
+      offset: 00005A70
+    - name: _ARPSendComplete@12
+      demangled: ''
+      offset: 00005A8C
+    - name: _ARPTDComplete@16
+      demangled: ''
+      offset: 00005B48
+    - name: _ARPResetComplete@8
+      demangled: ''
+      offset: 00005B64
+    - name: _ARPRequestComplete@12
+      demangled: ''
+      offset: 00005B68
+    - name: _ARPRcv@28
+      demangled: ''
+      offset: 00005B84
+    - name: _ARPRcvComplete@4
+      demangled: ''
+      offset: 00005CC8
+    - name: _ARPStatus@16
+      demangled: ''
+      offset: 00005CD0
+    - name: _ARPStatusComplete@4
+      demangled: ''
+      offset: 00005CF0
+    - name: _ARPPnPEvent@8
+      demangled: ''
+      offset: 00005CF4
+    - name: _ARPPnPComplete@12
+      demangled: ''
+      offset: 00005D3C
+    - name: _ARPReadNext
+      demangled: ''
+      offset: 00005D64
+    - name: _ARPValidateContext
+      demangled: ''
+      offset: '00005E88'
+    - name: _ARPQueryInfo@20
+      demangled: ''
+      offset: 00005F0C
+    - name: _ARPSetInfo@16
+      demangled: ''
+      offset: '00006490'
+    - name: _FreeARPInterface
+      demangled: ''
+      offset: '00006960'
+    - name: _ARPOpen@4
+      demangled: ''
+      offset: 00006ADC
+    - name: _ARPGetEList@12
+      demangled: ''
+      offset: 00006AEC
+    - name: _ARPRegister
+      demangled: ''
+      offset: 00006B90
+    - name: _ARPDynRegister@20
+      demangled: ''
+      offset: '00007170'
+    - name: _ARPBindAdapter@20
+      demangled: ''
+      offset: '00007190'
+    - name: _ARPUnbindAdapter@12
+      demangled: ''
+      offset: '00007300'
+    - name: _ARPUnloadProtocol@0
+      demangled: ''
+      offset: 000073F0
+    - name: _FindUserRcv
+      demangled: ''
+      offset: '00007420'
+    - name: _IPRcvComplete@0
+      demangled: ''
+      offset: '00007488'
+    - name: _FindRH
+      demangled: ''
+      offset: 000074B0
+    - name: _ParseRcvdOptions
+      demangled: ''
+      offset: 000074FC
+    - name: _BCastRcv
+      demangled: ''
+      offset: 000075D0
+    - name: _DeliverToUser
+      demangled: ''
+      offset: '00007660'
+    - name: _FreeRH
+      demangled: ''
+      offset: '00007750'
+    - name: _ReassembleFragment
+      demangled: ''
+      offset: 0000777C
+    - name: _RATDComplete
+      demangled: ''
+      offset: 00007BF0
+    - name: _IPReassemble
+      demangled: ''
+      offset: 00007C7C
+    - name: _CheckLocalOptions
+      demangled: ''
+      offset: '00007E74'
+    - name: _TDUserRcv
+      demangled: ''
+      offset: 00007F04
+    - name: _IPRcv@28
+      demangled: ''
+      offset: '00008008'
+    - name: _IPTDComplete@16
+      demangled: ''
+      offset: 0000840C
+    - name: _FreeIPHdrBuffer
+      demangled: ''
+      offset: '00008458'
+    - name: _FreeIPBufferChain
+      demangled: ''
+      offset: 0000846C
+    - name: _FreeIPPacket
+      demangled: ''
+      offset: '00008498'
+    - name: _GrowIPPacketList
+      demangled: ''
+      offset: 0000863C
+    - name: _GrowHdrBufList
+      demangled: ''
+      offset: '00008754'
+    - name: _GetIPPacket
+      demangled: ''
+      offset: '00008884'
+    - name: _GetIPHdrBuffer
+      demangled: ''
+      offset: 000088A0
+    - name: _GetIPHeader
+      demangled: ''
+      offset: 000088C0
+    - name: _ReferenceBuffer
+      demangled: ''
+      offset: '00008900'
+    - name: _IPSendComplete@12
+      demangled: ''
+      offset: 0000893C
+    - name: _xsum
+      demangled: ''
+      offset: '000089E4'
+    - name: _SendIPPacket
+      demangled: ''
+      offset: 00008A30
+    - name: _SendDHCPPacket
+      demangled: ''
+      offset: 00008B38
+    - name: _IPCopyBuffer
+      demangled: ''
+      offset: 00008B80
+    - name: _IPFragment
+      demangled: ''
+      offset: 00008C28
+    - name: _UpdateRouteOption
+      demangled: ''
+      offset: 00008FD8
+    - name: _UpdateOptions
+      demangled: ''
+      offset: 0000900C
+    - name: _SendIPBCast
+      demangled: ''
+      offset: 0000919C
+    - name: _IPTransmit
+      demangled: ''
+      offset: 000096D0
+    - name: _FindULStatus
+      demangled: ''
+      offset: 00009EC8
+    - name: _ULMTUNotify
+      demangled: ''
+      offset: 00009F14
+    - name: _IPULUnloadNotify
+      demangled: ''
+      offset: 00009F94
+    - name: _IPStatus@16
+      demangled: ''
+      offset: 00009FD0
+    - name: _IPPnPEvent@8
+      demangled: ''
+      offset: 0000A0C4
+    - name: _RegisterPMNotify
+      demangled: ''
+      offset: 0000A0F0
+    - name: _NotifyPowerEvent
+      demangled: ''
+      offset: 0000A134
+    - name: _DummyXmit@16
+      demangled: ''
+      offset: 0000A15C
+    - name: _DummyXfer@28
+      demangled: ''
+      offset: 0000A194
+    - name: _DummyClose@4
+      demangled: ''
+      offset: 0000A1D0
+    - name: _DummyInvalidate@8
+      demangled: ''
+      offset: 0000A208
+    - name: _DummyQInfo@20
+      demangled: ''
+      offset: 0000A240
+    - name: _DummySetInfo@16
+      demangled: ''
+      offset: 0000A27C
+    - name: _DummyAddAddr@20
+      demangled: ''
+      offset: 0000A2B8
+    - name: _DummyDelAddr@16
+      demangled: ''
+      offset: 0000A2E8
+    - name: _DummyGetEList@12
+      demangled: ''
+      offset: 0000A324
+    - name: _DerefIF
+      demangled: ''
+      offset: 0000A35C
+    - name: _LockedDerefIF
+      demangled: ''
+      offset: 0000A3BC
+    - name: _GetHashMask
+      demangled: ''
+      offset: 0000A418
+    - name: _AddrOnIF
+      demangled: ''
+      offset: 0000A44C
+    - name: _BestNTEForIF
+      demangled: ''
+      offset: 0000A47C
+    - name: _IsBCastOnNTE
+      demangled: ''
+      offset: 0000A4F8
+    - name: _InvalidSourceAddress
+      demangled: ''
+      offset: 0000A5F8
+    - name: _FlushATCache
+      demangled: ''
+      offset: 0000A698
+    - name: _GetAddrType
+      demangled: ''
+      offset: 0000A6C4
+    - name: _IPHash
+      demangled: ''
+      offset: 0000A7F0
+    - name: _GetLocalNTE
+      demangled: ''
+      offset: 0000A810
+    - name: _FindSpecificRTE
+      demangled: ''
+      offset: 0000A944
+    - name: _IsRouteICMP
+      demangled: ''
+      offset: 0000A9D4
+    - name: _FindRTE
+      demangled: ''
+      offset: 0000AA1C
+    - name: _ValidateDefaultGWs
+      demangled: ''
+      offset: 0000AAF8
+    - name: _InvalidateRCEChain
+      demangled: ''
+      offset: 0000AB58
+    - name: _FindValidIFForRTE
+      demangled: ''
+      offset: 0000AC50
+    - name: _LookupRTE
+      demangled: ''
+      offset: 0000AD14
+    - name: _GetRouteContext
+      demangled: ''
+      offset: 0000ADA4
+    - name: _FindInsertPoint
+      demangled: ''
+      offset: 0000ADF0
+    - name: _LookupNextHop
+      demangled: ''
+      offset: 0000AE40
+    - name: _LookupNextHopWithBuffer
+      demangled: ''
+      offset: 0000AECC
+    - name: _RTReadNext
+      demangled: ''
+      offset: 0000AF90
+    - name: _RTRead
+      demangled: ''
+      offset: 0000B0A4
+    - name: _LookupRoute
+      demangled: ''
+      offset: 0000B1B0
+    - name: _RTValidateContext
+      demangled: ''
+      offset: 0000B1E8
+    - name: _DeleteRTE
+      demangled: ''
+      offset: 0000B270
+    - name: _DeleteRTEOnIF
+      demangled: ''
+      offset: 0000B2C4
+    - name: _InvalidateRCEOnIF
+      demangled: ''
+      offset: 0000B2E4
+    - name: _SetMTUOnIF
+      demangled: ''
+      offset: 0000B300
+    - name: _SetMTUToAddr
+      demangled: ''
+      offset: 0000B31C
+    - name: _RTWalk
+      demangled: ''
+      offset: 0000B33C
+    - name: _AttachRCEToRTE
+      demangled: ''
+      offset: 0000B3B4
+    - name: _IPGetPInfo
+      demangled: ''
+      offset: 0000B690
+    - name: _IPCheckRoute
+      demangled: ''
+      offset: 0000B700
+    - name: _FindRCE
+      demangled: ''
+      offset: 0000B8E8
+    - name: _OpenRCE
+      demangled: ''
+      offset: 0000B93C
+    - name: _CloseRCE
+      demangled: ''
+      offset: 0000BBB0
+    - name: _LockedAddRoute
+      demangled: ''
+      offset: 0000BD08
+    - name: _AddRoute
+      demangled: ''
+      offset: 0000C168
+    - name: _DeleteRoute
+      demangled: ''
+      offset: 0000C1EC
+    - name: _Redirect
+      demangled: ''
+      offset: 0000C298
+    - name: _GetRaisedMTU
+      demangled: ''
+      offset: 0000C488
+    - name: _GuessNewMTU
+      demangled: ''
+      offset: 0000C4B0
+    - name: _RouteFragNeeded
+      demangled: ''
+      offset: 0000C4D4
+    - name: _IPRouteTimeout
+      demangled: ''
+      offset: 0000C600
+    - name: _FreeFWPacket
+      demangled: ''
+      offset: 0000C7AC
+    - name: _GrowFWPackets
+      demangled: ''
+      offset: 0000C87C
+    - name: _GrowFWBuffer
+      demangled: ''
+      offset: 0000CA18
+    - name: _FWSendComplete
+      demangled: ''
+      offset: 0000CB48
+    - name: _TransmitFWPacket
+      demangled: ''
+      offset: 0000CCA8
+    - name: _SendFWPacket
+      demangled: ''
+      offset: 0000CE04
+    - name: _RemoveRandomFWPacket
+      demangled: ''
+      offset: 0000CEC4
+    - name: _GetFWBuffer
+      demangled: ''
+      offset: 0000CFB0
+    - name: _GetFWPacket
+      demangled: ''
+      offset: 0000D244
+    - name: _IPForward
+      demangled: ''
+      offset: 0000D300
+    - name: _AddNTERoutes
+      demangled: ''
+      offset: 0000D990
+    - name: _InitNTERouting
+      demangled: ''
+      offset: 0000DAE4
+    - name: _UpdateICMPStats
+      demangled: ''
+      offset: 0000DBB8
+    - name: _GetICMPBuffer
+      demangled: ''
+      offset: 0000DC70
+    - name: _FreeICMPBuffer
+      demangled: ''
+      offset: 0000DD8C
+    - name: _DeleteEC
+      demangled: ''
+      offset: 0000DE40
+    - name: _ICMPSendComplete
+      demangled: ''
+      offset: 0000DE98
+    - name: _XsumBufChain
+      demangled: ''
+      offset: 0000DEDC
+    - name: _SendEcho
+      demangled: ''
+      offset: 0000DF38
+    - name: _SendICMPMsg
+      demangled: ''
+      offset: '0000E198'
+    - name: _SendICMPErr
+      demangled: ''
+      offset: 0000E28C
+    - name: _ICMPTimer
+      demangled: ''
+      offset: '0000E374'
+    - name: _CompleteEcho
+      demangled: ''
+      offset: '0000E400'
+    - name: _ICMPStatus
+      demangled: ''
+      offset: 0000E44C
+    - name: _ICMPMapStatus
+      demangled: ''
+      offset: '0000E494'
+    - name: _SendRouterSolicitation
+      demangled: ''
+      offset: '0000E554'
+    - name: _ICMPRouterTimer
+      demangled: ''
+      offset: '0000E578'
+    - name: _ProcessRouterAdvertisement
+      demangled: ''
+      offset: '0000E650'
+    - name: _ICMPRcv
+      demangled: ''
+      offset: '0000E850'
+    - name: _ICMPEcho
+      demangled: ''
+      offset: 0000ED0C
+    - name: _ICMPEchoRequest
+      demangled: ''
+      offset: 0000EF74
+    - name: _ICMPEchoComplete
+      demangled: ''
+      offset: 0000F088
+    - name: _VXDEchoComplete
+      demangled: ''
+      offset: 0000F2B0
+    - name: _VXDEchoRequest
+      demangled: ''
+      offset: 0000F2E4
+    - name: _LoopXmitRtn
+      demangled: ''
+      offset: 0000F3A0
+    - name: _LoopXmit@16
+      demangled: ''
+      offset: 0000F56C
+    - name: _LoopXfer@28
+      demangled: ''
+      offset: 0000F60C
+    - name: _LoopClose@4
+      demangled: ''
+      offset: 0000F768
+    - name: _LoopInvalidate@8
+      demangled: ''
+      offset: 0000F76C
+    - name: _LoopQInfo@20
+      demangled: ''
+      offset: 0000F770
+    - name: _LoopSetInfo@16
+      demangled: ''
+      offset: 0000F8BC
+    - name: _LoopAddAddr@20
+      demangled: ''
+      offset: 0000F93C
+    - name: _LoopDelAddr@16
+      demangled: ''
+      offset: 0000F944
+    - name: _LoopGetEList@12
+      demangled: ''
+      offset: 0000F94C
+    - name: _IGMPRandomTicks
+      demangled: ''
+      offset: 0000F9B4
+    - name: _FindIGMPAddr
+      demangled: ''
+      offset: 0000F9FC
+    - name: _IGMPRcv
+      demangled: ''
+      offset: 0000FA24
+    - name: _SendIGMPReport
+      demangled: ''
+      offset: 0000FCA8
+    - name: _IGMPAddrChange
+      demangled: ''
+      offset: 0000FDEC
+    - name: _IGMPTimer
+      demangled: ''
+      offset: '00010178'
+    - name: _InitIGMPForNTE
+      demangled: ''
+      offset: '00010258'
+    - name: _StopIGMPForNTE
+      demangled: ''
+      offset: 000102CC
+    - name: _CopyToNdis
+      demangled: ''
+      offset: '000102E8'
+    - name: _IPQueryInfo
+      demangled: ''
+      offset: '00010400'
+    - name: _IPSetInfo
+      demangled: ''
+      offset: 000109F8
+    - name: _IPGetEList
+      demangled: ''
+      offset: 00010D00
+    - name: _IPWakeupPattern
+      demangled: ''
+      offset: 00010DC8
+    - name: _IPGetPNPCap
+      demangled: ''
+      offset: '00010E14'
+    - name: _IPGetPNPCtxt
+      demangled: ''
+      offset: 00010E4C
+    - name: _VxdMapSegmentOffsetToFlat
+      demangled: ''
+      offset: '00010E80'
+    - name: _VxdLockBuffer
+      demangled: ''
+      offset: 00010EC8
+    - name: _VxdUnlockBuffer
+      demangled: ''
+      offset: 00010F1A
+    - name: _VxdValidateBuffer
+      demangled: ''
+      offset: 00010F6D
+    - name: _IPGetConfig
+      demangled: ''
+      offset: 00010FB4
+    - name: _OpenIFConfig
+      demangled: ''
+      offset: 000112B4
+    - name: _GetArpCacheLife
+      demangled: ''
+      offset: '000112E4'
+    - name: _GetArpRetryCount
+      demangled: ''
+      offset: 000112EC
+    - name: _IsLLInterfaceValueNull
+      demangled: ''
+      offset: 000112F4
+    - name: _GetLLInterfaceValue
+      demangled: ''
+      offset: '00011348'
+    - name: _String2Addr
+      demangled: ''
+      offset: 000113F8
+    - name: _GetGeneralIFConfig
+      demangled: ''
+      offset: 000114A4
+    - name: _GetIFAddrList
+      demangled: ''
+      offset: '000115E4'
+    - name: _CloseIFConfig
+      demangled: ''
+      offset: 000117B0
+    - name: _IPFreeConfig
+      demangled: ''
+      offset: 000117BC
+    - name: _UseEtherSNAP
+      demangled: ''
+      offset: 000117CC
+    - name: _GetAlwaysSourceRoute
+      demangled: ''
+      offset: 000117D4
+    - name: _IPDelNTEContextList
+      demangled: ''
+      offset: 000117EC
+    - name: _IPAddNTEContextList
+      demangled: ''
+      offset: 000117F0
+    - name: _NdisRegisterProtocol@16
+      demangled: ''
+      offset: 000117F4
+    - name: _NdisDeregisterProtocol@8
+      demangled: ''
+      offset: 000117FA
+    - name: _NdisOpenAdapter@44
+      demangled: ''
+      offset: '00011800'
+    - name: _NdisCloseAdapter@8
+      demangled: ''
+      offset: '00011806'
+    - name: _NdisSend@12
+      demangled: ''
+      offset: 0001180C
+    - name: _NdisTransferData@28
+      demangled: ''
+      offset: '00011812'
+    - name: _NdisReset@8
+      demangled: ''
+      offset: '00011818'
+    - name: _NdisRequest@12
+      demangled: ''
+      offset: 0001181E
+    - name: _NdisQueryGlobalStatistics@16
+      demangled: ''
+      offset: '00011824'
+    - name: _NdisOpenProtocolConfiguration@12
+      demangled: ''
+      offset: 0001182A
+    - name: _NdisCompleteBindAdapter@12
+      demangled: ''
+      offset: '00011830'
+    - name: _NdisCompleteUnbindAdapter@8
+      demangled: ''
+      offset: '00011836'
+    - name: _NdisGetVersion@0
+      demangled: ''
+      offset: 0001183C
+    - name: _NdisSetTimer@8
+      demangled: ''
+      offset: '00011842'
+    - name: _NdisCancelTimer@8
+      demangled: ''
+      offset: '00011848'
+    - name: _NdisInitializeInterrupt@40
+      demangled: ''
+      offset: 0001184E
+    - name: _NdisRemoveInterrupt@4
+      demangled: ''
+      offset: '00011854'
+    - name: _NdisSynchronizeWithInterrupt@12
+      demangled: ''
+      offset: 0001185A
+    - name: _NdisStallExecution@4
+      demangled: ''
+      offset: '00011860'
+    - name: _NdisAllocateMemory@16
+      demangled: ''
+      offset: '00011866'
+    - name: _NdisFreeMemory@12
+      demangled: ''
+      offset: 0001186C
+    - name: _NdisAllocatePacketPool@16
+      demangled: ''
+      offset: '00011872'
+    - name: _NdisFreePacketPool@4
+      demangled: ''
+      offset: '00011878'
+    - name: _NdisAllocatePacket@12
+      demangled: ''
+      offset: 0001187E
+    - name: _NdisReinitializePacket@4
+      demangled: ''
+      offset: '00011884'
+    - name: _NdisFreePacket@4
+      demangled: ''
+      offset: 0001188A
+    - name: _NdisQueryPacket@20
+      demangled: ''
+      offset: '00011890'
+    - name: _NdisAllocateBufferPool@12
+      demangled: ''
+      offset: '00011896'
+    - name: _NdisFreeBufferPool@4
+      demangled: ''
+      offset: 0001189C
+    - name: _NdisAllocateBuffer@20
+      demangled: ''
+      offset: 000118A2
+    - name: _NdisCopyBuffer@24
+      demangled: ''
+      offset: 000118A8
+    - name: _NdisFreeBuffer@4
+      demangled: ''
+      offset: 000118AE
+    - name: _NdisQueryBuffer@12
+      demangled: ''
+      offset: 000118B4
+    - name: _NdisGetBufferPhysicalAddress@12
+      demangled: ''
+      offset: 000118BA
+    - name: _NdisChainBufferAtFront@8
+      demangled: ''
+      offset: 000118C0
+    - name: _NdisChainBufferAtBack@8
+      demangled: ''
+      offset: 000118C6
+    - name: _NdisUnchainBufferAtFront@8
+      demangled: ''
+      offset: 000118CC
+    - name: _NdisUnchainBufferAtBack@8
+      demangled: ''
+      offset: 000118D2
+    - name: _NdisGetNextBuffer@8
+      demangled: ''
+      offset: 000118D8
+    - name: _NdisCopyFromPacketToPacket@24
+      demangled: ''
+      offset: 000118DE
+    - name: _NdisOpenConfiguration@12
+      demangled: ''
+      offset: '000118E4'
+    - name: _NdisReadConfiguration@20
+      demangled: ''
+      offset: 000118EA
+    - name: _NdisCloseConfiguration@4
+      demangled: ''
+      offset: 000118F0
+    - name: _NdisEqualString@12
+      demangled: ''
+      offset: 000118F6
+    - name: _NdisOpenFile@20
+      demangled: ''
+      offset: 000118FC
+    - name: _NdisMapFile@12
+      demangled: ''
+      offset: '00011902'
+    - name: _NdisUnmapFile@4
+      demangled: ''
+      offset: '00011908'
+    - name: _NdisCloseFile@4
+      demangled: ''
+      offset: 0001190E
+    - name: _NdisAllocateDmaChannel@20
+      demangled: ''
+      offset: '00011914'
+    - name: _NdisSetupDmaTransfer@24
+      demangled: ''
+      offset: 0001191A
+    - name: _NdisCompleteDmaTransfer@24
+      demangled: ''
+      offset: '00011920'
+    - name: _NdisReadDmaCounter@4
+      demangled: ''
+      offset: '00011926'
+    - name: _NdisFreeDmaChannel@4
+      demangled: ''
+      offset: 0001192C
+    - name: _NdisMapIoSpace@20
+      demangled: ''
+      offset: '00011932'
+    - name: _NdisWriteErrorLogEntry
+      demangled: ''
+      offset: '00011938'
+    - name: _NdisRegAdaptShutdown@12
+      demangled: ''
+      offset: 0001193E
+    - name: _NdisDeregAdaptShutdown@4
+      demangled: ''
+      offset: '00011944'
+    - name: _DbgPrint
+      demangled: ''
+      offset: 0001194C
+    - name: CTETotalMem
+      demangled: ''
+      offset: 0001196C
+    - name: __vxdhandle__
+      demangled: ''
+      offset: 0001198C
+    - name: _VIP_Get_Version
+      demangled: ''
+      offset: 000119EC
+    - name: _VIP_Get_Net_Info
+      demangled: ''
+      offset: 000119F0
+    - name: _VIP_Register_Protocol
+      demangled: ''
+      offset: 000119F4
+    - name: _VIP_Register_Driver
+      demangled: ''
+      offset: 000119F8
+    - name: _VIP_Set_Addr
+      demangled: ''
+      offset: 000119FC
+    - name: _VIP_ICMP_Echo
+      demangled: ''
+      offset: 00011A00
+    - name: _VIP_Register_Addr_Change
+      demangled: ''
+      offset: 00011A04
+    - name: _VIP_Register_Interface_Change
+      demangled: ''
+      offset: 00011A08
+    - name: _VIP_Set_DHCP_Interface
+      demangled: ''
+      offset: 00011A0C
+    - name: _VIP_IP_Add_Interface
+      demangled: ''
+      offset: 00011A10
+    - name: _VIP_IP_Delete_Interface
+      demangled: ''
+      offset: 00011A14
+    - name: _VIP_Set_Addr_Ex
+      demangled: ''
+      offset: 00011A18
+    - name: _VIP_Register_Rt_Change_Handler
+      demangled: ''
+      offset: 00011A1C
+    - name: _VIP_Register_Addr_ChangeEx
+      demangled: ''
+      offset: 00011A20
+    - name: _VIP_IPWakeup_Pattern
+      demangled: ''
+      offset: 00011A24
+    - name: _VIP_Register_PMNotify
+      demangled: ''
+      offset: 00011A28
+    - name: _VIP_IPRegisterARP
+      demangled: ''
+      offset: 00011A2C
+    - name: _VIP_IPDeregisterARP
+      demangled: ''
+      offset: 00011A30
+    - name: _VIP_Register_PNP_Change
+      demangled: ''
+      offset: 00011A34
+    - name: _VIP_Get_PNP_Cap
+      demangled: ''
+      offset: 00011A38
+    - name: _VIP_Get_PNP_Ctxt
+      demangled: ''
+      offset: 00011A3C
+    - name: VIP_DDB
+      demangled: ''
+      offset: 00011A40
+    - name: RefillEventSched
+      demangled: ''
+      offset: 00011B33
+    - name: _VIPTerminate
+      demangled: ''
+      offset: 00011B37
+    - name: _UniqueIfNumber
+      demangled: ''
+      offset: 00011B3C
+    - name: _ifuniadapter
+      demangled: ''
+      offset: 00011B40
+    - name: _RawPI
+      demangled: ''
+      offset: 00011B44
+    - name: _TrRii
+      demangled: ''
+      offset: 00011B48
+    - name: _DHCPActivityCount
+      demangled: ''
+      offset: 00011B4C
+    - name: _DHCPNTE
+      demangled: ''
+      offset: 00011B50
+    - name: _UniAdapter
+      demangled: ''
+      offset: 00011DBC
+    - name: _TRFunctionalMcast
+      demangled: ''
+      offset: 00011DFC
+    - name: _SwapTableLo
+      demangled: ''
+      offset: '00011E68'
+    - name: _SwapTableHi
+      demangled: ''
+      offset: '00011E78'
+    - name: _IFieldSize
+      demangled: ''
+      offset: '00011E88'
+    - name: _RcvFile
+      demangled: ''
+      offset: 0001219C
+    - name: _dbg_hdrincl
+      demangled: ''
+      offset: 000121A4
+    - name: _HdrBufList
+      demangled: ''
+      offset: 000121A8
+    - name: _PacketPoolList
+      demangled: ''
+      offset: 000121AC
+    - name: _HdrPoolList
+      demangled: ''
+      offset: 000121B0
+    - name: _CurrentPacketCount
+      demangled: ''
+      offset: 000121B4
+    - name: _MaxPacketCount
+      demangled: ''
+      offset: 000121B8
+    - name: _CurrentHdrBufCount
+      demangled: ''
+      offset: 000121BC
+    - name: _MaxHdrBufCount
+      demangled: ''
+      offset: 000121C0
+    - name: _DisableIPSourceRouting
+      demangled: ''
+      offset: '00012424'
+    - name: _Rcefailures
+      demangled: ''
+      offset: '00012428'
+    - name: _RtPI
+      demangled: ''
+      offset: 0001242C
+    - name: _IPMaskTable
+      demangled: ''
+      offset: '00012430'
+    - name: _MTUTable
+      demangled: ''
+      offset: '00012470'
+    - name: _BCastMinMTU
+      demangled: ''
+      offset: 0001249C
+    - name: _IcmpEchoPendingCnt
+      demangled: ''
+      offset: 000133F0
+    - name: _IcmpErrPendingCnt
+      demangled: ''
+      offset: 000133F4
+    - name: _LoopXmitHead
+      demangled: ''
+      offset: 000135EC
+    - name: _LoopXmitTail
+      demangled: ''
+      offset: 000135F0
+    - name: _LoopXmitRtnRunning
+      demangled: ''
+      offset: 000135F4
+    - name: _LoopName
+      demangled: ''
+      offset: 000135F8
+    - name: _LoopEntityType
+      demangled: ''
+      offset: '00013614'
+    - name: _GlobalConfigTable
+      demangled: ''
+      offset: 00013A00
+    - name: _IFConfigTable
+      demangled: ''
+      offset: 00013B90
+    - name: __IPAlwaysSR
+      demangled: ''
+      offset: 00013CC8
+    - name: _ICMPOutStats
+      demangled: ''
+      offset: 00013CCC
+    - name: _RouteTableLock
+      demangled: ''
+      offset: 00013D00
+    - name: _ForwardPackets
+      demangled: ''
+      offset: 00013D08
+    - name: _DummyInterface
+      demangled: ''
+      offset: 00013D0C
+    - name: _LoopInstance
+      demangled: ''
+      offset: 00013DEC
+    - name: __LLInterface
+      demangled: ''
+      offset: 00013DF0
+    - name: _FWPacketFree
+      demangled: ''
+      offset: 00013DF4
+    - name: _ICMPInStats
+      demangled: ''
+      offset: 00013DF8
+    - name: _ARPHandle
+      demangled: ''
+      offset: 00013E2C
+    - name: _LastPI
+      demangled: ''
+      offset: '00013E30'
+    - name: _RATimeout
+      demangled: ''
+      offset: '00013E34'
+    - name: _pArpModuleList
+      demangled: ''
+      offset: '00013E38'
+    - name: _Seed
+      demangled: ''
+      offset: 00013E3C
+    - name: _RandomValue
+      demangled: ''
+      offset: '00013E40'
+    - name: _MaxFWBufferSize
+      demangled: ''
+      offset: '00013E44'
+    - name: _ArpRetryCount
+      demangled: ''
+      offset: '00013E48'
+    - name: _IPProtInfo
+      demangled: ''
+      offset: 00013E4C
+    - name: _IGMPProtInfo
+      demangled: ''
+      offset: 00013EB0
+    - name: _LoopNTE
+      demangled: ''
+      offset: 00013EB4
+    - name: _NumIF
+      demangled: ''
+      offset: 00013EB8
+    - name: _IFBitMask
+      demangled: ''
+      offset: 00013EBC
+    - name: _FWBufFree
+      demangled: ''
+      offset: 00013EC4
+    - name: _PMTUDiscovery
+      demangled: ''
+      offset: 00013EC8
+    - name: _CurrentICMPHeaders
+      demangled: ''
+      offset: 00013ECC
+    - name: _ArpCacheLife
+      demangled: ''
+      offset: 00013ED0
+    - name: _HeaderLock
+      demangled: ''
+      offset: 00013ED4
+    - name: _NextPI
+      demangled: ''
+      offset: 00013EDC
+    - name: _AddrNotifyTable
+      demangled: ''
+      offset: 00013EE0
+    - name: __ArpRetryCount
+      demangled: ''
+      offset: 00013F00
+    - name: _IPID
+      demangled: ''
+      offset: 00013F04
+    - name: _ICMPHeaderLock
+      demangled: ''
+      offset: 00013F08
+    - name: _NetTableList
+      demangled: ''
+      offset: 00013F10
+    - name: _TSFlag
+      demangled: ''
+      offset: 00013F14
+    - name: _ArpModuleLock
+      demangled: ''
+      offset: 00013F18
+    - name: _LoopXmitEvent
+      demangled: ''
+      offset: 00013F20
+    - name: _MaxICMPHeaders
+      demangled: ''
+      offset: 00013F34
+    - name: _FWPacketFreeLock
+      demangled: ''
+      offset: 00013F38
+    - name: _IGMPBlockList
+      demangled: ''
+      offset: 00013F40
+    - name: _ATCache
+      demangled: ''
+      offset: 00013F44
+    - name: _FWBufFreeLock
+      demangled: ''
+      offset: 00013F74
+    - name: _IFList
+      demangled: ''
+      offset: 00013F7C
+    - name: _LoopInterface
+      demangled: ''
+      offset: 00013F80
+    - name: _AddChangeNotifyQueue
+      demangled: ''
+      offset: '00014060'
+    - name: _ATCIndex
+      demangled: ''
+      offset: '00014068'
+    - name: _CurrentFWPackets
+      demangled: ''
+      offset: 0001406C
+    - name: _IGMPLock
+      demangled: ''
+      offset: '00014070'
+    - name: _ClientNotifyQueue
+      demangled: ''
+      offset: '00014078'
+    - name: _IPRouteTimer
+      demangled: ''
+      offset: '00014080'
+    - name: _PMNotifyTable
+      demangled: ''
+      offset: '00014098'
+    - name: _InterfaceSize
+      demangled: ''
+      offset: 000140A8
+    - name: _PNPNotifyTable
+      demangled: ''
+      offset: 000140AC
+    - name: _sIPAlwaysSourceRoute
+      demangled: ''
+      offset: 000140CC
+    - name: _LoopIndex
+      demangled: ''
+      offset: 000140D0
+    - name: __UseEtherSNAP
+      demangled: ''
+      offset: 000140D4
+    - name: _BCastRSQ
+      demangled: ''
+      offset: 000140D8
+    - name: _ICMPInstance
+      demangled: ''
+      offset: 000140DC
+    - name: _RtChangeNotifyQueue
+      demangled: ''
+      offset: '000140E0'
+    - name: _ForwardFilterPtr
+      demangled: ''
+      offset: '000140E8'
+    - name: _ForwardBCast
+      demangled: ''
+      offset: 000140EC
+    - name: _NumNTE
+      demangled: ''
+      offset: 000140F0
+    - name: _DefaultTTL
+      demangled: ''
+      offset: 000140F4
+    - name: _DeadGWDetect
+      demangled: ''
+      offset: 000140F8
+    - name: _LoopIFE
+      demangled: ''
+      offset: 000140FC
+    - name: _NextNTEContext
+      demangled: ''
+      offset: '00014159'
+    - name: _MaxFWPackets
+      demangled: ''
+      offset: 0001415C
+    - name: _FirstIF
+      demangled: ''
+      offset: '00014160'
+    - name: _DefGWConfigured
+      demangled: ''
+      offset: '00014164'
+    - name: _TimeStamp
+      demangled: ''
+      offset: '00014168'
+    - name: _RouterConfigured
+      demangled: ''
+      offset: 0001416C
+    - name: _IPSInfo
+      demangled: ''
+      offset: '00014170'
+    - name: __TRSingleRoute
+      demangled: ''
+      offset: 000141CC
+    - name: _DefaultTOS
+      demangled: ''
+      offset: 000141D0
+    - name: _IPInstance
+      demangled: ''
+      offset: 000141D4
+    - name: __AlwaysSR
+      demangled: ''
+      offset: 000141D8
+    - name: _ICMPHeaderList
+      demangled: ''
+      offset: 000141DC
+    - name: _RtNotifyTable
+      demangled: ''
+      offset: '000141E0'
+    - name: _ClientNotifyQueueLock
+      demangled: ''
+      offset: '00014200'
+    - name: _RouteTable
+      demangled: ''
+      offset: '00014208'
+    - name: _DODCallout
+      demangled: ''
+      offset: '00014288'
+    - name: _DefGWActive
+      demangled: ''
+      offset: 0001428C
+    - name: _InterfaceNotifyTable
+      demangled: ''
+      offset: '00014290'
+    - name: _LoopLock
+      demangled: ''
+      offset: 000142B0
+    - name: __ArpCacheLife
+      demangled: ''
+      offset: 000142B8
+    - name: _sArpAlwaysSourceRoute
+      demangled: ''
+      offset: 000142BC
+    - name: _PacketList
+      demangled: ''
+      offset: 000142C0
+    - name: _IGMPBlockFlag
+      demangled: ''
+      offset: 000142C4
+    - name: _BufferPool
+      demangled: ''
+      offset: 000142C8
+    - name: _IGMPLevel
+      demangled: ''
+      offset: 000142CC
+    - name: _CurrentFWBufferSize
+      demangled: ''
+      offset: 000142D0
+    - name: _AddrNotifyTableEx
+      demangled: ''
+      offset: 000142D4
+    - name: _BSSBegin
+      demangled: ''
+      offset: 000142F4
+    - name: _BSSDataEnd
+      demangled: ''
+      offset: 000142F4
+  - num: '2'
+    name: _LMGROUP
+    offset: 0000B0C0
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000014'
+  - num: '3'
+    name: _IGROUP
+    offset: '00000000'
+    symbols:
+    - name: _CTEInitialize
+      demangled: ''
+      offset: '00000000'
+    - name: VIP_Device_Init
+      demangled: ''
+      offset: '00000020'
+    - name: GetNextInterface
+      demangled: ''
+      offset: '00000045'
+    - name: ConvertBoolean
+      demangled: ''
+      offset: '00000089'
+    - name: ConvertDecimal
+      demangled: ''
+      offset: '00000094'
+    - name: SkipWS
+      demangled: ''
+      offset: 000000A9
+    - name: ConvertIPAddress
+      demangled: ''
+      offset: 000000BC
+    - name: atol
+      demangled: ''
+      offset: 0000012E
+    - name: _GetGMTDelta
+      demangled: ''
+      offset: 0000014A
+    - name: _InitTimestamp
+      demangled: ''
+      offset: 000001DC
+    - name: _FreeNets
+      demangled: ''
+      offset: '00000240'
+    - name: _IPInit
+      demangled: ''
+      offset: '00000260'
+    - name: _ARPInit
+      demangled: ''
+      offset: '00000504'
+    - name: _InitRouting
+      demangled: ''
+      offset: 000005D8
+    - name: _InitGateway
+      demangled: ''
+      offset: '00000708'
+    - name: _ICMPInit
+      demangled: ''
+      offset: 00000A60
+    - name: _InitLoopback
+      demangled: ''
+      offset: 00000AD8
+    - name: _IGMPInit
+      demangled: ''
+      offset: 00000CA8
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00009920'
+    symbols:
+    - name: _CTEStartTimer
+      demangled: ''
+      offset: '00000000'
+    - name: _CTEStopTimer
+      demangled: ''
+      offset: '00000006'
+    - name: _CTESystemUpTime
+      demangled: ''
+      offset: 0000000C
+    - name: _CTEScheduleEvent
+      demangled: ''
+      offset: '00000012'
+    - name: _CTEScheduleEvent_N
+      demangled: ''
+      offset: '00000018'
+    - name: _CTECancelEvent
+      demangled: ''
+      offset: 0000001E
+    - name: _CTEAllocMem
+      demangled: ''
+      offset: '00000024'
+    - name: _CTEFreeMem
+      demangled: ''
+      offset: 0000002A
+    - name: _CTERefillMem
+      demangled: ''
+      offset: '00000030'
+    - name: _CTEBlock
+      demangled: ''
+      offset: '00000036'
+    - name: _CTEBlock1
+      demangled: ''
+      offset: 0000003C
+    - name: _CTESignal
+      demangled: ''
+      offset: '00000042'
+    - name: _CTEUnload
+      demangled: ''
+      offset: '00000048'
+    - name: _CTESetLoadNotifyProc
+      demangled: ''
+      offset: '00000053'
+    - name: _CTESetUnloadNotifyProc
+      demangled: ''
+      offset: 0000005E
+    - name: VIP_Get_Version
+      demangled: ''
+      offset: 0000006C
+    - name: _GetTime
+      demangled: ''
+      offset: '00000072'
+    - name: _RequestDHCPAddr
+      demangled: ''
+      offset: '000000E8'
+    - name: _NdisCompletePnPEvent
+      demangled: ''
+      offset: 000000F7
+    - name: _WrapperLoadSysDriver@4
+      demangled: ''
+      offset: 000000FD
+    - name: VIP_Register_Addr_Change
+      demangled: ''
+      offset: '00000103'
+    - name: VIP_Register_PNP_Change
+      demangled: ''
+      offset: '00000108'
+    - name: VIP_Register_Addr_ChangeEx
+      demangled: ''
+      offset: 0000010D
+    - name: VIP_Register_Rt_Change_Handler
+      demangled: ''
+      offset: '00000112'
+    - name: VIP_Register_Interface_Change
+      demangled: ''
+      offset: '00000117'
+    - name: _NotifyOfUnload
+      demangled: ''
+      offset: 0000011C
+    - name: RefillEvent
+      demangled: ''
+      offset: '00000132'
+    - name: _RefillReasmMem
+      demangled: ''
+      offset: '00000142'
+    - name: VIP_Get_Net_Info
+      demangled: ''
+      offset: '00000169'
+    - name: VIP_Get_PNP_Cap
+      demangled: ''
+      offset: 0000016E
+    - name: VIP_Get_PNP_Ctxt
+      demangled: ''
+      offset: '00000173'
+    - name: VIP_Register_Protocol
+      demangled: ''
+      offset: '00000178'
+    - name: VIP_Register_Driver
+      demangled: ''
+      offset: 0000017D
+    - name: VIP_Set_Addr
+      demangled: ''
+      offset: 0000017F
+    - name: VIP_Set_Addr_Ex
+      demangled: ''
+      offset: '00000184'
+    - name: VIP_IPRegisterARP
+      demangled: ''
+      offset: '00000189'
+    - name: VIP_IPDeregisterARP
+      demangled: ''
+      offset: 0000018E
+    - name: VIP_IPWakeup_Pattern
+      demangled: ''
+      offset: '00000193'
+    - name: VIP_Register_PMNotify
+      demangled: ''
+      offset: '00000198'
+    - name: VIP_Set_DHCP_Interface
+      demangled: ''
+      offset: 0000019D
+    - name: VIP_LookupRoute
+      demangled: ''
+      offset: 000001A2
+    - name: VIP_IP_Add_Interface
+      demangled: ''
+      offset: 000001A7
+    - name: VIP_IP_Delete_Interface
+      demangled: ''
+      offset: 000001AC
+    - name: ConvertPtr
+      demangled: ''
+      offset: 000001B1
+    - name: PingDone
+      demangled: ''
+      offset: '000001E7'
+    - name: VIP_V86_API
+      demangled: ''
+      offset: 0000026A
+    - name: VIP_ICMP_Echo
+      demangled: ''
+      offset: 0000035A
+    - name: _DisplayPopup
+      demangled: ''
+      offset: 0000035F
+    - name: _NotifyConflictProc
+      demangled: ''
+      offset: '00000360'
+    - name: _DisplayConflictPopup
+      demangled: ''
+      offset: '00000376'
+    - name: _EnableInts
+      demangled: ''
+      offset: 000003D5
+    - name: VIP_Terminate
+      demangled: ''
+      offset: 000003DB
+    - name: VIP_Device_Exit
+      demangled: ''
+      offset: '000003E7'
+    - name: VIP_Control
+      demangled: ''
+      offset: '000003E9'
+    - name: VIP_DeviceIoControl
+      demangled: ''
+      offset: 0000040C
+    - name: _SetDHCPNTE
+      demangled: ''
+      offset: 000004D0
+    - name: _IsDHCPInterface
+      demangled: ''
+      offset: '00000520'
+    - name: _CloseNets
+      demangled: ''
+      offset: '00000538'
+    - name: _IPBindComplete@8
+      demangled: ''
+      offset: '00000558'
+    - name: _IPRegisterARP@28
+      demangled: ''
+      offset: 0000056C
+    - name: _IPDeregisterARP@4
+      demangled: ''
+      offset: '00000618'
+    - name: _IPLookupArpModule
+      demangled: ''
+      offset: '00000668'
+    - name: _IPBindAdapter@20
+      demangled: ''
+      offset: 000006B0
+    - name: _IPRegisterProtocol
+      demangled: ''
+      offset: 000008A0
+    - name: _IPSetMCastAddr
+      demangled: ''
+      offset: 0000094C
+    - name: _IPGetAddrType
+      demangled: ''
+      offset: 000009A8
+    - name: _IPGetLocalMTU
+      demangled: ''
+      offset: 000009B8
+    - name: _IPUpdateRcvdOptions
+      demangled: ''
+      offset: 00000A04
+    - name: _ValidRouteOption
+      demangled: ''
+      offset: 00000C44
+    - name: _IPInitOptions
+      demangled: ''
+      offset: 00000C78
+    - name: _IPCopyOptions
+      demangled: ''
+      offset: 00000CA4
+    - name: _IPFreeOptions
+      demangled: ''
+      offset: '00001074'
+    - name: _IPGetInfo
+      demangled: ''
+      offset: 000010A4
+    - name: _IPTimeout
+      demangled: ''
+      offset: '00001148'
+    - name: _IPpSetNTEAddr
+      demangled: ''
+      offset: '00001200'
+    - name: _IPSetNTEAddr
+      demangled: ''
+      offset: 000013D0
+    - name: _IPSetNTEAddrEx
+      demangled: ''
+      offset: '00001424'
+    - name: _InitNTE
+      demangled: ''
+      offset: 0000147C
+    - name: _InitInterface
+      demangled: ''
+      offset: '00001504'
+    - name: _RegisterAddrNotify
+      demangled: ''
+      offset: '00001724'
+    - name: _RegisterAddrNotifyEx
+      demangled: ''
+      offset: '00001780'
+    - name: _RegisterRtNotify
+      demangled: ''
+      offset: 000017C0
+    - name: _RegisterPNPNotify
+      demangled: ''
+      offset: '00001804'
+    - name: _NotifyInterfaceChange
+      demangled: ''
+      offset: '00001844'
+    - name: _RegisterInterfaceNotify
+      demangled: ''
+      offset: '00001874'
+    - name: _NotifyAddrChange
+      demangled: ''
+      offset: 000018B8
+    - name: _RtChangeNotify
+      demangled: ''
+      offset: 000018F8
+    - name: _PNPChangeNotify
+      demangled: ''
+      offset: '00001924'
+    - name: _VipApiHandler
+      demangled: ''
+      offset: '00001950'
+    - name: _IPAddNTE
+      demangled: ''
+      offset: 00001B74
+    - name: _IPAddInterface@24
+      demangled: ''
+      offset: 00001D80
+    - name: _IPDelNTE
+      demangled: ''
+      offset: 000022C8
+    - name: _IPDeleteDynamicNTE
+      demangled: ''
+      offset: 000023AC
+    - name: _IPGetNTEInfo
+      demangled: ''
+      offset: 000023F0
+    - name: _IPDelInterface@4
+      demangled: ''
+      offset: 0000245C
+    - name: _DoNDISRequest
+      demangled: ''
+      offset: '00002634'
+    - name: _FreeARPBuffer
+      demangled: ''
+      offset: 000026DC
+    - name: _GrowARPHeaders
+      demangled: ''
+      offset: 0000270C
+    - name: _GetARPBuffer
+      demangled: ''
+      offset: '00002810'
+    - name: _BitSwap
+      demangled: ''
+      offset: 000028FC
+    - name: _SendARPPacket
+      demangled: ''
+      offset: '00002934'
+    - name: _SendARPRequest
+      demangled: ''
+      offset: 00002A64
+    - name: _SendARPReply
+      demangled: ''
+      offset: 00002D38
+    - name: _ARPRemoveRCE
+      demangled: ''
+      offset: 00002F60
+    - name: _ARPLookup
+      demangled: ''
+      offset: 00002F90
+    - name: _IsBCastOnIF
+      demangled: ''
+      offset: 00002FB8
+    - name: _ARPSendBCast
+      demangled: ''
+      offset: '00003050'
+    - name: _ARPSendData
+      demangled: ''
+      offset: '00003330'
+    - name: _CreateARPTableEntry
+      demangled: ''
+      offset: '000034E0'
+    - name: _ARPTransmit@16
+      demangled: ''
+      offset: 000035C8
+    - name: _RemoveARPTableEntry
+      demangled: ''
+      offset: 0000372C
+    - name: _ARPXferData@28
+      demangled: ''
+      offset: '00003754'
+    - name: _ARPClose@4
+      demangled: ''
+      offset: 0000378C
+    - name: _ARPInvalidate@8
+      demangled: ''
+      offset: 000037F8
+    - name: _ARPSetMCastList
+      demangled: ''
+      offset: 0000381C
+    - name: _ARPFindMCast
+      demangled: ''
+      offset: '000039E8'
+    - name: _ARPDelMCast
+      demangled: ''
+      offset: 00003A10
+    - name: _ARPAddMCast
+      demangled: ''
+      offset: 00003A90
+    - name: _ARPAddAddr@20
+      demangled: ''
+      offset: 00003B54
+    - name: _ARPDeleteAddr@16
+      demangled: ''
+      offset: 00003CCC
+    - name: _DoWakeupPattern@16
+      demangled: ''
+      offset: 00003DA4
+    - name: _ARPWakeupPattern@12
+      demangled: ''
+      offset: '00004074'
+    - name: _ARPTimeout
+      demangled: ''
+      offset: '00004158'
+    - name: _IsLocalAddr
+      demangled: ''
+      offset: 000042F8
+    - name: _ARPLocalAddr
+      demangled: ''
+      offset: '00004318'
+    - name: _DisplayConflictProc
+      demangled: ''
+      offset: 000043A8
+    - name: _HandleARPPacket
+      demangled: ''
+      offset: 000044AC
+    - name: _InitAdapter
+      demangled: ''
+      offset: 00004A40
+    - name: _ARPOAComplete@12
+      demangled: ''
+      offset: 00004AEC
+    - name: _ARPCAComplete@8
+      demangled: ''
+      offset: 00004B08
+    - name: _ARPSendComplete@12
+      demangled: ''
+      offset: 00004B24
+    - name: _ARPTDComplete@16
+      demangled: ''
+      offset: 00004BA4
+    - name: _ARPResetComplete@8
+      demangled: ''
+      offset: 00004BC0
+    - name: _ARPRequestComplete@12
+      demangled: ''
+      offset: 00004BC4
+    - name: _ARPRcv@28
+      demangled: ''
+      offset: 00004BE0
+    - name: _ARPRcvComplete@4
+      demangled: ''
+      offset: 00004D24
+    - name: _ARPStatus@16
+      demangled: ''
+      offset: 00004D2C
+    - name: _ARPStatusComplete@4
+      demangled: ''
+      offset: 00004D4C
+    - name: _ARPPnPEvent@8
+      demangled: ''
+      offset: 00004D50
+    - name: _ARPPnPComplete@12
+      demangled: ''
+      offset: 00004D98
+    - name: _ARPReadNext
+      demangled: ''
+      offset: 00004DC0
+    - name: _ARPValidateContext
+      demangled: ''
+      offset: 00004EC4
+    - name: _ARPQueryInfo@20
+      demangled: ''
+      offset: 00004F48
+    - name: _ARPSetInfo@16
+      demangled: ''
+      offset: '00005444'
+    - name: _FreeARPInterface
+      demangled: ''
+      offset: '00005894'
+    - name: _ARPOpen@4
+      demangled: ''
+      offset: 000059DC
+    - name: _ARPGetEList@12
+      demangled: ''
+      offset: 000059EC
+    - name: _ARPRegister
+      demangled: ''
+      offset: 00005A90
+    - name: _ARPDynRegister@20
+      demangled: ''
+      offset: 0000606C
+    - name: _ARPBindAdapter@20
+      demangled: ''
+      offset: 0000608C
+    - name: _ARPUnbindAdapter@12
+      demangled: ''
+      offset: 000061FC
+    - name: _ARPUnloadProtocol@0
+      demangled: ''
+      offset: 000062C0
+    - name: _FindUserRcv
+      demangled: ''
+      offset: 000062F0
+    - name: _IPRcvComplete@0
+      demangled: ''
+      offset: '00006358'
+    - name: _FindRH
+      demangled: ''
+      offset: '00006380'
+    - name: _ParseRcvdOptions
+      demangled: ''
+      offset: 000063CC
+    - name: _BCastRcv
+      demangled: ''
+      offset: 000064A0
+    - name: _DeliverToUser
+      demangled: ''
+      offset: '00006530'
+    - name: _FreeRH
+      demangled: ''
+      offset: 0000661C
+    - name: _ReassembleFragment
+      demangled: ''
+      offset: '00006648'
+    - name: _RATDComplete
+      demangled: ''
+      offset: 00006A30
+    - name: _IPReassemble
+      demangled: ''
+      offset: 00006A98
+    - name: _CheckLocalOptions
+      demangled: ''
+      offset: 00006C64
+    - name: _TDUserRcv
+      demangled: ''
+      offset: 00006CE4
+    - name: _IPRcv@28
+      demangled: ''
+      offset: 00006DC4
+    - name: _IPTDComplete@16
+      demangled: ''
+      offset: '00007134'
+    - name: _FreeIPHdrBuffer
+      demangled: ''
+      offset: '00007180'
+    - name: _FreeIPBufferChain
+      demangled: ''
+      offset: '00007194'
+    - name: _FreeIPPacket
+      demangled: ''
+      offset: 000071C0
+    - name: _GrowIPPacketList
+      demangled: ''
+      offset: 000072AC
+    - name: _GrowHdrBufList
+      demangled: ''
+      offset: 0000736C
+    - name: _GetIPPacket
+      demangled: ''
+      offset: '00007458'
+    - name: _GetIPHdrBuffer
+      demangled: ''
+      offset: '00007474'
+    - name: _GetIPHeader
+      demangled: ''
+      offset: '00007494'
+    - name: _ReferenceBuffer
+      demangled: ''
+      offset: 000074D4
+    - name: _IPSendComplete@12
+      demangled: ''
+      offset: '000074E4'
+    - name: _xsum
+      demangled: ''
+      offset: '00007560'
+    - name: _SendIPPacket
+      demangled: ''
+      offset: 000075AC
+    - name: _SendDHCPPacket
+      demangled: ''
+      offset: 000076B4
+    - name: _IPCopyBuffer
+      demangled: ''
+      offset: 000076FC
+    - name: _IPFragment
+      demangled: ''
+      offset: 000077A4
+    - name: _UpdateRouteOption
+      demangled: ''
+      offset: 00007BC0
+    - name: _UpdateOptions
+      demangled: ''
+      offset: 00007BF4
+    - name: _SendIPBCast
+      demangled: ''
+      offset: 00007D7C
+    - name: _IPTransmit
+      demangled: ''
+      offset: 000082FC
+    - name: _FindULStatus
+      demangled: ''
+      offset: 00008B20
+    - name: _ULMTUNotify
+      demangled: ''
+      offset: 00008B6C
+    - name: _IPULUnloadNotify
+      demangled: ''
+      offset: 00008BEC
+    - name: _IPStatus@16
+      demangled: ''
+      offset: 00008C28
+    - name: _IPPnPEvent@8
+      demangled: ''
+      offset: 00008D1C
+    - name: _RegisterPMNotify
+      demangled: ''
+      offset: 00008D48
+    - name: _NotifyPowerEvent
+      demangled: ''
+      offset: 00008D8C
+    - name: _DummyXmit@16
+      demangled: ''
+      offset: 00008DB4
+    - name: _DummyXfer@28
+      demangled: ''
+      offset: 00008DC8
+    - name: _DummyClose@4
+      demangled: ''
+      offset: 00008DE0
+    - name: _DummyInvalidate@8
+      demangled: ''
+      offset: 00008DF0
+    - name: _DummyQInfo@20
+      demangled: ''
+      offset: '00008E00'
+    - name: _DummySetInfo@16
+      demangled: ''
+      offset: '00008E18'
+    - name: _DummyAddAddr@20
+      demangled: ''
+      offset: '00008E30'
+    - name: _DummyDelAddr@16
+      demangled: ''
+      offset: '00008E38'
+    - name: _DummyGetEList@12
+      demangled: ''
+      offset: '00008E50'
+    - name: _DerefIF
+      demangled: ''
+      offset: '00008E64'
+    - name: _LockedDerefIF
+      demangled: ''
+      offset: '00008E90'
+    - name: _GetHashMask
+      demangled: ''
+      offset: 00008EB4
+    - name: _AddrOnIF
+      demangled: ''
+      offset: 00008EE8
+    - name: _BestNTEForIF
+      demangled: ''
+      offset: 00008F18
+    - name: _IsBCastOnNTE
+      demangled: ''
+      offset: 00008F94
+    - name: _InvalidSourceAddress
+      demangled: ''
+      offset: 0000904C
+    - name: _FlushATCache
+      demangled: ''
+      offset: 000090EC
+    - name: _GetAddrType
+      demangled: ''
+      offset: '00009118'
+    - name: _IPHash
+      demangled: ''
+      offset: '00009244'
+    - name: _GetLocalNTE
+      demangled: ''
+      offset: '00009264'
+    - name: _FindSpecificRTE
+      demangled: ''
+      offset: '00009398'
+    - name: _IsRouteICMP
+      demangled: ''
+      offset: '00009428'
+    - name: _FindRTE
+      demangled: ''
+      offset: '00009470'
+    - name: _ValidateDefaultGWs
+      demangled: ''
+      offset: 0000954C
+    - name: _InvalidateRCEChain
+      demangled: ''
+      offset: 000095B0
+    - name: _FindValidIFForRTE
+      demangled: ''
+      offset: '00009604'
+    - name: _LookupRTE
+      demangled: ''
+      offset: 0000969C
+    - name: _GetRouteContext
+      demangled: ''
+      offset: 0000972C
+    - name: _FindInsertPoint
+      demangled: ''
+      offset: 0000974C
+    - name: _LookupNextHop
+      demangled: ''
+      offset: 0000979C
+    - name: _LookupNextHopWithBuffer
+      demangled: ''
+      offset: '000097E8'
+    - name: _RTReadNext
+      demangled: ''
+      offset: 0000985C
+    - name: _RTRead
+      demangled: ''
+      offset: '00009970'
+    - name: _LookupRoute
+      demangled: ''
+      offset: 00009A3C
+    - name: _RTValidateContext
+      demangled: ''
+      offset: 00009A50
+    - name: _DeleteRTE
+      demangled: ''
+      offset: 00009AD8
+    - name: _DeleteRTEOnIF
+      demangled: ''
+      offset: 00009B2C
+    - name: _InvalidateRCEOnIF
+      demangled: ''
+      offset: 00009B4C
+    - name: _SetMTUOnIF
+      demangled: ''
+      offset: 00009B68
+    - name: _SetMTUToAddr
+      demangled: ''
+      offset: 00009B84
+    - name: _RTWalk
+      demangled: ''
+      offset: 00009BA4
+    - name: _AttachRCEToRTE
+      demangled: ''
+      offset: 00009BF0
+    - name: _IPGetPInfo
+      demangled: ''
+      offset: 00009D68
+    - name: _IPCheckRoute
+      demangled: ''
+      offset: 00009DA8
+    - name: _FindRCE
+      demangled: ''
+      offset: 00009EAC
+    - name: _OpenRCE
+      demangled: ''
+      offset: 00009ED4
+    - name: _CloseRCE
+      demangled: ''
+      offset: 0000A088
+    - name: _LockedAddRoute
+      demangled: ''
+      offset: 0000A0F0
+    - name: _AddRoute
+      demangled: ''
+      offset: 0000A4B0
+    - name: _DeleteRoute
+      demangled: ''
+      offset: 0000A4F8
+    - name: _Redirect
+      demangled: ''
+      offset: 0000A564
+    - name: _GetRaisedMTU
+      demangled: ''
+      offset: 0000A63C
+    - name: _GuessNewMTU
+      demangled: ''
+      offset: 0000A664
+    - name: _RouteFragNeeded
+      demangled: ''
+      offset: 0000A688
+    - name: _IPRouteTimeout
+      demangled: ''
+      offset: 0000A774
+    - name: _FreeFWPacket
+      demangled: ''
+      offset: 0000A8DC
+    - name: _GrowFWPackets
+      demangled: ''
+      offset: 0000A95C
+    - name: _GrowFWBuffer
+      demangled: ''
+      offset: 0000AA60
+    - name: _FWSendComplete
+      demangled: ''
+      offset: 0000AB14
+    - name: _TransmitFWPacket
+      demangled: ''
+      offset: 0000AB9C
+    - name: _SendFWPacket
+      demangled: ''
+      offset: 0000AC94
+    - name: _RemoveRandomFWPacket
+      demangled: ''
+      offset: 0000AD0C
+    - name: _GetFWBuffer
+      demangled: ''
+      offset: 0000AD70
+    - name: _GetFWPacket
+      demangled: ''
+      offset: 0000AF18
+    - name: _IPForward
+      demangled: ''
+      offset: 0000AF88
+    - name: _AddNTERoutes
+      demangled: ''
+      offset: 0000B5B8
+    - name: _InitNTERouting
+      demangled: ''
+      offset: 0000B6CC
+    - name: _UpdateICMPStats
+      demangled: ''
+      offset: 0000B7A0
+    - name: _GetICMPBuffer
+      demangled: ''
+      offset: 0000B858
+    - name: _FreeICMPBuffer
+      demangled: ''
+      offset: 0000B920
+    - name: _DeleteEC
+      demangled: ''
+      offset: 0000B9B8
+    - name: _ICMPSendComplete
+      demangled: ''
+      offset: 0000B9E4
+    - name: _XsumBufChain
+      demangled: ''
+      offset: 0000BA24
+    - name: _SendEcho
+      demangled: ''
+      offset: 0000BA60
+    - name: _SendICMPMsg
+      demangled: ''
+      offset: 0000BC58
+    - name: _SendICMPErr
+      demangled: ''
+      offset: 0000BD4C
+    - name: _ICMPTimer
+      demangled: ''
+      offset: 0000BE34
+    - name: _CompleteEcho
+      demangled: ''
+      offset: 0000BE98
+    - name: _ICMPStatus
+      demangled: ''
+      offset: 0000BEE4
+    - name: _ICMPMapStatus
+      demangled: ''
+      offset: 0000BF2C
+    - name: _SendRouterSolicitation
+      demangled: ''
+      offset: 0000BFEC
+    - name: _ICMPRouterTimer
+      demangled: ''
+      offset: 0000C010
+    - name: _ProcessRouterAdvertisement
+      demangled: ''
+      offset: 0000C0C8
+    - name: _ICMPRcv
+      demangled: ''
+      offset: 0000C2A8
+    - name: _ICMPEcho
+      demangled: ''
+      offset: 0000C768
+    - name: _ICMPEchoRequest
+      demangled: ''
+      offset: 0000C968
+    - name: _ICMPEchoComplete
+      demangled: ''
+      offset: 0000CA7C
+    - name: _VXDEchoComplete
+      demangled: ''
+      offset: 0000CBFC
+    - name: _VXDEchoRequest
+      demangled: ''
+      offset: 0000CC30
+    - name: _LoopXmitRtn
+      demangled: ''
+      offset: 0000CCC4
+    - name: _LoopXmit@16
+      demangled: ''
+      offset: 0000CE20
+    - name: _LoopXfer@28
+      demangled: ''
+      offset: 0000CE90
+    - name: _LoopClose@4
+      demangled: ''
+      offset: 0000CFE4
+    - name: _LoopInvalidate@8
+      demangled: ''
+      offset: 0000CFE8
+    - name: _LoopQInfo@20
+      demangled: ''
+      offset: 0000CFEC
+    - name: _LoopSetInfo@16
+      demangled: ''
+      offset: 0000D138
+    - name: _LoopAddAddr@20
+      demangled: ''
+      offset: 0000D1B8
+    - name: _LoopDelAddr@16
+      demangled: ''
+      offset: 0000D1C0
+    - name: _LoopGetEList@12
+      demangled: ''
+      offset: 0000D1C8
+    - name: _IGMPRandomTicks
+      demangled: ''
+      offset: 0000D230
+    - name: _FindIGMPAddr
+      demangled: ''
+      offset: 0000D278
+    - name: _IGMPRcv
+      demangled: ''
+      offset: 0000D2A0
+    - name: _SendIGMPReport
+      demangled: ''
+      offset: 0000D478
+    - name: _IGMPAddrChange
+      demangled: ''
+      offset: 0000D580
+    - name: _IGMPTimer
+      demangled: ''
+      offset: 0000D830
+    - name: _InitIGMPForNTE
+      demangled: ''
+      offset: 0000D8C4
+    - name: _StopIGMPForNTE
+      demangled: ''
+      offset: 0000D938
+    - name: _CopyToNdis
+      demangled: ''
+      offset: 0000D954
+    - name: _IPQueryInfo
+      demangled: ''
+      offset: 0000D9F0
+    - name: _IPSetInfo
+      demangled: ''
+      offset: 0000DF90
+    - name: _IPGetEList
+      demangled: ''
+      offset: '0000E298'
+    - name: _IPWakeupPattern
+      demangled: ''
+      offset: '0000E360'
+    - name: _IPGetPNPCap
+      demangled: ''
+      offset: 0000E3AC
+    - name: _IPGetPNPCtxt
+      demangled: ''
+      offset: 0000E3E4
+    - name: _VxdMapSegmentOffsetToFlat
+      demangled: ''
+      offset: '0000E418'
+    - name: _VxdLockBuffer
+      demangled: ''
+      offset: '0000E460'
+    - name: _VxdUnlockBuffer
+      demangled: ''
+      offset: 0000E4A7
+    - name: _VxdValidateBuffer
+      demangled: ''
+      offset: 0000E4EF
+    - name: _IPGetConfig
+      demangled: ''
+      offset: '0000E538'
+    - name: _OpenIFConfig
+      demangled: ''
+      offset: '0000E838'
+    - name: _GetArpCacheLife
+      demangled: ''
+      offset: '0000E868'
+    - name: _GetArpRetryCount
+      demangled: ''
+      offset: '0000E870'
+    - name: _IsLLInterfaceValueNull
+      demangled: ''
+      offset: '0000E878'
+    - name: _GetLLInterfaceValue
+      demangled: ''
+      offset: 0000E8CC
+    - name: _String2Addr
+      demangled: ''
+      offset: 0000E97C
+    - name: _GetGeneralIFConfig
+      demangled: ''
+      offset: 0000EA28
+    - name: _GetIFAddrList
+      demangled: ''
+      offset: 0000EB68
+    - name: _CloseIFConfig
+      demangled: ''
+      offset: 0000ED34
+    - name: _IPFreeConfig
+      demangled: ''
+      offset: 0000ED40
+    - name: _UseEtherSNAP
+      demangled: ''
+      offset: 0000ED50
+    - name: _GetAlwaysSourceRoute
+      demangled: ''
+      offset: 0000ED58
+    - name: _IPDelNTEContextList
+      demangled: ''
+      offset: 0000ED70
+    - name: _IPAddNTEContextList
+      demangled: ''
+      offset: 0000ED74
+    - name: _NdisRegisterProtocol@16
+      demangled: ''
+      offset: 0000ED78
+    - name: _NdisDeregisterProtocol@8
+      demangled: ''
+      offset: 0000ED7E
+    - name: _NdisOpenAdapter@44
+      demangled: ''
+      offset: 0000ED84
+    - name: _NdisCloseAdapter@8
+      demangled: ''
+      offset: 0000ED8A
+    - name: _NdisSend@12
+      demangled: ''
+      offset: 0000ED90
+    - name: _NdisTransferData@28
+      demangled: ''
+      offset: 0000ED96
+    - name: _NdisReset@8
+      demangled: ''
+      offset: 0000ED9C
+    - name: _NdisRequest@12
+      demangled: ''
+      offset: 0000EDA2
+    - name: _NdisQueryGlobalStatistics@16
+      demangled: ''
+      offset: 0000EDA8
+    - name: _NdisOpenProtocolConfiguration@12
+      demangled: ''
+      offset: 0000EDAE
+    - name: _NdisCompleteBindAdapter@12
+      demangled: ''
+      offset: 0000EDB4
+    - name: _NdisCompleteUnbindAdapter@8
+      demangled: ''
+      offset: 0000EDBA
+    - name: _NdisGetVersion@0
+      demangled: ''
+      offset: 0000EDC0
+    - name: _NdisSetTimer@8
+      demangled: ''
+      offset: 0000EDC6
+    - name: _NdisCancelTimer@8
+      demangled: ''
+      offset: 0000EDCC
+    - name: _NdisInitializeInterrupt@40
+      demangled: ''
+      offset: 0000EDD2
+    - name: _NdisRemoveInterrupt@4
+      demangled: ''
+      offset: 0000EDD8
+    - name: _NdisSynchronizeWithInterrupt@12
+      demangled: ''
+      offset: 0000EDDE
+    - name: _NdisStallExecution@4
+      demangled: ''
+      offset: 0000EDE4
+    - name: _NdisAllocateMemory@16
+      demangled: ''
+      offset: 0000EDEA
+    - name: _NdisFreeMemory@12
+      demangled: ''
+      offset: 0000EDF0
+    - name: _NdisAllocatePacketPool@16
+      demangled: ''
+      offset: 0000EDF6
+    - name: _NdisFreePacketPool@4
+      demangled: ''
+      offset: 0000EDFC
+    - name: _NdisAllocatePacket@12
+      demangled: ''
+      offset: 0000EE02
+    - name: _NdisReinitializePacket@4
+      demangled: ''
+      offset: 0000EE08
+    - name: _NdisFreePacket@4
+      demangled: ''
+      offset: 0000EE0E
+    - name: _NdisQueryPacket@20
+      demangled: ''
+      offset: 0000EE14
+    - name: _NdisAllocateBufferPool@12
+      demangled: ''
+      offset: 0000EE1A
+    - name: _NdisFreeBufferPool@4
+      demangled: ''
+      offset: 0000EE20
+    - name: _NdisAllocateBuffer@20
+      demangled: ''
+      offset: 0000EE26
+    - name: _NdisCopyBuffer@24
+      demangled: ''
+      offset: 0000EE2C
+    - name: _NdisFreeBuffer@4
+      demangled: ''
+      offset: 0000EE32
+    - name: _NdisQueryBuffer@12
+      demangled: ''
+      offset: 0000EE38
+    - name: _NdisGetBufferPhysicalAddress@12
+      demangled: ''
+      offset: 0000EE3E
+    - name: _NdisChainBufferAtFront@8
+      demangled: ''
+      offset: 0000EE44
+    - name: _NdisChainBufferAtBack@8
+      demangled: ''
+      offset: 0000EE4A
+    - name: _NdisUnchainBufferAtFront@8
+      demangled: ''
+      offset: 0000EE50
+    - name: _NdisUnchainBufferAtBack@8
+      demangled: ''
+      offset: 0000EE56
+    - name: _NdisGetNextBuffer@8
+      demangled: ''
+      offset: 0000EE5C
+    - name: _NdisCopyFromPacketToPacket@24
+      demangled: ''
+      offset: 0000EE62
+    - name: _NdisOpenConfiguration@12
+      demangled: ''
+      offset: 0000EE68
+    - name: _NdisReadConfiguration@20
+      demangled: ''
+      offset: 0000EE6E
+    - name: _NdisCloseConfiguration@4
+      demangled: ''
+      offset: 0000EE74
+    - name: _NdisEqualString@12
+      demangled: ''
+      offset: 0000EE7A
+    - name: _NdisOpenFile@20
+      demangled: ''
+      offset: 0000EE80
+    - name: _NdisMapFile@12
+      demangled: ''
+      offset: 0000EE86
+    - name: _NdisUnmapFile@4
+      demangled: ''
+      offset: 0000EE8C
+    - name: _NdisCloseFile@4
+      demangled: ''
+      offset: 0000EE92
+    - name: _NdisAllocateDmaChannel@20
+      demangled: ''
+      offset: 0000EE98
+    - name: _NdisSetupDmaTransfer@24
+      demangled: ''
+      offset: 0000EE9E
+    - name: _NdisCompleteDmaTransfer@24
+      demangled: ''
+      offset: 0000EEA4
+    - name: _NdisReadDmaCounter@4
+      demangled: ''
+      offset: 0000EEAA
+    - name: _NdisFreeDmaChannel@4
+      demangled: ''
+      offset: 0000EEB0
+    - name: _NdisMapIoSpace@20
+      demangled: ''
+      offset: 0000EEB6
+    - name: _NdisWriteErrorLogEntry
+      demangled: ''
+      offset: 0000EEBC
+    - name: _NdisRegAdaptShutdown@12
+      demangled: ''
+      offset: 0000EEC2
+    - name: _NdisDeregAdaptShutdown@4
+      demangled: ''
+      offset: 0000EEC8
+    - name: _DbgPrint
+      demangled: ''
+      offset: 0000EED0
+    - name: __vxdhandle__
+      demangled: ''
+      offset: 0000EEF0
+    - name: _VIP_Get_Version
+      demangled: ''
+      offset: 0000EEF4
+    - name: _VIP_Get_Net_Info
+      demangled: ''
+      offset: 0000EEF8
+    - name: _VIP_Register_Protocol
+      demangled: ''
+      offset: 0000EEFC
+    - name: _VIP_Register_Driver
+      demangled: ''
+      offset: 0000EF00
+    - name: _VIP_Set_Addr
+      demangled: ''
+      offset: 0000EF04
+    - name: _VIP_ICMP_Echo
+      demangled: ''
+      offset: 0000EF08
+    - name: _VIP_Register_Addr_Change
+      demangled: ''
+      offset: 0000EF0C
+    - name: _VIP_Register_Interface_Change
+      demangled: ''
+      offset: 0000EF10
+    - name: _VIP_Set_DHCP_Interface
+      demangled: ''
+      offset: 0000EF14
+    - name: _VIP_IP_Add_Interface
+      demangled: ''
+      offset: 0000EF18
+    - name: _VIP_IP_Delete_Interface
+      demangled: ''
+      offset: 0000EF1C
+    - name: _VIP_Set_Addr_Ex
+      demangled: ''
+      offset: 0000EF20
+    - name: _VIP_Register_Rt_Change_Handler
+      demangled: ''
+      offset: 0000EF24
+    - name: _VIP_Register_Addr_ChangeEx
+      demangled: ''
+      offset: 0000EF28
+    - name: _VIP_IPWakeup_Pattern
+      demangled: ''
+      offset: 0000EF2C
+    - name: _VIP_Register_PMNotify
+      demangled: ''
+      offset: 0000EF30
+    - name: _VIP_IPRegisterARP
+      demangled: ''
+      offset: 0000EF34
+    - name: _VIP_IPDeregisterARP
+      demangled: ''
+      offset: 0000EF38
+    - name: _VIP_Register_PNP_Change
+      demangled: ''
+      offset: 0000EF3C
+    - name: _VIP_Get_PNP_Cap
+      demangled: ''
+      offset: 0000EF40
+    - name: _VIP_Get_PNP_Ctxt
+      demangled: ''
+      offset: 0000EF44
+    - name: VIP_DDB
+      demangled: ''
+      offset: 0000EF48
+    - name: RefillEventSched
+      demangled: ''
+      offset: 0000F03B
+    - name: _VIPTerminate
+      demangled: ''
+      offset: 0000F03F
+    - name: _UniqueIfNumber
+      demangled: ''
+      offset: 0000F044
+    - name: _ifuniadapter
+      demangled: ''
+      offset: 0000F048
+    - name: _RawPI
+      demangled: ''
+      offset: 0000F04C
+    - name: _TrRii
+      demangled: ''
+      offset: 0000F050
+    - name: _DHCPActivityCount
+      demangled: ''
+      offset: 0000F054
+    - name: _DHCPNTE
+      demangled: ''
+      offset: 0000F058
+    - name: _UniAdapter
+      demangled: ''
+      offset: 0000F064
+    - name: _TRFunctionalMcast
+      demangled: ''
+      offset: 0000F0A4
+    - name: _SwapTableLo
+      demangled: ''
+      offset: 0000F110
+    - name: _SwapTableHi
+      demangled: ''
+      offset: 0000F120
+    - name: _IFieldSize
+      demangled: ''
+      offset: 0000F130
+    - name: _dbg_hdrincl
+      demangled: ''
+      offset: 0000F14C
+    - name: _HdrBufList
+      demangled: ''
+      offset: 0000F150
+    - name: _PacketPoolList
+      demangled: ''
+      offset: 0000F154
+    - name: _HdrPoolList
+      demangled: ''
+      offset: 0000F158
+    - name: _CurrentPacketCount
+      demangled: ''
+      offset: 0000F15C
+    - name: _MaxPacketCount
+      demangled: ''
+      offset: 0000F160
+    - name: _CurrentHdrBufCount
+      demangled: ''
+      offset: 0000F164
+    - name: _MaxHdrBufCount
+      demangled: ''
+      offset: 0000F168
+    - name: _DisableIPSourceRouting
+      demangled: ''
+      offset: 0000F16C
+    - name: _Rcefailures
+      demangled: ''
+      offset: 0000F170
+    - name: _RtPI
+      demangled: ''
+      offset: 0000F174
+    - name: _IPMaskTable
+      demangled: ''
+      offset: 0000F178
+    - name: _MTUTable
+      demangled: ''
+      offset: 0000F1B8
+    - name: _BCastMinMTU
+      demangled: ''
+      offset: 0000F1E4
+    - name: _IcmpEchoPendingCnt
+      demangled: ''
+      offset: 0000F328
+    - name: _IcmpErrPendingCnt
+      demangled: ''
+      offset: 0000F32C
+    - name: _LoopXmitHead
+      demangled: ''
+      offset: 0000F35C
+    - name: _LoopXmitTail
+      demangled: ''
+      offset: 0000F360
+    - name: _LoopXmitRtnRunning
+      demangled: ''
+      offset: 0000F364
+    - name: _LoopName
+      demangled: ''
+      offset: 0000F368
+    - name: _LoopEntityType
+      demangled: ''
+      offset: 0000F384
+    - name: _GlobalConfigTable
+      demangled: ''
+      offset: 0000F474
+    - name: _IFConfigTable
+      demangled: ''
+      offset: 0000F604
+    - name: __IPAlwaysSR
+      demangled: ''
+      offset: 0000F73C
+    - name: _ICMPOutStats
+      demangled: ''
+      offset: 0000F740
+    - name: _ForwardPackets
+      demangled: ''
+      offset: 0000F774
+    - name: _DummyInterface
+      demangled: ''
+      offset: 0000F778
+    - name: _LoopInstance
+      demangled: ''
+      offset: 0000F848
+    - name: __LLInterface
+      demangled: ''
+      offset: 0000F84C
+    - name: _FWPacketFree
+      demangled: ''
+      offset: 0000F850
+    - name: _ICMPInStats
+      demangled: ''
+      offset: 0000F854
+    - name: _ARPHandle
+      demangled: ''
+      offset: 0000F888
+    - name: _LastPI
+      demangled: ''
+      offset: 0000F88C
+    - name: _pArpModuleList
+      demangled: ''
+      offset: 0000F890
+    - name: _RATimeout
+      demangled: ''
+      offset: 0000F894
+    - name: _Seed
+      demangled: ''
+      offset: 0000F898
+    - name: _RandomValue
+      demangled: ''
+      offset: 0000F89C
+    - name: _MaxFWBufferSize
+      demangled: ''
+      offset: 0000F8A0
+    - name: _ArpRetryCount
+      demangled: ''
+      offset: 0000F8A4
+    - name: _IPProtInfo
+      demangled: ''
+      offset: 0000F8A8
+    - name: _IGMPProtInfo
+      demangled: ''
+      offset: 0000F90C
+    - name: _LoopNTE
+      demangled: ''
+      offset: 0000F910
+    - name: _NumIF
+      demangled: ''
+      offset: 0000F914
+    - name: _IFBitMask
+      demangled: ''
+      offset: 0000F918
+    - name: _FWBufFree
+      demangled: ''
+      offset: 0000F920
+    - name: _PMTUDiscovery
+      demangled: ''
+      offset: 0000F924
+    - name: _CurrentICMPHeaders
+      demangled: ''
+      offset: 0000F928
+    - name: _ArpCacheLife
+      demangled: ''
+      offset: 0000F92C
+    - name: _NextPI
+      demangled: ''
+      offset: 0000F930
+    - name: _AddrNotifyTable
+      demangled: ''
+      offset: 0000F934
+    - name: __ArpRetryCount
+      demangled: ''
+      offset: 0000F954
+    - name: _IPID
+      demangled: ''
+      offset: 0000F958
+    - name: _NetTableList
+      demangled: ''
+      offset: 0000F95C
+    - name: _TSFlag
+      demangled: ''
+      offset: 0000F960
+    - name: _LoopXmitEvent
+      demangled: ''
+      offset: 0000F964
+    - name: _MaxICMPHeaders
+      demangled: ''
+      offset: 0000F978
+    - name: _IGMPBlockList
+      demangled: ''
+      offset: 0000F97C
+    - name: _ATCache
+      demangled: ''
+      offset: 0000F980
+    - name: _IFList
+      demangled: ''
+      offset: 0000F9B0
+    - name: _LoopInterface
+      demangled: ''
+      offset: 0000F9B4
+    - name: _AddChangeNotifyQueue
+      demangled: ''
+      offset: 0000FA84
+    - name: _ATCIndex
+      demangled: ''
+      offset: 0000FA8C
+    - name: _CurrentFWPackets
+      demangled: ''
+      offset: 0000FA90
+    - name: _ClientNotifyQueue
+      demangled: ''
+      offset: 0000FA94
+    - name: _IPRouteTimer
+      demangled: ''
+      offset: 0000FA9C
+    - name: _PMNotifyTable
+      demangled: ''
+      offset: 0000FAB4
+    - name: _InterfaceSize
+      demangled: ''
+      offset: 0000FAC4
+    - name: _PNPNotifyTable
+      demangled: ''
+      offset: 0000FAC8
+    - name: _sIPAlwaysSourceRoute
+      demangled: ''
+      offset: 0000FAE8
+    - name: _LoopIndex
+      demangled: ''
+      offset: 0000FAEC
+    - name: __UseEtherSNAP
+      demangled: ''
+      offset: 0000FAF0
+    - name: _BCastRSQ
+      demangled: ''
+      offset: 0000FAF4
+    - name: _ICMPInstance
+      demangled: ''
+      offset: 0000FAF8
+    - name: _RtChangeNotifyQueue
+      demangled: ''
+      offset: 0000FAFC
+    - name: _ForwardFilterPtr
+      demangled: ''
+      offset: 0000FB04
+    - name: _ForwardBCast
+      demangled: ''
+      offset: 0000FB08
+    - name: _NumNTE
+      demangled: ''
+      offset: 0000FB0C
+    - name: _DefaultTTL
+      demangled: ''
+      offset: 0000FB10
+    - name: _DeadGWDetect
+      demangled: ''
+      offset: 0000FB14
+    - name: _LoopIFE
+      demangled: ''
+      offset: 0000FB18
+    - name: _NextNTEContext
+      demangled: ''
+      offset: 0000FB75
+    - name: _MaxFWPackets
+      demangled: ''
+      offset: 0000FB78
+    - name: _FirstIF
+      demangled: ''
+      offset: 0000FB7C
+    - name: _DefGWConfigured
+      demangled: ''
+      offset: 0000FB80
+    - name: _TimeStamp
+      demangled: ''
+      offset: 0000FB84
+    - name: _RouterConfigured
+      demangled: ''
+      offset: 0000FB88
+    - name: _IPSInfo
+      demangled: ''
+      offset: 0000FB8C
+    - name: __TRSingleRoute
+      demangled: ''
+      offset: 0000FBE8
+    - name: _DefaultTOS
+      demangled: ''
+      offset: 0000FBEC
+    - name: _IPInstance
+      demangled: ''
+      offset: 0000FBF0
+    - name: __AlwaysSR
+      demangled: ''
+      offset: 0000FBF4
+    - name: _ICMPHeaderList
+      demangled: ''
+      offset: 0000FBF8
+    - name: _RtNotifyTable
+      demangled: ''
+      offset: 0000FBFC
+    - name: _RouteTable
+      demangled: ''
+      offset: 0000FC1C
+    - name: _DODCallout
+      demangled: ''
+      offset: 0000FC9C
+    - name: _DefGWActive
+      demangled: ''
+      offset: 0000FCA0
+    - name: _InterfaceNotifyTable
+      demangled: ''
+      offset: 0000FCA4
+    - name: __ArpCacheLife
+      demangled: ''
+      offset: 0000FCC4
+    - name: _sArpAlwaysSourceRoute
+      demangled: ''
+      offset: 0000FCC8
+    - name: _PacketList
+      demangled: ''
+      offset: 0000FCCC
+    - name: _IGMPBlockFlag
+      demangled: ''
+      offset: 0000FCD0
+    - name: _BufferPool
+      demangled: ''
+      offset: 0000FCD4
+    - name: _IGMPLevel
+      demangled: ''
+      offset: 0000FCD8
+    - name: _CurrentFWBufferSize
+      demangled: ''
+      offset: 0000FCDC
+    - name: _AddrNotifyTableEx
+      demangled: ''
+      offset: 0000FCE0
+    - name: _BSSBegin
+      demangled: ''
+      offset: 0000FD00
+    - name: _BSSDataEnd
+      demangled: ''
+      offset: 0000FD00
+  - num: '2'
+    name: _LMGROUP
+    offset: '00009960'
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000014'
+  - num: '3'
+    name: _IGROUP
+    offset: '00000000'
+    symbols:
+    - name: _CTEInitialize
+      demangled: ''
+      offset: '00000000'
+    - name: VIP_Device_Init
+      demangled: ''
+      offset: '00000020'
+    - name: GetNextInterface
+      demangled: ''
+      offset: '00000045'
+    - name: ConvertBoolean
+      demangled: ''
+      offset: '00000089'
+    - name: ConvertDecimal
+      demangled: ''
+      offset: '00000094'
+    - name: SkipWS
+      demangled: ''
+      offset: 000000A9
+    - name: ConvertIPAddress
+      demangled: ''
+      offset: 000000BC
+    - name: atol
+      demangled: ''
+      offset: 0000012E
+    - name: _GetGMTDelta
+      demangled: ''
+      offset: 0000014A
+    - name: _InitTimestamp
+      demangled: ''
+      offset: 000001DC
+    - name: _FreeNets
+      demangled: ''
+      offset: '00000240'
+    - name: _IPInit
+      demangled: ''
+      offset: '00000260'
+    - name: _ARPInit
+      demangled: ''
+      offset: 000004CC
+    - name: _InitRouting
+      demangled: ''
+      offset: 000005A0
+    - name: _InitGateway
+      demangled: ''
+      offset: 000006C4
+    - name: _ICMPInit
+      demangled: ''
+      offset: '000009E0'
+    - name: _InitLoopback
+      demangled: ''
+      offset: 00000A4C
+    - name: _IGMPInit
+      demangled: ''
+      offset: 00000C0C

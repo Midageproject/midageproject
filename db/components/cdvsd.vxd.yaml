@@ -1,0 +1,3281 @@
+filename: cdvsd.vxd
+binary: CDVSD
+description: ''
+appearances:
+- version: Windows 98 Debug
+  source_tree:
+  - ../dvdioctl.c
+  - ../vsdaer.asm
+  - ../vsd.asm
+  - ../vsdaudio.asm
+  - ../vsdco.asm
+  - ../vsddbg.asm
+  - ../vsderror.asm
+  - ../vsdfltr.c
+  - ../vsdinit.asm
+  - ../vsdioctl.asm
+  - ../vsdpix.c
+  - ../vsdreq.asm
+  segments:
+  - num: '1'
+    name: .bss
+    offset: '00002E20'
+    symbols:
+    - name: _g_RedbookRegisterTable
+      processed: ''
+      offset: '00000000'
+    - name: _g_dwCSAReserved
+      processed: ''
+      offset: 0000002C
+    - name: _PAEP_rpm_change
+      processed: ''
+      offset: '00000030'
+    - name: _PAEP_3mode_config
+      processed: ''
+      offset: '00000034'
+    - name: _PAEP_rpm_inquiry
+      processed: ''
+      offset: '00000038'
+    - name: _DecoderRegion
+      processed: ''
+      offset: 0000003C
+    - name: _pszReg
+      processed: ''
+      offset: '00000040'
+    - name: _pszTZ
+      processed: ''
+      offset: '00000054'
+    - name: _pszStandardBias
+      processed: ''
+      offset: 0000008C
+    - name: _pszIEReg
+      processed: ''
+      offset: '00000094'
+    - name: _pszRegIEVal
+      processed: ''
+      offset: 000000C0
+    - name: _dvd_dispatch
+      processed: ''
+      offset: 000000CC
+    - name: _dvd_dispatch_cb
+      processed: ''
+      offset: '000000E8'
+    - name: _sense_key_map
+      processed: ''
+      offset: '00000104'
+    - name: _RDAMaxBuffersQueued
+      processed: ''
+      offset: 000001CC
+    - name: _RDAMaxConsecutiveReadErrors
+      processed: ''
+      offset: 000001D0
+    - name: _aAttenuation
+      processed: ''
+      offset: 000001D4
+    - name: _g_pRedbookRegister
+      processed: ''
+      offset: '00000220'
+    - name: _FindPIXIII
+      processed: ''
+      offset: '00000260'
+    - name: _TreeWalk
+      processed: ''
+      offset: 0000029E
+    - name: _isPIXIII
+      processed: ''
+      offset: '00000365'
+    - name: _PopEntryList
+      processed: ''
+      offset: '00000410'
+    - name: _PushEntryList
+      processed: ''
+      offset: '00000469'
+    - name: CDVSD_DDB
+      processed: ''
+      offset: 000004B0
+    - name: DISKVSD_trace_cur
+      processed: ''
+      offset: '00003838'
+    - name: _vsd_power
+      processed: ''
+      offset: '00005690'
+    - name: _setup_persistent_prevent
+      processed: ''
+      offset: '00005782'
+    - name: _setup_GESN
+      processed: ''
+      offset: '00005826'
+    - name: _cb_MESN
+      processed: ''
+      offset: '000058E1'
+    - name: _setup_get_config
+      processed: ''
+      offset: 00005A99
+    - name: cddevlist
+      processed: ''
+      offset: 00005B5C
+    - name: _ppcddevlist
+      processed: ''
+      offset: 00005B60
+    - name: CDAERFlags
+      processed: ''
+      offset: 00005B64
+    - name: async_not_event_handle
+      processed: ''
+      offset: 00005B68
+    - name: async_request
+      processed: ''
+      offset: 00005B6C
+    - name: vsd_prepare_for_unconfig
+      processed: ''
+      offset: 00005BF4
+    - name: vsd_start_2_secs
+      processed: ''
+      offset: 00005C22
+    - name: async_not_cb
+      processed: ''
+      offset: 00005C78
+    - name: async_not_cb_event
+      processed: ''
+      offset: 00005CBA
+    - name: Panasonic_Delay
+      processed: ''
+      offset: 00005F44
+    - name: async_not_event
+      processed: ''
+      offset: 00005F56
+    - name: getset_pix3
+      processed: ''
+      offset: 0000626D
+    - name: CDVSD_broadcast_shutdown
+      processed: ''
+      offset: 000062CC
+    - name: VSD_Callback
+      processed: ''
+      offset: '00006354'
+    - name: vsd_c_callback
+      processed: ''
+      offset: '000063E9'
+    - name: vsdco_retry
+      processed: ''
+      offset: '00006404'
+    - name: VSD_pass_thru_callback
+      processed: ''
+      offset: 000064BD
+    - name: do_ior_callback
+      processed: ''
+      offset: '00006570'
+    - name: vsd_reentry_cb
+      processed: ''
+      offset: '00006701'
+    - name: VSD_Error_Handler
+      processed: ''
+      offset: '00006744'
+    - name: vsd_eh_reenumerate
+      processed: ''
+      offset: 000069CE
+    - name: vsd_eh_no_disc
+      processed: ''
+      offset: 00006A52
+    - name: VSD_Request
+      processed: ''
+      offset: 00006A68
+    - name: vsd_r_check_if_handled
+      processed: ''
+      offset: 00006C7C
+    - name: Setup_Read
+      processed: ''
+      offset: 00006F9B
+    - name: setup_mmc_read
+      processed: ''
+      offset: '00007040'
+    - name: sr_setup_char_read
+      processed: ''
+      offset: '00007106'
+    - name: vsd_mode_sel_callback
+      processed: ''
+      offset: '000071E1'
+    - name: vsd_msel_error
+      processed: ''
+      offset: 0000730A
+    - name: setup_internal_async_request
+      processed: ''
+      offset: '00007322'
+    - name: Setup_Test_Unit_Ready
+      processed: ''
+      offset: 0000747C
+    - name: Setup_Lock_Media
+      processed: ''
+      offset: 000074AA
+    - name: Setup_Unlock_Media
+      processed: ''
+      offset: 000074AE
+    - name: Setup_Unsupported_Cmd
+      processed: ''
+      offset: 000074D5
+    - name: Setup_Compute_Geom
+      processed: ''
+      offset: 0000750D
+    - name: scg_getiop_event
+      processed: ''
+      offset: '00007566'
+    - name: vsd_compute_geom_tur_callback
+      processed: ''
+      offset: 0000765A
+    - name: scg_giope_bad_mem
+      processed: ''
+      offset: '00007791'
+    - name: srae_callback_no_mem
+      processed: ''
+      offset: 0000779E
+    - name: vsd_compute_geom_callback
+      processed: ''
+      offset: '000077E6'
+    - name: scg_cb_parse_TOC
+      processed: ''
+      offset: 000078C2
+    - name: scg_cb_good_status_exit
+      processed: ''
+      offset: '00007995'
+    - name: scg_exit
+      processed: ''
+      offset: 00007A4A
+    - name: scg_cb_parse_session
+      processed: ''
+      offset: 00007BEA
+    - name: scg_error_exit
+      processed: ''
+      offset: 00007C69
+    - name: scg_cb_do_play
+      processed: ''
+      offset: 00007CE0
+    - name: scg_cb_do_dvd_check
+      processed: ''
+      offset: 00007D2E
+    - name: scg_cb_do_dvd_struc
+      processed: ''
+      offset: 00007DF3
+    - name: scg_cb_do_mode_check
+      processed: ''
+      offset: 00007E5E
+    - name: scg_cb_pick_up_block_size
+      processed: ''
+      offset: 00007EF3
+    - name: scg_cb_do_mode_sense
+      processed: ''
+      offset: 00007F03
+    - name: scg_cb_do_toc
+      processed: ''
+      offset: 00007FE8
+    - name: scg_common_calldown
+      processed: ''
+      offset: 000080BC
+    - name: _vsd_ret_iop
+      processed: ''
+      offset: '00008168'
+    - name: vsd_ret_iop
+      processed: ''
+      offset: 0000817C
+    - name: _Vsd_GetIOP
+      processed: ''
+      offset: 000081D9
+    - name: Vsd_GetIOP
+      processed: ''
+      offset: 000081EF
+    - name: Setup_Start_Unit
+      processed: ''
+      offset: 0000825C
+    - name: Setup_Stop_Unit
+      processed: ''
+      offset: '00008260'
+    - name: VSD_Setup_Request_Sense
+      processed: ''
+      offset: 000082C9
+    - name: _vsd_internal_request
+      processed: ''
+      offset: '00008303'
+    - name: vsd_internal_request
+      processed: ''
+      offset: '00008315'
+    - name: vsd_setup_srb
+      processed: ''
+      offset: 000083A5
+    - name: setup_to_srb
+      processed: ''
+      offset: 000083B0
+    - name: vsd_send_criteria_request
+      processed: ''
+      offset: '00008418'
+    - name: vsd_send_internal_request
+      processed: ''
+      offset: '00008522'
+    - name: VSD_send_next_command
+      processed: ''
+      offset: '00008630'
+    - name: VSD_Timeout_Entry
+      processed: ''
+      offset: '00008738'
+    - name: VSD_to_callback
+      processed: ''
+      offset: 000087F3
+    - name: _vsd_ilb
+      processed: ''
+      offset: 000088C8
+    - name: Setup_Gen_Ioctl
+      processed: ''
+      offset: 000088FC
+    - name: MSF_to_LBA
+      processed: ''
+      offset: '00008971'
+    - name: LBA_to_MSF
+      processed: ''
+      offset: 0000899E
+    - name: get_trace_ptr
+      processed: ''
+      offset: 000089F0
+    - name: dot_command
+      processed: ''
+      offset: 00008A12
+    - name: VSD_dump_help
+      processed: ''
+      offset: 00008A38
+    - name: VSD_trace_dump
+      processed: ''
+      offset: 00008A47
+    - name: _cb_simulated_audio_read
+      processed: ''
+      offset: 00008B9C
+    - name: cb_simulated_audio_read
+      processed: ''
+      offset: 00008B9C
+    - name: cb_audio_read
+      processed: ''
+      offset: 00008BBD
+    - name: RedbookBufferPlayed
+      processed: ''
+      offset: 00008BD4
+    - name: _RedbookBufferPlayed
+      processed: ''
+      offset: 00008BD4
+    - name: RedbookStreamStarted
+      processed: ''
+      offset: 00008BFA
+    - name: _RedbookStreamStarted
+      processed: ''
+      offset: 00008BFA
+    - name: _RedbookCallinStub
+      processed: ''
+      offset: 00008C90
+    - name: _RedbookExiting
+      processed: ''
+      offset: 00008CA2
+    - name: _DelayedRead@4
+      processed: ''
+      offset: 00008D28
+    - name: _SimulateRead@4
+      processed: ''
+      offset: 00008D41
+  - num: '2'
+    name: PNP
+    offset: 00002FE0
+    symbols:
+    - name: _CCODE__RegCloseKey
+      processed: ''
+      offset: '00000000'
+    - name: _CCODE__RegQueryValueEx
+      processed: ''
+      offset: '00000008'
+    - name: _CCODE__RegOpenKey
+      processed: ''
+      offset: '00000010'
+    - name: _CCODE__RegSetValueEx
+      processed: ''
+      offset: '00000018'
+    - name: _CCODE__RegCreateKey
+      processed: ''
+      offset: '00000020'
+    - name: _CCODE__Debug_Printf_Service
+      processed: ''
+      offset: '00000028'
+    - name: _CCODE__CONFIGMG_Locate_DevNode
+      processed: ''
+      offset: 0000003C
+    - name: _CCODE__CONFIGMG_Get_Sibling
+      processed: ''
+      offset: '00000044'
+    - name: _CCODE__CONFIGMG_Get_Child
+      processed: ''
+      offset: 0000004C
+    - name: _CCODE__CONFIGMG_Call_Enumerator_Function
+      processed: ''
+      offset: '00000054'
+    - name: _CCODE__CONFIGMG_Get_Bus_Info
+      processed: ''
+      offset: 0000005C
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      processed: ''
+      offset: '00000064'
+    - name: _CCODE__PELDR_GetProcAddress
+      processed: ''
+      offset: 0000006C
+  - num: '3'
+    name: _PTEXT
+    offset: 00006DD0
+    symbols:
+    - name: _RegionInvalid
+      processed: ''
+      offset: '00000000'
+    - name: _setup_invalidate_agid
+      processed: ''
+      offset: '00000015'
+    - name: _cb_invalidate_agid
+      processed: ''
+      offset: '00000065'
+    - name: _setup_dvd_agid
+      processed: ''
+      offset: 000000EE
+    - name: _setup_dvd_read_key
+      processed: ''
+      offset: 0000014D
+    - name: _cb_dvd_rkey
+      processed: ''
+      offset: 000001F0
+    - name: _cb_dvd_get_region
+      processed: ''
+      offset: 0000036D
+    - name: _setup_set_region_worker
+      processed: ''
+      offset: 000004FB
+    - name: _GetDefaultRegion
+      processed: ''
+      offset: 000005F2
+    - name: _setup_set_read_ahead
+      processed: ''
+      offset: 00000B2C
+    - name: _setup_set_region
+      processed: ''
+      offset: 00000B9A
+    - name: _set_phase1_region
+      processed: ''
+      offset: 00000C06
+    - name: _setup_get_region
+      processed: ''
+      offset: 00000E3C
+    - name: _cb_dvd_rbuf
+      processed: ''
+      offset: 00000FA6
+    - name: _map_dvd_error
+      processed: ''
+      offset: 00000FD3
+    - name: _sioctl_dvd
+      processed: ''
+      offset: '00001109'
+    - name: _cbioctl_dvd
+      processed: ''
+      offset: '00001168'
+    - name: _cb_dvd_set_region
+      processed: ''
+      offset: 000011B7
+    - name: _setup_sendkey
+      processed: ''
+      offset: 0000133B
+    - name: _setup_readkey
+      processed: ''
+      offset: 0000153F
+    - name: _end_swap
+      processed: ''
+      offset: '00001612'
+    - name: _setup_readdisc_key
+      processed: ''
+      offset: '00001635'
+    - name: _free_buffer
+      processed: ''
+      offset: 000016DA
+    - name: _check_spin_down
+      processed: ''
+      offset: 000016F7
+    - name: _check_audio_status
+      processed: ''
+      offset: '00001780'
+    - name: _my_reg_path
+      processed: ''
+      offset: 0000184E
+    - name: CD_Broadcast_Removal
+      processed: ''
+      offset: '00001938'
+    - name: CD_Broadcast_Insert
+      processed: ''
+      offset: '00001988'
+    - name: _pszDigitalAudioPlay
+      processed: ''
+      offset: 000019CC
+    - name: _pszDigitalAudioBufferAllocation
+      processed: ''
+      offset: 000019DD
+    - name: _pszDigitalAudioCDLoopback
+      processed: ''
+      offset: 000019FA
+    - name: vsd_cfg_device
+      processed: ''
+      offset: 00001A28
+    - name: vsd_find_irq
+      processed: ''
+      offset: 00001CF2
+    - name: vsd_is_dvd
+      processed: ''
+      offset: 00001D60
+    - name: vcd_write_registry
+      processed: ''
+      offset: 000021B6
+    - name: vsd_uncfg_device
+      processed: ''
+      offset: '00002219'
+    - name: VSD_init_complete
+      processed: ''
+      offset: 0000229B
+    - name: vsd_shutdown
+      processed: ''
+      offset: 000022D6
+    - name: reentry_event
+      processed: ''
+      offset: '00002424'
+    - name: vsd_change_block_size_event
+      processed: ''
+      offset: 000024B4
+    - name: VSD_Ioctl_Table
+      processed: ''
+      offset: 000025B4
+    - name: VSD_Need_TUR_Table
+      processed: ''
+      offset: '00002618'
+    - name: VSD_DVD_Ioctl_Table
+      processed: ''
+      offset: '00002631'
+    - name: Setup_Gen_Event
+      processed: ''
+      offset: '00002695'
+    - name: sioctl_audio_play
+      processed: ''
+      offset: 000027FA
+    - name: playaud_play_msf
+      processed: ''
+      offset: '00002878'
+    - name: sioctl_read_sub_chan
+      processed: ''
+      offset: '00002917'
+    - name: _Allocate_Buffer
+      processed: ''
+      offset: 000029BB
+    - name: __free_buffer
+      processed: ''
+      offset: 00002A71
+    - name: ab_setup_IOR
+      processed: ''
+      offset: 00002A8E
+    - name: Allocate_Buffer
+      processed: ''
+      offset: 00002A92
+    - name: sioctl_reset_drive
+      processed: ''
+      offset: 00002BE2
+    - name: sioctl_seek
+      processed: ''
+      offset: 00002C50
+    - name: sioctl_get_device_status
+      processed: ''
+      offset: 00002CE8
+    - name: sioctl_get_sector_size
+      processed: ''
+      offset: 00002DB5
+    - name: sioctl_query_speed
+      processed: ''
+      offset: '00002E57'
+    - name: sioctl_query_speed_caps
+      processed: ''
+      offset: 00002ED6
+    - name: sioctl_set_speed
+      processed: ''
+      offset: 00002F5B
+    - name: sioctl_get_head_location
+      processed: ''
+      offset: 00002FF4
+    - name: sioctl_qchan_upc
+      processed: ''
+      offset: '00003099'
+    - name: sioctl_qchan_isrc
+      processed: ''
+      offset: '00003106'
+    - name: sioctl_qchan_current_info
+      processed: ''
+      offset: '00003184'
+    - name: sioctl_get_audio_state
+      processed: ''
+      offset: '00003254'
+    - name: sioctl_set_audio_chan_ctrl
+      processed: ''
+      offset: 000032DF
+    - name: sioctl_get_audio_chan_ctrl
+      processed: ''
+      offset: '00003363'
+    - name: sioctl_disc_info
+      processed: ''
+      offset: 000033F9
+    - name: si_di_last_session
+      processed: ''
+      offset: '00003531'
+    - name: si_di_first_session
+      processed: ''
+      offset: '00003549'
+    - name: si_di_read_toc_event
+      processed: ''
+      offset: 0000358E
+    - name: sioctl_track_info
+      processed: ''
+      offset: 0000360C
+    - name: sioctl_unsupported
+      processed: ''
+      offset: '00003705'
+    - name: sioctl_audio_stop
+      processed: ''
+      offset: '00003757'
+    - name: sioctl_audio_resume
+      processed: ''
+      offset: '000037E3'
+    - name: VSD_ioctl_callback
+      processed: ''
+      offset: '00003895'
+    - name: v_ic_convert_TUR_to_IOCTL
+      processed: ''
+      offset: 0000396E
+    - name: VSD_Ioctl_cb_table
+      processed: ''
+      offset: 00003AC8
+    - name: cbioctl_map_error
+      processed: ''
+      offset: 00003B2C
+    - name: cbioctl_standard
+      processed: ''
+      offset: 00003BA5
+    - name: cbioctl_audio_play
+      processed: ''
+      offset: 00003BF7
+    - name: ap_save_addresses
+      processed: ''
+      offset: 00003CDE
+    - name: cbioctl_audio_stop
+      processed: ''
+      offset: 00003D6F
+    - name: cbioctl_get_head_location
+      processed: ''
+      offset: 00003E4B
+    - name: sioctl_get_dvd_head
+      processed: ''
+      offset: 00003ECB
+    - name: sioctl_dvd_qchan_upc
+      processed: ''
+      offset: 00003F3C
+    - name: sioctl_dvd_qchan_isrc
+      processed: ''
+      offset: 00003FBE
+    - name: sioctl_dvd_qchan_cur
+      processed: ''
+      offset: '00004021'
+    - name: cbioctl_qchan_upc
+      processed: ''
+      offset: 0000409F
+    - name: cbioctl_qchan_isrc
+      processed: ''
+      offset: '00004120'
+    - name: cbioctl_qchan_current_info
+      processed: ''
+      offset: '00004199'
+    - name: cbioctl_get_audio_state
+      processed: ''
+      offset: 000042D3
+    - name: cbioctl_get_audio_chan_ctrl
+      processed: ''
+      offset: 000043D3
+    - name: cbioctl_set_audio_chan_ctrl
+      processed: ''
+      offset: 0000448F
+    - name: cb_sacc_common
+      processed: ''
+      offset: '00004518'
+    - name: cbioctl_get_device_status
+      processed: ''
+      offset: '000045E7'
+    - name: cbioctl_disc_info
+      processed: ''
+      offset: 000046EC
+    - name: cb_gdi_error_exit
+      processed: ''
+      offset: '00004730'
+    - name: cb_gdi_found_first_track
+      processed: ''
+      offset: 0000479A
+    - name: cbdi_error
+      processed: ''
+      offset: '000048E1'
+    - name: cb_gdi_free_buf_event
+      processed: ''
+      offset: '000048E9'
+    - name: vsd_ret_buffer
+      processed: ''
+      offset: 0000490A
+    - name: RDA_PlayingAudio
+      processed: ''
+      offset: '00004950'
+    - name: __AllocateAudioDataBuffer@4@4
+      processed: ''
+      offset: 000049A7
+    - name: _AllocateAudioDataBuffer@4
+      processed: ''
+      offset: 000049A7
+    - name: EventDigitalAudioStatus
+      processed: ''
+      offset: 000049CF
+    - name: __ScheduleDigitalAudioStatus@4@4
+      processed: ''
+      offset: 000049EC
+    - name: _ScheduleDigitalAudioStatus@4
+      processed: ''
+      offset: 000049EC
+    - name: _FreeAudioDataBuffer@4
+      processed: ''
+      offset: 00004A24
+    - name: __FreeAudioDataBuffer@4@4
+      processed: ''
+      offset: 00004A24
+    - name: event_RedbookBufferPlayed
+      processed: ''
+      offset: 00004A4B
+    - name: continue_reading_if_paused
+      processed: ''
+      offset: 00004A8B
+    - name: event_RedbookStreamStarted
+      processed: ''
+      offset: 00004AA4
+    - name: RDA_StopAudioOnIOP
+      processed: ''
+      offset: 00004AC0
+    - name: RDA_StopAudioOnDevlist
+      processed: ''
+      offset: 00004B1C
+    - name: RDA_PlayAudio
+      processed: ''
+      offset: 00004B42
+    - name: event_audio_read
+      processed: ''
+      offset: 00004CA3
+    - name: request_audio_read
+      processed: ''
+      offset: 00004EA9
+    - name: cds_search_toc
+      processed: ''
+      offset: 000051B6
+    - name: _RDA_InitializeDevice@8
+      processed: ''
+      offset: '00005210'
+    - name: _RDA_UpdateDigitalAudioStatus@8
+      processed: ''
+      offset: 000052EB
+    - name: _RDA_GetAudioBuffer@4
+      processed: ''
+      offset: 000053A9
+    - name: _RDA_ReleaseAudioBuffer@4
+      processed: ''
+      offset: '00005433'
+    - name: _RDA_InitializeAudioPlay@4
+      processed: ''
+      offset: 000054EA
+    - name: _RDA_FreeUnusedBuffers@4
+      processed: ''
+      offset: '00005605'
+    - name: _MassageChannels
+      processed: ''
+      offset: '00005694'
+    - name: _SendRedbookData@4
+      processed: ''
+      offset: '00005727'
+    - name: _CDSettings
+      processed: ''
+      offset: '00005867'
+    - name: _RDA_SetCDChannels@8
+      processed: ''
+      offset: 000058BB
+    - name: _SetVolume
+      processed: ''
+      offset: '00005922'
+    - name: _AsyncSetRedbookVolume@4
+      processed: ''
+      offset: '00005991'
+    - name: _BinaryVolumeToAttenuationLevel
+      processed: ''
+      offset: 000059CE
+    - name: _SetRedbookVolume@4
+      processed: ''
+      offset: 00005A98
+    - name: _StartRedbookStream@4
+      processed: ''
+      offset: 00005ADE
+    - name: _StopRedbookStream@4
+      processed: ''
+      offset: 00005BDB
+    - name: _EndRedbookMedia@4
+      processed: ''
+      offset: 00005C48
+  - num: '4'
+    name: _PDATA
+    offset: '00006E10'
+    symbols:
+    - name: cdvsd_device_count
+      processed: ''
+      offset: '00000000'
+  - num: '5'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: Drv_Reg_Pkt
+      processed: ''
+      offset: 0000001C
+    - name: CDVSD_Device_Init
+      processed: ''
+      offset: '00000054'
+    - name: Setup_DRP
+      processed: ''
+      offset: '00000087'
+- version: Windows 98 Retail
+  source_tree:
+  - ../dvdioctl.c
+  - ../vsdaer.asm
+  - ../vsd.asm
+  - ../vsdaudio.asm
+  - ../vsdco.asm
+  - ../vsderror.asm
+  - ../vsdfltr.c
+  - ../vsdinit.asm
+  - ../vsdioctl.asm
+  - ../vsdpix.c
+  - ../vsdreq.asm
+  segments:
+  - num: '1'
+    name: .bss
+    offset: '00002570'
+    symbols:
+    - name: _g_RedbookRegisterTable
+      demangled: ''
+      offset: '00000000'
+    - name: _g_dwCSAReserved
+      demangled: ''
+      offset: 0000002C
+    - name: _DecoderRegion
+      demangled: ''
+      offset: '00000030'
+    - name: _pszReg
+      demangled: ''
+      offset: '00000034'
+    - name: _pszTZ
+      demangled: ''
+      offset: '00000048'
+    - name: _pszStandardBias
+      demangled: ''
+      offset: '00000080'
+    - name: _pszIEReg
+      demangled: ''
+      offset: '00000088'
+    - name: _pszRegIEVal
+      demangled: ''
+      offset: 000000B4
+    - name: _dvd_dispatch
+      demangled: ''
+      offset: 000000C0
+    - name: _dvd_dispatch_cb
+      demangled: ''
+      offset: 000000DC
+    - name: _sense_key_map
+      demangled: ''
+      offset: 000000F8
+    - name: _RDAMaxConsecutiveReadErrors
+      demangled: ''
+      offset: 0000013C
+    - name: _aAttenuation
+      demangled: ''
+      offset: '00000140'
+    - name: _g_pRedbookRegister
+      demangled: ''
+      offset: 0000018C
+    - name: _FindPIXIII
+      demangled: ''
+      offset: 000001B0
+    - name: _TreeWalk
+      demangled: ''
+      offset: 000001EE
+    - name: _isPIXIII
+      demangled: ''
+      offset: 000002B5
+    - name: _PopEntryList
+      demangled: ''
+      offset: '00000360'
+    - name: _PushEntryList
+      demangled: ''
+      offset: '00000392'
+    - name: CDVSD_DDB
+      demangled: ''
+      offset: 000003B0
+    - name: _vsd_power
+      demangled: ''
+      offset: '00000400'
+    - name: _setup_persistent_prevent
+      demangled: ''
+      offset: 000004F2
+    - name: _setup_GESN
+      demangled: ''
+      offset: '00000596'
+    - name: _cb_MESN
+      demangled: ''
+      offset: '00000650'
+    - name: _setup_get_config
+      demangled: ''
+      offset: 000007D3
+    - name: cddevlist
+      demangled: ''
+      offset: '00000898'
+    - name: _ppcddevlist
+      demangled: ''
+      offset: 0000089C
+    - name: CDAERFlags
+      demangled: ''
+      offset: 000008A0
+    - name: async_not_event_handle
+      demangled: ''
+      offset: 000008A4
+    - name: async_request
+      demangled: ''
+      offset: 000008A8
+    - name: vsd_prepare_for_unconfig
+      demangled: ''
+      offset: '00000926'
+    - name: vsd_start_2_secs
+      demangled: ''
+      offset: '00000941'
+    - name: async_not_cb
+      demangled: ''
+      offset: '00000983'
+    - name: async_not_cb_event
+      demangled: ''
+      offset: '00000996'
+    - name: Panasonic_Delay
+      demangled: ''
+      offset: 00000B1F
+    - name: async_not_event
+      demangled: ''
+      offset: 00000B31
+    - name: getset_pix3
+      demangled: ''
+      offset: 00000CDF
+    - name: CDVSD_broadcast_shutdown
+      demangled: ''
+      offset: 00000D3E
+    - name: VSD_Callback
+      demangled: ''
+      offset: 00000DB0
+    - name: vsd_c_callback
+      demangled: ''
+      offset: 00000DE4
+    - name: vsdco_retry
+      demangled: ''
+      offset: 00000DFA
+    - name: VSD_pass_thru_callback
+      demangled: ''
+      offset: 00000E2A
+    - name: do_ior_callback
+      demangled: ''
+      offset: '00000E69'
+    - name: vsd_reentry_cb
+      demangled: ''
+      offset: 00000EEC
+    - name: VSD_Error_Handler
+      demangled: ''
+      offset: 00000F00
+    - name: vsd_eh_reenumerate
+      demangled: ''
+      offset: 00000FE0
+    - name: vsd_eh_no_disc
+      demangled: ''
+      offset: '00001017'
+    - name: VSD_Request
+      demangled: ''
+      offset: '00001030'
+    - name: vsd_r_check_if_handled
+      demangled: ''
+      offset: 000010F7
+    - name: Setup_Read
+      demangled: ''
+      offset: '00001200'
+    - name: setup_mmc_read
+      demangled: ''
+      offset: '00001292'
+    - name: sr_setup_char_read
+      demangled: ''
+      offset: 0000130F
+    - name: vsd_mode_sel_callback
+      demangled: ''
+      offset: '00001377'
+    - name: vsd_msel_error
+      demangled: ''
+      offset: 000013B5
+    - name: setup_internal_async_request
+      demangled: ''
+      offset: 000013C2
+    - name: Setup_Test_Unit_Ready
+      demangled: ''
+      offset: 000013FD
+    - name: Setup_Lock_Media
+      demangled: ''
+      offset: 0000142B
+    - name: Setup_Unlock_Media
+      demangled: ''
+      offset: 0000142F
+    - name: Setup_Unsupported_Cmd
+      demangled: ''
+      offset: '00001456'
+    - name: Setup_Compute_Geom
+      demangled: ''
+      offset: 0000145F
+    - name: scg_getiop_event
+      demangled: ''
+      offset: '00001476'
+    - name: vsd_compute_geom_tur_callback
+      demangled: ''
+      offset: 000014A7
+    - name: scg_giope_bad_mem
+      demangled: ''
+      offset: '00001528'
+    - name: srae_callback_no_mem
+      demangled: ''
+      offset: 0000152A
+    - name: vsd_compute_geom_callback
+      demangled: ''
+      offset: '00001538'
+    - name: scg_cb_parse_TOC
+      demangled: ''
+      offset: 000015A0
+    - name: scg_cb_good_status_exit
+      demangled: ''
+      offset: 0000163A
+    - name: scg_exit
+      demangled: ''
+      offset: 0000164C
+    - name: scg_cb_parse_session
+      demangled: ''
+      offset: '00001755'
+    - name: scg_error_exit
+      demangled: ''
+      offset: 000017AB
+    - name: scg_cb_do_play
+      demangled: ''
+      offset: 000017ED
+    - name: scg_cb_do_dvd_check
+      demangled: ''
+      offset: '00001825'
+    - name: scg_cb_do_dvd_struc
+      demangled: ''
+      offset: '00001876'
+    - name: scg_cb_do_mode_check
+      demangled: ''
+      offset: 000018CE
+    - name: scg_cb_pick_up_block_size
+      demangled: ''
+      offset: 000018EF
+    - name: scg_cb_do_mode_sense
+      demangled: ''
+      offset: 000018FF
+    - name: scg_cb_do_toc
+      demangled: ''
+      offset: '00001947'
+    - name: scg_common_calldown
+      demangled: ''
+      offset: 000019A7
+    - name: _vsd_ret_iop
+      demangled: ''
+      offset: 000019D5
+    - name: vsd_ret_iop
+      demangled: ''
+      offset: '000019E9'
+    - name: _Vsd_GetIOP
+      demangled: ''
+      offset: 00001A04
+    - name: Vsd_GetIOP
+      demangled: ''
+      offset: 00001A1A
+    - name: Setup_Start_Unit
+      demangled: ''
+      offset: 00001A84
+    - name: Setup_Stop_Unit
+      demangled: ''
+      offset: 00001A88
+    - name: VSD_Setup_Request_Sense
+      demangled: ''
+      offset: 00001AC2
+    - name: _vsd_internal_request
+      demangled: ''
+      offset: 00001AEC
+    - name: vsd_internal_request
+      demangled: ''
+      offset: 00001AFE
+    - name: vsd_setup_srb
+      demangled: ''
+      offset: 00001B8B
+    - name: setup_to_srb
+      demangled: ''
+      offset: 00001B96
+    - name: vsd_send_criteria_request
+      demangled: ''
+      offset: 00001BEB
+    - name: vsd_send_internal_request
+      demangled: ''
+      offset: 00001BFD
+    - name: VSD_send_next_command
+      demangled: ''
+      offset: 00001C23
+    - name: VSD_Timeout_Entry
+      demangled: ''
+      offset: 00001C93
+    - name: VSD_to_callback
+      demangled: ''
+      offset: 00001D04
+    - name: _vsd_ilb
+      demangled: ''
+      offset: 00001D74
+    - name: Setup_Gen_Ioctl
+      demangled: ''
+      offset: 00001DA8
+    - name: MSF_to_LBA
+      demangled: ''
+      offset: 00001DBC
+    - name: LBA_to_MSF
+      demangled: ''
+      offset: 00001DE9
+    - name: cb_audio_read
+      demangled: ''
+      offset: '00001E18'
+    - name: RedbookBufferPlayed
+      demangled: ''
+      offset: 00001E2F
+    - name: _RedbookBufferPlayed
+      demangled: ''
+      offset: 00001E2F
+    - name: RedbookStreamStarted
+      demangled: ''
+      offset: '00001E55'
+    - name: _RedbookStreamStarted
+      demangled: ''
+      offset: '00001E55'
+    - name: _RedbookCallinStub
+      demangled: ''
+      offset: 00001EB0
+    - name: _RedbookExiting
+      demangled: ''
+      offset: 00001EC2
+  - num: '2'
+    name: PNP
+    offset: '00002710'
+    symbols:
+    - name: _CCODE__RegCloseKey
+      demangled: ''
+      offset: '00000000'
+    - name: _CCODE__RegQueryValueEx
+      demangled: ''
+      offset: '00000008'
+    - name: _CCODE__RegOpenKey
+      demangled: ''
+      offset: '00000010'
+    - name: _CCODE__RegSetValueEx
+      demangled: ''
+      offset: '00000018'
+    - name: _CCODE__RegCreateKey
+      demangled: ''
+      offset: '00000020'
+    - name: _CCODE__CONFIGMG_Locate_DevNode
+      demangled: ''
+      offset: '00000028'
+    - name: _CCODE__CONFIGMG_Get_Sibling
+      demangled: ''
+      offset: '00000030'
+    - name: _CCODE__CONFIGMG_Get_Child
+      demangled: ''
+      offset: '00000038'
+    - name: _CCODE__CONFIGMG_Call_Enumerator_Function
+      demangled: ''
+      offset: '00000040'
+    - name: _CCODE__CONFIGMG_Get_Bus_Info
+      demangled: ''
+      offset: '00000048'
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      demangled: ''
+      offset: '00000050'
+    - name: _CCODE__PELDR_GetProcAddress
+      demangled: ''
+      offset: '00000058'
+  - num: '3'
+    name: _PTEXT
+    offset: 00005CF0
+    symbols:
+    - name: _RegionInvalid
+      demangled: ''
+      offset: '00000000'
+    - name: _setup_invalidate_agid
+      demangled: ''
+      offset: '00000015'
+    - name: _cb_invalidate_agid
+      demangled: ''
+      offset: '00000065'
+    - name: _setup_dvd_agid
+      demangled: ''
+      offset: 000000EE
+    - name: _setup_dvd_read_key
+      demangled: ''
+      offset: 0000014D
+    - name: _cb_dvd_rkey
+      demangled: ''
+      offset: 000001F0
+    - name: _cb_dvd_get_region
+      demangled: ''
+      offset: 0000036C
+    - name: _setup_set_region_worker
+      demangled: ''
+      offset: 000004FA
+    - name: _GetDefaultRegion
+      demangled: ''
+      offset: 000005F1
+    - name: _setup_set_read_ahead
+      demangled: ''
+      offset: 00000B28
+    - name: _setup_set_region
+      demangled: ''
+      offset: 00000B96
+    - name: _set_phase1_region
+      demangled: ''
+      offset: 00000C02
+    - name: _setup_get_region
+      demangled: ''
+      offset: '00000E38'
+    - name: _cb_dvd_rbuf
+      demangled: ''
+      offset: 00000FA2
+    - name: _map_dvd_error
+      demangled: ''
+      offset: 00000FCF
+    - name: _sioctl_dvd
+      demangled: ''
+      offset: '00001104'
+    - name: _cbioctl_dvd
+      demangled: ''
+      offset: '00001163'
+    - name: _cb_dvd_set_region
+      demangled: ''
+      offset: 000011B2
+    - name: _setup_sendkey
+      demangled: ''
+      offset: '00001335'
+    - name: _setup_readkey
+      demangled: ''
+      offset: '00001539'
+    - name: _end_swap
+      demangled: ''
+      offset: 0000160C
+    - name: _setup_readdisc_key
+      demangled: ''
+      offset: 0000162F
+    - name: _free_buffer
+      demangled: ''
+      offset: 000016D4
+    - name: _check_spin_down
+      demangled: ''
+      offset: 000016F1
+    - name: _check_audio_status
+      demangled: ''
+      offset: 0000177A
+    - name: _my_reg_path
+      demangled: ''
+      offset: '00001847'
+    - name: CD_Broadcast_Removal
+      demangled: ''
+      offset: '00001930'
+    - name: CD_Broadcast_Insert
+      demangled: ''
+      offset: '00001962'
+    - name: _pszDigitalAudioPlay
+      demangled: ''
+      offset: 0000198B
+    - name: _pszDigitalAudioBufferAllocation
+      demangled: ''
+      offset: 0000199C
+    - name: _pszDigitalAudioCDLoopback
+      demangled: ''
+      offset: 000019B9
+    - name: vsd_cfg_device
+      demangled: ''
+      offset: '000019E7'
+    - name: vsd_find_irq
+      demangled: ''
+      offset: 00001BF9
+    - name: vsd_is_dvd
+      demangled: ''
+      offset: 00001C4B
+    - name: vcd_write_registry
+      demangled: ''
+      offset: '00001E93'
+    - name: vsd_uncfg_device
+      demangled: ''
+      offset: 00001EDB
+    - name: VSD_init_complete
+      demangled: ''
+      offset: 00001F34
+    - name: vsd_shutdown
+      demangled: ''
+      offset: 00001F67
+    - name: reentry_event
+      demangled: ''
+      offset: 00001FDC
+    - name: vsd_change_block_size_event
+      demangled: ''
+      offset: 00001FF0
+    - name: VSD_Ioctl_Table
+      demangled: ''
+      offset: 0000206C
+    - name: VSD_Need_TUR_Table
+      demangled: ''
+      offset: 000020D0
+    - name: VSD_DVD_Ioctl_Table
+      demangled: ''
+      offset: '000020E9'
+    - name: Setup_Gen_Event
+      demangled: ''
+      offset: 0000214D
+    - name: sioctl_audio_play
+      demangled: ''
+      offset: '00002261'
+    - name: playaud_play_msf
+      demangled: ''
+      offset: 0000227A
+    - name: sioctl_read_sub_chan
+      demangled: ''
+      offset: '00002308'
+    - name: _Allocate_Buffer
+      demangled: ''
+      offset: 0000235D
+    - name: __free_buffer
+      demangled: ''
+      offset: 000023A7
+    - name: ab_setup_IOR
+      demangled: ''
+      offset: 000023BC
+    - name: Allocate_Buffer
+      demangled: ''
+      offset: 000023C0
+    - name: sioctl_reset_drive
+      demangled: ''
+      offset: 0000243A
+    - name: sioctl_seek
+      demangled: ''
+      offset: 0000244A
+    - name: sioctl_get_device_status
+      demangled: ''
+      offset: 0000247D
+    - name: sioctl_get_sector_size
+      demangled: ''
+      offset: 000024EC
+    - name: sioctl_query_speed
+      demangled: ''
+      offset: 0000252D
+    - name: sioctl_query_speed_caps
+      demangled: ''
+      offset: 0000254D
+    - name: sioctl_set_speed
+      demangled: ''
+      offset: '00002574'
+    - name: sioctl_get_head_location
+      demangled: ''
+      offset: 000025AC
+    - name: sioctl_qchan_upc
+      demangled: ''
+      offset: 000025F3
+    - name: sioctl_qchan_isrc
+      demangled: ''
+      offset: '00002602'
+    - name: sioctl_qchan_current_info
+      demangled: ''
+      offset: '00002617'
+    - name: sioctl_get_audio_state
+      demangled: ''
+      offset: '00002689'
+    - name: sioctl_set_audio_chan_ctrl
+      demangled: ''
+      offset: 000026B6
+    - name: sioctl_get_audio_chan_ctrl
+      demangled: ''
+      offset: 000026EF
+    - name: sioctl_disc_info
+      demangled: ''
+      offset: '00002730'
+    - name: si_di_last_session
+      demangled: ''
+      offset: '00002809'
+    - name: si_di_first_session
+      demangled: ''
+      offset: '00002821'
+    - name: si_di_read_toc_event
+      demangled: ''
+      offset: 0000285D
+    - name: sioctl_track_info
+      demangled: ''
+      offset: 000028D2
+    - name: sioctl_unsupported
+      demangled: ''
+      offset: '00002963'
+    - name: sioctl_audio_stop
+      demangled: ''
+      offset: 0000296A
+    - name: sioctl_audio_resume
+      demangled: ''
+      offset: '00002998'
+    - name: VSD_ioctl_callback
+      demangled: ''
+      offset: 000029EC
+    - name: v_ic_convert_TUR_to_IOCTL
+      demangled: ''
+      offset: 00002A3C
+    - name: VSD_Ioctl_cb_table
+      demangled: ''
+      offset: 00002B01
+    - name: cbioctl_map_error
+      demangled: ''
+      offset: 00002B65
+    - name: cbioctl_standard
+      demangled: ''
+      offset: 00002BD3
+    - name: cbioctl_audio_play
+      demangled: ''
+      offset: 00002BDB
+    - name: ap_save_addresses
+      demangled: ''
+      offset: 00002C35
+    - name: cbioctl_audio_stop
+      demangled: ''
+      offset: 00002C72
+    - name: cbioctl_get_head_location
+      demangled: ''
+      offset: 00002CFA
+    - name: sioctl_get_dvd_head
+      demangled: ''
+      offset: 00002D26
+    - name: sioctl_dvd_qchan_upc
+      demangled: ''
+      offset: 00002D4D
+    - name: sioctl_dvd_qchan_isrc
+      demangled: ''
+      offset: 00002D85
+    - name: sioctl_dvd_qchan_cur
+      demangled: ''
+      offset: 00002D9E
+    - name: cbioctl_qchan_upc
+      demangled: ''
+      offset: 00002DD2
+    - name: cbioctl_qchan_isrc
+      demangled: ''
+      offset: 00002DFC
+    - name: cbioctl_qchan_current_info
+      demangled: ''
+      offset: '00002E26'
+    - name: cbioctl_get_audio_state
+      demangled: ''
+      offset: 00002ECA
+    - name: cbioctl_get_audio_chan_ctrl
+      demangled: ''
+      offset: 00002F50
+    - name: cbioctl_set_audio_chan_ctrl
+      demangled: ''
+      offset: 00002FB9
+    - name: cb_sacc_common
+      demangled: ''
+      offset: 00002FE9
+    - name: cbioctl_get_device_status
+      demangled: ''
+      offset: 0000309F
+    - name: cbioctl_disc_info
+      demangled: ''
+      offset: 0000313C
+    - name: cb_gdi_error_exit
+      demangled: ''
+      offset: '00003175'
+    - name: cb_gdi_found_first_track
+      demangled: ''
+      offset: 0000319D
+    - name: cbdi_error
+      demangled: ''
+      offset: 0000325A
+    - name: cb_gdi_free_buf_event
+      demangled: ''
+      offset: '00003262'
+    - name: vsd_ret_buffer
+      demangled: ''
+      offset: 0000327A
+    - name: RDA_PlayingAudio
+      demangled: ''
+      offset: 000032B8
+    - name: __AllocateAudioDataBuffer@4@4
+      demangled: ''
+      offset: 000032C5
+    - name: _AllocateAudioDataBuffer@4
+      demangled: ''
+      offset: 000032C5
+    - name: EventDigitalAudioStatus
+      demangled: ''
+      offset: '000032E5'
+    - name: _ScheduleDigitalAudioStatus@4
+      demangled: ''
+      offset: 000032FA
+    - name: __ScheduleDigitalAudioStatus@4@4
+      demangled: ''
+      offset: 000032FA
+    - name: _FreeAudioDataBuffer@4
+      demangled: ''
+      offset: '00003325'
+    - name: __FreeAudioDataBuffer@4@4
+      demangled: ''
+      offset: '00003325'
+    - name: event_RedbookBufferPlayed
+      demangled: ''
+      offset: 0000333F
+    - name: continue_reading_if_paused
+      demangled: ''
+      offset: 0000336C
+    - name: event_RedbookStreamStarted
+      demangled: ''
+      offset: 0000337D
+    - name: RDA_StopAudioOnIOP
+      demangled: ''
+      offset: '00003391'
+    - name: RDA_StopAudioOnDevlist
+      demangled: ''
+      offset: 0000339F
+    - name: RDA_PlayAudio
+      demangled: ''
+      offset: 000033BD
+    - name: event_audio_read
+      demangled: ''
+      offset: '00003467'
+    - name: request_audio_read
+      demangled: ''
+      offset: 0000351E
+    - name: cds_search_toc
+      demangled: ''
+      offset: 000035BD
+    - name: _RDA_InitializeDevice@8
+      demangled: ''
+      offset: 000035F0
+    - name: _RDA_UpdateDigitalAudioStatus@8
+      demangled: ''
+      offset: 000036CB
+    - name: _RDA_GetAudioBuffer@4
+      demangled: ''
+      offset: '00003732'
+    - name: _RDA_ReleaseAudioBuffer@4
+      demangled: ''
+      offset: '00003775'
+    - name: _RDA_InitializeAudioPlay@4
+      demangled: ''
+      offset: 000037D5
+    - name: _RDA_FreeUnusedBuffers@4
+      demangled: ''
+      offset: 000038BF
+    - name: _MassageChannels
+      demangled: ''
+      offset: '00003901'
+    - name: _SendRedbookData@4
+      demangled: ''
+      offset: '00003994'
+    - name: _CDSettings
+      demangled: ''
+      offset: 00003A68
+    - name: _RDA_SetCDChannels@8
+      demangled: ''
+      offset: 00003ABC
+    - name: _SetVolume
+      demangled: ''
+      offset: 00003B23
+    - name: _AsyncSetRedbookVolume@4
+      demangled: ''
+      offset: 00003B8C
+    - name: _BinaryVolumeToAttenuationLevel
+      demangled: ''
+      offset: 00003BBE
+    - name: _SetRedbookVolume@4
+      demangled: ''
+      offset: 00003C88
+    - name: _StartRedbookStream@4
+      demangled: ''
+      offset: 00003CC3
+    - name: _StopRedbookStream@4
+      demangled: ''
+      offset: 00003DC0
+    - name: _EndRedbookMedia@4
+      demangled: ''
+      offset: 00003E2D
+  - num: '4'
+    name: _PDATA
+    offset: 00005D30
+    symbols:
+    - name: cdvsd_device_count
+      demangled: ''
+      offset: '00000000'
+  - num: '5'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: Drv_Reg_Pkt
+      demangled: ''
+      offset: '00000000'
+    - name: CDVSD_Device_Init
+      demangled: ''
+      offset: '00000038'
+    - name: Setup_DRP
+      demangled: ''
+      offset: '00000068'
+- version: Windows 98SE Debug
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: '00002E60'
+    symbols:
+    - name: _g_RedbookRegisterTable
+      demangled: ''
+      offset: '00000000'
+    - name: _PAEP_rpm_change
+      demangled: ''
+      offset: 0000002C
+    - name: _PAEP_3mode_config
+      demangled: ''
+      offset: '00000030'
+    - name: _PAEP_rpm_inquiry
+      demangled: ''
+      offset: '00000034'
+    - name: _DecoderRegion
+      demangled: ''
+      offset: '00000038'
+    - name: _pszTZ
+      demangled: ''
+      offset: 0000003C
+    - name: _pszStandardBias
+      demangled: ''
+      offset: '00000074'
+    - name: _pszIEReg
+      demangled: ''
+      offset: 0000007C
+    - name: _pszRegIEVal
+      demangled: ''
+      offset: 000000A8
+    - name: _pszFixedDefaultPath
+      demangled: ''
+      offset: 000000B4
+    - name: _pszFixedDefaultVal
+      demangled: ''
+      offset: '000000E0'
+    - name: _dvd_dispatch
+      demangled: ''
+      offset: 000000F4
+    - name: _dvd_dispatch_cb
+      demangled: ''
+      offset: '00000110'
+    - name: _sense_key_map
+      demangled: ''
+      offset: 0000012C
+    - name: _pszReg
+      demangled: ''
+      offset: '00000170'
+    - name: _pszRGunk
+      demangled: ''
+      offset: '00000184'
+    - name: _pszFixedDpidPath
+      demangled: ''
+      offset: 000001A4
+    - name: _pszFixedDpidVal
+      demangled: ''
+      offset: 000001D0
+    - name: _RDAMaxBuffersQueued
+      demangled: ''
+      offset: '00000268'
+    - name: _RDAMaxConsecutiveReadErrors
+      demangled: ''
+      offset: 0000026C
+    - name: _aAttenuation
+      demangled: ''
+      offset: '00000270'
+    - name: _g_pRedbookRegister
+      demangled: ''
+      offset: 000002BC
+    - name: _g_dwCSAReserved
+      demangled: ''
+      offset: 000002C0
+    - name: _PopEntryList
+      demangled: ''
+      offset: '00000300'
+    - name: _PushEntryList
+      demangled: ''
+      offset: '00000359'
+    - name: CDVSD_DDB
+      demangled: ''
+      offset: 000003A0
+    - name: DISKVSD_trace_cur
+      demangled: ''
+      offset: '00004328'
+    - name: _vsd_power
+      demangled: ''
+      offset: '00006180'
+    - name: _setup_persistent_prevent
+      demangled: ''
+      offset: '00006272'
+    - name: _setup_GESN
+      demangled: ''
+      offset: '00006316'
+    - name: _cb_MESN
+      demangled: ''
+      offset: 000063D1
+    - name: _setup_get_config
+      demangled: ''
+      offset: '00006589'
+    - name: _Read_System_Region
+      demangled: ''
+      offset: '00006637'
+    - name: _Write_System_Region
+      demangled: ''
+      offset: 0000685F
+    - name: _nuke_old_reg_key
+      demangled: ''
+      offset: 00006A58
+    - name: cddevlist
+      demangled: ''
+      offset: 00006AA0
+    - name: _ppcddevlist
+      demangled: ''
+      offset: 00006AA4
+    - name: CDAERFlags
+      demangled: ''
+      offset: 00006AA8
+    - name: async_not_event_handle
+      demangled: ''
+      offset: 00006AAC
+    - name: async_request
+      demangled: ''
+      offset: 00006AB0
+    - name: vsd_prepare_for_unconfig
+      demangled: ''
+      offset: 00006B38
+    - name: vsd_start_2_secs
+      demangled: ''
+      offset: 00006B66
+    - name: async_not_cb
+      demangled: ''
+      offset: 00006BC3
+    - name: async_not_cb_event
+      demangled: ''
+      offset: 00006C16
+    - name: async_not_event
+      demangled: ''
+      offset: 00006ED2
+    - name: CDVSD_broadcast_shutdown
+      demangled: ''
+      offset: '00007222'
+    - name: VSD_Callback
+      demangled: ''
+      offset: 000072AC
+    - name: vsd_c_callback
+      demangled: ''
+      offset: '00007363'
+    - name: vsdco_retry
+      demangled: ''
+      offset: 0000737E
+    - name: VSD_pass_thru_callback
+      demangled: ''
+      offset: '00007459'
+    - name: do_ior_callback
+      demangled: ''
+      offset: 0000752E
+    - name: vsd_reentry_cb
+      demangled: ''
+      offset: '000076E5'
+    - name: VSD_Error_Handler
+      demangled: ''
+      offset: '00007738'
+    - name: vsd_eh_reenumerate
+      demangled: ''
+      offset: 00007A39
+    - name: vsd_eh_no_disc
+      demangled: ''
+      offset: 00007ACE
+    - name: VSD_Request
+      demangled: ''
+      offset: 00007AE4
+    - name: vsd_r_check_if_handled
+      demangled: ''
+      offset: 00007D3C
+    - name: Setup_Read
+      demangled: ''
+      offset: '000080E3'
+    - name: setup_mmc_read
+      demangled: ''
+      offset: '00008188'
+    - name: sr_setup_char_read
+      demangled: ''
+      offset: 0000825F
+    - name: vsd_mode_sel_callback
+      demangled: ''
+      offset: 0000835C
+    - name: vsd_msel_error
+      demangled: ''
+      offset: 000084C9
+    - name: setup_internal_async_request
+      demangled: ''
+      offset: '000084E1'
+    - name: Setup_Test_Unit_Ready
+      demangled: ''
+      offset: '00008690'
+    - name: Setup_Lock_Media
+      demangled: ''
+      offset: 000086BE
+    - name: Setup_Unlock_Media
+      demangled: ''
+      offset: 000086C2
+    - name: Setup_Unsupported_Cmd
+      demangled: ''
+      offset: '000086E9'
+    - name: Setup_Compute_Geom
+      demangled: ''
+      offset: '00008732'
+    - name: scg_getiop_event
+      demangled: ''
+      offset: 0000879C
+    - name: vsd_compute_geom_tur_callback
+      demangled: ''
+      offset: 000088C3
+    - name: scg_giope_bad_mem
+      demangled: ''
+      offset: 00008A2D
+    - name: srae_callback_no_mem
+      demangled: ''
+      offset: 00008A3A
+    - name: vsd_compute_geom_callback
+      demangled: ''
+      offset: 00008A93
+    - name: scg_cb_parse_TOC
+      demangled: ''
+      offset: 00008B91
+    - name: scg_cb_good_status_exit
+      demangled: ''
+      offset: 00008C64
+    - name: scg_exit
+      demangled: ''
+      offset: 00008D4C
+    - name: scg_cb_parse_session
+      demangled: ''
+      offset: 00008EFD
+    - name: scg_error_exit
+      demangled: ''
+      offset: 00008F7C
+    - name: scg_cb_do_play
+      demangled: ''
+      offset: '00009004'
+    - name: scg_cb_do_dvd_check
+      demangled: ''
+      offset: '00009052'
+    - name: scg_cb_do_dvd_struc
+      demangled: ''
+      offset: '00009139'
+    - name: scg_cb_do_mode_check
+      demangled: ''
+      offset: 000091A4
+    - name: scg_cb_pick_up_block_size
+      demangled: ''
+      offset: 0000925B
+    - name: scg_cb_do_mode_sense
+      demangled: ''
+      offset: 0000926B
+    - name: scg_cb_do_toc
+      demangled: ''
+      offset: '00009372'
+    - name: scg_common_calldown
+      demangled: ''
+      offset: '00009468'
+    - name: _vsd_ret_iop
+      demangled: ''
+      offset: '00009536'
+    - name: vsd_ret_iop
+      demangled: ''
+      offset: 0000954A
+    - name: _Vsd_GetIOP
+      demangled: ''
+      offset: 000095B8
+    - name: Vsd_GetIOP
+      demangled: ''
+      offset: 000095CE
+    - name: Setup_Start_Unit
+      demangled: ''
+      offset: 0000963B
+    - name: Setup_Stop_Unit
+      demangled: ''
+      offset: 0000963F
+    - name: VSD_Setup_Request_Sense
+      demangled: ''
+      offset: 000096B9
+    - name: _vsd_internal_request
+      demangled: ''
+      offset: 000096F3
+    - name: vsd_internal_request
+      demangled: ''
+      offset: '00009705'
+    - name: vsd_setup_srb
+      demangled: ''
+      offset: '00009795'
+    - name: setup_to_srb
+      demangled: ''
+      offset: 000097A0
+    - name: vsd_send_criteria_request
+      demangled: ''
+      offset: '00009808'
+    - name: vsd_send_internal_request
+      demangled: ''
+      offset: '00009956'
+    - name: VSD_send_next_command
+      demangled: ''
+      offset: 00009AA8
+    - name: VSD_Timeout_Entry
+      demangled: ''
+      offset: 00009BD2
+    - name: VSD_to_callback
+      demangled: ''
+      offset: 00009CA4
+    - name: _vsd_ilb
+      demangled: ''
+      offset: 00009DA4
+    - name: Setup_Gen_Ioctl
+      demangled: ''
+      offset: 00009DD8
+    - name: MSF_to_LBA
+      demangled: ''
+      offset: 00009E6F
+    - name: LBA_to_MSF
+      demangled: ''
+      offset: 00009E9C
+    - name: get_trace_ptr
+      demangled: ''
+      offset: 00009EEC
+    - name: dot_command
+      demangled: ''
+      offset: 00009F0E
+    - name: VSD_dump_help
+      demangled: ''
+      offset: 00009F34
+    - name: VSD_trace_dump
+      demangled: ''
+      offset: 00009F43
+    - name: _cb_simulated_audio_read
+      demangled: ''
+      offset: 0000A098
+    - name: cb_simulated_audio_read
+      demangled: ''
+      offset: 0000A098
+    - name: cb_audio_read
+      demangled: ''
+      offset: 0000A0B9
+    - name: RedbookBufferPlayed
+      demangled: ''
+      offset: 0000A0D0
+    - name: _RedbookBufferPlayed
+      demangled: ''
+      offset: 0000A0D0
+    - name: RedbookStreamStarted
+      demangled: ''
+      offset: 0000A0F6
+    - name: _RedbookStreamStarted
+      demangled: ''
+      offset: 0000A0F6
+    - name: _RedbookCallinStub
+      demangled: ''
+      offset: 0000A180
+    - name: _RedbookExiting
+      demangled: ''
+      offset: 0000A192
+    - name: _DelayedRead@4
+      demangled: ''
+      offset: 0000A218
+    - name: _SimulateRead@4
+      demangled: ''
+      offset: 0000A231
+  - num: '2'
+    name: PNP
+    offset: 00002FB0
+    symbols:
+    - name: _CCODE__RegCloseKey
+      demangled: ''
+      offset: '00000000'
+    - name: _CCODE__RegQueryValueEx
+      demangled: ''
+      offset: '00000008'
+    - name: _CCODE__RegOpenKey
+      demangled: ''
+      offset: '00000010'
+    - name: _CCODE__RegCreateKey
+      demangled: ''
+      offset: '00000018'
+    - name: _CCODE__Debug_Printf_Service
+      demangled: ''
+      offset: '00000020'
+    - name: _CCODE__HeapAllocate
+      demangled: ''
+      offset: '00000034'
+    - name: _CCODE__RegSetValueEx
+      demangled: ''
+      offset: 0000003C
+    - name: _CCODE__HeapFree
+      demangled: ''
+      offset: '00000044'
+    - name: _CCODE__RegDeleteKey
+      demangled: ''
+      offset: 0000004C
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      demangled: ''
+      offset: '00000054'
+    - name: _CCODE__PELDR_GetProcAddress
+      demangled: ''
+      offset: 0000005C
+  - num: '3'
+    name: _PTEXT
+    offset: 00006EB0
+    symbols:
+    - name: _RegionInvalid
+      demangled: ''
+      offset: '00000000'
+    - name: _setup_invalidate_agid
+      demangled: ''
+      offset: '00000015'
+    - name: _cb_invalidate_agid
+      demangled: ''
+      offset: '00000065'
+    - name: _setup_dvd_agid
+      demangled: ''
+      offset: 000000EE
+    - name: _setup_dvd_read_key
+      demangled: ''
+      offset: 0000014D
+    - name: _cb_dvd_rkey
+      demangled: ''
+      offset: 000001F0
+    - name: _cb_dvd_get_region
+      demangled: ''
+      offset: 0000036D
+    - name: _setup_set_region_worker
+      demangled: ''
+      offset: 0000058B
+    - name: _GetDefaultRegion
+      demangled: ''
+      offset: '00000682'
+    - name: _setup_set_read_ahead
+      demangled: ''
+      offset: 00000C24
+    - name: _setup_set_region
+      demangled: ''
+      offset: 00000C92
+    - name: _set_phase1_region
+      demangled: ''
+      offset: 00000D00
+    - name: _setup_get_region
+      demangled: ''
+      offset: 00000F06
+    - name: _cb_dvd_rbuf
+      demangled: ''
+      offset: '00001068'
+    - name: _map_dvd_error
+      demangled: ''
+      offset: '00001095'
+    - name: _sioctl_dvd
+      demangled: ''
+      offset: 000011CB
+    - name: _cbioctl_dvd
+      demangled: ''
+      offset: 0000122A
+    - name: _cb_dvd_set_region
+      demangled: ''
+      offset: '00001279'
+    - name: _setup_sendkey
+      demangled: ''
+      offset: '00001415'
+    - name: _setup_readkey
+      demangled: ''
+      offset: '00001619'
+    - name: _end_swap
+      demangled: ''
+      offset: 000016EC
+    - name: _setup_readdisc_key
+      demangled: ''
+      offset: 0000170F
+    - name: _free_buffer
+      demangled: ''
+      offset: 000017B4
+    - name: _check_spin_down
+      demangled: ''
+      offset: 000017D1
+    - name: _check_audio_status
+      demangled: ''
+      offset: 0000185A
+    - name: _my_reg_path
+      demangled: ''
+      offset: '00001928'
+    - name: _start_reg_path
+      demangled: ''
+      offset: 00001A11
+    - name: _start_reg_path_dig
+      demangled: ''
+      offset: 00001C03
+    - name: CD_Broadcast_Removal
+      demangled: ''
+      offset: 00001CEC
+    - name: CD_Broadcast_Insert
+      demangled: ''
+      offset: 00001D3C
+    - name: _pszDigitalAudioPlay
+      demangled: ''
+      offset: 00001D80
+    - name: _pszDigitalAudioBufferAllocation
+      demangled: ''
+      offset: 00001D91
+    - name: _pszDigitalAudioSectorsPerBuffer
+      demangled: ''
+      offset: 00001DA9
+    - name: _pszDigitalAudioCDLoopback
+      demangled: ''
+      offset: 00001DC6
+    - name: vsd_cfg_device
+      demangled: ''
+      offset: 00001DF4
+    - name: vsd_is_dvd
+      demangled: ''
+      offset: '00002096'
+    - name: vcd_write_registry
+      demangled: ''
+      offset: '00002574'
+    - name: vsd_uncfg_device
+      demangled: ''
+      offset: 000025D7
+    - name: VSD_init_complete
+      demangled: ''
+      offset: '00002659'
+    - name: vsd_shutdown
+      demangled: ''
+      offset: '00002694'
+    - name: reentry_event
+      demangled: ''
+      offset: '00002814'
+    - name: vsd_change_block_size_event
+      demangled: ''
+      offset: 000028C8
+    - name: VSD_Ioctl_Table
+      demangled: ''
+      offset: 000029EC
+    - name: VSD_Need_TUR_Table
+      demangled: ''
+      offset: 00002A50
+    - name: VSD_DVD_Ioctl_Table
+      demangled: ''
+      offset: 00002A69
+    - name: Setup_Gen_Event
+      demangled: ''
+      offset: 00002ACD
+    - name: sioctl_audio_play
+      demangled: ''
+      offset: 00002C43
+    - name: playaud_play_msf
+      demangled: ''
+      offset: 00002CD2
+    - name: sioctl_read_sub_chan
+      demangled: ''
+      offset: 00002D71
+    - name: _Allocate_Buffer
+      demangled: ''
+      offset: '00002E26'
+    - name: __free_buffer
+      demangled: ''
+      offset: 00002EFE
+    - name: ab_setup_IOR
+      demangled: ''
+      offset: 00002F1B
+    - name: Allocate_Buffer
+      demangled: ''
+      offset: 00002F22
+    - name: sioctl_reset_drive
+      demangled: ''
+      offset: 000030B6
+    - name: sioctl_seek
+      demangled: ''
+      offset: '00003135'
+    - name: sioctl_get_device_status
+      demangled: ''
+      offset: 000031DE
+    - name: sioctl_get_sector_size
+      demangled: ''
+      offset: 000032BC
+    - name: sioctl_query_speed
+      demangled: ''
+      offset: 0000336F
+    - name: sioctl_query_speed_caps
+      demangled: ''
+      offset: 000033FF
+    - name: sioctl_set_speed
+      demangled: ''
+      offset: '00003495'
+    - name: sioctl_get_head_location
+      demangled: ''
+      offset: 0000353F
+    - name: sioctl_qchan_upc
+      demangled: ''
+      offset: 000035F5
+    - name: sioctl_qchan_isrc
+      demangled: ''
+      offset: '00003673'
+    - name: sioctl_qchan_current_info
+      demangled: ''
+      offset: '00003702'
+    - name: sioctl_get_audio_state
+      demangled: ''
+      offset: '000037E3'
+    - name: sioctl_set_audio_chan_ctrl
+      demangled: ''
+      offset: 0000387F
+    - name: sioctl_get_audio_chan_ctrl
+      demangled: ''
+      offset: '00003914'
+    - name: sioctl_disc_info
+      demangled: ''
+      offset: 000039BB
+    - name: si_di_last_session
+      demangled: ''
+      offset: 00003B04
+    - name: si_di_first_session
+      demangled: ''
+      offset: 00003B1C
+    - name: si_di_read_toc_event
+      demangled: ''
+      offset: 00003B61
+    - name: sioctl_track_info
+      demangled: ''
+      offset: 00003BDF
+    - name: sioctl_unsupported
+      demangled: ''
+      offset: 00003CE9
+    - name: sioctl_audio_stop
+      demangled: ''
+      offset: 00003D4C
+    - name: sioctl_audio_resume
+      demangled: ''
+      offset: 00003DE9
+    - name: VSD_ioctl_callback
+      demangled: ''
+      offset: 00003EAC
+    - name: v_ic_convert_TUR_to_IOCTL
+      demangled: ''
+      offset: 00003FA7
+    - name: VSD_Ioctl_cb_table
+      demangled: ''
+      offset: '00004116'
+    - name: cbioctl_map_error
+      demangled: ''
+      offset: 0000417A
+    - name: cbioctl_standard
+      demangled: ''
+      offset: 000041F3
+    - name: cbioctl_audio_play
+      demangled: ''
+      offset: '00004256'
+    - name: ap_save_addresses
+      demangled: ''
+      offset: 0000435F
+    - name: cbioctl_audio_stop
+      demangled: ''
+      offset: '00004401'
+    - name: cbioctl_get_head_location
+      demangled: ''
+      offset: 000044EE
+    - name: sioctl_get_dvd_head
+      demangled: ''
+      offset: 0000457F
+    - name: sioctl_dvd_qchan_upc
+      demangled: ''
+      offset: '00004601'
+    - name: sioctl_dvd_qchan_isrc
+      demangled: ''
+      offset: '00004694'
+    - name: sioctl_dvd_qchan_cur
+      demangled: ''
+      offset: '00004708'
+    - name: cbioctl_qchan_upc
+      demangled: ''
+      offset: '00004797'
+    - name: cbioctl_qchan_isrc
+      demangled: ''
+      offset: '00004829'
+    - name: cbioctl_qchan_current_info
+      demangled: ''
+      offset: 000048B3
+    - name: cbioctl_get_audio_state
+      demangled: ''
+      offset: 00004A0F
+    - name: cbioctl_get_audio_chan_ctrl
+      demangled: ''
+      offset: 00004B20
+    - name: cbioctl_set_audio_chan_ctrl
+      demangled: ''
+      offset: 00004BED
+    - name: cb_sacc_common
+      demangled: ''
+      offset: 00004C87
+    - name: cbioctl_get_device_status
+      demangled: ''
+      offset: 00004D56
+    - name: cbioctl_disc_info
+      demangled: ''
+      offset: 00004E6C
+    - name: cb_gdi_error_exit
+      demangled: ''
+      offset: 00004EB4
+    - name: cb_gdi_found_first_track
+      demangled: ''
+      offset: 00004F2F
+    - name: cbdi_error
+      demangled: ''
+      offset: 0000508F
+    - name: cb_gdi_free_buf_event
+      demangled: ''
+      offset: '00005097'
+    - name: vsd_ret_buffer
+      demangled: ''
+      offset: 000050B8
+    - name: RDA_PlayingAudio
+      demangled: ''
+      offset: '00005100'
+    - name: __AllocateAudioDataBuffer@4@4
+      demangled: ''
+      offset: '00005168'
+    - name: _AllocateAudioDataBuffer@4
+      demangled: ''
+      offset: '00005168'
+    - name: EventDigitalAudioStatus
+      demangled: ''
+      offset: '00005190'
+    - name: __ScheduleDigitalAudioStatus@4@4
+      demangled: ''
+      offset: 000051AD
+    - name: _ScheduleDigitalAudioStatus@4
+      demangled: ''
+      offset: 000051AD
+    - name: _FreeAudioDataBuffer@4
+      demangled: ''
+      offset: '000051E5'
+    - name: __FreeAudioDataBuffer@4@4
+      demangled: ''
+      offset: '000051E5'
+    - name: event_RedbookBufferPlayed
+      demangled: ''
+      offset: 0000520C
+    - name: continue_reading_if_paused
+      demangled: ''
+      offset: 0000524E
+    - name: event_RedbookStreamStarted
+      demangled: ''
+      offset: '00005267'
+    - name: RDA_StopAudioOnIOP
+      demangled: ''
+      offset: '00005283'
+    - name: RDA_StopAudioOnDevlist
+      demangled: ''
+      offset: 000052F0
+    - name: RDA_PlayAudio
+      demangled: ''
+      offset: '00005316'
+    - name: event_audio_read
+      demangled: ''
+      offset: 000054AA
+    - name: request_audio_read
+      demangled: ''
+      offset: 000056F4
+    - name: cds_search_toc
+      demangled: ''
+      offset: 00005AAF
+    - name: _RDA_InitializeDevice@8
+      demangled: ''
+      offset: 00005B00
+    - name: _RDA_UpdateDigitalAudioStatus@8
+      demangled: ''
+      offset: 00005B81
+    - name: _RDA_GetAudioBuffer@4
+      demangled: ''
+      offset: 00005D0E
+    - name: _RDA_ReleaseAudioBuffer@4
+      demangled: ''
+      offset: 00005D98
+    - name: _RDA_InitializeAudioPlay@4
+      demangled: ''
+      offset: 00005E4F
+    - name: _RDA_FreeUnusedBuffers@4
+      demangled: ''
+      offset: 00005F9B
+    - name: _MassageChannels
+      demangled: ''
+      offset: 0000602A
+    - name: _SendRedbookData@4
+      demangled: ''
+      offset: 000060C0
+    - name: _CDSettings
+      demangled: ''
+      offset: '00006212'
+    - name: _RDA_SetCDChannels@8
+      demangled: ''
+      offset: '00006266'
+    - name: _SetVolume
+      demangled: ''
+      offset: 000062CD
+    - name: _AsyncSetRedbookVolume@4
+      demangled: ''
+      offset: 0000633C
+    - name: _BinaryVolumeToAttenuationLevel
+      demangled: ''
+      offset: '00006379'
+    - name: _SetRedbookVolume@4
+      demangled: ''
+      offset: '00006443'
+    - name: _StartRedbookStream@4
+      demangled: ''
+      offset: '00006489'
+    - name: _StopRedbookStream@4
+      demangled: ''
+      offset: '00006586'
+    - name: _EndRedbookMedia@4
+      demangled: ''
+      offset: 000065F3
+  - num: '4'
+    name: _PDATA
+    offset: 00006EF0
+    symbols:
+    - name: cdvsd_device_count
+      demangled: ''
+      offset: '00000000'
+  - num: '5'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: Drv_Reg_Pkt
+      demangled: ''
+      offset: 0000001C
+    - name: CDVSD_Device_Init
+      demangled: ''
+      offset: '00000054'
+    - name: Setup_DRP
+      demangled: ''
+      offset: '00000087'
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: 000025F0
+    symbols:
+    - name: _g_RedbookRegisterTable
+      demangled: ''
+      offset: '00000000'
+    - name: _DecoderRegion
+      demangled: ''
+      offset: 0000002C
+    - name: _pszTZ
+      demangled: ''
+      offset: '00000030'
+    - name: _pszStandardBias
+      demangled: ''
+      offset: '00000068'
+    - name: _pszIEReg
+      demangled: ''
+      offset: '00000070'
+    - name: _pszRegIEVal
+      demangled: ''
+      offset: 0000009C
+    - name: _pszFixedDefaultPath
+      demangled: ''
+      offset: 000000A8
+    - name: _pszFixedDefaultVal
+      demangled: ''
+      offset: 000000D4
+    - name: _dvd_dispatch
+      demangled: ''
+      offset: '000000E8'
+    - name: _dvd_dispatch_cb
+      demangled: ''
+      offset: '00000104'
+    - name: _sense_key_map
+      demangled: ''
+      offset: '00000120'
+    - name: _pszReg
+      demangled: ''
+      offset: '00000164'
+    - name: _pszRGunk
+      demangled: ''
+      offset: '00000178'
+    - name: _pszFixedDpidPath
+      demangled: ''
+      offset: '00000198'
+    - name: _pszFixedDpidVal
+      demangled: ''
+      offset: 000001C4
+    - name: _RDAMaxConsecutiveReadErrors
+      demangled: ''
+      offset: 000001D8
+    - name: _aAttenuation
+      demangled: ''
+      offset: 000001DC
+    - name: _g_pRedbookRegister
+      demangled: ''
+      offset: '00000228'
+    - name: _g_dwCSAReserved
+      demangled: ''
+      offset: 0000022C
+    - name: _PopEntryList
+      demangled: ''
+      offset: '00000250'
+    - name: _PushEntryList
+      demangled: ''
+      offset: '00000282'
+    - name: CDVSD_DDB
+      demangled: ''
+      offset: 000002A0
+    - name: _vsd_power
+      demangled: ''
+      offset: 000002F0
+    - name: _setup_persistent_prevent
+      demangled: ''
+      offset: '000003E2'
+    - name: _setup_GESN
+      demangled: ''
+      offset: '00000486'
+    - name: _cb_MESN
+      demangled: ''
+      offset: '00000540'
+    - name: _setup_get_config
+      demangled: ''
+      offset: 000006C3
+    - name: _Read_System_Region
+      demangled: ''
+      offset: '00000771'
+    - name: _Write_System_Region
+      demangled: ''
+      offset: '00000999'
+    - name: _nuke_old_reg_key
+      demangled: ''
+      offset: 00000B92
+    - name: cddevlist
+      demangled: ''
+      offset: 00000BD8
+    - name: _ppcddevlist
+      demangled: ''
+      offset: 00000BDC
+    - name: CDAERFlags
+      demangled: ''
+      offset: 00000BE0
+    - name: async_not_event_handle
+      demangled: ''
+      offset: 00000BE4
+    - name: async_request
+      demangled: ''
+      offset: 00000BE8
+    - name: vsd_prepare_for_unconfig
+      demangled: ''
+      offset: 00000C66
+    - name: vsd_start_2_secs
+      demangled: ''
+      offset: 00000C81
+    - name: async_not_cb
+      demangled: ''
+      offset: 00000CCA
+    - name: async_not_cb_event
+      demangled: ''
+      offset: 00000CDD
+    - name: async_not_event
+      demangled: ''
+      offset: '00000E65'
+    - name: CDVSD_broadcast_shutdown
+      demangled: ''
+      offset: 00000FF7
+    - name: VSD_Callback
+      demangled: ''
+      offset: 0000106C
+    - name: vsd_c_callback
+      demangled: ''
+      offset: 000010A0
+    - name: vsdco_retry
+      demangled: ''
+      offset: 000010B6
+    - name: VSD_pass_thru_callback
+      demangled: ''
+      offset: '000010E6'
+    - name: do_ior_callback
+      demangled: ''
+      offset: '00001125'
+    - name: vsd_reentry_cb
+      demangled: ''
+      offset: 000011AC
+    - name: VSD_Error_Handler
+      demangled: ''
+      offset: 000011C0
+    - name: vsd_eh_reenumerate
+      demangled: ''
+      offset: 000012A0
+    - name: vsd_eh_no_disc
+      demangled: ''
+      offset: 000012D7
+    - name: VSD_Request
+      demangled: ''
+      offset: 000012F0
+    - name: vsd_r_check_if_handled
+      demangled: ''
+      offset: 000013B7
+    - name: Setup_Read
+      demangled: ''
+      offset: 000014C0
+    - name: setup_mmc_read
+      demangled: ''
+      offset: '00001552'
+    - name: sr_setup_char_read
+      demangled: ''
+      offset: 000015CF
+    - name: vsd_mode_sel_callback
+      demangled: ''
+      offset: '00001637'
+    - name: vsd_msel_error
+      demangled: ''
+      offset: '00001675'
+    - name: setup_internal_async_request
+      demangled: ''
+      offset: '00001682'
+    - name: Setup_Test_Unit_Ready
+      demangled: ''
+      offset: 000016BD
+    - name: Setup_Lock_Media
+      demangled: ''
+      offset: 000016EB
+    - name: Setup_Unlock_Media
+      demangled: ''
+      offset: 000016EF
+    - name: Setup_Unsupported_Cmd
+      demangled: ''
+      offset: '00001716'
+    - name: Setup_Compute_Geom
+      demangled: ''
+      offset: 0000171F
+    - name: scg_getiop_event
+      demangled: ''
+      offset: '00001736'
+    - name: vsd_compute_geom_tur_callback
+      demangled: ''
+      offset: '00001767'
+    - name: scg_giope_bad_mem
+      demangled: ''
+      offset: '000017E8'
+    - name: srae_callback_no_mem
+      demangled: ''
+      offset: 000017EA
+    - name: vsd_compute_geom_callback
+      demangled: ''
+      offset: 000017F8
+    - name: scg_cb_parse_TOC
+      demangled: ''
+      offset: '00001860'
+    - name: scg_cb_good_status_exit
+      demangled: ''
+      offset: 000018FA
+    - name: scg_exit
+      demangled: ''
+      offset: 0000190C
+    - name: scg_cb_parse_session
+      demangled: ''
+      offset: 00001A15
+    - name: scg_error_exit
+      demangled: ''
+      offset: 00001A6B
+    - name: scg_cb_do_play
+      demangled: ''
+      offset: 00001AAD
+    - name: scg_cb_do_dvd_check
+      demangled: ''
+      offset: 00001AE5
+    - name: scg_cb_do_dvd_struc
+      demangled: ''
+      offset: 00001B36
+    - name: scg_cb_do_mode_check
+      demangled: ''
+      offset: 00001B8E
+    - name: scg_cb_pick_up_block_size
+      demangled: ''
+      offset: 00001BAF
+    - name: scg_cb_do_mode_sense
+      demangled: ''
+      offset: 00001BBF
+    - name: scg_cb_do_toc
+      demangled: ''
+      offset: 00001C07
+    - name: scg_common_calldown
+      demangled: ''
+      offset: 00001C67
+    - name: _vsd_ret_iop
+      demangled: ''
+      offset: 00001C95
+    - name: vsd_ret_iop
+      demangled: ''
+      offset: 00001CA9
+    - name: _Vsd_GetIOP
+      demangled: ''
+      offset: 00001CC4
+    - name: Vsd_GetIOP
+      demangled: ''
+      offset: 00001CDA
+    - name: Setup_Start_Unit
+      demangled: ''
+      offset: 00001D44
+    - name: Setup_Stop_Unit
+      demangled: ''
+      offset: 00001D48
+    - name: VSD_Setup_Request_Sense
+      demangled: ''
+      offset: 00001D82
+    - name: _vsd_internal_request
+      demangled: ''
+      offset: 00001DAC
+    - name: vsd_internal_request
+      demangled: ''
+      offset: 00001DBE
+    - name: vsd_setup_srb
+      demangled: ''
+      offset: 00001E4B
+    - name: setup_to_srb
+      demangled: ''
+      offset: '00001E56'
+    - name: vsd_send_criteria_request
+      demangled: ''
+      offset: 00001EAB
+    - name: vsd_send_internal_request
+      demangled: ''
+      offset: 00001EBD
+    - name: VSD_send_next_command
+      demangled: ''
+      offset: 00001EE3
+    - name: VSD_Timeout_Entry
+      demangled: ''
+      offset: 00001F53
+    - name: VSD_to_callback
+      demangled: ''
+      offset: 00001FCA
+    - name: _vsd_ilb
+      demangled: ''
+      offset: '00002040'
+    - name: Setup_Gen_Ioctl
+      demangled: ''
+      offset: '00002074'
+    - name: MSF_to_LBA
+      demangled: ''
+      offset: '00002088'
+    - name: LBA_to_MSF
+      demangled: ''
+      offset: 000020B5
+    - name: cb_audio_read
+      demangled: ''
+      offset: '000020E4'
+    - name: RedbookBufferPlayed
+      demangled: ''
+      offset: 000020FB
+    - name: _RedbookBufferPlayed
+      demangled: ''
+      offset: 000020FB
+    - name: _RedbookStreamStarted
+      demangled: ''
+      offset: '00002121'
+    - name: RedbookStreamStarted
+      demangled: ''
+      offset: '00002121'
+    - name: _RedbookCallinStub
+      demangled: ''
+      offset: '00002180'
+    - name: _RedbookExiting
+      demangled: ''
+      offset: '00002192'
+  - num: '2'
+    name: PNP
+    offset: '00002720'
+    symbols:
+    - name: _CCODE__RegCloseKey
+      demangled: ''
+      offset: '00000000'
+    - name: _CCODE__RegQueryValueEx
+      demangled: ''
+      offset: '00000008'
+    - name: _CCODE__RegOpenKey
+      demangled: ''
+      offset: '00000010'
+    - name: _CCODE__RegCreateKey
+      demangled: ''
+      offset: '00000018'
+    - name: _CCODE__HeapAllocate
+      demangled: ''
+      offset: '00000020'
+    - name: _CCODE__RegSetValueEx
+      demangled: ''
+      offset: '00000028'
+    - name: _CCODE__HeapFree
+      demangled: ''
+      offset: '00000030'
+    - name: _CCODE__RegDeleteKey
+      demangled: ''
+      offset: '00000038'
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      demangled: ''
+      offset: '00000040'
+    - name: _CCODE__PELDR_GetProcAddress
+      demangled: ''
+      offset: '00000048'
+  - num: '3'
+    name: _PTEXT
+    offset: '00005E10'
+    symbols:
+    - name: _RegionInvalid
+      demangled: ''
+      offset: '00000000'
+    - name: _setup_invalidate_agid
+      demangled: ''
+      offset: '00000015'
+    - name: _cb_invalidate_agid
+      demangled: ''
+      offset: '00000065'
+    - name: _setup_dvd_agid
+      demangled: ''
+      offset: 000000EE
+    - name: _setup_dvd_read_key
+      demangled: ''
+      offset: 0000014D
+    - name: _cb_dvd_rkey
+      demangled: ''
+      offset: 000001F0
+    - name: _cb_dvd_get_region
+      demangled: ''
+      offset: 0000036C
+    - name: _setup_set_region_worker
+      demangled: ''
+      offset: 0000058A
+    - name: _GetDefaultRegion
+      demangled: ''
+      offset: '00000681'
+    - name: _setup_set_read_ahead
+      demangled: ''
+      offset: 00000C20
+    - name: _setup_set_region
+      demangled: ''
+      offset: 00000C8E
+    - name: _set_phase1_region
+      demangled: ''
+      offset: 00000CFC
+    - name: _setup_get_region
+      demangled: ''
+      offset: 00000F02
+    - name: _cb_dvd_rbuf
+      demangled: ''
+      offset: '00001064'
+    - name: _map_dvd_error
+      demangled: ''
+      offset: '00001091'
+    - name: _sioctl_dvd
+      demangled: ''
+      offset: 000011C6
+    - name: _cbioctl_dvd
+      demangled: ''
+      offset: '00001225'
+    - name: _cb_dvd_set_region
+      demangled: ''
+      offset: '00001274'
+    - name: _setup_sendkey
+      demangled: ''
+      offset: 0000140F
+    - name: _setup_readkey
+      demangled: ''
+      offset: '00001613'
+    - name: _end_swap
+      demangled: ''
+      offset: '000016E6'
+    - name: _setup_readdisc_key
+      demangled: ''
+      offset: '00001709'
+    - name: _free_buffer
+      demangled: ''
+      offset: 000017AE
+    - name: _check_spin_down
+      demangled: ''
+      offset: 000017CB
+    - name: _check_audio_status
+      demangled: ''
+      offset: '00001854'
+    - name: _my_reg_path
+      demangled: ''
+      offset: '00001921'
+    - name: _start_reg_path
+      demangled: ''
+      offset: 00001A0A
+    - name: _start_reg_path_dig
+      demangled: ''
+      offset: 00001BFC
+    - name: CD_Broadcast_Removal
+      demangled: ''
+      offset: 00001CE4
+    - name: CD_Broadcast_Insert
+      demangled: ''
+      offset: 00001D16
+    - name: _pszDigitalAudioPlay
+      demangled: ''
+      offset: 00001D3F
+    - name: _pszDigitalAudioBufferAllocation
+      demangled: ''
+      offset: 00001D50
+    - name: _pszDigitalAudioSectorsPerBuffer
+      demangled: ''
+      offset: 00001D68
+    - name: _pszDigitalAudioCDLoopback
+      demangled: ''
+      offset: 00001D85
+    - name: vsd_cfg_device
+      demangled: ''
+      offset: 00001DB3
+    - name: vsd_is_dvd
+      demangled: ''
+      offset: 00001FB7
+    - name: vcd_write_registry
+      demangled: ''
+      offset: 000021FF
+    - name: vsd_uncfg_device
+      demangled: ''
+      offset: '00002247'
+    - name: VSD_init_complete
+      demangled: ''
+      offset: 000022A0
+    - name: vsd_shutdown
+      demangled: ''
+      offset: 000022D3
+    - name: reentry_event
+      demangled: ''
+      offset: '00002348'
+    - name: vsd_change_block_size_event
+      demangled: ''
+      offset: 0000235C
+    - name: VSD_Ioctl_Table
+      demangled: ''
+      offset: 000023D8
+    - name: VSD_Need_TUR_Table
+      demangled: ''
+      offset: 0000243C
+    - name: VSD_DVD_Ioctl_Table
+      demangled: ''
+      offset: '00002455'
+    - name: Setup_Gen_Event
+      demangled: ''
+      offset: 000024B9
+    - name: sioctl_audio_play
+      demangled: ''
+      offset: 000025CD
+    - name: playaud_play_msf
+      demangled: ''
+      offset: '000025E6'
+    - name: sioctl_read_sub_chan
+      demangled: ''
+      offset: '00002674'
+    - name: _Allocate_Buffer
+      demangled: ''
+      offset: 000026C9
+    - name: __free_buffer
+      demangled: ''
+      offset: '00002713'
+    - name: ab_setup_IOR
+      demangled: ''
+      offset: '00002728'
+    - name: Allocate_Buffer
+      demangled: ''
+      offset: 0000272C
+    - name: sioctl_reset_drive
+      demangled: ''
+      offset: 000027A6
+    - name: sioctl_seek
+      demangled: ''
+      offset: 000027B6
+    - name: sioctl_get_device_status
+      demangled: ''
+      offset: '000027E9'
+    - name: sioctl_get_sector_size
+      demangled: ''
+      offset: '00002858'
+    - name: sioctl_query_speed
+      demangled: ''
+      offset: '00002899'
+    - name: sioctl_query_speed_caps
+      demangled: ''
+      offset: 000028B9
+    - name: sioctl_set_speed
+      demangled: ''
+      offset: '000028E0'
+    - name: sioctl_get_head_location
+      demangled: ''
+      offset: '00002918'
+    - name: sioctl_qchan_upc
+      demangled: ''
+      offset: 0000295F
+    - name: sioctl_qchan_isrc
+      demangled: ''
+      offset: 0000296E
+    - name: sioctl_qchan_current_info
+      demangled: ''
+      offset: '00002983'
+    - name: sioctl_get_audio_state
+      demangled: ''
+      offset: 000029F5
+    - name: sioctl_set_audio_chan_ctrl
+      demangled: ''
+      offset: 00002A22
+    - name: sioctl_get_audio_chan_ctrl
+      demangled: ''
+      offset: 00002A5B
+    - name: sioctl_disc_info
+      demangled: ''
+      offset: 00002A9C
+    - name: si_di_last_session
+      demangled: ''
+      offset: 00002B75
+    - name: si_di_first_session
+      demangled: ''
+      offset: 00002B8D
+    - name: si_di_read_toc_event
+      demangled: ''
+      offset: 00002BC9
+    - name: sioctl_track_info
+      demangled: ''
+      offset: 00002C3E
+    - name: sioctl_unsupported
+      demangled: ''
+      offset: 00002CCF
+    - name: sioctl_audio_stop
+      demangled: ''
+      offset: 00002CD6
+    - name: sioctl_audio_resume
+      demangled: ''
+      offset: 00002D04
+    - name: VSD_ioctl_callback
+      demangled: ''
+      offset: 00002D58
+    - name: v_ic_convert_TUR_to_IOCTL
+      demangled: ''
+      offset: 00002DA8
+    - name: VSD_Ioctl_cb_table
+      demangled: ''
+      offset: 00002E6D
+    - name: cbioctl_map_error
+      demangled: ''
+      offset: 00002ED1
+    - name: cbioctl_standard
+      demangled: ''
+      offset: 00002F3F
+    - name: cbioctl_audio_play
+      demangled: ''
+      offset: 00002F47
+    - name: ap_save_addresses
+      demangled: ''
+      offset: 00002FA1
+    - name: cbioctl_audio_stop
+      demangled: ''
+      offset: 00002FDE
+    - name: cbioctl_get_head_location
+      demangled: ''
+      offset: '00003066'
+    - name: sioctl_get_dvd_head
+      demangled: ''
+      offset: '00003092'
+    - name: sioctl_dvd_qchan_upc
+      demangled: ''
+      offset: 000030B9
+    - name: sioctl_dvd_qchan_isrc
+      demangled: ''
+      offset: 000030F1
+    - name: sioctl_dvd_qchan_cur
+      demangled: ''
+      offset: 0000310A
+    - name: cbioctl_qchan_upc
+      demangled: ''
+      offset: 0000313E
+    - name: cbioctl_qchan_isrc
+      demangled: ''
+      offset: '00003168'
+    - name: cbioctl_qchan_current_info
+      demangled: ''
+      offset: '00003192'
+    - name: cbioctl_get_audio_state
+      demangled: ''
+      offset: '00003236'
+    - name: cbioctl_get_audio_chan_ctrl
+      demangled: ''
+      offset: 000032BC
+    - name: cbioctl_set_audio_chan_ctrl
+      demangled: ''
+      offset: '00003325'
+    - name: cb_sacc_common
+      demangled: ''
+      offset: '00003355'
+    - name: cbioctl_get_device_status
+      demangled: ''
+      offset: 0000340B
+    - name: cbioctl_disc_info
+      demangled: ''
+      offset: 000034A8
+    - name: cb_gdi_error_exit
+      demangled: ''
+      offset: '000034E1'
+    - name: cb_gdi_found_first_track
+      demangled: ''
+      offset: '00003509'
+    - name: cbdi_error
+      demangled: ''
+      offset: 000035C6
+    - name: cb_gdi_free_buf_event
+      demangled: ''
+      offset: 000035CE
+    - name: vsd_ret_buffer
+      demangled: ''
+      offset: '000035E6'
+    - name: RDA_PlayingAudio
+      demangled: ''
+      offset: '00003624'
+    - name: __AllocateAudioDataBuffer@4@4
+      demangled: ''
+      offset: '00003631'
+    - name: _AllocateAudioDataBuffer@4
+      demangled: ''
+      offset: '00003631'
+    - name: EventDigitalAudioStatus
+      demangled: ''
+      offset: '00003651'
+    - name: _ScheduleDigitalAudioStatus@4
+      demangled: ''
+      offset: '00003666'
+    - name: __ScheduleDigitalAudioStatus@4@4
+      demangled: ''
+      offset: '00003666'
+    - name: _FreeAudioDataBuffer@4
+      demangled: ''
+      offset: '00003691'
+    - name: __FreeAudioDataBuffer@4@4
+      demangled: ''
+      offset: '00003691'
+    - name: event_RedbookBufferPlayed
+      demangled: ''
+      offset: 000036AB
+    - name: continue_reading_if_paused
+      demangled: ''
+      offset: 000036DA
+    - name: event_RedbookStreamStarted
+      demangled: ''
+      offset: 000036EB
+    - name: RDA_StopAudioOnIOP
+      demangled: ''
+      offset: 000036FF
+    - name: RDA_StopAudioOnDevlist
+      demangled: ''
+      offset: 0000370D
+    - name: RDA_PlayAudio
+      demangled: ''
+      offset: 0000372B
+    - name: event_audio_read
+      demangled: ''
+      offset: 000037D5
+    - name: request_audio_read
+      demangled: ''
+      offset: 0000388C
+    - name: cds_search_toc
+      demangled: ''
+      offset: '00003933'
+    - name: _RDA_InitializeDevice@8
+      demangled: ''
+      offset: '00003970'
+    - name: _RDA_UpdateDigitalAudioStatus@8
+      demangled: ''
+      offset: 000039F1
+    - name: _RDA_GetAudioBuffer@4
+      demangled: ''
+      offset: 00003B39
+    - name: _RDA_ReleaseAudioBuffer@4
+      demangled: ''
+      offset: 00003B7C
+    - name: _RDA_InitializeAudioPlay@4
+      demangled: ''
+      offset: 00003BDC
+    - name: _RDA_FreeUnusedBuffers@4
+      demangled: ''
+      offset: 00003CDB
+    - name: _MassageChannels
+      demangled: ''
+      offset: 00003D1D
+    - name: _SendRedbookData@4
+      demangled: ''
+      offset: 00003DB3
+    - name: _CDSettings
+      demangled: ''
+      offset: '00003E99'
+    - name: _RDA_SetCDChannels@8
+      demangled: ''
+      offset: 00003EED
+    - name: _SetVolume
+      demangled: ''
+      offset: 00003F54
+    - name: _AsyncSetRedbookVolume@4
+      demangled: ''
+      offset: 00003FBD
+    - name: _BinaryVolumeToAttenuationLevel
+      demangled: ''
+      offset: 00003FEF
+    - name: _SetRedbookVolume@4
+      demangled: ''
+      offset: 000040B9
+    - name: _StartRedbookStream@4
+      demangled: ''
+      offset: 000040F4
+    - name: _StopRedbookStream@4
+      demangled: ''
+      offset: 000041F1
+    - name: _EndRedbookMedia@4
+      demangled: ''
+      offset: 0000425E
+  - num: '4'
+    name: _PDATA
+    offset: '00005E50'
+    symbols:
+    - name: cdvsd_device_count
+      demangled: ''
+      offset: '00000000'
+  - num: '5'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: Drv_Reg_Pkt
+      demangled: ''
+      offset: '00000000'
+    - name: CDVSD_Device_Init
+      demangled: ''
+      offset: '00000038'
+    - name: Setup_DRP
+      demangled: ''
+      offset: '00000068'
