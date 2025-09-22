@@ -20,4 +20,4 @@ dbclean:
 
 build-submodules:
 	git submodule update --init --recursive
-	cd $(BUILD_DIR) && cmake -G Ninja .. && ninja
+	cd $(BUILD_DIR) && cmake -G Ninja .. && ninja && chmod +x demumble

@@ -34,6 +34,8 @@ def main():
         if not sym_file.is_file():
             sym_file = input_dir / f"{name}.sym".upper()
             if not sym_file.is_file():
+                sym_file = input_dir / f"{f"{name}".upper() + ".sym"}"
+            if not sym_file.is_file():
                 print(f"Missing: {sym_file}")
                 continue
 
