@@ -1,0 +1,503 @@
+filename: esdi_506.pdr
+binary: ESDI_506
+description: ''
+appearances:
+- version: Windows ME Debug
+  source_tree:
+  - ../esdiaer.asm
+  - ../esdi.asm
+  - ../esdierr.asm
+  - ../esdigeom.asm
+  - ../esdiinit.asm
+  - ../esdiisr.asm
+  - ../esdipm.asm
+  - ../esdireq.asm
+  - ../esdisgio.asm
+  - ../esdisubs.asm
+  segments:
+  - num: '1'
+    name: _LDATA
+    offset: 000034B0
+    symbols:
+    - name: ESDI_506_DDB
+      processed: ''
+      offset: '00000000'
+    - name: BIOS_ID
+      processed: ''
+      offset: '00000050'
+    - name: ESDISER_head
+      processed: ''
+      offset: 0000058D
+    - name: ESDISER_freeze_head
+      processed: ''
+      offset: '00000591'
+    - name: NumSerialize
+      processed: ''
+      offset: 00002ACC
+    - name: ESDI_DDB_Ptr
+      processed: ''
+      offset: 00002BC0
+    - name: ESDI_num_devices
+      processed: ''
+      offset: 00002BC4
+    - name: ESDI_async_event
+      processed: ''
+      offset: '00004014'
+    - name: ESDI_acpi_request
+      processed: ''
+      offset: '00004094'
+    - name: ESDI_internal_request
+      processed: ''
+      offset: 000040F8
+    - name: ESDI_nonio_request
+      processed: ''
+      offset: '00004307'
+    - name: ESDI_reset_timers
+      processed: ''
+      offset: '00004451'
+    - name: ESDI_reset_iopxs
+      processed: ''
+      offset: 000044F0
+    - name: ESDI_IOP_Timeout
+      processed: ''
+      offset: '00004536'
+    - name: ESDI_dot_command
+      processed: ''
+      offset: 000045EB
+    - name: ESDI_dump_help
+      processed: ''
+      offset: 0000460F
+    - name: ESDI_spin_down_all_disks
+      processed: ''
+      offset: '00004619'
+    - name: ESDI_Request
+      processed: ''
+      offset: '00004674'
+    - name: ESDI_r_dequeue_request
+      processed: ''
+      offset: 000046F3
+    - name: ESDI_Start_Request
+      processed: ''
+      offset: 000047C5
+    - name: ESDI_s_r_continue
+      processed: ''
+      offset: '00004884'
+    - name: ESDI_IOPX_Retry
+      processed: ''
+      offset: 0000493C
+    - name: ESDI_Start_Hardware
+      processed: ''
+      offset: 00004B22
+    - name: ESDI_Func_Read
+      processed: ''
+      offset: '00004E21'
+    - name: ESDI_Func_Write
+      processed: ''
+      offset: 00004E6C
+    - name: ESDI_Func_Verify
+      processed: ''
+      offset: 00004F04
+    - name: ESDI_Func_Flush
+      processed: ''
+      offset: 00004F0F
+    - name: ESDI_Func_Spin_Down
+      processed: ''
+      offset: 00004FD6
+    - name: ESDI_Func_Spin_Up
+      processed: ''
+      offset: 0000509D
+    - name: ESDI_Func_Lock
+      processed: ''
+      offset: 0000510D
+    - name: ESDI_Func_Unlock
+      processed: ''
+      offset: 0000517F
+    - name: ESDI_Func_Eject
+      processed: ''
+      offset: 000051F1
+    - name: ESDI_Func_Async_Spin
+      processed: ''
+      offset: '00005263'
+    - name: ESDI_Func_Recompute
+      processed: ''
+      offset: 000052CB
+    - name: ESDI_Func_Pass_Through
+      processed: ''
+      offset: 000053AB
+    - name: ESDI_Func_ATAPI
+      processed: ''
+      offset: 000054A3
+    - name: ESDI_send_atapi_block
+      processed: ''
+      offset: 0000578B
+    - name: ESDI_set_up_DMA_buffs
+      processed: ''
+      offset: '00005865'
+    - name: ESDISER_request
+      processed: ''
+      offset: '00005994'
+    - name: ESDISER_callback
+      processed: ''
+      offset: 00005A94
+    - name: ESDI_Irq_Handler
+      processed: ''
+      offset: 00005B38
+    - name: ESDI_IRQ_Alt_Entry
+      processed: ''
+      offset: 00005B75
+    - name: ESDI_Virt_EOI
+      processed: ''
+      offset: 00005D19
+    - name: ESDI_Read_Data
+      processed: ''
+      offset: 00005D25
+    - name: ESDI_Write_Data
+      processed: ''
+      offset: 00005D7B
+    - name: ESDI_Verify_Data
+      processed: ''
+      offset: 00005DE0
+    - name: ESDI_flush_Complete
+      processed: ''
+      offset: 00005DF8
+    - name: ESDI_Spindown_Complete
+      processed: ''
+      offset: 00005EC0
+    - name: ESDI_Lock_Unlock_Complete
+      processed: ''
+      offset: 00005FA4
+    - name: ESDI_Eject_Complete
+      processed: ''
+      offset: '00006023'
+    - name: ESDI_Process_Atapi
+      processed: ''
+      offset: '000060E9'
+    - name: ESDI_Process_DMA
+      processed: ''
+      offset: 0000620C
+    - name: ESDI_Complete_Request
+      processed: ''
+      offset: 0000622E
+    - name: ESDI_Start_Next_Request
+      processed: ''
+      offset: 0000632A
+    - name: ESDI_Call_Request_Back
+      processed: ''
+      offset: 000064B8
+    - name: ESDI_Check_Seek
+      processed: ''
+      offset: 0000650D
+    - name: ESDI_Seek_Timer
+      processed: ''
+      offset: 000065C2
+    - name: ESDI_Media_Status_Timer
+      processed: ''
+      offset: '00006601'
+    - name: ESDI_Check_Media_Status
+      processed: ''
+      offset: 0000672C
+    - name: ESDI_Eject_Media
+      processed: ''
+      offset: '00006787'
+    - name: ESDI_New_Medium
+      processed: ''
+      offset: 000067CF
+    - name: ESDI_IODelay
+      processed: ''
+      offset: 0000682C
+    - name: ESDI_wait_for_drq
+      processed: ''
+      offset: '00006834'
+    - name: ESDI_wait_not_busy
+      processed: ''
+      offset: 0000686E
+    - name: ESDI_reset_adapter
+      processed: ''
+      offset: '00006902'
+    - name: ESDI_reset_atapi
+      processed: ''
+      offset: 0000693D
+    - name: esdi_ilb
+      processed: ''
+      offset: '00006984'
+    - name: ESDI_get_drive_id
+      processed: ''
+      offset: 000069B8
+    - name: ESDI_extract_geom
+      processed: ''
+      offset: 00006B78
+    - name: ESDI_extract_current_geom
+      processed: ''
+      offset: 00006B85
+    - name: ESDI_get_ctlr_type
+      processed: ''
+      offset: 00006B92
+    - name: ESDI_enable_media_status
+      processed: ''
+      offset: 00006C18
+    - name: ESDI_Error_Handler
+      processed: ''
+      offset: 00006C94
+    - name: ESDI_error_iop_timeout
+      processed: ''
+      offset: 00006C9F
+    - name: ESDI_error_set_params_t_o
+      processed: ''
+      offset: 00006CAF
+    - name: ESDI_error_cmd_setup_t_o
+      processed: ''
+      offset: 00006CBF
+    - name: ESDI_error_write_cmd_t_o
+      processed: ''
+      offset: 00006CCF
+    - name: ESDI_error_write_drq_t_o
+      processed: ''
+      offset: 00006CDF
+    - name: ESDI_error_weird_cmd
+      processed: ''
+      offset: 00006CEF
+    - name: ESDI_error_read_cmd_t_o
+      processed: ''
+      offset: 00006CFF
+    - name: ESDI_error_read_drq_t_o
+      processed: ''
+      offset: 00006D0F
+    - name: ESDI_error_read_error
+      processed: ''
+      offset: 00006D1F
+    - name: ESDI_error_write_error
+      processed: ''
+      offset: 00006D2F
+    - name: ESDI_error_verify_error
+      processed: ''
+      offset: 00006D3C
+    - name: ESDI_error_write_sg_error
+      processed: ''
+      offset: 00006D49
+    - name: ESDI_error_write_last_sector_error
+      processed: ''
+      offset: 00006D56
+    - name: ESDI_error_read_dma
+      processed: ''
+      offset: 00006D63
+    - name: ESDI_error_write_dma
+      processed: ''
+      offset: 00006D70
+    - name: ESDI_atapi_error
+      processed: ''
+      offset: 00006D7D
+    - name: ESDI_atapi_busy
+      processed: ''
+      offset: 00006D8A
+    - name: ESDI_error_dma_error
+      processed: ''
+      offset: 00006D97
+    - name: ESDI_atapi_no_drq
+      processed: ''
+      offset: 00006DA4
+    - name: ESDI_error_common
+      processed: ''
+      offset: 00006DAF
+    - name: ESDI_Reset_If_Required
+      processed: ''
+      offset: 00006F82
+    - name: ESDI_Map_Hard_Error
+      processed: ''
+      offset: 00006FE5
+    - name: ESDI_Atapi_Error_Handler
+      processed: ''
+      offset: 00006FFF
+    - name: ESDI_Atapi_Error_Callback
+      processed: ''
+      offset: 0000723B
+    - name: ESDI_SG_Read
+      processed: ''
+      offset: 0000735C
+    - name: ESDI_SG_Write
+      processed: ''
+      offset: 000074B9
+    - name: ESDI_Get_Next_SGD
+      processed: ''
+      offset: '00007622'
+    - name: ESDI_Port_Trap_Handler
+      processed: ''
+      offset: 000076FB
+    - name: ESDI_Byte_In
+      processed: ''
+      offset: '00007758'
+    - name: ESDI_Byte_Out
+      processed: ''
+      offset: 000078BD
+    - name: ESDI_Unsupported_Port_IO
+      processed: ''
+      offset: 00007A5B
+    - name: ESDI_Flush_Disk
+      processed: ''
+      offset: 00007A60
+    - name: ESDI_flush_worker
+      processed: ''
+      offset: 00007A90
+  - num: '2'
+    name: _PTEXT
+    offset: 00005DB0
+    symbols:
+    - name: ESDI_show_complete
+      processed: ''
+      offset: '00000000'
+    - name: ESDI_shutdown
+      processed: ''
+      offset: 0000002A
+    - name: ESDI_config_physical
+      processed: ''
+      offset: 0000009C
+    - name: ESDI_unconfig_physical
+      processed: ''
+      offset: 0000031E
+    - name: ESDI_device_inquiry
+      processed: ''
+      offset: 0000049B
+    - name: ESDI_Uninit
+      processed: ''
+      offset: '00001134'
+    - name: ESDI_set_int13_geom
+      processed: ''
+      offset: '00001157'
+    - name: ESDI_app_chs_to_rba
+      processed: ''
+      offset: '00001490'
+    - name: ESDI_rba_to_app_chs
+      processed: ''
+      offset: 000014B8
+    - name: ESDI_rba_to_act_chs
+      processed: ''
+      offset: '000014E5'
+    - name: ESDI_do_bios_read
+      processed: ''
+      offset: 0000150B
+    - name: ESDI_geom_dct_to_dcb
+      processed: ''
+      offset: 000016A2
+    - name: ESDI_Set_IRQ_Handler
+      processed: ''
+      offset: '00001781'
+    - name: ESDI_Cfg_adapter_IRQ
+      processed: ''
+      offset: 0000182C
+    - name: ESDI_check_IBM
+      processed: ''
+      offset: '00001874'
+    - name: ESDI_cmos_read
+      processed: ''
+      offset: 000018DF
+    - name: ESDI_trap_io_ports
+      processed: ''
+      offset: 000018F1
+    - name: ESDI_untrap_io_ports
+      processed: ''
+      offset: 0000191A
+    - name: ESDI_check_serialize
+      processed: ''
+      offset: 0000193E
+    - name: ESDI_check_one_drive
+      processed: ''
+      offset: 000019A9
+    - name: ESDI_check_sharing
+      processed: ''
+      offset: 00001A02
+    - name: ESDI_check_cd_msn
+      processed: ''
+      offset: 00001A5F
+    - name: ESDI_check_DMA
+      processed: ''
+      offset: 00001ABC
+    - name: ESDI_check_MSN
+      processed: ''
+      offset: 00001B17
+    - name: ESDI_check_busted_atapi
+      processed: ''
+      offset: 00001B96
+    - name: ESDI_check_enable_ints
+      processed: ''
+      offset: 00001BF3
+    - name: ESDI_check_no_cmos
+      processed: ''
+      offset: 00001C50
+    - name: ESDI_check_no_ide
+      processed: ''
+      offset: 00001CA9
+    - name: ESDI_check_force_serialize
+      processed: ''
+      offset: 00001D19
+    - name: ESDI_check_busted_pci
+      processed: ''
+      offset: 00001D86
+    - name: ESDI_check_drive_ok_dma
+      processed: ''
+      offset: 00001DAC
+    - name: ESDI_check_wd_ok
+      processed: ''
+      offset: 00001DDA
+    - name: ESDI_update_registry
+      processed: ''
+      offset: 00001E3F
+    - name: ESDI_get_bds_ptr
+      processed: ''
+      offset: 00001F7F
+    - name: ESDI_Register
+      processed: ''
+      offset: 00001FEC
+    - name: ESDI_Initialize
+      processed: ''
+      offset: '00002037'
+    - name: ESDI_Create_DDB
+      processed: ''
+      offset: 000022C4
+    - name: ESDI_Destroy_DDB
+      processed: ''
+      offset: 000022EE
+    - name: ESDI_Uninitialize
+      processed: ''
+      offset: 0000230E
+    - name: ESDI_Scan_Inp_Params
+      processed: ''
+      offset: 000023B1
+    - name: ESDI_drive_test
+      processed: ''
+      offset: 000024B8
+    - name: ESDI_get_bios_id
+      processed: ''
+      offset: 0000256D
+    - name: ESDI_Read_Cmos
+      processed: ''
+      offset: 000025A6
+    - name: ESDI_disable_media_status
+      processed: ''
+      offset: '00002620'
+    - name: ESDI_geom_from_eid
+      processed: ''
+      offset: '00002663'
+    - name: ESDI_Hex_To_ASCII
+      processed: ''
+      offset: '00002853'
+  - num: '3'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: disk_type
+      processed: ''
+      offset: '00000004'
+    - name: drive_number
+      processed: ''
+      offset: '00000006'
+    - name: current_dcb
+      processed: ''
+      offset: 0000000A
+    - name: ESDI_trap_data
+      processed: ''
+      offset: 0000001A
+    - name: drv_reg_pkt
+      processed: ''
+      offset: '00001274'
+    - name: ESDI_controller_data
+      processed: ''
+      offset: '00001788'

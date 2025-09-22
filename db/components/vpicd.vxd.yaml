@@ -2,19 +2,12 @@ filename: vpicd.vxd
 binary: VPICD
 description: ''
 appearances:
-- version: Windows 98 Debug
-  source_tree:
-  - ../defint.asm
-  - ../vpicdapi.asm
-  - ../vpicdarb.asm
-  - ../vpicd.asm
-  - ../vpicdbg.asm
-  - ../vpicdio.asm
-  - ../vpicserv.asm
+- version: Windows 95
+  source_tree: []
   segments:
   - num: '1'
     name: _LGROUP
-    offset: 00003B70
+    offset: '00000620'
     symbols:
     - name: VPICD_Force_Default_Owner
       processed: ''
@@ -24,807 +17,194 @@ appearances:
       offset: 000000A8
     - name: VPICD_Get_Virtualization_Count
       processed: ''
-      offset: '000001E3'
-    - name: Def_Int_IRQ9_Owner_Detect
-      processed: ''
-      offset: '00000222'
-    - name: Def_Int_Detect_IRQ9_Event
-      processed: ''
-      offset: '00000230'
-    - name: Def_Int_PM_Vec_Hook
-      processed: ''
-      offset: 000002BB
-    - name: Default_IRQ9_EOI
-      processed: ''
-      offset: '00000320'
-    - name: Default_Cascade_EOI
-      processed: ''
-      offset: 0000034C
-    - name: Default_INT
-      processed: ''
-      offset: '00000370'
-    - name: Default_EOI
-      processed: ''
-      offset: 000003BC
-    - name: Default_Shared_EOI
-      processed: ''
-      offset: 000003C8
-    - name: Default_PM_Share_Int
-      processed: ''
-      offset: 000003D3
-    - name: Default_MASK
-      processed: ''
-      offset: 000003DC
-    - name: Default_Iret
-      processed: ''
-      offset: 000004EF
-    - name: Default_Shared_IRET
-      processed: ''
-      offset: 000004F9
-    - name: Def_Int_Share_Error_EOI
-      processed: ''
-      offset: 000006B3
-    - name: Def_Int_Share_Error_Timeout
-      processed: ''
-      offset: 000006D4
-    - name: Def_Int_Share_Error_IRET
-      processed: ''
-      offset: 000006FC
-    - name: Def_Int_Share_Error_Bitch
-      processed: ''
-      offset: '00000717'
-    - name: Def_Int_Share_Error
-      processed: ''
-      offset: '00000728'
-    - name: VPICD_Power_Handler
-      processed: ''
-      offset: 000007CC
-    - name: ReInitializePIC
-      processed: ''
-      offset: '00000855'
+      offset: '00000160'
     - name: VPICD_Control
       processed: ''
-      offset: 000008CD
+      offset: 000004C4
     - name: VPICD_Sys_Critical_Exit
       processed: ''
-      offset: '00000928'
+      offset: 0000051F
     - name: VPICD_Create_VM
       processed: ''
-      offset: '00000982'
+      offset: '00000579'
     - name: VPICD_Not_Executeable
       processed: ''
-      offset: 000009C2
+      offset: 000005B9
     - name: VPICD_Thread_Not_Executeable
       processed: ''
-      offset: 00000A61
-    - name: VPICD_Set_Virt_Mask
-      processed: ''
-      offset: 00000A88
-    - name: VPICD_State_Change_Event
-      processed: ''
-      offset: 00000B90
-    - name: VPICD_Adjust_Pri_Boost
-      processed: ''
-      offset: 00000BA4
-    - name: VPICD_Simulate_Int
-      processed: ''
-      offset: 00000C40
-    - name: VPICD_Begin_V86_Int_Stack
-      processed: ''
-      offset: 00000FA3
-    - name: VPICD_Set_VxD_PM_From_V86
-      processed: ''
-      offset: '00001075'
-    - name: VPICD_IRET_PM_From_V86
-      processed: ''
-      offset: 0000107C
-    - name: VPICD_Set_VxD_PM_From_PM
-      processed: ''
-      offset: '00001094'
-    - name: VPICD_IRET_PM_From_PM
-      processed: ''
-      offset: 000010A6
-    - name: VPICD_Set_VxD_V86_From_PM
-      processed: ''
-      offset: 000010B4
-    - name: VPICD_IRET_V86_From_PM
-      processed: ''
-      offset: 000010B8
-    - name: VPICD_End_V86_Int_Stack
-      processed: ''
-      offset: 000010CA
-    - name: VPICD_Set_VxD_V86_From_V86
-      processed: ''
-      offset: 0000118F
-    - name: VPICD_IRET_V86_From_V86
-      processed: ''
-      offset: '00001193'
-    - name: VPICD_IRET_Call_Devices
-      processed: ''
-      offset: 000011B7
-    - name: VPICD_Time_Out
-      processed: ''
-      offset: 0000125D
-    - name: VPICD_Hook_Int_Serv_Hook
-      processed: ''
-      offset: 0000133D
-    - name: VPICD_Common_Int_Code
-      processed: ''
-      offset: '00001354'
-    - name: VPICD_Common_Slave_Int
-      processed: ''
-      offset: '00001354'
-    - name: VPICD_Common_Master_Int
-      processed: ''
-      offset: 0000135A
-    - name: VPICD_Common_Shared_Slave_Int
-      processed: ''
-      offset: '00001504'
-    - name: VPICD_Common_Shared_Int_Code
-      processed: ''
-      offset: '00001504'
-    - name: VPICD_Common_Shared_Master_Int
-      processed: ''
-      offset: 0000150A
-    - name: VPICD_Slave_Mask_Change_Proc
-      processed: ''
-      offset: 0000156D
-    - name: Hw_IRQ_0
-      processed: ''
-      offset: '00001574'
-    - name: Hw_IRQ_1
-      processed: ''
-      offset: 000015A8
-    - name: Hw_IRQ_3
-      processed: ''
-      offset: 000015DC
-    - name: Hw_IRQ_4
-      processed: ''
-      offset: '00001610'
-    - name: Hw_IRQ_5
-      processed: ''
-      offset: '00001644'
-    - name: Hw_IRQ_6
-      processed: ''
-      offset: '00001678'
-    - name: Hw_IRQ_7
-      processed: ''
-      offset: 000016AC
-    - name: Hw_IRQ_8
-      processed: ''
-      offset: 000016F0
-    - name: Hw_IRQ_9
-      processed: ''
-      offset: '00001724'
-    - name: Hw_IRQ_10
-      processed: ''
-      offset: '00001758'
-    - name: Hw_IRQ_11
-      processed: ''
-      offset: 0000178C
-    - name: Hw_IRQ_12
-      processed: ''
-      offset: 000017C0
-    - name: Hw_IRQ_13
-      processed: ''
-      offset: 000017F4
-    - name: Hw_IRQ_14
-      processed: ''
-      offset: '00001828'
-    - name: Hw_IRQ_15
-      processed: ''
-      offset: 0000185C
-    - name: Hw_IRQ_2
-      processed: ''
-      offset: 000018A0
-    - name: VPICD_Slave_Error
-      processed: ''
-      offset: 000018AC
+      offset: '00000658'
     - name: VPICD_API
       processed: ''
-      offset: 000018C0
-    - name: VPICD_API_Convert_LDT_To_GDT
-      processed: ''
-      offset: 00001A27
-    - name: VPICD_Common_API_Int
-      processed: ''
-      offset: 00001A7F
-    - name: VPICD_API_Call_From_Use16
-      processed: ''
-      offset: 00001ABC
-    - name: VPICD_BIH_EOI
-      processed: ''
-      offset: 00001AF8
-    - name: VPICD_BIH_Mask
-      processed: ''
-      offset: 00001B00
-    - name: VPICD_BIH_Unmask
-      processed: ''
-      offset: 00001B08
-    - name: VPICD_BIH_Get_Mask
-      processed: ''
-      offset: 00001B10
-    - name: VPICD_BIH_Get_IRR
-      processed: ''
-      offset: 00001B20
-    - name: VPICD_BIH_Get_ISR
-      processed: ''
-      offset: 00001B28
-    - name: VPICD_BIH_Call_Back_PM
-      processed: ''
-      offset: 00001B34
-    - name: VPICD_BHI_Call_PM_Event
-      processed: ''
-      offset: 00001BA1
+      offset: 000011B8
     - name: VPICD_Virtual_EOI
       processed: ''
-      offset: 00001C0E
-    - name: VPICD_Simulate_IO_0
-      processed: ''
-      offset: 00001C40
-    - name: VPICD_Trap_SP0
-      processed: ''
-      offset: 00001C48
-    - name: VPICD_In_0
-      processed: ''
-      offset: 00001C5D
-    - name: VPICD_Trap_MP0
-      processed: ''
-      offset: 00001C88
-    - name: VPICD_Out_0
-      processed: ''
-      offset: 00001C9B
-    - name: VPICD_Simulate_IO_1
-      processed: ''
-      offset: 00001D80
-    - name: VPICD_Trap_SP1
-      processed: ''
-      offset: 00001D88
-    - name: VPICD_In_1
-      processed: ''
-      offset: 00001D99
-    - name: VPICD_Trap_MP1
-      processed: ''
-      offset: 00001DA0
-    - name: VPICD_Out_1
-      processed: ''
-      offset: 00001DAF
-    - name: VPICD_Not_Supported
-      processed: ''
-      offset: '00001E14'
+      offset: '00001502'
     - name: VPICD_Get_Version
       processed: ''
-      offset: 00001E2A
+      offset: 0000171E
     - name: VPICD_Virtualize_IRQ
       processed: ''
-      offset: '00001E49'
+      offset: 0000173D
     - name: VPICD_Set_Int_Request
       processed: ''
-      offset: '00002144'
+      offset: 000018EC
     - name: VPICD_Clear_Int_Request
       processed: ''
-      offset: 000021D4
+      offset: 0000197C
     - name: VPICD_Get_Complete_Status
       processed: ''
-      offset: '00002250'
+      offset: 000019F8
     - name: VPICD_Get_Status
       processed: ''
-      offset: 000022F0
+      offset: 00001A98
     - name: VPICD_Test_Phys_Request
       processed: ''
-      offset: 0000234B
+      offset: 00001AF3
     - name: VPICD_Phys_EOI
       processed: ''
-      offset: '00002390'
+      offset: 00001B38
     - name: VPICD_Convert_IRQ_To_Int
       processed: ''
-      offset: '00002415'
+      offset: 00001B97
     - name: VPICD_Convert_Int_To_IRQ
       processed: ''
-      offset: '00002455'
-    - name: VPICD_CITI_Test_Range
-      processed: ''
-      offset: 000024A2
+      offset: 00001BD7
     - name: VPICD_Get_IRQ_Complete_Status
       processed: ''
-      offset: 000024B8
+      offset: 00001C3A
     - name: VPICD_Convert_Handle_To_IRQ
       processed: ''
-      offset: '00002504'
+      offset: 00001C86
     - name: VPICD_Physically_Mask
       processed: ''
-      offset: '00002534'
+      offset: 00001CB4
     - name: VPICD_Physically_Unmask
       processed: ''
-      offset: 000025AC
+      offset: 00001D08
     - name: VPICD_Set_Auto_Masking
       processed: ''
-      offset: '00002624'
+      offset: 00001D5C
     - name: VPICD_Call_When_Hw_Int
       processed: ''
-      offset: 000026AC
-    - name: VPICD_Bogus_Hw_Filter
-      processed: ''
-      offset: 000026CE
+      offset: 00001DBE
     - name: VPICD_Auto_Mask_At_Inst_Swap
       processed: ''
-      offset: 000026D5
+      offset: 00001DE7
     - name: VPICD_Begin_Inst_Page_Swap
       processed: ''
-      offset: '00002718'
+      offset: '00001E28'
     - name: VPICD_End_Inst_Page_Swap
       processed: ''
-      offset: '00002738'
-    - name: VPICD_VM_SlavePIC_Mask_Change
-      processed: ''
-      offset: '00002796'
-    - name: clr_ir_int_proc
-      processed: ''
-      offset: 000027A3
-    - name: clr_ir_enable_int
-      processed: ''
-      offset: 000027C3
-    - name: _VPICD_Clear_IR_Bits
-      processed: ''
-      offset: '00002809'
-    - name: _VPICD_Set_Irql_Mask
-      processed: ''
-      offset: '00002889'
-    - name: _VPICD_Prepare_For_Shutdown
-      processed: ''
-      offset: 000028DE
-    - name: _VPICD_Set_Channel_Irql
-      processed: ''
-      offset: '00002924'
-    - name: VPICD_PreAlloc_IRQ
-      processed: ''
-      offset: '00002978'
-    - name: VPICDARB_Unmask
-      processed: ''
-      offset: 0000299F
-    - name: VPICD_Release_IRQ
-      processed: ''
-      offset: 000029BF
-    - name: Orig_V86_Int_0Ah_Vector
-      processed: ''
-      offset: 000029FC
-    - name: Orig_V86_Int_71h_Vector
-      processed: ''
-      offset: 00002A00
-    - name: Orig_PM_Int_0Ah_Vector
-      processed: ''
-      offset: 00002A04
-    - name: Orig_PM_Int_71h_Vector
-      processed: ''
-      offset: 00002A0A
-    - name: Def_Int_PM_Set_Vec_Chain
-      processed: ''
-      offset: 00002A10
+      offset: '00001E48'
     - name: _VPICD_Get_Version
       processed: ''
-      offset: 00002BF0
+      offset: 000020B8
     - name: _VPICD_Virtualize_IRQ
       processed: ''
-      offset: 00002BF4
+      offset: 000020BC
     - name: _VPICD_Set_Int_Request
       processed: ''
-      offset: 00002BF8
+      offset: 000020C0
     - name: _VPICD_Clear_Int_Request
       processed: ''
-      offset: 00002BFC
+      offset: 000020C4
     - name: _VPICD_Phys_EOI
       processed: ''
-      offset: 00002C00
+      offset: 000020C8
     - name: _VPICD_Get_Complete_Status
       processed: ''
-      offset: 00002C04
+      offset: 000020CC
     - name: _VPICD_Get_Status
       processed: ''
-      offset: 00002C08
+      offset: 000020D0
     - name: _VPICD_Test_Phys_Request
       processed: ''
-      offset: 00002C0C
+      offset: 000020D4
     - name: _VPICD_Physically_Mask
       processed: ''
-      offset: 00002C10
+      offset: 000020D8
     - name: _VPICD_Physically_Unmask
       processed: ''
-      offset: 00002C14
+      offset: 000020DC
     - name: _VPICD_Set_Auto_Masking
       processed: ''
-      offset: 00002C18
+      offset: '000020E0'
     - name: _VPICD_Get_IRQ_Complete_Status
       processed: ''
-      offset: 00002C1C
+      offset: '000020E4'
     - name: _VPICD_Convert_Handle_To_IRQ
       processed: ''
-      offset: 00002C20
+      offset: '000020E8'
     - name: _VPICD_Convert_IRQ_To_Int
       processed: ''
-      offset: 00002C24
+      offset: 000020EC
     - name: _VPICD_Convert_Int_To_IRQ
       processed: ''
-      offset: 00002C28
+      offset: 000020F0
     - name: _VPICD_Call_When_Hw_Int
       processed: ''
-      offset: 00002C2C
+      offset: 000020F4
     - name: _VPICD_Force_Default_Owner
       processed: ''
-      offset: 00002C30
+      offset: 000020F8
     - name: _VPICD_Force_Default_Behavior
       processed: ''
-      offset: 00002C34
+      offset: 000020FC
     - name: _VPICD_Auto_Mask_At_Inst_Swap
       processed: ''
-      offset: 00002C38
+      offset: '00002100'
     - name: _VPICD_Begin_Inst_Page_Swap
       processed: ''
-      offset: 00002C3C
+      offset: '00002104'
     - name: _VPICD_End_Inst_Page_Swap
       processed: ''
-      offset: 00002C40
+      offset: '00002108'
     - name: _VPICD_Virtual_EOI
       processed: ''
-      offset: 00002C44
+      offset: 0000210C
     - name: _VPICD_Get_Virtualization_Count
       processed: ''
-      offset: 00002C48
+      offset: '00002110'
     - name: _VPICD_Post_Sys_Critical_Init
       processed: ''
-      offset: 00002C4C
-    - name: _VPICD_VM_SlavePIC_Mask_Change
-      processed: ''
-      offset: 00002C50
-    - name: __VPICD_Clear_IR_Bits
-      processed: ''
-      offset: 00002C54
-    - name: __VPICD_Get_Level_Mask
-      processed: ''
-      offset: 00002C58
-    - name: __VPICD_Set_Level_Mask
-      processed: ''
-      offset: 00002C5C
-    - name: __VPICD_Set_Irql_Mask
-      processed: ''
-      offset: 00002C60
-    - name: __VPICD_Set_Channel_Irql
-      processed: ''
-      offset: 00002C64
-    - name: __VPICD_Prepare_For_Shutdown
-      processed: ''
-      offset: 00002C68
-    - name: __VPICD_Register_Trigger_Handler
-      processed: ''
-      offset: 00002C6C
+      offset: '00002114'
     - name: VPICD_DDB
       processed: ''
-      offset: 00002C70
-    - name: VPICD_Phys_IMR
-      processed: ''
-      offset: 00002CC0
-    - name: VPICD_Phys_ISR
-      processed: ''
-      offset: 00002CC2
-    - name: VPICD_Hardware_IRR
-      processed: ''
-      offset: 00002CC4
-    - name: VPICD_Def_IMR
-      processed: ''
-      offset: 00002CC6
-    - name: VPICD_Inst_Swap_Mask
-      processed: ''
-      offset: 00002CC8
-    - name: VPICD_Last_IMR
-      processed: ''
-      offset: 00002CCA
-    - name: VPICD_Irql_IMR
-      processed: ''
-      offset: 00002CCC
-    - name: VPICD_Hw_Int_Filter
-      processed: ''
-      offset: 00002CD0
-    - name: VPICD_SIRQ_Alloc_List
-      processed: ''
-      offset: 00002CD4
-    - name: VPICD_Irql_Mask_Table
-      processed: ''
-      offset: 00002CFC
-    - name: VIRQ_0
-      processed: ''
-      offset: 00002D3C
-    - name: VIRQ_1
-      processed: ''
-      offset: 00002D7C
-    - name: VIRQ_2
-      processed: ''
-      offset: 00002DBC
-    - name: VIRQ_3
-      processed: ''
-      offset: 00002DFC
-    - name: VIRQ_4
-      processed: ''
-      offset: 00002E3C
-    - name: VIRQ_5
-      processed: ''
-      offset: 00002E7C
-    - name: VIRQ_6
-      processed: ''
-      offset: 00002EBC
-    - name: VIRQ_7
-      processed: ''
-      offset: 00002EFC
-    - name: VIRQ_8
-      processed: ''
-      offset: 00002F3C
-    - name: VIRQ_9
-      processed: ''
-      offset: 00002F7C
-    - name: VIRQ_10
-      processed: ''
-      offset: 00002FBC
-    - name: VIRQ_11
-      processed: ''
-      offset: 00002FFC
-    - name: VIRQ_12
-      processed: ''
-      offset: 0000303C
-    - name: VIRQ_13
-      processed: ''
-      offset: 0000307C
-    - name: VIRQ_14
-      processed: ''
-      offset: 000030BC
-    - name: VIRQ_15
-      processed: ''
-      offset: 000030FC
-    - name: SIRQ_0
-      processed: ''
-      offset: 0000313C
-    - name: SIRQ_1
-      processed: ''
-      offset: '00003170'
-    - name: SIRQ_2
-      processed: ''
-      offset: 000031A4
-    - name: SIRQ_3
-      processed: ''
-      offset: 000031D8
-    - name: SIRQ_4
-      processed: ''
-      offset: 0000320C
-    - name: SIRQ_5
-      processed: ''
-      offset: '00003240'
-    - name: SIRQ_6
-      processed: ''
-      offset: '00003274'
-    - name: SIRQ_7
-      processed: ''
-      offset: 000032A8
-    - name: SIRQ_8
-      processed: ''
-      offset: 000032DC
-    - name: SIRQ_9
-      processed: ''
-      offset: '00003310'
-    - name: SIRQ_10
-      processed: ''
-      offset: '00003344'
-    - name: SIRQ_11
-      processed: ''
-      offset: '00003378'
-    - name: SIRQ_12
-      processed: ''
-      offset: 000033AC
-    - name: SIRQ_13
-      processed: ''
-      offset: '000033E0'
-    - name: SIRQ_14
-      processed: ''
-      offset: '00003414'
-    - name: SIRQ_15
-      processed: ''
-      offset: '00003448'
-    - name: VPICD_Priority_XRef
-      processed: ''
-      offset: 0000347C
-    - name: VPICD_IRQ_Convert
-      processed: ''
-      offset: 000034BC
-    - name: VPICD_CB_Offset
-      processed: ''
-      offset: 000034FC
-    - name: PEF_state_CB_offset
-      processed: ''
-      offset: '00003500'
-    - name: SYSVM_Stack_Seg
-      processed: ''
-      offset: '00003528'
-    - name: fSimulatedIntsOK
-      processed: ''
-      offset: '00003548'
-    - name: VPICD_ES_Mask
-      processed: ''
-      offset: '00003549'
-    - name: VPICD_Shared_Hook_Off_Tbl
-      processed: ''
-      offset: 0000354C
-    - name: VPICD_Shared_Hook_Tbl
-      processed: ''
-      offset: '00003588'
-    - name: VPICD_ES_Hooked_Mask
-      processed: ''
-      offset: 00003B18
-    - name: VPICD_Arb_Data
-      processed: ''
-      offset: 000041CE
-  - num: '2'
-    name: _LMGROUP
-    offset: 00003BB0
-    symbols:
-    - name: '@MSG_LAB'
-      processed: ''
-      offset: '00000000'
-    - name: '@MSG_LDATA'
-      processed: ''
-      offset: '00000014'
-  - num: '3'
-    name: _IMGROUP
-    offset: 00003BF0
-    symbols:
-    - name: '@MSG_IAB'
-      processed: ''
-      offset: '00000000'
-    - name: '@MSG_IDATA'
-      processed: ''
-      offset: '00000010'
+      offset: 0000211C
   - num: '4'
     name: _IGROUP
-    offset: '00004220'
+    offset: 000006A0
     symbols:
     - name: VPICD_Sys_Critical_Init
       processed: ''
       offset: '00000000'
     - name: VPICD_Post_Sys_Critical_Init
       processed: ''
-      offset: 0000037C
-    - name: VPICD_Init_Complete
-      processed: ''
-      offset: '000003E4'
-    - name: VPICD_API_Init
-      processed: ''
-      offset: '00000410'
-    - name: VPICD_PnP_Init
-      processed: ''
-      offset: 000004A0
+      offset: '00000333'
     - name: VPICDArb_Init_Complete
       processed: ''
-      offset: '00000552'
-    - name: DumpHexChar
-      processed: ''
-      offset: '000005E3'
-    - name: VPICD_IO_Table
-      processed: ''
-      offset: 0000060E
-    - name: VPICD_IRQ9_Global_Str
-      processed: ''
-      offset: 000007B8
-  - num: '5'
-    name: _PDATA
-    offset: '00004250'
-    symbols:
-    - name: fIRQARBITDebug
-      processed: ''
-      offset: '00000000'
+      offset: 000004F9
   - num: '6'
     name: _DBOGROUP
-    offset: 000046C0
+    offset: '000006E0'
     symbols:
-    - name: VPICD_Debug_Arb
-      processed: ''
-      offset: '00000000'
     - name: VPICD_Debug_Info
       processed: ''
-      offset: 000000F1
-    - name: VPICD_Debug_Global_Info
-      processed: ''
-      offset: '00000144'
-    - name: VPICD_Debug_Local_Info
-      processed: ''
-      offset: 0000024B
-    - name: VPICD_Debug_IRQ_Handler_Info
-      processed: ''
-      offset: '00000398'
-    - name: VPICD_Debug_IRQ_Title
-      processed: ''
-      offset: 0000048B
-    - name: VPICD_Debug_Show_IRQs
-      processed: ''
-      offset: 000004A2
+      offset: 000000D9
   - num: '7'
-    name: _LOCKABLE
-    offset: '00004730'
+    name: SYSEXIT
+    offset: '00000720'
     symbols:
     - name: VPICD_Stop_Using_Stacks
       processed: ''
       offset: '00000000'
   - num: '8'
-    name: _RARE
-    offset: 000047C0
+    name: RARE
+    offset: '00000000'
     symbols:
     - name: VPICD_Begin_PM_App
       processed: ''
       offset: '00000000'
-  - num: '9'
-    name: _VMDESTROY
-    offset: '00000000'
-    symbols:
-    - name: VPICD_Arbitrate
-      processed: ''
-      offset: '00000000'
-    - name: VPICD_Test_Alloc
-      processed: ''
-      offset: 0000002B
-    - name: VPICD_Alloc_Elements
-      processed: ''
-      offset: '00000094'
-    - name: VPICD_Next_Element
-      processed: ''
-      offset: '00000214'
-    - name: VPICD_Dup_Alloc
-      processed: ''
-      offset: 0000024A
-    - name: VPICD_Retest_Alloc
-      processed: ''
-      offset: '00000273'
-    - name: VPICD_Force_Alloc
-      processed: ''
-      offset: 0000036F
-    - name: VPICD_Set_Alloc
-      processed: ''
-      offset: '00000385'
-    - name: VPICD_Apply_Alloc
-      processed: ''
-      offset: 000003C4
-    - name: VPICD_Release_Alloc
-      processed: ''
-      offset: '00000498'
-    - name: VPICD_Query_Free
-      processed: ''
-      offset: 000004B0
-    - name: VPICD_Remove
-      processed: ''
-      offset: '000004E7'
-    - name: VPICD_Query_Arbitrate
-      processed: ''
-      offset: 000004EF
-    - name: VPICD_Add_Reserve
-      processed: ''
-      offset: 000004F7
-    - name: VPICD_Write_Reserve
-      processed: ''
-      offset: 000004FF
-    - name: VPICD_Begin_PnP_Mode
-      processed: ''
-      offset: '00000507'
-    - name: VPICD_Sort_Res_Desc
-      processed: ''
-      offset: '00000512'
-    - name: VPICD_Arb_Unalloc
-      processed: ''
-      offset: 000005AD
-    - name: _VPICD_Get_Level_Mask
-      processed: ''
-      offset: 0000061F
-    - name: _VPICD_Set_Level_Mask
-      processed: ''
-      offset: 0000063F
-    - name: _VPICD_Register_Trigger_Handler
-      processed: ''
-      offset: '00000674'
-    - name: VPICD_VXDLDR_Notify
-      processed: ''
-      offset: 000006B8
 - version: Windows 98 Retail
   source_tree:
   - ../defint.asm
@@ -1635,12 +1015,19 @@ appearances:
     - name: _VPICD_Register_Trigger_Handler
       demangled: ''
       offset: '00000522'
-- version: Windows 95
-  source_tree: []
+- version: Windows 98 Debug
+  source_tree:
+  - ../defint.asm
+  - ../vpicdapi.asm
+  - ../vpicdarb.asm
+  - ../vpicd.asm
+  - ../vpicdbg.asm
+  - ../vpicdio.asm
+  - ../vpicserv.asm
   segments:
   - num: '1'
     name: _LGROUP
-    offset: '00000620'
+    offset: 00003B70
     symbols:
     - name: VPICD_Force_Default_Owner
       demangled: ''
@@ -1650,196 +1037,816 @@ appearances:
       offset: 000000A8
     - name: VPICD_Get_Virtualization_Count
       demangled: ''
-      offset: '00000160'
+      offset: '000001E3'
+    - name: Def_Int_IRQ9_Owner_Detect
+      demangled: ''
+      offset: '00000222'
+    - name: Def_Int_Detect_IRQ9_Event
+      demangled: ''
+      offset: '00000230'
+    - name: Def_Int_PM_Vec_Hook
+      demangled: ''
+      offset: 000002BB
+    - name: Default_IRQ9_EOI
+      demangled: ''
+      offset: '00000320'
+    - name: Default_Cascade_EOI
+      demangled: ''
+      offset: 0000034C
+    - name: Default_INT
+      demangled: ''
+      offset: '00000370'
+    - name: Default_EOI
+      demangled: ''
+      offset: 000003BC
+    - name: Default_Shared_EOI
+      demangled: ''
+      offset: 000003C8
+    - name: Default_PM_Share_Int
+      demangled: ''
+      offset: 000003D3
+    - name: Default_MASK
+      demangled: ''
+      offset: 000003DC
+    - name: Default_Iret
+      demangled: ''
+      offset: 000004EF
+    - name: Default_Shared_IRET
+      demangled: ''
+      offset: 000004F9
+    - name: Def_Int_Share_Error_EOI
+      demangled: ''
+      offset: 000006B3
+    - name: Def_Int_Share_Error_Timeout
+      demangled: ''
+      offset: 000006D4
+    - name: Def_Int_Share_Error_IRET
+      demangled: ''
+      offset: 000006FC
+    - name: Def_Int_Share_Error_Bitch
+      demangled: ''
+      offset: '00000717'
+    - name: Def_Int_Share_Error
+      demangled: ''
+      offset: '00000728'
+    - name: VPICD_Power_Handler
+      demangled: ''
+      offset: 000007CC
+    - name: ReInitializePIC
+      demangled: ''
+      offset: '00000855'
     - name: VPICD_Control
       demangled: ''
-      offset: 000004C4
+      offset: 000008CD
     - name: VPICD_Sys_Critical_Exit
       demangled: ''
-      offset: 0000051F
+      offset: '00000928'
     - name: VPICD_Create_VM
       demangled: ''
-      offset: '00000579'
+      offset: '00000982'
     - name: VPICD_Not_Executeable
       demangled: ''
-      offset: 000005B9
+      offset: 000009C2
     - name: VPICD_Thread_Not_Executeable
       demangled: ''
-      offset: '00000658'
+      offset: 00000A61
+    - name: VPICD_Set_Virt_Mask
+      demangled: ''
+      offset: 00000A88
+    - name: VPICD_State_Change_Event
+      demangled: ''
+      offset: 00000B90
+    - name: VPICD_Adjust_Pri_Boost
+      demangled: ''
+      offset: 00000BA4
+    - name: VPICD_Simulate_Int
+      demangled: ''
+      offset: 00000C40
+    - name: VPICD_Begin_V86_Int_Stack
+      demangled: ''
+      offset: 00000FA3
+    - name: VPICD_Set_VxD_PM_From_V86
+      demangled: ''
+      offset: '00001075'
+    - name: VPICD_IRET_PM_From_V86
+      demangled: ''
+      offset: 0000107C
+    - name: VPICD_Set_VxD_PM_From_PM
+      demangled: ''
+      offset: '00001094'
+    - name: VPICD_IRET_PM_From_PM
+      demangled: ''
+      offset: 000010A6
+    - name: VPICD_Set_VxD_V86_From_PM
+      demangled: ''
+      offset: 000010B4
+    - name: VPICD_IRET_V86_From_PM
+      demangled: ''
+      offset: 000010B8
+    - name: VPICD_End_V86_Int_Stack
+      demangled: ''
+      offset: 000010CA
+    - name: VPICD_Set_VxD_V86_From_V86
+      demangled: ''
+      offset: 0000118F
+    - name: VPICD_IRET_V86_From_V86
+      demangled: ''
+      offset: '00001193'
+    - name: VPICD_IRET_Call_Devices
+      demangled: ''
+      offset: 000011B7
+    - name: VPICD_Time_Out
+      demangled: ''
+      offset: 0000125D
+    - name: VPICD_Hook_Int_Serv_Hook
+      demangled: ''
+      offset: 0000133D
+    - name: VPICD_Common_Int_Code
+      demangled: ''
+      offset: '00001354'
+    - name: VPICD_Common_Slave_Int
+      demangled: ''
+      offset: '00001354'
+    - name: VPICD_Common_Master_Int
+      demangled: ''
+      offset: 0000135A
+    - name: VPICD_Common_Shared_Slave_Int
+      demangled: ''
+      offset: '00001504'
+    - name: VPICD_Common_Shared_Int_Code
+      demangled: ''
+      offset: '00001504'
+    - name: VPICD_Common_Shared_Master_Int
+      demangled: ''
+      offset: 0000150A
+    - name: VPICD_Slave_Mask_Change_Proc
+      demangled: ''
+      offset: 0000156D
+    - name: Hw_IRQ_0
+      demangled: ''
+      offset: '00001574'
+    - name: Hw_IRQ_1
+      demangled: ''
+      offset: 000015A8
+    - name: Hw_IRQ_3
+      demangled: ''
+      offset: 000015DC
+    - name: Hw_IRQ_4
+      demangled: ''
+      offset: '00001610'
+    - name: Hw_IRQ_5
+      demangled: ''
+      offset: '00001644'
+    - name: Hw_IRQ_6
+      demangled: ''
+      offset: '00001678'
+    - name: Hw_IRQ_7
+      demangled: ''
+      offset: 000016AC
+    - name: Hw_IRQ_8
+      demangled: ''
+      offset: 000016F0
+    - name: Hw_IRQ_9
+      demangled: ''
+      offset: '00001724'
+    - name: Hw_IRQ_10
+      demangled: ''
+      offset: '00001758'
+    - name: Hw_IRQ_11
+      demangled: ''
+      offset: 0000178C
+    - name: Hw_IRQ_12
+      demangled: ''
+      offset: 000017C0
+    - name: Hw_IRQ_13
+      demangled: ''
+      offset: 000017F4
+    - name: Hw_IRQ_14
+      demangled: ''
+      offset: '00001828'
+    - name: Hw_IRQ_15
+      demangled: ''
+      offset: 0000185C
+    - name: Hw_IRQ_2
+      demangled: ''
+      offset: 000018A0
+    - name: VPICD_Slave_Error
+      demangled: ''
+      offset: 000018AC
     - name: VPICD_API
       demangled: ''
-      offset: 000011B8
+      offset: 000018C0
+    - name: VPICD_API_Convert_LDT_To_GDT
+      demangled: ''
+      offset: 00001A27
+    - name: VPICD_Common_API_Int
+      demangled: ''
+      offset: 00001A7F
+    - name: VPICD_API_Call_From_Use16
+      demangled: ''
+      offset: 00001ABC
+    - name: VPICD_BIH_EOI
+      demangled: ''
+      offset: 00001AF8
+    - name: VPICD_BIH_Mask
+      demangled: ''
+      offset: 00001B00
+    - name: VPICD_BIH_Unmask
+      demangled: ''
+      offset: 00001B08
+    - name: VPICD_BIH_Get_Mask
+      demangled: ''
+      offset: 00001B10
+    - name: VPICD_BIH_Get_IRR
+      demangled: ''
+      offset: 00001B20
+    - name: VPICD_BIH_Get_ISR
+      demangled: ''
+      offset: 00001B28
+    - name: VPICD_BIH_Call_Back_PM
+      demangled: ''
+      offset: 00001B34
+    - name: VPICD_BHI_Call_PM_Event
+      demangled: ''
+      offset: 00001BA1
     - name: VPICD_Virtual_EOI
       demangled: ''
-      offset: '00001502'
+      offset: 00001C0E
+    - name: VPICD_Simulate_IO_0
+      demangled: ''
+      offset: 00001C40
+    - name: VPICD_Trap_SP0
+      demangled: ''
+      offset: 00001C48
+    - name: VPICD_In_0
+      demangled: ''
+      offset: 00001C5D
+    - name: VPICD_Trap_MP0
+      demangled: ''
+      offset: 00001C88
+    - name: VPICD_Out_0
+      demangled: ''
+      offset: 00001C9B
+    - name: VPICD_Simulate_IO_1
+      demangled: ''
+      offset: 00001D80
+    - name: VPICD_Trap_SP1
+      demangled: ''
+      offset: 00001D88
+    - name: VPICD_In_1
+      demangled: ''
+      offset: 00001D99
+    - name: VPICD_Trap_MP1
+      demangled: ''
+      offset: 00001DA0
+    - name: VPICD_Out_1
+      demangled: ''
+      offset: 00001DAF
+    - name: VPICD_Not_Supported
+      demangled: ''
+      offset: '00001E14'
     - name: VPICD_Get_Version
       demangled: ''
-      offset: 0000171E
+      offset: 00001E2A
     - name: VPICD_Virtualize_IRQ
       demangled: ''
-      offset: 0000173D
+      offset: '00001E49'
     - name: VPICD_Set_Int_Request
       demangled: ''
-      offset: 000018EC
+      offset: '00002144'
     - name: VPICD_Clear_Int_Request
       demangled: ''
-      offset: 0000197C
+      offset: 000021D4
     - name: VPICD_Get_Complete_Status
       demangled: ''
-      offset: 000019F8
+      offset: '00002250'
     - name: VPICD_Get_Status
       demangled: ''
-      offset: 00001A98
+      offset: 000022F0
     - name: VPICD_Test_Phys_Request
       demangled: ''
-      offset: 00001AF3
+      offset: 0000234B
     - name: VPICD_Phys_EOI
       demangled: ''
-      offset: 00001B38
+      offset: '00002390'
     - name: VPICD_Convert_IRQ_To_Int
       demangled: ''
-      offset: 00001B97
+      offset: '00002415'
     - name: VPICD_Convert_Int_To_IRQ
       demangled: ''
-      offset: 00001BD7
+      offset: '00002455'
+    - name: VPICD_CITI_Test_Range
+      demangled: ''
+      offset: 000024A2
     - name: VPICD_Get_IRQ_Complete_Status
       demangled: ''
-      offset: 00001C3A
+      offset: 000024B8
     - name: VPICD_Convert_Handle_To_IRQ
       demangled: ''
-      offset: 00001C86
+      offset: '00002504'
     - name: VPICD_Physically_Mask
       demangled: ''
-      offset: 00001CB4
+      offset: '00002534'
     - name: VPICD_Physically_Unmask
       demangled: ''
-      offset: 00001D08
+      offset: 000025AC
     - name: VPICD_Set_Auto_Masking
       demangled: ''
-      offset: 00001D5C
+      offset: '00002624'
     - name: VPICD_Call_When_Hw_Int
       demangled: ''
-      offset: 00001DBE
+      offset: 000026AC
+    - name: VPICD_Bogus_Hw_Filter
+      demangled: ''
+      offset: 000026CE
     - name: VPICD_Auto_Mask_At_Inst_Swap
       demangled: ''
-      offset: 00001DE7
+      offset: 000026D5
     - name: VPICD_Begin_Inst_Page_Swap
       demangled: ''
-      offset: '00001E28'
+      offset: '00002718'
     - name: VPICD_End_Inst_Page_Swap
       demangled: ''
-      offset: '00001E48'
+      offset: '00002738'
+    - name: VPICD_VM_SlavePIC_Mask_Change
+      demangled: ''
+      offset: '00002796'
+    - name: clr_ir_int_proc
+      demangled: ''
+      offset: 000027A3
+    - name: clr_ir_enable_int
+      demangled: ''
+      offset: 000027C3
+    - name: _VPICD_Clear_IR_Bits
+      demangled: ''
+      offset: '00002809'
+    - name: _VPICD_Set_Irql_Mask
+      demangled: ''
+      offset: '00002889'
+    - name: _VPICD_Prepare_For_Shutdown
+      demangled: ''
+      offset: 000028DE
+    - name: _VPICD_Set_Channel_Irql
+      demangled: ''
+      offset: '00002924'
+    - name: VPICD_PreAlloc_IRQ
+      demangled: ''
+      offset: '00002978'
+    - name: VPICDARB_Unmask
+      demangled: ''
+      offset: 0000299F
+    - name: VPICD_Release_IRQ
+      demangled: ''
+      offset: 000029BF
+    - name: Orig_V86_Int_0Ah_Vector
+      demangled: ''
+      offset: 000029FC
+    - name: Orig_V86_Int_71h_Vector
+      demangled: ''
+      offset: 00002A00
+    - name: Orig_PM_Int_0Ah_Vector
+      demangled: ''
+      offset: 00002A04
+    - name: Orig_PM_Int_71h_Vector
+      demangled: ''
+      offset: 00002A0A
+    - name: Def_Int_PM_Set_Vec_Chain
+      demangled: ''
+      offset: 00002A10
     - name: _VPICD_Get_Version
       demangled: ''
-      offset: 000020B8
+      offset: 00002BF0
     - name: _VPICD_Virtualize_IRQ
       demangled: ''
-      offset: 000020BC
+      offset: 00002BF4
     - name: _VPICD_Set_Int_Request
       demangled: ''
-      offset: 000020C0
+      offset: 00002BF8
     - name: _VPICD_Clear_Int_Request
       demangled: ''
-      offset: 000020C4
+      offset: 00002BFC
     - name: _VPICD_Phys_EOI
       demangled: ''
-      offset: 000020C8
+      offset: 00002C00
     - name: _VPICD_Get_Complete_Status
       demangled: ''
-      offset: 000020CC
+      offset: 00002C04
     - name: _VPICD_Get_Status
       demangled: ''
-      offset: 000020D0
+      offset: 00002C08
     - name: _VPICD_Test_Phys_Request
       demangled: ''
-      offset: 000020D4
+      offset: 00002C0C
     - name: _VPICD_Physically_Mask
       demangled: ''
-      offset: 000020D8
+      offset: 00002C10
     - name: _VPICD_Physically_Unmask
       demangled: ''
-      offset: 000020DC
+      offset: 00002C14
     - name: _VPICD_Set_Auto_Masking
       demangled: ''
-      offset: '000020E0'
+      offset: 00002C18
     - name: _VPICD_Get_IRQ_Complete_Status
       demangled: ''
-      offset: '000020E4'
+      offset: 00002C1C
     - name: _VPICD_Convert_Handle_To_IRQ
       demangled: ''
-      offset: '000020E8'
+      offset: 00002C20
     - name: _VPICD_Convert_IRQ_To_Int
       demangled: ''
-      offset: 000020EC
+      offset: 00002C24
     - name: _VPICD_Convert_Int_To_IRQ
       demangled: ''
-      offset: 000020F0
+      offset: 00002C28
     - name: _VPICD_Call_When_Hw_Int
       demangled: ''
-      offset: 000020F4
+      offset: 00002C2C
     - name: _VPICD_Force_Default_Owner
       demangled: ''
-      offset: 000020F8
+      offset: 00002C30
     - name: _VPICD_Force_Default_Behavior
       demangled: ''
-      offset: 000020FC
+      offset: 00002C34
     - name: _VPICD_Auto_Mask_At_Inst_Swap
       demangled: ''
-      offset: '00002100'
+      offset: 00002C38
     - name: _VPICD_Begin_Inst_Page_Swap
       demangled: ''
-      offset: '00002104'
+      offset: 00002C3C
     - name: _VPICD_End_Inst_Page_Swap
       demangled: ''
-      offset: '00002108'
+      offset: 00002C40
     - name: _VPICD_Virtual_EOI
       demangled: ''
-      offset: 0000210C
+      offset: 00002C44
     - name: _VPICD_Get_Virtualization_Count
       demangled: ''
-      offset: '00002110'
+      offset: 00002C48
     - name: _VPICD_Post_Sys_Critical_Init
       demangled: ''
-      offset: '00002114'
+      offset: 00002C4C
+    - name: _VPICD_VM_SlavePIC_Mask_Change
+      demangled: ''
+      offset: 00002C50
+    - name: __VPICD_Clear_IR_Bits
+      demangled: ''
+      offset: 00002C54
+    - name: __VPICD_Get_Level_Mask
+      demangled: ''
+      offset: 00002C58
+    - name: __VPICD_Set_Level_Mask
+      demangled: ''
+      offset: 00002C5C
+    - name: __VPICD_Set_Irql_Mask
+      demangled: ''
+      offset: 00002C60
+    - name: __VPICD_Set_Channel_Irql
+      demangled: ''
+      offset: 00002C64
+    - name: __VPICD_Prepare_For_Shutdown
+      demangled: ''
+      offset: 00002C68
+    - name: __VPICD_Register_Trigger_Handler
+      demangled: ''
+      offset: 00002C6C
     - name: VPICD_DDB
       demangled: ''
-      offset: 0000211C
+      offset: 00002C70
+    - name: VPICD_Phys_IMR
+      demangled: ''
+      offset: 00002CC0
+    - name: VPICD_Phys_ISR
+      demangled: ''
+      offset: 00002CC2
+    - name: VPICD_Hardware_IRR
+      demangled: ''
+      offset: 00002CC4
+    - name: VPICD_Def_IMR
+      demangled: ''
+      offset: 00002CC6
+    - name: VPICD_Inst_Swap_Mask
+      demangled: ''
+      offset: 00002CC8
+    - name: VPICD_Last_IMR
+      demangled: ''
+      offset: 00002CCA
+    - name: VPICD_Irql_IMR
+      demangled: ''
+      offset: 00002CCC
+    - name: VPICD_Hw_Int_Filter
+      demangled: ''
+      offset: 00002CD0
+    - name: VPICD_SIRQ_Alloc_List
+      demangled: ''
+      offset: 00002CD4
+    - name: VPICD_Irql_Mask_Table
+      demangled: ''
+      offset: 00002CFC
+    - name: VIRQ_0
+      demangled: ''
+      offset: 00002D3C
+    - name: VIRQ_1
+      demangled: ''
+      offset: 00002D7C
+    - name: VIRQ_2
+      demangled: ''
+      offset: 00002DBC
+    - name: VIRQ_3
+      demangled: ''
+      offset: 00002DFC
+    - name: VIRQ_4
+      demangled: ''
+      offset: 00002E3C
+    - name: VIRQ_5
+      demangled: ''
+      offset: 00002E7C
+    - name: VIRQ_6
+      demangled: ''
+      offset: 00002EBC
+    - name: VIRQ_7
+      demangled: ''
+      offset: 00002EFC
+    - name: VIRQ_8
+      demangled: ''
+      offset: 00002F3C
+    - name: VIRQ_9
+      demangled: ''
+      offset: 00002F7C
+    - name: VIRQ_10
+      demangled: ''
+      offset: 00002FBC
+    - name: VIRQ_11
+      demangled: ''
+      offset: 00002FFC
+    - name: VIRQ_12
+      demangled: ''
+      offset: 0000303C
+    - name: VIRQ_13
+      demangled: ''
+      offset: 0000307C
+    - name: VIRQ_14
+      demangled: ''
+      offset: 000030BC
+    - name: VIRQ_15
+      demangled: ''
+      offset: 000030FC
+    - name: SIRQ_0
+      demangled: ''
+      offset: 0000313C
+    - name: SIRQ_1
+      demangled: ''
+      offset: '00003170'
+    - name: SIRQ_2
+      demangled: ''
+      offset: 000031A4
+    - name: SIRQ_3
+      demangled: ''
+      offset: 000031D8
+    - name: SIRQ_4
+      demangled: ''
+      offset: 0000320C
+    - name: SIRQ_5
+      demangled: ''
+      offset: '00003240'
+    - name: SIRQ_6
+      demangled: ''
+      offset: '00003274'
+    - name: SIRQ_7
+      demangled: ''
+      offset: 000032A8
+    - name: SIRQ_8
+      demangled: ''
+      offset: 000032DC
+    - name: SIRQ_9
+      demangled: ''
+      offset: '00003310'
+    - name: SIRQ_10
+      demangled: ''
+      offset: '00003344'
+    - name: SIRQ_11
+      demangled: ''
+      offset: '00003378'
+    - name: SIRQ_12
+      demangled: ''
+      offset: 000033AC
+    - name: SIRQ_13
+      demangled: ''
+      offset: '000033E0'
+    - name: SIRQ_14
+      demangled: ''
+      offset: '00003414'
+    - name: SIRQ_15
+      demangled: ''
+      offset: '00003448'
+    - name: VPICD_Priority_XRef
+      demangled: ''
+      offset: 0000347C
+    - name: VPICD_IRQ_Convert
+      demangled: ''
+      offset: 000034BC
+    - name: VPICD_CB_Offset
+      demangled: ''
+      offset: 000034FC
+    - name: PEF_state_CB_offset
+      demangled: ''
+      offset: '00003500'
+    - name: SYSVM_Stack_Seg
+      demangled: ''
+      offset: '00003528'
+    - name: fSimulatedIntsOK
+      demangled: ''
+      offset: '00003548'
+    - name: VPICD_ES_Mask
+      demangled: ''
+      offset: '00003549'
+    - name: VPICD_Shared_Hook_Off_Tbl
+      demangled: ''
+      offset: 0000354C
+    - name: VPICD_Shared_Hook_Tbl
+      demangled: ''
+      offset: '00003588'
+    - name: VPICD_ES_Hooked_Mask
+      demangled: ''
+      offset: 00003B18
+    - name: VPICD_Arb_Data
+      demangled: ''
+      offset: 000041CE
+  - num: '2'
+    name: _LMGROUP
+    offset: 00003BB0
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000014'
+  - num: '3'
+    name: _IMGROUP
+    offset: 00003BF0
+    symbols:
+    - name: '@MSG_IAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_IDATA'
+      demangled: ''
+      offset: '00000010'
   - num: '4'
     name: _IGROUP
-    offset: 000006A0
+    offset: '00004220'
     symbols:
     - name: VPICD_Sys_Critical_Init
       demangled: ''
       offset: '00000000'
     - name: VPICD_Post_Sys_Critical_Init
       demangled: ''
-      offset: '00000333'
+      offset: 0000037C
+    - name: VPICD_Init_Complete
+      demangled: ''
+      offset: '000003E4'
+    - name: VPICD_API_Init
+      demangled: ''
+      offset: '00000410'
+    - name: VPICD_PnP_Init
+      demangled: ''
+      offset: 000004A0
     - name: VPICDArb_Init_Complete
       demangled: ''
-      offset: 000004F9
+      offset: '00000552'
+    - name: DumpHexChar
+      demangled: ''
+      offset: '000005E3'
+    - name: VPICD_IO_Table
+      demangled: ''
+      offset: 0000060E
+    - name: VPICD_IRQ9_Global_Str
+      demangled: ''
+      offset: 000007B8
+  - num: '5'
+    name: _PDATA
+    offset: '00004250'
+    symbols:
+    - name: fIRQARBITDebug
+      demangled: ''
+      offset: '00000000'
   - num: '6'
     name: _DBOGROUP
-    offset: '000006E0'
+    offset: 000046C0
     symbols:
+    - name: VPICD_Debug_Arb
+      demangled: ''
+      offset: '00000000'
     - name: VPICD_Debug_Info
       demangled: ''
-      offset: 000000D9
+      offset: 000000F1
+    - name: VPICD_Debug_Global_Info
+      demangled: ''
+      offset: '00000144'
+    - name: VPICD_Debug_Local_Info
+      demangled: ''
+      offset: 0000024B
+    - name: VPICD_Debug_IRQ_Handler_Info
+      demangled: ''
+      offset: '00000398'
+    - name: VPICD_Debug_IRQ_Title
+      demangled: ''
+      offset: 0000048B
+    - name: VPICD_Debug_Show_IRQs
+      demangled: ''
+      offset: 000004A2
   - num: '7'
-    name: SYSEXIT
-    offset: '00000720'
+    name: _LOCKABLE
+    offset: '00004730'
     symbols:
     - name: VPICD_Stop_Using_Stacks
       demangled: ''
       offset: '00000000'
   - num: '8'
-    name: RARE
-    offset: '00000000'
+    name: _RARE
+    offset: 000047C0
     symbols:
     - name: VPICD_Begin_PM_App
       demangled: ''
       offset: '00000000'
+  - num: '9'
+    name: _VMDESTROY
+    offset: '00000000'
+    symbols:
+    - name: VPICD_Arbitrate
+      demangled: ''
+      offset: '00000000'
+    - name: VPICD_Test_Alloc
+      demangled: ''
+      offset: 0000002B
+    - name: VPICD_Alloc_Elements
+      demangled: ''
+      offset: '00000094'
+    - name: VPICD_Next_Element
+      demangled: ''
+      offset: '00000214'
+    - name: VPICD_Dup_Alloc
+      demangled: ''
+      offset: 0000024A
+    - name: VPICD_Retest_Alloc
+      demangled: ''
+      offset: '00000273'
+    - name: VPICD_Force_Alloc
+      demangled: ''
+      offset: 0000036F
+    - name: VPICD_Set_Alloc
+      demangled: ''
+      offset: '00000385'
+    - name: VPICD_Apply_Alloc
+      demangled: ''
+      offset: 000003C4
+    - name: VPICD_Release_Alloc
+      demangled: ''
+      offset: '00000498'
+    - name: VPICD_Query_Free
+      demangled: ''
+      offset: 000004B0
+    - name: VPICD_Remove
+      demangled: ''
+      offset: '000004E7'
+    - name: VPICD_Query_Arbitrate
+      demangled: ''
+      offset: 000004EF
+    - name: VPICD_Add_Reserve
+      demangled: ''
+      offset: 000004F7
+    - name: VPICD_Write_Reserve
+      demangled: ''
+      offset: 000004FF
+    - name: VPICD_Begin_PnP_Mode
+      demangled: ''
+      offset: '00000507'
+    - name: VPICD_Sort_Res_Desc
+      demangled: ''
+      offset: '00000512'
+    - name: VPICD_Arb_Unalloc
+      demangled: ''
+      offset: 000005AD
+    - name: _VPICD_Get_Level_Mask
+      demangled: ''
+      offset: 0000061F
+    - name: _VPICD_Set_Level_Mask
+      demangled: ''
+      offset: 0000063F
+    - name: _VPICD_Register_Trigger_Handler
+      demangled: ''
+      offset: '00000674'
+    - name: VPICD_VXDLDR_Notify
+      demangled: ''
+      offset: 000006B8
 - version: Windows 98SE Debug
-  source_tree: []
+  source_tree:
+  - ../defint.asm
+  - ../vpicdapi.asm
+  - ../vpicdarb.asm
+  - ../vpicd.asm
+  - ../vpicdbg.asm
+  - ../vpicdio.asm
+  - ../vpicserv.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -2655,7 +2662,14 @@ appearances:
       demangled: ''
       offset: 000006B8
 - version: Windows 98SE Retail
-  source_tree: []
+  source_tree:
+  - ../defint.asm
+  - ../vpicdapi.asm
+  - ../vpicdarb.asm
+  - ../vpicd.asm
+  - ../vpicdbg.asm
+  - ../vpicdio.asm
+  - ../vpicserv.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -3457,3 +3471,1628 @@ appearances:
     - name: _VPICD_Register_Trigger_Handler
       demangled: ''
       offset: '00000522'
+- version: Windows ME Retail
+  source_tree:
+  - ../../../../../dev/ddk/inc/Debug.Inc
+  - ../../../../../dev/ddk/inc/DOSMGR.INC
+  - ../../../../../dev/ddk/inc/OptTest.Inc
+  - ../../../../../dev/ddk/inc/VMM.Inc
+  - ../../../../../dev/ddk/inc/VPICD.Inc
+  - ../vpicd.asm
+  segments:
+  - num: '1'
+    name: _LDATA
+    offset: 000012F0
+    symbols:
+    - name: Orig_V86_Int_0Ah_Vector
+      demangled: ''
+      offset: '00000000'
+    - name: Orig_V86_Int_71h_Vector
+      demangled: ''
+      offset: '00000004'
+    - name: Orig_PM_Int_0Ah_Vector
+      demangled: ''
+      offset: '00000008'
+    - name: Orig_PM_Int_71h_Vector
+      demangled: ''
+      offset: 0000000E
+    - name: Def_Int_PM_Set_Vec_Chain
+      demangled: ''
+      offset: '00000014'
+    - name: _VPICD_Get_Version
+      demangled: ''
+      offset: '00000018'
+    - name: _VPICD_Virtualize_IRQ
+      demangled: ''
+      offset: 0000001C
+    - name: _VPICD_Set_Int_Request
+      demangled: ''
+      offset: '00000020'
+    - name: _VPICD_Clear_Int_Request
+      demangled: ''
+      offset: '00000024'
+    - name: _VPICD_Phys_EOI
+      demangled: ''
+      offset: '00000028'
+    - name: _VPICD_Get_Complete_Status
+      demangled: ''
+      offset: 0000002C
+    - name: _VPICD_Get_Status
+      demangled: ''
+      offset: '00000030'
+    - name: _VPICD_Test_Phys_Request
+      demangled: ''
+      offset: '00000034'
+    - name: _VPICD_Physically_Mask
+      demangled: ''
+      offset: '00000038'
+    - name: _VPICD_Physically_Unmask
+      demangled: ''
+      offset: 0000003C
+    - name: _VPICD_Set_Auto_Masking
+      demangled: ''
+      offset: '00000040'
+    - name: _VPICD_Get_IRQ_Complete_Status
+      demangled: ''
+      offset: '00000044'
+    - name: _VPICD_Convert_Handle_To_IRQ
+      demangled: ''
+      offset: '00000048'
+    - name: _VPICD_Convert_IRQ_To_Int
+      demangled: ''
+      offset: 0000004C
+    - name: _VPICD_Convert_Int_To_IRQ
+      demangled: ''
+      offset: '00000050'
+    - name: _VPICD_Call_When_Hw_Int
+      demangled: ''
+      offset: '00000054'
+    - name: _VPICD_Force_Default_Owner
+      demangled: ''
+      offset: '00000058'
+    - name: _VPICD_Force_Default_Behavior
+      demangled: ''
+      offset: 0000005C
+    - name: _VPICD_Auto_Mask_At_Inst_Swap
+      demangled: ''
+      offset: '00000060'
+    - name: _VPICD_Begin_Inst_Page_Swap
+      demangled: ''
+      offset: '00000064'
+    - name: _VPICD_End_Inst_Page_Swap
+      demangled: ''
+      offset: '00000068'
+    - name: _VPICD_Virtual_EOI
+      demangled: ''
+      offset: 0000006C
+    - name: _VPICD_Get_Virtualization_Count
+      demangled: ''
+      offset: '00000070'
+    - name: _VPICD_Post_Sys_Critical_Init
+      demangled: ''
+      offset: '00000074'
+    - name: _VPICD_VM_SlavePIC_Mask_Change
+      demangled: ''
+      offset: '00000078'
+    - name: __VPICD_Clear_IR_Bits
+      demangled: ''
+      offset: 0000007C
+    - name: __VPICD_Set_Irql_Mask
+      demangled: ''
+      offset: '00000088'
+    - name: __VPICD_Set_Channel_Irql
+      demangled: ''
+      offset: 0000008C
+    - name: __VPICD_Prepare_For_Shutdown
+      demangled: ''
+      offset: '00000090'
+    - name: __VPICD_Register_Trigger_Handler
+      demangled: ''
+      offset: '00000094'
+    - name: VPICD_DDB
+      demangled: ''
+      offset: '00000098'
+    - name: VPICD_Phys_IMR
+      demangled: ''
+      offset: '000000E8'
+    - name: VPICD_Phys_ISR
+      demangled: ''
+      offset: 000000EA
+    - name: VPICD_Hardware_IRR
+      demangled: ''
+      offset: 000000EC
+    - name: VPICD_Def_IMR
+      demangled: ''
+      offset: 000000EE
+    - name: VPICD_Inst_Swap_Mask
+      demangled: ''
+      offset: 000000F0
+    - name: VPICD_Last_IMR
+      demangled: ''
+      offset: 000000F2
+    - name: VPICD_Irql_IMR
+      demangled: ''
+      offset: 000000F4
+    - name: VPICD_Hw_Int_Filter
+      demangled: ''
+      offset: 000000F8
+    - name: VPICD_SIRQ_Alloc_List
+      demangled: ''
+      offset: 000000FC
+    - name: VPICD_Irql_Mask_Table
+      demangled: ''
+      offset: '00000124'
+    - name: VIRQ_0
+      demangled: ''
+      offset: '00000164'
+    - name: VIRQ_1
+      demangled: ''
+      offset: 000001A4
+    - name: VIRQ_2
+      demangled: ''
+      offset: '000001E4'
+    - name: VIRQ_3
+      demangled: ''
+      offset: '00000224'
+    - name: VIRQ_4
+      demangled: ''
+      offset: '00000264'
+    - name: VIRQ_5
+      demangled: ''
+      offset: 000002A4
+    - name: VIRQ_6
+      demangled: ''
+      offset: '000002E4'
+    - name: VIRQ_7
+      demangled: ''
+      offset: '00000324'
+    - name: VIRQ_8
+      demangled: ''
+      offset: '00000364'
+    - name: VIRQ_9
+      demangled: ''
+      offset: 000003A4
+    - name: VIRQ_10
+      demangled: ''
+      offset: '000003E4'
+    - name: VIRQ_11
+      demangled: ''
+      offset: '00000424'
+    - name: VIRQ_12
+      demangled: ''
+      offset: '00000464'
+    - name: VIRQ_13
+      demangled: ''
+      offset: 000004A4
+    - name: VIRQ_14
+      demangled: ''
+      offset: '000004E4'
+    - name: VIRQ_15
+      demangled: ''
+      offset: '00000524'
+    - name: SIRQ_0
+      demangled: ''
+      offset: '00000564'
+    - name: SIRQ_1
+      demangled: ''
+      offset: '00000598'
+    - name: SIRQ_2
+      demangled: ''
+      offset: 000005CC
+    - name: SIRQ_3
+      demangled: ''
+      offset: '00000600'
+    - name: SIRQ_4
+      demangled: ''
+      offset: '00000634'
+    - name: SIRQ_5
+      demangled: ''
+      offset: '00000668'
+    - name: SIRQ_6
+      demangled: ''
+      offset: 0000069C
+    - name: SIRQ_7
+      demangled: ''
+      offset: 000006D0
+    - name: SIRQ_8
+      demangled: ''
+      offset: '00000704'
+    - name: SIRQ_9
+      demangled: ''
+      offset: '00000738'
+    - name: SIRQ_10
+      demangled: ''
+      offset: 0000076C
+    - name: SIRQ_11
+      demangled: ''
+      offset: 000007A0
+    - name: SIRQ_12
+      demangled: ''
+      offset: 000007D4
+    - name: SIRQ_13
+      demangled: ''
+      offset: '00000808'
+    - name: SIRQ_14
+      demangled: ''
+      offset: 0000083C
+    - name: SIRQ_15
+      demangled: ''
+      offset: '00000870'
+    - name: VPICD_Priority_XRef
+      demangled: ''
+      offset: 000008A4
+    - name: VPICD_IRQ_Convert
+      demangled: ''
+      offset: '000008E4'
+    - name: VPICD_CB_Offset
+      demangled: ''
+      offset: '00000924'
+    - name: PEF_state_CB_offset
+      demangled: ''
+      offset: '00000928'
+    - name: SYSVM_Stack_Seg
+      demangled: ''
+      offset: '00000950'
+    - name: VPICD_ES_Mask
+      demangled: ''
+      offset: '00000970'
+    - name: VPICD_Shared_Hook_Off_Tbl
+      demangled: ''
+      offset: '00000974'
+    - name: VPICD_Shared_Hook_Tbl
+      demangled: ''
+      offset: 000009B0
+    - name: VPICD_ES_Hooked_Mask
+      demangled: ''
+      offset: 00000A64
+    - name: dwTriggerHandler
+      demangled: ''
+      offset: 00000A7C
+    - name: VPICD_Arb_Data
+      demangled: ''
+      offset: 00000A82
+    - name: VPICD_Force_Default_Owner
+      demangled: ''
+      offset: 00000AA0
+    - name: VPICD_Force_Default_Behavior
+      demangled: ''
+      offset: 00000B1A
+    - name: VPICD_Get_Virtualization_Count
+      demangled: ''
+      offset: 00000C2F
+    - name: Def_Int_IRQ9_Owner_Detect
+      demangled: ''
+      offset: 00000C59
+    - name: Def_Int_Detect_IRQ9_Event
+      demangled: ''
+      offset: 00000C67
+    - name: Def_Int_PM_Vec_Hook
+      demangled: ''
+      offset: 00000CEE
+    - name: Default_IRQ9_EOI
+      demangled: ''
+      offset: 00000D4B
+    - name: Default_Cascade_EOI
+      demangled: ''
+      offset: 00000D78
+    - name: Default_INT
+      demangled: ''
+      offset: 00000D9C
+    - name: Default_EOI
+      demangled: ''
+      offset: 00000DE8
+    - name: Default_Shared_EOI
+      demangled: ''
+      offset: 00000DF4
+    - name: Default_PM_Share_Int
+      demangled: ''
+      offset: 00000DFF
+    - name: Default_MASK
+      demangled: ''
+      offset: '00000E08'
+    - name: Default_Iret
+      demangled: ''
+      offset: 00000F10
+    - name: Default_Shared_IRET
+      demangled: ''
+      offset: 00000F1A
+    - name: Def_Int_Share_Error_EOI
+      demangled: ''
+      offset: 000010C5
+    - name: Def_Int_Share_Error_Timeout
+      demangled: ''
+      offset: '000010E8'
+    - name: Def_Int_Share_Error_IRET
+      demangled: ''
+      offset: '00001110'
+    - name: Def_Int_Share_Error_Bitch
+      demangled: ''
+      offset: 0000112B
+    - name: Def_Int_Share_Error
+      demangled: ''
+      offset: 0000113C
+    - name: VPICD_Power_Handler
+      demangled: ''
+      offset: 000011D0
+    - name: ReInitializePIC
+      demangled: ''
+      offset: 000012D6
+    - name: VPICD_Control
+      demangled: ''
+      offset: '00001323'
+    - name: VPICD_Create_VM
+      demangled: ''
+      offset: '00001377'
+    - name: VPICD_Not_Executeable
+      demangled: ''
+      offset: 000013B7
+    - name: VPICD_Thread_Not_Executeable
+      demangled: ''
+      offset: '00001456'
+    - name: VPICD_Set_Virt_Mask
+      demangled: ''
+      offset: '00001480'
+    - name: VPICD_State_Change_Event
+      demangled: ''
+      offset: '00001588'
+    - name: VPICD_Adjust_Pri_Boost
+      demangled: ''
+      offset: 0000159C
+    - name: VPICD_Simulate_Int
+      demangled: ''
+      offset: '00001634'
+    - name: VPICD_Begin_V86_Int_Stack
+      demangled: ''
+      offset: 000018F1
+    - name: VPICD_Set_VxD_PM_From_V86
+      demangled: ''
+      offset: 0000198A
+    - name: VPICD_IRET_PM_From_V86
+      demangled: ''
+      offset: '00001991'
+    - name: VPICD_Set_VxD_PM_From_PM
+      demangled: ''
+      offset: 000019A9
+    - name: VPICD_IRET_PM_From_PM
+      demangled: ''
+      offset: 000019BB
+    - name: VPICD_Set_VxD_V86_From_PM
+      demangled: ''
+      offset: 000019C9
+    - name: VPICD_IRET_V86_From_PM
+      demangled: ''
+      offset: 000019CD
+    - name: VPICD_End_V86_Int_Stack
+      demangled: ''
+      offset: 000019DF
+    - name: VPICD_Set_VxD_V86_From_V86
+      demangled: ''
+      offset: 00001A72
+    - name: VPICD_IRET_V86_From_V86
+      demangled: ''
+      offset: 00001A76
+    - name: VPICD_IRET_Call_Devices
+      demangled: ''
+      offset: 00001A9A
+    - name: VPICD_Time_Out
+      demangled: ''
+      offset: 00001B2E
+    - name: VPICD_Hook_Int_Serv_Hook
+      demangled: ''
+      offset: 00001BFA
+    - name: VPICD_Common_Int_Code
+      demangled: ''
+      offset: 00001C10
+    - name: VPICD_Common_Slave_Int
+      demangled: ''
+      offset: 00001C10
+    - name: VPICD_Common_Master_Int
+      demangled: ''
+      offset: 00001C16
+    - name: VPICD_Common_Shared_Slave_Int
+      demangled: ''
+      offset: 00001D80
+    - name: VPICD_Common_Shared_Int_Code
+      demangled: ''
+      offset: 00001D80
+    - name: VPICD_Common_Shared_Master_Int
+      demangled: ''
+      offset: 00001D86
+    - name: VPICD_Slave_Mask_Change_Proc
+      demangled: ''
+      offset: 00001DE9
+    - name: Hw_IRQ_0
+      demangled: ''
+      offset: 00001DF0
+    - name: Hw_IRQ_1
+      demangled: ''
+      offset: '00001E24'
+    - name: Hw_IRQ_3
+      demangled: ''
+      offset: '00001E58'
+    - name: Hw_IRQ_4
+      demangled: ''
+      offset: 00001E8C
+    - name: Hw_IRQ_5
+      demangled: ''
+      offset: 00001EC0
+    - name: Hw_IRQ_6
+      demangled: ''
+      offset: 00001EF4
+    - name: Hw_IRQ_7
+      demangled: ''
+      offset: 00001F28
+    - name: Hw_IRQ_8
+      demangled: ''
+      offset: 00001F6C
+    - name: Hw_IRQ_9
+      demangled: ''
+      offset: 00001FA0
+    - name: Hw_IRQ_10
+      demangled: ''
+      offset: 00001FD4
+    - name: Hw_IRQ_11
+      demangled: ''
+      offset: '00002008'
+    - name: Hw_IRQ_12
+      demangled: ''
+      offset: 0000203C
+    - name: Hw_IRQ_13
+      demangled: ''
+      offset: '00002070'
+    - name: Hw_IRQ_14
+      demangled: ''
+      offset: 000020A4
+    - name: Hw_IRQ_15
+      demangled: ''
+      offset: 000020D8
+    - name: Hw_IRQ_2
+      demangled: ''
+      offset: 0000211C
+    - name: VPICD_Slave_Error
+      demangled: ''
+      offset: 0000211D
+    - name: VPICD_API
+      demangled: ''
+      offset: '00002124'
+    - name: VPICD_API_Convert_LDT_To_GDT
+      demangled: ''
+      offset: '00002266'
+    - name: VPICD_Common_API_Int
+      demangled: ''
+      offset: 000022B8
+    - name: VPICD_API_Call_From_Use16
+      demangled: ''
+      offset: 000022F8
+    - name: VPICD_BIH_EOI
+      demangled: ''
+      offset: '00002334'
+    - name: VPICD_BIH_Mask
+      demangled: ''
+      offset: 0000233C
+    - name: VPICD_BIH_Unmask
+      demangled: ''
+      offset: '00002344'
+    - name: VPICD_BIH_Get_Mask
+      demangled: ''
+      offset: 0000234C
+    - name: VPICD_BIH_Get_IRR
+      demangled: ''
+      offset: 0000235C
+    - name: VPICD_BIH_Get_ISR
+      demangled: ''
+      offset: '00002364'
+    - name: VPICD_BIH_Call_Back_PM
+      demangled: ''
+      offset: '00002370'
+    - name: VPICD_BHI_Call_PM_Event
+      demangled: ''
+      offset: 000023D2
+    - name: VPICD_Virtual_EOI
+      demangled: ''
+      offset: '00002438'
+    - name: VPICD_Simulate_IO_0
+      demangled: ''
+      offset: 0000244E
+    - name: VPICD_Trap_SP0
+      demangled: ''
+      offset: '00002454'
+    - name: VPICD_In_0
+      demangled: ''
+      offset: '00002465'
+    - name: VPICD_Trap_MP0
+      demangled: ''
+      offset: '00002490'
+    - name: VPICD_Out_0
+      demangled: ''
+      offset: 0000249F
+    - name: VPICD_Simulate_IO_1
+      demangled: ''
+      offset: 0000256D
+    - name: VPICD_Trap_SP1
+      demangled: ''
+      offset: '00002574'
+    - name: VPICD_In_1
+      demangled: ''
+      offset: '00002585'
+    - name: VPICD_Trap_MP1
+      demangled: ''
+      offset: 0000258C
+    - name: VPICD_Out_1
+      demangled: ''
+      offset: 0000259B
+    - name: VPICD_Not_Supported
+      demangled: ''
+      offset: '000025E7'
+    - name: VPICD_Get_Version
+      demangled: ''
+      offset: 000025EC
+    - name: VPICD_Virtualize_IRQ
+      demangled: ''
+      offset: 000025FD
+    - name: VPICD_Set_Int_Request
+      demangled: ''
+      offset: '00002870'
+    - name: VPICD_Clear_Int_Request
+      demangled: ''
+      offset: 000028C4
+    - name: VPICD_Get_Complete_Status
+      demangled: ''
+      offset: 0000291C
+    - name: VPICD_Get_Status
+      demangled: ''
+      offset: '00002994'
+    - name: VPICD_Test_Phys_Request
+      demangled: ''
+      offset: 000029C7
+    - name: VPICD_Phys_EOI
+      demangled: ''
+      offset: 000029EC
+    - name: VPICD_Convert_IRQ_To_Int
+      demangled: ''
+      offset: 00002A4F
+    - name: VPICD_Convert_Int_To_IRQ
+      demangled: ''
+      offset: 00002A74
+    - name: VPICD_CITI_Test_Range
+      demangled: ''
+      offset: 00002AAC
+    - name: VPICD_Get_IRQ_Complete_Status
+      demangled: ''
+      offset: 00002ABC
+    - name: VPICD_Convert_Handle_To_IRQ
+      demangled: ''
+      offset: 00002AED
+    - name: VPICD_Physically_Mask
+      demangled: ''
+      offset: 00002B00
+    - name: VPICD_Physically_Unmask
+      demangled: ''
+      offset: 00002B54
+    - name: VPICD_Set_Auto_Masking
+      demangled: ''
+      offset: 00002BAC
+    - name: VPICD_Call_When_Hw_Int
+      demangled: ''
+      offset: 00002C12
+    - name: VPICD_Bogus_Hw_Filter
+      demangled: ''
+      offset: 00002C18
+    - name: VPICD_Auto_Mask_At_Inst_Swap
+      demangled: ''
+      offset: 00002C19
+    - name: VPICD_Begin_Inst_Page_Swap
+      demangled: ''
+      offset: 00002C40
+    - name: VPICD_End_Inst_Page_Swap
+      demangled: ''
+      offset: 00002C54
+    - name: VPICD_VM_SlavePIC_Mask_Change
+      demangled: ''
+      offset: 00002CA4
+    - name: clr_ir_int_proc
+      demangled: ''
+      offset: 00002CA9
+    - name: clr_ir_enable_int
+      demangled: ''
+      offset: 00002CC9
+    - name: _VPICD_Clear_IR_Bits
+      demangled: ''
+      offset: 00002D09
+    - name: _VPICD_Set_Irql_Mask
+      demangled: ''
+      offset: 00002D7B
+    - name: _VPICD_Prepare_For_Shutdown
+      demangled: ''
+      offset: 00002DC8
+    - name: _VPICD_Set_Channel_Irql
+      demangled: ''
+      offset: 00002E0E
+    - name: VPICD_PreAlloc_IRQ
+      demangled: ''
+      offset: '00002E64'
+    - name: VPICDARB_Unmask
+      demangled: ''
+      offset: 00002E8B
+    - name: VPICD_Release_IRQ
+      demangled: ''
+      offset: 00002EAB
+  - num: '2'
+    name: _LMSG$1
+    offset: '00001330'
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000014'
+  - num: '3'
+    name: _DB1CODE
+    offset: '00001410'
+    symbols:
+    - name: VPICD_Debug_Arb
+      demangled: ''
+      offset: '00000004'
+    - name: VPICD_Debug_Info
+      demangled: ''
+      offset: 000000F5
+    - name: VPICD_Debug_Global_Info
+      demangled: ''
+      offset: '00000148'
+    - name: VPICD_Debug_Local_Info
+      demangled: ''
+      offset: 0000024F
+    - name: VPICD_Debug_IRQ_Handler_Info
+      demangled: ''
+      offset: '00000380'
+    - name: VPICD_Debug_IRQ_Title
+      demangled: ''
+      offset: '00000473'
+    - name: VPICD_Debug_Show_IRQs
+      demangled: ''
+      offset: 0000048A
+  - num: '4'
+    name: _IMSG$1
+    offset: '00001450'
+    symbols:
+    - name: '@MSG_IAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_IDATA'
+      demangled: ''
+      offset: '00000010'
+  - num: '5'
+    name: SYSEXIT
+    offset: '00001490'
+    symbols:
+    - name: VPICD_Stop_Using_Stacks
+      demangled: ''
+      offset: '00000000'
+  - num: '6'
+    name: RARE
+    offset: 000014C0
+    symbols:
+    - name: VPICD_Begin_PM_App
+      demangled: ''
+      offset: '00000000'
+  - num: '7'
+    name: PNP
+    offset: 000016D0
+    symbols:
+    - name: VPICD_Arbitrate
+      demangled: ''
+      offset: '00000000'
+    - name: VPICD_Test_Alloc
+      demangled: ''
+      offset: '00000023'
+    - name: VPICD_Alloc_Elements
+      demangled: ''
+      offset: 0000006C
+    - name: VPICD_Next_Element
+      demangled: ''
+      offset: 000001C0
+    - name: VPICD_Dup_Alloc
+      demangled: ''
+      offset: 000001EE
+    - name: VPICD_Retest_Alloc
+      demangled: ''
+      offset: 0000020F
+    - name: VPICD_Force_Alloc
+      demangled: ''
+      offset: 000002ED
+    - name: VPICD_Set_Alloc
+      demangled: ''
+      offset: 000002FB
+    - name: VPICD_Apply_Alloc
+      demangled: ''
+      offset: '00000332'
+    - name: VPICD_Release_Alloc
+      demangled: ''
+      offset: 000003C8
+    - name: VPICD_Query_Free
+      demangled: ''
+      offset: 000003D8
+    - name: VPICD_Write_Reserve
+      demangled: ''
+      offset: '00000407'
+    - name: VPICD_Remove
+      demangled: ''
+      offset: '00000407'
+    - name: VPICD_Query_Arbitrate
+      demangled: ''
+      offset: '00000407'
+    - name: VPICD_Add_Reserve
+      demangled: ''
+      offset: '00000407'
+    - name: VPICD_Begin_PnP_Mode
+      demangled: ''
+      offset: '00000407'
+    - name: VPICD_Sort_Res_Desc
+      demangled: ''
+      offset: 0000040A
+    - name: VPICD_Arb_Unalloc
+      demangled: ''
+      offset: 0000049D
+    - name: _VPICD_Get_Level_Mask
+      demangled: ''
+      offset: '00000501'
+    - name: _VPICD_Set_Level_Mask
+      demangled: ''
+      offset: '00000508'
+    - name: _VPICD_Register_Trigger_Handler
+      demangled: ''
+      offset: '00000524'
+  - num: '9'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: VPICD_IO_Table
+      demangled: ''
+      offset: '00000000'
+    - name: VPICD_IRQ9_Global_Str
+      demangled: ''
+      offset: 0000005C
+    - name: VPICD_Sys_Critical_Init
+      demangled: ''
+      offset: 000000DC
+    - name: VPICD_Post_Sys_Critical_Init
+      demangled: ''
+      offset: 000003C7
+    - name: VPICD_Init_Complete
+      demangled: ''
+      offset: '00000411'
+    - name: VPICD_API_Init
+      demangled: ''
+      offset: 0000042C
+    - name: VPICD_PnP_Init
+      demangled: ''
+      offset: 000004A0
+    - name: VPICDArb_Init_Complete
+      demangled: ''
+      offset: 0000053E
+    - name: DumpHexChar
+      demangled: ''
+      offset: 000005BF
+- version: Windows ME Debug
+  source_tree:
+  - ../defint.asm
+  - ../../../../../dev/ddk/inc/VPICD.Inc
+  - ../vpicdapi.asm
+  - ../vpicdarb.asm
+  - ../vpicd.asm
+  - ../vpicdbg.asm
+  - ../vpicdio.asm
+  - ../vpicserv.asm
+  - ../../../../../dev/ddk/inc/Debug.Inc
+  - ../../../../../dev/ddk/inc/DOSMGR.INC
+  - ../../../../../dev/ddk/inc/OptTest.Inc
+  - ../../../../../dev/ddk/inc/VMM.Inc
+  segments:
+  - num: '1'
+    name: _LDATA
+    offset: 00003BA0
+    symbols:
+    - name: Orig_V86_Int_0Ah_Vector
+      demangled: ''
+      offset: '00000000'
+    - name: Orig_V86_Int_71h_Vector
+      demangled: ''
+      offset: '00000004'
+    - name: Orig_PM_Int_0Ah_Vector
+      demangled: ''
+      offset: '00000008'
+    - name: Orig_PM_Int_71h_Vector
+      demangled: ''
+      offset: 0000000E
+    - name: Def_Int_PM_Set_Vec_Chain
+      demangled: ''
+      offset: '00000014'
+    - name: _VPICD_Get_Version
+      demangled: ''
+      offset: 000001F4
+    - name: _VPICD_Virtualize_IRQ
+      demangled: ''
+      offset: 000001F8
+    - name: _VPICD_Set_Int_Request
+      demangled: ''
+      offset: 000001FC
+    - name: _VPICD_Clear_Int_Request
+      demangled: ''
+      offset: '00000200'
+    - name: _VPICD_Phys_EOI
+      demangled: ''
+      offset: '00000204'
+    - name: _VPICD_Get_Complete_Status
+      demangled: ''
+      offset: '00000208'
+    - name: _VPICD_Get_Status
+      demangled: ''
+      offset: 0000020C
+    - name: _VPICD_Test_Phys_Request
+      demangled: ''
+      offset: '00000210'
+    - name: _VPICD_Physically_Mask
+      demangled: ''
+      offset: '00000214'
+    - name: _VPICD_Physically_Unmask
+      demangled: ''
+      offset: '00000218'
+    - name: _VPICD_Set_Auto_Masking
+      demangled: ''
+      offset: 0000021C
+    - name: _VPICD_Get_IRQ_Complete_Status
+      demangled: ''
+      offset: '00000220'
+    - name: _VPICD_Convert_Handle_To_IRQ
+      demangled: ''
+      offset: '00000224'
+    - name: _VPICD_Convert_IRQ_To_Int
+      demangled: ''
+      offset: '00000228'
+    - name: _VPICD_Convert_Int_To_IRQ
+      demangled: ''
+      offset: 0000022C
+    - name: _VPICD_Call_When_Hw_Int
+      demangled: ''
+      offset: '00000230'
+    - name: _VPICD_Force_Default_Owner
+      demangled: ''
+      offset: '00000234'
+    - name: _VPICD_Force_Default_Behavior
+      demangled: ''
+      offset: '00000238'
+    - name: _VPICD_Auto_Mask_At_Inst_Swap
+      demangled: ''
+      offset: 0000023C
+    - name: _VPICD_Begin_Inst_Page_Swap
+      demangled: ''
+      offset: '00000240'
+    - name: _VPICD_End_Inst_Page_Swap
+      demangled: ''
+      offset: '00000244'
+    - name: _VPICD_Virtual_EOI
+      demangled: ''
+      offset: '00000248'
+    - name: _VPICD_Get_Virtualization_Count
+      demangled: ''
+      offset: 0000024C
+    - name: _VPICD_Post_Sys_Critical_Init
+      demangled: ''
+      offset: '00000250'
+    - name: _VPICD_VM_SlavePIC_Mask_Change
+      demangled: ''
+      offset: '00000254'
+    - name: __VPICD_Clear_IR_Bits
+      demangled: ''
+      offset: '00000258'
+    - name: __VPICD_Set_Irql_Mask
+      demangled: ''
+      offset: '00000264'
+    - name: __VPICD_Set_Channel_Irql
+      demangled: ''
+      offset: '00000268'
+    - name: __VPICD_Prepare_For_Shutdown
+      demangled: ''
+      offset: 0000026C
+    - name: __VPICD_Register_Trigger_Handler
+      demangled: ''
+      offset: '00000270'
+    - name: VPICD_DDB
+      demangled: ''
+      offset: '00000274'
+    - name: VPICD_Phys_IMR
+      demangled: ''
+      offset: 000002C4
+    - name: VPICD_Phys_ISR
+      demangled: ''
+      offset: 000002C6
+    - name: VPICD_Hardware_IRR
+      demangled: ''
+      offset: 000002C8
+    - name: VPICD_Def_IMR
+      demangled: ''
+      offset: 000002CA
+    - name: VPICD_Inst_Swap_Mask
+      demangled: ''
+      offset: 000002CC
+    - name: VPICD_Last_IMR
+      demangled: ''
+      offset: 000002CE
+    - name: VPICD_Irql_IMR
+      demangled: ''
+      offset: 000002D0
+    - name: VPICD_Hw_Int_Filter
+      demangled: ''
+      offset: 000002D4
+    - name: VPICD_SIRQ_Alloc_List
+      demangled: ''
+      offset: 000002D8
+    - name: VPICD_Irql_Mask_Table
+      demangled: ''
+      offset: '00000300'
+    - name: VIRQ_0
+      demangled: ''
+      offset: '00000340'
+    - name: VIRQ_1
+      demangled: ''
+      offset: '00000380'
+    - name: VIRQ_2
+      demangled: ''
+      offset: 000003C0
+    - name: VIRQ_3
+      demangled: ''
+      offset: '00000400'
+    - name: VIRQ_4
+      demangled: ''
+      offset: '00000440'
+    - name: VIRQ_5
+      demangled: ''
+      offset: '00000480'
+    - name: VIRQ_6
+      demangled: ''
+      offset: 000004C0
+    - name: VIRQ_7
+      demangled: ''
+      offset: '00000500'
+    - name: VIRQ_8
+      demangled: ''
+      offset: '00000540'
+    - name: VIRQ_9
+      demangled: ''
+      offset: '00000580'
+    - name: VIRQ_10
+      demangled: ''
+      offset: 000005C0
+    - name: VIRQ_11
+      demangled: ''
+      offset: '00000600'
+    - name: VIRQ_12
+      demangled: ''
+      offset: '00000640'
+    - name: VIRQ_13
+      demangled: ''
+      offset: '00000680'
+    - name: VIRQ_14
+      demangled: ''
+      offset: 000006C0
+    - name: VIRQ_15
+      demangled: ''
+      offset: '00000700'
+    - name: SIRQ_0
+      demangled: ''
+      offset: '00000740'
+    - name: SIRQ_1
+      demangled: ''
+      offset: '00000774'
+    - name: SIRQ_2
+      demangled: ''
+      offset: 000007A8
+    - name: SIRQ_3
+      demangled: ''
+      offset: 000007DC
+    - name: SIRQ_4
+      demangled: ''
+      offset: '00000810'
+    - name: SIRQ_5
+      demangled: ''
+      offset: '00000844'
+    - name: SIRQ_6
+      demangled: ''
+      offset: '00000878'
+    - name: SIRQ_7
+      demangled: ''
+      offset: 000008AC
+    - name: SIRQ_8
+      demangled: ''
+      offset: '000008E0'
+    - name: SIRQ_9
+      demangled: ''
+      offset: '00000914'
+    - name: SIRQ_10
+      demangled: ''
+      offset: '00000948'
+    - name: SIRQ_11
+      demangled: ''
+      offset: 0000097C
+    - name: SIRQ_12
+      demangled: ''
+      offset: 000009B0
+    - name: SIRQ_13
+      demangled: ''
+      offset: '000009E4'
+    - name: SIRQ_14
+      demangled: ''
+      offset: 00000A18
+    - name: SIRQ_15
+      demangled: ''
+      offset: 00000A4C
+    - name: VPICD_Priority_XRef
+      demangled: ''
+      offset: 00000A80
+    - name: VPICD_IRQ_Convert
+      demangled: ''
+      offset: 00000AC0
+    - name: VPICD_CB_Offset
+      demangled: ''
+      offset: 00000B00
+    - name: PEF_state_CB_offset
+      demangled: ''
+      offset: 00000B04
+    - name: SYSVM_Stack_Seg
+      demangled: ''
+      offset: 00000B2C
+    - name: fSimulatedIntsOK
+      demangled: ''
+      offset: 00000B4C
+    - name: VPICD_ES_Mask
+      demangled: ''
+      offset: 00000B4D
+    - name: VPICD_Shared_Hook_Off_Tbl
+      demangled: ''
+      offset: 00000B50
+    - name: VPICD_Shared_Hook_Tbl
+      demangled: ''
+      offset: 00000B8C
+    - name: VPICD_ES_Hooked_Mask
+      demangled: ''
+      offset: '00001148'
+    - name: dwTriggerHandler
+      demangled: ''
+      offset: 000017FC
+    - name: VPICD_Arb_Data
+      demangled: ''
+      offset: '00001802'
+    - name: VPICD_Force_Default_Owner
+      demangled: ''
+      offset: '00001886'
+    - name: VPICD_Force_Default_Behavior
+      demangled: ''
+      offset: '00001928'
+    - name: VPICD_Get_Virtualization_Count
+      demangled: ''
+      offset: 00001A63
+    - name: Def_Int_IRQ9_Owner_Detect
+      demangled: ''
+      offset: 00001AA2
+    - name: Def_Int_Detect_IRQ9_Event
+      demangled: ''
+      offset: 00001AB0
+    - name: Def_Int_PM_Vec_Hook
+      demangled: ''
+      offset: 00001B3B
+    - name: Default_IRQ9_EOI
+      demangled: ''
+      offset: 00001BA0
+    - name: Default_Cascade_EOI
+      demangled: ''
+      offset: 00001BCC
+    - name: Default_INT
+      demangled: ''
+      offset: 00001BF0
+    - name: Default_EOI
+      demangled: ''
+      offset: 00001C3C
+    - name: Default_Shared_EOI
+      demangled: ''
+      offset: 00001C48
+    - name: Default_PM_Share_Int
+      demangled: ''
+      offset: 00001C53
+    - name: Default_MASK
+      demangled: ''
+      offset: 00001C5C
+    - name: Default_Iret
+      demangled: ''
+      offset: 00001D6F
+    - name: Default_Shared_IRET
+      demangled: ''
+      offset: 00001D79
+    - name: Def_Int_Share_Error_EOI
+      demangled: ''
+      offset: 00001F33
+    - name: Def_Int_Share_Error_Timeout
+      demangled: ''
+      offset: 00001F54
+    - name: Def_Int_Share_Error_IRET
+      demangled: ''
+      offset: 00001F7C
+    - name: Def_Int_Share_Error_Bitch
+      demangled: ''
+      offset: 00001F97
+    - name: Def_Int_Share_Error
+      demangled: ''
+      offset: 00001FA8
+    - name: VPICD_Power_Handler
+      demangled: ''
+      offset: 0000204C
+    - name: ReInitializePIC
+      demangled: ''
+      offset: 0000215D
+    - name: VPICD_Control
+      demangled: ''
+      offset: 000021BE
+    - name: VPICD_Create_VM
+      demangled: ''
+      offset: '00002212'
+    - name: VPICD_Not_Executeable
+      demangled: ''
+      offset: '00002252'
+    - name: VPICD_Thread_Not_Executeable
+      demangled: ''
+      offset: 000022F1
+    - name: VPICD_Set_Virt_Mask
+      demangled: ''
+      offset: '00002318'
+    - name: VPICD_State_Change_Event
+      demangled: ''
+      offset: '00002420'
+    - name: VPICD_Adjust_Pri_Boost
+      demangled: ''
+      offset: '00002434'
+    - name: VPICD_Simulate_Int
+      demangled: ''
+      offset: 000024D0
+    - name: VPICD_Begin_V86_Int_Stack
+      demangled: ''
+      offset: '00002833'
+    - name: VPICD_Set_VxD_PM_From_V86
+      demangled: ''
+      offset: '00002905'
+    - name: VPICD_IRET_PM_From_V86
+      demangled: ''
+      offset: 0000290C
+    - name: VPICD_Set_VxD_PM_From_PM
+      demangled: ''
+      offset: '00002924'
+    - name: VPICD_IRET_PM_From_PM
+      demangled: ''
+      offset: '00002936'
+    - name: VPICD_Set_VxD_V86_From_PM
+      demangled: ''
+      offset: '00002944'
+    - name: VPICD_IRET_V86_From_PM
+      demangled: ''
+      offset: '00002948'
+    - name: VPICD_End_V86_Int_Stack
+      demangled: ''
+      offset: 0000295A
+    - name: VPICD_Set_VxD_V86_From_V86
+      demangled: ''
+      offset: 00002A1F
+    - name: VPICD_IRET_V86_From_V86
+      demangled: ''
+      offset: 00002A23
+    - name: VPICD_IRET_Call_Devices
+      demangled: ''
+      offset: 00002A47
+    - name: VPICD_Time_Out
+      demangled: ''
+      offset: 00002AED
+    - name: VPICD_Hook_Int_Serv_Hook
+      demangled: ''
+      offset: 00002BCD
+    - name: VPICD_Common_Int_Code
+      demangled: ''
+      offset: 00002BE4
+    - name: VPICD_Common_Slave_Int
+      demangled: ''
+      offset: 00002BE4
+    - name: VPICD_Common_Master_Int
+      demangled: ''
+      offset: 00002BEA
+    - name: VPICD_Common_Shared_Int_Code
+      demangled: ''
+      offset: 00002D94
+    - name: VPICD_Common_Shared_Slave_Int
+      demangled: ''
+      offset: 00002D94
+    - name: VPICD_Common_Shared_Master_Int
+      demangled: ''
+      offset: 00002D9A
+    - name: VPICD_Slave_Mask_Change_Proc
+      demangled: ''
+      offset: 00002DFD
+    - name: Hw_IRQ_0
+      demangled: ''
+      offset: '00002E04'
+    - name: Hw_IRQ_1
+      demangled: ''
+      offset: '00002E38'
+    - name: Hw_IRQ_3
+      demangled: ''
+      offset: 00002E6C
+    - name: Hw_IRQ_4
+      demangled: ''
+      offset: 00002EA0
+    - name: Hw_IRQ_5
+      demangled: ''
+      offset: 00002ED4
+    - name: Hw_IRQ_6
+      demangled: ''
+      offset: 00002F08
+    - name: Hw_IRQ_7
+      demangled: ''
+      offset: 00002F3C
+    - name: Hw_IRQ_8
+      demangled: ''
+      offset: 00002F80
+    - name: Hw_IRQ_9
+      demangled: ''
+      offset: 00002FB4
+    - name: Hw_IRQ_10
+      demangled: ''
+      offset: 00002FE8
+    - name: Hw_IRQ_11
+      demangled: ''
+      offset: 0000301C
+    - name: Hw_IRQ_12
+      demangled: ''
+      offset: '00003050'
+    - name: Hw_IRQ_13
+      demangled: ''
+      offset: '00003084'
+    - name: Hw_IRQ_14
+      demangled: ''
+      offset: 000030B8
+    - name: Hw_IRQ_15
+      demangled: ''
+      offset: 000030EC
+    - name: Hw_IRQ_2
+      demangled: ''
+      offset: '00003130'
+    - name: VPICD_Slave_Error
+      demangled: ''
+      offset: 0000313C
+    - name: VPICD_API
+      demangled: ''
+      offset: '00003150'
+    - name: VPICD_API_Convert_LDT_To_GDT
+      demangled: ''
+      offset: 000032B7
+    - name: VPICD_Common_API_Int
+      demangled: ''
+      offset: 0000330F
+    - name: VPICD_API_Call_From_Use16
+      demangled: ''
+      offset: 0000334C
+    - name: VPICD_BIH_EOI
+      demangled: ''
+      offset: '00003388'
+    - name: VPICD_BIH_Mask
+      demangled: ''
+      offset: '00003390'
+    - name: VPICD_BIH_Unmask
+      demangled: ''
+      offset: '00003398'
+    - name: VPICD_BIH_Get_Mask
+      demangled: ''
+      offset: 000033A0
+    - name: VPICD_BIH_Get_IRR
+      demangled: ''
+      offset: 000033B0
+    - name: VPICD_BIH_Get_ISR
+      demangled: ''
+      offset: 000033B8
+    - name: VPICD_BIH_Call_Back_PM
+      demangled: ''
+      offset: 000033C4
+    - name: VPICD_BHI_Call_PM_Event
+      demangled: ''
+      offset: '00003431'
+    - name: VPICD_Virtual_EOI
+      demangled: ''
+      offset: 0000349E
+    - name: VPICD_Simulate_IO_0
+      demangled: ''
+      offset: 000034D0
+    - name: VPICD_Trap_SP0
+      demangled: ''
+      offset: 000034D8
+    - name: VPICD_In_0
+      demangled: ''
+      offset: 000034ED
+    - name: VPICD_Trap_MP0
+      demangled: ''
+      offset: '00003518'
+    - name: VPICD_Out_0
+      demangled: ''
+      offset: 0000352B
+    - name: VPICD_Simulate_IO_1
+      demangled: ''
+      offset: '00003610'
+    - name: VPICD_Trap_SP1
+      demangled: ''
+      offset: '00003618'
+    - name: VPICD_In_1
+      demangled: ''
+      offset: '00003629'
+    - name: VPICD_Trap_MP1
+      demangled: ''
+      offset: '00003630'
+    - name: VPICD_Out_1
+      demangled: ''
+      offset: 0000363F
+    - name: VPICD_Not_Supported
+      demangled: ''
+      offset: 000036A4
+    - name: VPICD_Get_Version
+      demangled: ''
+      offset: 000036BA
+    - name: VPICD_Virtualize_IRQ
+      demangled: ''
+      offset: 000036D9
+    - name: VPICD_Set_Int_Request
+      demangled: ''
+      offset: 000039D4
+    - name: VPICD_Clear_Int_Request
+      demangled: ''
+      offset: 00003A70
+    - name: VPICD_Get_Complete_Status
+      demangled: ''
+      offset: 00003AFC
+    - name: VPICD_Get_Status
+      demangled: ''
+      offset: 00003B9C
+    - name: VPICD_Test_Phys_Request
+      demangled: ''
+      offset: 00003BF7
+    - name: VPICD_Phys_EOI
+      demangled: ''
+      offset: 00003C3C
+    - name: VPICD_Convert_IRQ_To_Int
+      demangled: ''
+      offset: 00003CC1
+    - name: VPICD_Convert_Int_To_IRQ
+      demangled: ''
+      offset: 00003D01
+    - name: VPICD_CITI_Test_Range
+      demangled: ''
+      offset: 00003D4E
+    - name: VPICD_Get_IRQ_Complete_Status
+      demangled: ''
+      offset: 00003D64
+    - name: VPICD_Convert_Handle_To_IRQ
+      demangled: ''
+      offset: 00003DB0
+    - name: VPICD_Physically_Mask
+      demangled: ''
+      offset: 00003DE0
+    - name: VPICD_Physically_Unmask
+      demangled: ''
+      offset: '00003E58'
+    - name: VPICD_Set_Auto_Masking
+      demangled: ''
+      offset: 00003ED0
+    - name: VPICD_Call_When_Hw_Int
+      demangled: ''
+      offset: 00003F58
+    - name: VPICD_Bogus_Hw_Filter
+      demangled: ''
+      offset: 00003F7A
+    - name: VPICD_Auto_Mask_At_Inst_Swap
+      demangled: ''
+      offset: 00003F81
+    - name: VPICD_Begin_Inst_Page_Swap
+      demangled: ''
+      offset: 00003FC4
+    - name: VPICD_End_Inst_Page_Swap
+      demangled: ''
+      offset: 00003FE4
+    - name: VPICD_VM_SlavePIC_Mask_Change
+      demangled: ''
+      offset: '00004042'
+    - name: clr_ir_int_proc
+      demangled: ''
+      offset: 0000404F
+    - name: clr_ir_enable_int
+      demangled: ''
+      offset: 0000406F
+    - name: _VPICD_Clear_IR_Bits
+      demangled: ''
+      offset: 000040B5
+    - name: _VPICD_Set_Irql_Mask
+      demangled: ''
+      offset: '00004135'
+    - name: _VPICD_Prepare_For_Shutdown
+      demangled: ''
+      offset: 0000418A
+    - name: _VPICD_Set_Channel_Irql
+      demangled: ''
+      offset: 000041D0
+    - name: VPICD_PreAlloc_IRQ
+      demangled: ''
+      offset: '00004224'
+    - name: VPICDARB_Unmask
+      demangled: ''
+      offset: 0000424B
+    - name: VPICD_Release_IRQ
+      demangled: ''
+      offset: 0000426B
+  - num: '2'
+    name: _LMSG$1
+    offset: 00003BE0
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000014'
+  - num: '3'
+    name: _DB1CODE
+    offset: '00004050'
+    symbols:
+    - name: VPICD_Debug_Arb
+      demangled: ''
+      offset: '00000004'
+    - name: VPICD_Debug_Info
+      demangled: ''
+      offset: 000000F5
+    - name: VPICD_Debug_Global_Info
+      demangled: ''
+      offset: '00000148'
+    - name: VPICD_Debug_Local_Info
+      demangled: ''
+      offset: 0000024F
+    - name: VPICD_Debug_IRQ_Handler_Info
+      demangled: ''
+      offset: 0000039C
+    - name: VPICD_Debug_IRQ_Title
+      demangled: ''
+      offset: 0000048F
+    - name: VPICD_Debug_Show_IRQs
+      demangled: ''
+      offset: 000004A6
+  - num: '4'
+    name: _IMSG$1
+    offset: '00004090'
+    symbols:
+    - name: '@MSG_IAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_IDATA'
+      demangled: ''
+      offset: '00000010'
+  - num: '5'
+    name: SYSEXIT
+    offset: '00004100'
+    symbols:
+    - name: VPICD_Stop_Using_Stacks
+      demangled: ''
+      offset: '00000000'
+  - num: '6'
+    name: RARE
+    offset: '00004180'
+    symbols:
+    - name: VPICD_Begin_PM_App
+      demangled: ''
+      offset: '00000000'
+  - num: '7'
+    name: PNP
+    offset: 00004A30
+    symbols:
+    - name: VPICD_Arbitrate
+      demangled: ''
+      offset: '00000000'
+    - name: VPICD_Test_Alloc
+      demangled: ''
+      offset: 0000002B
+    - name: VPICD_Alloc_Elements
+      demangled: ''
+      offset: '00000094'
+    - name: VPICD_Next_Element
+      demangled: ''
+      offset: '00000214'
+    - name: VPICD_Dup_Alloc
+      demangled: ''
+      offset: 0000024A
+    - name: VPICD_Retest_Alloc
+      demangled: ''
+      offset: '00000273'
+    - name: VPICD_Force_Alloc
+      demangled: ''
+      offset: 0000036F
+    - name: VPICD_Set_Alloc
+      demangled: ''
+      offset: '00000385'
+    - name: VPICD_Apply_Alloc
+      demangled: ''
+      offset: 000003C4
+    - name: VPICD_Release_Alloc
+      demangled: ''
+      offset: 0000049A
+    - name: VPICD_Query_Free
+      demangled: ''
+      offset: 000004B2
+    - name: VPICD_Remove
+      demangled: ''
+      offset: '000004E9'
+    - name: VPICD_Query_Arbitrate
+      demangled: ''
+      offset: 000004F1
+    - name: VPICD_Add_Reserve
+      demangled: ''
+      offset: 000004F9
+    - name: VPICD_Write_Reserve
+      demangled: ''
+      offset: '00000501'
+    - name: VPICD_Begin_PnP_Mode
+      demangled: ''
+      offset: '00000509'
+    - name: VPICD_Sort_Res_Desc
+      demangled: ''
+      offset: '00000514'
+    - name: VPICD_Arb_Unalloc
+      demangled: ''
+      offset: 000005AF
+    - name: _VPICD_Get_Level_Mask
+      demangled: ''
+      offset: '00000621'
+    - name: _VPICD_Set_Level_Mask
+      demangled: ''
+      offset: '00000641'
+    - name: _VPICD_Register_Trigger_Handler
+      demangled: ''
+      offset: '00000676'
+    - name: VPICD_VXDLDR_Notify
+      demangled: ''
+      offset: 000006BC
+  - num: '8'
+    name: _PDATA
+    offset: 00004A60
+    symbols:
+    - name: fIRQARBITDebug
+      demangled: ''
+      offset: '00000000'
+  - num: '9'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: VPICD_IO_Table
+      demangled: ''
+      offset: 0000001A
+    - name: VPICD_IRQ9_Global_Str
+      demangled: ''
+      offset: 000001C4
+    - name: VPICD_Sys_Critical_Init
+      demangled: ''
+      offset: '00000274'
+    - name: VPICD_Post_Sys_Critical_Init
+      demangled: ''
+      offset: 000005A7
+    - name: VPICD_Init_Complete
+      demangled: ''
+      offset: 0000060F
+    - name: VPICD_API_Init
+      demangled: ''
+      offset: 0000062C
+    - name: VPICD_PnP_Init
+      demangled: ''
+      offset: 000006BC
+    - name: VPICDArb_Init_Complete
+      demangled: ''
+      offset: 0000076E
+    - name: DumpHexChar
+      demangled: ''
+      offset: 000007FF

@@ -1,0 +1,810 @@
+filename: usbdiag.sys
+binary: USBDIAG
+description: ''
+appearances:
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000350'
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+    - name: _USBDIAG_Dispatch@8
+      processed: ''
+      offset: 0000007C
+    - name: _USBDIAG_PnP@8
+      processed: ''
+      offset: 000000CF
+    - name: _USBDIAG_Unload@4
+      processed: ''
+      offset: 000001C0
+    - name: _USBDIAG_StartDevice@4
+      processed: ''
+      offset: 000001DE
+    - name: _USBDIAG_StopDevice@4
+      processed: ''
+      offset: '00000280'
+    - name: _USBDIAG_PnPAddDevice@8
+      processed: ''
+      offset: 000002A0
+    - name: _USBDIAG_CreateDeviceObject@12
+      processed: ''
+      offset: '00000383'
+    - name: _USBDIAG_CallUSBD@8
+      processed: ''
+      offset: '00000444'
+    - name: _USBDIAG_RemoveGlobalDeviceObject@0
+      processed: ''
+      offset: 000004BD
+    - name: _USBDIAG_ExAllocatePool@8
+      processed: ''
+      offset: 0000051A
+    - name: _USBDIAG_ExFreePool@4
+      processed: ''
+      offset: '00000548'
+    - name: _USBDIAG_ProcessIOCTL@8
+      processed: ''
+      offset: 0000056A
+    - name: _USBDIAG_Chap9Control@8
+      processed: ''
+      offset: '00000657'
+    - name: _USBDIAG_Ch9CallUSBD@24
+      processed: ''
+      offset: 00000ECD
+    - name: _USBDIAG_SendPacket@20
+      processed: ''
+      offset: 00000FD9
+    - name: _pAllocFromBuffer@20
+      processed: ''
+      offset: '00001080'
+    - name: _USBDIAG_HIDP_GetCollection@8
+      processed: ''
+      offset: 000010AA
+    - name: _USBDIAG_Configure_Device@8
+      processed: ''
+      offset: 0000123A
+    - name: _USBDIAG_SelectInterfaces@16
+      processed: ''
+      offset: 000013F3
+    - name: _Ch9FillInReqStatus@12
+      processed: ''
+      offset: '00001574'
+    - name: _USBDIAG_ProcessPowerIrp@8
+      processed: ''
+      offset: 0000160B
+    - name: _USBDIAG_PoRequestCompletion@20
+      processed: ''
+      offset: 000016A1
+    - name: _USBDIAG_SetDevicePowerState@12
+      processed: ''
+      offset: 000016EB
+    - name: _HidP_FreeCollectionDescription@4
+      processed: ''
+      offset: '00001726'
+    - name: _HidP_GetCollectionDescription@16
+      processed: ''
+      offset: 0000172C
+    - name: _DbgPrint
+      processed: ''
+      offset: '00001732'
+    - name: _sprintf
+      processed: ''
+      offset: '00001738'
+  - num: '2'
+    name: .data
+    offset: 000006B0
+    symbols:
+    - name: ??_C@_0DB@OEHH@USBDIAG?4SYS?3?5exiting?5?$CIUSBDIAG?$CJ?5D@
+      processed: '"USBDIAG.SYS: exiting (USBDIAG) D"...'
+      offset: '00000000'
+    - name: ??_C@_0DF@GMMP@USBDIAG?4SYS?3?5USBDIAG?5Driver?5Buil@
+      processed: '"USBDIAG.SYS: USBDIAG Driver Buil"...'
+      offset: '00000034'
+    - name: ??_C@_0M@CKCG@Apr?528?51998?$AA@
+      processed: '"Apr 28 1998"'
+      offset: 0000006C
+    - name: ??_C@_08BHGO@18?320?307?$AA@
+      processed: '"18:20:07"'
+      offset: '00000078'
+    - name: ??_C@_0CN@DEKG@USBDIAG?4SYS?3?5entering?5?$CIUSBDIAG?$CJ?5@
+      processed: '"USBDIAG.SYS: entering (USBDIAG) "...'
+      offset: '00000084'
+    - name: ??_C@_0CC@NOHL@USBDIAG?4SYS?3?5exit?5USBDIAG_Unload@
+      processed: '"USBDIAG.SYS: exit USBDIAG_Unload"...'
+      offset: 000000B4
+    - name: ??_C@_0CD@DKMB@USBDIAG?4SYS?3?5enter?5USBDIAG_Unloa@
+      processed: '"USBDIAG.SYS: enter USBDIAG_Unloa"...'
+      offset: 000000D8
+    - name: 
+        ??_C@_1CA@GNDK@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAU?$AAS?$AAB?$AAD?$AAI?$AAA?$AAG?$AA?$AA@
+      processed: L"\\Device\\USBDIAG"
+      offset: 000000FC
+    - name: 
+        ??_C@_1CI@BOL@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AAU?$AAS?$AAB?$AAD?$AAI?$AAA?$AAG?$AA?$AA@
+      processed: L"\\DosDevices\\USBDIAG"
+      offset: 0000011C
+    - name: ??_C@_0L@JKKN@no?5devices?$AA@
+      processed: '"no devices"'
+      offset: '00000144'
+    - name: ??_C@_0CC@IAIO@?$CF2?42d?5Vid?5?$CI0x?$CF4?44x?$CJ?5Pid?5?$CI0x?$CF4?44x@
+      processed: '"%2.2d Vid (0x%4.4x) Pid (0x%4.4x"...'
+      offset: '00000150'
+    - name: _USBDIAG_GlobalDeviceObject
+      processed: ''
+      offset: '00000174'
+    - name: _USBDIAG_NextDeviceNumber
+      processed: ''
+      offset: '00000178'
+    - name: _USBDIAG_NumberDevices
+      processed: ''
+      offset: 0000017C
+    - name: _USBDIAG_DriverObject
+      processed: ''
+      offset: '00000180'
+  - num: '3'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HIDPARSE
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000050'
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: 000000DC
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: '000000E0'
+    - name: __imp__HidP_GetCollectionDescription@16
+      processed: ''
+      offset: '000000E4'
+    - name: __imp__HidP_FreeCollectionDescription@4
+      processed: ''
+      offset: '000000E8'
+    - name: \177HIDPARSE_NULL_THUNK_DATA
+      processed: ''
+      offset: 000000EC
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: 000000F0
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: 000000F4
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: 000000F8
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: 000000FC
+    - name: __imp__IoDetachDevice@4
+      processed: ''
+      offset: '00000100'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '00000104'
+    - name: __imp__IoCreateSymbolicLink@8
+      processed: ''
+      offset: '00000108'
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: 0000010C
+    - name: __imp__RtlFreeAnsiString@4
+      processed: ''
+      offset: '00000110'
+    - name: __imp__RtlUnicodeStringToAnsiString@12
+      processed: ''
+      offset: '00000114'
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: '00000118'
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: 0000011C
+    - name: __imp__sprintf
+      processed: ''
+      offset: '00000120'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: '00000124'
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '00000128'
+    - name: __imp__IoDeleteSymbolicLink@4
+      processed: ''
+      offset: 0000012C
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000130'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000134'
+    - name: __imp__IoCancelIrp@4
+      processed: ''
+      offset: '00000138'
+    - name: __imp__PoRequestPowerIrp@24
+      processed: ''
+      offset: 0000013C
+    - name: __imp__PoCallDriver@8
+      processed: ''
+      offset: '00000140'
+    - name: __imp__PoStartNextPowerIrp@4
+      processed: ''
+      offset: '00000144'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000148'
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      processed: ''
+      offset: 0000014C
+    - name: \177USBD_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000150'
+- version: Windows 98 Debug
+  source_tree:
+  - 36.C
+  - ../chap9drv.c
+  - ../ioctl.c
+  - ../usbdiag.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00001A10
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _USBDIAG_Dispatch@8
+      demangled: ''
+      offset: 000000C0
+    - name: _USBDIAG_PnP@8
+      demangled: ''
+      offset: '000001E0'
+    - name: _USBDIAG_Unload@4
+      demangled: ''
+      offset: '00000450'
+    - name: _USBDIAG_StartDevice@4
+      demangled: ''
+      offset: '00000480'
+    - name: _USBDIAG_StopDevice@4
+      demangled: ''
+      offset: '00000710'
+    - name: _USBDIAG_PnPAddDevice@8
+      demangled: ''
+      offset: '00000770'
+    - name: _USBDIAG_CreateDeviceObject@12
+      demangled: ''
+      offset: '00000990'
+    - name: _USBDIAG_CallUSBD@8
+      demangled: ''
+      offset: 00000B30
+    - name: _USBDIAG_RemoveGlobalDeviceObject@0
+      demangled: ''
+      offset: 00000CA0
+    - name: _USBDIAG_ExAllocatePool@8
+      demangled: ''
+      offset: 00000DC0
+    - name: _USBDIAG_ExFreePool@4
+      demangled: ''
+      offset: '00000E20'
+    - name: _USBDIAG_ProcessIOCTL@8
+      demangled: ''
+      offset: '00000E80'
+    - name: _USBDIAG_Chap9Control@8
+      demangled: ''
+      offset: 000011C0
+    - name: _USBDIAG_Ch9CallUSBD@24
+      demangled: ''
+      offset: 00002A30
+    - name: _USBDIAG_SendPacket@20
+      demangled: ''
+      offset: 00002D90
+    - name: _pAllocFromBuffer@20
+      demangled: ''
+      offset: 00002F50
+    - name: _USBDIAG_HIDP_GetCollection@8
+      demangled: ''
+      offset: 00002FA0
+    - name: _USBDIAG_SyncTimeoutDPC@16
+      demangled: ''
+      offset: '00003320'
+    - name: _USBDIAG_Configure_Device@8
+      demangled: ''
+      offset: '00003340'
+    - name: _USBDIAG_SelectInterfaces@16
+      demangled: ''
+      offset: 000037D0
+    - name: _Ch9FillInReqStatus@12
+      demangled: ''
+      offset: 00003CF0
+    - name: _USBDIAG_ProcessPowerIrp@8
+      demangled: ''
+      offset: '00003E60'
+    - name: _USBDIAG_PoRequestCompletion@20
+      demangled: ''
+      offset: '00004100'
+    - name: _USBDIAG_PowerIrp_Complete@12
+      demangled: ''
+      offset: '00004190'
+    - name: _USBDIAG_SetDevicePowerState@12
+      demangled: ''
+      offset: '00004210'
+    - name: _HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: 000042C2
+    - name: _HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: 000042C8
+    - name: _USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: 000042CE
+    - name: _DbgPrint
+      demangled: ''
+      offset: 000042D4
+    - name: '@IofCompleteRequest@8'
+      demangled: ''
+      offset: 000042DA
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: '000042E0'
+    - name: _IoDeleteDevice@4
+      demangled: ''
+      offset: '000042E6'
+    - name: '@IofCallDriver@8'
+      demangled: ''
+      offset: 000042EC
+    - name: _IoDetachDevice@4
+      demangled: ''
+      offset: 000042F2
+    - name: _IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 000042F8
+    - name: _IoCreateSymbolicLink@8
+      demangled: ''
+      offset: 000042FE
+    - name: _IoCreateDevice@28
+      demangled: ''
+      offset: '00004304'
+    - name: _RtlFreeAnsiString@4
+      demangled: ''
+      offset: 0000430A
+    - name: _RtlUnicodeStringToAnsiString@12
+      demangled: ''
+      offset: '00004310'
+    - name: _RtlInitUnicodeString@8
+      demangled: ''
+      offset: '00004316'
+    - name: _KeWaitForSingleObject@20
+      demangled: ''
+      offset: 0000431C
+    - name: _KeGetCurrentIrql@0
+      demangled: ''
+      offset: '00004322'
+    - name: _IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '00004328'
+    - name: _KeInitializeEvent@12
+      demangled: ''
+      offset: 0000432E
+    - name: _IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: '00004334'
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000433A
+    - name: _DbgBreakPoint@0
+      demangled: ''
+      offset: '00004340'
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: '00004346'
+    - name: _sprintf
+      demangled: ''
+      offset: 0000434C
+    - name: _PoRequestPowerIrp@24
+      demangled: ''
+      offset: '00004352'
+    - name: _IoCancelIrp@4
+      demangled: ''
+      offset: '00004358'
+    - name: _PoCallDriver@8
+      demangled: ''
+      offset: 0000435E
+    - name: _PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00004364'
+  - num: '3'
+    name: .data
+    offset: 00001AA0
+    symbols:
+    - name: _USBDIAG_GlobalDeviceObject
+      demangled: ''
+      offset: '00003728'
+    - name: _USBDIAG_NextDeviceNumber
+      demangled: ''
+      offset: 0000372C
+    - name: _USBDIAG_NumberDevices
+      demangled: ''
+      offset: '00003730'
+    - name: _USBDIAG_DriverObject
+      demangled: ''
+      offset: '00003734'
+  - num: '4'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HIDPARSE
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000050'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '000000E4'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '000000E8'
+    - name: __imp__HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: 000000EC
+    - name: __imp__HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: 000000F0
+    - name: \177HIDPARSE_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000F4
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: 000000F8
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: 000000FC
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: '00000100'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000104'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000108'
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: 0000010C
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00000110'
+    - name: __imp__IoCreateSymbolicLink@8
+      demangled: ''
+      offset: '00000114'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000118'
+    - name: __imp__RtlFreeAnsiString@4
+      demangled: ''
+      offset: 0000011C
+    - name: __imp__RtlUnicodeStringToAnsiString@12
+      demangled: ''
+      offset: '00000120'
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: '00000124'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000128'
+    - name: __imp__sprintf
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '00000130'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000134'
+    - name: __imp__IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: '00000138'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000013C
+    - name: __imp__DbgBreakPoint@0
+      demangled: ''
+      offset: '00000140'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: '00000148'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: '00000150'
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00000154'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: 0000015C
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000160'
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000350'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _USBDIAG_Dispatch@8
+      demangled: ''
+      offset: 0000007C
+    - name: _USBDIAG_PnP@8
+      demangled: ''
+      offset: 000000CF
+    - name: _USBDIAG_Unload@4
+      demangled: ''
+      offset: 000001C0
+    - name: _USBDIAG_StartDevice@4
+      demangled: ''
+      offset: 000001DE
+    - name: _USBDIAG_StopDevice@4
+      demangled: ''
+      offset: '00000280'
+    - name: _USBDIAG_PnPAddDevice@8
+      demangled: ''
+      offset: 000002A0
+    - name: _USBDIAG_CreateDeviceObject@12
+      demangled: ''
+      offset: '00000383'
+    - name: _USBDIAG_CallUSBD@8
+      demangled: ''
+      offset: '00000444'
+    - name: _USBDIAG_RemoveGlobalDeviceObject@0
+      demangled: ''
+      offset: 000004BD
+    - name: _USBDIAG_ExAllocatePool@8
+      demangled: ''
+      offset: 0000051A
+    - name: _USBDIAG_ExFreePool@4
+      demangled: ''
+      offset: '00000548'
+    - name: _USBDIAG_ProcessIOCTL@8
+      demangled: ''
+      offset: 0000056A
+    - name: _USBDIAG_Chap9Control@8
+      demangled: ''
+      offset: '00000657'
+    - name: _USBDIAG_Ch9CallUSBD@24
+      demangled: ''
+      offset: 00000ECD
+    - name: _USBDIAG_SendPacket@20
+      demangled: ''
+      offset: 00000FD9
+    - name: _pAllocFromBuffer@20
+      demangled: ''
+      offset: '00001080'
+    - name: _USBDIAG_HIDP_GetCollection@8
+      demangled: ''
+      offset: 000010AA
+    - name: _USBDIAG_Configure_Device@8
+      demangled: ''
+      offset: 0000123A
+    - name: _USBDIAG_SelectInterfaces@16
+      demangled: ''
+      offset: 000013F3
+    - name: _Ch9FillInReqStatus@12
+      demangled: ''
+      offset: '00001574'
+    - name: _USBDIAG_ProcessPowerIrp@8
+      demangled: ''
+      offset: 0000160B
+    - name: _USBDIAG_PoRequestCompletion@20
+      demangled: ''
+      offset: 000016A1
+    - name: _USBDIAG_SetDevicePowerState@12
+      demangled: ''
+      offset: 000016EB
+    - name: _HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: '00001726'
+    - name: _HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: 0000172C
+    - name: _DbgPrint
+      demangled: ''
+      offset: '00001732'
+    - name: _sprintf
+      demangled: ''
+      offset: '00001738'
+  - num: '2'
+    name: .data
+    offset: 000006B0
+    symbols:
+    - name: ??_C@_0DB@OEHH@USBDIAG?4SYS?3?5exiting?5?$CIUSBDIAG?$CJ?5D@
+      demangled: '"USBDIAG.SYS: exiting (USBDIAG) D"...'
+      offset: '00000000'
+    - name: ??_C@_0DF@GMMP@USBDIAG?4SYS?3?5USBDIAG?5Driver?5Buil@
+      demangled: '"USBDIAG.SYS: USBDIAG Driver Buil"...'
+      offset: '00000034'
+    - name: ??_C@_0M@CKCG@Apr?528?51998?$AA@
+      demangled: '"Apr 28 1998"'
+      offset: 0000006C
+    - name: ??_C@_08BHGO@18?320?307?$AA@
+      demangled: '"18:20:07"'
+      offset: '00000078'
+    - name: ??_C@_0CN@DEKG@USBDIAG?4SYS?3?5entering?5?$CIUSBDIAG?$CJ?5@
+      demangled: '"USBDIAG.SYS: entering (USBDIAG) "...'
+      offset: '00000084'
+    - name: ??_C@_0CC@NOHL@USBDIAG?4SYS?3?5exit?5USBDIAG_Unload@
+      demangled: '"USBDIAG.SYS: exit USBDIAG_Unload"...'
+      offset: 000000B4
+    - name: ??_C@_0CD@DKMB@USBDIAG?4SYS?3?5enter?5USBDIAG_Unloa@
+      demangled: '"USBDIAG.SYS: enter USBDIAG_Unloa"...'
+      offset: 000000D8
+    - name: 
+        ??_C@_1CA@GNDK@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AAU?$AAS?$AAB?$AAD?$AAI?$AAA?$AAG?$AA?$AA@
+      demangled: L"\\Device\\USBDIAG"
+      offset: 000000FC
+    - name: 
+        ??_C@_1CI@BOL@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AAU?$AAS?$AAB?$AAD?$AAI?$AAA?$AAG?$AA?$AA@
+      demangled: L"\\DosDevices\\USBDIAG"
+      offset: 0000011C
+    - name: ??_C@_0L@JKKN@no?5devices?$AA@
+      demangled: '"no devices"'
+      offset: '00000144'
+    - name: ??_C@_0CC@IAIO@?$CF2?42d?5Vid?5?$CI0x?$CF4?44x?$CJ?5Pid?5?$CI0x?$CF4?44x@
+      demangled: '"%2.2d Vid (0x%4.4x) Pid (0x%4.4x"...'
+      offset: '00000150'
+    - name: _USBDIAG_GlobalDeviceObject
+      demangled: ''
+      offset: '00000174'
+    - name: _USBDIAG_NextDeviceNumber
+      demangled: ''
+      offset: '00000178'
+    - name: _USBDIAG_NumberDevices
+      demangled: ''
+      offset: 0000017C
+    - name: _USBDIAG_DriverObject
+      demangled: ''
+      offset: '00000180'
+  - num: '3'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HIDPARSE
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000050'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: 000000DC
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '000000E0'
+    - name: __imp__HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: '000000E4'
+    - name: __imp__HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: '000000E8'
+    - name: \177HIDPARSE_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000EC
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: 000000F0
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: 000000F4
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: 000000F8
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 000000FC
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: '00000100'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00000104'
+    - name: __imp__IoCreateSymbolicLink@8
+      demangled: ''
+      offset: '00000108'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: 0000010C
+    - name: __imp__RtlFreeAnsiString@4
+      demangled: ''
+      offset: '00000110'
+    - name: __imp__RtlUnicodeStringToAnsiString@12
+      demangled: ''
+      offset: '00000114'
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: '00000118'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 0000011C
+    - name: __imp__sprintf
+      demangled: ''
+      offset: '00000120'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '00000124'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000128'
+    - name: __imp__IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000130'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000134'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000138'
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: 0000013C
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: '00000140'
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00000144'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000148'
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: 0000014C
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000150'

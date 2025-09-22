@@ -1,0 +1,2995 @@
+filename: msdv.sys
+binary: MSDV
+description: ''
+appearances:
+- version: Windows 98SE Debug
+  source_tree:
+  - ../dbg.c
+  - ../devprop.c
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/ulldiv.asm
+  - intel/ullrem.asm
+  - ../isorsrc.c
+  - ../msdvavc.c
+  - ../msdv.c
+  - ../msdvmain.c
+  - ../msdvread.c
+  - ../msdvwrt.c
+  - HHt.H
+  - ../ksguid.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00004910'
+    symbols:
+    - name: _Debug_LogEntry@16
+      processed: ''
+      offset: '00000000'
+    - name: _Debug_LogInit@0
+      processed: ''
+      offset: '00000042'
+    - name: _DVCRFindCmdEntryCompleted@12
+      processed: ''
+      offset: 0000006D
+    - name: _DVCRFindActiveCmdEntry@12
+      processed: ''
+      offset: '00000143'
+    - name: _DVCRFindCtrlInterimEntry@12
+      processed: ''
+      offset: 0000035A
+    - name: _DVCRFindNotifyInterimEntry@12
+      processed: ''
+      offset: 000003D0
+    - name: _DVCRAVCCmdResetAfterBusReset@4
+      processed: ''
+      offset: '00000446'
+    - name: _DVCRNonNotifyResponse@16
+      processed: ''
+      offset: 000004EC
+    - name: _DVCRNotifyResponse@16
+      processed: ''
+      offset: 000008CF
+    - name: _DVCRAVCResponseCallback@4
+      processed: ''
+      offset: 00000BCC
+    - name: _DVCRIssueAVCCommand@24
+      processed: ''
+      offset: 00000DC4
+    - name: _DVCRGetExtDeviceProperty@20
+      processed: ''
+      offset: '00001501'
+    - name: _DVCRSetExtDeviceProperty@20
+      processed: ''
+      offset: '00001679'
+    - name: _DVCRGetExtTransportProperty@20
+      processed: ''
+      offset: '00001713'
+    - name: _DVCRSetExtTransportProperty@20
+      processed: ''
+      offset: 00001A6E
+    - name: _DVCRGetTimecodeReaderProperty@20
+      processed: ''
+      offset: 00001D0E
+    - name: _DVCRSetTimecodeReaderProperty@20
+      processed: ''
+      offset: 00001E7E
+    - name: _AdapterGetDeviceProperty@4
+      processed: ''
+      offset: 00001F26
+    - name: _AdapterSetDeviceProperty@4
+      processed: ''
+      offset: '00002004'
+    - name: _DVCRAllocateAddressRange@4
+      processed: ''
+      offset: '000020E2'
+    - name: _DVCRFreeAddressRange@4
+      processed: ''
+      offset: 0000230D
+    - name: _DVCRAsyncLockPCR@28
+      processed: ''
+      offset: '00002431'
+    - name: _DVCRReadPCRs@20
+      processed: ''
+      offset: 000025B3
+    - name: _DVCRFreeIsochResource@28
+      processed: ''
+      offset: 0000290A
+    - name: _DVCRAllocateIsochResource@12
+      processed: ''
+      offset: 00002D67
+    - name: _DVCRAllocateIsochResourceBusReset@16
+      processed: ''
+      offset: '00003725'
+    - name: _DriverEntry@8
+      processed: ''
+      offset: 00003D03
+    - name: _GetCurrentGeneration@12
+      processed: ''
+      offset: 00003D8F
+    - name: _GetCurrentLocalHostNodeID@12
+      processed: ''
+      offset: 00003DF7
+    - name: _QueryDeviceType@8
+      processed: ''
+      offset: '00003E55'
+    - name: _QueryMediaSignal@8
+      processed: ''
+      offset: 00003F3A
+    - name: _DVCRHwInitialize@4
+      processed: ''
+      offset: '00004021'
+    - name: _DVCRHwUnInitialize@4
+      processed: ''
+      offset: '00004802'
+    - name: _DVCRIrpSynchCR@12
+      processed: ''
+      offset: 000049B7
+    - name: _DVCRSubmitIrpSynch@12
+      processed: ''
+      offset: 000049D5
+    - name: _DVCRAllocateIrbAndIrp@12
+      processed: ''
+      offset: 00004C5D
+    - name: _DVCRFreeIrbAndIrp@8
+      processed: ''
+      offset: 00004CE5
+    - name: _DVCRXlateGetMediumInfo@12
+      processed: ''
+      offset: 00004D0A
+    - name: _DVCRXlateGetTransportState@12
+      processed: ''
+      offset: 00004DA0
+    - name: _DVCRXlateGetIOSignalMode@8
+      processed: ''
+      offset: 00004F8B
+    - name: _DVCRXlateRAwAVC@20
+      processed: ''
+      offset: 00004FEC
+    - name: _DVCRGetStreamInfo@4
+      processed: ''
+      offset: 0000510B
+    - name: _DVCRProcessPnPBusReset@8
+      processed: ''
+      offset: 0000520E
+    - name: _DVCRAllocateIsochListenBuffers@8
+      processed: ''
+      offset: 0000530B
+    - name: _DVCRFreeIsochListenLists@4
+      processed: ''
+      offset: 000055BD
+    - name: _InitializeStreamExtension@12
+      processed: ''
+      offset: 000056F5
+    - name: _DVCROpenStream@12
+      processed: ''
+      offset: 0000586A
+    - name: _DVCRCloseStream@12
+      processed: ''
+      offset: 00005AAF
+    - name: _DVCRReceiveDataPacket@4
+      processed: ''
+      offset: 00005BA4
+    - name: _DVCRAdapterVerifyFormat@12
+      processed: ''
+      offset: '00006207'
+    - name: _DVCRCompareGUIDsAndFormatSize@12
+      processed: ''
+      offset: '000062E0'
+    - name: _DVCRFormatFromRange@24
+      processed: ''
+      offset: 0000633E
+    - name: _DVCRGetStreamProperty@4
+      processed: ''
+      offset: 0000662E
+    - name: _DVCRSetStreamProperty@4
+      processed: ''
+      offset: 0000668E
+    - name: _DVCRStreamGetConnectionProperty@4
+      processed: ''
+      offset: 000066B3
+    - name: _DVCRGetStreamState@12
+      processed: ''
+      offset: 0000677A
+    - name: _DVCRChangePower@4
+      processed: ''
+      offset: 000067B9
+    - name: _DVCRGetDroppedFramesProperty@4
+      processed: ''
+      offset: 000067C2
+    - name: _DVCROpenCloseMasterClock@8
+      processed: ''
+      offset: 000068A6
+    - name: _DVCRIndicateMasterClock@8
+      processed: ''
+      offset: '00006903'
+    - name: _DVCRCancelOnePacket@4
+      processed: ''
+      offset: '00006960'
+    - name: _DVCRTimeoutHandler@4
+      processed: ''
+      offset: 00006AE1
+    - name: _GetSystemTime@0
+      processed: ''
+      offset: 00006BD9
+    - name: _StreamClockRtn@4
+      processed: ''
+      offset: 00006C6F
+    - name: _DVCRSurpriseRemoval@8
+      processed: ''
+      offset: 00006D8F
+    - name: _DVCRReclaimBandwidthCR@12
+      processed: ''
+      offset: 00006E7B
+    - name: _DVCRBusResetNotification@4
+      processed: ''
+      offset: 00006F7B
+    - name: _DVCRReceiveDevicePacket@4
+      processed: ''
+      offset: 0000718B
+    - name: _DVCRRcvCtrlPcktForIsochListen@4
+      processed: ''
+      offset: '00007453'
+    - name: _DVCRAttachReadBufCR@12
+      processed: ''
+      offset: '00007615'
+    - name: _DVCRAttachIsochListenBuffers@12
+      processed: ''
+      offset: '00007688'
+    - name: _DVCRIsochDetachOnlyCR@12
+      processed: ''
+      offset: '00007874'
+    - name: _DVCRStopStream@12
+      processed: ''
+      offset: 000078EB
+    - name: _DVCRSetStreamStateForIsochListen@16
+      processed: ''
+      offset: 00007CDB
+    - name: _DVCRReadStream@12
+      processed: ''
+      offset: 00007FD1
+    - name: _DVCRExtractTimecodeFromFrame@12
+      processed: ''
+      offset: 000080D1
+    - name: _DVCRSendBackUserBuffer@12
+      processed: ''
+      offset: '00008370'
+    - name: _DVCRDetachReadBufCR@12
+      processed: ''
+      offset: 0000858B
+    - name: _DVCRIsochReadCallback@8
+      processed: ''
+      offset: 000086FB
+    - name: _DVCRFindStartOfFrame@4
+      processed: ''
+      offset: 00008A04
+    - name: _DVCRFindCIPQuad@4
+      processed: ''
+      offset: 00008A32
+    - name: _DVCRCreatePureVideoPacket@12
+      processed: ''
+      offset: 00008A68
+    - name: _DVCRCreateH0Packet@12
+      processed: ''
+      offset: 00008AC1
+    - name: _DVCRCreateAudioDifDataPart@8
+      processed: ''
+      offset: 00008B74
+    - name: _DVCRCreateAudioVideoPacket@16
+      processed: ''
+      offset: 00008BBD
+    - name: _DVCRFindA3@8
+      processed: ''
+      offset: 00008C9E
+    - name: _DVCRCheckQu@8
+      processed: ''
+      offset: 00008CB7
+    - name: _DVCRCreateDVPacket@8
+      processed: ''
+      offset: 00008D39
+    - name: _DVCRFindMissingPacket@20
+      processed: ''
+      offset: 00008D9D
+    - name: _DVCRCopyIsochDVPacketToUser@32
+      processed: ''
+      offset: '00008E99'
+    - name: _DVCRCopyStreamIsochToUser@20
+      processed: ''
+      offset: 00008F2C
+    - name: _DVCRCopyIsochToUser@20
+      processed: ''
+      offset: '00009250'
+    - name: _DVCRInitMdl@8
+      processed: ''
+      offset: '00009293'
+    - name: _CheckList@4
+      processed: ''
+      offset: '00009325'
+    - name: _DVCRFillCIPsWithDataForXmt@16
+      processed: ''
+      offset: 000093AF
+    - name: _DVCRGetCurrentCycleTime@8
+      processed: ''
+      offset: '00009558'
+    - name: _DVCRDetachXmtBufCR@12
+      processed: ''
+      offset: 0000963A
+    - name: _DVCRBufXmtedCallback@8
+      processed: ''
+      offset: 000097B3
+    - name: _DVCRReclaimFailedAttachBufCR@12
+      processed: ''
+      offset: 00009AD4
+    - name: _DVCRAttachXmtBufCR@12
+      processed: ''
+      offset: 00009C2B
+    - name: _DVCRIsXmtDetachedListEmpty@8
+      processed: ''
+      offset: '00009E41'
+    - name: _DVCRWriteStream@12
+      processed: ''
+      offset: 00009F80
+    - name: _DVCRIniXmtDescriptor@40
+      processed: ''
+      offset: 0000A40A
+    - name: _DVCRCreateDesc4OneFrame@12
+      processed: ''
+      offset: 0000A576
+    - name: _DVCRDestroyDesc4OneFrame@8
+      processed: ''
+      offset: 0000A82B
+    - name: _DVCRCreateDesc4AllFrames@8
+      processed: ''
+      offset: 0000A9A2
+    - name: _DVCRDestroyDesc4AllFrames@8
+      processed: ''
+      offset: 0000AA2D
+    - name: _DVCRStartIsochTalk@12
+      processed: ''
+      offset: 0000ACEB
+    - name: _DVCRStopStreamForIsochTalk@12
+      processed: ''
+      offset: 0000ADBF
+    - name: _DVCRSetStreamStateForIsochTalk@16
+      processed: ''
+      offset: 0000B145
+    - name: _DVCRRcvCtrlPcktForIsochTalk@4
+      processed: ''
+      offset: 0000B369
+    - name: _StreamClassDeviceNotification
+      processed: ''
+      offset: 0000B4DC
+    - name: _StreamClassGetNextEvent@20
+      processed: ''
+      offset: 0000B4E2
+    - name: _StreamClassRegisterAdapter@12
+      processed: ''
+      offset: 0000B4E8
+    - name: _StreamClassStreamNotification
+      processed: ''
+      offset: 0000B4EE
+    - name: _StreamClassQueryMasterClockSync@8
+      processed: ''
+      offset: 0000B4F4
+    - name: _ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 0000B4FA
+    - name: _DbgPrint
+      processed: ''
+      offset: 0000B500
+    - name: _RtlAssert@16
+      processed: ''
+      offset: 0000B506
+    - name: '@KfReleaseSpinLock@8'
+      processed: ''
+      offset: 0000B50C
+    - name: _ExFreePool@4
+      processed: ''
+      offset: 0000B512
+    - name: '@KfAcquireSpinLock@4'
+      processed: ''
+      offset: 0000B518
+    - name: _KeSetEvent@12
+      processed: ''
+      offset: 0000B51E
+    - name: _KeWaitForSingleObject@20
+      processed: ''
+      offset: 0000B524
+    - name: _IoFreeMdl@4
+      processed: ''
+      offset: 0000B52A
+    - name: _KeResetEvent@4
+      processed: ''
+      offset: 0000B530
+    - name: _MmBuildMdlForNonPagedPool@4
+      processed: ''
+      offset: 0000B536
+    - name: _MmCreateMdl@12
+      processed: ''
+      offset: 0000B53C
+    - name: _KeGetCurrentIrql@0
+      processed: ''
+      offset: 0000B542
+    - name: __aulldiv
+      processed: ''
+      offset: 0000B550
+    - name: _wcscpy
+      processed: ''
+      offset: 0000B5B8
+    - name: _IoFreeIrp@4
+      processed: ''
+      offset: 0000B5BE
+    - name: _IoAllocateIrp@8
+      processed: ''
+      offset: 0000B5C4
+    - name: _KeDelayExecutionThread@12
+      processed: ''
+      offset: 0000B5CA
+    - name: _KeReleaseMutex@8
+      processed: ''
+      offset: 0000B5D0
+    - name: '@IofCallDriver@8'
+      processed: ''
+      offset: 0000B5D6
+    - name: '@ExfInterlockedRemoveHeadList@8'
+      processed: ''
+      offset: 0000B5DC
+    - name: _KeInitializeEvent@12
+      processed: ''
+      offset: 0000B5E2
+    - name: _KeInitializeSpinLock@4
+      processed: ''
+      offset: 0000B5E8
+    - name: _IoRegisterDeviceInterface@16
+      processed: ''
+      offset: 0000B5EE
+    - name: _KeInitializeMutex@8
+      processed: ''
+      offset: 0000B5F4
+    - name: _KeClearEvent@4
+      processed: ''
+      offset: 0000B5FA
+    - name: __alldiv
+      processed: ''
+      offset: 0000B600
+    - name: _KeQueryPerformanceCounter@4
+      processed: ''
+      offset: 0000B6AA
+    - name: __aullrem
+      processed: ''
+      offset: 0000B6B0
+    - name: __allmul
+      processed: ''
+      offset: 0000B730
+    - name: '@KefReleaseSpinLockFromDpcLevel@4'
+      processed: ''
+      offset: 0000B764
+    - name: '@KefAcquireSpinLockAtDpcLevel@4'
+      processed: ''
+      offset: 0000B76A
+    - name: '@ExfInterlockedInsertTailList@12'
+      processed: ''
+      offset: 0000B770
+    - name: _MmMapLockedPages@8
+      processed: ''
+      offset: 0000B776
+    - name: '@ExfInterlockedInsertHeadList@12'
+      processed: ''
+      offset: 0000B77C
+    - name: '@InterlockedDecrement@4'
+      processed: ''
+      offset: 0000B782
+    - name: '@InterlockedIncrement@4'
+      processed: ''
+      offset: 0000B788
+    - name: _IoAllocateMdl@20
+      processed: ''
+      offset: 0000B78E
+  - num: '2'
+    name: .rdata
+    offset: 00004B00
+    symbols:
+    - name: _KSEVENTSETID_EXTDEV_Command
+      processed: ''
+      offset: '00000070'
+    - name: _PROPSETID_TIMECODE_READER
+      processed: ''
+      offset: '00000080'
+    - name: _PROPSETID_EXT_TRANSPORT
+      processed: ''
+      offset: '00000090'
+    - name: _PROPSETID_EXT_DEVICE
+      processed: ''
+      offset: 000000A0
+    - name: _KSDATAFORMAT_SPECIFIER_DVINFO
+      processed: ''
+      offset: 000000B0
+    - name: _KSDATAFORMAT_TYPE_INTERLEAVED
+      processed: ''
+      offset: 000000C0
+    - name: _PINNAME_DV_AV_INPUT
+      processed: ''
+      offset: 000000D0
+    - name: _PINNAME_DV_VID_INPUT
+      processed: ''
+      offset: '000000E0'
+    - name: _PINNAME_DV_AV_OUTPUT
+      processed: ''
+      offset: 000000F0
+    - name: _PINNAME_DV_VID_OUTPUT
+      processed: ''
+      offset: '00000100'
+    - name: _ExternalDeviceProperties
+      processed: ''
+      offset: '00000110'
+    - name: _ExternalTransportProperties
+      processed: ''
+      offset: 000001D8
+    - name: _TimeCodeReaderProperties
+      processed: ''
+      offset: '00000390'
+    - name: _VideoStreamConnectionProperties
+      processed: ''
+      offset: '00000408'
+    - name: _VideoStreamDroppedFramesProperties
+      processed: ''
+      offset: '00000430'
+  - num: '3'
+    name: .data
+    offset: 00004DD0
+    symbols:
+    - name: _DVcrAVCCmdTable
+      processed: ''
+      offset: '00000000'
+    - name: _IsochInfoTable
+      processed: ''
+      offset: '00009720'
+    - name: _DVFormatInfoTable
+      processed: ''
+      offset: '00009738'
+    - name: _VideoDeviceProperties
+      processed: ''
+      offset: 000097B8
+    - name: _ExtDevCommandItm
+      processed: ''
+      offset: 000097F8
+    - name: _VideoDeviceEvents
+      processed: ''
+      offset: '00009858'
+    - name: _VideoStreamProperties
+      processed: ''
+      offset: '00009868'
+    - name: _EndOfStreamEventItm
+      processed: ''
+      offset: '00009890'
+    - name: _StreamEvents
+      processed: ''
+      offset: 000098A8
+    - name: _DvcrNTSCiavStream
+      processed: ''
+      offset: 000098B8
+    - name: _DvcrPALiavStream
+      processed: ''
+      offset: '00009918'
+    - name: _DvcrNTSCVideoStream
+      processed: ''
+      offset: '00009978'
+    - name: _DvcrPALVideoStream
+      processed: ''
+      offset: 00009AA0
+    - name: _DVCRStream0Formats
+      processed: ''
+      offset: 00009BC8
+    - name: _DVCRStream1Formats
+      processed: ''
+      offset: 00009BD0
+    - name: _Streams
+      processed: ''
+      offset: 00009C18
+    - name: _gulStreamCount
+      processed: ''
+      offset: 00009DD4
+    - name: _PacketFirstDIFInfoTable
+      processed: ''
+      offset: 0000BD30
+    - name: _LogStart
+      processed: ''
+      offset: 0000EFC0
+    - name: _cntAVCCompleted
+      processed: ''
+      offset: 0000EFC4
+    - name: _TimeOutErrors
+      processed: ''
+      offset: 0000EFC8
+    - name: _PreviousState
+      processed: ''
+      offset: 0000EFCC
+    - name: _DVDebugLevel
+      processed: ''
+      offset: 0000EFE8
+    - name: _cntAllocateCh
+      processed: ''
+      offset: 0000EFEC
+    - name: _cntAllocateBw
+      processed: ''
+      offset: 0000EFF0
+    - name: _cntAllocateRsc
+      processed: ''
+      offset: 0000EFF4
+    - name: _cntCallback
+      processed: ''
+      offset: 0000EFF8
+    - name: _cntFrame
+      processed: ''
+      offset: 0000EFFC
+    - name: _tmStop
+      processed: ''
+      offset: 0000F000
+    - name: _tmLastWrite
+      processed: ''
+      offset: 0000F008
+    - name: _tmWrite
+      processed: ''
+      offset: 0000F010
+    - name: _tmPause
+      processed: ''
+      offset: 0000F018
+    - name: _tmRun
+      processed: ''
+      offset: 0000F020
+    - name: _tmRun2
+      processed: ''
+      offset: 0000F028
+    - name: _LogPtr
+      processed: ''
+      offset: 0000F030
+    - name: _LogEnd
+      processed: ''
+      offset: 0000F034
+  - num: '4'
+    name: .idata$2
+    offset: 000053D0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_STREAM
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __imp__KeQueryPerformanceCounter@4
+      processed: ''
+      offset: 000000F8
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: 000000FC
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: '00000100'
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: '00000104'
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000108'
+    - name: __imp__IoAllocateIrp@8
+      processed: ''
+      offset: 0000010C
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000110'
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: '00000114'
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: '00000118'
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      processed: ''
+      offset: 0000011C
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000120'
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '00000124'
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: '00000128'
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: 0000012C
+    - name: __imp__IoFreeMdl@4
+      processed: ''
+      offset: '00000130'
+    - name: __imp__KeResetEvent@4
+      processed: ''
+      offset: '00000134'
+    - name: __imp__MmBuildMdlForNonPagedPool@4
+      processed: ''
+      offset: '00000138'
+    - name: __imp__MmCreateMdl@12
+      processed: ''
+      offset: 0000013C
+    - name: __imp__KeClearEvent@4
+      processed: ''
+      offset: '00000140'
+    - name: __imp__wcscpy
+      processed: ''
+      offset: '00000144'
+    - name: __imp__IoFreeIrp@4
+      processed: ''
+      offset: '00000148'
+    - name: __imp__KeDelayExecutionThread@12
+      processed: ''
+      offset: 0000014C
+    - name: __imp__KeReleaseMutex@8
+      processed: ''
+      offset: '00000150'
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '00000154'
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      processed: ''
+      offset: '00000158'
+    - name: __imp_@InterlockedDecrement@4
+      processed: ''
+      offset: 0000015C
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: '00000160'
+    - name: __imp__IoRegisterDeviceInterface@16
+      processed: ''
+      offset: '00000164'
+    - name: __imp__KeInitializeMutex@8
+      processed: ''
+      offset: '00000168'
+    - name: __imp__IoAllocateMdl@20
+      processed: ''
+      offset: 0000016C
+    - name: __imp_@ExfInterlockedInsertHeadList@12
+      processed: ''
+      offset: '00000170'
+    - name: __imp_@InterlockedIncrement@4
+      processed: ''
+      offset: '00000174'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      processed: ''
+      offset: '00000178'
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      processed: ''
+      offset: 0000017C
+    - name: __imp__MmMapLockedPages@8
+      processed: ''
+      offset: '00000180'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000184'
+    - name: __imp__StreamClassDeviceNotification
+      processed: ''
+      offset: '00000188'
+    - name: __imp__StreamClassQueryMasterClockSync@8
+      processed: ''
+      offset: 0000018C
+    - name: __imp__StreamClassStreamNotification
+      processed: ''
+      offset: '00000190'
+    - name: __imp__StreamClassRegisterAdapter@12
+      processed: ''
+      offset: '00000194'
+    - name: __imp__StreamClassGetNextEvent@20
+      processed: ''
+      offset: '00000198'
+    - name: \177STREAM_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000019C
+  - num: '5'
+    name: PAGECONST
+    offset: '00000000'
+    symbols:
+    - name: _IID_IKoInitializeParentDeviceObject
+      processed: ''
+      offset: '00000000'
+    - name: _KoCreateObject
+      processed: ''
+      offset: '00000010'
+    - name: _IID_IUnknown
+      processed: ''
+      offset: '00000020'
+    - name: _CLSID_Proxy
+      processed: ''
+      offset: '00000030'
+    - name: _IID_IKsTopology
+      processed: ''
+      offset: '00000040'
+    - name: _IID_IKsAggregateControl
+      processed: ''
+      offset: '00000050'
+    - name: _IID_IKsControl
+      processed: ''
+      offset: '00000060'
+    - name: _IID_IKsPropertySet
+      processed: ''
+      offset: '00000070'
+    - name: _IID_IKsAllocatorEx
+      processed: ''
+      offset: '00000080'
+    - name: _IID_IKsAllocator
+      processed: ''
+      offset: '00000090'
+    - name: _IID_IKsClockPropertySet
+      processed: ''
+      offset: 000000A0
+    - name: _IID_IKsInterfaceHandler
+      processed: ''
+      offset: 000000B0
+    - name: _IID_IKsDataTypeCompletion
+      processed: ''
+      offset: 000000C0
+    - name: _IID_IKsDataTypeHandler
+      processed: ''
+      offset: 000000D0
+    - name: _IID_IKsPinPipe
+      processed: ''
+      offset: '000000E0'
+    - name: _IID_IKsPin
+      processed: ''
+      offset: 000000F0
+    - name: _IID_IKsObject
+      processed: ''
+      offset: '00000100'
+    - name: _KSPROPSETID_TSRateChange
+      processed: ''
+      offset: '00000110'
+    - name: _KSDATAFORMAT_TYPE_DVD_ENCRYPTED_PACK
+      processed: ''
+      offset: '00000120'
+    - name: _KSDATAFORMAT_SUBTYPE_Line21_GOPPacket
+      processed: ''
+      offset: '00000130'
+    - name: _KSDATAFORMAT_SUBTYPE_Line21_BytePair
+      processed: ''
+      offset: '00000140'
+    - name: _KSDATAFORMAT_TYPE_AUXLine21Data
+      processed: ''
+      offset: '00000150'
+    - name: _KSEVENTSETID_VPVBINotify
+      processed: ''
+      offset: '00000160'
+    - name: _KSEVENTSETID_VIDCAPTOSTI
+      processed: ''
+      offset: '00000170'
+    - name: _KSEVENTSETID_VPNotify
+      processed: ''
+      offset: '00000180'
+    - name: _KSPROPSETID_VPVBIConfig
+      processed: ''
+      offset: '00000190'
+    - name: _KSPROPSETID_VPConfig
+      processed: ''
+      offset: 000001A0
+    - name: _PROPSETID_VIDCAP_DROPPEDFRAMES
+      processed: ''
+      offset: 000001B0
+    - name: _PROPSETID_VIDCAP_VIDEOCONTROL
+      processed: ''
+      offset: 000001C0
+    - name: _KSPROPSETID_OverlayUpdate
+      processed: ''
+      offset: 000001D0
+    - name: _KSDATAFORMAT_SUBTYPE_OVERLAY
+      processed: ''
+      offset: '000001E0'
+    - name: _PROPSETID_VIDCAP_VIDEOCOMPRESSION
+      processed: ''
+      offset: 000001F0
+    - name: _KSEVENTSETID_VIDCAP_TVAUDIO
+      processed: ''
+      offset: '00000200'
+    - name: _PROPSETID_VIDCAP_TVAUDIO
+      processed: ''
+      offset: '00000210'
+    - name: _EVENTSETID_CROSSBAR
+      processed: ''
+      offset: '00000220'
+    - name: _PROPSETID_VIDCAP_CROSSBAR
+      processed: ''
+      offset: '00000230'
+    - name: _PROPSETID_VIDCAP_CAMERACONTROL
+      processed: ''
+      offset: '00000240'
+    - name: _EVENTSETID_VIDEODECODER
+      processed: ''
+      offset: '00000250'
+    - name: _PROPSETID_VIDCAP_VIDEODECODER
+      processed: ''
+      offset: '00000260'
+    - name: _PROPSETID_VIDCAP_VIDEOENCODER
+      processed: ''
+      offset: '00000270'
+    - name: _EVENTSETID_TUNER
+      processed: ''
+      offset: '00000280'
+    - name: _PROPSETID_TUNER
+      processed: ''
+      offset: '00000290'
+    - name: _PROPSETID_VIDCAP_VIDEOPROCAMP
+      processed: ''
+      offset: 000002A0
+    - name: _PROPSETID_ALLOCATOR_CONTROL
+      processed: ''
+      offset: 000002B0
+    - name: _PINNAME_VIDEO_VIDEOPORT_VBI
+      processed: ''
+      offset: 000002C0
+    - name: _PINNAME_VIDEO_TIMECODE
+      processed: ''
+      offset: 000002D0
+    - name: _PINNAME_VIDEO_STILL
+      processed: ''
+      offset: '000002E0'
+    - name: _PINNAME_VIDEO_CC
+      processed: ''
+      offset: 000002F0
+    - name: _PINNAME_VIDEO_TELETEXT
+      processed: ''
+      offset: '00000300'
+    - name: _PINNAME_VIDEO_EDS
+      processed: ''
+      offset: '00000310'
+    - name: _PINNAME_VIDEO_NABTS
+      processed: ''
+      offset: '00000320'
+    - name: _PINNAME_VIDEO_VIDEOPORT
+      processed: ''
+      offset: '00000330'
+    - name: _PINNAME_VIDEO_VBI
+      processed: ''
+      offset: '00000340'
+    - name: _PINNAME_VIDEO_ANALOGVIDEOIN
+      processed: ''
+      offset: '00000350'
+    - name: _PINNAME_VIDEO_PREVIEW
+      processed: ''
+      offset: '00000360'
+    - name: _PINNAME_VIDEO_CAPTURE
+      processed: ''
+      offset: '00000370'
+    - name: _KSPROPSETID_VBICodecFiltering
+      processed: ''
+      offset: '00000380'
+    - name: _KSDATAFORMAT_SUBTYPE_NABTS_FEC
+      processed: ''
+      offset: '00000390'
+    - name: _KSDATAFORMAT_TYPE_NABTS
+      processed: ''
+      offset: 000003A0
+    - name: _KSDATAFORMAT_SUBTYPE_TELETEXT
+      processed: ''
+      offset: 000003B0
+    - name: _KSDATAFORMAT_SUBTYPE_NABTS
+      processed: ''
+      offset: 000003C0
+    - name: _KSDATAFORMAT_SUBTYPE_RAW8
+      processed: ''
+      offset: 000003D0
+    - name: _KSDATAFORMAT_TYPE_VBI
+      processed: ''
+      offset: '000003E0'
+    - name: _KSDATAFORMAT_SPECIFIER_VBI
+      processed: ''
+      offset: 000003F0
+    - name: _KSDATAFORMAT_SPECIFIER_ANALOGVIDEO
+      processed: ''
+      offset: '00000400'
+    - name: _KSDATAFORMAT_TYPE_ANALOGVIDEO
+      processed: ''
+      offset: '00000410'
+    - name: _KSDATAFORMAT_SPECIFIER_VIDEOINFO2
+      processed: ''
+      offset: '00000420'
+    - name: _KSDATAFORMAT_SPECIFIER_VIDEOINFO
+      processed: ''
+      offset: '00000430'
+    - name: _KSDATAFORMAT_SUBTYPE_VPVBI
+      processed: ''
+      offset: '00000440'
+    - name: _KSDATAFORMAT_SUBTYPE_VPVideo
+      processed: ''
+      offset: '00000450'
+    - name: _KSCATEGORY_VBICODEC
+      processed: ''
+      offset: '00000460'
+    - name: _KSCATEGORY_VPMUX
+      processed: ''
+      offset: '00000470'
+    - name: _KSCATEGORY_TVAUDIO
+      processed: ''
+      offset: '00000480'
+    - name: _KSCATEGORY_CROSSBAR
+      processed: ''
+      offset: '00000490'
+    - name: _KSCATEGORY_TVTUNER
+      processed: ''
+      offset: 000004A0
+    - name: _KSPROPSETID_CopyProt
+      processed: ''
+      offset: 000004B0
+    - name: _KSPROPSETID_DvdSubPic
+      processed: ''
+      offset: 000004C0
+    - name: _KSDATAFORMAT_SUBTYPE_SUBPICTURE
+      processed: ''
+      offset: 000004D0
+    - name: _KSPROPSETID_AudioDecoderOut
+      processed: ''
+      offset: '000004E0'
+    - name: _KSPROPSETID_AC3
+      processed: ''
+      offset: 000004F0
+    - name: _KSDATAFORMAT_SPECIFIER_AC3_AUDIO
+      processed: ''
+      offset: '00000500'
+    - name: _KSDATAFORMAT_SUBTYPE_AC3_AUDIO
+      processed: ''
+      offset: '00000510'
+    - name: _KSDATAFORMAT_SPECIFIER_LPCM_AUDIO
+      processed: ''
+      offset: '00000520'
+    - name: _KSDATAFORMAT_SUBTYPE_LPCM_AUDIO
+      processed: ''
+      offset: '00000530'
+    - name: _KSDATAFORMAT_SPECIFIER_MPEG2_AUDIO
+      processed: ''
+      offset: '00000540'
+    - name: _KSDATAFORMAT_SUBTYPE_MPEG2_AUDIO
+      processed: ''
+      offset: '00000550'
+    - name: _KSPROPSETID_Mpeg2Vid
+      processed: ''
+      offset: '00000560'
+    - name: _KSDATAFORMAT_SPECIFIER_MPEG2_VIDEO
+      processed: ''
+      offset: '00000570'
+    - name: _KSDATAFORMAT_SUBTYPE_MPEG2_VIDEO
+      processed: ''
+      offset: '00000580'
+    - name: _KSDATAFORMAT_TYPE_MPEG2_TRANSPORT
+      processed: ''
+      offset: '00000590'
+    - name: _KSDATAFORMAT_TYPE_MPEG2_PROGRAM
+      processed: ''
+      offset: 000005A0
+    - name: _KSDATAFORMAT_TYPE_MPEG2_PES
+      processed: ''
+      offset: 000005B0
+    - name: _KSDATAFORMAT_SUBTYPE_DSS_AUDIO
+      processed: ''
+      offset: 000005C0
+    - name: _KSDATAFORMAT_SUBTYPE_DSS_VIDEO
+      processed: ''
+      offset: 000005D0
+    - name: _KSDATAFORMAT_SPECIFIER_DIALECT_AC3_AUDIO
+      processed: ''
+      offset: '000005E0'
+    - name: _KSDATAFORMAT_SPECIFIER_DIALECT_MPEG2_AUDIO
+      processed: ''
+      offset: 000005F0
+    - name: _KSDATAFORMAT_SPECIFIER_DIALECT_MPEG2_VIDEO
+      processed: ''
+      offset: '00000600'
+    - name: _KSDATAFORMAT_SPECIFIER_DIALECT_MPEG1_AUDIO
+      processed: ''
+      offset: '00000610'
+    - name: _KSDATAFORMAT_SPECIFIER_DIALECT_MPEG1_VIDEO
+      processed: ''
+      offset: '00000620'
+    - name: _KSDATAFORMAT_SUBTYPE_STANDARD_AC3_AUDIO
+      processed: ''
+      offset: '00000630'
+    - name: _KSDATAFORMAT_SUBTYPE_STANDARD_MPEG2_AUDIO
+      processed: ''
+      offset: '00000640'
+    - name: _KSDATAFORMAT_SUBTYPE_STANDARD_MPEG2_VIDEO
+      processed: ''
+      offset: '00000650'
+    - name: _KSDATAFORMAT_SUBTYPE_STANDARD_MPEG1_AUDIO
+      processed: ''
+      offset: '00000660'
+    - name: _KSDATAFORMAT_SUBTYPE_STANDARD_MPEG1_VIDEO
+      processed: ''
+      offset: '00000670'
+    - name: _KSDATAFORMAT_TYPE_STANDARD_PACK_HEADER
+      processed: ''
+      offset: '00000680'
+    - name: _KSDATAFORMAT_TYPE_STANDARD_PES_PACKET
+      processed: ''
+      offset: '00000690'
+    - name: _KSDATAFORMAT_TYPE_STANDARD_ELEMENTARY_STREAM
+      processed: ''
+      offset: 000006A0
+    - name: _KSDATAFORMAT_SUBTYPE_RIFFMIDI
+      processed: ''
+      offset: 000006B0
+    - name: _KSDATAFORMAT_SUBTYPE_MIDI_BUS
+      processed: ''
+      offset: 000006C0
+    - name: _KSDATAFORMAT_SUBTYPE_MIDI
+      processed: ''
+      offset: 000006D0
+    - name: _KSDATAFORMAT_TYPE_MIDI
+      processed: ''
+      offset: '000006E0'
+    - name: _KSDATAFORMAT_TYPE_MUSIC
+      processed: ''
+      offset: 000006F0
+    - name: _KSPROPSETID_Linear
+      processed: ''
+      offset: '00000700'
+    - name: _KSPROPSETID_Sysaudio_Pin
+      processed: ''
+      offset: '00000710'
+    - name: _KSPROPSETID_Sysaudio
+      processed: ''
+      offset: '00000720'
+    - name: _KSEVENTSETID_Sysaudio
+      processed: ''
+      offset: '00000730'
+    - name: _KSEVENTSETID_LoopedStreaming
+      processed: ''
+      offset: '00000740'
+    - name: _KSEVENTSETID_AudioControlChange
+      processed: ''
+      offset: '00000750'
+    - name: _KSPROPSETID_Cyclic
+      processed: ''
+      offset: '00000760'
+    - name: _KSEVENTSETID_Cyclic
+      processed: ''
+      offset: '00000770'
+    - name: _KSPROPSETID_WaveTable
+      processed: ''
+      offset: '00000780'
+    - name: _KSMUSIC_TECHNOLOGY_SWSYNTH
+      processed: ''
+      offset: '00000790'
+    - name: _KSMUSIC_TECHNOLOGY_WAVETABLE
+      processed: ''
+      offset: 000007A0
+    - name: _KSMUSIC_TECHNOLOGY_FMSYNTH
+      processed: ''
+      offset: 000007B0
+    - name: _KSMUSIC_TECHNOLOGY_SQSYNTH
+      processed: ''
+      offset: 000007C0
+    - name: _KSMUSIC_TECHNOLOGY_PORT
+      processed: ''
+      offset: 000007D0
+    - name: _KSPROPSETID_Wave
+      processed: ''
+      offset: '000007E0'
+    - name: _KSMETHODSETID_Wave_Queued
+      processed: ''
+      offset: 000007F0
+    - name: _KSPROPSETID_Wave_Queued
+      processed: ''
+      offset: '00000800'
+    - name: _KSPROPSETID_Hrtf3d
+      processed: ''
+      offset: '00000810'
+    - name: _KSPROPSETID_Itd3d
+      processed: ''
+      offset: '00000820'
+    - name: _KSMETHODSETID_Wavetable
+      processed: ''
+      offset: '00000830'
+    - name: _KSAUDFNAME_VIDEO
+      processed: ''
+      offset: '00000840'
+    - name: _KSAUDFNAME_VIDEO_MUTE
+      processed: ''
+      offset: '00000850'
+    - name: _KSAUDFNAME_VIDEO_VOLUME
+      processed: ''
+      offset: '00000860'
+    - name: _KSAUDFNAME_3D_CENTER
+      processed: ''
+      offset: '00000870'
+    - name: _KSAUDFNAME_3D_DEPTH
+      processed: ''
+      offset: '00000880'
+    - name: _KSAUDFNAME_ALTERNATE_MICROPHONE
+      processed: ''
+      offset: '00000890'
+    - name: _KSAUDFNAME_MICROPHONE_BOOST
+      processed: ''
+      offset: 000008A0
+    - name: _KSAUDFNAME_MONO_MIX_MUTE
+      processed: ''
+      offset: 000008B0
+    - name: _KSAUDFNAME_MONO_MIX_VOLUME
+      processed: ''
+      offset: 000008C0
+    - name: _KSAUDFNAME_STEREO_MIX_MUTE
+      processed: ''
+      offset: 000008D0
+    - name: _KSAUDFNAME_STEREO_MIX_VOLUME
+      processed: ''
+      offset: '000008E0'
+    - name: _KSAUDFNAME_MONO_OUT_MUTE
+      processed: ''
+      offset: 000008F0
+    - name: _KSAUDFNAME_MONO_OUT_VOLUME
+      processed: ''
+      offset: '00000900'
+    - name: _KSAUDFNAME_MONO_MIX
+      processed: ''
+      offset: '00000910'
+    - name: _KSAUDFNAME_STEREO_MIX
+      processed: ''
+      offset: '00000920'
+    - name: _KSAUDFNAME_MONO_OUT
+      processed: ''
+      offset: '00000930'
+    - name: _KSAUDFNAME_WAVE_OUT_MIX
+      processed: ''
+      offset: '00000940'
+    - name: _KSAUDFNAME_PC_SPEAKER
+      processed: ''
+      offset: '00000950'
+    - name: _KSAUDFNAME_AUX
+      processed: ''
+      offset: '00000960'
+    - name: _KSAUDFNAME_AUX_MUTE
+      processed: ''
+      offset: '00000970'
+    - name: _KSAUDFNAME_AUX_VOLUME
+      processed: ''
+      offset: '00000980'
+    - name: _KSAUDFNAME_CD_AUDIO
+      processed: ''
+      offset: '00000990'
+    - name: _KSAUDFNAME_RECORDING_CONTROL
+      processed: ''
+      offset: 000009A0
+    - name: _KSAUDFNAME_LINE_IN
+      processed: ''
+      offset: 000009B0
+    - name: _KSAUDFNAME_MIDI
+      processed: ''
+      offset: 000009C0
+    - name: _KSAUDFNAME_VOLUME_CONTROL
+      processed: ''
+      offset: 000009D0
+    - name: _KSAUDFNAME_WAVE_IN_VOLUME
+      processed: ''
+      offset: '000009E0'
+    - name: _KSAUDFNAME_MIC_IN_VOLUME
+      processed: ''
+      offset: 000009F0
+    - name: _KSAUDFNAME_LINE_IN_VOLUME
+      processed: ''
+      offset: 00000A00
+    - name: _KSAUDFNAME_CD_IN_VOLUME
+      processed: ''
+      offset: 00000A10
+    - name: _KSAUDFNAME_MIDI_IN_VOLUME
+      processed: ''
+      offset: 00000A20
+    - name: _KSAUDFNAME_PC_SPEAKER_MUTE
+      processed: ''
+      offset: 00000A30
+    - name: _KSAUDFNAME_PC_SPEAKER_VOLUME
+      processed: ''
+      offset: 00000A40
+    - name: _KSAUDFNAME_RECORDING_SOURCE
+      processed: ''
+      offset: 00000A50
+    - name: _KSAUDFNAME_MIC_MUTE
+      processed: ''
+      offset: 00000A60
+    - name: _KSAUDFNAME_MIC_VOLUME
+      processed: ''
+      offset: 00000A70
+    - name: _KSAUDFNAME_LINE_MUTE
+      processed: ''
+      offset: 00000A80
+    - name: _KSAUDFNAME_LINE_VOLUME
+      processed: ''
+      offset: 00000A90
+    - name: _KSAUDFNAME_CD_MUTE
+      processed: ''
+      offset: 00000AA0
+    - name: _KSAUDFNAME_CD_VOLUME
+      processed: ''
+      offset: 00000AB0
+    - name: _KSAUDFNAME_MIDI_MUTE
+      processed: ''
+      offset: 00000AC0
+    - name: _KSAUDFNAME_MIDI_VOLUME
+      processed: ''
+      offset: 00000AD0
+    - name: _KSAUDFNAME_WAVE_MUTE
+      processed: ''
+      offset: 00000AE0
+    - name: _KSAUDFNAME_WAVE_VOLUME
+      processed: ''
+      offset: 00000AF0
+    - name: _KSAUDFNAME_MASTER_MUTE
+      processed: ''
+      offset: 00000B00
+    - name: _KSAUDFNAME_MASTER_VOLUME
+      processed: ''
+      offset: 00000B10
+    - name: _KSAUDFNAME_3D_STEREO
+      processed: ''
+      offset: 00000B20
+    - name: _KSAUDFNAME_TREBLE
+      processed: ''
+      offset: 00000B30
+    - name: _KSAUDFNAME_BASS
+      processed: ''
+      offset: 00000B40
+    - name: _KSNODETYPE_SURROUND_ENCODER
+      processed: ''
+      offset: 00000B50
+    - name: _KSNODETYPE_DEV_SPECIFIC
+      processed: ''
+      offset: 00000B60
+    - name: _KSNODETYPE_3D_EFFECTS
+      processed: ''
+      offset: 00000B70
+    - name: _KSNODETYPE_CHORUS
+      processed: ''
+      offset: 00000B80
+    - name: _KSNODETYPE_REVERB
+      processed: ''
+      offset: 00000B90
+    - name: _KSNODETYPE_STEREO_ENHANCE
+      processed: ''
+      offset: 00000BA0
+    - name: _KSNODETYPE_STEREO_WIDE
+      processed: ''
+      offset: 00000BB0
+    - name: _KSNODETYPE_PROLOGIC_DECODER
+      processed: ''
+      offset: 00000BC0
+    - name: _KSNODETYPE_LOUDNESS
+      processed: ''
+      offset: 00000BD0
+    - name: _KSNODETYPE_DELAY
+      processed: ''
+      offset: 00000BE0
+    - name: _KSNODETYPE_AGC
+      processed: ''
+      offset: 00000BF0
+    - name: _KSNODETYPE_EQUALIZER
+      processed: ''
+      offset: 00000C00
+    - name: _KSNODETYPE_TONE
+      processed: ''
+      offset: 00000C10
+    - name: _KSNODETYPE_VOLUME
+      processed: ''
+      offset: 00000C20
+    - name: _KSNODETYPE_MUTE
+      processed: ''
+      offset: 00000C30
+    - name: _KSNODETYPE_SUM
+      processed: ''
+      offset: 00000C40
+    - name: _KSNODETYPE_DEMUX
+      processed: ''
+      offset: 00000C50
+    - name: _KSNODETYPE_MUX
+      processed: ''
+      offset: 00000C60
+    - name: _KSNODETYPE_SUPERMIX
+      processed: ''
+      offset: 00000C70
+    - name: _KSNODETYPE_SRC
+      processed: ''
+      offset: 00000C80
+    - name: _KSNODETYPE_ADC
+      processed: ''
+      offset: 00000C90
+    - name: _KSNODETYPE_DAC
+      processed: ''
+      offset: 00000CA0
+    - name: _KSPROPSETID_Audio
+      processed: ''
+      offset: 00000CB0
+    - name: _KSPROPSETID_TopologyNode
+      processed: ''
+      offset: 00000CC0
+    - name: _KSPROPSETID_Bibliographic
+      processed: ''
+      offset: 00000CD0
+    - name: _KSDATAFORMAT_SUBTYPE_RIFFWAVE
+      processed: ''
+      offset: 00000CE0
+    - name: _KSDATAFORMAT_SUBTYPE_RIFF
+      processed: ''
+      offset: 00000CF0
+    - name: _KSPROPSETID_DirectSound3DBuffer
+      processed: ''
+      offset: 00000D00
+    - name: _KSPROPSETID_DirectSound3DListener
+      processed: ''
+      offset: 00000D10
+    - name: _KSDATAFORMAT_SPECIFIER_DSOUND
+      processed: ''
+      offset: 00000D20
+    - name: _KSDATAFORMAT_SPECIFIER_WAVEFORMATEX
+      processed: ''
+      offset: 00000D30
+    - name: _KSDATAFORMAT_SPECIFIER_VC_ID
+      processed: ''
+      offset: 00000D40
+    - name: _KSDATAFORMAT_SUBTYPE_MPEG
+      processed: ''
+      offset: 00000D50
+    - name: _KSDATAFORMAT_SUBTYPE_ADPCM
+      processed: ''
+      offset: 00000D60
+    - name: _KSDATAFORMAT_SUBTYPE_MULAW
+      processed: ''
+      offset: 00000D70
+    - name: _KSDATAFORMAT_SUBTYPE_ALAW
+      processed: ''
+      offset: 00000D80
+    - name: _KSDATAFORMAT_SUBTYPE_IEEE_FLOAT
+      processed: ''
+      offset: 00000D90
+    - name: _KSDATAFORMAT_SUBTYPE_PCM
+      processed: ''
+      offset: 00000DA0
+    - name: _KSDATAFORMAT_SUBTYPE_ANALOG
+      processed: ''
+      offset: 00000DB0
+    - name: _KSDATAFORMAT_SUBTYPE_WAVEFORMATEX
+      processed: ''
+      offset: 00000DC0
+    - name: _KSDATAFORMAT_TYPE_TEXT
+      processed: ''
+      offset: 00000DD0
+    - name: _KSDATAFORMAT_TYPE_AUDIO
+      processed: ''
+      offset: 00000DE0
+    - name: _KSDATAFORMAT_TYPE_VIDEO
+      processed: ''
+      offset: 00000DF0
+    - name: _KSCATEGORY_ESCALANTE_PLATFORM_DRIVER
+      processed: ''
+      offset: '00000E00'
+    - name: _KSCATEGORY_WDMAUD_USE_PIN_NAME
+      processed: ''
+      offset: '00000E10'
+    - name: _KSCATEGORY_PREFERRED_MIDIOUT_DEVICE
+      processed: ''
+      offset: '00000E20'
+    - name: _KSCATEGORY_PREFERRED_WAVEIN_DEVICE
+      processed: ''
+      offset: '00000E30'
+    - name: _KSCATEGORY_PREFERRED_WAVEOUT_DEVICE
+      processed: ''
+      offset: '00000E40'
+    - name: _KSCATEGORY_AUDIO_DEVICE
+      processed: ''
+      offset: '00000E50'
+    - name: _KSCATEGORY_WDMAUD
+      processed: ''
+      offset: '00000E60'
+    - name: _KSCATEGORY_SYSAUDIO
+      processed: ''
+      offset: '00000E70'
+    - name: _KSCATEGORY_ACOUSTIC_ECHO_CANCEL
+      processed: ''
+      offset: '00000E80'
+    - name: _KSCATEGORY_VIRTUAL
+      processed: ''
+      offset: '00000E90'
+    - name: _KSCATEGORY_TOPOLOGY
+      processed: ''
+      offset: 00000EA0
+    - name: _KSCATEGORY_NETWORK
+      processed: ''
+      offset: 00000EB0
+    - name: _KSCATEGORY_TEXT
+      processed: ''
+      offset: 00000EC0
+    - name: _KSCATEGORY_VIDEO
+      processed: ''
+      offset: 00000ED0
+    - name: _KSCATEGORY_AUDIO
+      processed: ''
+      offset: 00000EE0
+    - name: _KSNODETYPE_SWMIDI
+      processed: ''
+      offset: 00000EF0
+    - name: _KSNODETYPE_SWSYNTH
+      processed: ''
+      offset: 00000F00
+    - name: _KSNODETYPE_SYNTHESIZER
+      processed: ''
+      offset: 00000F10
+    - name: _KSNODETYPE_MULTITRACK_RECORDER
+      processed: ''
+      offset: 00000F20
+    - name: _KSNODETYPE_RADIO_TRANSMITTER
+      processed: ''
+      offset: 00000F30
+    - name: _KSNODETYPE_RADIO_RECEIVER
+      processed: ''
+      offset: 00000F40
+    - name: _KSNODETYPE_DSS_AUDIO
+      processed: ''
+      offset: 00000F50
+    - name: _KSNODETYPE_CABLE_TUNER_AUDIO
+      processed: ''
+      offset: 00000F60
+    - name: _KSNODETYPE_SATELLITE_RECEIVER_AUDIO
+      processed: ''
+      offset: 00000F70
+    - name: _KSNODETYPE_TV_TUNER_AUDIO
+      processed: ''
+      offset: 00000F80
+    - name: _KSNODETYPE_DVD_AUDIO
+      processed: ''
+      offset: 00000F90
+    - name: _KSNODETYPE_VIDEO_DISC_AUDIO
+      processed: ''
+      offset: 00000FA0
+    - name: _KSNODETYPE_VCR_AUDIO
+      processed: ''
+      offset: 00000FB0
+    - name: _KSNODETYPE_PHONOGRAPH
+      processed: ''
+      offset: 00000FC0
+    - name: _KSNODETYPE_ANALOG_TAPE
+      processed: ''
+      offset: 00000FD0
+    - name: _KSNODETYPE_MINIDISK
+      processed: ''
+      offset: 00000FE0
+    - name: _KSNODETYPE_DCC_IO_DIGITAL_COMPACT_CASSETTE
+      processed: ''
+      offset: 00000FF0
+    - name: _KSNODETYPE_DAT_IO_DIGITAL_AUDIO_TAPE
+      processed: ''
+      offset: '00001000'
+    - name: _KSNODETYPE_CD_PLAYER
+      processed: ''
+      offset: '00001010'
+    - name: _KSNODETYPE_EQUALIZATION_NOISE
+      processed: ''
+      offset: '00001020'
+    - name: _KSNODETYPE_LEVEL_CALIBRATION_NOISE_SOURCE
+      processed: ''
+      offset: '00001030'
+    - name: _KSNODETYPE_1394_DV_STREAM_SOUNDTRACK
+      processed: ''
+      offset: '00001040'
+    - name: _KSNODETYPE_1394_DA_STREAM
+      processed: ''
+      offset: '00001050'
+    - name: _KSNODETYPE_SPDIF_INTERFACE
+      processed: ''
+      offset: '00001060'
+    - name: _KSNODETYPE_LEGACY_AUDIO_CONNECTOR
+      processed: ''
+      offset: '00001070'
+    - name: _KSNODETYPE_LINE_CONNECTOR
+      processed: ''
+      offset: '00001080'
+    - name: _KSNODETYPE_DIGITAL_AUDIO_INTERFACE
+      processed: ''
+      offset: '00001090'
+    - name: _KSNODETYPE_ANALOG_CONNECTOR
+      processed: ''
+      offset: 000010A0
+    - name: _KSNODETYPE_DOWN_LINE_PHONE
+      processed: ''
+      offset: 000010B0
+    - name: _KSNODETYPE_TELEPHONE
+      processed: ''
+      offset: 000010C0
+    - name: _KSNODETYPE_PHONE_LINE
+      processed: ''
+      offset: 000010D0
+    - name: _KSNODETYPE_ECHO_CANCELING_SPEAKERPHONE
+      processed: ''
+      offset: '000010E0'
+    - name: _KSNODETYPE_ECHO_SUPPRESSING_SPEAKERPHONE
+      processed: ''
+      offset: 000010F0
+    - name: _KSNODETYPE_SPEAKERPHONE_NO_ECHO_REDUCTION
+      processed: ''
+      offset: '00001100'
+    - name: _KSNODETYPE_HEADSET
+      processed: ''
+      offset: '00001110'
+    - name: _KSNODETYPE_HANDSET
+      processed: ''
+      offset: '00001120'
+    - name: _KSNODETYPE_LOW_FREQUENCY_EFFECTS_SPEAKER
+      processed: ''
+      offset: '00001130'
+    - name: _KSNODETYPE_COMMUNICATION_SPEAKER
+      processed: ''
+      offset: '00001140'
+    - name: _KSNODETYPE_ROOM_SPEAKER
+      processed: ''
+      offset: '00001150'
+    - name: _KSNODETYPE_DESKTOP_SPEAKER
+      processed: ''
+      offset: '00001160'
+    - name: _KSNODETYPE_HEAD_MOUNTED_DISPLAY_AUDIO
+      processed: ''
+      offset: '00001170'
+    - name: _KSNODETYPE_HEADPHONES
+      processed: ''
+      offset: '00001180'
+    - name: _KSNODETYPE_SPEAKER
+      processed: ''
+      offset: '00001190'
+    - name: _KSNODETYPE_PROCESSING_MICROPHONE_ARRAY
+      processed: ''
+      offset: 000011A0
+    - name: _KSNODETYPE_MICROPHONE_ARRAY
+      processed: ''
+      offset: 000011B0
+    - name: _KSNODETYPE_OMNI_DIRECTIONAL_MICROPHONE
+      processed: ''
+      offset: 000011C0
+    - name: _KSNODETYPE_PERSONAL_MICROPHONE
+      processed: ''
+      offset: 000011D0
+    - name: _KSNODETYPE_DESKTOP_MICROPHONE
+      processed: ''
+      offset: '000011E0'
+    - name: _KSNODETYPE_MICROPHONE
+      processed: ''
+      offset: 000011F0
+    - name: _KSINTERFACESETID_Media
+      processed: ''
+      offset: '00001200'
+    - name: _KSMEDIUMSETID_VPBus
+      processed: ''
+      offset: '00001210'
+    - name: _KSMEDIUMSETID_MidiBus
+      processed: ''
+      offset: '00001220'
+    - name: _KSPROPSETID_Service
+      processed: ''
+      offset: '00001230'
+    - name: _KSNAME_Server
+      processed: ''
+      offset: '00001240'
+    - name: _GUID_BUS_INTERFACE_MEDIUMS
+      processed: ''
+      offset: '00001250'
+    - name: _KSDEGRADESETID_Standard
+      processed: ''
+      offset: '00001260'
+    - name: _KSEVENTSETID_Connection
+      processed: ''
+      offset: '00001270'
+    - name: _KSEVENTSETID_Clock
+      processed: ''
+      offset: '00001280'
+    - name: _KSPROPSETID_Clock
+      processed: ''
+      offset: '00001290'
+    - name: _KSPROPSETID_Stream
+      processed: ''
+      offset: 000012A0
+    - name: _KSPROPSETID_StreamInterface
+      processed: ''
+      offset: 000012B0
+    - name: _KSPROPSETID_StreamAllocator
+      processed: ''
+      offset: 000012C0
+    - name: _KSMETHODSETID_StreamAllocator
+      processed: ''
+      offset: 000012D0
+    - name: _KSEVENTSETID_StreamAllocator
+      processed: ''
+      offset: '000012E0'
+    - name: _KSMEMORY_TYPE_DEVICE_UNKNOWN
+      processed: ''
+      offset: 000012F0
+    - name: _KSMEMORY_TYPE_KERNEL_NONPAGED
+      processed: ''
+      offset: '00001300'
+    - name: _KSMEMORY_TYPE_KERNEL_PAGED
+      processed: ''
+      offset: '00001310'
+    - name: _KSMEMORY_TYPE_USER
+      processed: ''
+      offset: '00001320'
+    - name: _KSMEMORY_TYPE_SYSTEM
+      processed: ''
+      offset: '00001330'
+    - name: _KSPROPSETID_Connection
+      processed: ''
+      offset: '00001340'
+    - name: _KSPROPSETID_Quality
+      processed: ''
+      offset: '00001350'
+    - name: _KSDATAFORMAT_SPECIFIER_NONE
+      processed: ''
+      offset: '00001360'
+    - name: _KSDATAFORMAT_SPECIFIER_FILEHANDLE
+      processed: ''
+      offset: '00001370'
+    - name: _KSDATAFORMAT_SPECIFIER_FILENAME
+      processed: ''
+      offset: '00001380'
+    - name: _KSDATAFORMAT_SUBTYPE_NONE
+      processed: ''
+      offset: '00001390'
+    - name: _KSDATAFORMAT_TYPE_STREAM
+      processed: ''
+      offset: 000013A0
+    - name: _KSNAME_TopologyNode
+      processed: ''
+      offset: 000013B0
+    - name: _KSNAME_Allocator
+      processed: ''
+      offset: 000013C0
+    - name: _KSNAME_Clock
+      processed: ''
+      offset: 000013D0
+    - name: _KSNAME_Pin
+      processed: ''
+      offset: '000013E0'
+    - name: _KSNAME_Filter
+      processed: ''
+      offset: 000013F0
+    - name: _KSPROPSETID_Pin
+      processed: ''
+      offset: '00001400'
+    - name: _KSMEDIUMSETID_Standard
+      processed: ''
+      offset: '00001410'
+    - name: _KSINTERFACESETID_FileIo
+      processed: ''
+      offset: '00001420'
+    - name: _KSINTERFACESETID_Standard
+      processed: ''
+      offset: '00001430'
+    - name: _KSTIME_FORMAT_MEDIA_TIME
+      processed: ''
+      offset: '00001440'
+    - name: _KSTIME_FORMAT_FIELD
+      processed: ''
+      offset: '00001450'
+    - name: _KSTIME_FORMAT_SAMPLE
+      processed: ''
+      offset: '00001460'
+    - name: _KSTIME_FORMAT_BYTE
+      processed: ''
+      offset: '00001470'
+    - name: _KSTIME_FORMAT_FRAME
+      processed: ''
+      offset: '00001480'
+    - name: _KSCATEGORY_QUALITY
+      processed: ''
+      offset: '00001490'
+    - name: _KSCATEGORY_PROXY
+      processed: ''
+      offset: 000014A0
+    - name: _KSCATEGORY_CLOCK
+      processed: ''
+      offset: 000014B0
+    - name: _KSCATEGORY_FILESYSTEM
+      processed: ''
+      offset: 000014C0
+    - name: _KSCATEGORY_MEDIUMTRANSFORM
+      processed: ''
+      offset: 000014D0
+    - name: _KSCATEGORY_INTERFACETRANSFORM
+      processed: ''
+      offset: '000014E0'
+    - name: _KSCATEGORY_COMMUNICATIONSTRANSFORM
+      processed: ''
+      offset: 000014F0
+    - name: _KSCATEGORY_DATATRANSFORM
+      processed: ''
+      offset: '00001500'
+    - name: _KSCATEGORY_DATADECOMPRESSOR
+      processed: ''
+      offset: '00001510'
+    - name: _KSCATEGORY_DATACOMPRESSOR
+      processed: ''
+      offset: '00001520'
+    - name: _KSCATEGORY_SPLITTER
+      processed: ''
+      offset: '00001530'
+    - name: _KSCATEGORY_MIXER
+      processed: ''
+      offset: '00001540'
+    - name: _KSCATEGORY_RENDER
+      processed: ''
+      offset: '00001550'
+    - name: _KSCATEGORY_CAPTURE
+      processed: ''
+      offset: '00001560'
+    - name: _KSCATEGORY_BRIDGE
+      processed: ''
+      offset: '00001570'
+    - name: _KSPROPSETID_Topology
+      processed: ''
+      offset: '00001580'
+    - name: _KSPROPSETID_MediaSeeking
+      processed: ''
+      offset: '00001590'
+    - name: _KSMETHODSETID_StreamIo
+      processed: ''
+      offset: 000015A0
+    - name: _KSPROPSETID_General
+      processed: ''
+      offset: 000015B0
+    - name: _KSPROPTYPESETID_General
+      processed: ''
+      offset: 000015C0
+    - name: _GUID_NULL
+      processed: ''
+      offset: 000015D0
+    - name: _BUSID_SoftwareDeviceEnumerator
+      processed: ''
+      offset: '000015E0'
+- version: Windows 98SE Retail
+  source_tree:
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/ulldiv.asm
+  - intel/ullrem.asm
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00001130'
+    symbols:
+    - name: _DVCRFindCmdEntryCompleted@12
+      demangled: ''
+      offset: '00000000'
+    - name: _DVCRFindActiveCmdEntry@12
+      demangled: ''
+      offset: 0000003B
+    - name: _DVCRFindCtrlInterimEntry@12
+      demangled: ''
+      offset: 000000F2
+    - name: _DVCRFindNotifyInterimEntry@12
+      demangled: ''
+      offset: 0000011F
+    - name: _DVCRAVCCmdResetAfterBusReset@4
+      demangled: ''
+      offset: '00000143'
+    - name: _DVCRNonNotifyResponse@16
+      demangled: ''
+      offset: 000001C9
+    - name: _DVCRNotifyResponse@16
+      demangled: ''
+      offset: 0000031B
+    - name: _DVCRAVCResponseCallback@4
+      demangled: ''
+      offset: '00000434'
+    - name: _DVCRIssueAVCCommand@24
+      demangled: ''
+      offset: 0000051B
+    - name: _DVCRGetExtDeviceProperty@20
+      demangled: ''
+      offset: 0000092A
+    - name: _DVCRGetExtTransportProperty@20
+      demangled: ''
+      offset: 00000A21
+    - name: _DVCRSetExtTransportProperty@20
+      demangled: ''
+      offset: 00000C44
+    - name: _DVCRGetTimecodeReaderProperty@20
+      demangled: ''
+      offset: 00000D76
+    - name: _DVCRSetExtDeviceProperty@20
+      demangled: ''
+      offset: 00000E3B
+    - name: _DVCRSetTimecodeReaderProperty@20
+      demangled: ''
+      offset: 00000E3B
+    - name: _AdapterGetDeviceProperty@4
+      demangled: ''
+      offset: 00000E4A
+    - name: _AdapterSetDeviceProperty@4
+      demangled: ''
+      offset: 00000EC8
+    - name: _DVCRAllocateAddressRange@4
+      demangled: ''
+      offset: 00000F46
+    - name: _DVCRFreeAddressRange@4
+      demangled: ''
+      offset: '00001094'
+    - name: _DVCRAsyncLockPCR@28
+      demangled: ''
+      offset: 0000115B
+    - name: _DVCRReadPCRs@20
+      demangled: ''
+      offset: '00001250'
+    - name: _DVCRFreeIsochResource@28
+      demangled: ''
+      offset: '00001413'
+    - name: _DVCRAllocateIsochResource@12
+      demangled: ''
+      offset: 000015AD
+    - name: _DVCRAllocateIsochResourceBusReset@16
+      demangled: ''
+      offset: '00001962'
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: 00001C4E
+    - name: _GetCurrentGeneration@12
+      demangled: ''
+      offset: 00001CBE
+    - name: _GetCurrentLocalHostNodeID@12
+      demangled: ''
+      offset: 00001D03
+    - name: _QueryDeviceType@8
+      demangled: ''
+      offset: 00001D3F
+    - name: _QueryMediaSignal@8
+      demangled: ''
+      offset: 00001DC9
+    - name: _DVCRHwInitialize@4
+      demangled: ''
+      offset: 00001E0F
+    - name: _DVCRHwUnInitialize@4
+      demangled: ''
+      offset: 000022B6
+    - name: _DVCRIrpSynchCR@12
+      demangled: ''
+      offset: 000023C4
+    - name: _DVCRSubmitIrpSynch@12
+      demangled: ''
+      offset: 000023DF
+    - name: _DVCRAllocateIrbAndIrp@12
+      demangled: ''
+      offset: 0000255D
+    - name: _DVCRFreeIrbAndIrp@8
+      demangled: ''
+      offset: 000025AE
+    - name: _DVCRXlateGetMediumInfo@12
+      demangled: ''
+      offset: 000025D3
+    - name: _DVCRXlateGetTransportState@12
+      demangled: ''
+      offset: '00002669'
+    - name: _DVCRXlateGetIOSignalMode@8
+      demangled: ''
+      offset: '00002788'
+    - name: _DVCRXlateRAwAVC@20
+      demangled: ''
+      offset: 000027D6
+    - name: _DVCRGetStreamInfo@4
+      demangled: ''
+      offset: 000028F5
+    - name: _DVCRProcessPnPBusReset@8
+      demangled: ''
+      offset: 0000297F
+    - name: _DVCRAllocateIsochListenBuffers@8
+      demangled: ''
+      offset: 00002A38
+    - name: _DVCRFreeIsochListenLists@4
+      demangled: ''
+      offset: 00002BF3
+    - name: _InitializeStreamExtension@12
+      demangled: ''
+      offset: 00002C75
+    - name: _DVCROpenStream@12
+      demangled: ''
+      offset: 00002DDD
+    - name: _DVCRCloseStream@12
+      demangled: ''
+      offset: 00002F1D
+    - name: _DVCRReceiveDataPacket@4
+      demangled: ''
+      offset: 00002F8D
+    - name: _DVCRAdapterVerifyFormat@12
+      demangled: ''
+      offset: '00003402'
+    - name: _DVCRCompareGUIDsAndFormatSize@12
+      demangled: ''
+      offset: '00003491'
+    - name: _DVCRFormatFromRange@24
+      demangled: ''
+      offset: 000034EE
+    - name: _DVCRGetStreamProperty@4
+      demangled: ''
+      offset: '00003646'
+    - name: _DVCRSetStreamProperty@4
+      demangled: ''
+      offset: 0000368F
+    - name: _DVCRStreamGetConnectionProperty@4
+      demangled: ''
+      offset: 0000369D
+    - name: _DVCRGetStreamState@12
+      demangled: ''
+      offset: '00003708'
+    - name: _DVCRChangePower@4
+      demangled: ''
+      offset: 0000373B
+    - name: _DVCRGetDroppedFramesProperty@4
+      demangled: ''
+      offset: '00003740'
+    - name: _DVCROpenCloseMasterClock@8
+      demangled: ''
+      offset: 0000379E
+    - name: _DVCRIndicateMasterClock@8
+      demangled: ''
+      offset: 000037BC
+    - name: _DVCRCancelOnePacket@4
+      demangled: ''
+      offset: 000037DA
+    - name: _DVCRTimeoutHandler@4
+      demangled: ''
+      offset: 0000388C
+    - name: _GetSystemTime@0
+      demangled: ''
+      offset: 000038AD
+    - name: _StreamClockRtn@4
+      demangled: ''
+      offset: '00003943'
+    - name: _DVCRSurpriseRemoval@8
+      demangled: ''
+      offset: 000039C1
+    - name: _DVCRReclaimBandwidthCR@12
+      demangled: ''
+      offset: 00003A67
+    - name: _DVCRBusResetNotification@4
+      demangled: ''
+      offset: 00003AA0
+    - name: _DVCRReceiveDevicePacket@4
+      demangled: ''
+      offset: 00003BCD
+    - name: _DVCRRcvCtrlPcktForIsochListen@4
+      demangled: ''
+      offset: 00003D05
+    - name: _DVCRAttachReadBufCR@12
+      demangled: ''
+      offset: 00003DDB
+    - name: _DVCRAttachIsochListenBuffers@12
+      demangled: ''
+      offset: 00003DFE
+    - name: _DVCRIsochDetachOnlyCR@12
+      demangled: ''
+      offset: 00003F0D
+    - name: _DVCRStopStream@12
+      demangled: ''
+      offset: 00003F46
+    - name: _DVCRSetStreamStateForIsochListen@16
+      demangled: ''
+      offset: '00004128'
+    - name: _DVCRReadStream@12
+      demangled: ''
+      offset: '00004305'
+    - name: _DVCRExtractTimecodeFromFrame@12
+      demangled: ''
+      offset: 000043A0
+    - name: _DVCRSendBackUserBuffer@12
+      demangled: ''
+      offset: 0000459D
+    - name: _DVCRDetachReadBufCR@12
+      demangled: ''
+      offset: '00004768'
+    - name: _DVCRIsochReadCallback@8
+      demangled: ''
+      offset: '00004832'
+    - name: _DVCRFindStartOfFrame@4
+      demangled: ''
+      offset: 000049D0
+    - name: _DVCRFindCIPQuad@4
+      demangled: ''
+      offset: '000049E4'
+    - name: _DVCRCreatePureVideoPacket@12
+      demangled: ''
+      offset: 000049FA
+    - name: _DVCRCreateH0Packet@12
+      demangled: ''
+      offset: 00004A53
+    - name: _DVCRCreateAudioDifDataPart@8
+      demangled: ''
+      offset: 00004B06
+    - name: _DVCRCreateAudioVideoPacket@16
+      demangled: ''
+      offset: 00004B4D
+    - name: _DVCRFindA3@8
+      demangled: ''
+      offset: 00004C2E
+    - name: _DVCRCheckQu@8
+      demangled: ''
+      offset: 00004C45
+    - name: _DVCRCreateDVPacket@8
+      demangled: ''
+      offset: 00004CC7
+    - name: _DVCRFindMissingPacket@20
+      demangled: ''
+      offset: 00004D2B
+    - name: _DVCRCopyIsochDVPacketToUser@32
+      demangled: ''
+      offset: '00004E27'
+    - name: _DVCRCopyStreamIsochToUser@20
+      demangled: ''
+      offset: 00004EBC
+    - name: _DVCRCopyIsochToUser@20
+      demangled: ''
+      offset: '00005154'
+    - name: _DVCRInitMdl@8
+      demangled: ''
+      offset: 0000516F
+    - name: _DVCRFillCIPsWithDataForXmt@16
+      demangled: ''
+      offset: 000051D9
+    - name: _DVCRGetCurrentCycleTime@8
+      demangled: ''
+      offset: '00005326'
+    - name: _DVCRDetachXmtBufCR@12
+      demangled: ''
+      offset: 000053A3
+    - name: _DVCRBufXmtedCallback@8
+      demangled: ''
+      offset: '00005424'
+    - name: _DVCRReclaimFailedAttachBufCR@12
+      demangled: ''
+      offset: 0000557A
+    - name: _DVCRAttachXmtBufCR@12
+      demangled: ''
+      offset: '00005661'
+    - name: _DVCRIsXmtDetachedListEmpty@8
+      demangled: ''
+      offset: 0000571E
+    - name: _DVCRWriteStream@12
+      demangled: ''
+      offset: '00005783'
+    - name: _DVCRIniXmtDescriptor@40
+      demangled: ''
+      offset: 00005A00
+    - name: _DVCRCreateDesc4OneFrame@12
+      demangled: ''
+      offset: 00005AFC
+    - name: _DVCRDestroyDesc4OneFrame@8
+      demangled: ''
+      offset: 00005CE1
+    - name: _DVCRCreateDesc4AllFrames@8
+      demangled: ''
+      offset: 00005D60
+    - name: _DVCRDestroyDesc4AllFrames@8
+      demangled: ''
+      offset: 00005D88
+    - name: _DVCRStartIsochTalk@12
+      demangled: ''
+      offset: 00005E4C
+    - name: _DVCRStopStreamForIsochTalk@12
+      demangled: ''
+      offset: 00005ED2
+    - name: _DVCRSetStreamStateForIsochTalk@16
+      demangled: ''
+      offset: 0000603B
+    - name: _DVCRRcvCtrlPcktForIsochTalk@4
+      demangled: ''
+      offset: '00006150'
+    - name: _StreamClassDeviceNotification
+      demangled: ''
+      offset: 0000620E
+    - name: _StreamClassGetNextEvent@20
+      demangled: ''
+      offset: '00006214'
+    - name: _StreamClassRegisterAdapter@12
+      demangled: ''
+      offset: 0000621A
+    - name: _StreamClassStreamNotification
+      demangled: ''
+      offset: '00006220'
+    - name: _StreamClassQueryMasterClockSync@8
+      demangled: ''
+      offset: '00006226'
+    - name: _wcscpy
+      demangled: ''
+      offset: 0000622C
+    - name: __alldiv
+      demangled: ''
+      offset: '00006240'
+    - name: __aulldiv
+      demangled: ''
+      offset: 000062F0
+    - name: __aullrem
+      demangled: ''
+      offset: '00006360'
+    - name: __allmul
+      demangled: ''
+      offset: '000063E0'
+  - num: '2'
+    name: .rdata
+    offset: '00001290'
+    symbols:
+    - name: _KSEVENTSETID_EXTDEV_Command
+      demangled: ''
+      offset: '00000000'
+    - name: _PROPSETID_TIMECODE_READER
+      demangled: ''
+      offset: '00000010'
+    - name: _PROPSETID_EXT_TRANSPORT
+      demangled: ''
+      offset: '00000020'
+    - name: _PROPSETID_EXT_DEVICE
+      demangled: ''
+      offset: '00000030'
+    - name: _KSDATAFORMAT_SPECIFIER_DVINFO
+      demangled: ''
+      offset: '00000040'
+    - name: _ExternalDeviceProperties
+      demangled: ''
+      offset: '00000050'
+    - name: _ExternalTransportProperties
+      demangled: ''
+      offset: '00000118'
+    - name: _TimeCodeReaderProperties
+      demangled: ''
+      offset: 000002D0
+    - name: _VideoStreamConnectionProperties
+      demangled: ''
+      offset: '00000348'
+    - name: _VideoStreamDroppedFramesProperties
+      demangled: ''
+      offset: '00000370'
+  - num: '3'
+    name: .data
+    offset: 000014B0
+    symbols:
+    - name: _DVcrAVCCmdTable
+      demangled: ''
+      offset: '00000000'
+    - name: ??_C@_1M@DFPH@?$AA2?$AA?4?$AA0?$AA?4?$AA1?$AA?$AA@
+      demangled: L"2.0.1"
+      offset: 00004AD0
+    - name: _IsochInfoTable
+      demangled: ''
+      offset: 00004AE0
+    - name: _DVFormatInfoTable
+      demangled: ''
+      offset: 00004AF8
+    - name: _VideoDeviceProperties
+      demangled: ''
+      offset: 00004B78
+    - name: _ExtDevCommandItm
+      demangled: ''
+      offset: 00004BB8
+    - name: _VideoDeviceEvents
+      demangled: ''
+      offset: 00004C18
+    - name: _VideoStreamProperties
+      demangled: ''
+      offset: 00004C28
+    - name: _EndOfStreamEventItm
+      demangled: ''
+      offset: 00004C50
+    - name: _StreamEvents
+      demangled: ''
+      offset: 00004C68
+    - name: _DvcrNTSCiavStream
+      demangled: ''
+      offset: 00004C78
+    - name: _DvcrPALiavStream
+      demangled: ''
+      offset: 00004CD8
+    - name: _DvcrNTSCVideoStream
+      demangled: ''
+      offset: 00004D38
+    - name: _DvcrPALVideoStream
+      demangled: ''
+      offset: '00004E60'
+    - name: _DVCRStream0Formats
+      demangled: ''
+      offset: 00004F88
+    - name: _DVCRStream1Formats
+      demangled: ''
+      offset: 00004F90
+    - name: _Streams
+      demangled: ''
+      offset: 00004FD8
+    - name: _gulStreamCount
+      demangled: ''
+      offset: '00005194'
+    - name: _PacketFirstDIFInfoTable
+      demangled: ''
+      offset: '00005198'
+    - name: _TimeOutErrors
+      demangled: ''
+      offset: 000051D0
+    - name: _PreviousState
+      demangled: ''
+      offset: 000051D4
+  - num: '4'
+    name: .idata$2
+    offset: 00001A80
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_STREAM
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__KeQueryPerformanceCounter@4
+      demangled: ''
+      offset: 000000F0
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: 000000F4
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: 000000F8
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: 000000FC
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000100'
+    - name: __imp__KeReleaseMutex@8
+      demangled: ''
+      offset: '00000104'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000108'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 0000010C
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000110'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000114'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000118'
+    - name: __imp__IoFreeMdl@4
+      demangled: ''
+      offset: 0000011C
+    - name: __imp__KeResetEvent@4
+      demangled: ''
+      offset: '00000120'
+    - name: __imp__MmBuildMdlForNonPagedPool@4
+      demangled: ''
+      offset: '00000124'
+    - name: __imp__MmCreateMdl@12
+      demangled: ''
+      offset: '00000128'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__wcscpy
+      demangled: ''
+      offset: '00000130'
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000134'
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000138'
+    - name: __imp__KeDelayExecutionThread@12
+      demangled: ''
+      offset: 0000013C
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      demangled: ''
+      offset: '00000140'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000144'
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      demangled: ''
+      offset: '00000148'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      demangled: ''
+      offset: 0000014C
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      demangled: ''
+      offset: '00000150'
+    - name: __imp__IoRegisterDeviceInterface@16
+      demangled: ''
+      offset: '00000154'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__KeInitializeMutex@8
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__KeClearEvent@4
+      demangled: ''
+      offset: '00000160'
+    - name: __imp_@ExfInterlockedInsertHeadList@12
+      demangled: ''
+      offset: '00000164'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__IoAllocateMdl@20
+      demangled: ''
+      offset: 0000016C
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000170'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000174'
+    - name: __imp__StreamClassRegisterAdapter@12
+      demangled: ''
+      offset: '00000178'
+    - name: __imp__StreamClassStreamNotification
+      demangled: ''
+      offset: 0000017C
+    - name: __imp__StreamClassGetNextEvent@20
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__StreamClassQueryMasterClockSync@8
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__StreamClassDeviceNotification
+      demangled: ''
+      offset: '00000188'
+    - name: \177STREAM_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000018C
+  - num: '5'
+    name: PAGECONST
+    offset: '00000000'
+    symbols:
+    - name: _PROPSETID_VIDCAP_DROPPEDFRAMES
+      demangled: ''
+      offset: '00000000'
+    - name: _KSDATAFORMAT_SPECIFIER_VIDEOINFO
+      demangled: ''
+      offset: '00000010'
+    - name: _KSEVENTSETID_Connection
+      demangled: ''
+      offset: '00000020'
+    - name: _KSPROPSETID_Connection
+      demangled: ''
+      offset: '00000030'
+    - name: _KSCATEGORY_CAPTURE
+      demangled: ''
+      offset: '00000040'
+- version: Windows ME Debug
+  source_tree:
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/ulldiv.asm
+  - intel/ullrem.asm
+  - /ntc/private/ntos/dd/wdm/capture/mini/msdv/msdvavc.c
+  - /ntc/private/ntos/dd/wdm/capture/mini/msdv/msdvguts.c
+  - /ntc/private/ntos/dd/wdm/capture/mini/msdv/msdvlowr.c
+  - /ntc/private/ntos/dd/wdm/capture/mini/msdv/msdvuppr.c
+  - /ntc/private/ntos/dd/wdm/capture/mini/msdv/msdvutil.c
+  - CommandData.C
+  - HHt.H
+  - Ph.H
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00003810'
+    symbols:
+    - name: _DVDelayExecutionThread@4
+      demangled: ''
+      offset: '00000080'
+    - name: _DVIrpSynchCR@12
+      demangled: ''
+      offset: 000000F6
+    - name: _DVSubmitIrpSynch@12
+      demangled: ''
+      offset: '00000216'
+    - name: _DVGetUnitCapabilities@12
+      demangled: ''
+      offset: '00000504'
+    - name: _DVGetDevModeOfOperation@4
+      demangled: ''
+      offset: 000008A9
+    - name: _DVGetDevIsItDVCPro@4
+      demangled: ''
+      offset: 00000B7E
+    - name: _DVGetDevMediaFormat@12
+      demangled: ''
+      offset: 00000EC2
+    - name: _DVCmpGUIDsAndFormatSize@12
+      demangled: ''
+      offset: '00001134'
+    - name: _DvAllocatePCResource@8
+      demangled: ''
+      offset: 000013C8
+    - name: _DvFreePCResource@4
+      demangled: ''
+      offset: 000016F7
+    - name: _DVGetPlugState@12
+      demangled: ''
+      offset: '00001958'
+    - name: _DVConnect@16
+      demangled: ''
+      offset: 00001C2E
+    - name: _DVDisconnect@12
+      demangled: ''
+      offset: 0000208D
+    - name: _GetSystemTime@0
+      demangled: ''
+      offset: '00002298'
+    - name: _DVMuteDVFrame@12
+      demangled: ''
+      offset: 0000235C
+    - name: _DVRcvStreamDevicePacket@4
+      demangled: ''
+      offset: '00002762'
+    - name: _DVRcvControlPacket@4
+      demangled: ''
+      offset: 00002BBE
+    - name: _DVRcvDataPacket@4
+      demangled: ''
+      offset: '00003191'
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00003636'
+    - name: _DVIniDevExtStruct@8
+      demangled: ''
+      offset: 000036C4
+    - name: _DVGetDevInfo@8
+      demangled: ''
+      offset: 00003B9E
+    - name: _DVInitializeDevice@12
+      demangled: ''
+      offset: 000040D1
+    - name: _DVGetStreamInfo@16
+      demangled: ''
+      offset: '00004439'
+    - name: _DVVerifyDataFormat@16
+      demangled: ''
+      offset: 000046A5
+    - name: _DVGetDataIntersection@28
+      demangled: ''
+      offset: 00004B73
+    - name: _DVIniStrmExt@16
+      demangled: ''
+      offset: '00004E42'
+    - name: _DVOpenStream@12
+      demangled: ''
+      offset: 000054BF
+    - name: _DVCloseStream@12
+      demangled: ''
+      offset: 00005CA8
+    - name: _DVChangePower@12
+      demangled: ''
+      offset: 0000601C
+    - name: _DVSurpriseRemoval@8
+      demangled: ''
+      offset: 000062BF
+    - name: _DVProcessPnPBusReset@4
+      demangled: ''
+      offset: '00006511'
+    - name: _DVUninitializeDevice@4
+      demangled: ''
+      offset: '00006647'
+    - name: _DVGetStreamState@12
+      demangled: ''
+      offset: '00006770'
+    - name: _DVStreamingStop@12
+      demangled: ''
+      offset: '00006937'
+    - name: _DVStreamingStart@12
+      demangled: ''
+      offset: 00006CBA
+    - name: _DVSetStreamState@16
+      demangled: ''
+      offset: 0000727B
+    - name: _DVStreamGetConnectionProperty@12
+      demangled: ''
+      offset: 000077CE
+    - name: _DVGetDroppedFramesProperty@16
+      demangled: ''
+      offset: 00007A29
+    - name: _DVGetStreamProperty@4
+      demangled: ''
+      offset: 00007BA6
+    - name: _DVSetStreamProperty@4
+      demangled: ''
+      offset: 00007CE0
+    - name: _DVCancelOnePacketCR@12
+      demangled: ''
+      offset: 00007F75
+    - name: _DVCancelSrbWorkItemRoutine@4
+      demangled: ''
+      offset: 000083A5
+    - name: _DVCancelOnePacket@4
+      demangled: ''
+      offset: 000087D3
+    - name: _DVCancelAllPackets@8
+      demangled: ''
+      offset: 00008F2D
+    - name: _DVTimeoutHandler@4
+      demangled: ''
+      offset: '00009555'
+    - name: _StreamClockRtn@4
+      demangled: ''
+      offset: '00009822'
+    - name: _DVOpenCloseMasterClock@8
+      demangled: ''
+      offset: 00009A74
+    - name: _DVIndicateMasterClock@8
+      demangled: ''
+      offset: 00009CC2
+    - name: _DVReadFrameValidate@4
+      demangled: ''
+      offset: 00009F35
+    - name: _DVCompleteSrbRead@4
+      demangled: ''
+      offset: 0000A68B
+    - name: _DVAttachFrameCR@12
+      demangled: ''
+      offset: 0000ADE1
+    - name: _DVSRBRead@20
+      demangled: ''
+      offset: 0000B261
+    - name: _DVSignalEOStream@16
+      demangled: ''
+      offset: 0000B69C
+    - name: _DVCompleteSrbWrite@4
+      demangled: ''
+      offset: 0000BC6F
+    - name: _DVAttachWriteFrame@4
+      demangled: ''
+      offset: 0000C72B
+    - name: _DVFormatAttachFrame@32
+      demangled: ''
+      offset: 0000D0B8
+    - name: _DVAttachFrameThread@4
+      demangled: ''
+      offset: 0000D3E4
+    - name: _DVTerminateAttachFrameThread@4
+      demangled: ''
+      offset: 0000D7A6
+    - name: _DVCRXlateGetMediumInfo@12
+      demangled: ''
+      offset: 0000D878
+    - name: _DVCRXlateGetTransportState@12
+      demangled: ''
+      offset: 0000DAEF
+    - name: _DVCRXlateGetIOSignalMode@8
+      demangled: ''
+      offset: 0000DDA7
+    - name: _DVCRXlateRawAVC@8
+      demangled: ''
+      offset: 0000DEFB
+    - name: _DVCRFindCmdEntryCompleted@16
+      demangled: ''
+      offset: '0000E288'
+    - name: _DVAVCCmdResetAfterBusReset@4
+      demangled: ''
+      offset: '0000E625'
+    - name: _DVIssueAVCCommandCR@12
+      demangled: ''
+      offset: 0000EF52
+    - name: _DVIssueAVCCommand@16
+      demangled: ''
+      offset: 0000FA4F
+    - name: _DVGetExtDeviceProperty@12
+      demangled: ''
+      offset: 0001026C
+    - name: _DVSetExtDeviceProperty@12
+      demangled: ''
+      offset: 000105AC
+    - name: _DVGetExtTransportProperty@12
+      demangled: ''
+      offset: 00010B27
+    - name: _DVSetExtTransportProperty@12
+      demangled: ''
+      offset: 0001129A
+    - name: _DVGetTimecodeReaderProperty@12
+      demangled: ''
+      offset: '000116E0'
+    - name: _DVMediaSeekingProperty@12
+      demangled: ''
+      offset: '00011899'
+    - name: _DVGetDeviceProperty@12
+      demangled: ''
+      offset: 00011A08
+    - name: _DVSetDeviceProperty@12
+      demangled: ''
+      offset: 00011BB6
+    - name: _DbgPrint
+      demangled: ''
+      offset: 00011C66
+    - name: __aulldiv
+      demangled: ''
+      offset: 00011C70
+    - name: __aullrem
+      demangled: ''
+      offset: 00011CE0
+    - name: __allmul
+      demangled: ''
+      offset: 00011D60
+    - name: __alldiv
+      demangled: ''
+      offset: 00011DA0
+    - name: _KeGetCurrentThread@0
+      demangled: ''
+      offset: 00011E4A
+    - name: _StreamClassDeviceNotification
+      demangled: ''
+      offset: '00011E50'
+    - name: _StreamClassStreamNotification
+      demangled: ''
+      offset: '00011E56'
+    - name: _StreamClassRegisterAdapter@12
+      demangled: ''
+      offset: 00011E5C
+    - name: _StreamClassGetNextEvent@20
+      demangled: ''
+      offset: '00011E62'
+    - name: _StreamClassQueryMasterClockSync@8
+      demangled: ''
+      offset: '00011E68'
+  - num: '2'
+    name: .idata$5
+    offset: 00003EA0
+    symbols:
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000000'
+    - name: __imp__KeQueryPerformanceCounter@4
+      demangled: ''
+      offset: '00000004'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '00000008'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: 0000000C
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000010'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000014'
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: '00000018'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 0000001C
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000020'
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000024'
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000028'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: 0000002C
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000030'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000034'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000038'
+    - name: __imp__KeReleaseMutex@8
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000040'
+    - name: __imp__KeInitializeMutex@8
+      demangled: ''
+      offset: '00000044'
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: '00000048'
+    - name: __imp__ObReferenceObjectByHandle@24
+      demangled: ''
+      offset: 0000004C
+    - name: __imp__KeDelayExecutionThread@12
+      demangled: ''
+      offset: '00000050'
+    - name: __imp__KeResetEvent@4
+      demangled: ''
+      offset: '00000054'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000058'
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: 0000005C
+    - name: __imp__KeClearEvent@4
+      demangled: ''
+      offset: '00000060'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: '00000064'
+    - name: __imp__PsTerminateSystemThread@4
+      demangled: ''
+      offset: '00000068'
+    - name: __imp__KeSetPriorityThread@8
+      demangled: ''
+      offset: 0000006C
+    - name: __imp__KeGetCurrentThread@0
+      demangled: ''
+      offset: '00000070'
+    - name: __imp_@ObfDereferenceObject@4
+      demangled: ''
+      offset: '00000074'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000078'
+    - name: __imp__wcscpy
+      demangled: ''
+      offset: 0000007C
+    - name: __imp__PsCreateSystemThread@28
+      demangled: ''
+      offset: '00000080'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000084'
+    - name: __imp__StreamClassStreamNotification
+      demangled: ''
+      offset: '00000088'
+    - name: __imp__StreamClassRegisterAdapter@12
+      demangled: ''
+      offset: 0000008C
+    - name: __imp__StreamClassGetNextEvent@20
+      demangled: ''
+      offset: '00000090'
+    - name: __imp__StreamClassQueryMasterClockSync@8
+      demangled: ''
+      offset: '00000094'
+    - name: __imp__StreamClassDeviceNotification
+      demangled: ''
+      offset: '00000098'
+    - name: \177STREAM_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000009C
+    - name: _ExternalDeviceProperties
+      demangled: ''
+      offset: '00000140'
+    - name: _ExternalTransportProperties
+      demangled: ''
+      offset: '00000208'
+    - name: _TimeCodeReaderProperties
+      demangled: ''
+      offset: 000003C0
+    - name: _MediaSeekingProperties
+      demangled: ''
+      offset: '00000438'
+    - name: _VideoStreamConnectionProperties
+      demangled: ''
+      offset: '00000460'
+    - name: _VideoStreamDroppedFramesProperties
+      demangled: ''
+      offset: '00000488'
+    - name: _KSEVENTSETID_Connection_Local
+      demangled: ''
+      offset: 000004B0
+    - name: _KSEVENTSETID_EXTDEV_Command
+      demangled: ''
+      offset: 000004C0
+    - name: _PROPSETID_TIMECODE_READER
+      demangled: ''
+      offset: 000004D0
+    - name: _PROPSETID_EXT_TRANSPORT
+      demangled: ''
+      offset: '000004E0'
+    - name: _PROPSETID_EXT_DEVICE
+      demangled: ''
+      offset: 000004F0
+    - name: _KSDATAFORMAT_SPECIFIER_DVINFO
+      demangled: ''
+      offset: '00000500'
+  - num: '3'
+    name: .data
+    offset: '00004050'
+    symbols:
+    - name: _DVDebugLevel
+      demangled: ''
+      offset: '00000000'
+    - name: _AVCDebugLevel
+      demangled: ''
+      offset: '00000004'
+    - name: _VideoDeviceProperties
+      demangled: ''
+      offset: '00000068'
+    - name: _ExtDevCommandItm
+      demangled: ''
+      offset: 000000B8
+    - name: _VideoDeviceEvents
+      demangled: ''
+      offset: '00000100'
+    - name: _VideoStreamProperties
+      demangled: ''
+      offset: '00000110'
+    - name: _EndOfStreamEventItm
+      demangled: ''
+      offset: '00000138'
+    - name: _StreamEvents
+      demangled: ''
+      offset: '00000150'
+    - name: _DvcrNTSCiavStream
+      demangled: ''
+      offset: '00000160'
+    - name: _DvcrPALiavStream
+      demangled: ''
+      offset: 000001C0
+    - name: _DvcrNTSCVideoStream
+      demangled: ''
+      offset: '00000220'
+    - name: _DvcrPALVideoStream
+      demangled: ''
+      offset: '00000348'
+    - name: _DVCRStream0Formats
+      demangled: ''
+      offset: '00000470'
+    - name: _DVCRStream1Formats
+      demangled: ''
+      offset: '00000478'
+    - name: _DVStreams
+      demangled: ''
+      offset: 000004C0
+    - name: _DVFormatInfoTable
+      demangled: ''
+      offset: '00000680'
+    - name: _DVcrAVCCmdTable
+      demangled: ''
+      offset: 000006D8
+    - name: _cntInvSrcPkt
+      demangled: ''
+      offset: 00005C28
+  - num: '4'
+    name: PAGECONST
+    offset: '00004110'
+    symbols:
+    - name: _PROPSETID_VIDCAP_DROPPEDFRAMES
+      demangled: ''
+      offset: '00000000'
+    - name: _KSDATAFORMAT_SPECIFIER_VIDEOINFO
+      demangled: ''
+      offset: '00000010'
+    - name: _KSPROPSETID_Connection
+      demangled: ''
+      offset: '00000020'
+    - name: _KSTIME_FORMAT_MEDIA_TIME
+      demangled: ''
+      offset: '00000030'
+    - name: _KSPROPSETID_MediaSeeking
+      demangled: ''
+      offset: '00000040'
+  - num: '5'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_STREAM
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C

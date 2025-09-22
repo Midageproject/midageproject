@@ -2,7 +2,7 @@ filename: ksclockf.ax
 binary: KSCLOCKF
 description: ''
 appearances:
-- version: Windows 98 Debug
+- version: Windows 98 Retail
   source_tree: []
   segments:
   - num: '1'
@@ -352,7 +352,7 @@ appearances:
     - name: \177ksproxy_NULL_THUNK_DATA
       processed: ''
       offset: 0000011C
-- version: Windows 98 Retail
+- version: Windows 98 Debug
   source_tree: []
   segments:
   - num: '1'
@@ -703,7 +703,17 @@ appearances:
       demangled: ''
       offset: 0000011C
 - version: Windows 98SE Debug
-  source_tree: []
+  source_tree:
+  - 16.h
+  - /n3/private/quartz/sdk/classes/base/amvideo.cpp
+  - /n3/private/quartz/sdk/classes/base/combase.cpp
+  - /n3/private/quartz/sdk/classes/base/dllentry.cpp
+  - /n3/private/quartz/sdk/classes/base/mtype.cpp
+  - /n3/private/quartz/sdk/classes/base/wxdebug.cpp
+  - /n3/private/quartz/sdk/classes/base/wxlist.cpp
+  - /n3/private/quartz/sdk/classes/base/wxutil.cpp
+  - ./wxlist.h
+  - ./wxutil.h
   segments:
   - num: '1'
     name: .text

@@ -1,0 +1,2199 @@
+filename: usbser.sys
+binary: USBSER
+description: ''
+appearances:
+- version: Windows 98SE Debug
+  source_tree:
+  - intel/llmul.asm
+  - ../read.c
+  - ../serioctl.c
+  - ../usbser.c
+  - ../usbserpw.c
+  - ../utils.c
+  - ../write.c
+  - ../debugwdm.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00001580'
+    symbols:
+    - name: _UsbSerWakeCompletion@20
+      processed: ''
+      offset: '00000000'
+    - name: _UsbSer_ProcessPowerIrp@8
+      processed: ''
+      offset: '00000050'
+    - name: _UsbSer_PoRequestCompletion@20
+      processed: ''
+      offset: '000004E0'
+    - name: _UsbSer_PowerIrp_Complete@12
+      processed: ''
+      offset: '00000570'
+    - name: _UsbSer_SelfSuspendOrActivate@8
+      processed: ''
+      offset: '000005E0'
+    - name: _UsbSer_SelfRequestPowerIrp@8
+      processed: ''
+      offset: 000006A0
+    - name: _UsbSer_PoSelfRequestCompletion@20
+      processed: ''
+      offset: '00000750'
+    - name: _UsbSer_SetDevicePowerState@8
+      processed: ''
+      offset: 000007A0
+    - name: _UsbSerQueryCapabilities@8
+      processed: ''
+      offset: '00000840'
+    - name: _UsbSerIrpCompletionRoutine@12
+      processed: ''
+      offset: '00000960'
+    - name: _GetLineControlAndBaud@4
+      processed: ''
+      offset: '00000990'
+    - name: _SetLineControlAndBaud@4
+      processed: ''
+      offset: 00000A90
+    - name: _NotifyCompletion@12
+      processed: ''
+      offset: 00000BC0
+    - name: _UsbSerWriteComplete@12
+      processed: ''
+      offset: '00001110'
+    - name: _UsbSerWriteTimeout@16
+      processed: ''
+      offset: '00001360'
+    - name: _CreateDeviceObject@12
+      processed: ''
+      offset: '00001450'
+    - name: _CompleteIO@20
+      processed: ''
+      offset: 000017D0
+    - name: _GetDeviceDescriptor@4
+      processed: ''
+      offset: '00001850'
+    - name: _SelectInterface@8
+      processed: ''
+      offset: 00001D30
+    - name: _BuildReadRequest@20
+      processed: ''
+      offset: '00002410'
+    - name: _RestartRead@4
+      processed: ''
+      offset: 000024A0
+    - name: _RestartNotifyRead@4
+      processed: ''
+      offset: '00002760'
+    - name: _ReadCompletion@12
+      processed: ''
+      offset: 000029B0
+    - name: _GetData@12
+      processed: ''
+      offset: 00002C00
+    - name: _UsbSerRundownIrpRefs@16
+      processed: ''
+      offset: '00002E30'
+    - name: _CheckForQueuedReads@4
+      processed: ''
+      offset: '00003040'
+    - name: _UsbSerSyncCompletion@12
+      processed: ''
+      offset: 000033B0
+    - name: _UsbSerFetchBooleanLocked@12
+      processed: ''
+      offset: 000033D0
+    - name: _UsbSerFetchPVoidLocked@12
+      processed: ''
+      offset: '00003400'
+    - name: _USBD_ParseConfigurationDescriptor@12
+      processed: ''
+      offset: 0000342A
+    - name: _USBD_CreateConfigurationRequest@8
+      processed: ''
+      offset: '00003430'
+    - name: _MmUnlockPagableImageSection@4
+      processed: ''
+      offset: '00003436'
+    - name: _KeInitializeSpinLock@4
+      processed: ''
+      offset: 0000343C
+    - name: _RtlAssert@16
+      processed: ''
+      offset: '00003442'
+    - name: _DbgPrint
+      processed: ''
+      offset: '00003448'
+    - name: _KeGetCurrentIrql@0
+      processed: ''
+      offset: 0000344E
+    - name: _MmLockPagableDataSection@4
+      processed: ''
+      offset: '00003454'
+    - name: '@IofCallDriver@8'
+      processed: ''
+      offset: 0000345A
+    - name: _IoCancelIrp@4
+      processed: ''
+      offset: '00003460'
+    - name: '@KfReleaseSpinLock@8'
+      processed: ''
+      offset: '00003466'
+    - name: '@KfAcquireSpinLock@4'
+      processed: ''
+      offset: 0000346C
+    - name: '@InterlockedDecrement@4'
+      processed: ''
+      offset: '00003472'
+    - name: '@InterlockedIncrement@4'
+      processed: ''
+      offset: '00003478'
+    - name: _IoDeleteDevice@4
+      processed: ''
+      offset: 0000347E
+    - name: _IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '00003484'
+    - name: _ExFreePool@4
+      processed: ''
+      offset: 0000348A
+    - name: _KeWaitForSingleObject@20
+      processed: ''
+      offset: '00003490'
+    - name: _KeInitializeEvent@12
+      processed: ''
+      offset: '00003496'
+    - name: '@IofCompleteRequest@8'
+      processed: ''
+      offset: 0000349C
+    - name: _ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 000034A2
+    - name: _PoRequestPowerIrp@24
+      processed: ''
+      offset: 000034A8
+    - name: _PoCallDriver@8
+      processed: ''
+      offset: 000034AE
+    - name: _PoStartNextPowerIrp@4
+      processed: ''
+      offset: 000034B4
+    - name: _KeSetEvent@12
+      processed: ''
+      offset: 000034BA
+    - name: _IoFreeIrp@4
+      processed: ''
+      offset: 000034C0
+    - name: _IoAllocateIrp@8
+      processed: ''
+      offset: 000034C6
+    - name: _IoReleaseCancelSpinLock@4
+      processed: ''
+      offset: 000034CC
+    - name: '@InterlockedExchange@8'
+      processed: ''
+      offset: 000034D2
+    - name: _IoAcquireCancelSpinLock@4
+      processed: ''
+      offset: 000034D8
+    - name: '@InterlockedCompareExchange@12'
+      processed: ''
+      offset: 000034DE
+    - name: __allmul
+      processed: ''
+      offset: 000034F0
+    - name: _KeCancelTimer@4
+      processed: ''
+      offset: '00003524'
+    - name: _KeSetTimer@16
+      processed: ''
+      offset: 0000352A
+    - name: _KeInitializeDpc@12
+      processed: ''
+      offset: '00003530'
+    - name: _KeInitializeTimer@4
+      processed: ''
+      offset: '00003536'
+    - name: _KeQuerySystemTime@4
+      processed: ''
+      offset: 0000353C
+    - name: _ZwQueryValueKey@24
+      processed: ''
+      offset: '00003542'
+    - name: _RtlInitUnicodeString@8
+      processed: ''
+      offset: '00003548'
+    - name: _RtlDeleteRegistryValue@12
+      processed: ''
+      offset: 0000354E
+    - name: _IoDeleteSymbolicLink@4
+      processed: ''
+      offset: '00003554'
+    - name: _RtlWriteRegistryValue@24
+      processed: ''
+      offset: 0000355A
+    - name: _IoCreateSymbolicLink@8
+      processed: ''
+      offset: '00003560'
+    - name: _RtlAppendUnicodeStringToString@8
+      processed: ''
+      offset: '00003566'
+    - name: _RtlAppendUnicodeToString@8
+      processed: ''
+      offset: 0000356C
+    - name: _ZwClose@4
+      processed: ''
+      offset: '00003572'
+    - name: _IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: '00003578'
+    - name: _IoDetachDevice@4
+      processed: ''
+      offset: 0000357E
+    - name: _RtlFreeUnicodeString@4
+      processed: ''
+      offset: '00003584'
+    - name: _RtlxAnsiStringToUnicodeSize@4
+      processed: ''
+      offset: 0000358A
+    - name: _IoCreateUnprotectedSymbolicLink@8
+      processed: ''
+      offset: '00003590'
+    - name: _IoCreateDevice@28
+      processed: ''
+      offset: '00003596'
+    - name: _RtlAnsiStringToUnicodeString@12
+      processed: ''
+      offset: 0000359C
+    - name: _RtlInitAnsiString@8
+      processed: ''
+      offset: 000035A2
+    - name: _sprintf
+      processed: ''
+      offset: 000035A8
+    - name: _KeQueryPerformanceCounter@4
+      processed: ''
+      offset: 000035AE
+    - name: _RtlExtendedLargeIntegerDivide@16
+      processed: ''
+      offset: 000035B4
+    - name: _RtlExtendedIntegerMultiply@12
+      processed: ''
+      offset: 000035BA
+    - name: _IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: 000035C0
+  - num: '3'
+    name: .data
+    offset: 000016A0
+    symbols:
+    - name: _StopBits
+      processed: ''
+      offset: 000007D0
+    - name: _ParityType
+      processed: ''
+      offset: 000007D4
+    - name: _Slots
+      processed: ''
+      offset: 000047D0
+    - name: _NumDevices
+      processed: ''
+      offset: 000048D0
+    - name: _GlobDeviceObject
+      processed: ''
+      offset: 000048D4
+    - name: _PAGEUSBSER_Count
+      processed: ''
+      offset: 000048D8
+    - name: _DriverName
+      processed: ''
+      offset: 000048DC
+    - name: _UsbSerSerialDebugLevel
+      processed: ''
+      offset: '000048E0'
+    - name: _PAGEUSBSER_Function
+      processed: ''
+      offset: '000048E4'
+    - name: _DriverVersion
+      processed: ''
+      offset: '000048E8'
+    - name: _GlobalSpinLock
+      processed: ''
+      offset: 000048EC
+    - name: _Usbser_Debug_Trace_Level
+      processed: ''
+      offset: 000048F0
+    - name: _PAGEUSBSER_Handle
+      processed: ''
+      offset: 000048F4
+  - num: '4'
+    name: .idata$2
+    offset: 00001F50
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_USBD
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __imp__KeQueryPerformanceCounter@4
+      processed: ''
+      offset: '00000148'
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: 0000014C
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: '00000150'
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: '00000154'
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000158'
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: 0000015C
+    - name: __imp__MmUnlockPagableImageSection@4
+      processed: ''
+      offset: '00000160'
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: '00000164'
+    - name: __imp__MmLockPagableDataSection@4
+      processed: ''
+      offset: '00000168'
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: 0000016C
+    - name: __imp__IoCancelIrp@4
+      processed: ''
+      offset: '00000170'
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: '00000174'
+    - name: __imp_@InterlockedCompareExchange@12
+      processed: ''
+      offset: '00000178'
+    - name: __imp_@InterlockedDecrement@4
+      processed: ''
+      offset: 0000017C
+    - name: __imp_@InterlockedIncrement@4
+      processed: ''
+      offset: '00000180'
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: '00000184'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '00000188'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: 0000018C
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: '00000190'
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '00000194'
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: '00000198'
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 0000019C
+    - name: __imp__PoRequestPowerIrp@24
+      processed: ''
+      offset: 000001A0
+    - name: __imp__PoCallDriver@8
+      processed: ''
+      offset: 000001A4
+    - name: __imp__PoStartNextPowerIrp@4
+      processed: ''
+      offset: 000001A8
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: 000001AC
+    - name: __imp__IoFreeIrp@4
+      processed: ''
+      offset: 000001B0
+    - name: __imp__IoAllocateIrp@8
+      processed: ''
+      offset: 000001B4
+    - name: __imp__IoReleaseCancelSpinLock@4
+      processed: ''
+      offset: 000001B8
+    - name: __imp_@InterlockedExchange@8
+      processed: ''
+      offset: 000001BC
+    - name: __imp__IoAcquireCancelSpinLock@4
+      processed: ''
+      offset: 000001C0
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: 000001C4
+    - name: __imp__KeCancelTimer@4
+      processed: ''
+      offset: 000001C8
+    - name: __imp__KeSetTimer@16
+      processed: ''
+      offset: 000001CC
+    - name: __imp__KeInitializeDpc@12
+      processed: ''
+      offset: 000001D0
+    - name: __imp__KeInitializeTimer@4
+      processed: ''
+      offset: 000001D4
+    - name: __imp__KeQuerySystemTime@4
+      processed: ''
+      offset: 000001D8
+    - name: __imp__ZwQueryValueKey@24
+      processed: ''
+      offset: 000001DC
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: '000001E0'
+    - name: __imp__RtlDeleteRegistryValue@12
+      processed: ''
+      offset: '000001E4'
+    - name: __imp__IoDeleteSymbolicLink@4
+      processed: ''
+      offset: '000001E8'
+    - name: __imp__RtlWriteRegistryValue@24
+      processed: ''
+      offset: 000001EC
+    - name: __imp__IoCreateSymbolicLink@8
+      processed: ''
+      offset: 000001F0
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      processed: ''
+      offset: 000001F4
+    - name: __imp__RtlAppendUnicodeToString@8
+      processed: ''
+      offset: 000001F8
+    - name: __imp__ZwClose@4
+      processed: ''
+      offset: 000001FC
+    - name: __imp__RtlInitAnsiString@8
+      processed: ''
+      offset: '00000200'
+    - name: __imp__IoDetachDevice@4
+      processed: ''
+      offset: '00000204'
+    - name: __imp__RtlFreeUnicodeString@4
+      processed: ''
+      offset: '00000208'
+    - name: __imp__RtlxAnsiStringToUnicodeSize@4
+      processed: ''
+      offset: 0000020C
+    - name: _NlsMbCodePageTag
+      processed: ''
+      offset: '00000210'
+    - name: __imp__NlsMbCodePageTag
+      processed: ''
+      offset: '00000210'
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      processed: ''
+      offset: '00000214'
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: '00000218'
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      processed: ''
+      offset: 0000021C
+    - name: __imp__sprintf
+      processed: ''
+      offset: '00000220'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: '00000224'
+    - name: __imp__RtlExtendedLargeIntegerDivide@16
+      processed: ''
+      offset: '00000228'
+    - name: __imp__RtlExtendedIntegerMultiply@12
+      processed: ''
+      offset: 0000022C
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000230'
+    - name: __imp__USBD_CreateConfigurationRequest@8
+      processed: ''
+      offset: '00000234'
+    - name: __imp__USBD_ParseConfigurationDescriptor@12
+      processed: ''
+      offset: '00000238'
+    - name: \177USBD_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000023C
+  - num: '5'
+    name: PAGEUSBS
+    offset: '00003810'
+    symbols:
+    - name: _UsbSer_Dispatch@8
+      processed: ''
+      offset: '00000000'
+    - name: _UsbSer_Create@8
+      processed: ''
+      offset: '00000870'
+    - name: _UsbSer_Close@8
+      processed: ''
+      offset: 00000B90
+    - name: _UsbSer_Cleanup@8
+      processed: ''
+      offset: 00000DF0
+    - name: _UsbSerSendWaitWake@4
+      processed: ''
+      offset: 00000F70
+    - name: _SetBaudRate@8
+      processed: ''
+      offset: '00001060'
+    - name: _GetBaudRate@8
+      processed: ''
+      offset: '00001210'
+    - name: _SetLineControl@8
+      processed: ''
+      offset: '00001390'
+    - name: _GetLineControl@8
+      processed: ''
+      offset: '00001520'
+    - name: _SetTimeouts@8
+      processed: ''
+      offset: 000016B0
+    - name: _GetTimeouts@8
+      processed: ''
+      offset: '00001830'
+    - name: _SetChars@8
+      processed: ''
+      offset: 000019B0
+    - name: _GetChars@8
+      processed: ''
+      offset: 00001B30
+    - name: _SetClrDtr@8
+      processed: ''
+      offset: 00001CC0
+    - name: _ResetDevice@8
+      processed: ''
+      offset: 00001EE0
+    - name: _SetRts@8
+      processed: ''
+      offset: '00002030'
+    - name: _ClrRts@8
+      processed: ''
+      offset: '00002180'
+    - name: _SetBreak@12
+      processed: ''
+      offset: 000022D0
+    - name: _SetQueueSize@8
+      processed: ''
+      offset: '00002430'
+    - name: _GetWaitMask@8
+      processed: ''
+      offset: 000025A0
+    - name: _SetWaitMask@8
+      processed: ''
+      offset: '00002720'
+    - name: _WaitOnMask@8
+      processed: ''
+      offset: 000028F0
+    - name: _ImmediateChar@8
+      processed: ''
+      offset: 00002D40
+    - name: _Purge@12
+      processed: ''
+      offset: 00002EC0
+    - name: _GetHandflow@8
+      processed: ''
+      offset: 000030B0
+    - name: _SetHandflow@8
+      processed: ''
+      offset: '00003240'
+    - name: _GetModemStatus@8
+      processed: ''
+      offset: '00003400'
+    - name: _GetDtrRts@8
+      processed: ''
+      offset: 000035B0
+    - name: _GetCommStatus@8
+      processed: ''
+      offset: '00003730'
+    - name: _GetProperties@8
+      processed: ''
+      offset: 000038F0
+    - name: _LsrmstInsert@8
+      processed: ''
+      offset: 00003A60
+    - name: _ConfigSize@8
+      processed: ''
+      offset: 00003B90
+    - name: _GetStats@8
+      processed: ''
+      offset: 00003D00
+    - name: _ClearStats@8
+      processed: ''
+      offset: '00003E80'
+    - name: _SerialGetProperties@8
+      processed: ''
+      offset: 00003FD0
+    - name: _UsbSer_Write@8
+      processed: ''
+      offset: '00004190'
+    - name: _UsbSerGiveWriteToUsb@16
+      processed: ''
+      offset: '00004410'
+    - name: _UsbSer_Read@8
+      processed: ''
+      offset: '00004790'
+    - name: _UsbSerStartRead@4
+      processed: ''
+      offset: 00004A00
+    - name: _UsbSerGrabReadFromRx@4
+      processed: ''
+      offset: '00005120'
+    - name: _UsbSerCancelCurrentRead@8
+      processed: ''
+      offset: '00005280'
+    - name: _UsbSerReadTimeout@16
+      processed: ''
+      offset: 000053F0
+    - name: _UsbSerIntervalReadTimeout@16
+      processed: ''
+      offset: '00005560'
+    - name: _CancelPendingWaitMasks@4
+      processed: ''
+      offset: 00005C40
+    - name: _CancelPendingNotifyOrRead@8
+      processed: ''
+      offset: 00005DF0
+    - name: _UsbSerTryToCompleteCurrent@44
+      processed: ''
+      offset: '00006130'
+    - name: _UsbSerGetNextIrp@20
+      processed: ''
+      offset: 000063B0
+    - name: _UsbSerStartOrQueue@20
+      processed: ''
+      offset: '00006590'
+    - name: _UsbSerCancelQueued@8
+      processed: ''
+      offset: '00006850'
+    - name: _UsbSerKillAllReadsOrWrites@12
+      processed: ''
+      offset: 000069B0
+    - name: _UsbSerKillPendingIrps@4
+      processed: ''
+      offset: 00006BA0
+    - name: _UsbSerCompletePendingWaitMasks@4
+      processed: ''
+      offset: 00006D90
+    - name: _UsbSerProcessEmptyTransmit@4
+      processed: ''
+      offset: 00006F50
+    - name: _UsbSerCancelWaitOnMask@8
+      processed: ''
+      offset: '00007080'
+  - num: '6'
+    name: PAGEUSBS0
+    offset: 00003AA0
+    symbols:
+    - name: _UsbSer_Unload@4
+      processed: ''
+      offset: '00000000'
+    - name: _UsbSer_PnPAddDevice@8
+      processed: ''
+      offset: '00000050'
+    - name: _UsbSer_PnP@8
+      processed: ''
+      offset: 000002A0
+    - name: _UsbSer_SystemControl@8
+      processed: ''
+      offset: 000006F0
+    - name: _UsbSerMajorNotSupported@8
+      processed: ''
+      offset: '000007E0'
+  - num: '7'
+    name: PAGEUBS0
+    offset: '00004230'
+    symbols:
+    - name: _UsbSerGetRegistryKeyValue@20
+      processed: ''
+      offset: '00000000'
+    - name: _UsbSerUndoExternalNaming@4
+      processed: ''
+      offset: '000001E0'
+    - name: _UsbSerDoExternalNaming@4
+      processed: ''
+      offset: 000003C0
+    - name: _StartDevice@8
+      processed: ''
+      offset: 000008B0
+    - name: _StopDevice@8
+      processed: ''
+      offset: 00000C00
+    - name: _RemoveDevice@8
+      processed: ''
+      offset: 00000D40
+    - name: _DeleteObjectAndLink@4
+      processed: ''
+      offset: 00000EE0
+    - name: _StartPerfTimer@4
+      processed: ''
+      offset: 00000FB0
+    - name: _StopPerfTimer@8
+      processed: ''
+      offset: '00001030'
+    - name: _BytesPerSecond@4
+      processed: ''
+      offset: '00001180'
+    - name: _CallUSBD@8
+      processed: ''
+      offset: '00001260'
+    - name: _ConfigureDevice@4
+      processed: ''
+      offset: '00001350'
+    - name: _BuildRequest@16
+      processed: ''
+      offset: '00001560'
+    - name: _ClassVendorCommand@32
+      processed: ''
+      offset: '00001660'
+    - name: _StartRead@4
+      processed: ''
+      offset: 000017B0
+    - name: _StartNotifyRead@4
+      processed: ''
+      offset: '00001960'
+    - name: _UsbSerRestoreModemSettings@4
+      processed: ''
+      offset: 00001B10
+    - name: _UsbSerLockPagableCodeSection@4
+      processed: ''
+      offset: 00001B70
+  - num: '8'
+    name: INIT
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+- version: Windows 98SE Retail
+  source_tree:
+  - intel/llmul.asm
+  - ../read.c
+  - ../serioctl.c
+  - ../usbser.c
+  - ../usbserpw.c
+  - ../utils.c
+  - ../write.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00000C20
+    symbols:
+    - name: _UsbSerWakeCompletion@20
+      demangled: ''
+      offset: '00000000'
+    - name: _UsbSer_ProcessPowerIrp@8
+      demangled: ''
+      offset: '00000032'
+    - name: _UsbSer_PoRequestCompletion@20
+      demangled: ''
+      offset: 0000021D
+    - name: _UsbSer_PowerIrp_Complete@12
+      demangled: ''
+      offset: 0000026F
+    - name: _UsbSer_SelfSuspendOrActivate@8
+      demangled: ''
+      offset: 0000029A
+    - name: _UsbSer_SelfRequestPowerIrp@8
+      demangled: ''
+      offset: 000002ED
+    - name: _UsbSer_PoSelfRequestCompletion@20
+      demangled: ''
+      offset: '00000351'
+    - name: _UsbSer_SetDevicePowerState@8
+      demangled: ''
+      offset: '00000381'
+    - name: _UsbSerQueryCapabilities@8
+      demangled: ''
+      offset: 000003D2
+    - name: _UsbSerIrpCompletionRoutine@12
+      demangled: ''
+      offset: '00000462'
+    - name: _GetLineControlAndBaud@4
+      demangled: ''
+      offset: '00000478'
+    - name: _SetLineControlAndBaud@4
+      demangled: ''
+      offset: '00000504'
+    - name: _NotifyCompletion@12
+      demangled: ''
+      offset: 000005DC
+    - name: _UsbSerWriteComplete@12
+      demangled: ''
+      offset: 000007F1
+    - name: _UsbSerWriteTimeout@16
+      demangled: ''
+      offset: 000008A2
+    - name: _CreateDeviceObject@12
+      demangled: ''
+      offset: 000008BF
+    - name: _CompleteIO@20
+      demangled: ''
+      offset: 00000AEA
+    - name: _GetDeviceDescriptor@4
+      demangled: ''
+      offset: 00000B39
+    - name: _SelectInterface@8
+      demangled: ''
+      offset: 00000C11
+    - name: _BuildReadRequest@20
+      demangled: ''
+      offset: 00000E6B
+    - name: _RestartRead@4
+      demangled: ''
+      offset: 00000EB3
+    - name: _RestartNotifyRead@4
+      demangled: ''
+      offset: 00000F7F
+    - name: _ReadCompletion@12
+      demangled: ''
+      offset: '00001001'
+    - name: _GetData@12
+      demangled: ''
+      offset: 000010D7
+    - name: _UsbSerRundownIrpRefs@16
+      demangled: ''
+      offset: '00001156'
+    - name: _CheckForQueuedReads@4
+      demangled: ''
+      offset: 000011BD
+    - name: _UsbSerSyncCompletion@12
+      demangled: ''
+      offset: 000012D0
+    - name: _UsbSerFetchBooleanLocked@12
+      demangled: ''
+      offset: '000012E6'
+    - name: _UsbSerFetchPVoidLocked@12
+      demangled: ''
+      offset: '00001309'
+    - name: __allmul
+      demangled: ''
+      offset: '00001330'
+    - name: _sprintf
+      demangled: ''
+      offset: '00001364'
+  - num: '2'
+    name: .data
+    offset: 00000EE0
+    symbols:
+    - name: ??_C@_04NIMO@0?499?$AA@
+      demangled: '"0.99"'
+      offset: '00000000'
+    - name: ??_C@_06OJKE@USBSER?$AA@
+      demangled: '"USBSER"'
+      offset: '00000008'
+    - name: ??_C@_1BG@EGGH@?$AAS?$AAE?$AAR?$AAI?$AAA?$AAL?$AAC?$AAO?$AAM?$AAM?$AA?$AA@
+      demangled: L"SERIALCOMM"
+      offset: 0000001C
+    - name: ??_C@_1BG@BJJK@?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?$AA@
+      demangled: L"DosDevices"
+      offset: '00000034'
+    - name: ??_C@_13HMCP@?$AA?2?$AA?$AA@
+      demangled: L"\\"
+      offset: 0000004C
+    - name: ??_C@_1BG@OHP@?$AAI?$AAd?$AAe?$AAn?$AAt?$AAi?$AAf?$AAi?$AAe?$AAr?$AA?$AA@
+      demangled: L"Identifier"
+      offset: '00000050'
+    - name: ??_C@_1BC@HJPM@?$AAP?$AAo?$AAr?$AAt?$AAN?$AAa?$AAm?$AAe?$AA?$AA@
+      demangled: L"PortName"
+      offset: '00000068'
+    - name: ??_C@_08CGAH@?2Device?2?$AA@
+      demangled: '"\\Device\\"'
+      offset: 0000007C
+    - name: ??_C@_0N@BKCB@?2DosDevices?2?$AA@
+      demangled: '"\\DosDevices\\"'
+      offset: '00000088'
+    - name: ??_C@_08LIAB@?$CFs?$CFs?$CF03d?$AA@
+      demangled: '"%s%s%03d"'
+      offset: '00000098'
+    - name: _DriverName
+      demangled: ''
+      offset: 000001B8
+    - name: _UsbSerSerialDebugLevel
+      demangled: ''
+      offset: 000001BC
+    - name: _PAGEUSBSER_Function
+      demangled: ''
+      offset: 000001C0
+    - name: _DriverVersion
+      demangled: ''
+      offset: 000001C4
+    - name: _GlobalSpinLock
+      demangled: ''
+      offset: 000001C8
+    - name: _Usbser_Debug_Trace_Level
+      demangled: ''
+      offset: 000001CC
+    - name: _PAGEUSBSER_Handle
+      demangled: ''
+      offset: 000001D0
+  - num: '3'
+    name: .idata$2
+    offset: '00001750'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__KeQueryPerformanceCounter@4
+      demangled: ''
+      offset: 0000013C
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '00000140'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000144'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000148'
+    - name: __imp__MmLockPagableDataSection@4
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000150'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000154'
+    - name: __imp__MmUnlockPagableImageSection@4
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: '00000160'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: '00000164'
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: 0000016C
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00000170'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000174'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000178'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: 0000017C
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00000190'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: 000001A0
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__IoAcquireCancelSpinLock@4
+      demangled: ''
+      offset: 000001A8
+    - name: __imp_@InterlockedCompareExchange@12
+      demangled: ''
+      offset: 000001AC
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: 000001B4
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: 000001B8
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__KeQuerySystemTime@4
+      demangled: ''
+      offset: 000001C0
+    - name: __imp__ZwQueryValueKey@24
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__RtlDeleteRegistryValue@12
+      demangled: ''
+      offset: 000001CC
+    - name: __imp__IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__RtlWriteRegistryValue@24
+      demangled: ''
+      offset: 000001D4
+    - name: __imp__IoCreateSymbolicLink@8
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: 000001DC
+    - name: __imp__RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__RtlInitAnsiString@8
+      demangled: ''
+      offset: 000001EC
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: 000001F0
+    - name: __imp__RtlxAnsiStringToUnicodeSize@4
+      demangled: ''
+      offset: 000001F4
+    - name: _NlsMbCodePageTag
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__NlsMbCodePageTag
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: 000001FC
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000200'
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      demangled: ''
+      offset: '00000204'
+    - name: __imp__sprintf
+      demangled: ''
+      offset: '00000208'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: 0000020C
+    - name: __imp__RtlExtendedLargeIntegerDivide@16
+      demangled: ''
+      offset: '00000210'
+    - name: __imp__RtlExtendedIntegerMultiply@12
+      demangled: ''
+      offset: '00000214'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000218'
+    - name: __imp__USBD_CreateConfigurationRequest@8
+      demangled: ''
+      offset: 0000021C
+    - name: __imp__USBD_ParseConfigurationDescriptor@12
+      demangled: ''
+      offset: '00000220'
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000224'
+  - num: '4'
+    name: PAGEUSBS
+    offset: '000029E0'
+    symbols:
+    - name: _UsbSer_Dispatch@8
+      demangled: ''
+      offset: '00000000'
+    - name: _UsbSer_Create@8
+      demangled: ''
+      offset: '00000447'
+    - name: _UsbSer_Close@8
+      demangled: ''
+      offset: 0000053E
+    - name: _UsbSer_Cleanup@8
+      demangled: ''
+      offset: 000005A9
+    - name: _UsbSerSendWaitWake@4
+      demangled: ''
+      offset: 000005CF
+    - name: _SetBaudRate@8
+      demangled: ''
+      offset: '00000626'
+    - name: _GetBaudRate@8
+      demangled: ''
+      offset: '00000674'
+    - name: _SetLineControl@8
+      demangled: ''
+      offset: 000006D6
+    - name: _GetLineControl@8
+      demangled: ''
+      offset: '00000727'
+    - name: _SetTimeouts@8
+      demangled: ''
+      offset: 0000078A
+    - name: _GetTimeouts@8
+      demangled: ''
+      offset: '000007E0'
+    - name: _SetChars@8
+      demangled: ''
+      offset: 0000083F
+    - name: _GetChars@8
+      demangled: ''
+      offset: '00000893'
+    - name: _SetClrDtr@8
+      demangled: ''
+      offset: 000008F0
+    - name: _ResetDevice@8
+      demangled: ''
+      offset: 0000099A
+    - name: _SetRts@8
+      demangled: ''
+      offset: 000009CF
+    - name: _ClrRts@8
+      demangled: ''
+      offset: 000009FB
+    - name: _SetBreak@12
+      demangled: ''
+      offset: 00000A27
+    - name: _SetQueueSize@8
+      demangled: ''
+      offset: 00000A4B
+    - name: _GetWaitMask@8
+      demangled: ''
+      offset: 00000A76
+    - name: _SetWaitMask@8
+      demangled: ''
+      offset: 00000AD2
+    - name: _WaitOnMask@8
+      demangled: ''
+      offset: 00000B43
+    - name: _ImmediateChar@8
+      demangled: ''
+      offset: 00000C78
+    - name: _Purge@12
+      demangled: ''
+      offset: 00000CA7
+    - name: _GetHandflow@8
+      demangled: ''
+      offset: 00000D52
+    - name: _SetHandflow@8
+      demangled: ''
+      offset: 00000DB0
+    - name: _GetModemStatus@8
+      demangled: ''
+      offset: '00000E05'
+    - name: _GetDtrRts@8
+      demangled: ''
+      offset: '00000E62'
+    - name: _GetCommStatus@8
+      demangled: ''
+      offset: 00000EBE
+    - name: _GetProperties@8
+      demangled: ''
+      offset: 00000F34
+    - name: _LsrmstInsert@8
+      demangled: ''
+      offset: 00000F69
+    - name: _ConfigSize@8
+      demangled: ''
+      offset: 00000F71
+    - name: _GetStats@8
+      demangled: ''
+      offset: 00000F9B
+    - name: _ClearStats@8
+      demangled: ''
+      offset: 00000FFA
+    - name: _SerialGetProperties@8
+      demangled: ''
+      offset: '00001036'
+    - name: _UsbSer_Write@8
+      demangled: ''
+      offset: 000010BD
+    - name: _UsbSerGiveWriteToUsb@16
+      demangled: ''
+      offset: 000011C0
+    - name: _UsbSer_Read@8
+      demangled: ''
+      offset: 0000131B
+    - name: _UsbSerStartRead@4
+      demangled: ''
+      offset: 0000136F
+    - name: _UsbSerGrabReadFromRx@4
+      demangled: ''
+      offset: 0000165D
+    - name: _UsbSerCancelCurrentRead@8
+      demangled: ''
+      offset: '00001676'
+    - name: _UsbSerReadTimeout@16
+      demangled: ''
+      offset: 000016CC
+    - name: _UsbSerIntervalReadTimeout@16
+      demangled: ''
+      offset: 0000172B
+    - name: _CancelPendingWaitMasks@4
+      demangled: ''
+      offset: '00001920'
+    - name: _CancelPendingNotifyOrRead@8
+      demangled: ''
+      offset: 0000197C
+    - name: _UsbSerTryToCompleteCurrent@44
+      demangled: ''
+      offset: 00001A5B
+    - name: _UsbSerGetNextIrp@20
+      demangled: ''
+      offset: 00001AFB
+    - name: _UsbSerStartOrQueue@20
+      demangled: ''
+      offset: 00001B66
+    - name: _UsbSerCancelQueued@8
+      demangled: ''
+      offset: 00001C03
+    - name: _UsbSerKillAllReadsOrWrites@12
+      demangled: ''
+      offset: 00001C36
+    - name: _UsbSerKillPendingIrps@4
+      demangled: ''
+      offset: 00001CC0
+    - name: _UsbSerCompletePendingWaitMasks@4
+      demangled: ''
+      offset: 00001D48
+    - name: _UsbSerProcessEmptyTransmit@4
+      demangled: ''
+      offset: 00001DC2
+    - name: _UsbSerCancelWaitOnMask@8
+      demangled: ''
+      offset: '00001E46'
+  - num: '5'
+    name: PAGEUSBS0
+    offset: 00002BA0
+    symbols:
+    - name: _UsbSer_Unload@4
+      demangled: ''
+      offset: '00000000'
+    - name: _UsbSer_PnPAddDevice@8
+      demangled: ''
+      offset: '00000003'
+    - name: _UsbSer_PnP@8
+      demangled: ''
+      offset: 000000FE
+    - name: _UsbSer_SystemControl@8
+      demangled: ''
+      offset: '00000248'
+    - name: _UsbSerMajorNotSupported@8
+      demangled: ''
+      offset: '00000276'
+  - num: '6'
+    name: PAGEUBS0
+    offset: '00003100'
+    symbols:
+    - name: _UsbSerGetRegistryKeyValue@20
+      demangled: ''
+      offset: '00000000'
+    - name: _UsbSerUndoExternalNaming@4
+      demangled: ''
+      offset: 0000008A
+    - name: _UsbSerDoExternalNaming@4
+      demangled: ''
+      offset: '00000121'
+    - name: _StartDevice@8
+      demangled: ''
+      offset: 000003A9
+    - name: _StopDevice@8
+      demangled: ''
+      offset: 0000055D
+    - name: _RemoveDevice@8
+      demangled: ''
+      offset: 000005D1
+    - name: _DeleteObjectAndLink@4
+      demangled: ''
+      offset: 0000069D
+    - name: _BytesPerSecond@4
+      demangled: ''
+      offset: 0000070A
+    - name: _CallUSBD@8
+      demangled: ''
+      offset: 0000075D
+    - name: _ConfigureDevice@4
+      demangled: ''
+      offset: 000007CD
+    - name: _ClassVendorCommand@32
+      demangled: ''
+      offset: 000008C0
+    - name: _StartRead@4
+      demangled: ''
+      offset: '00000960'
+    - name: _StartNotifyRead@4
+      demangled: ''
+      offset: 000009D2
+    - name: _UsbSerRestoreModemSettings@4
+      demangled: ''
+      offset: 00000A44
+  - num: '7'
+    name: INIT
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+- version: Windows ME Debug
+  source_tree:
+  - ../debugwdm.c
+  - intel/llmul.asm
+  - ../read.c
+  - ../serioctl.c
+  - ../usbser.c
+  - ../usbserpw.c
+  - ../utils.c
+  - ../write.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00001A00
+    symbols:
+    - name: _UsbSerWakeCompletion@20
+      demangled: ''
+      offset: '00000000'
+    - name: _UsbSer_ProcessPowerIrp@8
+      demangled: ''
+      offset: 000000A0
+    - name: _UsbSer_PoRequestCompletion@20
+      demangled: ''
+      offset: 000006D0
+    - name: _UsbSer_PowerIrp_Complete@12
+      demangled: ''
+      offset: '00000770'
+    - name: _UsbSer_SelfSuspendOrActivate@8
+      demangled: ''
+      offset: '00000830'
+    - name: _UsbSer_SelfRequestPowerIrp@8
+      demangled: ''
+      offset: '00000910'
+    - name: _UsbSer_PoSelfRequestCompletion@20
+      demangled: ''
+      offset: 000009D0
+    - name: _UsbSer_SetDevicePowerState@8
+      demangled: ''
+      offset: 00000A30
+    - name: _UsbSerQueryCapabilities@8
+      demangled: ''
+      offset: 00000BB0
+    - name: _UsbSerIrpCompletionRoutine@12
+      demangled: ''
+      offset: 00000D40
+    - name: _UsbSerWaitWakeIrpCompletionRoutine@12
+      demangled: ''
+      offset: 00000D80
+    - name: _GetLineControlAndBaud@4
+      demangled: ''
+      offset: '00000E10'
+    - name: _SetLineControlAndBaud@4
+      demangled: ''
+      offset: 00000F20
+    - name: _NotifyCompletion@12
+      demangled: ''
+      offset: '00001060'
+    - name: _UsbSerFlush@8
+      demangled: ''
+      offset: '00001610'
+    - name: _UsbSerWriteComplete@12
+      demangled: ''
+      offset: '00001760'
+    - name: _UsbSerWriteTimeout@16
+      demangled: ''
+      offset: 00001AD0
+    - name: _UsbSerAbortPipes@4
+      demangled: ''
+      offset: 00001BC0
+    - name: _CreateDeviceObject@12
+      demangled: ''
+      offset: '00002030'
+    - name: _CompleteIO@20
+      demangled: ''
+      offset: '00002450'
+    - name: _CallUSBD_SyncCompletionRoutine@12
+      demangled: ''
+      offset: 000024C0
+    - name: _GetDeviceDescriptor@4
+      demangled: ''
+      offset: 000024F0
+    - name: _SelectInterface@8
+      demangled: ''
+      offset: 000029C0
+    - name: _BuildReadRequest@20
+      demangled: ''
+      offset: 000030A0
+    - name: _CancelPendingWaitMasks@4
+      demangled: ''
+      offset: '00003130'
+    - name: _RestartRead@4
+      demangled: ''
+      offset: '00003290'
+    - name: _RestartNotifyRead@4
+      demangled: ''
+      offset: '00003640'
+    - name: _ReadCompletion@12
+      demangled: ''
+      offset: 000038B0
+    - name: _GetData@16
+      demangled: ''
+      offset: 00003C10
+    - name: _UsbSerRundownIrpRefs@16
+      demangled: ''
+      offset: '00003E30'
+    - name: _CheckForQueuedReads@4
+      demangled: ''
+      offset: 00003FD0
+    - name: _UsbSerSyncCompletion@12
+      demangled: ''
+      offset: 000043C0
+    - name: _UsbSerFetchBooleanLocked@12
+      demangled: ''
+      offset: '000043E0'
+    - name: _UsbSerFetchPVoidLocked@12
+      demangled: ''
+      offset: '00004410'
+    - name: _Debug_CheckAllocations@0
+      demangled: ''
+      offset: '00004440'
+    - name: _Debug_MemAlloc@8
+      demangled: ''
+      offset: '00004490'
+    - name: _Debug_MemFree@4
+      demangled: ''
+      offset: '00004530'
+    - name: _USBD_ParseConfigurationDescriptor@12
+      demangled: ''
+      offset: 000045AC
+    - name: _USBD_CreateConfigurationRequest@8
+      demangled: ''
+      offset: 000045B2
+    - name: _MmUnlockPagableImageSection@4
+      demangled: ''
+      offset: 000045B8
+    - name: _KeInitializeSpinLock@4
+      demangled: ''
+      offset: 000045BE
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: 000045C4
+    - name: _DbgPrint
+      demangled: ''
+      offset: 000045CA
+    - name: _KeGetCurrentIrql@0
+      demangled: ''
+      offset: 000045D0
+    - name: _MmLockPagableDataSection@4
+      demangled: ''
+      offset: 000045D6
+    - name: '@IofCallDriver@8'
+      demangled: ''
+      offset: 000045DC
+    - name: _IoCancelIrp@4
+      demangled: ''
+      offset: '000045E2'
+    - name: '@IofCompleteRequest@8'
+      demangled: ''
+      offset: '000045E8'
+    - name: '@KfReleaseSpinLock@8'
+      demangled: ''
+      offset: 000045EE
+    - name: '@KfAcquireSpinLock@4'
+      demangled: ''
+      offset: 000045F4
+    - name: '@InterlockedDecrement@4'
+      demangled: ''
+      offset: 000045FA
+    - name: '@InterlockedIncrement@4'
+      demangled: ''
+      offset: '00004600'
+    - name: _IoDeleteDevice@4
+      demangled: ''
+      offset: '00004606'
+    - name: _IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 0000460C
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: '00004612'
+    - name: _KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00004618'
+    - name: _KeInitializeEvent@12
+      demangled: ''
+      offset: 0000461E
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00004624'
+    - name: _PoRequestPowerIrp@24
+      demangled: ''
+      offset: 0000462A
+    - name: _PoCallDriver@8
+      demangled: ''
+      offset: '00004630'
+    - name: _PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00004636'
+    - name: _KeSetEvent@12
+      demangled: ''
+      offset: 0000463C
+    - name: _PoSetPowerState@12
+      demangled: ''
+      offset: '00004642'
+    - name: _IoFreeIrp@4
+      demangled: ''
+      offset: '00004648'
+    - name: _IoAllocateIrp@8
+      demangled: ''
+      offset: 0000464E
+    - name: _IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: '00004654'
+    - name: '@InterlockedExchange@8'
+      demangled: ''
+      offset: 0000465A
+    - name: _IoAcquireCancelSpinLock@4
+      demangled: ''
+      offset: '00004660'
+    - name: '@InterlockedCompareExchange@12'
+      demangled: ''
+      offset: '00004666'
+    - name: __allmul
+      demangled: ''
+      offset: '00004670'
+    - name: _KeCancelTimer@4
+      demangled: ''
+      offset: 000046A4
+    - name: _KeSetTimer@16
+      demangled: ''
+      offset: 000046AA
+    - name: _KeInitializeDpc@12
+      demangled: ''
+      offset: 000046B0
+    - name: _KeInitializeTimer@4
+      demangled: ''
+      offset: 000046B6
+    - name: _KeQuerySystemTime@4
+      demangled: ''
+      offset: 000046BC
+    - name: _ZwQueryValueKey@24
+      demangled: ''
+      offset: 000046C2
+    - name: _RtlInitUnicodeString@8
+      demangled: ''
+      offset: 000046C8
+    - name: _RtlDeleteRegistryValue@12
+      demangled: ''
+      offset: 000046CE
+    - name: _IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 000046D4
+    - name: _RtlWriteRegistryValue@24
+      demangled: ''
+      offset: 000046DA
+    - name: _IoCreateSymbolicLink@8
+      demangled: ''
+      offset: '000046E0'
+    - name: _RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: '000046E6'
+    - name: _RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: 000046EC
+    - name: _ZwClose@4
+      demangled: ''
+      offset: 000046F2
+    - name: _IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 000046F8
+    - name: _IoDetachDevice@4
+      demangled: ''
+      offset: 000046FE
+    - name: _RtlFreeUnicodeString@4
+      demangled: ''
+      offset: '00004704'
+    - name: _RtlxAnsiStringToUnicodeSize@4
+      demangled: ''
+      offset: 0000470A
+    - name: _IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: '00004710'
+    - name: _IoCreateDevice@28
+      demangled: ''
+      offset: '00004716'
+    - name: _RtlAnsiStringToUnicodeString@12
+      demangled: ''
+      offset: 0000471C
+    - name: _RtlInitAnsiString@8
+      demangled: ''
+      offset: '00004722'
+    - name: _sprintf
+      demangled: ''
+      offset: '00004728'
+    - name: _KeQueryPerformanceCounter@4
+      demangled: ''
+      offset: 0000472E
+    - name: _RtlExtendedLargeIntegerDivide@16
+      demangled: ''
+      offset: '00004734'
+    - name: _RtlExtendedIntegerMultiply@12
+      demangled: ''
+      offset: 0000473A
+    - name: _DbgBreakPoint@0
+      demangled: ''
+      offset: '00004740'
+  - num: '2'
+    name: .idata$5
+    offset: '00002250'
+    symbols:
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '00000000'
+    - name: __imp__KeQueryPerformanceCounter@4
+      demangled: ''
+      offset: '00000004'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '00000008'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: 0000000C
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000010'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000014'
+    - name: __imp__MmUnlockPagableImageSection@4
+      demangled: ''
+      offset: '00000018'
+    - name: __imp__MmLockPagableDataSection@4
+      demangled: ''
+      offset: 0000001C
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000020'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000024'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000028'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 0000002C
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: '00000030'
+    - name: __imp__IoAcquireCancelSpinLock@4
+      demangled: ''
+      offset: '00000034'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: '00000038'
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000040'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00000044'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000048'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 0000004C
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000050'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000054'
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: '00000058'
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: 0000005C
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00000060'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000064'
+    - name: __imp__PoSetPowerState@12
+      demangled: ''
+      offset: '00000068'
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: 0000006C
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000070'
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: '00000074'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000078'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 0000007C
+    - name: __imp_@InterlockedCompareExchange@12
+      demangled: ''
+      offset: '00000080'
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: '00000084'
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: '00000088'
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: 0000008C
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: '00000090'
+    - name: __imp__KeQuerySystemTime@4
+      demangled: ''
+      offset: '00000094'
+    - name: __imp__ZwQueryValueKey@24
+      demangled: ''
+      offset: '00000098'
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 0000009C
+    - name: __imp__RtlDeleteRegistryValue@12
+      demangled: ''
+      offset: 000000A0
+    - name: __imp__IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 000000A4
+    - name: __imp__RtlWriteRegistryValue@24
+      demangled: ''
+      offset: 000000A8
+    - name: __imp__IoCreateSymbolicLink@8
+      demangled: ''
+      offset: 000000AC
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: 000000B0
+    - name: __imp__RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: 000000B4
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: 000000B8
+    - name: __imp__RtlInitAnsiString@8
+      demangled: ''
+      offset: 000000BC
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: 000000C0
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: 000000C4
+    - name: __imp__RtlxAnsiStringToUnicodeSize@4
+      demangled: ''
+      offset: 000000C8
+    - name: __imp__NlsMbCodePageTag
+      demangled: ''
+      offset: 000000CC
+    - name: _NlsMbCodePageTag
+      demangled: ''
+      offset: 000000CC
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: 000000D0
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: 000000D4
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      demangled: ''
+      offset: 000000D8
+    - name: __imp__sprintf
+      demangled: ''
+      offset: 000000DC
+    - name: __imp__DbgBreakPoint@0
+      demangled: ''
+      offset: '000000E0'
+    - name: __imp__RtlExtendedLargeIntegerDivide@16
+      demangled: ''
+      offset: '000000E4'
+    - name: __imp__RtlExtendedIntegerMultiply@12
+      demangled: ''
+      offset: '000000E8'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000EC
+    - name: __imp__USBD_CreateConfigurationRequest@8
+      demangled: ''
+      offset: 000000F0
+    - name: __imp__USBD_ParseConfigurationDescriptor@12
+      demangled: ''
+      offset: 000000F4
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000F8
+  - num: '3'
+    name: .data
+    offset: '00002400'
+    symbols:
+    - name: _StopBits
+      demangled: ''
+      offset: 00000BE4
+    - name: _ParityType
+      demangled: ''
+      offset: 00000BE8
+    - name: _RxBuffSize
+      demangled: ''
+      offset: 00002FCC
+    - name: _MemoryAllocated
+      demangled: ''
+      offset: '00004E60'
+    - name: _MemAllocFailCnt
+      demangled: ''
+      offset: '00004E64'
+    - name: _MemAllocCnt
+      demangled: ''
+      offset: '00004E68'
+    - name: _MemFreeFailCnt
+      demangled: ''
+      offset: 00004E6C
+    - name: _MemFreeCnt
+      demangled: ''
+      offset: '00004E70'
+    - name: _MaxMemAllocated
+      demangled: ''
+      offset: '00004E74'
+    - name: _Slots
+      demangled: ''
+      offset: '00004E80'
+    - name: _NumDevices
+      demangled: ''
+      offset: 00004F80
+    - name: _GlobDeviceObject
+      demangled: ''
+      offset: 00004F84
+    - name: _PAGEUSBSER_Count
+      demangled: ''
+      offset: 00004F88
+    - name: _DriverName
+      demangled: ''
+      offset: 00004F8C
+    - name: _UsbSerSerialDebugLevel
+      demangled: ''
+      offset: 00004F90
+    - name: _PAGEUSBSER_Function
+      demangled: ''
+      offset: 00004F94
+    - name: _DriverVersion
+      demangled: ''
+      offset: 00004F98
+    - name: _GlobalSpinLock
+      demangled: ''
+      offset: 00004F9C
+    - name: _Usbser_Debug_Trace_Level
+      demangled: ''
+      offset: 00004FA0
+    - name: _PAGEUSBSER_Handle
+      demangled: ''
+      offset: 00004FA4
+  - num: '4'
+    name: PAGEUSBS
+    offset: 00003C80
+    symbols:
+    - name: _UsbSer_Dispatch@8
+      demangled: ''
+      offset: '00000000'
+    - name: _UsbSer_Create@8
+      demangled: ''
+      offset: '00000860'
+    - name: _UsbSer_Close@8
+      demangled: ''
+      offset: 00000B60
+    - name: _UsbSer_Cleanup@8
+      demangled: ''
+      offset: 00000DB0
+    - name: _UsbSerSendWaitWake@4
+      demangled: ''
+      offset: 00000F30
+    - name: _SetBaudRate@8
+      demangled: ''
+      offset: '00001050'
+    - name: _GetBaudRate@8
+      demangled: ''
+      offset: '00001210'
+    - name: _SetLineControl@8
+      demangled: ''
+      offset: 000013A0
+    - name: _GetLineControl@8
+      demangled: ''
+      offset: '00001530'
+    - name: _SetTimeouts@8
+      demangled: ''
+      offset: 000016D0
+    - name: _GetTimeouts@8
+      demangled: ''
+      offset: '00001850'
+    - name: _SetChars@8
+      demangled: ''
+      offset: 000019D0
+    - name: _GetChars@8
+      demangled: ''
+      offset: 00001B50
+    - name: _SetClrDtr@8
+      demangled: ''
+      offset: 00001CE0
+    - name: _ResetDevice@8
+      demangled: ''
+      offset: 00001F00
+    - name: _SetRts@8
+      demangled: ''
+      offset: '00002050'
+    - name: _ClrRts@8
+      demangled: ''
+      offset: 000021A0
+    - name: _SetBreak@12
+      demangled: ''
+      offset: 000022F0
+    - name: _SetQueueSize@8
+      demangled: ''
+      offset: '00002450'
+    - name: _GetWaitMask@8
+      demangled: ''
+      offset: 000025D0
+    - name: _SetWaitMask@8
+      demangled: ''
+      offset: '00002750'
+    - name: _WaitOnMask@8
+      demangled: ''
+      offset: '00002920'
+    - name: _ImmediateChar@8
+      demangled: ''
+      offset: 00002D70
+    - name: _Purge@12
+      demangled: ''
+      offset: 00002EF0
+    - name: _GetHandflow@8
+      demangled: ''
+      offset: '000030E0'
+    - name: _SetHandflow@8
+      demangled: ''
+      offset: '00003270'
+    - name: _GetModemStatus@8
+      demangled: ''
+      offset: '00003430'
+    - name: _GetDtrRts@8
+      demangled: ''
+      offset: '000035E0'
+    - name: _GetCommStatus@8
+      demangled: ''
+      offset: '00003760'
+    - name: _GetProperties@8
+      demangled: ''
+      offset: '00003940'
+    - name: _LsrmstInsert@8
+      demangled: ''
+      offset: 00003AB0
+    - name: _ConfigSize@8
+      demangled: ''
+      offset: 00003BE0
+    - name: _GetStats@8
+      demangled: ''
+      offset: 00003D50
+    - name: _ClearStats@8
+      demangled: ''
+      offset: 00003ED0
+    - name: _SerialGetProperties@8
+      demangled: ''
+      offset: '00004020'
+    - name: _UsbSer_Write@8
+      demangled: ''
+      offset: '000041E0'
+    - name: _UsbSerGiveWriteToUsb@16
+      demangled: ''
+      offset: '00004480'
+    - name: _UsbSer_Read@8
+      demangled: ''
+      offset: 000048A0
+    - name: _UsbSerStartRead@4
+      demangled: ''
+      offset: 00004B10
+    - name: _UsbSerGrabReadFromRx@4
+      demangled: ''
+      offset: '00005250'
+    - name: _UsbSerCancelCurrentRead@8
+      demangled: ''
+      offset: '00005390'
+    - name: _UsbSerReadTimeout@16
+      demangled: ''
+      offset: '00005500'
+    - name: _UsbSerIntervalReadTimeout@16
+      demangled: ''
+      offset: '00005670'
+    - name: _UsbSerTryToCompleteCurrent@44
+      demangled: ''
+      offset: 00005D50
+    - name: _UsbSerGetNextIrp@20
+      demangled: ''
+      offset: 00005FB0
+    - name: _UsbSerStartOrQueue@20
+      demangled: ''
+      offset: '00006190'
+    - name: _UsbSerCancelQueued@8
+      demangled: ''
+      offset: '00006450'
+    - name: _UsbSerKillAllReadsOrWrites@12
+      demangled: ''
+      offset: 000065B0
+    - name: _UsbSerKillPendingIrps@4
+      demangled: ''
+      offset: 000067A0
+    - name: _UsbSerCompletePendingWaitMasks@4
+      demangled: ''
+      offset: '00006990'
+    - name: _UsbSerProcessEmptyTransmit@4
+      demangled: ''
+      offset: 00006B40
+    - name: _UsbSerCancelWaitOnMask@8
+      demangled: ''
+      offset: 00006C70
+  - num: '5'
+    name: PAGEUSBS0
+    offset: 00003F30
+    symbols:
+    - name: _UsbSer_Unload@4
+      demangled: ''
+      offset: '00000000'
+    - name: _UsbSer_PnPAddDevice@8
+      demangled: ''
+      offset: '00000050'
+    - name: _UsbSer_PnP@8
+      demangled: ''
+      offset: 000002B0
+    - name: _UsbSer_SystemControl@8
+      demangled: ''
+      offset: '00000780'
+    - name: _UsbSerMajorNotSupported@8
+      demangled: ''
+      offset: '00000870'
+  - num: '6'
+    name: PAGEUBS0
+    offset: '00004750'
+    symbols:
+    - name: _UsbSerGetRegistryKeyValue@20
+      demangled: ''
+      offset: '00000000'
+    - name: _UsbSerUndoExternalNaming@4
+      demangled: ''
+      offset: '000001E0'
+    - name: _UsbSerDoExternalNaming@4
+      demangled: ''
+      offset: 000003C0
+    - name: _StartDevice@8
+      demangled: ''
+      offset: '00000890'
+    - name: _StopDevice@8
+      demangled: ''
+      offset: 00000C10
+    - name: _RemoveDevice@8
+      demangled: ''
+      offset: 00000D70
+    - name: _DeleteObjectAndLink@4
+      demangled: ''
+      offset: '00001020'
+    - name: _StartPerfTimer@4
+      demangled: ''
+      offset: '00001180'
+    - name: _StopPerfTimer@8
+      demangled: ''
+      offset: '00001200'
+    - name: _BytesPerSecond@4
+      demangled: ''
+      offset: '00001330'
+    - name: _CallUSBD@8
+      demangled: ''
+      offset: '00001410'
+    - name: _ConfigureDevice@4
+      demangled: ''
+      offset: '000015E0'
+    - name: _BuildRequest@16
+      demangled: ''
+      offset: '000017E0'
+    - name: _ClassVendorCommand@32
+      demangled: ''
+      offset: '000018E0'
+    - name: _StartRead@4
+      demangled: ''
+      offset: 00001A30
+    - name: _StartNotifyRead@4
+      demangled: ''
+      offset: 00001BE0
+    - name: _UsbSerRestoreModemSettings@4
+      demangled: ''
+      offset: 00001D70
+    - name: _UsbSerLockPagableCodeSection@4
+      demangled: ''
+      offset: 00001DD0
+  - num: '7'
+    name: INIT
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000198'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: 000001AC
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: 000001C0
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 000001D4

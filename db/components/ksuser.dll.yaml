@@ -2,7 +2,7 @@ filename: ksuser.dll
 binary: KSUSER
 description: ''
 appearances:
-- version: Windows 98 Debug
+- version: Windows 98 Retail
   source_tree: []
   segments:
   - num: '1'
@@ -67,7 +67,7 @@ appearances:
     - name: \177NTDLL_NULL_THUNK_DATA
       processed: ''
       offset: '00000070'
-- version: Windows 98 Retail
+- version: Windows 98 Debug
   source_tree: []
   segments:
   - num: '1'
@@ -197,3 +197,67 @@ appearances:
     - name: \177NTDLL_NULL_THUNK_DATA
       demangled: ''
       offset: '00000070'
+- version: Windows ME Debug
+  source_tree:
+  - /ntc/private/amovie/filters.ks/ksuser/ksuser.c
+  - wcscat.c
+  - wcslen.c
+  segments:
+  - num: '1'
+    name: .idata$5
+    offset: '00000000'
+    symbols:
+    - name: __imp__GetProcessHeap@0
+      demangled: ''
+      offset: '00000000'
+    - name: __imp__HeapAlloc@12
+      demangled: ''
+      offset: '00000004'
+    - name: __imp__HeapFree@12
+      demangled: ''
+      offset: '00000008'
+    - name: \177KERNEL32_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000000C
+    - name: __imp__NtCreateFile@44
+      demangled: ''
+      offset: '00000010'
+    - name: __imp__RtlNtStatusToDosError@4
+      demangled: ''
+      offset: '00000014'
+    - name: \177ntdll_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000018'
+    - name: _KsiCreateObjectType@24
+      demangled: ''
+      offset: 000001D0
+    - name: _KsCreateAllocator@12
+      demangled: ''
+      offset: 000002B6
+    - name: _KsCreateClock@12
+      demangled: ''
+      offset: 000002D7
+    - name: _KsCreatePin@16
+      demangled: ''
+      offset: 000002F8
+    - name: _KsCreateTopologyNode@16
+      demangled: ''
+      offset: 0000032C
+    - name: _DllInstanceInit@12
+      demangled: ''
+      offset: 0000034B
+    - name: _wcscpy
+      demangled: ''
+      offset: '00000360'
+    - name: _wcslen
+      demangled: ''
+      offset: '00000390'
+    - name: __IMPORT_DESCRIPTOR_ntdll
+      demangled: ''
+      offset: 000003B0
+    - name: __IMPORT_DESCRIPTOR_KERNEL32
+      demangled: ''
+      offset: 000003C4
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 000003D8

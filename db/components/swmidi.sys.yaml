@@ -1,0 +1,3607 @@
+filename: swmidi.sys
+binary: SWMIDI
+description: ''
+appearances:
+- version: Windows 98SE Debug
+  source_tree:
+  - ../clist.cpp
+  - ../clist.h
+  - ../control.cpp
+  - ../device.cpp
+  - ../../../../../dev/tools/c32/inc/math.h
+  - ../filter.cpp
+  - ../float.h
+  - i386/87cdisp.asm
+  - i386/87ctran.asm
+  - i386/87disp.asm
+  - i386/87tran.asm
+  - i386/ftol.asm
+  - ../instr.cpp
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/llshl.asm
+  - intel/llshr.asm
+  - intel/ulldiv.asm
+  - intel/ullrem.asm
+  - ../loadicol.cpp
+  - ../maketab.cpp
+  - ../midi.cpp
+  - ../mix.cpp
+  - ../mmx.cpp
+  - ../muldiv32.h
+  - /NT/private/crt32nt/hack/stubs.c
+  - /NT/private/crt32nt/misc/rand.c
+  - /NT/private/fp32nt/tran/fpexcept.c
+  - /NT/private/fp32nt/tran/i386/87except.c
+  - /NT/private/fp32nt/tran/i386/fpctrl.c
+  - /NT/private/fp32nt/tran/i386/frnd.c
+  - /NT/private/fp32nt/tran/matherr.c
+  - /NT/private/fp32nt/tran/powhlp.c
+  - /NT/private/fp32nt/tran/util.c
+  - ../pins.cpp
+  - ../synth.h
+  - ../topology.cpp
+  - ../voice.cpp
+  - FileStandardInformationBlock.EndOfFile.H
+  - ../pch.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00002680'
+    symbols:
+    - name: _WriteComplete@12
+      processed: ''
+      offset: '00000000'
+    - name: ??0CList@@QAE@XZ
+      processed: 'public: __thiscall CList::CList(void)'
+      offset: '00000089'
+    - name: ?GetCount@CList@@QBEJXZ
+      processed: 'public: long __thiscall CList::GetCount(void) const'
+      offset: 0000008F
+    - name: ?AddHead@CList@@QAEXPAVCListItem@@@Z
+      processed: 'public: void __thiscall CList::AddHead(class CListItem *)'
+      offset: '00000096'
+    - name: ?SetNext@CListItem@@QAEXPAV1@@Z
+      processed: 'public: void __thiscall CListItem::SetNext(class CListItem *)'
+      offset: 000000AE
+    - name: ?Remove@CList@@QAEXPAVCListItem@@@Z
+      processed: 'public: void __thiscall CList::Remove(class CListItem *)'
+      offset: 000000B7
+    - name: ?GetNext@Voice@@QAEPAV1@XZ
+      processed: 'public: class Voice * __thiscall Voice::GetNext(void)'
+      offset: 000000CB
+    - name: ?GetNext@CListItem@@QBEPAV1@XZ
+      processed: 'public: class CListItem * __thiscall CListItem::GetNext(void) const'
+      offset: 000000D0
+    - name: ?GetHead@VoiceList@@QAEPAVVoice@@XZ
+      processed: 'public: class Voice * __thiscall VoiceList::GetHead(void)'
+      offset: 000000D3
+    - name: ?GetHead@CList@@QBEPAVCListItem@@XZ
+      processed: 'public: class CListItem * __thiscall CList::GetHead(void) const'
+      offset: 000000D8
+    - name: ?RemoveHead@VoiceList@@QAEPAVVoice@@XZ
+      processed: 'public: class Voice * __thiscall VoiceList::RemoveHead(void)'
+      offset: 000000DB
+    - name: ?RemoveHead@CList@@QAEPAVCListItem@@XZ
+      processed: 'public: class CListItem * __thiscall CList::RemoveHead(void)'
+      offset: '000000E0'
+    - name: ?MulDiv32@@YGJJJJ@Z
+      processed: long __stdcall MulDiv32(long, long, long)
+      offset: '00000105'
+    - name: ?GetGSActive@ControlLogic@@QAEHXZ
+      processed: 'public: int __thiscall ControlLogic::GetGSActive(void)'
+      offset: 0000011F
+    - name: ??0CListItem@@QAE@XZ
+      processed: 'public: __thiscall CListItem::CListItem(void)'
+      offset: '00000126'
+    - name: ?IsEmpty@CList@@QBEHXZ
+      processed: 'public: int __thiscall CList::IsEmpty(void) const'
+      offset: 0000012C
+    - name: ?RemoveHead@SourceRegionList@@QAEPAVSourceRegion@@XZ
+      processed: 'public: class SourceRegion * __thiscall SourceRegionList::RemoveHead(void)'
+      offset: '00000134'
+    - name: ?GetNext@SourceRegion@@QAEPAV1@XZ
+      processed: 'public: class SourceRegion * __thiscall SourceRegion::GetNext(void)'
+      offset: '00000139'
+    - name: ?GetHead@SourceRegionList@@QAEPAVSourceRegion@@XZ
+      processed: 'public: class SourceRegion * __thiscall SourceRegionList::GetHead(void)'
+      offset: 0000013E
+    - name: ?RemoveHead@WavePool@@QAEPAVWave@@XZ
+      processed: 'public: class Wave * __thiscall WavePool::RemoveHead(void)'
+      offset: '00000143'
+    - name: ?RemoveHead@InstrumentList@@QAEPAVInstrument@@XZ
+      processed: 'public: class Instrument * __thiscall InstrumentList::RemoveHead(void)'
+      offset: '00000148'
+    - name: ?GetNext@Instrument@@QAEPAV1@XZ
+      processed: 'public: class Instrument * __thiscall Instrument::GetNext(void)'
+      offset: 0000014D
+    - name: ?GetHead@InstrumentList@@QAEPAVInstrument@@XZ
+      processed: 'public: class Instrument * __thiscall InstrumentList::GetHead(void)'
+      offset: '00000152'
+    - name: ?GetNext@Wave@@QAEPAV1@XZ
+      processed: 'public: class Wave * __thiscall Wave::GetNext(void)'
+      offset: '00000157'
+    - name: ?GetHead@WavePool@@QAEPAVWave@@XZ
+      processed: 'public: class Wave * __thiscall WavePool::GetHead(void)'
+      offset: 0000015C
+    - name: ?AddTail@CList@@QAEXPAVCListItem@@@Z
+      processed: 'public: void __thiscall CList::AddTail(class CListItem *)'
+      offset: '00000161'
+    - name: ?AddTail@CListItem@@QAEPAV1@PAV1@@Z
+      processed: 'public: class CListItem * __thiscall CListItem::AddTail(class CListItem
+        *)'
+      offset: '00000175'
+    - name: ?GetNext@Collection@@QAEPAV1@XZ
+      processed: 'public: class Collection * __thiscall Collection::GetNext(void)'
+      offset: '00000181'
+    - name: ?GetHead@CollectionList@@QAEPAVCollection@@XZ
+      processed: 'public: class Collection * __thiscall CollectionList::GetHead(void)'
+      offset: '00000186'
+    - name: ?RemoveHead@CollectionList@@QAEPAVCollection@@XZ
+      processed: 'public: class Collection * __thiscall CollectionList::RemoveHead(void)'
+      offset: 0000018B
+    - name: ?IsMember@CList@@QAEHPAVCListItem@@@Z
+      processed: 'public: int __thiscall CList::IsMember(class CListItem *)'
+      offset: '00000190'
+    - name: ?AddHead@LockList@@QAEXPAVLockRange@@@Z
+      processed: 'public: void __thiscall LockList::AddHead(class LockRange *)'
+      offset: 0000019E
+    - name: ?GetNext@LockRange@@QAEPAV1@XZ
+      processed: 'public: class LockRange * __thiscall LockRange::GetNext(void)'
+      offset: 000001AA
+    - name: ?GetHead@LockList@@QAEPAVLockRange@@XZ
+      processed: 'public: class LockRange * __thiscall LockList::GetHead(void)'
+      offset: 000001AF
+    - name: ?AddHead@CollectionList@@QAEXPAVCollection@@@Z
+      processed: 'public: void __thiscall CollectionList::AddHead(class Collection
+        *)'
+      offset: 000001B4
+    - name: ?RemoveAll@CList@@QAEXXZ
+      processed: 'public: void __thiscall CList::RemoveAll(void)'
+      offset: 000001C0
+    - name: ?GetNext@MIDIData@@QAEPAV1@XZ
+      processed: 'public: class MIDIData * __thiscall MIDIData::GetNext(void)'
+      offset: 000001C4
+    - name: ?GetHead@MIDIDataList@@QAEPAVMIDIData@@XZ
+      processed: 'public: class MIDIData * __thiscall MIDIDataList::GetHead(void)'
+      offset: 000001C9
+    - name: ?RemoveHead@MIDIDataList@@QAEPAVMIDIData@@XZ
+      processed: 'public: class MIDIData * __thiscall MIDIDataList::RemoveHead(void)'
+      offset: 000001CE
+    - name: ?GetPrev@CList@@QBEPAVCListItem@@PAV2@@Z
+      processed: 'public: class CListItem * __thiscall CList::GetPrev(class CListItem
+        *) const'
+      offset: 000001D3
+    - name: _KsDefaultForwardIrp@8
+      processed: ''
+      offset: '000001E2'
+    - name: _KsDefaultDispatchPnp@8
+      processed: ''
+      offset: '000001E8'
+    - name: _KsSetMajorFunctionHandler@8
+      processed: ''
+      offset: 000001EE
+    - name: _KsDefaultDispatchPower@8
+      processed: ''
+      offset: 000001F4
+    - name: _KsSetDevicePnpAndBaseObject@12
+      processed: ''
+      offset: 000001FA
+    - name: _KsAllocateDeviceHeader@12
+      processed: ''
+      offset: '00000200'
+    - name: _KsNullDriverUnload@4
+      processed: ''
+      offset: '00000206'
+    - name: _KsDereferenceSoftwareBusObject@4
+      processed: ''
+      offset: 0000020C
+    - name: _KsAllocateObjectHeader@20
+      processed: ''
+      offset: '00000212'
+    - name: _KsReferenceSoftwareBusObject@4
+      processed: ''
+      offset: '00000218'
+    - name: _KsFreeObjectHeader@4
+      processed: ''
+      offset: 0000021E
+    - name: _KsDispatchInvalidDeviceRequest@8
+      processed: ''
+      offset: '00000224'
+    - name: _KsPropertyHandler@12
+      processed: ''
+      offset: 0000022A
+    - name: _KsDefaultDeviceIoCompletion@8
+      processed: ''
+      offset: '00000230'
+    - name: _KsPinPropertyHandler@20
+      processed: ''
+      offset: '00000236'
+    - name: _KsValidateConnectRequest@16
+      processed: ''
+      offset: 0000023C
+    - name: _KsProbeStreamIrp@12
+      processed: ''
+      offset: '00000242'
+    - name: _KsTopologyPropertyHandler@16
+      processed: ''
+      offset: '00000248'
+    - name: _fflush
+      processed: ''
+      offset: 0000024E
+    - name: _fprintf
+      processed: ''
+      offset: 0000024F
+    - name: _abort
+      processed: ''
+      offset: '00000250'
+    - name: _read
+      processed: ''
+      offset: '00000251'
+    - name: __read
+      processed: ''
+      offset: '00000252'
+    - name: __assert
+      processed: ''
+      offset: '00000253'
+    - name: __amsg_exit
+      processed: ''
+      offset: '00000254'
+    - name: __ftol
+      processed: ''
+      offset: '00000258'
+    - name: _pow
+      processed: ''
+      offset: '00000280'
+    - name: _log
+      processed: ''
+      offset: 0000028A
+    - name: _log10
+      processed: ''
+      offset: '00000294'
+    - name: _exp
+      processed: ''
+      offset: 0000029B
+    - name: __CIpow
+      processed: ''
+      offset: 000002A2
+    - name: __CIlog
+      processed: ''
+      offset: 000002AC
+    - name: __CIlog10
+      processed: ''
+      offset: 000002B6
+    - name: __CIexp
+      processed: ''
+      offset: 000002BD
+    - name: _srand
+      processed: ''
+      offset: 000002C4
+    - name: _rand
+      processed: ''
+      offset: 000002CE
+    - name: __fFEXP
+      processed: ''
+      offset: 000002FD
+    - name: __rtinfpopse
+      processed: ''
+      offset: '00000354'
+    - name: __rtinfnpopse
+      processed: ''
+      offset: '00000356'
+    - name: __fFLN
+      processed: ''
+      offset: '00000366'
+    - name: __rtinfpop
+      processed: ''
+      offset: 0000041B
+    - name: __rtinfnpop
+      processed: ''
+      offset: 0000041D
+    - name: __ffexpm1
+      processed: ''
+      offset: 0000043A
+    - name: __cintrindisp2
+      processed: ''
+      offset: '000004E4'
+    - name: __cintrindisp1
+      processed: ''
+      offset: '00000522'
+    - name: __ctrandisp2
+      processed: ''
+      offset: '00000558'
+    - name: __ctrandisp1
+      processed: ''
+      offset: 000006C9
+    - name: __fload
+      processed: ''
+      offset: 000006F5
+    - name: __trandisp1
+      processed: ''
+      offset: '00000734'
+    - name: __trandisp2
+      processed: ''
+      offset: 0000079B
+    - name: __rttospopde
+      processed: ''
+      offset: '00000827'
+    - name: __rttospop
+      processed: ''
+      offset: 0000082C
+    - name: __rtnospop
+      processed: ''
+      offset: 0000082E
+    - name: __rttosnpop
+      processed: ''
+      offset: '00000830'
+    - name: __rtnospopde
+      processed: ''
+      offset: '00000831'
+    - name: __rtzeropop
+      processed: ''
+      offset: '00000838'
+    - name: __rtzeronpop
+      processed: ''
+      offset: 0000083A
+    - name: __rtonepop
+      processed: ''
+      offset: 0000083F
+    - name: __rtonenpop
+      processed: ''
+      offset: '00000841'
+    - name: __tosnan1
+      processed: ''
+      offset: '00000846'
+    - name: __nosnan2
+      processed: ''
+      offset: '00000871'
+    - name: __tosnan2
+      processed: ''
+      offset: '00000873'
+    - name: __nan2
+      processed: ''
+      offset: 0000089B
+    - name: __rtindfpop
+      processed: ''
+      offset: 000008DA
+    - name: __rtindfnpop
+      processed: ''
+      offset: 000008DC
+    - name: __rttosnpopde
+      processed: ''
+      offset: 000008ED
+    - name: __rtchsifneg
+      processed: ''
+      offset: 000008F7
+    - name: __powhlp
+      processed: ''
+      offset: 000008FE
+    - name: __d_inttype
+      processed: ''
+      offset: 00000AEB
+    - name: __87except
+      processed: ''
+      offset: 00000B3D
+    - name: __set_exp
+      processed: ''
+      offset: 00000C47
+    - name: __get_exp
+      processed: ''
+      offset: 00000C7C
+    - name: __add_exp
+      processed: ''
+      offset: 00000C91
+    - name: __set_bexp
+      processed: ''
+      offset: 00000CBD
+    - name: __sptype
+      processed: ''
+      offset: 00000CED
+    - name: __decomp
+      processed: ''
+      offset: 00000D52
+    - name: __frnd
+      processed: ''
+      offset: '00000E20'
+    - name: _MyRaiseException@16
+      processed: ''
+      offset: '00000E35'
+    - name: __handle_qnan1
+      processed: ''
+      offset: 00000EA5
+    - name: __handle_qnan2
+      processed: ''
+      offset: 00000EF2
+    - name: __except1
+      processed: ''
+      offset: 00000F52
+    - name: __except2
+      processed: ''
+      offset: 00000FE9
+    - name: __raise_exc
+      processed: ''
+      offset: '00001098'
+    - name: __handle_exc
+      processed: ''
+      offset: 000013A9
+    - name: __umatherr
+      processed: ''
+      offset: '00001601'
+    - name: __set_errno
+      processed: ''
+      offset: '00001695'
+    - name: __errcode
+      processed: ''
+      offset: '000016E8'
+    - name: __matherr
+      processed: ''
+      offset: 0000171E
+    - name: __statfp
+      processed: ''
+      offset: '00001721'
+    - name: __clrfp
+      processed: ''
+      offset: '00001732'
+    - name: __ctrlfp
+      processed: ''
+      offset: '00001744'
+    - name: __set_statfp
+      processed: ''
+      offset: '00001774'
+    - name: _IoDeleteDevice@4
+      processed: ''
+      offset: 000017CE
+    - name: _IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: 000017D4
+    - name: _IoCreateDevice@28
+      processed: ''
+      offset: 000017DA
+    - name: _DbgPrint
+      processed: ''
+      offset: '000017E0'
+    - name: '@IofCompleteRequest@8'
+      processed: ''
+      offset: '000017E6'
+    - name: _KeInitializeMutex@8
+      processed: ''
+      offset: 000017EC
+    - name: _ExFreePool@4
+      processed: ''
+      offset: 000017F2
+    - name: _ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 000017F8
+    - name: _ExSetTimerResolution@8
+      processed: ''
+      offset: 000017FE
+    - name: '@ObfReferenceObject@4'
+      processed: ''
+      offset: '00001804'
+    - name: '@InterlockedDecrement@4'
+      processed: ''
+      offset: 0000180A
+    - name: '@InterlockedIncrement@4'
+      processed: ''
+      offset: '00001810'
+    - name: '@ObfDereferenceObject@4'
+      processed: ''
+      offset: '00001816'
+    - name: _KeInitializeEvent@12
+      processed: ''
+      offset: 0000181C
+    - name: _IoGetRelatedDeviceObject@4
+      processed: ''
+      offset: '00001822'
+    - name: _ObReferenceObjectByHandle@24
+      processed: ''
+      offset: '00001828'
+    - name: _RtlAssert@16
+      processed: ''
+      offset: 0000182E
+    - name: _KeReleaseMutex@8
+      processed: ''
+      offset: '00001834'
+    - name: _KeWaitForSingleObject@20
+      processed: ''
+      offset: 0000183A
+    - name: __alldiv
+      processed: ''
+      offset: '00001840'
+    - name: __allmul
+      processed: ''
+      offset: 000018F0
+    - name: '@IofCallDriver@8'
+      processed: ''
+      offset: '00001924'
+    - name: _KeClearEvent@4
+      processed: ''
+      offset: 0000192A
+    - name: _IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: '00001930'
+    - name: _ExQueueWorkItem@8
+      processed: ''
+      offset: '00001936'
+    - name: _KeGetCurrentIrql@0
+      processed: ''
+      offset: 0000193C
+    - name: _KeSetEvent@12
+      processed: ''
+      offset: '00001942'
+    - name: _KeQueryPerformanceCounter@4
+      processed: ''
+      offset: '00001948'
+    - name: __aulldiv
+      processed: ''
+      offset: '00001950'
+    - name: __aullrem
+      processed: ''
+      offset: 000019C0
+    - name: _KeSaveFloatingPointState@4
+      processed: ''
+      offset: 00001A36
+    - name: _KeRestoreFloatingPointState@4
+      processed: ''
+      offset: 00001A3C
+    - name: __allshr
+      processed: ''
+      offset: 00001A50
+    - name: __allshl
+      processed: ''
+      offset: 00001A80
+    - name: _ZwClose@4
+      processed: ''
+      offset: 00001AA0
+    - name: _RtlFreeUnicodeString@4
+      processed: ''
+      offset: 00001AA6
+    - name: _ZwReadFile@36
+      processed: ''
+      offset: 00001AAC
+    - name: _ZwQueryInformationFile@20
+      processed: ''
+      offset: 00001AB2
+    - name: _ZwCreateFile@44
+      processed: ''
+      offset: 00001AB8
+    - name: _RtlAnsiStringToUnicodeString@12
+      processed: ''
+      offset: 00001ABE
+    - name: _RtlInitAnsiString@8
+      processed: ''
+      offset: 00001AC4
+    - name: _RtlRaiseException@4
+      processed: ''
+      offset: 00001ACA
+  - num: '2'
+    name: .rdata
+    offset: 000027A0
+    symbols:
+    - name: _gcPinInstances
+      processed: ''
+      offset: '00000350'
+    - name: __GUID_cb9befa0_a251_11d1_a050_0000f8004788
+      processed: ''
+      offset: '00000360'
+    - name: __GUID_47a4fa20_a251_11d1_a050_0000f8004788
+      processed: ''
+      offset: '00000370'
+    - name: __GUID_720d4ac0_7533_11d0_a5d6_28db04c10000
+      processed: ''
+      offset: '00000380'
+    - name: __GUID_8c134960_51ad_11cf_878a_94f801c10000
+      processed: ''
+      offset: '00000390'
+    - name: __GUID_1d58c920_ac9b_11cf_a5d6_28db04c10000
+      processed: ''
+      offset: '000003E0'
+  - num: '3'
+    name: .data
+    offset: 00002CC0
+    symbols:
+    - name: ??_C@_0CF@NLCJ@?8swmidi?3?5WriteComplete?5irp?5cance@
+      processed: "\"\\'swmidi: WriteComplete irp cance\"..."
+      offset: '00000000'
+    - name: ??_C@_0CD@BJED@?8swmidi?3?5WriteComplete?5error?5?$CF08@
+      processed: "\"\\'swmidi: WriteComplete error %08\"..."
+      offset: '00000028'
+    - name: ??_C@_0CB@GJIL@?8swmidi?3?5WriteComplete?5WC?3?5?$CF08x?6@
+      processed: "\"\\'swmidi: WriteComplete WC: %08x\\n\"..."
+      offset: 0000004C
+    - name: __fltused
+      processed: ''
+      offset: '00000070'
+    - name: __ldused
+      processed: ''
+      offset: '00000074'
+    - name: ___fastflag
+      processed: ''
+      offset: '00000078'
+    - name: __infinity
+      processed: ''
+      offset: '00000080'
+    - name: __minfinity
+      processed: ''
+      offset: 0000008A
+    - name: __logemax
+      processed: ''
+      offset: '00000094'
+    - name: __OP_POWjmptab
+      processed: ''
+      offset: 000000C4
+    - name: __OP_LOG10jmptab
+      processed: ''
+      offset: '00000114'
+    - name: __OP_LOGjmptab
+      processed: ''
+      offset: '00000134'
+    - name: __OP_EXPjmptab
+      processed: ''
+      offset: '00000154'
+    - name: __indefinite
+      processed: ''
+      offset: 000001B0
+    - name: __piby2
+      processed: ''
+      offset: 000001BA
+    - name: __cpower
+      processed: ''
+      offset: 000001CC
+    - name: __d_inf
+      processed: ''
+      offset: '000001E0'
+    - name: __d_ind
+      processed: ''
+      offset: '000001E8'
+    - name: __d_max
+      processed: ''
+      offset: 000001F0
+    - name: __d_min
+      processed: ''
+      offset: 000001F8
+    - name: __d_mzero
+      processed: ''
+      offset: '00000200'
+    - name: ??_C@_03GAFO@_yn?$AA@
+      processed: '"_yn"'
+      offset: '000002E0'
+    - name: ??_C@_03GNLD@_y1?$AA@
+      processed: '"_y1"'
+      offset: '000002E4'
+    - name: ??_C@_03MHCE@_y0?$AA@
+      processed: '"_y0"'
+      offset: '000002E8'
+    - name: ??_C@_05PAK@frexp?$AA@
+      processed: '"frexp"'
+      offset: 000002EC
+    - name: ??_C@_04JKCH@fmod?$AA@
+      processed: '"fmod"'
+      offset: 000002F4
+    - name: ??_C@_06GGHF@_hypot?$AA@
+      processed: '"_hypot"'
+      offset: 000002FC
+    - name: ??_C@_05JNMC@_cabs?$AA@
+      processed: '"_cabs"'
+      offset: '00000304'
+    - name: ??_C@_05MEKH@ldexp?$AA@
+      processed: '"ldexp"'
+      offset: 0000030C
+    - name: ??_C@_04KAOJ@modf?$AA@
+      processed: '"modf"'
+      offset: '00000314'
+    - name: ??_C@_04EHAJ@fabs?$AA@
+      processed: '"fabs"'
+      offset: 0000031C
+    - name: ??_C@_05MFBN@floor?$AA@
+      processed: '"floor"'
+      offset: '00000324'
+    - name: ??_C@_04JJMP@ceil?$AA@
+      processed: '"ceil"'
+      offset: 0000032C
+    - name: ??_C@_03JLPI@tan?$AA@
+      processed: '"tan"'
+      offset: '00000334'
+    - name: ??_C@_03DLFL@cos?$AA@
+      processed: '"cos"'
+      offset: '00000338'
+    - name: ??_C@_03JAMN@sin?$AA@
+      processed: '"sin"'
+      offset: 0000033C
+    - name: ??_C@_04LMBE@sqrt?$AA@
+      processed: '"sqrt"'
+      offset: '00000340'
+    - name: ??_C@_05BFPO@atan2?$AA@
+      processed: '"atan2"'
+      offset: '00000348'
+    - name: ??_C@_04EAGN@atan?$AA@
+      processed: '"atan"'
+      offset: '00000350'
+    - name: ??_C@_04OAMO@acos?$AA@
+      processed: '"acos"'
+      offset: '00000358'
+    - name: ??_C@_04ELFI@asin?$AA@
+      processed: '"asin"'
+      offset: '00000360'
+    - name: ??_C@_04LFAD@tanh?$AA@
+      processed: '"tanh"'
+      offset: '00000368'
+    - name: ??_C@_04PFKD@cosh?$AA@
+      processed: '"cosh"'
+      offset: '00000370'
+    - name: ??_C@_04NPAI@sinh?$AA@
+      processed: '"sinh"'
+      offset: '00000378'
+    - name: ??_C@_05IJHH@log10?$AA@
+      processed: '"log10"'
+      offset: '00000380'
+    - name: ??_C@_03BGKD@log?$AA@
+      processed: '"log"'
+      offset: '00000388'
+    - name: ??_C@_03EGFG@pow?$AA@
+      processed: '"pow"'
+      offset: 0000038C
+    - name: ??_C@_03CDGJ@exp?$AA@
+      processed: '"exp"'
+      offset: '00000390'
+    - name: __matherr_flag
+      processed: ''
+      offset: '00000394'
+    - name: ?DummyIoStatusBlock@@3U_IO_STATUS_BLOCK@@A
+      processed: struct _IO_STATUS_BLOCK DummyIoStatusBlock
+      offset: 000003C0
+    - name: __osfile
+      processed: ''
+      offset: 000003D0
+    - name: __iob
+      processed: ''
+      offset: '000003E4'
+    - name: _errno
+      processed: ''
+      offset: '000003E8'
+  - num: '4'
+    name: .idata$2
+    offset: 000034D0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_ks
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __imp__KeQueryPerformanceCounter@4
+      processed: ''
+      offset: '00000134'
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: '00000138'
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000013C
+    - name: __imp_@ObfReferenceObject@4
+      processed: ''
+      offset: '00000140'
+    - name: __imp_@InterlockedIncrement@4
+      processed: ''
+      offset: '00000144'
+    - name: __imp_@ObfDereferenceObject@4
+      processed: ''
+      offset: '00000148'
+    - name: __imp__RtlRaiseException@4
+      processed: ''
+      offset: 0000014C
+    - name: __imp__RtlInitAnsiString@8
+      processed: ''
+      offset: '00000150'
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      processed: ''
+      offset: '00000154'
+    - name: __imp__ZwCreateFile@44
+      processed: ''
+      offset: '00000158'
+    - name: __imp__ZwQueryInformationFile@20
+      processed: ''
+      offset: 0000015C
+    - name: __imp__ZwReadFile@36
+      processed: ''
+      offset: '00000160'
+    - name: __imp__RtlFreeUnicodeString@4
+      processed: ''
+      offset: '00000164'
+    - name: __imp__ZwClose@4
+      processed: ''
+      offset: '00000168'
+    - name: __imp__KeRestoreFloatingPointState@4
+      processed: ''
+      offset: 0000016C
+    - name: __imp_@InterlockedDecrement@4
+      processed: ''
+      offset: '00000170'
+    - name: __imp__KeSaveFloatingPointState@4
+      processed: ''
+      offset: '00000174'
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: '00000178'
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: 0000017C
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '00000180'
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: '00000184'
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: '00000188'
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: 0000018C
+    - name: __imp__KeInitializeMutex@8
+      processed: ''
+      offset: '00000190'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000194'
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000198'
+    - name: __imp__ExSetTimerResolution@8
+      processed: ''
+      offset: 0000019C
+    - name: __imp__ObReferenceObjectByHandle@24
+      processed: ''
+      offset: 000001A0
+    - name: __imp__ExQueueWorkItem@8
+      processed: ''
+      offset: 000001A4
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: 000001A8
+    - name: __imp__KeReleaseMutex@8
+      processed: ''
+      offset: 000001AC
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: 000001B0
+    - name: __imp__IoGetRelatedDeviceObject@4
+      processed: ''
+      offset: 000001B4
+    - name: __imp__KeClearEvent@4
+      processed: ''
+      offset: 000001B8
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: 000001BC
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: 000001C0
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: 000001C4
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: 000001C8
+    - name: __imp__KsProbeStreamIrp@12
+      processed: ''
+      offset: 000001CC
+    - name: __imp__KsDefaultForwardIrp@8
+      processed: ''
+      offset: 000001D0
+    - name: __imp__KsTopologyPropertyHandler@16
+      processed: ''
+      offset: 000001D4
+    - name: __imp__KsDefaultDispatchPower@8
+      processed: ''
+      offset: 000001D8
+    - name: __imp__KsValidateConnectRequest@16
+      processed: ''
+      offset: 000001DC
+    - name: __imp__KsSetMajorFunctionHandler@8
+      processed: ''
+      offset: '000001E0'
+    - name: __imp__KsPinPropertyHandler@20
+      processed: ''
+      offset: '000001E4'
+    - name: __imp__KsDefaultDeviceIoCompletion@8
+      processed: ''
+      offset: '000001E8'
+    - name: __imp__KsPropertyHandler@12
+      processed: ''
+      offset: 000001EC
+    - name: __imp__KsDispatchInvalidDeviceRequest@8
+      processed: ''
+      offset: 000001F0
+    - name: __imp__KsFreeObjectHeader@4
+      processed: ''
+      offset: 000001F4
+    - name: __imp__KsReferenceSoftwareBusObject@4
+      processed: ''
+      offset: 000001F8
+    - name: __imp__KsAllocateObjectHeader@20
+      processed: ''
+      offset: 000001FC
+    - name: __imp__KsDereferenceSoftwareBusObject@4
+      processed: ''
+      offset: '00000200'
+    - name: __imp__KsNullDriverUnload@4
+      processed: ''
+      offset: '00000204'
+    - name: __imp__KsSetDevicePnpAndBaseObject@12
+      processed: ''
+      offset: '00000208'
+    - name: __imp__KsAllocateDeviceHeader@12
+      processed: ''
+      offset: 0000020C
+    - name: __imp__KsDefaultDispatchPnp@8
+      processed: ''
+      offset: '00000210'
+    - name: \177ks_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000214'
+  - num: '5'
+    name: PAGE
+    offset: 00009B40
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+    - name: _PnpAddDevice@8
+      processed: ''
+      offset: '00000059'
+    - name: _PnpDriverUnload@4
+      processed: ''
+      offset: 000000ED
+    - name: _FilterDispatchCreate@8
+      processed: ''
+      offset: 0000011B
+    - name: _FilterDispatchClose@8
+      processed: ''
+      offset: '00000200'
+    - name: ??_GControlLogic@@QAEPAXI@Z
+      processed: "public: void * __thiscall ControlLogic::`scalar deleting dtor'(unsigned
+        int)"
+      offset: '00000294'
+    - name: _FilterDispatchWrite@8
+      processed: ''
+      offset: 000002B0
+    - name: _FilterDispatchIoControl@8
+      processed: ''
+      offset: 000002C1
+    - name: _FilterPinPropertyHandler@12
+      processed: ''
+      offset: '00000304'
+    - name: _FilterPinInstances@12
+      processed: ''
+      offset: '00000320'
+    - name: _PinDispatchCreate@8
+      processed: ''
+      offset: '00000355'
+    - name: _PinDispatchClose@8
+      processed: ''
+      offset: 0000064E
+    - name: _PinDispatchIoControl@8
+      processed: ''
+      offset: '00000714'
+    - name: ?ProcessMidiMessage@@YGJPAU_IRP@@PAU_IO_STACK_LOCATION@@PAUfilter_instance@@@Z
+      processed: long __stdcall ProcessMidiMessage(struct _IRP *, struct _IO_STACK_LOCATION
+        *, struct filter_instance *)
+      offset: 000007C2
+    - name: _PinDispatchWrite@8
+      processed: ''
+      offset: 00000AB6
+    - name: _SetDeviceState@8
+      processed: ''
+      offset: 00000AE9
+    - name: _PinStateHandler@12
+      processed: ''
+      offset: 00000B97
+    - name: _BeginWrite@4
+      processed: ''
+      offset: 00000C04
+    - name: _FillBuffer@4
+      processed: ''
+      offset: 00000C3C
+    - name: _WriteBuffer@4
+      processed: ''
+      offset: 00000CBB
+    - name: _WriteCompleteWorker@4
+      processed: ''
+      offset: 00000DB2
+    - name: _GetTime100Ns@0
+      processed: ''
+      offset: 00000E6B
+    - name: ?FilterTopologyHandler@@YGJPAU_IRP@@PAUKSIDENTIFIER@@PAX@Z
+      processed: long __stdcall FilterTopologyHandler(struct _IRP *, struct KSIDENTIFIER
+        *, void *)
+      offset: 00000F22
+    - name: ?SetSampleRate@ControlLogic@@QAEXK@Z
+      processed: 'public: void __thiscall ControlLogic::SetSampleRate(unsigned long)'
+      offset: 00000F3C
+    - name: ?GetSampleRate@ControlLogic@@QAEJPAK@Z
+      processed: 'public: long __thiscall ControlLogic::GetSampleRate(unsigned long
+        *)'
+      offset: '00001052'
+    - name: ?GetMaxVoices@ControlLogic@@QAEJPAF0@Z
+      processed: 'public: long __thiscall ControlLogic::GetMaxVoices(short *, short
+        *)'
+      offset: 0000106A
+    - name: ?GetStereoMode@ControlLogic@@QAEJPAK@Z
+      processed: 'public: long __thiscall ControlLogic::GetStereoMode(unsigned long
+        *)'
+      offset: '00001093'
+    - name: ?MilsToSamples@ControlLogic@@QAE_JJ@Z
+      processed: 'public: __int64 __thiscall ControlLogic::MilsToSamples(long)'
+      offset: 000010AD
+    - name: ?SamplesToMils@ControlLogic@@QAEJ_J@Z
+      processed: 'public: long __thiscall ControlLogic::SamplesToMils(__int64)'
+      offset: '000010E8'
+    - name: ?SamplesPerMs@ControlLogic@@QAE_JXZ
+      processed: 'public: __int64 __thiscall ControlLogic::SamplesPerMs(void)'
+      offset: '00001137'
+    - name: ?Unit100NsToSamples@ControlLogic@@QAE_J_J@Z
+      processed: 'public: __int64 __thiscall ControlLogic::Unit100NsToSamples(__int64)'
+      offset: 0000114B
+    - name: ??0ControlLogic@@QAE@XZ
+      processed: 'public: __thiscall ControlLogic::ControlLogic(void)'
+      offset: '00001183'
+    - name: ??0NoteIn@@QAE@XZ
+      processed: 'public: __thiscall NoteIn::NoteIn(void)'
+      offset: '00001317'
+    - name: ??0VoiceList@@QAE@XZ
+      processed: 'public: __thiscall VoiceList::VoiceList(void)'
+      offset: '00001323'
+    - name: ??0ModWheelIn@@QAE@XZ
+      processed: 'public: __thiscall ModWheelIn::ModWheelIn(void)'
+      offset: 0000132F
+    - name: ??_H@YGXPAXIHP6EX0@Z@Z
+      processed: void __stdcall `vector ctor iterator'(void *, unsigned int, int,
+        void (__thiscall *)(void *))
+      offset: 0000133B
+    - name: ??_I@YGXPAXIHP6EX0@Z@Z
+      processed: void __stdcall `vector dtor iterator'(void *, unsigned int, int,
+        void (__thiscall *)(void *))
+      offset: 0000135D
+    - name: ??1ControlLogic@@QAE@XZ
+      processed: 'public: __thiscall ControlLogic::~ControlLogic(void)'
+      offset: '00001387'
+    - name: ??1NoteIn@@QAE@XZ
+      processed: 'public: __thiscall NoteIn::~NoteIn(void)'
+      offset: '00001470'
+    - name: ??1ModWheelIn@@QAE@XZ
+      processed: 'public: __thiscall ModWheelIn::~ModWheelIn(void)'
+      offset: '00001475'
+    - name: ??1PitchBendIn@@QAE@XZ
+      processed: 'public: __thiscall PitchBendIn::~PitchBendIn(void)'
+      offset: 0000147A
+    - name: ??1VolumeIn@@QAE@XZ
+      processed: 'public: __thiscall VolumeIn::~VolumeIn(void)'
+      offset: 0000147F
+    - name: ??1ExpressionIn@@QAE@XZ
+      processed: 'public: __thiscall ExpressionIn::~ExpressionIn(void)'
+      offset: '00001484'
+    - name: ??1PanIn@@QAE@XZ
+      processed: 'public: __thiscall PanIn::~PanIn(void)'
+      offset: '00001489'
+    - name: ??1ProgramIn@@QAE@XZ
+      processed: 'public: __thiscall ProgramIn::~ProgramIn(void)'
+      offset: 0000148E
+    - name: ??_GVoice@@QAEPAXI@Z
+      processed: "public: void * __thiscall Voice::`scalar deleting dtor'(unsigned
+        int)"
+      offset: '00001493'
+    - name: ??1Voice@@QAE@XZ
+      processed: 'public: __thiscall Voice::~Voice(void)'
+      offset: 000014AF
+    - name: ??1DigitalAudio@@QAE@XZ
+      processed: 'public: __thiscall DigitalAudio::~DigitalAudio(void)'
+      offset: 000014BA
+    - name: ?GMReset@ControlLogic@@QAEXXZ
+      processed: 'public: void __thiscall ControlLogic::GMReset(void)'
+      offset: 000014BF
+    - name: ?SetStereoMode@ControlLogic@@QAEXK@Z
+      processed: 'public: void __thiscall ControlLogic::SetStereoMode(unsigned long)'
+      offset: '00001541'
+    - name: ?SetMaxVoices@ControlLogic@@QAEJFF@Z
+      processed: 'public: long __thiscall ControlLogic::SetMaxVoices(short, short)'
+      offset: '00001557'
+    - name: ?Init@ControlLogic@@QAEXXZ
+      processed: 'public: void __thiscall ControlLogic::Init(void)'
+      offset: '00001655'
+    - name: ??0FLOATSAFE@@QAE@XZ
+      processed: 'public: __thiscall FLOATSAFE::FLOATSAFE(void)'
+      offset: 0000167C
+    - name: ??1FLOATSAFE@@QAE@XZ
+      processed: 'public: __thiscall FLOATSAFE::~FLOATSAFE(void)'
+      offset: 0000168A
+    - name: ?AdjustTiming@ControlLogic@@QAEXJ_J@Z
+      processed: 'public: void __thiscall ControlLogic::AdjustTiming(long, __int64)'
+      offset: '00001692'
+    - name: ?SetStartTime@ControlLogic@@QAEXJ_J@Z
+      processed: 'public: void __thiscall ControlLogic::SetStartTime(long, __int64)'
+      offset: 000016B2
+    - name: ?StealNotes@ControlLogic@@AAEX_J@Z
+      processed: 'private: void __thiscall ControlLogic::StealNotes(__int64)'
+      offset: 0000182C
+    - name: ?AllNotesOff@ControlLogic@@QAEJXZ
+      processed: 'public: long __thiscall ControlLogic::AllNotesOff(void)'
+      offset: 0000188E
+    - name: ?OldestVoice@ControlLogic@@AAEPAVVoice@@XZ
+      processed: 'private: class Voice * __thiscall ControlLogic::OldestVoice(void)'
+      offset: 000018D5
+    - name: ?StealVoice@ControlLogic@@AAEPAVVoice@@XZ
+      processed: 'private: class Voice * __thiscall ControlLogic::StealVoice(void)'
+      offset: '00001964'
+    - name: ?QueueNotes@ControlLogic@@AAEX_J@Z
+      processed: 'private: void __thiscall ControlLogic::QueueNotes(__int64)'
+      offset: 000019F2
+    - name: ?GetMixPosition@ControlLogic@@QAEKXZ
+      processed: 'public: unsigned long __thiscall ControlLogic::GetMixPosition(void)'
+      offset: 00001EFF
+    - name: ?Flush@ControlLogic@@QAEX_J@Z
+      processed: 'public: void __thiscall ControlLogic::Flush(__int64)'
+      offset: 00001F06
+    - name: ?FlushChannel@ControlLogic@@QAEXE_J@Z
+      processed: 'public: void __thiscall ControlLogic::FlushChannel(unsigned char,
+        __int64)'
+      offset: 00001F9D
+    - name: ?Mix@ControlLogic@@QAEXPAFKK@Z
+      processed: 'public: void __thiscall ControlLogic::Mix(short *, unsigned long,
+        unsigned long)'
+      offset: 00001FDA
+    - name: ?CalibrateSampleTime@ControlLogic@@QAE_J_J@Z
+      processed: 'public: __int64 __thiscall ControlLogic::CalibrateSampleTime(__int64)'
+      offset: '00002106'
+    - name: ?RecordMIDI@ControlLogic@@QAEH_JEEE@Z
+      processed: 'public: int __thiscall ControlLogic::RecordMIDI(__int64, unsigned
+        char, unsigned char, unsigned char)'
+      offset: 000021FF
+    - name: ?RecordSysEx@ControlLogic@@QAEH_JKPAE@Z
+      processed: 'public: int __thiscall ControlLogic::RecordSysEx(__int64, unsigned
+        long, unsigned char *)'
+      offset: 000027B4
+    - name: ?SWMidiClearAll@ControlLogic@@QAEX_J@Z
+      processed: 'public: void __thiscall ControlLogic::SWMidiClearAll(__int64)'
+      offset: '00002979'
+    - name: ?SWMidiResetPatches@ControlLogic@@QAEX_J@Z
+      processed: 'public: void __thiscall ControlLogic::SWMidiResetPatches(__int64)'
+      offset: 00002A2F
+    - name: ??2@YAPAXI@Z
+      processed: void * __cdecl operator new(unsigned int)
+      offset: 00002ADB
+    - name: ??3@YAXPAX@Z
+      processed: void __cdecl operator delete(void *)
+      offset: 00002B02
+    - name: ??0SourceLFO@@QAE@XZ
+      processed: 'public: __thiscall SourceLFO::SourceLFO(void)'
+      offset: 00002B19
+    - name: ?Init@SourceLFO@@QAEXK@Z
+      processed: 'public: void __thiscall SourceLFO::Init(unsigned long)'
+      offset: 00002B3A
+    - name: ?SetSampleRate@SourceLFO@@QAEXJ@Z
+      processed: 'public: void __thiscall SourceLFO::SetSampleRate(long)'
+      offset: 00002B62
+    - name: ?Verify@SourceLFO@@QAEXXZ
+      processed: 'public: void __thiscall SourceLFO::Verify(void)'
+      offset: 00002BA5
+    - name: ??0SourceEG@@QAE@XZ
+      processed: 'public: __thiscall SourceEG::SourceEG(void)'
+      offset: 00002C52
+    - name: ?Init@SourceEG@@QAEXK@Z
+      processed: 'public: void __thiscall SourceEG::Init(unsigned long)'
+      offset: 00002C7A
+    - name: ?SetSampleRate@SourceEG@@QAEXJ@Z
+      processed: 'public: void __thiscall SourceEG::SetSampleRate(long)'
+      offset: 00002CA2
+    - name: ?Verify@SourceEG@@QAEXXZ
+      processed: 'public: void __thiscall SourceEG::Verify(void)'
+      offset: 00002D1F
+    - name: ??0SourceArticulation@@QAE@XZ
+      processed: 'public: __thiscall SourceArticulation::SourceArticulation(void)'
+      offset: 00002E0A
+    - name: ?SetSampleRate@SourceArticulation@@QAEXK@Z
+      processed: 'public: void __thiscall SourceArticulation::SetSampleRate(unsigned
+        long)'
+      offset: '00002E44'
+    - name: ?Verify@SourceArticulation@@QAEXXZ
+      processed: 'public: void __thiscall SourceArticulation::Verify(void)'
+      offset: '00002E91'
+    - name: ?AddRef@SourceArticulation@@QAEXXZ
+      processed: 'public: void __thiscall SourceArticulation::AddRef(void)'
+      offset: 00002ECB
+    - name: ?Release@SourceArticulation@@QAEXXZ
+      processed: 'public: void __thiscall SourceArticulation::Release(void)'
+      offset: 00002EF0
+    - name: ??0SourceSample@@QAE@XZ
+      processed: 'public: __thiscall SourceSample::SourceSample(void)'
+      offset: 00002F28
+    - name: ??1SourceSample@@QAE@XZ
+      processed: 'public: __thiscall SourceSample::~SourceSample(void)'
+      offset: 00002F55
+    - name: ?Verify@SourceSample@@QAEXXZ
+      processed: 'public: void __thiscall SourceSample::Verify(void)'
+      offset: 00002F73
+    - name: ?CopyFromWave@SourceSample@@QAEHXZ
+      processed: 'public: int __thiscall SourceSample::CopyFromWave(void)'
+      offset: 00002FFC
+    - name: ?Lock@SourceSample@@QAEHH@Z
+      processed: 'public: int __thiscall SourceSample::Lock(int)'
+      offset: '00003099'
+    - name: ?UnLock@SourceSample@@QAEHXZ
+      processed: 'public: int __thiscall SourceSample::UnLock(void)'
+      offset: 000030D8
+    - name: ??0Wave@@QAE@XZ
+      processed: 'public: __thiscall Wave::Wave(void)'
+      offset: 000030EA
+    - name: ??1Wave@@QAE@XZ
+      processed: 'public: __thiscall Wave::~Wave(void)'
+      offset: '00003123'
+    - name: ?Verify@Wave@@QAEXXZ
+      processed: 'public: void __thiscall Wave::Verify(void)'
+      offset: '00003185'
+    - name: ?PlayOn@Wave@@QAEXXZ
+      processed: 'public: void __thiscall Wave::PlayOn(void)'
+      offset: '00003240'
+    - name: ?PlayOff@Wave@@QAEXXZ
+      processed: 'public: void __thiscall Wave::PlayOff(void)'
+      offset: '00003299'
+    - name: ?IsPlaying@Wave@@QAEHXZ
+      processed: 'public: int __thiscall Wave::IsPlaying(void)'
+      offset: 000032F1
+    - name: ?AddRef@Wave@@QAEXXZ
+      processed: 'public: void __thiscall Wave::AddRef(void)'
+      offset: 000032F5
+    - name: ?Release@Wave@@QAEXXZ
+      processed: 'public: void __thiscall Wave::Release(void)'
+      offset: 0000331A
+    - name: ??_GWave@@QAEPAXI@Z
+      processed: "public: void * __thiscall Wave::`scalar deleting dtor'(unsigned
+        int)"
+      offset: 0000334D
+    - name: ?IsLocked@Wave@@QAEHXZ
+      processed: 'public: int __thiscall Wave::IsLocked(void)'
+      offset: '00003369'
+    - name: ?Lock@Wave@@QAEHXZ
+      processed: 'public: int __thiscall Wave::Lock(void)'
+      offset: 0000336D
+    - name: ?UnLock@Wave@@QAEHXZ
+      processed: 'public: int __thiscall Wave::UnLock(void)'
+      offset: 000033F6
+    - name: ??0SourceRegion@@QAE@XZ
+      processed: 'public: __thiscall SourceRegion::SourceRegion(void)'
+      offset: '00003453'
+    - name: ??1SourceRegion@@QAE@XZ
+      processed: 'public: __thiscall SourceRegion::~SourceRegion(void)'
+      offset: '00003488'
+    - name: ?SetSampleRate@SourceRegion@@QAEXK@Z
+      processed: 'public: void __thiscall SourceRegion::SetSampleRate(unsigned long)'
+      offset: 000034A1
+    - name: ?Lock@SourceRegion@@QAEHKKH@Z
+      processed: 'public: int __thiscall SourceRegion::Lock(unsigned long, unsigned
+        long, int)'
+      offset: 000034B4
+    - name: ?UnLock@SourceRegion@@QAEHKK@Z
+      processed: 'public: int __thiscall SourceRegion::UnLock(unsigned long, unsigned
+        long)'
+      offset: '00003517'
+    - name: ?Verify@SourceRegion@@QAEXXZ
+      processed: 'public: void __thiscall SourceRegion::Verify(void)'
+      offset: 0000356F
+    - name: ??0Instrument@@QAE@XZ
+      processed: 'public: __thiscall Instrument::Instrument(void)'
+      offset: 000035D5
+    - name: ??0SourceRegionList@@QAE@XZ
+      processed: 'public: __thiscall SourceRegionList::SourceRegionList(void)'
+      offset: 000035F5
+    - name: ??1Instrument@@QAE@XZ
+      processed: 'public: __thiscall Instrument::~Instrument(void)'
+      offset: '00003601'
+    - name: ??_GSourceRegion@@QAEPAXI@Z
+      processed: "public: void * __thiscall SourceRegion::`scalar deleting dtor'(unsigned
+        int)"
+      offset: '00003628'
+    - name: ?Verify@Instrument@@QAEXXZ
+      processed: 'public: void __thiscall Instrument::Verify(void)'
+      offset: '00003644'
+    - name: ?SetSampleRate@Instrument@@QAEXK@Z
+      processed: 'public: void __thiscall Instrument::SetSampleRate(unsigned long)'
+      offset: 0000369E
+    - name: ?ScanForRegion@Instrument@@QAEPAVSourceRegion@@K@Z
+      processed: 'public: class SourceRegion * __thiscall Instrument::ScanForRegion(unsigned
+        long)'
+      offset: 000036C5
+    - name: ?Lock@Instrument@@QAEHKKH@Z
+      processed: 'public: int __thiscall Instrument::Lock(unsigned long, unsigned
+        long, int)'
+      offset: 000036F7
+    - name: ?UnLock@Instrument@@QAEHKK@Z
+      processed: 'public: int __thiscall Instrument::UnLock(unsigned long, unsigned
+        long)'
+      offset: 0000376C
+    - name: ??0Collection@@QAE@XZ
+      processed: 'public: __thiscall Collection::Collection(void)'
+      offset: 000037D6
+    - name: ??0InstrumentList@@QAE@XZ
+      processed: 'public: __thiscall InstrumentList::InstrumentList(void)'
+      offset: '00003811'
+    - name: ??0WavePool@@QAE@XZ
+      processed: 'public: __thiscall WavePool::WavePool(void)'
+      offset: 0000381D
+    - name: ??1Collection@@QAE@XZ
+      processed: 'public: __thiscall Collection::~Collection(void)'
+      offset: '00003829'
+    - name: ??_GInstrument@@QAEPAXI@Z
+      processed: "public: void * __thiscall Instrument::`scalar deleting dtor'(unsigned
+        int)"
+      offset: 0000389D
+    - name: ?SetSampleRate@Collection@@QAEXK@Z
+      processed: 'public: void __thiscall Collection::SetSampleRate(unsigned long)'
+      offset: 000038B9
+    - name: ?Lock@Collection@@QAEHKKKH@Z
+      processed: 'public: int __thiscall Collection::Lock(unsigned long, unsigned
+        long, unsigned long, int)'
+      offset: '000038E0'
+    - name: ?UnLock@Collection@@QAEHKKK@Z
+      processed: 'public: int __thiscall Collection::UnLock(unsigned long, unsigned
+        long, unsigned long)'
+      offset: 0000397C
+    - name: ?Verify@Collection@@QAEXXZ
+      processed: 'public: void __thiscall Collection::Verify(void)'
+      offset: '000039E5'
+    - name: ?AddInstrument@Collection@@QAEXPAVInstrument@@@Z
+      processed: 'public: void __thiscall Collection::AddInstrument(class Instrument
+        *)'
+      offset: 00003A28
+    - name: ??0LockRange@@QAE@XZ
+      processed: 'public: __thiscall LockRange::LockRange(void)'
+      offset: 00003A79
+    - name: ?GetInstrument@Collection@@QAEPAVInstrument@@KK@Z
+      processed: 'public: class Instrument * __thiscall Collection::GetInstrument(unsigned
+        long, unsigned long)'
+      offset: 00003A97
+    - name: ?RemoveDuplicateInstrument@Collection@@AAEXK@Z
+      processed: 'private: void __thiscall Collection::RemoveDuplicateInstrument(unsigned
+        long)'
+      offset: 00003ADD
+    - name: ?SetSampleRate@InstManager@@QAEXK@Z
+      processed: 'public: void __thiscall InstManager::SetSampleRate(unsigned long)'
+      offset: 00003B1B
+    - name: ?SetGMLoad@InstManager@@QAEJH@Z
+      processed: 'public: long __thiscall InstManager::SetGMLoad(int)'
+      offset: 00003B45
+    - name: ??0InstManager@@QAE@XZ
+      processed: 'public: __thiscall InstManager::InstManager(void)'
+      offset: 00003C36
+    - name: ??0CollectionList@@QAE@XZ
+      processed: 'public: __thiscall CollectionList::CollectionList(void)'
+      offset: 00003C80
+    - name: ??0LockList@@QAE@XZ
+      processed: 'public: __thiscall LockList::LockList(void)'
+      offset: 00003C8C
+    - name: ??1InstManager@@QAE@XZ
+      processed: 'public: __thiscall InstManager::~InstManager(void)'
+      offset: 00003C98
+    - name: ??_GCollection@@QAEPAXI@Z
+      processed: "public: void * __thiscall Collection::`scalar deleting dtor'(unsigned
+        int)"
+      offset: 00003CD9
+    - name: ?QueryLock@InstManager@@QAEHPAX@Z
+      processed: 'public: int __thiscall InstManager::QueryLock(void *)'
+      offset: 00003CF5
+    - name: ?Lock@InstManager@@QAEJPAXKKK@Z
+      processed: 'public: long __thiscall InstManager::Lock(void *, unsigned long,
+        unsigned long, unsigned long)'
+      offset: 00003D14
+    - name: ?Lock@InstManager@@QAEPAXPAXKKKH@Z
+      processed: 'public: void * __thiscall InstManager::Lock(void *, unsigned long,
+        unsigned long, unsigned long, int)'
+      offset: 00003D3C
+    - name: ?UnLock@InstManager@@QAEJPAXKKK@Z
+      processed: 'public: long __thiscall InstManager::UnLock(void *, unsigned long,
+        unsigned long, unsigned long)'
+      offset: 00003DC9
+    - name: ?UnLock@InstManager@@QAEJPAX@Z
+      processed: 'public: long __thiscall InstManager::UnLock(void *)'
+      offset: '00003E09'
+    - name: ?LockCollection@InstManager@@QAEJPAVCollection@@@Z
+      processed: 'public: long __thiscall InstManager::LockCollection(class Collection
+        *)'
+      offset: '00003E64'
+    - name: ?UnLockCollection@InstManager@@QAEJPAVCollection@@@Z
+      processed: 'public: long __thiscall InstManager::UnLockCollection(class Collection
+        *)'
+      offset: 00003EA3
+    - name: ?LockInstrument@InstManager@@QAEJPAVCollection@@K@Z
+      processed: 'public: long __thiscall InstManager::LockInstrument(class Collection
+        *, unsigned long)'
+      offset: 00003EE0
+    - name: ?UnLockInstrument@InstManager@@QAEJPAVCollection@@K@Z
+      processed: 'public: long __thiscall InstManager::UnLockInstrument(class Collection
+        *, unsigned long)'
+      offset: 00003F26
+    - name: ?Verify@InstManager@@QAEXXZ
+      processed: 'public: void __thiscall InstManager::Verify(void)'
+      offset: 00003F6A
+    - name: ?GetInstrument@InstManager@@QAEPAVInstrument@@KK@Z
+      processed: 'public: class Instrument * __thiscall InstManager::GetInstrument(unsigned
+        long, unsigned long)'
+      offset: 00003F88
+    - name: ?RequestGMInstrument@InstManager@@QAEXKK@Z
+      processed: 'public: void __thiscall InstManager::RequestGMInstrument(unsigned
+        long, unsigned long)'
+      offset: 00003FBC
+    - name: ?LoadGMInstrument@InstManager@@QAEXKK@Z
+      processed: 'public: void __thiscall InstManager::LoadGMInstrument(unsigned long,
+        unsigned long)'
+      offset: 00003FDA
+    - name: ?Mix8@DigitalAudio@@AAEKPAFKKJJJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::Mix8(short *, unsigned
+        long, unsigned long, long, long, long, long, long)'
+      offset: 0000403F
+    - name: ?MixMono8@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::MixMono8(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: 000041A2
+    - name: ?Mix8NoI@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::Mix8NoI(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: 000042B7
+    - name: ?MixMono8NoI@DigitalAudio@@AAEKPAFKKJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::MixMono8NoI(short
+        *, unsigned long, unsigned long, long, long, long)'
+      offset: '000043E8'
+    - name: ?Mix16@DigitalAudio@@AAEKPAFKKJJJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::Mix16(short *, unsigned
+        long, unsigned long, long, long, long, long, long)'
+      offset: 000044A1
+    - name: ?Mix16NoI@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::Mix16NoI(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: '00004601'
+    - name: ?MixMono16@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::MixMono16(short
+        *, unsigned long, unsigned long, long, long, long, long)'
+      offset: '00004725'
+    - name: ?MixMono16NoI@DigitalAudio@@AAEKPAFKKJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::MixMono16NoI(short
+        *, unsigned long, unsigned long, long, long, long)'
+      offset: 0000483A
+    - name: ?MixC@DigitalAudio@@AAEKPAFKKJJJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::MixC(short *, unsigned
+        long, unsigned long, long, long, long, long, long)'
+      offset: 000048F4
+    - name: ?MixMonoC@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::MixMonoC(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: 00004B89
+    - name: ?MixCNoI@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::MixCNoI(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: 00004D46
+    - name: ?MixMonoCNoI@DigitalAudio@@AAEKPAFKKJJJ@Z
+      processed: 'private: unsigned long __thiscall DigitalAudio::MixMonoCNoI(short
+        *, unsigned long, unsigned long, long, long, long)'
+      offset: 00004F98
+    - name: ?TimeCents2Samples@@YGKJK@Z
+      processed: unsigned long __stdcall TimeCents2Samples(long, unsigned long)
+      offset: '00005108'
+    - name: _powf@8
+      processed: ''
+      offset: '00005154'
+    - name: ?PitchCents2PitchFract@@YGKJK@Z
+      processed: unsigned long __stdcall PitchCents2PitchFract(long, unsigned long)
+      offset: '00005164'
+    - name: ?Load@Wave@@QAEJPAE0K@Z
+      processed: 'public: long __thiscall Wave::Load(unsigned char *, unsigned char
+        *, unsigned long)'
+      offset: 000051BB
+    - name: ?Load@SourceArticulation@@QAEJPAE0K@Z
+      processed: 'public: long __thiscall SourceArticulation::Load(unsigned char *,
+        unsigned char *, unsigned long)'
+      offset: 000054ED
+    - name: ?Load@SourceRegion@@QAEJPAE0K@Z
+      processed: 'public: long __thiscall SourceRegion::Load(unsigned char *, unsigned
+        char *, unsigned long)'
+      offset: 0000588B
+    - name: ?LoadRegions@Instrument@@QAEJPAE0K@Z
+      processed: 'public: long __thiscall Instrument::LoadRegions(unsigned char *,
+        unsigned char *, unsigned long)'
+      offset: 00005A29
+    - name: ?Load@Instrument@@QAEJPAE0K@Z
+      processed: 'public: long __thiscall Instrument::Load(unsigned char *, unsigned
+        char *, unsigned long)'
+      offset: 00005ABB
+    - name: ?LoadInstruments@Collection@@AAEJPAE0K@Z
+      processed: 'private: long __thiscall Collection::LoadInstruments(unsigned char
+        *, unsigned char *, unsigned long)'
+      offset: 00005CB8
+    - name: ?LoadWavePool@Collection@@AAEJPAE0K@Z
+      processed: 'private: long __thiscall Collection::LoadWavePool(unsigned char
+        *, unsigned char *, unsigned long)'
+      offset: 00005D7A
+    - name: ?LoadPoolCues@Collection@@AAEJPAE0K@Z
+      processed: 'private: long __thiscall Collection::LoadPoolCues(unsigned char
+        *, unsigned char *, unsigned long)'
+      offset: '00005E02'
+    - name: ?ResolveConnections@Collection@@QAEJXZ
+      processed: 'public: long __thiscall Collection::ResolveConnections(void)'
+      offset: 00005EAB
+    - name: ?Close@Collection@@QAEXXZ
+      processed: 'public: void __thiscall Collection::Close(void)'
+      offset: 00005FAD
+    - name: ?Open@Collection@@QAEJPAD@Z
+      processed: 'public: long __thiscall Collection::Open(char *)'
+      offset: 00005FC4
+    - name: ?LoadName@Collection@@AAEJPAE0@Z
+      processed: 'private: long __thiscall Collection::LoadName(unsigned char *, unsigned
+        char *)'
+      offset: 000060F1
+    - name: ?Load@Collection@@AAEJPAE0KK@Z
+      processed: 'private: long __thiscall Collection::Load(unsigned char *, unsigned
+        char *, unsigned long, unsigned long)'
+      offset: 0000616A
+    - name: ?Load@Collection@@QAEJKK@Z
+      processed: 'public: long __thiscall Collection::Load(unsigned long, unsigned
+        long)'
+      offset: 000062A6
+    - name: ?GetCollection@InstManager@@QAEJPAPAXPBDH@Z
+      processed: 'public: long __thiscall InstManager::GetCollection(void **, char
+        const *, int)'
+      offset: 000062DE
+    - name: ?LoadCollection@InstManager@@QAEJPAPAXPBDH@Z
+      processed: 'public: long __thiscall InstManager::LoadCollection(void **, char
+        const *, int)'
+      offset: 0000637D
+    - name: ?ReleaseCollection@InstManager@@QAEJPAX@Z
+      processed: 'public: long __thiscall InstManager::ReleaseCollection(void *)'
+      offset: 000065F5
+    - name: ??0MIDIData@@QAE@XZ
+      processed: 'public: __thiscall MIDIData::MIDIData(void)'
+      offset: 0000665C
+    - name: ??0MIDIRecorder@@QAE@XZ
+      processed: 'public: __thiscall MIDIRecorder::MIDIRecorder(void)'
+      offset: '00006673'
+    - name: ??0MIDIDataList@@QAE@XZ
+      processed: 'public: __thiscall MIDIDataList::MIDIDataList(void)'
+      offset: 0000668A
+    - name: ??1MIDIRecorder@@QAE@XZ
+      processed: 'public: __thiscall MIDIRecorder::~MIDIRecorder(void)'
+      offset: '00006696'
+    - name: ?FlushMIDI@MIDIRecorder@@QAEX_J@Z
+      processed: 'public: void __thiscall MIDIRecorder::FlushMIDI(__int64)'
+      offset: 000066A3
+    - name: ?ClearMIDI@MIDIRecorder@@QAEX_J@Z
+      processed: 'public: void __thiscall MIDIRecorder::ClearMIDI(__int64)'
+      offset: 0000670A
+    - name: ?VelocityToVolume@MIDIRecorder@@SGJG@Z
+      processed: 'public: static long __stdcall MIDIRecorder::VelocityToVolume(unsigned
+        short)'
+      offset: '00006771'
+    - name: ?RecordMIDI@MIDIRecorder@@QAEH_JJ@Z
+      processed: 'public: int __thiscall MIDIRecorder::RecordMIDI(__int64, long)'
+      offset: '00006780'
+    - name: ?GetData@MIDIRecorder@@QAEJ_J@Z
+      processed: 'public: long __thiscall MIDIRecorder::GetData(__int64)'
+      offset: 0000684B
+    - name: ?RecordNote@NoteIn@@QAEH_JPAVNote@@@Z
+      processed: 'public: int __thiscall NoteIn::RecordNote(__int64, class Note *)'
+      offset: 0000689F
+    - name: ?GetNote@NoteIn@@QAEH_JPAVNote@@@Z
+      processed: 'public: int __thiscall NoteIn::GetNote(__int64, class Note *)'
+      offset: 000068C5
+    - name: ?FlushMIDI@NoteIn@@QAEX_J@Z
+      processed: 'public: void __thiscall NoteIn::FlushMIDI(__int64)'
+      offset: '00006923'
+    - name: ?FlushPart@NoteIn@@QAEX_JE@Z
+      processed: 'public: void __thiscall NoteIn::FlushPart(__int64, unsigned char)'
+      offset: 0000697B
+    - name: ?GetModulation@ModWheelIn@@QAEK_J@Z
+      processed: 'public: unsigned long __thiscall ModWheelIn::GetModulation(__int64)'
+      offset: 000069DF
+    - name: ??0PitchBendIn@@QAE@XZ
+      processed: 'public: __thiscall PitchBendIn::PitchBendIn(void)'
+      offset: 000069EF
+    - name: ?GetPitch@PitchBendIn@@QAEJ_J@Z
+      processed: 'public: long __thiscall PitchBendIn::GetPitch(__int64)'
+      offset: 00006A09
+    - name: ??0VolumeIn@@QAE@XZ
+      processed: 'public: __thiscall VolumeIn::VolumeIn(void)'
+      offset: 00006A2C
+    - name: ?GetVolume@VolumeIn@@QAEJ_J@Z
+      processed: 'public: long __thiscall VolumeIn::GetVolume(__int64)'
+      offset: 00006A3F
+    - name: ??0ExpressionIn@@QAE@XZ
+      processed: 'public: __thiscall ExpressionIn::ExpressionIn(void)'
+      offset: 00006A56
+    - name: ?GetVolume@ExpressionIn@@QAEJ_J@Z
+      processed: 'public: long __thiscall ExpressionIn::GetVolume(__int64)'
+      offset: 00006A69
+    - name: ??0PanIn@@QAE@XZ
+      processed: 'public: __thiscall PanIn::PanIn(void)'
+      offset: 00006A80
+    - name: ?GetPan@PanIn@@QAEJ_J@Z
+      processed: 'public: long __thiscall PanIn::GetPan(__int64)'
+      offset: 00006A93
+    - name: ??0ProgramIn@@QAE@XZ
+      processed: 'public: __thiscall ProgramIn::ProgramIn(void)'
+      offset: 00006AA3
+    - name: ?GetProgram@ProgramIn@@QAEK_J@Z
+      processed: 'public: unsigned long __thiscall ProgramIn::GetProgram(__int64)'
+      offset: 00006ABA
+    - name: ?RecordBankH@ProgramIn@@QAEHE@Z
+      processed: 'public: int __thiscall ProgramIn::RecordBankH(unsigned char)'
+      offset: 00006ACA
+    - name: ?RecordBankL@ProgramIn@@QAEHE@Z
+      processed: 'public: int __thiscall ProgramIn::RecordBankL(unsigned char)'
+      offset: 00006AD7
+    - name: ?RecordProgram@ProgramIn@@QAEH_JE@Z
+      processed: 'public: int __thiscall ProgramIn::RecordProgram(__int64, unsigned
+        char)'
+      offset: 00006AE4
+    - name: ?MixMono8X@DigitalAudio@@AAAKPAFKKJJJJ@Z
+      processed: 'private: unsigned long __cdecl DigitalAudio::MixMono8X(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: 00006B0C
+    - name: ?Mix8X@DigitalAudio@@AAAKPAFKKJJJJJ@Z
+      processed: 'private: unsigned long __cdecl DigitalAudio::Mix8X(short *, unsigned
+        long, unsigned long, long, long, long, long, long)'
+      offset: 00006CB9
+    - name: ?MixMono16X@DigitalAudio@@AAAKPAFKKJJJJ@Z
+      processed: 'private: unsigned long __cdecl DigitalAudio::MixMono16X(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: '00006E97'
+    - name: ?Mix16X@DigitalAudio@@AAAKPAFKKJJJJJ@Z
+      processed: 'private: unsigned long __cdecl DigitalAudio::Mix16X(short *, unsigned
+        long, unsigned long, long, long, long, long, long)'
+      offset: '00007037'
+    - name: ?MultiMediaInstructionsSupported@@YGHXZ
+      processed: int __stdcall MultiMediaInstructionsSupported(void)
+      offset: '00007208'
+    - name: ??0VoiceLFO@@QAE@XZ
+      processed: 'public: __thiscall VoiceLFO::VoiceLFO(void)'
+      offset: '00007254'
+    - name: ?StartVoice@VoiceLFO@@QAE_JPAVSourceLFO@@_JPAVModWheelIn@@@Z
+      processed: 'public: __int64 __thiscall VoiceLFO::StartVoice(class SourceLFO
+        *, __int64, class ModWheelIn *)'
+      offset: '00007264'
+    - name: ?GetLevel@VoiceLFO@@AAEJ_JPA_J@Z
+      processed: 'private: long __thiscall VoiceLFO::GetLevel(__int64, __int64 *)'
+      offset: 000072CA
+    - name: ?GetVolume@VoiceLFO@@QAEJ_JPA_J@Z
+      processed: 'public: long __thiscall VoiceLFO::GetVolume(__int64, __int64 *)'
+      offset: 0000733A
+    - name: ?GetPitch@VoiceLFO@@QAEJ_JPA_J@Z
+      processed: 'public: long __thiscall VoiceLFO::GetPitch(__int64, __int64 *)'
+      offset: '00007385'
+    - name: ??0VoiceEG@@QAE@XZ
+      processed: 'public: __thiscall VoiceEG::VoiceEG(void)'
+      offset: 000073D0
+    - name: ?StopVoice@VoiceEG@@QAEX_J@Z
+      processed: 'public: void __thiscall VoiceEG::StopVoice(__int64)'
+      offset: '000073E4'
+    - name: ?QuickStopVoice@VoiceEG@@QAEX_JK@Z
+      processed: 'public: void __thiscall VoiceEG::QuickStopVoice(__int64, unsigned
+        long)'
+      offset: '00007436'
+    - name: ?StartVoice@VoiceEG@@QAE_JPAVSourceEG@@_JGG@Z
+      processed: 'public: __int64 __thiscall VoiceEG::StartVoice(class SourceEG *,
+        __int64, unsigned short, unsigned short)'
+      offset: 000074B3
+    - name: ?InAttack@VoiceEG@@QAEH_J@Z
+      processed: 'public: int __thiscall VoiceEG::InAttack(__int64)'
+      offset: '00007595'
+    - name: ?InRelease@VoiceEG@@QAEH_J@Z
+      processed: 'public: int __thiscall VoiceEG::InRelease(__int64)'
+      offset: 000075CC
+    - name: ?GetLevel@VoiceEG@@AAEJ_JPA_JH@Z
+      processed: 'private: long __thiscall VoiceEG::GetLevel(__int64, __int64 *, int)'
+      offset: 000075EC
+    - name: ?GetVolume@VoiceEG@@QAEJ_JPA_J@Z
+      processed: 'public: long __thiscall VoiceEG::GetVolume(__int64, __int64 *)'
+      offset: '00007857'
+    - name: ?GetPitch@VoiceEG@@QAEJ_JPA_J@Z
+      processed: 'public: long __thiscall VoiceEG::GetPitch(__int64, __int64 *)'
+      offset: 0000787E
+    - name: ??0DigitalAudio@@QAE@XZ
+      processed: 'public: __thiscall DigitalAudio::DigitalAudio(void)'
+      offset: 000078C1
+    - name: ?StartCPUTests@DigitalAudio@@QAEHXZ
+      processed: 'public: int __thiscall DigitalAudio::StartCPUTests(void)'
+      offset: 000078FF
+    - name: ?EndCPUTests@DigitalAudio@@QAEXXZ
+      processed: 'public: void __thiscall DigitalAudio::EndCPUTests(void)'
+      offset: '000079E2'
+    - name: ?TestCPU@DigitalAudio@@QAEKK@Z
+      processed: 'public: unsigned long __thiscall DigitalAudio::TestCPU(unsigned
+        long)'
+      offset: 00007A25
+    - name: ?VRELToVFRACT@DigitalAudio@@CGJJ@Z
+      processed: 'private: static long __stdcall DigitalAudio::VRELToVFRACT(long)'
+      offset: 00007DA2
+    - name: ?PRELToPFRACT@DigitalAudio@@SGJJ@Z
+      processed: 'public: static long __stdcall DigitalAudio::PRELToPFRACT(long)'
+      offset: 00007DC9
+    - name: ?ClearVoice@DigitalAudio@@QAEXXZ
+      processed: 'public: void __thiscall DigitalAudio::ClearVoice(void)'
+      offset: '00007E77'
+    - name: ?StartVoice@DigitalAudio@@QAE_JPAVControlLogic@@PAVSourceSample@@JJJJ@Z
+      processed: 'public: __int64 __thiscall DigitalAudio::StartVoice(class ControlLogic
+        *, class SourceSample *, long, long, long, long)'
+      offset: '00007E98'
+    - name: ?Mix@DigitalAudio@@QAEHPAFKJJJK@Z
+      processed: 'public: int __thiscall DigitalAudio::Mix(short *, unsigned long,
+        long, long, long, unsigned long)'
+      offset: 00007F7F
+    - name: ??0Voice@@QAE@XZ
+      processed: 'public: __thiscall Voice::Voice(void)'
+      offset: 000083D2
+    - name: ?StopVoice@Voice@@QAEX_J@Z
+      processed: 'public: void __thiscall Voice::StopVoice(__int64)'
+      offset: 0000845E
+    - name: ?QuickStopVoice@Voice@@QAEX_J@Z
+      processed: 'public: void __thiscall Voice::QuickStopVoice(__int64)'
+      offset: 000084CE
+    - name: 
+        ?StartVoice@Voice@@QAEHPAVControlLogic@@PAVSourceRegion@@_JPAVModWheelIn@@PAVPitchBendIn@@PAVExpressionIn@@PAVVolumeIn@@PAVPanIn@@GGJJ@Z
+      processed: 'public: int __thiscall Voice::StartVoice(class ControlLogic *, class
+        SourceRegion *, __int64, class ModWheelIn *, class PitchBendIn *, class ExpressionIn
+        *, class VolumeIn *, class PanIn *, unsigned short, unsigned short, long,
+        long)'
+      offset: '00008575'
+    - name: ?ClearVoice@Voice@@QAEXXZ
+      processed: 'public: void __thiscall Voice::ClearVoice(void)'
+      offset: '00008838'
+    - name: ?GetNewVolume@Voice@@QAEX_JAAJ1@Z
+      processed: 'public: void __thiscall Voice::GetNewVolume(__int64, long &, long
+        &)'
+      offset: 0000884A
+    - name: ?GetNewPitch@Voice@@QAEJ_J@Z
+      processed: 'public: long __thiscall Voice::GetNewPitch(__int64)'
+      offset: '00008955'
+    - name: ?Mix@Voice@@QAEKPAFK_J1@Z
+      processed: 'public: unsigned long __thiscall Voice::Mix(short *, unsigned long,
+        __int64, __int64)'
+      offset: 000089F1
+    - name: ?GetCount@CListItem@@QBEJXZ
+      processed: 'public: long __thiscall CListItem::GetCount(void) const'
+      offset: 00008BAB
+    - name: ?IsMember@CListItem@@QAEHPAV1@@Z
+      processed: 'public: int __thiscall CListItem::IsMember(class CListItem *)'
+      offset: 00008BB7
+    - name: ?Cat@CListItem@@QAEPAV1@PAV1@@Z
+      processed: 'public: class CListItem * __thiscall CListItem::Cat(class CListItem
+        *)'
+      offset: 00008BCF
+    - name: ?Remove@CListItem@@QAEPAV1@PAV1@@Z
+      processed: 'public: class CListItem * __thiscall CListItem::Remove(class CListItem
+        *)'
+      offset: 00008BF4
+    - name: ?GetPrev@CListItem@@QBEPAV1@PAV1@@Z
+      processed: 'public: class CListItem * __thiscall CListItem::GetPrev(class CListItem
+        *) const'
+      offset: 00008C33
+    - name: ?GetItem@CListItem@@QAEPAV1@J@Z
+      processed: 'public: class CListItem * __thiscall CListItem::GetItem(long)'
+      offset: 00008C48
+    - name: ?InsertBefore@CList@@QAEXPAVCListItem@@0@Z
+      processed: 'public: void __thiscall CList::InsertBefore(class CListItem *, class
+        CListItem *)'
+      offset: 00008C60
+    - name: ?InitCompression@DigitalAudio@@SGXXZ
+      processed: 'public: static void __stdcall DigitalAudio::InitCompression(void)'
+      offset: 00008C95
+    - name: ?ClearCompression@DigitalAudio@@SGXXZ
+      processed: 'public: static void __stdcall DigitalAudio::ClearCompression(void)'
+      offset: 00008D4A
+    - name: ?Init@DigitalAudio@@SGXXZ
+      processed: 'public: static void __stdcall DigitalAudio::Init(void)'
+      offset: 00008D62
+    - name: ?InitTables@MIDIRecorder@@SGXXZ
+      processed: 'public: static void __stdcall MIDIRecorder::InitTables(void)'
+      offset: 00008E8C
+    - name: _log10f@4
+      processed: ''
+      offset: 00008EF2
+    - name: ?Init@VoiceEG@@SGXXZ
+      processed: 'public: static void __stdcall VoiceEG::Init(void)'
+      offset: 00008EFD
+    - name: ?Init@Voice@@SGXXZ
+      processed: 'public: static void __stdcall Voice::Init(void)'
+      offset: 00008F58
+    - name: ?Init@Wave@@SGXXZ
+      processed: 'public: static void __stdcall Wave::Init(void)'
+      offset: 00008FB6
+    - name: ?Init@VoiceLFO@@SGXXZ
+      processed: 'public: static void __stdcall VoiceLFO::Init(void)'
+      offset: '00009018'
+    - name: _sinf@4
+      processed: ''
+      offset: 0000905C
+  - num: '6'
+    name: PAGEDATA
+    offset: '00000000'
+    symbols:
+    - name: ?DeviceCreateItems@@3PAUKSOBJECT_CREATE_ITEM@@A
+      processed: struct KSOBJECT_CREATE_ITEM *DeviceCreateItems
+      offset: '00000000'
+    - name: ??_C@_01BJG@?6?$AA@
+      processed: '"\n"'
+      offset: '00000018'
+    - name: ??_C@_0BG@JHKL@Entering?5PnpAddDevice?$AA@
+      processed: '"Entering PnpAddDevice"'
+      offset: 0000001C
+    - name: ??_C@_09OK@?8swmidi?3?5?$AA@
+      processed: "\"\\'swmidi: \""
+      offset: '00000034'
+    - name: ??_C@_0BJ@KNAF@Entering?5PnpDriverUnload?$AA@
+      processed: '"Entering PnpDriverUnload"'
+      offset: '00000040'
+    - name: ?FilterCreateHandlers@@3PAUKSOBJECT_CREATE_ITEM@@A
+      processed: struct KSOBJECT_CREATE_ITEM *FilterCreateHandlers
+      offset: '00000060'
+    - name: _FilterDispatchTable
+      processed: ''
+      offset: '00000078'
+    - name: ?PinInterfaces@@3PAUKSIDENTIFIER@@A
+      processed: struct KSIDENTIFIER *PinInterfaces
+      offset: 000000A0
+    - name: ?PinMediums@@3PAUKSIDENTIFIER@@A
+      processed: struct KSIDENTIFIER *PinMediums
+      offset: 000000D0
+    - name: ?PinMIDIFormats@@3PAUKSDATARANGE_MUSIC@@A
+      processed: struct KSDATARANGE_MUSIC *PinMIDIFormats
+      offset: '000000E8'
+    - name: ?PinDigitalAudioFormats@@3PAUKSDATARANGE_AUDIO@@A
+      processed: struct KSDATARANGE_AUDIO *PinDigitalAudioFormats
+      offset: '00000148'
+    - name: ?PinDataFormats@@3PAPATKSDATAFORMAT@@A
+      processed: union KSDATAFORMAT **PinDataFormats
+      offset: 000001A0
+    - name: _PinDescs
+      processed: ''
+      offset: 000001A8
+    - name: ??_C@_0BF@DEJA@FilterDispatchCreate?$AA@
+      processed: '"FilterDispatchCreate"'
+      offset: '00000208'
+    - name: ??_C@_0BE@KLOL@FilterDispatchClose?$AA@
+      processed: '"FilterDispatchClose"'
+      offset: '00000220'
+    - name: _PinDispatchTable
+      processed: ''
+      offset: '00000238'
+    - name: ??_C@_0EJ@JDF@pFilterInstance?9?$DOcPinInstances?$FLp@
+      processed: '"pFilterInstance->cPinInstances[p"...'
+      offset: '00000260'
+    - name: ??_C@_0M@BGJO@?4?4?2pins?4cpp?$AA@
+      processed: '"..\\pins.cpp"'
+      offset: 000002AC
+    - name: ??_C@_0BM@IGKE@Unknown?5Device?5Request?3?5?$CFx?6?$AA@
+      processed: '"Unknown Device Request: %x\n"'
+      offset: 000002B8
+    - name: ??_C@_0BG@BJHO@READ_STREAM?5called?$CB?$CB?$CB?$AA@
+      processed: '"READ_STREAM called!!!"'
+      offset: 000002D4
+    - name: ??_C@_0DF@BEDL@?$CK?$CK?$CK?5SWMidi?3?5NULL?5param?5to?5Proces@
+      processed: '"*** SWMidi: NULL param to Proces"...'
+      offset: 000002EC
+    - name: ??_C@_0CL@CPHK@MIDI?5irp?5w?1o?5room?5for?5KSMUSICFOR@
+      processed: '"MIDI irp w/o room for KSMUSICFOR"...'
+      offset: '00000324'
+    - name: ??_C@_0BD@BKJO@RecordMIDI?5failure?$AA@
+      processed: '"RecordMIDI failure"'
+      offset: '00000350'
+    - name: ??_C@_0BO@MOEI@NIL?5KSMUSICFORMAT?4ByteCount?$CB?6?$AA@
+      processed: '"NIL KSMUSICFORMAT.ByteCount!\n"'
+      offset: '00000364'
+    - name: ??_C@_0CH@IHPH@?$CK?$CK?$CK?5SWMidi?3?5ByteCount?5is?5too?5big@
+      processed: '"*** SWMidi: ByteCount is too big"...'
+      offset: '00000384'
+    - name: ??_C@_0DA@DBOA@?$CK?$CK?$CK?5SWMidi?5stream?5header?5w?1?5no?5M@
+      processed: '"*** SWMidi stream header w/ no M"...'
+      offset: 000003AC
+    - name: ??_C@_0DF@KOGN@?$CK?$CK?$CK?5SWMidi?3?5WRITE?5irp?5w?1?5invalid@
+      processed: '"*** SWMidi: WRITE irp w/ invalid"...'
+      offset: 000003DC
+    - name: ??_C@_0CF@FPON@SWMidi?3?5ControlLogic?5object?5is?5N@
+      processed: '"SWMidi: ControlLogic object is N"...'
+      offset: '00000414'
+    - name: ??_C@_0BM@ENA@?8swmidi?3?5PinState?5WC?3?5?$CF08x?6?$AA@
+      processed: "\"\\'swmidi: PinState WC: %08x\\n\""
+      offset: 0000043C
+    - name: ??_C@_0CH@NJL@FillBuffer?5failed?0?5null?5pWriteCo@
+      processed: '"FillBuffer failed, null pWriteCo"...'
+      offset: '00000458'
+    - name: ??_C@_0DI@CMOD@FillBuffer?5failed?0?5null?5pWriteCo@
+      processed: '"FillBuffer failed, null pWriteCo"...'
+      offset: '00000480'
+    - name: ??_C@_0CA@JIFC@FillBuffer?5failed?0?5null?5pSynth?$CB?$AA@
+      processed: '"FillBuffer failed, null pSynth!"'
+      offset: 000004B8
+    - name: 
+        ??_C@_0DB@IKBD@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIWriteComplete@
+      processed: '"(1) | (1) | (1) ? (WriteComplete"...'
+      offset: 000004D8
+    - name: ??_C@_0DP@DNMC@IoBuildDeviceIoControlRequest?5fa@
+      processed: '"IoBuildDeviceIoControlRequest fa"...'
+      offset: 0000050C
+    - name: ??_C@_0BP@EHDF@?8swmidi?3?5WriteBuffer?5WC?3?5?$CF08x?6?$AA@
+      processed: "\"\\'swmidi: WriteBuffer WC: %08x\\n\""
+      offset: 0000054C
+    - name: ??_C@_0DK@IMIP@?$CIpWriteContext?9?$DOfulFlags?5?$CG?5WRITE@
+      processed: '"(pWriteContext->fulFlags & WRITE"...'
+      offset: 0000056C
+    - name: ??_C@_0CH@OFBA@?8swmidi?3?5WriteCompleteWorker?5WC?3@
+      processed: "\"\\'swmidi: WriteCompleteWorker WC:\"..."
+      offset: 000005A8
+    - name: ??_C@_05LLOB@FALSE?$AA@
+      processed: '"FALSE"'
+      offset: 000005D0
+    - name: ??_C@_0CF@HIAL@EX?3?5Pageable?5code?5called?5at?5IRQL@
+      processed: '"EX: Pageable code called at IRQL"...'
+      offset: 000005D8
+    - name: ?SWMIDITraceLevel@@3HA
+      processed: int SWMIDITraceLevel
+      offset: '00000640'
+    - name: ?cbMemoryUsage@@3KA
+      processed: unsigned long cbMemoryUsage
+      offset: 0000065C
+    - name: ??_C@_0EK@HKKB@?8swmidi?3?5Note?5Off?3?$CF7d?5ch?5?$DN?5?$CF01x?5@
+      processed: "\"\\'swmidi: Note Off:%7d ch = %01x \"..."
+      offset: '00000660'
+    - name: ??_C@_0BP@CMEN@?8swmidi?3?5Sustain?5on?5?$CF7d?3?5?$CI?$CFd?$CJ?6?$AA@
+      processed: "\"\\'swmidi: Sustain on %7d: (%d)\\n\""
+      offset: 000006AC
+    - name: ??_C@_0DO@EBEJ@?8swmidi?3?5Note?5Off?3?$CF7d?5ch?5?$DN?5?$CF01x?5@
+      processed: "\"\\'swmidi: Note Off:%7d ch = %01x \"..."
+      offset: 000006CC
+    - name: ??_C@_0DD@IKPO@?8swmidi?3?5Unhandled?5controller?3?5?$CF@
+      processed: "\"\\'swmidi: Unhandled controller: %\"..."
+      offset: 0000070C
+    - name: ??_C@_0CN@JNMO@?8swmidi?3?5New?5RPN?5?$CD?$CFd?5on?5nPart?5?$CFd@
+      processed: "\"\\'swmidi: New RPN #%d on nPart %d\"..."
+      offset: '00000740'
+    - name: ??_C@_0CN@FPIG@?8swmidi?3?5New?5RPN?5?$CD?$CFd?5on?5nPart?5?$CFd@
+      processed: "\"\\'swmidi: New RPN #%d on nPart %d\"..."
+      offset: '00000770'
+    - name: ??_C@_0DC@KKLA@?8swmidi?3?5Unhandled?5data?9entry?5LS@
+      processed: "\"\\'swmidi: Unhandled data-entry LS\"..."
+      offset: 000007A0
+    - name: ??_C@_0EB@DANI@?8swmidi?3?5Unhandled?5data?9entry?5MS@
+      processed: "\"\\'swmidi: Unhandled data-entry MS\"..."
+      offset: 000007D4
+    - name: ??_C@_0DF@GCOB@?8swmidi?3?5Program?5change?3?5nPart?5?$CF@
+      processed: "\"\\'swmidi: Program change: nPart %\"..."
+      offset: '00000818'
+    - name: ??_C@_0P@KNCH@usageCount?5?$DO?50?$AA@
+      processed: '"usageCount > 0"'
+      offset: '00000850'
+    - name: ??_C@_0N@CKLA@?4?4?2instr?4cpp?$AA@
+      processed: '"..\\instr.cpp"'
+      offset: '00000860'
+    - name: ??_C@_0BA@EJAH@usageCount?5?$DO?$DN?50?$AA@
+      processed: '"usageCount >= 0"'
+      offset: '00000870'
+    - name: ??_C@_0BC@BKMF@m_lPlayCount?5?$DN?$DN?50?$AA@
+      processed: '"m_lPlayCount == 0"'
+      offset: '00000880'
+    - name: ??_C@_0BC@MJJN@m_lLockCount?5?$DN?$DN?50?$AA@
+      processed: '"m_lLockCount == 0"'
+      offset: '00000894'
+    - name: ??_C@_0BD@LKJG@m_lUsageCount?5?$DN?$DN?50?$AA@
+      processed: '"m_lUsageCount == 0"'
+      offset: 000008A8
+    - name: ??_C@_0BD@FAGP@m_lUsageCount?5?$CB?$DN?50?$AA@
+      processed: '"m_lUsageCount != 0"'
+      offset: 000008BC
+    - name: ??_C@_0O@BDOO@playCount?5?$DO?50?$AA@
+      processed: '"playCount > 0"'
+      offset: 000008D0
+    - name: ??_C@_0BB@MBDO@m_lLockCount?5?$DO?50?$AA@
+      processed: '"m_lLockCount > 0"'
+      offset: '000008E0'
+    - name: ??_C@_0BC@MKKN@m_lUsageCount?5?$DO?50?$AA@
+      processed: '"m_lUsageCount > 0"'
+      offset: 000008F4
+    - name: ??_C@_0O@ELGI@lockCount?5?$DO?50?$AA@
+      processed: '"lockCount > 0"'
+      offset: '00000908'
+    - name: ??_C@_0BI@MMLA@this?9?$DOm_lLockCount?5?$DO?$DN?50?$AA@
+      processed: '"this->m_lLockCount >= 0"'
+      offset: '00000918'
+    - name: ??_C@_0BH@BKPI@this?9?$DOm_lLockCount?5?$DO?50?$AA@
+      processed: '"this->m_lLockCount > 0"'
+      offset: '00000930'
+    - name: ??_C@_0CE@FOFH@?2SystemRoot?2system32?2drivers?2GM?4@
+      processed: '"\\SystemRoot\\system32\\drivers\\GM."...'
+      offset: '00000948'
+    - name: ??_C@_0DK@MALL@?8swmidi?3?5Unknown?5Articulation?3?5S@
+      processed: "\"\\'swmidi: Unknown Articulation: S\"..."
+      offset: 0000096C
+    - name: ??_C@_0DP@ONBM@?8swmidi?3?5Loading?5instrument?5bank@
+      processed: "\"\\'swmidi: Loading instrument bank\"..."
+      offset: 000009A8
+    - name: ??_C@_0DE@HHJD@?8swmidi?3?5Instrument?5?$CD?$CF0x?5isn?8t?5i@
+      processed: "\"\\'swmidi: Instrument #%0x isn\\'t i\"..."
+      offset: '000009E8'
+    - name: ??_C@_0DF@OJID@FileStandardInformationBlock?4End@
+      processed: '"FileStandardInformationBlock.End"...'
+      offset: 00000A1C
+    - name: ??_C@_0BA@MOAA@?4?4?2loadicol?4cpp?$AA@
+      processed: '"..\\loadicol.cpp"'
+      offset: 00000A54
+    - name: ??_C@_0DB@DLGL@?8swmidi?3?5Loading?5collection?5with@
+      processed: "\"\\'swmidi: Loading collection with\"..."
+      offset: 00000A64
+    - name: ??_C@_0BP@LMDM@pCollection?9?$DOm_lOpenCount?5?$DO?$DN?50?$AA@
+      processed: '"pCollection->m_lOpenCount >= 0"'
+      offset: 00000A98
+    - name: ??_C@_0CP@MKGL@SWMidi?5can?8t?5load?5DLS?5collection@
+      processed: "\"SWMidi can\\'t load DLS collection\"..."
+      offset: 00000AB8
+    - name: ??_C@_0DE@DPCO@SWMidi?5can?8t?5add?5DLS?5collection?5@
+      processed: "\"SWMidi can\\'t add DLS collection \"..."
+      offset: 00000AE8
+    - name: ??_C@_0CC@JLMM@SWMidi?5can?8t?5open?5DLS?5collection@
+      processed: "\"SWMidi can\\'t open DLS collection\"..."
+      offset: 00000B1C
+    - name: ??_C@_0CP@JFCI@SWMidi?5can?8t?5create?5DLS?5collecti@
+      processed: "\"SWMidi can\\'t create DLS collecti\"..."
+      offset: 00000B40
+    - name: ??_C@_0BO@JGMN@pCollection?9?$DOm_lOpenCount?5?$DO?50?$AA@
+      processed: '"pCollection->m_lOpenCount > 0"'
+      offset: 00000B70
+    - name: ??_C@_0CO@KJLC@?8swmidi?3?5Freeing?5event?5at?5time?5?$CF@
+      processed: "\"\\'swmidi: Freeing event at time %\"..."
+      offset: 00000B90
+    - name: ??_C@_0DF@LALI@?8swmidi?3?5ERROR?3?5MIDIRecorder?5stT@
+      processed: "\"\\'swmidi: ERROR: MIDIRecorder stT\"..."
+      offset: 00000BC0
+    - name: ??_C@_0CN@GPPO@?8swmidi?3?5Getting?5data?5at?5time?5?$CFl@
+      processed: "\"\\'swmidi: Getting data at time %l\"..."
+      offset: 00000BF8
+    - name: ??_C@_0DB@MEAK@?8swmidi?3?5Base?5Pitch?3?5?$CFld?0?5Base?5V@
+      processed: "\"\\'swmidi: Base Pitch: %ld, Base V\"..."
+      offset: 00000C30
+    - name: ??_C@_0BH@KKGI@stStartMix?5?$DM?$DN?5stEndMix?$AA@
+      processed: '"stStartMix <= stEndMix"'
+      offset: 00000C64
+    - name: ??_C@_0N@LLE@?4?4?2voice?4cpp?$AA@
+      processed: '"..\\voice.cpp"'
+      offset: 00000C7C
+    - name: ?m_pnDecompMult@DigitalAudio@@2PAFA
+      processed: 'public: static short *DigitalAudio::m_pnDecompMult'
+      offset: 00000C90
+    - name: ?m_snSineTable@VoiceLFO@@0PAFA
+      processed: 'private: static short *VoiceLFO::m_snSineTable'
+      offset: 00000C98
+    - name: ?m_snAttackTable@VoiceEG@@0PAFA
+      processed: 'private: static short *VoiceEG::m_snAttackTable'
+      offset: '00000E98'
+    - name: ?m_spfCents@DigitalAudio@@0PAJA
+      processed: 'private: static long *DigitalAudio::m_spfCents'
+      offset: '00001030'
+    - name: ?m_spfSemiTones@DigitalAudio@@0PAJA
+      processed: 'private: static long *DigitalAudio::m_spfSemiTones'
+      offset: '00001358'
+    - name: ?m_svfDbToVolume@DigitalAudio@@0PAJA
+      processed: 'private: static long *DigitalAudio::m_svfDbToVolume'
+      offset: '000014E0'
+    - name: ?m_svrPanToVREL@Voice@@0PAJA
+      processed: 'private: static long *Voice::m_svrPanToVREL'
+      offset: '00002488'
+    - name: ?m_Compress@Wave@@2PADA
+      processed: 'public: static char *Wave::m_Compress'
+      offset: '00002688'
+    - name: ?m_vrMIDIToVREL@MIDIRecorder@@1PAJA
+      processed: 'protected: static long *MIDIRecorder::m_vrMIDIToVREL'
+      offset: '00002E88'
+    - name: ?m_sfMMXEnabled@DigitalAudio@@0HA
+      processed: 'private: static int DigitalAudio::m_sfMMXEnabled'
+      offset: '00003088'
+- version: Windows 98SE Retail
+  source_tree:
+  - i386/87cdisp.asm
+  - i386/87ctran.asm
+  - i386/87disp.asm
+  - i386/87tran.asm
+  - i386/ftol.asm
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/llshl.asm
+  - intel/llshr.asm
+  - intel/ulldiv.asm
+  - intel/ullrem.asm
+  - /NT/private/fp32nt/tran/fpexcept.c
+  - /NT/private/fp32nt/tran/i386/87except.c
+  - /NT/private/fp32nt/tran/i386/fpctrl.c
+  - /NT/private/fp32nt/tran/i386/frnd.c
+  - /NT/private/fp32nt/tran/matherr.c
+  - /NT/private/fp32nt/tran/powhlp.c
+  - /NT/private/fp32nt/tran/util.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00001B30
+    symbols:
+    - name: _WriteComplete@12
+      demangled: ''
+      offset: '00000000'
+    - name: ?AddHead@CList@@QAEXPAVCListItem@@@Z
+      demangled: 'public: void __thiscall CList::AddHead(class CListItem *)'
+      offset: '00000040'
+    - name: ?SetNext@CListItem@@QAEXPAV1@@Z
+      demangled: 'public: void __thiscall CListItem::SetNext(class CListItem *)'
+      offset: '00000058'
+    - name: ?GetCount@CList@@QBEJXZ
+      demangled: 'public: long __thiscall CList::GetCount(void) const'
+      offset: '00000061'
+    - name: ?Remove@CList@@QAEXPAVCListItem@@@Z
+      demangled: 'public: void __thiscall CList::Remove(class CListItem *)'
+      offset: '00000068'
+    - name: ?GetHead@SourceRegionList@@QAEPAVSourceRegion@@XZ
+      demangled: 'public: class SourceRegion * __thiscall SourceRegionList::GetHead(void)'
+      offset: 0000007C
+    - name: ?GetHead@InstrumentList@@QAEPAVInstrument@@XZ
+      demangled: 'public: class Instrument * __thiscall InstrumentList::GetHead(void)'
+      offset: 0000007C
+    - name: ?GetNext@SourceRegion@@QAEPAV1@XZ
+      demangled: 'public: class SourceRegion * __thiscall SourceRegion::GetNext(void)'
+      offset: 0000007C
+    - name: ?GetNext@Instrument@@QAEPAV1@XZ
+      demangled: 'public: class Instrument * __thiscall Instrument::GetNext(void)'
+      offset: 0000007C
+    - name: ?GetHead@CollectionList@@QAEPAVCollection@@XZ
+      demangled: 'public: class Collection * __thiscall CollectionList::GetHead(void)'
+      offset: 0000007C
+    - name: ?GetHead@WavePool@@QAEPAVWave@@XZ
+      demangled: 'public: class Wave * __thiscall WavePool::GetHead(void)'
+      offset: 0000007C
+    - name: ?GetNext@MIDIData@@QAEPAV1@XZ
+      demangled: 'public: class MIDIData * __thiscall MIDIData::GetNext(void)'
+      offset: 0000007C
+    - name: ?GetHead@VoiceList@@QAEPAVVoice@@XZ
+      demangled: 'public: class Voice * __thiscall VoiceList::GetHead(void)'
+      offset: 0000007C
+    - name: ?GetNext@Wave@@QAEPAV1@XZ
+      demangled: 'public: class Wave * __thiscall Wave::GetNext(void)'
+      offset: 0000007C
+    - name: ?GetNext@Voice@@QAEPAV1@XZ
+      demangled: 'public: class Voice * __thiscall Voice::GetNext(void)'
+      offset: 0000007C
+    - name: ?GetHead@MIDIDataList@@QAEPAVMIDIData@@XZ
+      demangled: 'public: class MIDIData * __thiscall MIDIDataList::GetHead(void)'
+      offset: 0000007C
+    - name: ?GetNext@Collection@@QAEPAV1@XZ
+      demangled: 'public: class Collection * __thiscall Collection::GetNext(void)'
+      offset: 0000007C
+    - name: ?GetNext@CListItem@@QBEPAV1@XZ
+      demangled: 'public: class CListItem * __thiscall CListItem::GetNext(void) const'
+      offset: '00000081'
+    - name: ?GetHead@CList@@QBEPAVCListItem@@XZ
+      demangled: 'public: class CListItem * __thiscall CList::GetHead(void) const'
+      offset: '00000081'
+    - name: ?RemoveHead@SourceRegionList@@QAEPAVSourceRegion@@XZ
+      demangled: 'public: class SourceRegion * __thiscall SourceRegionList::RemoveHead(void)'
+      offset: '00000084'
+    - name: ?RemoveHead@VoiceList@@QAEPAVVoice@@XZ
+      demangled: 'public: class Voice * __thiscall VoiceList::RemoveHead(void)'
+      offset: '00000084'
+    - name: ?RemoveHead@CollectionList@@QAEPAVCollection@@XZ
+      demangled: 'public: class Collection * __thiscall CollectionList::RemoveHead(void)'
+      offset: '00000084'
+    - name: ?RemoveHead@InstrumentList@@QAEPAVInstrument@@XZ
+      demangled: 'public: class Instrument * __thiscall InstrumentList::RemoveHead(void)'
+      offset: '00000084'
+    - name: ?RemoveHead@WavePool@@QAEPAVWave@@XZ
+      demangled: 'public: class Wave * __thiscall WavePool::RemoveHead(void)'
+      offset: '00000084'
+    - name: ?RemoveHead@MIDIDataList@@QAEPAVMIDIData@@XZ
+      demangled: 'public: class MIDIData * __thiscall MIDIDataList::RemoveHead(void)'
+      offset: '00000084'
+    - name: ?RemoveHead@CList@@QAEPAVCListItem@@XZ
+      demangled: 'public: class CListItem * __thiscall CList::RemoveHead(void)'
+      offset: '00000089'
+    - name: ?MulDiv32@@YGJJJJ@Z
+      demangled: long __stdcall MulDiv32(long, long, long)
+      offset: 000000AE
+    - name: ?GetGSActive@ControlLogic@@QAEHXZ
+      demangled: 'public: int __thiscall ControlLogic::GetGSActive(void)'
+      offset: 000000C8
+    - name: ??0CListItem@@QAE@XZ
+      demangled: 'public: __thiscall CListItem::CListItem(void)'
+      offset: 000000CF
+    - name: ??0CList@@QAE@XZ
+      demangled: 'public: __thiscall CList::CList(void)'
+      offset: 000000CF
+    - name: ?IsEmpty@CList@@QBEHXZ
+      demangled: 'public: int __thiscall CList::IsEmpty(void) const'
+      offset: 000000D5
+    - name: ?AddTail@CList@@QAEXPAVCListItem@@@Z
+      demangled: 'public: void __thiscall CList::AddTail(class CListItem *)'
+      offset: 000000DD
+    - name: ?AddTail@CListItem@@QAEPAV1@PAV1@@Z
+      demangled: 'public: class CListItem * __thiscall CListItem::AddTail(class CListItem
+        *)'
+      offset: 000000F1
+    - name: ?IsMember@CList@@QAEHPAVCListItem@@@Z
+      demangled: 'public: int __thiscall CList::IsMember(class CListItem *)'
+      offset: 000000FD
+    - name: ?AddHead@LockList@@QAEXPAVLockRange@@@Z
+      demangled: 'public: void __thiscall LockList::AddHead(class LockRange *)'
+      offset: 0000010B
+    - name: ?AddHead@CollectionList@@QAEXPAVCollection@@@Z
+      demangled: 'public: void __thiscall CollectionList::AddHead(class Collection
+        *)'
+      offset: 0000010B
+    - name: ?RemoveAll@CList@@QAEXXZ
+      demangled: 'public: void __thiscall CList::RemoveAll(void)'
+      offset: '00000117'
+    - name: __ftol
+      demangled: ''
+      offset: 0000011C
+    - name: _pow
+      demangled: ''
+      offset: '00000144'
+    - name: _log
+      demangled: ''
+      offset: 0000014E
+    - name: _log10
+      demangled: ''
+      offset: '00000158'
+    - name: _exp
+      demangled: ''
+      offset: 0000015F
+    - name: __CIpow
+      demangled: ''
+      offset: '00000166'
+    - name: __CIlog
+      demangled: ''
+      offset: '00000170'
+    - name: __CIlog10
+      demangled: ''
+      offset: 0000017A
+    - name: __CIexp
+      demangled: ''
+      offset: '00000181'
+    - name: __fFEXP
+      demangled: ''
+      offset: '00000199'
+    - name: __rtinfpopse
+      demangled: ''
+      offset: 000001F0
+    - name: __rtinfnpopse
+      demangled: ''
+      offset: 000001F2
+    - name: __fFLN
+      demangled: ''
+      offset: '00000202'
+    - name: __rtinfpop
+      demangled: ''
+      offset: 000002B7
+    - name: __rtinfnpop
+      demangled: ''
+      offset: 000002B9
+    - name: __ffexpm1
+      demangled: ''
+      offset: 000002D6
+    - name: __cintrindisp2
+      demangled: ''
+      offset: '00000380'
+    - name: __cintrindisp1
+      demangled: ''
+      offset: 000003BE
+    - name: __ctrandisp2
+      demangled: ''
+      offset: 000003F4
+    - name: __ctrandisp1
+      demangled: ''
+      offset: '00000565'
+    - name: __fload
+      demangled: ''
+      offset: '00000591'
+    - name: __trandisp1
+      demangled: ''
+      offset: 000005D0
+    - name: __trandisp2
+      demangled: ''
+      offset: '00000637'
+    - name: __rttospopde
+      demangled: ''
+      offset: 000006C3
+    - name: __rttospop
+      demangled: ''
+      offset: 000006C8
+    - name: __rtnospop
+      demangled: ''
+      offset: 000006CA
+    - name: __rttosnpop
+      demangled: ''
+      offset: 000006CC
+    - name: __rtnospopde
+      demangled: ''
+      offset: 000006CD
+    - name: __rtzeropop
+      demangled: ''
+      offset: 000006D4
+    - name: __rtzeronpop
+      demangled: ''
+      offset: 000006D6
+    - name: __rtonepop
+      demangled: ''
+      offset: 000006DB
+    - name: __rtonenpop
+      demangled: ''
+      offset: 000006DD
+    - name: __tosnan1
+      demangled: ''
+      offset: '000006E2'
+    - name: __nosnan2
+      demangled: ''
+      offset: 0000070D
+    - name: __tosnan2
+      demangled: ''
+      offset: 0000070F
+    - name: __nan2
+      demangled: ''
+      offset: '00000737'
+    - name: __rtindfpop
+      demangled: ''
+      offset: '00000776'
+    - name: __rtindfnpop
+      demangled: ''
+      offset: '00000778'
+    - name: __rttosnpopde
+      demangled: ''
+      offset: '00000789'
+    - name: __rtchsifneg
+      demangled: ''
+      offset: '00000793'
+    - name: __powhlp
+      demangled: ''
+      offset: 0000079A
+    - name: __d_inttype
+      demangled: ''
+      offset: '00000987'
+    - name: __87except
+      demangled: ''
+      offset: 000009D9
+    - name: __set_exp
+      demangled: ''
+      offset: 00000AE3
+    - name: __decomp
+      demangled: ''
+      offset: 00000B18
+    - name: __frnd
+      demangled: ''
+      offset: 00000BE6
+    - name: _MyRaiseException@16
+      demangled: ''
+      offset: 00000BFB
+    - name: __raise_exc
+      demangled: ''
+      offset: 00000C6B
+    - name: __handle_exc
+      demangled: ''
+      offset: 00000F7C
+    - name: __set_errno
+      demangled: ''
+      offset: 000011D4
+    - name: __matherr
+      demangled: ''
+      offset: '00001200'
+    - name: __statfp
+      demangled: ''
+      offset: '00001203'
+    - name: __clrfp
+      demangled: ''
+      offset: '00001214'
+    - name: __ctrlfp
+      demangled: ''
+      offset: '00001226'
+    - name: __set_statfp
+      demangled: ''
+      offset: '00001256'
+    - name: __alldiv
+      demangled: ''
+      offset: 000012B0
+    - name: __allmul
+      demangled: ''
+      offset: '00001360'
+    - name: __aulldiv
+      demangled: ''
+      offset: 000013A0
+    - name: __aullrem
+      demangled: ''
+      offset: '00001410'
+    - name: __allshr
+      demangled: ''
+      offset: '00001490'
+    - name: __allshl
+      demangled: ''
+      offset: 000014C0
+    - name: _RtlRaiseException@4
+      demangled: ''
+      offset: '000014E0'
+  - num: '2'
+    name: .rdata
+    offset: 00001C50
+    symbols:
+    - name: _gcPinInstances
+      demangled: ''
+      offset: 000002F8
+    - name: __GUID_cb9befa0_a251_11d1_a050_0000f8004788
+      demangled: ''
+      offset: '00000308'
+    - name: __GUID_47a4fa20_a251_11d1_a050_0000f8004788
+      demangled: ''
+      offset: '00000318'
+    - name: __GUID_720d4ac0_7533_11d0_a5d6_28db04c10000
+      demangled: ''
+      offset: '00000328'
+    - name: __GUID_8c134960_51ad_11cf_878a_94f801c10000
+      demangled: ''
+      offset: '00000338'
+    - name: __GUID_1d58c920_ac9b_11cf_a5d6_28db04c10000
+      demangled: ''
+      offset: '00000388'
+  - num: '3'
+    name: .data
+    offset: 000020A0
+    symbols:
+    - name: __fltused
+      demangled: ''
+      offset: '00000000'
+    - name: __ldused
+      demangled: ''
+      offset: '00000004'
+    - name: ___fastflag
+      demangled: ''
+      offset: '00000008'
+    - name: __infinity
+      demangled: ''
+      offset: '00000010'
+    - name: __minfinity
+      demangled: ''
+      offset: 0000001A
+    - name: __logemax
+      demangled: ''
+      offset: '00000024'
+    - name: __OP_POWjmptab
+      demangled: ''
+      offset: '00000054'
+    - name: __OP_LOG10jmptab
+      demangled: ''
+      offset: 000000A4
+    - name: __OP_LOGjmptab
+      demangled: ''
+      offset: 000000C4
+    - name: __OP_EXPjmptab
+      demangled: ''
+      offset: '000000E4'
+    - name: __indefinite
+      demangled: ''
+      offset: '00000140'
+    - name: __piby2
+      demangled: ''
+      offset: 0000014A
+    - name: __cpower
+      demangled: ''
+      offset: 0000015C
+    - name: __d_inf
+      demangled: ''
+      offset: '00000170'
+    - name: __d_ind
+      demangled: ''
+      offset: '00000178'
+    - name: __d_max
+      demangled: ''
+      offset: '00000180'
+    - name: __d_min
+      demangled: ''
+      offset: '00000188'
+    - name: __d_mzero
+      demangled: ''
+      offset: '00000190'
+    - name: ??_C@_03GAFO@_yn?$AA@
+      demangled: '"_yn"'
+      offset: '00000270'
+    - name: ??_C@_03GNLD@_y1?$AA@
+      demangled: '"_y1"'
+      offset: '00000274'
+    - name: ??_C@_03MHCE@_y0?$AA@
+      demangled: '"_y0"'
+      offset: '00000278'
+    - name: ??_C@_05PAK@frexp?$AA@
+      demangled: '"frexp"'
+      offset: 0000027C
+    - name: ??_C@_04JKCH@fmod?$AA@
+      demangled: '"fmod"'
+      offset: '00000284'
+    - name: ??_C@_06GGHF@_hypot?$AA@
+      demangled: '"_hypot"'
+      offset: 0000028C
+    - name: ??_C@_05JNMC@_cabs?$AA@
+      demangled: '"_cabs"'
+      offset: '00000294'
+    - name: ??_C@_05MEKH@ldexp?$AA@
+      demangled: '"ldexp"'
+      offset: 0000029C
+    - name: ??_C@_04KAOJ@modf?$AA@
+      demangled: '"modf"'
+      offset: 000002A4
+    - name: ??_C@_04EHAJ@fabs?$AA@
+      demangled: '"fabs"'
+      offset: 000002AC
+    - name: ??_C@_05MFBN@floor?$AA@
+      demangled: '"floor"'
+      offset: 000002B4
+    - name: ??_C@_04JJMP@ceil?$AA@
+      demangled: '"ceil"'
+      offset: 000002BC
+    - name: ??_C@_03JLPI@tan?$AA@
+      demangled: '"tan"'
+      offset: 000002C4
+    - name: ??_C@_03DLFL@cos?$AA@
+      demangled: '"cos"'
+      offset: 000002C8
+    - name: ??_C@_03JAMN@sin?$AA@
+      demangled: '"sin"'
+      offset: 000002CC
+    - name: ??_C@_04LMBE@sqrt?$AA@
+      demangled: '"sqrt"'
+      offset: 000002D0
+    - name: ??_C@_05BFPO@atan2?$AA@
+      demangled: '"atan2"'
+      offset: 000002D8
+    - name: ??_C@_04EAGN@atan?$AA@
+      demangled: '"atan"'
+      offset: '000002E0'
+    - name: ??_C@_04OAMO@acos?$AA@
+      demangled: '"acos"'
+      offset: '000002E8'
+    - name: ??_C@_04ELFI@asin?$AA@
+      demangled: '"asin"'
+      offset: 000002F0
+    - name: ??_C@_04LFAD@tanh?$AA@
+      demangled: '"tanh"'
+      offset: 000002F8
+    - name: ??_C@_04PFKD@cosh?$AA@
+      demangled: '"cosh"'
+      offset: '00000300'
+    - name: ??_C@_04NPAI@sinh?$AA@
+      demangled: '"sinh"'
+      offset: '00000308'
+    - name: ??_C@_05IJHH@log10?$AA@
+      demangled: '"log10"'
+      offset: '00000310'
+    - name: ??_C@_03BGKD@log?$AA@
+      demangled: '"log"'
+      offset: '00000318'
+    - name: ??_C@_03EGFG@pow?$AA@
+      demangled: '"pow"'
+      offset: 0000031C
+    - name: ??_C@_03CDGJ@exp?$AA@
+      demangled: '"exp"'
+      offset: '00000320'
+    - name: __matherr_flag
+      demangled: ''
+      offset: '00000324'
+    - name: ?DummyIoStatusBlock@@3U_IO_STATUS_BLOCK@@A
+      demangled: struct _IO_STATUS_BLOCK DummyIoStatusBlock
+      offset: '00000350'
+    - name: _errno
+      demangled: ''
+      offset: '00000358'
+  - num: '4'
+    name: .idata$2
+    offset: '00002860'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_ks
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '00000128'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000012C
+    - name: __imp_@ObfReferenceObject@4
+      demangled: ''
+      offset: '00000130'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: '00000134'
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000138'
+    - name: __imp__RtlRaiseException@4
+      demangled: ''
+      offset: 0000013C
+    - name: __imp__RtlInitAnsiString@8
+      demangled: ''
+      offset: '00000140'
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__ZwCreateFile@44
+      demangled: ''
+      offset: '00000148'
+    - name: __imp__ZwQueryInformationFile@20
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__ZwReadFile@36
+      demangled: ''
+      offset: '00000150'
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: '00000154'
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__KeRestoreFloatingPointState@4
+      demangled: ''
+      offset: 0000015C
+    - name: __imp_@ObfDereferenceObject@4
+      demangled: ''
+      offset: '00000160'
+    - name: __imp__KeSaveFloatingPointState@4
+      demangled: ''
+      offset: '00000164'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: 0000016C
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00000170'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000174'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000178'
+    - name: __imp__KeInitializeMutex@8
+      demangled: ''
+      offset: 0000017C
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__ExSetTimerResolution@8
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__ObReferenceObjectByHandle@24
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: '00000190'
+    - name: __imp__KeReleaseMutex@8
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__IoGetRelatedDeviceObject@4
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__KeClearEvent@4
+      demangled: ''
+      offset: 000001A0
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 000001A8
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: 000001AC
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__KsProbeStreamIrp@12
+      demangled: ''
+      offset: 000001B4
+    - name: __imp__KsDefaultForwardIrp@8
+      demangled: ''
+      offset: 000001B8
+    - name: __imp__KsTopologyPropertyHandler@16
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__KsDefaultDispatchPower@8
+      demangled: ''
+      offset: 000001C0
+    - name: __imp__KsValidateConnectRequest@16
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__KsSetMajorFunctionHandler@8
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__KsPinPropertyHandler@20
+      demangled: ''
+      offset: 000001CC
+    - name: __imp__KsDefaultDeviceIoCompletion@8
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__KsPropertyHandler@12
+      demangled: ''
+      offset: 000001D4
+    - name: __imp__KsDispatchInvalidDeviceRequest@8
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__KsFreeObjectHeader@4
+      demangled: ''
+      offset: 000001DC
+    - name: __imp__KsReferenceSoftwareBusObject@4
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp__KsAllocateObjectHeader@20
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp__KsDereferenceSoftwareBusObject@4
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__KsNullDriverUnload@4
+      demangled: ''
+      offset: 000001EC
+    - name: __imp__KsSetDevicePnpAndBaseObject@12
+      demangled: ''
+      offset: 000001F0
+    - name: __imp__KsAllocateDeviceHeader@12
+      demangled: ''
+      offset: 000001F4
+    - name: __imp__KsDefaultDispatchPnp@8
+      demangled: ''
+      offset: 000001F8
+    - name: \177ks_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000001FC
+  - num: '5'
+    name: PAGE
+    offset: '00004700'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _PnpAddDevice@8
+      demangled: ''
+      offset: '00000059'
+    - name: _PnpDriverUnload@4
+      demangled: ''
+      offset: 000000CB
+    - name: _FilterDispatchCreate@8
+      demangled: ''
+      offset: 000000D8
+    - name: _FilterDispatchClose@8
+      demangled: ''
+      offset: 0000019C
+    - name: ??_GControlLogic@@QAEPAXI@Z
+      demangled: "public: void * __thiscall ControlLogic::`scalar deleting dtor'(unsigned
+        int)"
+      offset: 0000020F
+    - name: _FilterDispatchWrite@8
+      demangled: ''
+      offset: 0000022B
+    - name: _FilterDispatchIoControl@8
+      demangled: ''
+      offset: 0000023C
+    - name: _FilterPinPropertyHandler@12
+      demangled: ''
+      offset: 0000027F
+    - name: _FilterPinInstances@12
+      demangled: ''
+      offset: 0000029B
+    - name: _PinDispatchCreate@8
+      demangled: ''
+      offset: 000002D0
+    - name: _PinDispatchClose@8
+      demangled: ''
+      offset: 000005BE
+    - name: _PinDispatchIoControl@8
+      demangled: ''
+      offset: '00000663'
+    - name: ?ProcessMidiMessage@@YGJPAU_IRP@@PAU_IO_STACK_LOCATION@@PAUfilter_instance@@@Z
+      demangled: long __stdcall ProcessMidiMessage(struct _IRP *, struct _IO_STACK_LOCATION
+        *, struct filter_instance *)
+      offset: 000006C7
+    - name: _PinDispatchWrite@8
+      demangled: ''
+      offset: 000008D0
+    - name: _SetDeviceState@8
+      demangled: ''
+      offset: '00000903'
+    - name: _PinStateHandler@12
+      demangled: ''
+      offset: '00000998'
+    - name: _BeginWrite@4
+      demangled: ''
+      offset: 00000A05
+    - name: _FillBuffer@4
+      demangled: ''
+      offset: 00000A3D
+    - name: _WriteBuffer@4
+      demangled: ''
+      offset: 00000A77
+    - name: _WriteCompleteWorker@4
+      demangled: ''
+      offset: 00000AFC
+    - name: ?FilterTopologyHandler@@YGJPAU_IRP@@PAUKSIDENTIFIER@@PAX@Z
+      demangled: long __stdcall FilterTopologyHandler(struct _IRP *, struct KSIDENTIFIER
+        *, void *)
+      offset: 00000B6B
+    - name: ?SetSampleRate@ControlLogic@@QAEXK@Z
+      demangled: 'public: void __thiscall ControlLogic::SetSampleRate(unsigned long)'
+      offset: 00000B85
+    - name: ?SamplesPerMs@ControlLogic@@QAE_JXZ
+      demangled: 'public: __int64 __thiscall ControlLogic::SamplesPerMs(void)'
+      offset: 00000C9B
+    - name: ?Unit100NsToSamples@ControlLogic@@QAE_J_J@Z
+      demangled: 'public: __int64 __thiscall ControlLogic::Unit100NsToSamples(__int64)'
+      offset: 00000CAF
+    - name: ??0ControlLogic@@QAE@XZ
+      demangled: 'public: __thiscall ControlLogic::ControlLogic(void)'
+      offset: 00000CE7
+    - name: ??0NoteIn@@QAE@XZ
+      demangled: 'public: __thiscall NoteIn::NoteIn(void)'
+      offset: 00000E7B
+    - name: ??0VoiceList@@QAE@XZ
+      demangled: 'public: __thiscall VoiceList::VoiceList(void)'
+      offset: '00000E87'
+    - name: ??0ModWheelIn@@QAE@XZ
+      demangled: 'public: __thiscall ModWheelIn::ModWheelIn(void)'
+      offset: '00000E93'
+    - name: ??_H@YGXPAXIHP6EX0@Z@Z
+      demangled: void __stdcall `vector ctor iterator'(void *, unsigned int, int,
+        void (__thiscall *)(void *))
+      offset: 00000E9F
+    - name: ??_I@YGXPAXIHP6EX0@Z@Z
+      demangled: void __stdcall `vector dtor iterator'(void *, unsigned int, int,
+        void (__thiscall *)(void *))
+      offset: 00000EC1
+    - name: ??1ControlLogic@@QAE@XZ
+      demangled: 'public: __thiscall ControlLogic::~ControlLogic(void)'
+      offset: 00000EEB
+    - name: ??1NoteIn@@QAE@XZ
+      demangled: 'public: __thiscall NoteIn::~NoteIn(void)'
+      offset: 00000FD4
+    - name: ??1ModWheelIn@@QAE@XZ
+      demangled: 'public: __thiscall ModWheelIn::~ModWheelIn(void)'
+      offset: 00000FD9
+    - name: ??1PitchBendIn@@QAE@XZ
+      demangled: 'public: __thiscall PitchBendIn::~PitchBendIn(void)'
+      offset: 00000FDE
+    - name: ??1VolumeIn@@QAE@XZ
+      demangled: 'public: __thiscall VolumeIn::~VolumeIn(void)'
+      offset: 00000FE3
+    - name: ??1ExpressionIn@@QAE@XZ
+      demangled: 'public: __thiscall ExpressionIn::~ExpressionIn(void)'
+      offset: 00000FE8
+    - name: ??1PanIn@@QAE@XZ
+      demangled: 'public: __thiscall PanIn::~PanIn(void)'
+      offset: 00000FED
+    - name: ??1ProgramIn@@QAE@XZ
+      demangled: 'public: __thiscall ProgramIn::~ProgramIn(void)'
+      offset: 00000FF2
+    - name: ??_GVoice@@QAEPAXI@Z
+      demangled: "public: void * __thiscall Voice::`scalar deleting dtor'(unsigned
+        int)"
+      offset: 00000FF7
+    - name: ??1Voice@@QAE@XZ
+      demangled: 'public: __thiscall Voice::~Voice(void)'
+      offset: '00001013'
+    - name: ??1DigitalAudio@@QAE@XZ
+      demangled: 'public: __thiscall DigitalAudio::~DigitalAudio(void)'
+      offset: 0000101E
+    - name: ?GMReset@ControlLogic@@QAEXXZ
+      demangled: 'public: void __thiscall ControlLogic::GMReset(void)'
+      offset: '00001023'
+    - name: ?SetStereoMode@ControlLogic@@QAEXK@Z
+      demangled: 'public: void __thiscall ControlLogic::SetStereoMode(unsigned long)'
+      offset: 000010A5
+    - name: ?Init@ControlLogic@@QAEXXZ
+      demangled: 'public: void __thiscall ControlLogic::Init(void)'
+      offset: 000010BB
+    - name: ??0FLOATSAFE@@QAE@XZ
+      demangled: 'public: __thiscall FLOATSAFE::FLOATSAFE(void)'
+      offset: '000010E2'
+    - name: ??1FLOATSAFE@@QAE@XZ
+      demangled: 'public: __thiscall FLOATSAFE::~FLOATSAFE(void)'
+      offset: 000010F0
+    - name: ?StealNotes@ControlLogic@@AAEX_J@Z
+      demangled: 'private: void __thiscall ControlLogic::StealNotes(__int64)'
+      offset: 000010F8
+    - name: ?AllNotesOff@ControlLogic@@QAEJXZ
+      demangled: 'public: long __thiscall ControlLogic::AllNotesOff(void)'
+      offset: 0000115A
+    - name: ?OldestVoice@ControlLogic@@AAEPAVVoice@@XZ
+      demangled: 'private: class Voice * __thiscall ControlLogic::OldestVoice(void)'
+      offset: 000011A1
+    - name: ?StealVoice@ControlLogic@@AAEPAVVoice@@XZ
+      demangled: 'private: class Voice * __thiscall ControlLogic::StealVoice(void)'
+      offset: '00001230'
+    - name: ?QueueNotes@ControlLogic@@AAEX_J@Z
+      demangled: 'private: void __thiscall ControlLogic::QueueNotes(__int64)'
+      offset: 000012BE
+    - name: ?Flush@ControlLogic@@QAEX_J@Z
+      demangled: 'public: void __thiscall ControlLogic::Flush(__int64)'
+      offset: 0000174D
+    - name: ?Mix@ControlLogic@@QAEXPAFKK@Z
+      demangled: 'public: void __thiscall ControlLogic::Mix(short *, unsigned long,
+        unsigned long)'
+      offset: '000017E4'
+    - name: ?CalibrateSampleTime@ControlLogic@@QAE_J_J@Z
+      demangled: 'public: __int64 __thiscall ControlLogic::CalibrateSampleTime(__int64)'
+      offset: '00001910'
+    - name: ?RecordMIDI@ControlLogic@@QAEH_JEEE@Z
+      demangled: 'public: int __thiscall ControlLogic::RecordMIDI(__int64, unsigned
+        char, unsigned char, unsigned char)'
+      offset: 00001A09
+    - name: ?RecordSysEx@ControlLogic@@QAEH_JKPAE@Z
+      demangled: 'public: int __thiscall ControlLogic::RecordSysEx(__int64, unsigned
+        long, unsigned char *)'
+      offset: 00001ECB
+    - name: ?SWMidiClearAll@ControlLogic@@QAEX_J@Z
+      demangled: 'public: void __thiscall ControlLogic::SWMidiClearAll(__int64)'
+      offset: '00002090'
+    - name: ?SWMidiResetPatches@ControlLogic@@QAEX_J@Z
+      demangled: 'public: void __thiscall ControlLogic::SWMidiResetPatches(__int64)'
+      offset: '00002146'
+    - name: ??2@YAPAXI@Z
+      demangled: void * __cdecl operator new(unsigned int)
+      offset: 000021F2
+    - name: ??3@YAXPAX@Z
+      demangled: void __cdecl operator delete(void *)
+      offset: '00002204'
+    - name: ??0SourceLFO@@QAE@XZ
+      demangled: 'public: __thiscall SourceLFO::SourceLFO(void)'
+      offset: 0000220F
+    - name: ?Init@SourceLFO@@QAEXK@Z
+      demangled: 'public: void __thiscall SourceLFO::Init(unsigned long)'
+      offset: '00002230'
+    - name: ?SetSampleRate@SourceLFO@@QAEXJ@Z
+      demangled: 'public: void __thiscall SourceLFO::SetSampleRate(long)'
+      offset: '00002258'
+    - name: ?Verify@SourceLFO@@QAEXXZ
+      demangled: 'public: void __thiscall SourceLFO::Verify(void)'
+      offset: 0000229B
+    - name: ??0SourceEG@@QAE@XZ
+      demangled: 'public: __thiscall SourceEG::SourceEG(void)'
+      offset: '00002348'
+    - name: ?Init@SourceEG@@QAEXK@Z
+      demangled: 'public: void __thiscall SourceEG::Init(unsigned long)'
+      offset: '00002370'
+    - name: ?SetSampleRate@SourceEG@@QAEXJ@Z
+      demangled: 'public: void __thiscall SourceEG::SetSampleRate(long)'
+      offset: '00002398'
+    - name: ?Verify@SourceEG@@QAEXXZ
+      demangled: 'public: void __thiscall SourceEG::Verify(void)'
+      offset: '00002415'
+    - name: ??0SourceArticulation@@QAE@XZ
+      demangled: 'public: __thiscall SourceArticulation::SourceArticulation(void)'
+      offset: '00002500'
+    - name: ?SetSampleRate@SourceArticulation@@QAEXK@Z
+      demangled: 'public: void __thiscall SourceArticulation::SetSampleRate(unsigned
+        long)'
+      offset: 0000253A
+    - name: ?Verify@SourceArticulation@@QAEXXZ
+      demangled: 'public: void __thiscall SourceArticulation::Verify(void)'
+      offset: '00002587'
+    - name: ?AddRef@SourceArticulation@@QAEXXZ
+      demangled: 'public: void __thiscall SourceArticulation::AddRef(void)'
+      offset: 000025C1
+    - name: ?Release@SourceArticulation@@QAEXXZ
+      demangled: 'public: void __thiscall SourceArticulation::Release(void)'
+      offset: 000025CA
+    - name: ??0SourceSample@@QAE@XZ
+      demangled: 'public: __thiscall SourceSample::SourceSample(void)'
+      offset: '000025E3'
+    - name: ??1SourceSample@@QAE@XZ
+      demangled: 'public: __thiscall SourceSample::~SourceSample(void)'
+      offset: '00002610'
+    - name: ?Verify@SourceSample@@QAEXXZ
+      demangled: 'public: void __thiscall SourceSample::Verify(void)'
+      offset: 0000262E
+    - name: ?CopyFromWave@SourceSample@@QAEHXZ
+      demangled: 'public: int __thiscall SourceSample::CopyFromWave(void)'
+      offset: 000026B7
+    - name: ?Lock@SourceSample@@QAEHH@Z
+      demangled: 'public: int __thiscall SourceSample::Lock(int)'
+      offset: '00002754'
+    - name: ?UnLock@SourceSample@@QAEHXZ
+      demangled: 'public: int __thiscall SourceSample::UnLock(void)'
+      offset: '00002793'
+    - name: ??0Wave@@QAE@XZ
+      demangled: 'public: __thiscall Wave::Wave(void)'
+      offset: 000027A5
+    - name: ??1Wave@@QAE@XZ
+      demangled: 'public: __thiscall Wave::~Wave(void)'
+      offset: 000027DE
+    - name: ?Verify@Wave@@QAEXXZ
+      demangled: 'public: void __thiscall Wave::Verify(void)'
+      offset: 000027F5
+    - name: ?PlayOn@Wave@@QAEXXZ
+      demangled: 'public: void __thiscall Wave::PlayOn(void)'
+      offset: '00002893'
+    - name: ?PlayOff@Wave@@QAEXXZ
+      demangled: 'public: void __thiscall Wave::PlayOff(void)'
+      offset: 0000289C
+    - name: ?IsPlaying@Wave@@QAEHXZ
+      demangled: 'public: int __thiscall Wave::IsPlaying(void)'
+      offset: 000028B8
+    - name: ?AddRef@Wave@@QAEXXZ
+      demangled: 'public: void __thiscall Wave::AddRef(void)'
+      offset: 000028BC
+    - name: ?Release@Wave@@QAEXXZ
+      demangled: 'public: void __thiscall Wave::Release(void)'
+      offset: 000028C5
+    - name: ??_GWave@@QAEPAXI@Z
+      demangled: "public: void * __thiscall Wave::`scalar deleting dtor'(unsigned
+        int)"
+      offset: 000028F8
+    - name: ?IsLocked@Wave@@QAEHXZ
+      demangled: 'public: int __thiscall Wave::IsLocked(void)'
+      offset: '00002914'
+    - name: ?Lock@Wave@@QAEHXZ
+      demangled: 'public: int __thiscall Wave::Lock(void)'
+      offset: '00002918'
+    - name: ?UnLock@Wave@@QAEHXZ
+      demangled: 'public: int __thiscall Wave::UnLock(void)'
+      offset: '00002966'
+    - name: ??0SourceRegion@@QAE@XZ
+      demangled: 'public: __thiscall SourceRegion::SourceRegion(void)'
+      offset: 000029A2
+    - name: ??1SourceRegion@@QAE@XZ
+      demangled: 'public: __thiscall SourceRegion::~SourceRegion(void)'
+      offset: 000029D7
+    - name: ?SetSampleRate@SourceRegion@@QAEXK@Z
+      demangled: 'public: void __thiscall SourceRegion::SetSampleRate(unsigned long)'
+      offset: 000029F0
+    - name: ?Lock@SourceRegion@@QAEHKKH@Z
+      demangled: 'public: int __thiscall SourceRegion::Lock(unsigned long, unsigned
+        long, int)'
+      offset: 00002A03
+    - name: ?UnLock@SourceRegion@@QAEHKK@Z
+      demangled: 'public: int __thiscall SourceRegion::UnLock(unsigned long, unsigned
+        long)'
+      offset: 00002A45
+    - name: ??0Instrument@@QAE@XZ
+      demangled: 'public: __thiscall Instrument::Instrument(void)'
+      offset: 00002A7C
+    - name: ??0SourceRegionList@@QAE@XZ
+      demangled: 'public: __thiscall SourceRegionList::SourceRegionList(void)'
+      offset: 00002A9C
+    - name: ??1Instrument@@QAE@XZ
+      demangled: 'public: __thiscall Instrument::~Instrument(void)'
+      offset: 00002AA8
+    - name: ??_GSourceRegion@@QAEPAXI@Z
+      demangled: "public: void * __thiscall SourceRegion::`scalar deleting dtor'(unsigned
+        int)"
+      offset: 00002ACF
+    - name: ?SetSampleRate@Instrument@@QAEXK@Z
+      demangled: 'public: void __thiscall Instrument::SetSampleRate(unsigned long)'
+      offset: 00002AEB
+    - name: ?ScanForRegion@Instrument@@QAEPAVSourceRegion@@K@Z
+      demangled: 'public: class SourceRegion * __thiscall Instrument::ScanForRegion(unsigned
+        long)'
+      offset: 00002B12
+    - name: ?Lock@Instrument@@QAEHKKH@Z
+      demangled: 'public: int __thiscall Instrument::Lock(unsigned long, unsigned
+        long, int)'
+      offset: 00002B44
+    - name: ?UnLock@Instrument@@QAEHKK@Z
+      demangled: 'public: int __thiscall Instrument::UnLock(unsigned long, unsigned
+        long)'
+      offset: 00002B9C
+    - name: ??0Collection@@QAE@XZ
+      demangled: 'public: __thiscall Collection::Collection(void)'
+      offset: 00002BE9
+    - name: ??0InstrumentList@@QAE@XZ
+      demangled: 'public: __thiscall InstrumentList::InstrumentList(void)'
+      offset: 00002C24
+    - name: ??0WavePool@@QAE@XZ
+      demangled: 'public: __thiscall WavePool::WavePool(void)'
+      offset: 00002C30
+    - name: ??1Collection@@QAE@XZ
+      demangled: 'public: __thiscall Collection::~Collection(void)'
+      offset: 00002C3C
+    - name: ??_GInstrument@@QAEPAXI@Z
+      demangled: "public: void * __thiscall Instrument::`scalar deleting dtor'(unsigned
+        int)"
+      offset: 00002CB0
+    - name: ?SetSampleRate@Collection@@QAEXK@Z
+      demangled: 'public: void __thiscall Collection::SetSampleRate(unsigned long)'
+      offset: 00002CCC
+    - name: ?Lock@Collection@@QAEHKKKH@Z
+      demangled: 'public: int __thiscall Collection::Lock(unsigned long, unsigned
+        long, unsigned long, int)'
+      offset: 00002CF3
+    - name: ?UnLock@Collection@@QAEHKKK@Z
+      demangled: 'public: int __thiscall Collection::UnLock(unsigned long, unsigned
+        long, unsigned long)'
+      offset: 00002D70
+    - name: ??0LockRange@@QAE@XZ
+      demangled: 'public: __thiscall LockRange::LockRange(void)'
+      offset: 00002DB8
+    - name: ?GetInstrument@Collection@@QAEPAVInstrument@@KK@Z
+      demangled: 'public: class Instrument * __thiscall Collection::GetInstrument(unsigned
+        long, unsigned long)'
+      offset: 00002DD6
+    - name: ?RemoveDuplicateInstrument@Collection@@AAEXK@Z
+      demangled: 'private: void __thiscall Collection::RemoveDuplicateInstrument(unsigned
+        long)'
+      offset: 00002E1C
+    - name: ?SetSampleRate@InstManager@@QAEXK@Z
+      demangled: 'public: void __thiscall InstManager::SetSampleRate(unsigned long)'
+      offset: 00002E5A
+    - name: ?SetGMLoad@InstManager@@QAEJH@Z
+      demangled: 'public: long __thiscall InstManager::SetGMLoad(int)'
+      offset: '00002E84'
+    - name: ??0InstManager@@QAE@XZ
+      demangled: 'public: __thiscall InstManager::InstManager(void)'
+      offset: 00002F75
+    - name: ??0CollectionList@@QAE@XZ
+      demangled: 'public: __thiscall CollectionList::CollectionList(void)'
+      offset: 00002FBF
+    - name: ??0LockList@@QAE@XZ
+      demangled: 'public: __thiscall LockList::LockList(void)'
+      offset: 00002FCB
+    - name: ??1InstManager@@QAE@XZ
+      demangled: 'public: __thiscall InstManager::~InstManager(void)'
+      offset: 00002FD7
+    - name: ??_GCollection@@QAEPAXI@Z
+      demangled: "public: void * __thiscall Collection::`scalar deleting dtor'(unsigned
+        int)"
+      offset: '00003018'
+    - name: ?Lock@InstManager@@QAEPAXPAXKKKH@Z
+      demangled: 'public: void * __thiscall InstManager::Lock(void *, unsigned long,
+        unsigned long, unsigned long, int)'
+      offset: '00003034'
+    - name: ?UnLock@InstManager@@QAEJPAX@Z
+      demangled: 'public: long __thiscall InstManager::UnLock(void *)'
+      offset: 000030C1
+    - name: ?GetInstrument@InstManager@@QAEPAVInstrument@@KK@Z
+      demangled: 'public: class Instrument * __thiscall InstManager::GetInstrument(unsigned
+        long, unsigned long)'
+      offset: 0000311C
+    - name: ?RequestGMInstrument@InstManager@@QAEXKK@Z
+      demangled: 'public: void __thiscall InstManager::RequestGMInstrument(unsigned
+        long, unsigned long)'
+      offset: '00003150'
+    - name: ?LoadGMInstrument@InstManager@@QAEXKK@Z
+      demangled: 'public: void __thiscall InstManager::LoadGMInstrument(unsigned long,
+        unsigned long)'
+      offset: 0000316E
+    - name: ?Mix8@DigitalAudio@@AAEKPAFKKJJJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::Mix8(short *, unsigned
+        long, unsigned long, long, long, long, long, long)'
+      offset: 000031D3
+    - name: ?MixMono8@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::MixMono8(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: '00003336'
+    - name: ?Mix8NoI@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::Mix8NoI(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: 0000344B
+    - name: ?MixMono8NoI@DigitalAudio@@AAEKPAFKKJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::MixMono8NoI(short
+        *, unsigned long, unsigned long, long, long, long)'
+      offset: 0000357C
+    - name: ?Mix16@DigitalAudio@@AAEKPAFKKJJJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::Mix16(short *, unsigned
+        long, unsigned long, long, long, long, long, long)'
+      offset: '00003635'
+    - name: ?Mix16NoI@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::Mix16NoI(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: '00003795'
+    - name: ?MixMono16@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::MixMono16(short
+        *, unsigned long, unsigned long, long, long, long, long)'
+      offset: 000038B9
+    - name: ?MixMono16NoI@DigitalAudio@@AAEKPAFKKJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::MixMono16NoI(short
+        *, unsigned long, unsigned long, long, long, long)'
+      offset: 000039CE
+    - name: ?MixC@DigitalAudio@@AAEKPAFKKJJJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::MixC(short *, unsigned
+        long, unsigned long, long, long, long, long, long)'
+      offset: 00003A88
+    - name: ?MixMonoC@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::MixMonoC(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: 00003D1D
+    - name: ?MixCNoI@DigitalAudio@@AAEKPAFKKJJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::MixCNoI(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: 00003EDA
+    - name: ?MixMonoCNoI@DigitalAudio@@AAEKPAFKKJJJ@Z
+      demangled: 'private: unsigned long __thiscall DigitalAudio::MixMonoCNoI(short
+        *, unsigned long, unsigned long, long, long, long)'
+      offset: 0000412C
+    - name: ?TimeCents2Samples@@YGKJK@Z
+      demangled: unsigned long __stdcall TimeCents2Samples(long, unsigned long)
+      offset: 0000429C
+    - name: _powf@8
+      demangled: ''
+      offset: '000042E8'
+    - name: ?PitchCents2PitchFract@@YGKJK@Z
+      demangled: unsigned long __stdcall PitchCents2PitchFract(long, unsigned long)
+      offset: 000042F8
+    - name: ?Load@Wave@@QAEJPAE0K@Z
+      demangled: 'public: long __thiscall Wave::Load(unsigned char *, unsigned char
+        *, unsigned long)'
+      offset: 0000434F
+    - name: ?Load@SourceArticulation@@QAEJPAE0K@Z
+      demangled: 'public: long __thiscall SourceArticulation::Load(unsigned char *,
+        unsigned char *, unsigned long)'
+      offset: '00004681'
+    - name: ?Load@SourceRegion@@QAEJPAE0K@Z
+      demangled: 'public: long __thiscall SourceRegion::Load(unsigned char *, unsigned
+        char *, unsigned long)'
+      offset: 000049F4
+    - name: ?LoadRegions@Instrument@@QAEJPAE0K@Z
+      demangled: 'public: long __thiscall Instrument::LoadRegions(unsigned char *,
+        unsigned char *, unsigned long)'
+      offset: 00004B92
+    - name: ?Load@Instrument@@QAEJPAE0K@Z
+      demangled: 'public: long __thiscall Instrument::Load(unsigned char *, unsigned
+        char *, unsigned long)'
+      offset: 00004C24
+    - name: ?LoadInstruments@Collection@@AAEJPAE0K@Z
+      demangled: 'private: long __thiscall Collection::LoadInstruments(unsigned char
+        *, unsigned char *, unsigned long)'
+      offset: 00004DE0
+    - name: ?LoadWavePool@Collection@@AAEJPAE0K@Z
+      demangled: 'private: long __thiscall Collection::LoadWavePool(unsigned char
+        *, unsigned char *, unsigned long)'
+      offset: 00004EA2
+    - name: ?LoadPoolCues@Collection@@AAEJPAE0K@Z
+      demangled: 'private: long __thiscall Collection::LoadPoolCues(unsigned char
+        *, unsigned char *, unsigned long)'
+      offset: 00004F2A
+    - name: ?ResolveConnections@Collection@@QAEJXZ
+      demangled: 'public: long __thiscall Collection::ResolveConnections(void)'
+      offset: 00004FD3
+    - name: ?Close@Collection@@QAEXXZ
+      demangled: 'public: void __thiscall Collection::Close(void)'
+      offset: 000050D5
+    - name: ?Open@Collection@@QAEJPAD@Z
+      demangled: 'public: long __thiscall Collection::Open(char *)'
+      offset: 000050EC
+    - name: ?LoadName@Collection@@AAEJPAE0@Z
+      demangled: 'private: long __thiscall Collection::LoadName(unsigned char *, unsigned
+        char *)'
+      offset: 000051EB
+    - name: ?Load@Collection@@AAEJPAE0KK@Z
+      demangled: 'private: long __thiscall Collection::Load(unsigned char *, unsigned
+        char *, unsigned long, unsigned long)'
+      offset: '00005264'
+    - name: ?Load@Collection@@QAEJKK@Z
+      demangled: 'public: long __thiscall Collection::Load(unsigned long, unsigned
+        long)'
+      offset: '00005384'
+    - name: ?LoadCollection@InstManager@@QAEJPAPAXPBDH@Z
+      demangled: 'public: long __thiscall InstManager::LoadCollection(void **, char
+        const *, int)'
+      offset: 000053BC
+    - name: ?ReleaseCollection@InstManager@@QAEJPAX@Z
+      demangled: 'public: long __thiscall InstManager::ReleaseCollection(void *)'
+      offset: 0000558A
+    - name: ??0MIDIData@@QAE@XZ
+      demangled: 'public: __thiscall MIDIData::MIDIData(void)'
+      offset: 000055CE
+    - name: ??0MIDIRecorder@@QAE@XZ
+      demangled: 'public: __thiscall MIDIRecorder::MIDIRecorder(void)'
+      offset: '000055E5'
+    - name: ??0MIDIDataList@@QAE@XZ
+      demangled: 'public: __thiscall MIDIDataList::MIDIDataList(void)'
+      offset: 000055FC
+    - name: ??1MIDIRecorder@@QAE@XZ
+      demangled: 'public: __thiscall MIDIRecorder::~MIDIRecorder(void)'
+      offset: '00005608'
+    - name: ?FlushMIDI@MIDIRecorder@@QAEX_J@Z
+      demangled: 'public: void __thiscall MIDIRecorder::FlushMIDI(__int64)'
+      offset: '00005615'
+    - name: ?ClearMIDI@MIDIRecorder@@QAEX_J@Z
+      demangled: 'public: void __thiscall MIDIRecorder::ClearMIDI(__int64)'
+      offset: 0000567C
+    - name: ?VelocityToVolume@MIDIRecorder@@SGJG@Z
+      demangled: 'public: static long __stdcall MIDIRecorder::VelocityToVolume(unsigned
+        short)'
+      offset: 000056C8
+    - name: ?RecordMIDI@MIDIRecorder@@QAEH_JJ@Z
+      demangled: 'public: int __thiscall MIDIRecorder::RecordMIDI(__int64, long)'
+      offset: 000056D7
+    - name: ?GetData@MIDIRecorder@@QAEJ_J@Z
+      demangled: 'public: long __thiscall MIDIRecorder::GetData(__int64)'
+      offset: '00005782'
+    - name: ?RecordNote@NoteIn@@QAEH_JPAVNote@@@Z
+      demangled: 'public: int __thiscall NoteIn::RecordNote(__int64, class Note *)'
+      offset: 000057B7
+    - name: ?GetNote@NoteIn@@QAEH_JPAVNote@@@Z
+      demangled: 'public: int __thiscall NoteIn::GetNote(__int64, class Note *)'
+      offset: 000057DD
+    - name: ?FlushMIDI@NoteIn@@QAEX_J@Z
+      demangled: 'public: void __thiscall NoteIn::FlushMIDI(__int64)'
+      offset: 0000583B
+    - name: ?GetModulation@ModWheelIn@@QAEK_J@Z
+      demangled: 'public: unsigned long __thiscall ModWheelIn::GetModulation(__int64)'
+      offset: '00005893'
+    - name: ??0PitchBendIn@@QAE@XZ
+      demangled: 'public: __thiscall PitchBendIn::PitchBendIn(void)'
+      offset: 000058A3
+    - name: ?GetPitch@PitchBendIn@@QAEJ_J@Z
+      demangled: 'public: long __thiscall PitchBendIn::GetPitch(__int64)'
+      offset: 000058BD
+    - name: ??0VolumeIn@@QAE@XZ
+      demangled: 'public: __thiscall VolumeIn::VolumeIn(void)'
+      offset: '000058E0'
+    - name: ?GetVolume@VolumeIn@@QAEJ_J@Z
+      demangled: 'public: long __thiscall VolumeIn::GetVolume(__int64)'
+      offset: 000058F3
+    - name: ??0ExpressionIn@@QAE@XZ
+      demangled: 'public: __thiscall ExpressionIn::ExpressionIn(void)'
+      offset: 0000590A
+    - name: ?GetVolume@ExpressionIn@@QAEJ_J@Z
+      demangled: 'public: long __thiscall ExpressionIn::GetVolume(__int64)'
+      offset: 0000591D
+    - name: ??0PanIn@@QAE@XZ
+      demangled: 'public: __thiscall PanIn::PanIn(void)'
+      offset: '00005934'
+    - name: ?GetPan@PanIn@@QAEJ_J@Z
+      demangled: 'public: long __thiscall PanIn::GetPan(__int64)'
+      offset: '00005947'
+    - name: ??0ProgramIn@@QAE@XZ
+      demangled: 'public: __thiscall ProgramIn::ProgramIn(void)'
+      offset: '00005957'
+    - name: ?GetProgram@ProgramIn@@QAEK_J@Z
+      demangled: 'public: unsigned long __thiscall ProgramIn::GetProgram(__int64)'
+      offset: 0000596E
+    - name: ?RecordBankH@ProgramIn@@QAEHE@Z
+      demangled: 'public: int __thiscall ProgramIn::RecordBankH(unsigned char)'
+      offset: 0000597E
+    - name: ?RecordBankL@ProgramIn@@QAEHE@Z
+      demangled: 'public: int __thiscall ProgramIn::RecordBankL(unsigned char)'
+      offset: 0000598B
+    - name: ?RecordProgram@ProgramIn@@QAEH_JE@Z
+      demangled: 'public: int __thiscall ProgramIn::RecordProgram(__int64, unsigned
+        char)'
+      offset: '00005998'
+    - name: ?MixMono8X@DigitalAudio@@AAAKPAFKKJJJJ@Z
+      demangled: 'private: unsigned long __cdecl DigitalAudio::MixMono8X(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: 000059C0
+    - name: ?Mix8X@DigitalAudio@@AAAKPAFKKJJJJJ@Z
+      demangled: 'private: unsigned long __cdecl DigitalAudio::Mix8X(short *, unsigned
+        long, unsigned long, long, long, long, long, long)'
+      offset: 00005B6D
+    - name: ?MixMono16X@DigitalAudio@@AAAKPAFKKJJJJ@Z
+      demangled: 'private: unsigned long __cdecl DigitalAudio::MixMono16X(short *,
+        unsigned long, unsigned long, long, long, long, long)'
+      offset: 00005D4B
+    - name: ?Mix16X@DigitalAudio@@AAAKPAFKKJJJJJ@Z
+      demangled: 'private: unsigned long __cdecl DigitalAudio::Mix16X(short *, unsigned
+        long, unsigned long, long, long, long, long, long)'
+      offset: 00005EEB
+    - name: ?MultiMediaInstructionsSupported@@YGHXZ
+      demangled: int __stdcall MultiMediaInstructionsSupported(void)
+      offset: 000060BC
+    - name: ??0VoiceLFO@@QAE@XZ
+      demangled: 'public: __thiscall VoiceLFO::VoiceLFO(void)'
+      offset: '00006108'
+    - name: ?StartVoice@VoiceLFO@@QAE_JPAVSourceLFO@@_JPAVModWheelIn@@@Z
+      demangled: 'public: __int64 __thiscall VoiceLFO::StartVoice(class SourceLFO
+        *, __int64, class ModWheelIn *)'
+      offset: '00006118'
+    - name: ?GetLevel@VoiceLFO@@AAEJ_JPA_J@Z
+      demangled: 'private: long __thiscall VoiceLFO::GetLevel(__int64, __int64 *)'
+      offset: 0000617E
+    - name: ?GetVolume@VoiceLFO@@QAEJ_JPA_J@Z
+      demangled: 'public: long __thiscall VoiceLFO::GetVolume(__int64, __int64 *)'
+      offset: 000061EE
+    - name: ?GetPitch@VoiceLFO@@QAEJ_JPA_J@Z
+      demangled: 'public: long __thiscall VoiceLFO::GetPitch(__int64, __int64 *)'
+      offset: '00006239'
+    - name: ??0VoiceEG@@QAE@XZ
+      demangled: 'public: __thiscall VoiceEG::VoiceEG(void)'
+      offset: '00006284'
+    - name: ?StopVoice@VoiceEG@@QAEX_J@Z
+      demangled: 'public: void __thiscall VoiceEG::StopVoice(__int64)'
+      offset: '00006298'
+    - name: ?QuickStopVoice@VoiceEG@@QAEX_JK@Z
+      demangled: 'public: void __thiscall VoiceEG::QuickStopVoice(__int64, unsigned
+        long)'
+      offset: 000062EA
+    - name: ?StartVoice@VoiceEG@@QAE_JPAVSourceEG@@_JGG@Z
+      demangled: 'public: __int64 __thiscall VoiceEG::StartVoice(class SourceEG *,
+        __int64, unsigned short, unsigned short)'
+      offset: '00006367'
+    - name: ?InRelease@VoiceEG@@QAEH_J@Z
+      demangled: 'public: int __thiscall VoiceEG::InRelease(__int64)'
+      offset: '00006449'
+    - name: ?GetLevel@VoiceEG@@AAEJ_JPA_JH@Z
+      demangled: 'private: long __thiscall VoiceEG::GetLevel(__int64, __int64 *, int)'
+      offset: '00006469'
+    - name: ?GetVolume@VoiceEG@@QAEJ_JPA_J@Z
+      demangled: 'public: long __thiscall VoiceEG::GetVolume(__int64, __int64 *)'
+      offset: 000066D4
+    - name: ?GetPitch@VoiceEG@@QAEJ_JPA_J@Z
+      demangled: 'public: long __thiscall VoiceEG::GetPitch(__int64, __int64 *)'
+      offset: 000066FB
+    - name: ??0DigitalAudio@@QAE@XZ
+      demangled: 'public: __thiscall DigitalAudio::DigitalAudio(void)'
+      offset: 0000673E
+    - name: ?VRELToVFRACT@DigitalAudio@@CGJJ@Z
+      demangled: 'private: static long __stdcall DigitalAudio::VRELToVFRACT(long)'
+      offset: 0000677C
+    - name: ?PRELToPFRACT@DigitalAudio@@SGJJ@Z
+      demangled: 'public: static long __stdcall DigitalAudio::PRELToPFRACT(long)'
+      offset: 000067A3
+    - name: ?ClearVoice@DigitalAudio@@QAEXXZ
+      demangled: 'public: void __thiscall DigitalAudio::ClearVoice(void)'
+      offset: '00006851'
+    - name: ?StartVoice@DigitalAudio@@QAE_JPAVControlLogic@@PAVSourceSample@@JJJJ@Z
+      demangled: 'public: __int64 __thiscall DigitalAudio::StartVoice(class ControlLogic
+        *, class SourceSample *, long, long, long, long)'
+      offset: '00006872'
+    - name: ?Mix@DigitalAudio@@QAEHPAFKJJJK@Z
+      demangled: 'public: int __thiscall DigitalAudio::Mix(short *, unsigned long,
+        long, long, long, unsigned long)'
+      offset: 0000693A
+    - name: ??0Voice@@QAE@XZ
+      demangled: 'public: __thiscall Voice::Voice(void)'
+      offset: 00006D8D
+    - name: ?StopVoice@Voice@@QAEX_J@Z
+      demangled: 'public: void __thiscall Voice::StopVoice(__int64)'
+      offset: '00006E19'
+    - name: ?QuickStopVoice@Voice@@QAEX_J@Z
+      demangled: 'public: void __thiscall Voice::QuickStopVoice(__int64)'
+      offset: '00006E89'
+    - name: 
+        ?StartVoice@Voice@@QAEHPAVControlLogic@@PAVSourceRegion@@_JPAVModWheelIn@@PAVPitchBendIn@@PAVExpressionIn@@PAVVolumeIn@@PAVPanIn@@GGJJ@Z
+      demangled: 'public: int __thiscall Voice::StartVoice(class ControlLogic *, class
+        SourceRegion *, __int64, class ModWheelIn *, class PitchBendIn *, class ExpressionIn
+        *, class VolumeIn *, class PanIn *, unsigned short, unsigned short, long,
+        long)'
+      offset: 00006F30
+    - name: ?ClearVoice@Voice@@QAEXXZ
+      demangled: 'public: void __thiscall Voice::ClearVoice(void)'
+      offset: 000071F3
+    - name: ?GetNewVolume@Voice@@QAEX_JAAJ1@Z
+      demangled: 'public: void __thiscall Voice::GetNewVolume(__int64, long &, long
+        &)'
+      offset: '00007205'
+    - name: ?GetNewPitch@Voice@@QAEJ_J@Z
+      demangled: 'public: long __thiscall Voice::GetNewPitch(__int64)'
+      offset: '00007310'
+    - name: ?Mix@Voice@@QAEKPAFK_J1@Z
+      demangled: 'public: unsigned long __thiscall Voice::Mix(short *, unsigned long,
+        __int64, __int64)'
+      offset: 000073AC
+    - name: ?GetCount@CListItem@@QBEJXZ
+      demangled: 'public: long __thiscall CListItem::GetCount(void) const'
+      offset: '00007551'
+    - name: ?IsMember@CListItem@@QAEHPAV1@@Z
+      demangled: 'public: int __thiscall CListItem::IsMember(class CListItem *)'
+      offset: 0000755D
+    - name: ?Cat@CListItem@@QAEPAV1@PAV1@@Z
+      demangled: 'public: class CListItem * __thiscall CListItem::Cat(class CListItem
+        *)'
+      offset: '00007575'
+    - name: ?Remove@CListItem@@QAEPAV1@PAV1@@Z
+      demangled: 'public: class CListItem * __thiscall CListItem::Remove(class CListItem
+        *)'
+      offset: 0000759A
+    - name: ?Init@DigitalAudio@@SGXXZ
+      demangled: 'public: static void __stdcall DigitalAudio::Init(void)'
+      offset: 000075D9
+    - name: ?InitTables@MIDIRecorder@@SGXXZ
+      demangled: 'public: static void __stdcall MIDIRecorder::InitTables(void)'
+      offset: '00007703'
+    - name: _log10f@4
+      demangled: ''
+      offset: '00007769'
+    - name: ?Init@VoiceEG@@SGXXZ
+      demangled: 'public: static void __stdcall VoiceEG::Init(void)'
+      offset: '00007774'
+    - name: ?Init@Voice@@SGXXZ
+      demangled: 'public: static void __stdcall Voice::Init(void)'
+      offset: 000077CF
+    - name: ?Init@Wave@@SGXXZ
+      demangled: 'public: static void __stdcall Wave::Init(void)'
+      offset: 0000782D
+    - name: ?Init@VoiceLFO@@SGXXZ
+      demangled: 'public: static void __stdcall VoiceLFO::Init(void)'
+      offset: 0000788F
+    - name: _sinf@4
+      demangled: ''
+      offset: 000078D3
+  - num: '6'
+    name: PAGEDATA
+    offset: '00000000'
+    symbols:
+    - name: ?DeviceCreateItems@@3PAUKSOBJECT_CREATE_ITEM@@A
+      demangled: struct KSOBJECT_CREATE_ITEM *DeviceCreateItems
+      offset: '00000000'
+    - name: ?FilterCreateHandlers@@3PAUKSOBJECT_CREATE_ITEM@@A
+      demangled: struct KSOBJECT_CREATE_ITEM *FilterCreateHandlers
+      offset: '00000018'
+    - name: _FilterDispatchTable
+      demangled: ''
+      offset: '00000030'
+    - name: ?PinInterfaces@@3PAUKSIDENTIFIER@@A
+      demangled: struct KSIDENTIFIER *PinInterfaces
+      offset: '00000058'
+    - name: ?PinMediums@@3PAUKSIDENTIFIER@@A
+      demangled: struct KSIDENTIFIER *PinMediums
+      offset: '00000088'
+    - name: ?PinMIDIFormats@@3PAUKSDATARANGE_MUSIC@@A
+      demangled: struct KSDATARANGE_MUSIC *PinMIDIFormats
+      offset: 000000A0
+    - name: ?PinDigitalAudioFormats@@3PAUKSDATARANGE_AUDIO@@A
+      demangled: struct KSDATARANGE_AUDIO *PinDigitalAudioFormats
+      offset: '00000100'
+    - name: ?PinDataFormats@@3PAPATKSDATAFORMAT@@A
+      demangled: union KSDATAFORMAT **PinDataFormats
+      offset: '00000158'
+    - name: _PinDescs
+      demangled: ''
+      offset: '00000160'
+    - name: _PinDispatchTable
+      demangled: ''
+      offset: 000001C0
+    - name: ??_C@_0CE@FOFH@?2SystemRoot?2system32?2drivers?2GM?4@
+      demangled: '"\\SystemRoot\\system32\\drivers\\GM."...'
+      offset: '00000238'
+    - name: ?m_pnDecompMult@DigitalAudio@@2PAFA
+      demangled: 'public: static short *DigitalAudio::m_pnDecompMult'
+      offset: '00000268'
+    - name: ?m_snSineTable@VoiceLFO@@0PAFA
+      demangled: 'private: static short *VoiceLFO::m_snSineTable'
+      offset: '00000270'
+    - name: ?m_snAttackTable@VoiceEG@@0PAFA
+      demangled: 'private: static short *VoiceEG::m_snAttackTable'
+      offset: '00000470'
+    - name: ?m_spfCents@DigitalAudio@@0PAJA
+      demangled: 'private: static long *DigitalAudio::m_spfCents'
+      offset: '00000608'
+    - name: ?m_spfSemiTones@DigitalAudio@@0PAJA
+      demangled: 'private: static long *DigitalAudio::m_spfSemiTones'
+      offset: '00000930'
+    - name: ?m_svfDbToVolume@DigitalAudio@@0PAJA
+      demangled: 'private: static long *DigitalAudio::m_svfDbToVolume'
+      offset: 00000AB8
+    - name: ?m_svrPanToVREL@Voice@@0PAJA
+      demangled: 'private: static long *Voice::m_svrPanToVREL'
+      offset: 00001A60
+    - name: ?m_Compress@Wave@@2PADA
+      demangled: 'public: static char *Wave::m_Compress'
+      offset: 00001C60
+    - name: ?m_vrMIDIToVREL@MIDIRecorder@@1PAJA
+      demangled: 'protected: static long *MIDIRecorder::m_vrMIDIToVREL'
+      offset: '00002460'
+    - name: ?m_sfMMXEnabled@DigitalAudio@@0HA
+      demangled: 'private: static int DigitalAudio::m_sfMMXEnabled'
+      offset: '00002660'

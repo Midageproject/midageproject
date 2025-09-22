@@ -2,6 +2,593 @@ filename: uhcd.sys
 binary: UHCD
 description: ''
 appearances:
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00000CA0
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+    - name: _UHCD_ProcessPnPIrp@8
+      processed: ''
+      offset: '00000044'
+    - name: _UHCD_Dispatch@8
+      processed: ''
+      offset: 0000013A
+    - name: _UHCD_SetDevicePowerState@12
+      processed: ''
+      offset: 0000029E
+    - name: _UHCD_PowerIrp_Complete@12
+      processed: ''
+      offset: '00000317'
+    - name: _UHCD_Unload@4
+      processed: ''
+      offset: 0000033C
+    - name: _UHCD_PnPAddDevice@8
+      processed: ''
+      offset: 0000033F
+    - name: _UHCD_QueryCapabilitiesCompletion@12
+      processed: ''
+      offset: 0000041E
+    - name: _UHCD_DeferIrpCompletion@12
+      processed: ''
+      offset: 0000044D
+    - name: _UHCD_StopDevice@4
+      processed: ''
+      offset: '00000463'
+    - name: _UHCD_CompleteGlobalReset@4
+      processed: ''
+      offset: '00000529'
+    - name: _UHCD_GetCurrentFrame@4
+      processed: ''
+      offset: '000005E1'
+    - name: _UHCD_SaveHCstate@4
+      processed: ''
+      offset: '00000619'
+    - name: _UHCD_RestoreHCstate@4
+      processed: ''
+      offset: '00000659'
+    - name: _UHCD_Resume@4
+      processed: ''
+      offset: 000006BE
+    - name: _UHCD_RootHubPower@8
+      processed: ''
+      offset: '00000748'
+    - name: _UHCD_FixPIIX4@4
+      processed: ''
+      offset: 000007B1
+    - name: _UHCD_StartBIOS@4
+      processed: ''
+      offset: '00000863'
+    - name: _UHCD_GetResources@12
+      processed: ''
+      offset: '00000917'
+    - name: _UHCD_DeferredStartDevice@8
+      processed: ''
+      offset: 00000A51
+    - name: _UHCD_UpdateFrameCounter@4
+      processed: ''
+      offset: 00000AAA
+    - name: _UHCD_DisableIdleCheck@4
+      processed: ''
+      offset: 00000B24
+    - name: _UHCD_WakeIdle@4
+      processed: ''
+      offset: 00000B4E
+    - name: _UHCD_CheckIdle@4
+      processed: ''
+      offset: 00000B7D
+    - name: _UHCD_GetSOFRegModifyValue@8
+      processed: ''
+      offset: 00000D78
+    - name: _UHCD_GetConfigValue@24
+      processed: ''
+      offset: 00000DD0
+    - name: _UHCD_GetClassGlobalRegistryParameters@4
+      processed: ''
+      offset: '00000E01'
+    - name: _UHCD_GetGlobalRegistryParameters@4
+      processed: ''
+      offset: '00000E57'
+    - name: _UHCD_InterruptService@8
+      processed: ''
+      offset: 00000EB2
+    - name: _UHCD_IsrDpc@16
+      processed: ''
+      offset: 00000FF7
+    - name: _UHCD_RequestInterrupt@8
+      processed: ''
+      offset: '00001154'
+    - name: _UHCD_CompleteIrp@20
+      processed: ''
+      offset: 000011DC
+    - name: _UHCD_URB_Dispatch@8
+      processed: ''
+      offset: 0000129D
+    - name: _UHCD_StartIo@8
+      processed: ''
+      offset: 0000168A
+    - name: _UHCD_OpenEndpoint_StartIo@8
+      processed: ''
+      offset: 000017CD
+    - name: _UHCD_CloseEndpoint_StartIo@8
+      processed: ''
+      offset: 0000193D
+    - name: _UHCD_InsertQueueHeadInSchedule@16
+      processed: ''
+      offset: 00001A06
+    - name: _UHCD_RemoveQueueHeadFromSchedule@12
+      processed: ''
+      offset: 00001B47
+    - name: _UHCD_CopyInterruptScheduleToFrameList@4
+      processed: ''
+      offset: 00001C28
+    - name: _UHCD_StartIoCancel@8
+      processed: ''
+      offset: 00001CA0
+    - name: _UHCD_GetSetEndpointState_StartIo@8
+      processed: ''
+      offset: 00001D16
+    - name: _UHCD_InitializeEndpoint@20
+      processed: ''
+      offset: 00001E0C
+    - name: _UHCD_GetNumTDsPerEndoint@8
+      processed: ''
+      offset: 00001EDE
+    - name: _UHCD_BW_Reclimation@8
+      processed: ''
+      offset: 00001F05
+    - name: _UHCD_Transfer_StartIo@8
+      processed: ''
+      offset: 00001F6F
+    - name: _UHCD_CompleteTransferDPC@12
+      processed: ''
+      offset: 000020B0
+    - name: _UHCD_StartDmaTransfer@16
+      processed: ''
+      offset: '00002331'
+    - name: _UHCD_InitializeDmaTransfer@16
+      processed: ''
+      offset: '000023E8'
+    - name: _UHCD_TransferCancel@8
+      processed: ''
+      offset: 0000247D
+    - name: _UHCD_BeginTransfer@16
+      processed: ''
+      offset: '00002585'
+    - name: _UHCD_RemoveQueuedUrbs@12
+      processed: ''
+      offset: 000025F8
+    - name: _UHCD_EndpointWorker@8
+      processed: ''
+      offset: '00002653'
+    - name: _UHCD_SelectBufferPool@8
+      processed: ''
+      offset: 0000274B
+    - name: _UHCD_FreePoolSize@8
+      processed: ''
+      offset: 0000278A
+    - name: _UHCD_InitializeHardwareQueueHeadDescriptor@12
+      processed: ''
+      offset: 000027AF
+    - name: _UHCD_InitializeHardwareTransferDescriptor@12
+      processed: ''
+      offset: 000027DF
+    - name: _UHCD_AllocateHardwareDescriptors@12
+      processed: ''
+      offset: 000027FF
+    - name: _UHCD_FreeHardwareDescriptors@8
+      processed: ''
+      offset: 000028B2
+    - name: _UHCD_DoAllocateCommonBuffer@8
+      processed: ''
+      offset: 000028CE
+    - name: _UHCD_AllocateCommonBuffer@8
+      processed: ''
+      offset: 000028F9
+    - name: _UHCD_FreeCommonBuffer@8
+      processed: ''
+      offset: '00002944'
+    - name: _UHCD_AllocateCommonBufferBlock@12
+      processed: ''
+      offset: '00002960'
+    - name: _UHCD_CheckCommonBufferPool@12
+      processed: ''
+      offset: 00002A4D
+    - name: _UHCD_MoreCommonBuffers@4
+      processed: ''
+      offset: 00002A8E
+    - name: _UHCD_GrowBufferPool@24
+      processed: ''
+      offset: 00002B97
+    - name: _UHCD_GrowPoolWorker@4
+      processed: ''
+      offset: 00002BF3
+    - name: _UHCD_PrepareStatusPacket@12
+      processed: ''
+      offset: 00002C32
+    - name: _UHCD_PrepareSetupPacket@12
+      processed: ''
+      offset: 00002C83
+    - name: _UHCD_MapTDError@12
+      processed: ''
+      offset: 00002CDF
+    - name: _UHCD_InitializeAsyncTD@8
+      processed: ''
+      offset: 00002D9E
+    - name: _UHCD_QueueBusy@12
+      processed: ''
+      offset: 00002DD6
+    - name: _UHCD_PrepareAsyncDataPacket@24
+      processed: ''
+      offset: 00002EB5
+    - name: _UHCD_InitializeAsyncTransfer@12
+      processed: ''
+      offset: 00002FDD
+    - name: _UHCD_ProcessAsyncTransfer@16
+      processed: ''
+      offset: 0000321B
+    - name: _UHCD_PrepareMoreAsyncTDs@16
+      processed: ''
+      offset: '00003594'
+    - name: _UHCD_GetPacketBuffer@24
+      processed: ''
+      offset: '00003756'
+    - name: _UHCD_RootHub_OpenEndpoint@12
+      processed: ''
+      offset: '00003802'
+    - name: _UHCD_RootHub_CloseEndpoint@12
+      processed: ''
+      offset: 000038C2
+    - name: _UHCD_RootHub_ControlTransfer@12
+      processed: ''
+      offset: '00003927'
+    - name: _UHCD_RootHub_InterruptTransfer@12
+      processed: ''
+      offset: 00003A05
+    - name: _UHCD_RootHubPoll@8
+      processed: ''
+      offset: 00003AAE
+    - name: _UHCD_RootHub_ReadPort@4
+      processed: ''
+      offset: 00003BCC
+    - name: _UHCD_RootHub_Timer@16
+      processed: ''
+      offset: 00003BEB
+    - name: _UHCD_RootHubTimerDpc@16
+      processed: ''
+      offset: 00003C5F
+    - name: _UHCD_RootHub_WritePort@8
+      processed: ''
+      offset: 00003C83
+    - name: _UHCD_RootHub_InterruptTransferCancel@8
+      processed: ''
+      offset: 00003CAB
+    - name: _UHCD_RootHubPollDpc@16
+      processed: ''
+      offset: 00003CDD
+    - name: _RootHub_ResetTimerHandler@4
+      processed: ''
+      offset: 00003D19
+    - name: _RootHub_SuspendTimerHandler@4
+      processed: ''
+      offset: 00003D66
+    - name: _RootHub_Initialize@12
+      processed: ''
+      offset: 00003D84
+    - name: _RootHub_Endpoint0@20
+      processed: ''
+      offset: 00003DED
+    - name: _RootHub_StandardCommand@20
+      processed: ''
+      offset: 00003E2B
+    - name: _RootHub_ClassCommand@16
+      processed: ''
+      offset: 00003FA0
+    - name: _RootHub_Endpoint1@16
+      processed: ''
+      offset: '00004329'
+    - name: _RootHub_PortsIdle@4
+      processed: ''
+      offset: 000043BE
+    - name: _UHCD_SyncInsertIsochDescriptor@4
+      processed: ''
+      offset: 000043F4
+    - name: _UHCD_InsertIsochDescriptor@12
+      processed: ''
+      offset: '00004432'
+    - name: _UHCD_InitializeIsochTransfer@12
+      processed: ''
+      offset: '00004483'
+    - name: _UHCD_ScheduleIsochTransfer@12
+      processed: ''
+      offset: '000044E6'
+    - name: _UHCD_ProcessIsochTransfer@16
+      processed: ''
+      offset: '00004694'
+    - name: _UHCD_InitBandwidthTable@4
+      processed: ''
+      offset: '00004843'
+    - name: _UHCD_ManageBandwidth@16
+      processed: ''
+      offset: 0000485F
+    - name: _USBD_GetPdoRegistryParameter@20
+      processed: ''
+      offset: '00004904'
+  - num: '2'
+    name: .data
+    offset: 00000F70
+    symbols:
+    - name: 
+        ??_C@_1DA@EMCA@?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAS?$AAe?$AAl?$AAe?$AAc?$AAt?$AAi?$AAv?$AAe?$AAS?$AAu?$AAs?$AAp@
+      processed: L"DisableSelectiveSusp"
+      offset: '00000000'
+    - name: 
+        ??_C@_1DE@EOKK@?$AAr?$AAe?$AAc?$AAo?$AAm?$AAm?$AAe?$AAn?$AAd?$AAe?$AAd?$AAC?$AAl?$AAo?$AAc?$AAk?$AAs?$AAP?$AAe?$AAr@
+      processed: L"recommendedClocksPer"
+      offset: '00000030'
+    - name: 
+        ??_C@_1CG@IPGH@?$AAF?$AAo?$AAr?$AAc?$AAe?$AAL?$AAo?$AAw?$AAP?$AAo?$AAw?$AAe?$AAr?$AAS?$AAt?$AAa?$AAt?$AAe?$AA?$AA@
+      processed: L"ForceLowPowerState"
+      offset: '00000064'
+    - name: ??_C@_1BE@FLHC@?$AAc?$AAl?$AAa?$AAs?$AAs?$AA?2?$AAu?$AAs?$AAb?$AA?$AA@
+      processed: L"class\\usb"
+      offset: 0000008C
+    - name: 
+        ??_C@_1BO@OODP@?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAP?$AAI?$AAI?$AAX?$AAU?$AAs?$AAb?$AA?$AA@
+      processed: L"DisablePIIXUsb"
+      offset: 000000A0
+    - name: ??_C@_17IGND@?$AAu?$AAs?$AAb?$AA?$AA@
+      processed: L"usb"
+      offset: 000000C0
+    - name: _TransferDispatchTable
+      processed: ''
+      offset: 000000C8
+    - name: _RH_DeviceDescriptor
+      processed: ''
+      offset: '000000E8'
+    - name: _RH_ConfigurationDescriptor
+      processed: ''
+      offset: '00000100'
+    - name: _RH_HubDescriptor
+      processed: ''
+      offset: '00000120'
+  - num: '3'
+    name: .idata$2
+    offset: 000017C0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_USBD
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __imp__READ_PORT_ULONG@4
+      processed: ''
+      offset: '00000144'
+    - name: __imp__READ_PORT_UCHAR@4
+      processed: ''
+      offset: '00000148'
+    - name: __imp__WRITE_PORT_USHORT@8
+      processed: ''
+      offset: 0000014C
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: '00000150'
+    - name: __imp_@KfRaiseIrql@4
+      processed: ''
+      offset: '00000154'
+    - name: __imp_@KfLowerIrql@4
+      processed: ''
+      offset: '00000158'
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: 0000015C
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: '00000160'
+    - name: __imp__WRITE_PORT_ULONG@8
+      processed: ''
+      offset: '00000164'
+    - name: __imp__READ_PORT_USHORT@4
+      processed: ''
+      offset: '00000168'
+    - name: __imp__WRITE_PORT_UCHAR@8
+      processed: ''
+      offset: 0000016C
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000170'
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: '00000174'
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '00000178'
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: 0000017C
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: '00000180'
+    - name: __imp__IoDetachDevice@4
+      processed: ''
+      offset: '00000184'
+    - name: __imp__IoFreeIrp@4
+      processed: ''
+      offset: '00000188'
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: 0000018C
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '00000190'
+    - name: __imp__IoAllocateIrp@8
+      processed: ''
+      offset: '00000194'
+    - name: __imp__IoDisconnectInterrupt@4
+      processed: ''
+      offset: '00000198'
+    - name: __imp__KeQuerySystemTime@4
+      processed: ''
+      offset: 0000019C
+    - name: __imp__RtlFreeUnicodeString@4
+      processed: ''
+      offset: 000001A0
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: 000001A4
+    - name: __imp__KeDelayExecutionThread@12
+      processed: ''
+      offset: 000001A8
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: 000001AC
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: 000001B0
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 000001B4
+    - name: __imp__KeSetTimer@16
+      processed: ''
+      offset: 000001B8
+    - name: __imp__KeInsertQueueDpc@12
+      processed: ''
+      offset: 000001BC
+    - name: __imp__MmMapIoSpace@16
+      processed: ''
+      offset: 000001C0
+    - name: __imp__IoConnectInterrupt@44
+      processed: ''
+      offset: 000001C4
+    - name: __imp__KeInitializeDpc@12
+      processed: ''
+      offset: 000001C8
+    - name: __imp__IoGetDmaAdapter@12
+      processed: ''
+      offset: 000001CC
+    - name: __imp__IoAcquireCancelSpinLock@4
+      processed: ''
+      offset: 000001D0
+    - name: __imp_@InterlockedExchange@8
+      processed: ''
+      offset: 000001D4
+    - name: __imp__KeCancelTimer@4
+      processed: ''
+      offset: 000001D8
+    - name: __imp__KeInitializeTimer@4
+      processed: ''
+      offset: 000001DC
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      processed: ''
+      offset: '000001E0'
+    - name: __imp__KeSynchronizeExecution@12
+      processed: ''
+      offset: '000001E4'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      processed: ''
+      offset: '000001E8'
+    - name: __imp__RtlQueryRegistryValues@20
+      processed: ''
+      offset: 000001EC
+    - name: __imp__IoStartNextPacket@8
+      processed: ''
+      offset: 000001F0
+    - name: __imp__IoReleaseCancelSpinLock@4
+      processed: ''
+      offset: 000001F4
+    - name: __imp__ExQueueWorkItem@8
+      processed: ''
+      offset: 000001F8
+    - name: __imp__KeSetTimerEx@20
+      processed: ''
+      offset: 000001FC
+    - name: __imp__IoStartPacket@16
+      processed: ''
+      offset: '00000200'
+    - name: __imp_@ExfInterlockedPopEntryList@8
+      processed: ''
+      offset: '00000204'
+    - name: __imp__MmMapLockedPages@8
+      processed: ''
+      offset: '00000208'
+    - name: __imp_@ExfInterlockedPushEntryList@12
+      processed: ''
+      offset: 0000020C
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000210'
+    - name: __imp__USBD_AllocateDeviceName@4
+      processed: ''
+      offset: '00000214'
+    - name: __imp__USBD_GetPdoRegistryParameter@20
+      processed: ''
+      offset: '00000218'
+    - name: __imp__USBD_RegisterHcDeviceCapabilities@12
+      processed: ''
+      offset: 0000021C
+    - name: __imp__USBD_CompleteRequest@8
+      processed: ''
+      offset: '00000220'
+    - name: __imp__USBD_CalculateUsbBandwidth@12
+      processed: ''
+      offset: '00000224'
+    - name: __imp__USBD_FreeDeviceName@4
+      processed: ''
+      offset: '00000228'
+    - name: __imp__USBD_RegisterHostController@28
+      processed: ''
+      offset: 0000022C
+    - name: __imp__USBD_Dispatch@16
+      processed: ''
+      offset: '00000230'
+    - name: \177USBD_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000234'
+  - num: '4'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _UHCD_CreateDeviceObject@12
+      processed: ''
+      offset: '00000000'
+    - name: _UHCD_ReadWriteConfig@20
+      processed: ''
+      offset: 0000003A
+    - name: _UHCD_QueryCapabilities@8
+      processed: ''
+      offset: 000000EF
+    - name: _UHCD_CleanupDevice@4
+      processed: ''
+      offset: 0000017C
+    - name: _UHCD_InitializeSchedule@4
+      processed: ''
+      offset: '00000280'
+    - name: _UHCD_StartGlobalReset@4
+      processed: ''
+      offset: '00000500'
+    - name: _UHCD_Suspend@8
+      processed: ''
+      offset: 0000051A
+    - name: _UHCD_StopBIOS@4
+      processed: ''
+      offset: 000005C9
+    - name: _UHCD_StartDevice@8
+      processed: ''
+      offset: '00000734'
+    - name: _UHCD_InitializeCommonBufferPool@16
+      processed: ''
+      offset: 000009F1
 - version: Windows 98 Debug
   source_tree:
   - ../async.c
@@ -23,1425 +610,852 @@ appearances:
     offset: '00004850'
     symbols:
     - name: _DriverEntry@8
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: _UHCD_ProcessPnPIrp@8
-      processed: ''
+      demangled: ''
       offset: 000000D0
     - name: _UHCD_Dispatch@8
-      processed: ''
+      demangled: ''
       offset: '00000440'
     - name: _UHCD_SetDevicePowerState@12
-      processed: ''
+      demangled: ''
       offset: 000007D0
     - name: _UHCD_PowerIrp_Complete@12
-      processed: ''
+      demangled: ''
       offset: 00000A60
     - name: _UHCD_Unload@4
-      processed: ''
+      demangled: ''
       offset: 00000BE0
     - name: _UHCD_PnPAddDevice@8
-      processed: ''
+      demangled: ''
       offset: 00000C00
     - name: _UHCD_QueryCapabilitiesCompletion@12
-      processed: ''
+      demangled: ''
       offset: 00000DA0
     - name: _UHCD_DeferIrpCompletion@12
-      processed: ''
+      demangled: ''
       offset: '00000E90'
     - name: _UHCD_StopDevice@4
-      processed: ''
+      demangled: ''
       offset: 00000EC0
     - name: _UHCD_CompleteGlobalReset@4
-      processed: ''
+      demangled: ''
       offset: '00001060'
     - name: _UHCD_GetCurrentFrame@4
-      processed: ''
+      demangled: ''
       offset: '00001350'
     - name: _UHCD_SaveHCstate@4
-      processed: ''
+      demangled: ''
       offset: 000013B0
     - name: _UHCD_RestoreHCstate@4
-      processed: ''
+      demangled: ''
       offset: '00001430'
     - name: _UHCD_Resume@4
-      processed: ''
+      demangled: ''
       offset: '000014E0'
     - name: _UHCD_RootHubPower@8
-      processed: ''
+      demangled: ''
       offset: '00001740'
     - name: _UHCD_FixPIIX4@4
-      processed: ''
+      demangled: ''
       offset: '00001840'
     - name: _UHCD_StartBIOS@4
-      processed: ''
+      demangled: ''
       offset: 00001A00
     - name: _UHCD_GetResources@12
-      processed: ''
+      demangled: ''
       offset: 00001B20
     - name: _UHCD_DeferredStartDevice@8
-      processed: ''
+      demangled: ''
       offset: 00001EB0
     - name: _UHCD_UpdateFrameCounter@4
-      processed: ''
+      demangled: ''
       offset: 00001FA0
     - name: _UHCD_DisableIdleCheck@4
-      processed: ''
+      demangled: ''
       offset: '00002070'
     - name: _UHCD_WakeIdle@4
-      processed: ''
+      demangled: ''
       offset: 000020C0
     - name: _UHCD_CheckIdle@4
-      processed: ''
+      demangled: ''
       offset: '00002120'
     - name: _UHCD_GetSOFRegModifyValue@8
-      processed: ''
+      demangled: ''
       offset: '00002550'
     - name: _UHCD_GetConfigValue@24
-      processed: ''
+      demangled: ''
       offset: '00002660'
     - name: _UHCD_GetClassGlobalRegistryParameters@4
-      processed: ''
+      demangled: ''
       offset: 000026C0
     - name: _UHCD_GetGlobalRegistryParameters@4
-      processed: ''
+      demangled: ''
       offset: 000027B0
     - name: _UHCD_InterruptService@8
-      processed: ''
+      demangled: ''
       offset: 000028A0
     - name: _UHCD_IsrDpc@16
-      processed: ''
+      demangled: ''
       offset: 00002BA0
     - name: _UHCD_RequestInterrupt@8
-      processed: ''
+      demangled: ''
       offset: '00002E80'
     - name: _UHCD_CompleteIrp@20
-      processed: ''
+      demangled: ''
       offset: 00002FE0
     - name: _UHCD_URB_Dispatch@8
-      processed: ''
+      demangled: ''
       offset: '000031E0'
     - name: _UHCD_StartIo@8
-      processed: ''
+      demangled: ''
       offset: 00003B40
     - name: _UHCD_OpenEndpoint_StartIo@8
-      processed: ''
+      demangled: ''
       offset: '00003E10'
     - name: _UHCD_CloseEndpoint_StartIo@8
-      processed: ''
+      demangled: ''
       offset: '00004230'
     - name: _UHCD_InsertQueueHeadInSchedule@16
-      processed: ''
+      demangled: ''
       offset: '00004410'
     - name: _UHCD_RemoveQueueHeadFromSchedule@12
-      processed: ''
+      demangled: ''
       offset: '00004910'
     - name: _UHCD_CopyInterruptScheduleToFrameList@4
-      processed: ''
+      demangled: ''
       offset: 00004B90
     - name: _UHCD_StartIoCancel@8
-      processed: ''
+      demangled: ''
       offset: 00004C60
     - name: _UHCD_GetSetEndpointState_StartIo@8
-      processed: ''
+      demangled: ''
       offset: 00004D40
     - name: _UHCD_InitializeEndpoint@20
-      processed: ''
+      demangled: ''
       offset: '00005020'
     - name: _UHCD_GetNumTDsPerEndoint@8
-      processed: ''
+      demangled: ''
       offset: '00005270'
     - name: _UHCD_BW_Reclimation@8
-      processed: ''
+      demangled: ''
       offset: 000052B0
     - name: _UHCD_KdPrintX
-      processed: ''
+      demangled: ''
       offset: '00005410'
     - name: _UHCD_Debug_DumpTD@4
-      processed: ''
+      demangled: ''
       offset: 000054A0
     - name: _UHCD_Assert@16
-      processed: ''
+      demangled: ''
       offset: '00005690'
     - name: _UHCD_CheckSystemBuffer@8
-      processed: ''
+      demangled: ''
       offset: 000056D0
     - name: _UHCD_Debug_GetHeap@16
-      processed: ''
+      demangled: ''
       offset: '00005730'
     - name: _UHCD_Debug_RetHeap@12
-      processed: ''
+      demangled: ''
       offset: '00005760'
     - name: _UHCD_PrintPowerMessage@8
-      processed: ''
+      demangled: ''
       offset: '00005780'
     - name: _UHCD_PrintPnPMessage@8
-      processed: ''
+      demangled: ''
       offset: 000057F0
     - name: _UHCD_Debug_LogEntry@20
-      processed: ''
+      demangled: ''
       offset: 000058C0
     - name: _UHCD_LogInit@0
-      processed: ''
+      demangled: ''
       offset: 000059D0
     - name: _UHCD_LogTD@8
-      processed: ''
+      demangled: ''
       offset: 00005A40
     - name: _UHCD_Transfer_StartIo@8
-      processed: ''
+      demangled: ''
       offset: 00005AA0
     - name: _UHCD_CompleteTransferDPC@12
-      processed: ''
+      demangled: ''
       offset: '00005E20'
     - name: _UHCD_StartDmaTransfer@16
-      processed: ''
+      demangled: ''
       offset: 000064D0
     - name: _UHCD_InitializeDmaTransfer@16
-      processed: ''
+      demangled: ''
       offset: '00006720'
     - name: _UHCD_TransferCancel@8
-      processed: ''
+      demangled: ''
       offset: 000068D0
     - name: _UHCD_BeginTransfer@16
-      processed: ''
+      demangled: ''
       offset: 00006B60
     - name: _UHCD_RemoveQueuedUrbs@12
-      processed: ''
+      demangled: ''
       offset: 00006D50
     - name: _UHCD_EndpointWorker@8
-      processed: ''
+      demangled: ''
       offset: 00006EE0
     - name: _UHCD_LockAccess@4
-      processed: ''
+      demangled: ''
       offset: '00007140'
     - name: _UHCD_UnLockAccess@4
-      processed: ''
+      demangled: ''
       offset: '00007180'
     - name: _UHCD_SelectBufferPool@8
-      processed: ''
+      demangled: ''
       offset: 000071C0
     - name: _UHCD_FreePoolSize@8
-      processed: ''
+      demangled: ''
       offset: '00007260'
     - name: _UHCD_InitializeHardwareQueueHeadDescriptor@12
-      processed: ''
+      demangled: ''
       offset: 000072C0
     - name: _UHCD_InitializeHardwareTransferDescriptor@12
-      processed: ''
+      demangled: ''
       offset: '00007340'
     - name: _UHCD_AllocateHardwareDescriptors@12
-      processed: ''
+      demangled: ''
       offset: '00007390'
     - name: _UHCD_FreeHardwareDescriptors@8
-      processed: ''
+      demangled: ''
       offset: 000075A0
     - name: _UHCD_DoAllocateCommonBuffer@8
-      processed: ''
+      demangled: ''
       offset: '00007610'
     - name: _UHCD_AllocateCommonBuffer@8
-      processed: ''
+      demangled: ''
       offset: '000076E0'
     - name: _UHCD_FreeCommonBuffer@8
-      processed: ''
+      demangled: ''
       offset: 000077A0
     - name: _UHCD_AllocateCommonBufferBlock@12
-      processed: ''
+      demangled: ''
       offset: '00007870'
     - name: _UHCD_FreeCommonBufferBlocks@4
-      processed: ''
+      demangled: ''
       offset: 00007B80
     - name: _UHCD_CheckCommonBufferPool@12
-      processed: ''
+      demangled: ''
       offset: 00007BB0
     - name: _UHCD_MoreCommonBuffers@4
-      processed: ''
+      demangled: ''
       offset: 00007C40
     - name: _UHCD_GrowBufferPool@24
-      processed: ''
+      demangled: ''
       offset: 00007DF0
     - name: _UHCD_GrowPoolWorker@4
-      processed: ''
+      demangled: ''
       offset: 00007F80
     - name: _UHCD_PrepareStatusPacket@12
-      processed: ''
+      demangled: ''
       offset: '00008010'
     - name: _UHCD_PrepareSetupPacket@12
-      processed: ''
+      demangled: ''
       offset: '00008120'
     - name: _UHCD_MapTDError@12
-      processed: ''
+      demangled: ''
       offset: '00008230'
     - name: _UHCD_InitializeAsyncTD@8
-      processed: ''
+      demangled: ''
       offset: 000083D0
     - name: _UHCD_QueueBusy@12
-      processed: ''
+      demangled: ''
       offset: 000084A0
     - name: _UHCD_PrepareAsyncDataPacket@24
-      processed: ''
+      demangled: ''
       offset: 000087F0
     - name: _UHCD_InitializeAsyncTransfer@12
-      processed: ''
+      demangled: ''
       offset: 00008B00
     - name: _UHCD_ProcessAsyncTransfer@16
-      processed: ''
+      demangled: ''
       offset: 000090D0
     - name: _UHCD_PrepareMoreAsyncTDs@16
-      processed: ''
+      demangled: ''
       offset: 00009A00
     - name: _UHCD_GetPacketBuffer@24
-      processed: ''
+      demangled: ''
       offset: '00009E40'
     - name: _UHCD_RootHub_OpenEndpoint@12
-      processed: ''
+      demangled: ''
       offset: 0000A0B0
     - name: _UHCD_RootHub_CloseEndpoint@12
-      processed: ''
+      demangled: ''
       offset: 0000A270
     - name: _UHCD_RootHub_ControlTransfer@12
-      processed: ''
+      demangled: ''
       offset: 0000A360
     - name: _UHCD_RootHub_InterruptTransfer@12
-      processed: ''
+      demangled: ''
       offset: 0000A580
     - name: _UHCD_RootHubPoll@8
-      processed: ''
+      demangled: ''
       offset: 0000A740
     - name: _UHCD_RootHub_ReadPort@4
-      processed: ''
+      demangled: ''
       offset: 0000A9D0
     - name: _UHCD_RootHub_Timer@16
-      processed: ''
+      demangled: ''
       offset: 0000AA10
     - name: _UHCD_RootHubTimerDpc@16
-      processed: ''
+      demangled: ''
       offset: 0000AB00
     - name: _UHCD_RootHub_WritePort@8
-      processed: ''
+      demangled: ''
       offset: 0000AB90
     - name: _UHCD_RootHub_InterruptTransferCancel@8
-      processed: ''
+      demangled: ''
       offset: 0000ABE0
     - name: _UHCD_RootHubPollDpc@16
-      processed: ''
+      demangled: ''
       offset: 0000AC70
     - name: _RootHub_ResetTimerHandler@4
-      processed: ''
+      demangled: ''
       offset: 0000AD20
     - name: _RootHub_SuspendTimerHandler@4
-      processed: ''
+      demangled: ''
       offset: 0000ADE0
     - name: _RootHub_Initialize@12
-      processed: ''
+      demangled: ''
       offset: 0000AE50
     - name: _RootHub_Endpoint0@20
-      processed: ''
+      demangled: ''
       offset: 0000AF60
     - name: _RootHub_StandardCommand@20
-      processed: ''
+      demangled: ''
       offset: 0000B020
     - name: _RootHub_ClassCommand@16
-      processed: ''
+      demangled: ''
       offset: 0000B3C0
     - name: _RootHub_Endpoint1@16
-      processed: ''
+      demangled: ''
       offset: 0000BDC0
     - name: _RootHub_PortsIdle@4
-      processed: ''
+      demangled: ''
       offset: 0000BF60
     - name: _UHCD_SyncInsertIsochDescriptor@4
-      processed: ''
+      demangled: ''
       offset: 0000BFD0
     - name: _UHCD_InsertIsochDescriptor@12
-      processed: ''
+      demangled: ''
       offset: 0000C090
     - name: _UHCD_InitializeIsochTransfer@12
-      processed: ''
+      demangled: ''
       offset: 0000C130
     - name: _UHCD_ScheduleIsochTransfer@12
-      processed: ''
+      demangled: ''
       offset: 0000C2A0
     - name: _UHCD_ProcessIsochTransfer@16
-      processed: ''
+      demangled: ''
       offset: 0000C700
     - name: _UHCD_InitBandwidthTable@4
-      processed: ''
+      demangled: ''
       offset: 0000CB60
     - name: _UHCD_ManageBandwidth@16
-      processed: ''
+      demangled: ''
       offset: 0000CBA0
     - name: _USBD_FreeDeviceName@4
-      processed: ''
+      demangled: ''
       offset: 0000CD8E
     - name: _USBD_Dispatch@16
-      processed: ''
+      demangled: ''
       offset: 0000CD94
     - name: _USBD_RegisterHostController@28
-      processed: ''
+      demangled: ''
       offset: 0000CD9A
     - name: _USBD_AllocateDeviceName@4
-      processed: ''
+      demangled: ''
       offset: 0000CDA0
     - name: _USBD_GetPdoRegistryParameter@20
-      processed: ''
+      demangled: ''
       offset: 0000CDA6
     - name: _USBD_RegisterHcDeviceCapabilities@12
-      processed: ''
+      demangled: ''
       offset: 0000CDAC
     - name: _USBD_CompleteRequest@8
-      processed: ''
+      demangled: ''
       offset: 0000CDB2
     - name: _USBD_CalculateUsbBandwidth@12
-      processed: ''
+      demangled: ''
       offset: 0000CDB8
     - name: _RtlAssert@16
-      processed: ''
+      demangled: ''
       offset: 0000CDBE
     - name: _IoDeleteDevice@4
-      processed: ''
+      demangled: ''
       offset: 0000CDC4
     - name: _IoDetachDevice@4
-      processed: ''
+      demangled: ''
       offset: 0000CDCA
     - name: '@IofCallDriver@8'
-      processed: ''
+      demangled: ''
       offset: 0000CDD0
     - name: _DbgPrint
-      processed: ''
+      demangled: ''
       offset: 0000CDD6
     - name: _KeQuerySystemTime@4
-      processed: ''
+      demangled: ''
       offset: 0000CDDC
     - name: _IoCreateDevice@28
-      processed: ''
+      demangled: ''
       offset: 0000CDE2
     - name: _KeGetCurrentIrql@0
-      processed: ''
+      demangled: ''
       offset: 0000CDE8
     - name: _RtlFreeUnicodeString@4
-      processed: ''
+      demangled: ''
       offset: 0000CDEE
     - name: _IoAttachDeviceToDeviceStack@8
-      processed: ''
+      demangled: ''
       offset: 0000CDF4
     - name: _KeSetEvent@12
-      processed: ''
+      demangled: ''
       offset: 0000CDFA
     - name: _IoFreeIrp@4
-      processed: ''
+      demangled: ''
       offset: 0000CE00
     - name: _KeWaitForSingleObject@20
-      processed: ''
+      demangled: ''
       offset: 0000CE06
     - name: _KeInitializeEvent@12
-      processed: ''
+      demangled: ''
       offset: 0000CE0C
     - name: _IoAllocateIrp@8
-      processed: ''
+      demangled: ''
       offset: 0000CE12
     - name: _IoDisconnectInterrupt@4
-      processed: ''
+      demangled: ''
       offset: 0000CE18
     - name: _READ_PORT_USHORT@4
-      processed: ''
+      demangled: ''
       offset: 0000CE1E
     - name: _WRITE_PORT_USHORT@8
-      processed: ''
+      demangled: ''
       offset: 0000CE24
     - name: _KeDelayExecutionThread@12
-      processed: ''
+      demangled: ''
       offset: 0000CE2A
     - name: _KeInitializeSpinLock@4
-      processed: ''
+      demangled: ''
       offset: 0000CE30
     - name: _READ_PORT_ULONG@4
-      processed: ''
+      demangled: ''
       offset: 0000CE36
     - name: _WRITE_PORT_UCHAR@8
-      processed: ''
+      demangled: ''
       offset: 0000CE3C
     - name: _WRITE_PORT_ULONG@8
-      processed: ''
+      demangled: ''
       offset: 0000CE42
     - name: _READ_PORT_UCHAR@4
-      processed: ''
+      demangled: ''
       offset: 0000CE48
     - name: _MmMapIoSpace@16
-      processed: ''
+      demangled: ''
       offset: 0000CE4E
     - name: _IoConnectInterrupt@44
-      processed: ''
+      demangled: ''
       offset: 0000CE54
     - name: _KeInitializeDpc@12
-      processed: ''
+      demangled: ''
       offset: 0000CE5A
     - name: _IoGetDmaAdapter@12
-      processed: ''
+      demangled: ''
       offset: 0000CE60
     - name: '@KfReleaseSpinLock@8'
-      processed: ''
+      demangled: ''
       offset: 0000CE66
     - name: '@KfAcquireSpinLock@4'
-      processed: ''
+      demangled: ''
       offset: 0000CE6C
     - name: '@KfLowerIrql@4'
-      processed: ''
+      demangled: ''
       offset: 0000CE72
     - name: '@KfRaiseIrql@4'
-      processed: ''
+      demangled: ''
       offset: 0000CE78
     - name: '@KefReleaseSpinLockFromDpcLevel@4'
-      processed: ''
+      demangled: ''
       offset: 0000CE7E
     - name: _KeSynchronizeExecution@12
-      processed: ''
+      demangled: ''
       offset: 0000CE84
     - name: '@KefAcquireSpinLockAtDpcLevel@4'
-      processed: ''
+      demangled: ''
       offset: 0000CE8A
     - name: _RtlQueryRegistryValues@20
-      processed: ''
+      demangled: ''
       offset: 0000CE90
     - name: _KeInsertQueueDpc@12
-      processed: ''
+      demangled: ''
       offset: 0000CE96
     - name: _IoReleaseCancelSpinLock@4
-      processed: ''
+      demangled: ''
       offset: 0000CE9C
     - name: '@InterlockedExchange@8'
-      processed: ''
+      demangled: ''
       offset: 0000CEA2
     - name: _IoAcquireCancelSpinLock@4
-      processed: ''
+      demangled: ''
       offset: 0000CEA8
     - name: _IoStartPacket@16
-      processed: ''
+      demangled: ''
       offset: 0000CEAE
     - name: _IoStartNextPacket@8
-      processed: ''
+      demangled: ''
       offset: 0000CEB4
     - name: _ExAllocatePoolWithTag@12
-      processed: ''
+      demangled: ''
       offset: 0000CEBA
     - name: _ExFreePool@4
-      processed: ''
+      demangled: ''
       offset: 0000CEC0
     - name: _MmMapLockedPages@8
-      processed: ''
+      demangled: ''
       offset: 0000CEC6
     - name: '@ExfInterlockedPopEntryList@8'
-      processed: ''
+      demangled: ''
       offset: 0000CECC
     - name: '@ExfInterlockedPushEntryList@12'
-      processed: ''
+      demangled: ''
       offset: 0000CED2
     - name: _ExQueueWorkItem@8
-      processed: ''
+      demangled: ''
       offset: 0000CED8
     - name: _KeSetTimerEx@20
-      processed: ''
+      demangled: ''
       offset: 0000CEDE
     - name: _KeInitializeTimer@4
-      processed: ''
+      demangled: ''
       offset: 0000CEE4
     - name: _KeCancelTimer@4
-      processed: ''
+      demangled: ''
       offset: 0000CEEA
     - name: _KeSetTimer@16
-      processed: ''
+      demangled: ''
       offset: 0000CEF0
   - num: '3'
     name: .data
     offset: 00004B30
     symbols:
     - name: ??_C@_0BJ@FPNP@freeCommonBuffer?5?$CB?$DN?5NULL?$AA@
-      processed: '"freeCommonBuffer != NULL"'
+      demangled: '"freeCommonBuffer != NULL"'
       offset: 00000BCC
     - name: ??_C@_0CD@PJBI@?4?4?2?4?4?2?4?4?2?4?4?2?4?4?2wdm10?2ddk?2inc?2wdm@
-      processed: '"..\\..\\..\\..\\..\\wdm10\\ddk\\inc\\wdm"...'
+      demangled: '"..\\..\\..\\..\\..\\wdm10\\ddk\\inc\\wdm"...'
       offset: 00000BE8
     - name: ??_C@_0BN@IHIP@allocateCommonBuffer?5?$CB?$DN?5NULL?$AA@
-      processed: '"allocateCommonBuffer != NULL"'
+      demangled: '"allocateCommonBuffer != NULL"'
       offset: 00000D74
     - name: _UHCD_Debug_Trace_Level
-      processed: ''
+      demangled: ''
       offset: 000029F8
     - name: _LogMask
-      processed: ''
+      demangled: ''
       offset: 000029FC
     - name: _TransferDispatchTable
-      processed: ''
+      demangled: ''
       offset: 00002D38
     - name: ??_C@_0BJ@BLDF@freeMapRegisters?5?$CB?$DN?5NULL?$AA@
-      processed: '"freeMapRegisters != NULL"'
+      demangled: '"freeMapRegisters != NULL"'
       offset: '00003038'
     - name: ??_C@_0BM@MGEC@flushAdapterBuffers?5?$CB?$DN?5NULL?$AA@
-      processed: '"flushAdapterBuffers != NULL"'
+      demangled: '"flushAdapterBuffers != NULL"'
       offset: '00003054'
     - name: ??_C@_0BE@CIAH@mapTransfer?5?$CB?$DN?5NULL?$AA@
-      processed: '"mapTransfer != NULL"'
+      demangled: '"mapTransfer != NULL"'
       offset: '00003214'
     - name: ??_C@_0BP@OCPD@allocateAdapterChannel?5?$CB?$DN?5NULL?$AA@
-      processed: '"allocateAdapterChannel != NULL"'
+      demangled: '"allocateAdapterChannel != NULL"'
       offset: 000032A8
     - name: _RH_DeviceDescriptor
-      processed: ''
+      demangled: ''
       offset: 00004A58
     - name: _RH_ConfigurationDescriptor
-      processed: ''
+      demangled: ''
       offset: 00004A70
     - name: _RH_HubDescriptor
-      processed: ''
+      demangled: ''
       offset: 00004A90
     - name: _TrapOn
-      processed: ''
+      demangled: ''
       offset: '00005150'
     - name: _UHCD_TotalAllocatedHeapSpace
-      processed: ''
+      demangled: ''
       offset: '00005154'
     - name: _HcdLStart
-      processed: ''
+      demangled: ''
       offset: '00005158'
     - name: _UHCD_CommonBufferBytes
-      processed: ''
+      demangled: ''
       offset: 0000515C
     - name: _LogSpinLock
-      processed: ''
+      demangled: ''
       offset: '00005160'
     - name: _HcdLEnd
-      processed: ''
+      demangled: ''
       offset: '00005164'
     - name: _HcdLPtr
-      processed: ''
+      demangled: ''
       offset: '00005168'
   - num: '4'
     name: .idata$2
     offset: 000053B0
     symbols:
     - name: __IMPORT_DESCRIPTOR_USBD
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: __IMPORT_DESCRIPTOR_NTOSKRNL
-      processed: ''
+      demangled: ''
       offset: '00000014'
     - name: __IMPORT_DESCRIPTOR_HAL
-      processed: ''
+      demangled: ''
       offset: '00000028'
     - name: __NULL_IMPORT_DESCRIPTOR
-      processed: ''
+      demangled: ''
       offset: 0000003C
     - name: __imp__WRITE_PORT_ULONG@8
-      processed: ''
+      demangled: ''
       offset: 0000014C
     - name: __imp__READ_PORT_UCHAR@4
-      processed: ''
+      demangled: ''
       offset: '00000150'
     - name: __imp__WRITE_PORT_UCHAR@8
-      processed: ''
+      demangled: ''
       offset: '00000154'
     - name: __imp_@KfRaiseIrql@4
-      processed: ''
+      demangled: ''
       offset: '00000158'
     - name: __imp_@KfLowerIrql@4
-      processed: ''
+      demangled: ''
       offset: 0000015C
     - name: __imp_@KfAcquireSpinLock@4
-      processed: ''
+      demangled: ''
       offset: '00000160'
     - name: __imp_@KfReleaseSpinLock@8
-      processed: ''
+      demangled: ''
       offset: '00000164'
     - name: __imp__READ_PORT_ULONG@4
-      processed: ''
+      demangled: ''
       offset: '00000168'
     - name: __imp__KeGetCurrentIrql@0
-      processed: ''
+      demangled: ''
       offset: 0000016C
     - name: __imp__READ_PORT_USHORT@4
-      processed: ''
+      demangled: ''
       offset: '00000170'
     - name: __imp__WRITE_PORT_USHORT@8
-      processed: ''
+      demangled: ''
       offset: '00000174'
     - name: \177HAL_NULL_THUNK_DATA
-      processed: ''
+      demangled: ''
       offset: '00000178'
     - name: __imp_@IofCallDriver@8
-      processed: ''
+      demangled: ''
       offset: 0000017C
     - name: __imp__IoDetachDevice@4
-      processed: ''
+      demangled: ''
       offset: '00000180'
     - name: __imp__IoDeleteDevice@4
-      processed: ''
+      demangled: ''
       offset: '00000184'
     - name: __imp__RtlAssert@16
-      processed: ''
+      demangled: ''
       offset: '00000188'
     - name: __imp__DbgPrint
-      processed: ''
+      demangled: ''
       offset: 0000018C
     - name: __imp__RtlFreeUnicodeString@4
-      processed: ''
+      demangled: ''
       offset: '00000190'
     - name: __imp__IoAttachDeviceToDeviceStack@8
-      processed: ''
+      demangled: ''
       offset: '00000194'
     - name: __imp__KeSetEvent@12
-      processed: ''
+      demangled: ''
       offset: '00000198'
     - name: __imp__IoFreeIrp@4
-      processed: ''
+      demangled: ''
       offset: 0000019C
     - name: __imp__KeWaitForSingleObject@20
-      processed: ''
+      demangled: ''
       offset: 000001A0
     - name: __imp__KeInitializeEvent@12
-      processed: ''
+      demangled: ''
       offset: 000001A4
     - name: __imp__IoAllocateIrp@8
-      processed: ''
+      demangled: ''
       offset: 000001A8
     - name: __imp__IoDisconnectInterrupt@4
-      processed: ''
+      demangled: ''
       offset: 000001AC
     - name: __imp__KeQuerySystemTime@4
-      processed: ''
+      demangled: ''
       offset: 000001B0
     - name: __imp__IoCreateDevice@28
-      processed: ''
+      demangled: ''
       offset: 000001B4
     - name: __imp__KeDelayExecutionThread@12
-      processed: ''
+      demangled: ''
       offset: 000001B8
     - name: __imp__KeInitializeSpinLock@4
-      processed: ''
+      demangled: ''
       offset: 000001BC
     - name: __imp__KeInsertQueueDpc@12
-      processed: ''
+      demangled: ''
       offset: 000001C0
     - name: __imp__KeSetTimer@16
-      processed: ''
+      demangled: ''
       offset: 000001C4
     - name: __imp__IoReleaseCancelSpinLock@4
-      processed: ''
+      demangled: ''
       offset: 000001C8
     - name: __imp__MmMapIoSpace@16
-      processed: ''
+      demangled: ''
       offset: 000001CC
     - name: __imp__IoConnectInterrupt@44
-      processed: ''
+      demangled: ''
       offset: 000001D0
     - name: __imp__KeInitializeDpc@12
-      processed: ''
+      demangled: ''
       offset: 000001D4
     - name: __imp__IoGetDmaAdapter@12
-      processed: ''
+      demangled: ''
       offset: 000001D8
     - name: __imp__IoAcquireCancelSpinLock@4
-      processed: ''
+      demangled: ''
       offset: 000001DC
     - name: __imp__IoStartPacket@16
-      processed: ''
+      demangled: ''
       offset: '000001E0'
     - name: __imp__KeInitializeTimer@4
-      processed: ''
+      demangled: ''
       offset: '000001E4'
     - name: __imp__KeSetTimerEx@20
-      processed: ''
+      demangled: ''
       offset: '000001E8'
     - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
-      processed: ''
+      demangled: ''
       offset: 000001EC
     - name: __imp__KeSynchronizeExecution@12
-      processed: ''
+      demangled: ''
       offset: 000001F0
     - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
-      processed: ''
+      demangled: ''
       offset: 000001F4
     - name: __imp__RtlQueryRegistryValues@20
-      processed: ''
+      demangled: ''
       offset: 000001F8
     - name: __imp__ExAllocatePoolWithTag@12
-      processed: ''
+      demangled: ''
       offset: 000001FC
     - name: __imp__IoStartNextPacket@8
-      processed: ''
+      demangled: ''
       offset: '00000200'
     - name: __imp_@InterlockedExchange@8
-      processed: ''
+      demangled: ''
       offset: '00000204'
     - name: __imp__KeCancelTimer@4
-      processed: ''
+      demangled: ''
       offset: '00000208'
     - name: __imp_@ExfInterlockedPushEntryList@12
-      processed: ''
+      demangled: ''
       offset: 0000020C
     - name: __imp__ExQueueWorkItem@8
-      processed: ''
+      demangled: ''
       offset: '00000210'
     - name: __imp__ExFreePool@4
-      processed: ''
+      demangled: ''
       offset: '00000214'
     - name: __imp__MmMapLockedPages@8
-      processed: ''
+      demangled: ''
       offset: '00000218'
     - name: __imp_@ExfInterlockedPopEntryList@8
-      processed: ''
+      demangled: ''
       offset: 0000021C
     - name: \177NTOSKRNL_NULL_THUNK_DATA
-      processed: ''
+      demangled: ''
       offset: '00000220'
     - name: __imp__USBD_AllocateDeviceName@4
-      processed: ''
+      demangled: ''
       offset: '00000224'
     - name: __imp__USBD_CalculateUsbBandwidth@12
-      processed: ''
+      demangled: ''
       offset: '00000228'
     - name: __imp__USBD_CompleteRequest@8
-      processed: ''
+      demangled: ''
       offset: 0000022C
     - name: __imp__USBD_GetPdoRegistryParameter@20
-      processed: ''
+      demangled: ''
       offset: '00000230'
     - name: __imp__USBD_RegisterHcDeviceCapabilities@12
-      processed: ''
+      demangled: ''
       offset: '00000234'
     - name: __imp__USBD_FreeDeviceName@4
-      processed: ''
+      demangled: ''
       offset: '00000238'
     - name: __imp__USBD_RegisterHostController@28
-      processed: ''
+      demangled: ''
       offset: 0000023C
     - name: __imp__USBD_Dispatch@16
-      processed: ''
+      demangled: ''
       offset: '00000240'
     - name: \177USBD_NULL_THUNK_DATA
-      processed: ''
+      demangled: ''
       offset: '00000244'
   - num: '5'
     name: PAGE
     offset: '00000000'
     symbols:
     - name: _UHCD_CreateDeviceObject@12
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: _UHCD_ReadWriteConfig@20
-      processed: ''
+      demangled: ''
       offset: '000000E0'
     - name: _UHCD_QueryCapabilities@8
-      processed: ''
+      demangled: ''
       offset: '00000300'
     - name: _UHCD_CleanupDevice@4
-      processed: ''
+      demangled: ''
       offset: '000004E0'
     - name: _UHCD_InitializeSchedule@4
-      processed: ''
+      demangled: ''
       offset: '00000800'
     - name: _UHCD_StartGlobalReset@4
-      processed: ''
+      demangled: ''
       offset: '00000E90'
     - name: _UHCD_Suspend@8
-      processed: ''
+      demangled: ''
       offset: 00000FB0
     - name: _UHCD_StopBIOS@4
-      processed: ''
+      demangled: ''
       offset: 000012C0
     - name: _UHCD_StartDevice@8
-      processed: ''
+      demangled: ''
       offset: 000015F0
     - name: _UHCD_InitializeCommonBufferPool@16
-      processed: ''
+      demangled: ''
       offset: 00001D00
-- version: Windows 98 Retail
-  source_tree: []
-  segments:
-  - num: '1'
-    name: .text
-    offset: 00000CA0
-    symbols:
-    - name: _DriverEntry@8
-      demangled: ''
-      offset: '00000000'
-    - name: _UHCD_ProcessPnPIrp@8
-      demangled: ''
-      offset: '00000044'
-    - name: _UHCD_Dispatch@8
-      demangled: ''
-      offset: 0000013A
-    - name: _UHCD_SetDevicePowerState@12
-      demangled: ''
-      offset: 0000029E
-    - name: _UHCD_PowerIrp_Complete@12
-      demangled: ''
-      offset: '00000317'
-    - name: _UHCD_Unload@4
-      demangled: ''
-      offset: 0000033C
-    - name: _UHCD_PnPAddDevice@8
-      demangled: ''
-      offset: 0000033F
-    - name: _UHCD_QueryCapabilitiesCompletion@12
-      demangled: ''
-      offset: 0000041E
-    - name: _UHCD_DeferIrpCompletion@12
-      demangled: ''
-      offset: 0000044D
-    - name: _UHCD_StopDevice@4
-      demangled: ''
-      offset: '00000463'
-    - name: _UHCD_CompleteGlobalReset@4
-      demangled: ''
-      offset: '00000529'
-    - name: _UHCD_GetCurrentFrame@4
-      demangled: ''
-      offset: '000005E1'
-    - name: _UHCD_SaveHCstate@4
-      demangled: ''
-      offset: '00000619'
-    - name: _UHCD_RestoreHCstate@4
-      demangled: ''
-      offset: '00000659'
-    - name: _UHCD_Resume@4
-      demangled: ''
-      offset: 000006BE
-    - name: _UHCD_RootHubPower@8
-      demangled: ''
-      offset: '00000748'
-    - name: _UHCD_FixPIIX4@4
-      demangled: ''
-      offset: 000007B1
-    - name: _UHCD_StartBIOS@4
-      demangled: ''
-      offset: '00000863'
-    - name: _UHCD_GetResources@12
-      demangled: ''
-      offset: '00000917'
-    - name: _UHCD_DeferredStartDevice@8
-      demangled: ''
-      offset: 00000A51
-    - name: _UHCD_UpdateFrameCounter@4
-      demangled: ''
-      offset: 00000AAA
-    - name: _UHCD_DisableIdleCheck@4
-      demangled: ''
-      offset: 00000B24
-    - name: _UHCD_WakeIdle@4
-      demangled: ''
-      offset: 00000B4E
-    - name: _UHCD_CheckIdle@4
-      demangled: ''
-      offset: 00000B7D
-    - name: _UHCD_GetSOFRegModifyValue@8
-      demangled: ''
-      offset: 00000D78
-    - name: _UHCD_GetConfigValue@24
-      demangled: ''
-      offset: 00000DD0
-    - name: _UHCD_GetClassGlobalRegistryParameters@4
-      demangled: ''
-      offset: '00000E01'
-    - name: _UHCD_GetGlobalRegistryParameters@4
-      demangled: ''
-      offset: '00000E57'
-    - name: _UHCD_InterruptService@8
-      demangled: ''
-      offset: 00000EB2
-    - name: _UHCD_IsrDpc@16
-      demangled: ''
-      offset: 00000FF7
-    - name: _UHCD_RequestInterrupt@8
-      demangled: ''
-      offset: '00001154'
-    - name: _UHCD_CompleteIrp@20
-      demangled: ''
-      offset: 000011DC
-    - name: _UHCD_URB_Dispatch@8
-      demangled: ''
-      offset: 0000129D
-    - name: _UHCD_StartIo@8
-      demangled: ''
-      offset: 0000168A
-    - name: _UHCD_OpenEndpoint_StartIo@8
-      demangled: ''
-      offset: 000017CD
-    - name: _UHCD_CloseEndpoint_StartIo@8
-      demangled: ''
-      offset: 0000193D
-    - name: _UHCD_InsertQueueHeadInSchedule@16
-      demangled: ''
-      offset: 00001A06
-    - name: _UHCD_RemoveQueueHeadFromSchedule@12
-      demangled: ''
-      offset: 00001B47
-    - name: _UHCD_CopyInterruptScheduleToFrameList@4
-      demangled: ''
-      offset: 00001C28
-    - name: _UHCD_StartIoCancel@8
-      demangled: ''
-      offset: 00001CA0
-    - name: _UHCD_GetSetEndpointState_StartIo@8
-      demangled: ''
-      offset: 00001D16
-    - name: _UHCD_InitializeEndpoint@20
-      demangled: ''
-      offset: 00001E0C
-    - name: _UHCD_GetNumTDsPerEndoint@8
-      demangled: ''
-      offset: 00001EDE
-    - name: _UHCD_BW_Reclimation@8
-      demangled: ''
-      offset: 00001F05
-    - name: _UHCD_Transfer_StartIo@8
-      demangled: ''
-      offset: 00001F6F
-    - name: _UHCD_CompleteTransferDPC@12
-      demangled: ''
-      offset: 000020B0
-    - name: _UHCD_StartDmaTransfer@16
-      demangled: ''
-      offset: '00002331'
-    - name: _UHCD_InitializeDmaTransfer@16
-      demangled: ''
-      offset: '000023E8'
-    - name: _UHCD_TransferCancel@8
-      demangled: ''
-      offset: 0000247D
-    - name: _UHCD_BeginTransfer@16
-      demangled: ''
-      offset: '00002585'
-    - name: _UHCD_RemoveQueuedUrbs@12
-      demangled: ''
-      offset: 000025F8
-    - name: _UHCD_EndpointWorker@8
-      demangled: ''
-      offset: '00002653'
-    - name: _UHCD_SelectBufferPool@8
-      demangled: ''
-      offset: 0000274B
-    - name: _UHCD_FreePoolSize@8
-      demangled: ''
-      offset: 0000278A
-    - name: _UHCD_InitializeHardwareQueueHeadDescriptor@12
-      demangled: ''
-      offset: 000027AF
-    - name: _UHCD_InitializeHardwareTransferDescriptor@12
-      demangled: ''
-      offset: 000027DF
-    - name: _UHCD_AllocateHardwareDescriptors@12
-      demangled: ''
-      offset: 000027FF
-    - name: _UHCD_FreeHardwareDescriptors@8
-      demangled: ''
-      offset: 000028B2
-    - name: _UHCD_DoAllocateCommonBuffer@8
-      demangled: ''
-      offset: 000028CE
-    - name: _UHCD_AllocateCommonBuffer@8
-      demangled: ''
-      offset: 000028F9
-    - name: _UHCD_FreeCommonBuffer@8
-      demangled: ''
-      offset: '00002944'
-    - name: _UHCD_AllocateCommonBufferBlock@12
-      demangled: ''
-      offset: '00002960'
-    - name: _UHCD_CheckCommonBufferPool@12
-      demangled: ''
-      offset: 00002A4D
-    - name: _UHCD_MoreCommonBuffers@4
-      demangled: ''
-      offset: 00002A8E
-    - name: _UHCD_GrowBufferPool@24
-      demangled: ''
-      offset: 00002B97
-    - name: _UHCD_GrowPoolWorker@4
-      demangled: ''
-      offset: 00002BF3
-    - name: _UHCD_PrepareStatusPacket@12
-      demangled: ''
-      offset: 00002C32
-    - name: _UHCD_PrepareSetupPacket@12
-      demangled: ''
-      offset: 00002C83
-    - name: _UHCD_MapTDError@12
-      demangled: ''
-      offset: 00002CDF
-    - name: _UHCD_InitializeAsyncTD@8
-      demangled: ''
-      offset: 00002D9E
-    - name: _UHCD_QueueBusy@12
-      demangled: ''
-      offset: 00002DD6
-    - name: _UHCD_PrepareAsyncDataPacket@24
-      demangled: ''
-      offset: 00002EB5
-    - name: _UHCD_InitializeAsyncTransfer@12
-      demangled: ''
-      offset: 00002FDD
-    - name: _UHCD_ProcessAsyncTransfer@16
-      demangled: ''
-      offset: 0000321B
-    - name: _UHCD_PrepareMoreAsyncTDs@16
-      demangled: ''
-      offset: '00003594'
-    - name: _UHCD_GetPacketBuffer@24
-      demangled: ''
-      offset: '00003756'
-    - name: _UHCD_RootHub_OpenEndpoint@12
-      demangled: ''
-      offset: '00003802'
-    - name: _UHCD_RootHub_CloseEndpoint@12
-      demangled: ''
-      offset: 000038C2
-    - name: _UHCD_RootHub_ControlTransfer@12
-      demangled: ''
-      offset: '00003927'
-    - name: _UHCD_RootHub_InterruptTransfer@12
-      demangled: ''
-      offset: 00003A05
-    - name: _UHCD_RootHubPoll@8
-      demangled: ''
-      offset: 00003AAE
-    - name: _UHCD_RootHub_ReadPort@4
-      demangled: ''
-      offset: 00003BCC
-    - name: _UHCD_RootHub_Timer@16
-      demangled: ''
-      offset: 00003BEB
-    - name: _UHCD_RootHubTimerDpc@16
-      demangled: ''
-      offset: 00003C5F
-    - name: _UHCD_RootHub_WritePort@8
-      demangled: ''
-      offset: 00003C83
-    - name: _UHCD_RootHub_InterruptTransferCancel@8
-      demangled: ''
-      offset: 00003CAB
-    - name: _UHCD_RootHubPollDpc@16
-      demangled: ''
-      offset: 00003CDD
-    - name: _RootHub_ResetTimerHandler@4
-      demangled: ''
-      offset: 00003D19
-    - name: _RootHub_SuspendTimerHandler@4
-      demangled: ''
-      offset: 00003D66
-    - name: _RootHub_Initialize@12
-      demangled: ''
-      offset: 00003D84
-    - name: _RootHub_Endpoint0@20
-      demangled: ''
-      offset: 00003DED
-    - name: _RootHub_StandardCommand@20
-      demangled: ''
-      offset: 00003E2B
-    - name: _RootHub_ClassCommand@16
-      demangled: ''
-      offset: 00003FA0
-    - name: _RootHub_Endpoint1@16
-      demangled: ''
-      offset: '00004329'
-    - name: _RootHub_PortsIdle@4
-      demangled: ''
-      offset: 000043BE
-    - name: _UHCD_SyncInsertIsochDescriptor@4
-      demangled: ''
-      offset: 000043F4
-    - name: _UHCD_InsertIsochDescriptor@12
-      demangled: ''
-      offset: '00004432'
-    - name: _UHCD_InitializeIsochTransfer@12
-      demangled: ''
-      offset: '00004483'
-    - name: _UHCD_ScheduleIsochTransfer@12
-      demangled: ''
-      offset: '000044E6'
-    - name: _UHCD_ProcessIsochTransfer@16
-      demangled: ''
-      offset: '00004694'
-    - name: _UHCD_InitBandwidthTable@4
-      demangled: ''
-      offset: '00004843'
-    - name: _UHCD_ManageBandwidth@16
-      demangled: ''
-      offset: 0000485F
-    - name: _USBD_GetPdoRegistryParameter@20
-      demangled: ''
-      offset: '00004904'
-  - num: '2'
-    name: .data
-    offset: 00000F70
-    symbols:
-    - name: 
-        ??_C@_1DA@EMCA@?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAS?$AAe?$AAl?$AAe?$AAc?$AAt?$AAi?$AAv?$AAe?$AAS?$AAu?$AAs?$AAp@
-      demangled: L"DisableSelectiveSusp"
-      offset: '00000000'
-    - name: 
-        ??_C@_1DE@EOKK@?$AAr?$AAe?$AAc?$AAo?$AAm?$AAm?$AAe?$AAn?$AAd?$AAe?$AAd?$AAC?$AAl?$AAo?$AAc?$AAk?$AAs?$AAP?$AAe?$AAr@
-      demangled: L"recommendedClocksPer"
-      offset: '00000030'
-    - name: 
-        ??_C@_1CG@IPGH@?$AAF?$AAo?$AAr?$AAc?$AAe?$AAL?$AAo?$AAw?$AAP?$AAo?$AAw?$AAe?$AAr?$AAS?$AAt?$AAa?$AAt?$AAe?$AA?$AA@
-      demangled: L"ForceLowPowerState"
-      offset: '00000064'
-    - name: ??_C@_1BE@FLHC@?$AAc?$AAl?$AAa?$AAs?$AAs?$AA?2?$AAu?$AAs?$AAb?$AA?$AA@
-      demangled: L"class\\usb"
-      offset: 0000008C
-    - name: 
-        ??_C@_1BO@OODP@?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAP?$AAI?$AAI?$AAX?$AAU?$AAs?$AAb?$AA?$AA@
-      demangled: L"DisablePIIXUsb"
-      offset: 000000A0
-    - name: ??_C@_17IGND@?$AAu?$AAs?$AAb?$AA?$AA@
-      demangled: L"usb"
-      offset: 000000C0
-    - name: _TransferDispatchTable
-      demangled: ''
-      offset: 000000C8
-    - name: _RH_DeviceDescriptor
-      demangled: ''
-      offset: '000000E8'
-    - name: _RH_ConfigurationDescriptor
-      demangled: ''
-      offset: '00000100'
-    - name: _RH_HubDescriptor
-      demangled: ''
-      offset: '00000120'
-  - num: '3'
-    name: .idata$2
-    offset: 000017C0
-    symbols:
-    - name: __IMPORT_DESCRIPTOR_USBD
-      demangled: ''
-      offset: '00000000'
-    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
-      demangled: ''
-      offset: '00000014'
-    - name: __IMPORT_DESCRIPTOR_HAL
-      demangled: ''
-      offset: '00000028'
-    - name: __NULL_IMPORT_DESCRIPTOR
-      demangled: ''
-      offset: 0000003C
-    - name: __imp__READ_PORT_ULONG@4
-      demangled: ''
-      offset: '00000144'
-    - name: __imp__READ_PORT_UCHAR@4
-      demangled: ''
-      offset: '00000148'
-    - name: __imp__WRITE_PORT_USHORT@8
-      demangled: ''
-      offset: 0000014C
-    - name: __imp__KeGetCurrentIrql@0
-      demangled: ''
-      offset: '00000150'
-    - name: __imp_@KfRaiseIrql@4
-      demangled: ''
-      offset: '00000154'
-    - name: __imp_@KfLowerIrql@4
-      demangled: ''
-      offset: '00000158'
-    - name: __imp_@KfAcquireSpinLock@4
-      demangled: ''
-      offset: 0000015C
-    - name: __imp_@KfReleaseSpinLock@8
-      demangled: ''
-      offset: '00000160'
-    - name: __imp__WRITE_PORT_ULONG@8
-      demangled: ''
-      offset: '00000164'
-    - name: __imp__READ_PORT_USHORT@4
-      demangled: ''
-      offset: '00000168'
-    - name: __imp__WRITE_PORT_UCHAR@8
-      demangled: ''
-      offset: 0000016C
-    - name: \177HAL_NULL_THUNK_DATA
-      demangled: ''
-      offset: '00000170'
-    - name: __imp__IoCreateDevice@28
-      demangled: ''
-      offset: '00000174'
-    - name: __imp_@IofCallDriver@8
-      demangled: ''
-      offset: '00000178'
-    - name: __imp__KeSetEvent@12
-      demangled: ''
-      offset: 0000017C
-    - name: __imp__IoDeleteDevice@4
-      demangled: ''
-      offset: '00000180'
-    - name: __imp__IoDetachDevice@4
-      demangled: ''
-      offset: '00000184'
-    - name: __imp__IoFreeIrp@4
-      demangled: ''
-      offset: '00000188'
-    - name: __imp__KeWaitForSingleObject@20
-      demangled: ''
-      offset: 0000018C
-    - name: __imp__KeInitializeEvent@12
-      demangled: ''
-      offset: '00000190'
-    - name: __imp__IoAllocateIrp@8
-      demangled: ''
-      offset: '00000194'
-    - name: __imp__IoDisconnectInterrupt@4
-      demangled: ''
-      offset: '00000198'
-    - name: __imp__KeQuerySystemTime@4
-      demangled: ''
-      offset: 0000019C
-    - name: __imp__RtlFreeUnicodeString@4
-      demangled: ''
-      offset: 000001A0
-    - name: __imp__ExFreePool@4
-      demangled: ''
-      offset: 000001A4
-    - name: __imp__KeDelayExecutionThread@12
-      demangled: ''
-      offset: 000001A8
-    - name: __imp__KeInitializeSpinLock@4
-      demangled: ''
-      offset: 000001AC
-    - name: __imp__IoAttachDeviceToDeviceStack@8
-      demangled: ''
-      offset: 000001B0
-    - name: __imp__ExAllocatePoolWithTag@12
-      demangled: ''
-      offset: 000001B4
-    - name: __imp__KeSetTimer@16
-      demangled: ''
-      offset: 000001B8
-    - name: __imp__KeInsertQueueDpc@12
-      demangled: ''
-      offset: 000001BC
-    - name: __imp__MmMapIoSpace@16
-      demangled: ''
-      offset: 000001C0
-    - name: __imp__IoConnectInterrupt@44
-      demangled: ''
-      offset: 000001C4
-    - name: __imp__KeInitializeDpc@12
-      demangled: ''
-      offset: 000001C8
-    - name: __imp__IoGetDmaAdapter@12
-      demangled: ''
-      offset: 000001CC
-    - name: __imp__IoAcquireCancelSpinLock@4
-      demangled: ''
-      offset: 000001D0
-    - name: __imp_@InterlockedExchange@8
-      demangled: ''
-      offset: 000001D4
-    - name: __imp__KeCancelTimer@4
-      demangled: ''
-      offset: 000001D8
-    - name: __imp__KeInitializeTimer@4
-      demangled: ''
-      offset: 000001DC
-    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
-      demangled: ''
-      offset: '000001E0'
-    - name: __imp__KeSynchronizeExecution@12
-      demangled: ''
-      offset: '000001E4'
-    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
-      demangled: ''
-      offset: '000001E8'
-    - name: __imp__RtlQueryRegistryValues@20
-      demangled: ''
-      offset: 000001EC
-    - name: __imp__IoStartNextPacket@8
-      demangled: ''
-      offset: 000001F0
-    - name: __imp__IoReleaseCancelSpinLock@4
-      demangled: ''
-      offset: 000001F4
-    - name: __imp__ExQueueWorkItem@8
-      demangled: ''
-      offset: 000001F8
-    - name: __imp__KeSetTimerEx@20
-      demangled: ''
-      offset: 000001FC
-    - name: __imp__IoStartPacket@16
-      demangled: ''
-      offset: '00000200'
-    - name: __imp_@ExfInterlockedPopEntryList@8
-      demangled: ''
-      offset: '00000204'
-    - name: __imp__MmMapLockedPages@8
-      demangled: ''
-      offset: '00000208'
-    - name: __imp_@ExfInterlockedPushEntryList@12
-      demangled: ''
-      offset: 0000020C
-    - name: \177NTOSKRNL_NULL_THUNK_DATA
-      demangled: ''
-      offset: '00000210'
-    - name: __imp__USBD_AllocateDeviceName@4
-      demangled: ''
-      offset: '00000214'
-    - name: __imp__USBD_GetPdoRegistryParameter@20
-      demangled: ''
-      offset: '00000218'
-    - name: __imp__USBD_RegisterHcDeviceCapabilities@12
-      demangled: ''
-      offset: 0000021C
-    - name: __imp__USBD_CompleteRequest@8
-      demangled: ''
-      offset: '00000220'
-    - name: __imp__USBD_CalculateUsbBandwidth@12
-      demangled: ''
-      offset: '00000224'
-    - name: __imp__USBD_FreeDeviceName@4
-      demangled: ''
-      offset: '00000228'
-    - name: __imp__USBD_RegisterHostController@28
-      demangled: ''
-      offset: 0000022C
-    - name: __imp__USBD_Dispatch@16
-      demangled: ''
-      offset: '00000230'
-    - name: \177USBD_NULL_THUNK_DATA
-      demangled: ''
-      offset: '00000234'
-  - num: '4'
-    name: PAGE
-    offset: '00000000'
-    symbols:
-    - name: _UHCD_CreateDeviceObject@12
-      demangled: ''
-      offset: '00000000'
-    - name: _UHCD_ReadWriteConfig@20
-      demangled: ''
-      offset: 0000003A
-    - name: _UHCD_QueryCapabilities@8
-      demangled: ''
-      offset: 000000EF
-    - name: _UHCD_CleanupDevice@4
-      demangled: ''
-      offset: 0000017C
-    - name: _UHCD_InitializeSchedule@4
-      demangled: ''
-      offset: '00000280'
-    - name: _UHCD_StartGlobalReset@4
-      demangled: ''
-      offset: '00000500'
-    - name: _UHCD_Suspend@8
-      demangled: ''
-      offset: 0000051A
-    - name: _UHCD_StopBIOS@4
-      demangled: ''
-      offset: 000005C9
-    - name: _UHCD_StartDevice@8
-      demangled: ''
-      offset: '00000734'
-    - name: _UHCD_InitializeCommonBufferPool@16
-      demangled: ''
-      offset: 000009F1
 - version: Windows 98SE Debug
-  source_tree: []
+  source_tree:
+  - ../async.c
+  - ../bandwdth.c
+  - ../control.c
+  - ../dbg.c
+  - ../dblbuff.c
+  - ../dscrptor.c
+  - ../hub.c
+  - ../int.c
+  - ../isoch.c
+  - ../roothub.c
+  - ../transfer.c
+  - ../uhcd.c
+  - ../urb.c
+  - ../../../../../wdm10/ddk/inc/wdm.h
   segments:
   - num: '1'
     name: .text
@@ -2988,3 +3002,1526 @@ appearances:
     - name: _UHCD_InitializeCommonBufferPool@16
       demangled: ''
       offset: 00000B06
+- version: Windows ME Retail
+  source_tree:
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/async.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/bandwdth.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/control.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/dblbuff.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/dscrptor.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/fastiso.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/hub.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/int.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/isoch.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/roothub.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/transfer.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/uhcd.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/urb.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00003A50
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _UHCD_ProcessPnPIrp@8
+      demangled: ''
+      offset: '00000044'
+    - name: _UHCD_PreUSBD_SetContentId@12
+      demangled: ''
+      offset: '00000106'
+    - name: _UHCD_PostUSBD_SetContentId@12
+      demangled: ''
+      offset: '00000128'
+    - name: _UHCD_Dispatch@8
+      demangled: ''
+      offset: 0000012E
+    - name: _UHCD_SetDevicePowerState@12
+      demangled: ''
+      offset: '00000332'
+    - name: _UHCD_PowerIrp_Complete@12
+      demangled: ''
+      offset: 0000048C
+    - name: _UHCD_Unload@4
+      demangled: ''
+      offset: 000004B2
+    - name: _UHCD_PnPAddDevice@8
+      demangled: ''
+      offset: 000004B6
+    - name: _UHCD_DeferIrpCompletion@12
+      demangled: ''
+      offset: 0000058A
+    - name: _UHCD_StopDevice@4
+      demangled: ''
+      offset: 000005A0
+    - name: _UHCD_CompleteGlobalReset@4
+      demangled: ''
+      offset: '00000696'
+    - name: _UHCD_GetCurrentFrame@4
+      demangled: ''
+      offset: '00000758'
+    - name: _UHCD_SaveHCstate@4
+      demangled: ''
+      offset: '00000790'
+    - name: _UHCD_RestoreHCstate@4
+      demangled: ''
+      offset: 000007F6
+    - name: _UHCD_Resume@8
+      demangled: ''
+      offset: '00000928'
+    - name: _UHCD_ExternalGetCurrentFrame@8
+      demangled: ''
+      offset: 000009FA
+    - name: _UHCD_ExternalGetConsumedBW@4
+      demangled: ''
+      offset: 00000A0E
+    - name: _UHCD_RootHubPower@8
+      demangled: ''
+      offset: 00000A3C
+    - name: _UhcdKickStartController@4
+      demangled: ''
+      offset: 00000AE2
+    - name: _UHCD_FixPIIX4@4
+      demangled: ''
+      offset: 00000B7A
+    - name: _UHCD_GetResources@12
+      demangled: ''
+      offset: 00000C3A
+    - name: _UHCD_DeferredStartDevice@8
+      demangled: ''
+      offset: 00000D74
+    - name: _UHCD_UpdateFrameCounter@4
+      demangled: ''
+      offset: 00000DD0
+    - name: _UHCD_DisableIdleCheck@4
+      demangled: ''
+      offset: 00000E4A
+    - name: _UHCD_WakeIdle@4
+      demangled: ''
+      offset: '00000E74'
+    - name: _UHCD_CheckIdle@4
+      demangled: ''
+      offset: 00000EA4
+    - name: _UHCD_GetSOFRegModifyValue@8
+      demangled: ''
+      offset: 000010B6
+    - name: _UHCD_GetConfigValue@24
+      demangled: ''
+      offset: 000010DE
+    - name: _UHCD_SetControllerD0@4
+      demangled: ''
+      offset: '00001110'
+    - name: _UHCD_GetClassGlobalRegistryParameters@4
+      demangled: ''
+      offset: 000011B0
+    - name: _MAX_REQUESTS@8
+      demangled: ''
+      offset: '00001206'
+    - name: _UHCD_CompleteIrp@20
+      demangled: ''
+      offset: 0000123E
+    - name: _UHCD_URB_Dispatch@8
+      demangled: ''
+      offset: '00001300'
+    - name: _UHCD_StartIo@8
+      demangled: ''
+      offset: '00001842'
+    - name: _UHCD_OpenEndpoint_StartIo@8
+      demangled: ''
+      offset: 00001A16
+    - name: _UHCD_CloseEndpoint_StartIo@8
+      demangled: ''
+      offset: 00001C18
+    - name: _UHCD_InsertQueueHeadInSchedule@16
+      demangled: ''
+      offset: 00001D66
+    - name: _UHCD_RemoveQueueHeadFromSchedule@16
+      demangled: ''
+      offset: 00001EBC
+    - name: _UHCD_CopyInterruptScheduleToFrameList@4
+      demangled: ''
+      offset: 00001FEE
+    - name: _UHCD_StartIoCancel@8
+      demangled: ''
+      offset: 000020CE
+    - name: _UHCD_GetSetEndpointState_StartIo@8
+      demangled: ''
+      offset: 0000214C
+    - name: _UHCD_FinishInitializeEndpoint@16
+      demangled: ''
+      offset: '00002296'
+    - name: _UHCD_GetNumTDsPerEndoint@4
+      demangled: ''
+      offset: '00002372'
+    - name: _UHCD_BW_Reclimation@8
+      demangled: ''
+      offset: '00002394'
+    - name: _UHCD_InterruptService@8
+      demangled: ''
+      offset: 000023FE
+    - name: _UHCD_IsrDpc@16
+      demangled: ''
+      offset: 0000258C
+    - name: _UHCD_RequestInterrupt@8
+      demangled: ''
+      offset: '00002814'
+    - name: _UHCD_ValidateIsoUrb@12
+      demangled: ''
+      offset: 0000289C
+    - name: _UHCD_Transfer_StartIo@8
+      demangled: ''
+      offset: 000029AE
+    - name: _UHCD_CompleteTransferDPC@12
+      demangled: ''
+      offset: 00002B04
+    - name: _UHCD_StartDmaTransfer@16
+      demangled: ''
+      offset: 00002DD6
+    - name: _UHCD_InitializeDmaTransfer@20
+      demangled: ''
+      offset: 00002EB0
+    - name: _UHCD_TransferCancel@8
+      demangled: ''
+      offset: 00002F70
+    - name: _UHCD_BeginTransfer@16
+      demangled: ''
+      offset: 0000302A
+    - name: _UHCD_RemoveQueuedUrbs@12
+      demangled: ''
+      offset: 000030F6
+    - name: _UHCD_EndpointWorker@8
+      demangled: ''
+      offset: '00003158'
+    - name: _UHCD_EndpointDMAWorker@8
+      demangled: ''
+      offset: 0000317A
+    - name: _UHCD_EndpointIdle@8
+      demangled: ''
+      offset: '00003382'
+    - name: _UHCD_EndpointWakeup@8
+      demangled: ''
+      offset: 0000343A
+    - name: _UHCD_SelectBufferPool@8
+      demangled: ''
+      offset: '00003498'
+    - name: _UHCD_FreePoolSize@8
+      demangled: ''
+      offset: 000034D8
+    - name: _UHCD_InitializeHardwareQueueHeadDescriptor@12
+      demangled: ''
+      offset: 0000351E
+    - name: _UHCD_InitializeHardwareTransferDescriptor@12
+      demangled: ''
+      offset: 0000354E
+    - name: _UHCD_AllocateHardwareDescriptors@12
+      demangled: ''
+      offset: 0000356E
+    - name: _UHCD_FreeHardwareDescriptors@8
+      demangled: ''
+      offset: '00003628'
+    - name: _UHCD_DoAllocateCommonBuffer@8
+      demangled: ''
+      offset: '00003644'
+    - name: _UHCD_AllocateCommonBuffer@8
+      demangled: ''
+      offset: '00003670'
+    - name: _UHCD_FreeCommonBuffer@8
+      demangled: ''
+      offset: 000036BC
+    - name: _UHCD_AllocateCommonBufferBlock@12
+      demangled: ''
+      offset: 000036D8
+    - name: _UHCD_CheckCommonBufferPool@12
+      demangled: ''
+      offset: 000037D6
+    - name: _UHCD_MoreCommonBuffers@4
+      demangled: ''
+      offset: '00003818'
+    - name: _UHCD_GrowBufferPool@24
+      demangled: ''
+      offset: 0000391E
+    - name: _UHCD_GrowPoolWorker@4
+      demangled: ''
+      offset: 0000397A
+    - name: _UHCD_Free_NoDMA_Buffer@8
+      demangled: ''
+      offset: 000039BA
+    - name: _UHCD_Alloc_NoDMA_Buffer@12
+      demangled: ''
+      offset: 000039C8
+    - name: _UHCD_PrepareStatusPacket@12
+      demangled: ''
+      offset: 00003AA2
+    - name: _UHCD_PrepareSetupPacket@12
+      demangled: ''
+      offset: 00003AF6
+    - name: _UHCD_MapTDError@12
+      demangled: ''
+      offset: 00003B56
+    - name: _UHCD_InitializeAsyncTD@8
+      demangled: ''
+      offset: 00003C16
+    - name: _UHCD_QueueBusy@12
+      demangled: ''
+      offset: 00003C52
+    - name: _UHCD_PrepareAsyncDataPacket@28
+      demangled: ''
+      offset: 00003D34
+    - name: _UHCD_InitializeAsyncTransfer@12
+      demangled: ''
+      offset: '00003E88'
+    - name: _UHCD_ProcessAsyncTransfer@16
+      demangled: ''
+      offset: '00004106'
+    - name: _UHCD_PrepareMoreAsyncTDs@16
+      demangled: ''
+      offset: '00004536'
+    - name: _UHCD_GetPacketBuffer@24
+      demangled: ''
+      offset: 0000472C
+    - name: _UHCD_FixupDataToggle@12
+      demangled: ''
+      offset: 000047D2
+    - name: _UHCD_SyncInsertIsochDescriptor@4
+      demangled: ''
+      offset: 000048A0
+    - name: _UHCD_InsertIsochDescriptor@12
+      demangled: ''
+      offset: 000048DE
+    - name: _UHCD_InitializeIsochTransfer@12
+      demangled: ''
+      offset: '00004912'
+    - name: _UHCD_ScheduleIsochTransfer@12
+      demangled: ''
+      offset: '00004982'
+    - name: _UHCD_ProcessIsochTransfer@16
+      demangled: ''
+      offset: 00004B4E
+    - name: _UHCD_RootHub_OpenEndpoint@12
+      demangled: ''
+      offset: 00004CDA
+    - name: _UHCD_RootHub_CloseEndpoint@12
+      demangled: ''
+      offset: 00004DD8
+    - name: _UHCD_RootHub_ControlTransfer@12
+      demangled: ''
+      offset: '00004E40'
+    - name: _UHCD_RootHub_InterruptTransfer@12
+      demangled: ''
+      offset: 00004F26
+    - name: _UHCD_RootHubPoll@8
+      demangled: ''
+      offset: 00004FD6
+    - name: _UHCD_RootHub_ReadPort@4
+      demangled: ''
+      offset: '00005118'
+    - name: _UHCD_RootHub_Timer@16
+      demangled: ''
+      offset: '00005136'
+    - name: _UHCD_RootHubTimerDpc@16
+      demangled: ''
+      offset: 000051B2
+    - name: _UHCD_RootHub_WritePort@8
+      demangled: ''
+      offset: 000051D6
+    - name: _UHCD_RootHub_InterruptTransferCancel@8
+      demangled: ''
+      offset: 000051FC
+    - name: _UHCD_RootHubPollDpc@16
+      demangled: ''
+      offset: '00005232'
+    - name: _RootHub_ResetTimerHandler@4
+      demangled: ''
+      offset: '00005278'
+    - name: _RootHub_SuspendTimerHandler@4
+      demangled: ''
+      offset: 000052CE
+    - name: _RootHub_Initialize@12
+      demangled: ''
+      offset: 000052EC
+    - name: _RootHub_Endpoint0@20
+      demangled: ''
+      offset: 0000535E
+    - name: _RootHub_StandardCommand@20
+      demangled: ''
+      offset: 0000539C
+    - name: _RootHub_ClassCommand@16
+      demangled: ''
+      offset: '00005512'
+    - name: _RootHub_Endpoint1@12
+      demangled: ''
+      offset: 000058AE
+    - name: _RootHub_PortsIdle@4
+      demangled: ''
+      offset: '00005928'
+    - name: _UHCD_InitBandwidthTable@4
+      demangled: ''
+      offset: '00005964'
+    - name: _UHCD_ManageBandwidth@16
+      demangled: ''
+      offset: '00005980'
+    - name: _UHCD_StartNoDMATransfer@8
+      demangled: ''
+      offset: 00005A2A
+    - name: _UHCD_StopNoDMATransfer@8
+      demangled: ''
+      offset: 00005B2C
+    - name: _UHCD_ProcessNoDMATransfer@12
+      demangled: ''
+      offset: 00005B68
+    - name: _UHCD_InitializeNoDMAEndpoint@8
+      demangled: ''
+      offset: 00005DB6
+    - name: _UHCD_UnInitializeNoDMAEndpoint@8
+      demangled: ''
+      offset: 00005DEA
+    - name: _UHCD_EndpointNoDMA_Abort@8
+      demangled: ''
+      offset: '00005E12'
+    - name: _UHCD_EndpointNoDMAWorker@8
+      demangled: ''
+      offset: 00005ED8
+    - name: _UHCD_InitFastIsoTDs@4
+      demangled: ''
+      offset: '00006030'
+    - name: _UHCD_UnInitFastIso@4
+      demangled: ''
+      offset: '00006072'
+    - name: _UHCD_InitializeFastIsoEndpoint@8
+      demangled: ''
+      offset: 000060B8
+    - name: _UHCD_UnInitializeFastIsoEndpoint@8
+      demangled: ''
+      offset: '00006278'
+    - name: _UHCD_GetLastFastIsoEndpoint@4
+      demangled: ''
+      offset: 000062D2
+    - name: _UHCD_GetRelativeTD@16
+      demangled: ''
+      offset: '00006302'
+    - name: _UHCD_CleanupFastIsoTD@16
+      demangled: ''
+      offset: '00006350'
+    - name: _UHCD_ProcessFastIsoTransfer@16
+      demangled: ''
+      offset: 0000638E
+    - name: _UHCD_SubmitFastIsoUrb@8
+      demangled: ''
+      offset: '000064E4'
+    - name: _USBD_GetPdoRegistryParameter@20
+      demangled: ''
+      offset: '00006560'
+  - num: '2'
+    name: .idata$5
+    offset: 000043A0
+    symbols:
+    - name: __imp_@KfRaiseIrql@4
+      demangled: ''
+      offset: '00000000'
+    - name: __imp__READ_PORT_UCHAR@4
+      demangled: ''
+      offset: '00000004'
+    - name: __imp__KeStallExecutionProcessor@4
+      demangled: ''
+      offset: '00000008'
+    - name: __imp__READ_PORT_ULONG@4
+      demangled: ''
+      offset: 0000000C
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '00000010'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000014'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '00000018'
+    - name: __imp__WRITE_PORT_UCHAR@8
+      demangled: ''
+      offset: 0000001C
+    - name: __imp__WRITE_PORT_ULONG@8
+      demangled: ''
+      offset: '00000020'
+    - name: __imp_@KfLowerIrql@4
+      demangled: ''
+      offset: '00000024'
+    - name: __imp__WRITE_PORT_USHORT@8
+      demangled: ''
+      offset: '00000028'
+    - name: __imp__READ_PORT_USHORT@4
+      demangled: ''
+      offset: 0000002C
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000030'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000034'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000038'
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000040'
+    - name: __imp__IoDisconnectInterrupt@4
+      demangled: ''
+      offset: '00000044'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000048'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: 0000004C
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: '00000050'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000054'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00000058'
+    - name: __imp__KeDelayExecutionThread@12
+      demangled: ''
+      offset: 0000005C
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000060'
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: '00000064'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000068'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 0000006C
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000070'
+    - name: __imp__IoConnectInterrupt@44
+      demangled: ''
+      offset: '00000074'
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: '00000078'
+    - name: __imp__IoGetDmaAdapter@12
+      demangled: ''
+      offset: 0000007C
+    - name: __imp__KeQueryTimeIncrement@0
+      demangled: ''
+      offset: '00000080'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000084'
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: '00000088'
+    - name: __imp__KeSynchronizeExecution@12
+      demangled: ''
+      offset: 0000008C
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      demangled: ''
+      offset: '00000090'
+    - name: __imp__RtlQueryRegistryValues@20
+      demangled: ''
+      offset: '00000094'
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: '00000098'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: 0000009C
+    - name: __imp__IoAcquireCancelSpinLock@4
+      demangled: ''
+      offset: 000000A0
+    - name: __imp__IoStartPacket@16
+      demangled: ''
+      offset: 000000A4
+    - name: __imp__IoStartNextPacket@8
+      demangled: ''
+      offset: 000000A8
+    - name: __imp__KeRemoveEntryDeviceQueue@8
+      demangled: ''
+      offset: 000000AC
+    - name: __imp__KeQuerySystemTime@4
+      demangled: ''
+      offset: 000000B0
+    - name: __imp__KeInsertQueueDpc@12
+      demangled: ''
+      offset: 000000B4
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: 000000B8
+    - name: __imp_@ExfInterlockedPopEntryList@8
+      demangled: ''
+      offset: 000000BC
+    - name: __imp_@ExfInterlockedPushEntryList@12
+      demangled: ''
+      offset: 000000C0
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: 000000C4
+    - name: __imp__KeSetTimerEx@20
+      demangled: ''
+      offset: 000000C8
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: 000000CC
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: 000000D0
+    - name: __imp__MmMapIoSpace@16
+      demangled: ''
+      offset: 000000D4
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      demangled: ''
+      offset: 000000D8
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000DC
+    - name: __imp__USBD_RegisterHcDeviceCapabilities@12
+      demangled: ''
+      offset: '000000E0'
+    - name: __imp__USBD_Dispatch@16
+      demangled: ''
+      offset: '000000E4'
+    - name: __imp__USBD_RegisterHostController@40
+      demangled: ''
+      offset: '000000E8'
+    - name: __imp__USBD_AllocateDeviceName@4
+      demangled: ''
+      offset: 000000EC
+    - name: __imp__USBD_GetPdoRegistryParameter@20
+      demangled: ''
+      offset: 000000F0
+    - name: __imp__USBD_FreeDeviceName@4
+      demangled: ''
+      offset: 000000F4
+    - name: __imp__USBD_CompleteRequest@8
+      demangled: ''
+      offset: 000000F8
+    - name: __imp__USBD_CalculateUsbBandwidth@12
+      demangled: ''
+      offset: 000000FC
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000100'
+    - name: __imp__KsPropertyHandler@12
+      demangled: ''
+      offset: '00000104'
+    - name: \177ks_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000108'
+    - name: _UHCD_PreUSBD_PropertyTable_DrmAudioStream
+      demangled: ''
+      offset: 000001A0
+    - name: _UHCD_PreUSBD_PropertySetTable
+      demangled: ''
+      offset: 000001C8
+    - name: _UHCD_PostUSBD_PropertyTable_DrmAudioStream
+      demangled: ''
+      offset: '000001E0'
+    - name: _UHCD_PostUSBD_PropertySetTable
+      demangled: ''
+      offset: '00000208'
+  - num: '3'
+    name: .data
+    offset: '00004440'
+    symbols:
+    - name: _TransferDispatchTable
+      demangled: ''
+      offset: '00000000'
+    - name: _RH_DeviceDescriptor
+      demangled: ''
+      offset: '00000020'
+    - name: _RH_ConfigurationDescriptor
+      demangled: ''
+      offset: '00000038'
+    - name: _RH_HubDescriptor
+      demangled: ''
+      offset: '00000058'
+    - name: _UHCD_CommonBufferBytes
+      demangled: ''
+      offset: '00000064'
+  - num: '4'
+    name: PAGE
+    offset: 000049B0
+    symbols:
+    - name: _UHCD_CreateDeviceObject@12
+      demangled: ''
+      offset: '00000000'
+    - name: _UHCD_ReadWriteConfig@20
+      demangled: ''
+      offset: 0000003A
+    - name: _UHCD_QueryCapabilities@8
+      demangled: ''
+      offset: 000000F8
+    - name: _UHCD_CleanupDevice@4
+      demangled: ''
+      offset: 000001B0
+    - name: _UHCD_InitializeSchedule@4
+      demangled: ''
+      offset: '00000320'
+    - name: _UHCD_StartGlobalReset@4
+      demangled: ''
+      offset: '00000644'
+    - name: _UHCD_Suspend@8
+      demangled: ''
+      offset: 0000065E
+    - name: _UHCD_StopBIOS@4
+      demangled: ''
+      offset: '00000744'
+    - name: _UHCD_StartDevice@8
+      demangled: ''
+      offset: '00000914'
+    - name: _UHCD_InitializeCommonBufferPool@16
+      demangled: ''
+      offset: 00000C72
+  - num: '5'
+    name: PAGECONST
+    offset: 000049F0
+    symbols:
+    - name: _KSPROPSETID_DrmAudioStream
+      demangled: ''
+      offset: '00000000'
+  - num: '6'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_ks
+      demangled: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000050'
+- version: Windows ME Debug
+  source_tree:
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/async.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/bandwdth.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/control.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/dbg.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/dblbuff.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/dscrptor.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/fastiso.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/hub.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/int.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/isoch.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/roothub.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/transfer.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/uhcd.c
+  - /ntc/private/ntos/dd/wdm/usb/hcd/uhcd/urb.c
+  - id.c
+  - /NTC/public/sdk/inc/wdm.h
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00005280'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000069'
+    - name: _UHCD_ProcessPnPIrp@8
+      demangled: ''
+      offset: '00000209'
+    - name: _UHCD_PreUSBD_SetContentId@12
+      demangled: ''
+      offset: 000004CB
+    - name: _UHCD_PostUSBD_SetContentId@12
+      demangled: ''
+      offset: '00000675'
+    - name: _UHCD_Dispatch@8
+      demangled: ''
+      offset: '00000908'
+    - name: _UHCD_SetDevicePowerState@12
+      demangled: ''
+      offset: 00000E9B
+    - name: _UHCD_PowerIrp_Complete@12
+      demangled: ''
+      offset: 000012FD
+    - name: _UHCD_Unload@4
+      demangled: ''
+      offset: 000013EA
+    - name: _UHCD_PnPAddDevice@8
+      demangled: ''
+      offset: '00001446'
+    - name: _UHCD_DeferIrpCompletion@12
+      demangled: ''
+      offset: 0000157C
+    - name: _UHCD_StopDevice@4
+      demangled: ''
+      offset: '00001626'
+    - name: _UHCD_CompleteGlobalReset@4
+      demangled: ''
+      offset: 000019AB
+    - name: _UHCD_GetCurrentFrame@4
+      demangled: ''
+      offset: 00001BCC
+    - name: _UHCD_SaveHCstate@4
+      demangled: ''
+      offset: 00001C27
+    - name: _UHCD_RestoreHCstate@4
+      demangled: ''
+      offset: 00001D2A
+    - name: _UHCD_Resume@8
+      demangled: ''
+      offset: '00002028'
+    - name: _UHCD_ExternalGetCurrentFrame@8
+      demangled: ''
+      offset: '00002224'
+    - name: _UHCD_ExternalGetConsumedBW@4
+      demangled: ''
+      offset: 0000223A
+    - name: _UHCD_RootHubPower@8
+      demangled: ''
+      offset: 0000231D
+    - name: _UhcdKickStartController@4
+      demangled: ''
+      offset: '00002480'
+    - name: _UHCD_FixPIIX4@4
+      demangled: ''
+      offset: '00002575'
+    - name: _UHCD_GetResources@12
+      demangled: ''
+      offset: '00002822'
+    - name: _UHCD_DeferredStartDevice@8
+      demangled: ''
+      offset: 00002AAA
+    - name: _UHCD_UpdateFrameCounter@4
+      demangled: ''
+      offset: 00002B54
+    - name: _UHCD_DisableIdleCheck@4
+      demangled: ''
+      offset: 00002BD2
+    - name: _UHCD_WakeIdle@4
+      demangled: ''
+      offset: 00002C00
+    - name: _UHCD_CheckIdle@4
+      demangled: ''
+      offset: 00002CED
+    - name: _UHCD_GetSOFRegModifyValue@8
+      demangled: ''
+      offset: 0000300F
+    - name: _UHCD_GetConfigValue@24
+      demangled: ''
+      offset: 000030A1
+    - name: _UHCD_SetControllerD0@4
+      demangled: ''
+      offset: 0000316F
+    - name: _UHCD_GetClassGlobalDebugRegistryParameters@0
+      demangled: ''
+      offset: 0000331C
+    - name: _UHCD_GetClassGlobalRegistryParameters@4
+      demangled: ''
+      offset: 000034B8
+    - name: _MAX_REQUESTS@8
+      demangled: ''
+      offset: 000035B8
+    - name: _UHCD_CompleteIrp@20
+      demangled: ''
+      offset: '000036E2'
+    - name: _UHCD_URB_Dispatch@8
+      demangled: ''
+      offset: 00003C50
+    - name: _UHCD_StartIo@8
+      demangled: ''
+      offset: 0000450A
+    - name: _UHCD_OpenEndpoint_StartIo@8
+      demangled: ''
+      offset: 00004A33
+    - name: _UHCD_CloseEndpoint_StartIo@8
+      demangled: ''
+      offset: '00004E08'
+    - name: _UHCD_InsertQueueHeadInSchedule@16
+      demangled: ''
+      offset: '00005471'
+    - name: _UHCD_RemoveQueueHeadFromSchedule@16
+      demangled: ''
+      offset: 000059DB
+    - name: _UHCD_CopyInterruptScheduleToFrameList@4
+      demangled: ''
+      offset: 00005BE2
+    - name: _UHCD_StartIoCancel@8
+      demangled: ''
+      offset: 00005D67
+    - name: _UHCD_GetSetEndpointState_StartIo@8
+      demangled: ''
+      offset: 00005F9E
+    - name: _UHCD_FinishInitializeEndpoint@16
+      demangled: ''
+      offset: '00006355'
+    - name: _UHCD_GetNumTDsPerEndoint@4
+      demangled: ''
+      offset: '000064E2'
+    - name: _UHCD_BW_Reclimation@8
+      demangled: ''
+      offset: '00006506'
+    - name: _UHCD_InterruptService@8
+      demangled: ''
+      offset: '00006605'
+    - name: _UHCD_IsrDpc@16
+      demangled: ''
+      offset: 0000697E
+    - name: _UHCD_RequestInterrupt@8
+      demangled: ''
+      offset: 00006D8D
+    - name: _UHCD_KdPrintX
+      demangled: ''
+      offset: 00006E7E
+    - name: _UHCD_Debug_DumpTD@4
+      demangled: ''
+      offset: '00007079'
+    - name: _UHCD_Assert@16
+      demangled: ''
+      offset: 0000721C
+    - name: _UHCD_Debug_GetHeap@16
+      demangled: ''
+      offset: '00007256'
+    - name: _UHCD_Debug_RetHeap@12
+      demangled: ''
+      offset: 0000726C
+    - name: _UHCD_PrintPnPMessage@8
+      demangled: ''
+      offset: '00007342'
+    - name: _UHCD_Debug_LogEntry@20
+      demangled: ''
+      offset: 000073F7
+    - name: _UHCD_LogInit@0
+      demangled: ''
+      offset: 000074D4
+    - name: _UHCD_LogFree@0
+      demangled: ''
+      offset: '00007510'
+    - name: _UHCD_LogTD@8
+      demangled: ''
+      offset: '00007522'
+    - name: _UHCD_ValidateIsoUrb@12
+      demangled: ''
+      offset: '00007654'
+    - name: _UHCD_Transfer_StartIo@8
+      demangled: ''
+      offset: 000078CF
+    - name: _UHCD_CompleteTransferDPC@12
+      demangled: ''
+      offset: '00007E20'
+    - name: _UHCD_StartDmaTransfer@16
+      demangled: ''
+      offset: '000085E1'
+    - name: _UHCD_InitializeDmaTransfer@20
+      demangled: ''
+      offset: 000088DA
+    - name: _UHCD_TransferCancel@8
+      demangled: ''
+      offset: 00008B3B
+    - name: _UHCD_BeginTransfer@16
+      demangled: ''
+      offset: 0000908E
+    - name: _UHCD_RemoveQueuedUrbs@12
+      demangled: ''
+      offset: '00009464'
+    - name: _UHCD_EndpointWorker@8
+      demangled: ''
+      offset: 0000954E
+    - name: _UHCD_EndpointDMAWorker@8
+      demangled: ''
+      offset: 000096DB
+    - name: _UHCD_EndpointIdle@8
+      demangled: ''
+      offset: 00009BCC
+    - name: _UHCD_EndpointWakeup@8
+      demangled: ''
+      offset: 00009DFB
+    - name: _UHCD_LockAccess@4
+      demangled: ''
+      offset: 00009ED0
+    - name: _UHCD_UnLockAccess@4
+      demangled: ''
+      offset: 00009F33
+    - name: _UHCD_SelectBufferPool@8
+      demangled: ''
+      offset: 00009FC4
+    - name: _UHCD_FreePoolSize@8
+      demangled: ''
+      offset: 0000A08A
+    - name: _UHCD_InitializeHardwareQueueHeadDescriptor@12
+      demangled: ''
+      offset: 0000A161
+    - name: _UHCD_InitializeHardwareTransferDescriptor@12
+      demangled: ''
+      offset: 0000A201
+    - name: _UHCD_AllocateHardwareDescriptors@12
+      demangled: ''
+      offset: 0000A3F3
+    - name: _UHCD_FreeHardwareDescriptors@8
+      demangled: ''
+      offset: 0000A59E
+    - name: _UHCD_DoAllocateCommonBuffer@8
+      demangled: ''
+      offset: 0000A694
+    - name: _UHCD_AllocateCommonBuffer@8
+      demangled: ''
+      offset: 0000A78A
+    - name: _UHCD_FreeCommonBuffer@8
+      demangled: ''
+      offset: 0000A8B3
+    - name: _UHCD_AllocateCommonBufferBlock@12
+      demangled: ''
+      offset: 0000AA7B
+    - name: _UHCD_CheckCommonBufferPool@12
+      demangled: ''
+      offset: 0000ACBD
+    - name: _UHCD_MoreCommonBuffers@4
+      demangled: ''
+      offset: 0000AD18
+    - name: _UHCD_GrowBufferPool@24
+      demangled: ''
+      offset: 0000AF15
+    - name: _UHCD_GrowPoolWorker@4
+      demangled: ''
+      offset: 0000AFFE
+    - name: _UHCD_Free_NoDMA_Buffer@8
+      demangled: ''
+      offset: 0000B05A
+    - name: _UHCD_Alloc_NoDMA_Buffer@12
+      demangled: ''
+      offset: 0000B0F9
+    - name: _UHCD_PrepareStatusPacket@12
+      demangled: ''
+      offset: 0000B2CE
+    - name: _UHCD_PrepareSetupPacket@12
+      demangled: ''
+      offset: 0000B416
+    - name: _UHCD_MapTDError@12
+      demangled: ''
+      offset: 0000B4DA
+    - name: _UHCD_InitializeAsyncTD@8
+      demangled: ''
+      offset: 0000B5AE
+    - name: _UHCD_QueueBusy@12
+      demangled: ''
+      offset: 0000B7C6
+    - name: _UHCD_PrepareAsyncDataPacket@28
+      demangled: ''
+      offset: 0000BB12
+    - name: _UHCD_InitializeAsyncTransfer@12
+      demangled: ''
+      offset: 0000BF48
+    - name: _UHCD_ProcessAsyncTransfer@16
+      demangled: ''
+      offset: 0000C86F
+    - name: _UHCD_PrepareMoreAsyncTDs@16
+      demangled: ''
+      offset: 0000D2D2
+    - name: _UHCD_GetPacketBuffer@24
+      demangled: ''
+      offset: 0000D738
+    - name: _UHCD_FixupDataToggle@12
+      demangled: ''
+      offset: 0000DA65
+    - name: _UHCD_SyncInsertIsochDescriptor@4
+      demangled: ''
+      offset: 0000DBAA
+    - name: _UHCD_InsertIsochDescriptor@12
+      demangled: ''
+      offset: 0000DC59
+    - name: _UHCD_InitializeIsochTransfer@12
+      demangled: ''
+      offset: 0000DD4D
+    - name: _UHCD_ScheduleIsochTransfer@12
+      demangled: ''
+      offset: '0000E179'
+    - name: _UHCD_ProcessIsochTransfer@16
+      demangled: ''
+      offset: '0000E623'
+    - name: _UHCD_RootHub_OpenEndpoint@12
+      demangled: ''
+      offset: '0000E974'
+    - name: _UHCD_RootHub_CloseEndpoint@12
+      demangled: ''
+      offset: 0000EB7B
+    - name: _UHCD_RootHub_ControlTransfer@12
+      demangled: ''
+      offset: 0000EDEB
+    - name: _UHCD_RootHub_InterruptTransfer@12
+      demangled: ''
+      offset: 0000F19B
+    - name: _UHCD_RootHubPoll@8
+      demangled: ''
+      offset: 0000F480
+    - name: _UHCD_RootHub_ReadPort@4
+      demangled: ''
+      offset: 0000F66C
+    - name: _UHCD_RootHub_Timer@16
+      demangled: ''
+      offset: 0000F6EB
+    - name: _UHCD_RootHubTimerDpc@16
+      demangled: ''
+      offset: 0000F812
+    - name: _UHCD_RootHub_WritePort@8
+      demangled: ''
+      offset: 0000F86E
+    - name: _UHCD_RootHub_InterruptTransferCancel@8
+      demangled: ''
+      offset: 0000F93A
+    - name: _UHCD_RootHubPollDpc@16
+      demangled: ''
+      offset: 0000F9F8
+    - name: _RootHub_ResetTimerHandler@4
+      demangled: ''
+      offset: 0000FA74
+    - name: _RootHub_SuspendTimerHandler@4
+      demangled: ''
+      offset: 0000FADC
+    - name: _RootHub_Initialize@12
+      demangled: ''
+      offset: 0000FB0E
+    - name: _RootHub_Endpoint0@20
+      demangled: ''
+      offset: 0000FC23
+    - name: _RootHub_StandardCommand@20
+      demangled: ''
+      offset: 0000FD3B
+    - name: _RootHub_ClassCommand@16
+      demangled: ''
+      offset: 0001013D
+    - name: _RootHub_Endpoint1@12
+      demangled: ''
+      offset: '00010823'
+    - name: _RootHub_PortsIdle@4
+      demangled: ''
+      offset: 0001092C
+    - name: _UHCD_InitBandwidthTable@4
+      demangled: ''
+      offset: '00010996'
+    - name: _UHCD_ManageBandwidth@16
+      demangled: ''
+      offset: 00010B62
+    - name: _UHCD_StartNoDMATransfer@8
+      demangled: ''
+      offset: 00010D02
+    - name: _UHCD_StopNoDMATransfer@8
+      demangled: ''
+      offset: 00010ECE
+    - name: _UHCD_ProcessNoDMATransfer@12
+      demangled: ''
+      offset: '00011111'
+    - name: _UHCD_InitializeNoDMAEndpoint@8
+      demangled: ''
+      offset: '00011574'
+    - name: _UHCD_UnInitializeNoDMAEndpoint@8
+      demangled: ''
+      offset: '00011635'
+    - name: _UHCD_EndpointNoDMA_Abort@8
+      demangled: ''
+      offset: 0001171F
+    - name: _UHCD_EndpointNoDMAWorker@8
+      demangled: ''
+      offset: 00011B42
+    - name: _UHCD_InitFastIsoTDs@4
+      demangled: ''
+      offset: 00011EC1
+    - name: _UHCD_UnInitFastIso@4
+      demangled: ''
+      offset: 00011FDB
+    - name: _UHCD_InitializeFastIsoEndpoint@8
+      demangled: ''
+      offset: 000121F1
+    - name: _UHCD_UnInitializeFastIsoEndpoint@8
+      demangled: ''
+      offset: '00012503'
+    - name: _UHCD_GetLastFastIsoEndpoint@4
+      demangled: ''
+      offset: 000125EC
+    - name: _UHCD_GetRelativeTD@16
+      demangled: ''
+      offset: 0001266E
+    - name: _UHCD_CleanupFastIsoTD@16
+      demangled: ''
+      offset: 000126FD
+    - name: _UHCD_ProcessFastIsoTransfer@16
+      demangled: ''
+      offset: 000128EF
+    - name: _UHCD_SubmitFastIsoUrb@8
+      demangled: ''
+      offset: 00012B4E
+    - name: _DbgBreakPoint@0
+      demangled: ''
+      offset: 00012C18
+    - name: _DbgPrint
+      demangled: ''
+      offset: 00012C1E
+    - name: _USBD_GetPdoRegistryParameter@20
+      demangled: ''
+      offset: 00012C24
+  - num: '2'
+    name: .idata$5
+    offset: 00005DB0
+    symbols:
+    - name: __imp_@KfRaiseIrql@4
+      demangled: ''
+      offset: '00000000'
+    - name: __imp__READ_PORT_UCHAR@4
+      demangled: ''
+      offset: '00000004'
+    - name: __imp__KeStallExecutionProcessor@4
+      demangled: ''
+      offset: '00000008'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: 0000000C
+    - name: __imp_@KfLowerIrql@4
+      demangled: ''
+      offset: '00000010'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '00000014'
+    - name: __imp__READ_PORT_USHORT@4
+      demangled: ''
+      offset: '00000018'
+    - name: __imp__WRITE_PORT_USHORT@8
+      demangled: ''
+      offset: 0000001C
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000020'
+    - name: __imp__WRITE_PORT_ULONG@8
+      demangled: ''
+      offset: '00000024'
+    - name: __imp__WRITE_PORT_UCHAR@8
+      demangled: ''
+      offset: '00000028'
+    - name: __imp__READ_PORT_ULONG@4
+      demangled: ''
+      offset: 0000002C
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000030'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00000034'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000038'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000040'
+    - name: __imp__IoDisconnectInterrupt@4
+      demangled: ''
+      offset: '00000044'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000048'
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: 0000004C
+    - name: __imp__KeQuerySystemTime@4
+      demangled: ''
+      offset: '00000050'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000054'
+    - name: __imp__KeDelayExecutionThread@12
+      demangled: ''
+      offset: '00000058'
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: 0000005C
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000060'
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: '00000064'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000068'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: 0000006C
+    - name: __imp__KeQueryTimeIncrement@0
+      demangled: ''
+      offset: '00000070'
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: '00000074'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000078'
+    - name: __imp__IoConnectInterrupt@44
+      demangled: ''
+      offset: 0000007C
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: '00000080'
+    - name: __imp__IoGetDmaAdapter@12
+      demangled: ''
+      offset: '00000084'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000088'
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: 0000008C
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      demangled: ''
+      offset: '00000090'
+    - name: __imp__KeSynchronizeExecution@12
+      demangled: ''
+      offset: '00000094'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      demangled: ''
+      offset: '00000098'
+    - name: __imp__RtlQueryRegistryValues@20
+      demangled: ''
+      offset: 0000009C
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: 000000A0
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: 000000A4
+    - name: __imp__IoAcquireCancelSpinLock@4
+      demangled: ''
+      offset: 000000A8
+    - name: __imp__IoStartPacket@16
+      demangled: ''
+      offset: 000000AC
+    - name: __imp__IoStartNextPacket@8
+      demangled: ''
+      offset: 000000B0
+    - name: __imp__KeRemoveEntryDeviceQueue@8
+      demangled: ''
+      offset: 000000B4
+    - name: __imp__KeInsertQueueDpc@12
+      demangled: ''
+      offset: 000000B8
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 000000BC
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 000000C0
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: 000000C4
+    - name: __imp_@ExfInterlockedPopEntryList@8
+      demangled: ''
+      offset: 000000C8
+    - name: __imp_@ExfInterlockedPushEntryList@12
+      demangled: ''
+      offset: 000000CC
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: 000000D0
+    - name: __imp__KeSetTimerEx@20
+      demangled: ''
+      offset: 000000D4
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: 000000D8
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: 000000DC
+    - name: __imp__MmMapIoSpace@16
+      demangled: ''
+      offset: '000000E0'
+    - name: __imp__DbgBreakPoint@0
+      demangled: ''
+      offset: '000000E4'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '000000E8'
+    - name: __imp__USBD_RegisterHcDeviceCapabilities@12
+      demangled: ''
+      offset: 000000EC
+    - name: __imp__USBD_Dispatch@16
+      demangled: ''
+      offset: 000000F0
+    - name: __imp__USBD_RegisterHostController@40
+      demangled: ''
+      offset: 000000F4
+    - name: __imp__USBD_AllocateDeviceName@4
+      demangled: ''
+      offset: 000000F8
+    - name: __imp__USBD_GetPdoRegistryParameter@20
+      demangled: ''
+      offset: 000000FC
+    - name: __imp__USBD_FreeDeviceName@4
+      demangled: ''
+      offset: '00000100'
+    - name: __imp__USBD_CompleteRequest@8
+      demangled: ''
+      offset: '00000104'
+    - name: __imp__USBD_CalculateUsbBandwidth@12
+      demangled: ''
+      offset: '00000108'
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000010C
+    - name: __imp__KsPropertyHandler@12
+      demangled: ''
+      offset: '00000110'
+    - name: \177ks_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000114'
+    - name: _UHCD_PreUSBD_PropertyTable_DrmAudioStream
+      demangled: ''
+      offset: 000001B0
+    - name: _UHCD_PreUSBD_PropertySetTable
+      demangled: ''
+      offset: 000001D8
+    - name: _UHCD_PostUSBD_PropertyTable_DrmAudioStream
+      demangled: ''
+      offset: 000001F0
+    - name: _UHCD_PostUSBD_PropertySetTable
+      demangled: ''
+      offset: '00000218'
+    - name: ??_C@_0BJ@FPNP@freeCommonBuffer?5?$CB?$DN?5NULL?$AA@
+      demangled: '"freeCommonBuffer != NULL"'
+      offset: 0000022C
+    - name: ??_C@_0BM@CEJF@E?3?2NTC?2public?2sdk?2inc?2wdm?4h?$AA@
+      demangled: '"E:\\NTC\\public\\sdk\\inc\\wdm.h"'
+      offset: '00000248'
+    - name: ??_C@_0BN@IHIP@allocateCommonBuffer?5?$CB?$DN?5NULL?$AA@
+      demangled: '"allocateCommonBuffer != NULL"'
+      offset: '00000264'
+    - name: ??_C@_0BJ@BLDF@freeMapRegisters?5?$CB?$DN?5NULL?$AA@
+      demangled: '"freeMapRegisters != NULL"'
+      offset: '00000284'
+    - name: ??_C@_0BM@MGEC@flushAdapterBuffers?5?$CB?$DN?5NULL?$AA@
+      demangled: '"flushAdapterBuffers != NULL"'
+      offset: 000002A0
+    - name: ??_C@_0BE@CIAH@mapTransfer?5?$CB?$DN?5NULL?$AA@
+      demangled: '"mapTransfer != NULL"'
+      offset: 000002BC
+    - name: ??_C@_0BP@OCPD@allocateAdapterChannel?5?$CB?$DN?5NULL?$AA@
+      demangled: '"allocateAdapterChannel != NULL"'
+      offset: 000002D0
+  - num: '3'
+    name: .data
+    offset: 00005F30
+    symbols:
+    - name: _LogMask
+      demangled: ''
+      offset: '00000000'
+    - name: _TransferDispatchTable
+      demangled: ''
+      offset: '00000008'
+    - name: _RH_DeviceDescriptor
+      demangled: ''
+      offset: '00000028'
+    - name: _RH_ConfigurationDescriptor
+      demangled: ''
+      offset: '00000040'
+    - name: _RH_HubDescriptor
+      demangled: ''
+      offset: '00000060'
+    - name: _TrapOn
+      demangled: ''
+      offset: 0000006C
+    - name: _UHCD_Debug_Asserts
+      demangled: ''
+      offset: '00000070'
+    - name: _UHCD_W98_Debug_Trace
+      demangled: ''
+      offset: '00000074'
+    - name: _UHCD_Debug_Trace_Level
+      demangled: ''
+      offset: '00000078'
+    - name: _UHCD_TotalAllocatedHeapSpace
+      demangled: ''
+      offset: 0000007C
+    - name: _HcdLStart
+      demangled: ''
+      offset: '00000080'
+    - name: _UHCD_CommonBufferBytes
+      demangled: ''
+      offset: '00000084'
+    - name: _UHCD_PnpTest
+      demangled: ''
+      offset: '00000088'
+    - name: _LogSpinLock
+      demangled: ''
+      offset: 0000008C
+    - name: _HcdLEnd
+      demangled: ''
+      offset: '00000090'
+    - name: _HcdLPtr
+      demangled: ''
+      offset: '00000094'
+  - num: '4'
+    name: PAGE
+    offset: 000066A0
+    symbols:
+    - name: _UHCD_CreateDeviceObject@12
+      demangled: ''
+      offset: '000000E8'
+    - name: _UHCD_ReadWriteConfig@20
+      demangled: ''
+      offset: '00000362'
+    - name: _UHCD_QueryCapabilities@8
+      demangled: ''
+      offset: 0000067E
+    - name: _UHCD_CleanupDevice@4
+      demangled: ''
+      offset: '00000997'
+    - name: _UHCD_InitializeSchedule@4
+      demangled: ''
+      offset: 00000DD0
+    - name: _UHCD_StartGlobalReset@4
+      demangled: ''
+      offset: 000013DD
+    - name: _UHCD_Suspend@8
+      demangled: ''
+      offset: '00001679'
+    - name: _UHCD_StopBIOS@4
+      demangled: ''
+      offset: 00001A68
+    - name: _UHCD_StartDevice@8
+      demangled: ''
+      offset: '00002099'
+    - name: _UHCD_InitializeCommonBufferPool@16
+      demangled: ''
+      offset: 0000268C
+  - num: '5'
+    name: PAGECONST
+    offset: '000066E0'
+    symbols:
+    - name: _KSPROPSETID_DrmAudioStream
+      demangled: ''
+      offset: '00000000'
+  - num: '6'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_ks
+      demangled: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000050'

@@ -1,0 +1,3569 @@
+filename: aha894x.sys
+binary: AHA894X
+description: ''
+appearances:
+- version: Windows 98 Retail
+  source_tree:
+  - ../a894xirp.c
+  - ../a894xpnp.c
+  - ../aha894x.c
+  - ../../common/common.c
+  - ../hardware.c
+  - ../interrup.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00002DB0
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+    - name: _A894xUnload@4
+      processed: ''
+      offset: '00000051'
+    - name: _A894xCreateClose@8
+      processed: ''
+      offset: '00000054'
+    - name: _GetMemory@8
+      processed: ''
+      offset: 0000007B
+    - name: _A894xVirtualToPhysicalAddress@8
+      processed: ''
+      offset: 0000013D
+    - name: _A894xIsr@8
+      processed: ''
+      offset: '00000178'
+    - name: _A894xDpc@16
+      processed: ''
+      offset: 000001B7
+    - name: _A894xBeginPhysicalDma@16
+      processed: ''
+      offset: 000004F8
+    - name: _A894xBeginAsyncDma@16
+      processed: ''
+      offset: '00000604'
+    - name: _A894xBeginIsochDma@16
+      processed: ''
+      offset: 00000AA6
+    - name: _A894xTimeOutDpc@16
+      processed: ''
+      offset: 0000112C
+    - name: _A894xGetInterruptEvents@4
+      processed: ''
+      offset: 000011EA
+    - name: _A894xCompleteAsyncRequest@12
+      processed: ''
+      offset: 0000121F
+    - name: _HandleIOCtl@12
+      processed: ''
+      offset: '000013E2'
+    - name: _CreatePortObjectAndSymLink@20
+      processed: ''
+      offset: '00001444'
+    - name: _A894xIOCtl@8
+      processed: ''
+      offset: 000015A9
+    - name: _A894xStartAsyncIo@8
+      processed: ''
+      offset: 00001C1C
+    - name: _A894xPnPAddDevice@8
+      processed: ''
+      offset: 000038BC
+    - name: _A894xPnP@8
+      processed: ''
+      offset: 00003C58
+    - name: _A894xPower@8
+      processed: ''
+      offset: 000042D9
+    - name: _A894xSynchCompletionRoutine@12
+      processed: ''
+      offset: 000042FC
+    - name: _A894xCheckPciConfigSpace@4
+      processed: ''
+      offset: '00004312'
+    - name: _A894xTurnOffPower@4
+      processed: ''
+      offset: 000043BF
+    - name: _A894xReadWriteConfig@20
+      processed: ''
+      offset: 000043F8
+    - name: _A894xGetRegistryParameters@8
+      processed: ''
+      offset: 000044B3
+    - name: _A894xGetRegistryKeyValue@20
+      processed: ''
+      offset: '00004752'
+    - name: _A894xDistributeCommonBufferMemory@4
+      processed: ''
+      offset: 000047D7
+    - name: _A894xSystemControl@8
+      processed: ''
+      offset: 0000491F
+    - name: _A894xCleanUpForStopRemove@4
+      processed: ''
+      offset: '00004954'
+    - name: _A894xVerifyHardware@4
+      processed: ''
+      offset: 00004A9B
+    - name: _A894xInitializeHardware@4
+      processed: ''
+      offset: 00004B50
+    - name: _A894xInitializeGruProgram@4
+      processed: ''
+      offset: 00004CAB
+    - name: _A894xResetInterrupt@4
+      processed: ''
+      offset: 00004DB4
+    - name: _A894xBusResetStarted@4
+      processed: ''
+      offset: '00004E88'
+    - name: _A894xResetTimeoutTimerRoutine@16
+      processed: ''
+      offset: 00004FFA
+    - name: _A894xBusResetFinished@8
+      processed: ''
+      offset: '00005078'
+    - name: _A894xGenerateBusReset@8
+      processed: ''
+      offset: 000054FD
+    - name: _Get_tLabel@4
+      processed: ''
+      offset: 000055C0
+    - name: _GetRSU_tLabel@4
+      processed: ''
+      offset: 000055D8
+    - name: _A894xStartNextTransmitTask@4
+      processed: ''
+      offset: 000055F3
+    - name: _A894xCopyAsyncHeaderAndData@8
+      processed: ''
+      offset: '000056E1'
+    - name: _A894xHandleAsyncTransmission@4
+      processed: ''
+      offset: '00005826'
+    - name: _A894xHandleAsyncResponse@8
+      processed: ''
+      offset: 0000594F
+    - name: _A894xHandleRsuCompletion@8
+      processed: ''
+      offset: 00005B19
+    - name: _A894xHandleAsyncRequest@8
+      processed: ''
+      offset: 00005B88
+    - name: _A894xFindAsyncPendingTask@12
+      processed: ''
+      offset: 000065FF
+    - name: _A894xFindMappingStructure@8
+      processed: ''
+      offset: 0000667D
+    - name: _A894xEnablePhysicalDma@8
+      processed: ''
+      offset: 000066F0
+    - name: _A894xDeactivateHardware@4
+      processed: ''
+      offset: 0000671E
+    - name: _A894xHandleIsochInterrupt@8
+      processed: ''
+      offset: '00006780'
+    - name: _Aha894xIsochReceiveConfiguration@12
+      processed: ''
+      offset: 000067EF
+    - name: _Aha894xIsochTransmitConfiguration@12
+      processed: ''
+      offset: 000068A0
+    - name: _A894xGetPhyCapabilities@4
+      processed: ''
+      offset: '00006966'
+    - name: _CalculateCrc@8
+      processed: ''
+      offset: 00006A37
+    - name: _Crc_16@8
+      processed: ''
+      offset: 00006A5E
+    - name: _A894xGenerateSelfIdPacket@4
+      processed: ''
+      offset: 00006A94
+    - name: _A894xGetUniqueId@4
+      processed: ''
+      offset: 00006BCB
+    - name: _Read_PHY@8
+      processed: ''
+      offset: 00006C1E
+    - name: _SeeInput@8
+      processed: ''
+      offset: 00006C9F
+    - name: _SeeRecvBit@8
+      processed: ''
+      offset: 00006D9F
+    - name: _SeeSendBit@12
+      processed: ''
+      offset: 00006E5F
+    - name: _Write_PHY@8
+      processed: ''
+      offset: 00006F12
+    - name: _Bus1394RegisterPortDriver@4
+      processed: ''
+      offset: 00006F2C
+    - name: _KeGetCurrentThread@0
+      processed: ''
+      offset: 00006F32
+  - num: '2'
+    name: .data
+    offset: 000034A0
+    symbols:
+    - name: _A894xDebugFlag
+      processed: ''
+      offset: '00000000'
+    - name: 
+        ??_C@_1CI@KDMG@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      processed: L"\\DosDevices\\1394BUS"
+      offset: '00000004'
+    - name: 
+        ??_C@_1CA@MPBH@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      processed: L"\\Device\\1394BUS"
+      offset: 0000002C
+    - name: 
+        ??_C@_1CG@NCGG@?$AAA?$AAl?$AAl?$AAo?$AAw?$AAP?$AAh?$AAy?$AAs?$AAi?$AAc?$AAa?$AAl?$AAR?$AAe?$AAa?$AAd?$AAs?$AA?$AA@
+      processed: L"AllowPhysicalReads"
+      offset: 0000004C
+    - name: ??_C@_1BE@NFLL@?$AAA?$AAl?$AAl?$AAo?$AAw?$AAI?$AAS?$AAB?$AAR?$AA?$AA@
+      processed: L"AllowISBR"
+      offset: '00000074'
+    - name: 
+        ??_C@_1CA@PDFH@?$AAD?$AAe?$AAl?$AAa?$AAy?$AAA?$AAf?$AAt?$AAe?$AAr?$AAR?$AAe?$AAs?$AAe?$AAt?$AA?$AA@
+      processed: L"DelayAfterReset"
+      offset: '00000088'
+    - name: ??_C@_1BE@DONB@?$AAF?$AAo?$AAr?$AAc?$AAe?$AAR?$AAo?$AAo?$AAt?$AA?$AA@
+      processed: L"ForceRoot"
+      offset: 000000A8
+    - name: 
+        ??_C@_1BK@IDJ@?$AAM?$AAa?$AAx?$AAA?$AAs?$AAy?$AAn?$AAc?$AAR?$AAe?$AAa?$AAd?$AA?$AA@
+      processed: L"MaxAsyncRead"
+      offset: 000000BC
+    - name: 
+        ??_C@_1BM@PCJH@?$AAM?$AAa?$AAx?$AAA?$AAs?$AAy?$AAn?$AAc?$AAW?$AAr?$AAi?$AAt?$AAe?$AA?$AA@
+      processed: L"MaxAsyncWrite"
+      offset: 000000D8
+    - name: ??_C@_1BC@NCHE@?$AAM?$AAa?$AAx?$AAS?$AAp?$AAe?$AAe?$AAd?$AA?$AA@
+      processed: L"MaxSpeed"
+      offset: 000000F4
+    - name: 
+        ??_C@_1CC@LEBG@?$AAA?$AAH?$AAA?$AA8?$AA9?$AA4?$AAx?$AAD?$AAe?$AAb?$AAu?$AAg?$AAF?$AAl?$AAa?$AAg?$AA?$AA@
+      processed: L"AHA894xDebugFlag"
+      offset: '00000108'
+    - name: 
+        ??_C@_1BK@GNPM@?$AAD?$AAo?$AAN?$AAo?$AAt?$AAC?$AAo?$AAn?$AAt?$AAe?$AAn?$AAd?$AA?$AA@
+      processed: L"DoNotContend"
+      offset: 0000012C
+    - name: 
+        ??_C@_1CI@BBP@?$AAN?$AAo?$AAC?$AAy?$AAc?$AAl?$AAe?$AAS?$AAt?$AAa?$AAr?$AAt?$AAP?$AAa?$AAc?$AAk?$AAe?$AAt?$AAs?$AA?$AA@
+      processed: L"NoCycleStartPackets"
+      offset: '00000148'
+    - name: 
+        ??_C@_1BO@LIJK@?$AAR?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAT?$AAi?$AAm?$AAe?$AAO?$AAu?$AAt?$AA?$AA@
+      processed: L"RequestTimeOut"
+      offset: '00000170'
+    - name: 
+        ??_C@_1BO@NHAK@?$AAR?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe?$AAB?$AAu?$AAf?$AAf?$AAe?$AAr?$AAs?$AA?$AA@
+      processed: L"ReceiveBuffers"
+      offset: '00000190'
+    - name: 
+        ??_C@_1CA@PCLB@?$AAT?$AAr?$AAa?$AAn?$AAs?$AAm?$AAi?$AAt?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      processed: L"TransmitWorkers"
+      offset: 000001B0
+    - name: 
+        ??_C@_1BO@NBKO@?$AAR?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      processed: L"ReceiveWorkers"
+      offset: 000001D0
+    - name: 
+        ??_C@_1BO@MLPO@?$AAD?$AAi?$AAa?$AAg?$AAn?$AAo?$AAs?$AAt?$AAi?$AAc?$AAM?$AAo?$AAd?$AAe?$AA?$AA@
+      processed: L"DiagnosticMode"
+      offset: 000001F0
+    - name: _A894xDeviceExtension
+      processed: ''
+      offset: '00000210'
+    - name: _A894xRegisterBase
+      processed: ''
+      offset: '00000214'
+  - num: '3'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_1394BUS
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __imp__Bus1394RegisterPortDriver@4
+      processed: ''
+      offset: '00000138'
+    - name: \1771394BUS_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000013C
+    - name: __imp__KeStallExecutionProcessor@4
+      processed: ''
+      offset: '00000140'
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000144'
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      processed: ''
+      offset: '00000148'
+    - name: __imp__WRITE_REGISTER_ULONG@8
+      processed: ''
+      offset: 0000014C
+    - name: __imp__KeSynchronizeExecution@12
+      processed: ''
+      offset: '00000150'
+    - name: __imp__READ_REGISTER_ULONG@4
+      processed: ''
+      offset: '00000154'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      processed: ''
+      offset: '00000158'
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      processed: ''
+      offset: 0000015C
+    - name: __imp__KeSetTimer@16
+      processed: ''
+      offset: '00000160'
+    - name: __imp__KeInitializeTimer@4
+      processed: ''
+      offset: '00000164'
+    - name: __imp__KeInitializeDpc@12
+      processed: ''
+      offset: '00000168'
+    - name: __imp__MmUnmapLockedPages@8
+      processed: ''
+      offset: 0000016C
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: '00000170'
+    - name: __imp__KeInsertQueueDpc@12
+      processed: ''
+      offset: '00000174'
+    - name: __imp__RtlCopyUnicodeString@8
+      processed: ''
+      offset: '00000178'
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      processed: ''
+      offset: 0000017C
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000180'
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: '00000184'
+    - name: __imp__RtlIntegerToUnicodeString@12
+      processed: ''
+      offset: '00000188'
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      processed: ''
+      offset: 0000018C
+    - name: __imp__RtlAppendUnicodeToString@8
+      processed: ''
+      offset: '00000190'
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: '00000194'
+    - name: __imp__IoStartPacket@16
+      processed: ''
+      offset: '00000198'
+    - name: __imp__KeReleaseMutex@8
+      processed: ''
+      offset: 0000019C
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: 000001A0
+    - name: __imp_@InterlockedExchange@8
+      processed: ''
+      offset: 000001A4
+    - name: __imp__KeCancelTimer@4
+      processed: ''
+      offset: 000001A8
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: 000001AC
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      processed: ''
+      offset: 000001B0
+    - name: __imp__IoStartNextPacket@8
+      processed: ''
+      offset: 000001B4
+    - name: __imp__KeInitializeMutex@8
+      processed: ''
+      offset: 000001B8
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: 000001BC
+    - name: __imp__IoDetachDevice@4
+      processed: ''
+      offset: 000001C0
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: 000001C4
+    - name: __imp__IoDeleteSymbolicLink@4
+      processed: ''
+      offset: 000001C8
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: 000001CC
+    - name: __imp__IoDisconnectInterrupt@4
+      processed: ''
+      offset: 000001D0
+    - name: __imp__IoConnectInterrupt@44
+      processed: ''
+      offset: 000001D4
+    - name: __imp__MmUnmapIoSpace@8
+      processed: ''
+      offset: 000001D8
+    - name: __imp__IoGetDmaAdapter@12
+      processed: ''
+      offset: 000001DC
+    - name: __imp__MmMapIoSpace@16
+      processed: ''
+      offset: '000001E0'
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '000001E4'
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '000001E8'
+    - name: __imp__PoCallDriver@8
+      processed: ''
+      offset: 000001EC
+    - name: __imp__PoStartNextPowerIrp@4
+      processed: ''
+      offset: 000001F0
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: 000001F4
+    - name: __imp__IoFreeIrp@4
+      processed: ''
+      offset: 000001F8
+    - name: __imp__KeGetCurrentThread@0
+      processed: ''
+      offset: 000001FC
+    - name: __imp__IoAllocateIrp@8
+      processed: ''
+      offset: '00000200'
+    - name: __imp__ZwClose@4
+      processed: ''
+      offset: '00000204'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: '00000208'
+    - name: __imp__ZwQueryValueKey@24
+      processed: ''
+      offset: 0000020C
+    - name: __imp__IoAllocateMdl@20
+      processed: ''
+      offset: '00000210'
+    - name: __imp__IoFreeMdl@4
+      processed: ''
+      offset: '00000214'
+    - name: __imp__MmMapLockedPages@8
+      processed: ''
+      offset: '00000218'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000021C
+- version: Windows 98 Debug
+  source_tree:
+  - ../a894xirp.c
+  - ../a894xpnp.c
+  - ../aha894x.c
+  - ../../common/common.c
+  - ../hardware.c
+  - ../interrup.c
+  - nodeUniqueId.H
+  - UniqueId.H
+  - ../../../../../wdm10/ddk/inc/wdm.h
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00004320'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _A894xUnload@4
+      demangled: ''
+      offset: '00000079'
+    - name: _A894xCreateClose@8
+      demangled: ''
+      offset: 0000007C
+    - name: _GetMemory@8
+      demangled: ''
+      offset: 000000FB
+    - name: _FreeMemory@12
+      demangled: ''
+      offset: '000001E5'
+    - name: _A894xVirtualToPhysicalAddress@8
+      demangled: ''
+      offset: 0000025C
+    - name: _A894xIsr@8
+      demangled: ''
+      offset: 000002AD
+    - name: _A894xDpc@16
+      demangled: ''
+      offset: '00000314'
+    - name: _A894xBeginPhysicalDma@16
+      demangled: ''
+      offset: 0000091D
+    - name: _A894xBeginAsyncDma@16
+      demangled: ''
+      offset: 00000CA4
+    - name: _A894xBeginIsochDma@16
+      demangled: ''
+      offset: 0000164E
+    - name: _A894xTimeOutDpc@16
+      demangled: ''
+      offset: 000023F3
+    - name: _A894xGetInterruptEvents@4
+      demangled: ''
+      offset: '000025E4'
+    - name: _A894xCompleteAsyncRequest@12
+      demangled: ''
+      offset: 0000262D
+    - name: _HandleIOCtl@12
+      demangled: ''
+      offset: 000029A1
+    - name: _CreatePortObjectAndSymLink@20
+      demangled: ''
+      offset: 00002A03
+    - name: _A894xIOCtl@8
+      demangled: ''
+      offset: 00002B68
+    - name: _A894xStartAsyncIo@8
+      demangled: ''
+      offset: 00003AD2
+    - name: _A894xPnPAddDevice@8
+      demangled: ''
+      offset: '00007000'
+    - name: _A894xPnP@8
+      demangled: ''
+      offset: 0000743E
+    - name: _A894xPower@8
+      demangled: ''
+      offset: '00008078'
+    - name: _A894xSynchCompletionRoutine@12
+      demangled: ''
+      offset: 000080AF
+    - name: _A894xCheckPciConfigSpace@4
+      demangled: ''
+      offset: 000080C5
+    - name: _A894xTurnOffPower@4
+      demangled: ''
+      offset: '00008209'
+    - name: _A894xReadWriteConfig@20
+      demangled: ''
+      offset: '00008256'
+    - name: _A894xGetRegistryParameters@8
+      demangled: ''
+      offset: 000083A4
+    - name: _A894xGetRegistryKeyValue@20
+      demangled: ''
+      offset: 0000883B
+    - name: _A894xDistributeCommonBufferMemory@4
+      demangled: ''
+      offset: 000088C0
+    - name: _A894xSystemControl@8
+      demangled: ''
+      offset: 00008A63
+    - name: _A894xCleanUpForStopRemove@4
+      demangled: ''
+      offset: 00008A98
+    - name: _A894xVerifyHardware@4
+      demangled: ''
+      offset: 00008C57
+    - name: _A894xInitializeHardware@4
+      demangled: ''
+      offset: 00008D98
+    - name: _A894xInitializeGruProgram@4
+      demangled: ''
+      offset: 00008F2C
+    - name: _A894xResetInterrupt@4
+      demangled: ''
+      offset: 0000905F
+    - name: _A894xBusResetStarted@4
+      demangled: ''
+      offset: 000091D4
+    - name: _A894xResetTimeoutTimerRoutine@16
+      demangled: ''
+      offset: 000093FC
+    - name: _A894xBusResetFinished@8
+      demangled: ''
+      offset: 000094DE
+    - name: _A894xGenerateBusReset@8
+      demangled: ''
+      offset: 00009DDC
+    - name: _Get_tLabel@4
+      demangled: ''
+      offset: 00009F02
+    - name: _GetRSU_tLabel@4
+      demangled: ''
+      offset: 00009F2E
+    - name: _A894xStartNextTransmitTask@4
+      demangled: ''
+      offset: 00009F5D
+    - name: _A894xCopyAsyncHeaderAndData@8
+      demangled: ''
+      offset: 0000A09C
+    - name: _A894xHandleAsyncTransmission@4
+      demangled: ''
+      offset: 0000A3AD
+    - name: _A894xHandleAsyncResponse@8
+      demangled: ''
+      offset: 0000A5DC
+    - name: _A894xHandleRsuCompletion@8
+      demangled: ''
+      offset: 0000AA69
+    - name: _A894xHandleAsyncRequest@8
+      demangled: ''
+      offset: 0000AB3D
+    - name: _A894xFindAsyncPendingTask@12
+      demangled: ''
+      offset: 0000BB19
+    - name: _A894xFindMappingStructure@8
+      demangled: ''
+      offset: 0000BBC3
+    - name: _A894xEnablePhysicalDma@8
+      demangled: ''
+      offset: 0000BC62
+    - name: _A894xDeactivateHardware@4
+      demangled: ''
+      offset: 0000BCBD
+    - name: _A894xHandleIsochInterrupt@8
+      demangled: ''
+      offset: 0000BD1F
+    - name: _Aha894xIsochReceiveConfiguration@12
+      demangled: ''
+      offset: 0000BEDE
+    - name: _Aha894xIsochTransmitConfiguration@12
+      demangled: ''
+      offset: 0000BFE1
+    - name: _A894xGetPhyCapabilities@4
+      demangled: ''
+      offset: 0000C105
+    - name: _CalculateCrc@8
+      demangled: ''
+      offset: 0000C23F
+    - name: _CheckSeeprom@8
+      demangled: ''
+      offset: 0000C266
+    - name: _Crc_16@8
+      demangled: ''
+      offset: 0000C2AF
+    - name: _A894xGenerateSelfIdPacket@4
+      demangled: ''
+      offset: 0000C2E5
+    - name: _A894xGetUniqueId@4
+      demangled: ''
+      offset: 0000C434
+    - name: _Read_PHY@8
+      demangled: ''
+      offset: 0000C487
+    - name: _SeeInput@8
+      demangled: ''
+      offset: 0000C508
+    - name: _SeeOutput@12
+      demangled: ''
+      offset: 0000C608
+    - name: _SeeRecvBit@8
+      demangled: ''
+      offset: 0000C800
+    - name: _SeeSendBit@12
+      demangled: ''
+      offset: 0000C8C0
+    - name: _Write_PHY@8
+      demangled: ''
+      offset: 0000C975
+    - name: _Bus1394RegisterPortDriver@4
+      demangled: ''
+      offset: 0000C990
+    - name: _DbgPrint
+      demangled: ''
+      offset: 0000C996
+    - name: '@IofCompleteRequest@8'
+      demangled: ''
+      offset: 0000C99C
+    - name: _KeInsertQueueDpc@12
+      demangled: ''
+      offset: 0000C9A2
+    - name: _READ_REGISTER_ULONG@4
+      demangled: ''
+      offset: 0000C9A8
+    - name: _WRITE_REGISTER_ULONG@8
+      demangled: ''
+      offset: 0000C9AE
+    - name: _KeSynchronizeExecution@12
+      demangled: ''
+      offset: 0000C9B4
+    - name: '@KefReleaseSpinLockFromDpcLevel@4'
+      demangled: ''
+      offset: 0000C9BA
+    - name: '@KefAcquireSpinLockAtDpcLevel@4'
+      demangled: ''
+      offset: 0000C9C0
+    - name: '@ExfInterlockedInsertTailList@12'
+      demangled: ''
+      offset: 0000C9C6
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: 0000C9CC
+    - name: _KeSetTimer@16
+      demangled: ''
+      offset: 0000C9D2
+    - name: _KeInitializeTimer@4
+      demangled: ''
+      offset: 0000C9D8
+    - name: _KeInitializeDpc@12
+      demangled: ''
+      offset: 0000C9DE
+    - name: _MmUnmapLockedPages@8
+      demangled: ''
+      offset: 0000C9E4
+    - name: _KeCancelTimer@4
+      demangled: ''
+      offset: 0000C9EA
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: 0000C9F0
+    - name: _RtlCopyUnicodeString@8
+      demangled: ''
+      offset: 0000C9F6
+    - name: _IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: 0000C9FC
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000CA02
+    - name: _IoCreateDevice@28
+      demangled: ''
+      offset: 0000CA08
+    - name: _RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: 0000CA0E
+    - name: _RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: 0000CA14
+    - name: _RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: 0000CA1A
+    - name: _RtlInitUnicodeString@8
+      demangled: ''
+      offset: 0000CA20
+    - name: _IoStartPacket@16
+      demangled: ''
+      offset: 0000CA26
+    - name: _KeReleaseMutex@8
+      demangled: ''
+      offset: 0000CA2C
+    - name: _KeWaitForSingleObject@20
+      demangled: ''
+      offset: 0000CA32
+    - name: '@InterlockedExchange@8'
+      demangled: ''
+      offset: 0000CA38
+    - name: _IoStartNextPacket@8
+      demangled: ''
+      offset: 0000CA3E
+    - name: _MmMapLockedPages@8
+      demangled: ''
+      offset: 0000CA44
+    - name: '@ExfInterlockedRemoveHeadList@8'
+      demangled: ''
+      offset: 0000CA4A
+    - name: _KeStallExecutionProcessor@4
+      demangled: ''
+      offset: 0000CA50
+    - name: _KeInitializeMutex@8
+      demangled: ''
+      offset: 0000CA56
+    - name: _KeInitializeSpinLock@4
+      demangled: ''
+      offset: 0000CA5C
+    - name: _IoDetachDevice@4
+      demangled: ''
+      offset: 0000CA62
+    - name: _IoDeleteDevice@4
+      demangled: ''
+      offset: 0000CA68
+    - name: _IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 0000CA6E
+    - name: _IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 0000CA74
+    - name: _IoDisconnectInterrupt@4
+      demangled: ''
+      offset: 0000CA7A
+    - name: _IoConnectInterrupt@44
+      demangled: ''
+      offset: 0000CA80
+    - name: _MmUnmapIoSpace@8
+      demangled: ''
+      offset: 0000CA86
+    - name: _IoGetDmaAdapter@12
+      demangled: ''
+      offset: 0000CA8C
+    - name: _MmMapIoSpace@16
+      demangled: ''
+      offset: 0000CA92
+    - name: _KeInitializeEvent@12
+      demangled: ''
+      offset: 0000CA98
+    - name: '@IofCallDriver@8'
+      demangled: ''
+      offset: 0000CA9E
+    - name: _PoCallDriver@8
+      demangled: ''
+      offset: 0000CAA4
+    - name: _PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 0000CAAA
+    - name: _KeSetEvent@12
+      demangled: ''
+      offset: 0000CAB0
+    - name: _IoFreeIrp@4
+      demangled: ''
+      offset: 0000CAB6
+    - name: _KeGetCurrentThread@0
+      demangled: ''
+      offset: 0000CABC
+    - name: _IoAllocateIrp@8
+      demangled: ''
+      offset: 0000CAC2
+    - name: _ZwClose@4
+      demangled: ''
+      offset: 0000CAC8
+    - name: _IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 0000CACE
+    - name: _ZwQueryValueKey@24
+      demangled: ''
+      offset: 0000CAD4
+    - name: _IoAllocateMdl@20
+      demangled: ''
+      offset: 0000CADA
+    - name: _IoFreeMdl@4
+      demangled: ''
+      offset: 0000CAE0
+  - num: '3'
+    name: .data
+    offset: 0000DCB0
+    symbols:
+    - name: _A894xDebugFlag
+      demangled: ''
+      offset: '00000000'
+    - name: ??_C@_0BM@IKCA@?8AHA894x?5DriverEntry?3?5exit?6?$AA@
+      demangled: "\"\\'AHA894x DriverEntry: exit\\n\""
+      offset: '00000004'
+    - name: ??_C@_0BN@FGEL@?8AHA894x?5DriverEntry?3?5enter?6?$AA@
+      demangled: "\"\\'AHA894x DriverEntry: enter\\n\""
+      offset: '00000020'
+    - name: ??_C@_0BL@JKCL@?8A894xCreateClose?3?5Create?6?$AA@
+      demangled: "\"\\'A894xCreateClose: Create\\n\""
+      offset: '00000040'
+    - name: ??_C@_0BK@BBLO@?8A894xCreateClose?3?5Close?6?$AA@
+      demangled: "\"\\'A894xCreateClose: Close\\n\""
+      offset: 0000005C
+    - name: ??_C@_0CH@NIFP@?8A894xCreateClose?3?5MajorFunction@
+      demangled: "\"\\'A894xCreateClose: MajorFunction\"..."
+      offset: '00000078'
+    - name: ??_C@_0BK@PKJC@?8A894xCreateClose?3?5Enter?6?$AA@
+      demangled: "\"\\'A894xCreateClose: Enter\\n\""
+      offset: 000000A0
+    - name: ??_C@_0BG@JKAK@?8GetMemory?5failed?4?4?4?6?$AA@
+      demangled: "\"\\'GetMemory failed...\\n\""
+      offset: 000000BC
+    - name: ??_C@_0BF@MPNB@?8AHA894x?3?5GetMemory?6?$AA@
+      demangled: "\"\\'AHA894x: GetMemory\\n\""
+      offset: 000000D4
+    - name: ??_C@_0BG@BKAH@?8AHA894x?3?5FreeMemory?6?$AA@
+      demangled: "\"\\'AHA894x: FreeMemory\\n\""
+      offset: 000000EC
+    - name: ??_C@_0EJ@FHEC@?8A894xVirtualToPhysicalAddress?3?5@
+      demangled: "\"\\'A894xVirtualToPhysicalAddress: \"..."
+      offset: '00000104'
+    - name: ??_C@_0CA@JKPF@?8A894xIsr?3?5Hardware?5is?5gone?$CB?$CB?$CB?6?$AA@
+      demangled: "\"\\'A894xIsr: Hardware is gone!!!\\n\""
+      offset: '00000150'
+    - name: ??_C@_0BC@OMKB@?8A894xIsr?3?5Enter?6?$AA@
+      demangled: "\"\\'A894xIsr: Enter\\n\""
+      offset: '00000170'
+    - name: ??_C@_0CA@CDOM@?8A894xDpc?3?5Hardware?5is?5gone?$CB?$CB?$CB?6?$AA@
+      demangled: "\"\\'A894xDpc: Hardware is gone!!!\\n\""
+      offset: '00000184'
+    - name: ??_C@_0BB@CCPG@?8A894xDpc?3?5Exit?6?$AA@
+      demangled: "\"\\'A894xDpc: Exit\\n\""
+      offset: 000001A4
+    - name: ??_C@_0BL@CPCA@?8A894xDpc?3?5RX_DMA_ISOCH_B?6?$AA@
+      demangled: "\"\\'A894xDpc: RX_DMA_ISOCH_B\\n\""
+      offset: 000001B8
+    - name: ??_C@_0BL@BENP@?8A894xDpc?3?5RX_DMA_ISOCH_A?6?$AA@
+      demangled: "\"\\'A894xDpc: RX_DMA_ISOCH_A\\n\""
+      offset: 000001D4
+    - name: ??_C@_0BL@KAOB@?8A894xDpc?3?5TX_DMA_ISOCH_B?6?$AA@
+      demangled: "\"\\'A894xDpc: TX_DMA_ISOCH_B\\n\""
+      offset: 000001F0
+    - name: ??_C@_0BP@DOEP@?8A894xDpc?3?5IsochResource?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xDpc: IsochResource = %x\\n\""
+      offset: 0000020C
+    - name: ??_C@_0BL@JLBO@?8A894xDpc?3?5TX_DMA_ISOCH_A?6?$AA@
+      demangled: "\"\\'A894xDpc: TX_DMA_ISOCH_A\\n\""
+      offset: 0000022C
+    - name: ??_C@_0CC@PFA@?8A894xDpc?3?5rsuInterruptMask?5?$DN?5?$CFx@
+      demangled: "\"\\'A894xDpc: rsuInterruptMask = %x\"..."
+      offset: '00000248'
+    - name: ??_C@_0BN@HMEG@?8A894xDpc?3?5rsuTablePtr?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xDpc: rsuTablePtr = %x\\n\""
+      offset: 0000026C
+    - name: ??_C@_0CD@NMNI@?8A894xDpc?3?5rsuInterruptClear?5?$DN?5?$CF@
+      demangled: "\"\\'A894xDpc: rsuInterruptClear = %\"..."
+      offset: 0000028C
+    - name: ??_C@_0BL@BPNE@?8A894xDpc?3?5rsuEnable?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xDpc: rsuEnable = %x\\n\""
+      offset: 000002B0
+    - name: ??_C@_0BF@KJDL@?8A894xDpc?3?5RSU_DONE?6?$AA@
+      demangled: "\"\\'A894xDpc: RSU_DONE\\n\""
+      offset: 000002CC
+    - name: ??_C@_0BL@MEIP@?8A894xDpc?3?5Not?5handled?$CB?$CB?$CB?6?$AA@
+      demangled: "\"\\'A894xDpc: Not handled!!!\\n\""
+      offset: '000002E4'
+    - name: ??_C@_0BH@BHGH@?8A894xDpc?3?5tCode?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xDpc: tCode = %x\\n\""
+      offset: '00000300'
+    - name: ??_C@_0DB@BCEH@?8A894xDpc?3?5?$CGDeviceExtension?9?$DOGru@
+      demangled: "\"\\'A894xDpc: &DeviceExtension->Gru\"..."
+      offset: '00000318'
+    - name: ??_C@_0DC@HDDA@?8A894xDpc?3?5GruBuffer?5?$CD?5for?5busy?5@
+      demangled: "\"\\'A894xDpc: GruBuffer # for busy \"..."
+      offset: 0000034C
+    - name: ??_C@_0CF@HNFB@?8A894xDpc?3?5Current?5GruBuffer?5?$CD?5?$DN@
+      demangled: "\"\\'A894xDpc: Current GruBuffer # =\"..."
+      offset: '00000380'
+    - name: ??_C@_0BL@LOEH@?8A894xDpc?3?5GruStatus?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xDpc: GruStatus = %x\\n\""
+      offset: 000003A8
+    - name: ??_C@_0CE@BOMF@?8A894xDpc?3?5RsuInterruptEvents?5?$DN?5@
+      demangled: "\"\\'A894xDpc: RsuInterruptEvents = \"..."
+      offset: 000003C4
+    - name: ??_C@_0CB@GDJK@?8A894xDpc?3?5InterruptEvents?5?$DN?5?$CFx?6@
+      demangled: "\"\\'A894xDpc: InterruptEvents = %x\\n\"..."
+      offset: '000003E8'
+    - name: ??_C@_0BC@IOOD@?8A894xDpc?3?5Enter?6?$AA@
+      demangled: "\"\\'A894xDpc: Enter\\n\""
+      offset: 0000040C
+    - name: ??_C@_0DP@GPCK@?8A894xBeginPhysicalDma?3?5Physical@
+      demangled: "\"\\'A894xBeginPhysicalDma: Physical\"..."
+      offset: '00000420'
+    - name: ??_C@_0DP@PPFO@?8A894xBeginPhysicalDma?3?5Physical@
+      demangled: "\"\\'A894xBeginPhysicalDma: Physical\"..."
+      offset: '00000460'
+    - name: ??_C@_0DN@INLE@?8A894xBeginPhysicalDma?3?5Physical@
+      demangled: "\"\\'A894xBeginPhysicalDma: Physical\"..."
+      offset: 000004A0
+    - name: ??_C@_0DD@GMAC@?8A894xBeginPhysicalDma?3?5Physical@
+      demangled: "\"\\'A894xBeginPhysicalDma: Physical\"..."
+      offset: '000004E0'
+    - name: ??_C@_0DD@MEPM@?8A894xBeginPhysicalDma?3?5Physical@
+      demangled: "\"\\'A894xBeginPhysicalDma: Physical\"..."
+      offset: '00000514'
+    - name: ??_C@_0DD@HAIN@?8A894xBeginPhysicalDma?3?5Physical@
+      demangled: "\"\\'A894xBeginPhysicalDma: Physical\"..."
+      offset: '00000548'
+    - name: ??_C@_0CO@GFEN@?8A894xBeginPhysicalDma?3?5DeviceEx@
+      demangled: "\"\\'A894xBeginPhysicalDma: DeviceEx\"..."
+      offset: 0000057C
+    - name: ??_C@_0CM@ICHP@?8A894xBeginPhysicalDma?3?5hAddress@
+      demangled: "\"\\'A894xBeginPhysicalDma: hAddress\"..."
+      offset: 000005AC
+    - name: ??_C@_0DA@IJBA@?8A894xBeginPhysicalDma?3?5Addresse@
+      demangled: "\"\\'A894xBeginPhysicalDma: Addresse\"..."
+      offset: 000005D8
+    - name: ??_C@_0DB@DNPL@?8A894xBeginPhysicalDma?3?5Required@
+      demangled: "\"\\'A894xBeginPhysicalDma: Required\"..."
+      offset: '00000608'
+    - name: ??_C@_0CG@MFAC@?8A894xBeginPhysicalDma?3?5Context?5@
+      demangled: "\"\\'A894xBeginPhysicalDma: Context \"..."
+      offset: 0000063C
+    - name: ??_C@_0CH@GDFM@?8A894xBeginPhysicalDma?3?5Callback@
+      demangled: "\"\\'A894xBeginPhysicalDma: Callback\"..."
+      offset: '00000664'
+    - name: ??_C@_0DF@DLDN@?8A894xBeginPhysicalDma?3?5fulNotif@
+      demangled: "\"\\'A894xBeginPhysicalDma: fulNotif\"..."
+      offset: 0000068C
+    - name: ??_C@_0CM@DJFD@?8A894xBeginPhysicalDma?3?5fulAcces@
+      demangled: "\"\\'A894xBeginPhysicalDma: fulAcces\"..."
+      offset: 000006C4
+    - name: ??_C@_0CN@LMEG@?8A894xBeginPhysicalDma?3?5MaxSegme@
+      demangled: "\"\\'A894xBeginPhysicalDma: MaxSegme\"..."
+      offset: 000006F0
+    - name: ??_C@_0CG@EIMH@?8A894xBeginPhysicalDma?3?5nLength?5@
+      demangled: "\"\\'A894xBeginPhysicalDma: nLength \"..."
+      offset: '00000720'
+    - name: ??_C@_0CH@CIEH@?8A894xBeginPhysicalDma?3?5fulFlags@
+      demangled: "\"\\'A894xBeginPhysicalDma: fulFlags\"..."
+      offset: '00000748'
+    - name: ??_C@_0CC@BHGO@?8A894xBeginPhysicalDma?3?5Mdl?5?$DN?5?$CFx@
+      demangled: "\"\\'A894xBeginPhysicalDma: Mdl = %x\"..."
+      offset: '00000770'
+    - name: ??_C@_0EA@NBKA@?8?8A894xBeginPhysicalDma?3?5p1394Ad@
+      demangled: "\"\\'\\'A894xBeginPhysicalDma: p1394Ad\"..."
+      offset: '00000794'
+    - name: ??_C@_0DN@CNJH@?8?8A894xBeginPhysicalDma?3?5MappedP@
+      demangled: "\"\\'\\'A894xBeginPhysicalDma: MappedP\"..."
+      offset: 000007D4
+    - name: ??_C@_0BE@CIAH@mapTransfer?5?$CB?$DN?5NULL?$AA@
+      demangled: '"mapTransfer != NULL"'
+      offset: '00000814'
+    - name: ??_C@_0CD@PJBI@?4?4?2?4?4?2?4?4?2?4?4?2?4?4?2wdm10?2ddk?2inc?2wdm@
+      demangled: '"..\\..\\..\\..\\..\\wdm10\\ddk\\inc\\wdm"...'
+      offset: '00000828'
+    - name: ??_C@_0DE@JBDO@?8A894xBeginPhysicalDma?3?5CurrentV@
+      demangled: "\"\\'A894xBeginPhysicalDma: CurrentV\"..."
+      offset: 0000084C
+    - name: ??_C@_0CA@LJPI@?8A894xBeginPhysicalDma?3?5Enter?6?6?$AA@
+      demangled: "\"\\'A894xBeginPhysicalDma: Enter\\n\\n\""
+      offset: '00000880'
+    - name: ??_C@_0CK@EKGN@?8A894xBeginAsyncDma?3?5Next?5mdl?5va@
+      demangled: "\"\\'A894xBeginAsyncDma: Next mdl va\"..."
+      offset: 000008A0
+    - name: ??_C@_0CI@EKIF@?8A894xBeginAsyncDma?3?5Get?5next?5md@
+      demangled: "\"\\'A894xBeginAsyncDma: Get next md\"..."
+      offset: 000008CC
+    - name: ??_C@_0DA@HEJH@?8A894xBeginAsyncDma?3?5This?5transf@
+      demangled: "\"\\'A894xBeginAsyncDma: This transf\"..."
+      offset: 000008F4
+    - name: ??_C@_0DF@LHLA@?8A894xBeginAsyncDma?3?5Previous?5tr@
+      demangled: "\"\\'A894xBeginAsyncDma: Previous tr\"..."
+      offset: '00000924'
+    - name: ??_C@_0DD@CCAF@?8A894xBeginAsyncDma?3?5TCODE_WRITE@
+      demangled: "\"\\'A894xBeginAsyncDma: TCODE_WRITE\"..."
+      offset: 0000095C
+    - name: ??_C@_0CJ@BDLK@?8A894xBeginAsyncDma?3?5interruptMa@
+      demangled: "\"\\'A894xBeginAsyncDma: interruptMa\"..."
+      offset: '00000990'
+    - name: ??_C@_0CM@DKDN@?8A894xBeginAsyncDma?3?5rsuInterrup@
+      demangled: "\"\\'A894xBeginAsyncDma: rsuInterrup\"..."
+      offset: 000009BC
+    - name: ??_C@_0CH@OLEB@?8A894xBeginAsyncDma?3?5rsuTablePtr@
+      demangled: "\"\\'A894xBeginAsyncDma: rsuTablePtr\"..."
+      offset: '000009E8'
+    - name: ??_C@_0CN@MJON@?8A894xBeginAsyncDma?3?5rsuInterrup@
+      demangled: "\"\\'A894xBeginAsyncDma: rsuInterrup\"..."
+      offset: 00000A10
+    - name: ??_C@_0CF@EAIG@?8A894xBeginAsyncDma?3?5rsuEnable?5?$DN@
+      demangled: "\"\\'A894xBeginAsyncDma: rsuEnable =\"..."
+      offset: 00000A40
+    - name: ??_C@_0CC@NLNH@?8A894xBeginAsyncDma?3?5RsuSet?5?$DN?5?$CFx@
+      demangled: "\"\\'A894xBeginAsyncDma: RsuSet = %x\"..."
+      offset: 00000A68
+    - name: ??_C@_0DF@KEKB@?8A894xBeginAsyncDma?3?5DeviceExten@
+      demangled: "\"\\'A894xBeginAsyncDma: DeviceExten\"..."
+      offset: 00000A8C
+    - name: ??_C@_0DB@MLIM@?8A894xBeginAsyncDma?3?5AsyncTransf@
+      demangled: "\"\\'A894xBeginAsyncDma: AsyncTransf\"..."
+      offset: 00000AC4
+    - name: ??_C@_0DB@GJOD@?8A894xBeginAsyncDma?3?5MappedPhysi@
+      demangled: "\"\\'A894xBeginAsyncDma: MappedPhysi\"..."
+      offset: 00000AF8
+    - name: ??_C@_0DM@FDC@?8A894xBeginAsyncDma?3?5AsyncTransf@
+      demangled: "\"\\'A894xBeginAsyncDma: AsyncTransf\"..."
+      offset: 00000B2C
+    - name: ??_C@_0DB@NPEI@?8A894xBeginAsyncDma?3?5CurrentVirt@
+      demangled: "\"\\'A894xBeginAsyncDma: CurrentVirt\"..."
+      offset: 00000B68
+    - name: ??_C@_0CP@GPEE@?8A894xBeginAsyncDma?3?5TCODE_READ_@
+      demangled: "\"\\'A894xBeginAsyncDma: TCODE_READ_\"..."
+      offset: 00000B9C
+    - name: ??_C@_0DE@HMNL@?8A894xBeginAsyncDma?3?5TCODE_READ_@
+      demangled: "\"\\'A894xBeginAsyncDma: TCODE_READ_\"..."
+      offset: 00000BCC
+    - name: ??_C@_0CM@EHP@?8A894xBeginAsyncDma?3?5AsyncProgra@
+      demangled: "\"\\'A894xBeginAsyncDma: AsyncProgra\"..."
+      offset: 00000C00
+    - name: ??_C@_0EA@MGEO@?8A894xBeginAsyncDma?3?5Creating?5ch@
+      demangled: "\"\\'A894xBeginAsyncDma: Creating ch\"..."
+      offset: 00000C2C
+    - name: ??_C@_0DJ@ELJL@?8A894xBeginAsyncDma?3?5CurrentVirt@
+      demangled: "\"\\'A894xBeginAsyncDma: CurrentVirt\"..."
+      offset: 00000C6C
+    - name: ??_C@_0DH@CAJC@?8A894xBeginAsyncDma?3?5MdlLengthTo@
+      demangled: "\"\\'A894xBeginAsyncDma: MdlLengthTo\"..."
+      offset: 00000CA8
+    - name: ??_C@_0DJ@JLHO@?8A894xBeginAsyncDma?3?5TotalLength@
+      demangled: "\"\\'A894xBeginAsyncDma: TotalLength\"..."
+      offset: 00000CE0
+    - name: ??_C@_0EB@IBKN@?8A894xBeginAsyncDma?3?5MappedPhysi@
+      demangled: "\"\\'A894xBeginAsyncDma: MappedPhysi\"..."
+      offset: 00000D1C
+    - name: ??_C@_0DG@JIKI@?8A894xBeginAsyncDma?3?5CurrentLeng@
+      demangled: "\"\\'A894xBeginAsyncDma: CurrentLeng\"..."
+      offset: 00000D60
+    - name: ??_C@_0DH@NLGF@?8A894xBeginAsyncDma?3?5CurrentLeng@
+      demangled: "\"\\'A894xBeginAsyncDma: CurrentLeng\"..."
+      offset: 00000D98
+    - name: ??_C@_0DK@DHLG@?8A894xBeginAsyncDma?3?5CurrentVirt@
+      demangled: "\"\\'A894xBeginAsyncDma: CurrentVirt\"..."
+      offset: 00000DD0
+    - name: ??_C@_0DI@GPNN@?8A894xBeginAsyncDma?3?5MdlLengthTo@
+      demangled: "\"\\'A894xBeginAsyncDma: MdlLengthTo\"..."
+      offset: 00000E0C
+    - name: ??_C@_0DK@BKGG@?8A894xBeginAsyncDma?3?5TotalLength@
+      demangled: "\"\\'A894xBeginAsyncDma: TotalLength\"..."
+      offset: '00000E44'
+    - name: ??_C@_0CM@BMEL@?8A894xBeginAsyncDma?3?5Mapping?5tra@
+      demangled: "\"\\'A894xBeginAsyncDma: Mapping tra\"..."
+      offset: '00000E80'
+    - name: ??_C@_0DA@BBDO@?8A894xBeginAsyncDma?3?5TCODE_READ_@
+      demangled: "\"\\'A894xBeginAsyncDma: TCODE_READ_\"..."
+      offset: 00000EAC
+    - name: ??_C@_0BN@FPAM@?8A894xBeginAsyncDma?3?5Enter?6?6?$AA@
+      demangled: "\"\\'A894xBeginAsyncDma: Enter\\n\\n\""
+      offset: 00000EDC
+    - name: ??_C@_0BL@HFIB@?8A894xBeginIsocDma?3?5Exit?6?6?$AA@
+      demangled: "\"\\'A894xBeginIsocDma: Exit\\n\\n\""
+      offset: 00000EFC
+    - name: ??_C@_0CE@JAFG@?8A894xBeginIsocDma?3?5Dma?5started?4@
+      demangled: "\"\\'A894xBeginIsocDma: Dma started.\"..."
+      offset: 00000F18
+    - name: ??_C@_0FA@JONO@?8A894xBeginIsocDma?3?5?$CIafter?$CJ?5isoc@
+      demangled: "\"\\'A894xBeginIsocDma: (after) isoc\"..."
+      offset: 00000F3C
+    - name: ??_C@_0FA@BFCE@?8A894xBeginIsocDma?3?5?$CIafter?$CJ?5isoc@
+      demangled: "\"\\'A894xBeginIsocDma: (after) isoc\"..."
+      offset: 00000F8C
+    - name: ??_C@_0EN@BIAL@?8A894xBeginIsocDma?3?5?$CIafter?$CJ?5isoc@
+      demangled: "\"\\'A894xBeginIsocDma: (after) isoc\"..."
+      offset: 00000FDC
+    - name: ??_C@_0EN@OMAJ@?8A894xBeginIsocDma?3?5?$CIafter?$CJ?5isoc@
+      demangled: "\"\\'A894xBeginIsocDma: (after) isoc\"..."
+      offset: 0000102C
+    - name: ??_C@_0EB@LGAO@?8A894xBeginIsocDma?3?5?$CIafter?$CJ?5IRdb@
+      demangled: "\"\\'A894xBeginIsocDma: (after) IRdb\"..."
+      offset: 0000107C
+    - name: ??_C@_0EB@ECAM@?8A894xBeginIsocDma?3?5?$CIafter?$CJ?5IRdb@
+      demangled: "\"\\'A894xBeginIsocDma: (after) IRdb\"..."
+      offset: 000010C0
+    - name: ??_C@_0EE@FFMJ@?8A894xBeginIsocDma?3?5?$CIafter?$CJ?5IRdb@
+      demangled: "\"\\'A894xBeginIsocDma: (after) IRdb\"..."
+      offset: '00001104'
+    - name: ??_C@_0EE@NODD@?8A894xBeginIsocDma?3?5?$CIafter?$CJ?5IRdb@
+      demangled: "\"\\'A894xBeginIsocDma: (after) IRdb\"..."
+      offset: '00001148'
+    - name: ??_C@_0DJ@JOIA@?8A894xBeginIsocDma?3?5?$CIafter?$CJ?5inte@
+      demangled: "\"\\'A894xBeginIsocDma: (after) inte\"..."
+      offset: 0000118C
+    - name: ??_C@_0DD@KDBJ@?8A894xBeginIsocDma?3?5?$CIafter?$CJ?5cont@
+      demangled: "\"\\'A894xBeginIsocDma: (after) cont\"..."
+      offset: 000011C8
+    - name: ??_C@_0FB@LKNA@?8A894xBeginIsocDma?3?5?$CIbefore?$CJ?5iso@
+      demangled: "\"\\'A894xBeginIsocDma: (before) iso\"..."
+      offset: 000011FC
+    - name: ??_C@_0FB@DBCK@?8A894xBeginIsocDma?3?5?$CIbefore?$CJ?5iso@
+      demangled: "\"\\'A894xBeginIsocDma: (before) iso\"..."
+      offset: '00001250'
+    - name: ??_C@_0EO@BIHC@?8A894xBeginIsocDma?3?5?$CIbefore?$CJ?5iso@
+      demangled: "\"\\'A894xBeginIsocDma: (before) iso\"..."
+      offset: 000012A4
+    - name: ??_C@_0EO@OMHA@?8A894xBeginIsocDma?3?5?$CIbefore?$CJ?5iso@
+      demangled: "\"\\'A894xBeginIsocDma: (before) iso\"..."
+      offset: 000012F4
+    - name: ??_C@_0EC@KPPE@?8A894xBeginIsocDma?3?5?$CIbefore?$CJ?5IRd@
+      demangled: "\"\\'A894xBeginIsocDma: (before) IRd\"..."
+      offset: '00001344'
+    - name: ??_C@_0EC@FLPG@?8A894xBeginIsocDma?3?5?$CIbefore?$CJ?5IRd@
+      demangled: "\"\\'A894xBeginIsocDma: (before) IRd\"..."
+      offset: '00001388'
+    - name: ??_C@_0EF@NOJB@?8A894xBeginIsocDma?3?5?$CIbefore?$CJ?5IRd@
+      demangled: "\"\\'A894xBeginIsocDma: (before) IRd\"..."
+      offset: 000013CC
+    - name: ??_C@_0EF@FFGL@?8A894xBeginIsocDma?3?5?$CIbefore?$CJ?5IRd@
+      demangled: "\"\\'A894xBeginIsocDma: (before) IRd\"..."
+      offset: '00001414'
+    - name: ??_C@_0DK@HFFF@?8A894xBeginIsocDma?3?5?$CIbefore?$CJ?5int@
+      demangled: "\"\\'A894xBeginIsocDma: (before) int\"..."
+      offset: 0000145C
+    - name: ??_C@_0DE@LCDK@?8A894xBeginIsocDma?3?5?$CIbefore?$CJ?5con@
+      demangled: "\"\\'A894xBeginIsocDma: (before) con\"..."
+      offset: '00001498'
+    - name: ??_C@_0CE@CFKM@?8A894xBeginIsocDma?3?5Dma?5stopped?4@
+      demangled: "\"\\'A894xBeginIsocDma: Dma stopped.\"..."
+      offset: 000014CC
+    - name: ??_C@_0CO@KGIB@?8A894xBeginIsocDma?3?5Streaming?5in@
+      demangled: "\"\\'A894xBeginIsocDma: Streaming in\"..."
+      offset: 000014F0
+    - name: ??_C@_0EN@JEMO@?8A894xBeginIsocDma?3?5Changing?5sto@
+      demangled: "\"\\'A894xBeginIsocDma: Changing sto\"..."
+      offset: '00001520'
+    - name: ??_C@_0DN@DIBD@?8A894xBeginIsocDma?3?5IsochResourc@
+      demangled: "\"\\'A894xBeginIsocDma: IsochResourc\"..."
+      offset: '00001570'
+    - name: ??_C@_0EK@BILI@?8A894xBeginIsochDma?3?5IsochStruct@
+      demangled: "\"\\'A894xBeginIsochDma: IsochStruct\"..."
+      offset: 000015B0
+    - name: ??_C@_0EP@NGLK@?8A894xBeginIsochDma?3?5TailIsochSt@
+      demangled: "\"\\'A894xBeginIsochDma: TailIsochSt\"..."
+      offset: 000015FC
+    - name: ??_C@_0FB@JCJ@?8A894xBeginIsochDma?3?5TailIsochSt@
+      demangled: "\"\\'A894xBeginIsochDma: TailIsochSt\"..."
+      offset: 0000164C
+    - name: ??_C@_0EC@NGPM@?8A894xBeginIsochDma?3?5TailIsochSt@
+      demangled: "\"\\'A894xBeginIsochDma: TailIsochSt\"..."
+      offset: 000016A0
+    - name: ??_C@_0EC@HPAH@?8A894xBeginIsochDma?3?5IsochStruct@
+      demangled: "\"\\'A894xBeginIsochDma: IsochStruct\"..."
+      offset: '000016E4'
+    - name: ??_C@_0CO@CPLD@?8A894xBeginIsochDma?3?5TailIsochSt@
+      demangled: "\"\\'A894xBeginIsochDma: TailIsochSt\"..."
+      offset: '00001728'
+    - name: ??_C@_0EI@OLJI@?8A894xBeginIsocDma?3?5Link?5descrip@
+      demangled: "\"\\'A894xBeginIsocDma: Link descrip\"..."
+      offset: '00001758'
+    - name: ??_C@_0DB@BNIO@?8A894xBeginIsocDma?3?5Descriptors?5@
+      demangled: "\"\\'A894xBeginIsocDma: Descriptors \"..."
+      offset: 000017A0
+    - name: ??_C@_0DG@OPAJ@?8A894xBeginIsocDma?3?5No?5other?5des@
+      demangled: "\"\\'A894xBeginIsocDma: No other des\"..."
+      offset: 000017D4
+    - name: ??_C@_0CO@NHBH@?8A894xBeginIsochDma?3?5ChannelProg@
+      demangled: "\"\\'A894xBeginIsochDma: ChannelProg\"..."
+      offset: 0000180C
+    - name: ??_C@_0DK@PKFJ@?8A894xBeginIsochDma?3?5ChannelProg@
+      demangled: "\"\\'A894xBeginIsochDma: ChannelProg\"..."
+      offset: 0000183C
+    - name: ??_C@_0DN@BIOJ@?8A894xBeginIsochDma?3?5ChannelProg@
+      demangled: "\"\\'A894xBeginIsochDma: ChannelProg\"..."
+      offset: '00001878'
+    - name: ??_C@_0DL@INEK@?8A894xBeginIsochDma?3?5ChannelProg@
+      demangled: "\"\\'A894xBeginIsochDma: ChannelProg\"..."
+      offset: 000018B8
+    - name: ??_C@_0EO@KNEN@?8A894xBeginIsochDma?3?5ChannelProg@
+      demangled: "\"\\'A894xBeginIsochDma: ChannelProg\"..."
+      offset: 000018F4
+    - name: ??_C@_0EL@OLGP@?8A894xBeginIsocDma?3?5Inserting?5in@
+      demangled: "\"\\'A894xBeginIsocDma: Inserting in\"..."
+      offset: '00001944'
+    - name: ??_C@_0ED@FKON@?8A894xBeginIsocDma?3?5Stamping?5des@
+      demangled: "\"\\'A894xBeginIsocDma: Stamping des\"..."
+      offset: '00001990'
+    - name: ??_C@_0EG@PGHA@?8A894xBeginIsochDmaProgram?3?5Chan@
+      demangled: "\"\\'A894xBeginIsochDmaProgram: Chan\"..."
+      offset: 000019D4
+    - name: ??_C@_0DG@FDNL@?8A894xBeginIsochDmaProgram?3?5Rese@
+      demangled: "\"\\'A894xBeginIsochDmaProgram: Rese\"..."
+      offset: 00001A1C
+    - name: ??_C@_0EG@COAD@?8A894xBeginIsochDmaProgram?3?5Chan@
+      demangled: "\"\\'A894xBeginIsochDmaProgram: Chan\"..."
+      offset: 00001A54
+    - name: ??_C@_0EG@GGCN@?8A894xBeginIsochDmaProgram?3?5Chan@
+      demangled: "\"\\'A894xBeginIsochDmaProgram: Chan\"..."
+      offset: 00001A9C
+    - name: ??_C@_0DG@IEKK@?8A894xBeginIsocDma?3?5IRconfigurai@
+      demangled: "\"\\'A894xBeginIsocDma: IRconfigurai\"..."
+      offset: 00001AE4
+    - name: ??_C@_0DK@NFBC@?8A894xBeginIsochDma?3?5?$CGIsochStruc@
+      demangled: "\"\\'A894xBeginIsochDma: &IsochStruc\"..."
+      offset: 00001B1C
+    - name: ??_C@_0DP@PBKI@?8A894xBeginIsocDma?3?5Creating?5cha@
+      demangled: "\"\\'A894xBeginIsocDma: Creating cha\"..."
+      offset: 00001B58
+    - name: ??_C@_0CM@HKMN@?8A894xBeginIsochDma?3?5Mapping?5tra@
+      demangled: "\"\\'A894xBeginIsochDma: Mapping tra\"..."
+      offset: 00001B98
+    - name: ??_C@_0DJ@HCCP@?8A894xBeginIsocDma?3?5BandwidthCon@
+      demangled: "\"\\'A894xBeginIsocDma: BandwidthCon\"..."
+      offset: 00001BC4
+    - name: ??_C@_0DM@JFMN@?8A894xBeginIsocDma?3?5BandwidthCon@
+      demangled: "\"\\'A894xBeginIsocDma: BandwidthCon\"..."
+      offset: 00001C00
+    - name: ??_C@_0CJ@CMEF@?8A894xBeginIsocDma?3?5ChannelProgr@
+      demangled: "\"\\'A894xBeginIsocDma: ChannelProgr\"..."
+      offset: 00001C3C
+    - name: ??_C@_0BO@CHDO@?8A894xBeginIsocDma?3?5Mdl?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xBeginIsocDma: Mdl = %x\\n\""
+      offset: 00001C68
+    - name: ??_C@_0CI@GMNL@?8A894xBeginIsocDma?3?5IsochResourc@
+      demangled: "\"\\'A894xBeginIsocDma: IsochResourc\"..."
+      offset: 00001C88
+    - name: ??_C@_0CK@GMPG@?8A894xBeginIsocDma?3?5IsochDescrip@
+      demangled: "\"\\'A894xBeginIsocDma: IsochDescrip\"..."
+      offset: 00001CB0
+    - name: ??_C@_0CK@FBGF@?8A894xBeginIsocDma?3?5DeviceExtens@
+      demangled: "\"\\'A894xBeginIsocDma: DeviceExtens\"..."
+      offset: 00001CDC
+    - name: ??_C@_0CJ@LOHF@?8A894xBeginIsocDma?3?5IsochStructu@
+      demangled: "\"\\'A894xBeginIsocDma: IsochStructu\"..."
+      offset: 00001D08
+    - name: ??_C@_0BM@CEDN@?8A894xBeginIsocDma?3?5Enter?6?6?$AA@
+      demangled: "\"\\'A894xBeginIsocDma: Enter\\n\\n\""
+      offset: 00001D34
+    - name: ??_C@_0BI@MBHF@?8A894xTimeOutDpc?3?5Exit?6?$AA@
+      demangled: "\"\\'A894xTimeOutDpc: Exit\\n\""
+      offset: 00001D50
+    - name: ??_C@_0CH@LJDL@?8A894xTimeOutDpc?3?5Hardware?5is?5go@
+      demangled: "\"\\'A894xTimeOutDpc: Hardware is go\"..."
+      offset: 00001D68
+    - name: ??_C@_0EF@JDNG@?8A894xTimeOutDpc?3?5Could?5not?5find@
+      demangled: "\"\\'A894xTimeOutDpc: Could not find\"..."
+      offset: 00001D90
+    - name: ??_C@_0CN@DBGM@?8A894xTimeOutDpc?3?5AsyncTransfer?9@
+      demangled: "\"\\'A894xTimeOutDpc: AsyncTransfer-\"..."
+      offset: 00001DD8
+    - name: ??_C@_0CO@OHAO@?8A894xTimeOutDpc?3?5AsyncTransfer?9@
+      demangled: "\"\\'A894xTimeOutDpc: AsyncTransfer-\"..."
+      offset: '00001E08'
+    - name: ??_C@_0CM@DCDP@?8A894xTimeOutDpc?3?5Found?5request?5@
+      demangled: "\"\\'A894xTimeOutDpc: Found request \"..."
+      offset: '00001E38'
+    - name: ??_C@_0DD@ICCH@?8A894xTimeOutDpc?3?5AsyncTransmitP@
+      demangled: "\"\\'A894xTimeOutDpc: AsyncTransmitP\"..."
+      offset: '00001E64'
+    - name: ??_C@_0CO@MBMJ@?8A894xTimeOutDpc?3?5DeviceExtensio@
+      demangled: "\"\\'A894xTimeOutDpc: DeviceExtensio\"..."
+      offset: '00001E98'
+    - name: ??_C@_0CN@GJBC@?8A894xTimeOutDpc?3?5AsyncTimer?5not@
+      demangled: "\"\\'A894xTimeOutDpc: AsyncTimer not\"..."
+      offset: 00001EC8
+    - name: ??_C@_0CM@FCJK@?8A894xTimeOutDpc?3?5AsyncTransfer?5@
+      demangled: "\"\\'A894xTimeOutDpc: AsyncTransfer \"..."
+      offset: 00001EF8
+    - name: ??_C@_0BJ@BBAA@?8A894xTimeOutDpc?3?5Enter?6?$AA@
+      demangled: "\"\\'A894xTimeOutDpc: Enter\\n\""
+      offset: 00001F24
+    - name: ??_C@_0CB@DENI@?8A894xGetInterruptEvents?3?5enter?6@
+      demangled: "\"\\'A894xGetInterruptEvents: enter\\n\"..."
+      offset: 00001F40
+    - name: ??_C@_0CJ@IJPJ@?8A894xCompleteAsyncRequest?3?5Stat@
+      demangled: "\"\\'A894xCompleteAsyncRequest: Stat\"..."
+      offset: 00001F64
+    - name: ??_C@_0CO@CENP@?8A894xCompleteAsyncRequest?3?5Comp@
+      demangled: "\"\\'A894xCompleteAsyncRequest: Comp\"..."
+      offset: 00001F90
+    - name: ??_C@_0DI@ICKI@?8A894xCompleteAsyncRequest?3?5Call@
+      demangled: "\"\\'A894xCompleteAsyncRequest: Call\"..."
+      offset: 00001FC0
+    - name: ??_C@_0DD@MAGL@?8A894xCompleteAsyncRequest?3?5Unma@
+      demangled: "\"\\'A894xCompleteAsyncRequest: Unma\"..."
+      offset: 00001FF8
+    - name: ??_C@_0EM@CBEJ@?8A894xCompleteAsyncRequest?3?5Flus@
+      demangled: "\"\\'A894xCompleteAsyncRequest: Flus\"..."
+      offset: 0000202C
+    - name: ??_C@_0BJ@BLDF@freeMapRegisters?5?$CB?$DN?5NULL?$AA@
+      demangled: '"freeMapRegisters != NULL"'
+      offset: '00002078'
+    - name: ??_C@_0BM@MGEC@flushAdapterBuffers?5?$CB?$DN?5NULL?$AA@
+      demangled: '"flushAdapterBuffers != NULL"'
+      offset: '00002094'
+    - name: ??_C@_0EN@LJKC@?8A894xCompleteAsyncRequest?3?5Flus@
+      demangled: "\"\\'A894xCompleteAsyncRequest: Flus\"..."
+      offset: 000020B0
+    - name: ??_C@_0CP@MGHE@?8A894xCompleteAsyncRequest?3?5Stop@
+      demangled: "\"\\'A894xCompleteAsyncRequest: Stop\"..."
+      offset: '00002100'
+    - name: ??_C@_0DH@FAEB@?8A894xCompleteAsyncRequest?3?5Asyn@
+      demangled: "\"\\'A894xCompleteAsyncRequest: Asyn\"..."
+      offset: '00002130'
+    - name: ??_C@_0DI@PGP@?8A894xCompleteAsyncRequest?3?5Asyn@
+      demangled: "\"\\'A894xCompleteAsyncRequest: Asyn\"..."
+      offset: '00002168'
+    - name: ??_C@_0CD@MJAB@?8A894xCompleteAsyncRequest?3?5Ente@
+      demangled: "\"\\'A894xCompleteAsyncRequest: Ente\"..."
+      offset: 000021A0
+    - name: 
+        ??_C@_1CI@KDMG@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      demangled: L"\\DosDevices\\1394BUS"
+      offset: 000021C4
+    - name: 
+        ??_C@_1CA@MPBH@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      demangled: L"\\Device\\1394BUS"
+      offset: 000021EC
+    - name: ??_C@_0CF@IAFM@?8A894xIOCtl?3?5ExAllocatePool?5fail@
+      demangled: "\"\\'A894xIOCtl: ExAllocatePool fail\"..."
+      offset: 0000220C
+    - name: ??_C@_0BD@GLGK@?8A894xIOCtl?3?5Exit?6?$AA@
+      demangled: "\"\\'A894xIOCtl: Exit\\n\""
+      offset: '00002234'
+    - name: ??_C@_0CC@MCDP@?8A894xIOCtl?3?5Hardware?5is?5gone?$CB?$CB?$CB@
+      demangled: "\"\\'A894xIOCtl: Hardware is gone!!!\"..."
+      offset: '00002248'
+    - name: ??_C@_0CF@DHDA@?8IOCTL_1394_GET_EEPROM_CONTENTS?3@
+      demangled: "\"\\'IOCTL_1394_GET_EEPROM_CONTENTS:\"..."
+      offset: 0000226C
+    - name: ??_C@_0BO@OGOH@?8A894xIOCtl?3?5REQUEST_CONTROL?6?$AA@
+      demangled: "\"\\'A894xIOCtl: REQUEST_CONTROL\\n\""
+      offset: '00002294'
+    - name: ??_C@_0CM@GMAM@?8A894xIOCtl?3?5Irb?9?$DOu?4BusReset?4ful@
+      demangled: "\"\\'A894xIOCtl: Irb->u.BusReset.ful\"..."
+      offset: 000022B4
+    - name: ??_C@_0CA@HHID@?8A894xIOCtl?3?5REQUEST_BUS_RESET?6?$AA@
+      demangled: "\"\\'A894xIOCtl: REQUEST_BUS_RESET\\n\""
+      offset: '000022E0'
+    - name: ??_C@_0CG@GFJB@?8A894xIOCtl?3?5Inverse?5check?5faile@
+      demangled: "\"\\'A894xIOCtl: Inverse check faile\"..."
+      offset: '00002300'
+    - name: ??_C@_0CN@OOKA@?8A894xIOCtl?3?5REQUEST_SEND_PHY_CO@
+      demangled: "\"\\'A894xIOCtl: REQUEST_SEND_PHY_CO\"..."
+      offset: '00002328'
+    - name: ??_C@_0CD@GOBB@?8A894xIOCtl?3?5IOCTL?5not?5handled?4?4@
+      demangled: "\"\\'A894xIOCtl: IOCTL not handled..\"..."
+      offset: '00002358'
+    - name: ??_C@_0DF@GFPJ@?8A894xIOCtl?3?5LocalHostInfo1?9?$DOUni@
+      demangled: "\"\\'A894xIOCtl: LocalHostInfo1->Uni\"..."
+      offset: 0000237C
+    - name: ??_C@_0DE@CGMI@?8A894xIOCtl?3?5LocalHostInfo1?9?$DOUni@
+      demangled: "\"\\'A894xIOCtl: LocalHostInfo1->Uni\"..."
+      offset: 000023B4
+    - name: ??_C@_0DI@BFF@?8A894xIOCtl?3?5LocalHostInfo2?9?$DOMax@
+      demangled: "\"\\'A894xIOCtl: LocalHostInfo2->Max\"..."
+      offset: '000023E8'
+    - name: ??_C@_0DH@KDME@?8A894xIOCtl?3?5LocalHostInfo2?9?$DOMax@
+      demangled: "\"\\'A894xIOCtl: LocalHostInfo2->Max\"..."
+      offset: '00002420'
+    - name: ??_C@_0DE@EKJD@?8A894xIOCtl?3?5LocalHostInfo2?9?$DOHos@
+      demangled: "\"\\'A894xIOCtl: LocalHostInfo2->Hos\"..."
+      offset: '00002458'
+    - name: ??_C@_0CL@GEFG@?8A894xIOCtl?3?5LocalHostInfo3?9?$DOVol@
+      demangled: "\"\\'A894xIOCtl: LocalHostInfo3->Vol\"..."
+      offset: 0000248C
+    - name: ??_C@_0DF@DCJF@?8A894xIOCtl?3?5LocalHostInfo3?9?$DOdec@
+      demangled: "\"\\'A894xIOCtl: LocalHostInfo3->dec\"..."
+      offset: 000024B8
+    - name: ??_C@_0DD@IBPE@?8A894xIOCtl?3?5GET_POWER_SUPPLIED?0@
+      demangled: "\"\\'A894xIOCtl: GET_POWER_SUPPLIED,\"..."
+      offset: 000024F0
+    - name: ??_C@_0CK@FDNN@?8A894xIOCtl?3?5REQUEST_GET_LOCAL_H@
+      demangled: "\"\\'A894xIOCtl: REQUEST_GET_LOCAL_H\"..."
+      offset: '00002524'
+    - name: ??_C@_0CB@LKLL@?8A894xIOCtl?3?5REQUEST_ISOCH_TALK?6@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ISOCH_TALK\\n\"..."
+      offset: '00002550'
+    - name: ??_C@_0CC@HGKF@?8A894xIOCtl?3?5CL_SecondCount?5?$DN?5?$CFx@
+      demangled: "\"\\'A894xIOCtl: CL_SecondCount = %x\"..."
+      offset: '00002574'
+    - name: ??_C@_0CB@IELM@?8A894xIOCtl?3?5CL_CycleCount?5?$DN?5?$CFx?6@
+      demangled: "\"\\'A894xIOCtl: CL_CycleCount = %x\\n\"..."
+      offset: '00002598'
+    - name: ??_C@_0CC@KJLD@?8A894xIOCtl?3?5CL_CycleOffset?5?$DN?5?$CFx@
+      demangled: "\"\\'A894xIOCtl: CL_CycleOffset = %x\"..."
+      offset: 000025BC
+    - name: ??_C@_0CN@OFPK@?8A894xIOCtl?3?5REQUEST_ISOCH_QUERY@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ISOCH_QUERY\"..."
+      offset: '000025E0'
+    - name: ??_C@_0CP@BDMP@?8A894xIOCtl?3?5Port?5driver?5will?5ha@
+      demangled: "\"\\'A894xIOCtl: Port driver will ha\"..."
+      offset: '00002610'
+    - name: ??_C@_0CD@DMAG@?8A894xIOCtl?3?5DeviceExtension?5?$DN?5?$CF@
+      demangled: "\"\\'A894xIOCtl: DeviceExtension = %\"..."
+      offset: '00002640'
+    - name: ??_C@_0CB@FHEH@?8A894xIOCtl?3?5hAddressRange?5?$DN?5?$CFx?6@
+      demangled: "\"\\'A894xIOCtl: hAddressRange = %x\\n\"..."
+      offset: '00002664'
+    - name: ??_C@_0CF@GPOP@?8A894xIOCtl?3?5AddressesReturned?5?$DN@
+      demangled: "\"\\'A894xIOCtl: AddressesReturned =\"..."
+      offset: '00002688'
+    - name: ??_C@_0CO@IEDK@?8A894xIOCtl?3?5Required1394Offset?4@
+      demangled: "\"\\'A894xIOCtl: Required1394Offset.\"..."
+      offset: 000026B0
+    - name: ??_C@_0CP@FGED@?8A894xIOCtl?3?5Required1394Offset?4@
+      demangled: "\"\\'A894xIOCtl: Required1394Offset.\"..."
+      offset: '000026E0'
+    - name: ??_C@_0BL@EMHA@?8A894xIOCtl?3?5Context?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xIOCtl: Context = %x\\n\""
+      offset: '00002710'
+    - name: ??_C@_0BM@EHNF@?8A894xIOCtl?3?5Callback?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xIOCtl: Callback = %x\\n\""
+      offset: 0000272C
+    - name: ??_C@_0CK@DLPK@?8A894xIOCtl?3?5fulNotificationOpti@
+      demangled: "\"\\'A894xIOCtl: fulNotificationOpti\"..."
+      offset: '00002748'
+    - name: ??_C@_0CB@OMGL@?8A894xIOCtl?3?5fulAccessType?5?$DN?5?$CFx?6@
+      demangled: "\"\\'A894xIOCtl: fulAccessType = %x\\n\"..."
+      offset: '00002774'
+    - name: ??_C@_0CC@PHJD@?8A894xIOCtl?3?5MaxSegmentSize?5?$DN?5?$CFx@
+      demangled: "\"\\'A894xIOCtl: MaxSegmentSize = %x\"..."
+      offset: '00002798'
+    - name: ??_C@_0BL@MBLF@?8A894xIOCtl?3?5nLength?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xIOCtl: nLength = %x\\n\""
+      offset: 000027BC
+    - name: ??_C@_0BH@IBEB@?8A894xIOCtl?3?5Mdl?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xIOCtl: Mdl = %x\\n\""
+      offset: 000027D8
+    - name: ??_C@_0CF@GABH@?8A894xIOCtl?3?5ALLOCATE_ADDRESS_RA@
+      demangled: "\"\\'A894xIOCtl: ALLOCATE_ADDRESS_RA\"..."
+      offset: 000027F0
+    - name: ??_C@_0CJ@PNCM@?8A894xIOCtl?3?5REQUEST_FREE_ADDRES@
+      demangled: "\"\\'A894xIOCtl: REQUEST_FREE_ADDRES\"..."
+      offset: '00002818'
+    - name: ??_C@_0CB@CNED@?8A894xIOCtl?3?5REQUEST_ISOCH_STOP?6@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ISOCH_STOP\\n\"..."
+      offset: '00002844'
+    - name: ??_C@_0CD@FGPB@?8A894xIOCtl?3?5REQUEST_ISOCH_LISTE@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ISOCH_LISTE\"..."
+      offset: '00002868'
+    - name: ??_C@_0CI@OPOM@?8A894xIOCtl?3?5Bad?5ISOCH_RESOURCE_@
+      demangled: "\"\\'A894xIOCtl: Bad ISOCH_RESOURCE_\"..."
+      offset: 0000288C
+    - name: ??_C@_0CL@BO@?8A894xIOCtl?3?5REQUEST_ISOCH_FREE_@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ISOCH_FREE_\"..."
+      offset: 000028B4
+    - name: ??_C@_0CE@ELD@?8A894xIOCtl?3?5pIsochDescriptor?5?$DN?5@
+      demangled: "\"\\'A894xIOCtl: pIsochDescriptor = \"..."
+      offset: '000028E0'
+    - name: ??_C@_0CI@DPNP@?8A894xIOCtl?3?5nNumberOfDescriptor@
+      demangled: "\"\\'A894xIOCtl: nNumberOfDescriptor\"..."
+      offset: '00002904'
+    - name: ??_C@_0CL@EEGF@?8A894xIOCtl?3?5REQUEST_ISOCH_DETAC@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ISOCH_DETAC\"..."
+      offset: 0000292C
+    - name: ??_C@_0CL@CJAD@?8A894xIOCtl?3?5REQUEST_ISOCH_ATTAC@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ISOCH_ATTAC\"..."
+      offset: '00002958'
+    - name: ??_C@_0DE@JEAN@?8A894xIOCtl?3?5REQUEST_ISOCH_ALLOC@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ISOCH_ALLOC\"..."
+      offset: '00002984'
+    - name: ??_C@_0CK@IGBB@?8A894xIOCtl?3?5ChannelProgramPhysA@
+      demangled: "\"\\'A894xIOCtl: ChannelProgramPhysA\"..."
+      offset: 000029B8
+    - name: ??_C@_0CE@JMOC@?8A894xIOCtl?3?5ChannelProgramVa?5?$DN?5@
+      demangled: "\"\\'A894xIOCtl: ChannelProgramVa = \"..."
+      offset: '000029E4'
+    - name: ??_C@_0CC@NNPE@?8A894xIOCtl?3?5IsochStructure?5?$DN?5?$CFx@
+      demangled: "\"\\'A894xIOCtl: IsochStructure = %x\"..."
+      offset: 00002A08
+    - name: ??_C@_0CM@KHJP@?8A894xIOCtl?3?5Isoch?5Struct?5Alloca@
+      demangled: "\"\\'A894xIOCtl: Isoch Struct Alloca\"..."
+      offset: 00002A2C
+    - name: ??_C@_0CN@ILOO@?8A894xIOCtl?3?5SizeOfChannelProgra@
+      demangled: "\"\\'A894xIOCtl: SizeOfChannelProgra\"..."
+      offset: 00002A58
+    - name: ??_C@_0BJ@FPNP@freeCommonBuffer?5?$CB?$DN?5NULL?$AA@
+      demangled: '"freeCommonBuffer != NULL"'
+      offset: 00002A88
+    - name: ??_C@_0CO@PNDI@?8A894xIOCtl?3?5HalAllocateCommonBu@
+      demangled: "\"\\'A894xIOCtl: HalAllocateCommonBu\"..."
+      offset: 00002AA4
+    - name: ??_C@_0BN@IHIP@allocateCommonBuffer?5?$CB?$DN?5NULL?$AA@
+      demangled: '"allocateCommonBuffer != NULL"'
+      offset: 00002AD4
+    - name: ??_C@_0DA@MHLB@?8A894xIOCtl?3?5MaxSizeOfTotalChann@
+      demangled: "\"\\'A894xIOCtl: MaxSizeOfTotalChann\"..."
+      offset: 00002AF4
+    - name: ??_C@_0DF@OAIM@?8A894xIOCtl?3?5MaxSizeOfIndividual@
+      demangled: "\"\\'A894xIOCtl: MaxSizeOfIndividual\"..."
+      offset: 00002B24
+    - name: ??_C@_0CB@ONCF@?8A894xIOCtl?3?5IsochResource?5?$DN?5?$CFx?6@
+      demangled: "\"\\'A894xIOCtl: IsochResource = %x\\n\"..."
+      offset: 00002B5C
+    - name: ??_C@_0DF@OMBI@?8A894xIOCtl?3?5No?5hardware?5isoch?5c@
+      demangled: "\"\\'A894xIOCtl: No hardware isoch c\"..."
+      offset: 00002B80
+    - name: ??_C@_0DK@DPGI@?8A894xIOCtl?3?5Found?5a?5isoc?5transm@
+      demangled: "\"\\'A894xIOCtl: Found a isoc transm\"..."
+      offset: 00002BB8
+    - name: ??_C@_0DJ@EAOB@?8A894xIOCtl?3?5Found?5a?5isoc?5receiv@
+      demangled: "\"\\'A894xIOCtl: Found a isoc receiv\"..."
+      offset: 00002BF4
+    - name: ??_C@_0BN@NPKI@?8A894xIOCtl?3?5hResource?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xIOCtl: hResource = %x\\n\""
+      offset: 00002C30
+    - name: ??_C@_0BM@CHMI@?8A894xIOCtl?3?5nChannel?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xIOCtl: nChannel = %x\\n\""
+      offset: 00002C50
+    - name: ??_C@_0CE@NFBF@?8A894xIOCtl?3?5nQuadletsToStrip?5?$DN?5@
+      demangled: "\"\\'A894xIOCtl: nQuadletsToStrip = \"..."
+      offset: 00002C6C
+    - name: ??_C@_0CC@JPIP@?8A894xIOCtl?3?5nMaxBufferSize?5?$DN?5?$CFx@
+      demangled: "\"\\'A894xIOCtl: nMaxBufferSize = %x\"..."
+      offset: 00002C90
+    - name: ??_C@_0CE@LADM@?8A894xIOCtl?3?5nNumberOfBuffers?5?$DN?5@
+      demangled: "\"\\'A894xIOCtl: nNumberOfBuffers = \"..."
+      offset: 00002CB4
+    - name: ??_C@_0CF@BMFM@?8A894xIOCtl?3?5nMaxBytesPerFrame?5?$DN@
+      demangled: "\"\\'A894xIOCtl: nMaxBytesPerFrame =\"..."
+      offset: 00002CD8
+    - name: ??_C@_0BM@MMO@?8A894xIOCtl?3?5fulFlags?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xIOCtl: fulFlags = %x\\n\""
+      offset: 00002D00
+    - name: ??_C@_0BM@OAHC@?8A894xIOCtl?3?5fulSpeed?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xIOCtl: fulSpeed = %x\\n\""
+      offset: 00002D1C
+    - name: ??_C@_0CP@CAPA@?8A894xIOCtl?3?5REQUEST_ISOCH_ALLOC@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ISOCH_ALLOC\"..."
+      offset: 00002D38
+    - name: ??_C@_0CB@LBND@?8A894xIOCtl?3?5REQUEST_ASYNC_LOCK?6@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ASYNC_LOCK\\n\"..."
+      offset: 00002D68
+    - name: ??_C@_0CI@GBKH@?8A894xIOCtl?3?5TCODE_WRITE_REQUEST@
+      demangled: "\"\\'A894xIOCtl: TCODE_WRITE_REQUEST\"..."
+      offset: 00002D8C
+    - name: ??_C@_0CK@HEAP@?8A894xIOCtl?3?5TCODE_WRITE_REQUEST@
+      demangled: "\"\\'A894xIOCtl: TCODE_WRITE_REQUEST\"..."
+      offset: 00002DB4
+    - name: ??_C@_0CC@ECF@?8A894xIOCtl?3?5REQUEST_ASYNC_WRITE@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ASYNC_WRITE\"..."
+      offset: 00002DE0
+    - name: ??_C@_0CH@BEGM@?8A894xIOCtl?3?5TCODE_READ_REQUEST_@
+      demangled: "\"\\'A894xIOCtl: TCODE_READ_REQUEST_\"..."
+      offset: '00002E04'
+    - name: ??_C@_0CJ@LAON@?8A894xIOCtl?3?5TCODE_READ_REQUEST_@
+      demangled: "\"\\'A894xIOCtl: TCODE_READ_REQUEST_\"..."
+      offset: 00002E2C
+    - name: ??_C@_0CB@GCGL@?8A894xIOCtl?3?5REQUEST_ASYNC_READ?6@
+      demangled: "\"\\'A894xIOCtl: REQUEST_ASYNC_READ\\n\"..."
+      offset: '00002E58'
+    - name: ??_C@_0BH@CJLP@?8A894xIOCtl?3?5Irb?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xIOCtl: Irb = %x\\n\""
+      offset: 00002E7C
+    - name: ??_C@_0BM@CLO@?8A894xIOCtl?3?5IrpStack?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xIOCtl: IrpStack = %x\\n\""
+      offset: '00002E94'
+    - name: ??_C@_0BH@JNMO@?8A894xIOCtl?3?5Irp?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xIOCtl: Irp = %x\\n\""
+      offset: 00002EB0
+    - name: ??_C@_0CM@PAIO@?8A894xIOCtl?3?5BAD?5DEVICE?5OBJECT?$CB?$CB@
+      demangled: "\"\\'A894xIOCtl: BAD DEVICE OBJECT!!\"..."
+      offset: 00002EC8
+    - name: ??_C@_0BE@HLAK@?8A894xIOCtl?3?5Entry?6?$AA@
+      demangled: "\"\\'A894xIOCtl: Entry\\n\""
+      offset: 00002EF4
+    - name: ??_C@_0BK@PCDN@?8A894xStartAsyncIo?3?5Exit?6?$AA@
+      demangled: "\"\\'A894xStartAsyncIo: Exit\\n\""
+      offset: 00002F08
+    - name: ??_C@_0CI@FNO@?8A894xStartAsyncIo?3?5REQUEST_ISOC@
+      demangled: "\"\\'A894xStartAsyncIo: REQUEST_ISOC\"..."
+      offset: 00002F24
+    - name: ??_C@_0DF@OKCH@?8A894xStartAsyncIo?3?5No?5buffers?5a@
+      demangled: "\"\\'A894xStartAsyncIo: No buffers a\"..."
+      offset: 00002F4C
+    - name: ??_C@_0CE@BEEG@?8A894xStartAsyncIo?3?5Dma?5started?4@
+      demangled: "\"\\'A894xStartAsyncIo: Dma started.\"..."
+      offset: 00002F84
+    - name: ??_C@_0CI@JCCG@?8A894xStartAsyncIo?3?5REQUEST_ISOC@
+      demangled: "\"\\'A894xStartAsyncIo: REQUEST_ISOC\"..."
+      offset: 00002FA8
+    - name: ??_C@_0DE@CIOP@?8A894xStartAsyncIo?3?5No?5memory?5fo@
+      demangled: "\"\\'A894xStartAsyncIo: No memory fo\"..."
+      offset: 00002FD0
+    - name: ??_C@_0CM@JPDG@?8A894xStartAsyncIo?3?5ALLOCATE_ADD@
+      demangled: "\"\\'A894xStartAsyncIo: ALLOCATE_ADD\"..."
+      offset: '00003004'
+    - name: ??_C@_0DB@CHBB@?8A894xStartAsyncIo?3?5New?5phy?5regi@
+      demangled: "\"\\'A894xStartAsyncIo: New phy regi\"..."
+      offset: '00003030'
+    - name: ??_C@_0DF@PHCC@?8A894xStartAsyncIo?3?5Current?5phy?5@
+      demangled: "\"\\'A894xStartAsyncIo: Current phy \"..."
+      offset: '00003064'
+    - name: ??_C@_0DA@JNPF@?8A894xStartAsyncIo?3?5No?5free?5work@
+      demangled: "\"\\'A894xStartAsyncIo: No free work\"..."
+      offset: 0000309C
+    - name: ??_C@_0DN@GLDL@?8A894xStartAsyncIo?3?5PhyConfigura@
+      demangled: "\"\\'A894xStartAsyncIo: PhyConfigura\"..."
+      offset: 000030CC
+    - name: ??_C@_0EA@HIJJ@?8A894xStartAsyncIo?3?5PhyConfigura@
+      demangled: "\"\\'A894xStartAsyncIo: PhyConfigura\"..."
+      offset: 0000310C
+    - name: ??_C@_0ED@JOM@?8A894xStartAsyncIo?3?5PhyConfigura@
+      demangled: "\"\\'A894xStartAsyncIo: PhyConfigura\"..."
+      offset: 0000314C
+    - name: ??_C@_0DP@DNKH@?8A894xStartAsyncIo?3?5PhyConfigura@
+      demangled: "\"\\'A894xStartAsyncIo: PhyConfigura\"..."
+      offset: '00003190'
+    - name: ??_C@_0DP@EOHB@?8A894xStartAsyncIo?3?5PhyConfigura@
+      demangled: "\"\\'A894xStartAsyncIo: PhyConfigura\"..."
+      offset: 000031D0
+    - name: ??_C@_0DN@OMPP@?8A894xStartAsyncIo?3?5PhyConfigura@
+      demangled: "\"\\'A894xStartAsyncIo: PhyConfigura\"..."
+      offset: '00003210'
+    - name: ??_C@_0DB@PCKG@?8A894xStartAsyncIo?3?5PhyConfigura@
+      demangled: "\"\\'A894xStartAsyncIo: PhyConfigura\"..."
+      offset: '00003250'
+    - name: ??_C@_0DE@NDAD@?8A894xStartAsyncIo?3?5REQUEST_SEND@
+      demangled: "\"\\'A894xStartAsyncIo: REQUEST_SEND\"..."
+      offset: '00003284'
+    - name: ??_C@_0CN@PJI@?8A894xStartAsyncIo?3?5Function?5not@
+      demangled: "\"\\'A894xStartAsyncIo: Function not\"..."
+      offset: 000032B8
+    - name: ??_C@_0DH@JMI@?8A894xStartAsyncIo?3?5No?5buffers?5a@
+      demangled: "\"\\'A894xStartAsyncIo: No buffers a\"..."
+      offset: '000032E8'
+    - name: ??_C@_0DO@MJOH@?8A894xStartAsyncIo?3?5HeadIsochStr@
+      demangled: "\"\\'A894xStartAsyncIo: HeadIsochStr\"..."
+      offset: '00003320'
+    - name: ??_C@_0EE@EEME@?8A894xStartAsyncIo?3?5Setting?5chan@
+      demangled: "\"\\'A894xStartAsyncIo: Setting chan\"..."
+      offset: '00003360'
+    - name: ??_C@_0DD@HIAI@?8A894xStartAsyncIo?3?5IsochResourc@
+      demangled: "\"\\'A894xStartAsyncIo: IsochResourc\"..."
+      offset: 000033A4
+    - name: ??_C@_0DJ@KNEM@?8A894xStartAsyncIo?3?5IsochResourc@
+      demangled: "\"\\'A894xStartAsyncIo: IsochResourc\"..."
+      offset: 000033D8
+    - name: ??_C@_0CP@KFPL@?8A894xStartAsyncIo?3?5IsochResourc@
+      demangled: "\"\\'A894xStartAsyncIo: IsochResourc\"..."
+      offset: '00003414'
+    - name: ??_C@_0DB@FELM@?8A894xStartAsyncIo?3?5IsochResourc@
+      demangled: "\"\\'A894xStartAsyncIo: IsochResourc\"..."
+      offset: '00003444'
+    - name: ??_C@_0DF@PJAF@?8A894xStartAsyncIo?3?5IsochResourc@
+      demangled: "\"\\'A894xStartAsyncIo: IsochResourc\"..."
+      offset: '00003478'
+    - name: ??_C@_0DG@HJGK@?8A894xStartAsyncIo?3?5IsochResourc@
+      demangled: "\"\\'A894xStartAsyncIo: IsochResourc\"..."
+      offset: 000034B0
+    - name: ??_C@_0DN@FCOD@?8A894xStartAsyncIo?3?5IsochResourc@
+      demangled: "\"\\'A894xStartAsyncIo: IsochResourc\"..."
+      offset: '000034E8'
+    - name: ??_C@_0CK@OHDA@?8A894xStartAsyncIo?3?5REQUEST_ISOC@
+      demangled: "\"\\'A894xStartAsyncIo: REQUEST_ISOC\"..."
+      offset: '00003528'
+    - name: ??_C@_0DL@JCMA@?8A894xStartAsyncIo?3?5REQUEST?5TRYI@
+      demangled: "\"\\'A894xStartAsyncIo: REQUEST TRYI\"..."
+      offset: '00003554'
+    - name: ??_C@_0CO@MNM@?8A894xStartAsyncIo?3?5TCODE_READ_R@
+      demangled: "\"\\'A894xStartAsyncIo: TCODE_READ_R\"..."
+      offset: '00003590'
+    - name: ??_C@_0DC@HKPK@?8A894xStartAsyncIo?3?5Use?5RSU?5for?5@
+      demangled: "\"\\'A894xStartAsyncIo: Use RSU for \"..."
+      offset: 000035C0
+    - name: ??_C@_0DL@ECLF@?8A894xStartAsyncIo?3?5AsyncTransfe@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncTransfe\"..."
+      offset: 000035F4
+    - name: ??_C@_0CP@BICA@?8A894xStartAsyncIo?3?5nNumberOfByt@
+      demangled: "\"\\'A894xStartAsyncIo: nNumberOfByt\"..."
+      offset: '00003630'
+    - name: ??_C@_0DA@MEDB@?8A894xStartAsyncIo?3?5TCODE_READ_R@
+      demangled: "\"\\'A894xStartAsyncIo: TCODE_READ_R\"..."
+      offset: '00003660'
+    - name: ??_C@_0DC@PPAM@?8A894xStartAsyncIo?3?5INVALID?5GENE@
+      demangled: "\"\\'A894xStartAsyncIo: INVALID GENE\"..."
+      offset: '00003690'
+    - name: ??_C@_0DO@DJND@?8A894xStartAsyncIo?3?5DeviceExtens@
+      demangled: "\"\\'A894xStartAsyncIo: DeviceExtens\"..."
+      offset: 000036C4
+    - name: ??_C@_0DC@NNLD@?8A894xStartAsyncIo?3?5AsyncTransfe@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncTransfe\"..."
+      offset: '00003704'
+    - name: ??_C@_0CP@KDII@?8A894xStartAsyncIo?3?5Copied?5?$CFx?5by@
+      demangled: "\"\\'A894xStartAsyncIo: Copied %x by\"..."
+      offset: '00003738'
+    - name: ??_C@_0ED@PJNJ@?8A894xStartAsyncIo?3?5Copying?5part@
+      demangled: "\"\\'A894xStartAsyncIo: Copying part\"..."
+      offset: '00003768'
+    - name: ??_C@_0CL@KNID@?8A894xStartAsyncIo?3?5AsyncProgram@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncProgram\"..."
+      offset: 000037AC
+    - name: ??_C@_0CP@LNLP@?8A894xStartAsyncIo?3?5TCODE_WRITE_@
+      demangled: "\"\\'A894xStartAsyncIo: TCODE_WRITE_\"..."
+      offset: 000037D8
+    - name: ??_C@_0BO@EIAE@?8A894xStartAsyncIo?3?5Mdl?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xStartAsyncIo: Mdl = %x\\n\""
+      offset: '00003808'
+    - name: ??_C@_0CF@LPAK@?8A894xStartAsyncIo?3?5nBlockSize?5?$DN@
+      demangled: "\"\\'A894xStartAsyncIo: nBlockSize =\"..."
+      offset: '00003828'
+    - name: ??_C@_0DA@CGJC@?8A894xStartAsyncIo?3?5nNumberOfByt@
+      demangled: "\"\\'A894xStartAsyncIo: nNumberOfByt\"..."
+      offset: '00003850'
+    - name: ??_C@_0DB@IHHL@?8A894xStartAsyncIo?3?5TCODE_WRITE_@
+      demangled: "\"\\'A894xStartAsyncIo: TCODE_WRITE_\"..."
+      offset: '00003880'
+    - name: ??_C@_0CJ@OHAN@?8A894xStartAsyncIo?3?5AsyncHeader?$FL@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncHeader[\"..."
+      offset: 000038B4
+    - name: ??_C@_0CJ@KPCD@?8A894xStartAsyncIo?3?5AsyncHeader?$FL@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncHeader[\"..."
+      offset: '000038E0'
+    - name: ??_C@_0CJ@HHFA@?8A894xStartAsyncIo?3?5AsyncHeader?$FL@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncHeader[\"..."
+      offset: 0000390C
+    - name: ??_C@_0CJ@DPHO@?8A894xStartAsyncIo?3?5AsyncHeader?$FL@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncHeader[\"..."
+      offset: '00003938'
+    - name: ??_C@_0CJ@MHLH@?8A894xStartAsyncIo?3?5AsyncHeader?$FL@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncHeader[\"..."
+      offset: '00003964'
+    - name: ??_C@_0CJ@IPJJ@?8A894xStartAsyncIo?3?5AsyncHeader?$FL@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncHeader[\"..."
+      offset: '00003990'
+    - name: ??_C@_0CJ@FHOK@?8A894xStartAsyncIo?3?5AsyncHeader?$FL@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncHeader[\"..."
+      offset: 000039BC
+    - name: ??_C@_0CJ@BPME@?8A894xStartAsyncIo?3?5AsyncHeader?$FL@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncHeader[\"..."
+      offset: '000039E8'
+    - name: ??_C@_0DA@DGOD@?8A894xStartAsyncIo?3?5AsyncTransfe@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncTransfe\"..."
+      offset: 00003A14
+    - name: ??_C@_0DG@HKGA@?8A894xStartAsyncIo?3?5AsyncTransfe@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncTransfe\"..."
+      offset: 00003A44
+    - name: ??_C@_0DF@EAMO@?8A894xStartAsyncIo?3?5AsyncTransfe@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncTransfe\"..."
+      offset: 00003A7C
+    - name: ??_C@_0CI@KGEA@?8A894xStartAsyncIo?3?5AsyncTransfe@
+      demangled: "\"\\'A894xStartAsyncIo: AsyncTransfe\"..."
+      offset: 00003AB4
+    - name: ??_C@_0CB@MDED@?8A894xStartAsyncIo?3?5tCode?5?$DN?5?$CFx?6?6@
+      demangled: "\"\\'A894xStartAsyncIo: tCode = %x\\n\\n\"..."
+      offset: 00003ADC
+    - name: ??_C@_0CB@EAFN@?8A894xStartAsyncIo?3?5nSpeed?5?$DN?5?$CFx?6@
+      demangled: "\"\\'A894xStartAsyncIo: nSpeed = %x\\n\"..."
+      offset: 00003B00
+    - name: ??_C@_0CF@GJAG@?8A894xStartAsyncIo?3?5chPriority?5?$DN@
+      demangled: "\"\\'A894xStartAsyncIo: chPriority =\"..."
+      offset: 00003B24
+    - name: ??_C@_0CH@EGGD@?8A894xStartAsyncIo?3?5ulGeneration@
+      demangled: "\"\\'A894xStartAsyncIo: ulGeneration\"..."
+      offset: 00003B4C
+    - name: ??_C@_0CC@CHJE@?8A894xStartAsyncIo?3?5pBuffer?5?$DN?5?$CFx@
+      demangled: "\"\\'A894xStartAsyncIo: pBuffer = %x\"..."
+      offset: 00003B74
+    - name: ??_C@_0CI@CIMB@?8A894xStartAsyncIo?3?5DataValues?$FL1@
+      demangled: "\"\\'A894xStartAsyncIo: DataValues[1\"..."
+      offset: 00003B98
+    - name: ??_C@_0CI@GAOP@?8A894xStartAsyncIo?3?5DataValues?$FL0@
+      demangled: "\"\\'A894xStartAsyncIo: DataValues[0\"..."
+      offset: 00003BC0
+    - name: ??_C@_0CH@EBMM@?8A894xStartAsyncIo?3?5Arguments?$FL1?$FN@
+      demangled: "\"\\'A894xStartAsyncIo: Arguments[1]\"..."
+      offset: 00003BE8
+    - name: ??_C@_0CH@JOC@?8A894xStartAsyncIo?3?5Arguments?$FL0?$FN@
+      demangled: "\"\\'A894xStartAsyncIo: Arguments[0]\"..."
+      offset: 00003C10
+    - name: ??_C@_0CD@OFEP@?8A894xStartAsyncIo?3?5fulFlags?5?$DN?5?$CF@
+      demangled: "\"\\'A894xStartAsyncIo: fulFlags = %\"..."
+      offset: 00003C38
+    - name: ??_C@_0CN@DKDM@?8A894xStartAsyncIo?3?5fulTransacti@
+      demangled: "\"\\'A894xStartAsyncIo: fulTransacti\"..."
+      offset: 00003C5C
+    - name: ??_C@_0CN@EJHO@?8A894xStartAsyncIo?3?5nNumberOfDat@
+      demangled: "\"\\'A894xStartAsyncIo: nNumberOfDat\"..."
+      offset: 00003C8C
+    - name: ??_C@_0CM@JFBB@?8A894xStartAsyncIo?3?5nNumberOfArg@
+      demangled: "\"\\'A894xStartAsyncIo: nNumberOfArg\"..."
+      offset: 00003CBC
+    - name: ??_C@_0CN@ENEA@?8A894xStartAsyncIo?3?5Address_Offs@
+      demangled: "\"\\'A894xStartAsyncIo: Address_Offs\"..."
+      offset: 00003CE8
+    - name: ??_C@_0CO@OPIK@?8A894xStartAsyncIo?3?5Address_Offs@
+      demangled: "\"\\'A894xStartAsyncIo: Address_Offs\"..."
+      offset: 00003D18
+    - name: ??_C@_0CI@KMFB@?8A894xStartAsyncIo?3?5NA_Bus_Numbe@
+      demangled: "\"\\'A894xStartAsyncIo: NA_Bus_Numbe\"..."
+      offset: 00003D48
+    - name: ??_C@_0CJ@HIIE@?8A894xStartAsyncIo?3?5NA_Node_Numb@
+      demangled: "\"\\'A894xStartAsyncIo: NA_Node_Numb\"..."
+      offset: 00003D70
+    - name: ??_C@_0CA@JJBD@?8A894xStartAsyncIo?3?5Flags?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xStartAsyncIo: Flags = %x\\n\""
+      offset: 00003D9C
+    - name: ??_C@_0CJ@MMBM@?8A894xStartAsyncIo?3?5FunctionNumb@
+      demangled: "\"\\'A894xStartAsyncIo: FunctionNumb\"..."
+      offset: 00003DBC
+    - name: ??_C@_0BO@DHJM@?8A894xStartAsyncIo?3?5IRB?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xStartAsyncIo: IRB = %x\\n\""
+      offset: 00003DE8
+    - name: ??_C@_0BO@IDON@?8A894xStartAsyncIo?3?5IRP?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xStartAsyncIo: IRP = %x\\n\""
+      offset: '00003E08'
+    - name: ??_C@_0CI@JJEO@?8A894xStartAsyncIo?3?5REQUEST_ASYN@
+      demangled: "\"\\'A894xStartAsyncIo: REQUEST_ASYN\"..."
+      offset: '00003E28'
+    - name: ??_C@_0CP@GPCG@?8A894xIOCtl?3?5IoAllocateAdapterCh@
+      demangled: "\"\\'A894xIOCtl: IoAllocateAdapterCh\"..."
+      offset: '00003E50'
+    - name: ??_C@_0DG@EKDE@?8A894xStartAsyncIo?3?5No?5available@
+      demangled: "\"\\'A894xStartAsyncIo: No available\"..."
+      offset: '00003E80'
+    - name: ??_C@_0DF@CAGM@?8A894xStartAsyncIo?3?5ulLength?5?$DM?5n@
+      demangled: "\"\\'A894xStartAsyncIo: ulLength < n\"..."
+      offset: 00003EB8
+    - name: ??_C@_0BP@OCPD@allocateAdapterChannel?5?$CB?$DN?5NULL?$AA@
+      demangled: '"allocateAdapterChannel != NULL"'
+      offset: 00003EF0
+    - name: ??_C@_0DB@IFPL@?8A894xStartAsyncIo?3?5Last?5descrip@
+      demangled: "\"\\'A894xStartAsyncIo: Last descrip\"..."
+      offset: 00003F10
+    - name: ??_C@_0DN@PPMK@?8A894xStartAsyncIo?3?5IsochStructu@
+      demangled: "\"\\'A894xStartAsyncIo: IsochStructu\"..."
+      offset: 00003F44
+    - name: ??_C@_0DF@II@?8A894xStartAsyncIo?3?5FirstIsochSt@
+      demangled: "\"\\'A894xStartAsyncIo: FirstIsochSt\"..."
+      offset: 00003F84
+    - name: ??_C@_0DD@DHMG@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: 00003FBC
+    - name: ??_C@_0DC@BJMI@?8A894xStartAsyncIo?3?5IsochStructu@
+      demangled: "\"\\'A894xStartAsyncIo: IsochStructu\"..."
+      offset: 00003FF0
+    - name: ??_C@_0DC@EAK@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: '00004024'
+    - name: ??_C@_0DE@MHED@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: '00004058'
+    - name: ??_C@_0DE@LEPN@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: 0000408C
+    - name: ??_C@_0DE@LLPJ@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: 000040C0
+    - name: ??_C@_0DB@NBGP@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: 000040F4
+    - name: ??_C@_0DD@EBDD@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: '00004128'
+    - name: ??_C@_0DN@NEOD@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: 0000415C
+    - name: ??_C@_0DE@CMAF@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: 0000419C
+    - name: ??_C@_0CP@MALC@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: 000041D0
+    - name: ??_C@_0DE@PAOC@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: '00004200'
+    - name: ??_C@_0EM@MAPG@?8A894xStartAsyncIo?3?5Replacing?5no@
+      demangled: "\"\\'A894xStartAsyncIo: Replacing no\"..."
+      offset: '00004234'
+    - name: ??_C@_0DM@KDFJ@?8A894xStartAsyncIo?3?5Multiple?5des@
+      demangled: "\"\\'A894xStartAsyncIo: Multiple des\"..."
+      offset: '00004280'
+    - name: ??_C@_0CI@MFLI@?8A894xStartAsyncIo?3?5IsochResourc@
+      demangled: "\"\\'A894xStartAsyncIo: IsochResourc\"..."
+      offset: 000042BC
+    - name: ??_C@_0DC@GBPA@?8A894xStartAsyncIo?3?5REQUEST_ISOC@
+      demangled: "\"\\'A894xStartAsyncIo: REQUEST_ISOC\"..."
+      offset: '000042E4'
+    - name: ??_C@_0DN@LBAG@?8A894xStartAsyncIo?3?5IsochResourc@
+      demangled: "\"\\'A894xStartAsyncIo: IsochResourc\"..."
+      offset: '00004318'
+    - name: ??_C@_0EL@BAFG@?8A894xStartAsyncIo?3?5TRYING?5TO?5RE@
+      demangled: "\"\\'A894xStartAsyncIo: TRYING TO RE\"..."
+      offset: '00004358'
+    - name: ??_C@_0DD@JAFO@?8A894xStartAsyncIo?3?5IsochDescrip@
+      demangled: "\"\\'A894xStartAsyncIo: IsochDescrip\"..."
+      offset: 000043A4
+    - name: ??_C@_0DC@LOFA@?8A894xStartAsyncIo?3?5IsochStructu@
+      demangled: "\"\\'A894xStartAsyncIo: IsochStructu\"..."
+      offset: 000043D8
+    - name: ??_C@_0DC@MJG@?8A894xStartAsyncIo?3?5REQUEST_ISOC@
+      demangled: "\"\\'A894xStartAsyncIo: REQUEST_ISOC\"..."
+      offset: 0000440C
+    - name: ??_C@_0DC@KJED@?8A894xStartAsyncIo?3?5Current?5node@
+      demangled: "\"\\'A894xStartAsyncIo: Current node\"..."
+      offset: '00004440'
+    - name: ??_C@_0CK@INMH@?8A894xStartAsyncIo?3?5DeviceExtens@
+      demangled: "\"\\'A894xStartAsyncIo: DeviceExtens\"..."
+      offset: '00004474'
+    - name: ??_C@_0CH@CPGL@?8A894xStartAsyncIo?3?5DeviceObject@
+      demangled: "\"\\'A894xStartAsyncIo: DeviceObject\"..."
+      offset: 000044A0
+    - name: ??_C@_0BL@NHDD@?8A894xStartAsyncIo?3?5Enter?6?$AA@
+      demangled: "\"\\'A894xStartAsyncIo: Enter\\n\""
+      offset: 000044C8
+    - name: ??_C@_0BK@ECHP@?8A894xPnPAddDevice?3?5exit?6?$AA@
+      demangled: "\"\\'A894xPnPAddDevice: exit\\n\""
+      offset: '000044E4'
+    - name: ??_C@_0DJ@GNJC@?8A894xPnPAddDevice?3?5Bus1394Regis@
+      demangled: "\"\\'A894xPnPAddDevice: Bus1394Regis\"..."
+      offset: '00004500'
+    - name: ??_C@_0DN@LIPO@?8A894xPnPAddDevice?3?5Registered?5P@
+      demangled: "\"\\'A894xPnPAddDevice: Registered P\"..."
+      offset: 0000453C
+    - name: ??_C@_0DO@PEEO@?8A894xPnPAddDevice?3?5Registered?5P@
+      demangled: "\"\\'A894xPnPAddDevice: Registered P\"..."
+      offset: 0000457C
+    - name: ??_C@_0CP@KIMG@?8A894xPnPAddDevice?3?5Registered?5P@
+      demangled: "\"\\'A894xPnPAddDevice: Registered P\"..."
+      offset: 000045BC
+    - name: ??_C@_0DL@FAFG@?8A894xPnPAddDevice?3?5IoAttachDevi@
+      demangled: "\"\\'A894xPnPAddDevice: IoAttachDevi\"..."
+      offset: 000045EC
+    - name: ??_C@_0BL@GNID@?8A894xPnPAddDevice?3?5enter?6?$AA@
+      demangled: "\"\\'A894xPnPAddDevice: enter\\n\""
+      offset: '00004628'
+    - name: ??_C@_0DF@JGLG@?8A894xPnP?3?5Couldn?8t?5translate?5Me@
+      demangled: "\"\\'A894xPnP: Couldn\\'t translate Me\"..."
+      offset: '00004644'
+    - name: ??_C@_0CB@PLGP@?8A894xPnP?3?5MN_START_DEVICE?5exit?6@
+      demangled: "\"\\'A894xPnP: MN_START_DEVICE exit\\n\"..."
+      offset: 0000467C
+    - name: ??_C@_0CN@BGMA@?8A894xPnP?3?5Couldn?8t?5initialize?5t@
+      demangled: "\"\\'A894xPnP: Couldn\\'t initialize t\"..."
+      offset: 000046A0
+    - name: ??_C@_0CO@FHF@?8A894xPnP?3?5Couldn?8t?5connect?5to?5t@
+      demangled: "\"\\'A894xPnP: Couldn\\'t connect to t\"..."
+      offset: 000046D0
+    - name: ??_C@_0BP@PAEG@?8A894xPnP?3?5IoConnectInterrupt?6?$AA@
+      demangled: "\"\\'A894xPnP: IoConnectInterrupt\\n\""
+      offset: '00004700'
+    - name: ??_C@_0DH@OIBM@?8A894xPnP?3?5DeviceExtension?9?$DOnode@
+      demangled: "\"\\'A894xPnP: DeviceExtension->node\"..."
+      offset: '00004720'
+    - name: ??_C@_0DI@OHDH@?8A894xPnP?3?5DeviceExtension?9?$DOnode@
+      demangled: "\"\\'A894xPnP: DeviceExtension->node\"..."
+      offset: '00004758'
+    - name: ??_C@_0CM@CNON@?8A894xPnP?3?5Couldn?8t?5verify?5the?5h@
+      demangled: "\"\\'A894xPnP: Couldn\\'t verify the h\"..."
+      offset: '00004790'
+    - name: ??_C@_0CP@ENOF@?8A894xPnP?3?5A894xCheckPciConfigSp@
+      demangled: "\"\\'A894xPnP: A894xCheckPciConfigSp\"..."
+      offset: 000047BC
+    - name: ??_C@_0CF@HCDO@?8A894xPnP?3?5ExAllocatePool?5failed@
+      demangled: "\"\\'A894xPnP: ExAllocatePool failed\"..."
+      offset: 000047EC
+    - name: ??_C@_0CC@EHK@?8A894xPnP?3?5CommonBufferSize?5?$DN?5?$CFx@
+      demangled: "\"\\'A894xPnP: CommonBufferSize = %x\"..."
+      offset: '00004814'
+    - name: ??_C@_0CN@KEJG@?8A894xPnP?3?5CommonBufferPhysicalA@
+      demangled: "\"\\'A894xPnP: CommonBufferPhysicalA\"..."
+      offset: '00004838'
+    - name: ??_C@_0CM@BJ@?8A894xPnP?3?5CommonBufferVirtualAd@
+      demangled: "\"\\'A894xPnP: CommonBufferVirtualAd\"..."
+      offset: '00004868'
+    - name: ??_C@_0CL@FPKJ@?8A894xPnP?3?5HalAllocateCommonBuff@
+      demangled: "\"\\'A894xPnP: HalAllocateCommonBuff\"..."
+      offset: '00004894'
+    - name: ??_C@_0CN@MBKO@?8A894xPnP?3?5Couldn?8t?5allocate?5ada@
+      demangled: "\"\\'A894xPnP: Couldn\\'t allocate ada\"..."
+      offset: 000048C0
+    - name: ??_C@_0CA@CJMK@?8A894xPnP?3?5Unhandled?5resource?4?6?$AA@
+      demangled: "\"\\'A894xPnP: Unhandled resource.\\n\""
+      offset: 000048F0
+    - name: ??_C@_0CE@LBCK@?8A894xPnP?3?5Memory?5BaseAddress?5?$DN?5@
+      demangled: "\"\\'A894xPnP: Memory BaseAddress = \"..."
+      offset: '00004910'
+    - name: ??_C@_0CP@IFBG@?8A894xPnP?3?5Memory?5Port?5Translate@
+      demangled: "\"\\'A894xPnP: Memory Port Translate\"..."
+      offset: '00004934'
+    - name: ??_C@_0CL@OFHF@?8A894xPnP?3?5Base?5address?5already?5@
+      demangled: "\"\\'A894xPnP: Base address already \"..."
+      offset: '00004964'
+    - name: ??_C@_0CC@BANJ@?8A894xPnP?3?5bad?5memory?5port?5size?$CB@
+      demangled: "\"\\'A894xPnP: bad memory port size!\"..."
+      offset: '00004990'
+    - name: ??_C@_0DD@CAON@?8A894xPnP?3?5Port?5Resources?5Found?5@
+      demangled: "\"\\'A894xPnP: Port Resources Found \"..."
+      offset: 000049B4
+    - name: ??_C@_0BG@EMNB@?8A894xPnP?3?5IRQL?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xPnP: IRQL = %x\\n\""
+      offset: '000049E8'
+    - name: ??_C@_0CC@MMKF@?8A894xPnP?3?5Interrupt?5Vector?5?$DN?5?$CFx@
+      demangled: "\"\\'A894xPnP: Interrupt Vector = %x\"..."
+      offset: 00004A00
+    - name: ??_C@_0DO@KKCN@?8A894xPnP?3?5Interrupt?5Resources?5F@
+      demangled: "\"\\'A894xPnP: Interrupt Resources F\"..."
+      offset: 00004A24
+    - name: ??_C@_0DD@BMNI@?8A894xPnP?3?5Memory?5BaseAddress?5?$CIM@
+      demangled: "\"\\'A894xPnP: Memory BaseAddress (M\"..."
+      offset: 00004A64
+    - name: ??_C@_0CK@CDPF@?8A894xPnP?3?5Memory?5TranslatedAddr@
+      demangled: "\"\\'A894xPnP: Memory TranslatedAddr\"..."
+      offset: 00004A98
+    - name: ??_C@_0BN@ICDG@?8A894xPnP?3?5bad?5memory?5size?$CB?6?$AA@
+      demangled: "\"\\'A894xPnP: bad memory size!\\n\""
+      offset: 00004AC4
+    - name: ??_C@_0DF@FAAF@?8A894xPnP?3?5Memory?5Resources?5Foun@
+      demangled: "\"\\'A894xPnP: Memory Resources Foun\"..."
+      offset: 00004AE4
+    - name: ??_C@_0CD@JDKE@?8A894xPnP?3?5IoCallDriver?5failed?4?4@
+      demangled: "\"\\'A894xPnP: IoCallDriver failed..\"..."
+      offset: 00004B1C
+    - name: 
+        ??_C@_0DP@GKP@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CIA894xSynchCom@
+      demangled: '"(1) | (1) | (1) ? (A894xSynchCom"...'
+      offset: 00004B40
+    - name: ??_C@_0O@CLOE@?4?4?2a894xpnp?4c?$AA@
+      demangled: '"..\\a894xpnp.c"'
+      offset: 00004B80
+    - name: ??_C@_0CC@HEDK@?8A894xPnP?3?5MN_START_DEVICE?5enter@
+      demangled: "\"\\'A894xPnP: MN_START_DEVICE enter\"..."
+      offset: 00004B90
+    - name: ??_C@_0CD@OCGL@?8A894xPnP?3?5MN_QUERY_REMOVE_DEVIC@
+      demangled: "\"\\'A894xPnP: MN_QUERY_REMOVE_DEVIC\"..."
+      offset: 00004BB4
+    - name: ??_C@_0BN@HPAI@?8A894xPnP?3?5MN_REMOVE_DEVICE?6?$AA@
+      demangled: "\"\\'A894xPnP: MN_REMOVE_DEVICE\\n\""
+      offset: 00004BD8
+    - name: ??_C@_0CE@BLPE@?8A894xPnP?3?5MN_CANCEL_REMOVE_DEVI@
+      demangled: "\"\\'A894xPnP: MN_CANCEL_REMOVE_DEVI\"..."
+      offset: 00004BF8
+    - name: ??_C@_0BL@KCHE@?8A894xPnP?3?5MN_STOP_DEVICE?6?$AA@
+      demangled: "\"\\'A894xPnP: MN_STOP_DEVICE\\n\""
+      offset: 00004C1C
+    - name: ??_C@_0CB@NFCA@?8A894xPnP?3?5MN_QUERY_STOP_DEVICE?6@
+      demangled: "\"\\'A894xPnP: MN_QUERY_STOP_DEVICE\\n\"..."
+      offset: 00004C38
+    - name: ??_C@_0CC@KGCG@?8A894xPnP?3?5MN_CANCEL_STOP_DEVICE@
+      demangled: "\"\\'A894xPnP: MN_CANCEL_STOP_DEVICE\"..."
+      offset: 00004C5C
+    - name: ??_C@_0BL@DOMA@?8A894xPnP?3?5Not?5handled?$CB?$CB?$CB?6?$AA@
+      demangled: "\"\\'A894xPnP: Not handled!!!\\n\""
+      offset: 00004C80
+    - name: ??_C@_0CJ@NDOO@?8A894xPnP?3?5IrpStack?9?$DOMinorFuncti@
+      demangled: "\"\\'A894xPnP: IrpStack->MinorFuncti\"..."
+      offset: 00004C9C
+    - name: ??_C@_0BF@FNJO@?8A894xPnP?3?5Irp?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xPnP: Irp = %x\\n\""
+      offset: 00004CC8
+    - name: ??_C@_0BO@HEDD@?8A894xPnP?3?5DeviceObject?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'A894xPnP: DeviceObject = %x\\n\""
+      offset: 00004CE0
+    - name: ??_C@_0BC@LBMA@?8A894xPnP?3?5enter?6?$AA@
+      demangled: "\"\\'A894xPnP: enter\\n\""
+      offset: 00004D00
+    - name: ??_C@_0BE@DEIN@?8A894xPower?3?5enter?6?$AA@
+      demangled: "\"\\'A894xPower: enter\\n\""
+      offset: 00004D14
+    - name: ??_C@_0DF@CKLF@?8A894xCheckPciConfigSpace?3?5Bad?5L@
+      demangled: "\"\\'A894xCheckPciConfigSpace: Bad L\"..."
+      offset: 00004D28
+    - name: ??_C@_0CP@FOHE@?8A894xCheckPciConfigSpace?3?5Laten@
+      demangled: "\"\\'A894xCheckPciConfigSpace: Laten\"..."
+      offset: 00004D60
+    - name: ??_C@_0DH@ENNC@?8A894xCheckPciConfigSpace?3?5Bad?5C@
+      demangled: "\"\\'A894xCheckPciConfigSpace: Bad C\"..."
+      offset: 00004D90
+    - name: ??_C@_0DB@MOCA@?8A894xCheckPciConfigSpace?3?5Cache@
+      demangled: "\"\\'A894xCheckPciConfigSpace: Cache\"..."
+      offset: 00004DC8
+    - name: ??_C@_0CL@EAHE@?8A894xCheckPciConfigSpace?3?5Bad?5V@
+      demangled: "\"\\'A894xCheckPciConfigSpace: Bad V\"..."
+      offset: 00004DFC
+    - name: ??_C@_0CL@NIOD@?8A894xCheckPciConfigSpace?3?5Vendo@
+      demangled: "\"\\'A894xCheckPciConfigSpace: Vendo\"..."
+      offset: '00004E28'
+    - name: ??_C@_0CC@KBKK@?8A894xCheckPciConfigSpace?3?5enter@
+      demangled: "\"\\'A894xCheckPciConfigSpace: enter\"..."
+      offset: '00004E54'
+    - name: ??_C@_0BL@KNDJ@?8A894xTurnOffPower?3?5enter?6?$AA@
+      demangled: "\"\\'A894xTurnOffPower: enter\\n\""
+      offset: '00004E78'
+    - name: ??_C@_0DK@CGKC@?8A894xReadWriteConfig?3?5IoCallDri@
+      demangled: "\"\\'A894xReadWriteConfig: IoCallDri\"..."
+      offset: '00004E94'
+    - name: ??_C@_0DN@MDMJ@?8A894xReadWriteConfig?3?5IoCallDri@
+      demangled: "\"\\'A894xReadWriteConfig: IoCallDri\"..."
+      offset: 00004ED0
+    - name: ??_C@_0DN@FMJE@?8A894xReadWriteConfig?3?5Status?5fr@
+      demangled: "\"\\'A894xReadWriteConfig: Status fr\"..."
+      offset: 00004F10
+    - name: ??_C@_0CO@FKDN@?8A894xReadWriteConfig?3?5IoAllocat@
+      demangled: "\"\\'A894xReadWriteConfig: IoAllocat\"..."
+      offset: 00004F50
+    - name: ??_C@_0BO@NNBK@?8A894xReadWriteConfig?3?5enter?6?$AA@
+      demangled: "\"\\'A894xReadWriteConfig: enter\\n\""
+      offset: 00004F80
+    - name: ??_C@_0DG@NOME@?8A894xGetRegistryParameters?3?5All@
+      demangled: "\"\\'A894xGetRegistryParameters: All\"..."
+      offset: 00004FA0
+    - name: ??_C@_0CN@DAFI@?8A894xGetRegistryParameters?3?5All@
+      demangled: "\"\\'A894xGetRegistryParameters: All\"..."
+      offset: 00004FD8
+    - name: ??_C@_0CN@DPGH@?8A894xGetRegistryParameters?3?5For@
+      demangled: "\"\\'A894xGetRegistryParameters: For\"..."
+      offset: '00005008'
+    - name: ??_C@_0DD@EBMN@?8A894xGetRegistryParameters?3?5Del@
+      demangled: "\"\\'A894xGetRegistryParameters: Del\"..."
+      offset: '00005038'
+    - name: ??_C@_0DA@PAIE@?8A894xGetRegistryParameters?3?5Max@
+      demangled: "\"\\'A894xGetRegistryParameters: Max\"..."
+      offset: 0000506C
+    - name: ??_C@_0DB@IMHK@?8A894xGetRegistryParameters?3?5Max@
+      demangled: "\"\\'A894xGetRegistryParameters: Max\"..."
+      offset: 0000509C
+    - name: ??_C@_0CM@CKOK@?8A894xGetRegistryParameters?3?5Max@
+      demangled: "\"\\'A894xGetRegistryParameters: Max\"..."
+      offset: 000050D0
+    - name: ??_C@_0DE@HNFA@?8A894xGetRegistryParameters?3?5AHA@
+      demangled: "\"\\'A894xGetRegistryParameters: AHA\"..."
+      offset: 000050FC
+    - name: ??_C@_0DA@JGBP@?8A894xGetRegistryParameters?3?5DoN@
+      demangled: "\"\\'A894xGetRegistryParameters: DoN\"..."
+      offset: '00005130'
+    - name: ??_C@_0DH@OKIP@?8A894xGetRegistryParameters?3?5NoC@
+      demangled: "\"\\'A894xGetRegistryParameters: NoC\"..."
+      offset: '00005160'
+    - name: ??_C@_0DC@NIFJ@?8A894xGetRegistryParameters?3?5Req@
+      demangled: "\"\\'A894xGetRegistryParameters: Req\"..."
+      offset: '00005198'
+    - name: ??_C@_0DC@OICP@?8A894xGetRegistryParameters?3?5Rec@
+      demangled: "\"\\'A894xGetRegistryParameters: Rec\"..."
+      offset: 000051CC
+    - name: ??_C@_0DD@MGJF@?8A894xGetRegistryParameters?3?5Tra@
+      demangled: "\"\\'A894xGetRegistryParameters: Tra\"..."
+      offset: '00005200'
+    - name: ??_C@_0DC@EMBI@?8A894xGetRegistryParameters?3?5Rec@
+      demangled: "\"\\'A894xGetRegistryParameters: Rec\"..."
+      offset: '00005234'
+    - name: ??_C@_0DC@GOIO@?8A894xGetRegistryParameters?3?5Dia@
+      demangled: "\"\\'A894xGetRegistryParameters: Dia\"..."
+      offset: '00005268'
+    - name: ??_C@_0CK@BBMG@?8A894xGetRegistryParameters?3?5Sta@
+      demangled: "\"\\'A894xGetRegistryParameters: Sta\"..."
+      offset: 0000529C
+    - name: 
+        ??_C@_1CG@NCGG@?$AAA?$AAl?$AAl?$AAo?$AAw?$AAP?$AAh?$AAy?$AAs?$AAi?$AAc?$AAa?$AAl?$AAR?$AAe?$AAa?$AAd?$AAs?$AA?$AA@
+      demangled: L"AllowPhysicalReads"
+      offset: 000052C8
+    - name: ??_C@_1BE@NFLL@?$AAA?$AAl?$AAl?$AAo?$AAw?$AAI?$AAS?$AAB?$AAR?$AA?$AA@
+      demangled: L"AllowISBR"
+      offset: 000052F0
+    - name: 
+        ??_C@_1CA@PDFH@?$AAD?$AAe?$AAl?$AAa?$AAy?$AAA?$AAf?$AAt?$AAe?$AAr?$AAR?$AAe?$AAs?$AAe?$AAt?$AA?$AA@
+      demangled: L"DelayAfterReset"
+      offset: '00005304'
+    - name: ??_C@_1BE@DONB@?$AAF?$AAo?$AAr?$AAc?$AAe?$AAR?$AAo?$AAo?$AAt?$AA?$AA@
+      demangled: L"ForceRoot"
+      offset: '00005324'
+    - name: 
+        ??_C@_1BK@IDJ@?$AAM?$AAa?$AAx?$AAA?$AAs?$AAy?$AAn?$AAc?$AAR?$AAe?$AAa?$AAd?$AA?$AA@
+      demangled: L"MaxAsyncRead"
+      offset: '00005338'
+    - name: 
+        ??_C@_1BM@PCJH@?$AAM?$AAa?$AAx?$AAA?$AAs?$AAy?$AAn?$AAc?$AAW?$AAr?$AAi?$AAt?$AAe?$AA?$AA@
+      demangled: L"MaxAsyncWrite"
+      offset: '00005354'
+    - name: ??_C@_1BC@NCHE@?$AAM?$AAa?$AAx?$AAS?$AAp?$AAe?$AAe?$AAd?$AA?$AA@
+      demangled: L"MaxSpeed"
+      offset: '00005370'
+    - name: 
+        ??_C@_1CC@LEBG@?$AAA?$AAH?$AAA?$AA8?$AA9?$AA4?$AAx?$AAD?$AAe?$AAb?$AAu?$AAg?$AAF?$AAl?$AAa?$AAg?$AA?$AA@
+      demangled: L"AHA894xDebugFlag"
+      offset: '00005384'
+    - name: 
+        ??_C@_1BK@GNPM@?$AAD?$AAo?$AAN?$AAo?$AAt?$AAC?$AAo?$AAn?$AAt?$AAe?$AAn?$AAd?$AA?$AA@
+      demangled: L"DoNotContend"
+      offset: 000053A8
+    - name: 
+        ??_C@_1CI@BBP@?$AAN?$AAo?$AAC?$AAy?$AAc?$AAl?$AAe?$AAS?$AAt?$AAa?$AAr?$AAt?$AAP?$AAa?$AAc?$AAk?$AAe?$AAt?$AAs?$AA?$AA@
+      demangled: L"NoCycleStartPackets"
+      offset: 000053C4
+    - name: 
+        ??_C@_1BO@LIJK@?$AAR?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAT?$AAi?$AAm?$AAe?$AAO?$AAu?$AAt?$AA?$AA@
+      demangled: L"RequestTimeOut"
+      offset: 000053EC
+    - name: 
+        ??_C@_1BO@NHAK@?$AAR?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe?$AAB?$AAu?$AAf?$AAf?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: L"ReceiveBuffers"
+      offset: 0000540C
+    - name: 
+        ??_C@_1CA@PCLB@?$AAT?$AAr?$AAa?$AAn?$AAs?$AAm?$AAi?$AAt?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: L"TransmitWorkers"
+      offset: 0000542C
+    - name: 
+        ??_C@_1BO@NBKO@?$AAR?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: L"ReceiveWorkers"
+      offset: 0000544C
+    - name: 
+        ??_C@_1BO@MLPO@?$AAD?$AAi?$AAa?$AAg?$AAn?$AAo?$AAs?$AAt?$AAi?$AAc?$AAM?$AAo?$AAd?$AAe?$AA?$AA@
+      demangled: L"DiagnosticMode"
+      offset: 0000546C
+    - name: ??_C@_0EP@BBCP@?8A894xDistributeCommonBufferMemo@
+      demangled: "\"\\'A894xDistributeCommonBufferMemo\"..."
+      offset: 0000548C
+    - name: ??_C@_0CL@NFBG@?8A894xDistributeCommonBufferMemo@
+      demangled: "\"\\'A894xDistributeCommonBufferMemo\"..."
+      offset: 000054DC
+    - name: ??_C@_0CC@BLCA@?8A894xCleanUpForStopRemove?3?5Exit@
+      demangled: "\"\\'A894xCleanUpForStopRemove: Exit\"..."
+      offset: '00005508'
+    - name: ??_C@_0CA@FHG@?8A894xPnP?3?5Hardware?5is?5gone?$CB?$CB?$CB?6?$AA@
+      demangled: "\"\\'A894xPnP: Hardware is gone!!!\\n\""
+      offset: 0000552C
+    - name: ??_C@_0CD@GNK@?8A894xCleanUpForStopRemove?3?5Ente@
+      demangled: "\"\\'A894xCleanUpForStopRemove: Ente\"..."
+      offset: 0000554C
+    - name: ??_C@_0CJ@HAEB@?8A894xVerifyHardware?3?5Model?5Numb@
+      demangled: "\"\\'A894xVerifyHardware: Model Numb\"..."
+      offset: '00005570'
+    - name: ??_C@_0CJ@LPGM@?8A894xVerifyHardware?3?5SeeInput?$FL?$CF@
+      demangled: "\"\\'A894xVerifyHardware: SeeInput[%\"..."
+      offset: 0000559C
+    - name: ??_C@_0CH@GJFJ@?8A894xVerifyHardware?3?5Bad?5seeCon@
+      demangled: "\"\\'A894xVerifyHardware: Bad seeCon\"..."
+      offset: 000055C8
+    - name: ??_C@_0CH@DKB@?8A894xVerifyHardware?3?5seeControl@
+      demangled: "\"\\'A894xVerifyHardware: seeControl\"..."
+      offset: 000055F0
+    - name: ??_C@_0CE@PJAA@?8A894xVerifyHardware?3?5version?5?$DN?5@
+      demangled: "\"\\'A894xVerifyHardware: version = \"..."
+      offset: '00005618'
+    - name: ??_C@_0BN@NHHP@?8A894xVerifyHardware?3?5Enter?6?$AA@
+      demangled: "\"\\'A894xVerifyHardware: Enter\\n\""
+      offset: 0000563C
+    - name: ??_C@_0CM@BBLH@?8A894xInitializeHardware?3?5rsuTab@
+      demangled: "\"\\'A894xInitializeHardware: rsuTab\"..."
+      offset: 0000565C
+    - name: ??_C@_0CB@ILDE@?8A894xInitializeHardware?3?5Enter?6@
+      demangled: "\"\\'A894xInitializeHardware: Enter\\n\"..."
+      offset: '00005688'
+    - name: ??_C@_0CN@LLDJ@?8A894xInitializeGruProgram?3?5GruP@
+      demangled: "\"\\'A894xInitializeGruProgram: GruP\"..."
+      offset: 000056AC
+    - name: ??_C@_0CD@PHKI@?8A894xInitializeGruProgram?3?5Ente@
+      demangled: "\"\\'A894xInitializeGruProgram: Ente\"..."
+      offset: 000056DC
+    - name: ??_C@_0DL@FBBB@?8A894xResetInterrupt?3?5BUS?5RESET?5@
+      demangled: "\"\\'A894xResetInterrupt: BUS RESET \"..."
+      offset: '00005700'
+    - name: ??_C@_0CE@DKNH@?8A894xResetInterrupt?3?5BUS_RESET?$CB@
+      demangled: "\"\\'A894xResetInterrupt: BUS_RESET!\"..."
+      offset: 0000573C
+    - name: ??_C@_0CK@IMBJ@?8A894xResetInterrupt?3?5InterruptM@
+      demangled: "\"\\'A894xResetInterrupt: InterruptM\"..."
+      offset: '00005760'
+    - name: ??_C@_0CP@FCCB@?8A894xResetInterrupt?3?5RsuInterru@
+      demangled: "\"\\'A894xResetInterrupt: RsuInterru\"..."
+      offset: 0000578C
+    - name: ??_C@_0DA@JLDN@?8A894xResetInterrupt?3?5RealInterr@
+      demangled: "\"\\'A894xResetInterrupt: RealInterr\"..."
+      offset: 000057BC
+    - name: ??_C@_0CM@HDOD@?8A894xResetInterrupt?3?5InterruptE@
+      demangled: "\"\\'A894xResetInterrupt: InterruptE\"..."
+      offset: 000057EC
+    - name: ??_C@_0BN@OOJG@?8A894xResetInterrupt?3?5Enter?6?$AA@
+      demangled: "\"\\'A894xResetInterrupt: Enter\\n\""
+      offset: '00005818'
+    - name: ??_C@_0EB@COHK@?8A894xBusResetStarted?3?5DeviceExt@
+      demangled: "\"\\'A894xBusResetStarted: DeviceExt\"..."
+      offset: '00005838'
+    - name: ??_C@_0DM@EJEN@?8A894xBusResetStarted?3?5BUS?5RESET@
+      demangled: "\"\\'A894xBusResetStarted: BUS RESET\"..."
+      offset: 0000587C
+    - name: ??_C@_0BO@CFKN@?8A894xBusResetStarted?3?5Enter?6?$AA@
+      demangled: "\"\\'A894xBusResetStarted: Enter\\n\""
+      offset: 000058B8
+    - name: ??_C@_0CH@CNLM@?8A894xResetTimeoutTimerRoutine?3?5@
+      demangled: "\"\\'A894xResetTimeoutTimerRoutine: \"..."
+      offset: 000058D8
+    - name: ??_C@_0CO@BHCI@?8A894xResetTimeoutTimerRoutine?3?5@
+      demangled: "\"\\'A894xResetTimeoutTimerRoutine: \"..."
+      offset: '00005900'
+    - name: ??_C@_0DP@LJPI@?8A894xResetTimeoutTimerRoutine?3?5@
+      demangled: "\"\\'A894xResetTimeoutTimerRoutine: \"..."
+      offset: '00005930'
+    - name: ??_C@_0EC@LPJD@?8A894xResetTimeoutTimerRoutine?3?5@
+      demangled: "\"\\'A894xResetTimeoutTimerRoutine: \"..."
+      offset: '00005970'
+    - name: ??_C@_0CH@JCAP@?8A894xResetTimeoutTimerRoutine?3?5@
+      demangled: "\"\\'A894xResetTimeoutTimerRoutine: \"..."
+      offset: 000059B4
+    - name: ??_C@_0CN@MGIH@?8A894xBusResetFinished?3?5SID_Pack@
+      demangled: "\"\\'A894xBusResetFinished: SID_Pack\"..."
+      offset: 000059DC
+    - name: ??_C@_0CK@GJEK@?8A894xBusResetFinished?3?5SID_Phys@
+      demangled: "\"\\'A894xBusResetFinished: SID_Phys\"..."
+      offset: 00005A0C
+    - name: ??_C@_0CH@HDJI@?8A894xBusResetFinished?3?5SID_Zero@
+      demangled: "\"\\'A894xBusResetFinished: SID_Zero\"..."
+      offset: 00005A38
+    - name: ??_C@_0CO@HHDF@?8A894xBusResetFinished?3?5SID_Link@
+      demangled: "\"\\'A894xBusResetFinished: SID_Link\"..."
+      offset: 00005A60
+    - name: ??_C@_0CM@GCDK@?8A894xBusResetFinished?3?5SID_Gap_@
+      demangled: "\"\\'A894xBusResetFinished: SID_Gap_\"..."
+      offset: 00005A90
+    - name: ??_C@_0CI@DIFC@?8A894xBusResetFinished?3?5SID_Spee@
+      demangled: "\"\\'A894xBusResetFinished: SID_Spee\"..."
+      offset: 00005ABC
+    - name: ??_C@_0CI@LAGJ@?8A894xBusResetFinished?3?5SID_Dela@
+      demangled: "\"\\'A894xBusResetFinished: SID_Dela\"..."
+      offset: 00005AE4
+    - name: ??_C@_0CM@IMJK@?8A894xBusResetFinished?3?5SID_Cont@
+      demangled: "\"\\'A894xBusResetFinished: SID_Cont\"..."
+      offset: 00005B0C
+    - name: ??_C@_0CO@HGFD@?8A894xBusResetFinished?3?5SID_Powe@
+      demangled: "\"\\'A894xBusResetFinished: SID_Powe\"..."
+      offset: 00005B38
+    - name: ??_C@_0CI@FDPH@?8A894xBusResetFinished?3?5SID_Port@
+      demangled: "\"\\'A894xBusResetFinished: SID_Port\"..."
+      offset: 00005B68
+    - name: ??_C@_0CI@CAEJ@?8A894xBusResetFinished?3?5SID_Port@
+      demangled: "\"\\'A894xBusResetFinished: SID_Port\"..."
+      offset: 00005B90
+    - name: ??_C@_0CI@ONM@?8A894xBusResetFinished?3?5SID_Port@
+      demangled: "\"\\'A894xBusResetFinished: SID_Port\"..."
+      offset: 00005BB8
+    - name: ??_C@_0DA@KHMB@?8A894xBusResetFinished?3?5SID_Init@
+      demangled: "\"\\'A894xBusResetFinished: SID_Init\"..."
+      offset: 00005BE0
+    - name: ??_C@_0CP@IMED@?8A894xBusResetFinished?3?5SID_More@
+      demangled: "\"\\'A894xBusResetFinished: SID_More\"..."
+      offset: 00005C10
+    - name: ??_C@_0DC@EN@?8A894xBusResetFinished?3?5SELF?5ID?5@
+      demangled: "\"\\'A894xBusResetFinished: SELF ID \"..."
+      offset: 00005C40
+    - name: ??_C@_0DO@BECL@?8A894xBusResetFinished?3?5LocalNod@
+      demangled: "\"\\'A894xBusResetFinished: LocalNod\"..."
+      offset: 00005C74
+    - name: ??_C@_0EB@JDFJ@?8A894xBusResetFinished?3?5IsochMgr@
+      demangled: "\"\\'A894xBusResetFinished: IsochMgr\"..."
+      offset: 00005CB4
+    - name: ??_C@_0CM@JPN@?8A894xBusResetFinished?3?5BusReset@
+      demangled: "\"\\'A894xBusResetFinished: BusReset\"..."
+      offset: 00005CF8
+    - name: ??_C@_0CN@BKFG@?8A894xBusResetFinished?3?5TOP_Node@
+      demangled: "\"\\'A894xBusResetFinished: TOP_Node\"..."
+      offset: 00005D24
+    - name: ??_C@_0DA@OJEH@?8A894xBusResetFinished?3?5TOP_Self@
+      demangled: "\"\\'A894xBusResetFinished: TOP_Self\"..."
+      offset: 00005D54
+    - name: ??_C@_0CJ@HAHI@?8A894xBusResetFinished?3?5TOP_Leng@
+      demangled: "\"\\'A894xBusResetFinished: TOP_Leng\"..."
+      offset: 00005D84
+    - name: ??_C@_0CN@MOCJ@?8A894xBusResetFinished?3?5TOP_Gene@
+      demangled: "\"\\'A894xBusResetFinished: TOP_Gene\"..."
+      offset: 00005DB0
+    - name: ??_C@_0DD@MPOF@?8A894xBusResetFinished?3?5Couldn?8t@
+      demangled: "\"\\'A894xBusResetFinished: Couldn\\'t\"..."
+      offset: 00005DE0
+    - name: ??_C@_0CN@MHC@?8A894xBusResetFinished?3?5Local?5no@
+      demangled: "\"\\'A894xBusResetFinished: Local no\"..."
+      offset: '00005E14'
+    - name: ??_C@_0CO@HAIO@?8A894xBusResetFinished?3?5LocalNod@
+      demangled: "\"\\'A894xBusResetFinished: LocalNod\"..."
+      offset: '00005E44'
+    - name: ??_C@_0DG@CGD@?8A894xBusResetFinished?3?5Insert?5l@
+      demangled: "\"\\'A894xBusResetFinished: Insert l\"..."
+      offset: '00005E74'
+    - name: ??_C@_0CI@JEJO@?8A894xBusResetFinished?3?5Valid?5Se@
+      demangled: "\"\\'A894xBusResetFinished: Valid Se\"..."
+      offset: 00005EAC
+    - name: ??_C@_0CK@IJFO@?8A894xBusResetFinished?3?5Raw?5self@
+      demangled: "\"\\'A894xBusResetFinished: Raw self\"..."
+      offset: 00005ED4
+    - name: ??_C@_0CO@LBEB@?8A894xBusResetFinished?3?5ACK?5data@
+      demangled: "\"\\'A894xBusResetFinished: ACK data\"..."
+      offset: 00005F00
+    - name: ??_C@_0CM@EEHJ@?8A894xBusResetFinished?3?5Bad?5self@
+      demangled: "\"\\'A894xBusResetFinished: Bad self\"..."
+      offset: 00005F30
+    - name: ??_C@_0CN@OCDA@?8A894xBusResetFinished?3?5NodeIdRe@
+      demangled: "\"\\'A894xBusResetFinished: NodeIdRe\"..."
+      offset: 00005F5C
+    - name: ??_C@_0CI@IKLI@?8A894xBusResetFinished?3?5Bad?5Node@
+      demangled: "\"\\'A894xBusResetFinished: Bad Node\"..."
+      offset: 00005F8C
+    - name: ??_C@_0CJ@BKCF@?8A894xBusResetFinished?3?5RawSelfI@
+      demangled: "\"\\'A894xBusResetFinished: RawSelfI\"..."
+      offset: 00005FB4
+    - name: ??_C@_0DN@LOHP@?8A894xBusResetFinished?3?5BUS?5RESE@
+      demangled: "\"\\'A894xBusResetFinished: BUS RESE\"..."
+      offset: 00005FE0
+    - name: ??_C@_0BP@FNNB@?8A894xBusResetFinished?3?5Enter?6?$AA@
+      demangled: "\"\\'A894xBusResetFinished: Enter\\n\""
+      offset: '00006020'
+    - name: ??_C@_0DG@DEND@?8A894xGenerateBusReset?3?5Initiate@
+      demangled: "\"\\'A894xGenerateBusReset: Initiate\"..."
+      offset: '00006040'
+    - name: ??_C@_0ED@FDCD@?8A894xGenerateBusReset?3?5Initiate@
+      demangled: "\"\\'A894xGenerateBusReset: Initiate\"..."
+      offset: '00006078'
+    - name: ??_C@_0DO@CMOM@?8A894xGenerateBusReset?3?5Initiate@
+      demangled: "\"\\'A894xGenerateBusReset: Initiate\"..."
+      offset: 000060BC
+    - name: ??_C@_0CI@HLBL@?8A894xGenerateBusReset?3?5Gap?5Coun@
+      demangled: "\"\\'A894xGenerateBusReset: Gap Coun\"..."
+      offset: 000060FC
+    - name: ??_C@_0BP@BONE@?8A894xGenerateBusReset?3?5Enter?6?$AA@
+      demangled: "\"\\'A894xGenerateBusReset: Enter\\n\""
+      offset: '00006124'
+    - name: ??_C@_0BE@EOCA@?8Get_tLabel?3?5Enter?6?$AA@
+      demangled: "\"\\'Get_tLabel: Enter\\n\""
+      offset: '00006144'
+    - name: ??_C@_0BH@KIKA@?8GetRSU_tLabel?3?5Enter?6?$AA@
+      demangled: "\"\\'GetRSU_tLabel: Enter\\n\""
+      offset: '00006158'
+    - name: ??_C@_0DJ@FELG@?8A894xStartNextTransmitTask?3?5Sta@
+      demangled: "\"\\'A894xStartNextTransmitTask: Sta\"..."
+      offset: '00006170'
+    - name: ??_C@_0DP@CGLE@?8A894xStartNextTransmitTask?3?5Asy@
+      demangled: "\"\\'A894xStartNextTransmitTask: Asy\"..."
+      offset: 000061AC
+    - name: ??_C@_0DP@GOLO@?8A894xStartNextTransmitTask?3?5Asy@
+      demangled: "\"\\'A894xStartNextTransmitTask: Asy\"..."
+      offset: 000061EC
+    - name: ??_C@_0CE@GFFP@?8A894xStartNextTransmitTask?3?5Ent@
+      demangled: "\"\\'A894xStartNextTransmitTask: Ent\"..."
+      offset: 0000622C
+    - name: ??_C@_0CE@NMGK@?8A894xCopyAsyncHeaderAndData?3?5Ex@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: Ex\"..."
+      offset: '00006250'
+    - name: ??_C@_0EA@BAGK@?8A894xCopyAsyncHeaderAndData?3?5As@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: As\"..."
+      offset: '00006274'
+    - name: ??_C@_0EC@FDJM@?8A894xCopyAsyncHeaderAndData?3?5Cu@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: Cu\"..."
+      offset: 000062B4
+    - name: ??_C@_0EA@KAHC@?8A894xCopyAsyncHeaderAndData?3?5Md@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: Md\"..."
+      offset: 000062F8
+    - name: ??_C@_0EC@PHGN@?8A894xCopyAsyncHeaderAndData?3?5To@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: To\"..."
+      offset: '00006338'
+    - name: ??_C@_0DA@DNMM@?8A894xCopyAsyncHeaderAndData?3?5Md@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: Md\"..."
+      offset: 0000637C
+    - name: ??_C@_0EB@GAON@?8A894xCopyAsyncHeaderAndData?3?5As@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: As\"..."
+      offset: 000063AC
+    - name: ??_C@_0ED@IDKO@?8A894xCopyAsyncHeaderAndData?3?5Cu@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: Cu\"..."
+      offset: 000063F0
+    - name: ??_C@_0EB@PJFN@?8A894xCopyAsyncHeaderAndData?3?5Md@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: Md\"..."
+      offset: '00006434'
+    - name: ??_C@_0ED@DPAK@?8A894xCopyAsyncHeaderAndData?3?5To@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: To\"..."
+      offset: '00006478'
+    - name: ??_C@_0DB@NBMA@?8A894xCopyAsyncHeaderAndData?3?5Md@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: Md\"..."
+      offset: 000064BC
+    - name: ??_C@_0DM@CMBP@?8A894xCopyAsyncHeaderAndData?3?5St@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: St\"..."
+      offset: 000064F0
+    - name: ??_C@_0EH@KIB@?8A894xCopyAsyncHeaderAndData?3?5As@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: As\"..."
+      offset: 0000652C
+    - name: ??_C@_0EC@PHBJ@?8A894xCopyAsyncHeaderAndData?3?5As@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: As\"..."
+      offset: '00006574'
+    - name: ??_C@_0EE@HJPK@?8A894xCopyAsyncHeaderAndData?3?5Cu@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: Cu\"..."
+      offset: 000065B8
+    - name: ??_C@_0EC@MLIA@?8A894xCopyAsyncHeaderAndData?3?5Md@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: Md\"..."
+      offset: 000065FC
+    - name: ??_C@_0EE@CBEG@?8A894xCopyAsyncHeaderAndData?3?5To@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: To\"..."
+      offset: '00006640'
+    - name: ??_C@_0DC@KKI@?8A894xCopyAsyncHeaderAndData?3?5Md@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: Md\"..."
+      offset: '00006684'
+    - name: ??_C@_0DO@GNHD@?8A894xCopyAsyncHeaderAndData?3?5Co@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: Co\"..."
+      offset: 000066B8
+    - name: ??_C@_0CF@DHBN@?8A894xCopyAsyncHeaderAndData?3?5En@
+      demangled: "\"\\'A894xCopyAsyncHeaderAndData: En\"..."
+      offset: 000066F8
+    - name: ??_C@_0CJ@JGLG@?8A894xHandleAsyncTransmission?3?5A@
+      demangled: "\"\\'A894xHandleAsyncTransmission: A\"..."
+      offset: '00006720'
+    - name: ??_C@_0CM@PBBP@?8A894xHandleAsyncTransmission?3?5A@
+      demangled: "\"\\'A894xHandleAsyncTransmission: A\"..."
+      offset: 0000674C
+    - name: ??_C@_0CP@DCO@?8A894xHandleAsyncTransmission?3?5N@
+      demangled: "\"\\'A894xHandleAsyncTransmission: N\"..."
+      offset: '00006778'
+    - name: ??_C@_0DD@LFIL@?8A894xHandleAsyncTransmission?3?5A@
+      demangled: "\"\\'A894xHandleAsyncTransmission: A\"..."
+      offset: 000067A8
+    - name: ??_C@_0EA@MGH@?8A894xHandleAsyncTransmission?3?5A@
+      demangled: "\"\\'A894xHandleAsyncTransmission: A\"..."
+      offset: 000067DC
+    - name: ??_C@_0DH@HPIM@?8A894xHandleAsyncTransmission?3?5D@
+      demangled: "\"\\'A894xHandleAsyncTransmission: D\"..."
+      offset: 0000681C
+    - name: ??_C@_0DD@BCKG@?8A894xHandleAsyncTransmission?3?5C@
+      demangled: "\"\\'A894xHandleAsyncTransmission: C\"..."
+      offset: '00006854'
+    - name: ??_C@_0EL@ONHO@?8A894xHandleAsyncTransmission?3?5D@
+      demangled: "\"\\'A894xHandleAsyncTransmission: D\"..."
+      offset: '00006888'
+    - name: ??_C@_0DN@HHIN@?8A894xHandleAsyncTransmission?3?5D@
+      demangled: "\"\\'A894xHandleAsyncTransmission: D\"..."
+      offset: 000068D4
+    - name: ??_C@_0CG@KOBN@?8A894xHandleAsyncTransmission?3?5E@
+      demangled: "\"\\'A894xHandleAsyncTransmission: E\"..."
+      offset: '00006914'
+    - name: ??_C@_0DB@EDFA@?8A894xHandleAsyncResponse?3?5TCODE@
+      demangled: "\"\\'A894xHandleAsyncResponse: TCODE\"..."
+      offset: 0000693C
+    - name: ??_C@_0DD@PMCP@?8A894xHandleAsyncResponse?3?5Quadl@
+      demangled: "\"\\'A894xHandleAsyncResponse: Quadl\"..."
+      offset: '00006970'
+    - name: ??_C@_0DI@EANB@?8A894xHandleAsyncResponse?3?5TCODE@
+      demangled: "\"\\'A894xHandleAsyncResponse: TCODE\"..."
+      offset: 000069A4
+    - name: ??_C@_0DG@JPMM@?8A894xHandleAsyncResponse?3?5TCODE@
+      demangled: "\"\\'A894xHandleAsyncResponse: TCODE\"..."
+      offset: 000069DC
+    - name: ??_C@_0ED@FAOO@?8A894xHandleAsyncResponse?3?5?$CGAsyn@
+      demangled: "\"\\'A894xHandleAsyncResponse: &Asyn\"..."
+      offset: 00006A14
+    - name: ??_C@_0EC@HMGP@?8A894xHandleAsyncResponse?3?5Async@
+      demangled: "\"\\'A894xHandleAsyncResponse: Async\"..."
+      offset: 00006A58
+    - name: ??_C@_0CM@OCIE@?8A894xHandleAsyncResponse?3?5DataL@
+      demangled: "\"\\'A894xHandleAsyncResponse: DataL\"..."
+      offset: 00006A9C
+    - name: ??_C@_0CO@LDGC@?8A894xHandleAsyncResponse?3?5Error@
+      demangled: "\"\\'A894xHandleAsyncResponse: Error\"..."
+      offset: 00006AC8
+    - name: ??_C@_0CO@OFFF@?8A894xHandleAsyncResponse?3?5Respo@
+      demangled: "\"\\'A894xHandleAsyncResponse: Respo\"..."
+      offset: 00006AF8
+    - name: ??_C@_0DA@KPMP@?8A894xHandleAsyncResponse?3?5TCODE@
+      demangled: "\"\\'A894xHandleAsyncResponse: TCODE\"..."
+      offset: 00006B28
+    - name: ??_C@_0CL@HJCF@?8A894xHandleAsyncResponse?3?5NOT?5H@
+      demangled: "\"\\'A894xHandleAsyncResponse: NOT H\"..."
+      offset: 00006B58
+    - name: ??_C@_0DP@BBD@?8A894xHandleAsyncResponse?3?5COULD@
+      demangled: "\"\\'A894xHandleAsyncResponse: COULD\"..."
+      offset: 00006B84
+    - name: ??_C@_0CH@BKGL@?8A894xHandleAsyncResponse?3?5tCode@
+      demangled: "\"\\'A894xHandleAsyncResponse: tCode\"..."
+      offset: 00006BC4
+    - name: ??_C@_0CI@OJCF@?8A894xHandleAsyncResponse?3?5tLabe@
+      demangled: "\"\\'A894xHandleAsyncResponse: tLabe\"..."
+      offset: 00006BEC
+    - name: ??_C@_0CI@NEFO@?8A894xHandleAsyncResponse?3?5Gru?$FL6@
+      demangled: "\"\\'A894xHandleAsyncResponse: Gru[6\"..."
+      offset: 00006C14
+    - name: ??_C@_0CI@MCN@?8A894xHandleAsyncResponse?3?5Gru?$FL5@
+      demangled: "\"\\'A894xHandleAsyncResponse: Gru[5\"..."
+      offset: 00006C3C
+    - name: ??_C@_0CI@EEAD@?8A894xHandleAsyncResponse?3?5Gru?$FL4@
+      demangled: "\"\\'A894xHandleAsyncResponse: Gru[4\"..."
+      offset: 00006C64
+    - name: ??_C@_0CI@LMMK@?8A894xHandleAsyncResponse?3?5Gru?$FL3@
+      demangled: "\"\\'A894xHandleAsyncResponse: Gru[3\"..."
+      offset: 00006C8C
+    - name: ??_C@_0CI@PEOE@?8A894xHandleAsyncResponse?3?5Gru?$FL2@
+      demangled: "\"\\'A894xHandleAsyncResponse: Gru[2\"..."
+      offset: 00006CB4
+    - name: ??_C@_0CI@CMJH@?8A894xHandleAsyncResponse?3?5Gru?$FL1@
+      demangled: "\"\\'A894xHandleAsyncResponse: Gru[1\"..."
+      offset: 00006CDC
+    - name: ??_C@_0CI@GELJ@?8A894xHandleAsyncResponse?3?5Gru?$FL0@
+      demangled: "\"\\'A894xHandleAsyncResponse: Gru[0\"..."
+      offset: 00006D04
+    - name: ??_C@_0CC@GF@?8A894xHandleAsyncResponse?3?5Enter@
+      demangled: "\"\\'A894xHandleAsyncResponse: Enter\"..."
+      offset: 00006D2C
+    - name: ??_C@_0DP@CDAJ@?8A894xHandleRsuCompletion?3?5COULD@
+      demangled: "\"\\'A894xHandleRsuCompletion: COULD\"..."
+      offset: 00006D50
+    - name: ??_C@_0DE@JMIP@?8A894xHandleRsuCompletion?3?5tLabe@
+      demangled: "\"\\'A894xHandleRsuCompletion: tLabe\"..."
+      offset: 00006D90
+    - name: ??_C@_0DE@BKPD@?8A894xHandleRsuCompletion?3?5RsuIn@
+      demangled: "\"\\'A894xHandleRsuCompletion: RsuIn\"..."
+      offset: 00006DC4
+    - name: ??_C@_0CC@KMAJ@?8A894xHandleRsuCompletion?3?5Enter@
+      demangled: "\"\\'A894xHandleRsuCompletion: Enter\"..."
+      offset: 00006DF8
+    - name: ??_C@_0DB@PJNJ@?8A894xHandleAsyncRequest?3?5AsyncP@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncP\"..."
+      offset: 00006E1C
+    - name: ??_C@_0CP@GNIK@?8A894xHandleAsyncRequest?3?5AsyncH@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncH\"..."
+      offset: '00006E50'
+    - name: ??_C@_0CP@NEDH@?8A894xHandleAsyncRequest?3?5AsyncH@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncH\"..."
+      offset: '00006E80'
+    - name: ??_C@_0CP@JMBJ@?8A894xHandleAsyncRequest?3?5AsyncH@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncH\"..."
+      offset: 00006EB0
+    - name: ??_C@_0CP@EEGK@?8A894xHandleAsyncRequest?3?5AsyncH@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncH\"..."
+      offset: 00006EE0
+    - name: ??_C@_0CP@MEE@?8A894xHandleAsyncRequest?3?5AsyncH@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncH\"..."
+      offset: 00006F10
+    - name: ??_C@_0CP@PEIN@?8A894xHandleAsyncRequest?3?5AsyncH@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncH\"..."
+      offset: 00006F40
+    - name: ??_C@_0CP@LMKD@?8A894xHandleAsyncRequest?3?5AsyncH@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncH\"..."
+      offset: 00006F70
+    - name: ??_C@_0CP@GENA@?8A894xHandleAsyncRequest?3?5AsyncH@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncH\"..."
+      offset: 00006FA0
+    - name: ??_C@_0CP@CMPO@?8A894xHandleAsyncRequest?3?5AsyncH@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncH\"..."
+      offset: 00006FD0
+    - name: ??_C@_0EB@KMBA@?8A894xHandleAsyncRequest?3?5AsyncT@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncT\"..."
+      offset: '00007000'
+    - name: ??_C@_0CP@CDNN@?8A894xHandleAsyncRequest?3?5Respon@
+      demangled: "\"\\'A894xHandleAsyncRequest: Respon\"..."
+      offset: '00007044'
+    - name: ??_C@_0CN@EIKM@?8A894xHandleAsyncRequest?3?5Respon@
+      demangled: "\"\\'A894xHandleAsyncRequest: Respon\"..."
+      offset: '00007074'
+    - name: ??_C@_0CM@CGMN@?8A894xHandleAsyncRequest?3?5Respon@
+      demangled: "\"\\'A894xHandleAsyncRequest: Respon\"..."
+      offset: 000070A4
+    - name: ??_C@_0DC@GOOH@?8A894xHandleAsyncRequest?3?5Indica@
+      demangled: "\"\\'A894xHandleAsyncRequest: Indica\"..."
+      offset: 000070D0
+    - name: ??_C@_0DA@BJFB@?8A894xHandleAsyncRequest?3?5Indica@
+      demangled: "\"\\'A894xHandleAsyncRequest: Indica\"..."
+      offset: '00007104'
+    - name: ??_C@_0DE@DAF@?8A894xHandleAsyncRequest?3?5Reques@
+      demangled: "\"\\'A894xHandleAsyncRequest: Reques\"..."
+      offset: '00007134'
+    - name: ??_C@_0CO@IDML@?8A894xHandleAsyncRequest?3?5Reques@
+      demangled: "\"\\'A894xHandleAsyncRequest: Reques\"..."
+      offset: '00007168'
+    - name: ??_C@_0CN@EDKN@?8A894xHandleAsyncRequest?3?5Reques@
+      demangled: "\"\\'A894xHandleAsyncRequest: Reques\"..."
+      offset: '00007198'
+    - name: ??_C@_0DM@LFAL@?8A894xHandleAsyncRequest?3?5AsyncT@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncT\"..."
+      offset: 000071C8
+    - name: ??_C@_0DL@CLMG@?8A894xHandleAsyncRequest?3?5AsyncT@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncT\"..."
+      offset: '00007204'
+    - name: ??_C@_0CO@JMCC@?8A894xHandleAsyncRequest?3?5AsyncT@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncT\"..."
+      offset: '00007240'
+    - name: ??_C@_0DH@GAMA@?8A894xHandleAsyncRequest?3?5TCODE_@
+      demangled: "\"\\'A894xHandleAsyncRequest: TCODE_\"..."
+      offset: '00007270'
+    - name: ??_C@_0DC@KELM@?8A894xHandleAsyncRequest?3?5AsyncP@
+      demangled: "\"\\'A894xHandleAsyncRequest: AsyncP\"..."
+      offset: 000072A8
+    - name: ??_C@_0DA@GDJJ@?8A894xHandleAsyncRequest?3?5BlockD@
+      demangled: "\"\\'A894xHandleAsyncRequest: BlockD\"..."
+      offset: 000072DC
+    - name: ??_C@_0DF@GPCP@?8A894xHandleAsyncRequest?3?5TCODE_@
+      demangled: "\"\\'A894xHandleAsyncRequest: TCODE_\"..."
+      offset: 0000730C
+    - name: ??_C@_0DG@HPOD@?8A894xHandleAsyncRequest?3?5TCODE_@
+      demangled: "\"\\'A894xHandleAsyncRequest: TCODE_\"..."
+      offset: '00007344'
+    - name: ??_C@_0DE@JMPJ@?8A894xHandleAsyncRequest?3?5TCODE_@
+      demangled: "\"\\'A894xHandleAsyncRequest: TCODE_\"..."
+      offset: 0000737C
+    - name: ??_C@_0CO@KPCP@?8A894xHandleAsyncRequest?3?5TCODE_@
+      demangled: "\"\\'A894xHandleAsyncRequest: TCODE_\"..."
+      offset: 000073B0
+    - name: ??_C@_0CK@MBPK@?8A894xHandleAsyncRequest?3?5NOT?5HA@
+      demangled: "\"\\'A894xHandleAsyncRequest: NOT HA\"..."
+      offset: '000073E0'
+    - name: ??_C@_0CG@LDOD@?8A894xHandleAsyncRequest?3?5tCode?5@
+      demangled: "\"\\'A894xHandleAsyncRequest: tCode \"..."
+      offset: 0000740C
+    - name: ??_C@_0CH@MLIM@?8A894xHandleAsyncRequest?3?5tLabel@
+      demangled: "\"\\'A894xHandleAsyncRequest: tLabel\"..."
+      offset: '00007434'
+    - name: ??_C@_0CE@PGEK@?8A894xHandleAsyncRequest?3?5Gru?5?$DN?5@
+      demangled: "\"\\'A894xHandleAsyncRequest: Gru = \"..."
+      offset: 0000745C
+    - name: ??_C@_0CH@PGPH@?8A894xHandleAsyncRequest?3?5Gru?$FL6?$FN@
+      demangled: "\"\\'A894xHandleAsyncRequest: Gru[6]\"..."
+      offset: '00007480'
+    - name: ??_C@_0CH@COIE@?8A894xHandleAsyncRequest?3?5Gru?$FL5?$FN@
+      demangled: "\"\\'A894xHandleAsyncRequest: Gru[5]\"..."
+      offset: 000074A8
+    - name: ??_C@_0CH@GGKK@?8A894xHandleAsyncRequest?3?5Gru?$FL4?$FN@
+      demangled: "\"\\'A894xHandleAsyncRequest: Gru[4]\"..."
+      offset: 000074D0
+    - name: ??_C@_0CH@JOGD@?8A894xHandleAsyncRequest?3?5Gru?$FL3?$FN@
+      demangled: "\"\\'A894xHandleAsyncRequest: Gru[3]\"..."
+      offset: 000074F8
+    - name: ??_C@_0CH@NGEN@?8A894xHandleAsyncRequest?3?5Gru?$FL2?$FN@
+      demangled: "\"\\'A894xHandleAsyncRequest: Gru[2]\"..."
+      offset: '00007520'
+    - name: ??_C@_0CH@ODO@?8A894xHandleAsyncRequest?3?5Gru?$FL1?$FN@
+      demangled: "\"\\'A894xHandleAsyncRequest: Gru[1]\"..."
+      offset: '00007548'
+    - name: ??_C@_0CH@EGBA@?8A894xHandleAsyncRequest?3?5Gru?$FL0?$FN@
+      demangled: "\"\\'A894xHandleAsyncRequest: Gru[0]\"..."
+      offset: '00007570'
+    - name: ??_C@_0CB@DKON@?8A894xHandleAsyncRequest?3?5Enter?6@
+      demangled: "\"\\'A894xHandleAsyncRequest: Enter\\n\"..."
+      offset: '00007598'
+    - name: ??_C@_0DJ@OLJB@?8A894xFindAsyncPendingTask?3?5Asyn@
+      demangled: "\"\\'A894xFindAsyncPendingTask: Asyn\"..."
+      offset: 000075BC
+    - name: ??_C@_0CD@MBKP@?8A894xFindAsyncPendingTask?3?5Ente@
+      demangled: "\"\\'A894xFindAsyncPendingTask: Ente\"..."
+      offset: 000075F8
+    - name: ??_C@_0DL@PGDL@?8A894xFindMappingStructure?3?5Phys@
+      demangled: "\"\\'A894xFindMappingStructure: Phys\"..."
+      offset: 0000761C
+    - name: ??_C@_0CD@EAHH@?8A894xFindMappingStructure?3?5Ente@
+      demangled: "\"\\'A894xFindMappingStructure: Ente\"..."
+      offset: '00007658'
+    - name: ??_C@_0CJ@JKMO@?8A894xEnablePhysicalDma?3?5Turn?5DM@
+      demangled: "\"\\'A894xEnablePhysicalDma: Turn DM\"..."
+      offset: 0000767C
+    - name: ??_C@_0CA@JEFB@?8A894xEnablePhysicalDma?3?5Enter?6?$AA@
+      demangled: "\"\\'A894xEnablePhysicalDma: Enter\\n\""
+      offset: 000076A8
+    - name: ??_C@_0CC@FEBO@?8A894xHandleIsochInterrupt?3?5Exit@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Exit\"..."
+      offset: 000076C8
+    - name: ??_C@_0DN@KOJH@?8A894xHandleIsochInterrupt?3?5Isoc@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Isoc\"..."
+      offset: 000076EC
+    - name: ??_C@_0DM@KNGK@?8A894xHandleIsochInterrupt?3?5Isoc@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Isoc\"..."
+      offset: 0000772C
+    - name: ??_C@_0EA@FHPC@?8A894xHandleIsochInterrupt?3?5Maki@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Maki\"..."
+      offset: '00007768'
+    - name: ??_C@_0DG@NPJ@?8A894xHandleIsochInterrupt?3?5Isoc@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Isoc\"..."
+      offset: 000077A8
+    - name: ??_C@_0EO@MIHB@?8A894xHandleIsochInterrupt?3?5?$CKIso@
+      demangled: "\"\\'A894xHandleIsochInterrupt: *Iso\"..."
+      offset: '000077E0'
+    - name: ??_C@_0EN@MLHG@?8A894xHandleIsochInterrupt?3?5Isoc@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Isoc\"..."
+      offset: '00007830'
+    - name: ??_C@_0DA@KGLA@?8A894xHandleIsochInterrupt?3?5Chan@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Chan\"..."
+      offset: '00007880'
+    - name: ??_C@_0DL@OFPE@?8A894xHandleIsochInterrupt?3?5Isoc@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Isoc\"..."
+      offset: 000078B0
+    - name: ??_C@_0DK@MBHK@?8A894xHandleIsochInterrupt?3?5Isoc@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Isoc\"..."
+      offset: 000078EC
+    - name: ??_C@_0DB@JAHL@?8A894xHandleIsochInterrupt?3?5Isoc@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Isoc\"..."
+      offset: '00007928'
+    - name: ??_C@_0EF@EPEA@?8A894xHandleIsochInterrupt?3?5Isoc@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Isoc\"..."
+      offset: 0000795C
+    - name: ??_C@_0CD@HDJF@?8A894xHandleIsochInterrupt?3?5Ente@
+      demangled: "\"\\'A894xHandleIsochInterrupt: Ente\"..."
+      offset: 000079A4
+    - name: ??_C@_0DH@CABE@?8Aha894xIsochReceiveConfiguratio@
+      demangled: "\"\\'Aha894xIsochReceiveConfiguratio\"..."
+      offset: 000079C8
+    - name: ??_C@_0EG@KPJD@?8Aha894xIsochReceiveConfiguratio@
+      demangled: "\"\\'Aha894xIsochReceiveConfiguratio\"..."
+      offset: 00007A00
+    - name: ??_C@_0EG@ENIF@?8Aha894xIsochReceiveConfiguratio@
+      demangled: "\"\\'Aha894xIsochReceiveConfiguratio\"..."
+      offset: 00007A48
+    - name: ??_C@_0CK@CHNM@?8Aha894xIsochReceiveConfiguratio@
+      demangled: "\"\\'Aha894xIsochReceiveConfiguratio\"..."
+      offset: 00007A90
+    - name: ??_C@_0DI@OAIK@?8Aha894xIsochTransmitConfigurati@
+      demangled: "\"\\'Aha894xIsochTransmitConfigurati\"..."
+      offset: 00007ABC
+    - name: ??_C@_0EH@DLGK@?8Aha894xIsochTransmitConfigurati@
+      demangled: "\"\\'Aha894xIsochTransmitConfigurati\"..."
+      offset: 00007AF4
+    - name: ??_C@_0EH@NJHM@?8Aha894xIsochTransmitConfigurati@
+      demangled: "\"\\'Aha894xIsochTransmitConfigurati\"..."
+      offset: 00007B3C
+    - name: ??_C@_0CL@IPJG@?8Aha894xIsochTransmitConfigurati@
+      demangled: "\"\\'Aha894xIsochTransmitConfigurati\"..."
+      offset: 00007B84
+    - name: ??_C@_0DH@BION@?8A894xGetPhyCapabilities?3?5Speed?5@
+      demangled: "\"\\'A894xGetPhyCapabilities: Speed \"..."
+      offset: 00007BB0
+    - name: ??_C@_0DE@EGPH@?8A894xGetPhyCapabilities?3?5IBM?5le@
+      demangled: "\"\\'A894xGetPhyCapabilities: IBM le\"..."
+      offset: 00007BE8
+    - name: ??_C@_0DD@MGBL@?8A894xGetPhyCapabilities?3?5IBM?513@
+      demangled: "\"\\'A894xGetPhyCapabilities: IBM 13\"..."
+      offset: 00007C1C
+    - name: ??_C@_0DH@NLFP@?8A894xGetPhyCapabilities?3?51394A?5@
+      demangled: "\"\\'A894xGetPhyCapabilities: 1394A \"..."
+      offset: 00007C50
+    - name: ??_C@_0CB@KLFM@?8A894xGetPhyCapabilities?3?5enter?6@
+      demangled: "\"\\'A894xGetPhyCapabilities: enter\\n\"..."
+      offset: 00007C88
+    - name: ??_C@_0DC@MACD@?8A894xGenerateSelfIdPacket?3?5Self@
+      demangled: "\"\\'A894xGenerateSelfIdPacket: Self\"..."
+      offset: 00007CAC
+    - name: _A894xDeviceExtension
+      demangled: ''
+      offset: 00007CE0
+    - name: _A894xRegisterBase
+      demangled: ''
+      offset: 00007CE4
+  - num: '4'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_1394BUS
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__Bus1394RegisterPortDriver@4
+      demangled: ''
+      offset: '00000140'
+    - name: \1771394BUS_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__KeStallExecutionProcessor@4
+      demangled: ''
+      offset: '00000148'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__READ_REGISTER_ULONG@4
+      demangled: ''
+      offset: '00000150'
+    - name: __imp__WRITE_REGISTER_ULONG@8
+      demangled: ''
+      offset: '00000154'
+    - name: __imp__KeInsertQueueDpc@12
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: 0000015C
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000160'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      demangled: ''
+      offset: '00000164'
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: 0000016C
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: '00000170'
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: '00000174'
+    - name: __imp__KeSynchronizeExecution@12
+      demangled: ''
+      offset: '00000178'
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      demangled: ''
+      offset: 0000017C
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__RtlCopyUnicodeString@8
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000190'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: 000001A0
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__IoStartPacket@16
+      demangled: ''
+      offset: 000001A8
+    - name: __imp__KeReleaseMutex@8
+      demangled: ''
+      offset: 000001AC
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__MmUnmapLockedPages@8
+      demangled: ''
+      offset: 000001B4
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: 000001B8
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: 000001BC
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      demangled: ''
+      offset: 000001C0
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__KeInitializeMutex@8
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 000001CC
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: 000001D4
+    - name: __imp__IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 000001DC
+    - name: __imp__IoDisconnectInterrupt@4
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp__IoConnectInterrupt@44
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp__MmUnmapIoSpace@8
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__IoGetDmaAdapter@12
+      demangled: ''
+      offset: 000001EC
+    - name: __imp__MmMapIoSpace@16
+      demangled: ''
+      offset: 000001F0
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: 000001F4
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: 000001FC
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: '00000200'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000204'
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000208'
+    - name: __imp__KeGetCurrentThread@0
+      demangled: ''
+      offset: 0000020C
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000210'
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: '00000214'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: '00000218'
+    - name: __imp__ZwQueryValueKey@24
+      demangled: ''
+      offset: 0000021C
+    - name: __imp__IoAllocateMdl@20
+      demangled: ''
+      offset: '00000220'
+    - name: __imp__IoFreeMdl@4
+      demangled: ''
+      offset: '00000224'
+    - name: __imp__IoStartNextPacket@8
+      demangled: ''
+      offset: '00000228'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000022C
+- version: Windows 98SE Retail
+  source_tree:
+  - ../a894xirp.c
+  - ../a894xpnp.c
+  - ../aha894x.c
+  - ../../common/common.c
+  - ../hardware.c
+  - ../interrup.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00002DB0
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _A894xUnload@4
+      demangled: ''
+      offset: '00000051'
+    - name: _A894xCreateClose@8
+      demangled: ''
+      offset: '00000054'
+    - name: _GetMemory@8
+      demangled: ''
+      offset: 0000007B
+    - name: _A894xVirtualToPhysicalAddress@8
+      demangled: ''
+      offset: 0000013D
+    - name: _A894xIsr@8
+      demangled: ''
+      offset: '00000178'
+    - name: _A894xDpc@16
+      demangled: ''
+      offset: 000001B7
+    - name: _A894xBeginPhysicalDma@16
+      demangled: ''
+      offset: 000004F8
+    - name: _A894xBeginAsyncDma@16
+      demangled: ''
+      offset: '00000604'
+    - name: _A894xBeginIsochDma@16
+      demangled: ''
+      offset: 00000AA6
+    - name: _A894xTimeOutDpc@16
+      demangled: ''
+      offset: 0000112C
+    - name: _A894xGetInterruptEvents@4
+      demangled: ''
+      offset: 000011EA
+    - name: _A894xCompleteAsyncRequest@12
+      demangled: ''
+      offset: 0000121F
+    - name: _HandleIOCtl@12
+      demangled: ''
+      offset: '000013E2'
+    - name: _CreatePortObjectAndSymLink@20
+      demangled: ''
+      offset: '00001444'
+    - name: _A894xIOCtl@8
+      demangled: ''
+      offset: 000015A9
+    - name: _A894xStartAsyncIo@8
+      demangled: ''
+      offset: 00001C1C
+    - name: _A894xPnPAddDevice@8
+      demangled: ''
+      offset: 000038BC
+    - name: _A894xPnP@8
+      demangled: ''
+      offset: 00003C58
+    - name: _A894xPower@8
+      demangled: ''
+      offset: 000042D9
+    - name: _A894xSynchCompletionRoutine@12
+      demangled: ''
+      offset: 000042FC
+    - name: _A894xCheckPciConfigSpace@4
+      demangled: ''
+      offset: '00004312'
+    - name: _A894xTurnOffPower@4
+      demangled: ''
+      offset: 000043BF
+    - name: _A894xReadWriteConfig@20
+      demangled: ''
+      offset: 000043F8
+    - name: _A894xGetRegistryParameters@8
+      demangled: ''
+      offset: 000044B3
+    - name: _A894xGetRegistryKeyValue@20
+      demangled: ''
+      offset: '00004752'
+    - name: _A894xDistributeCommonBufferMemory@4
+      demangled: ''
+      offset: 000047D7
+    - name: _A894xSystemControl@8
+      demangled: ''
+      offset: 0000491F
+    - name: _A894xCleanUpForStopRemove@4
+      demangled: ''
+      offset: '00004954'
+    - name: _A894xVerifyHardware@4
+      demangled: ''
+      offset: 00004A9B
+    - name: _A894xInitializeHardware@4
+      demangled: ''
+      offset: 00004B50
+    - name: _A894xInitializeGruProgram@4
+      demangled: ''
+      offset: 00004CAB
+    - name: _A894xResetInterrupt@4
+      demangled: ''
+      offset: 00004DB4
+    - name: _A894xBusResetStarted@4
+      demangled: ''
+      offset: '00004E88'
+    - name: _A894xResetTimeoutTimerRoutine@16
+      demangled: ''
+      offset: 00004FFA
+    - name: _A894xBusResetFinished@8
+      demangled: ''
+      offset: '00005078'
+    - name: _A894xGenerateBusReset@8
+      demangled: ''
+      offset: 000054FD
+    - name: _Get_tLabel@4
+      demangled: ''
+      offset: 000055C0
+    - name: _GetRSU_tLabel@4
+      demangled: ''
+      offset: 000055D8
+    - name: _A894xStartNextTransmitTask@4
+      demangled: ''
+      offset: 000055F3
+    - name: _A894xCopyAsyncHeaderAndData@8
+      demangled: ''
+      offset: '000056E1'
+    - name: _A894xHandleAsyncTransmission@4
+      demangled: ''
+      offset: '00005826'
+    - name: _A894xHandleAsyncResponse@8
+      demangled: ''
+      offset: 0000594F
+    - name: _A894xHandleRsuCompletion@8
+      demangled: ''
+      offset: 00005B19
+    - name: _A894xHandleAsyncRequest@8
+      demangled: ''
+      offset: 00005B88
+    - name: _A894xFindAsyncPendingTask@12
+      demangled: ''
+      offset: 000065FF
+    - name: _A894xFindMappingStructure@8
+      demangled: ''
+      offset: 0000667D
+    - name: _A894xEnablePhysicalDma@8
+      demangled: ''
+      offset: 000066F0
+    - name: _A894xDeactivateHardware@4
+      demangled: ''
+      offset: 0000671E
+    - name: _A894xHandleIsochInterrupt@8
+      demangled: ''
+      offset: '00006780'
+    - name: _Aha894xIsochReceiveConfiguration@12
+      demangled: ''
+      offset: 000067EF
+    - name: _Aha894xIsochTransmitConfiguration@12
+      demangled: ''
+      offset: 000068A0
+    - name: _A894xGetPhyCapabilities@4
+      demangled: ''
+      offset: '00006966'
+    - name: _CalculateCrc@8
+      demangled: ''
+      offset: 00006A37
+    - name: _Crc_16@8
+      demangled: ''
+      offset: 00006A5E
+    - name: _A894xGenerateSelfIdPacket@4
+      demangled: ''
+      offset: 00006A94
+    - name: _A894xGetUniqueId@4
+      demangled: ''
+      offset: 00006BCB
+    - name: _Read_PHY@8
+      demangled: ''
+      offset: 00006C1E
+    - name: _SeeInput@8
+      demangled: ''
+      offset: 00006C9F
+    - name: _SeeRecvBit@8
+      demangled: ''
+      offset: 00006D9F
+    - name: _SeeSendBit@12
+      demangled: ''
+      offset: 00006E5F
+    - name: _Write_PHY@8
+      demangled: ''
+      offset: 00006F12
+    - name: _Bus1394RegisterPortDriver@4
+      demangled: ''
+      offset: 00006F2C
+    - name: _KeGetCurrentThread@0
+      demangled: ''
+      offset: 00006F32
+  - num: '2'
+    name: .data
+    offset: 000034A0
+    symbols:
+    - name: _A894xDebugFlag
+      demangled: ''
+      offset: '00000000'
+    - name: 
+        ??_C@_1CI@KDMG@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      demangled: L"\\DosDevices\\1394BUS"
+      offset: '00000004'
+    - name: 
+        ??_C@_1CA@MPBH@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      demangled: L"\\Device\\1394BUS"
+      offset: 0000002C
+    - name: 
+        ??_C@_1CG@NCGG@?$AAA?$AAl?$AAl?$AAo?$AAw?$AAP?$AAh?$AAy?$AAs?$AAi?$AAc?$AAa?$AAl?$AAR?$AAe?$AAa?$AAd?$AAs?$AA?$AA@
+      demangled: L"AllowPhysicalReads"
+      offset: 0000004C
+    - name: ??_C@_1BE@NFLL@?$AAA?$AAl?$AAl?$AAo?$AAw?$AAI?$AAS?$AAB?$AAR?$AA?$AA@
+      demangled: L"AllowISBR"
+      offset: '00000074'
+    - name: 
+        ??_C@_1CA@PDFH@?$AAD?$AAe?$AAl?$AAa?$AAy?$AAA?$AAf?$AAt?$AAe?$AAr?$AAR?$AAe?$AAs?$AAe?$AAt?$AA?$AA@
+      demangled: L"DelayAfterReset"
+      offset: '00000088'
+    - name: ??_C@_1BE@DONB@?$AAF?$AAo?$AAr?$AAc?$AAe?$AAR?$AAo?$AAo?$AAt?$AA?$AA@
+      demangled: L"ForceRoot"
+      offset: 000000A8
+    - name: 
+        ??_C@_1BK@IDJ@?$AAM?$AAa?$AAx?$AAA?$AAs?$AAy?$AAn?$AAc?$AAR?$AAe?$AAa?$AAd?$AA?$AA@
+      demangled: L"MaxAsyncRead"
+      offset: 000000BC
+    - name: 
+        ??_C@_1BM@PCJH@?$AAM?$AAa?$AAx?$AAA?$AAs?$AAy?$AAn?$AAc?$AAW?$AAr?$AAi?$AAt?$AAe?$AA?$AA@
+      demangled: L"MaxAsyncWrite"
+      offset: 000000D8
+    - name: ??_C@_1BC@NCHE@?$AAM?$AAa?$AAx?$AAS?$AAp?$AAe?$AAe?$AAd?$AA?$AA@
+      demangled: L"MaxSpeed"
+      offset: 000000F4
+    - name: 
+        ??_C@_1CC@LEBG@?$AAA?$AAH?$AAA?$AA8?$AA9?$AA4?$AAx?$AAD?$AAe?$AAb?$AAu?$AAg?$AAF?$AAl?$AAa?$AAg?$AA?$AA@
+      demangled: L"AHA894xDebugFlag"
+      offset: '00000108'
+    - name: 
+        ??_C@_1BK@GNPM@?$AAD?$AAo?$AAN?$AAo?$AAt?$AAC?$AAo?$AAn?$AAt?$AAe?$AAn?$AAd?$AA?$AA@
+      demangled: L"DoNotContend"
+      offset: 0000012C
+    - name: 
+        ??_C@_1CI@BBP@?$AAN?$AAo?$AAC?$AAy?$AAc?$AAl?$AAe?$AAS?$AAt?$AAa?$AAr?$AAt?$AAP?$AAa?$AAc?$AAk?$AAe?$AAt?$AAs?$AA?$AA@
+      demangled: L"NoCycleStartPackets"
+      offset: '00000148'
+    - name: 
+        ??_C@_1BO@LIJK@?$AAR?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAT?$AAi?$AAm?$AAe?$AAO?$AAu?$AAt?$AA?$AA@
+      demangled: L"RequestTimeOut"
+      offset: '00000170'
+    - name: 
+        ??_C@_1BO@NHAK@?$AAR?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe?$AAB?$AAu?$AAf?$AAf?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: L"ReceiveBuffers"
+      offset: '00000190'
+    - name: 
+        ??_C@_1CA@PCLB@?$AAT?$AAr?$AAa?$AAn?$AAs?$AAm?$AAi?$AAt?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: L"TransmitWorkers"
+      offset: 000001B0
+    - name: 
+        ??_C@_1BO@NBKO@?$AAR?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: L"ReceiveWorkers"
+      offset: 000001D0
+    - name: 
+        ??_C@_1BO@MLPO@?$AAD?$AAi?$AAa?$AAg?$AAn?$AAo?$AAs?$AAt?$AAi?$AAc?$AAM?$AAo?$AAd?$AAe?$AA?$AA@
+      demangled: L"DiagnosticMode"
+      offset: 000001F0
+    - name: _A894xDeviceExtension
+      demangled: ''
+      offset: '00000210'
+    - name: _A894xRegisterBase
+      demangled: ''
+      offset: '00000214'
+  - num: '3'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_1394BUS
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__Bus1394RegisterPortDriver@4
+      demangled: ''
+      offset: '00000138'
+    - name: \1771394BUS_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000013C
+    - name: __imp__KeStallExecutionProcessor@4
+      demangled: ''
+      offset: '00000140'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000144'
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      demangled: ''
+      offset: '00000148'
+    - name: __imp__WRITE_REGISTER_ULONG@8
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__KeSynchronizeExecution@12
+      demangled: ''
+      offset: '00000150'
+    - name: __imp__READ_REGISTER_ULONG@4
+      demangled: ''
+      offset: '00000154'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      demangled: ''
+      offset: '00000158'
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: '00000160'
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: '00000164'
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__MmUnmapLockedPages@8
+      demangled: ''
+      offset: 0000016C
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000170'
+    - name: __imp__KeInsertQueueDpc@12
+      demangled: ''
+      offset: '00000174'
+    - name: __imp__RtlCopyUnicodeString@8
+      demangled: ''
+      offset: '00000178'
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: 0000017C
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: '00000190'
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__IoStartPacket@16
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__KeReleaseMutex@8
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 000001A0
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: 000001A8
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 000001AC
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__IoStartNextPacket@8
+      demangled: ''
+      offset: 000001B4
+    - name: __imp__KeInitializeMutex@8
+      demangled: ''
+      offset: 000001B8
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: 000001C0
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 000001CC
+    - name: __imp__IoDisconnectInterrupt@4
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__IoConnectInterrupt@44
+      demangled: ''
+      offset: 000001D4
+    - name: __imp__MmUnmapIoSpace@8
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__IoGetDmaAdapter@12
+      demangled: ''
+      offset: 000001DC
+    - name: __imp__MmMapIoSpace@16
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: 000001EC
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 000001F0
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: 000001F4
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__KeGetCurrentThread@0
+      demangled: ''
+      offset: 000001FC
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000200'
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: '00000204'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: '00000208'
+    - name: __imp__ZwQueryValueKey@24
+      demangled: ''
+      offset: 0000020C
+    - name: __imp__IoAllocateMdl@20
+      demangled: ''
+      offset: '00000210'
+    - name: __imp__IoFreeMdl@4
+      demangled: ''
+      offset: '00000214'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: '00000218'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000021C

@@ -2,6 +2,538 @@ filename: usbaudio.sys
 binary: USBAUDIO
 description: ''
 appearances:
+- version: Windows 98 Retail
+  source_tree:
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/ulldiv.asm
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00000BD0
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+    - name: _HwInitialize@4
+      processed: ''
+      offset: '00000066'
+    - name: _HwUnInitialize@4
+      processed: ''
+      offset: 000002BE
+    - name: _GetUnit@8
+      processed: ''
+      offset: 0000036C
+    - name: _CountInputChannels@8
+      processed: ''
+      offset: 000003D9
+    - name: _SetAudioState@4
+      processed: ''
+      offset: 0000043A
+    - name: _SetInitialSampleFrequency@4
+      processed: ''
+      offset: '00000605'
+    - name: _SetStreamDataFormat@4
+      processed: ''
+      offset: '00000621'
+    - name: _CancelRenderRequest@4
+      processed: ''
+      offset: '00000671'
+    - name: _QueueDataSRB@4
+      processed: ''
+      offset: 0000068D
+    - name: _AudioReceiveDataPacket@4
+      processed: ''
+      offset: '000006E6'
+    - name: _AudioReceiveCtrlPacket@4
+      processed: ''
+      offset: '00000774'
+    - name: _DataRangeCompare@12
+      processed: ''
+      offset: '00000803'
+    - name: _CheckFormatMatch@12
+      processed: ''
+      offset: '00000886'
+    - name: _ConvertRangeToFormat@8
+      processed: ''
+      offset: 0000093A
+    - name: _MaxInfoForInterface@12
+      processed: ''
+      offset: 000009B4
+    - name: _GetBestSampleRate@8
+      processed: ''
+      offset: 00000A77
+    - name: _GetBestSampleSize@8
+      processed: ''
+      offset: 00000AC1
+    - name: _GetMaxChannels@8
+      processed: ''
+      offset: 00000B0B
+    - name: _FindBestMatch@12
+      processed: ''
+      offset: 00000B55
+    - name: _GetDataIntersection@4
+      processed: ''
+      offset: 00000BE2
+    - name: _AdapterCancelPacket@4
+      processed: ''
+      offset: 00000D30
+    - name: _AdapterTimeoutPacket@4
+      processed: ''
+      offset: 00000DD0
+    - name: _ChangePowerState@4
+      processed: ''
+      offset: 00000DDD
+    - name: _AdapterReceivePacket@4
+      processed: ''
+      offset: 00000F95
+    - name: _CopyDescriptorToFormat@12
+      processed: ''
+      offset: 000010BF
+    - name: _ConvertTermTypeToNodeType@16
+      processed: ''
+      offset: '00001261'
+    - name: _MapTerminalToPinNumber@8
+      processed: ''
+      offset: '00001343'
+    - name: _AdapterStreamInfo@4
+      processed: ''
+      offset: 0000139F
+    - name: _AdapterOpenStream@4
+      processed: ''
+      offset: 00001F91
+    - name: _AdapterCloseStream@4
+      processed: ''
+      offset: 0000214C
+    - name: _PCM2USB_StartDevice@4
+      processed: ''
+      offset: 000021DD
+    - name: _PCM2USB_StopDevice@4
+      processed: ''
+      offset: 0000231C
+    - name: _PCM2USB_CallUSBD@8
+      processed: ''
+      offset: 0000236C
+    - name: _GetCurrentUSBFrame@4
+      processed: ''
+      offset: 000023CF
+    - name: _GetAudioSpecificInterface@12
+      processed: ''
+      offset: 0000241B
+    - name: _GetFirstAudioInterface@8
+      processed: ''
+      offset: 0000247C
+    - name: _GetNextAudioInterface@8
+      processed: ''
+      offset: 000024EF
+    - name: _PCM2USB_CountFormats@4
+      processed: ''
+      offset: '00002527'
+    - name: _PCM2USB_CountUnits@20
+      processed: ''
+      offset: '00002575'
+    - name: _PCM2USB_FindInterface@12
+      processed: ''
+      offset: '000026E4'
+    - name: _PCM2USB_SelectConfiguration@4
+      processed: ''
+      offset: '00002839'
+    - name: _PCM2USB_SelectInterface@12
+      processed: ''
+      offset: 00002A19
+    - name: _PCM2USB_GetEndpointDescriptor@12
+      processed: ''
+      offset: 00002B2C
+    - name: _PCM2USB_GetMaxPacketSizeForFormat@8
+      processed: ''
+      offset: 00002B71
+    - name: _PCM2USB_GetControlInterfaceForUnits@4
+      processed: ''
+      offset: 00002B8D
+    - name: _IsZeroBWInterface@8
+      processed: ''
+      offset: 00002C25
+    - name: _PCM2USB_SelectZeroBWInterface@12
+      processed: ''
+      offset: 00002C58
+    - name: _PCM2USB_WriteReset@4
+      processed: ''
+      offset: 00002CB1
+    - name: _PCM2USB_AbortPipe@4
+      processed: ''
+      offset: 00002D04
+    - name: _PCM2USB_BuildIsoRequest@4
+      processed: ''
+      offset: 00002DCE
+    - name: _PCM2USB_Write@4
+      processed: ''
+      offset: 00002EC0
+    - name: _PCM2USB_Completion@12
+      processed: ''
+      offset: 00002F71
+    - name: _InitInputStream@4
+      processed: ''
+      offset: 0000305B
+    - name: _QueueInputRequest@4
+      processed: ''
+      offset: '00003307'
+    - name: _ResetInputTransfer@4
+      processed: ''
+      offset: '00003360'
+    - name: _InputCompleteWorkItem@4
+      processed: ''
+      offset: '00003408'
+    - name: _IsocInputCompletion@12
+      processed: ''
+      offset: '00003715'
+    - name: _StartIsocInputTransfer@4
+      processed: ''
+      offset: 000037BD
+    - name: _StopPauseIsocInputTransfer@4
+      processed: ''
+      offset: '00003828'
+    - name: _CancelCaptureRequest@4
+      processed: ''
+      offset: '00003958'
+    - name: _CloseInputStream@4
+      processed: ''
+      offset: 00003A4B
+    - name: _GetSetProperty@40
+      processed: ''
+      offset: 00003AB2
+    - name: _GetSetByte@24
+      processed: ''
+      offset: 00003B47
+    - name: _GetSetShort@24
+      processed: ''
+      offset: 00003BB8
+    - name: _GetDbLevelRange@24
+      processed: ''
+      offset: 00003C2A
+    - name: _GetSetDBLevel@24
+      processed: ''
+      offset: 00003CA6
+    - name: _GetAudioProperty@4
+      processed: ''
+      offset: 00003DBF
+    - name: _SetAudioProperty@4
+      processed: ''
+      offset: '000040E7'
+    - name: _GetBasicSupport@4
+      processed: ''
+      offset: 000043A1
+    - name: _GetSetSamplingRate@8
+      processed: ''
+      offset: 000044C7
+    - name: _getLATENCY@8
+      processed: ''
+      offset: 0000467D
+    - name: _getCHANNEL_CONFIG@8
+      processed: ''
+      offset: 000046BE
+    - name: _getsetPOSITION@8
+      processed: ''
+      offset: 0000472F
+    - name: _getsetDYNAMIC_SAMPLING_RATE@8
+      processed: ''
+      offset: '00004858'
+    - name: _GetSetMixLevels@12
+      processed: ''
+      offset: '000048E0'
+    - name: _getMUX_SOURCE@8
+      processed: ''
+      offset: 00004D83
+    - name: _setMUX_SOURCE@8
+      processed: ''
+      offset: '00004E30'
+    - name: _getEQ@16
+      processed: ''
+      offset: 00004EF8
+    - name: _setEQ@8
+      processed: ''
+      offset: '000050E3'
+    - name: _getsetDEV_SPECIFIC@4
+      processed: ''
+      offset: 000051D7
+    - name: _GetAllocatorInfo@4
+      processed: ''
+      offset: '00005277'
+    - name: _InitDalSemi@4
+      processed: ''
+      offset: 000052CF
+    - name: _StreamClassRegisterAdapter@12
+      processed: ''
+      offset: '00005376'
+    - name: _StreamClassStreamNotification
+      processed: ''
+      offset: 0000537C
+    - name: _StreamClassDeviceNotification
+      processed: ''
+      offset: '00005382'
+    - name: __alldiv
+      processed: ''
+      offset: '00005390'
+    - name: __allmul
+      processed: ''
+      offset: '00005440'
+    - name: __aulldiv
+      processed: ''
+      offset: '00005480'
+  - num: '3'
+    name: .data
+    offset: 00000C50
+    symbols:
+    - name: ??_C@_1BG@BCBE@?$AAH?$AAW?$AAR?$AAe?$AAv?$AAi?$AAs?$AAi?$AAo?$AAn?$AA?$AA@
+      processed: L"HWRevision"
+      offset: '00000000'
+    - name: _MapPropertyToNode
+      processed: ''
+      offset: '00000030'
+  - num: '4'
+    name: .idata$2
+    offset: 000011A0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_STREAM
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000050'
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: 000000F0
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: 000000F4
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: 000000F8
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: 000000FC
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000100'
+    - name: __imp__KeResetEvent@4
+      processed: ''
+      offset: '00000104'
+    - name: __imp__KeDelayExecutionThread@12
+      processed: ''
+      offset: '00000108'
+    - name: __imp__ZwClose@4
+      processed: ''
+      offset: 0000010C
+    - name: __imp__ZwSetValueKey@24
+      processed: ''
+      offset: '00000110'
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: '00000114'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: '00000118'
+    - name: __imp__RtlIntegerToUnicodeString@12
+      processed: ''
+      offset: 0000011C
+    - name: __imp__KeInitializeMutex@8
+      processed: ''
+      offset: '00000120'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000124'
+    - name: __imp__KeReleaseMutex@8
+      processed: ''
+      offset: '00000128'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: 0000012C
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '00000130'
+    - name: __imp__IoInitializeIrp@12
+      processed: ''
+      offset: '00000134'
+    - name: __imp__ExQueueWorkItem@8
+      processed: ''
+      offset: '00000138'
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: 0000013C
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: '00000140'
+    - name: __imp__IoAllocateIrp@8
+      processed: ''
+      offset: '00000144'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      processed: ''
+      offset: '00000148'
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      processed: ''
+      offset: 0000014C
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: '00000150'
+    - name: __imp__IoFreeIrp@4
+      processed: ''
+      offset: '00000154'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000158'
+    - name: __imp__StreamClassDeviceNotification
+      processed: ''
+      offset: 0000015C
+    - name: __imp__StreamClassStreamNotification
+      processed: ''
+      offset: '00000160'
+    - name: __imp__StreamClassRegisterAdapter@12
+      processed: ''
+      offset: '00000164'
+    - name: \177STREAM_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000168'
+    - name: __imp__USBD_ParseDescriptors@16
+      processed: ''
+      offset: 0000016C
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      processed: ''
+      offset: '00000170'
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      processed: ''
+      offset: '00000174'
+    - name: \177USBD_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000178'
+  - num: '5'
+    name: PAGECONST
+    offset: '00000000'
+    symbols:
+    - name: _KSPROPSETID_AC3
+      processed: ''
+      offset: '00000000'
+    - name: _KSDATAFORMAT_SUBTYPE_AC3_AUDIO
+      processed: ''
+      offset: '00000010'
+    - name: _KSNODETYPE_DEV_SPECIFIC
+      processed: ''
+      offset: '00000020'
+    - name: _KSNODETYPE_CHORUS
+      processed: ''
+      offset: '00000030'
+    - name: _KSNODETYPE_REVERB
+      processed: ''
+      offset: '00000040'
+    - name: _KSNODETYPE_STEREO_WIDE
+      processed: ''
+      offset: '00000050'
+    - name: _KSNODETYPE_PROLOGIC_DECODER
+      processed: ''
+      offset: '00000060'
+    - name: _KSNODETYPE_LOUDNESS
+      processed: ''
+      offset: '00000070'
+    - name: _KSNODETYPE_DELAY
+      processed: ''
+      offset: '00000080'
+    - name: _KSNODETYPE_AGC
+      processed: ''
+      offset: '00000090'
+    - name: _KSNODETYPE_EQUALIZER
+      processed: ''
+      offset: 000000A0
+    - name: _KSNODETYPE_TONE
+      processed: ''
+      offset: 000000B0
+    - name: _KSNODETYPE_VOLUME
+      processed: ''
+      offset: 000000C0
+    - name: _KSNODETYPE_MUTE
+      processed: ''
+      offset: 000000D0
+    - name: _KSNODETYPE_SUM
+      processed: ''
+      offset: '000000E0'
+    - name: _KSNODETYPE_MUX
+      processed: ''
+      offset: 000000F0
+    - name: _KSNODETYPE_SUPERMIX
+      processed: ''
+      offset: '00000100'
+    - name: _KSNODETYPE_SRC
+      processed: ''
+      offset: '00000110'
+    - name: _KSNODETYPE_ADC
+      processed: ''
+      offset: '00000120'
+    - name: _KSNODETYPE_DAC
+      processed: ''
+      offset: '00000130'
+    - name: _KSPROPSETID_Audio
+      processed: ''
+      offset: '00000140'
+    - name: _KSDATAFORMAT_SPECIFIER_WAVEFORMATEX
+      processed: ''
+      offset: '00000150'
+    - name: _KSDATAFORMAT_SUBTYPE_MPEG
+      processed: ''
+      offset: '00000160'
+    - name: _KSDATAFORMAT_SUBTYPE_MULAW
+      processed: ''
+      offset: '00000170'
+    - name: _KSDATAFORMAT_SUBTYPE_ALAW
+      processed: ''
+      offset: '00000180'
+    - name: _KSDATAFORMAT_SUBTYPE_PCM
+      processed: ''
+      offset: '00000190'
+    - name: _KSDATAFORMAT_SUBTYPE_ANALOG
+      processed: ''
+      offset: 000001A0
+    - name: _KSDATAFORMAT_SUBTYPE_WAVEFORMATEX
+      processed: ''
+      offset: 000001B0
+    - name: _KSDATAFORMAT_TYPE_AUDIO
+      processed: ''
+      offset: 000001C0
+    - name: _KSCATEGORY_AUDIO
+      processed: ''
+      offset: 000001D0
+    - name: _KSNODETYPE_SPEAKER
+      processed: ''
+      offset: '000001E0'
+    - name: _KSNODETYPE_MICROPHONE
+      processed: ''
+      offset: 000001F0
+    - name: _KSPROPSETID_Stream
+      processed: ''
+      offset: '00000200'
+    - name: _KSPROPSETID_Connection
+      processed: ''
+      offset: '00000210'
+    - name: _KSDATAFORMAT_SPECIFIER_NONE
+      processed: ''
+      offset: '00000220'
+    - name: _KSCATEGORY_RENDER
+      processed: ''
+      offset: '00000230'
+    - name: _KSCATEGORY_CAPTURE
+      processed: ''
+      offset: '00000240'
+    - name: _KSPROPTYPESETID_General
+      processed: ''
+      offset: '00000250'
+    - name: _GUID_NULL
+      processed: ''
+      offset: '00000260'
 - version: Windows 98 Debug
   source_tree:
   - ../adapter.c
@@ -23,2042 +555,1527 @@ appearances:
     offset: 00003FD0
     symbols:
     - name: _DriverEntry@8
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: _HwInitialize@4
-      processed: ''
+      demangled: ''
       offset: '00000080'
     - name: _HwUnInitialize@4
-      processed: ''
+      demangled: ''
       offset: '00000510'
     - name: _GetUnit@8
-      processed: ''
+      demangled: ''
       offset: 000006A0
     - name: _CountInputChannels@8
-      processed: ''
+      demangled: ''
       offset: '00000760'
     - name: _SetAudioState@4
-      processed: ''
+      demangled: ''
       offset: '00000860'
     - name: _SetInitialSampleFrequency@4
-      processed: ''
+      demangled: ''
       offset: 00000D50
     - name: _SetStreamDataFormat@4
-      processed: ''
+      demangled: ''
       offset: 00000D90
     - name: _CancelRenderRequest@4
-      processed: ''
+      demangled: ''
       offset: '00000E30'
     - name: _QueueDataSRB@4
-      processed: ''
+      demangled: ''
       offset: '00000E60'
     - name: _AudioReceiveDataPacket@4
-      processed: ''
+      demangled: ''
       offset: 00000F30
     - name: _AudioReceiveCtrlPacket@4
-      processed: ''
+      demangled: ''
       offset: '00001050'
     - name: _DataRangeCompare@12
-      processed: ''
+      demangled: ''
       offset: '00001220'
     - name: _CheckFormatMatch@12
-      processed: ''
+      demangled: ''
       offset: '00001320'
     - name: _ConvertRangeToFormat@8
-      processed: ''
+      demangled: ''
       offset: '00001430'
     - name: _MaxInfoForInterface@12
-      processed: ''
+      demangled: ''
       offset: '00001500'
     - name: _GetBestSampleRate@8
-      processed: ''
+      demangled: ''
       offset: '00001660'
     - name: _GetBestSampleSize@8
-      processed: ''
+      demangled: ''
       offset: '00001710'
     - name: _GetMaxChannels@8
-      processed: ''
+      demangled: ''
       offset: 000017C0
     - name: _FindBestMatch@12
-      processed: ''
+      demangled: ''
       offset: '00001870'
     - name: _GetDataIntersection@4
-      processed: ''
+      demangled: ''
       offset: '00001980'
     - name: _AdapterCancelPacket@4
-      processed: ''
+      demangled: ''
       offset: 00001B80
     - name: _AdapterTimeoutPacket@4
-      processed: ''
+      demangled: ''
       offset: 00001CD0
     - name: _ChangePowerState@4
-      processed: ''
+      demangled: ''
       offset: 00001D90
     - name: _AdapterReceivePacket@4
-      processed: ''
+      demangled: ''
       offset: '00002110'
     - name: _CopyDescriptorToFormat@12
-      processed: ''
+      demangled: ''
       offset: 000023C0
     - name: _ConvertTermTypeToNodeType@16
-      processed: ''
+      demangled: ''
       offset: '00002780'
     - name: _MapTerminalToPinNumber@8
-      processed: ''
+      demangled: ''
       offset: 00002A60
     - name: _AdapterStreamInfo@4
-      processed: ''
+      demangled: ''
       offset: 00002AF0
     - name: _AdapterOpenStream@4
-      processed: ''
+      demangled: ''
       offset: '00004870'
     - name: _AdapterCloseStream@4
-      processed: ''
+      demangled: ''
       offset: 00004BD0
     - name: _PCM2USB_StartDevice@4
-      processed: ''
+      demangled: ''
       offset: 00004D20
     - name: _PCM2USB_StopDevice@4
-      processed: ''
+      demangled: ''
       offset: '00005080'
     - name: _PCM2USB_CallUSBD@8
-      processed: ''
+      demangled: ''
       offset: '00005190'
     - name: _GetCurrentUSBFrame@4
-      processed: ''
+      demangled: ''
       offset: '00005350'
     - name: _GetAudioSpecificInterface@12
-      processed: ''
+      demangled: ''
       offset: '00005400'
     - name: _GetFirstAudioInterface@8
-      processed: ''
+      demangled: ''
       offset: '00005480'
     - name: _GetNextAudioInterface@8
-      processed: ''
+      demangled: ''
       offset: '00005570'
     - name: _PCM2USB_CountFormats@4
-      processed: ''
+      demangled: ''
       offset: '000055E0'
     - name: _PCM2USB_CountUnits@20
-      processed: ''
+      demangled: ''
       offset: 000056B0
     - name: _PCM2USB_FindInterface@12
-      processed: ''
+      demangled: ''
       offset: 000059D0
     - name: _PCM2USB_SelectConfiguration@4
-      processed: ''
+      demangled: ''
       offset: 00005C30
     - name: _PCM2USB_SelectInterface@12
-      processed: ''
+      demangled: ''
       offset: '00006060'
     - name: _PCM2USB_GetEndpointDescriptor@12
-      processed: ''
+      demangled: ''
       offset: 000065B0
     - name: _PCM2USB_GetMaxPacketSizeForFormat@8
-      processed: ''
+      demangled: ''
       offset: '00006620'
     - name: _PCM2USB_GetControlInterfaceForUnits@4
-      processed: ''
+      demangled: ''
       offset: '00006650'
     - name: _IsZeroBWInterface@8
-      processed: ''
+      demangled: ''
       offset: '00006790'
     - name: _PCM2USB_SelectZeroBWInterface@12
-      processed: ''
+      demangled: ''
       offset: 000067F0
     - name: _PCM2USB_WriteReset@4
-      processed: ''
+      demangled: ''
       offset: 000068B0
     - name: _PCM2USB_AbortPipe@4
-      processed: ''
+      demangled: ''
       offset: '00006970'
     - name: _PCM2USB_BuildIsoRequest@4
-      processed: ''
+      demangled: ''
       offset: 00006AE0
     - name: _PCM2USB_Write@4
-      processed: ''
+      demangled: ''
       offset: 00006D40
     - name: _PCM2USB_Completion@12
-      processed: ''
+      demangled: ''
       offset: 00006F70
     - name: _InitInputStream@4
-      processed: ''
+      demangled: ''
       offset: '00007150'
     - name: _QueueInputRequest@4
-      processed: ''
+      demangled: ''
       offset: 000076D0
     - name: _ResetInputTransfer@4
-      processed: ''
+      demangled: ''
       offset: 000077A0
     - name: _InputCompleteWorkItem@4
-      processed: ''
+      demangled: ''
       offset: '000078E0'
     - name: _IsocInputCompletion@12
-      processed: ''
+      demangled: ''
       offset: '00007E30'
     - name: _StartIsocInputTransfer@4
-      processed: ''
+      demangled: ''
       offset: 00007FE0
     - name: _StopPauseIsocInputTransfer@4
-      processed: ''
+      demangled: ''
       offset: 000080A0
     - name: _CancelCaptureRequest@4
-      processed: ''
+      demangled: ''
       offset: 000082B0
     - name: _CloseInputStream@4
-      processed: ''
+      demangled: ''
       offset: '00008510'
     - name: _GetSetProperty@40
-      processed: ''
+      demangled: ''
       offset: '000085E0'
     - name: _GetSetByte@24
-      processed: ''
+      demangled: ''
       offset: '00008720'
     - name: _GetSetShort@24
-      processed: ''
+      demangled: ''
       offset: 000087F0
     - name: _GetDbLevelRange@24
-      processed: ''
+      demangled: ''
       offset: 000088C0
     - name: _GetSetDBLevel@24
-      processed: ''
+      demangled: ''
       offset: 00008A30
     - name: _GetAudioProperty@4
-      processed: ''
+      demangled: ''
       offset: 00008DB0
     - name: _SetAudioProperty@4
-      processed: ''
+      demangled: ''
       offset: '00009320'
     - name: _GetBasicSupport@4
-      processed: ''
+      demangled: ''
       offset: 000097A0
     - name: _GetSetSamplingRate@8
-      processed: ''
+      demangled: ''
       offset: 00009A20
     - name: _getLATENCY@8
-      processed: ''
+      demangled: ''
       offset: 00009DF0
     - name: _getCHANNEL_CONFIG@8
-      processed: ''
+      demangled: ''
       offset: '00009E60'
     - name: _getsetPOSITION@8
-      processed: ''
+      demangled: ''
       offset: 00009F70
     - name: _getsetDYNAMIC_SAMPLING_RATE@8
-      processed: ''
+      demangled: ''
       offset: 0000A180
     - name: _GetSetMixLevels@12
-      processed: ''
+      demangled: ''
       offset: 0000A260
     - name: _getMUX_SOURCE@8
-      processed: ''
+      demangled: ''
       offset: 0000A9F0
     - name: _setMUX_SOURCE@8
-      processed: ''
+      demangled: ''
       offset: 0000AB30
     - name: _getEQ@16
-      processed: ''
+      demangled: ''
       offset: 0000AC60
     - name: _setEQ@8
-      processed: ''
+      demangled: ''
       offset: 0000AF20
     - name: _getsetDEV_SPECIFIC@4
-      processed: ''
+      demangled: ''
       offset: 0000B0A0
     - name: _GetAllocatorInfo@4
-      processed: ''
+      demangled: ''
       offset: 0000B430
     - name: _InitDalSemi@4
-      processed: ''
+      demangled: ''
       offset: 0000B4E0
     - name: _DumpGenericDescriptor@4
-      processed: ''
+      demangled: ''
       offset: 0000B5E0
     - name: _DumpHeaderUnit@4
-      processed: ''
+      demangled: ''
       offset: 0000B710
     - name: _DumpInputTerminal@4
-      processed: ''
+      demangled: ''
       offset: 0000B930
     - name: _DumpOutputTerminal@4
-      processed: ''
+      demangled: ''
       offset: 0000BBC0
     - name: _DumpMixerUnit@4
-      processed: ''
+      demangled: ''
       offset: 0000BDE0
     - name: _DumpSelectorUnit@4
-      processed: ''
+      demangled: ''
       offset: 0000C0B0
     - name: _DumpFeatureUnit@4
-      processed: ''
+      demangled: ''
       offset: 0000C290
     - name: _DumpProcessUnit@4
-      processed: ''
+      demangled: ''
       offset: 0000C560
     - name: _DumpExtensionUnit@4
-      processed: ''
+      demangled: ''
       offset: 0000C780
     - name: _DumpUnitDescriptor@4
-      processed: ''
+      demangled: ''
       offset: 0000C9A0
     - name: _DumpAllUnitDescriptors@8
-      processed: ''
+      demangled: ''
       offset: 0000CA60
     - name: _DumpDeviceDescriptor@4
-      processed: ''
+      demangled: ''
       offset: 0000CAC0
     - name: _DumpConfigDescriptor@4
-      processed: ''
+      demangled: ''
       offset: 0000CE30
     - name: _DumpEndpointDescriptor@4
-      processed: ''
+      demangled: ''
       offset: 0000D050
     - name: _DumpInterfaceDescriptor@4
-      processed: ''
+      demangled: ''
       offset: 0000D210
     - name: _DumpClassSpecInterfaceDescriptor@4
-      processed: ''
+      demangled: ''
       offset: 0000D580
     - name: _DumpDescriptor@4
-      processed: ''
+      demangled: ''
       offset: 0000D590
     - name: _DumpAllDescriptors@4
-      processed: ''
+      demangled: ''
       offset: 0000D650
     - name: _StreamClassRegisterAdapter@12
-      processed: ''
+      demangled: ''
       offset: 0000D69C
     - name: _StreamClassStreamNotification
-      processed: ''
+      demangled: ''
       offset: 0000D6A2
     - name: _StreamClassDebugAssert@16
-      processed: ''
+      demangled: ''
       offset: 0000D6A8
     - name: _StreamClassDeviceNotification
-      processed: ''
+      demangled: ''
       offset: 0000D6AE
     - name: _USBD_ParseDescriptors@16
-      processed: ''
+      demangled: ''
       offset: 0000D6B4
     - name: _USBD_ParseConfigurationDescriptorEx@28
-      processed: ''
+      demangled: ''
       offset: 0000D6BA
     - name: _USBD_CreateConfigurationRequestEx@8
-      processed: ''
+      demangled: ''
       offset: 0000D6C0
     - name: _DbgBreakPoint@0
-      processed: ''
+      demangled: ''
       offset: 0000D6C6
     - name: _DbgPrint
-      processed: ''
+      demangled: ''
       offset: 0000D6CC
     - name: _ZwClose@4
-      processed: ''
+      demangled: ''
       offset: 0000D6D2
     - name: _ZwSetValueKey@24
-      processed: ''
+      demangled: ''
       offset: 0000D6D8
     - name: _RtlInitUnicodeString@8
-      processed: ''
+      demangled: ''
       offset: 0000D6DE
     - name: _IoOpenDeviceRegistryKey@16
-      processed: ''
+      demangled: ''
       offset: 0000D6E4
     - name: _RtlIntegerToUnicodeString@12
-      processed: ''
+      demangled: ''
       offset: 0000D6EA
     - name: _KeInitializeMutex@8
-      processed: ''
+      demangled: ''
       offset: 0000D6F0
     - name: _ExFreePool@4
-      processed: ''
+      demangled: ''
       offset: 0000D6F6
     - name: _KeReleaseMutex@8
-      processed: ''
+      demangled: ''
       offset: 0000D6FC
     - name: _KeWaitForSingleObject@20
-      processed: ''
+      demangled: ''
       offset: 0000D702
     - name: '@KfReleaseSpinLock@8'
-      processed: ''
+      demangled: ''
       offset: 0000D708
     - name: '@KfAcquireSpinLock@4'
-      processed: ''
+      demangled: ''
       offset: 0000D70E
     - name: _ExAllocatePoolWithTag@12
-      processed: ''
+      demangled: ''
       offset: 0000D714
     - name: _KeResetEvent@4
-      processed: ''
+      demangled: ''
       offset: 0000D71A
     - name: _RtlAssert@16
-      processed: ''
+      demangled: ''
       offset: 0000D720
     - name: _KeInitializeEvent@12
-      processed: ''
+      demangled: ''
       offset: 0000D726
     - name: _KeInitializeSpinLock@4
-      processed: ''
+      demangled: ''
       offset: 0000D72C
     - name: '@IofCallDriver@8'
-      processed: ''
+      demangled: ''
       offset: 0000D732
     - name: _IoBuildDeviceIoControlRequest@36
-      processed: ''
+      demangled: ''
       offset: 0000D738
     - name: '@KefReleaseSpinLockFromDpcLevel@4'
-      processed: ''
+      demangled: ''
       offset: 0000D73E
     - name: _KeSetEvent@12
-      processed: ''
+      demangled: ''
       offset: 0000D744
     - name: '@KefAcquireSpinLockAtDpcLevel@4'
-      processed: ''
+      demangled: ''
       offset: 0000D74A
     - name: _IoFreeIrp@4
-      processed: ''
+      demangled: ''
       offset: 0000D750
     - name: _IoAllocateIrp@8
-      processed: ''
+      demangled: ''
       offset: 0000D756
     - name: _IoInitializeIrp@12
-      processed: ''
+      demangled: ''
       offset: 0000D75C
     - name: _ExQueueWorkItem@8
-      processed: ''
+      demangled: ''
       offset: 0000D762
     - name: _KeDelayExecutionThread@12
-      processed: ''
+      demangled: ''
       offset: 0000D768
     - name: __alldiv
-      processed: ''
+      demangled: ''
       offset: 0000D770
     - name: __allmul
-      processed: ''
+      demangled: ''
       offset: 0000D820
     - name: __aulldiv
-      processed: ''
+      demangled: ''
       offset: 0000D860
   - num: '3'
     name: .data
     offset: '00004010'
     symbols:
     - name: _MapPropertyToNode
-      processed: ''
+      demangled: ''
       offset: 00003A90
   - num: '4'
     name: .idata$2
     offset: 000045D0
     symbols:
     - name: __IMPORT_DESCRIPTOR_STREAM
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: __IMPORT_DESCRIPTOR_USBD
-      processed: ''
+      demangled: ''
       offset: '00000014'
     - name: __IMPORT_DESCRIPTOR_NTOSKRNL
-      processed: ''
+      demangled: ''
       offset: '00000028'
     - name: __IMPORT_DESCRIPTOR_HAL
-      processed: ''
+      demangled: ''
       offset: 0000003C
     - name: __NULL_IMPORT_DESCRIPTOR
-      processed: ''
+      demangled: ''
       offset: '00000050'
     - name: __imp_@KfAcquireSpinLock@4
-      processed: ''
+      demangled: ''
       offset: '00000100'
     - name: __imp_@KfReleaseSpinLock@8
-      processed: ''
+      demangled: ''
       offset: '00000104'
     - name: \177HAL_NULL_THUNK_DATA
-      processed: ''
+      demangled: ''
       offset: '00000108'
     - name: __imp__KeWaitForSingleObject@20
-      processed: ''
+      demangled: ''
       offset: 0000010C
     - name: __imp__KeReleaseMutex@8
-      processed: ''
+      demangled: ''
       offset: '00000110'
     - name: __imp__KeDelayExecutionThread@12
-      processed: ''
+      demangled: ''
       offset: '00000114'
     - name: __imp__ExQueueWorkItem@8
-      processed: ''
+      demangled: ''
       offset: '00000118'
     - name: __imp__IoInitializeIrp@12
-      processed: ''
+      demangled: ''
       offset: 0000011C
     - name: __imp__DbgBreakPoint@0
-      processed: ''
+      demangled: ''
       offset: '00000120'
     - name: __imp__DbgPrint
-      processed: ''
+      demangled: ''
       offset: '00000124'
     - name: __imp__ZwClose@4
-      processed: ''
+      demangled: ''
       offset: '00000128'
     - name: __imp__ZwSetValueKey@24
-      processed: ''
+      demangled: ''
       offset: 0000012C
     - name: __imp__RtlInitUnicodeString@8
-      processed: ''
+      demangled: ''
       offset: '00000130'
     - name: __imp__IoOpenDeviceRegistryKey@16
-      processed: ''
+      demangled: ''
       offset: '00000134'
     - name: __imp__RtlIntegerToUnicodeString@12
-      processed: ''
+      demangled: ''
       offset: '00000138'
     - name: __imp__KeInitializeMutex@8
-      processed: ''
+      demangled: ''
       offset: 0000013C
     - name: __imp__ExFreePool@4
-      processed: ''
+      demangled: ''
       offset: '00000140'
     - name: __imp__IoAllocateIrp@8
-      processed: ''
+      demangled: ''
       offset: '00000144'
     - name: __imp__KeInitializeSpinLock@4
-      processed: ''
+      demangled: ''
       offset: '00000148'
     - name: __imp__KeInitializeEvent@12
-      processed: ''
+      demangled: ''
       offset: 0000014C
     - name: __imp__IoFreeIrp@4
-      processed: ''
+      demangled: ''
       offset: '00000150'
     - name: __imp__ExAllocatePoolWithTag@12
-      processed: ''
+      demangled: ''
       offset: '00000154'
     - name: __imp__KeResetEvent@4
-      processed: ''
+      demangled: ''
       offset: '00000158'
     - name: __imp__RtlAssert@16
-      processed: ''
+      demangled: ''
       offset: 0000015C
     - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
-      processed: ''
+      demangled: ''
       offset: '00000160'
     - name: __imp_@IofCallDriver@8
-      processed: ''
+      demangled: ''
       offset: '00000164'
     - name: __imp__IoBuildDeviceIoControlRequest@36
-      processed: ''
+      demangled: ''
       offset: '00000168'
     - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
-      processed: ''
+      demangled: ''
       offset: 0000016C
     - name: __imp__KeSetEvent@12
-      processed: ''
+      demangled: ''
       offset: '00000170'
     - name: \177NTOSKRNL_NULL_THUNK_DATA
-      processed: ''
+      demangled: ''
       offset: '00000174'
     - name: __imp__StreamClassDeviceNotification
-      processed: ''
+      demangled: ''
       offset: '00000178'
     - name: __imp__StreamClassRegisterAdapter@12
-      processed: ''
+      demangled: ''
       offset: 0000017C
     - name: __imp__StreamClassDebugAssert@16
-      processed: ''
+      demangled: ''
       offset: '00000180'
     - name: __imp__StreamClassStreamNotification
-      processed: ''
+      demangled: ''
       offset: '00000184'
     - name: \177STREAM_NULL_THUNK_DATA
-      processed: ''
+      demangled: ''
       offset: '00000188'
     - name: __imp__USBD_ParseConfigurationDescriptorEx@28
-      processed: ''
+      demangled: ''
       offset: 0000018C
     - name: __imp__USBD_ParseDescriptors@16
-      processed: ''
+      demangled: ''
       offset: '00000190'
     - name: __imp__USBD_CreateConfigurationRequestEx@8
-      processed: ''
+      demangled: ''
       offset: '00000194'
     - name: \177USBD_NULL_THUNK_DATA
-      processed: ''
+      demangled: ''
       offset: '00000198'
   - num: '5'
     name: PAGECONST
     offset: '00000000'
     symbols:
     - name: _KoCreateObject
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: _CLSID_Proxy
-      processed: ''
+      demangled: ''
       offset: '00000010'
     - name: _IID_IKsPropertySet
-      processed: ''
+      demangled: ''
       offset: '00000020'
     - name: _IID_IKsAllocator
-      processed: ''
+      demangled: ''
       offset: '00000030'
     - name: _IID_IKsClockPropertySet
-      processed: ''
+      demangled: ''
       offset: '00000040'
     - name: _IID_IKsInterfaceHandler
-      processed: ''
+      demangled: ''
       offset: '00000050'
     - name: _IID_IKsDataTypeHandler
-      processed: ''
+      demangled: ''
       offset: '00000060'
     - name: _IID_IKsPin
-      processed: ''
+      demangled: ''
       offset: '00000070'
     - name: _IID_IKsObject
-      processed: ''
+      demangled: ''
       offset: '00000080'
     - name: _KSPROPSETID_TSRateChange
-      processed: ''
+      demangled: ''
       offset: '00000090'
     - name: _KSDATAFORMAT_TYPE_DVD_ENCRYPTED_PACK
-      processed: ''
+      demangled: ''
       offset: 000000A0
     - name: _KSDATAFORMAT_SUBTYPE_Line21_GOPPacket
-      processed: ''
+      demangled: ''
       offset: 000000B0
     - name: _KSDATAFORMAT_SUBTYPE_Line21_BytePair
-      processed: ''
+      demangled: ''
       offset: 000000C0
     - name: _KSDATAFORMAT_TYPE_AUXLine21Data
-      processed: ''
+      demangled: ''
       offset: 000000D0
     - name: _KSEVENTSETID_VPVBINotify
-      processed: ''
+      demangled: ''
       offset: '000000E0'
     - name: _KSEVENTSETID_VPNotify
-      processed: ''
+      demangled: ''
       offset: 000000F0
     - name: _KSPROPSETID_VPVBIConfig
-      processed: ''
+      demangled: ''
       offset: '00000100'
     - name: _KSPROPSETID_VPConfig
-      processed: ''
+      demangled: ''
       offset: '00000110'
     - name: _PROPSETID_VIDCAP_DROPPEDFRAMES
-      processed: ''
+      demangled: ''
       offset: '00000120'
     - name: _PROPSETID_VIDCAP_VIDEOCONTROL
-      processed: ''
+      demangled: ''
       offset: '00000130'
     - name: _KSPROPSETID_OverlayUpdate
-      processed: ''
+      demangled: ''
       offset: '00000140'
     - name: _KSDATAFORMAT_SUBTYPE_OVERLAY
-      processed: ''
+      demangled: ''
       offset: '00000150'
     - name: _PROPSETID_VIDCAP_VIDEOCOMPRESSION
-      processed: ''
+      demangled: ''
       offset: '00000160'
     - name: _KSEVENTSETID_VIDCAP_TVAUDIO
-      processed: ''
+      demangled: ''
       offset: '00000170'
     - name: _PROPSETID_VIDCAP_TVAUDIO
-      processed: ''
+      demangled: ''
       offset: '00000180'
     - name: _EVENTSETID_CROSSBAR
-      processed: ''
+      demangled: ''
       offset: '00000190'
     - name: _PROPSETID_VIDCAP_CROSSBAR
-      processed: ''
+      demangled: ''
       offset: 000001A0
     - name: _PROPSETID_VIDCAP_CAMERACONTROL
-      processed: ''
+      demangled: ''
       offset: 000001B0
     - name: _EVENTSETID_VIDEODECODER
-      processed: ''
+      demangled: ''
       offset: 000001C0
     - name: _PROPSETID_VIDCAP_VIDEODECODER
-      processed: ''
+      demangled: ''
       offset: 000001D0
     - name: _PROPSETID_VIDCAP_VIDEOENCODER
-      processed: ''
+      demangled: ''
       offset: '000001E0'
     - name: _EVENTSETID_TUNER
-      processed: ''
+      demangled: ''
       offset: 000001F0
     - name: _PROPSETID_TUNER
-      processed: ''
+      demangled: ''
       offset: '00000200'
     - name: _PROPSETID_VIDCAP_VIDEOPROCAMP
-      processed: ''
+      demangled: ''
       offset: '00000210'
     - name: _PINNAME_VIDEO_VIDEOPORT_VBI
-      processed: ''
+      demangled: ''
       offset: '00000220'
     - name: _PINNAME_VIDEO_TIMECODE
-      processed: ''
+      demangled: ''
       offset: '00000230'
     - name: _PINNAME_VIDEO_STILL
-      processed: ''
+      demangled: ''
       offset: '00000240'
     - name: _PINNAME_VIDEO_CC
-      processed: ''
+      demangled: ''
       offset: '00000250'
     - name: _PINNAME_VIDEO_TELETEXT
-      processed: ''
+      demangled: ''
       offset: '00000260'
     - name: _PINNAME_VIDEO_EDS
-      processed: ''
+      demangled: ''
       offset: '00000270'
     - name: _PINNAME_VIDEO_NABTS
-      processed: ''
+      demangled: ''
       offset: '00000280'
     - name: _PINNAME_VIDEO_VIDEOPORT
-      processed: ''
+      demangled: ''
       offset: '00000290'
     - name: _PINNAME_VIDEO_VBI
-      processed: ''
+      demangled: ''
       offset: 000002A0
     - name: _PINNAME_VIDEO_ANALOGVIDEOIN
-      processed: ''
+      demangled: ''
       offset: 000002B0
     - name: _PINNAME_VIDEO_PREVIEW
-      processed: ''
+      demangled: ''
       offset: 000002C0
     - name: _PINNAME_VIDEO_CAPTURE
-      processed: ''
+      demangled: ''
       offset: 000002D0
     - name: _KSPROPSETID_VBICodecFiltering
-      processed: ''
+      demangled: ''
       offset: '000002E0'
     - name: _KSDATAFORMAT_SUBTYPE_NABTS_FEC
-      processed: ''
+      demangled: ''
       offset: 000002F0
     - name: _KSDATAFORMAT_TYPE_NABTS
-      processed: ''
+      demangled: ''
       offset: '00000300'
     - name: _KSDATAFORMAT_SUBTYPE_TELETEXT
-      processed: ''
+      demangled: ''
       offset: '00000310'
     - name: _KSDATAFORMAT_SUBTYPE_NABTS
-      processed: ''
+      demangled: ''
       offset: '00000320'
     - name: _KSDATAFORMAT_SUBTYPE_RAW8
-      processed: ''
+      demangled: ''
       offset: '00000330'
     - name: _KSDATAFORMAT_TYPE_VBI
-      processed: ''
+      demangled: ''
       offset: '00000340'
     - name: _KSDATAFORMAT_SPECIFIER_VBI
-      processed: ''
+      demangled: ''
       offset: '00000350'
     - name: _KSDATAFORMAT_SPECIFIER_ANALOGVIDEO
-      processed: ''
+      demangled: ''
       offset: '00000360'
     - name: _KSDATAFORMAT_TYPE_ANALOGVIDEO
-      processed: ''
+      demangled: ''
       offset: '00000370'
     - name: _KSDATAFORMAT_SPECIFIER_VIDEOINFO2
-      processed: ''
+      demangled: ''
       offset: '00000380'
     - name: _KSDATAFORMAT_SPECIFIER_VIDEOINFO
-      processed: ''
+      demangled: ''
       offset: '00000390'
     - name: _KSDATAFORMAT_SUBTYPE_VPVBI
-      processed: ''
+      demangled: ''
       offset: 000003A0
     - name: _KSDATAFORMAT_SUBTYPE_VPVideo
-      processed: ''
+      demangled: ''
       offset: 000003B0
     - name: _KSCATEGORY_VBICODEC
-      processed: ''
+      demangled: ''
       offset: 000003C0
     - name: _KSCATEGORY_VPMUX
-      processed: ''
+      demangled: ''
       offset: 000003D0
     - name: _KSCATEGORY_TVAUDIO
-      processed: ''
+      demangled: ''
       offset: '000003E0'
     - name: _KSCATEGORY_CROSSBAR
-      processed: ''
+      demangled: ''
       offset: 000003F0
     - name: _KSCATEGORY_TVTUNER
-      processed: ''
+      demangled: ''
       offset: '00000400'
     - name: _KSPROPSETID_CopyProt
-      processed: ''
+      demangled: ''
       offset: '00000410'
     - name: _KSPROPSETID_DvdSubPic
-      processed: ''
+      demangled: ''
       offset: '00000420'
     - name: _KSDATAFORMAT_SUBTYPE_SUBPICTURE
-      processed: ''
+      demangled: ''
       offset: '00000430'
     - name: _KSPROPSETID_AudioDecoderOut
-      processed: ''
+      demangled: ''
       offset: '00000440'
     - name: _KSPROPSETID_AC3
-      processed: ''
+      demangled: ''
       offset: '00000450'
     - name: _KSDATAFORMAT_SPECIFIER_AC3_AUDIO
-      processed: ''
+      demangled: ''
       offset: '00000460'
     - name: _KSDATAFORMAT_SUBTYPE_AC3_AUDIO
-      processed: ''
+      demangled: ''
       offset: '00000470'
     - name: _KSDATAFORMAT_SPECIFIER_LPCM_AUDIO
-      processed: ''
+      demangled: ''
       offset: '00000480'
     - name: _KSDATAFORMAT_SUBTYPE_LPCM_AUDIO
-      processed: ''
+      demangled: ''
       offset: '00000490'
     - name: _KSDATAFORMAT_SPECIFIER_MPEG2_AUDIO
-      processed: ''
+      demangled: ''
       offset: 000004A0
     - name: _KSDATAFORMAT_SUBTYPE_MPEG2_AUDIO
-      processed: ''
+      demangled: ''
       offset: 000004B0
     - name: _KSPROPSETID_Mpeg2Vid
-      processed: ''
+      demangled: ''
       offset: 000004C0
     - name: _KSDATAFORMAT_SPECIFIER_MPEG2_VIDEO
-      processed: ''
+      demangled: ''
       offset: 000004D0
     - name: _KSDATAFORMAT_SUBTYPE_MPEG2_VIDEO
-      processed: ''
+      demangled: ''
       offset: '000004E0'
     - name: _KSDATAFORMAT_TYPE_MPEG2_TRANSPORT
-      processed: ''
+      demangled: ''
       offset: 000004F0
     - name: _KSDATAFORMAT_TYPE_MPEG2_PROGRAM
-      processed: ''
+      demangled: ''
       offset: '00000500'
     - name: _KSDATAFORMAT_TYPE_MPEG2_PES
-      processed: ''
+      demangled: ''
       offset: '00000510'
     - name: _KSDATAFORMAT_SUBTYPE_DSS_AUDIO
-      processed: ''
+      demangled: ''
       offset: '00000520'
     - name: _KSDATAFORMAT_SUBTYPE_DSS_VIDEO
-      processed: ''
+      demangled: ''
       offset: '00000530'
     - name: _KSDATAFORMAT_SPECIFIER_DIALECT_AC3_AUDIO
-      processed: ''
+      demangled: ''
       offset: '00000540'
     - name: _KSDATAFORMAT_SPECIFIER_DIALECT_MPEG2_AUDIO
-      processed: ''
+      demangled: ''
       offset: '00000550'
     - name: _KSDATAFORMAT_SPECIFIER_DIALECT_MPEG2_VIDEO
-      processed: ''
+      demangled: ''
       offset: '00000560'
     - name: _KSDATAFORMAT_SPECIFIER_DIALECT_MPEG1_AUDIO
-      processed: ''
+      demangled: ''
       offset: '00000570'
     - name: _KSDATAFORMAT_SPECIFIER_DIALECT_MPEG1_VIDEO
-      processed: ''
+      demangled: ''
       offset: '00000580'
     - name: _KSDATAFORMAT_SUBTYPE_STANDARD_AC3_AUDIO
-      processed: ''
+      demangled: ''
       offset: '00000590'
     - name: _KSDATAFORMAT_SUBTYPE_STANDARD_MPEG2_AUDIO
-      processed: ''
+      demangled: ''
       offset: 000005A0
     - name: _KSDATAFORMAT_SUBTYPE_STANDARD_MPEG2_VIDEO
-      processed: ''
+      demangled: ''
       offset: 000005B0
     - name: _KSDATAFORMAT_SUBTYPE_STANDARD_MPEG1_AUDIO
-      processed: ''
+      demangled: ''
       offset: 000005C0
     - name: _KSDATAFORMAT_SUBTYPE_STANDARD_MPEG1_VIDEO
-      processed: ''
+      demangled: ''
       offset: 000005D0
     - name: _KSDATAFORMAT_TYPE_STANDARD_PACK_HEADER
-      processed: ''
+      demangled: ''
       offset: '000005E0'
     - name: _KSDATAFORMAT_TYPE_STANDARD_PES_PACKET
-      processed: ''
+      demangled: ''
       offset: 000005F0
     - name: _KSDATAFORMAT_TYPE_STANDARD_ELEMENTARY_STREAM
-      processed: ''
+      demangled: ''
       offset: '00000600'
     - name: _KSDATAFORMAT_SUBTYPE_RIFFMIDI
-      processed: ''
+      demangled: ''
       offset: '00000610'
     - name: _KSDATAFORMAT_SUBTYPE_MIDI_BUS
-      processed: ''
+      demangled: ''
       offset: '00000620'
     - name: _KSDATAFORMAT_SUBTYPE_MIDI
-      processed: ''
+      demangled: ''
       offset: '00000630'
     - name: _KSDATAFORMAT_TYPE_MIDI
-      processed: ''
+      demangled: ''
       offset: '00000640'
     - name: _KSDATAFORMAT_TYPE_MUSIC
-      processed: ''
+      demangled: ''
       offset: '00000650'
     - name: _KSPROPSETID_Linear
-      processed: ''
+      demangled: ''
       offset: '00000660'
     - name: _KSPROPSETID_Sysaudio_Pin
-      processed: ''
+      demangled: ''
       offset: '00000670'
     - name: _KSPROPSETID_Sysaudio
-      processed: ''
+      demangled: ''
       offset: '00000680'
     - name: _KSEVENTSETID_Sysaudio
-      processed: ''
+      demangled: ''
       offset: '00000690'
     - name: _KSEVENTSETID_LoopedStreaming
-      processed: ''
+      demangled: ''
       offset: 000006A0
     - name: _KSPROPSETID_Cyclic
-      processed: ''
+      demangled: ''
       offset: 000006B0
     - name: _KSEVENTSETID_Cyclic
-      processed: ''
+      demangled: ''
       offset: 000006C0
     - name: _KSPROPSETID_WaveTable
-      processed: ''
+      demangled: ''
       offset: 000006D0
     - name: _KSMUSIC_TECHNOLOGY_SWSYNTH
-      processed: ''
+      demangled: ''
       offset: '000006E0'
     - name: _KSMUSIC_TECHNOLOGY_WAVETABLE
-      processed: ''
+      demangled: ''
       offset: 000006F0
     - name: _KSMUSIC_TECHNOLOGY_FMSYNTH
-      processed: ''
+      demangled: ''
       offset: '00000700'
     - name: _KSMUSIC_TECHNOLOGY_SQSYNTH
-      processed: ''
+      demangled: ''
       offset: '00000710'
     - name: _KSMUSIC_TECHNOLOGY_PORT
-      processed: ''
+      demangled: ''
       offset: '00000720'
     - name: _KSPROPSETID_Wave
-      processed: ''
+      demangled: ''
       offset: '00000730'
     - name: _KSMETHODSETID_Wave_Queued
-      processed: ''
+      demangled: ''
       offset: '00000740'
     - name: _KSPROPSETID_Wave_Queued
-      processed: ''
+      demangled: ''
       offset: '00000750'
     - name: _KSPROPSETID_Iir3d
-      processed: ''
+      demangled: ''
       offset: '00000760'
     - name: _KSPROPSETID_Itd3d
-      processed: ''
+      demangled: ''
       offset: '00000770'
     - name: _KSMETHODSETID_Dls
-      processed: ''
+      demangled: ''
       offset: '00000780'
     - name: _KSPROPSETID_Dls
-      processed: ''
+      demangled: ''
       offset: '00000790'
     - name: _KSMETHODSETID_Wavetable
-      processed: ''
+      demangled: ''
       offset: 000007A0
     - name: _KSAUDFNAME_WAVE_OUT_MIX
-      processed: ''
+      demangled: ''
       offset: 000007B0
     - name: _KSAUDFNAME_PC_SPEAKER
-      processed: ''
+      demangled: ''
       offset: 000007C0
     - name: _KSAUDFNAME_AUX
-      processed: ''
+      demangled: ''
       offset: 000007D0
     - name: _KSAUDFNAME_AUX_MUTE
-      processed: ''
+      demangled: ''
       offset: '000007E0'
     - name: _KSAUDFNAME_AUX_VOLUME
-      processed: ''
+      demangled: ''
       offset: 000007F0
     - name: _KSAUDFNAME_CD_AUDIO
-      processed: ''
+      demangled: ''
       offset: '00000800'
     - name: _KSAUDFNAME_RECORDING_CONTROL
-      processed: ''
+      demangled: ''
       offset: '00000810'
     - name: _KSAUDFNAME_LINE_IN
-      processed: ''
+      demangled: ''
       offset: '00000820'
     - name: _KSAUDFNAME_MIDI
-      processed: ''
+      demangled: ''
       offset: '00000830'
     - name: _KSAUDFNAME_VOLUME_CONTROL
-      processed: ''
+      demangled: ''
       offset: '00000840'
     - name: _KSAUDFNAME_WAVE_IN_VOLUME
-      processed: ''
+      demangled: ''
       offset: '00000850'
     - name: _KSAUDFNAME_MIC_IN_VOLUME
-      processed: ''
+      demangled: ''
       offset: '00000860'
     - name: _KSAUDFNAME_LINE_IN_VOLUME
-      processed: ''
+      demangled: ''
       offset: '00000870'
     - name: _KSAUDFNAME_CD_IN_VOLUME
-      processed: ''
+      demangled: ''
       offset: '00000880'
     - name: _KSAUDFNAME_MIDI_IN_VOLUME
-      processed: ''
+      demangled: ''
       offset: '00000890'
     - name: _KSAUDFNAME_PC_SPEAKER_MUTE
-      processed: ''
+      demangled: ''
       offset: 000008A0
     - name: _KSAUDFNAME_PC_SPEAKER_VOLUME
-      processed: ''
+      demangled: ''
       offset: 000008B0
     - name: _KSAUDFNAME_RECORDING_SOURCE
-      processed: ''
+      demangled: ''
       offset: 000008C0
     - name: _KSAUDFNAME_MIC_MUTE
-      processed: ''
+      demangled: ''
       offset: 000008D0
     - name: _KSAUDFNAME_MIC_VOLUME
-      processed: ''
+      demangled: ''
       offset: '000008E0'
     - name: _KSAUDFNAME_LINE_MUTE
-      processed: ''
+      demangled: ''
       offset: 000008F0
     - name: _KSAUDFNAME_LINE_VOLUME
-      processed: ''
+      demangled: ''
       offset: '00000900'
     - name: _KSAUDFNAME_CD_MUTE
-      processed: ''
+      demangled: ''
       offset: '00000910'
     - name: _KSAUDFNAME_CD_VOLUME
-      processed: ''
+      demangled: ''
       offset: '00000920'
     - name: _KSAUDFNAME_MIDI_MUTE
-      processed: ''
+      demangled: ''
       offset: '00000930'
     - name: _KSAUDFNAME_MIDI_VOLUME
-      processed: ''
+      demangled: ''
       offset: '00000940'
     - name: _KSAUDFNAME_WAVE_MUTE
-      processed: ''
+      demangled: ''
       offset: '00000950'
     - name: _KSAUDFNAME_WAVE_VOLUME
-      processed: ''
+      demangled: ''
       offset: '00000960'
     - name: _KSAUDFNAME_MASTER_MUTE
-      processed: ''
+      demangled: ''
       offset: '00000970'
     - name: _KSAUDFNAME_MASTER_VOLUME
-      processed: ''
+      demangled: ''
       offset: '00000980'
     - name: _KSAUDFNAME_3D_STEREO
-      processed: ''
+      demangled: ''
       offset: '00000990'
     - name: _KSAUDFNAME_TREBLE
-      processed: ''
+      demangled: ''
       offset: 000009A0
     - name: _KSAUDFNAME_BASS
-      processed: ''
+      demangled: ''
       offset: 000009B0
     - name: _KSNODETYPE_DEV_SPECIFIC
-      processed: ''
+      demangled: ''
       offset: 000009C0
     - name: _KSNODETYPE_DEV_SPECIFIC_3D_EFFECTS
-      processed: ''
+      demangled: ''
       offset: 000009D0
     - name: _KSNODETYPE_IIR_3D_EFFECTS
-      processed: ''
+      demangled: ''
       offset: '000009E0'
     - name: _KSNODETYPE_ITD_3D_EFFECTS
-      processed: ''
+      demangled: ''
       offset: 000009F0
     - name: _KSNODETYPE_CHORUS
-      processed: ''
+      demangled: ''
       offset: 00000A00
     - name: _KSNODETYPE_REVERB
-      processed: ''
+      demangled: ''
       offset: 00000A10
     - name: _KSNODETYPE_STEREO_ENHANCE
-      processed: ''
+      demangled: ''
       offset: 00000A20
     - name: _KSNODETYPE_STEREO_WIDE
-      processed: ''
+      demangled: ''
       offset: 00000A30
     - name: _KSNODETYPE_PROLOGIC_DECODER
-      processed: ''
+      demangled: ''
       offset: 00000A40
     - name: _KSNODETYPE_LOUDNESS
-      processed: ''
+      demangled: ''
       offset: 00000A50
     - name: _KSNODETYPE_DELAY
-      processed: ''
+      demangled: ''
       offset: 00000A60
     - name: _KSNODETYPE_AGC
-      processed: ''
+      demangled: ''
       offset: 00000A70
     - name: _KSNODETYPE_EQUALIZER
-      processed: ''
+      demangled: ''
       offset: 00000A80
     - name: _KSNODETYPE_TONE
-      processed: ''
+      demangled: ''
       offset: 00000A90
     - name: _KSNODETYPE_VOLUME
-      processed: ''
+      demangled: ''
       offset: 00000AA0
     - name: _KSNODETYPE_MUTE
-      processed: ''
+      demangled: ''
       offset: 00000AB0
     - name: _KSNODETYPE_SUM
-      processed: ''
+      demangled: ''
       offset: 00000AC0
     - name: _KSNODETYPE_DEMUX
-      processed: ''
+      demangled: ''
       offset: 00000AD0
     - name: _KSNODETYPE_MUX
-      processed: ''
+      demangled: ''
       offset: 00000AE0
     - name: _KSNODETYPE_SUPERMIX
-      processed: ''
+      demangled: ''
       offset: 00000AF0
     - name: _KSNODETYPE_SRC
-      processed: ''
+      demangled: ''
       offset: 00000B00
     - name: _KSNODETYPE_ADC
-      processed: ''
+      demangled: ''
       offset: 00000B10
     - name: _KSNODETYPE_DAC
-      processed: ''
+      demangled: ''
       offset: 00000B20
     - name: _KSPROPSETID_Audio
-      processed: ''
+      demangled: ''
       offset: 00000B30
     - name: _KSPROPSETID_TopologyNode
-      processed: ''
+      demangled: ''
       offset: 00000B40
     - name: _KSPROPSETID_Bibliographic
-      processed: ''
+      demangled: ''
       offset: 00000B50
     - name: _KSDATAFORMAT_SUBTYPE_RIFFWAVE
-      processed: ''
+      demangled: ''
       offset: 00000B60
     - name: _KSDATAFORMAT_SUBTYPE_RIFF
-      processed: ''
+      demangled: ''
       offset: 00000B70
     - name: _KSPROPSETID_DirectSound3DBuffer
-      processed: ''
+      demangled: ''
       offset: 00000B80
     - name: _KSPROPSETID_DirectSound3DListener
-      processed: ''
+      demangled: ''
       offset: 00000B90
     - name: _KSDATAFORMAT_SPECIFIER_DSOUND
-      processed: ''
+      demangled: ''
       offset: 00000BA0
     - name: _KSDATAFORMAT_SPECIFIER_WAVEFORMATEX
-      processed: ''
+      demangled: ''
       offset: 00000BB0
     - name: _KSDATAFORMAT_SPECIFIER_VC_ID
-      processed: ''
+      demangled: ''
       offset: 00000BC0
     - name: _KSDATAFORMAT_SUBTYPE_MPEG
-      processed: ''
+      demangled: ''
       offset: 00000BD0
     - name: _KSDATAFORMAT_SUBTYPE_ADPCM
-      processed: ''
+      demangled: ''
       offset: 00000BE0
     - name: _KSDATAFORMAT_SUBTYPE_MULAW
-      processed: ''
+      demangled: ''
       offset: 00000BF0
     - name: _KSDATAFORMAT_SUBTYPE_ALAW
-      processed: ''
+      demangled: ''
       offset: 00000C00
     - name: _KSDATAFORMAT_SUBTYPE_PCM
-      processed: ''
+      demangled: ''
       offset: 00000C10
     - name: _KSDATAFORMAT_SUBTYPE_ANALOG
-      processed: ''
+      demangled: ''
       offset: 00000C20
     - name: _KSDATAFORMAT_SUBTYPE_WAVEFORMATEX
-      processed: ''
+      demangled: ''
       offset: 00000C30
     - name: _KSDATAFORMAT_TYPE_TEXT
-      processed: ''
+      demangled: ''
       offset: 00000C40
     - name: _KSDATAFORMAT_TYPE_AUDIO
-      processed: ''
+      demangled: ''
       offset: 00000C50
     - name: _KSDATAFORMAT_TYPE_VIDEO
-      processed: ''
+      demangled: ''
       offset: 00000C60
     - name: _KSCATEGORY_WDMAUD_USE_PIN_NAME
-      processed: ''
+      demangled: ''
       offset: 00000C70
     - name: _KSCATEGORY_SYSAUDIO
-      processed: ''
+      demangled: ''
       offset: 00000C80
     - name: _KSCATEGORY_ACOUSTIC_ECHO_CANCEL
-      processed: ''
+      demangled: ''
       offset: 00000C90
     - name: _KSCATEGORY_VIRTUAL
-      processed: ''
+      demangled: ''
       offset: 00000CA0
     - name: _KSCATEGORY_TOPOLOGY
-      processed: ''
+      demangled: ''
       offset: 00000CB0
     - name: _KSCATEGORY_TEXT
-      processed: ''
+      demangled: ''
       offset: 00000CC0
     - name: _KSCATEGORY_VIDEO
-      processed: ''
+      demangled: ''
       offset: 00000CD0
     - name: _KSCATEGORY_AUDIO
-      processed: ''
+      demangled: ''
       offset: 00000CE0
     - name: _KSNODETYPE_SWMIDI
-      processed: ''
+      demangled: ''
       offset: 00000CF0
     - name: _KSNODETYPE_SWSYNTH
-      processed: ''
+      demangled: ''
       offset: 00000D00
     - name: _KSNODETYPE_SYNTHESIZER
-      processed: ''
+      demangled: ''
       offset: 00000D10
     - name: _KSNODETYPE_MULTITRACK_RECORDER
-      processed: ''
+      demangled: ''
       offset: 00000D20
     - name: _KSNODETYPE_RADIO_TRANSMITTER
-      processed: ''
+      demangled: ''
       offset: 00000D30
     - name: _KSNODETYPE_RADIO_RECEIVER
-      processed: ''
+      demangled: ''
       offset: 00000D40
     - name: _KSNODETYPE_DSS_AUDIO
-      processed: ''
+      demangled: ''
       offset: 00000D50
     - name: _KSNODETYPE_CABLE_TUNER_AUDIO
-      processed: ''
+      demangled: ''
       offset: 00000D60
     - name: _KSNODETYPE_SATELLITE_RECEIVER_AUDIO
-      processed: ''
+      demangled: ''
       offset: 00000D70
     - name: _KSNODETYPE_TV_TUNER_AUDIO
-      processed: ''
+      demangled: ''
       offset: 00000D80
     - name: _KSNODETYPE_DVD_AUDIO
-      processed: ''
+      demangled: ''
       offset: 00000D90
     - name: _KSNODETYPE_VIDEO_DISC_AUDIO
-      processed: ''
+      demangled: ''
       offset: 00000DA0
     - name: _KSNODETYPE_VCR_AUDIO
-      processed: ''
+      demangled: ''
       offset: 00000DB0
     - name: _KSNODETYPE_PHONOGRAPH
-      processed: ''
+      demangled: ''
       offset: 00000DC0
     - name: _KSNODETYPE_ANALOG_TAPE
-      processed: ''
+      demangled: ''
       offset: 00000DD0
     - name: _KSNODETYPE_MINIDISK
-      processed: ''
+      demangled: ''
       offset: 00000DE0
     - name: _KSNODETYPE_DCC_IO_DIGITAL_COMPACT_CASSETTE
-      processed: ''
+      demangled: ''
       offset: 00000DF0
     - name: _KSNODETYPE_DAT_IO_DIGITAL_AUDIO_TAPE
-      processed: ''
+      demangled: ''
       offset: '00000E00'
     - name: _KSNODETYPE_CD_PLAYER
-      processed: ''
+      demangled: ''
       offset: '00000E10'
     - name: _KSNODETYPE_EQUALIZATION_NOISE
-      processed: ''
+      demangled: ''
       offset: '00000E20'
     - name: _KSNODETYPE_LEVEL_CALIBRATION_NOISE_SOURCE
-      processed: ''
+      demangled: ''
       offset: '00000E30'
     - name: _KSNODETYPE_1394_DV_STREAM_SOUNDTRACK
-      processed: ''
+      demangled: ''
       offset: '00000E40'
     - name: _KSNODETYPE_1394_DA_STREAM
-      processed: ''
+      demangled: ''
       offset: '00000E50'
     - name: _KSNODETYPE_SPDIF_INTERFACE
-      processed: ''
+      demangled: ''
       offset: '00000E60'
     - name: _KSNODETYPE_LEGACY_AUDIO_CONNECTOR
-      processed: ''
+      demangled: ''
       offset: '00000E70'
     - name: _KSNODETYPE_LINE_CONNECTOR
-      processed: ''
+      demangled: ''
       offset: '00000E80'
     - name: _KSNODETYPE_DIGITAL_AUDIO_INTERFACE
-      processed: ''
+      demangled: ''
       offset: '00000E90'
     - name: _KSNODETYPE_ANALOG_CONNECTOR
-      processed: ''
+      demangled: ''
       offset: 00000EA0
     - name: _KSNODETYPE_DOWN_LINE_PHONE
-      processed: ''
+      demangled: ''
       offset: 00000EB0
     - name: _KSNODETYPE_TELEPHONE
-      processed: ''
+      demangled: ''
       offset: 00000EC0
     - name: _KSNODETYPE_PHONE_LINE
-      processed: ''
+      demangled: ''
       offset: 00000ED0
     - name: _KSNODETYPE_ECHO_CANCELING_SPEAKERPHONE
-      processed: ''
+      demangled: ''
       offset: 00000EE0
     - name: _KSNODETYPE_ECHO_SUPPRESSING_SPEAKERPHONE
-      processed: ''
+      demangled: ''
       offset: 00000EF0
     - name: _KSNODETYPE_SPEAKERPHONE_NO_ECHO_REDUCTION
-      processed: ''
+      demangled: ''
       offset: 00000F00
     - name: _KSNODETYPE_HEADSET
-      processed: ''
+      demangled: ''
       offset: 00000F10
     - name: _KSNODETYPE_HANDSET
-      processed: ''
+      demangled: ''
       offset: 00000F20
     - name: _KSNODETYPE_LOW_FREQUENCY_EFFECTS_SPEAKER
-      processed: ''
+      demangled: ''
       offset: 00000F30
     - name: _KSNODETYPE_COMMUNICATION_SPEAKER
-      processed: ''
+      demangled: ''
       offset: 00000F40
     - name: _KSNODETYPE_ROOM_SPEAKER
-      processed: ''
+      demangled: ''
       offset: 00000F50
     - name: _KSNODETYPE_DESKTOP_SPEAKER
-      processed: ''
+      demangled: ''
       offset: 00000F60
     - name: _KSNODETYPE_HEAD_MOUNTED_DISPLAY_AUDIO
-      processed: ''
+      demangled: ''
       offset: 00000F70
     - name: _KSNODETYPE_HEADPHONES
-      processed: ''
+      demangled: ''
       offset: 00000F80
     - name: _KSNODETYPE_SPEAKER
-      processed: ''
+      demangled: ''
       offset: 00000F90
     - name: _KSNODETYPE_PROCESSING_MICROPHONE_ARRAY
-      processed: ''
+      demangled: ''
       offset: 00000FA0
     - name: _KSNODETYPE_MICROPHONE_ARRAY
-      processed: ''
+      demangled: ''
       offset: 00000FB0
     - name: _KSNODETYPE_OMNI_DIRECTIONAL_MICROPHONE
-      processed: ''
+      demangled: ''
       offset: 00000FC0
     - name: _KSNODETYPE_PERSONAL_MICROPHONE
-      processed: ''
+      demangled: ''
       offset: 00000FD0
     - name: _KSNODETYPE_DESKTOP_MICROPHONE
-      processed: ''
+      demangled: ''
       offset: 00000FE0
     - name: _KSNODETYPE_MICROPHONE
-      processed: ''
+      demangled: ''
       offset: 00000FF0
     - name: _KSINTERFACESETID_Media
-      processed: ''
+      demangled: ''
       offset: '00001000'
     - name: _KSMEDIUMSETID_VPBus
-      processed: ''
+      demangled: ''
       offset: '00001010'
     - name: _KSMEDIUMSETID_MidiBus
-      processed: ''
+      demangled: ''
       offset: '00001020'
     - name: _KSPROPSETID_Service
-      processed: ''
+      demangled: ''
       offset: '00001030'
     - name: _KSNAME_Server
-      processed: ''
+      demangled: ''
       offset: '00001040'
     - name: _KSDEGRADESETID_Standard
-      processed: ''
+      demangled: ''
       offset: '00001050'
     - name: _KSEVENTSETID_Connection
-      processed: ''
+      demangled: ''
       offset: '00001060'
     - name: _KSEVENTSETID_Clock
-      processed: ''
+      demangled: ''
       offset: '00001070'
     - name: _KSPROPSETID_Clock
-      processed: ''
+      demangled: ''
       offset: '00001080'
     - name: _KSPROPSETID_Stream
-      processed: ''
+      demangled: ''
       offset: '00001090'
     - name: _KSPROPSETID_StreamInterface
-      processed: ''
+      demangled: ''
       offset: 000010A0
     - name: _KSPROPSETID_StreamAllocator
-      processed: ''
+      demangled: ''
       offset: 000010B0
     - name: _KSMETHODSETID_StreamAllocator
-      processed: ''
+      demangled: ''
       offset: 000010C0
     - name: _KSEVENTSETID_StreamAllocator
-      processed: ''
+      demangled: ''
       offset: 000010D0
     - name: _KSPROPSETID_Connection
-      processed: ''
+      demangled: ''
       offset: '000010E0'
     - name: _KSPROPSETID_Quality
-      processed: ''
+      demangled: ''
       offset: 000010F0
     - name: _KSDATAFORMAT_SPECIFIER_NONE
-      processed: ''
+      demangled: ''
       offset: '00001100'
     - name: _KSDATAFORMAT_SPECIFIER_FILEHANDLE
-      processed: ''
+      demangled: ''
       offset: '00001110'
     - name: _KSDATAFORMAT_SPECIFIER_FILENAME
-      processed: ''
+      demangled: ''
       offset: '00001120'
     - name: _KSDATAFORMAT_SUBTYPE_NONE
-      processed: ''
+      demangled: ''
       offset: '00001130'
     - name: _KSDATAFORMAT_TYPE_STREAM
-      processed: ''
+      demangled: ''
       offset: '00001140'
     - name: _KSNAME_TopologyNode
-      processed: ''
+      demangled: ''
       offset: '00001150'
     - name: _KSNAME_Allocator
-      processed: ''
+      demangled: ''
       offset: '00001160'
     - name: _KSNAME_Clock
-      processed: ''
+      demangled: ''
       offset: '00001170'
     - name: _KSNAME_Pin
-      processed: ''
+      demangled: ''
       offset: '00001180'
     - name: _KSNAME_Filter
-      processed: ''
+      demangled: ''
       offset: '00001190'
     - name: _IID_IMediumValidation
-      processed: ''
+      demangled: ''
       offset: 000011A0
     - name: _KSPROPSETID_Pin
-      processed: ''
+      demangled: ''
       offset: 000011B0
     - name: _KSMEDIUMSETID_FileIo
-      processed: ''
+      demangled: ''
       offset: 000011C0
     - name: _KSMEDIUMSETID_Standard
-      processed: ''
+      demangled: ''
       offset: 000011D0
     - name: _KSINTERFACESETID_Standard
-      processed: ''
+      demangled: ''
       offset: '000011E0'
     - name: _KSTIME_FORMAT_MEDIA_TIME
-      processed: ''
+      demangled: ''
       offset: 000011F0
     - name: _KSTIME_FORMAT_FIELD
-      processed: ''
+      demangled: ''
       offset: '00001200'
     - name: _KSTIME_FORMAT_SAMPLE
-      processed: ''
+      demangled: ''
       offset: '00001210'
     - name: _KSTIME_FORMAT_BYTE
-      processed: ''
+      demangled: ''
       offset: '00001220'
     - name: _KSTIME_FORMAT_FRAME
-      processed: ''
+      demangled: ''
       offset: '00001230'
     - name: _KSCATEGORY_QUALITY
-      processed: ''
+      demangled: ''
       offset: '00001240'
     - name: _KSCATEGORY_PROXY
-      processed: ''
+      demangled: ''
       offset: '00001250'
     - name: _KSCATEGORY_CLOCK
-      processed: ''
+      demangled: ''
       offset: '00001260'
     - name: _KSCATEGORY_FILESYSTEM
-      processed: ''
+      demangled: ''
       offset: '00001270'
     - name: _KSCATEGORY_MEDIUMTRANSFORM
-      processed: ''
+      demangled: ''
       offset: '00001280'
     - name: _KSCATEGORY_INTERFACETRANSFORM
-      processed: ''
+      demangled: ''
       offset: '00001290'
     - name: _KSCATEGORY_COMMUNICATIONSTRANSFORM
-      processed: ''
+      demangled: ''
       offset: 000012A0
     - name: _KSCATEGORY_DATATRANSFORM
-      processed: ''
+      demangled: ''
       offset: 000012B0
     - name: _KSCATEGORY_DATADECOMPRESSOR
-      processed: ''
+      demangled: ''
       offset: 000012C0
     - name: _KSCATEGORY_DATACOMPRESSOR
-      processed: ''
+      demangled: ''
       offset: 000012D0
     - name: _KSCATEGORY_SPLITTER
-      processed: ''
+      demangled: ''
       offset: '000012E0'
     - name: _KSCATEGORY_MIXER
-      processed: ''
+      demangled: ''
       offset: 000012F0
     - name: _KSCATEGORY_RENDER
-      processed: ''
+      demangled: ''
       offset: '00001300'
     - name: _KSCATEGORY_CAPTURE
-      processed: ''
+      demangled: ''
       offset: '00001310'
     - name: _KSCATEGORY_BRIDGE
-      processed: ''
+      demangled: ''
       offset: '00001320'
     - name: _KSPROPSETID_Topology
-      processed: ''
+      demangled: ''
       offset: '00001330'
     - name: _KSPROPSETID_MediaSeeking
-      processed: ''
+      demangled: ''
       offset: '00001340'
     - name: _KSPROPSETID_General
-      processed: ''
+      demangled: ''
       offset: '00001350'
     - name: _KSPROPTYPESETID_General
-      processed: ''
+      demangled: ''
       offset: '00001360'
     - name: _GUID_NULL
-      processed: ''
+      demangled: ''
       offset: '00001370'
     - name: _BUSID_SoftwareDeviceEnumerator
-      processed: ''
+      demangled: ''
       offset: '00001380'
-- version: Windows 98 Retail
+- version: Windows 98SE Debug
   source_tree:
+  - ../adapter.c
+  - ../clock.c
+  - ../dalsemi.c
+  - ../descript.c
+  - ../input.c
   - intel/lldiv.asm
   - intel/llmul.asm
   - intel/ulldiv.asm
-  segments:
-  - num: '1'
-    name: .text
-    offset: 00000BD0
-    symbols:
-    - name: _DriverEntry@8
-      demangled: ''
-      offset: '00000000'
-    - name: _HwInitialize@4
-      demangled: ''
-      offset: '00000066'
-    - name: _HwUnInitialize@4
-      demangled: ''
-      offset: 000002BE
-    - name: _GetUnit@8
-      demangled: ''
-      offset: 0000036C
-    - name: _CountInputChannels@8
-      demangled: ''
-      offset: 000003D9
-    - name: _SetAudioState@4
-      demangled: ''
-      offset: 0000043A
-    - name: _SetInitialSampleFrequency@4
-      demangled: ''
-      offset: '00000605'
-    - name: _SetStreamDataFormat@4
-      demangled: ''
-      offset: '00000621'
-    - name: _CancelRenderRequest@4
-      demangled: ''
-      offset: '00000671'
-    - name: _QueueDataSRB@4
-      demangled: ''
-      offset: 0000068D
-    - name: _AudioReceiveDataPacket@4
-      demangled: ''
-      offset: '000006E6'
-    - name: _AudioReceiveCtrlPacket@4
-      demangled: ''
-      offset: '00000774'
-    - name: _DataRangeCompare@12
-      demangled: ''
-      offset: '00000803'
-    - name: _CheckFormatMatch@12
-      demangled: ''
-      offset: '00000886'
-    - name: _ConvertRangeToFormat@8
-      demangled: ''
-      offset: 0000093A
-    - name: _MaxInfoForInterface@12
-      demangled: ''
-      offset: 000009B4
-    - name: _GetBestSampleRate@8
-      demangled: ''
-      offset: 00000A77
-    - name: _GetBestSampleSize@8
-      demangled: ''
-      offset: 00000AC1
-    - name: _GetMaxChannels@8
-      demangled: ''
-      offset: 00000B0B
-    - name: _FindBestMatch@12
-      demangled: ''
-      offset: 00000B55
-    - name: _GetDataIntersection@4
-      demangled: ''
-      offset: 00000BE2
-    - name: _AdapterCancelPacket@4
-      demangled: ''
-      offset: 00000D30
-    - name: _AdapterTimeoutPacket@4
-      demangled: ''
-      offset: 00000DD0
-    - name: _ChangePowerState@4
-      demangled: ''
-      offset: 00000DDD
-    - name: _AdapterReceivePacket@4
-      demangled: ''
-      offset: 00000F95
-    - name: _CopyDescriptorToFormat@12
-      demangled: ''
-      offset: 000010BF
-    - name: _ConvertTermTypeToNodeType@16
-      demangled: ''
-      offset: '00001261'
-    - name: _MapTerminalToPinNumber@8
-      demangled: ''
-      offset: '00001343'
-    - name: _AdapterStreamInfo@4
-      demangled: ''
-      offset: 0000139F
-    - name: _AdapterOpenStream@4
-      demangled: ''
-      offset: 00001F91
-    - name: _AdapterCloseStream@4
-      demangled: ''
-      offset: 0000214C
-    - name: _PCM2USB_StartDevice@4
-      demangled: ''
-      offset: 000021DD
-    - name: _PCM2USB_StopDevice@4
-      demangled: ''
-      offset: 0000231C
-    - name: _PCM2USB_CallUSBD@8
-      demangled: ''
-      offset: 0000236C
-    - name: _GetCurrentUSBFrame@4
-      demangled: ''
-      offset: 000023CF
-    - name: _GetAudioSpecificInterface@12
-      demangled: ''
-      offset: 0000241B
-    - name: _GetFirstAudioInterface@8
-      demangled: ''
-      offset: 0000247C
-    - name: _GetNextAudioInterface@8
-      demangled: ''
-      offset: 000024EF
-    - name: _PCM2USB_CountFormats@4
-      demangled: ''
-      offset: '00002527'
-    - name: _PCM2USB_CountUnits@20
-      demangled: ''
-      offset: '00002575'
-    - name: _PCM2USB_FindInterface@12
-      demangled: ''
-      offset: '000026E4'
-    - name: _PCM2USB_SelectConfiguration@4
-      demangled: ''
-      offset: '00002839'
-    - name: _PCM2USB_SelectInterface@12
-      demangled: ''
-      offset: 00002A19
-    - name: _PCM2USB_GetEndpointDescriptor@12
-      demangled: ''
-      offset: 00002B2C
-    - name: _PCM2USB_GetMaxPacketSizeForFormat@8
-      demangled: ''
-      offset: 00002B71
-    - name: _PCM2USB_GetControlInterfaceForUnits@4
-      demangled: ''
-      offset: 00002B8D
-    - name: _IsZeroBWInterface@8
-      demangled: ''
-      offset: 00002C25
-    - name: _PCM2USB_SelectZeroBWInterface@12
-      demangled: ''
-      offset: 00002C58
-    - name: _PCM2USB_WriteReset@4
-      demangled: ''
-      offset: 00002CB1
-    - name: _PCM2USB_AbortPipe@4
-      demangled: ''
-      offset: 00002D04
-    - name: _PCM2USB_BuildIsoRequest@4
-      demangled: ''
-      offset: 00002DCE
-    - name: _PCM2USB_Write@4
-      demangled: ''
-      offset: 00002EC0
-    - name: _PCM2USB_Completion@12
-      demangled: ''
-      offset: 00002F71
-    - name: _InitInputStream@4
-      demangled: ''
-      offset: 0000305B
-    - name: _QueueInputRequest@4
-      demangled: ''
-      offset: '00003307'
-    - name: _ResetInputTransfer@4
-      demangled: ''
-      offset: '00003360'
-    - name: _InputCompleteWorkItem@4
-      demangled: ''
-      offset: '00003408'
-    - name: _IsocInputCompletion@12
-      demangled: ''
-      offset: '00003715'
-    - name: _StartIsocInputTransfer@4
-      demangled: ''
-      offset: 000037BD
-    - name: _StopPauseIsocInputTransfer@4
-      demangled: ''
-      offset: '00003828'
-    - name: _CancelCaptureRequest@4
-      demangled: ''
-      offset: '00003958'
-    - name: _CloseInputStream@4
-      demangled: ''
-      offset: 00003A4B
-    - name: _GetSetProperty@40
-      demangled: ''
-      offset: 00003AB2
-    - name: _GetSetByte@24
-      demangled: ''
-      offset: 00003B47
-    - name: _GetSetShort@24
-      demangled: ''
-      offset: 00003BB8
-    - name: _GetDbLevelRange@24
-      demangled: ''
-      offset: 00003C2A
-    - name: _GetSetDBLevel@24
-      demangled: ''
-      offset: 00003CA6
-    - name: _GetAudioProperty@4
-      demangled: ''
-      offset: 00003DBF
-    - name: _SetAudioProperty@4
-      demangled: ''
-      offset: '000040E7'
-    - name: _GetBasicSupport@4
-      demangled: ''
-      offset: 000043A1
-    - name: _GetSetSamplingRate@8
-      demangled: ''
-      offset: 000044C7
-    - name: _getLATENCY@8
-      demangled: ''
-      offset: 0000467D
-    - name: _getCHANNEL_CONFIG@8
-      demangled: ''
-      offset: 000046BE
-    - name: _getsetPOSITION@8
-      demangled: ''
-      offset: 0000472F
-    - name: _getsetDYNAMIC_SAMPLING_RATE@8
-      demangled: ''
-      offset: '00004858'
-    - name: _GetSetMixLevels@12
-      demangled: ''
-      offset: '000048E0'
-    - name: _getMUX_SOURCE@8
-      demangled: ''
-      offset: 00004D83
-    - name: _setMUX_SOURCE@8
-      demangled: ''
-      offset: '00004E30'
-    - name: _getEQ@16
-      demangled: ''
-      offset: 00004EF8
-    - name: _setEQ@8
-      demangled: ''
-      offset: '000050E3'
-    - name: _getsetDEV_SPECIFIC@4
-      demangled: ''
-      offset: 000051D7
-    - name: _GetAllocatorInfo@4
-      demangled: ''
-      offset: '00005277'
-    - name: _InitDalSemi@4
-      demangled: ''
-      offset: 000052CF
-    - name: _StreamClassRegisterAdapter@12
-      demangled: ''
-      offset: '00005376'
-    - name: _StreamClassStreamNotification
-      demangled: ''
-      offset: 0000537C
-    - name: _StreamClassDeviceNotification
-      demangled: ''
-      offset: '00005382'
-    - name: __alldiv
-      demangled: ''
-      offset: '00005390'
-    - name: __allmul
-      demangled: ''
-      offset: '00005440'
-    - name: __aulldiv
-      demangled: ''
-      offset: '00005480'
-  - num: '3'
-    name: .data
-    offset: 00000C50
-    symbols:
-    - name: ??_C@_1BG@BCBE@?$AAH?$AAW?$AAR?$AAe?$AAv?$AAi?$AAs?$AAi?$AAo?$AAn?$AA?$AA@
-      demangled: L"HWRevision"
-      offset: '00000000'
-    - name: _MapPropertyToNode
-      demangled: ''
-      offset: '00000030'
-  - num: '4'
-    name: .idata$2
-    offset: 000011A0
-    symbols:
-    - name: __IMPORT_DESCRIPTOR_STREAM
-      demangled: ''
-      offset: '00000000'
-    - name: __IMPORT_DESCRIPTOR_USBD
-      demangled: ''
-      offset: '00000014'
-    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
-      demangled: ''
-      offset: '00000028'
-    - name: __IMPORT_DESCRIPTOR_HAL
-      demangled: ''
-      offset: 0000003C
-    - name: __NULL_IMPORT_DESCRIPTOR
-      demangled: ''
-      offset: '00000050'
-    - name: __imp_@KfAcquireSpinLock@4
-      demangled: ''
-      offset: 000000F0
-    - name: __imp_@KfReleaseSpinLock@8
-      demangled: ''
-      offset: 000000F4
-    - name: \177HAL_NULL_THUNK_DATA
-      demangled: ''
-      offset: 000000F8
-    - name: __imp__KeWaitForSingleObject@20
-      demangled: ''
-      offset: 000000FC
-    - name: __imp__ExAllocatePoolWithTag@12
-      demangled: ''
-      offset: '00000100'
-    - name: __imp__KeResetEvent@4
-      demangled: ''
-      offset: '00000104'
-    - name: __imp__KeDelayExecutionThread@12
-      demangled: ''
-      offset: '00000108'
-    - name: __imp__ZwClose@4
-      demangled: ''
-      offset: 0000010C
-    - name: __imp__ZwSetValueKey@24
-      demangled: ''
-      offset: '00000110'
-    - name: __imp__RtlInitUnicodeString@8
-      demangled: ''
-      offset: '00000114'
-    - name: __imp__IoOpenDeviceRegistryKey@16
-      demangled: ''
-      offset: '00000118'
-    - name: __imp__RtlIntegerToUnicodeString@12
-      demangled: ''
-      offset: 0000011C
-    - name: __imp__KeInitializeMutex@8
-      demangled: ''
-      offset: '00000120'
-    - name: __imp__ExFreePool@4
-      demangled: ''
-      offset: '00000124'
-    - name: __imp__KeReleaseMutex@8
-      demangled: ''
-      offset: '00000128'
-    - name: __imp__IoBuildDeviceIoControlRequest@36
-      demangled: ''
-      offset: 0000012C
-    - name: __imp_@IofCallDriver@8
-      demangled: ''
-      offset: '00000130'
-    - name: __imp__IoInitializeIrp@12
-      demangled: ''
-      offset: '00000134'
-    - name: __imp__ExQueueWorkItem@8
-      demangled: ''
-      offset: '00000138'
-    - name: __imp__KeInitializeEvent@12
-      demangled: ''
-      offset: 0000013C
-    - name: __imp__KeInitializeSpinLock@4
-      demangled: ''
-      offset: '00000140'
-    - name: __imp__IoAllocateIrp@8
-      demangled: ''
-      offset: '00000144'
-    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
-      demangled: ''
-      offset: '00000148'
-    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
-      demangled: ''
-      offset: 0000014C
-    - name: __imp__KeSetEvent@12
-      demangled: ''
-      offset: '00000150'
-    - name: __imp__IoFreeIrp@4
-      demangled: ''
-      offset: '00000154'
-    - name: \177NTOSKRNL_NULL_THUNK_DATA
-      demangled: ''
-      offset: '00000158'
-    - name: __imp__StreamClassDeviceNotification
-      demangled: ''
-      offset: 0000015C
-    - name: __imp__StreamClassStreamNotification
-      demangled: ''
-      offset: '00000160'
-    - name: __imp__StreamClassRegisterAdapter@12
-      demangled: ''
-      offset: '00000164'
-    - name: \177STREAM_NULL_THUNK_DATA
-      demangled: ''
-      offset: '00000168'
-    - name: __imp__USBD_ParseDescriptors@16
-      demangled: ''
-      offset: 0000016C
-    - name: __imp__USBD_CreateConfigurationRequestEx@8
-      demangled: ''
-      offset: '00000170'
-    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
-      demangled: ''
-      offset: '00000174'
-    - name: \177USBD_NULL_THUNK_DATA
-      demangled: ''
-      offset: '00000178'
-  - num: '5'
-    name: PAGECONST
-    offset: '00000000'
-    symbols:
-    - name: _KSPROPSETID_AC3
-      demangled: ''
-      offset: '00000000'
-    - name: _KSDATAFORMAT_SUBTYPE_AC3_AUDIO
-      demangled: ''
-      offset: '00000010'
-    - name: _KSNODETYPE_DEV_SPECIFIC
-      demangled: ''
-      offset: '00000020'
-    - name: _KSNODETYPE_CHORUS
-      demangled: ''
-      offset: '00000030'
-    - name: _KSNODETYPE_REVERB
-      demangled: ''
-      offset: '00000040'
-    - name: _KSNODETYPE_STEREO_WIDE
-      demangled: ''
-      offset: '00000050'
-    - name: _KSNODETYPE_PROLOGIC_DECODER
-      demangled: ''
-      offset: '00000060'
-    - name: _KSNODETYPE_LOUDNESS
-      demangled: ''
-      offset: '00000070'
-    - name: _KSNODETYPE_DELAY
-      demangled: ''
-      offset: '00000080'
-    - name: _KSNODETYPE_AGC
-      demangled: ''
-      offset: '00000090'
-    - name: _KSNODETYPE_EQUALIZER
-      demangled: ''
-      offset: 000000A0
-    - name: _KSNODETYPE_TONE
-      demangled: ''
-      offset: 000000B0
-    - name: _KSNODETYPE_VOLUME
-      demangled: ''
-      offset: 000000C0
-    - name: _KSNODETYPE_MUTE
-      demangled: ''
-      offset: 000000D0
-    - name: _KSNODETYPE_SUM
-      demangled: ''
-      offset: '000000E0'
-    - name: _KSNODETYPE_MUX
-      demangled: ''
-      offset: 000000F0
-    - name: _KSNODETYPE_SUPERMIX
-      demangled: ''
-      offset: '00000100'
-    - name: _KSNODETYPE_SRC
-      demangled: ''
-      offset: '00000110'
-    - name: _KSNODETYPE_ADC
-      demangled: ''
-      offset: '00000120'
-    - name: _KSNODETYPE_DAC
-      demangled: ''
-      offset: '00000130'
-    - name: _KSPROPSETID_Audio
-      demangled: ''
-      offset: '00000140'
-    - name: _KSDATAFORMAT_SPECIFIER_WAVEFORMATEX
-      demangled: ''
-      offset: '00000150'
-    - name: _KSDATAFORMAT_SUBTYPE_MPEG
-      demangled: ''
-      offset: '00000160'
-    - name: _KSDATAFORMAT_SUBTYPE_MULAW
-      demangled: ''
-      offset: '00000170'
-    - name: _KSDATAFORMAT_SUBTYPE_ALAW
-      demangled: ''
-      offset: '00000180'
-    - name: _KSDATAFORMAT_SUBTYPE_PCM
-      demangled: ''
-      offset: '00000190'
-    - name: _KSDATAFORMAT_SUBTYPE_ANALOG
-      demangled: ''
-      offset: 000001A0
-    - name: _KSDATAFORMAT_SUBTYPE_WAVEFORMATEX
-      demangled: ''
-      offset: 000001B0
-    - name: _KSDATAFORMAT_TYPE_AUDIO
-      demangled: ''
-      offset: 000001C0
-    - name: _KSCATEGORY_AUDIO
-      demangled: ''
-      offset: 000001D0
-    - name: _KSNODETYPE_SPEAKER
-      demangled: ''
-      offset: '000001E0'
-    - name: _KSNODETYPE_MICROPHONE
-      demangled: ''
-      offset: 000001F0
-    - name: _KSPROPSETID_Stream
-      demangled: ''
-      offset: '00000200'
-    - name: _KSPROPSETID_Connection
-      demangled: ''
-      offset: '00000210'
-    - name: _KSDATAFORMAT_SPECIFIER_NONE
-      demangled: ''
-      offset: '00000220'
-    - name: _KSCATEGORY_RENDER
-      demangled: ''
-      offset: '00000230'
-    - name: _KSCATEGORY_CAPTURE
-      demangled: ''
-      offset: '00000240'
-    - name: _KSPROPTYPESETID_General
-      demangled: ''
-      offset: '00000250'
-    - name: _GUID_NULL
-      demangled: ''
-      offset: '00000260'
-- version: Windows 98SE Debug
-  source_tree: []
+  - ../mpaudio.c
+  - ../mpinit.c
+  - ../pcm2usb.c
+  - ../pcmwrite.c
+  - ../property.c
+  - ../topology.c
+  - ../typeii.c
+  - ../debug.c
+  - ../ksguid.c
   segments:
   - num: '1'
     name: .text
@@ -3973,7 +3990,10 @@ appearances:
       demangled: ''
       offset: '000015E0'
 - version: Windows 98SE Retail
-  source_tree: []
+  source_tree:
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/ulldiv.asm
   segments:
   - num: '1'
     name: .text
@@ -4759,3 +4779,2181 @@ appearances:
     - name: _GUID_NULL
       demangled: ''
       offset: '00000270'
+- version: Windows ME Retail
+  source_tree:
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/ulldiv.asm
+  - intel/ullrem.asm
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/capture.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/device.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/filter.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/hardware.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/intrsect.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/midiin.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/midiout.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/parsedsc.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/pin.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/property.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/topology.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/typei.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/typeii.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/usbaudio.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 000055B0
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _USBAudioAddDevice@4
+      demangled: ''
+      offset: '00000016'
+    - name: _TypeIIRenderStreamClose@4
+      demangled: ''
+      offset: '00000016'
+    - name: _USBAudioPnpStart@16
+      demangled: ''
+      offset: 0000001C
+    - name: _USBAudioPnpQueryStop@8
+      demangled: ''
+      offset: 000000A4
+    - name: _USBAudioPnpQueryRemove@8
+      demangled: ''
+      offset: 000000A4
+    - name: _USBAudioPnpStop@8
+      demangled: ''
+      offset: 000000AA
+    - name: _USBAudioPnpQueryCapabilities@12
+      demangled: ''
+      offset: 000000C6
+    - name: _USBAudioPnpCancelStop@8
+      demangled: ''
+      offset: 000000FC
+    - name: _USBAudioPnpCancelRemove@8
+      demangled: ''
+      offset: 000000FC
+    - name: _USBAudioPnpRemove@8
+      demangled: ''
+      offset: 000000FC
+    - name: _USBAudioSurpriseRemoval@8
+      demangled: ''
+      offset: 000000FC
+    - name: _USBAudioQueryPower@28
+      demangled: ''
+      offset: '00000100'
+    - name: _USBAudioSetPower@16
+      demangled: ''
+      offset: '00000106'
+    - name: _USBAudioDeferIrpCompletion@12
+      demangled: ''
+      offset: '00000184'
+    - name: _USBAudioGetUsbBusInterface@4
+      demangled: ''
+      offset: 0000019A
+    - name: _USBAudioFilterCreate@8
+      demangled: ''
+      offset: 0000029C
+    - name: _USBAudioCreateFilterContext@4
+      demangled: ''
+      offset: 0000030A
+    - name: _USBAudioPinValidateDataFormat@8
+      demangled: ''
+      offset: '00000408'
+    - name: _USBAudioPinCreate@8
+      demangled: ''
+      offset: 000004C6
+    - name: _USBAudioPinClose@8
+      demangled: ''
+      offset: '00000660'
+    - name: _USBAudioPinSetDeviceState@12
+      demangled: ''
+      offset: 000006A8
+    - name: _USBAudioPinSetDataFormat@20
+      demangled: ''
+      offset: 0000074A
+    - name: _USBAudioPinProcess@4
+      demangled: ''
+      offset: 000007C6
+    - name: _USBAudioPinDataIntersect@32
+      demangled: ''
+      offset: '00000808'
+    - name: _USBAudioPinWaitForStarvation@4
+      demangled: ''
+      offset: 0000087A
+    - name: _USBMIDIOutPinWaitForStarvation@4
+      demangled: ''
+      offset: 000008CC
+    - name: _USBAudioPinReturnFromStandby@4
+      demangled: ''
+      offset: 0000094E
+    - name: _USBAudioPinGoToStandby@4
+      demangled: ''
+      offset: 000009CE
+    - name: _USBMIDIPinCreate@8
+      demangled: ''
+      offset: 00000A20
+    - name: _USBMIDIPinClose@8
+      demangled: ''
+      offset: 00000B5C
+    - name: _USBMIDIPinSetDeviceState@12
+      demangled: ''
+      offset: 00000B76
+    - name: _USBMIDIPinSetDataFormat@20
+      demangled: ''
+      offset: 00000BD4
+    - name: _USBMIDIPinProcess@4
+      demangled: ''
+      offset: 00000BDA
+    - name: _USBAudioPinReset@4
+      demangled: ''
+      offset: 00000BF4
+    - name: _USBMIDIPinReset@4
+      demangled: ''
+      offset: 00000BF4
+    - name: '@USBAudioCorrelatedTime@8'
+      demangled: ''
+      offset: 00000BF8
+    - name: _USBMIDIPinDataIntersect@32
+      demangled: ''
+      offset: 00000CAA
+    - name: _USBAudioPinBuildDescriptors@16
+      demangled: ''
+      offset: 00000CB2
+    - name: _ConvertTermTypeToNodeType@16
+      demangled: ''
+      offset: 000010FC
+    - name: _ProcessMIDIOutJack@32
+      demangled: ''
+      offset: '000011E2'
+    - name: _ProcessInputTerminalUnit@28
+      demangled: ''
+      offset: '00001262'
+    - name: _ProcessOutputTerminalUnit@28
+      demangled: ''
+      offset: '000012E4'
+    - name: _ProcessMixerUnit@20
+      demangled: ''
+      offset: '00001380'
+    - name: _ProcessSelectorUnit@20
+      demangled: ''
+      offset: '00001444'
+    - name: _ProcessFeatureUnit@24
+      demangled: ''
+      offset: 000014AC
+    - name: _ProcessProcessingUnit@24
+      demangled: ''
+      offset: '00001992'
+    - name: _ProcessExtensionUnit@20
+      demangled: ''
+      offset: 00001BB8
+    - name: _BuildUSBAudioFilterTopology@4
+      demangled: ''
+      offset: 00001C36
+    - name: _GetPinIndex@8
+      demangled: ''
+      offset: '00002190'
+    - name: _GetPinName@12
+      demangled: ''
+      offset: 0000221E
+    - name: _GetSetProperty@40
+      demangled: ''
+      offset: '00002360'
+    - name: _GetSetByte@20
+      demangled: ''
+      offset: '000023E2'
+    - name: _GetSetShort@20
+      demangled: ''
+      offset: '00002468'
+    - name: _GetSetDBLevel@24
+      demangled: ''
+      offset: 000024F0
+    - name: _GetDbLevelRange@20
+      demangled: ''
+      offset: 000025C0
+    - name: _InitializeDbLevelCache@16
+      demangled: ''
+      offset: 0000263A
+    - name: _GetSetProcessingUnitValue@24
+      demangled: ''
+      offset: 000026F0
+    - name: _GetSetProcessingUnitEnable@16
+      demangled: ''
+      offset: '00002796'
+    - name: _GetProcessingUnitRange@24
+      demangled: ''
+      offset: 000027C8
+    - name: _GetSampleRate@8
+      demangled: ''
+      offset: '00002834'
+    - name: _SetSampleRate@8
+      demangled: ''
+      offset: 0000285C
+    - name: _GetSetSampleRate@12
+      demangled: ''
+      offset: '00002914'
+    - name: _GetAudioLatency@12
+      demangled: ''
+      offset: 0000294A
+    - name: _GetAudioPosition@12
+      demangled: ''
+      offset: 000029A4
+    - name: _GetSetCopyProtection@12
+      demangled: ''
+      offset: 00002A10
+    - name: _GetChannelConfiguration@12
+      demangled: ''
+      offset: 00002A9E
+    - name: _GetSetMixLevels@12
+      demangled: ''
+      offset: 00002B12
+    - name: _GetMuxSource@12
+      demangled: ''
+      offset: 00002EDA
+    - name: _SetMuxSource@12
+      demangled: ''
+      offset: 00002F44
+    - name: _GetEqualizerValues@28
+      demangled: ''
+      offset: 00002FA2
+    - name: _SetEqualizerValues@20
+      demangled: ''
+      offset: 0000313A
+    - name: _GetNumEqualizerBands@12
+      demangled: ''
+      offset: '00003210'
+    - name: _GetEqualizerBands@12
+      demangled: ''
+      offset: 0000325E
+    - name: _GetSetEqualizerLevels@12
+      demangled: ''
+      offset: 000032AE
+    - name: _GetEqDbRanges@16
+      demangled: ''
+      offset: 0000332C
+    - name: _GetSetDeviceSpecific@12
+      demangled: ''
+      offset: 0000340C
+    - name: _GetSetAudioControlLevel@12
+      demangled: ''
+      offset: 000034B2
+    - name: _GetSetBoolean@12
+      demangled: ''
+      offset: 0000354A
+    - name: _GetSetVolumeLevel@12
+      demangled: ''
+      offset: '00003614'
+    - name: _GetSetToneLevel@12
+      demangled: ''
+      offset: '00003662'
+    - name: _GetBasicSupport@12
+      demangled: ''
+      offset: 000036B0
+    - name: _GetSetTopologyNodeEnable@12
+      demangled: ''
+      offset: 000038A0
+    - name: _RestoreCachedSettings@4
+      demangled: ''
+      offset: '00003914'
+    - name: _DrmAudioStream_SetContentId@12
+      demangled: ''
+      offset: 00003A52
+    - name: _RtAudio_GetAudioPositionFunction@12
+      demangled: ''
+      offset: 00003ADE
+    - name: _BuildNodePropertySet@4
+      demangled: ''
+      offset: 00003B18
+    - name: _BuildFilterPropertySet@20
+      demangled: ''
+      offset: 00003B48
+    - name: _BuildPinPropertySet@20
+      demangled: ''
+      offset: 00003B94
+    - name: _RtAudioTypeIGetPlayPosition@12
+      demangled: ''
+      offset: 00003CCC
+    - name: _TypeIAsyncEPPollCallback@12
+      demangled: ''
+      offset: 00003D9E
+    - name: _TypeIAsyncEndpointPoll@8
+      demangled: ''
+      offset: 00003E4E
+    - name: _TypeIRenderBytePosition@8
+      demangled: ''
+      offset: 00003EFC
+    - name: _TypeICountUSBCyclesInStreamPointer@12
+      demangled: ''
+      offset: 0000405A
+    - name: _TypeI1MsCompleteCallback@12
+      demangled: ''
+      offset: 0000417A
+    - name: _TypeIBuild1MsecIsocRequest@8
+      demangled: ''
+      offset: '00004212'
+    - name: _TypeICompleteCallback@12
+      demangled: ''
+      offset: '000042E6'
+    - name: _TypeILockDelayCompleteCallback@12
+      demangled: ''
+      offset: 000043DE
+    - name: _TypeIBuildIsochRequest@12
+      demangled: ''
+      offset: '00004470'
+    - name: _TypeILockDelay@4
+      demangled: ''
+      offset: '00004640'
+    - name: _TypeIProcessStreamPtr@4
+      demangled: ''
+      offset: '00004742'
+    - name: _TypeIStateChange@12
+      demangled: ''
+      offset: '00004918'
+    - name: _TypeIRenderStreamInit@4
+      demangled: ''
+      offset: '00004998'
+    - name: _TypeIRenderStreamClose@4
+      demangled: ''
+      offset: 00004BD8
+    - name: _TypeIIGetFrameSize@16
+      demangled: ''
+      offset: 00004C42
+    - name: _TypeIIProcessCallback@12
+      demangled: ''
+      offset: 00004CC6
+    - name: _TypeIIBuildIsochRequest@12
+      demangled: ''
+      offset: 00004D7C
+    - name: _TypeIIProcessStreamPtr@4
+      demangled: ''
+      offset: 00004EEE
+    - name: _TypeIIWaitForStarvation@4
+      demangled: ''
+      offset: '00005074'
+    - name: _TypeIIStateChange@12
+      demangled: ''
+      offset: 000050AC
+    - name: _TypeIIRenderStreamInit@4
+      demangled: ''
+      offset: 000050C2
+    - name: _CaptureBytePosition@8
+      demangled: ''
+      offset: 000051D2
+    - name: _CaptureGateOnWorkItem@4
+      demangled: ''
+      offset: '00005288'
+    - name: _CaptureCompleteCallback@12
+      demangled: ''
+      offset: 000052F4
+    - name: _CaptureInitializeUrbAndIrp@4
+      demangled: ''
+      offset: 0000543C
+    - name: _CaptureReQueueUrb@4
+      demangled: ''
+      offset: 000054FC
+    - name: _CaptureResetWorkItem@4
+      demangled: ''
+      offset: '00005560'
+    - name: _CaptureProcess@4
+      demangled: ''
+      offset: 000055D8
+    - name: _CaptureStartIsocTransfer@4
+      demangled: ''
+      offset: 0000583A
+    - name: _CaptureStateChange@12
+      demangled: ''
+      offset: '00005898'
+    - name: _CaptureStreamInit@4
+      demangled: ''
+      offset: '00005980'
+    - name: _CaptureStreamClose@4
+      demangled: ''
+      offset: 00005AEE
+    - name: _GenerateCodeIndexNumber@28
+      demangled: ''
+      offset: 00005B1A
+    - name: _CreateUSBMIDIEventPacket@20
+      demangled: ''
+      offset: 00005CB6
+    - name: _USBMIDIBulkCompleteCallback@12
+      demangled: ''
+      offset: 00005D66
+    - name: _CreateMIDIBulkUrb@12
+      demangled: ''
+      offset: 00005E0A
+    - name: _SendBulkMIDIRequest@12
+      demangled: ''
+      offset: '00005E64'
+    - name: _USBMIDIOutProcessStreamPtr@4
+      demangled: ''
+      offset: '00006066'
+    - name: _USBMIDIOutStateChange@12
+      demangled: ''
+      offset: 000060F0
+    - name: _USBMIDIOutStreamInit@4
+      demangled: ''
+      offset: '00006110'
+    - name: _USBMIDIOutStreamClose@4
+      demangled: ''
+      offset: 0000616E
+    - name: _GetCurrentTime@0
+      demangled: ''
+      offset: 000061C2
+    - name: _AbortMIDIInPipe@4
+      demangled: ''
+      offset: 0000627E
+    - name: _USBMIDIInGateOnWorkItem@4
+      demangled: ''
+      offset: '00006344'
+    - name: _USBMIDIInInitializeUrbAndIrp@4
+      demangled: ''
+      offset: '00006386'
+    - name: _USBMIDIInReQueueUrb@4
+      demangled: ''
+      offset: '00006432'
+    - name: _USBMIDIInRequeueWorkItem@4
+      demangled: ''
+      offset: 0000645C
+    - name: _AddMIDIEventToPinQueue@8
+      demangled: ''
+      offset: 0000650A
+    - name: _USBMIDIInCompleteCallback@12
+      demangled: ''
+      offset: '00006644'
+    - name: _ConvertCINToBytes@4
+      demangled: ''
+      offset: 000066DC
+    - name: _CopyUSBMIDIEvent@20
+      demangled: ''
+      offset: '00006728'
+    - name: _IsRealTimeEvent@4
+      demangled: ''
+      offset: 000067A6
+    - name: _USBMIDIInProcessStreamPtr@4
+      demangled: ''
+      offset: 000067B6
+    - name: _USBMIDIInStartBulkTransfer@4
+      demangled: ''
+      offset: '00006970'
+    - name: _USBMIDIInStateChange@12
+      demangled: ''
+      offset: 000069F6
+    - name: _USBMIDIPipeInit@8
+      demangled: ''
+      offset: 00006B5E
+    - name: _USBMIDIInGetPipeInfo@4
+      demangled: ''
+      offset: 00006D18
+    - name: _USBMIDIInFreePipeInfo@4
+      demangled: ''
+      offset: 00006D4A
+    - name: _USBMIDIInRemovePinFromPipe@8
+      demangled: ''
+      offset: 00006D96
+    - name: _USBMIDIInAddPinToPipe@8
+      demangled: ''
+      offset: 00006DEA
+    - name: _USBMIDIInStreamInit@4
+      demangled: ''
+      offset: '00006E76'
+    - name: _USBMIDIInStreamClose@4
+      demangled: ''
+      offset: 00006F58
+    - name: _SubmitUrbToUsbdSynch@8
+      demangled: ''
+      offset: 00006F82
+    - name: _SelectDeviceConfiguration@8
+      demangled: ''
+      offset: '00007030'
+    - name: _StartUSBAudioDevice@4
+      demangled: ''
+      offset: 000072B6
+    - name: _StopUSBAudioDevice@4
+      demangled: ''
+      offset: 0000745E
+    - name: _SelectStreamingAudioInterface@12
+      demangled: ''
+      offset: '00007550'
+    - name: _SelectStreamingMIDIInterface@8
+      demangled: ''
+      offset: '00007758'
+    - name: _SelectZeroBandwidthInterface@8
+      demangled: ''
+      offset: 000079EA
+    - name: _ResetUSBPipe@8
+      demangled: ''
+      offset: 00007A4A
+    - name: _AbortUSBPipe@4
+      demangled: ''
+      offset: 00007A94
+    - name: _GetCurrentUSBFrame@8
+      demangled: ''
+      offset: 00007B52
+    - name: _GetNextAudioInterface@8
+      demangled: ''
+      offset: 00007B86
+    - name: _GetFirstAudioStreamingInterface@8
+      demangled: ''
+      offset: 00007BAE
+    - name: _GetAudioSpecificInterface@12
+      demangled: ''
+      offset: 00007C22
+    - name: _GetEndpointDescriptor@12
+      demangled: ''
+      offset: 00007C82
+    - name: _GetSyncEndpointDescriptor@8
+      demangled: ''
+      offset: 00007CC6
+    - name: _GetMaxPacketSizeForInterface@8
+      demangled: ''
+      offset: 00007D38
+    - name: _GetUnit@8
+      demangled: ''
+      offset: 00007D56
+    - name: _IsSupportedFormat@8
+      demangled: ''
+      offset: '00007E20'
+    - name: _IsZeroBWInterface@8
+      demangled: ''
+      offset: '00007E82'
+    - name: _CountTerminalUnits@16
+      demangled: ''
+      offset: 00007EAA
+    - name: _CountFormatsForAudioStreamingInterface@8
+      demangled: ''
+      offset: 00007FE2
+    - name: _CountInputChannels@8
+      demangled: ''
+      offset: '00008024'
+    - name: _ConvertInterfaceToDataRange@12
+      demangled: ''
+      offset: '00008080'
+    - name: _CountTopologyComponents@20
+      demangled: ''
+      offset: '00008246'
+    - name: _GetDataFlowDirectionForInterface@8
+      demangled: ''
+      offset: 000084CE
+    - name: _GetDataFlowDirectionForMIDIInterface@12
+      demangled: ''
+      offset: '00008526'
+    - name: _GetTerminalUnitForInterface@8
+      demangled: ''
+      offset: '00008606'
+    - name: _GetTerminalUnitForBridgePin@8
+      demangled: ''
+      offset: '00008632'
+    - name: _IsBridgePinDigital@8
+      demangled: ''
+      offset: '00008712'
+    - name: _GetCategoryForBridgePin@12
+      demangled: ''
+      offset: 0000874A
+    - name: _GetDataFlowForBridgePin@8
+      demangled: ''
+      offset: 0000879E
+    - name: _GetPinNumberForStreamingTerminalUnit@8
+      demangled: ''
+      offset: 000087C4
+    - name: _GetPinNumberForMIDIJack@16
+      demangled: ''
+      offset: 0000880E
+    - name: _GetChannelConfigForUnit@8
+      demangled: ''
+      offset: 000088CC
+    - name: _GetUnitControlInterface@8
+      demangled: ''
+      offset: 0000893E
+    - name: _IsSampleRateInRange@12
+      demangled: ''
+      offset: 000089BA
+    - name: _GetUsbDataRangeForFormat@12
+      demangled: ''
+      offset: 00008AB0
+    - name: _GetPinDataRangesFromInterface@16
+      demangled: ''
+      offset: 00008BC4
+    - name: _GetContextForMIDIPin@12
+      demangled: ''
+      offset: 00008CB4
+    - name: _GetIntersectFormatSize@4
+      demangled: ''
+      offset: '00008E82'
+    - name: _ConvertDatarangeToFormat@8
+      demangled: ''
+      offset: 00008EB4
+    - name: _CheckFormatMatch@8
+      demangled: ''
+      offset: 00008FD4
+    - name: _GetMaxSampleRate@12
+      demangled: ''
+      offset: 0000909C
+    - name: _FindBestMatchForInterfaces@12
+      demangled: ''
+      offset: 0000914C
+    - name: _FindDataIntersection@12
+      demangled: ''
+      offset: '00009284'
+    - name: __allmul
+      demangled: ''
+      offset: '00009340'
+    - name: __aulldiv
+      demangled: ''
+      offset: '00009380'
+    - name: __aullrem
+      demangled: ''
+      offset: 000093F0
+    - name: __alldiv
+      demangled: ''
+      offset: '00009470'
+    - name: _DrmForwardContentToDeviceObject@12
+      demangled: ''
+      offset: 0000951A
+  - num: '2'
+    name: .idata$5
+    offset: '00006090'
+    symbols:
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '00000000'
+    - name: __imp__KeQueryPerformanceCounter@4
+      demangled: ''
+      offset: '00000004'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000008'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000000C
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000010'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000014'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000018'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 0000001C
+    - name: __imp__PoUnregisterSystemState@4
+      demangled: ''
+      offset: '00000020'
+    - name: __imp__PoRegisterSystemState@8
+      demangled: ''
+      offset: '00000024'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000028'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: 0000002C
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000030'
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000034'
+    - name: __imp__KeResetEvent@4
+      demangled: ''
+      offset: '00000038'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__wcsncpy
+      demangled: ''
+      offset: '00000040'
+    - name: __imp__swprintf
+      demangled: ''
+      offset: '00000044'
+    - name: __imp__wcslen
+      demangled: ''
+      offset: '00000048'
+    - name: __imp__IoGetDeviceProperty@20
+      demangled: ''
+      offset: 0000004C
+    - name: __imp__IoInitializeIrp@12
+      demangled: ''
+      offset: '00000050'
+    - name: __imp__KeReleaseSemaphore@16
+      demangled: ''
+      offset: '00000054'
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      demangled: ''
+      offset: '00000058'
+    - name: __imp__KeInitializeSemaphore@12
+      demangled: ''
+      offset: 0000005C
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000060'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000064'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '00000068'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 0000006C
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000070'
+    - name: __imp__USBD_ParseDescriptors@16
+      demangled: ''
+      offset: '00000074'
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: '00000078'
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: 0000007C
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000080'
+    - name: __imp__DrmForwardContentToDeviceObject@12
+      demangled: ''
+      offset: '00000084'
+    - name: \177drmk_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000088'
+    - name: __imp__KsPinGetNextSiblingPin@4
+      demangled: ''
+      offset: 0000008C
+    - name: __imp__KsFilterGetFirstChildPin@8
+      demangled: ''
+      offset: '00000090'
+    - name: __imp__KsGetFirstChild@4
+      demangled: ''
+      offset: '00000094'
+    - name: __imp__KsGetParent@4
+      demangled: ''
+      offset: '00000098'
+    - name: __imp__KsGetNextSibling@4
+      demangled: ''
+      offset: 0000009C
+    - name: __imp__KsCreateFilterFactory@32
+      demangled: ''
+      offset: 000000A0
+    - name: __imp___KsEdit@20
+      demangled: ''
+      offset: 000000A4
+    - name: __imp__KsPinGetParentFilter@4
+      demangled: ''
+      offset: 000000A8
+    - name: __imp__KsGetFilterFromIrp@4
+      demangled: ''
+      offset: 000000AC
+    - name: __imp__KsPinAttemptProcessing@8
+      demangled: ''
+      offset: 000000B0
+    - name: __imp__KsPinGetAndGate@4
+      demangled: ''
+      offset: 000000B4
+    - name: __imp__KsPinReleaseProcessingMutex@4
+      demangled: ''
+      offset: 000000B8
+    - name: __imp__KsPinAcquireProcessingMutex@4
+      demangled: ''
+      offset: 000000BC
+    - name: __imp__KsStreamPointerDelete@4
+      demangled: ''
+      offset: 000000C0
+    - name: __imp__KsGetObjectFromFileObject@4
+      demangled: ''
+      offset: 000000C4
+    - name: __imp__KsInitializeDriver@12
+      demangled: ''
+      offset: 000000C8
+    - name: __imp__KsStreamPointerUnlock@8
+      demangled: ''
+      offset: 000000CC
+    - name: __imp__KsStreamPointerClone@16
+      demangled: ''
+      offset: 000000D0
+    - name: __imp__KsPinGetLeadingEdgeStreamPointer@8
+      demangled: ''
+      offset: 000000D4
+    - name: __imp__KsStreamPointerAdvanceOffsets@16
+      demangled: ''
+      offset: 000000D8
+    - name: __imp__KsQueueWorkItem@8
+      demangled: ''
+      offset: 000000DC
+    - name: __imp__KsStreamPointerAdvanceOffsetsAndUnlock@16
+      demangled: ''
+      offset: '000000E0'
+    - name: __imp__KsRegisterWorker@8
+      demangled: ''
+      offset: '000000E4'
+    - name: __imp__KsUnregisterWorker@4
+      demangled: ''
+      offset: '000000E8'
+    - name: __imp__KsDecrementCountedWorker@4
+      demangled: ''
+      offset: 000000EC
+    - name: __imp__KsIncrementCountedWorker@4
+      demangled: ''
+      offset: 000000F0
+    - name: __imp__KsRegisterCountedWorker@12
+      demangled: ''
+      offset: 000000F4
+    - name: __imp__KsReleaseDevice@4
+      demangled: ''
+      offset: 000000F8
+    - name: __imp__KsReleaseControl@4
+      demangled: ''
+      offset: 000000FC
+    - name: __imp__KsAcquireControl@4
+      demangled: ''
+      offset: '00000100'
+    - name: __imp__KsAcquireDevice@4
+      demangled: ''
+      offset: '00000104'
+    - name: __imp__KsGetPinFromIrp@4
+      demangled: ''
+      offset: '00000108'
+    - name: __imp__KsAddItemToObjectBag@12
+      demangled: ''
+      offset: 0000010C
+    - name: \177ks_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000110'
+    - name: _USBAudioDeviceDispatch
+      demangled: ''
+      offset: '00000190'
+    - name: _USBAudioDeviceDescriptor
+      demangled: ''
+      offset: 000001C8
+    - name: _USB_BUS_INTERFACE_USBDI_GUID
+      demangled: ''
+      offset: 000001D8
+    - name: _USBAudioFilterDispatch
+      demangled: ''
+      offset: '000001E8'
+    - name: _USBAudioPinDispatch
+      demangled: ''
+      offset: '00000208'
+    - name: _USBMIDIPinDispatch
+      demangled: ''
+      offset: '00000230'
+    - name: _AudioBridgePinDataFormat
+      demangled: ''
+      offset: '00000258'
+    - name: _MIDIBridgePinDataFormat
+      demangled: ''
+      offset: '00000298'
+    - name: _MIDIStreamingPinDataFormat
+      demangled: ''
+      offset: 000002D8
+    - name: _PinInterface
+      demangled: ''
+      offset: '00000338'
+    - name: _PinMedium
+      demangled: ''
+      offset: '00000350'
+    - name: _pAudioBridgePinFormats
+      demangled: ''
+      offset: '00000368'
+    - name: _pMIDIBridgePinFormats
+      demangled: ''
+      offset: 0000036C
+    - name: _pMIDIStreamingPinFormats
+      demangled: ''
+      offset: '00000370'
+    - name: _AllocatorFraming
+      demangled: ''
+      offset: '00000378'
+    - name: _RtAudioPropertyItems
+      demangled: ''
+      offset: 00000AC8
+    - name: _DrmAudioStreamPropertyItems
+      demangled: ''
+      offset: 00000AF0
+  - num: '3'
+    name: .data
+    offset: '00006100'
+    symbols:
+    - name: _ProcessUnitControlsMap
+      demangled: ''
+      offset: '00000010'
+    - name: _AC3FrameSizeLookupTable
+      demangled: ''
+      offset: 000000B8
+    - name: _MapPropertyToNode
+      demangled: ''
+      offset: '00000280'
+  - num: '4'
+    name: PAGECONST
+    offset: '00006550'
+    symbols:
+    - name: _PINNAME_VIDEO_CAPTURE
+      demangled: ''
+      offset: '00000000'
+    - name: _KSDATAFORMAT_SUBTYPE_AC3_AUDIO
+      demangled: ''
+      offset: '00000010'
+    - name: _KSNODETYPE_DEV_SPECIFIC
+      demangled: ''
+      offset: '00000020'
+    - name: _KSNODETYPE_CHORUS
+      demangled: ''
+      offset: '00000030'
+    - name: _KSNODETYPE_REVERB
+      demangled: ''
+      offset: '00000040'
+    - name: _KSNODETYPE_STEREO_WIDE
+      demangled: ''
+      offset: '00000050'
+    - name: _KSNODETYPE_PROLOGIC_DECODER
+      demangled: ''
+      offset: '00000060'
+    - name: _KSNODETYPE_LOUDNESS
+      demangled: ''
+      offset: '00000070'
+    - name: _KSNODETYPE_DELAY
+      demangled: ''
+      offset: '00000080'
+    - name: _KSNODETYPE_AGC
+      demangled: ''
+      offset: '00000090'
+    - name: _KSNODETYPE_EQUALIZER
+      demangled: ''
+      offset: 000000A0
+    - name: _KSNODETYPE_TONE
+      demangled: ''
+      offset: 000000B0
+    - name: _KSNODETYPE_VOLUME
+      demangled: ''
+      offset: 000000C0
+    - name: _KSNODETYPE_MUTE
+      demangled: ''
+      offset: 000000D0
+    - name: _KSNODETYPE_SUM
+      demangled: ''
+      offset: '000000E0'
+    - name: _KSNODETYPE_MUX
+      demangled: ''
+      offset: 000000F0
+    - name: _KSNODETYPE_SUPERMIX
+      demangled: ''
+      offset: '00000100'
+    - name: _KSNODETYPE_SRC
+      demangled: ''
+      offset: '00000110'
+    - name: _KSNODETYPE_ADC
+      demangled: ''
+      offset: '00000120'
+    - name: _KSNODETYPE_DAC
+      demangled: ''
+      offset: '00000130'
+    - name: _KSPROPSETID_Audio
+      demangled: ''
+      offset: '00000140'
+    - name: _KSPROPSETID_DrmAudioStream
+      demangled: ''
+      offset: '00000150'
+    - name: _KSPROPSETID_RtAudio
+      demangled: ''
+      offset: '00000160'
+    - name: _KSDATAFORMAT_SPECIFIER_WAVEFORMATEX
+      demangled: ''
+      offset: '00000170'
+    - name: _KSDATAFORMAT_SUBTYPE_MPEG
+      demangled: ''
+      offset: '00000180'
+    - name: _KSDATAFORMAT_SUBTYPE_MULAW
+      demangled: ''
+      offset: '00000190'
+    - name: _KSDATAFORMAT_SUBTYPE_ALAW
+      demangled: ''
+      offset: 000001A0
+    - name: _KSDATAFORMAT_SUBTYPE_IEEE_FLOAT
+      demangled: ''
+      offset: 000001B0
+    - name: _KSDATAFORMAT_SUBTYPE_PCM
+      demangled: ''
+      offset: 000001C0
+    - name: _KSDATAFORMAT_SUBTYPE_WAVEFORMATEX
+      demangled: ''
+      offset: 000001D0
+    - name: _KSDATAFORMAT_TYPE_AUDIO
+      demangled: ''
+      offset: '000001E0'
+    - name: _KSCATEGORY_WDMAUD_USE_PIN_NAME
+      demangled: ''
+      offset: 000001F0
+    - name: _KSCATEGORY_AUDIO
+      demangled: ''
+      offset: '00000200'
+    - name: _KSPROPSETID_Stream
+      demangled: ''
+      offset: '00000210'
+    - name: _KSPROPSETID_Connection
+      demangled: ''
+      offset: '00000220'
+    - name: _KSNAME_Filter
+      demangled: ''
+      offset: '00000230'
+    - name: _KSPROPSETID_Pin
+      demangled: ''
+      offset: '00000240'
+    - name: _KSCATEGORY_RENDER
+      demangled: ''
+      offset: '00000250'
+    - name: _KSCATEGORY_CAPTURE
+      demangled: ''
+      offset: '00000260'
+    - name: _KSPROPTYPESETID_General
+      demangled: ''
+      offset: '00000270'
+    - name: _GUID_NULL
+      demangled: ''
+      offset: '00000280'
+  - num: '5'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_ks
+      demangled: ''
+      offset: 0000003C
+    - name: __IMPORT_DESCRIPTOR_drmk
+      demangled: ''
+      offset: '00000050'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000064'
+- version: Windows ME Debug
+  source_tree:
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/llshr.asm
+  - intel/ulldiv.asm
+  - intel/ullrem.asm
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/capture.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/debug.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/device.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/filter.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/hardware.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/intrsect.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/midiin.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/midiout.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/parsedsc.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/pin.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/property.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/topology.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/typei.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/typeii.c
+  - /ntc/private/ntos/dd/wdm/audio/drivers/usbaudio.2/usbaudio.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00006890'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000063'
+    - name: _USBAudioAddDevice@4
+      demangled: ''
+      offset: 0000017D
+    - name: _USBAudioPnpStart@16
+      demangled: ''
+      offset: 0000034A
+    - name: _USBAudioPnpQueryStop@8
+      demangled: ''
+      offset: 000005B8
+    - name: _USBAudioPnpCancelStop@8
+      demangled: ''
+      offset: '00000764'
+    - name: _USBAudioPnpStop@8
+      demangled: ''
+      offset: 0000090B
+    - name: _USBAudioPnpQueryRemove@8
+      demangled: ''
+      offset: 00000AD6
+    - name: _USBAudioPnpCancelRemove@8
+      demangled: ''
+      offset: 00000C8A
+    - name: _USBAudioPnpRemove@8
+      demangled: ''
+      offset: '00000E38'
+    - name: _USBAudioPnpQueryCapabilities@12
+      demangled: ''
+      offset: 00000FEE
+    - name: _USBAudioSurpriseRemoval@8
+      demangled: ''
+      offset: 000011D5
+    - name: _USBAudioQueryPower@28
+      demangled: ''
+      offset: 000012BA
+    - name: _USBAudioSetPower@16
+      demangled: ''
+      offset: 0000135D
+    - name: _USBAudioDeferIrpCompletion@12
+      demangled: ''
+      offset: 0000142A
+    - name: _USBAudioGetUsbBusInterface@4
+      demangled: ''
+      offset: '00001660'
+    - name: _USBAudioFilterCreate@8
+      demangled: ''
+      offset: 0000192A
+    - name: _USBAudioCreateFilterContext@4
+      demangled: ''
+      offset: 00001A92
+    - name: _USBAudioPinValidateDataFormat@8
+      demangled: ''
+      offset: 00001BDE
+    - name: _USBAudioPinCreate@8
+      demangled: ''
+      offset: '00001E09'
+    - name: _USBAudioPinClose@8
+      demangled: ''
+      offset: 0000215B
+    - name: _USBAudioPinSetDeviceState@12
+      demangled: ''
+      offset: '00002396'
+    - name: _USBAudioPinSetDataFormat@20
+      demangled: ''
+      offset: 000025C5
+    - name: _USBAudioPinProcess@4
+      demangled: ''
+      offset: 000026C0
+    - name: _USBAudioPinReset@4
+      demangled: ''
+      offset: 0000276E
+    - name: _USBAudioPinDataIntersect@32
+      demangled: ''
+      offset: 000027C6
+    - name: _USBAudioPinWaitForStarvation@4
+      demangled: ''
+      offset: '00002838'
+    - name: _USBMIDIOutPinWaitForStarvation@4
+      demangled: ''
+      offset: 0000288C
+    - name: _USBAudioPinReturnFromStandby@4
+      demangled: ''
+      offset: 0000290E
+    - name: _USBAudioPinGoToStandby@4
+      demangled: ''
+      offset: 000029C3
+    - name: _USBMIDIPinCreate@8
+      demangled: ''
+      offset: 00002B66
+    - name: _USBMIDIPinClose@8
+      demangled: ''
+      offset: 00002E5E
+    - name: _USBMIDIPinSetDeviceState@12
+      demangled: ''
+      offset: 0000306C
+    - name: _USBMIDIPinSetDataFormat@20
+      demangled: ''
+      offset: 000031B8
+    - name: _USBMIDIPinProcess@4
+      demangled: ''
+      offset: '00003250'
+    - name: _USBMIDIPinReset@4
+      demangled: ''
+      offset: '000032E0'
+    - name: '@USBAudioCorrelatedTime@8'
+      demangled: ''
+      offset: '00003355'
+    - name: _USBMIDIPinDataIntersect@32
+      demangled: ''
+      offset: 0000349B
+    - name: _USBAudioPinBuildDescriptors@16
+      demangled: ''
+      offset: '00003583'
+    - name: _ConvertTermTypeToNodeType@16
+      demangled: ''
+      offset: 00003A0E
+    - name: _ProcessMIDIOutJack@32
+      demangled: ''
+      offset: 00003AF4
+    - name: _ProcessInputTerminalUnit@28
+      demangled: ''
+      offset: 00003B74
+    - name: _ProcessOutputTerminalUnit@28
+      demangled: ''
+      offset: 00003BF6
+    - name: _ProcessMixerUnit@20
+      demangled: ''
+      offset: 00003C92
+    - name: _ProcessSelectorUnit@20
+      demangled: ''
+      offset: 00003D56
+    - name: _ProcessFeatureUnit@24
+      demangled: ''
+      offset: 00003DE6
+    - name: _ProcessProcessingUnit@24
+      demangled: ''
+      offset: 0000433E
+    - name: _ProcessExtensionUnit@20
+      demangled: ''
+      offset: '00004564'
+    - name: _BuildUSBAudioFilterTopology@4
+      demangled: ''
+      offset: 0000497E
+    - name: _GetPinIndex@8
+      demangled: ''
+      offset: 0000520A
+    - name: _GetPinName@12
+      demangled: ''
+      offset: 000054B3
+    - name: _GetSetProperty@40
+      demangled: ''
+      offset: 000056EA
+    - name: _GetSetByte@20
+      demangled: ''
+      offset: 0000576C
+    - name: _GetSetShort@20
+      demangled: ''
+      offset: 000057F2
+    - name: _GetSetDBLevel@24
+      demangled: ''
+      offset: 000058EA
+    - name: _GetDbLevelRange@20
+      demangled: ''
+      offset: 00005A85
+    - name: _InitializeDbLevelCache@16
+      demangled: ''
+      offset: 00005CD0
+    - name: _GetSetProcessingUnitValue@24
+      demangled: ''
+      offset: '00005E58'
+    - name: _GetSetProcessingUnitEnable@16
+      demangled: ''
+      offset: 00005EFE
+    - name: _GetProcessingUnitRange@24
+      demangled: ''
+      offset: 00005F63
+    - name: _GetSampleRate@8
+      demangled: ''
+      offset: 00005FF8
+    - name: _SetSampleRate@8
+      demangled: ''
+      offset: '00006065'
+    - name: _GetSetSampleRate@12
+      demangled: ''
+      offset: '00006142'
+    - name: _GetAudioLatency@12
+      demangled: ''
+      offset: '00006182'
+    - name: _GetAudioPosition@12
+      demangled: ''
+      offset: 0000624D
+    - name: _GetSetCopyProtection@12
+      demangled: ''
+      offset: 000062F6
+    - name: _GetChannelConfiguration@12
+      demangled: ''
+      offset: '00006384'
+    - name: _GetSetMixLevels@12
+      demangled: ''
+      offset: 000063F8
+    - name: _GetMuxSource@12
+      demangled: ''
+      offset: 000067C0
+    - name: _SetMuxSource@12
+      demangled: ''
+      offset: '00006826'
+    - name: _GetEqualizerValues@28
+      demangled: ''
+      offset: '00006884'
+    - name: _SetEqualizerValues@20
+      demangled: ''
+      offset: 00006A1C
+    - name: _GetNumEqualizerBands@12
+      demangled: ''
+      offset: 00006AF2
+    - name: _GetEqualizerBands@12
+      demangled: ''
+      offset: 00006B3E
+    - name: _GetSetEqualizerLevels@12
+      demangled: ''
+      offset: 00006B8E
+    - name: _GetEqDbRanges@16
+      demangled: ''
+      offset: 00006C0C
+    - name: _GetSetDeviceSpecific@12
+      demangled: ''
+      offset: 00006E1E
+    - name: _GetSetAudioControlLevel@12
+      demangled: ''
+      offset: '00007070'
+    - name: _GetSetBoolean@12
+      demangled: ''
+      offset: '00007170'
+    - name: _GetSetVolumeLevel@12
+      demangled: ''
+      offset: 000072C0
+    - name: _GetSetToneLevel@12
+      demangled: ''
+      offset: 0000736A
+    - name: _GetBasicSupport@12
+      demangled: ''
+      offset: 0000741E
+    - name: _GetSetTopologyNodeEnable@12
+      demangled: ''
+      offset: '00007640'
+    - name: _RestoreCachedSettings@4
+      demangled: ''
+      offset: 000077DB
+    - name: _DrmAudioStream_SetContentId@12
+      demangled: ''
+      offset: 00007A35
+    - name: _RtAudio_GetAudioPositionFunction@12
+      demangled: ''
+      offset: 00007B42
+    - name: _BuildNodePropertySet@4
+      demangled: ''
+      offset: 00007BA0
+    - name: _BuildFilterPropertySet@20
+      demangled: ''
+      offset: 00007C1B
+    - name: _BuildPinPropertySet@20
+      demangled: ''
+      offset: 00007C82
+    - name: _RtAudioTypeIGetPlayPosition@12
+      demangled: ''
+      offset: '00007E68'
+    - name: _TypeIAsyncEPPollCallback@12
+      demangled: ''
+      offset: 00007FBE
+    - name: _TypeIAsyncEndpointPoll@8
+      demangled: ''
+      offset: '00008152'
+    - name: _TypeIRenderBytePosition@8
+      demangled: ''
+      offset: 0000829D
+    - name: _TypeICountUSBCyclesInStreamPointer@12
+      demangled: ''
+      offset: '00008466'
+    - name: _TypeI1MsCompleteCallback@12
+      demangled: ''
+      offset: 0000859C
+    - name: _TypeIBuild1MsecIsocRequest@8
+      demangled: ''
+      offset: 000086FC
+    - name: _TypeICompleteCallback@12
+      demangled: ''
+      offset: '00008818'
+    - name: _TypeILockDelayCompleteCallback@12
+      demangled: ''
+      offset: 0000894A
+    - name: _TypeIBuildIsochRequest@12
+      demangled: ''
+      offset: 00008AAE
+    - name: _TypeILockDelay@4
+      demangled: ''
+      offset: 00008DB5
+    - name: _TypeIProcessStreamPtr@4
+      demangled: ''
+      offset: 00008FA2
+    - name: _TypeIStateChange@12
+      demangled: ''
+      offset: 000091BA
+    - name: _TypeIRenderStreamInit@4
+      demangled: ''
+      offset: 0000929D
+    - name: _TypeIRenderStreamClose@4
+      demangled: ''
+      offset: 000094F6
+    - name: _TypeIIGetFrameSize@16
+      demangled: ''
+      offset: '00009564'
+    - name: _TypeIIProcessCallback@12
+      demangled: ''
+      offset: 000096DC
+    - name: _TypeIIBuildIsochRequest@12
+      demangled: ''
+      offset: 0000985F
+    - name: _TypeIIProcessStreamPtr@4
+      demangled: ''
+      offset: 00009B00
+    - name: _TypeIIWaitForStarvation@4
+      demangled: ''
+      offset: 00009D1E
+    - name: _TypeIIStateChange@12
+      demangled: ''
+      offset: 00009D5A
+    - name: _TypeIIRenderStreamInit@4
+      demangled: ''
+      offset: 00009D72
+    - name: _TypeIIRenderStreamClose@4
+      demangled: ''
+      offset: 00009E7C
+    - name: _CaptureBytePosition@8
+      demangled: ''
+      offset: 00009ED2
+    - name: _CaptureGateOnWorkItem@4
+      demangled: ''
+      offset: 00009FEA
+    - name: _CaptureCompleteCallback@12
+      demangled: ''
+      offset: 0000A09C
+    - name: _CaptureInitializeUrbAndIrp@4
+      demangled: ''
+      offset: 0000A2DC
+    - name: _CaptureReQueueUrb@4
+      demangled: ''
+      offset: 0000A469
+    - name: _CaptureResetWorkItem@4
+      demangled: ''
+      offset: 0000A529
+    - name: _CaptureProcess@4
+      demangled: ''
+      offset: 0000A748
+    - name: _CaptureStartIsocTransfer@4
+      demangled: ''
+      offset: 0000AB26
+    - name: _CaptureStateChange@12
+      demangled: ''
+      offset: 0000AC05
+    - name: _CaptureStreamInit@4
+      demangled: ''
+      offset: 0000AD22
+    - name: _CaptureStreamClose@4
+      demangled: ''
+      offset: 0000AEC1
+    - name: _GenerateCodeIndexNumber@28
+      demangled: ''
+      offset: 0000B1A0
+    - name: _CreateUSBMIDIEventPacket@20
+      demangled: ''
+      offset: 0000B5C2
+    - name: _USBMIDIBulkCompleteCallback@12
+      demangled: ''
+      offset: 0000B716
+    - name: _CreateMIDIBulkUrb@12
+      demangled: ''
+      offset: 0000B800
+    - name: _SendBulkMIDIRequest@12
+      demangled: ''
+      offset: 0000BB1F
+    - name: _USBMIDIOutProcessStreamPtr@4
+      demangled: ''
+      offset: 0000BF87
+    - name: _USBMIDIOutStateChange@12
+      demangled: ''
+      offset: 0000C161
+    - name: _USBMIDIOutStreamInit@4
+      demangled: ''
+      offset: 0000C1E6
+    - name: _USBMIDIOutStreamClose@4
+      demangled: ''
+      offset: 0000C2F9
+    - name: _GetCurrentTime@0
+      demangled: ''
+      offset: 0000C3A8
+    - name: _AbortMIDIInPipe@4
+      demangled: ''
+      offset: 0000C50D
+    - name: _USBMIDIInGateOnWorkItem@4
+      demangled: ''
+      offset: 0000C672
+    - name: _USBMIDIInInitializeUrbAndIrp@4
+      demangled: ''
+      offset: 0000C7C6
+    - name: _USBMIDIInReQueueUrb@4
+      demangled: ''
+      offset: 0000C8CA
+    - name: _USBMIDIInRequeueWorkItem@4
+      demangled: ''
+      offset: 0000C9B0
+    - name: _AddMIDIEventToPinQueue@8
+      demangled: ''
+      offset: 0000CB30
+    - name: _USBMIDIInCompleteCallback@12
+      demangled: ''
+      offset: 0000CD47
+    - name: _ConvertCINToBytes@4
+      demangled: ''
+      offset: 0000CE92
+    - name: _CopyUSBMIDIEvent@20
+      demangled: ''
+      offset: 0000D065
+    - name: _IsRealTimeEvent@4
+      demangled: ''
+      offset: 0000D1A0
+    - name: _USBMIDIInProcessStreamPtr@4
+      demangled: ''
+      offset: 0000D35F
+    - name: _USBMIDIInStartBulkTransfer@4
+      demangled: ''
+      offset: 0000D642
+    - name: _USBMIDIInStateChange@12
+      demangled: ''
+      offset: 0000D7EE
+    - name: _USBMIDIPipeInit@8
+      demangled: ''
+      offset: 0000DAB7
+    - name: _USBMIDIInGetPipeInfo@4
+      demangled: ''
+      offset: 0000DCD4
+    - name: _USBMIDIInFreePipeInfo@4
+      demangled: ''
+      offset: 0000DD08
+    - name: _USBMIDIInRemovePinFromPipe@8
+      demangled: ''
+      offset: 0000DD58
+    - name: _USBMIDIInAddPinToPipe@8
+      demangled: ''
+      offset: 0000DDAE
+    - name: _USBMIDIInStreamInit@4
+      demangled: ''
+      offset: 0000DE3A
+    - name: _USBMIDIInStreamClose@4
+      demangled: ''
+      offset: 0000DF4B
+    - name: _SubmitUrbToUsbdSynch@8
+      demangled: ''
+      offset: 0000DFEE
+    - name: _SelectDeviceConfiguration@8
+      demangled: ''
+      offset: 0000E0F4
+    - name: _StartUSBAudioDevice@4
+      demangled: ''
+      offset: 0000E3AE
+    - name: _StopUSBAudioDevice@4
+      demangled: ''
+      offset: 0000E5DE
+    - name: _SelectStreamingAudioInterface@12
+      demangled: ''
+      offset: 0000E72E
+    - name: _SelectStreamingMIDIInterface@8
+      demangled: ''
+      offset: 0000EB53
+    - name: _SelectZeroBandwidthInterface@8
+      demangled: ''
+      offset: 0000EED0
+    - name: _ResetUSBPipe@8
+      demangled: ''
+      offset: 0000EF80
+    - name: _AbortUSBPipe@4
+      demangled: ''
+      offset: 0000F063
+    - name: _GetCurrentUSBFrame@8
+      demangled: ''
+      offset: 0000F164
+    - name: _GetNextAudioInterface@8
+      demangled: ''
+      offset: 0000F198
+    - name: _GetFirstAudioStreamingInterface@8
+      demangled: ''
+      offset: 0000F1C2
+    - name: _GetAudioSpecificInterface@12
+      demangled: ''
+      offset: 0000F236
+    - name: _GetEndpointDescriptor@12
+      demangled: ''
+      offset: 0000F296
+    - name: _GetSyncEndpointDescriptor@8
+      demangled: ''
+      offset: 0000F2DA
+    - name: _GetMaxPacketSizeForInterface@8
+      demangled: ''
+      offset: 0000F34C
+    - name: _GetUnit@8
+      demangled: ''
+      offset: 0000F36C
+    - name: _IsSupportedFormat@8
+      demangled: ''
+      offset: 0000F436
+    - name: _IsZeroBWInterface@8
+      demangled: ''
+      offset: 0000F49A
+    - name: _CountTerminalUnits@16
+      demangled: ''
+      offset: 0000F4C4
+    - name: _CountFormatsForAudioStreamingInterface@8
+      demangled: ''
+      offset: 0000F5FE
+    - name: _CountInputChannels@8
+      demangled: ''
+      offset: 0000F642
+    - name: _ConvertInterfaceToDataRange@12
+      demangled: ''
+      offset: 0000F6A0
+    - name: _CountTopologyComponents@20
+      demangled: ''
+      offset: 0000F866
+    - name: _GetDataFlowDirectionForInterface@8
+      demangled: ''
+      offset: 0000FAEE
+    - name: _GetDataFlowDirectionForMIDIInterface@12
+      demangled: ''
+      offset: 0000FB8A
+    - name: _GetTerminalUnitForInterface@8
+      demangled: ''
+      offset: 0000FC80
+    - name: _GetTerminalUnitForBridgePin@8
+      demangled: ''
+      offset: 0000FCAE
+    - name: _IsBridgePinDigital@8
+      demangled: ''
+      offset: 0000FD8E
+    - name: _GetCategoryForBridgePin@12
+      demangled: ''
+      offset: 0000FDC8
+    - name: _GetDataFlowForBridgePin@8
+      demangled: ''
+      offset: 0000FE1E
+    - name: _GetPinNumberForStreamingTerminalUnit@8
+      demangled: ''
+      offset: 0000FE46
+    - name: _GetPinNumberForMIDIJack@16
+      demangled: ''
+      offset: 0000FE92
+    - name: _GetChannelConfigForUnit@8
+      demangled: ''
+      offset: 0000FF50
+    - name: _GetUnitControlInterface@8
+      demangled: ''
+      offset: 0000FFC4
+    - name: _IsSampleRateInRange@12
+      demangled: ''
+      offset: '00010040'
+    - name: _GetUsbDataRangeForFormat@12
+      demangled: ''
+      offset: '00010136'
+    - name: _GetPinDataRangesFromInterface@16
+      demangled: ''
+      offset: '00010381'
+    - name: _GetContextForMIDIPin@12
+      demangled: ''
+      offset: '00010616'
+    - name: _GetIntersectFormatSize@4
+      demangled: ''
+      offset: '00010892'
+    - name: _ConvertDatarangeToFormat@8
+      demangled: ''
+      offset: 000108C8
+    - name: _CheckFormatMatch@8
+      demangled: ''
+      offset: '000109E8'
+    - name: _GetMaxSampleRate@12
+      demangled: ''
+      offset: 00010AAA
+    - name: _FindBestMatchForInterfaces@12
+      demangled: ''
+      offset: 00010B5A
+    - name: _FindDataIntersection@12
+      demangled: ''
+      offset: 00010C92
+    - name: _dprintf
+      demangled: ''
+      offset: 00010D44
+    - name: _DebugGetCommandChar@0
+      demangled: ''
+      offset: 00010D5E
+    - name: _DumpUSBAudioLog@4
+      demangled: ''
+      offset: '00010E13'
+    - name: _DebugCommand@0
+      demangled: ''
+      offset: 00010F36
+    - name: _DebugDotCommand@0
+      demangled: ''
+      offset: 00010F5E
+    - name: _InitializeDebuggerCommand@0
+      demangled: ''
+      offset: 00010F96
+    - name: _UninitializeDebuggerCommand@0
+      demangled: ''
+      offset: 00010FBA
+    - name: _DbugLogInitialization@0
+      demangled: ''
+      offset: '00011045'
+    - name: _DbugLogUninitialization@0
+      demangled: ''
+      offset: '00011116'
+    - name: _DbugLogEntry@20
+      demangled: ''
+      offset: '00011150'
+    - name: _DbgPrint
+      demangled: ''
+      offset: '00011244'
+    - name: __allshr
+      demangled: ''
+      offset: '00011250'
+    - name: __allmul
+      demangled: ''
+      offset: '00011280'
+    - name: __aulldiv
+      demangled: ''
+      offset: 000112C0
+    - name: _DbgBreakPoint@0
+      demangled: ''
+      offset: '00011328'
+    - name: __aullrem
+      demangled: ''
+      offset: '00011330'
+    - name: __alldiv
+      demangled: ''
+      offset: 000113B0
+    - name: _DrmForwardContentToDeviceObject@12
+      demangled: ''
+      offset: 0001145A
+  - num: '2'
+    name: .idata$5
+    offset: '00007400'
+    symbols:
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '00000000'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000004'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '00000008'
+    - name: __imp__KeQueryPerformanceCounter@4
+      demangled: ''
+      offset: 0000000C
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000010'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000014'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000018'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: 0000001C
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000020'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000024'
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000028'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 0000002C
+    - name: __imp__PoUnregisterSystemState@4
+      demangled: ''
+      offset: '00000030'
+    - name: __imp__PoRegisterSystemState@8
+      demangled: ''
+      offset: '00000034'
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000038'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__KeResetEvent@4
+      demangled: ''
+      offset: '00000040'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000044'
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: '00000048'
+    - name: __imp__wcsncpy
+      demangled: ''
+      offset: 0000004C
+    - name: __imp__swprintf
+      demangled: ''
+      offset: '00000050'
+    - name: __imp__wcslen
+      demangled: ''
+      offset: '00000054'
+    - name: __imp__IoGetDeviceProperty@20
+      demangled: ''
+      offset: '00000058'
+    - name: __imp__DbgBreakPoint@0
+      demangled: ''
+      offset: 0000005C
+    - name: __imp__IoInitializeIrp@12
+      demangled: ''
+      offset: '00000060'
+    - name: __imp__KeReleaseSemaphore@16
+      demangled: ''
+      offset: '00000064'
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      demangled: ''
+      offset: '00000068'
+    - name: __imp__KeInitializeSemaphore@12
+      demangled: ''
+      offset: 0000006C
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000070'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000074'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '00000078'
+    - name: __imp__KeQuerySystemTime@4
+      demangled: ''
+      offset: 0000007C
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: '00000080'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000084'
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: '00000088'
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: 0000008C
+    - name: __imp__USBD_ParseDescriptors@16
+      demangled: ''
+      offset: '00000090'
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000094'
+    - name: __imp__DrmForwardContentToDeviceObject@12
+      demangled: ''
+      offset: '00000098'
+    - name: \177drmk_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000009C
+    - name: __imp__KsInitializeDriver@12
+      demangled: ''
+      offset: 000000A0
+    - name: __imp__KsPinGetNextSiblingPin@4
+      demangled: ''
+      offset: 000000A4
+    - name: __imp__KsFilterGetFirstChildPin@8
+      demangled: ''
+      offset: 000000A8
+    - name: __imp__KsGetFirstChild@4
+      demangled: ''
+      offset: 000000AC
+    - name: __imp__KsGetParent@4
+      demangled: ''
+      offset: 000000B0
+    - name: __imp__KsCreateFilterFactory@32
+      demangled: ''
+      offset: 000000B4
+    - name: __imp___KsEdit@20
+      demangled: ''
+      offset: 000000B8
+    - name: __imp__KsPinGetParentFilter@4
+      demangled: ''
+      offset: 000000BC
+    - name: __imp__KsGetFilterFromIrp@4
+      demangled: ''
+      offset: 000000C0
+    - name: __imp__KsPinAttemptProcessing@8
+      demangled: ''
+      offset: 000000C4
+    - name: __imp__KsPinGetAndGate@4
+      demangled: ''
+      offset: 000000C8
+    - name: __imp__KsPinReleaseProcessingMutex@4
+      demangled: ''
+      offset: 000000CC
+    - name: __imp__KsPinAcquireProcessingMutex@4
+      demangled: ''
+      offset: 000000D0
+    - name: __imp__KsGetPinFromIrp@4
+      demangled: ''
+      offset: 000000D4
+    - name: __imp__KsGetObjectFromFileObject@4
+      demangled: ''
+      offset: 000000D8
+    - name: __imp__KsAddItemToObjectBag@12
+      demangled: ''
+      offset: 000000DC
+    - name: __imp__KsGetNextSibling@4
+      demangled: ''
+      offset: '000000E0'
+    - name: __imp__KsStreamPointerClone@16
+      demangled: ''
+      offset: '000000E4'
+    - name: __imp__KsPinGetLeadingEdgeStreamPointer@8
+      demangled: ''
+      offset: '000000E8'
+    - name: __imp__KsStreamPointerAdvanceOffsets@16
+      demangled: ''
+      offset: 000000EC
+    - name: __imp__KsQueueWorkItem@8
+      demangled: ''
+      offset: 000000F0
+    - name: __imp__KsStreamPointerAdvanceOffsetsAndUnlock@16
+      demangled: ''
+      offset: 000000F4
+    - name: __imp__KsRegisterWorker@8
+      demangled: ''
+      offset: 000000F8
+    - name: __imp__KsUnregisterWorker@4
+      demangled: ''
+      offset: 000000FC
+    - name: __imp__KsDecrementCountedWorker@4
+      demangled: ''
+      offset: '00000100'
+    - name: __imp__KsIncrementCountedWorker@4
+      demangled: ''
+      offset: '00000104'
+    - name: __imp__KsRegisterCountedWorker@12
+      demangled: ''
+      offset: '00000108'
+    - name: __imp__KsReleaseDevice@4
+      demangled: ''
+      offset: 0000010C
+    - name: __imp__KsReleaseControl@4
+      demangled: ''
+      offset: '00000110'
+    - name: __imp__KsAcquireControl@4
+      demangled: ''
+      offset: '00000114'
+    - name: __imp__KsAcquireDevice@4
+      demangled: ''
+      offset: '00000118'
+    - name: __imp__KsStreamPointerDelete@4
+      demangled: ''
+      offset: 0000011C
+    - name: __imp__KsStreamPointerUnlock@8
+      demangled: ''
+      offset: '00000120'
+    - name: \177ks_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000124'
+    - name: _USBAudioDeviceDispatch
+      demangled: ''
+      offset: 000001A0
+    - name: _USBAudioDeviceDescriptor
+      demangled: ''
+      offset: 000001D8
+    - name: _USB_BUS_INTERFACE_USBDI_GUID
+      demangled: ''
+      offset: '000001E8'
+    - name: _USBAudioFilterDispatch
+      demangled: ''
+      offset: 000001F8
+    - name: _USBAudioPinDispatch
+      demangled: ''
+      offset: '00000218'
+    - name: _USBMIDIPinDispatch
+      demangled: ''
+      offset: '00000240'
+    - name: _AudioBridgePinDataFormat
+      demangled: ''
+      offset: '00000268'
+    - name: _MIDIBridgePinDataFormat
+      demangled: ''
+      offset: 000002A8
+    - name: _MIDIStreamingPinDataFormat
+      demangled: ''
+      offset: '000002E8'
+    - name: _PinInterface
+      demangled: ''
+      offset: '00000348'
+    - name: _PinMedium
+      demangled: ''
+      offset: '00000360'
+    - name: _pAudioBridgePinFormats
+      demangled: ''
+      offset: '00000378'
+    - name: _pMIDIBridgePinFormats
+      demangled: ''
+      offset: 0000037C
+    - name: _pMIDIStreamingPinFormats
+      demangled: ''
+      offset: '00000380'
+    - name: _AllocatorFraming
+      demangled: ''
+      offset: '00000388'
+    - name: _RtAudioPropertyItems
+      demangled: ''
+      offset: 00000AD8
+    - name: _DrmAudioStreamPropertyItems
+      demangled: ''
+      offset: 00000B00
+  - num: '3'
+    name: .data
+    offset: 000074C0
+    symbols:
+    - name: _USBAudioDebugLevel
+      demangled: ''
+      offset: '00000000'
+    - name: _ProcessUnitControlsMap
+      demangled: ''
+      offset: '00000018'
+    - name: _AC3FrameSizeLookupTable
+      demangled: ''
+      offset: 000000C0
+    - name: _ulNumDevices
+      demangled: ''
+      offset: '00000290'
+    - name: _LogSpinLock
+      demangled: ''
+      offset: '00000294'
+    - name: _gpLogPtr
+      demangled: ''
+      offset: '00000298'
+    - name: _MapPropertyToNode
+      demangled: ''
+      offset: 000002A0
+  - num: '4'
+    name: PAGECONST
+    offset: '00007910'
+    symbols:
+    - name: _PINNAME_VIDEO_CAPTURE
+      demangled: ''
+      offset: '00000000'
+    - name: _KSDATAFORMAT_SUBTYPE_AC3_AUDIO
+      demangled: ''
+      offset: '00000010'
+    - name: _KSNODETYPE_DEV_SPECIFIC
+      demangled: ''
+      offset: '00000020'
+    - name: _KSNODETYPE_CHORUS
+      demangled: ''
+      offset: '00000030'
+    - name: _KSNODETYPE_REVERB
+      demangled: ''
+      offset: '00000040'
+    - name: _KSNODETYPE_STEREO_WIDE
+      demangled: ''
+      offset: '00000050'
+    - name: _KSNODETYPE_PROLOGIC_DECODER
+      demangled: ''
+      offset: '00000060'
+    - name: _KSNODETYPE_LOUDNESS
+      demangled: ''
+      offset: '00000070'
+    - name: _KSNODETYPE_DELAY
+      demangled: ''
+      offset: '00000080'
+    - name: _KSNODETYPE_AGC
+      demangled: ''
+      offset: '00000090'
+    - name: _KSNODETYPE_EQUALIZER
+      demangled: ''
+      offset: 000000A0
+    - name: _KSNODETYPE_TONE
+      demangled: ''
+      offset: 000000B0
+    - name: _KSNODETYPE_VOLUME
+      demangled: ''
+      offset: 000000C0
+    - name: _KSNODETYPE_MUTE
+      demangled: ''
+      offset: 000000D0
+    - name: _KSNODETYPE_SUM
+      demangled: ''
+      offset: '000000E0'
+    - name: _KSNODETYPE_MUX
+      demangled: ''
+      offset: 000000F0
+    - name: _KSNODETYPE_SUPERMIX
+      demangled: ''
+      offset: '00000100'
+    - name: _KSNODETYPE_SRC
+      demangled: ''
+      offset: '00000110'
+    - name: _KSNODETYPE_ADC
+      demangled: ''
+      offset: '00000120'
+    - name: _KSNODETYPE_DAC
+      demangled: ''
+      offset: '00000130'
+    - name: _KSPROPSETID_Audio
+      demangled: ''
+      offset: '00000140'
+    - name: _KSPROPSETID_DrmAudioStream
+      demangled: ''
+      offset: '00000150'
+    - name: _KSPROPSETID_RtAudio
+      demangled: ''
+      offset: '00000160'
+    - name: _KSDATAFORMAT_SPECIFIER_WAVEFORMATEX
+      demangled: ''
+      offset: '00000170'
+    - name: _KSDATAFORMAT_SUBTYPE_MPEG
+      demangled: ''
+      offset: '00000180'
+    - name: _KSDATAFORMAT_SUBTYPE_MULAW
+      demangled: ''
+      offset: '00000190'
+    - name: _KSDATAFORMAT_SUBTYPE_ALAW
+      demangled: ''
+      offset: 000001A0
+    - name: _KSDATAFORMAT_SUBTYPE_IEEE_FLOAT
+      demangled: ''
+      offset: 000001B0
+    - name: _KSDATAFORMAT_SUBTYPE_PCM
+      demangled: ''
+      offset: 000001C0
+    - name: _KSDATAFORMAT_SUBTYPE_WAVEFORMATEX
+      demangled: ''
+      offset: 000001D0
+    - name: _KSDATAFORMAT_TYPE_AUDIO
+      demangled: ''
+      offset: '000001E0'
+    - name: _KSCATEGORY_WDMAUD_USE_PIN_NAME
+      demangled: ''
+      offset: 000001F0
+    - name: _KSCATEGORY_AUDIO
+      demangled: ''
+      offset: '00000200'
+    - name: _KSPROPSETID_Stream
+      demangled: ''
+      offset: '00000210'
+    - name: _KSPROPSETID_Connection
+      demangled: ''
+      offset: '00000220'
+    - name: _KSNAME_Filter
+      demangled: ''
+      offset: '00000230'
+    - name: _KSPROPSETID_Pin
+      demangled: ''
+      offset: '00000240'
+    - name: _KSCATEGORY_RENDER
+      demangled: ''
+      offset: '00000250'
+    - name: _KSCATEGORY_CAPTURE
+      demangled: ''
+      offset: '00000260'
+    - name: _KSPROPTYPESETID_General
+      demangled: ''
+      offset: '00000270'
+    - name: _GUID_NULL
+      demangled: ''
+      offset: '00000280'
+  - num: '5'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_ks
+      demangled: ''
+      offset: 0000003C
+    - name: __IMPORT_DESCRIPTOR_drmk
+      demangled: ''
+      offset: '00000050'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000064'

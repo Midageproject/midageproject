@@ -2,6 +2,807 @@ filename: irlamp.vxd
 binary: IRLAMP
 description: ''
 appearances:
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00001630'
+    symbols:
+    - name: IRLAMP_Control
+      processed: ''
+      offset: '00000000'
+    - name: _IRLAMP_Register
+      processed: ''
+      offset: '00000027'
+    - name: _VTD_Get_Date_And_Time
+      processed: ''
+      offset: 0000002D
+    - name: _VTD_GetRealTime
+      processed: ''
+      offset: '00000033'
+    - name: _InitializeW32Event
+      processed: ''
+      offset: '00000039'
+    - name: _SetW32Event
+      processed: ''
+      offset: 0000005C
+    - name: _ClearW32Event
+      processed: ''
+      offset: 0000006E
+    - name: _ResetW32Event
+      processed: ''
+      offset: '00000079'
+    - name: _PulseW32Event
+      processed: ''
+      offset: '00000088'
+    - name: _WaitSingleObject
+      processed: ''
+      offset: '00000097'
+    - name: _CreateR0Thread
+      processed: ''
+      offset: 000000B1
+    - name: _LM_IoCtl
+      processed: ''
+      offset: 000000D2
+    - name: _InitThreadExLock
+      processed: ''
+      offset: 000000EC
+    - name: _FreeThreadExLock
+      processed: ''
+      offset: '00000138'
+    - name: _EnterThreadExLock
+      processed: ''
+      offset: '00000168'
+    - name: _LeaveThreadExLock
+      processed: ''
+      offset: '00000189'
+    - name: _IrLapInit
+      processed: ''
+      offset: 000001A8
+    - name: _IRLAP_InitializeWrapper
+      processed: ''
+      offset: 0000043A
+    - name: _IRLAP_DeinitializeWrapper
+      processed: ''
+      offset: '00000498'
+    - name: _IRLAP_AllocatePort
+      processed: ''
+      offset: 000004C9
+    - name: _IRLAP_DeallocatePort
+      processed: ''
+      offset: 000005A9
+    - name: _IRLAP_SendUnitData
+      processed: ''
+      offset: 000005DB
+    - name: _IRLAP_MediaBusy
+      processed: ''
+      offset: 000006D8
+    - name: _IRLAP_Sniff
+      processed: ''
+      offset: 000006F3
+    - name: _IrLapGetDispatchBuffer
+      processed: ''
+      offset: 0000080F
+    - name: _IrLapFinishDispatchBuffer
+      processed: ''
+      offset: 000008EA
+    - name: _IrLapAllocateTxPacket
+      processed: ''
+      offset: 00000CA7
+    - name: _IrLapFreeTxPacket
+      processed: ''
+      offset: 00000DA2
+    - name: _IrLapGetProcessPacket
+      processed: ''
+      offset: '00000E06'
+    - name: _IrLapFinishProcessPacket
+      processed: ''
+      offset: '00000E69'
+    - name: _SendCompleteDpc
+      processed: ''
+      offset: 00000EBE
+    - name: _IRLAPFRM_Send
+      processed: ''
+      offset: 00000EDD
+    - name: _IrLapErrorHandler
+      processed: ''
+      offset: 00000F24
+    - name: _IrLapState_NDM
+      processed: ''
+      offset: 00000F4C
+    - name: _IrLapNextState_NDM
+      processed: ''
+      offset: 0000137E
+    - name: '@memCopy@12'
+      processed: ''
+      offset: '00001410'
+    - name: _zeroMemory
+      processed: ''
+      offset: 0000145B
+    - name: _IrLapGenerateDeviceAddress
+      processed: ''
+      offset: 0000148F
+    - name: _IrdaRand
+      processed: ''
+      offset: 000014C8
+    - name: _IrLapSendTest
+      processed: ''
+      offset: '00001557'
+    - name: _InitEventMutex
+      processed: ''
+      offset: 000016B8
+    - name: _FreeEventMutex
+      processed: ''
+      offset: 000016FA
+    - name: _EnterEventMutex
+      processed: ''
+      offset: 0000172A
+    - name: _LeaveEventMutex
+      processed: ''
+      offset: '00001763'
+    - name: _PutEventRecord
+      processed: ''
+      offset: 0000177C
+    - name: _GetEventRecord
+      processed: ''
+      offset: 000017F6
+    - name: _Win32ThreadFunc
+      processed: ''
+      offset: '00001870'
+    - name: _IrLapStartTimer
+      processed: ''
+      offset: 0000196E
+    - name: _IrLapEventProc
+      processed: ''
+      offset: 000019AE
+    - name: _IrLapTimerFunc
+      processed: ''
+      offset: 000019ED
+    - name: _IrLapDisableTimers
+      processed: ''
+      offset: 00001A41
+    - name: _LmStartTimer
+      processed: ''
+      offset: 00001C70
+    - name: _LmCancelTimer
+      processed: ''
+      offset: 00001D33
+    - name: _IRLAP_DiscoverDevices
+      processed: ''
+      offset: 00001D80
+    - name: _IrLapState_QUERY
+      processed: ''
+      offset: 00001EF7
+    - name: _IrLapState_REPLY
+      processed: ''
+      offset: 000020DA
+    - name: _GetRxDiscoveryInfo
+      processed: ''
+      offset: '00002248'
+    - name: _IrLapRxDiscoveryAction
+      processed: ''
+      offset: '00002399'
+    - name: _IrLapSendXIDDiscovery
+      processed: ''
+      offset: 0000256B
+    - name: _AcquireListsMutex
+      processed: ''
+      offset: '00002710'
+    - name: _InitListData
+      processed: ''
+      offset: '00002748'
+    - name: _FreeListData
+      processed: ''
+      offset: 0000278A
+    - name: _InitListHead
+      processed: ''
+      offset: 000027BA
+    - name: _InsertTailList
+      processed: ''
+      offset: 000027D9
+    - name: _RemoveHeadList
+      processed: ''
+      offset: '00002820'
+    - name: _RemoveEntryList
+      processed: ''
+      offset: '00002891'
+    - name: _InsertHeadList
+      processed: ''
+      offset: '000028E0'
+    - name: _IsNodeOnList
+      processed: ''
+      offset: '00002925'
+    - name: _IsListCircular
+      processed: ''
+      offset: 0000298F
+    - name: _IRLAP_Connect
+      processed: ''
+      offset: 00002A44
+    - name: _IRLAP_ConnectResp
+      processed: ''
+      offset: 00002BBE
+    - name: _IrLapState_SETUP
+      processed: ''
+      offset: 00002C77
+    - name: _IrLapState_SSETUP
+      processed: ''
+      offset: 00002FA8
+    - name: _IrLapRxConnectAction
+      processed: ''
+      offset: '00003229'
+    - name: _IRLAP_SendData
+      processed: ''
+      offset: 000040D8
+    - name: _IRLAP_Disconnect
+      processed: ''
+      offset: 000041AE
+    - name: _InitPollTimer
+      processed: ''
+      offset: '00004270'
+    - name: _IrLapSetStateNRM
+      processed: ''
+      offset: '000042E9'
+    - name: _IrLapState_NRM
+      processed: ''
+      offset: '00004345'
+    - name: _ReleaseBufferedData
+      processed: ''
+      offset: '00005E41'
+    - name: _IrLapSendSUFrame
+      processed: ''
+      offset: 0000683E
+    - name: _IrLapFrmInit
+      processed: ''
+      offset: 00006A20
+    - name: _IRLAMP_Dynamic_Shutdown@0
+      processed: ''
+      offset: 00006BA0
+    - name: _IRLAMP_Dynamic_Exit@0
+      processed: ''
+      offset: 00006BEE
+    - name: _LMI_GetMediaFlag
+      processed: ''
+      offset: 00006C7B
+    - name: _LMI_GetSpeed
+      processed: ''
+      offset: 00006CA2
+    - name: _LMI_SetMaxSpeed
+      processed: ''
+      offset: 00006CC1
+    - name: _IRLAP_AbortPackets
+      processed: ''
+      offset: 00006CE4
+    - name: _LM_Startup
+      processed: ''
+      offset: 00006FE0
+    - name: _LM_Shutdown
+      processed: ''
+      offset: 000071D6
+    - name: _LM_InitClient
+      processed: ''
+      offset: 0000723C
+    - name: _LM_AddIncoming
+      processed: ''
+      offset: 0000728C
+    - name: _LM_RemoveIncoming
+      processed: ''
+      offset: 0000730A
+    - name: _LM_BindClient
+      processed: ''
+      offset: 000073A3
+    - name: _LM_UnBindClient
+      processed: ''
+      offset: 000075BB
+    - name: _LM_DiscoveryReq
+      processed: ''
+      offset: 000076DD
+    - name: _LM_ConnectReq
+      processed: ''
+      offset: '00007791'
+    - name: _LM_ConnectRsp
+      processed: ''
+      offset: 0000795C
+    - name: _LM_DisconnectReq
+      processed: ''
+      offset: 00007A1C
+    - name: _LM_Idle
+      processed: ''
+      offset: 00007B5D
+    - name: _LM_DeviceStatus
+      processed: ''
+      offset: 00007BD0
+    - name: _LM_StatusReq
+      processed: ''
+      offset: 00007C6B
+    - name: _LM_ReceiveData
+      processed: ''
+      offset: 00007D14
+    - name: _LM_DataReq
+      processed: ''
+      offset: 00007D4F
+    - name: _LM_UDataReq
+      processed: ''
+      offset: 00007D9B
+    - name: _LM_NoConnectDataReq
+      processed: ''
+      offset: 00007DE7
+    - name: _LM_GetIrLapFrmStats
+      processed: ''
+      offset: 00007EE9
+    - name: _LM_GetDeviceStats
+      processed: ''
+      offset: 00007F28
+    - name: _LM_GetDiscoveryCache
+      processed: ''
+      offset: 00007FA2
+    - name: _LM_SetNickname
+      processed: ''
+      offset: 00007FE3
+    - name: _LM_SetHints
+      processed: ''
+      offset: 0000806A
+    - name: _LM_Sniff
+      processed: ''
+      offset: '00008108'
+    - name: _LM_PeriodicDiscovery
+      processed: ''
+      offset: '00008152'
+    - name: _LM_GetPeriodicDiscoveryPeriod
+      processed: ''
+      offset: 0000825D
+    - name: _LM_LocalBusy
+      processed: ''
+      offset: '00008296'
+    - name: _LM_AbortConnection
+      processed: ''
+      offset: 000082FF
+    - name: _LmFindCacheConflicts
+      processed: ''
+      offset: '00008380'
+    - name: _LmRemoveCacheConflicts
+      processed: ''
+      offset: 0000852E
+    - name: _LmAddDeviceToCache
+      processed: ''
+      offset: 0000863B
+    - name: _LmValidClientForConnection
+      processed: ''
+      offset: '000086E8'
+    - name: _LmGiveStatusIndication
+      processed: ''
+      offset: 0000874F
+    - name: _LmDisconnectPendingConnections
+      processed: ''
+      offset: 000087D2
+    - name: _LmStartIrLapConnection
+      processed: ''
+      offset: 000088B2
+    - name: _LmFindIcc
+      processed: ''
+      offset: '00008937'
+    - name: _LmFindIdleIcc
+      processed: ''
+      offset: 000089EF
+    - name: _LmProcessConnectResponse
+      processed: ''
+      offset: 00008ABF
+    - name: _LmProcessConnectCommand
+      processed: ''
+      offset: 00008B91
+    - name: _LmProcessDisconnectCommand
+      processed: ''
+      offset: 00008D29
+    - name: _LmProcessAccessModeCommand
+      processed: ''
+      offset: 00008E2E
+    - name: _LmSendDisconnect
+      processed: ''
+      offset: 00008EE0
+    - name: _LmSetWatchDogTime
+      processed: ''
+      offset: 00008F67
+    - name: _LmClearWatchDogTime
+      processed: ''
+      offset: 00008F72
+    - name: _LmValidatePacket
+      processed: ''
+      offset: 00008F7D
+    - name: _LmUpdateXidInfo
+      processed: ''
+      offset: 0000905D
+    - name: _LmInitCallbacks
+      processed: ''
+      offset: '00009130'
+    - name: _IrLmpErrorHandler
+      processed: ''
+      offset: 00009AFD
+    - name: _LmIasInitClient
+      processed: ''
+      offset: 00009B58
+    - name: _LMIAS_ClientRequest
+      processed: ''
+      offset: 00009D7E
+    - name: _LmIasClientState_Calling
+      processed: ''
+      offset: 0000A124
+    - name: _LmIasClientState_Outstanding
+      processed: ''
+      offset: 0000A1A3
+    - name: _LmIasFindConnect
+      processed: ''
+      offset: 0000A2CC
+    - name: _LmIasStartNewConnection
+      processed: ''
+      offset: 0000A384
+    - name: _LmIasStartOperation
+      processed: ''
+      offset: 0000A722
+    - name: _LmIasFindPendingToken
+      processed: ''
+      offset: 0000A7F9
+    - name: _LmIasEndOperation
+      processed: ''
+      offset: 0000A862
+    - name: _LmIasClientSendCommand
+      processed: ''
+      offset: 0000A87A
+    - name: _LmIasSetTokenTime
+      processed: ''
+      offset: 0000A9B2
+    - name: _LmIasProcessWaitingOpers
+      processed: ''
+      offset: 0000A9F4
+    - name: _LmIasClientTimerFunc
+      processed: ''
+      offset: 0000AAAF
+    - name: _LmIasClientDiscTimerFunc
+      processed: ''
+      offset: 0000AB33
+    - name: _LmIasClientWdTimerFunc
+      processed: ''
+      offset: 0000AB79
+    - name: _LmIasSendAck
+      processed: ''
+      offset: 0000ABEC
+    - name: _LmIasClientSendDisconnect
+      processed: ''
+      offset: 0000AC78
+    - name: _LmIasClientDisconnect
+      processed: ''
+      offset: 0000ACB4
+    - name: _LMIAS_RegisterObject
+      processed: ''
+      offset: 0000AD90
+    - name: _LMIAS_DeregisterObject
+      processed: ''
+      offset: 0000AE2B
+    - name: _LMIAS_SetDeviceName
+      processed: ''
+      offset: 0000AF39
+    - name: _LmIasInitServer
+      processed: ''
+      offset: 0000AFB3
+    - name: _LmIasUpdateHints
+      processed: ''
+      offset: 0000B644
+    - name: _LmIasServerFindConnect
+      processed: ''
+      offset: 0000B71B
+    - name: _LmIasServerSendDisconnect
+      processed: ''
+      offset: 0000B7DF
+    - name: _LmIasServerSendReject
+      processed: ''
+      offset: 0000B8B9
+    - name: _LmIasServerDetermineCommand
+      processed: ''
+      offset: 0000BCB8
+    - name: _LmIasValidateClientToken
+      processed: ''
+      offset: 0000C754
+    - name: _MuxCon_ValidateActiveConnect
+      processed: ''
+      offset: 0000CF78
+    - name: _MuxCon_ValidForReq
+      processed: ''
+      offset: 0000D002
+    - name: _MuxCon_ValidForRsp
+      processed: ''
+      offset: 0000D0A2
+    - name: _MuxCon_ValidForDisc
+      processed: ''
+      offset: 0000D139
+    - name: _MuxCon_SendConnectPacket
+      processed: ''
+      offset: 0000D1DC
+    - name: _MuxCon_SendResponsePacket
+      processed: ''
+      offset: 0000D236
+    - name: _MuxCon_Init
+      processed: ''
+      offset: 0000D284
+    - name: _MuxCon_MakeDisconnected
+      processed: ''
+      offset: 0000D300
+    - name: _MuxCon_MakeActive
+      processed: ''
+      offset: 0000D386
+    - name: _MuxCon_MakeIncoming
+      processed: ''
+      offset: 0000D3D8
+    - name: _MuxCon_MakePending
+      processed: ''
+      offset: 0000D433
+    - name: _MuxCon_InitConPacket
+      processed: ''
+      offset: 0000D482
+    - name: _MuxCon_SendData
+      processed: ''
+      offset: 0000D4EE
+    - name: _MuxCon_Idle
+      processed: ''
+      offset: 0000D5C9
+    - name: _MuxCon_CheckDisconnect
+      processed: ''
+      offset: 0000D619
+    - name: _MuxCon_CheckPendingDisc
+      processed: ''
+      offset: 0000D683
+    - name: _MuxCon_Disconnect
+      processed: ''
+      offset: 0000D6BC
+    - name: _MuxIcc_Init
+      processed: ''
+      offset: 0000D7D8
+    - name: _MuxIcc_Allocate
+      processed: ''
+      offset: 0000D81C
+    - name: _MuxIcc_Free
+      processed: ''
+      offset: 0000D89C
+    - name: _MuxIcc_MakePending
+      processed: ''
+      offset: 0000D8DC
+    - name: _MuxIcc_MakeActive
+      processed: ''
+      offset: 0000D90C
+    - name: _MuxIcc_MakeClosing
+      processed: ''
+      offset: 0000D9A7
+    - name: _MuxIcc_MakeClosed
+      processed: ''
+      offset: 0000D9F3
+    - name: _MuxIcc_ChangeToActive
+      processed: ''
+      offset: 0000DA5F
+    - name: _MuxIcc_StartConnection
+      processed: ''
+      offset: 0000DA9C
+    - name: _MuxIcc_ProcessPendingConnects
+      processed: ''
+      offset: 0000DB46
+    - name: _MuxIcc_FindConnection
+      processed: ''
+      offset: 0000DC34
+    - name: _MuxIcc_DisconnectList
+      processed: ''
+      offset: 0000DCF0
+    - name: _MuxIcc_Disconnect
+      processed: ''
+      offset: 0000DD45
+    - name: _MuxIcc_AddIncomingConnect
+      processed: ''
+      offset: 0000DD6B
+    - name: _MuxIcc_AddPendingConnect
+      processed: ''
+      offset: 0000DDB4
+    - name: _MuxIcc_AllocateIncoming
+      processed: ''
+      offset: 0000DDF1
+    - name: _MuxIcc_RemoveConnect
+      processed: ''
+      offset: 0000DE4F
+    - name: _MuxIcc_StatusIndic
+      processed: ''
+      offset: 0000DE8D
+    - name: _MuxIcc_CheckForPossibleIcc
+      processed: ''
+      offset: 0000DF16
+    - name: _MuxIcc_CheckClosing
+      processed: ''
+      offset: 0000DF7B
+    - name: _MuxIcc_CheckDisconnect
+      processed: ''
+      offset: 0000E03E
+    - name: _LmSmoothCache
+      processed: ''
+      offset: 0000E0E0
+    - name: _LmAddDeviceToSmoothCache
+      processed: ''
+      offset: 0000E1D9
+    - name: _LmDiscoveryTimerFunc
+      processed: ''
+      offset: 0000E4B7
+    - name: _LmPerformPeriodicDiscovery
+      processed: ''
+      offset: 0000E51D
+    - name: _LmPerformDiscovery
+      processed: ''
+      offset: 0000E5C3
+    - name: _LmSmoothStatusInd
+      processed: ''
+      offset: 0000E6C7
+    - name: _LmConfirmDiscovery
+      processed: ''
+      offset: '0000E956'
+    - name: _LmStartPeriodicDiscoveryTimer
+      processed: ''
+      offset: 0000E9F8
+    - name: _LmUpdateDiscoveryCache
+      processed: ''
+      offset: 0000EA67
+    - name: _LmIndicateCacheChange
+      processed: ''
+      offset: 0000EAC9
+    - name: _LmDiscoveryConfirm
+      processed: ''
+      offset: 0000EB33
+    - name: IRLAMPEX_DDB
+      processed: ''
+      offset: 0000EBB8
+    - name: _IrLap
+      processed: ''
+      offset: 0000EC08
+    - name: _ThreadExLock
+      processed: ''
+      offset: 0000EC14
+    - name: _doRetroactiveShutdown
+      processed: ''
+      offset: 0000EC78
+    - name: _Win32ThreadFuncActive
+      processed: ''
+      offset: 0000EC7C
+    - name: _EventMutex
+      processed: ''
+      offset: 0000EC80
+    - name: _EQFront
+      processed: ''
+      offset: 0000EC84
+    - name: _EQBack
+      processed: ''
+      offset: 0000EC88
+    - name: _DebugEQBack
+      processed: ''
+      offset: 0000EC8C
+    - name: _slotTable
+      processed: ''
+      offset: 0000EC9C
+    - name: _allListsMutex
+      processed: ''
+      offset: 0000ECAC
+    - name: _PollTime2Table
+      processed: ''
+      offset: 0000EE74
+    - name: _PollTime3Table
+      processed: ''
+      offset: 0000EE84
+    - name: _IrLapFrmCap
+      processed: ''
+      offset: 0000EE90
+    - name: _IrLapFrmWrap
+      processed: ''
+      offset: 0000EE94
+    - name: _IrLapFrmParm
+      processed: ''
+      offset: 0000EE98
+    - name: _IrLampParm
+      processed: ''
+      offset: 0000EE9C
+    - name: _NumIccs
+      processed: ''
+      offset: 0000EEA0
+    - name: _IrLampWrap
+      processed: ''
+      offset: 0000EEA8
+    - name: _IoCtlTable
+      processed: ''
+      offset: 0000EF30
+    - name: _IoCtlTableSize
+      processed: ''
+      offset: 0000EF3C
+    - name: _IrLmp
+      processed: ''
+      offset: 0000EF40
+    - name: _IrLmpInitialized
+      processed: ''
+      offset: 0000EF44
+    - name: _IasClient
+      processed: ''
+      offset: 0000EFA4
+    - name: _IasClientNoConCB
+      processed: ''
+      offset: 0000EFAC
+    - name: _IasClientCB
+      processed: ''
+      offset: 0000EFCC
+    - name: _IasServer
+      processed: ''
+      offset: 0000F018
+    - name: _IasServerNoConCB
+      processed: ''
+      offset: 0000F020
+    - name: _IasServerCB
+      processed: ''
+      offset: 0000F040
+    - name: _dwsNumPackets
+      processed: ''
+      offset: 0000F0CC
+    - name: _EventQueue
+      processed: ''
+      offset: 0000F0D0
+    - name: _stServbuff
+      processed: ''
+      offset: 0000F110
+    - name: _ThreadExRef
+      processed: ''
+      offset: 0000F130
+    - name: _fThreadEnable
+      processed: ''
+      offset: 0000F134
+  - num: '2'
+    name: _IGROUP
+    offset: '00001680'
+    symbols:
+    - name: IRLAMP_Dynamic_Init
+      processed: ''
+      offset: '00000000'
+    - name: _IRLAMPEX_DynamicInit
+      processed: ''
+      offset: '00000014'
+  - num: '3'
+    name: _RARE
+    offset: '00000000'
+    symbols:
+    - name: _CCODE__HeapAllocate
+      processed: ''
+      offset: '00000000'
+    - name: _CCODE__HeapFree
+      processed: ''
+      offset: '00000008'
+    - name: _CCODE_Schedule_Global_Event@8
+      processed: ''
+      offset: '00000010'
+    - name: _CCODE_Get_Sys_VM_Handle
+      processed: ''
+      offset: '00000028'
+    - name: _CCODE_Set_Global_Time_Out@12
+      processed: ''
+      offset: '00000034'
+    - name: _CCODE_Cancel_Time_Out@4
+      processed: ''
+      offset: '00000050'
+    - name: _CCODE_Get_Last_Updated_System_Time
+      processed: ''
+      offset: '00000060'
+    - name: _CCODE__CreateMutex
+      processed: ''
+      offset: '00000068'
+    - name: _CCODE__DestroyMutex
+      processed: ''
+      offset: '00000070'
+    - name: _CCODE__EnterMutex
+      processed: ''
+      offset: '00000078'
+    - name: _CCODE__LeaveMutex
+      processed: ''
+      offset: '00000080'
+    - name: _CCODE__lmemcpy
+      processed: ''
+      offset: '00000088'
+    - name: _CCODE_Call_Restricted_Event@24
+      processed: ''
+      offset: '00000090'
 - version: Windows 98 Debug
   source_tree:
   - abort.c
@@ -30,2014 +831,1213 @@ appearances:
     offset: 00003C30
     symbols:
     - name: IRLAMP_Control
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: _IRLAMP_Register
-      processed: ''
+      demangled: ''
       offset: 0000003A
     - name: _VTD_Get_Date_And_Time
-      processed: ''
+      demangled: ''
       offset: '00000040'
     - name: _VTD_GetRealTime
-      processed: ''
+      demangled: ''
       offset: '00000046'
     - name: _InitializeW32Event
-      processed: ''
+      demangled: ''
       offset: 0000004C
     - name: _SetW32Event
-      processed: ''
+      demangled: ''
       offset: 0000006F
     - name: _ClearW32Event
-      processed: ''
+      demangled: ''
       offset: '00000081'
     - name: _ResetW32Event
-      processed: ''
+      demangled: ''
       offset: 0000008C
     - name: _PulseW32Event
-      processed: ''
+      demangled: ''
       offset: 0000009B
     - name: _WaitSingleObject
-      processed: ''
+      demangled: ''
       offset: 000000AA
     - name: _CreateR0Thread
-      processed: ''
+      demangled: ''
       offset: 000000C4
     - name: _LM_IoCtl
-      processed: ''
+      demangled: ''
       offset: '000000E5'
     - name: _DebugPrintf
-      processed: ''
+      demangled: ''
       offset: 000000FE
     - name: the_idtr
-      processed: ''
+      demangled: ''
       offset: 0000011B
     - name: old_desc
-      processed: ''
+      demangled: ''
       offset: '00000123'
     - name: our_idt
-      processed: ''
+      demangled: ''
       offset: 0000012B
     - name: DbgLogSystemMessage
-      processed: ''
+      demangled: ''
       offset: '00000133'
     - name: _InitThreadExLock
-      processed: ''
+      demangled: ''
       offset: '00000160'
     - name: _FreeThreadExLock
-      processed: ''
+      demangled: ''
       offset: 000001AC
     - name: _EnterThreadExLock
-      processed: ''
+      demangled: ''
       offset: 000001DC
     - name: _LeaveThreadExLock
-      processed: ''
+      demangled: ''
       offset: '00000220'
     - name: _IrLapInit
-      processed: ''
+      demangled: ''
       offset: '00000285'
     - name: _IRLAP_InitializeWrapper
-      processed: ''
+      demangled: ''
       offset: 0000058D
     - name: _IRLAP_DeinitializeWrapper
-      processed: ''
+      demangled: ''
       offset: 000005EB
     - name: _IRLAP_AllocatePort
-      processed: ''
+      demangled: ''
       offset: 0000061C
     - name: _IRLAP_DeallocatePort
-      processed: ''
+      demangled: ''
       offset: '00000709'
     - name: _IRLAP_SendUnitData
-      processed: ''
+      demangled: ''
       offset: 0000073B
     - name: _IRLAP_MediaBusy
-      processed: ''
+      demangled: ''
       offset: '00000838'
     - name: _IRLAP_Sniff
-      processed: ''
+      demangled: ''
       offset: '00000853'
     - name: _IrLapSniffTimerFunc
-      processed: ''
+      demangled: ''
       offset: 000008FB
     - name: _IrLapGetDispatchBuffer
-      processed: ''
+      demangled: ''
       offset: 0000096F
     - name: _IrLapFinishDispatchBuffer
-      processed: ''
+      demangled: ''
       offset: 00000A90
     - name: _RecordDebugRx
-      processed: ''
+      demangled: ''
       offset: 00000B1D
     - name: _IrLapDispatchBuffers
-      processed: ''
+      demangled: ''
       offset: 00000B9D
     - name: _CheckAddress
-      processed: ''
+      demangled: ''
       offset: 00000E0F
     - name: _IrLapAllocateTxPacket
-      processed: ''
+      demangled: ''
       offset: '00001004'
     - name: _IrLapFreeTxPacket
-      processed: ''
+      demangled: ''
       offset: '00001146'
     - name: _IrLapGetProcessPacket
-      processed: ''
+      demangled: ''
       offset: '00001249'
     - name: _IrLapFinishProcessPacket
-      processed: ''
+      demangled: ''
       offset: 0000131F
     - name: _IrLapProcessTxPackets
-      processed: ''
+      demangled: ''
       offset: '00001345'
     - name: _RecordDebugTx
-      processed: ''
+      demangled: ''
       offset: '00001409'
     - name: _SendCompleteDpc
-      processed: ''
+      demangled: ''
       offset: '00001472'
     - name: _IRLAPFRM_Send
-      processed: ''
+      demangled: ''
       offset: '00001491'
     - name: _IrLapErrorHandler
-      processed: ''
+      demangled: ''
       offset: '000014E4'
     - name: _IrLapState_NDM
-      processed: ''
+      demangled: ''
       offset: '00001536'
     - name: _IrLapMediaChangeHandler
-      processed: ''
+      demangled: ''
       offset: '00001969'
     - name: _IrLapNextState_NDM
-      processed: ''
+      demangled: ''
       offset: '00001980'
     - name: _memCopy
-      processed: ''
+      demangled: ''
       offset: 00001A1F
     - name: _zeroMemory
-      processed: ''
+      demangled: ''
       offset: 00001A62
     - name: _IrLapGenerateDeviceAddress
-      processed: ''
+      demangled: ''
       offset: 00001A96
     - name: _IrdaRand
-      processed: ''
+      demangled: ''
       offset: 00001ACF
     - name: _IrLapSendDMRsp
-      processed: ''
+      demangled: ''
       offset: 00001B09
     - name: _IrLapSendTest
-      processed: ''
+      demangled: ''
       offset: 00001B5E
     - name: _IRLAMP_DebugQuery@0
-      processed: ''
+      demangled: ''
       offset: 00001CBE
     - name: _InitEventMutex
-      processed: ''
+      demangled: ''
       offset: 00001CE8
     - name: _FreeEventMutex
-      processed: ''
+      demangled: ''
       offset: 00001D2A
     - name: _EnterEventMutex
-      processed: ''
+      demangled: ''
       offset: 00001D5A
     - name: _LeaveEventMutex
-      processed: ''
+      demangled: ''
       offset: 00001DB6
     - name: _RecordDebugEvent
-      processed: ''
+      demangled: ''
       offset: 00001DF2
     - name: _PutEventRecord
-      processed: ''
+      demangled: ''
       offset: '00001E49'
     - name: _GetEventRecord
-      processed: ''
+      demangled: ''
       offset: 00001F0E
     - name: _Win32ThreadFunc
-      processed: ''
+      demangled: ''
       offset: 00001FBE
     - name: _IrLapStartTimer
-      processed: ''
+      demangled: ''
       offset: '00002126'
     - name: _IrLapEventProc
-      processed: ''
+      demangled: ''
       offset: 000021AA
     - name: _IrLapTimerFunc
-      processed: ''
+      demangled: ''
       offset: 000021F6
     - name: _IrLapDisableTimers
-      processed: ''
+      demangled: ''
       offset: 0000224A
     - name: _IrLapTimerHandler
-      processed: ''
+      demangled: ''
       offset: 000022DC
     - name: _MinTimerPeriod
-      processed: ''
+      demangled: ''
       offset: 0000232F
     - name: _DetermineTimerPeriod
-      processed: ''
+      demangled: ''
       offset: '00002396'
     - name: _AdjustTimerPeriod
-      processed: ''
+      demangled: ''
       offset: '00002435'
     - name: _LmStartTimer
-      processed: ''
+      demangled: ''
       offset: '00002479'
     - name: _LmCancelTimer
-      processed: ''
+      demangled: ''
       offset: 0000259B
     - name: _IRLAP_DiscoverDevices
-      processed: ''
+      demangled: ''
       offset: '00002620'
     - name: _IrLapState_QUERY
-      processed: ''
+      demangled: ''
       offset: 000027B1
     - name: _IrLapState_REPLY
-      processed: ''
+      demangled: ''
       offset: 000029AC
     - name: _GetRxDiscoveryInfo
-      processed: ''
+      demangled: ''
       offset: 00002B3F
     - name: _IrLapSendBOS
-      processed: ''
+      demangled: ''
       offset: 00002C0B
     - name: _IrLapRxDiscoveryAction
-      processed: ''
+      demangled: ''
       offset: 00002C95
     - name: _IrLapSendXIDDiscovery
-      processed: ''
+      demangled: ''
       offset: '00002E74'
     - name: _AcquireListsMutex
-      processed: ''
+      demangled: ''
       offset: '00003018'
     - name: _InitListData
-      processed: ''
+      demangled: ''
       offset: 000030A2
     - name: _FreeListData
-      processed: ''
+      demangled: ''
       offset: '000030E4'
     - name: _InitListHead
-      processed: ''
+      demangled: ''
       offset: '00003114'
     - name: _InsertTailList
-      processed: ''
+      demangled: ''
       offset: '00003143'
     - name: _RemoveHeadList
-      processed: ''
+      demangled: ''
       offset: '00003228'
     - name: _RemoveEntryList
-      processed: ''
+      demangled: ''
       offset: 0000331A
     - name: _InsertHeadList
-      processed: ''
+      demangled: ''
       offset: 000033D6
     - name: _IsNodeOnList
-      processed: ''
+      demangled: ''
       offset: 000034C2
     - name: _IsListCircular
-      processed: ''
+      demangled: ''
       offset: '00003559'
     - name: _DbgLogListAction
-      processed: ''
+      demangled: ''
       offset: 0000360C
     - name: _DbgRecordList
-      processed: ''
+      demangled: ''
       offset: '00003834'
     - name: _IRLAP_Connect
-      processed: ''
+      demangled: ''
       offset: '00003954'
     - name: _IRLAP_ConnectResp
-      processed: ''
+      demangled: ''
       offset: 00003AE8
     - name: _IrLapState_SETUP
-      processed: ''
+      demangled: ''
       offset: 00003BA1
     - name: _IrLapState_SSETUP
-      processed: ''
+      demangled: ''
       offset: 00003F14
     - name: _IrLapState_SETUP2
-      processed: ''
+      demangled: ''
       offset: '00004044'
     - name: _IrLapState_CONN
-      processed: ''
+      demangled: ''
       offset: 0000411F
     - name: _IrLapState_CONN2
-      processed: ''
+      demangled: ''
       offset: 0000423B
     - name: _DisconnectIndic
-      processed: ''
+      demangled: ''
       offset: '00004277'
     - name: _IrLapRxConnectAction
-      processed: ''
+      demangled: ''
       offset: 000042F7
     - name: _InitConnection
-      processed: ''
+      demangled: ''
       offset: '000043E1'
     - name: _FinishConnection
-      processed: ''
+      demangled: ''
       offset: 0000491C
     - name: _InitCurConnection
-      processed: ''
+      demangled: ''
       offset: '00004986'
     - name: _CalculateCapacity
-      processed: ''
+      demangled: ''
       offset: 000049F7
     - name: _ScanBits
-      processed: ''
+      demangled: ''
       offset: 00004A8A
     - name: _SetConnectionParameters
-      processed: ''
+      demangled: ''
       offset: 00004ADD
     - name: _AdjustNegotiationParms
-      processed: ''
+      demangled: ''
       offset: 00004C3F
     - name: _GenRandomConnectAddr
-      processed: ''
+      demangled: ''
       offset: 00004D7A
     - name: _GenRandomBackoff
-      processed: ''
+      demangled: ''
       offset: '00004E53'
     - name: _ParseConnectionParms
-      processed: ''
+      demangled: ''
       offset: 00004E8E
     - name: _FillNegParms
-      processed: ''
+      demangled: ''
       offset: 00004F5F
     - name: _IrLapSendSNRM
-      processed: ''
+      demangled: ''
       offset: '00005066'
     - name: _IrLapSendUA
-      processed: ''
+      demangled: ''
       offset: 0000511E
     - name: _IRLAP_SendData
-      processed: ''
+      demangled: ''
       offset: 000051D8
     - name: _IRLAP_Disconnect
-      processed: ''
+      demangled: ''
       offset: 000053CE
     - name: _InitPollTimer
-      processed: ''
+      demangled: ''
       offset: 000054FA
     - name: _IrLapSetStateNRM
-      processed: ''
+      demangled: ''
       offset: 0000559E
     - name: _IrLapState_NRM
-      processed: ''
+      demangled: ''
       offset: '00005632'
     - name: _IrLapConState_XMIT
-      processed: ''
+      demangled: ''
       offset: 000056CA
     - name: _IrLapConState_RECV_P
-      processed: ''
+      demangled: ''
       offset: 000059AA
     - name: _IrLapConState_RECV_S
-      processed: ''
+      demangled: ''
       offset: 00005BEC
     - name: _IrLapConState_PCLOSE_P
-      processed: ''
+      demangled: ''
       offset: 00005D9C
     - name: _IrLapConState_PCLOSE_S
-      processed: ''
+      demangled: ''
       offset: 00005F41
     - name: _IrLapConState_PCLOSE_S2
-      processed: ''
+      demangled: ''
       offset: '00006156'
     - name: _IrLapConState_ERROR_P
-      processed: ''
+      demangled: ''
       offset: 000061CA
     - name: _IrLapConState_ERROR_S
-      processed: ''
+      demangled: ''
       offset: 000062DE
     - name: _NextStateRECV
-      processed: ''
+      demangled: ''
       offset: 000064A2
     - name: _NextStateXMIT
-      processed: ''
+      demangled: ''
       offset: 000065C5
     - name: _CheckProgress
-      processed: ''
+      demangled: ''
       offset: '00006683'
     - name: _CheckRemoteBusy
-      processed: ''
+      demangled: ''
       offset: '00006855'
     - name: _Disconnect
-      processed: ''
+      demangled: ''
       offset: 00006A3C
     - name: _ValidNR
-      processed: ''
+      demangled: ''
       offset: 00006AF9
     - name: _ProcessNR
-      processed: ''
+      demangled: ''
       offset: 00006BC6
     - name: _SendData
-      processed: ''
+      demangled: ''
       offset: 00006DCC
     - name: _PutBackUnackedFrames
-      processed: ''
+      demangled: ''
       offset: 00006FBF
     - name: _SendSelectedFrame
-      processed: ''
+      demangled: ''
       offset: 000071C1
     - name: _SendIFrames
-      processed: ''
+      demangled: ''
       offset: 000072DA
     - name: _SendUIFrames
-      processed: ''
+      demangled: ''
       offset: 000075A7
     - name: _ReleaseBufferedData
-      processed: ''
+      demangled: ''
       offset: '00007807'
     - name: _ProcessConnectionEnd
-      processed: ''
+      demangled: ''
       offset: 00007A57
     - name: _HandleInvalidFrame
-      processed: ''
+      demangled: ''
       offset: 00007BF2
     - name: _HandleUFrame
-      processed: ''
+      demangled: ''
       offset: 00007DD6
     - name: _HandleIFrame
-      processed: ''
+      demangled: ''
       offset: 000080FD
     - name: _HandleSFrame
-      processed: ''
+      demangled: ''
       offset: '00008294'
     - name: _HandleFTimer
-      processed: ''
+      demangled: ''
       offset: 000083DD
     - name: _Between
-      processed: ''
+      demangled: ''
       offset: 000084CD
     - name: _IrLapSendSUFrame
-      processed: ''
+      demangled: ''
       offset: 0000855A
     - name: _IrLapSendUAFrame
-      processed: ''
+      demangled: ''
       offset: 000086A8
     - name: _IrLapFrmInit
-      processed: ''
+      demangled: ''
       offset: 000087A0
     - name: _LM_AllocateMemory
-      processed: ''
+      demangled: ''
       offset: '00008800'
     - name: _IRLAMPEX_Init
-      processed: ''
+      demangled: ''
       offset: '00008905'
     - name: _IRLAMP_Dynamic_Shutdown@0
-      processed: ''
+      demangled: ''
       offset: '00008949'
     - name: _IRLAMP_Dynamic_Exit@0
-      processed: ''
+      demangled: ''
       offset: 000089A4
     - name: _LMI_GetMediaFlag
-      processed: ''
+      demangled: ''
       offset: 00008A4B
     - name: _LMI_GetSpeed
-      processed: ''
+      demangled: ''
       offset: 00008A72
     - name: _LMI_SetMaxSpeed
-      processed: ''
+      demangled: ''
       offset: 00008A91
     - name: _LmCheckPtr
-      processed: ''
+      demangled: ''
       offset: 00008AB3
     - name: _IRLAP_AbortPackets
-      processed: ''
+      demangled: ''
       offset: 00008AF0
     - name: _AbortUnackedList
-      processed: ''
+      demangled: ''
       offset: 00008CF8
     - name: _AbortState
-      processed: ''
+      demangled: ''
       offset: 00008E3F
     - name: _LM_Startup
-      processed: ''
+      demangled: ''
       offset: 00008EE8
     - name: _LM_Shutdown
-      processed: ''
+      demangled: ''
       offset: 000090EB
     - name: _LM_InitClient
-      processed: ''
+      demangled: ''
       offset: 0000915E
     - name: _LM_AddIncoming
-      processed: ''
+      demangled: ''
       offset: 000091BB
     - name: _LM_RemoveIncoming
-      processed: ''
+      demangled: ''
       offset: 0000927D
     - name: _LM_BindClient
-      processed: ''
+      demangled: ''
       offset: '00009362'
     - name: _LM_UnBindClient
-      processed: ''
+      demangled: ''
       offset: 0000958B
     - name: _LM_DiscoveryReq
-      processed: ''
+      demangled: ''
       offset: 0000975A
     - name: _LM_ConnectReq
-      processed: ''
+      demangled: ''
       offset: 0000981B
     - name: _LM_ConnectRsp
-      processed: ''
+      demangled: ''
       offset: 00009A59
     - name: _LM_DisconnectReq
-      processed: ''
+      demangled: ''
       offset: 00009B3D
     - name: _LM_Idle
-      processed: ''
+      demangled: ''
       offset: 00009CC4
     - name: _LM_DeviceStatus
-      processed: ''
+      demangled: ''
       offset: 00009D44
     - name: _LM_StatusReq
-      processed: ''
+      demangled: ''
       offset: 00009DEC
     - name: _LM_ReceiveData
-      processed: ''
+      demangled: ''
       offset: 00009EA2
     - name: _LM_DataReq
-      processed: ''
+      demangled: ''
       offset: 00009EEF
     - name: _LM_UDataReq
-      processed: ''
+      demangled: ''
       offset: 00009F48
     - name: _LM_NoConnectDataReq
-      processed: ''
+      demangled: ''
       offset: 00009FA1
     - name: _LM_GetIrLapFrmStats
-      processed: ''
+      demangled: ''
       offset: 0000A0B0
     - name: _LM_GetDeviceStats
-      processed: ''
+      demangled: ''
       offset: 0000A0FC
     - name: _LM_GetDiscoveryCache
-      processed: ''
+      demangled: ''
       offset: 0000A183
     - name: _LM_SetNickname
-      processed: ''
+      demangled: ''
       offset: 0000A1D1
     - name: _LM_SetHints
-      processed: ''
+      demangled: ''
       offset: 0000A268
     - name: _LM_Sniff
-      processed: ''
+      demangled: ''
       offset: 0000A313
     - name: _LM_PeriodicDiscovery
-      processed: ''
+      demangled: ''
       offset: 0000A36A
     - name: _LM_GetPeriodicDiscoveryPeriod
-      processed: ''
+      demangled: ''
       offset: 0000A482
     - name: _LM_LocalBusy
-      processed: ''
+      demangled: ''
       offset: 0000A4C8
     - name: _LM_AbortConnection
-      processed: ''
+      demangled: ''
       offset: 0000A53E
     - name: _LmFindCacheConflicts
-      processed: ''
+      demangled: ''
       offset: 0000A5CC
     - name: _LmRemoveCacheConflicts
-      processed: ''
+      demangled: ''
       offset: 0000A77A
     - name: _LmAddDeviceToCache
-      processed: ''
+      demangled: ''
       offset: 0000A887
     - name: _LmValidClientForConnection
-      processed: ''
+      demangled: ''
       offset: 0000A934
     - name: _LmGiveStatusIndication
-      processed: ''
+      demangled: ''
       offset: 0000A99B
     - name: _LmDisconnectPendingConnections
-      processed: ''
+      demangled: ''
       offset: 0000AA1E
     - name: _LmStartIrLapConnection
-      processed: ''
+      demangled: ''
       offset: 0000AB2B
     - name: _LmFindIcc
-      processed: ''
+      demangled: ''
       offset: 0000ABB0
     - name: _LmFindIdleIcc
-      processed: ''
+      demangled: ''
       offset: 0000AC68
     - name: _LmProcessConnectResponse
-      processed: ''
+      demangled: ''
       offset: 0000AD38
     - name: _LmProcessConnectCommand
-      processed: ''
+      demangled: ''
       offset: 0000AE21
     - name: _LmProcessDisconnectCommand
-      processed: ''
+      demangled: ''
       offset: 0000AFD0
     - name: _LmProcessAccessModeCommand
-      processed: ''
+      demangled: ''
       offset: 0000B0EC
     - name: _LmSendDisconnect
-      processed: ''
+      demangled: ''
       offset: 0000B1BB
     - name: _LmSetWatchDogTime
-      processed: ''
+      demangled: ''
       offset: 0000B2C7
     - name: _LmClearWatchDogTime
-      processed: ''
+      demangled: ''
       offset: 0000B2D2
     - name: _LmValidatePacket
-      processed: ''
+      demangled: ''
       offset: 0000B2DD
     - name: _LmUpdateXidInfo
-      processed: ''
+      demangled: ''
       offset: 0000B3BD
     - name: _LmInitCallbacks
-      processed: ''
+      demangled: ''
       offset: 0000B490
     - name: _IrLapDiscoverConf
-      processed: ''
+      demangled: ''
       offset: 0000B540
     - name: _IrLapDiscoverIndic
-      processed: ''
+      demangled: ''
       offset: 0000B6A1
     - name: _IrLapConnectConf
-      processed: ''
+      demangled: ''
       offset: 0000B754
     - name: _IrlapConnectIndic
-      processed: ''
+      demangled: ''
       offset: 0000B7AA
     - name: _IrLapDisconIndic
-      processed: ''
+      demangled: ''
       offset: 0000B861
     - name: _IrLapSendHandler
-      processed: ''
+      demangled: ''
       offset: 0000BABD
     - name: _IrLapDataIndic
-      processed: ''
+      demangled: ''
       offset: 0000BBA6
     - name: _IrLapUnitDataHand
-      processed: ''
+      demangled: ''
       offset: 0000BE25
     - name: _IrLapUnitDataIndic
-      processed: ''
+      demangled: ''
       offset: 0000BE50
     - name: _IrLapStatusIndic
-      processed: ''
+      demangled: ''
       offset: 0000BF11
     - name: _IrLmpErrorHandler
-      processed: ''
+      demangled: ''
       offset: 0000BF7C
     - name: _LmIasInitClient
-      processed: ''
+      demangled: ''
       offset: 0000BFD8
     - name: _LMIAS_ClientRequest
-      processed: ''
+      demangled: ''
       offset: 0000C1FE
     - name: _LmIasClientStatusInd
-      processed: ''
+      demangled: ''
       offset: 0000C42B
     - name: _LmIasClientConnectCnf
-      processed: ''
+      demangled: ''
       offset: 0000C45B
     - name: _LmIasClientDisconnectInd
-      processed: ''
+      demangled: ''
       offset: 0000C4DB
     - name: _LmIasClientDataInd
-      processed: ''
+      demangled: ''
       offset: 0000C58D
     - name: _LmIasClientPacketHandled
-      processed: ''
+      demangled: ''
       offset: 0000C5DC
     - name: _LmIasClientState_Calling
-      processed: ''
+      demangled: ''
       offset: 0000C6A1
     - name: _LmIasClientState_Outstanding
-      processed: ''
+      demangled: ''
       offset: 0000C720
     - name: _LmIasClientErrorHandler
-      processed: ''
+      demangled: ''
       offset: 0000C83D
     - name: _LmIasFindConnect
-      processed: ''
+      demangled: ''
       offset: 0000C848
     - name: _LmIasStartNewConnection
-      processed: ''
+      demangled: ''
       offset: 0000C900
     - name: _LmIasFindIdleConnection
-      processed: ''
+      demangled: ''
       offset: 0000CB1B
     - name: _LmIasDisconnectPendingConnections
-      processed: ''
+      demangled: ''
       offset: 0000CC2E
     - name: _LmIasStartOperation
-      processed: ''
+      demangled: ''
       offset: 0000CD1C
     - name: _LmIasFindPendingToken
-      processed: ''
+      demangled: ''
       offset: 0000CDF3
     - name: _LmIasEndOperation
-      processed: ''
+      demangled: ''
       offset: 0000CE8E
     - name: _LmIasClientSendCommand
-      processed: ''
+      demangled: ''
       offset: 0000CEA6
     - name: _LmIasSetTokenTime
-      processed: ''
+      demangled: ''
       offset: 0000D00C
     - name: _LmIasProcessWaitingOpers
-      processed: ''
+      demangled: ''
       offset: 0000D04E
     - name: _LmIasClientTimerFunc
-      processed: ''
+      demangled: ''
       offset: 0000D116
     - name: _LmIasClientDiscTimerFunc
-      processed: ''
+      demangled: ''
       offset: 0000D1CE
     - name: _LmIasClientWdTimerFunc
-      processed: ''
+      demangled: ''
       offset: 0000D22E
     - name: _LmIasSendAck
-      processed: ''
+      demangled: ''
       offset: 0000D2C8
     - name: _LmIasClientSendDisconnect
-      processed: ''
+      demangled: ''
       offset: 0000D382
     - name: _LmIasClientDisconnect
-      processed: ''
+      demangled: ''
       offset: 0000D3D4
     - name: _LMIAS_RegisterObject
-      processed: ''
+      demangled: ''
       offset: 0000D524
     - name: _LMIAS_DeregisterObject
-      processed: ''
+      demangled: ''
       offset: 0000D5F2
     - name: _LMIAS_SetDeviceName
-      processed: ''
+      demangled: ''
       offset: 0000D739
     - name: _LmIasInitServer
-      processed: ''
+      demangled: ''
       offset: 0000D7B7
     - name: _LmIasServerConnectInd
-      processed: ''
+      demangled: ''
       offset: 0000D9E9
     - name: _LmIasServerDisconnectInd
-      processed: ''
+      demangled: ''
       offset: 0000DAFF
     - name: _LmIasServerDataInd
-      processed: ''
+      demangled: ''
       offset: 0000DB2C
     - name: _LmIasServerPacketHandled
-      processed: ''
+      demangled: ''
       offset: 0000DBC9
     - name: _LmIasServerErrorHnd
-      processed: ''
+      demangled: ''
       offset: 0000DC7D
     - name: _LmIasServerState_Receiving
-      processed: ''
+      demangled: ''
       offset: 0000DC88
     - name: _LmIasServerState_Returning
-      processed: ''
+      demangled: ''
       offset: 0000DE37
     - name: _LmIasUpdateHints
-      processed: ''
+      demangled: ''
       offset: 0000DEB3
     - name: _LmIasServerFindConnect
-      processed: ''
+      demangled: ''
       offset: 0000DF8A
     - name: _LmIasServerSendDisconnect
-      processed: ''
+      demangled: ''
       offset: 0000E04E
     - name: _LmIasServerDisconnect
-      processed: ''
+      demangled: ''
       offset: '0000E082'
     - name: _LmIasServerSendAck
-      processed: ''
+      demangled: ''
       offset: 0000E0AD
     - name: _LmIasServerSendReject
-      processed: ''
+      demangled: ''
       offset: '0000E135'
     - name: _LmIasServerAddObject
-      processed: ''
+      demangled: ''
       offset: 0000E1C8
     - name: _LmIasServerRemoveObject
-      processed: ''
+      demangled: ''
       offset: '0000E276'
     - name: _LmIasServerStartQuery
-      processed: ''
+      demangled: ''
       offset: 0000E29F
     - name: _LmIasServerFinishQuery
-      processed: ''
+      demangled: ''
       offset: 0000E2C0
     - name: _LmIasServerValidateObject
-      processed: ''
+      demangled: ''
       offset: 0000E3B0
     - name: _LmIasServerDetermineCommand
-      processed: ''
+      demangled: ''
       offset: '0000E574'
     - name: _ProcessCommandNull
-      processed: ''
+      demangled: ''
       offset: 0000E62E
     - name: _ProcessResultNull
-      processed: ''
+      demangled: ''
       offset: '0000E639'
     - name: _ProcessCommandGVBC
-      processed: ''
+      demangled: ''
       offset: '0000E644'
     - name: _ProcessResultGVBC
-      processed: ''
+      demangled: ''
       offset: 0000E7F7
     - name: _GetNumObjectsGVBC
-      processed: ''
+      demangled: ''
       offset: 0000E8F8
     - name: _FillTxBufferGVBC
-      processed: ''
+      demangled: ''
       offset: 0000E95B
     - name: _SendTxBufferGVBC
-      processed: ''
+      demangled: ''
       offset: 0000EA77
     - name: _StoreIasAttributeValue
-      processed: ''
+      demangled: ''
       offset: 0000EAF3
     - name: _IasAttribValueSize
-      processed: ''
+      demangled: ''
       offset: 0000EC07
     - name: _FindNextResultGVBC
-      processed: ''
+      demangled: ''
       offset: 0000EC92
     - name: _FindObjectViaClassName
-      processed: ''
+      demangled: ''
       offset: 0000EDB4
     - name: _FindAttribViaName
-      processed: ''
+      demangled: ''
       offset: 0000EE26
     - name: _StrnCmp
-      processed: ''
+      demangled: ''
       offset: 0000EEA8
     - name: _SendServerTxBuffer
-      processed: ''
+      demangled: ''
       offset: 0000EF29
     - name: _LmIasValidateClientToken
-      processed: ''
+      demangled: ''
       offset: 0000F01C
     - name: _ProcessAttribValue
-      processed: ''
+      demangled: ''
       offset: 0000F447
     - name: _ProcessEndGVBC
-      processed: ''
+      demangled: ''
       offset: 0000F722
     - name: _ProcessRetCode
-      processed: ''
+      demangled: ''
       offset: 0000F79F
     - name: _TokenCallBack
-      processed: ''
+      demangled: ''
       offset: 0000F7F9
     - name: _MuxCon_ValidateActiveConnect
-      processed: ''
+      demangled: ''
       offset: 0000F854
     - name: _MuxCon_ValidForReq
-      processed: ''
+      demangled: ''
       offset: 0000F8DE
     - name: _MuxCon_ValidForRsp
-      processed: ''
+      demangled: ''
       offset: 0000F97E
     - name: _MuxCon_ValidForDisc
-      processed: ''
+      demangled: ''
       offset: 0000FA15
     - name: _MuxCon_SendConnectPacket
-      processed: ''
+      demangled: ''
       offset: 0000FAB8
     - name: _MuxCon_SendResponsePacket
-      processed: ''
+      demangled: ''
       offset: 0000FB12
     - name: _MuxCon_Init
-      processed: ''
+      demangled: ''
       offset: 0000FB60
     - name: _MuxCon_MakeDisconnected
-      processed: ''
+      demangled: ''
       offset: 0000FBDC
     - name: _MuxCon_MakeActive
-      processed: ''
+      demangled: ''
       offset: 0000FC81
     - name: _MuxCon_MakeIncoming
-      processed: ''
+      demangled: ''
       offset: 0000FCD3
     - name: _MuxCon_MakePending
-      processed: ''
+      demangled: ''
       offset: 0000FD64
     - name: _MuxCon_InitConPacket
-      processed: ''
+      demangled: ''
       offset: 0000FDE9
     - name: _MuxCon_SendData
-      processed: ''
+      demangled: ''
       offset: 0000FE55
     - name: _MuxCon_Idle
-      processed: ''
+      demangled: ''
       offset: 0000FF30
     - name: _MuxCon_CheckDisconnect
-      processed: ''
+      demangled: ''
       offset: 0000FF80
     - name: _MuxCon_CheckPendingDisc
-      processed: ''
+      demangled: ''
       offset: 0001001A
     - name: _MuxCon_Disconnect
-      processed: ''
+      demangled: ''
       offset: '00010053'
     - name: _MuxIcc_Init
-      processed: ''
+      demangled: ''
       offset: '00010170'
     - name: _MuxIcc_Allocate
-      processed: ''
+      demangled: ''
       offset: 000101B4
     - name: _MuxIcc_Free
-      processed: ''
+      demangled: ''
       offset: '00010234'
     - name: _MuxIcc_MakePending
-      processed: ''
+      demangled: ''
       offset: 000102D9
     - name: _MuxIcc_MakeActive
-      processed: ''
+      demangled: ''
       offset: 0001036E
     - name: _MuxIcc_MakeClosing
-      processed: ''
+      demangled: ''
       offset: '00010496'
     - name: _MuxIcc_MakeClosed
-      processed: ''
+      demangled: ''
       offset: 0001059A
     - name: _MuxIcc_ChangeToActive
-      processed: ''
+      demangled: ''
       offset: '000106E6'
     - name: _MuxIcc_StartConnection
-      processed: ''
+      demangled: ''
       offset: 0001078B
     - name: _MuxIcc_ProcessPendingConnects
-      processed: ''
+      demangled: ''
       offset: '00010835'
     - name: _MuxIcc_FindConnection
-      processed: ''
+      demangled: ''
       offset: '00010923'
     - name: _MuxIcc_DisconnectList
-      processed: ''
+      demangled: ''
       offset: 000109DF
     - name: _MuxIcc_Disconnect
-      processed: ''
+      demangled: ''
       offset: 00010A34
     - name: _MuxIcc_AddIncomingConnect
-      processed: ''
+      demangled: ''
       offset: 00010AC2
     - name: _MuxIcc_AddPendingConnect
-      processed: ''
+      demangled: ''
       offset: 00010B45
     - name: _MuxIcc_AllocateIncoming
-      processed: ''
+      demangled: ''
       offset: 00010B82
     - name: _MuxIcc_RemoveConnect
-      processed: ''
+      demangled: ''
       offset: 00010C10
     - name: _MuxIcc_StatusIndic
-      processed: ''
+      demangled: ''
       offset: 00010C4E
     - name: _MuxIcc_CheckForPossibleIcc
-      processed: ''
+      demangled: ''
       offset: 00010D3F
     - name: _MuxIcc_CheckClosing
-      processed: ''
+      demangled: ''
       offset: 00010DA4
     - name: _MuxIcc_CheckDisconnect
-      processed: ''
+      demangled: ''
       offset: 00010F4C
     - name: _MuxIcc_DiscTimerFunc
-      processed: ''
+      demangled: ''
       offset: '00011015'
     - name: _LmSmoothCache
-      processed: ''
+      demangled: ''
       offset: '00011120'
     - name: _LmAddDeviceToSmoothCache
-      processed: ''
+      demangled: ''
       offset: '00011219'
     - name: _LmRemoveFailedItems
-      processed: ''
+      demangled: ''
       offset: '00011358'
     - name: _LmDiscoveryTimerFunc
-      processed: ''
+      demangled: ''
       offset: 000114F7
     - name: _LmPerformPeriodicDiscovery
-      processed: ''
+      demangled: ''
       offset: 0001156A
     - name: _LmPerformDiscovery
-      processed: ''
+      demangled: ''
       offset: '00011610'
     - name: _LmSmoothStatusInd
-      processed: ''
+      demangled: ''
       offset: 0001175A
     - name: _LmStartPinging
-      processed: ''
+      demangled: ''
       offset: 000117A9
     - name: _LmProcessPingResult
-      processed: ''
+      demangled: ''
       offset: 000118AC
     - name: _LmConfirmDiscovery
-      processed: ''
+      demangled: ''
       offset: 00011A98
     - name: _LmStartPeriodicDiscoveryTimer
-      processed: ''
+      demangled: ''
       offset: 00011B3A
     - name: _LmUpdateDiscoveryCache
-      processed: ''
+      demangled: ''
       offset: 00011BA9
     - name: _LmIndicateCacheChange
-      processed: ''
+      demangled: ''
       offset: 00011C0B
     - name: _LmDiscoveryConfirm
-      processed: ''
+      demangled: ''
       offset: 00011C82
     - name: IRLAMPEX_DDB
-      processed: ''
+      demangled: ''
       offset: 00011D08
     - name: _IrLap
-      processed: ''
+      demangled: ''
       offset: '00011E60'
     - name: _ThreadExLock
-      processed: ''
+      demangled: ''
       offset: 00011E6C
     - name: _RXBack
-      processed: ''
+      demangled: ''
       offset: '00011E70'
     - name: _TXBack
-      processed: ''
+      demangled: ''
       offset: '00011E74'
     - name: _doRetroactiveShutdown
-      processed: ''
+      demangled: ''
       offset: 000120F4
     - name: _Win32ThreadFuncActive
-      processed: ''
+      demangled: ''
       offset: 000120F8
     - name: _EventMutex
-      processed: ''
+      demangled: ''
       offset: 000120FC
     - name: _EQFront
-      processed: ''
+      demangled: ''
       offset: '00012100'
     - name: _EQBack
-      processed: ''
+      demangled: ''
       offset: '00012104'
     - name: _DebugEQBack
-      processed: ''
+      demangled: ''
       offset: '00012108'
     - name: _slotTable
-      processed: ''
+      demangled: ''
       offset: '00012260'
     - name: _allListsMutex
-      processed: ''
+      demangled: ''
       offset: 0001234C
     - name: _DbgListLog
-      processed: ''
+      demangled: ''
       offset: '00012354'
     - name: _DbgListRecords
-      processed: ''
+      demangled: ''
       offset: '00016354'
     - name: _ParmIdentifierTable
-      processed: ''
+      demangled: ''
       offset: 000167F8
     - name: _DefaultNegTable
-      processed: ''
+      demangled: ''
       offset: '00016800'
     - name: _PollTime2Table
-      processed: ''
+      demangled: ''
       offset: 00016C90
     - name: _PollTime3Table
-      processed: ''
+      demangled: ''
       offset: 00016CA0
     - name: _IrLapFrmCap
-      processed: ''
+      demangled: ''
       offset: '00017564'
     - name: _IrLapFrmWrap
-      processed: ''
+      demangled: ''
       offset: '00017568'
     - name: _IrLapFrmParm
-      processed: ''
+      demangled: ''
       offset: 0001756C
     - name: _IrLampParm
-      processed: ''
+      demangled: ''
       offset: '00017570'
     - name: _NumIccs
-      processed: ''
+      demangled: ''
       offset: '00017574'
     - name: _IrLampWrap
-      processed: ''
+      demangled: ''
       offset: 0001757C
     - name: _IoCtlTable
-      processed: ''
+      demangled: ''
       offset: '00017604'
     - name: _IoCtlTableSize
-      processed: ''
+      demangled: ''
       offset: '00017610'
     - name: _IrLmp
-      processed: ''
+      demangled: ''
       offset: '00017788'
     - name: _IrLmpInitialized
-      processed: ''
+      demangled: ''
       offset: 0001778C
     - name: _IasClient
-      processed: ''
+      demangled: ''
       offset: 00017E6C
     - name: _IasClientNoConCB
-      processed: ''
+      demangled: ''
       offset: '00017E74'
     - name: _IasClientCB
-      processed: ''
+      demangled: ''
       offset: '00017E94'
     - name: _IasServer
-      processed: ''
+      demangled: ''
       offset: 000185D4
     - name: _IasServerNoConCB
-      processed: ''
+      demangled: ''
       offset: 000185DC
     - name: _IasServerCB
-      processed: ''
+      demangled: ''
       offset: 000185FC
     - name: _IrlapEventNames
-      processed: ''
+      demangled: ''
       offset: 00018D04
     - name: _dwsNumPackets
-      processed: ''
+      demangled: ''
       offset: 00018D68
     - name: _EventQueue
-      processed: ''
+      demangled: ''
       offset: 00018D6C
     - name: _stServbuff
-      processed: ''
+      demangled: ''
       offset: 00018E6C
     - name: _DebugEventQueue
-      processed: ''
+      demangled: ''
       offset: 00018E8C
     - name: _ThreadExRef
-      processed: ''
+      demangled: ''
       offset: 00019E8C
     - name: _DebugRxQueue
-      processed: ''
+      demangled: ''
       offset: '00019E90'
     - name: _DebugTxQueue
-      processed: ''
+      demangled: ''
       offset: 0001AE90
     - name: _fThreadEnable
-      processed: ''
+      demangled: ''
       offset: 0001BE90
   - num: '2'
     name: _IGROUP
     offset: 00003D00
     symbols:
     - name: IRLAMP_Dynamic_Init
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: _IRLAMPEX_DynamicInit
-      processed: ''
+      demangled: ''
       offset: '00000020'
   - num: '3'
     name: _RARE
     offset: '00000000'
     symbols:
     - name: _CCODE__HeapAllocate
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: _CCODE__HeapFree
-      processed: ''
+      demangled: ''
       offset: '00000008'
     - name: _CCODE__Trace_Out_Service@4
-      processed: ''
+      demangled: ''
       offset: '00000010'
     - name: _CCODE__Debug_Printf_Service
-      processed: ''
+      demangled: ''
       offset: '00000018'
     - name: _CCODE_Schedule_Global_Event@8
-      processed: ''
+      demangled: ''
       offset: 0000002C
     - name: _CCODE_Get_Sys_VM_Handle
-      processed: ''
+      demangled: ''
       offset: '00000044'
     - name: _CCODE_Set_Global_Time_Out@12
-      processed: ''
+      demangled: ''
       offset: '00000050'
     - name: _CCODE_Cancel_Time_Out@4
-      processed: ''
+      demangled: ''
       offset: 0000006C
     - name: _CCODE_Get_Last_Updated_System_Time
-      processed: ''
+      demangled: ''
       offset: 0000007C
     - name: _CCODE__CreateMutex
-      processed: ''
+      demangled: ''
       offset: '00000084'
     - name: _CCODE__DestroyMutex
-      processed: ''
+      demangled: ''
       offset: 0000008C
     - name: _CCODE__EnterMutex
-      processed: ''
+      demangled: ''
       offset: '00000094'
     - name: _CCODE__LeaveMutex
-      processed: ''
+      demangled: ''
       offset: 0000009C
     - name: _CCODE__lmemcpy
-      processed: ''
+      demangled: ''
       offset: 000000A4
     - name: _CCODE_Call_Restricted_Event@24
-      processed: ''
+      demangled: ''
       offset: 000000AC
-- version: Windows 98 Retail
-  source_tree: []
-  segments:
-  - num: '1'
-    name: _LGROUP
-    offset: '00001630'
-    symbols:
-    - name: IRLAMP_Control
-      demangled: ''
-      offset: '00000000'
-    - name: _IRLAMP_Register
-      demangled: ''
-      offset: '00000027'
-    - name: _VTD_Get_Date_And_Time
-      demangled: ''
-      offset: 0000002D
-    - name: _VTD_GetRealTime
-      demangled: ''
-      offset: '00000033'
-    - name: _InitializeW32Event
-      demangled: ''
-      offset: '00000039'
-    - name: _SetW32Event
-      demangled: ''
-      offset: 0000005C
-    - name: _ClearW32Event
-      demangled: ''
-      offset: 0000006E
-    - name: _ResetW32Event
-      demangled: ''
-      offset: '00000079'
-    - name: _PulseW32Event
-      demangled: ''
-      offset: '00000088'
-    - name: _WaitSingleObject
-      demangled: ''
-      offset: '00000097'
-    - name: _CreateR0Thread
-      demangled: ''
-      offset: 000000B1
-    - name: _LM_IoCtl
-      demangled: ''
-      offset: 000000D2
-    - name: _InitThreadExLock
-      demangled: ''
-      offset: 000000EC
-    - name: _FreeThreadExLock
-      demangled: ''
-      offset: '00000138'
-    - name: _EnterThreadExLock
-      demangled: ''
-      offset: '00000168'
-    - name: _LeaveThreadExLock
-      demangled: ''
-      offset: '00000189'
-    - name: _IrLapInit
-      demangled: ''
-      offset: 000001A8
-    - name: _IRLAP_InitializeWrapper
-      demangled: ''
-      offset: 0000043A
-    - name: _IRLAP_DeinitializeWrapper
-      demangled: ''
-      offset: '00000498'
-    - name: _IRLAP_AllocatePort
-      demangled: ''
-      offset: 000004C9
-    - name: _IRLAP_DeallocatePort
-      demangled: ''
-      offset: 000005A9
-    - name: _IRLAP_SendUnitData
-      demangled: ''
-      offset: 000005DB
-    - name: _IRLAP_MediaBusy
-      demangled: ''
-      offset: 000006D8
-    - name: _IRLAP_Sniff
-      demangled: ''
-      offset: 000006F3
-    - name: _IrLapGetDispatchBuffer
-      demangled: ''
-      offset: 0000080F
-    - name: _IrLapFinishDispatchBuffer
-      demangled: ''
-      offset: 000008EA
-    - name: _IrLapAllocateTxPacket
-      demangled: ''
-      offset: 00000CA7
-    - name: _IrLapFreeTxPacket
-      demangled: ''
-      offset: 00000DA2
-    - name: _IrLapGetProcessPacket
-      demangled: ''
-      offset: '00000E06'
-    - name: _IrLapFinishProcessPacket
-      demangled: ''
-      offset: '00000E69'
-    - name: _SendCompleteDpc
-      demangled: ''
-      offset: 00000EBE
-    - name: _IRLAPFRM_Send
-      demangled: ''
-      offset: 00000EDD
-    - name: _IrLapErrorHandler
-      demangled: ''
-      offset: 00000F24
-    - name: _IrLapState_NDM
-      demangled: ''
-      offset: 00000F4C
-    - name: _IrLapNextState_NDM
-      demangled: ''
-      offset: 0000137E
-    - name: '@memCopy@12'
-      demangled: ''
-      offset: '00001410'
-    - name: _zeroMemory
-      demangled: ''
-      offset: 0000145B
-    - name: _IrLapGenerateDeviceAddress
-      demangled: ''
-      offset: 0000148F
-    - name: _IrdaRand
-      demangled: ''
-      offset: 000014C8
-    - name: _IrLapSendTest
-      demangled: ''
-      offset: '00001557'
-    - name: _InitEventMutex
-      demangled: ''
-      offset: 000016B8
-    - name: _FreeEventMutex
-      demangled: ''
-      offset: 000016FA
-    - name: _EnterEventMutex
-      demangled: ''
-      offset: 0000172A
-    - name: _LeaveEventMutex
-      demangled: ''
-      offset: '00001763'
-    - name: _PutEventRecord
-      demangled: ''
-      offset: 0000177C
-    - name: _GetEventRecord
-      demangled: ''
-      offset: 000017F6
-    - name: _Win32ThreadFunc
-      demangled: ''
-      offset: '00001870'
-    - name: _IrLapStartTimer
-      demangled: ''
-      offset: 0000196E
-    - name: _IrLapEventProc
-      demangled: ''
-      offset: 000019AE
-    - name: _IrLapTimerFunc
-      demangled: ''
-      offset: 000019ED
-    - name: _IrLapDisableTimers
-      demangled: ''
-      offset: 00001A41
-    - name: _LmStartTimer
-      demangled: ''
-      offset: 00001C70
-    - name: _LmCancelTimer
-      demangled: ''
-      offset: 00001D33
-    - name: _IRLAP_DiscoverDevices
-      demangled: ''
-      offset: 00001D80
-    - name: _IrLapState_QUERY
-      demangled: ''
-      offset: 00001EF7
-    - name: _IrLapState_REPLY
-      demangled: ''
-      offset: 000020DA
-    - name: _GetRxDiscoveryInfo
-      demangled: ''
-      offset: '00002248'
-    - name: _IrLapRxDiscoveryAction
-      demangled: ''
-      offset: '00002399'
-    - name: _IrLapSendXIDDiscovery
-      demangled: ''
-      offset: 0000256B
-    - name: _AcquireListsMutex
-      demangled: ''
-      offset: '00002710'
-    - name: _InitListData
-      demangled: ''
-      offset: '00002748'
-    - name: _FreeListData
-      demangled: ''
-      offset: 0000278A
-    - name: _InitListHead
-      demangled: ''
-      offset: 000027BA
-    - name: _InsertTailList
-      demangled: ''
-      offset: 000027D9
-    - name: _RemoveHeadList
-      demangled: ''
-      offset: '00002820'
-    - name: _RemoveEntryList
-      demangled: ''
-      offset: '00002891'
-    - name: _InsertHeadList
-      demangled: ''
-      offset: '000028E0'
-    - name: _IsNodeOnList
-      demangled: ''
-      offset: '00002925'
-    - name: _IsListCircular
-      demangled: ''
-      offset: 0000298F
-    - name: _IRLAP_Connect
-      demangled: ''
-      offset: 00002A44
-    - name: _IRLAP_ConnectResp
-      demangled: ''
-      offset: 00002BBE
-    - name: _IrLapState_SETUP
-      demangled: ''
-      offset: 00002C77
-    - name: _IrLapState_SSETUP
-      demangled: ''
-      offset: 00002FA8
-    - name: _IrLapRxConnectAction
-      demangled: ''
-      offset: '00003229'
-    - name: _IRLAP_SendData
-      demangled: ''
-      offset: 000040D8
-    - name: _IRLAP_Disconnect
-      demangled: ''
-      offset: 000041AE
-    - name: _InitPollTimer
-      demangled: ''
-      offset: '00004270'
-    - name: _IrLapSetStateNRM
-      demangled: ''
-      offset: '000042E9'
-    - name: _IrLapState_NRM
-      demangled: ''
-      offset: '00004345'
-    - name: _ReleaseBufferedData
-      demangled: ''
-      offset: '00005E41'
-    - name: _IrLapSendSUFrame
-      demangled: ''
-      offset: 0000683E
-    - name: _IrLapFrmInit
-      demangled: ''
-      offset: 00006A20
-    - name: _IRLAMP_Dynamic_Shutdown@0
-      demangled: ''
-      offset: 00006BA0
-    - name: _IRLAMP_Dynamic_Exit@0
-      demangled: ''
-      offset: 00006BEE
-    - name: _LMI_GetMediaFlag
-      demangled: ''
-      offset: 00006C7B
-    - name: _LMI_GetSpeed
-      demangled: ''
-      offset: 00006CA2
-    - name: _LMI_SetMaxSpeed
-      demangled: ''
-      offset: 00006CC1
-    - name: _IRLAP_AbortPackets
-      demangled: ''
-      offset: 00006CE4
-    - name: _LM_Startup
-      demangled: ''
-      offset: 00006FE0
-    - name: _LM_Shutdown
-      demangled: ''
-      offset: 000071D6
-    - name: _LM_InitClient
-      demangled: ''
-      offset: 0000723C
-    - name: _LM_AddIncoming
-      demangled: ''
-      offset: 0000728C
-    - name: _LM_RemoveIncoming
-      demangled: ''
-      offset: 0000730A
-    - name: _LM_BindClient
-      demangled: ''
-      offset: 000073A3
-    - name: _LM_UnBindClient
-      demangled: ''
-      offset: 000075BB
-    - name: _LM_DiscoveryReq
-      demangled: ''
-      offset: 000076DD
-    - name: _LM_ConnectReq
-      demangled: ''
-      offset: '00007791'
-    - name: _LM_ConnectRsp
-      demangled: ''
-      offset: 0000795C
-    - name: _LM_DisconnectReq
-      demangled: ''
-      offset: 00007A1C
-    - name: _LM_Idle
-      demangled: ''
-      offset: 00007B5D
-    - name: _LM_DeviceStatus
-      demangled: ''
-      offset: 00007BD0
-    - name: _LM_StatusReq
-      demangled: ''
-      offset: 00007C6B
-    - name: _LM_ReceiveData
-      demangled: ''
-      offset: 00007D14
-    - name: _LM_DataReq
-      demangled: ''
-      offset: 00007D4F
-    - name: _LM_UDataReq
-      demangled: ''
-      offset: 00007D9B
-    - name: _LM_NoConnectDataReq
-      demangled: ''
-      offset: 00007DE7
-    - name: _LM_GetIrLapFrmStats
-      demangled: ''
-      offset: 00007EE9
-    - name: _LM_GetDeviceStats
-      demangled: ''
-      offset: 00007F28
-    - name: _LM_GetDiscoveryCache
-      demangled: ''
-      offset: 00007FA2
-    - name: _LM_SetNickname
-      demangled: ''
-      offset: 00007FE3
-    - name: _LM_SetHints
-      demangled: ''
-      offset: 0000806A
-    - name: _LM_Sniff
-      demangled: ''
-      offset: '00008108'
-    - name: _LM_PeriodicDiscovery
-      demangled: ''
-      offset: '00008152'
-    - name: _LM_GetPeriodicDiscoveryPeriod
-      demangled: ''
-      offset: 0000825D
-    - name: _LM_LocalBusy
-      demangled: ''
-      offset: '00008296'
-    - name: _LM_AbortConnection
-      demangled: ''
-      offset: 000082FF
-    - name: _LmFindCacheConflicts
-      demangled: ''
-      offset: '00008380'
-    - name: _LmRemoveCacheConflicts
-      demangled: ''
-      offset: 0000852E
-    - name: _LmAddDeviceToCache
-      demangled: ''
-      offset: 0000863B
-    - name: _LmValidClientForConnection
-      demangled: ''
-      offset: '000086E8'
-    - name: _LmGiveStatusIndication
-      demangled: ''
-      offset: 0000874F
-    - name: _LmDisconnectPendingConnections
-      demangled: ''
-      offset: 000087D2
-    - name: _LmStartIrLapConnection
-      demangled: ''
-      offset: 000088B2
-    - name: _LmFindIcc
-      demangled: ''
-      offset: '00008937'
-    - name: _LmFindIdleIcc
-      demangled: ''
-      offset: 000089EF
-    - name: _LmProcessConnectResponse
-      demangled: ''
-      offset: 00008ABF
-    - name: _LmProcessConnectCommand
-      demangled: ''
-      offset: 00008B91
-    - name: _LmProcessDisconnectCommand
-      demangled: ''
-      offset: 00008D29
-    - name: _LmProcessAccessModeCommand
-      demangled: ''
-      offset: 00008E2E
-    - name: _LmSendDisconnect
-      demangled: ''
-      offset: 00008EE0
-    - name: _LmSetWatchDogTime
-      demangled: ''
-      offset: 00008F67
-    - name: _LmClearWatchDogTime
-      demangled: ''
-      offset: 00008F72
-    - name: _LmValidatePacket
-      demangled: ''
-      offset: 00008F7D
-    - name: _LmUpdateXidInfo
-      demangled: ''
-      offset: 0000905D
-    - name: _LmInitCallbacks
-      demangled: ''
-      offset: '00009130'
-    - name: _IrLmpErrorHandler
-      demangled: ''
-      offset: 00009AFD
-    - name: _LmIasInitClient
-      demangled: ''
-      offset: 00009B58
-    - name: _LMIAS_ClientRequest
-      demangled: ''
-      offset: 00009D7E
-    - name: _LmIasClientState_Calling
-      demangled: ''
-      offset: 0000A124
-    - name: _LmIasClientState_Outstanding
-      demangled: ''
-      offset: 0000A1A3
-    - name: _LmIasFindConnect
-      demangled: ''
-      offset: 0000A2CC
-    - name: _LmIasStartNewConnection
-      demangled: ''
-      offset: 0000A384
-    - name: _LmIasStartOperation
-      demangled: ''
-      offset: 0000A722
-    - name: _LmIasFindPendingToken
-      demangled: ''
-      offset: 0000A7F9
-    - name: _LmIasEndOperation
-      demangled: ''
-      offset: 0000A862
-    - name: _LmIasClientSendCommand
-      demangled: ''
-      offset: 0000A87A
-    - name: _LmIasSetTokenTime
-      demangled: ''
-      offset: 0000A9B2
-    - name: _LmIasProcessWaitingOpers
-      demangled: ''
-      offset: 0000A9F4
-    - name: _LmIasClientTimerFunc
-      demangled: ''
-      offset: 0000AAAF
-    - name: _LmIasClientDiscTimerFunc
-      demangled: ''
-      offset: 0000AB33
-    - name: _LmIasClientWdTimerFunc
-      demangled: ''
-      offset: 0000AB79
-    - name: _LmIasSendAck
-      demangled: ''
-      offset: 0000ABEC
-    - name: _LmIasClientSendDisconnect
-      demangled: ''
-      offset: 0000AC78
-    - name: _LmIasClientDisconnect
-      demangled: ''
-      offset: 0000ACB4
-    - name: _LMIAS_RegisterObject
-      demangled: ''
-      offset: 0000AD90
-    - name: _LMIAS_DeregisterObject
-      demangled: ''
-      offset: 0000AE2B
-    - name: _LMIAS_SetDeviceName
-      demangled: ''
-      offset: 0000AF39
-    - name: _LmIasInitServer
-      demangled: ''
-      offset: 0000AFB3
-    - name: _LmIasUpdateHints
-      demangled: ''
-      offset: 0000B644
-    - name: _LmIasServerFindConnect
-      demangled: ''
-      offset: 0000B71B
-    - name: _LmIasServerSendDisconnect
-      demangled: ''
-      offset: 0000B7DF
-    - name: _LmIasServerSendReject
-      demangled: ''
-      offset: 0000B8B9
-    - name: _LmIasServerDetermineCommand
-      demangled: ''
-      offset: 0000BCB8
-    - name: _LmIasValidateClientToken
-      demangled: ''
-      offset: 0000C754
-    - name: _MuxCon_ValidateActiveConnect
-      demangled: ''
-      offset: 0000CF78
-    - name: _MuxCon_ValidForReq
-      demangled: ''
-      offset: 0000D002
-    - name: _MuxCon_ValidForRsp
-      demangled: ''
-      offset: 0000D0A2
-    - name: _MuxCon_ValidForDisc
-      demangled: ''
-      offset: 0000D139
-    - name: _MuxCon_SendConnectPacket
-      demangled: ''
-      offset: 0000D1DC
-    - name: _MuxCon_SendResponsePacket
-      demangled: ''
-      offset: 0000D236
-    - name: _MuxCon_Init
-      demangled: ''
-      offset: 0000D284
-    - name: _MuxCon_MakeDisconnected
-      demangled: ''
-      offset: 0000D300
-    - name: _MuxCon_MakeActive
-      demangled: ''
-      offset: 0000D386
-    - name: _MuxCon_MakeIncoming
-      demangled: ''
-      offset: 0000D3D8
-    - name: _MuxCon_MakePending
-      demangled: ''
-      offset: 0000D433
-    - name: _MuxCon_InitConPacket
-      demangled: ''
-      offset: 0000D482
-    - name: _MuxCon_SendData
-      demangled: ''
-      offset: 0000D4EE
-    - name: _MuxCon_Idle
-      demangled: ''
-      offset: 0000D5C9
-    - name: _MuxCon_CheckDisconnect
-      demangled: ''
-      offset: 0000D619
-    - name: _MuxCon_CheckPendingDisc
-      demangled: ''
-      offset: 0000D683
-    - name: _MuxCon_Disconnect
-      demangled: ''
-      offset: 0000D6BC
-    - name: _MuxIcc_Init
-      demangled: ''
-      offset: 0000D7D8
-    - name: _MuxIcc_Allocate
-      demangled: ''
-      offset: 0000D81C
-    - name: _MuxIcc_Free
-      demangled: ''
-      offset: 0000D89C
-    - name: _MuxIcc_MakePending
-      demangled: ''
-      offset: 0000D8DC
-    - name: _MuxIcc_MakeActive
-      demangled: ''
-      offset: 0000D90C
-    - name: _MuxIcc_MakeClosing
-      demangled: ''
-      offset: 0000D9A7
-    - name: _MuxIcc_MakeClosed
-      demangled: ''
-      offset: 0000D9F3
-    - name: _MuxIcc_ChangeToActive
-      demangled: ''
-      offset: 0000DA5F
-    - name: _MuxIcc_StartConnection
-      demangled: ''
-      offset: 0000DA9C
-    - name: _MuxIcc_ProcessPendingConnects
-      demangled: ''
-      offset: 0000DB46
-    - name: _MuxIcc_FindConnection
-      demangled: ''
-      offset: 0000DC34
-    - name: _MuxIcc_DisconnectList
-      demangled: ''
-      offset: 0000DCF0
-    - name: _MuxIcc_Disconnect
-      demangled: ''
-      offset: 0000DD45
-    - name: _MuxIcc_AddIncomingConnect
-      demangled: ''
-      offset: 0000DD6B
-    - name: _MuxIcc_AddPendingConnect
-      demangled: ''
-      offset: 0000DDB4
-    - name: _MuxIcc_AllocateIncoming
-      demangled: ''
-      offset: 0000DDF1
-    - name: _MuxIcc_RemoveConnect
-      demangled: ''
-      offset: 0000DE4F
-    - name: _MuxIcc_StatusIndic
-      demangled: ''
-      offset: 0000DE8D
-    - name: _MuxIcc_CheckForPossibleIcc
-      demangled: ''
-      offset: 0000DF16
-    - name: _MuxIcc_CheckClosing
-      demangled: ''
-      offset: 0000DF7B
-    - name: _MuxIcc_CheckDisconnect
-      demangled: ''
-      offset: 0000E03E
-    - name: _LmSmoothCache
-      demangled: ''
-      offset: 0000E0E0
-    - name: _LmAddDeviceToSmoothCache
-      demangled: ''
-      offset: 0000E1D9
-    - name: _LmDiscoveryTimerFunc
-      demangled: ''
-      offset: 0000E4B7
-    - name: _LmPerformPeriodicDiscovery
-      demangled: ''
-      offset: 0000E51D
-    - name: _LmPerformDiscovery
-      demangled: ''
-      offset: 0000E5C3
-    - name: _LmSmoothStatusInd
-      demangled: ''
-      offset: 0000E6C7
-    - name: _LmConfirmDiscovery
-      demangled: ''
-      offset: '0000E956'
-    - name: _LmStartPeriodicDiscoveryTimer
-      demangled: ''
-      offset: 0000E9F8
-    - name: _LmUpdateDiscoveryCache
-      demangled: ''
-      offset: 0000EA67
-    - name: _LmIndicateCacheChange
-      demangled: ''
-      offset: 0000EAC9
-    - name: _LmDiscoveryConfirm
-      demangled: ''
-      offset: 0000EB33
-    - name: IRLAMPEX_DDB
-      demangled: ''
-      offset: 0000EBB8
-    - name: _IrLap
-      demangled: ''
-      offset: 0000EC08
-    - name: _ThreadExLock
-      demangled: ''
-      offset: 0000EC14
-    - name: _doRetroactiveShutdown
-      demangled: ''
-      offset: 0000EC78
-    - name: _Win32ThreadFuncActive
-      demangled: ''
-      offset: 0000EC7C
-    - name: _EventMutex
-      demangled: ''
-      offset: 0000EC80
-    - name: _EQFront
-      demangled: ''
-      offset: 0000EC84
-    - name: _EQBack
-      demangled: ''
-      offset: 0000EC88
-    - name: _DebugEQBack
-      demangled: ''
-      offset: 0000EC8C
-    - name: _slotTable
-      demangled: ''
-      offset: 0000EC9C
-    - name: _allListsMutex
-      demangled: ''
-      offset: 0000ECAC
-    - name: _PollTime2Table
-      demangled: ''
-      offset: 0000EE74
-    - name: _PollTime3Table
-      demangled: ''
-      offset: 0000EE84
-    - name: _IrLapFrmCap
-      demangled: ''
-      offset: 0000EE90
-    - name: _IrLapFrmWrap
-      demangled: ''
-      offset: 0000EE94
-    - name: _IrLapFrmParm
-      demangled: ''
-      offset: 0000EE98
-    - name: _IrLampParm
-      demangled: ''
-      offset: 0000EE9C
-    - name: _NumIccs
-      demangled: ''
-      offset: 0000EEA0
-    - name: _IrLampWrap
-      demangled: ''
-      offset: 0000EEA8
-    - name: _IoCtlTable
-      demangled: ''
-      offset: 0000EF30
-    - name: _IoCtlTableSize
-      demangled: ''
-      offset: 0000EF3C
-    - name: _IrLmp
-      demangled: ''
-      offset: 0000EF40
-    - name: _IrLmpInitialized
-      demangled: ''
-      offset: 0000EF44
-    - name: _IasClient
-      demangled: ''
-      offset: 0000EFA4
-    - name: _IasClientNoConCB
-      demangled: ''
-      offset: 0000EFAC
-    - name: _IasClientCB
-      demangled: ''
-      offset: 0000EFCC
-    - name: _IasServer
-      demangled: ''
-      offset: 0000F018
-    - name: _IasServerNoConCB
-      demangled: ''
-      offset: 0000F020
-    - name: _IasServerCB
-      demangled: ''
-      offset: 0000F040
-    - name: _dwsNumPackets
-      demangled: ''
-      offset: 0000F0CC
-    - name: _EventQueue
-      demangled: ''
-      offset: 0000F0D0
-    - name: _stServbuff
-      demangled: ''
-      offset: 0000F110
-    - name: _ThreadExRef
-      demangled: ''
-      offset: 0000F130
-    - name: _fThreadEnable
-      demangled: ''
-      offset: 0000F134
-  - num: '2'
-    name: _IGROUP
-    offset: '00001680'
-    symbols:
-    - name: IRLAMP_Dynamic_Init
-      demangled: ''
-      offset: '00000000'
-    - name: _IRLAMPEX_DynamicInit
-      demangled: ''
-      offset: '00000014'
-  - num: '3'
-    name: _RARE
-    offset: '00000000'
-    symbols:
-    - name: _CCODE__HeapAllocate
-      demangled: ''
-      offset: '00000000'
-    - name: _CCODE__HeapFree
-      demangled: ''
-      offset: '00000008'
-    - name: _CCODE_Schedule_Global_Event@8
-      demangled: ''
-      offset: '00000010'
-    - name: _CCODE_Get_Sys_VM_Handle
-      demangled: ''
-      offset: '00000028'
-    - name: _CCODE_Set_Global_Time_Out@12
-      demangled: ''
-      offset: '00000034'
-    - name: _CCODE_Cancel_Time_Out@4
-      demangled: ''
-      offset: '00000050'
-    - name: _CCODE_Get_Last_Updated_System_Time
-      demangled: ''
-      offset: '00000060'
-    - name: _CCODE__CreateMutex
-      demangled: ''
-      offset: '00000068'
-    - name: _CCODE__DestroyMutex
-      demangled: ''
-      offset: '00000070'
-    - name: _CCODE__EnterMutex
-      demangled: ''
-      offset: '00000078'
-    - name: _CCODE__LeaveMutex
-      demangled: ''
-      offset: '00000080'
-    - name: _CCODE__lmemcpy
-      demangled: ''
-      offset: '00000088'
-    - name: _CCODE_Call_Restricted_Event@24
-      demangled: ''
-      offset: '00000090'
 - version: Windows 98SE Retail
   source_tree: []
   segments:

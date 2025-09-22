@@ -1,0 +1,1560 @@
+filename: hidparse.sys
+binary: HIDPARSE
+description: ''
+appearances:
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000430'
+    symbols:
+    - name: _HidP_FreeCollectionDescription@4
+      processed: ''
+      offset: '00000000'
+    - name: _HidP_SysPowerEvent@16
+      processed: ''
+      offset: '00000060'
+    - name: _HidP_SysPowerCaps@8
+      processed: ''
+      offset: '00000140'
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000160'
+    - name: _HidP_ExtractData@16
+      processed: ''
+      offset: '00000170'
+    - name: _HidP_InsertData@20
+      processed: ''
+      offset: '00000330'
+    - name: _HidP_DeleteArrayEntry@20
+      processed: ''
+      offset: '00000540'
+    - name: _HidP_GetCaps@8
+      processed: ''
+      offset: '00000650'
+    - name: _HidP_GetLinkCollectionNodes@12
+      processed: ''
+      offset: '00000930'
+    - name: _HidP_GetButtonCaps@16
+      processed: ''
+      offset: 00000A00
+    - name: _HidP_GetSpecificButtonCaps@28
+      processed: ''
+      offset: 00000A30
+    - name: _HidP_GetValueCaps@16
+      processed: ''
+      offset: '00000E10'
+    - name: _HidP_GetSpecificValueCaps@28
+      processed: ''
+      offset: '00000E40'
+    - name: _HidP_Index2Usage@8
+      processed: ''
+      offset: '00001330'
+    - name: _HidP_Usage2Index@8
+      processed: ''
+      offset: '00001450'
+    - name: _HidP_SetUsages@32
+      processed: ''
+      offset: '00001580'
+    - name: _HidP_UnsetUsages@32
+      processed: ''
+      offset: '00001690'
+    - name: _HidP_SetUnsetOneUsage@28
+      processed: ''
+      offset: 000017A0
+    - name: _HidP_GetUsagesEx@28
+      processed: ''
+      offset: 00001C20
+    - name: _HidP_GetUsages@32
+      processed: ''
+      offset: 00001C50
+    - name: _HidP_MaxUsageListLength@12
+      processed: ''
+      offset: '00002110'
+    - name: _HidP_MaxDataListLength@8
+      processed: ''
+      offset: '00002220'
+    - name: _HidP_SetUsageValue@32
+      processed: ''
+      offset: '00002340'
+    - name: _HidP_SetUsageValueArray@36
+      processed: ''
+      offset: 000025B0
+    - name: _HidP_SetScaledUsageValue@32
+      processed: ''
+      offset: 000028C0
+    - name: _HidP_GetUsageValue@32
+      processed: ''
+      offset: 00002C90
+    - name: _HidP_GetUsageValueArray@36
+      processed: ''
+      offset: 00002F10
+    - name: _HidP_GetScaledUsageValue@32
+      processed: ''
+      offset: '00003210'
+    - name: _HidP_SetOneData@16
+      processed: ''
+      offset: '00003590'
+    - name: _HidP_SetData@24
+      processed: ''
+      offset: 00003A50
+    - name: _HidP_GetData@24
+      processed: ''
+      offset: 00003B50
+    - name: _HidP_UsageListDifference@20
+      processed: ''
+      offset: '00004010'
+    - name: _HidP_TranslateUsagesToI8042ScanCodes@24
+      processed: ''
+      offset: 000041D0
+    - name: _HidP_KeyboardKeypadCode@24
+      processed: ''
+      offset: '00004350'
+    - name: _HidP_ModifierCode@24
+      processed: ''
+      offset: '00004500'
+    - name: _memcpy
+      processed: ''
+      offset: '00004628'
+    - name: _memset
+      processed: ''
+      offset: 0000462E
+  - num: '2'
+    name: .data
+    offset: 000004D0
+    symbols:
+    - name: _HidP_XlateToScanCodeTable
+      processed: ''
+      offset: '00000000'
+    - name: _HidP_XlateKbdPadCodesSubTable
+      processed: ''
+      offset: '00000400'
+    - name: _HidP_XlateModifierCodesSubTable
+      processed: ''
+      offset: '00000430'
+    - name: _HidP_ScanCodeSubTables
+      processed: ''
+      offset: '00000460'
+  - num: '3'
+    name: .idata$2
+    offset: 000005B0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      processed: ''
+      offset: '00000000'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000014'
+    - name: __imp__memcpy
+      processed: ''
+      offset: 0000003C
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000040'
+    - name: __imp__memset
+      processed: ''
+      offset: '00000044'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000048'
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000004C
+  - num: '4'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HidP_GetCollectionDescription@16
+      processed: ''
+      offset: '00000000'
+    - name: _HidP_AllocateCollections@28
+      processed: ''
+      offset: 000001C0
+    - name: _HidP_FreeUsageList@4
+      processed: ''
+      offset: 00000F20
+    - name: _HidP_PushUsageList@12
+      processed: ''
+      offset: 00000F70
+    - name: _HidP_PopUsageList@4
+      processed: ''
+      offset: '00001020'
+    - name: _HidP_ParseCollections@28
+      processed: ''
+      offset: '00001060'
+    - name: _HidP_AssignDataIndices@8
+      processed: ''
+      offset: '00004570'
+- version: Windows 98 Debug
+  source_tree:
+  - ../descript.c
+  - ../hidparse.c
+  - ../query.c
+  - ../trnslate.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00001710'
+    symbols:
+    - name: _HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: '00000000'
+    - name: _HidP_SysPowerEvent@16
+      demangled: ''
+      offset: '00000060'
+    - name: _HidP_SysPowerCaps@8
+      demangled: ''
+      offset: '00000140'
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000160'
+    - name: _HidP_ExtractData@16
+      demangled: ''
+      offset: '00000170'
+    - name: _HidP_InsertData@20
+      demangled: ''
+      offset: '00000330'
+    - name: _HidP_DeleteArrayEntry@20
+      demangled: ''
+      offset: '00000540'
+    - name: _HidP_GetCaps@8
+      demangled: ''
+      offset: '00000690'
+    - name: _HidP_GetLinkCollectionNodes@12
+      demangled: ''
+      offset: 000009C0
+    - name: _HidP_GetButtonCaps@16
+      demangled: ''
+      offset: 00000AF0
+    - name: _HidP_GetSpecificButtonCaps@28
+      demangled: ''
+      offset: 00000B20
+    - name: _HidP_GetValueCaps@16
+      demangled: ''
+      offset: 00000F70
+    - name: _HidP_GetSpecificValueCaps@28
+      demangled: ''
+      offset: 00000FA0
+    - name: _HidP_Index2Usage@8
+      demangled: ''
+      offset: 000014F0
+    - name: _HidP_Usage2Index@8
+      demangled: ''
+      offset: '00001610'
+    - name: _HidP_SetUsages@32
+      demangled: ''
+      offset: '00001740'
+    - name: _HidP_UnsetUsages@32
+      demangled: ''
+      offset: '00001850'
+    - name: _HidP_SetUnsetOneUsage@28
+      demangled: ''
+      offset: '00001960'
+    - name: _HidP_GetUsagesEx@28
+      demangled: ''
+      offset: '00001E00'
+    - name: _HidP_GetUsages@32
+      demangled: ''
+      offset: '00001E30'
+    - name: _HidP_MaxUsageListLength@12
+      demangled: ''
+      offset: '00002300'
+    - name: _HidP_MaxDataListLength@8
+      demangled: ''
+      offset: '00002470'
+    - name: _HidP_SetUsageValue@32
+      demangled: ''
+      offset: 000025F0
+    - name: _HidP_SetUsageValueArray@36
+      demangled: ''
+      offset: '00002860'
+    - name: _HidP_SetScaledUsageValue@32
+      demangled: ''
+      offset: 00002B70
+    - name: _HidP_GetUsageValue@32
+      demangled: ''
+      offset: 00002F40
+    - name: _HidP_GetUsageValueArray@36
+      demangled: ''
+      offset: 000031C0
+    - name: _HidP_GetScaledUsageValue@32
+      demangled: ''
+      offset: 000034C0
+    - name: _HidP_SetOneData@16
+      demangled: ''
+      offset: '00003840'
+    - name: _HidP_SetData@24
+      demangled: ''
+      offset: 00003D20
+    - name: _HidP_GetData@24
+      demangled: ''
+      offset: '00003E20'
+    - name: _HidP_UsageListDifference@20
+      demangled: ''
+      offset: '00004320'
+    - name: _HidP_TranslateUsagesToI8042ScanCodes@24
+      demangled: ''
+      offset: '000044E0'
+    - name: _HidP_KeyboardKeypadCode@24
+      demangled: ''
+      offset: '00004660'
+    - name: _HidP_ModifierCode@24
+      demangled: ''
+      offset: '00004810'
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: '00004938'
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000493E
+    - name: _DbgPrint
+      demangled: ''
+      offset: '00004944'
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: 0000494A
+    - name: _DbgBreakPoint@0
+      demangled: ''
+      offset: '00004950'
+    - name: _KeGetCurrentIrql@0
+      demangled: ''
+      offset: '00004956'
+  - num: '3'
+    name: .data
+    offset: '00002750'
+    symbols:
+    - name: ??_C@_0CF@LBPL@Insufficitent?5Resources?5at?5VERY?5@
+      demangled: '"Insufficitent Resources at VERY "...'
+      offset: '00000000'
+    - name: ??_C@_0BI@EALA@?8Starting?5Parsing?5Pass?6?$AA@
+      demangled: "\"\\'Starting Parsing Pass\\n\""
+      offset: '00000028'
+    - name: ??_C@_0BP@GGOP@?8Preparing?5to?5Allocate?5memory?6?$AA@
+      demangled: "\"\\'Preparing to Allocate memory\\n\""
+      offset: '00000040'
+    - name: ??_C@_0BA@DFPB@?8HidParse?4SYS?3?5?$AA@
+      demangled: "\"\\'HidParse.SYS: \""
+      offset: '00000060'
+    - name: ??_C@_0CH@MJC@No?5top?5level?5collections?5were?5fo@
+      demangled: '"No top level collections were fo"...'
+      offset: '00000070'
+    - name: ??_C@_08EMJP@report?4?6?$AA@
+      demangled: '"report.\n"'
+      offset: '00000098'
+    - name: ??_C@_0DF@CCIL@For?5each?5TOP?5level?5collection?0?5u@
+      demangled: '"For each TOP level collection, u"...'
+      offset: 000000A4
+    - name: ??_C@_0DG@BLKN@This?5means?5that?5you?5must?5have?5at@
+      demangled: '"This means that you must have at"...'
+      offset: 000000DC
+    - name: ??_C@_0CF@MNCO@Report?5IDS?5cannot?5span?5collectio@
+      demangled: '"Report IDS cannot span collectio"...'
+      offset: '00000114'
+    - name: ??_C@_0BE@GKDD@Report?5ID?5found?3?5?$CFd?$AA@
+      demangled: '"Report ID found: %d"'
+      offset: 0000013C
+    - name: ??_C@_0CO@IAEJ@Reports?5cannot?5span?5more?5than?5on@
+      demangled: '"Reports cannot span more than on"...'
+      offset: '00000150'
+    - name: ??_C@_0CL@DCFF@Report?5ID?5outside?5of?5Top?5level?5c@
+      demangled: '"Report ID outside of Top level c"...'
+      offset: '00000180'
+    - name: ??_C@_06HNBH@curCol?$AA@
+      demangled: '"curCol"'
+      offset: 000001AC
+    - name: ??_C@_0O@GGMF@?4?4?2descript?4c?$AA@
+      demangled: '"..\\descript.c"'
+      offset: 000001B4
+    - name: ??_C@_0CN@FB@Main?5item?5found?5not?5in?5top?5level@
+      demangled: '"Main item found not in top level"...'
+      offset: 000001C4
+    - name: ??_C@_0DB@LAIN@Non?5constant?5main?5item?5found?5wit@
+      demangled: '"Non constant main item found wit"...'
+      offset: 000001F4
+    - name: ??_C@_0CO@FJBG@IE?3?5Only?5Usage?5token?5allowes?5?$CIno@
+      demangled: '"IE: Only Usage token allowes (no"...'
+      offset: '00000228'
+    - name: ??_C@_0CM@IMJH@Only?5Usages?5are?5allowed?5within?5a@
+      demangled: '"Only Usages are allowed within a"...'
+      offset: '00000258'
+    - name: ??_C@_0CH@GCKA@Invalid?5token?5found?5within?5delim@
+      demangled: '"Invalid token found within delim"...'
+      offset: '00000284'
+    - name: ??_C@_0BH@HIBH@Delimiter?5not?5stop?5?$CFx?6?$AA@
+      demangled: '"Delimiter not stop %x\n"'
+      offset: 000002AC
+    - name: ??_C@_0BK@OPJO@End?5delimiter?5NOT?5found?$CB?6?$AA@
+      demangled: '"End delimiter NOT found!\n"'
+      offset: 000002C4
+    - name: ??_C@_0BI@NPMC@Delimiter?5not?5start?5?$CFx?6?$AA@
+      demangled: '"Delimiter not start %x\n"'
+      offset: '000002E0'
+    - name: ??_C@_0CM@ENHH@Could?5not?5allocate?5space?5for?5Pre@
+      demangled: '"Could not allocate space for Pre"...'
+      offset: 000002F8
+    - name: ??_C@_0BF@PPDG@?8Collection?5?$CFd?5exit?6?$AA@
+      demangled: "\"\\'Collection %d exit\\n\""
+      offset: '00000324'
+    - name: ??_C@_0BH@MMIF@?8Exit?5Link?5Collection?6?$AA@
+      demangled: "\"\\'Exit Link Collection\\n\""
+      offset: 0000033C
+    - name: ??_C@_0BG@LLKD@Extra?5End?5Collection?6?$AA@
+      demangled: '"Extra End Collection\n"'
+      offset: '00000354'
+    - name: ??_C@_0CL@GAEA@Link?5Collection?5with?5multiple?5us@
+      demangled: '"Link Collection with multiple us"...'
+      offset: 0000036C
+    - name: ??_C@_0BG@CGA@Pos?5?$CI?$CFd?$CJ?0?5depth?5?$CI?$CFd?$CJ?6?$AA@
+      demangled: '"Pos (%d), depth (%d)\n"'
+      offset: '00000398'
+    - name: ??_C@_0CJ@CNJC@Warning?$CB?5Link?5collection?5without@
+      demangled: '"Warning! Link collection without"...'
+      offset: 000003B0
+    - name: 
+        ??_C@_0CJ@CJB@?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK@
+      demangled: '"********************************"...'
+      offset: 000003DC
+    - name: ??_C@_0BI@BIG@?8Enter?5Link?5Collection?6?$AA@
+      demangled: "\"\\'Enter Link Collection\\n\""
+      offset: '00000408'
+    - name: ??_C@_0CL@EMG@No?5Resources?5to?5make?5Top?5level?5c@
+      demangled: '"No Resources to make Top level c"...'
+      offset: '00000420'
+    - name: ??_C@_0CA@KKLL@?8Top?5Level?5Collection?5?$CFd?5found?6?$AA@
+      demangled: "\"\\'Top Level Collection %d found\\n\""
+      offset: 0000044C
+    - name: ??_C@_0CI@IOHJ@Default?5report?5ID?5used?5inappropr@
+      demangled: '"Default report ID used inappropr"...'
+      offset: 0000046C
+    - name: ??_C@_0CB@EFCK@No?5report?5ID?5for?5collection?3?5?$CFd?6@
+      demangled: '"No report ID for collection: %d\n"...'
+      offset: '00000494'
+    - name: ??_C@_0CO@IDIH@Multiple?5usages?5for?5top?5level?5co@
+      demangled: '"Multiple usages for top level co"...'
+      offset: 000004B8
+    - name: ??_C@_0CI@IOHD@No?5usage?5for?5top?5level?5collectio@
+      demangled: '"No usage for top level collectio"...'
+      offset: '000004E8'
+    - name: ??_C@_0BB@LOJF@Item?5Unknown?5?$CFx?6?$AA@
+      demangled: '"Item Unknown %x\n"'
+      offset: '00000510'
+    - name: ??_C@_0EM@DLMJ@tmpCount?5?$DN?$DN?5?$CIusage?9?$DODepth?5?$CL?5?$CIusa@
+      demangled: '"tmpCount == (usage->Depth + (usa"...'
+      offset: '00000524'
+    - name: ??_C@_0BF@PBLG@usage?5?$DN?$DN?5?$CGfirstUsage?$AA@
+      demangled: '"usage == &firstUsage"'
+      offset: '00000570'
+    - name: ??_C@_0BC@EOEP@0?5?$DN?$DN?5usage?9?$DODepth?$AA@
+      demangled: '"0 == usage->Depth"'
+      offset: '00000588'
+    - name: ??_C@_0CE@MNMO@Delimiters?5for?5array?5declairatio@
+      demangled: '"Delimiters for array declairatio"...'
+      offset: 0000059C
+    - name: ??_C@_0CI@KGIN@Currently?5this?5parser?5does?5not?5s@
+      demangled: '"Currently this parser does not s"...'
+      offset: 000005C0
+    - name: ??_C@_0BG@GIDO@?8Feature2?5offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Feature2 offset:%x \\n\""
+      offset: '000005E8'
+    - name: ??_C@_0BF@FAHP@?8Feature?5offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Feature offset:%x \\n\""
+      offset: '00000600'
+    - name: ??_C@_0BC@KGDE@?8Out2?5offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Out2 offset:%x \\n\""
+      offset: '00000618'
+    - name: ??_C@_0BB@FKAK@?8Out?5offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Out offset:%x \\n\""
+      offset: 0000062C
+    - name: ??_C@_0BD@DEAO@?8Main2?5offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Main2 offset:%x \\n\""
+      offset: '00000640'
+    - name: ??_C@_0BC@DBDI@?8Main?5Offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Main Offset:%x \\n\""
+      offset: '00000654'
+    - name: ??_C@_0CC@PGHG@No?5Resources?5to?5Push?5Usage?5stack@
+      demangled: '"No Resources to Push Usage stack"...'
+      offset: '00000668'
+    - name: ??_C@_0BC@FOIK@Pop?5Global?5Stack?6?$AA@
+      demangled: '"Pop Global Stack\n"'
+      offset: 0000068C
+    - name: ??_C@_0BD@HGGM@Push?5Global?5Stack?6?$AA@
+      demangled: '"Push Global Stack\n"'
+      offset: 000006A0
+    - name: ??_C@_0CD@GACK@No?5Resources?5to?5Push?5global?5stac@
+      demangled: '"No Resources to Push global stac"...'
+      offset: 000006B4
+    - name: ??_C@_0BP@JEHE@Report?5IDs?5cannot?5be?5zero?5?$CI0?$CJ?6?$AA@
+      demangled: '"Report IDs cannot be zero (0)\n"'
+      offset: 000006D8
+    - name: ??_C@_0CK@FKCG@Report?5ID?5?$CFd?5found?5in?5collection@
+      demangled: '"Report ID %d found in collection"...'
+      offset: 000006F8
+    - name: ??_C@_0CP@CHND@Col?5?$CFx?5Report?5?$CFx?5NOT?5byte?5allign@
+      demangled: '"Col %x Report %x NOT byte allign"...'
+      offset: '00000724'
+    - name: ??_C@_0BJ@PFOJ@?8X?5Parse?5Collection?5?$CFd?5?6?$AA@
+      demangled: "\"\\'X Parse Collection %d \\n\""
+      offset: '00000754'
+    - name: ??_C@_0DI@JAOM@?$CIparentLCNode?5?9?5linkNodeArray?$CJ?5?$DN@
+      demangled: '"(parentLCNode - linkNodeArray) ="...'
+      offset: '00000770'
+    - name: ??_C@_0DN@FLBL@currentLCNode?9?$DOParent?5?$DM?5preparse@
+      demangled: '"currentLCNode->Parent < preparse"...'
+      offset: 000007A8
+    - name: ??_C@_0DF@BGIC@linkNodeIndex?5?$DM?5preparsed?9?$DOLinkC@
+      demangled: '"linkNodeIndex < preparsed->LinkC"...'
+      offset: '000007E8'
+    - name: ??_C@_0CJ@IAAC@0?5?$DM?5preparsed?9?$DOLinkCollectionArr@
+      demangled: '"0 < preparsed->LinkCollectionArr"...'
+      offset: '00000820'
+    - name: ??_C@_0BH@IFBB@?8Parse?5Collection?5?$CFd?5?6?$AA@
+      demangled: "\"\\'Parse Collection %d \\n\""
+      offset: 0000084C
+    - name: ??_C@_06DMED@appCol?$AA@
+      demangled: '"appCol"'
+      offset: '00000864'
+    - name: ??_C@_0BE@CJDH@More?5Data?5Expected?6?$AA@
+      demangled: '"More Data Expected\n"'
+      offset: 0000086C
+    - name: ??_C@_0BF@OKNF@?$CGPpd?9?$DOFeature?5?$DN?$DN?5iof?$AA@
+      demangled: '"&Ppd->Feature == iof"'
+      offset: '00000880'
+    - name: ??_C@_05LLOB@FALSE?$AA@
+      demangled: '"FALSE"'
+      offset: '00000898'
+    - name: ??_C@_0CF@HIAL@EX?3?5Pageable?5code?5called?5at?5IRQL@
+      demangled: '"EX: Pageable code called at IRQL"...'
+      offset: 000008A0
+    - name: ??_C@_0L@MOHO@0?5?$CB?$DN?5Value?$AA@
+      demangled: '"0 != Value"'
+      offset: 000008C8
+    - name: ??_C@_0BA@HDHE@0?5?$DM?5ReportCount?$AA@
+      demangled: '"0 < ReportCount"'
+      offset: 000008D4
+    - name: ??_C@_0L@JKEG@?4?4?2query?4c?$AA@
+      demangled: '"..\\query.c"'
+      offset: '000008E4'
+    - name: ??_C@_0M@PDDA@0?5?$DN?$DN?5status?$AA@
+      demangled: '"0 == status"'
+      offset: 000008F0
+    - name: ??_C@_0EK@PGGI@tmpDataIndex?5?$CL?5channel?9?$DORange?4Da@
+      demangled: '"tmpDataIndex + channel->Range.Da"...'
+      offset: 000008FC
+    - name: _HidP_XlateToScanCodeTable
+      demangled: ''
+      offset: '00000948'
+    - name: _HidP_XlateKbdPadCodesSubTable
+      demangled: ''
+      offset: 00000D48
+    - name: _HidP_XlateModifierCodesSubTable
+      demangled: ''
+      offset: 00000D78
+    - name: _HidP_ScanCodeSubTables
+      demangled: ''
+      offset: 00000DA8
+  - num: '4'
+    name: .idata$2
+    offset: 000028B0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000028'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: 0000005C
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000060'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000064'
+    - name: __imp__DbgBreakPoint@0
+      demangled: ''
+      offset: '00000068'
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: 0000006C
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000070'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000074'
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000078'
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: '00000000'
+    - name: _HidP_AllocateCollections@28
+      demangled: ''
+      offset: '00000230'
+    - name: _HidP_FreeUsageList@4
+      demangled: ''
+      offset: '00001580'
+    - name: _HidP_PushUsageList@12
+      demangled: ''
+      offset: 000015D0
+    - name: _HidP_PopUsageList@4
+      demangled: ''
+      offset: '00001680'
+    - name: _HidP_ParseCollections@28
+      demangled: ''
+      offset: 000016D0
+    - name: _HidP_AssignDataIndices@8
+      demangled: ''
+      offset: '00005440'
+- version: Windows 98SE Debug
+  source_tree:
+  - ../descript.c
+  - ../hidparse.c
+  - ../query.c
+  - ../trnslate.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00001B60
+    symbols:
+    - name: _HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: '00000000'
+    - name: _HidP_SysPowerEvent@16
+      demangled: ''
+      offset: '00000060'
+    - name: _HidP_SysPowerCaps@8
+      demangled: ''
+      offset: '00000140'
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000160'
+    - name: _HidP_ExtractData@16
+      demangled: ''
+      offset: '00000170'
+    - name: _HidP_InsertData@20
+      demangled: ''
+      offset: '00000330'
+    - name: _HidP_DeleteArrayEntry@20
+      demangled: ''
+      offset: '00000540'
+    - name: _HidP_GetCaps@8
+      demangled: ''
+      offset: '00000690'
+    - name: _HidP_GetLinkCollectionNodes@12
+      demangled: ''
+      offset: 000009C0
+    - name: _HidP_GetButtonCaps@16
+      demangled: ''
+      offset: 00000AF0
+    - name: _HidP_GetSpecificButtonCaps@28
+      demangled: ''
+      offset: 00000B20
+    - name: _HidP_GetValueCaps@16
+      demangled: ''
+      offset: 00000F60
+    - name: _HidP_GetSpecificValueCaps@28
+      demangled: ''
+      offset: 00000F90
+    - name: _HidP_GetExtendedAttributes@20
+      demangled: ''
+      offset: 000014D0
+    - name: _HidP_InitializeReportForID@20
+      demangled: ''
+      offset: '00001710'
+    - name: _HidP_Index2Usage@8
+      demangled: ''
+      offset: 00001A30
+    - name: _HidP_Usage2Index@8
+      demangled: ''
+      offset: 00001B50
+    - name: _HidP_SetUsages@32
+      demangled: ''
+      offset: 00001C80
+    - name: _HidP_UnsetUsages@32
+      demangled: ''
+      offset: 00001DB0
+    - name: _HidP_SetUnsetOneUsage@28
+      demangled: ''
+      offset: 00001EE0
+    - name: _HidP_GetUsagesEx@28
+      demangled: ''
+      offset: 000023A0
+    - name: _HidP_GetUsages@32
+      demangled: ''
+      offset: 000023D0
+    - name: _HidP_MaxUsageListLength@12
+      demangled: ''
+      offset: 000028C0
+    - name: _HidP_MaxDataListLength@8
+      demangled: ''
+      offset: 00002A30
+    - name: _HidP_SetUsageValue@32
+      demangled: ''
+      offset: 00002BB0
+    - name: _HidP_SetUsageValueArray@36
+      demangled: ''
+      offset: '00002E40'
+    - name: _HidP_SetScaledUsageValue@32
+      demangled: ''
+      offset: '00003170'
+    - name: _HidP_GetUsageValue@32
+      demangled: ''
+      offset: '00003570'
+    - name: _HidP_GetUsageValueArray@36
+      demangled: ''
+      offset: '00003810'
+    - name: _HidP_GetScaledUsageValue@32
+      demangled: ''
+      offset: 00003B30
+    - name: _HidP_SetOneData@16
+      demangled: ''
+      offset: 00003ED0
+    - name: _HidP_SetData@24
+      demangled: ''
+      offset: 000043B0
+    - name: _HidP_GetData@24
+      demangled: ''
+      offset: 000044B0
+    - name: _HidP_UsageListDifference@20
+      demangled: ''
+      offset: 000049B0
+    - name: _HidP_UsageAndPageListDifference@20
+      demangled: ''
+      offset: 00004B70
+    - name: _HidP_KbdPutKey@16
+      demangled: ''
+      offset: 00004D20
+    - name: _HidP_TranslateUsagesToI8042ScanCodes@24
+      demangled: ''
+      offset: 00004D90
+    - name: _HidP_TranslateUsageAndPagesToI8042ScanCodes@24
+      demangled: ''
+      offset: '00004E20'
+    - name: _HidP_TranslateUsage@32
+      demangled: ''
+      offset: 00004F10
+    - name: _HidP_KeyboardKeypadCode@24
+      demangled: ''
+      offset: 00004FF0
+    - name: _HidP_ModifierCode@24
+      demangled: ''
+      offset: 000050B0
+    - name: _HidP_VendorBreakCodesAsMakeCodes@24
+      demangled: ''
+      offset: '00005170'
+    - name: _HidP_StraightLookup@8
+      demangled: ''
+      offset: 000051C0
+    - name: _HidP_AssociativeLookup@8
+      demangled: ''
+      offset: '000051E0'
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: '00005220'
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00005226'
+    - name: _DbgPrint
+      demangled: ''
+      offset: 0000522C
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: '00005232'
+    - name: _DbgBreakPoint@0
+      demangled: ''
+      offset: '00005238'
+    - name: _KeGetCurrentIrql@0
+      demangled: ''
+      offset: 0000523E
+  - num: '3'
+    name: .data
+    offset: 00002CC0
+    symbols:
+    - name: ??_C@_0CF@LBPL@Insufficitent?5Resources?5at?5VERY?5@
+      demangled: '"Insufficitent Resources at VERY "...'
+      offset: '00000000'
+    - name: ??_C@_0BI@EALA@?8Starting?5Parsing?5Pass?6?$AA@
+      demangled: "\"\\'Starting Parsing Pass\\n\""
+      offset: '00000028'
+    - name: ??_C@_0BP@GGOP@?8Preparing?5to?5Allocate?5memory?6?$AA@
+      demangled: "\"\\'Preparing to Allocate memory\\n\""
+      offset: '00000040'
+    - name: ??_C@_0BA@DFPB@?8HidParse?4SYS?3?5?$AA@
+      demangled: "\"\\'HidParse.SYS: \""
+      offset: '00000060'
+    - name: ??_C@_0CH@MJC@No?5top?5level?5collections?5were?5fo@
+      demangled: '"No top level collections were fo"...'
+      offset: '00000070'
+    - name: ??_C@_08EMJP@report?4?6?$AA@
+      demangled: '"report.\n"'
+      offset: '00000098'
+    - name: ??_C@_0DF@CCIL@For?5each?5TOP?5level?5collection?0?5u@
+      demangled: '"For each TOP level collection, u"...'
+      offset: 000000A4
+    - name: ??_C@_0DG@BLKN@This?5means?5that?5you?5must?5have?5at@
+      demangled: '"This means that you must have at"...'
+      offset: 000000DC
+    - name: ??_C@_0CF@MNCO@Report?5IDS?5cannot?5span?5collectio@
+      demangled: '"Report IDS cannot span collectio"...'
+      offset: '00000114'
+    - name: ??_C@_0BN@GFJE@Long?5Items?5not?5supported?5?$CFx?6?$AA@
+      demangled: '"Long Items not supported %x\n"'
+      offset: 0000013C
+    - name: ??_C@_0BE@GKDD@Report?5ID?5found?3?5?$CFd?$AA@
+      demangled: '"Report ID found: %d"'
+      offset: 0000015C
+    - name: ??_C@_0CO@IAEJ@Reports?5cannot?5span?5more?5than?5on@
+      demangled: '"Reports cannot span more than on"...'
+      offset: '00000170'
+    - name: ??_C@_0CL@DCFF@Report?5ID?5outside?5of?5Top?5level?5c@
+      demangled: '"Report ID outside of Top level c"...'
+      offset: 000001A0
+    - name: ??_C@_06HNBH@curCol?$AA@
+      demangled: '"curCol"'
+      offset: 000001CC
+    - name: ??_C@_0O@GGMF@?4?4?2descript?4c?$AA@
+      demangled: '"..\\descript.c"'
+      offset: 000001D4
+    - name: ??_C@_0CN@FB@Main?5item?5found?5not?5in?5top?5level@
+      demangled: '"Main item found not in top level"...'
+      offset: '000001E4'
+    - name: ??_C@_0DB@LAIN@Non?5constant?5main?5item?5found?5wit@
+      demangled: '"Non constant main item found wit"...'
+      offset: '00000214'
+    - name: ??_C@_0CO@FJBG@IE?3?5Only?5Usage?5token?5allowes?5?$CIno@
+      demangled: '"IE: Only Usage token allowes (no"...'
+      offset: '00000248'
+    - name: ??_C@_0CM@IMJH@Only?5Usages?5are?5allowed?5within?5a@
+      demangled: '"Only Usages are allowed within a"...'
+      offset: '00000278'
+    - name: ??_C@_0CH@GCKA@Invalid?5token?5found?5within?5delim@
+      demangled: '"Invalid token found within delim"...'
+      offset: 000002A4
+    - name: ??_C@_0BH@HIBH@Delimiter?5not?5stop?5?$CFx?6?$AA@
+      demangled: '"Delimiter not stop %x\n"'
+      offset: 000002CC
+    - name: ??_C@_0BK@OPJO@End?5delimiter?5NOT?5found?$CB?6?$AA@
+      demangled: '"End delimiter NOT found!\n"'
+      offset: '000002E4'
+    - name: ??_C@_0BI@NPMC@Delimiter?5not?5start?5?$CFx?6?$AA@
+      demangled: '"Delimiter not start %x\n"'
+      offset: '00000300'
+    - name: ??_C@_0CM@ENHH@Could?5not?5allocate?5space?5for?5Pre@
+      demangled: '"Could not allocate space for Pre"...'
+      offset: '00000318'
+    - name: ??_C@_0BF@PPDG@?8Collection?5?$CFd?5exit?6?$AA@
+      demangled: "\"\\'Collection %d exit\\n\""
+      offset: '00000344'
+    - name: ??_C@_0BH@MMIF@?8Exit?5Link?5Collection?6?$AA@
+      demangled: "\"\\'Exit Link Collection\\n\""
+      offset: 0000035C
+    - name: ??_C@_0BG@LLKD@Extra?5End?5Collection?6?$AA@
+      demangled: '"Extra End Collection\n"'
+      offset: '00000374'
+    - name: ??_C@_0CL@GAEA@Link?5Collection?5with?5multiple?5us@
+      demangled: '"Link Collection with multiple us"...'
+      offset: 0000038C
+    - name: ??_C@_0BG@CGA@Pos?5?$CI?$CFd?$CJ?0?5depth?5?$CI?$CFd?$CJ?6?$AA@
+      demangled: '"Pos (%d), depth (%d)\n"'
+      offset: 000003B8
+    - name: ??_C@_0CJ@CNJC@Warning?$CB?5Link?5collection?5without@
+      demangled: '"Warning! Link collection without"...'
+      offset: 000003D0
+    - name: 
+        ??_C@_0CJ@CJB@?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK?$CK@
+      demangled: '"********************************"...'
+      offset: 000003FC
+    - name: ??_C@_0BI@BIG@?8Enter?5Link?5Collection?6?$AA@
+      demangled: "\"\\'Enter Link Collection\\n\""
+      offset: '00000428'
+    - name: ??_C@_0CL@EMG@No?5Resources?5to?5make?5Top?5level?5c@
+      demangled: '"No Resources to make Top level c"...'
+      offset: '00000440'
+    - name: ??_C@_0CA@KKLL@?8Top?5Level?5Collection?5?$CFd?5found?6?$AA@
+      demangled: "\"\\'Top Level Collection %d found\\n\""
+      offset: 0000046C
+    - name: ??_C@_0CI@IOHJ@Default?5report?5ID?5used?5inappropr@
+      demangled: '"Default report ID used inappropr"...'
+      offset: 0000048C
+    - name: ??_C@_0CB@EFCK@No?5report?5ID?5for?5collection?3?5?$CFd?6@
+      demangled: '"No report ID for collection: %d\n"...'
+      offset: 000004B4
+    - name: ??_C@_0CO@IDIH@Multiple?5usages?5for?5top?5level?5co@
+      demangled: '"Multiple usages for top level co"...'
+      offset: 000004D8
+    - name: ??_C@_0CI@IOHD@No?5usage?5for?5top?5level?5collectio@
+      demangled: '"No usage for top level collectio"...'
+      offset: '00000508'
+    - name: ??_C@_0BL@IMCC@Unknown?5RESERVED?5item?3?5?$CFx?6?$AA@
+      demangled: '"Unknown RESERVED item: %x\n"'
+      offset: '00000530'
+    - name: ??_C@_0BI@MKDL@Unknown?5LOCAL?5item?3?5?$CFx?6?$AA@
+      demangled: '"Unknown LOCAL item: %x\n"'
+      offset: 0000054C
+    - name: ??_C@_0BH@KIKK@Unknown?5MAIN?5item?3?5?$CFx?6?$AA@
+      demangled: '"Unknown MAIN item: %x\n"'
+      offset: '00000564'
+    - name: ??_C@_0EM@DLMJ@tmpCount?5?$DN?$DN?5?$CIusage?9?$DODepth?5?$CL?5?$CIusa@
+      demangled: '"tmpCount == (usage->Depth + (usa"...'
+      offset: 0000057C
+    - name: ??_C@_0BF@PBLG@usage?5?$DN?$DN?5?$CGfirstUsage?$AA@
+      demangled: '"usage == &firstUsage"'
+      offset: 000005C8
+    - name: ??_C@_0BC@EOEP@0?5?$DN?$DN?5usage?9?$DODepth?$AA@
+      demangled: '"0 == usage->Depth"'
+      offset: '000005E0'
+    - name: ??_C@_0CE@MNMO@Delimiters?5for?5array?5declairatio@
+      demangled: '"Delimiters for array declairatio"...'
+      offset: 000005F4
+    - name: ??_C@_0CI@KGIN@Currently?5this?5parser?5does?5not?5s@
+      demangled: '"Currently this parser does not s"...'
+      offset: '00000618'
+    - name: ??_C@_0BG@GIDO@?8Feature2?5offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Feature2 offset:%x \\n\""
+      offset: '00000640'
+    - name: ??_C@_0BF@FAHP@?8Feature?5offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Feature offset:%x \\n\""
+      offset: '00000658'
+    - name: ??_C@_0BC@KGDE@?8Out2?5offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Out2 offset:%x \\n\""
+      offset: '00000670'
+    - name: ??_C@_0BB@FKAK@?8Out?5offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Out offset:%x \\n\""
+      offset: '00000684'
+    - name: ??_C@_0BD@DEAO@?8Main2?5offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Main2 offset:%x \\n\""
+      offset: '00000698'
+    - name: ??_C@_0BC@DBDI@?8Main?5Offset?3?$CFx?5?6?$AA@
+      demangled: "\"\\'Main Offset:%x \\n\""
+      offset: 000006AC
+    - name: ??_C@_0CC@PGHG@No?5Resources?5to?5Push?5Usage?5stack@
+      demangled: '"No Resources to Push Usage stack"...'
+      offset: 000006C0
+    - name: ??_C@_0BC@FOIK@Pop?5Global?5Stack?6?$AA@
+      demangled: '"Pop Global Stack\n"'
+      offset: '000006E4'
+    - name: ??_C@_0BD@HGGM@Push?5Global?5Stack?6?$AA@
+      demangled: '"Push Global Stack\n"'
+      offset: 000006F8
+    - name: ??_C@_0CD@GACK@No?5Resources?5to?5Push?5global?5stac@
+      demangled: '"No Resources to Push global stac"...'
+      offset: 0000070C
+    - name: ??_C@_0BP@JEHE@Report?5IDs?5cannot?5be?5zero?5?$CI0?$CJ?6?$AA@
+      demangled: '"Report IDs cannot be zero (0)\n"'
+      offset: '00000730'
+    - name: ??_C@_0CK@FKCG@Report?5ID?5?$CFd?5found?5in?5collection@
+      demangled: '"Report ID %d found in collection"...'
+      offset: '00000750'
+    - name: ??_C@_0CP@CHND@Col?5?$CFx?5Report?5?$CFx?5NOT?5byte?5allign@
+      demangled: '"Col %x Report %x NOT byte allign"...'
+      offset: 0000077C
+    - name: ??_C@_0BJ@PFOJ@?8X?5Parse?5Collection?5?$CFd?5?6?$AA@
+      demangled: "\"\\'X Parse Collection %d \\n\""
+      offset: 000007AC
+    - name: ??_C@_0DI@JAOM@?$CIparentLCNode?5?9?5linkNodeArray?$CJ?5?$DN@
+      demangled: '"(parentLCNode - linkNodeArray) ="...'
+      offset: 000007C8
+    - name: ??_C@_0DN@FLBL@currentLCNode?9?$DOParent?5?$DM?5preparse@
+      demangled: '"currentLCNode->Parent < preparse"...'
+      offset: '00000800'
+    - name: ??_C@_0DF@BGIC@linkNodeIndex?5?$DM?5preparsed?9?$DOLinkC@
+      demangled: '"linkNodeIndex < preparsed->LinkC"...'
+      offset: '00000840'
+    - name: ??_C@_0CJ@IAAC@0?5?$DM?5preparsed?9?$DOLinkCollectionArr@
+      demangled: '"0 < preparsed->LinkCollectionArr"...'
+      offset: '00000878'
+    - name: ??_C@_0BH@IFBB@?8Parse?5Collection?5?$CFd?5?6?$AA@
+      demangled: "\"\\'Parse Collection %d \\n\""
+      offset: 000008A4
+    - name: ??_C@_06DMED@appCol?$AA@
+      demangled: '"appCol"'
+      offset: 000008BC
+    - name: ??_C@_0BE@CJDH@More?5Data?5Expected?6?$AA@
+      demangled: '"More Data Expected\n"'
+      offset: 000008C4
+    - name: ??_C@_0BF@OKNF@?$CGPpd?9?$DOFeature?5?$DN?$DN?5iof?$AA@
+      demangled: '"&Ppd->Feature == iof"'
+      offset: 000008D8
+    - name: ??_C@_05LLOB@FALSE?$AA@
+      demangled: '"FALSE"'
+      offset: 000008F0
+    - name: ??_C@_0CF@HIAL@EX?3?5Pageable?5code?5called?5at?5IRQL@
+      demangled: '"EX: Pageable code called at IRQL"...'
+      offset: 000008F8
+    - name: ??_C@_0L@MOHO@0?5?$CB?$DN?5Value?$AA@
+      demangled: '"0 != Value"'
+      offset: '00000920'
+    - name: ??_C@_0BA@HDHE@0?5?$DM?5ReportCount?$AA@
+      demangled: '"0 < ReportCount"'
+      offset: 0000092C
+    - name: ??_C@_0L@JKEG@?4?4?2query?4c?$AA@
+      demangled: '"..\\query.c"'
+      offset: 0000093C
+    - name: ??_C@_0M@PDDA@0?5?$DN?$DN?5status?$AA@
+      demangled: '"0 == status"'
+      offset: '00000948'
+    - name: ??_C@_0EK@PGGI@tmpDataIndex?5?$CL?5channel?9?$DORange?4Da@
+      demangled: '"tmpDataIndex + channel->Range.Da"...'
+      offset: '00000954'
+    - name: _HidP_KeyboardToScanCodeTable
+      demangled: ''
+      offset: 000009A0
+    - name: _HidP_XlateKbdPadCodesSubTable
+      demangled: ''
+      offset: 00000DA0
+    - name: _HidP_XlateModifierCodesSubTable
+      demangled: ''
+      offset: 00000DD0
+    - name: _HidP_BreakCodesAsMakeCodesTable
+      demangled: ''
+      offset: '00000E00'
+    - name: _HidP_KeyboardSubTables
+      demangled: ''
+      offset: '00000E08'
+    - name: _HidP_ConsumerToScanCodeTable
+      demangled: ''
+      offset: '00000E88'
+    - name: _HidP_ConsumerSubTables
+      demangled: ''
+      offset: 00000EC8
+  - num: '4'
+    name: .idata$2
+    offset: '00002E20'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000028'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: 0000005C
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000060'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000064'
+    - name: __imp__DbgBreakPoint@0
+      demangled: ''
+      offset: '00000068'
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: 0000006C
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000070'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000074'
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000078'
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: '00000000'
+    - name: _HidP_AllocateCollections@28
+      demangled: ''
+      offset: '00000230'
+    - name: _HidP_FreeUsageList@4
+      demangled: ''
+      offset: '00001630'
+    - name: _HidP_PushUsageList@12
+      demangled: ''
+      offset: '00001680'
+    - name: _HidP_PopUsageList@4
+      demangled: ''
+      offset: '00001730'
+    - name: _HidP_ParseCollections@28
+      demangled: ''
+      offset: '00001780'
+    - name: _HidP_AssignDataIndices@8
+      demangled: ''
+      offset: 00005B90
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000570'
+    symbols:
+    - name: _HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: '00000000'
+    - name: _HidP_SysPowerEvent@16
+      demangled: ''
+      offset: '00000060'
+    - name: _HidP_SysPowerCaps@8
+      demangled: ''
+      offset: '00000140'
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000160'
+    - name: _HidP_ExtractData@16
+      demangled: ''
+      offset: '00000170'
+    - name: _HidP_InsertData@20
+      demangled: ''
+      offset: '00000330'
+    - name: _HidP_DeleteArrayEntry@20
+      demangled: ''
+      offset: '00000540'
+    - name: _HidP_GetCaps@8
+      demangled: ''
+      offset: '00000650'
+    - name: _HidP_GetLinkCollectionNodes@12
+      demangled: ''
+      offset: '00000930'
+    - name: _HidP_GetButtonCaps@16
+      demangled: ''
+      offset: 00000A00
+    - name: _HidP_GetSpecificButtonCaps@28
+      demangled: ''
+      offset: 00000A30
+    - name: _HidP_GetValueCaps@16
+      demangled: ''
+      offset: '00000E10'
+    - name: _HidP_GetSpecificValueCaps@28
+      demangled: ''
+      offset: '00000E40'
+    - name: _HidP_GetExtendedAttributes@20
+      demangled: ''
+      offset: '00001320'
+    - name: _HidP_InitializeReportForID@20
+      demangled: ''
+      offset: '00001500'
+    - name: _HidP_Index2Usage@8
+      demangled: ''
+      offset: 000017B0
+    - name: _HidP_Usage2Index@8
+      demangled: ''
+      offset: 000018D0
+    - name: _HidP_SetUsages@32
+      demangled: ''
+      offset: 00001A00
+    - name: _HidP_UnsetUsages@32
+      demangled: ''
+      offset: 00001B30
+    - name: _HidP_SetUnsetOneUsage@28
+      demangled: ''
+      offset: 00001C60
+    - name: _HidP_GetUsagesEx@28
+      demangled: ''
+      offset: '00002100'
+    - name: _HidP_GetUsages@32
+      demangled: ''
+      offset: '00002130'
+    - name: _HidP_MaxUsageListLength@12
+      demangled: ''
+      offset: '00002610'
+    - name: _HidP_MaxDataListLength@8
+      demangled: ''
+      offset: '00002720'
+    - name: _HidP_SetUsageValue@32
+      demangled: ''
+      offset: '00002840'
+    - name: _HidP_SetUsageValueArray@36
+      demangled: ''
+      offset: 00002AD0
+    - name: _HidP_SetScaledUsageValue@32
+      demangled: ''
+      offset: '00002E00'
+    - name: _HidP_GetUsageValue@32
+      demangled: ''
+      offset: '00003200'
+    - name: _HidP_GetUsageValueArray@36
+      demangled: ''
+      offset: 000034A0
+    - name: _HidP_GetScaledUsageValue@32
+      demangled: ''
+      offset: 000037C0
+    - name: _HidP_SetOneData@16
+      demangled: ''
+      offset: 00003B60
+    - name: _HidP_SetData@24
+      demangled: ''
+      offset: '00004020'
+    - name: _HidP_GetData@24
+      demangled: ''
+      offset: '00004120'
+    - name: _HidP_UsageListDifference@20
+      demangled: ''
+      offset: '000045E0'
+    - name: _HidP_UsageAndPageListDifference@20
+      demangled: ''
+      offset: 000047A0
+    - name: _HidP_KbdPutKey@16
+      demangled: ''
+      offset: '00004950'
+    - name: _HidP_TranslateUsagesToI8042ScanCodes@24
+      demangled: ''
+      offset: 000049C0
+    - name: _HidP_TranslateUsageAndPagesToI8042ScanCodes@24
+      demangled: ''
+      offset: 00004A50
+    - name: _HidP_TranslateUsage@32
+      demangled: ''
+      offset: 00004B40
+    - name: _HidP_KeyboardKeypadCode@24
+      demangled: ''
+      offset: 00004C20
+    - name: _HidP_ModifierCode@24
+      demangled: ''
+      offset: 00004CE0
+    - name: _HidP_VendorBreakCodesAsMakeCodes@24
+      demangled: ''
+      offset: 00004DA0
+    - name: _HidP_StraightLookup@8
+      demangled: ''
+      offset: 00004DF0
+    - name: _HidP_AssociativeLookup@8
+      demangled: ''
+      offset: '00004E10'
+    - name: _memcpy
+      demangled: ''
+      offset: '00004E50'
+    - name: _memset
+      demangled: ''
+      offset: '00004E56'
+  - num: '2'
+    name: .data
+    offset: '00000680'
+    symbols:
+    - name: _HidP_KeyboardToScanCodeTable
+      demangled: ''
+      offset: '00000000'
+    - name: _HidP_XlateKbdPadCodesSubTable
+      demangled: ''
+      offset: '00000400'
+    - name: _HidP_XlateModifierCodesSubTable
+      demangled: ''
+      offset: '00000430'
+    - name: _HidP_BreakCodesAsMakeCodesTable
+      demangled: ''
+      offset: '00000460'
+    - name: _HidP_KeyboardSubTables
+      demangled: ''
+      offset: '00000468'
+    - name: _HidP_ConsumerToScanCodeTable
+      demangled: ''
+      offset: '000004E8'
+    - name: _HidP_ConsumerSubTables
+      demangled: ''
+      offset: '00000528'
+  - num: '3'
+    name: .idata$2
+    offset: '00000760'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      demangled: ''
+      offset: '00000000'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000014'
+    - name: __imp__memcpy
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000040'
+    - name: __imp__memset
+      demangled: ''
+      offset: '00000044'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000048'
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000004C
+  - num: '4'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: '00000000'
+    - name: _HidP_AllocateCollections@28
+      demangled: ''
+      offset: 000001C0
+    - name: _HidP_FreeUsageList@4
+      demangled: ''
+      offset: 00000FB0
+    - name: _HidP_PushUsageList@12
+      demangled: ''
+      offset: '00001000'
+    - name: _HidP_PopUsageList@4
+      demangled: ''
+      offset: 000010B0
+    - name: _HidP_ParseCollections@28
+      demangled: ''
+      offset: 000010F0
+    - name: _HidP_AssignDataIndices@8
+      demangled: ''
+      offset: 00004BE0
+- version: Windows ME Debug
+  source_tree:
+  - /ntc/private/ntos/dd/wdm/input/hidparse/descript.c
+  - /ntc/private/ntos/dd/wdm/input/hidparse/hidparse.c
+  - /ntc/private/ntos/dd/wdm/input/hidparse/query.c
+  - /ntc/private/ntos/dd/wdm/input/hidparse/trnslate.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 000016B0
+    symbols:
+    - name: _HidP_FreeCollectionDescription@4
+      demangled: ''
+      offset: '00000000'
+    - name: _HidP_SysPowerEvent@16
+      demangled: ''
+      offset: 0000003E
+    - name: _HidP_SysPowerCaps@8
+      demangled: ''
+      offset: 000000B4
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: 000000C8
+    - name: _HidP_ExtractData@16
+      demangled: ''
+      offset: 000000D2
+    - name: _HidP_InsertData@20
+      demangled: ''
+      offset: 0000018A
+    - name: _HidP_DeleteArrayEntry@20
+      demangled: ''
+      offset: '000002E5'
+    - name: _HidP_GetCaps@8
+      demangled: ''
+      offset: '00000442'
+    - name: _HidP_GetLinkCollectionNodes@12
+      demangled: ''
+      offset: '00000648'
+    - name: _HidP_GetButtonCaps@16
+      demangled: ''
+      offset: 000006F2
+    - name: _HidP_GetSpecificButtonCaps@28
+      demangled: ''
+      offset: '00000782'
+    - name: _HidP_GetValueCaps@16
+      demangled: ''
+      offset: '00000978'
+    - name: _HidP_GetSpecificValueCaps@28
+      demangled: ''
+      offset: 00000A08
+    - name: _HidP_GetExtendedAttributes@20
+      demangled: ''
+      offset: 00000CB6
+    - name: _HidP_InitializeReportForID@20
+      demangled: ''
+      offset: '00000E80'
+    - name: _HidP_Index2Usage@8
+      demangled: ''
+      offset: 0000104C
+    - name: _HidP_Usage2Index@8
+      demangled: ''
+      offset: 000010B4
+    - name: _HidP_SetUsages@32
+      demangled: ''
+      offset: 0000112C
+    - name: _HidP_UnsetUsages@32
+      demangled: ''
+      offset: '000011E2'
+    - name: _HidP_SetUnsetOneUsage@28
+      demangled: ''
+      offset: 000012D8
+    - name: _HidP_GetUsagesEx@28
+      demangled: ''
+      offset: '00001556'
+    - name: _HidP_GetUsages@32
+      demangled: ''
+      offset: 0000157A
+    - name: _HidP_MaxUsageListLength@12
+      demangled: ''
+      offset: '00001898'
+    - name: _HidP_MaxDataListLength@8
+      demangled: ''
+      offset: 000019C8
+    - name: _HidP_SetUsageValue@32
+      demangled: ''
+      offset: 00001A80
+    - name: _HidP_SetUsageValueArray@36
+      demangled: ''
+      offset: 00001BD2
+    - name: _HidP_SetScaledUsageValue@32
+      demangled: ''
+      offset: 00001D8E
+    - name: _HidP_GetUsageValue@32
+      demangled: ''
+      offset: 00001F82
+    - name: _HidP_GetUsageValueArray@36
+      demangled: ''
+      offset: 000020CC
+    - name: _HidP_GetScaledUsageValue@32
+      demangled: ''
+      offset: 0000227C
+    - name: _HidP_SetOneData@16
+      demangled: ''
+      offset: 000024AA
+    - name: _HidP_SetData@24
+      demangled: ''
+      offset: '00002734'
+    - name: _HidP_GetData@24
+      demangled: ''
+      offset: '00002848'
+    - name: _HidP_UsageListDifference@20
+      demangled: ''
+      offset: 00002B1C
+    - name: _HidP_UsageAndPageListDifference@20
+      demangled: ''
+      offset: 00002C36
+    - name: _HidP_KbdPutKey@16
+      demangled: ''
+      offset: 00002D38
+    - name: _HidP_TranslateUsagesToI8042ScanCodes@24
+      demangled: ''
+      offset: 00002D6E
+    - name: _HidP_TranslateUsageAndPagesToI8042ScanCodes@24
+      demangled: ''
+      offset: 00002DC0
+    - name: _HidP_TranslateUsage@32
+      demangled: ''
+      offset: '00002E40'
+    - name: _HidP_KeyboardKeypadCode@24
+      demangled: ''
+      offset: 00002EBC
+    - name: _HidP_ModifierCode@24
+      demangled: ''
+      offset: 00002F2C
+    - name: _HidP_VendorBreakCodesAsMakeCodes@24
+      demangled: ''
+      offset: 00002FAE
+    - name: _HidP_PrintScreenCode@24
+      demangled: ''
+      offset: 00002FE0
+    - name: _HidP_StraightLookup@8
+      demangled: ''
+      offset: 0000306C
+    - name: _HidP_AssociativeLookup@8
+      demangled: ''
+      offset: '00003088'
+    - name: _DbgPrint
+      demangled: ''
+      offset: 000030B2
+    - name: _DbgBreakPoint@0
+      demangled: ''
+      offset: 000030B8
+    - name: _KeGetCurrentIrql@0
+      demangled: ''
+      offset: 000030BE
+  - num: '2'
+    name: .idata$5
+    offset: 000017B0
+    symbols:
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '00000000'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000004'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000008'
+    - name: __imp__DbgBreakPoint@0
+      demangled: ''
+      offset: 0000000C
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000010'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000014'
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: '00000018'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000001C
+  - num: '3'
+    name: .data
+    offset: '000018E0'
+    symbols:
+    - name: _HidP_KeyboardToScanCodeTable
+      demangled: ''
+      offset: '00000000'
+    - name: _HidP_XlateKbdPadCodesSubTable
+      demangled: ''
+      offset: '00000400'
+    - name: _HidP_XlateModifierCodesSubTable
+      demangled: ''
+      offset: '00000428'
+    - name: _HidP_BreakCodesAsMakeCodesTable
+      demangled: ''
+      offset: '00000458'
+    - name: _HidP_XlatePrtScrCodesSubTable
+      demangled: ''
+      offset: '00000460'
+    - name: _HidP_KeyboardSubTables
+      demangled: ''
+      offset: '00000468'
+    - name: _HidP_ConsumerToScanCodeTable
+      demangled: ''
+      offset: '000004E8'
+    - name: _HidP_ConsumerSubTables
+      demangled: ''
+      offset: '00000528'
+  - num: '4'
+    name: PAGE
+    offset: '00002630'
+    symbols:
+    - name: _HidP_GetCollectionDescription@16
+      demangled: ''
+      offset: '00000035'
+    - name: _HidP_AllocateCollections@28
+      demangled: ''
+      offset: 00000A31
+    - name: _HidP_FreeUsageList@4
+      demangled: ''
+      offset: 000013AC
+    - name: _HidP_PushUsageList@12
+      demangled: ''
+      offset: 000013D8
+    - name: _HidP_PopUsageList@4
+      demangled: ''
+      offset: '00001476'
+    - name: _HidP_ParseCollections@28
+      demangled: ''
+      offset: 000022C9
+    - name: _HidP_AssignDataIndices@8
+      demangled: ''
+      offset: '00004451'
+  - num: '6'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000028'

@@ -1,0 +1,1600 @@
+filename: hidusb.sys
+binary: HIDUSB
+description: ''
+appearances:
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: 000003F0
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+    - name: _HumCreateClose@8
+      processed: ''
+      offset: '00000080'
+    - name: _HumAddDevice@8
+      processed: ''
+      offset: 000000B0
+    - name: _HumUnload@4
+      processed: ''
+      offset: 000000C7
+    - name: _HumPower@8
+      processed: ''
+      offset: 000000CA
+    - name: _HumStartCompletion@12
+      processed: ''
+      offset: 000000F7
+    - name: _HumStopCompletion@12
+      processed: ''
+      offset: '00000141'
+    - name: _HumIoctl@8
+      processed: ''
+      offset: '00000194'
+    - name: _EnqueueResetWorkItem@4
+      processed: ''
+      offset: 000002B8
+    - name: _DequeueResetWorkItemWithIrp@8
+      processed: ''
+      offset: '000002E7'
+    - name: _GetInterruptInputPipeForDevice@4
+      processed: ''
+      offset: '00000345'
+    - name: _HumIncrementPendingRequestCount@4
+      processed: ''
+      offset: '00000381'
+    - name: _HumDecrementPendingRequestCount@4
+      processed: ''
+      offset: 000003A9
+    - name: _HumReadReport@12
+      processed: ''
+      offset: 000003CD
+    - name: _HumResetInterruptPipe@4
+      processed: ''
+      offset: 000004FB
+    - name: _HumGetPortStatus@8
+      processed: ''
+      offset: '00000553'
+    - name: _HumEnableParentPort@4
+      processed: ''
+      offset: 000005CA
+    - name: _HumResetWorkItem@4
+      processed: ''
+      offset: '00000634'
+    - name: _ResetCancelRoutine@8
+      processed: ''
+      offset: '00000703'
+    - name: _HumReadCompletion@12
+      processed: ''
+      offset: '00000758'
+    - name: _HumWriteReport@12
+      processed: ''
+      offset: '00000866'
+    - name: _HumGetFeatureCompletion@12
+      processed: ''
+      offset: '000009E3'
+    - name: _HumSetFeatureCompletion@12
+      processed: ''
+      offset: '000009E3'
+    - name: _HumWriteCompletion@12
+      processed: ''
+      offset: '000009E3'
+    - name: _HumGetHidInfo@12
+      processed: ''
+      offset: 00000A21
+    - name: _HumGetDeviceDescriptor@8
+      processed: ''
+      offset: 00000A8E
+    - name: _HumGetConfigDescriptor@12
+      processed: ''
+      offset: 00000ABA
+    - name: _HumParseHidInterface@16
+      processed: ''
+      offset: 00000B37
+    - name: _HumSelectConfiguration@8
+      processed: ''
+      offset: 00000BC5
+    - name: _HumSetIdle@4
+      processed: ''
+      offset: 00000C85
+    - name: _HumGetDescriptorRequest@32
+      processed: ''
+      offset: 00000D1E
+    - name: _HumGetDescriptorEndpoint@28
+      processed: ''
+      offset: '00000E00'
+    - name: _HumGetDescriptorInterface@28
+      processed: ''
+      offset: 00000EE3
+    - name: _HumCallUSB@8
+      processed: ''
+      offset: 00000FC6
+    - name: _HidRegisterMinidriver@4
+      processed: ''
+      offset: 0000106A
+  - num: '2'
+    name: .data
+    offset: '00000450'
+    symbols:
+    - name: _resetWorkItemsList
+      processed: ''
+      offset: '00000008'
+    - name: _resetWorkItemsListSpinLock
+      processed: ''
+      offset: 0000000C
+  - num: '3'
+    name: .idata$2
+    offset: '00000890'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HIDCLASS
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000050'
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: 000000D0
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: 000000D4
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: 000000D8
+    - name: __imp__HidRegisterMinidriver@4
+      processed: ''
+      offset: 000000DC
+    - name: \177HIDCLASS_NULL_THUNK_DATA
+      processed: ''
+      offset: '000000E0'
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: '000000E4'
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '000000E8'
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: 000000EC
+    - name: __imp__PoCallDriver@8
+      processed: ''
+      offset: 000000F0
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: 000000F4
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: 000000F8
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 000000FC
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: '00000100'
+    - name: __imp_@InterlockedIncrement@4
+      processed: ''
+      offset: '00000104'
+    - name: __imp__IoReleaseCancelSpinLock@4
+      processed: ''
+      offset: '00000108'
+    - name: __imp__ExQueueWorkItem@8
+      processed: ''
+      offset: 0000010C
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: '00000110'
+    - name: __imp_@InterlockedDecrement@4
+      processed: ''
+      offset: '00000114'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: '00000118'
+    - name: __imp_@InterlockedExchange@8
+      processed: ''
+      offset: 0000011C
+    - name: __imp__IoCancelIrp@4
+      processed: ''
+      offset: '00000120'
+    - name: __imp_@InterlockedCompareExchange@12
+      processed: ''
+      offset: '00000124'
+    - name: __imp__MmMapLockedPages@8
+      processed: ''
+      offset: '00000128'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000012C
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      processed: ''
+      offset: '00000130'
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      processed: ''
+      offset: '00000134'
+    - name: \177USBD_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000138'
+  - num: '4'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HumPnP@8
+      processed: ''
+      offset: '00000000'
+    - name: _HumStartDevice@4
+      processed: ''
+      offset: '000000E1'
+    - name: _HumInitDevice@4
+      processed: ''
+      offset: 0000010A
+    - name: _HumStopDevice@4
+      processed: ''
+      offset: 0000017B
+    - name: _HumAbortPendingRequests@4
+      processed: ''
+      offset: 000001F1
+    - name: _HumRemoveDevice@4
+      processed: ''
+      offset: 0000025B
+    - name: _HumGetHidDescriptor@12
+      processed: ''
+      offset: 000002B9
+    - name: _HumGetDeviceAttributes@12
+      processed: ''
+      offset: '00000316'
+    - name: _HumGetReportDescriptor@12
+      processed: ''
+      offset: '00000357'
+    - name: _HumGetPhysicalDescriptor@12
+      processed: ''
+      offset: 0000042A
+    - name: _HumGetStringDescriptor@12
+      processed: ''
+      offset: '00000483'
+    - name: _HumGetFeature@12
+      processed: ''
+      offset: 000005ED
+    - name: _HumSetFeature@12
+      processed: ''
+      offset: '00000703'
+    - name: _HumSystemControl@8
+      processed: ''
+      offset: 0000081A
+- version: Windows 98 Debug
+  source_tree:
+  - ../hid.c
+  - ../hidusb.c
+  - ../ioctl.c
+  - ../pnp.c
+  - ../sysctrl.c
+  - ../usb.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00001590'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _HumCreateClose@8
+      demangled: ''
+      offset: '00000130'
+    - name: _HumAddDevice@8
+      demangled: ''
+      offset: '00000210'
+    - name: _HumUnload@4
+      demangled: ''
+      offset: '00000290'
+    - name: _HumPower@8
+      demangled: ''
+      offset: '00000300'
+    - name: _HumStartCompletion@12
+      demangled: ''
+      offset: '00000360'
+    - name: _HumStopCompletion@12
+      demangled: ''
+      offset: 000004B0
+    - name: _HumIoctl@8
+      demangled: ''
+      offset: '000005E0'
+    - name: _EnqueueResetWorkItem@4
+      demangled: ''
+      offset: 000009C0
+    - name: _DequeueResetWorkItemWithIrp@8
+      demangled: ''
+      offset: 00000A00
+    - name: _GetInterruptInputPipeForDevice@4
+      demangled: ''
+      offset: 00000AD0
+    - name: _HumIncrementPendingRequestCount@4
+      demangled: ''
+      offset: 00000B60
+    - name: _HumDecrementPendingRequestCount@4
+      demangled: ''
+      offset: 00000BC0
+    - name: _HumReadReport@12
+      demangled: ''
+      offset: 00000C70
+    - name: _HumResetInterruptPipe@4
+      demangled: ''
+      offset: 00000FD0
+    - name: _HumGetPortStatus@8
+      demangled: ''
+      offset: '00001060'
+    - name: _HumEnableParentPort@4
+      demangled: ''
+      offset: 000011D0
+    - name: _HumResetWorkItem@4
+      demangled: ''
+      offset: '00001320'
+    - name: _ResetCancelRoutine@8
+      demangled: ''
+      offset: '00001490'
+    - name: _HumReadCompletion@12
+      demangled: ''
+      offset: '00001500'
+    - name: _HumWriteReport@12
+      demangled: ''
+      offset: '00001750'
+    - name: _HumWriteCompletion@12
+      demangled: ''
+      offset: 00001A40
+    - name: _HumGetFeatureCompletion@12
+      demangled: ''
+      offset: 00001AB0
+    - name: _HumSetFeatureCompletion@12
+      demangled: ''
+      offset: 00001B20
+    - name: _HumGetHidInfo@12
+      demangled: ''
+      offset: 00001B90
+    - name: _HumGetDeviceDescriptor@8
+      demangled: ''
+      offset: '00001E10'
+    - name: _HumGetConfigDescriptor@12
+      demangled: ''
+      offset: 00001FC0
+    - name: _HumParseHidInterface@16
+      demangled: ''
+      offset: '00002280'
+    - name: _HumSelectConfiguration@8
+      demangled: ''
+      offset: 000025F0
+    - name: _HumSetIdle@4
+      demangled: ''
+      offset: '00002970'
+    - name: _HumGetDescriptorRequest@32
+      demangled: ''
+      offset: 00002AF0
+    - name: _HumGetDescriptorEndpoint@28
+      demangled: ''
+      offset: 00002CA0
+    - name: _HumGetDescriptorInterface@28
+      demangled: ''
+      offset: '00002E40'
+    - name: _HumCallUSB@8
+      demangled: ''
+      offset: 00002FE0
+    - name: _DumpConfigDescriptor@8
+      demangled: ''
+      offset: '00003220'
+    - name: _HidRegisterMinidriver@4
+      demangled: ''
+      offset: 00003AB8
+    - name: _USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: 00003ABE
+    - name: _USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: 00003AC4
+    - name: _KeInitializeSpinLock@4
+      demangled: ''
+      offset: 00003ACA
+    - name: _DbgPrint
+      demangled: ''
+      offset: 00003AD0
+    - name: '@IofCompleteRequest@8'
+      demangled: ''
+      offset: 00003AD6
+    - name: _DbgBreakPoint@0
+      demangled: ''
+      offset: 00003ADC
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: 00003AE2
+    - name: '@IofCallDriver@8'
+      demangled: ''
+      offset: 00003AE8
+    - name: _KeGetCurrentIrql@0
+      demangled: ''
+      offset: 00003AEE
+    - name: _PoCallDriver@8
+      demangled: ''
+      offset: 00003AF4
+    - name: _KeInitializeEvent@12
+      demangled: ''
+      offset: 00003AFA
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: 00003B00
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 00003B06
+    - name: _KeWaitForSingleObject@20
+      demangled: ''
+      offset: 00003B0C
+    - name: '@KfReleaseSpinLock@8'
+      demangled: ''
+      offset: 00003B12
+    - name: '@KfAcquireSpinLock@4'
+      demangled: ''
+      offset: 00003B18
+    - name: '@InterlockedIncrement@4'
+      demangled: ''
+      offset: 00003B1E
+    - name: _KeSetEvent@12
+      demangled: ''
+      offset: 00003B24
+    - name: '@InterlockedDecrement@4'
+      demangled: ''
+      offset: 00003B2A
+    - name: _IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: 00003B30
+    - name: '@InterlockedExchange@8'
+      demangled: ''
+      offset: 00003B36
+    - name: _IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: 00003B3C
+    - name: _ExQueueWorkItem@8
+      demangled: ''
+      offset: 00003B42
+    - name: '@InterlockedCompareExchange@12'
+      demangled: ''
+      offset: 00003B48
+    - name: _MmMapLockedPages@8
+      demangled: ''
+      offset: 00003B4E
+    - name: _IoCancelIrp@4
+      demangled: ''
+      offset: 00003B54
+  - num: '3'
+    name: .data
+    offset: '00001600'
+    symbols:
+    - name: _HIDUSB_DebugLevel
+      demangled: ''
+      offset: 00003A78
+    - name: _resetWorkItemsList
+      demangled: ''
+      offset: 00003A7C
+    - name: _resetWorkItemsListSpinLock
+      demangled: ''
+      offset: 00003A80
+  - num: '4'
+    name: .idata$2
+    offset: 00001AA0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HIDCLASS
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000050'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '000000E0'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '000000E4'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '000000E8'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000EC
+    - name: __imp__HidRegisterMinidriver@4
+      demangled: ''
+      offset: 000000F0
+    - name: \177HIDCLASS_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000F4
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: 000000F8
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 000000FC
+    - name: __imp__DbgBreakPoint@0
+      demangled: ''
+      offset: '00000100'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000104'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000108'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: 0000010C
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: '00000110'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000114'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000118'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000011C
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000120'
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: '00000124'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000128'
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000130'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: '00000134'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '00000138'
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: 0000013C
+    - name: __imp_@InterlockedCompareExchange@12
+      demangled: ''
+      offset: '00000140'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000148'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: '00000150'
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: '00000154'
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000158'
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HumPnP@8
+      demangled: ''
+      offset: '00000000'
+    - name: _HumStartDevice@4
+      demangled: ''
+      offset: 000003B0
+    - name: _HumInitDevice@4
+      demangled: ''
+      offset: 000004A0
+    - name: _HumStopDevice@4
+      demangled: ''
+      offset: 000005D0
+    - name: _HumAbortPendingRequests@4
+      demangled: ''
+      offset: '00000760'
+    - name: _HumRemoveDevice@4
+      demangled: ''
+      offset: '00000860'
+    - name: _HumGetHidDescriptor@12
+      demangled: ''
+      offset: '000009E0'
+    - name: _HumGetDeviceAttributes@12
+      demangled: ''
+      offset: 00000B50
+    - name: _HumGetReportDescriptor@12
+      demangled: ''
+      offset: 00000C70
+    - name: _HumGetPhysicalDescriptor@12
+      demangled: ''
+      offset: '00000E90'
+    - name: _HumGetStringDescriptor@12
+      demangled: ''
+      offset: 00000FB0
+    - name: _HumGetFeature@12
+      demangled: ''
+      offset: '00001280'
+    - name: _HumSetFeature@12
+      demangled: ''
+      offset: '00001570'
+    - name: _HumSystemControl@8
+      demangled: ''
+      offset: '00001860'
+- version: Windows 98SE Debug
+  source_tree:
+  - ../hid.c
+  - ../hidusb.c
+  - ../ioctl.c
+  - ../pnp.c
+  - ../sysctrl.c
+  - ../usb.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00001550'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _HumCreateClose@8
+      demangled: ''
+      offset: 000001B0
+    - name: _HumAddDevice@8
+      demangled: ''
+      offset: '00000330'
+    - name: _HumUnload@4
+      demangled: ''
+      offset: '00000400'
+    - name: _HumPower@8
+      demangled: ''
+      offset: 000004C0
+    - name: _HumInitDevice@4
+      demangled: ''
+      offset: '00000520'
+    - name: _HumPnpCompletion@12
+      demangled: ''
+      offset: '000005E0'
+    - name: _HumInternalIoctl@8
+      demangled: ''
+      offset: '00000770'
+    - name: _EnqueueResetWorkItem@4
+      demangled: ''
+      offset: 00000A00
+    - name: _DequeueResetWorkItemWithIrp@8
+      demangled: ''
+      offset: 00000A20
+    - name: _GetInterruptInputPipeForDevice@4
+      demangled: ''
+      offset: 00000AF0
+    - name: _GetInterruptOutputPipeForDevice@4
+      demangled: ''
+      offset: 00000B80
+    - name: _HumIncrementPendingRequestCount@4
+      demangled: ''
+      offset: 00000C10
+    - name: _HumDecrementPendingRequestCount@4
+      demangled: ''
+      offset: 00000C60
+    - name: _HumReadReport@12
+      demangled: ''
+      offset: 00000CD0
+    - name: _HumResetInterruptPipe@4
+      demangled: ''
+      offset: 00000F70
+    - name: _HumGetPortStatus@8
+      demangled: ''
+      offset: 00000FF0
+    - name: _HumEnableParentPort@4
+      demangled: ''
+      offset: 000010C0
+    - name: _HumResetWorkItem@4
+      demangled: ''
+      offset: '00001150'
+    - name: _ResetCancelRoutine@8
+      demangled: ''
+      offset: 000012B0
+    - name: _HumReadCompletion@12
+      demangled: ''
+      offset: '00001320'
+    - name: _HumWriteReport@12
+      demangled: ''
+      offset: '00001510'
+    - name: _HumWriteCompletion@12
+      demangled: ''
+      offset: '00001880'
+    - name: _HumGetFeatureCompletion@12
+      demangled: ''
+      offset: 000018F0
+    - name: _HumSetFeatureCompletion@12
+      demangled: ''
+      offset: '00001960'
+    - name: _HumGetHidInfo@12
+      demangled: ''
+      offset: 000019D0
+    - name: _HumGetDeviceDescriptor@8
+      demangled: ''
+      offset: 00001BF0
+    - name: _HumGetConfigDescriptor@12
+      demangled: ''
+      offset: 00001EF0
+    - name: _HumParseHidInterface@16
+      demangled: ''
+      offset: 000022C0
+    - name: _HumSelectConfiguration@8
+      demangled: ''
+      offset: '00002800'
+    - name: _HumSetIdle@4
+      demangled: ''
+      offset: '00002E30'
+    - name: _HumGetDescriptorRequest@32
+      demangled: ''
+      offset: 00002FE0
+    - name: _HumGetDescriptorEndpoint@28
+      demangled: ''
+      offset: '00003200'
+    - name: _HumGetDescriptorInterface@28
+      demangled: ''
+      offset: 000033F0
+    - name: _HumCallUSB@8
+      demangled: ''
+      offset: 000036A0
+    - name: _DumpConfigDescriptor@8
+      demangled: ''
+      offset: 00003A60
+    - name: _HidRegisterMinidriver@4
+      demangled: ''
+      offset: '00004790'
+    - name: _USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: '00004796'
+    - name: _USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: 0000479C
+    - name: _KeInitializeSpinLock@4
+      demangled: ''
+      offset: 000047A2
+    - name: _DbgPrint
+      demangled: ''
+      offset: 000047A8
+    - name: '@IofCompleteRequest@8'
+      demangled: ''
+      offset: 000047AE
+    - name: _DbgBreakPoint@0
+      demangled: ''
+      offset: 000047B4
+    - name: _KeInitializeEvent@12
+      demangled: ''
+      offset: 000047BA
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: 000047C0
+    - name: '@IofCallDriver@8'
+      demangled: ''
+      offset: 000047C6
+    - name: _KeGetCurrentIrql@0
+      demangled: ''
+      offset: 000047CC
+    - name: _PoCallDriver@8
+      demangled: ''
+      offset: 000047D2
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: 000047D8
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 000047DE
+    - name: _KeWaitForSingleObject@20
+      demangled: ''
+      offset: '000047E4'
+    - name: '@InterlockedIncrement@4'
+      demangled: ''
+      offset: 000047EA
+    - name: _KeSetEvent@12
+      demangled: ''
+      offset: 000047F0
+    - name: '@InterlockedDecrement@4'
+      demangled: ''
+      offset: 000047F6
+    - name: _IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: 000047FC
+    - name: '@KfReleaseSpinLock@8'
+      demangled: ''
+      offset: '00004802'
+    - name: '@KfAcquireSpinLock@4'
+      demangled: ''
+      offset: '00004808'
+    - name: '@InterlockedExchange@8'
+      demangled: ''
+      offset: 0000480E
+    - name: _IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: '00004814'
+    - name: _ExQueueWorkItem@8
+      demangled: ''
+      offset: 0000481A
+    - name: '@InterlockedCompareExchange@12'
+      demangled: ''
+      offset: '00004820'
+    - name: _MmMapLockedPages@8
+      demangled: ''
+      offset: '00004826'
+    - name: _IoCancelIrp@4
+      demangled: ''
+      offset: 0000482C
+  - num: '3'
+    name: .data
+    offset: 000015D0
+    symbols:
+    - name: _HIDUSB_DebugLevel
+      demangled: ''
+      offset: 0000311C
+    - name: _dbgTrapOnWarn
+      demangled: ''
+      offset: '00003120'
+    - name: _resetWorkItemsList
+      demangled: ''
+      offset: '00003124'
+    - name: _resetWorkItemsListSpinLock
+      demangled: ''
+      offset: '00003128'
+  - num: '4'
+    name: .idata$2
+    offset: 00001A70
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HIDCLASS
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000050'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '000000E0'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '000000E4'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '000000E8'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000EC
+    - name: __imp__HidRegisterMinidriver@4
+      demangled: ''
+      offset: 000000F0
+    - name: \177HIDCLASS_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000F4
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 000000F8
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: 000000FC
+    - name: __imp__DbgBreakPoint@0
+      demangled: ''
+      offset: '00000100'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000104'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000108'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 0000010C
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000110'
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: '00000114'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000118'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000011C
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000120'
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000124'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000128'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '00000130'
+    - name: __imp_@InterlockedCompareExchange@12
+      demangled: ''
+      offset: '00000134'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000138'
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: 0000013C
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: '00000140'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: '00000148'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: '00000150'
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: '00000154'
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000158'
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HumPnP@8
+      demangled: ''
+      offset: '00000000'
+    - name: _HumStartDevice@4
+      demangled: ''
+      offset: 000001C0
+    - name: _HumStopDevice@4
+      demangled: ''
+      offset: 000002C0
+    - name: _HumAbortPendingRequests@4
+      demangled: ''
+      offset: '00000410'
+    - name: _HumRemoveDevice@4
+      demangled: ''
+      offset: '00000600'
+    - name: _HumGetHidDescriptor@8
+      demangled: ''
+      offset: '00000750'
+    - name: _HumGetDeviceAttributes@8
+      demangled: ''
+      offset: '00000890'
+    - name: _HumGetReportDescriptor@8
+      demangled: ''
+      offset: '00000990'
+    - name: _HumGetPhysicalDescriptor@12
+      demangled: ''
+      offset: 00000B60
+    - name: _HumGetStringDescriptor@8
+      demangled: ''
+      offset: 00000C50
+    - name: _HumGetFeature@12
+      demangled: ''
+      offset: 00000F00
+    - name: _HumSetFeature@12
+      demangled: ''
+      offset: 000011A0
+    - name: _HumSystemControl@8
+      demangled: ''
+      offset: '00001440'
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000410'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _HumCreateClose@8
+      demangled: ''
+      offset: '00000083'
+    - name: _HumAddDevice@8
+      demangled: ''
+      offset: 000000B3
+    - name: _HumUnload@4
+      demangled: ''
+      offset: 000000DF
+    - name: _HumPower@8
+      demangled: ''
+      offset: '000000E2'
+    - name: _HumInitDevice@4
+      demangled: ''
+      offset: 0000010F
+    - name: _HumPnpCompletion@12
+      demangled: ''
+      offset: 0000017A
+    - name: _HumInternalIoctl@8
+      demangled: ''
+      offset: '00000215'
+    - name: _EnqueueResetWorkItem@4
+      demangled: ''
+      offset: '00000326'
+    - name: _DequeueResetWorkItemWithIrp@8
+      demangled: ''
+      offset: 0000033B
+    - name: _GetInterruptInputPipeForDevice@4
+      demangled: ''
+      offset: '00000399'
+    - name: _GetInterruptOutputPipeForDevice@4
+      demangled: ''
+      offset: 000003D5
+    - name: _HumIncrementPendingRequestCount@4
+      demangled: ''
+      offset: '00000411'
+    - name: _HumDecrementPendingRequestCount@4
+      demangled: ''
+      offset: '00000440'
+    - name: _HumReadReport@12
+      demangled: ''
+      offset: '00000464'
+    - name: _HumResetInterruptPipe@4
+      demangled: ''
+      offset: 0000058C
+    - name: _HumGetPortStatus@8
+      demangled: ''
+      offset: '000005E4'
+    - name: _HumEnableParentPort@4
+      demangled: ''
+      offset: 0000065B
+    - name: _HumResetWorkItem@4
+      demangled: ''
+      offset: 000006C5
+    - name: _ResetCancelRoutine@8
+      demangled: ''
+      offset: '00000795'
+    - name: _HumReadCompletion@12
+      demangled: ''
+      offset: 000007EA
+    - name: _HumWriteReport@12
+      demangled: ''
+      offset: '00000931'
+    - name: _HumGetFeatureCompletion@12
+      demangled: ''
+      offset: 00000AD6
+    - name: _HumWriteCompletion@12
+      demangled: ''
+      offset: 00000AD6
+    - name: _HumSetFeatureCompletion@12
+      demangled: ''
+      offset: 00000AD6
+    - name: _HumGetHidInfo@12
+      demangled: ''
+      offset: 00000B14
+    - name: _HumGetDeviceDescriptor@8
+      demangled: ''
+      offset: 00000B81
+    - name: _HumGetConfigDescriptor@12
+      demangled: ''
+      offset: 00000BAD
+    - name: _HumParseHidInterface@16
+      demangled: ''
+      offset: 00000C2A
+    - name: _HumSelectConfiguration@8
+      demangled: ''
+      offset: 00000CB9
+    - name: _HumSetIdle@4
+      demangled: ''
+      offset: 00000D79
+    - name: _HumGetDescriptorRequest@32
+      demangled: ''
+      offset: '00000E12'
+    - name: _HumGetDescriptorEndpoint@28
+      demangled: ''
+      offset: 00000EF4
+    - name: _HumGetDescriptorInterface@28
+      demangled: ''
+      offset: 00000FD7
+    - name: _HumCallUSB@8
+      demangled: ''
+      offset: 000010BA
+    - name: _HidRegisterMinidriver@4
+      demangled: ''
+      offset: 0000115E
+  - num: '2'
+    name: .data
+    offset: '00000470'
+    symbols:
+    - name: _resetWorkItemsList
+      demangled: ''
+      offset: '00000008'
+    - name: _resetWorkItemsListSpinLock
+      demangled: ''
+      offset: 0000000C
+  - num: '3'
+    name: .idata$2
+    offset: 000008B0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_HIDCLASS
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000050'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: 000000D0
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: 000000D4
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000D8
+    - name: __imp__HidRegisterMinidriver@4
+      demangled: ''
+      offset: 000000DC
+    - name: \177HIDCLASS_NULL_THUNK_DATA
+      demangled: ''
+      offset: '000000E0'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '000000E4'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '000000E8'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: 000000EC
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 000000F0
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: 000000F4
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 000000F8
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 000000FC
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000100'
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000104'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000108'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: 0000010C
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: '00000110'
+    - name: __imp_@InterlockedCompareExchange@12
+      demangled: ''
+      offset: '00000114'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000118'
+    - name: __imp__IoReleaseCancelSpinLock@4
+      demangled: ''
+      offset: 0000011C
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: '00000120'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000124'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: '00000128'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: '00000130'
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: '00000134'
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000138'
+  - num: '4'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _HumPnP@8
+      demangled: ''
+      offset: '00000000'
+    - name: _HumStartDevice@4
+      demangled: ''
+      offset: 0000009A
+    - name: _HumStopDevice@4
+      demangled: ''
+      offset: 000000CC
+    - name: _HumAbortPendingRequests@4
+      demangled: ''
+      offset: '00000146'
+    - name: _HumRemoveDevice@4
+      demangled: ''
+      offset: 000001B0
+    - name: _HumGetHidDescriptor@8
+      demangled: ''
+      offset: '00000218'
+    - name: _HumGetDeviceAttributes@8
+      demangled: ''
+      offset: 0000026B
+    - name: _HumGetReportDescriptor@8
+      demangled: ''
+      offset: 000002BD
+    - name: _HumGetPhysicalDescriptor@12
+      demangled: ''
+      offset: 0000038C
+    - name: _HumGetStringDescriptor@8
+      demangled: ''
+      offset: '000003E5'
+    - name: _HumGetFeature@12
+      demangled: ''
+      offset: 0000056A
+    - name: _HumSetFeature@12
+      demangled: ''
+      offset: '00000680'
+    - name: _HumSystemControl@8
+      demangled: ''
+      offset: '00000797'
+- version: Windows ME Debug
+  source_tree:
+  - /ntc/private/ntos/dd/wdm/input/hidusb/hid.c
+  - /ntc/private/ntos/dd/wdm/input/hidusb/hidusb.c
+  - /ntc/private/ntos/dd/wdm/input/hidusb/ioctl.c
+  - /ntc/private/ntos/dd/wdm/input/hidusb/pnp.c
+  - /ntc/private/ntos/dd/wdm/input/hidusb/sysctrl.c
+  - /ntc/private/ntos/dd/wdm/input/hidusb/usb.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00001000'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: 000000C6
+    - name: _HumCreateClose@8
+      demangled: ''
+      offset: '00000396'
+    - name: _HumAddDevice@8
+      demangled: ''
+      offset: 0000055A
+    - name: _HumUnload@4
+      demangled: ''
+      offset: 000006FA
+    - name: _HumPowerCompletion@12
+      demangled: ''
+      offset: 000008B6
+    - name: _HumPower@8
+      demangled: ''
+      offset: 00000A06
+    - name: _HumInitDevice@4
+      demangled: ''
+      offset: 00000B1B
+    - name: _HumPnpCompletion@12
+      demangled: ''
+      offset: 00000BD0
+    - name: _HumInternalIoctl@8
+      demangled: ''
+      offset: 00000C5B
+    - name: _HumGetSystemAddressForMdlSafe@4
+      demangled: ''
+      offset: 00000F4B
+    - name: _GetInterruptInputPipeForDevice@4
+      demangled: ''
+      offset: 00000FE0
+    - name: _GetInterruptOutputPipeForDevice@4
+      demangled: ''
+      offset: '00001070'
+    - name: _HumIncrementPendingRequestCount@4
+      demangled: ''
+      offset: '00001100'
+    - name: _HumDecrementPendingRequestCount@4
+      demangled: ''
+      offset: '00001211'
+    - name: _HumReadReport@12
+      demangled: ''
+      offset: '00001428'
+    - name: _HumResetInterruptPipe@4
+      demangled: ''
+      offset: 000016D0
+    - name: _HumGetPortStatus@8
+      demangled: ''
+      offset: 000017A2
+    - name: _HumEnableParentPort@4
+      demangled: ''
+      offset: '00001880'
+    - name: _HumResetWorkItem@8
+      demangled: ''
+      offset: 00001C36
+    - name: _HumReadCompletion@12
+      demangled: ''
+      offset: 00001FC6
+    - name: _HumWriteReport@12
+      demangled: ''
+      offset: 000022F2
+    - name: _HumGetFeatureCompletion@12
+      demangled: ''
+      offset: '00002650'
+    - name: _HumSetFeatureCompletion@12
+      demangled: ''
+      offset: '00002650'
+    - name: _HumWriteCompletion@12
+      demangled: ''
+      offset: '00002650'
+    - name: _HumGetHidInfo@12
+      demangled: ''
+      offset: 000029BE
+    - name: _HumGetDeviceDescriptor@8
+      demangled: ''
+      offset: 00002EF2
+    - name: _HumGetConfigDescriptor@12
+      demangled: ''
+      offset: 000036C2
+    - name: _HumParseHidInterface@16
+      demangled: ''
+      offset: 000041DA
+    - name: _HumSelectConfiguration@8
+      demangled: ''
+      offset: 00004CC2
+    - name: _HumSetIdle@4
+      demangled: ''
+      offset: 0000532A
+    - name: _HumGetDescriptorRequest@32
+      demangled: ''
+      offset: 000055D2
+    - name: _HumCallUSB@8
+      demangled: ''
+      offset: 00005AE2
+    - name: _DbgPrint
+      demangled: ''
+      offset: 00005EAA
+    - name: _DbgBreakPoint@0
+      demangled: ''
+      offset: 00005EB0
+    - name: _memcpy
+      demangled: ''
+      offset: 00005EB6
+    - name: _memset
+      demangled: ''
+      offset: 00005EBC
+    - name: _HidRegisterMinidriver@4
+      demangled: ''
+      offset: 00005EC2
+  - num: '2'
+    name: .idata$5
+    offset: '00001440'
+    symbols:
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '00000000'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000004'
+    - name: __imp__HidRegisterMinidriver@4
+      demangled: ''
+      offset: '00000008'
+    - name: \177HIDCLASS_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000000C
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000010'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000014'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000018'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 0000001C
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000020'
+    - name: __imp__memcpy
+      demangled: ''
+      offset: '00000024'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000028'
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: 0000002C
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: '00000030'
+    - name: __imp__DbgBreakPoint@0
+      demangled: ''
+      offset: '00000034'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000038'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: 0000003C
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000040'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000044'
+    - name: __imp__memset
+      demangled: ''
+      offset: '00000048'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      demangled: ''
+      offset: 0000004C
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000050'
+    - name: __imp_@InterlockedCompareExchange@12
+      demangled: ''
+      offset: '00000054'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000058'
+    - name: __imp__KeResetEvent@4
+      demangled: ''
+      offset: 0000005C
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000060'
+    - name: __imp_@InterlockedDecrement@4
+      demangled: ''
+      offset: '00000064'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000068'
+    - name: __imp__USBD_CreateConfigurationRequestEx@8
+      demangled: ''
+      offset: 0000006C
+    - name: __imp__USBD_ParseConfigurationDescriptorEx@28
+      demangled: ''
+      offset: '00000070'
+    - name: \177USBD_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000074'
+    - name: __imp__IoQueueWorkItem@16
+      demangled: ''
+      offset: '00000078'
+    - name: __imp__IoAllocateWorkItem@4
+      demangled: ''
+      offset: 0000007C
+    - name: __imp__IoFreeWorkItem@4
+      demangled: ''
+      offset: '00000080'
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000084'
+  - num: '3'
+    name: .data
+    offset: '00001510'
+    symbols:
+    - name: _HIDUSB_DebugLevel
+      demangled: ''
+      offset: '00000008'
+    - name: _dbgTrapOnWarn
+      demangled: ''
+      offset: 0000000C
+    - name: _resetWorkItemsList
+      demangled: ''
+      offset: '00000010'
+    - name: _resetWorkItemsListSpinLock
+      demangled: ''
+      offset: '00000014'
+    - name: ___@@_PchSym_@00@UmgxUkirezgvUmglhUwwUdwnUrmkfgUsrwfhyUlyqUrDIGUkxsOlyq@hidusb
+      demangled: ''
+      offset: '00000018'
+  - num: '4'
+    name: PAGE
+    offset: 00001D40
+    symbols:
+    - name: _HumPnP@8
+      demangled: ''
+      offset: 0000028E
+    - name: _HumStartDevice@4
+      demangled: ''
+      offset: 0000082E
+    - name: _HumStopDevice@4
+      demangled: ''
+      offset: 00000B2A
+    - name: _HumAbortPendingRequests@4
+      demangled: ''
+      offset: 00000ED0
+    - name: _HumRemoveDevice@8
+      demangled: ''
+      offset: 0000125A
+    - name: _HumGetHidDescriptor@8
+      demangled: ''
+      offset: '00001521'
+    - name: _HumGetDeviceAttributes@8
+      demangled: ''
+      offset: '00001705'
+    - name: _HumGetReportDescriptor@8
+      demangled: ''
+      offset: 000018D8
+    - name: _HumGetPhysicalDescriptor@12
+      demangled: ''
+      offset: 00001AFE
+    - name: _HumGetStringDescriptor@8
+      demangled: ''
+      offset: 00001C52
+    - name: _HumGetFeature@12
+      demangled: ''
+      offset: 00001FAB
+    - name: _HumSetFeature@12
+      demangled: ''
+      offset: 0000231B
+    - name: _HumGetMsGenreDescriptor@8
+      demangled: ''
+      offset: '00002706'
+    - name: _HumSystemControl@8
+      demangled: ''
+      offset: 000029BA
+  - num: '5'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HIDCLASS
+      demangled: ''
+      offset: '00000028'
+    - name: __IMPORT_DESCRIPTOR_USBD
+      demangled: ''
+      offset: 0000003C
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      demangled: ''
+      offset: '00000050'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000064'

@@ -1,0 +1,1669 @@
+filename: ccport.sys
+binary: CCPORT
+description: ''
+appearances:
+- version: Windows 98SE Debug
+  source_tree:
+  - ../ccport.c
+  - ../utils.c
+  - ../vxd.c
+  - cm08z.asm
+  - cm0cz.asm
+  - cm10z.asm
+  - cm3fz.asm
+  - cm40z.asm
+  - ntk0az.asm
+  - reg01z.asm
+  - reg02z.asm
+  - reg03z.asm
+  - reg05z.asm
+  - reg0Az.asm
+  - reg0Bz.asm
+  - vcomm1az.asm
+  - vcomm1fz.asm
+  - vcomm21z.asm
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00002020'
+    symbols:
+    - name: _CCPORT_Dispatch@8
+      processed: ''
+      offset: '00000000'
+    - name: _CCPORT_Create@8
+      processed: ''
+      offset: '00000270'
+    - name: _CCPORT_Close@8
+      processed: ''
+      offset: 000003A0
+    - name: _CCPORT_Write@8
+      processed: ''
+      offset: 000004C0
+    - name: _CCPORT_Read@8
+      processed: ''
+      offset: 000005A0
+    - name: _CCPORT_PnPAddDevice@8
+      processed: ''
+      offset: '00000680'
+    - name: _CCPORT_PnP@8
+      processed: ''
+      offset: 000007C0
+    - name: _CCPORT_Power@8
+      processed: ''
+      offset: 00000DC0
+    - name: _RemoveDevice@8
+      processed: ''
+      offset: 000011D0
+    - name: _Debug_MemAlloc@8
+      processed: ''
+      offset: '00001330'
+    - name: _Debug_MemFree@4
+      processed: ''
+      offset: 000013D0
+    - name: _Debug_MemCheck@0
+      processed: ''
+      offset: '00001450'
+    - name: _IoctlCall@16
+      processed: ''
+      offset: '00001500'
+    - name: _WriteCall@12
+      processed: ''
+      offset: '00001750'
+    - name: _ReadCall@12
+      processed: ''
+      offset: 000019C0
+    - name: _CheckReadBuff@4
+      processed: ''
+      offset: 00001C60
+    - name: _GetPort
+      processed: ''
+      offset: 00001D60
+    - name: _ReleasePort
+      processed: ''
+      offset: '00001E80'
+    - name: _StealPort
+      processed: ''
+      offset: 00001F60
+    - name: _CallNotifyProc
+      processed: ''
+      offset: 00001FD0
+    - name: _StartNotifyRead@4
+      processed: ''
+      offset: 000021B0
+    - name: _RestartNotifyRead@4
+      processed: ''
+      offset: 000022D0
+    - name: _NotifyCompletion@12
+      processed: ''
+      offset: 000024C0
+    - name: _IoctlCompletion@12
+      processed: ''
+      offset: '00002900'
+    - name: _ReadCompletion@12
+      processed: ''
+      offset: '00002970'
+    - name: _WriteCompletion@12
+      processed: ''
+      offset: 000029C0
+    - name: _CancelPendingNotifyRead@4
+      processed: ''
+      offset: 00002A10
+    - name: _SetDTR@8
+      processed: ''
+      offset: 00002B80
+    - name: _AllocateCommPort@4
+      processed: ''
+      offset: 00002CB0
+    - name: _GetExistingPort@4
+      processed: ''
+      offset: '00002E60'
+    - name: _CheckForPort@8
+      processed: ''
+      offset: '00003180'
+    - name: _SearchForPort@4
+      processed: ''
+      offset: '00003280'
+    - name: _FindDevExtWithParent@4
+      processed: ''
+      offset: '00003420'
+    - name: _FindDevExtWithDevNode@4
+      processed: ''
+      offset: '000034E0'
+    - name: _FindDevExtWithCommName@4
+      processed: ''
+      offset: 000035A0
+    - name: _CreateDevNodeName@8
+      processed: ''
+      offset: 000036B0
+    - name: _SendPowerIRP@8
+      processed: ''
+      offset: '00003830'
+    - name: _VCOMM_Map_Ring0DCB_To_Win32@8
+      processed: ''
+      offset: 000038A0
+    - name: _VCOMM_Map_Win32DCB_To_Ring0@8
+      processed: ''
+      offset: 000038C0
+    - name: _Vcomm_DriverControl
+      processed: ''
+      offset: '000038E0'
+    - name: _StartEnumerator@4
+      processed: ''
+      offset: 00003A60
+    - name: _OnEnumerate
+      processed: ''
+      offset: 00003B90
+    - name: _PortOpen
+      processed: ''
+      offset: '00004270'
+    - name: _PortSetCommState
+      processed: ''
+      offset: '00004710'
+    - name: _PortGetCommState
+      processed: ''
+      offset: '00004E70'
+    - name: _PortSetup
+      processed: ''
+      offset: '00005080'
+    - name: _PortTransmitChar
+      processed: ''
+      offset: '000051E0'
+    - name: _PortClose
+      processed: ''
+      offset: '00005260'
+    - name: _PortGetQueueStatus
+      processed: ''
+      offset: 000054A0
+    - name: _PortClearError
+      processed: ''
+      offset: '00005550'
+    - name: _PortSetModemStatusShadow
+      processed: ''
+      offset: '00005600'
+    - name: _PortGetProperties
+      processed: ''
+      offset: 000056C0
+    - name: _PortEscapeFunction
+      processed: ''
+      offset: '00005820'
+    - name: _PortPurge
+      processed: ''
+      offset: '00006360'
+    - name: _PortSetEventMask
+      processed: ''
+      offset: '00006430'
+    - name: _PortGetEventMask
+      processed: ''
+      offset: '00006710'
+    - name: _PortWrite
+      processed: ''
+      offset: '00006830'
+    - name: _PortRead
+      processed: ''
+      offset: '00006960'
+    - name: _PortEnableNotification
+      processed: ''
+      offset: 00006AA0
+    - name: _PortSetReadCallBack
+      processed: ''
+      offset: 00006B90
+    - name: _PortSetWriteCallBack
+      processed: ''
+      offset: 00006D60
+    - name: _PortGetModemStatus
+      processed: ''
+      offset: '00006E50'
+    - name: _PortGetCommConfig
+      processed: ''
+      offset: 00006F50
+    - name: _PortSetCommConfig
+      processed: ''
+      offset: '00007030'
+    - name: _PortGetWin32Error
+      processed: ''
+      offset: '00007100'
+    - name: _ConfigEnumerate@12
+      processed: ''
+      offset: '00007180'
+    - name: _ConfigRemove@4
+      processed: ''
+      offset: 000075B0
+    - name: _RtlAssert@16
+      processed: ''
+      offset: '00007626'
+    - name: _DbgPrint
+      processed: ''
+      offset: 0000762C
+    - name: _KeGetCurrentIrql@0
+      processed: ''
+      offset: '00007632'
+    - name: '@IofCompleteRequest@8'
+      processed: ''
+      offset: '00007638'
+    - name: '@IofCallDriver@8'
+      processed: ''
+      offset: 0000763E
+    - name: '@KfReleaseSpinLock@8'
+      processed: ''
+      offset: '00007644'
+    - name: '@KfAcquireSpinLock@4'
+      processed: ''
+      offset: 0000764A
+    - name: _IoDeleteDevice@4
+      processed: ''
+      offset: '00007650'
+    - name: _IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '00007656'
+    - name: _KeSetEvent@12
+      processed: ''
+      offset: 0000765C
+    - name: _KeWaitForSingleObject@20
+      processed: ''
+      offset: '00007662'
+    - name: _KeInitializeEvent@12
+      processed: ''
+      offset: '00007668'
+    - name: _IoDetachDevice@4
+      processed: ''
+      offset: 0000766E
+    - name: _RtlFreeUnicodeString@4
+      processed: ''
+      offset: '00007674'
+    - name: _KeInitializeSpinLock@4
+      processed: ''
+      offset: 0000767A
+    - name: _IoCreateUnprotectedSymbolicLink@8
+      processed: ''
+      offset: '00007680'
+    - name: _IoCreateDevice@28
+      processed: ''
+      offset: '00007686'
+    - name: _RtlAnsiStringToUnicodeString@12
+      processed: ''
+      offset: 0000768C
+    - name: _RtlInitAnsiString@8
+      processed: ''
+      offset: '00007692'
+    - name: _sprintf
+      processed: ''
+      offset: '00007698'
+    - name: _IoDeleteSymbolicLink@4
+      processed: ''
+      offset: 0000769E
+    - name: _ExAllocatePoolWithTag@12
+      processed: ''
+      offset: 000076A4
+    - name: _ExFreePool@4
+      processed: ''
+      offset: 000076AA
+    - name: _IoFreeIrp@4
+      processed: ''
+      offset: 000076B0
+    - name: _IoInitializeIrp@12
+      processed: ''
+      offset: 000076B6
+    - name: _IoAllocateIrp@8
+      processed: ''
+      offset: 000076BC
+    - name: '@InterlockedExchange@8'
+      processed: ''
+      offset: 000076C2
+    - name: '@InterlockedCompareExchange@12'
+      processed: ''
+      offset: 000076C8
+    - name: _IoCancelIrp@4
+      processed: ''
+      offset: 000076CE
+    - name: _atoi
+      processed: ''
+      offset: 000076D4
+    - name: _IoBuildSynchronousFsdRequest@28
+      processed: ''
+      offset: 000076DA
+  - num: '2'
+    name: PNP
+    offset: '00002230'
+    symbols:
+    - name: _CCODE__RegCloseKey
+      processed: ''
+      offset: '00000000'
+    - name: _CCODE__RegSetValueEx
+      processed: ''
+      offset: '00000008'
+    - name: _CCODE__RegCreateKey
+      processed: ''
+      offset: '00000010'
+    - name: _CCODE__RegEnumKey
+      processed: ''
+      offset: '00000018'
+    - name: _CCODE__RegOpenKey
+      processed: ''
+      offset: '00000020'
+    - name: _CCODE__RegQueryValueEx
+      processed: ''
+      offset: '00000028'
+    - name: _CCODE__VCOMM_Map_Name_To_Resource
+      processed: ''
+      offset: '00000030'
+    - name: _CCODE__VCOMM_Get_Contention_Handler
+      processed: ''
+      offset: '00000038'
+    - name: _CCODE__VCOMM_Add_Port
+      processed: ''
+      offset: '00000040'
+    - name: _CCODE__CONFIGMG_Register_Enumerator
+      processed: ''
+      offset: '00000048'
+    - name: _CCODE__NtKernPhysicalDeviceObjectToDevNode
+      processed: ''
+      offset: '00000050'
+    - name: _CCODE__CONFIGMG_Get_Device_ID
+      processed: ''
+      offset: '00000058'
+    - name: _CCODE__CONFIGMG_Write_Registry_Value
+      processed: ''
+      offset: '00000060'
+    - name: _CCODE__CONFIGMG_Create_DevNode
+      processed: ''
+      offset: '00000068'
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      processed: ''
+      offset: '00000070'
+  - num: '4'
+    name: .data
+    offset: '00002360'
+    symbols:
+    - name: _CCPortFunctions
+      processed: ''
+      offset: 00001A90
+    - name: _BaudRates
+      processed: ''
+      offset: 00001AF0
+    - name: _MemoryAllocated
+      processed: ''
+      offset: '00003058'
+    - name: _MemAllocFailCnt
+      processed: ''
+      offset: 0000305C
+    - name: _MemAllocCnt
+      processed: ''
+      offset: '00003060'
+    - name: _MemFreeFailCnt
+      processed: ''
+      offset: '00003064'
+    - name: _MemFreeCnt
+      processed: ''
+      offset: '00003068'
+    - name: _MaxMemAllocated
+      processed: ''
+      offset: 0000306C
+    - name: _Slots
+      processed: ''
+      offset: '00003070'
+    - name: _PortFound
+      processed: ''
+      offset: '00003170'
+    - name: _NumDevices
+      processed: ''
+      offset: 0000317C
+    - name: _CommPorts
+      processed: ''
+      offset: '00003190'
+    - name: _CCPORT_Debug_Trace_Level
+      processed: ''
+      offset: 000031B0
+    - name: _DriverName
+      processed: ''
+      offset: 000031B4
+    - name: _DriverVersion
+      processed: ''
+      offset: 000031B8
+  - num: '5'
+    name: .idata$2
+    offset: 000027D0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000014'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000028'
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: 000000C0
+    - name: __imp__KeGetCurrentIrql@0
+      processed: ''
+      offset: 000000C4
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: 000000C8
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: 000000CC
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: 000000D0
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: 000000D4
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: 000000D8
+    - name: __imp__DbgPrint
+      processed: ''
+      offset: 000000DC
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '000000E0'
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: '000000E4'
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: '000000E8'
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: 000000EC
+    - name: __imp__IoDetachDevice@4
+      processed: ''
+      offset: 000000F0
+    - name: __imp__RtlFreeUnicodeString@4
+      processed: ''
+      offset: 000000F4
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: 000000F8
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      processed: ''
+      offset: 000000FC
+    - name: __imp__RtlAssert@16
+      processed: ''
+      offset: '00000100'
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      processed: ''
+      offset: '00000104'
+    - name: __imp__RtlInitAnsiString@8
+      processed: ''
+      offset: '00000108'
+    - name: __imp__sprintf
+      processed: ''
+      offset: 0000010C
+    - name: __imp__IoDeleteSymbolicLink@4
+      processed: ''
+      offset: '00000110'
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000114'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000118'
+    - name: __imp__IoFreeIrp@4
+      processed: ''
+      offset: 0000011C
+    - name: __imp__IoInitializeIrp@12
+      processed: ''
+      offset: '00000120'
+    - name: __imp__IoAllocateIrp@8
+      processed: ''
+      offset: '00000124'
+    - name: __imp_@InterlockedExchange@8
+      processed: ''
+      offset: '00000128'
+    - name: __imp_@InterlockedCompareExchange@12
+      processed: ''
+      offset: 0000012C
+    - name: __imp__IoCancelIrp@4
+      processed: ''
+      offset: '00000130'
+    - name: __imp__atoi
+      processed: ''
+      offset: '00000134'
+    - name: __imp__IoBuildSynchronousFsdRequest@28
+      processed: ''
+      offset: '00000138'
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: 0000013C
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000140'
+  - num: '6'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+    - name: _CCPORT_Unload@4
+      processed: ''
+      offset: '00000170'
+    - name: _CCPORT_SystemControl@8
+      processed: ''
+      offset: '00000220'
+    - name: _CCPORT_Cleanup@8
+      processed: ''
+      offset: '00000340'
+    - name: _CCPORT_QueryInformation@8
+      processed: ''
+      offset: '00000400'
+    - name: _CCPORT_SetInformation@8
+      processed: ''
+      offset: 000004C0
+    - name: _StartDevice@8
+      processed: ''
+      offset: '00000580'
+    - name: _StopDevice@8
+      processed: ''
+      offset: '00000680'
+    - name: _CreateDeviceObject@12
+      processed: ''
+      offset: '00000700'
+    - name: _DeleteObjectAndLink@4
+      processed: ''
+      offset: '000009E0'
+- version: Windows 98SE Retail
+  source_tree:
+  - ../ccport.c
+  - ../utils.c
+  - ../vxd.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00001C80
+    symbols:
+    - name: _CCPORT_Dispatch@8
+      demangled: ''
+      offset: '00000000'
+    - name: _CCPORT_Create@8
+      demangled: ''
+      offset: '00000200'
+    - name: _CCPORT_Close@8
+      demangled: ''
+      offset: '00000300'
+    - name: _CCPORT_Write@8
+      demangled: ''
+      offset: '000003E0'
+    - name: _CCPORT_Read@8
+      demangled: ''
+      offset: '00000480'
+    - name: _CCPORT_PnPAddDevice@8
+      demangled: ''
+      offset: '00000520'
+    - name: _CCPORT_PnP@8
+      demangled: ''
+      offset: '00000620'
+    - name: _CCPORT_Power@8
+      demangled: ''
+      offset: 00000A60
+    - name: _RemoveDevice@8
+      demangled: ''
+      offset: 00000D50
+    - name: _Debug_MemCheck@0
+      demangled: ''
+      offset: '00000E40'
+    - name: _IoctlCall@16
+      demangled: ''
+      offset: '00000E80'
+    - name: _WriteCall@12
+      demangled: ''
+      offset: '00001030'
+    - name: _ReadCall@12
+      demangled: ''
+      offset: '00001230'
+    - name: _CheckReadBuff@4
+      demangled: ''
+      offset: '00001440'
+    - name: _GetPort
+      demangled: ''
+      offset: '00001500'
+    - name: _ReleasePort
+      demangled: ''
+      offset: 000015F0
+    - name: _StealPort
+      demangled: ''
+      offset: 000016A0
+    - name: _CallNotifyProc
+      demangled: ''
+      offset: 000016F0
+    - name: _StartNotifyRead@4
+      demangled: ''
+      offset: '00001860'
+    - name: _RestartNotifyRead@4
+      demangled: ''
+      offset: '00001960'
+    - name: _NotifyCompletion@12
+      demangled: ''
+      offset: 00001AD0
+    - name: _IoctlCompletion@12
+      demangled: ''
+      offset: '00001E70'
+    - name: _ReadCompletion@12
+      demangled: ''
+      offset: 00001EB0
+    - name: _WriteCompletion@12
+      demangled: ''
+      offset: 00001F00
+    - name: _CancelPendingNotifyRead@4
+      demangled: ''
+      offset: 00001F50
+    - name: _SetDTR@8
+      demangled: ''
+      offset: '00002060'
+    - name: _AllocateCommPort@4
+      demangled: ''
+      offset: '00002140'
+    - name: _GetExistingPort@4
+      demangled: ''
+      offset: 000022A0
+    - name: _CheckForPort@8
+      demangled: ''
+      offset: '00002500'
+    - name: _SearchForPort@4
+      demangled: ''
+      offset: 000025D0
+    - name: _FindDevExtWithParent@4
+      demangled: ''
+      offset: '00002720'
+    - name: _FindDevExtWithDevNode@4
+      demangled: ''
+      offset: 000027C0
+    - name: _FindDevExtWithCommName@4
+      demangled: ''
+      offset: '00002860'
+    - name: _SendPowerIRP@8
+      demangled: ''
+      offset: '00002900'
+    - name: _TraceBuff@8
+      demangled: ''
+      offset: '00002940'
+    - name: _VCOMM_Map_Ring0DCB_To_Win32@8
+      demangled: ''
+      offset: 000029C0
+    - name: _VCOMM_Map_Win32DCB_To_Ring0@8
+      demangled: ''
+      offset: '000029E0'
+    - name: _Vcomm_DriverControl
+      demangled: ''
+      offset: 00002A00
+    - name: _StartEnumerator@4
+      demangled: ''
+      offset: 00002B50
+    - name: _OnEnumerate
+      demangled: ''
+      offset: 00002C40
+    - name: _PortOpen
+      demangled: ''
+      offset: '00003120'
+    - name: _PortSetCommState
+      demangled: ''
+      offset: 000034B0
+    - name: _PortGetCommState
+      demangled: ''
+      offset: 00003B40
+    - name: _PortSetup
+      demangled: ''
+      offset: 00003CA0
+    - name: _PortTransmitChar
+      demangled: ''
+      offset: 00003DB0
+    - name: _PortClose
+      demangled: ''
+      offset: '00003E00'
+    - name: _PortGetQueueStatus
+      demangled: ''
+      offset: 00003F70
+    - name: _PortClearError
+      demangled: ''
+      offset: 00003FF0
+    - name: _PortSetModemStatusShadow
+      demangled: ''
+      offset: '00004080'
+    - name: _PortGetProperties
+      demangled: ''
+      offset: '00004120'
+    - name: _PortEscapeFunction
+      demangled: ''
+      offset: '00004250'
+    - name: _PortPurge
+      demangled: ''
+      offset: 00004A00
+    - name: _PortSetEventMask
+      demangled: ''
+      offset: 00004AA0
+    - name: _PortGetEventMask
+      demangled: ''
+      offset: 00004CD0
+    - name: _PortWrite
+      demangled: ''
+      offset: 00004DA0
+    - name: _PortRead
+      demangled: ''
+      offset: '00004E70'
+    - name: _PortEnableNotification
+      demangled: ''
+      offset: 00004F60
+    - name: _PortSetReadCallBack
+      demangled: ''
+      offset: '00005010'
+    - name: _PortSetWriteCallBack
+      demangled: ''
+      offset: '00005160'
+    - name: _PortGetModemStatus
+      demangled: ''
+      offset: '00005210'
+    - name: _PortGetCommConfig
+      demangled: ''
+      offset: '000052E0'
+    - name: _PortSetCommConfig
+      demangled: ''
+      offset: 000053A0
+    - name: _PortGetWin32Error
+      demangled: ''
+      offset: '00005440'
+    - name: _ConfigEnumerate@12
+      demangled: ''
+      offset: 000054A0
+    - name: _ConfigRemove@4
+      demangled: ''
+      offset: '00005830'
+    - name: _memcpy
+      demangled: ''
+      offset: 000058A6
+    - name: _strcpy
+      demangled: ''
+      offset: 000058AC
+    - name: _memset
+      demangled: ''
+      offset: 000058B2
+    - name: _sprintf
+      demangled: ''
+      offset: 000058B8
+    - name: _strlen
+      demangled: ''
+      offset: 000058BE
+    - name: _strcat
+      demangled: ''
+      offset: 000058C4
+    - name: _atoi
+      demangled: ''
+      offset: 000058CA
+    - name: _strcmp
+      demangled: ''
+      offset: 000058D0
+  - num: '2'
+    name: PNP
+    offset: '00001E90'
+    symbols:
+    - name: _CCODE__RegCloseKey
+      demangled: ''
+      offset: '00000000'
+    - name: _CCODE__RegSetValueEx
+      demangled: ''
+      offset: '00000008'
+    - name: _CCODE__RegCreateKey
+      demangled: ''
+      offset: '00000010'
+    - name: _CCODE__RegEnumKey
+      demangled: ''
+      offset: '00000018'
+    - name: _CCODE__RegOpenKey
+      demangled: ''
+      offset: '00000020'
+    - name: _CCODE__RegQueryValueEx
+      demangled: ''
+      offset: '00000028'
+    - name: _CCODE__VCOMM_Map_Name_To_Resource
+      demangled: ''
+      offset: '00000030'
+    - name: _CCODE__VCOMM_Get_Contention_Handler
+      demangled: ''
+      offset: '00000038'
+    - name: _CCODE__VCOMM_Add_Port
+      demangled: ''
+      offset: '00000040'
+    - name: _CCODE__CONFIGMG_Register_Enumerator
+      demangled: ''
+      offset: '00000048'
+    - name: _CCODE__NtKernPhysicalDeviceObjectToDevNode
+      demangled: ''
+      offset: '00000050'
+    - name: _CCODE__CONFIGMG_Get_Device_ID
+      demangled: ''
+      offset: '00000058'
+    - name: _CCODE__CONFIGMG_Write_Registry_Value
+      demangled: ''
+      offset: '00000060'
+    - name: _CCODE__CONFIGMG_Create_DevNode
+      demangled: ''
+      offset: '00000068'
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      demangled: ''
+      offset: '00000070'
+  - num: '3'
+    name: .data
+    offset: 00001F60
+    symbols:
+    - name: _CCPortFunctions
+      demangled: ''
+      offset: '00000140'
+    - name: _BaudRates
+      demangled: ''
+      offset: 000001A0
+    - name: _CCPORT_Debug_Trace_Ptr
+      demangled: ''
+      offset: '00000468'
+    - name: _CommPorts
+      demangled: ''
+      offset: '00000480'
+    - name: _CCPORT_Debug_Trace_Level
+      demangled: ''
+      offset: 000004A0
+    - name: _DriverName
+      demangled: ''
+      offset: 000004A4
+    - name: _CCPORT_Debug_Trace_Buff
+      demangled: ''
+      offset: 000004C0
+    - name: _DriverVersion
+      demangled: ''
+      offset: 000008C0
+  - num: '4'
+    name: .idata$2
+    offset: 000023C0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000028'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: 000000C4
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: 000000C8
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000CC
+    - name: __imp__memcpy
+      demangled: ''
+      offset: 000000D0
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: 000000D4
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 000000D8
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: 000000DC
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '000000E0'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '000000E4'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '000000E8'
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: 000000EC
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: 000000F0
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 000000F4
+    - name: __imp__strcpy
+      demangled: ''
+      offset: 000000F8
+    - name: __imp__memset
+      demangled: ''
+      offset: 000000FC
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: '00000100'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: '00000104'
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      demangled: ''
+      offset: '00000108'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: 0000010C
+    - name: __imp__sprintf
+      demangled: ''
+      offset: '00000110'
+    - name: __imp__IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: '00000114'
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000118'
+    - name: __imp__IoInitializeIrp@12
+      demangled: ''
+      offset: 0000011C
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: '00000120'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000124'
+    - name: __imp_@InterlockedCompareExchange@12
+      demangled: ''
+      offset: '00000128'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: 0000012C
+    - name: __imp__strlen
+      demangled: ''
+      offset: '00000130'
+    - name: __imp__strcat
+      demangled: ''
+      offset: '00000134'
+    - name: __imp__atoi
+      demangled: ''
+      offset: '00000138'
+    - name: __imp__strcmp
+      demangled: ''
+      offset: 0000013C
+    - name: __imp__IoBuildSynchronousFsdRequest@28
+      demangled: ''
+      offset: '00000140'
+    - name: __imp__RtlInitAnsiString@8
+      demangled: ''
+      offset: '00000144'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000148'
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _CCPORT_Unload@4
+      demangled: ''
+      offset: '00000100'
+    - name: _CCPORT_SystemControl@8
+      demangled: ''
+      offset: '00000140'
+    - name: _CCPORT_Cleanup@8
+      demangled: ''
+      offset: 000001F0
+    - name: _CCPORT_QueryInformation@8
+      demangled: ''
+      offset: '00000240'
+    - name: _CCPORT_SetInformation@8
+      demangled: ''
+      offset: '00000290'
+    - name: _StartDevice@8
+      demangled: ''
+      offset: '000002E0'
+    - name: _StopDevice@8
+      demangled: ''
+      offset: 000003C0
+    - name: _CreateDeviceObject@12
+      demangled: ''
+      offset: '00000420'
+    - name: _DeleteObjectAndLink@4
+      demangled: ''
+      offset: '00000640'
+- version: Windows ME Debug
+  source_tree:
+  - ../ccport.c
+  - ../pdo.c
+  - ../utils.c
+  - ../vxd.c
+  - ../../../../../DEV/DDK/LIB/VXDWRAPS.C
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00002460'
+    symbols:
+    - name: _DealWithResources@8
+      demangled: ''
+      offset: '00000000'
+    - name: _RemoveDevice@8
+      demangled: ''
+      offset: '000002E0'
+    - name: _GetOldInstance@4
+      demangled: ''
+      offset: '000004E0'
+    - name: _Debug_MemAlloc@8
+      demangled: ''
+      offset: '00000710'
+    - name: _Debug_MemFree@4
+      demangled: ''
+      offset: 000007B0
+    - name: _Debug_MemCheck@0
+      demangled: ''
+      offset: '00000830'
+    - name: _IoctlCall@24
+      demangled: ''
+      offset: '000008E0'
+    - name: _WriteCall@12
+      demangled: ''
+      offset: 00000B60
+    - name: _ReadCall@12
+      demangled: ''
+      offset: 00000EA0
+    - name: _CheckReadBuff@4
+      demangled: ''
+      offset: '00001120'
+    - name: _GetPort
+      demangled: ''
+      offset: '00001290'
+    - name: _ReleasePort
+      demangled: ''
+      offset: 000013C0
+    - name: _StealPort
+      demangled: ''
+      offset: 000014A0
+    - name: _CallReadNotifyProc
+      demangled: ''
+      offset: '00001510'
+    - name: _CallNotifyProc
+      demangled: ''
+      offset: '00001580'
+    - name: _StartNotifyRead@4
+      demangled: ''
+      offset: '00001760'
+    - name: _RestartNotifyRead@4
+      demangled: ''
+      offset: '00001880'
+    - name: _NotifyCompletion@12
+      demangled: ''
+      offset: 00001A70
+    - name: _IoctlCompletion@12
+      demangled: ''
+      offset: 00001F50
+    - name: _ReadCompletion@12
+      demangled: ''
+      offset: 00001F70
+    - name: _WriteCompletion@12
+      demangled: ''
+      offset: 00001F90
+    - name: _CancelPendingNotifyRead@4
+      demangled: ''
+      offset: '00002000'
+    - name: _SetDTR@8
+      demangled: ''
+      offset: 000021B0
+    - name: _SetRTS@8
+      demangled: ''
+      offset: 000022F0
+    - name: _AllocateCommPort@4
+      demangled: ''
+      offset: '00002430'
+    - name: _GetExistingPortDriverKey@4
+      demangled: ''
+      offset: '00002600'
+    - name: _GetExistingPortDeviceKey@4
+      demangled: ''
+      offset: '00002960'
+    - name: _CheckForPort@8
+      demangled: ''
+      offset: 00002A00
+    - name: _SearchForDeviceKey@8
+      demangled: ''
+      offset: 00002B00
+    - name: _SearchForPort@4
+      demangled: ''
+      offset: 00002D80
+    - name: _FindDevExtWithParent@4
+      demangled: ''
+      offset: '00003050'
+    - name: _FindDevExtWithDevNode@4
+      demangled: ''
+      offset: '00003110'
+    - name: _FindDevExtWithCommName@4
+      demangled: ''
+      offset: 000031D0
+    - name: _SendPowerIRP@8
+      demangled: ''
+      offset: 000032F0
+    - name: _VCOMM_Map_Ring0DCB_To_Win32@8
+      demangled: ''
+      offset: '00003350'
+    - name: _VCOMM_Map_Win32DCB_To_Ring0@8
+      demangled: ''
+      offset: '00003370'
+    - name: _IrpCompletion@12
+      demangled: ''
+      offset: '00003390'
+    - name: _ForwardIrp@8
+      demangled: ''
+      offset: '00003530'
+    - name: _ForwardPowerIrp@8
+      demangled: ''
+      offset: '00003620'
+    - name: _IoCompletionSetEvent@12
+      demangled: ''
+      offset: '00003720'
+    - name: _WaitForLowerDriverToCompleteIrp@12
+      demangled: ''
+      offset: 000037F0
+    - name: _GetDevNodeID@8
+      demangled: ''
+      offset: '00003970'
+    - name: _DriverControl@12
+      demangled: ''
+      offset: 000039F0
+    - name: _PortOpen@12
+      demangled: ''
+      offset: 00003B80
+    - name: _PortSetCommState@12
+      demangled: ''
+      offset: '000040E0'
+    - name: _PortGetCommState@8
+      demangled: ''
+      offset: 00004A90
+    - name: _PortSetup@20
+      demangled: ''
+      offset: 00004DF0
+    - name: _PortTransmitChar@8
+      demangled: ''
+      offset: '00005010'
+    - name: _PortClose@4
+      demangled: ''
+      offset: 000050C0
+    - name: _PortGetQueueStatus@8
+      demangled: ''
+      offset: 000054B0
+    - name: _PortClearError@8
+      demangled: ''
+      offset: '00005580'
+    - name: _PortSetModemStatusShadow@8
+      demangled: ''
+      offset: 000055F0
+    - name: _PortGetProperties@8
+      demangled: ''
+      offset: 000056D0
+    - name: _PortEscapeFunction@16
+      demangled: ''
+      offset: '00005850'
+    - name: _PortPurge@8
+      demangled: ''
+      offset: '00006420'
+    - name: _PortSetEventMask@12
+      demangled: ''
+      offset: '00006520'
+    - name: _PortGetEventMask@12
+      demangled: ''
+      offset: '00006830'
+    - name: _PortWrite@16
+      demangled: ''
+      offset: '00006970'
+    - name: _PortRead@16
+      demangled: ''
+      offset: 00006B00
+    - name: _PortEnableNotification@12
+      demangled: ''
+      offset: 00006C60
+    - name: _PortSetReadCallBack@16
+      demangled: ''
+      offset: 00006D70
+    - name: _PortSetWriteCallBack@16
+      demangled: ''
+      offset: 00006F60
+    - name: _PortGetModemStatus@8
+      demangled: ''
+      offset: '00007070'
+    - name: _PortGetCommConfig@12
+      demangled: ''
+      offset: 000071A0
+    - name: _PortSetCommConfig@12
+      demangled: ''
+      offset: '00007570'
+    - name: _Modem_CreateChildPdo@4
+      demangled: ''
+      offset: '00007870'
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: 00007B96
+    - name: _DbgPrint
+      demangled: ''
+      offset: 00007B9C
+    - name: _KeGetCurrentIrql@0
+      demangled: ''
+      offset: 00007BA2
+    - name: '@IofCompleteRequest@8'
+      demangled: ''
+      offset: 00007BA8
+    - name: '@IofCallDriver@8'
+      demangled: ''
+      offset: 00007BAE
+    - name: '@KfReleaseSpinLock@8'
+      demangled: ''
+      offset: 00007BB4
+    - name: '@KfAcquireSpinLock@4'
+      demangled: ''
+      offset: 00007BBA
+    - name: _IoDeleteDevice@4
+      demangled: ''
+      offset: 00007BC0
+    - name: _IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 00007BC6
+    - name: _KeLeaveCriticalRegion@0
+      demangled: ''
+      offset: 00007BCC
+    - name: '@ObfReferenceObject@4'
+      demangled: ''
+      offset: 00007BD2
+    - name: _KeEnterCriticalRegion@0
+      demangled: ''
+      offset: 00007BD8
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: 00007BDE
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 00007BE4
+    - name: _IoDetachDevice@4
+      demangled: ''
+      offset: 00007BEA
+    - name: _RtlFreeUnicodeString@4
+      demangled: ''
+      offset: 00007BF0
+    - name: _RtlUnicodeStringToInteger@12
+      demangled: ''
+      offset: 00007BF6
+    - name: _RtlCompareMemory@12
+      demangled: ''
+      offset: 00007BFC
+    - name: _RtlQueryRegistryValues@20
+      demangled: ''
+      offset: 00007C02
+    - name: _RtlInitUnicodeString@8
+      demangled: ''
+      offset: 00007C08
+    - name: _IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 00007C0E
+    - name: _KeInitializeSpinLock@4
+      demangled: ''
+      offset: 00007C14
+    - name: _IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: 00007C1A
+    - name: _IoCreateDevice@28
+      demangled: ''
+      offset: 00007C20
+    - name: _RtlAnsiStringToUnicodeString@12
+      demangled: ''
+      offset: 00007C26
+    - name: _RtlInitAnsiString@8
+      demangled: ''
+      offset: 00007C2C
+    - name: _sprintf
+      demangled: ''
+      offset: 00007C32
+    - name: _IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 00007C38
+    - name: _IoFreeIrp@4
+      demangled: ''
+      offset: 00007C3E
+    - name: _KeWaitForSingleObject@20
+      demangled: ''
+      offset: 00007C44
+    - name: _IoInitializeIrp@12
+      demangled: ''
+      offset: 00007C4A
+    - name: _IoAllocateIrp@8
+      demangled: ''
+      offset: 00007C50
+    - name: _KeInitializeEvent@12
+      demangled: ''
+      offset: 00007C56
+    - name: '@InterlockedIncrement@4'
+      demangled: ''
+      offset: 00007C5C
+    - name: '@InterlockedExchange@8'
+      demangled: ''
+      offset: 00007C62
+    - name: '@InterlockedCompareExchange@12'
+      demangled: ''
+      offset: 00007C68
+    - name: _KeSetEvent@12
+      demangled: ''
+      offset: 00007C6E
+    - name: _IoCancelIrp@4
+      demangled: ''
+      offset: 00007C74
+    - name: _atoi
+      demangled: ''
+      offset: 00007C7A
+    - name: _PoCallDriver@8
+      demangled: ''
+      offset: 00007C80
+    - name: _PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 00007C86
+    - name: _IoBuildSynchronousFsdRequest@28
+      demangled: ''
+      offset: 00007C8C
+    - name: _KeResetEvent@4
+      demangled: ''
+      offset: 00007C92
+    - name: _ZwClose@4
+      demangled: ''
+      offset: 00007C98
+    - name: _RtlWriteRegistryValue@24
+      demangled: ''
+      offset: 00007C9E
+    - name: _RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: 00007CA4
+  - num: '2'
+    name: PNP
+    offset: 000025F0
+    symbols:
+    - name: _CCODE__NtKernPhysicalDeviceObjectToDevNode
+      demangled: ''
+      offset: '00000000'
+    - name: _CCODE_Cancel_Global_Event@4
+      demangled: ''
+      offset: '00000008'
+    - name: _CCODE__RegCloseKey
+      demangled: ''
+      offset: '00000018'
+    - name: _CCODE__RegSetValueEx
+      demangled: ''
+      offset: '00000020'
+    - name: _CCODE__RegCreateKey
+      demangled: ''
+      offset: '00000028'
+    - name: _CCODE__RegEnumKey
+      demangled: ''
+      offset: '00000030'
+    - name: _CCODE__RegOpenKey
+      demangled: ''
+      offset: '00000038'
+    - name: _CCODE__RegQueryValueEx
+      demangled: ''
+      offset: '00000040'
+    - name: _CCODE__CONFIGMG_Get_Device_ID
+      demangled: ''
+      offset: '00000048'
+    - name: _CCODE__VCOMM_Map_Name_To_Resource
+      demangled: ''
+      offset: '00000050'
+    - name: _CCODE__VCOMM_Get_Contention_Handler
+      demangled: ''
+      offset: '00000058'
+    - name: _CCODE__VCOMM_Add_Port
+      demangled: ''
+      offset: '00000060'
+  - num: '3'
+    name: .idata$5
+    offset: 00002C00
+    symbols:
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000000'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '00000004'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: '00000008'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000000C
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000010'
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: '00000014'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000018'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 0000001C
+    - name: __imp__KeLeaveCriticalRegion@0
+      demangled: ''
+      offset: '00000020'
+    - name: __imp_@ObfReferenceObject@4
+      demangled: ''
+      offset: '00000024'
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000028'
+    - name: __imp__KeEnterCriticalRegion@0
+      demangled: ''
+      offset: 0000002C
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000030'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000034'
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: '00000038'
+    - name: __imp__RtlFreeUnicodeString@4
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__RtlUnicodeStringToInteger@12
+      demangled: ''
+      offset: '00000040'
+    - name: __imp__RtlCompareMemory@12
+      demangled: ''
+      offset: '00000044'
+    - name: __imp__RtlQueryRegistryValues@20
+      demangled: ''
+      offset: '00000048'
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 0000004C
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: '00000050'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000054'
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: '00000058'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: 0000005C
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000060'
+    - name: __imp__RtlInitAnsiString@8
+      demangled: ''
+      offset: '00000064'
+    - name: __imp__sprintf
+      demangled: ''
+      offset: '00000068'
+    - name: __imp__IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 0000006C
+    - name: __imp__IoFreeIrp@4
+      demangled: ''
+      offset: '00000070'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000074'
+    - name: __imp__IoInitializeIrp@12
+      demangled: ''
+      offset: '00000078'
+    - name: __imp__IoAllocateIrp@8
+      demangled: ''
+      offset: 0000007C
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000080'
+    - name: __imp_@InterlockedIncrement@4
+      demangled: ''
+      offset: '00000084'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000088'
+    - name: __imp_@InterlockedCompareExchange@12
+      demangled: ''
+      offset: 0000008C
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000090'
+    - name: __imp__IoCancelIrp@4
+      demangled: ''
+      offset: '00000094'
+    - name: __imp__atoi
+      demangled: ''
+      offset: '00000098'
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: 0000009C
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 000000A0
+    - name: __imp__IoBuildSynchronousFsdRequest@28
+      demangled: ''
+      offset: 000000A4
+    - name: __imp__KeResetEvent@4
+      demangled: ''
+      offset: 000000A8
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: 000000AC
+    - name: __imp__RtlWriteRegistryValue@24
+      demangled: ''
+      offset: 000000B0
+    - name: __imp__RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: 000000B4
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      demangled: ''
+      offset: 000000B8
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000000BC
+  - num: '4'
+    name: .data
+    offset: 00002D10
+    symbols:
+    - name: _BaudRates
+      demangled: ''
+      offset: 000025A8
+    - name: _MemoryAllocated
+      demangled: ''
+      offset: 00004A50
+    - name: _MemAllocFailCnt
+      demangled: ''
+      offset: 00004A54
+    - name: _MemAllocCnt
+      demangled: ''
+      offset: 00004A58
+    - name: _MemFreeFailCnt
+      demangled: ''
+      offset: 00004A5C
+    - name: _MemFreeCnt
+      demangled: ''
+      offset: 00004A60
+    - name: _MaxMemAllocated
+      demangled: ''
+      offset: 00004A64
+    - name: _Slots
+      demangled: ''
+      offset: 00004A80
+    - name: _PortFound
+      demangled: ''
+      offset: '00004E80'
+    - name: _NumDevices
+      demangled: ''
+      offset: 00004E8C
+    - name: _CCPORT_Debug_Trace_Level
+      demangled: ''
+      offset: '00004E90'
+    - name: _DriverName
+      demangled: ''
+      offset: '00004E94'
+    - name: _DriverVersion
+      demangled: ''
+      offset: '00004E98'
+  - num: '5'
+    name: PAGE
+    offset: 000038C0
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _CCPORT_Dispatch@8
+      demangled: ''
+      offset: '00000140'
+    - name: _CCPORT_Create@8
+      demangled: ''
+      offset: '00000400'
+    - name: _CCPORT_Close@8
+      demangled: ''
+      offset: '00000550'
+    - name: _CCPORT_Unload@4
+      demangled: ''
+      offset: '00000690'
+    - name: _CCPORT_PnPAddDevice@8
+      demangled: ''
+      offset: '00000740'
+    - name: _CCPORT_PnP@8
+      demangled: ''
+      offset: '00000940'
+    - name: _CCPORT_Power@8
+      demangled: ''
+      offset: '00001360'
+    - name: _CCPORT_SystemControl@8
+      demangled: ''
+      offset: '00001960'
+    - name: _CCPORT_Cleanup@8
+      demangled: ''
+      offset: 00001A70
+    - name: _StartDevice@8
+      demangled: ''
+      offset: 00001B30
+    - name: _StopDevice@8
+      demangled: ''
+      offset: 00001BD0
+    - name: _CreateDeviceObject@16
+      demangled: ''
+      offset: 00001C50
+    - name: _DeleteObjectAndLink@4
+      demangled: ''
+      offset: 00001FC0
+    - name: _Modem_PnP@8
+      demangled: ''
+      offset: '000020E0'
+    - name: _Modem_Power@8
+      demangled: ''
+      offset: 00002F80
+    - name: _Modem_Wmi@8
+      demangled: ''
+      offset: 000034A0
+  - num: '7'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000014'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000028'

@@ -2,6 +2,187 @@ filename: voltrack.vxd
 binary: VOLTRACK
 description: ''
 appearances:
+- version: Windows 98 Retail
+  source_tree:
+  - ../volaer.asm
+  - ../volco.asm
+  - ../volinit.asm
+  - ../volreq.asm
+  - ../voltrk.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00000930'
+    symbols:
+    - name: vol_request
+      processed: ''
+      offset: 0000000C
+    - name: vol_r_check_uncertain
+      processed: ''
+      offset: '00000071'
+    - name: IsPagingDevice
+      processed: ''
+      offset: 0000018A
+    - name: vol_lock_volume
+      processed: ''
+      offset: 0000019A
+    - name: vol_unlock_volume
+      processed: ''
+      offset: '00000209'
+    - name: vol_send_unlock
+      processed: ''
+      offset: '00000267'
+    - name: vol_eject_media
+      processed: ''
+      offset: '00000282'
+    - name: vol_call_down_request
+      processed: ''
+      offset: 000002B0
+    - name: vol_cd_check_floppy_a_b
+      processed: ''
+      offset: 000002EE
+    - name: vol_handle_media_change
+      processed: ''
+      offset: 0000033E
+    - name: vol_prompt_for_media
+      processed: ''
+      offset: 0000036C
+    - name: vol_async_event
+      processed: ''
+      offset: '00000380'
+    - name: half_sec_note
+      processed: ''
+      offset: 000003B8
+    - name: vol_distribute_uncertain
+      processed: ''
+      offset: 0000041C
+    - name: vol_completion
+      processed: ''
+      offset: '00000484'
+    - name: vol_call_back_request
+      processed: ''
+      offset: 0000050C
+    - name: vol_completion_error
+      processed: ''
+      offset: 0000051C
+    - name: vol_init_cd_ptr
+      processed: ''
+      offset: '00000550'
+    - name: voltrack_DDB
+      processed: ''
+      offset: 0000056C
+    - name: vol_ilb
+      processed: ''
+      offset: 000005BC
+    - name: vol_prompt_sem
+      processed: ''
+      offset: 000005F0
+    - name: vol_pDOSDATA
+      processed: ''
+      offset: 000005F4
+  - num: '2'
+    name: _LMGROUP
+    offset: '00000970'
+    symbols:
+    - name: '@MSG_LAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      processed: ''
+      offset: '00000020'
+  - num: '3'
+    name: _IGROUP
+    offset: 00000A40
+    symbols:
+    - name: Voltrk_Device_Init
+      processed: ''
+      offset: '00000000'
+    - name: Drv_Reg_Pkt
+      processed: ''
+      offset: '00000084'
+  - num: '4'
+    name: _PTEXT
+    offset: 00001A00
+    symbols:
+    - name: vol_recompute
+      processed: ''
+      offset: '00000000'
+    - name: vol_issue_arrival_notify
+      processed: ''
+      offset: 000001C1
+    - name: vol_prompt_for_floppy
+      processed: ''
+      offset: 000001D9
+    - name: vol_eject_win32_event
+      processed: ''
+      offset: 0000022F
+    - name: vol_eject_event
+      processed: ''
+      offset: 0000023F
+    - name: vol_gen_ioctl
+      processed: ''
+      offset: '00000373'
+    - name: vol_ior_to_ioctl_status
+      processed: ''
+      offset: 0000041D
+    - name: vol_prompt_for_media_event
+      processed: ''
+      offset: '00000430'
+    - name: vol_internal_request
+      processed: ''
+      offset: 0000071B
+    - name: vol_internal_request_async
+      processed: ''
+      offset: '00000726'
+    - name: vol_tracked_internal_request
+      processed: ''
+      offset: '00000731'
+    - name: vol_phys_internal_request
+      processed: ''
+      offset: '00000848'
+    - name: vol_ensure_safe_event
+      processed: ''
+      offset: 0000087E
+    - name: VolIsIndosSafe
+      processed: ''
+      offset: 000008FD
+    - name: vol_config_dcb
+      processed: ''
+      offset: '00000940'
+    - name: vol_init_complete
+      processed: ''
+      offset: 000009BC
+    - name: vol_shutdown
+      processed: ''
+      offset: 000009CC
+    - name: vol_completion_error_event
+      processed: ''
+      offset: 00000A18
+    - name: vol_start_next_vol
+      processed: ''
+      offset: 00000B32
+    - name: vol_issue_remove_notify
+      processed: ''
+      offset: 00000B64
+  - num: '5'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: voltrk_device_count
+      processed: ''
+      offset: '00000000'
+    - name: VolDrive
+      processed: ''
+      offset: '00000004'
+    - name: VolSN
+      processed: ''
+      offset: '00000007'
+    - name: VolLabel
+      processed: ''
+      offset: '00000011'
+    - name: VolMsgBuffer
+      processed: ''
+      offset: 0000001D
 - version: Windows 98 Debug
   source_tree:
   - ../volaer.asm
@@ -16,187 +197,187 @@ appearances:
     offset: '00000E80'
     symbols:
     - name: vol_request
-      processed: ''
+      demangled: ''
       offset: 0000000C
     - name: vol_r_check_uncertain
-      processed: ''
+      demangled: ''
       offset: '00000163'
     - name: IsPagingDevice
-      processed: ''
+      demangled: ''
       offset: 000002F8
     - name: vol_lock_volume
-      processed: ''
+      demangled: ''
       offset: 0000035D
     - name: vol_unlock_volume
-      processed: ''
+      demangled: ''
       offset: 0000046E
     - name: vol_send_unlock
-      processed: ''
+      demangled: ''
       offset: '00000540'
     - name: vol_eject_media
-      processed: ''
+      demangled: ''
       offset: 0000056E
     - name: vol_call_down_request
-      processed: ''
+      demangled: ''
       offset: 0000059C
     - name: vol_cd_check_floppy_a_b
-      processed: ''
+      demangled: ''
       offset: 0000062F
     - name: vol_handle_media_change
-      processed: ''
+      demangled: ''
       offset: 000006DA
     - name: vol_prompt_for_media
-      processed: ''
+      demangled: ''
       offset: 0000078A
     - name: vol_async_event
-      processed: ''
+      demangled: ''
       offset: 0000079C
     - name: half_sec_note
-      processed: ''
+      demangled: ''
       offset: 000007DE
     - name: vol_distribute_uncertain
-      processed: ''
+      demangled: ''
       offset: '00000842'
     - name: vol_completion
-      processed: ''
+      demangled: ''
       offset: 000008AC
     - name: vol_call_back_request
-      processed: ''
+      demangled: ''
       offset: 000009F3
     - name: vol_completion_error
-      processed: ''
+      demangled: ''
       offset: 00000A32
     - name: vol_init_cd_ptr
-      processed: ''
+      demangled: ''
       offset: 00000A69
     - name: get_trace_ptr
-      processed: ''
+      demangled: ''
       offset: 00000A88
     - name: dot_command
-      processed: ''
+      demangled: ''
       offset: 00000AAD
     - name: Vol_dump_help
-      processed: ''
+      demangled: ''
       offset: 00000AD3
     - name: Vol_trace_dump
-      processed: ''
+      demangled: ''
       offset: 00000AE2
     - name: voltrack_DDB
-      processed: ''
+      demangled: ''
       offset: 00000C24
     - name: vol_ilb
-      processed: ''
+      demangled: ''
       offset: 00000C74
     - name: vol_prompt_sem
-      processed: ''
+      demangled: ''
       offset: 00000CA8
     - name: vol_pDOSDATA
-      processed: ''
+      demangled: ''
       offset: 00000CAC
   - num: '2'
     name: _LMGROUP
     offset: 00000EC0
     symbols:
     - name: '@MSG_LAB'
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: '@MSG_LDATA'
-      processed: ''
+      demangled: ''
       offset: '00000020'
   - num: '3'
     name: _IGROUP
     offset: 00000F90
     symbols:
     - name: Voltrk_Device_Init
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: Drv_Reg_Pkt
-      processed: ''
+      demangled: ''
       offset: 000000B8
   - num: '4'
     name: _PTEXT
     offset: '00002490'
     symbols:
     - name: vol_recompute
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: vol_issue_arrival_notify
-      processed: ''
+      demangled: ''
       offset: '00000306'
     - name: vol_prompt_for_floppy
-      processed: ''
+      demangled: ''
       offset: '00000339'
     - name: vol_eject_win32_event
-      processed: ''
+      demangled: ''
       offset: 000003F5
     - name: vol_eject_event
-      processed: ''
+      demangled: ''
       offset: 0000040D
     - name: vol_gen_ioctl
-      processed: ''
+      demangled: ''
       offset: 000006B2
     - name: vol_ior_to_ioctl_status
-      processed: ''
+      demangled: ''
       offset: 000007BC
     - name: vol_prompt_for_media_event
-      processed: ''
+      demangled: ''
       offset: 000007D7
     - name: vol_internal_request
-      processed: ''
+      demangled: ''
       offset: 00000D1E
     - name: vol_internal_request_async
-      processed: ''
+      demangled: ''
       offset: 00000D31
     - name: vol_tracked_internal_request
-      processed: ''
+      demangled: ''
       offset: 00000D3C
     - name: vol_phys_internal_request
-      processed: ''
+      demangled: ''
       offset: 00000ECF
     - name: vol_ensure_safe_event
-      processed: ''
+      demangled: ''
       offset: 00000F59
     - name: VolIsIndosSafe
-      processed: ''
+      demangled: ''
       offset: '00001066'
     - name: vol_config_dcb
-      processed: ''
+      demangled: ''
       offset: '000010E8'
     - name: vol_init_complete
-      processed: ''
+      demangled: ''
       offset: 000011B0
     - name: vol_shutdown
-      processed: ''
+      demangled: ''
       offset: 000011C8
     - name: vol_completion_error_event
-      processed: ''
+      demangled: ''
       offset: '00001240'
     - name: vol_start_next_vol
-      processed: ''
+      demangled: ''
       offset: 000014B9
     - name: vol_issue_remove_notify
-      processed: ''
+      demangled: ''
       offset: '00001559'
   - num: '5'
     name: _PDATA
     offset: '00000000'
     symbols:
     - name: voltrk_device_count
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: VolDrive
-      processed: ''
+      demangled: ''
       offset: 00000F88
     - name: VolSN
-      processed: ''
+      demangled: ''
       offset: 00000F8B
     - name: VolLabel
-      processed: ''
+      demangled: ''
       offset: 00000F95
     - name: VolMsgBuffer
-      processed: ''
+      demangled: ''
       offset: 00000FA1
-- version: Windows 98 Retail
+- version: Windows 98SE Retail
   source_tree:
   - ../volaer.asm
   - ../volco.asm
@@ -377,82 +558,103 @@ appearances:
     - name: VolMsgBuffer
       demangled: ''
       offset: 0000001D
-- version: Windows 98SE Retail
-  source_tree: []
+- version: Windows ME Debug
+  source_tree:
+  - ../volaer.asm
+  - ../volco.asm
+  - ../voldbg.asm
+  - ../volinit.asm
+  - ../volreq.asm
+  - ../voltrk.asm
   segments:
   - num: '1'
     name: _LGROUP
-    offset: '00000930'
+    offset: '00000E90'
     symbols:
     - name: vol_request
       demangled: ''
       offset: 0000000C
     - name: vol_r_check_uncertain
       demangled: ''
-      offset: '00000071'
+      offset: 0000018D
     - name: IsPagingDevice
       demangled: ''
-      offset: 0000018A
+      offset: '00000322'
     - name: vol_lock_volume
       demangled: ''
-      offset: 0000019A
+      offset: '00000398'
     - name: vol_unlock_volume
       demangled: ''
-      offset: '00000209'
+      offset: 000004BA
     - name: vol_send_unlock
       demangled: ''
-      offset: '00000267'
+      offset: 0000059D
     - name: vol_eject_media
       demangled: ''
-      offset: '00000282'
+      offset: 000005CB
     - name: vol_call_down_request
       demangled: ''
-      offset: 000002B0
+      offset: 000005F9
     - name: vol_cd_check_floppy_a_b
       demangled: ''
-      offset: 000002EE
+      offset: 0000068C
     - name: vol_handle_media_change
       demangled: ''
-      offset: 0000033E
+      offset: '00000737'
     - name: vol_prompt_for_media
       demangled: ''
-      offset: 0000036C
+      offset: '000007E7'
     - name: vol_async_event
       demangled: ''
-      offset: '00000380'
+      offset: 000007FC
     - name: half_sec_note
       demangled: ''
-      offset: 000003B8
+      offset: 0000083E
     - name: vol_distribute_uncertain
       demangled: ''
-      offset: 0000041C
+      offset: 000008A2
     - name: vol_completion
       demangled: ''
-      offset: '00000484'
+      offset: 0000090C
     - name: vol_call_back_request
       demangled: ''
-      offset: 0000050C
+      offset: 00000A64
     - name: vol_completion_error
       demangled: ''
-      offset: 0000051C
+      offset: 00000AA3
     - name: vol_init_cd_ptr
       demangled: ''
-      offset: '00000550'
+      offset: 00000ADA
+    - name: get_trace_ptr
+      demangled: ''
+      offset: 00000AF8
+    - name: dot_command
+      demangled: ''
+      offset: 00000B1D
+    - name: Vol_dump_help
+      demangled: ''
+      offset: 00000B43
+    - name: Vol_trace_dump
+      demangled: ''
+      offset: 00000B52
     - name: voltrack_DDB
       demangled: ''
-      offset: 0000056C
+      offset: 00000C94
     - name: vol_ilb
       demangled: ''
-      offset: 000005BC
+      offset: 00000CE4
     - name: vol_prompt_sem
       demangled: ''
-      offset: 000005F0
+      offset: 00000D18
     - name: vol_pDOSDATA
       demangled: ''
-      offset: 000005F4
+      offset: 00000D1C
+    - name: voltrk_factive
+      demangled: ''
+      offset: 00000D20
   - num: '2'
     name: _LMGROUP
-    offset: '00000970'
+    offset: 00000ED0
     symbols:
     - name: '@MSG_LAB'
       demangled: ''
@@ -462,94 +664,91 @@ appearances:
       offset: '00000020'
   - num: '3'
     name: _IGROUP
-    offset: 00000A40
+    offset: 00000FA0
     symbols:
     - name: Voltrk_Device_Init
       demangled: ''
       offset: '00000000'
     - name: Drv_Reg_Pkt
       demangled: ''
-      offset: '00000084'
+      offset: 000000C0
   - num: '4'
     name: _PTEXT
-    offset: 00001A00
+    offset: 000024A0
     symbols:
     - name: vol_recompute
       demangled: ''
       offset: '00000000'
     - name: vol_issue_arrival_notify
       demangled: ''
-      offset: 000001C1
+      offset: '00000317'
     - name: vol_prompt_for_floppy
       demangled: ''
-      offset: 000001D9
+      offset: 0000034A
     - name: vol_eject_win32_event
       demangled: ''
-      offset: 0000022F
+      offset: '00000406'
     - name: vol_eject_event
       demangled: ''
-      offset: 0000023F
+      offset: 0000041E
     - name: vol_gen_ioctl
       demangled: ''
-      offset: '00000373'
+      offset: '00000707'
     - name: vol_ior_to_ioctl_status
       demangled: ''
-      offset: 0000041D
+      offset: '00000822'
     - name: vol_prompt_for_media_event
       demangled: ''
-      offset: '00000430'
+      offset: 0000083D
     - name: vol_internal_request
       demangled: ''
-      offset: 0000071B
+      offset: 00000DB7
     - name: vol_internal_request_async
       demangled: ''
-      offset: '00000726'
+      offset: 00000DCA
     - name: vol_tracked_internal_request
       demangled: ''
-      offset: '00000731'
+      offset: 00000DD5
     - name: vol_phys_internal_request
       demangled: ''
-      offset: '00000848'
+      offset: 00000F7C
     - name: vol_ensure_safe_event
       demangled: ''
-      offset: 0000087E
+      offset: '00001006'
     - name: VolIsIndosSafe
       demangled: ''
-      offset: 000008FD
+      offset: '00001135'
     - name: vol_config_dcb
       demangled: ''
-      offset: '00000940'
+      offset: 000011B8
     - name: vol_init_complete
       demangled: ''
-      offset: 000009BC
+      offset: '00001281'
     - name: vol_shutdown
       demangled: ''
-      offset: 000009CC
+      offset: '00001299'
     - name: vol_completion_error_event
       demangled: ''
-      offset: 00000A18
+      offset: '00001310'
     - name: vol_start_next_vol
       demangled: ''
-      offset: 00000B32
+      offset: 000015AB
     - name: vol_issue_remove_notify
       demangled: ''
-      offset: 00000B64
+      offset: 0000164B
   - num: '5'
     name: _PDATA
     offset: '00000000'
     symbols:
-    - name: voltrk_device_count
-      demangled: ''
-      offset: '00000000'
     - name: VolDrive
       demangled: ''
-      offset: '00000004'
+      offset: '00001150'
     - name: VolSN
       demangled: ''
-      offset: '00000007'
+      offset: '00001153'
     - name: VolLabel
       demangled: ''
-      offset: '00000011'
+      offset: 0000115D
     - name: VolMsgBuffer
       demangled: ''
-      offset: 0000001D
+      offset: '00001169'

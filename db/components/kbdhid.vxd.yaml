@@ -2,336 +2,6 @@ filename: kbdhid.vxd
 binary: KBDHID
 description: ''
 appearances:
-- version: Windows 98 Debug
-  source_tree:
-  - ../kbdhid.c
-  - ../shutdown.c
-  - ../vxd.asm
-  segments:
-  - num: '1'
-    name: _LGROUP
-    offset: '00000660'
-    symbols:
-    - name: _KBDHID_Timeout_AutoRepeat@0
-      processed: ''
-      offset: '00000000'
-    - name: ControlProc
-      processed: ''
-      offset: '00000020'
-    - name: _KBDHID_Enter_Lock@0
-      processed: ''
-      offset: 0000004F
-    - name: _KBDHID_Leave_Lock@0
-      processed: ''
-      offset: '00000081'
-    - name: _KBDHID_Destroy_Lock@0
-      processed: ''
-      offset: '00000098'
-    - name: _IncPendingActionCount@0
-      processed: ''
-      offset: 000000C0
-    - name: _DecPendingActionCount@0
-      processed: ''
-      offset: 000000CC
-    - name: _HandleShutdown
-      processed: ''
-      offset: '00000167'
-    - name: __NtKernInternalDeviceIoControl@40
-      processed: ''
-      offset: 0000019C
-    - name: _LCODE__NtKernCreateFile@44
-      processed: ''
-      offset: 000001A4
-    - name: _LCODE__NtKernClose@4
-      processed: ''
-      offset: 000001AC
-    - name: _LCODE__NtKernReadFile@36
-      processed: ''
-      offset: 000001B4
-    - name: _LCODE__NtKernWriteFile@36
-      processed: ''
-      offset: 000001BC
-    - name: _LCODE__NtKernDeviceIoControl@40
-      processed: ''
-      offset: 000001C4
-    - name: _LCODE__NtKernQueueWorkItem@8
-      processed: ''
-      offset: 000001CC
-    - name: _LCODE__PELDR_GetProcAddress
-      processed: ''
-      offset: 000001D4
-    - name: _LCODE__HeapAllocate
-      processed: ''
-      offset: 000001DC
-    - name: _LCODE__HeapFree
-      processed: ''
-      offset: '000001E4'
-    - name: _LCODE__Trace_Out_Service@4
-      processed: ''
-      offset: 000001EC
-    - name: _LCODE__Debug_Printf_Service
-      processed: ''
-      offset: 000001F4
-    - name: _LCODE_Set_Global_Time_Out@12
-      processed: ''
-      offset: '00000208'
-    - name: _LCODE_Get_Last_Updated_System_Time
-      processed: ''
-      offset: '00000224'
-    - name: __imp__ExFreePool@4
-      processed: ''
-      offset: 0000022C
-    - name: WDMExFreePool
-      processed: ''
-      offset: '00000230'
-    - name: __imp__RtlAssert@16
-      processed: ''
-      offset: 0000023C
-    - name: WDMRtlAssert
-      processed: ''
-      offset: '00000240'
-    - name: __imp__KeGetCurrentIrql@0
-      processed: ''
-      offset: 0000024C
-    - name: WDMKeGetCurrentIrql
-      processed: ''
-      offset: '00000250'
-    - name: KBDHID_DDB
-      processed: ''
-      offset: 0000025C
-    - name: _shuttingDown
-      processed: ''
-      offset: 000002AC
-    - name: _pendingActionCount
-      processed: ''
-      offset: 000002B0
-    - name: _GUID_CLASS_INPUT
-      processed: ''
-      offset: '00000310'
-    - name: _GUID_DEVICE_SYS_BUTTON
-      processed: ''
-      offset: '00000320'
-    - name: _pHidP_GetUsages
-      processed: ''
-      offset: '00000334'
-    - name: _TimeoutWorkItem
-      processed: ''
-      offset: '00000338'
-    - name: _pHidP_SetUsages
-      processed: ''
-      offset: '00000348'
-    - name: _pHidP_GetCaps
-      processed: ''
-      offset: 0000034C
-    - name: _AltIsDown
-      processed: ''
-      offset: '00000350'
-    - name: _KBDHID_LEDs
-      processed: ''
-      offset: '00000354'
-    - name: _kbdTail
-      processed: ''
-      offset: '00000358'
-    - name: _pHidP_GetUsageValue
-      processed: ''
-      offset: 0000035C
-    - name: _pIoGetDeviceInterfaces
-      processed: ''
-      offset: '00000360'
-    - name: _KBDHID_ReadCount
-      processed: ''
-      offset: '00000364'
-    - name: _pHidP_GetMaxUsageListLength
-      processed: ''
-      offset: '00000368'
-    - name: _KBDHID_MultiCount
-      processed: ''
-      offset: 0000036C
-    - name: _pHidP_GetSpecificButtonCaps
-      processed: ''
-      offset: '00000370'
-    - name: _hTimeout
-      processed: ''
-      offset: '00000374'
-    - name: _kbdHead
-      processed: ''
-      offset: '00000378'
-  - num: '3'
-    name: _PTEXT
-    offset: '00001570'
-    symbols:
-    - name: _DbgCommonEntry@0
-      processed: ''
-      offset: '00000000'
-    - name: _KBDHID_UnicodeStrcmp@8
-      processed: ''
-      offset: 0000002A
-    - name: _UnicodeStringLength@4
-      processed: ''
-      offset: '00000086'
-    - name: _KBDHID_GetFunctions@0
-      processed: ''
-      offset: 000000A8
-    - name: _KBDHID_Enqueue@4
-      processed: ''
-      offset: 000001B0
-    - name: _KBDHID_Dequeue@4
-      processed: ''
-      offset: '00000239'
-    - name: _KBDHID_Is_Active_Device@4
-      processed: ''
-      offset: '00000334'
-    - name: _KBDHID_Find_Device_By_Name@4
-      processed: ''
-      offset: '00000358'
-    - name: _KBDHID_Device_Init@0
-      processed: ''
-      offset: 0000039A
-    - name: _KBDHID_Callback_Open@4
-      processed: ''
-      offset: 0000045E
-    - name: _KbdReadComplete@12
-      processed: ''
-      offset: '00000E09'
-    - name: _KBDHID_Callback_Read@4
-      processed: ''
-      offset: 00000F1A
-    - name: _KBDHID_Callback_Close@4
-      processed: ''
-      offset: 00000FF1
-    - name: _KBDHID_DeviceExit@0
-      processed: ''
-      offset: 000011A4
-    - name: _KBDHID_Set_LEDs
-      processed: ''
-      offset: 000011CD
-    - name: _KBDHID_Set_Key_Rate
-      processed: ''
-      offset: '000011E5'
-    - name: _KBDHID_Call_LEDs@0
-      processed: ''
-      offset: '00001216'
-    - name: _KbdWriteComplete@12
-      processed: ''
-      offset: 0000128B
-    - name: _KBDHID_Callback_LEDs@4
-      processed: ''
-      offset: 000012A9
-    - name: _KBDHID_KeyboardKeypadCode@12
-      processed: ''
-      offset: '00001498'
-    - name: _KBDHID_KeyboardPrtScrn@12
-      processed: ''
-      offset: '00001550'
-    - name: _KbdPutKey@12
-      processed: ''
-      offset: 000015A5
-    - name: _UpdateKeystrokes@8
-      processed: ''
-      offset: '00001633'
-    - name: _KBDHID_Check_AutoRepeat@4
-      processed: ''
-      offset: 00001A18
-    - name: _KBDHID_Callback_AutoRepeat@4
-      processed: ''
-      offset: 00001B0F
-    - name: _KBDHID_Start_Bluescreen_Mode@0
-      processed: ''
-      offset: 00001B5A
-    - name: _KBDHID_End_Bluescreen_Mode@0
-      processed: ''
-      offset: 00001B61
-    - name: _KBDHID_CatchBluescreenKeystroke@8
-      processed: ''
-      offset: 00001B68
-    - name: KBDHID_Init
-      processed: ''
-      offset: 00001B7C
-    - name: _KBDHID_Hook@0
-      processed: ''
-      offset: 00001B9C
-    - name: _KBDHID_Unhook@0
-      processed: ''
-      offset: 00001C20
-    - name: KBDHID_Exit
-      processed: ''
-      offset: 00001C96
-    - name: KBDHID_Kernel32Shutdown
-      processed: ''
-      offset: 00001CB1
-    - name: KBDHID_New_Devnode
-      processed: ''
-      offset: 00001CC0
-    - name: KBDHID_New_Devnode_Callback
-      processed: ''
-      offset: 00001CE8
-    - name: _KbdPutBytes
-      processed: ''
-      offset: 00001CFC
-    - name: _GetKeyRateCode
-      processed: ''
-      offset: 00001D3D
-    - name: KBDHID_Hook_Proc_Set_LEDs
-      processed: ''
-      offset: 00001D58
-    - name: KBDHID_Hook_Proc_Set_Key_Rate
-      processed: ''
-      offset: 00001D7B
-    - name: KBDHID_Hook_Sysmodal
-      processed: ''
-      offset: 00001D9E
-    - name: MyCallAtAppyTime
-      processed: ''
-      offset: 00001DBC
-  - num: '4'
-    name: _PDATA
-    offset: '00000000'
-    symbols:
-    - name: _StartRepeatTime
-      processed: ''
-      offset: '00000000'
-    - name: _IntervalRepeatTime
-      processed: ''
-      offset: '00000004'
-    - name: _IsNumLock
-      processed: ''
-      offset: '00000008'
-    - name: _KBDHID_IsBlueScreenTime
-      processed: ''
-      offset: 0000000C
-    - name: _ModifierCodes
-      processed: ''
-      offset: '00000010'
-    - name: _XlateToScanCode
-      processed: ''
-      offset: '00000030'
-    - name: _XlateKbdPadCodes
-      processed: ''
-      offset: '00000430'
-    - name: _XlatePrtScrnCodes
-      processed: ''
-      offset: '00000458'
-    - name: _KbdPadCodes
-      processed: ''
-      offset: 0000045C
-    - name: _KbdPrtScrnCodes
-      processed: ''
-      offset: '00000470'
-    - name: _ScanCodeSubTables
-      processed: ''
-      offset: '00000484'
-    - name: _XlateControlToKbd
-      processed: ''
-      offset: 000004C4
-    - name: _KbdSysControlCodes
-      processed: ''
-      offset: 000004F8
-    - name: _dbgLastEntry
-      processed: ''
-      offset: 0000050C
-    - name: _VKD_Hooked
-      processed: ''
-      offset: 000013DC
 - version: Windows 98 Retail
   source_tree:
   - ../kbdhid.c
@@ -343,6 +13,306 @@ appearances:
     offset: '00000580'
     symbols:
     - name: _KBDHID_Timeout_AutoRepeat@0
+      processed: ''
+      offset: '00000000'
+    - name: ControlProc
+      processed: ''
+      offset: '00000020'
+    - name: _KBDHID_Enter_Lock@0
+      processed: ''
+      offset: 0000004F
+    - name: _KBDHID_Leave_Lock@0
+      processed: ''
+      offset: '00000081'
+    - name: _KBDHID_Destroy_Lock@0
+      processed: ''
+      offset: '00000098'
+    - name: _IncPendingActionCount@0
+      processed: ''
+      offset: 000000C0
+    - name: _DecPendingActionCount@0
+      processed: ''
+      offset: 000000CC
+    - name: _HandleShutdown
+      processed: ''
+      offset: '00000132'
+    - name: __NtKernInternalDeviceIoControl@40
+      processed: ''
+      offset: '00000164'
+    - name: _LCODE__NtKernCreateFile@44
+      processed: ''
+      offset: 0000016C
+    - name: _LCODE__NtKernClose@4
+      processed: ''
+      offset: '00000174'
+    - name: _LCODE__NtKernReadFile@36
+      processed: ''
+      offset: 0000017C
+    - name: _LCODE__NtKernWriteFile@36
+      processed: ''
+      offset: '00000184'
+    - name: _LCODE__NtKernDeviceIoControl@40
+      processed: ''
+      offset: 0000018C
+    - name: _LCODE__NtKernQueueWorkItem@8
+      processed: ''
+      offset: '00000194'
+    - name: _LCODE__PELDR_GetProcAddress
+      processed: ''
+      offset: 0000019C
+    - name: _LCODE__HeapAllocate
+      processed: ''
+      offset: 000001A4
+    - name: _LCODE__HeapFree
+      processed: ''
+      offset: 000001AC
+    - name: _LCODE_Set_Global_Time_Out@12
+      processed: ''
+      offset: 000001B4
+    - name: _LCODE_Get_Last_Updated_System_Time
+      processed: ''
+      offset: 000001D0
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: 000001D8
+    - name: WDMExFreePool
+      processed: ''
+      offset: 000001DC
+    - name: KBDHID_DDB
+      processed: ''
+      offset: '000001E8'
+    - name: _shuttingDown
+      processed: ''
+      offset: '00000238'
+    - name: _pendingActionCount
+      processed: ''
+      offset: 0000023C
+    - name: _GUID_CLASS_INPUT
+      processed: ''
+      offset: '00000250'
+    - name: _GUID_DEVICE_SYS_BUTTON
+      processed: ''
+      offset: '00000260'
+    - name: _pHidP_GetUsages
+      processed: ''
+      offset: '00000274'
+    - name: _TimeoutWorkItem
+      processed: ''
+      offset: '00000278'
+    - name: _pHidP_SetUsages
+      processed: ''
+      offset: '00000288'
+    - name: _pHidP_GetCaps
+      processed: ''
+      offset: 0000028C
+    - name: _AltIsDown
+      processed: ''
+      offset: '00000290'
+    - name: _KBDHID_LEDs
+      processed: ''
+      offset: '00000294'
+    - name: _kbdTail
+      processed: ''
+      offset: '00000298'
+    - name: _pHidP_GetUsageValue
+      processed: ''
+      offset: 0000029C
+    - name: _pIoGetDeviceInterfaces
+      processed: ''
+      offset: 000002A0
+    - name: _pHidP_GetMaxUsageListLength
+      processed: ''
+      offset: 000002A4
+    - name: _pHidP_GetSpecificButtonCaps
+      processed: ''
+      offset: 000002A8
+    - name: _hTimeout
+      processed: ''
+      offset: 000002AC
+    - name: _kbdHead
+      processed: ''
+      offset: 000002B0
+  - num: '2'
+    name: _IGROUP
+    offset: '00001290'
+    symbols:
+    - name: _KBDHID_UnicodeStrcmp@8
+      processed: ''
+      offset: '00000000'
+    - name: _UnicodeStringLength@4
+      processed: ''
+      offset: '00000039'
+    - name: _KBDHID_GetFunctions@0
+      processed: ''
+      offset: '00000058'
+    - name: _KBDHID_Enqueue@4
+      processed: ''
+      offset: '00000160'
+    - name: _KBDHID_Dequeue@4
+      processed: ''
+      offset: '00000191'
+    - name: _KBDHID_Is_Active_Device@4
+      processed: ''
+      offset: 000001BB
+    - name: _KBDHID_Find_Device_By_Name@4
+      processed: ''
+      offset: 000001DC
+    - name: _KBDHID_Device_Init@0
+      processed: ''
+      offset: 0000021E
+    - name: _KBDHID_Callback_Open@4
+      processed: ''
+      offset: '00000268'
+    - name: _KbdReadComplete@12
+      processed: ''
+      offset: 000007CD
+    - name: _KBDHID_Callback_Read@4
+      processed: ''
+      offset: 0000085B
+    - name: _KBDHID_Callback_Close@4
+      processed: ''
+      offset: 000008EF
+    - name: _KBDHID_DeviceExit@0
+      processed: ''
+      offset: 0000097C
+    - name: _KBDHID_Set_LEDs
+      processed: ''
+      offset: 000009A5
+    - name: _KBDHID_Set_Key_Rate
+      processed: ''
+      offset: 000009B4
+    - name: _KBDHID_Call_LEDs@0
+      processed: ''
+      offset: 000009DD
+    - name: _KbdWriteComplete@12
+      processed: ''
+      offset: 00000A0F
+    - name: _KBDHID_Callback_LEDs@4
+      processed: ''
+      offset: 00000A25
+    - name: _KBDHID_KeyboardKeypadCode@12
+      processed: ''
+      offset: 00000B82
+    - name: _KBDHID_KeyboardPrtScrn@12
+      processed: ''
+      offset: 00000C1F
+    - name: _KbdPutKey@12
+      processed: ''
+      offset: 00000C73
+    - name: _UpdateKeystrokes@8
+      processed: ''
+      offset: 00000CF6
+    - name: _KBDHID_Check_AutoRepeat@4
+      processed: ''
+      offset: 0000103A
+    - name: _KBDHID_Callback_AutoRepeat@4
+      processed: ''
+      offset: '00001108'
+    - name: _KBDHID_Start_Bluescreen_Mode@0
+      processed: ''
+      offset: '00001153'
+    - name: _KBDHID_End_Bluescreen_Mode@0
+      processed: ''
+      offset: 0000115A
+    - name: _KBDHID_CatchBluescreenKeystroke@8
+      processed: ''
+      offset: '00001161'
+    - name: KBDHID_Init
+      processed: ''
+      offset: '00001174'
+    - name: _KBDHID_Hook@0
+      processed: ''
+      offset: '00001188'
+    - name: _KBDHID_Unhook@0
+      processed: ''
+      offset: '00001200'
+    - name: KBDHID_Exit
+      processed: ''
+      offset: 0000126A
+    - name: KBDHID_Kernel32Shutdown
+      processed: ''
+      offset: '00001279'
+    - name: KBDHID_New_Devnode
+      processed: ''
+      offset: '00001280'
+    - name: KBDHID_New_Devnode_Callback
+      processed: ''
+      offset: 0000129C
+    - name: _KbdPutBytes
+      processed: ''
+      offset: 000012A8
+    - name: _GetKeyRateCode
+      processed: ''
+      offset: '000012E1'
+    - name: KBDHID_Hook_Proc_Set_LEDs
+      processed: ''
+      offset: 000012F0
+    - name: KBDHID_Hook_Proc_Set_Key_Rate
+      processed: ''
+      offset: '00001307'
+    - name: KBDHID_Hook_Sysmodal
+      processed: ''
+      offset: 0000131E
+    - name: MyCallAtAppyTime
+      processed: ''
+      offset: '00001334'
+  - num: '3'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: _StartRepeatTime
+      processed: ''
+      offset: '00000000'
+    - name: _IntervalRepeatTime
+      processed: ''
+      offset: '00000004'
+    - name: _IsNumLock
+      processed: ''
+      offset: '00000008'
+    - name: _KBDHID_IsBlueScreenTime
+      processed: ''
+      offset: 0000000C
+    - name: _ModifierCodes
+      processed: ''
+      offset: '00000010'
+    - name: _XlateToScanCode
+      processed: ''
+      offset: '00000030'
+    - name: _XlateKbdPadCodes
+      processed: ''
+      offset: '00000430'
+    - name: _XlatePrtScrnCodes
+      processed: ''
+      offset: '00000458'
+    - name: _KbdPadCodes
+      processed: ''
+      offset: 0000045C
+    - name: _KbdPrtScrnCodes
+      processed: ''
+      offset: '00000470'
+    - name: _ScanCodeSubTables
+      processed: ''
+      offset: '00000484'
+    - name: _XlateControlToKbd
+      processed: ''
+      offset: 000004C4
+    - name: _KbdSysControlCodes
+      processed: ''
+      offset: 000004F8
+    - name: _VKD_Hooked
+      processed: ''
+      offset: 000006BC
+- version: Windows 98 Debug
+  source_tree:
+  - ../kbdhid.c
+  - ../shutdown.c
+  - ../vxd.asm
+  segments:
+  - num: '1'
+    name: _LGROUP
+    offset: '00000660'
+    symbols:
+    - name: _KBDHID_Timeout_AutoRepeat@0
       demangled: ''
       offset: '00000000'
     - name: ControlProc
@@ -365,228 +335,255 @@ appearances:
       offset: 000000CC
     - name: _HandleShutdown
       demangled: ''
-      offset: '00000132'
+      offset: '00000167'
     - name: __NtKernInternalDeviceIoControl@40
       demangled: ''
-      offset: '00000164'
+      offset: 0000019C
     - name: _LCODE__NtKernCreateFile@44
       demangled: ''
-      offset: 0000016C
+      offset: 000001A4
     - name: _LCODE__NtKernClose@4
       demangled: ''
-      offset: '00000174'
+      offset: 000001AC
     - name: _LCODE__NtKernReadFile@36
       demangled: ''
-      offset: 0000017C
+      offset: 000001B4
     - name: _LCODE__NtKernWriteFile@36
       demangled: ''
-      offset: '00000184'
+      offset: 000001BC
     - name: _LCODE__NtKernDeviceIoControl@40
       demangled: ''
-      offset: 0000018C
+      offset: 000001C4
     - name: _LCODE__NtKernQueueWorkItem@8
       demangled: ''
-      offset: '00000194'
+      offset: 000001CC
     - name: _LCODE__PELDR_GetProcAddress
       demangled: ''
-      offset: 0000019C
+      offset: 000001D4
     - name: _LCODE__HeapAllocate
       demangled: ''
-      offset: 000001A4
+      offset: 000001DC
     - name: _LCODE__HeapFree
       demangled: ''
-      offset: 000001AC
+      offset: '000001E4'
+    - name: _LCODE__Trace_Out_Service@4
+      demangled: ''
+      offset: 000001EC
+    - name: _LCODE__Debug_Printf_Service
+      demangled: ''
+      offset: 000001F4
     - name: _LCODE_Set_Global_Time_Out@12
       demangled: ''
-      offset: 000001B4
+      offset: '00000208'
     - name: _LCODE_Get_Last_Updated_System_Time
       demangled: ''
-      offset: 000001D0
+      offset: '00000224'
     - name: __imp__ExFreePool@4
       demangled: ''
-      offset: 000001D8
+      offset: 0000022C
     - name: WDMExFreePool
       demangled: ''
-      offset: 000001DC
-    - name: KBDHID_DDB
-      demangled: ''
-      offset: '000001E8'
-    - name: _shuttingDown
-      demangled: ''
-      offset: '00000238'
-    - name: _pendingActionCount
+      offset: '00000230'
+    - name: __imp__RtlAssert@16
       demangled: ''
       offset: 0000023C
-    - name: _GUID_CLASS_INPUT
+    - name: WDMRtlAssert
+      demangled: ''
+      offset: '00000240'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: 0000024C
+    - name: WDMKeGetCurrentIrql
       demangled: ''
       offset: '00000250'
-    - name: _GUID_DEVICE_SYS_BUTTON
+    - name: KBDHID_DDB
       demangled: ''
-      offset: '00000260'
-    - name: _pHidP_GetUsages
-      demangled: ''
-      offset: '00000274'
-    - name: _TimeoutWorkItem
-      demangled: ''
-      offset: '00000278'
-    - name: _pHidP_SetUsages
-      demangled: ''
-      offset: '00000288'
-    - name: _pHidP_GetCaps
-      demangled: ''
-      offset: 0000028C
-    - name: _AltIsDown
-      demangled: ''
-      offset: '00000290'
-    - name: _KBDHID_LEDs
-      demangled: ''
-      offset: '00000294'
-    - name: _kbdTail
-      demangled: ''
-      offset: '00000298'
-    - name: _pHidP_GetUsageValue
-      demangled: ''
-      offset: 0000029C
-    - name: _pIoGetDeviceInterfaces
-      demangled: ''
-      offset: 000002A0
-    - name: _pHidP_GetMaxUsageListLength
-      demangled: ''
-      offset: 000002A4
-    - name: _pHidP_GetSpecificButtonCaps
-      demangled: ''
-      offset: 000002A8
-    - name: _hTimeout
+      offset: 0000025C
+    - name: _shuttingDown
       demangled: ''
       offset: 000002AC
-    - name: _kbdHead
+    - name: _pendingActionCount
       demangled: ''
       offset: 000002B0
-  - num: '2'
-    name: _IGROUP
-    offset: '00001290'
+    - name: _GUID_CLASS_INPUT
+      demangled: ''
+      offset: '00000310'
+    - name: _GUID_DEVICE_SYS_BUTTON
+      demangled: ''
+      offset: '00000320'
+    - name: _pHidP_GetUsages
+      demangled: ''
+      offset: '00000334'
+    - name: _TimeoutWorkItem
+      demangled: ''
+      offset: '00000338'
+    - name: _pHidP_SetUsages
+      demangled: ''
+      offset: '00000348'
+    - name: _pHidP_GetCaps
+      demangled: ''
+      offset: 0000034C
+    - name: _AltIsDown
+      demangled: ''
+      offset: '00000350'
+    - name: _KBDHID_LEDs
+      demangled: ''
+      offset: '00000354'
+    - name: _kbdTail
+      demangled: ''
+      offset: '00000358'
+    - name: _pHidP_GetUsageValue
+      demangled: ''
+      offset: 0000035C
+    - name: _pIoGetDeviceInterfaces
+      demangled: ''
+      offset: '00000360'
+    - name: _KBDHID_ReadCount
+      demangled: ''
+      offset: '00000364'
+    - name: _pHidP_GetMaxUsageListLength
+      demangled: ''
+      offset: '00000368'
+    - name: _KBDHID_MultiCount
+      demangled: ''
+      offset: 0000036C
+    - name: _pHidP_GetSpecificButtonCaps
+      demangled: ''
+      offset: '00000370'
+    - name: _hTimeout
+      demangled: ''
+      offset: '00000374'
+    - name: _kbdHead
+      demangled: ''
+      offset: '00000378'
+  - num: '3'
+    name: _PTEXT
+    offset: '00001570'
     symbols:
-    - name: _KBDHID_UnicodeStrcmp@8
+    - name: _DbgCommonEntry@0
       demangled: ''
       offset: '00000000'
+    - name: _KBDHID_UnicodeStrcmp@8
+      demangled: ''
+      offset: 0000002A
     - name: _UnicodeStringLength@4
       demangled: ''
-      offset: '00000039'
+      offset: '00000086'
     - name: _KBDHID_GetFunctions@0
       demangled: ''
-      offset: '00000058'
+      offset: 000000A8
     - name: _KBDHID_Enqueue@4
       demangled: ''
-      offset: '00000160'
+      offset: 000001B0
     - name: _KBDHID_Dequeue@4
       demangled: ''
-      offset: '00000191'
+      offset: '00000239'
     - name: _KBDHID_Is_Active_Device@4
       demangled: ''
-      offset: 000001BB
+      offset: '00000334'
     - name: _KBDHID_Find_Device_By_Name@4
       demangled: ''
-      offset: 000001DC
+      offset: '00000358'
     - name: _KBDHID_Device_Init@0
       demangled: ''
-      offset: 0000021E
+      offset: 0000039A
     - name: _KBDHID_Callback_Open@4
       demangled: ''
-      offset: '00000268'
+      offset: 0000045E
     - name: _KbdReadComplete@12
       demangled: ''
-      offset: 000007CD
+      offset: '00000E09'
     - name: _KBDHID_Callback_Read@4
       demangled: ''
-      offset: 0000085B
+      offset: 00000F1A
     - name: _KBDHID_Callback_Close@4
       demangled: ''
-      offset: 000008EF
+      offset: 00000FF1
     - name: _KBDHID_DeviceExit@0
       demangled: ''
-      offset: 0000097C
+      offset: 000011A4
     - name: _KBDHID_Set_LEDs
       demangled: ''
-      offset: 000009A5
+      offset: 000011CD
     - name: _KBDHID_Set_Key_Rate
       demangled: ''
-      offset: 000009B4
+      offset: '000011E5'
     - name: _KBDHID_Call_LEDs@0
       demangled: ''
-      offset: 000009DD
+      offset: '00001216'
     - name: _KbdWriteComplete@12
       demangled: ''
-      offset: 00000A0F
+      offset: 0000128B
     - name: _KBDHID_Callback_LEDs@4
       demangled: ''
-      offset: 00000A25
+      offset: 000012A9
     - name: _KBDHID_KeyboardKeypadCode@12
       demangled: ''
-      offset: 00000B82
+      offset: '00001498'
     - name: _KBDHID_KeyboardPrtScrn@12
       demangled: ''
-      offset: 00000C1F
+      offset: '00001550'
     - name: _KbdPutKey@12
       demangled: ''
-      offset: 00000C73
+      offset: 000015A5
     - name: _UpdateKeystrokes@8
       demangled: ''
-      offset: 00000CF6
+      offset: '00001633'
     - name: _KBDHID_Check_AutoRepeat@4
       demangled: ''
-      offset: 0000103A
+      offset: 00001A18
     - name: _KBDHID_Callback_AutoRepeat@4
       demangled: ''
-      offset: '00001108'
+      offset: 00001B0F
     - name: _KBDHID_Start_Bluescreen_Mode@0
       demangled: ''
-      offset: '00001153'
+      offset: 00001B5A
     - name: _KBDHID_End_Bluescreen_Mode@0
       demangled: ''
-      offset: 0000115A
+      offset: 00001B61
     - name: _KBDHID_CatchBluescreenKeystroke@8
       demangled: ''
-      offset: '00001161'
+      offset: 00001B68
     - name: KBDHID_Init
       demangled: ''
-      offset: '00001174'
+      offset: 00001B7C
     - name: _KBDHID_Hook@0
       demangled: ''
-      offset: '00001188'
+      offset: 00001B9C
     - name: _KBDHID_Unhook@0
       demangled: ''
-      offset: '00001200'
+      offset: 00001C20
     - name: KBDHID_Exit
       demangled: ''
-      offset: 0000126A
+      offset: 00001C96
     - name: KBDHID_Kernel32Shutdown
       demangled: ''
-      offset: '00001279'
+      offset: 00001CB1
     - name: KBDHID_New_Devnode
       demangled: ''
-      offset: '00001280'
+      offset: 00001CC0
     - name: KBDHID_New_Devnode_Callback
       demangled: ''
-      offset: 0000129C
+      offset: 00001CE8
     - name: _KbdPutBytes
       demangled: ''
-      offset: 000012A8
+      offset: 00001CFC
     - name: _GetKeyRateCode
       demangled: ''
-      offset: '000012E1'
+      offset: 00001D3D
     - name: KBDHID_Hook_Proc_Set_LEDs
       demangled: ''
-      offset: 000012F0
+      offset: 00001D58
     - name: KBDHID_Hook_Proc_Set_Key_Rate
       demangled: ''
-      offset: '00001307'
+      offset: 00001D7B
     - name: KBDHID_Hook_Sysmodal
       demangled: ''
-      offset: 0000131E
+      offset: 00001D9E
     - name: MyCallAtAppyTime
       demangled: ''
-      offset: '00001334'
-  - num: '3'
+      offset: 00001DBC
+  - num: '4'
     name: _PDATA
     offset: '00000000'
     symbols:
@@ -629,11 +626,18 @@ appearances:
     - name: _KbdSysControlCodes
       demangled: ''
       offset: 000004F8
+    - name: _dbgLastEntry
+      demangled: ''
+      offset: 0000050C
     - name: _VKD_Hooked
       demangled: ''
-      offset: 000006BC
+      offset: 000013DC
 - version: Windows 98SE Debug
-  source_tree: []
+  source_tree:
+  - ../kbdhid.c
+  - ../mapusage.c
+  - ../shutdown.c
+  - ../vxd.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -1053,7 +1057,11 @@ appearances:
       demangled: ''
       offset: '00001448'
 - version: Windows 98SE Retail
-  source_tree: []
+  source_tree:
+  - ../kbdhid.c
+  - ../mapusage.c
+  - ../shutdown.c
+  - ../vxd.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -1442,3 +1450,820 @@ appearances:
     - name: _VKD_Hooked
       demangled: ''
       offset: 000006F0
+- version: Windows ME Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: 000008B0
+    symbols:
+    - name: _hTimeout
+      demangled: ''
+      offset: '00000004'
+    - name: _pHidP_TranslateUsagesToI8042ScanCodes
+      demangled: ''
+      offset: '00000008'
+    - name: _pHidP_UsageListDifference
+      demangled: ''
+      offset: 0000000C
+    - name: _kbdHead
+      demangled: ''
+      offset: '00000010'
+    - name: _TimeoutWorkItem
+      demangled: ''
+      offset: '00000020'
+    - name: _pHidP_SetUsages
+      demangled: ''
+      offset: '00000030'
+    - name: _pHidP_GetSpecificButtonCaps
+      demangled: ''
+      offset: '00000034'
+    - name: _pHidP_GetUsages
+      demangled: ''
+      offset: '00000038'
+    - name: _KBDHID_LEDs
+      demangled: ''
+      offset: 0000003C
+    - name: _pHidP_GetUsageValue
+      demangled: ''
+      offset: '00000040'
+    - name: _pIoGetDeviceInterfaces
+      demangled: ''
+      offset: '00000044'
+    - name: _pHidP_GetCaps
+      demangled: ''
+      offset: '00000048'
+    - name: _pHidP_GetMaxUsageListLength
+      demangled: ''
+      offset: 0000004C
+    - name: _kbdTail
+      demangled: ''
+      offset: '00000050'
+    - name: _GUID_HID_INTERFACE_NOTIFY
+      demangled: ''
+      offset: '00000054'
+    - name: _GUID_CLASS_INPUT
+      demangled: ''
+      offset: '00000064'
+    - name: KBDHID_DDB
+      demangled: ''
+      offset: '00000074'
+    - name: _shuttingDown
+      demangled: ''
+      offset: 000000C4
+    - name: _pendingActionCount
+      demangled: ''
+      offset: 000000C8
+    - name: _KBDHID_Timeout_AutoRepeat@0
+      demangled: ''
+      offset: 000000F4
+    - name: ControlProc
+      demangled: ''
+      offset: 0000011C
+    - name: _KBDHID_Enter_Lock@0
+      demangled: ''
+      offset: 0000014B
+    - name: _KBDHID_Leave_Lock@0
+      demangled: ''
+      offset: 0000017D
+    - name: _KBDHID_Destroy_Lock@0
+      demangled: ''
+      offset: '00000194'
+    - name: _IncPendingActionCount@0
+      demangled: ''
+      offset: 000001B7
+    - name: _DecPendingActionCount@0
+      demangled: ''
+      offset: 000001BE
+    - name: _HandleShutdown
+      demangled: ''
+      offset: '00000221'
+    - name: _LoadKeyboardUsageMappingList@4
+      demangled: ''
+      offset: 0000024C
+    - name: _FreeKeyboardUsageMappingList@4
+      demangled: ''
+      offset: '00000378'
+    - name: _MapUsage@8
+      demangled: ''
+      offset: 000003B8
+    - name: _OpenSubkey@16
+      demangled: ''
+      offset: 000003FE
+    - name: _LAtoX@4
+      demangled: ''
+      offset: 0000043A
+    - name: _LCODE__PELDR_GetProcAddress
+      demangled: ''
+      offset: 000004A0
+    - name: _LCODE__NtKernQueueWorkItem@8
+      demangled: ''
+      offset: 000004A8
+    - name: _LCODE__HeapAllocate
+      demangled: ''
+      offset: 000004B0
+    - name: _LCODE__NtKernClose@4
+      demangled: ''
+      offset: 000004B8
+    - name: __NtKernInternalDeviceIoControl@40
+      demangled: ''
+      offset: 000004C0
+    - name: _LCODE__NtKernDeviceIoControl@40
+      demangled: ''
+      offset: 000004C8
+    - name: _LCODE__NtKernCreateFile@44
+      demangled: ''
+      offset: 000004D0
+    - name: _LCODE_Set_Global_Time_Out@12
+      demangled: ''
+      offset: 000004D8
+    - name: _LCODE__HeapFree
+      demangled: ''
+      offset: 000004F4
+    - name: _LCODE__NtKernReadFile@36
+      demangled: ''
+      offset: 000004FC
+    - name: _LCODE__NtKernWriteFile@36
+      demangled: ''
+      offset: '00000504'
+    - name: _LCODE_Get_Last_Updated_System_Time
+      demangled: ''
+      offset: 0000050C
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000514'
+    - name: WDMKeWaitForSingleObject
+      demangled: ''
+      offset: '00000518'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000524'
+    - name: WDMIofCallDriver
+      demangled: ''
+      offset: '00000528'
+    - name: __imp__IoBuildSynchronousFsdRequest@28
+      demangled: ''
+      offset: '00000534'
+    - name: WDMIoBuildSynchronousFsdRequest
+      demangled: ''
+      offset: '00000538'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000544'
+    - name: WDMKeInitializeEvent
+      demangled: ''
+      offset: '00000548'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000554'
+    - name: WDMExFreePool
+      demangled: ''
+      offset: '00000558'
+    - name: __imp_@ObfDereferenceObject@4
+      demangled: ''
+      offset: '00000564'
+    - name: WDMObfDereferenceObject
+      demangled: ''
+      offset: '00000568'
+    - name: __imp__IoGetRelatedDeviceObject@4
+      demangled: ''
+      offset: '00000574'
+    - name: WDMIoGetRelatedDeviceObject
+      demangled: ''
+      offset: '00000578'
+    - name: __imp__ObReferenceObjectByHandle@24
+      demangled: ''
+      offset: '00000584'
+    - name: WDMObReferenceObjectByHandle
+      demangled: ''
+      offset: '00000588'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000594'
+    - name: WDMKeInitializeSpinLock
+      demangled: ''
+      offset: '00000598'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: 000005A4
+    - name: WDMKfReleaseSpinLock
+      demangled: ''
+      offset: 000005A8
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: 000005B4
+    - name: WDMKfAcquireSpinLock
+      demangled: ''
+      offset: 000005B8
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: 000005C4
+    - name: WDMZwClose
+      demangled: ''
+      offset: 000005C8
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 000005D4
+    - name: WDMExAllocatePoolWithTag
+      demangled: ''
+      offset: 000005D8
+    - name: __imp__ZwEnumerateValueKey@24
+      demangled: ''
+      offset: '000005E4'
+    - name: WDMZwEnumerateValueKey
+      demangled: ''
+      offset: '000005E8'
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 000005F4
+    - name: WDMRtlInitUnicodeString
+      demangled: ''
+      offset: 000005F8
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: '00000604'
+    - name: WDMIoOpenDeviceRegistryKey
+      demangled: ''
+      offset: '00000608'
+    - name: __imp__ZwOpenKey@12
+      demangled: ''
+      offset: '00000614'
+    - name: WDMZwOpenKey
+      demangled: ''
+      offset: '00000618'
+  - num: '2'
+    name: _PTEXT
+    offset: 00000D20
+    symbols:
+    - name: _KBDHID_UnicodeStrcmp@12
+      demangled: ''
+      offset: '00000000'
+    - name: _UnicodeStringLength@4
+      demangled: ''
+      offset: '00000044'
+    - name: _KBDHID_GetFunctions@0
+      demangled: ''
+      offset: 0000005A
+    - name: _KBDHID_Enqueue@4
+      demangled: ''
+      offset: 0000017E
+    - name: _KBDHID_Dequeue@4
+      demangled: ''
+      offset: 000001A7
+    - name: _KBDHID_Is_Active_Device@4
+      demangled: ''
+      offset: 000001CF
+    - name: _KBDHID_Find_Device_By_Name@4
+      demangled: ''
+      offset: 000001EA
+    - name: _KBDHID_Device_Init@0
+      demangled: ''
+      offset: '00000226'
+    - name: _DeviceObjectChanged@8
+      demangled: ''
+      offset: '00000268'
+    - name: _RegisterDeviceInterface@8
+      demangled: ''
+      offset: 0000028D
+    - name: _KBDHID_Callback_Open@4
+      demangled: ''
+      offset: '00000341'
+    - name: _KbdReadComplete@12
+      demangled: ''
+      offset: '00000864'
+    - name: _KBDHID_Callback_Read@4
+      demangled: ''
+      offset: 000008EE
+    - name: _KBDHID_Callback_Close@4
+      demangled: ''
+      offset: '00000982'
+    - name: _KBDHID_DeviceExit@0
+      demangled: ''
+      offset: 00000A0D
+    - name: _KBDHID_Set_LEDs
+      demangled: ''
+      offset: 00000A30
+    - name: _KBDHID_Set_Key_Rate
+      demangled: ''
+      offset: 00000A3F
+    - name: _KBDHID_Call_LEDs@0
+      demangled: ''
+      offset: 00000A69
+    - name: _KbdWriteComplete@12
+      demangled: ''
+      offset: 00000A9A
+    - name: _KBDHID_Callback_LEDs@4
+      demangled: ''
+      offset: 00000AAF
+    - name: _ApplyUsageLevelHacks@8
+      demangled: ''
+      offset: 00000BE3
+    - name: _KbdHid_InsertCodesIntoQueue@12
+      demangled: ''
+      offset: 00000C36
+    - name: _UpdateKeystrokes@8
+      demangled: ''
+      offset: 00000C9F
+    - name: _KBDHID_Check_AutoRepeat@4
+      demangled: ''
+      offset: '00000E55'
+    - name: _KBDHID_Callback_AutoRepeat@4
+      demangled: ''
+      offset: 00000F19
+    - name: _KBDHID_Start_Bluescreen_Mode@0
+      demangled: ''
+      offset: 00000F6F
+    - name: _KBDHID_End_Bluescreen_Mode@0
+      demangled: ''
+      offset: 00000F76
+    - name: _KBDHID_CatchBluescreenKeystroke@8
+      demangled: ''
+      offset: 00000F7D
+    - name: KBDHID_Init
+      demangled: ''
+      offset: 00000F90
+    - name: _KBDHID_Hook@0
+      demangled: ''
+      offset: 00000FA4
+    - name: _KBDHID_Unhook@0
+      demangled: ''
+      offset: 0000101C
+    - name: KBDHID_Exit
+      demangled: ''
+      offset: '00001086'
+    - name: KBDHID_Kernel32Shutdown
+      demangled: ''
+      offset: '00001095'
+    - name: KBDHID_New_Devnode
+      demangled: ''
+      offset: 0000109C
+    - name: KBDHID_New_Devnode_Callback
+      demangled: ''
+      offset: 000010B8
+    - name: _KbdPutBytes
+      demangled: ''
+      offset: 000010C4
+    - name: _GetKeyRateCode
+      demangled: ''
+      offset: '00001103'
+    - name: KBDHID_Hook_Proc_Set_LEDs
+      demangled: ''
+      offset: '00001112'
+    - name: KBDHID_Hook_Proc_Set_Key_Rate
+      demangled: ''
+      offset: '00001129'
+    - name: KBDHID_Hook_Sysmodal
+      demangled: ''
+      offset: '00001140'
+    - name: _MyCallAtAppyTime
+      demangled: ''
+      offset: '00001156'
+  - num: '3'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: _StartRepeatTime
+      demangled: ''
+      offset: '00000000'
+    - name: _IntervalRepeatTime
+      demangled: ''
+      offset: '00000004'
+    - name: _KBDHID_IsBlueScreenTime
+      demangled: ''
+      offset: '00000008'
+    - name: _XlateControlToKbd
+      demangled: ''
+      offset: 0000000C
+    - name: _KbdSysControlCodes
+      demangled: ''
+      offset: '00000040'
+    - name: _VKD_Hooked
+      demangled: ''
+      offset: 0000028C
+- version: Windows ME Debug
+  source_tree:
+  - ../kbdhid.c
+  - ../mapusage.c
+  - ../shutdown.c
+  - ../vxd.asm
+  segments:
+  - num: '1'
+    name: .bss
+    offset: 00000C10
+    symbols:
+    - name: _hTimeout
+      demangled: ''
+      offset: '00000004'
+    - name: _KBDHID_MultiCount
+      demangled: ''
+      offset: '00000008'
+    - name: _pHidP_TranslateUsagesToI8042ScanCodes
+      demangled: ''
+      offset: 0000000C
+    - name: _pHidP_UsageListDifference
+      demangled: ''
+      offset: '00000010'
+    - name: _kbdHead
+      demangled: ''
+      offset: '00000014'
+    - name: _KBDHID_ReadCount
+      demangled: ''
+      offset: '00000018'
+    - name: _TimeoutWorkItem
+      demangled: ''
+      offset: '00000020'
+    - name: _pHidP_SetUsages
+      demangled: ''
+      offset: '00000030'
+    - name: _pHidP_GetSpecificButtonCaps
+      demangled: ''
+      offset: '00000034'
+    - name: _pHidP_GetUsages
+      demangled: ''
+      offset: '00000038'
+    - name: _KBDHID_LEDs
+      demangled: ''
+      offset: 0000003C
+    - name: _pHidP_GetUsageValue
+      demangled: ''
+      offset: '00000040'
+    - name: _pIoGetDeviceInterfaces
+      demangled: ''
+      offset: '00000044'
+    - name: _pHidP_GetCaps
+      demangled: ''
+      offset: '00000048'
+    - name: _pHidP_GetMaxUsageListLength
+      demangled: ''
+      offset: 0000004C
+    - name: _kbdTail
+      demangled: ''
+      offset: '00000050'
+    - name: _GUID_HID_INTERFACE_NOTIFY
+      demangled: ''
+      offset: '00000054'
+    - name: _GUID_DEVICE_SYS_BUTTON
+      demangled: ''
+      offset: '00000064'
+    - name: _GUID_CLASS_INPUT
+      demangled: ''
+      offset: '00000074'
+    - name: KBDHID_DDB
+      demangled: ''
+      offset: '00000084'
+    - name: _shuttingDown
+      demangled: ''
+      offset: 000000D4
+    - name: _pendingActionCount
+      demangled: ''
+      offset: 000000D8
+    - name: _KBDHID_Timeout_AutoRepeat@0
+      demangled: ''
+      offset: '00000254'
+    - name: ControlProc
+      demangled: ''
+      offset: 0000027C
+    - name: _KBDHID_Enter_Lock@0
+      demangled: ''
+      offset: 000002AB
+    - name: _KBDHID_Leave_Lock@0
+      demangled: ''
+      offset: 000002DD
+    - name: _KBDHID_Destroy_Lock@0
+      demangled: ''
+      offset: 000002F4
+    - name: _IncPendingActionCount@0
+      demangled: ''
+      offset: '00000317'
+    - name: _DecPendingActionCount@0
+      demangled: ''
+      offset: 0000031E
+    - name: _HandleShutdown
+      demangled: ''
+      offset: 000003B8
+    - name: _LoadKeyboardUsageMappingList@4
+      demangled: ''
+      offset: '000003E8'
+    - name: _FreeKeyboardUsageMappingList@4
+      demangled: ''
+      offset: '00000582'
+    - name: _MapUsage@8
+      demangled: ''
+      offset: 000005C5
+    - name: _OpenSubkey@16
+      demangled: ''
+      offset: 0000060D
+    - name: _LAtoX@4
+      demangled: ''
+      offset: '00000649'
+    - name: _LCODE__PELDR_GetProcAddress
+      demangled: ''
+      offset: 000006CC
+    - name: _LCODE__NtKernQueueWorkItem@8
+      demangled: ''
+      offset: 000006D4
+    - name: _LCODE__Trace_Out_Service@4
+      demangled: ''
+      offset: 000006DC
+    - name: _LCODE__HeapAllocate
+      demangled: ''
+      offset: '000006E4'
+    - name: _LCODE__Debug_Printf_Service
+      demangled: ''
+      offset: 000006EC
+    - name: _LCODE__NtKernClose@4
+      demangled: ''
+      offset: '00000700'
+    - name: __NtKernInternalDeviceIoControl@40
+      demangled: ''
+      offset: '00000708'
+    - name: _LCODE__NtKernDeviceIoControl@40
+      demangled: ''
+      offset: '00000710'
+    - name: _LCODE__NtKernCreateFile@44
+      demangled: ''
+      offset: '00000718'
+    - name: _LCODE_Set_Global_Time_Out@12
+      demangled: ''
+      offset: '00000720'
+    - name: _LCODE__HeapFree
+      demangled: ''
+      offset: 0000073C
+    - name: _LCODE__NtKernReadFile@36
+      demangled: ''
+      offset: '00000744'
+    - name: _LCODE__NtKernWriteFile@36
+      demangled: ''
+      offset: 0000074C
+    - name: _LCODE_Get_Last_Updated_System_Time
+      demangled: ''
+      offset: '00000754'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: 0000075C
+    - name: WDMRtlAssert
+      demangled: ''
+      offset: '00000760'
+    - name: __imp__KeGetCurrentIrql@0
+      demangled: ''
+      offset: 0000076C
+    - name: WDMKeGetCurrentIrql
+      demangled: ''
+      offset: '00000770'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 0000077C
+    - name: WDMKeWaitForSingleObject
+      demangled: ''
+      offset: '00000780'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: 0000078C
+    - name: WDMIofCallDriver
+      demangled: ''
+      offset: '00000790'
+    - name: __imp__IoBuildSynchronousFsdRequest@28
+      demangled: ''
+      offset: 0000079C
+    - name: WDMIoBuildSynchronousFsdRequest
+      demangled: ''
+      offset: 000007A0
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: 000007AC
+    - name: WDMKeInitializeEvent
+      demangled: ''
+      offset: 000007B0
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 000007BC
+    - name: WDMExFreePool
+      demangled: ''
+      offset: 000007C0
+    - name: __imp_@ObfDereferenceObject@4
+      demangled: ''
+      offset: 000007CC
+    - name: WDMObfDereferenceObject
+      demangled: ''
+      offset: 000007D0
+    - name: __imp__IoGetRelatedDeviceObject@4
+      demangled: ''
+      offset: 000007DC
+    - name: WDMIoGetRelatedDeviceObject
+      demangled: ''
+      offset: '000007E0'
+    - name: __imp__ObReferenceObjectByHandle@24
+      demangled: ''
+      offset: 000007EC
+    - name: WDMObReferenceObjectByHandle
+      demangled: ''
+      offset: 000007F0
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: 000007FC
+    - name: WDMKeInitializeSpinLock
+      demangled: ''
+      offset: '00000800'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: 0000080C
+    - name: WDMKfReleaseSpinLock
+      demangled: ''
+      offset: '00000810'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: 0000081C
+    - name: WDMKfAcquireSpinLock
+      demangled: ''
+      offset: '00000820'
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: 0000082C
+    - name: WDMZwClose
+      demangled: ''
+      offset: '00000830'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000083C
+    - name: WDMExAllocatePoolWithTag
+      demangled: ''
+      offset: '00000840'
+    - name: __imp__ZwEnumerateValueKey@24
+      demangled: ''
+      offset: 0000084C
+    - name: WDMZwEnumerateValueKey
+      demangled: ''
+      offset: '00000850'
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: 0000085C
+    - name: WDMRtlInitUnicodeString
+      demangled: ''
+      offset: '00000860'
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 0000086C
+    - name: WDMIoOpenDeviceRegistryKey
+      demangled: ''
+      offset: '00000870'
+    - name: __imp__ZwOpenKey@12
+      demangled: ''
+      offset: 0000087C
+    - name: WDMZwOpenKey
+      demangled: ''
+      offset: '00000880'
+  - num: '2'
+    name: _PTEXT
+    offset: 00001A40
+    symbols:
+    - name: _DbgCommonEntry@0
+      demangled: ''
+      offset: '00000000'
+    - name: _KBDHID_UnicodeStrcmp@12
+      demangled: ''
+      offset: 0000002B
+    - name: _UnicodeStringLength@4
+      demangled: ''
+      offset: 0000008A
+    - name: _KBDHID_GetFunctions@0
+      demangled: ''
+      offset: 000000A3
+    - name: _KBDHID_Enqueue@4
+      demangled: ''
+      offset: 000001C7
+    - name: _KBDHID_Dequeue@4
+      demangled: ''
+      offset: '00000248'
+    - name: _KBDHID_Is_Active_Device@4
+      demangled: ''
+      offset: 0000033F
+    - name: _KBDHID_Find_Device_By_Name@4
+      demangled: ''
+      offset: 0000035D
+    - name: _KBDHID_Device_Init@0
+      demangled: ''
+      offset: 0000039B
+    - name: _DeviceObjectChanged@8
+      demangled: ''
+      offset: '00000451'
+    - name: _RegisterDeviceInterface@8
+      demangled: ''
+      offset: '00000478'
+    - name: _KBDHID_Callback_Open@4
+      demangled: ''
+      offset: 0000054D
+    - name: _KbdReadComplete@12
+      demangled: ''
+      offset: '00000E72'
+    - name: _KBDHID_Callback_Read@4
+      demangled: ''
+      offset: 00000F74
+    - name: _KBDHID_Callback_Close@4
+      demangled: ''
+      offset: 0000104B
+    - name: _KBDHID_DeviceExit@0
+      demangled: ''
+      offset: '000011E4'
+    - name: _KBDHID_Set_LEDs
+      demangled: ''
+      offset: '00001207'
+    - name: _KBDHID_Set_Key_Rate
+      demangled: ''
+      offset: 0000121F
+    - name: _KBDHID_Call_LEDs@0
+      demangled: ''
+      offset: '00001251'
+    - name: _KbdWriteComplete@12
+      demangled: ''
+      offset: 000012C1
+    - name: _KBDHID_Callback_LEDs@4
+      demangled: ''
+      offset: 000012DE
+    - name: _ApplyUsageLevelHacks@8
+      demangled: ''
+      offset: '00001472'
+    - name: _KbdHid_InsertCodesIntoQueue@12
+      demangled: ''
+      offset: 000014C7
+    - name: _UpdateKeystrokes@8
+      demangled: ''
+      offset: '00001530'
+    - name: _KBDHID_Check_AutoRepeat@4
+      demangled: ''
+      offset: '000016E6'
+    - name: _KBDHID_Callback_AutoRepeat@4
+      demangled: ''
+      offset: 000017AD
+    - name: _KBDHID_Start_Bluescreen_Mode@0
+      demangled: ''
+      offset: '00001803'
+    - name: _KBDHID_End_Bluescreen_Mode@0
+      demangled: ''
+      offset: 0000180A
+    - name: _KBDHID_CatchBluescreenKeystroke@8
+      demangled: ''
+      offset: '00001811'
+    - name: KBDHID_Init
+      demangled: ''
+      offset: '00001824'
+    - name: _KBDHID_Hook@0
+      demangled: ''
+      offset: '00001844'
+    - name: _KBDHID_Unhook@0
+      demangled: ''
+      offset: 000018C8
+    - name: KBDHID_Exit
+      demangled: ''
+      offset: 0000193E
+    - name: KBDHID_Kernel32Shutdown
+      demangled: ''
+      offset: '00001959'
+    - name: KBDHID_New_Devnode
+      demangled: ''
+      offset: '00001968'
+    - name: KBDHID_New_Devnode_Callback
+      demangled: ''
+      offset: '00001990'
+    - name: _KbdPutBytes
+      demangled: ''
+      offset: 000019A4
+    - name: _GetKeyRateCode
+      demangled: ''
+      offset: 000019EB
+    - name: KBDHID_Hook_Proc_Set_LEDs
+      demangled: ''
+      offset: 00001A06
+    - name: KBDHID_Hook_Proc_Set_Key_Rate
+      demangled: ''
+      offset: 00001A29
+    - name: KBDHID_Hook_Sysmodal
+      demangled: ''
+      offset: 00001A4C
+    - name: _MyCallAtAppyTime
+      demangled: ''
+      offset: 00001A6A
+  - num: '3'
+    name: _PDATA
+    offset: '00000000'
+    symbols:
+    - name: _StartRepeatTime
+      demangled: ''
+      offset: '00000000'
+    - name: _IntervalRepeatTime
+      demangled: ''
+      offset: '00000004'
+    - name: _KBDHID_IsBlueScreenTime
+      demangled: ''
+      offset: '00000008'
+    - name: _XlateControlToKbd
+      demangled: ''
+      offset: 0000000C
+    - name: _KbdSysControlCodes
+      demangled: ''
+      offset: '00000040'
+    - name: _dbgLastEntry
+      demangled: ''
+      offset: 0000004C
+    - name: _VKD_Hooked
+      demangled: ''
+      offset: 00000EA4

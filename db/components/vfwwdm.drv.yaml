@@ -2,7 +2,7 @@ filename: vfwwdm.drv
 binary: VFWWDM
 description: ''
 appearances:
-- version: Windows 98 Debug
+- version: Windows 98 Retail
   source_tree:
   - ../cap.c
   - ../drvproc.c
@@ -421,7 +421,7 @@ appearances:
     - name: _dwVideoClock
       processed: ''
       offset: '00002204'
-- version: Windows 98 Retail
+- version: Windows 98 Debug
   source_tree:
   - ../cap.c
   - ../drvproc.c
@@ -841,7 +841,20 @@ appearances:
       demangled: ''
       offset: '00002204'
 - version: Windows 98SE Debug
-  source_tree: []
+  source_tree:
+  - ../cap.c
+  - ../drvproc.c
+  - ../flat.asm
+  - ../initc.c
+  - ../libinit.asm
+  - ../mapa.asm
+  - ../mapc.c
+  - ../md.c
+  - ../muldiv.asm
+  - ../rect.c
+  - uldiv.asm
+  - ulshr.asm
+  - ../vmsg.c
   segments:
   - num: '1'
     name: _TEXT
@@ -1197,7 +1210,19 @@ appearances:
       demangled: ''
       offset: 0000339A
 - version: Windows 98SE Retail
-  source_tree: []
+  source_tree:
+  - ../cap.c
+  - ../drvproc.c
+  - ../flat.asm
+  - ../initc.c
+  - ../libinit.asm
+  - ../mapa.asm
+  - ../mapc.c
+  - ../muldiv.asm
+  - ../rect.c
+  - uldiv.asm
+  - ulshr.asm
+  - ../vmsg.c
   segments:
   - num: '1'
     name: _TEXT
@@ -1522,3 +1547,372 @@ appearances:
     - name: _dwVideoClock
       demangled: ''
       offset: '00000578'
+- version: Windows ME Debug
+  source_tree:
+  - ../cap.c
+  - ../drvproc.c
+  - ../flat.asm
+  - ../initc.c
+  - ../libinit.asm
+  - ../mapa.asm
+  - ../mapc.c
+  - ../md.c
+  - ../muldiv.asm
+  - ../rect.c
+  - uldiv.asm
+  - ulshr.asm
+  - ../vmsg.c
+  segments:
+  - num: '1'
+    name: _TEXT
+    offset: 00001B00
+    symbols:
+    - name: VIDEOCALLBACK
+      demangled: ''
+      offset: '00000000'
+    - name: INSTREAMGETERROR
+      demangled: ''
+      offset: 0000015C
+    - name: INSTREAMGETPOS
+      demangled: ''
+      offset: '00000238'
+    - name: INSTREAMINIT
+      demangled: ''
+      offset: '00000310'
+    - name: STREAMRETURNALLBUFFERS
+      demangled: ''
+      offset: '00000608'
+    - name: INSTREAMFINI
+      demangled: ''
+      offset: '00000772'
+    - name: QUEHEADER
+      demangled: ''
+      offset: 00000A26
+    - name: INSTREAMADDBUFFER
+      demangled: ''
+      offset: 00000D3A
+    - name: TIMERCALLBACKPROC
+      demangled: ''
+      offset: 00000F5C
+    - name: INSTREAMSTART
+      demangled: ''
+      offset: 000010CA
+    - name: INSTREAMSTOP
+      demangled: ''
+      offset: '00001370'
+    - name: INSTREAMRESET
+      demangled: ''
+      offset: '00001470'
+    - name: SENDBUDDYMESSAGE
+      demangled: ''
+      offset: 000015C4
+    - name: SENDBUDDYMESSAGENOTIFY
+      demangled: ''
+      offset: 00001B24
+    - name: LISTENINGWNDPROC
+      demangled: ''
+      offset: 00001D9C
+    - name: _CreateListeningWindow
+      demangled: ''
+      offset: 00001F36
+    - name: _DestroyListeningWindow
+      demangled: ''
+      offset: '00002268'
+    - name: _VideoConfig
+      demangled: ''
+      offset: '00002362'
+    - name: DriverProc
+      demangled: ''
+      offset: '000023E6'
+    - name: CreatePhysicalSelector
+      demangled: ''
+      offset: 0000293C
+    - name: GetFrameBufferPointer
+      demangled: ''
+      offset: '00002984'
+    - name: FreeFrameBufferSelector
+      demangled: ''
+      offset: 000029BA
+    - name: LIBMAIN
+      demangled: ''
+      offset: 000029EA
+    - name: LibEntry
+      demangled: ''
+      offset: 00002AA4
+    - name: WEP
+      demangled: ''
+      offset: 00002AB8
+    - name: mapUnpackedYUVto8
+      demangled: ''
+      offset: 00002B1E
+    - name: mapUnpackedYUVtoRGB16
+      demangled: ''
+      offset: 00002C19
+    - name: RectCopyBytes
+      demangled: ''
+      offset: 00002D14
+    - name: TRANSINIT
+      demangled: ''
+      offset: 00002D78
+    - name: TRANSFINI
+      demangled: ''
+      offset: 00002FD4
+    - name: muldiv32
+      demangled: ''
+      offset: '00003082'
+    - name: GETBITMAPINFO
+      demangled: ''
+      offset: '00003096'
+    - name: SETBITMAPINFO
+      demangled: ''
+      offset: 000031B8
+    - name: VIDEOOPEN
+      demangled: ''
+      offset: 000032F8
+    - name: VIDEOCLOSE
+      demangled: ''
+      offset: 00003D48
+    - name: VIDEODIALOG
+      demangled: ''
+      offset: 000041AA
+    - name: VIDEOGETCHANNELCAPS
+      demangled: ''
+      offset: 000044DC
+    - name: VIDEOUPDATE
+      demangled: ''
+      offset: 000047D2
+    - name: VIDEOSRCRECT
+      demangled: ''
+      offset: 000048D8
+    - name: VIDEODSTRECT
+      demangled: ''
+      offset: 00004FBC
+    - name: VIDEOGETERRORTEXT
+      demangled: ''
+      offset: '00005540'
+    - name: VIDEOCONFIGURESTORAGEMESSAGE
+      demangled: ''
+      offset: '00005604'
+    - name: GETDESTFORMAT
+      demangled: ''
+      offset: 0000565A
+    - name: SETDESTFORMAT
+      demangled: ''
+      offset: '00005792'
+    - name: VIDEOFORMAT
+      demangled: ''
+      offset: 00005B60
+    - name: VIDEOFRAME
+      demangled: ''
+      offset: 00005DE2
+    - name: VIDEOPROCESSMESSAGE
+      demangled: ''
+      offset: 00005FC0
+    - name: _ASSERT
+      demangled: ''
+      offset: '00006646'
+    - name: _dbgSetDebugLevel
+      demangled: ''
+      offset: 000066D0
+    - name: _PlaceStamp
+      demangled: ''
+      offset: '00006700'
+    - name: _dbgPrintf
+      demangled: ''
+      offset: 0000677E
+    - name: __aNuldiv
+      demangled: ''
+      offset: 000067CC
+    - name: __aNulshr
+      demangled: ''
+      offset: 0000682C
+  - num: '2'
+    name: DGROUP
+    offset: '00000000'
+    symbols:
+    - name: _g_szClass
+      demangled: ''
+      offset: 00000C38
+    - name: _g_szClass32
+      demangled: ''
+      offset: 00000C4E
+    - name: _g_hBuddy
+      demangled: ''
+      offset: 00000C64
+    - name: _g_dwMsgCount
+      demangled: ''
+      offset: 00000C66
+    - name: _g_bLoading32Buddy
+      demangled: ''
+      offset: '00001450'
+    - name: glpFrameBuffer
+      demangled: ''
+      offset: 0000169C
+    - name: _gszIniFile
+      demangled: ''
+      offset: 000016A0
+    - name: _gszDriverName
+      demangled: ''
+      offset: 000016AC
+    - name: _gszDebug
+      demangled: ''
+      offset: 000016B8
+    - name: pLocalHeap
+      demangled: ''
+      offset: 000016F8
+    - name: rsrvptrs
+      demangled: ''
+      offset: 000016F8
+    - name: pAtomTable
+      demangled: ''
+      offset: 000016FA
+    - name: pStackTop
+      demangled: ''
+      offset: 000016FC
+    - name: pStackMin
+      demangled: ''
+      offset: 000016FE
+    - name: pStackBot
+      demangled: ''
+      offset: '00001700'
+    - name: _fDeviceInitialized
+      demangled: ''
+      offset: 000019CA
+    - name: _gwDriverUsage
+      demangled: ''
+      offset: 000019CC
+    - name: _gwVidInUsage
+      demangled: ''
+      offset: 000019CE
+    - name: _gwVidExtInUsage
+      demangled: ''
+      offset: 000019D0
+    - name: _gwVidExtOutUsage
+      demangled: ''
+      offset: 000019D2
+    - name: _gwVidOutUage
+      demangled: ''
+      offset: 000019D4
+    - name: _g_pdwOpenFlags
+      demangled: ''
+      offset: 000019D6
+    - name: _g_bVidInChannel
+      demangled: ''
+      offset: 000019DA
+    - name: _g_bVidExtInChannel
+      demangled: ''
+      offset: 000019DC
+    - name: _g_bVidExtOutChannel
+      demangled: ''
+      offset: 000019DE
+    - name: _VfWWDM16DebugLevel
+      demangled: ''
+      offset: 00002F9C
+    - name: _VfWWDM16DebugStamp
+      demangled: ''
+      offset: 00002FA0
+    - name: _g_wSrcHeight
+      demangled: ''
+      offset: '000030E0'
+    - name: _grcDestIn
+      demangled: ''
+      offset: '000030E2'
+    - name: _biDest
+      demangled: ''
+      offset: 000030EA
+    - name: _gwWidth
+      demangled: ''
+      offset: '00003112'
+    - name: GBINT
+      demangled: ''
+      offset: '00003114'
+    - name: _ghModule
+      demangled: ''
+      offset: '00003116'
+    - name: _gwHeight
+      demangled: ''
+      offset: '00003118'
+    - name: _wDebugLevel
+      demangled: ''
+      offset: 0000311A
+    - name: _gwWidthBytesSource
+      demangled: ''
+      offset: 0000311C
+    - name: GWBASEREG
+      demangled: ''
+      offset: 0000311E
+    - name: _grcDestExtIn
+      demangled: ''
+      offset: '00003120'
+    - name: _grcSourceIn
+      demangled: ''
+      offset: '00003128'
+    - name: _gfEnabled
+      demangled: ''
+      offset: '00003130'
+    - name: _g_wSrcWidth
+      demangled: ''
+      offset: '00003132'
+    - name: _gwWidthBytes
+      demangled: ''
+      offset: '00003134'
+    - name: _grcSourceExtOut
+      demangled: ''
+      offset: '00003136'
+    - name: _g_lpFlat
+      demangled: ''
+      offset: 0000313E
+    - name: _dwTemp
+      demangled: ''
+      offset: '00003142'
+    - name: _grcDestExtOut
+      demangled: ''
+      offset: '00003146'
+    - name: _g_pContext
+      demangled: ''
+      offset: 0000314E
+    - name: _wPCVideoAddress
+      demangled: ''
+      offset: '00003152'
+    - name: _gwWidthBytesDest
+      demangled: ''
+      offset: '00003154'
+    - name: _biSource
+      demangled: ''
+      offset: '00003156'
+    - name: _gfEurope
+      demangled: ''
+      offset: 0000317E
+    - name: _g_fpCopyBuffer
+      demangled: ''
+      offset: '00003180'
+    - name: _gwWaitState
+      demangled: ''
+      offset: '00003184'
+    - name: _palCurrent
+      demangled: ''
+      offset: '00003186'
+    - name: _gwSourceConnector
+      demangled: ''
+      offset: 0000358A
+    - name: _gwVidOutUsage
+      demangled: ''
+      offset: 0000358C
+    - name: _g_lpbmiHdr
+      demangled: ''
+      offset: 0000358E
+    - name: _g_pdwChannel
+      demangled: ''
+      offset: '00003590'
+    - name: _g_dwOpenFlags
+      demangled: ''
+      offset: '00003592'
+    - name: _gwSize40
+      demangled: ''
+      offset: '00003596'
+    - name: _gfVideoInStarted
+      demangled: ''
+      offset: '00003598'
+    - name: _dwVideoClock
+      demangled: ''
+      offset: 0000359A

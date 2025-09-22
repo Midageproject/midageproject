@@ -1,0 +1,1422 @@
+filename: secur32.dll
+binary: SECUR32
+description: ''
+appearances:
+- version: Windows 98SE Debug
+  source_tree:
+  - ../context.c
+  - ../credhand.c
+  - ../ctxtcli.c
+  - ../ctxtsrv.c
+  - ../init.c
+  - ../package.c
+  - ../stubs.c
+  - ../vxdsup.c
+  segments:
+  - num: '1'
+    name: .rdata
+    offset: 00000DC0
+    symbols:
+    - name: _BuiltinPackageInit
+      processed: ''
+      offset: 0000001C
+    - name: _BuiltinPackageExit
+      processed: ''
+      offset: '00000020'
+    - name: _SspGlobalForever
+      processed: ''
+      offset: '00000024'
+    - name: _Signature
+      processed: ''
+      offset: 0000002C
+    - name: _BindPackageFromDll@12
+      processed: ''
+      offset: '00000040'
+    - name: _BindBuiltinPackage@12
+      processed: ''
+      offset: '00000083'
+    - name: _UnloadPackages@4
+      processed: ''
+      offset: 000000BB
+    - name: _LoadKnownPackages@8
+      processed: ''
+      offset: 0000017D
+    - name: _LocalStrTok@12
+      processed: ''
+      offset: 0000038A
+    - name: _LoadAllPackages@0
+      processed: ''
+      offset: '00000438'
+    - name: _LocatePackage@4
+      processed: ''
+      offset: 000005D8
+    - name: _InitializePackages@0
+      processed: ''
+      offset: 0000065F
+    - name: _DllMain@12
+      processed: ''
+      offset: 0000069A
+    - name: _InitSecurityInterfaceA@0
+      processed: ''
+      offset: 000006D8
+    - name: _AcquireCredentialsHandleA@36
+      processed: ''
+      offset: 000006EC
+    - name: _FreeCredentialsHandle@4
+      processed: ''
+      offset: 0000074C
+    - name: _InitializeSecurityContextA@48
+      processed: ''
+      offset: 0000076A
+    - name: _AcceptSecurityContext@36
+      processed: ''
+      offset: '000007E1'
+    - name: _DeleteSecurityContext@4
+      processed: ''
+      offset: '00000850'
+    - name: _ApplyControlToken@8
+      processed: ''
+      offset: '00000879'
+    - name: _EnumerateSecurityPackagesA@8
+      processed: ''
+      offset: 000008A5
+    - name: _QuerySecurityPackageInfoA@8
+      processed: ''
+      offset: 00000A8E
+    - name: _FreeContextBuffer@4
+      processed: ''
+      offset: 00000ABE
+    - name: _CompleteAuthToken@8
+      processed: ''
+      offset: 00000AD1
+    - name: _ImpersonateSecurityContext@4
+      processed: ''
+      offset: 00000AF2
+    - name: _RevertSecurityContext@4
+      processed: ''
+      offset: 00000AFA
+    - name: _QueryContextAttributesA@12
+      processed: ''
+      offset: 00000B02
+    - name: _QueryCredentialsAttributesA@12
+      processed: ''
+      offset: 00000B26
+    - name: _MakeSignature@16
+      processed: ''
+      offset: 00000B4A
+    - name: _VerifySignature@16
+      processed: ''
+      offset: 00000B71
+    - name: _SealMessage@16
+      processed: ''
+      offset: 00000B98
+    - name: _UnsealMessage@16
+      processed: ''
+      offset: 00000BBF
+    - name: __assert
+      processed: ''
+      offset: 00000BE6
+    - name: _strncmp
+      processed: ''
+      offset: 00000C24
+    - name: _SspGetTargetName@0
+      processed: ''
+      offset: 00000C78
+    - name: _SspCommonInitialize@0
+      processed: ''
+      offset: '00000E08'
+    - name: _SspCommonShutdown@0
+      processed: ''
+      offset: 00000F71
+    - name: _ConvertUnicodeString@8
+      processed: ''
+      offset: 00000FE1
+    - name: _SspInitSecurityInterface@0
+      processed: ''
+      offset: 0000106D
+    - name: _LocalQuerySecurityPackageInfo@8
+      processed: ''
+      offset: '00001173'
+    - name: _SspEnumerateSecurityPackages@8
+      processed: ''
+      offset: 0000120B
+    - name: _SspAcquireCredentialsHandle@36
+      processed: ''
+      offset: 0000122F
+    - name: _SspFreeCredentialsHandle@4
+      processed: ''
+      offset: '00001428'
+    - name: _SspGetTokenBuffer@16
+      processed: ''
+      offset: '00001438'
+    - name: _SspInitializeSecurityContext@48
+      processed: ''
+      offset: 000014A4
+    - name: _SspAcceptSecurityContext@36
+      processed: ''
+      offset: 0000157A
+    - name: _SspImpersonateSecurityContext@4
+      processed: ''
+      offset: '00001662'
+    - name: _SspRevertSecurityContext@4
+      processed: ''
+      offset: 0000166A
+    - name: _SspQueryContextAttributes@12
+      processed: ''
+      offset: '00001672'
+    - name: _SspDeleteSecurityContext@4
+      processed: ''
+      offset: '00001688'
+    - name: _NtLmSspControl@8
+      processed: ''
+      offset: '00001698'
+    - name: _SspFreeContextBuffer@4
+      processed: ''
+      offset: 000016A0
+    - name: _SspApplyControlToken@8
+      processed: ''
+      offset: 000016B3
+    - name: _SspMakeSignature@16
+      processed: ''
+      offset: 000016CA
+    - name: _SspVerifySignature@16
+      processed: ''
+      offset: '000016E3'
+    - name: _SspSealMessage@16
+      processed: ''
+      offset: 000016FC
+    - name: _SspUnsealMessage@16
+      processed: ''
+      offset: '00001715'
+    - name: _SspQuerySecurityPackageInfo@8
+      processed: ''
+      offset: 0000172E
+    - name: _SspCompleteAuthToken@8
+      processed: ''
+      offset: '00001741'
+    - name: _SspPrintRoutine
+      processed: ''
+      offset: '00001758'
+    - name: _SspVxDCall@28
+      processed: ''
+      offset: 000017B4
+    - name: _SspCloseAllVxDHandles@0
+      processed: ''
+      offset: 000018A5
+    - name: _SspCopyStringFromClient@16
+      processed: ''
+      offset: 000018CA
+    - name: _SspCredentialReferenceCredential@8
+      processed: ''
+      offset: 0000193A
+    - name: _SspCredentialDereferenceCredential@4
+      processed: ''
+      offset: 000019C8
+    - name: _SsprAcquireCredentialHandle@36
+      processed: ''
+      offset: 00001A56
+    - name: _SsprFreeCredentialHandle@4
+      processed: ''
+      offset: 00001BD6
+    - name: _SspCredentialInitialize@0
+      processed: ''
+      offset: 00001C1B
+    - name: _SspCredentialTerminate@0
+      processed: ''
+      offset: 00001C38
+    - name: _SspQueryCredentialsAttributes@12
+      processed: ''
+      offset: 00001CB4
+    - name: _SspGetCurrentTime@0
+      processed: ''
+      offset: 00001DD6
+    - name: _SspTimeHasElapsed@12
+      processed: ''
+      offset: 00001E0C
+    - name: _SspContextReferenceContext@8
+      processed: ''
+      offset: '00001E52'
+    - name: _SspContextDereferenceContext@4
+      processed: ''
+      offset: 00001F00
+    - name: _SspContextAllocateContext@0
+      processed: ''
+      offset: '00002093'
+    - name: _SspContextGetMessage@16
+      processed: ''
+      offset: '00002154'
+    - name: _SspAllocStrFromStr@8
+      processed: ''
+      offset: '00002191'
+    - name: _SspAllocSzStringFromString@8
+      processed: ''
+      offset: '00002206'
+    - name: _SspContextCopyString@20
+      processed: ''
+      offset: '00002250'
+    - name: _SspConvertRelativeToAbsolute@16
+      processed: ''
+      offset: '000022E6'
+    - name: _SspContextGetTimeStamp@8
+      processed: ''
+      offset: '00002338'
+    - name: _SspContextSetTimeStamp@12
+      processed: ''
+      offset: 000023CC
+    - name: _SsprQueryContextAttributes@12
+      processed: ''
+      offset: 0000245A
+    - name: _SsprDeleteSecurityContext@4
+      processed: ''
+      offset: 0000267C
+    - name: _SspContextInitialize@0
+      processed: ''
+      offset: 000026C1
+    - name: _SspContextTerminate@0
+      processed: ''
+      offset: 000026DE
+    - name: _IsEncryptionPermitted@0
+      processed: ''
+      offset: 0000275A
+    - name: _EncryptStdBlock@8
+      processed: ''
+      offset: 000027A5
+    - name: _SspCalculateLmOwfPassword@8
+      processed: ''
+      offset: 000027F3
+    - name: _SspCalculateLmResponse@12
+      processed: ''
+      offset: '00002868'
+    - name: _SsprHandleFirstCall@44
+      processed: ''
+      offset: '00002937'
+    - name: _SspComputeChallengeResponseAndSessionKey@16
+      processed: ''
+      offset: 00002D90
+    - name: _SsprBuildNtlmAuthenticateMessage@32
+      processed: ''
+      offset: '00002E20'
+    - name: _SsprBuildNwAuthenticateMessage@32
+      processed: ''
+      offset: '00003419'
+    - name: _SsprBuildNwUidRequestMessage@32
+      processed: ''
+      offset: 0000378C
+    - name: _SsprHandleSubsequentClientMessage@36
+      processed: ''
+      offset: 00003AAF
+    - name: _SspContextGetNwUid@12
+      processed: ''
+      offset: 00003C39
+    - name: _SspContextComputeChallenge@8
+      processed: ''
+      offset: 00003CE9
+    - name: _SsprHandleNegotiateMessage@36
+      processed: ''
+      offset: 00003D33
+    - name: _SsprHandleNwUidRequestMessage@32
+      processed: ''
+      offset: 000043BA
+    - name: _SsprHandleNtlmAuthenticateMessage@32
+      processed: ''
+      offset: '000044E8'
+    - name: _SsprHandleNwAuthenticateMessage@32
+      processed: ''
+      offset: '00004843'
+    - name: _SsprHandleSubsequentServerMessage@36
+      processed: ''
+      offset: 00004A0B
+    - name: _SsprGenCheckSum@8
+      processed: ''
+      offset: 00004B0D
+    - name: _SsprHandleSignMessage@16
+      processed: ''
+      offset: 00004B2B
+    - name: _SsprHandleVerifyMessage@16
+      processed: ''
+      offset: 00004C3D
+    - name: _SsprHandleSealMessage@16
+      processed: ''
+      offset: 00004D97
+    - name: _SsprHandleUnsealMessage@16
+      processed: ''
+      offset: 00004EAA
+    - name: _DES_ECB_LM
+      processed: ''
+      offset: 00004FD2
+    - name: _rc4_key@12
+      processed: ''
+      offset: '00005030'
+    - name: _rc4@12
+      processed: ''
+      offset: 000050C0
+    - name: _Crc32@16
+      processed: ''
+      offset: '00005130'
+    - name: _key_table@4
+      processed: ''
+      offset: 0000516C
+    - name: _des_cipher@8
+      processed: ''
+      offset: 0000523C
+    - name: _desf@12
+      processed: ''
+      offset: 000053BD
+    - name: _InitLanManKey@4
+      processed: ''
+      offset: '00005439'
+    - name: __CRT_INIT@12
+      processed: ''
+      offset: '00005493'
+    - name: __DllMainCRTStartup@12
+      processed: ''
+      offset: '000055E0'
+    - name: __allmul
+      processed: ''
+      offset: '00005680'
+    - name: __aullshr
+      processed: ''
+      offset: 000056B4
+    - name: __aulldiv
+      processed: ''
+      offset: 000056C4
+    - name: _strtol
+      processed: ''
+      offset: '00005724'
+    - name: __initterm
+      processed: ''
+      offset: 0000572A
+  - num: '2'
+    name: .CRT$XCA
+    offset: 000011C0
+    symbols:
+    - name: ___xc_a
+      processed: ''
+      offset: '00000000'
+    - name: ___xc_z
+      processed: ''
+      offset: '00000004'
+    - name: ___xi_a
+      processed: ''
+      offset: '00000008'
+    - name: ___xi_z
+      processed: ''
+      offset: 0000000C
+    - name: _csSecurity
+      processed: ''
+      offset: '00000020'
+    - name: _pspPackages
+      processed: ''
+      offset: '00000038'
+    - name: _C
+      processed: ''
+      offset: '00000040'
+    - name: _D
+      processed: ''
+      offset: '00000060'
+    - name: _L
+      processed: ''
+      offset: '00000080'
+    - name: _f
+      processed: ''
+      offset: 000000C0
+    - name: _preS
+      processed: ''
+      offset: '000000E0'
+    - name: _KS
+      processed: ''
+      offset: '00000110'
+    - name: _tempL
+      processed: ''
+      offset: '00000410'
+    - name: _SspContextList
+      processed: ''
+      offset: '00000430'
+    - name: _SspCredentialCritSect
+      processed: ''
+      offset: '00000440'
+    - name: _SspCredentialList
+      processed: ''
+      offset: '00000458'
+    - name: _SspGlobalCapabilities
+      processed: ''
+      offset: '00000460'
+    - name: _SspGlobalComputerName
+      processed: ''
+      offset: '00000468'
+    - name: _SspGlobalContextInitialized
+      processed: ''
+      offset: '00000470'
+    - name: _SspGlobalEncryptionPermitted
+      processed: ''
+      offset: '00000471'
+    - name: _pfNwSspGetUserAccountName
+      processed: ''
+      offset: '00000474'
+    - name: _SspGlobalOemTargetString
+      processed: ''
+      offset: '00000478'
+    - name: _SspDllCritSect
+      processed: ''
+      offset: '00000480'
+    - name: _SspContextCritSect
+      processed: ''
+      offset: 000004A0
+    - name: _SspDllSecurityFunctionTable
+      processed: ''
+      offset: 000004C0
+    - name: _SspGlobalCredentialInitialized
+      processed: ''
+      offset: '00000510'
+    - name: _SspGlobalTargetFlags
+      processed: ''
+      offset: '00000514'
+    - name: _SspGlobalTargetName
+      processed: ''
+      offset: '00000518'
+    - name: _SspGlobalClientAuthSupported
+      processed: ''
+      offset: '00000520'
+    - name: _SspGlobalLogFileCritSect
+      processed: ''
+      offset: '00000530'
+    - name: _pfNwSspGetEncryptedResponse
+      processed: ''
+      offset: '00000548'
+    - name: _SspGlobalDbflag
+      processed: ''
+      offset: 0000054C
+    - name: _SspGlobalNwDllHandle
+      processed: ''
+      offset: '00000550'
+    - name: ___onexitend
+      processed: ''
+      offset: '00000554'
+    - name: ___onexitbegin
+      processed: ''
+      offset: '00000558'
+    - name: __pRawDllMain
+      processed: ''
+      offset: 0000055C
+    - name: _cPackages
+      processed: ''
+      offset: '00000560'
+    - name: _cBuiltInPackages
+      processed: ''
+      offset: '00000564'
+    - name: _PackageInitialized
+      processed: ''
+      offset: '00000568'
+    - name: _SecTable
+      processed: ''
+      offset: '00000638'
+    - name: _DisplayFlags
+      processed: ''
+      offset: '00000750'
+    - name: _VxDTable
+      processed: ''
+      offset: '00000838'
+    - name: _CRCTable
+      processed: ''
+      offset: '00002350'
+    - name: _IP
+      processed: ''
+      offset: '00002750'
+    - name: _FP
+      processed: ''
+      offset: '00002790'
+    - name: _PC1_C
+      processed: ''
+      offset: 000027D0
+    - name: _PC1_D
+      processed: ''
+      offset: 000027F0
+    - name: _shifts
+      processed: ''
+      offset: '00002810'
+    - name: _PC2_C
+      processed: ''
+      offset: '00002820'
+    - name: _PC2_D
+      processed: ''
+      offset: '00002838'
+    - name: _E
+      processed: ''
+      offset: '00002850'
+    - name: _S
+      processed: ''
+      offset: '00002880'
+    - name: _P
+      processed: ''
+      offset: 00002A80
+    - name: ___win32sflag
+      processed: ''
+      offset: 00002AA4
+  - num: '3'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_KERNEL32
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_USER32
+      processed: ''
+      offset: '00000014'
+    - name: ADVAPI32_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000028'
+    - name: MSVCRT20_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000050'
+    - name: NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000064'
+    - name: __imp__RegCloseKey@4
+      processed: ''
+      offset: '00000148'
+    - name: __imp__RegQueryValueExA@24
+      processed: ''
+      offset: 0000014C
+    - name: __imp__RegOpenKeyA@12
+      processed: ''
+      offset: '00000150'
+    - name: \177ADVAPI32_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000154'
+    - name: __imp__LoadLibraryA@4
+      processed: ''
+      offset: '00000158'
+    - name: __imp__EnterCriticalSection@4
+      processed: ''
+      offset: 0000015C
+    - name: __imp__lstrcpyA@8
+      processed: ''
+      offset: '00000160'
+    - name: __imp__LocalAlloc@8
+      processed: ''
+      offset: '00000164'
+    - name: __imp__lstrlenA@4
+      processed: ''
+      offset: '00000168'
+    - name: __imp__lstrcmpiA@8
+      processed: ''
+      offset: 0000016C
+    - name: __imp__InitializeCriticalSection@4
+      processed: ''
+      offset: '00000170'
+    - name: __imp__DeleteCriticalSection@4
+      processed: ''
+      offset: '00000174'
+    - name: __imp__RtlMoveMemory@12
+      processed: ''
+      offset: '00000178'
+    - name: __imp__DebugBreak@0
+      processed: ''
+      offset: 0000017C
+    - name: __imp__OutputDebugStringA@4
+      processed: ''
+      offset: '00000180'
+    - name: __imp__IsDBCSLeadByte@4
+      processed: ''
+      offset: '00000184'
+    - name: __imp__GetComputerNameA@8
+      processed: ''
+      offset: '00000188'
+    - name: __imp__LeaveCriticalSection@4
+      processed: ''
+      offset: 0000018C
+    - name: __imp__LocalFree@4
+      processed: ''
+      offset: '00000190'
+    - name: __imp__RtlZeroMemory@8
+      processed: ''
+      offset: '00000194'
+    - name: __imp__lstrlenW@4
+      processed: ''
+      offset: '00000198'
+    - name: __imp__lstrcatA@8
+      processed: ''
+      offset: 0000019C
+    - name: __imp__GetLastError@0
+      processed: ''
+      offset: 000001A0
+    - name: __imp__DeviceIoControl@32
+      processed: ''
+      offset: 000001A4
+    - name: __imp__CreateFileA@28
+      processed: ''
+      offset: 000001A8
+    - name: __imp__CloseHandle@4
+      processed: ''
+      offset: 000001AC
+    - name: __imp__SystemTimeToFileTime@8
+      processed: ''
+      offset: 000001B0
+    - name: __imp__FreeLibrary@4
+      processed: ''
+      offset: 000001B4
+    - name: __imp__FileTimeToLocalFileTime@8
+      processed: ''
+      offset: 000001B8
+    - name: __imp__GetLocaleInfoA@16
+      processed: ''
+      offset: 000001BC
+    - name: __imp__GetSystemDefaultLCID@0
+      processed: ''
+      offset: 000001C0
+    - name: __imp__GetProcAddress@8
+      processed: ''
+      offset: 000001C4
+    - name: __imp__WideCharToMultiByte@32
+      processed: ''
+      offset: 000001C8
+    - name: __imp__IsBadCodePtr@4
+      processed: ''
+      offset: 000001CC
+    - name: __imp__GetSystemTime@4
+      processed: ''
+      offset: 000001D0
+    - name: __imp__GetVersion@0
+      processed: ''
+      offset: 000001D4
+    - name: __imp__GlobalAlloc@8
+      processed: ''
+      offset: 000001D8
+    - name: __imp__GlobalFree@4
+      processed: ''
+      offset: 000001DC
+    - name: \177KERNEL32_NULL_THUNK_DATA
+      processed: ''
+      offset: '000001E0'
+    - name: __imp__strtol
+      processed: ''
+      offset: '000001E4'
+    - name: __imp__malloc
+      processed: ''
+      offset: '000001E8'
+    - name: __imp___initterm
+      processed: ''
+      offset: 000001EC
+    - name: \177MSVCRT20_NULL_THUNK_DATA
+      processed: ''
+      offset: 000001F0
+    - name: __imp__wvsprintfA@12
+      processed: ''
+      offset: 000001F4
+    - name: __imp__OemToCharA@8
+      processed: ''
+      offset: 000001F8
+    - name: __imp__CharNextA@4
+      processed: ''
+      offset: 000001FC
+    - name: __imp__wsprintfA
+      processed: ''
+      offset: '00000200'
+    - name: __imp__CharUpperA@4
+      processed: ''
+      offset: '00000204'
+    - name: __imp__CharToOemBuffA@12
+      processed: ''
+      offset: '00000208'
+    - name: __imp__OemToCharBuffA@12
+      processed: ''
+      offset: 0000020C
+    - name: __imp__CharToOemA@8
+      processed: ''
+      offset: '00000210'
+    - name: \177USER32_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000214'
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .rdata
+    offset: 00000DA0
+    symbols:
+    - name: _BuiltinPackageInit
+      demangled: ''
+      offset: 0000001C
+    - name: _BuiltinPackageExit
+      demangled: ''
+      offset: '00000020'
+    - name: _SspGlobalForever
+      demangled: ''
+      offset: '00000024'
+    - name: _Signature
+      demangled: ''
+      offset: 0000002C
+    - name: _BindPackageFromDll@12
+      demangled: ''
+      offset: '00000040'
+    - name: _BindBuiltinPackage@12
+      demangled: ''
+      offset: '00000082'
+    - name: _UnloadPackages@4
+      demangled: ''
+      offset: 000000B8
+    - name: _LoadKnownPackages@8
+      demangled: ''
+      offset: 0000017C
+    - name: _LocalStrTok@12
+      demangled: ''
+      offset: 0000035A
+    - name: _LoadAllPackages@0
+      demangled: ''
+      offset: '00000408'
+    - name: _LocatePackage@4
+      demangled: ''
+      offset: 000005BB
+    - name: _InitializePackages@0
+      demangled: ''
+      offset: '00000634'
+    - name: _DllMain@12
+      demangled: ''
+      offset: 0000066F
+    - name: _InitSecurityInterfaceA@0
+      demangled: ''
+      offset: 000006A9
+    - name: _AcquireCredentialsHandleA@36
+      demangled: ''
+      offset: 000006BD
+    - name: _FreeCredentialsHandle@4
+      demangled: ''
+      offset: 0000071D
+    - name: _InitializeSecurityContextA@48
+      demangled: ''
+      offset: '00000737'
+    - name: _AcceptSecurityContext@36
+      demangled: ''
+      offset: 000007AE
+    - name: _DeleteSecurityContext@4
+      demangled: ''
+      offset: 0000081D
+    - name: _ApplyControlToken@8
+      demangled: ''
+      offset: '00000842'
+    - name: _EnumerateSecurityPackagesA@8
+      demangled: ''
+      offset: 0000086B
+    - name: _QuerySecurityPackageInfoA@8
+      demangled: ''
+      offset: 00000A33
+    - name: _FreeContextBuffer@4
+      demangled: ''
+      offset: 00000A61
+    - name: _CompleteAuthToken@8
+      demangled: ''
+      offset: 00000A70
+    - name: _ImpersonateSecurityContext@4
+      demangled: ''
+      offset: 00000A8E
+    - name: _RevertSecurityContext@4
+      demangled: ''
+      offset: 00000A96
+    - name: _QueryContextAttributesA@12
+      demangled: ''
+      offset: 00000A9E
+    - name: _QueryCredentialsAttributesA@12
+      demangled: ''
+      offset: 00000AC0
+    - name: _MakeSignature@16
+      demangled: ''
+      offset: 00000AE2
+    - name: _VerifySignature@16
+      demangled: ''
+      offset: 00000B08
+    - name: _SealMessage@16
+      demangled: ''
+      offset: 00000B2E
+    - name: _UnsealMessage@16
+      demangled: ''
+      offset: 00000B54
+    - name: _strncmp
+      demangled: ''
+      offset: 00000B7A
+    - name: _SspGetTargetName@0
+      demangled: ''
+      offset: 00000BD1
+    - name: _SspCommonInitialize@0
+      demangled: ''
+      offset: 00000D10
+    - name: _SspCommonShutdown@0
+      demangled: ''
+      offset: '00000E79'
+    - name: _ConvertUnicodeString@8
+      demangled: ''
+      offset: 00000EDE
+    - name: _SspInitSecurityInterface@0
+      demangled: ''
+      offset: 00000F54
+    - name: _LocalQuerySecurityPackageInfo@8
+      demangled: ''
+      offset: '00001045'
+    - name: _SspEnumerateSecurityPackages@8
+      demangled: ''
+      offset: 000010DB
+    - name: _SspAcquireCredentialsHandle@36
+      demangled: ''
+      offset: 000010FC
+    - name: _SspFreeCredentialsHandle@4
+      demangled: ''
+      offset: '00001305'
+    - name: _SspGetTokenBuffer@16
+      demangled: ''
+      offset: '00001311'
+    - name: _SspInitializeSecurityContext@48
+      demangled: ''
+      offset: 0000137E
+    - name: _SspAcceptSecurityContext@36
+      demangled: ''
+      offset: '00001454'
+    - name: _SspImpersonateSecurityContext@4
+      demangled: ''
+      offset: 0000153C
+    - name: _SspRevertSecurityContext@4
+      demangled: ''
+      offset: '00001544'
+    - name: _SspQueryContextAttributes@12
+      demangled: ''
+      offset: 0000154C
+    - name: _SspDeleteSecurityContext@4
+      demangled: ''
+      offset: '00001560'
+    - name: _NtLmSspControl@8
+      demangled: ''
+      offset: 0000156C
+    - name: _SspFreeContextBuffer@4
+      demangled: ''
+      offset: '00001574'
+    - name: _SspApplyControlToken@8
+      demangled: ''
+      offset: '00001583'
+    - name: _SspMakeSignature@16
+      demangled: ''
+      offset: 0000158B
+    - name: _SspVerifySignature@16
+      demangled: ''
+      offset: 000015A4
+    - name: _SspSealMessage@16
+      demangled: ''
+      offset: 000015BD
+    - name: _SspUnsealMessage@16
+      demangled: ''
+      offset: 000015D6
+    - name: _SspQuerySecurityPackageInfo@8
+      demangled: ''
+      offset: 000015EF
+    - name: _SspCompleteAuthToken@8
+      demangled: ''
+      offset: 000015FF
+    - name: _SspVxDCall@28
+      demangled: ''
+      offset: '00001607'
+    - name: _SspCloseAllVxDHandles@0
+      demangled: ''
+      offset: 000016DC
+    - name: _SspCopyStringFromClient@16
+      demangled: ''
+      offset: '00001701'
+    - name: _SspCredentialReferenceCredential@8
+      demangled: ''
+      offset: '00001772'
+    - name: _SspCredentialDereferenceCredential@4
+      demangled: ''
+      offset: 000017D7
+    - name: _SsprAcquireCredentialHandle@36
+      demangled: ''
+      offset: '00001832'
+    - name: _SsprFreeCredentialHandle@4
+      demangled: ''
+      offset: 0000192D
+    - name: _SspCredentialInitialize@0
+      demangled: ''
+      offset: 0000194E
+    - name: _SspCredentialTerminate@0
+      demangled: ''
+      offset: 0000196B
+    - name: _SspQueryCredentialsAttributes@12
+      demangled: ''
+      offset: '000019E7'
+    - name: _SspGetCurrentTime@0
+      demangled: ''
+      offset: 00001ABA
+    - name: _SspTimeHasElapsed@12
+      demangled: ''
+      offset: 00001AF0
+    - name: _SspContextReferenceContext@8
+      demangled: ''
+      offset: 00001B33
+    - name: _SspContextDereferenceContext@4
+      demangled: ''
+      offset: 00001BAC
+    - name: _SspContextAllocateContext@0
+      demangled: ''
+      offset: 00001CB0
+    - name: _SspContextGetMessage@16
+      demangled: ''
+      offset: 00001D51
+    - name: _SspAllocStrFromStr@8
+      demangled: ''
+      offset: 00001D8E
+    - name: _SspAllocSzStringFromString@8
+      demangled: ''
+      offset: 00001DDF
+    - name: _SspContextCopyString@20
+      demangled: ''
+      offset: '00001E27'
+    - name: _SspConvertRelativeToAbsolute@16
+      demangled: ''
+      offset: 00001E9E
+    - name: _SspContextGetTimeStamp@8
+      demangled: ''
+      offset: 00001EEF
+    - name: _SspContextSetTimeStamp@12
+      demangled: ''
+      offset: 00001F83
+    - name: _SsprQueryContextAttributes@12
+      demangled: ''
+      offset: '00002013'
+    - name: _SsprDeleteSecurityContext@4
+      demangled: ''
+      offset: 000021D9
+    - name: _SspContextInitialize@0
+      demangled: ''
+      offset: 000021FA
+    - name: _SspContextTerminate@0
+      demangled: ''
+      offset: '00002217'
+    - name: _IsEncryptionPermitted@0
+      demangled: ''
+      offset: '00002293'
+    - name: _EncryptStdBlock@8
+      demangled: ''
+      offset: 000022DD
+    - name: _SspCalculateLmOwfPassword@8
+      demangled: ''
+      offset: 0000232B
+    - name: _SspCalculateLmResponse@12
+      demangled: ''
+      offset: 000023A0
+    - name: _SsprHandleFirstCall@44
+      demangled: ''
+      offset: '00002474'
+    - name: _SspComputeChallengeResponseAndSessionKey@16
+      demangled: ''
+      offset: '00002836'
+    - name: _SsprBuildNtlmAuthenticateMessage@32
+      demangled: ''
+      offset: 000028C6
+    - name: _SsprBuildNwAuthenticateMessage@32
+      demangled: ''
+      offset: 00002DF8
+    - name: _SsprBuildNwUidRequestMessage@32
+      demangled: ''
+      offset: '00003019'
+    - name: _SsprHandleSubsequentClientMessage@36
+      demangled: ''
+      offset: 000031F0
+    - name: _SspContextGetNwUid@12
+      demangled: ''
+      offset: '00003345'
+    - name: _SspContextComputeChallenge@8
+      demangled: ''
+      offset: 000033B5
+    - name: _SsprHandleNegotiateMessage@36
+      demangled: ''
+      offset: '000033E3'
+    - name: _SsprHandleNwUidRequestMessage@32
+      demangled: ''
+      offset: '00003813'
+    - name: _SsprHandleNtlmAuthenticateMessage@32
+      demangled: ''
+      offset: 000038F5
+    - name: _SsprHandleNwAuthenticateMessage@32
+      demangled: ''
+      offset: 00003BB9
+    - name: _SsprHandleSubsequentServerMessage@36
+      demangled: ''
+      offset: 00003D2D
+    - name: _SsprGenCheckSum@8
+      demangled: ''
+      offset: 00003DEB
+    - name: _SsprHandleSignMessage@16
+      demangled: ''
+      offset: '00003E06'
+    - name: _SsprHandleVerifyMessage@16
+      demangled: ''
+      offset: 00003F13
+    - name: _SsprHandleSealMessage@16
+      demangled: ''
+      offset: 0000406D
+    - name: _SsprHandleUnsealMessage@16
+      demangled: ''
+      offset: '00004180'
+    - name: _DES_ECB_LM
+      demangled: ''
+      offset: 000042A8
+    - name: _rc4_key@12
+      demangled: ''
+      offset: '00004300'
+    - name: _rc4@12
+      demangled: ''
+      offset: '00004390'
+    - name: _Crc32@16
+      demangled: ''
+      offset: '00004400'
+    - name: _key_table@4
+      demangled: ''
+      offset: 0000443B
+    - name: _des_cipher@8
+      demangled: ''
+      offset: 0000450B
+    - name: _desf@12
+      demangled: ''
+      offset: 0000468C
+    - name: _InitLanManKey@4
+      demangled: ''
+      offset: '00004708'
+    - name: __CRT_INIT@12
+      demangled: ''
+      offset: '00004762'
+    - name: __DllMainCRTStartup@12
+      demangled: ''
+      offset: 000048AF
+    - name: __allmul
+      demangled: ''
+      offset: 0000494C
+    - name: __aullshr
+      demangled: ''
+      offset: '00004980'
+    - name: __aulldiv
+      demangled: ''
+      offset: '00004990'
+    - name: _strtol
+      demangled: ''
+      offset: 000049F0
+    - name: __initterm
+      demangled: ''
+      offset: 000049F6
+  - num: '2'
+    name: .CRT$XCA
+    offset: '00001150'
+    symbols:
+    - name: ___xc_a
+      demangled: ''
+      offset: '00000000'
+    - name: ___xc_z
+      demangled: ''
+      offset: '00000004'
+    - name: ___xi_a
+      demangled: ''
+      offset: '00000008'
+    - name: ___xi_z
+      demangled: ''
+      offset: 0000000C
+    - name: _csSecurity
+      demangled: ''
+      offset: '00000020'
+    - name: _pspPackages
+      demangled: ''
+      offset: '00000038'
+    - name: _C
+      demangled: ''
+      offset: '00000040'
+    - name: _D
+      demangled: ''
+      offset: '00000060'
+    - name: _L
+      demangled: ''
+      offset: '00000080'
+    - name: _f
+      demangled: ''
+      offset: 000000C0
+    - name: _preS
+      demangled: ''
+      offset: '000000E0'
+    - name: _KS
+      demangled: ''
+      offset: '00000110'
+    - name: _tempL
+      demangled: ''
+      offset: '00000410'
+    - name: _SspContextList
+      demangled: ''
+      offset: '00000430'
+    - name: _SspCredentialCritSect
+      demangled: ''
+      offset: '00000440'
+    - name: _SspCredentialList
+      demangled: ''
+      offset: '00000458'
+    - name: _SspGlobalCapabilities
+      demangled: ''
+      offset: '00000460'
+    - name: _SspGlobalComputerName
+      demangled: ''
+      offset: '00000468'
+    - name: _SspGlobalContextInitialized
+      demangled: ''
+      offset: '00000470'
+    - name: _SspGlobalEncryptionPermitted
+      demangled: ''
+      offset: '00000471'
+    - name: _pfNwSspGetUserAccountName
+      demangled: ''
+      offset: '00000474'
+    - name: _SspGlobalOemTargetString
+      demangled: ''
+      offset: '00000478'
+    - name: _SspDllCritSect
+      demangled: ''
+      offset: '00000480'
+    - name: _SspContextCritSect
+      demangled: ''
+      offset: 000004A0
+    - name: _SspDllSecurityFunctionTable
+      demangled: ''
+      offset: 000004C0
+    - name: _SspGlobalCredentialInitialized
+      demangled: ''
+      offset: '00000510'
+    - name: _SspGlobalTargetFlags
+      demangled: ''
+      offset: '00000514'
+    - name: _SspGlobalTargetName
+      demangled: ''
+      offset: '00000518'
+    - name: _SspGlobalClientAuthSupported
+      demangled: ''
+      offset: '00000520'
+    - name: _pfNwSspGetEncryptedResponse
+      demangled: ''
+      offset: '00000524'
+    - name: _SspGlobalNwDllHandle
+      demangled: ''
+      offset: '00000528'
+    - name: ___onexitend
+      demangled: ''
+      offset: 0000052C
+    - name: ___onexitbegin
+      demangled: ''
+      offset: '00000530'
+    - name: __pRawDllMain
+      demangled: ''
+      offset: '00000534'
+    - name: _cPackages
+      demangled: ''
+      offset: '00000538'
+    - name: _cBuiltInPackages
+      demangled: ''
+      offset: 0000053C
+    - name: _PackageInitialized
+      demangled: ''
+      offset: '00000540'
+    - name: _SecTable
+      demangled: ''
+      offset: 000005C8
+    - name: _VxDTable
+      demangled: ''
+      offset: '00000674'
+    - name: _CRCTable
+      demangled: ''
+      offset: 000006A4
+    - name: _IP
+      demangled: ''
+      offset: 00000AA8
+    - name: _FP
+      demangled: ''
+      offset: 00000AE8
+    - name: _PC1_C
+      demangled: ''
+      offset: 00000B28
+    - name: _PC1_D
+      demangled: ''
+      offset: 00000B48
+    - name: _shifts
+      demangled: ''
+      offset: 00000B68
+    - name: _PC2_C
+      demangled: ''
+      offset: 00000B78
+    - name: _PC2_D
+      demangled: ''
+      offset: 00000B90
+    - name: _E
+      demangled: ''
+      offset: 00000BA8
+    - name: _S
+      demangled: ''
+      offset: 00000BD8
+    - name: _P
+      demangled: ''
+      offset: 00000DD8
+    - name: ___win32sflag
+      demangled: ''
+      offset: 00000DFC
+  - num: '3'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_KERNEL32
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_USER32
+      demangled: ''
+      offset: '00000014'
+    - name: ADVAPI32_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000028'
+    - name: MSVCRT20_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000050'
+    - name: NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000064'
+    - name: __imp__RegQueryValueExA@24
+      demangled: ''
+      offset: '00000134'
+    - name: __imp__RegOpenKeyA@12
+      demangled: ''
+      offset: '00000138'
+    - name: __imp__RegCloseKey@4
+      demangled: ''
+      offset: 0000013C
+    - name: \177ADVAPI32_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000140'
+    - name: __imp__EnterCriticalSection@4
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__lstrcpyA@8
+      demangled: ''
+      offset: '00000148'
+    - name: __imp__LocalAlloc@8
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__lstrlenA@4
+      demangled: ''
+      offset: '00000150'
+    - name: __imp__LocalFree@4
+      demangled: ''
+      offset: '00000154'
+    - name: __imp__lstrcmpiA@8
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__InitializeCriticalSection@4
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__DeleteCriticalSection@4
+      demangled: ''
+      offset: '00000160'
+    - name: __imp__RtlMoveMemory@12
+      demangled: ''
+      offset: '00000164'
+    - name: __imp__IsDBCSLeadByte@4
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__GetComputerNameA@8
+      demangled: ''
+      offset: 0000016C
+    - name: __imp__GetProcAddress@8
+      demangled: ''
+      offset: '00000170'
+    - name: __imp__LeaveCriticalSection@4
+      demangled: ''
+      offset: '00000174'
+    - name: __imp__RtlZeroMemory@8
+      demangled: ''
+      offset: '00000178'
+    - name: __imp__lstrlenW@4
+      demangled: ''
+      offset: 0000017C
+    - name: __imp__GetLastError@0
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__DeviceIoControl@32
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__CreateFileA@28
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__CloseHandle@4
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__SystemTimeToFileTime@8
+      demangled: ''
+      offset: '00000190'
+    - name: __imp__GetSystemTime@4
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__FreeLibrary@4
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__GetLocaleInfoA@16
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__GetSystemDefaultLCID@0
+      demangled: ''
+      offset: 000001A0
+    - name: __imp__LoadLibraryA@4
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__IsBadCodePtr@4
+      demangled: ''
+      offset: 000001A8
+    - name: __imp__WideCharToMultiByte@32
+      demangled: ''
+      offset: 000001AC
+    - name: __imp__FileTimeToLocalFileTime@8
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__GetVersion@0
+      demangled: ''
+      offset: 000001B4
+    - name: __imp__GlobalAlloc@8
+      demangled: ''
+      offset: 000001B8
+    - name: __imp__GlobalFree@4
+      demangled: ''
+      offset: 000001BC
+    - name: \177KERNEL32_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000001C0
+    - name: __imp___initterm
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__strtol
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__malloc
+      demangled: ''
+      offset: 000001CC
+    - name: \177MSVCRT20_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__CharNextA@4
+      demangled: ''
+      offset: 000001D4
+    - name: __imp__OemToCharBuffA@12
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__OemToCharA@8
+      demangled: ''
+      offset: 000001DC
+    - name: __imp__CharUpperA@4
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp__CharToOemA@8
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp__CharToOemBuffA@12
+      demangled: ''
+      offset: '000001E8'
+    - name: \177USER32_NULL_THUNK_DATA
+      demangled: ''
+      offset: 000001EC

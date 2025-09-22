@@ -1,0 +1,4324 @@
+filename: vbisurf.ax
+binary: VBISURF
+description: ''
+appearances:
+- version: Windows ME Debug
+  source_tree:
+  - amfilter.h
+  - intel/lldiv.asm
+  - intel/llmul.asm
+  - intel/llrem.asm
+  - intel/llshl.asm
+  - intel/ulldiv.asm
+  - intel/ullrem.asm
+  - /ntc/private/amovie/filters.ks/vbisurf/ddmm.cpp
+  - /ntc/private/amovie/filters.ks/vbisurf/filter.cpp
+  - /ntc/private/amovie/filters.ks/vbisurf/inpin.cpp
+  - /ntc/private/amovie/filters.ks/vbisurf/outpin.cpp
+  - /ntc/private/amovie/filters.ks/vbisurf/thread.cpp
+  - /ntc/private/amovie/filters.ks/vbisurf/vpobj.cpp
+  - /ntc/private/genx/dxmdev/dshowdev/base/amfilter.cpp
+  - /ntc/private/genx/dxmdev/dshowdev/base/combase.cpp
+  - /ntc/private/genx/dxmdev/dshowdev/base/ddmm.cpp
+  - /ntc/private/genx/dxmdev/dshowdev/base/dllentry.cpp
+  - /ntc/private/genx/dxmdev/dshowdev/base/dllsetup.cpp
+  - /ntc/private/genx/dxmdev/dshowdev/base/mtype.cpp
+  - /ntc/private/genx/dxmdev/dshowdev/base/videoctl.cpp
+  - /ntc/private/genx/dxmdev/dshowdev/base/wxdebug.cpp
+  - /ntc/private/genx/dxmdev/dshowdev/base/wxlist.cpp
+  - /ntc/private/genx/dxmdev/dshowdev/base/wxutil.cpp
+  - /NTC/public/sdk/amovie/inc/amfilter.h
+  - /NTC/public/sdk/amovie/inc/wxutil.h
+  - /NTC/public/sdk/inc/multimon.h
+  - vbisurf.h
+  - wxlist.h
+  - ./wxlist.h
+  - ./wxutil.h
+  segments:
+  - num: '1'
+    name: .idata$5
+    offset: 000128A0
+    symbols:
+    - name: __imp__RegCloseKey@4
+      processed: ''
+      offset: '00000000'
+    - name: __imp__RegDeleteKeyA@8
+      processed: ''
+      offset: '00000004'
+    - name: __imp__RegEnumKeyExA@32
+      processed: ''
+      offset: '00000008'
+    - name: __imp__RegCreateKeyExA@36
+      processed: ''
+      offset: 0000000C
+    - name: __imp__RegQueryValueExA@24
+      processed: ''
+      offset: '00000010'
+    - name: __imp__RegCreateKeyA@12
+      processed: ''
+      offset: '00000014'
+    - name: __imp__RegSetValueA@20
+      processed: ''
+      offset: '00000018'
+    - name: __imp__RegSetValueExA@24
+      processed: ''
+      offset: 0000001C
+    - name: __imp__RegOpenKeyExA@20
+      processed: ''
+      offset: '00000020'
+    - name: \177ADVAPI32_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000024'
+    - name: __imp__GetClipBox@8
+      processed: ''
+      offset: '00000028'
+    - name: __imp__GetDCOrgEx@8
+      processed: ''
+      offset: 0000002C
+    - name: \177GDI32_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000030'
+    - name: __imp__IsBadWritePtr@8
+      processed: ''
+      offset: '00000034'
+    - name: __imp__IsBadReadPtr@8
+      processed: ''
+      offset: '00000038'
+    - name: __imp__GetModuleHandleA@4
+      processed: ''
+      offset: 0000003C
+    - name: __imp__WaitForSingleObject@8
+      processed: ''
+      offset: '00000040'
+    - name: __imp__InterlockedExchange@8
+      processed: ''
+      offset: '00000044'
+    - name: __imp__GetCurrentProcessId@0
+      processed: ''
+      offset: '00000048'
+    - name: __imp__GetCurrentThreadId@0
+      processed: ''
+      offset: 0000004C
+    - name: __imp__lstrcpyA@8
+      processed: ''
+      offset: '00000050'
+    - name: __imp__CloseHandle@4
+      processed: ''
+      offset: '00000054'
+    - name: __imp__GetModuleFileNameA@12
+      processed: ''
+      offset: '00000058'
+    - name: __imp__lstrlenA@4
+      processed: ''
+      offset: 0000005C
+    - name: __imp__MultiByteToWideChar@24
+      processed: ''
+      offset: '00000060'
+    - name: __imp__GetLastError@0
+      processed: ''
+      offset: '00000064'
+    - name: __imp__InterlockedIncrement@4
+      processed: ''
+      offset: '00000068'
+    - name: __imp__InterlockedDecrement@4
+      processed: ''
+      offset: 0000006C
+    - name: __imp__DisableThreadLibraryCalls@4
+      processed: ''
+      offset: '00000070'
+    - name: __imp__LoadLibraryA@4
+      processed: ''
+      offset: '00000074'
+    - name: __imp__ResetEvent@4
+      processed: ''
+      offset: '00000078'
+    - name: __imp__CreateEventA@16
+      processed: ''
+      offset: 0000007C
+    - name: __imp__FreeLibrary@4
+      processed: ''
+      offset: '00000080'
+    - name: __imp__GetProcAddress@8
+      processed: ''
+      offset: '00000084'
+    - name: __imp__SetErrorMode@4
+      processed: ''
+      offset: '00000088'
+    - name: __imp__CreateThread@24
+      processed: ''
+      offset: 0000008C
+    - name: __imp__InitializeCriticalSection@4
+      processed: ''
+      offset: '00000090'
+    - name: __imp__DeleteCriticalSection@4
+      processed: ''
+      offset: '00000094'
+    - name: __imp__EnterCriticalSection@4
+      processed: ''
+      offset: '00000098'
+    - name: __imp__LeaveCriticalSection@4
+      processed: ''
+      offset: 0000009C
+    - name: __imp__DebugBreak@0
+      processed: ''
+      offset: 000000A0
+    - name: __imp__GetProfileIntA@12
+      processed: ''
+      offset: 000000A4
+    - name: __imp__OutputDebugStringA@4
+      processed: ''
+      offset: 000000A8
+    - name: __imp__WriteFile@20
+      processed: ''
+      offset: 000000AC
+    - name: __imp__SetFilePointer@16
+      processed: ''
+      offset: 000000B0
+    - name: __imp__GetVersionExA@4
+      processed: ''
+      offset: 000000B4
+    - name: __imp__SetConsoleTitleA@4
+      processed: ''
+      offset: 000000B8
+    - name: __imp__AllocConsole@0
+      processed: ''
+      offset: 000000BC
+    - name: __imp__GetStdHandle@4
+      processed: ''
+      offset: 000000C0
+    - name: __imp__lstrcmpiA@8
+      processed: ''
+      offset: 000000C4
+    - name: __imp__FatalAppExitA@8
+      processed: ''
+      offset: 000000C8
+    - name: __imp__lstrcatA@8
+      processed: ''
+      offset: 000000CC
+    - name: __imp__SetEvent@4
+      processed: ''
+      offset: 000000D0
+    - name: __imp__CreateFileA@28
+      processed: ''
+      offset: 000000D4
+    - name: \177KERNEL32_NULL_THUNK_DATA
+      processed: ''
+      offset: 000000D8
+    - name: __imp__vsprintf
+      processed: ''
+      offset: 000000DC
+    - name: __imp_??3@YAXPAX@Z
+      processed: ''
+      offset: '000000E0'
+    - name: __imp__strrchr
+      processed: ''
+      offset: '000000E4'
+    - name: __imp_??2@YAPAXI@Z
+      processed: ''
+      offset: '000000E8'
+    - name: \177MSVCRT_NULL_THUNK_DATA
+      processed: ''
+      offset: 000000EC
+    - name: __imp__GetSystemMetrics@4
+      processed: ''
+      offset: 000000F0
+    - name: __imp__IntersectRect@12
+      processed: ''
+      offset: 000000F4
+    - name: __imp__OffsetRect@12
+      processed: ''
+      offset: 000000F8
+    - name: __imp__SetRect@20
+      processed: ''
+      offset: 000000FC
+    - name: __imp__ClientToScreen@8
+      processed: ''
+      offset: '00000100'
+    - name: __imp__SystemParametersInfoA@16
+      processed: ''
+      offset: '00000104'
+    - name: __imp__SetRectEmpty@4
+      processed: ''
+      offset: '00000108'
+    - name: __imp__wsprintfA
+      processed: ''
+      offset: 0000010C
+    - name: __imp__GetClientRect@8
+      processed: ''
+      offset: '00000110'
+    - name: __imp__MessageBoxA@16
+      processed: ''
+      offset: '00000114'
+    - name: \177USER32_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000118'
+    - name: __imp__timeGetTime@0
+      processed: ''
+      offset: 0000011C
+    - name: \177WINMM_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000120'
+    - name: __imp__CoTaskMemFree@4
+      processed: ''
+      offset: '00000124'
+    - name: __imp__CoTaskMemAlloc@4
+      processed: ''
+      offset: '00000128'
+    - name: __imp__CoCreateInstance@20
+      processed: ''
+      offset: 0000012C
+    - name: __imp__StringFromGUID2@12
+      processed: ''
+      offset: '00000130'
+    - name: __imp__CoUninitialize@0
+      processed: ''
+      offset: '00000134'
+    - name: __imp__CoFreeUnusedLibraries@0
+      processed: ''
+      offset: '00000138'
+    - name: __imp__CoInitialize@4
+      processed: ''
+      offset: 0000013C
+    - name: \177ole32_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000140'
+    - name: ??_C@_0BE@FLCK@EnumDisplayDevicesA?$AA@
+      processed: '"EnumDisplayDevicesA"'
+      offset: 000001C0
+    - name: ??_C@_0BA@LJCP@GetMonitorInfoA?$AA@
+      processed: '"GetMonitorInfoA"'
+      offset: 000001D4
+    - name: ??_C@_0BE@KPOG@EnumDisplayMonitors?$AA@
+      processed: '"EnumDisplayMonitors"'
+      offset: '000001E4'
+    - name: ??_C@_0BB@GJCM@MonitorFromPoint?$AA@
+      processed: '"MonitorFromPoint"'
+      offset: 000001F8
+    - name: ??_C@_0BA@GOHF@MonitorFromRect?$AA@
+      processed: '"MonitorFromRect"'
+      offset: 0000020C
+    - name: ??_C@_0BC@COEH@MonitorFromWindow?$AA@
+      processed: '"MonitorFromWindow"'
+      offset: 0000021C
+    - name: ??_C@_0BB@NDAA@GetSystemMetrics?$AA@
+      processed: '"GetSystemMetrics"'
+      offset: '00000230'
+    - name: ??_C@_06NEIN@USER32?$AA@
+      processed: '"USER32"'
+      offset: '00000244'
+    - name: ??_C@_07LGIJ@DISPLAY?$AA@
+      processed: '"DISPLAY"'
+      offset: 0000024C
+    - name: 
+        ??_C@_1CK@NMGK@?$AAV?$AAi?$AAd?$AAe?$AAo?$AAP?$AAo?$AAr?$AAt?$AA?5?$AAV?$AAB?$AAI?$AA?5?$AAO?$AAb?$AAj?$AAe?$AAc?$AAt@
+      processed: L"VideoPort VBI Object"
+      offset: '00000254'
+    - name: 
+        ??_C@_1CM@GNJL@?$AAV?$AAB?$AAI?$AA?5?$AAS?$AAu?$AAr?$AAf?$AAa?$AAc?$AAe?$AA?5?$AAA?$AAl?$AAl?$AAo?$AAc?$AAa?$AAt?$AAo@
+      processed: L"VBI Surface Allocato"
+      offset: '00000280'
+    - name: ??_C@_11A@?$AA?$AA@
+      processed: L""
+      offset: 000002AC
+    - name: ??_C@_19JEGO@?$AAN?$AAu?$AAl?$AAl?$AA?$AA@
+      processed: L"Null"
+      offset: 000002B0
+    - name: ??_C@_1O@JFCO@?$AAO?$AAu?$AAt?$AAp?$AAu?$AAt?$AA?$AA@
+      processed: L"Output"
+      offset: 000002BC
+    - name: ??_C@_1BG@DDDE@?$AAV?$AAB?$AAI?$AA?5?$AAN?$AAo?$AAt?$AAi?$AAf?$AAy?$AA?$AA@
+      processed: L"VBI Notify"
+      offset: 000002CC
+    - name: __GUID_00000000_0000_0000_0000_000000000000
+      processed: ''
+      offset: '000002E8'
+    - name: ??_C@_0BG@CLEM@VBI?5Surface?5Allocator?$AA@
+      processed: '"VBI Surface Allocator"'
+      offset: 000002F8
+    - name: ??_7CVBISurfFilter@@6BIAMovieSetup@@@
+      processed: "const CVBISurfFilter::`vftable'{for `IAMovieSetup'} unused suffix:
+        @"
+      offset: '00000310'
+    - name: ??_7CVBISurfFilter@@6BIBaseFilter@@@
+      processed: "const CVBISurfFilter::`vftable'{for `IBaseFilter'} unused suffix:
+        @"
+      offset: '00000328'
+    - name: ??_7CVBISurfFilter@@6BCUnknown@@@
+      processed: "const CVBISurfFilter::`vftable'{for `CUnknown'} unused suffix: @"
+      offset: '00000368'
+    - name: ??_C@_0CD@ENPD@Leaving?5CVBISurfFilter?3?3CreatePi@
+      processed: '"Leaving CVBISurfFilter::CreatePi"...'
+      offset: '00000394'
+    - name: ??_C@_0CK@NMIN@Unable?5to?5create?5the?5input?5pin?0?5@
+      processed: '"Unable to create the input pin, "...'
+      offset: 000003B8
+    - name: ??_C@_0CL@PMGK@Unable?5to?5create?5the?5output?5pin?0@
+      processed: '"Unable to create the output pin,"...'
+      offset: '000003E4'
+    - name: ??_C@_0BH@LPGJ@VBI?5Surface?5output?5pin?$AA@
+      processed: '"VBI Surface output pin"'
+      offset: '00000410'
+    - name: ??_C@_0CK@DCFM@m_pInput?9?$DOSetDirectDraw?5failed?0?5@
+      processed: '"m_pInput->SetDirectDraw failed, "...'
+      offset: '00000428'
+    - name: ??_C@_0BG@GAPO@VBI?5Surface?5input?5pin?$AA@
+      processed: '"VBI Surface input pin"'
+      offset: '00000454'
+    - name: ??_C@_0CE@PPKL@Entering?5CVBISurfFilter?3?3CreateP@
+      processed: '"Entering CVBISurfFilter::CreateP"...'
+      offset: 0000046C
+    - name: ??_C@_0CD@DKMK@Leaving?5CVBISurfFilter?3?3DeletePi@
+      processed: '"Leaving CVBISurfFilter::DeletePi"...'
+      offset: '00000490'
+    - name: ??_C@_0CE@IIJC@Entering?5CVBISurfFilter?3?3DeleteP@
+      processed: '"Entering CVBISurfFilter::DeleteP"...'
+      offset: 000004B4
+    - name: ??_C@_0CM@KBDO@QI?$CIIID_VPVBINotify?$CJ?5called?5on?5fi@
+      processed: '"QI(IID_VPVBINotify) called on fi"...'
+      offset: 000004D8
+    - name: ??_C@_0BI@NEJO@?$CCInvalid?5write?5pointer?$CC?$AA@
+      processed: '"\"Invalid write pointer\""'
+      offset: '00000504'
+    - name: ??_C@_0BH@OLCA@?$CCInvalid?5read?5pointer?$CC?$AA@
+      processed: '"\"Invalid read pointer\""'
+      offset: 0000051C
+    - name: ??_C@_0DE@GMKL@E?3?2ntc?2private?2amovie?2filters?4ks@
+      processed: '"E:\\ntc\\private\\amovie\\filters.ks"...'
+      offset: '00000534'
+    - name: ??_C@_0CM@IPBL@Bad?5Pin?5Requested?0?5n?5?$DN?5?$CFd?0?5No?4?5o@
+      processed: '"Bad Pin Requested, n = %d, No. o"...'
+      offset: '00000568'
+    - name: ??_C@_0BO@JDDK@Leaving?5CVBISurfFilter?3?3Pause?$AA@
+      processed: '"Leaving CVBISurfFilter::Pause"'
+      offset: '00000594'
+    - name: ??_C@_0CG@IDJP@CVBISurfFilter?3?3Pause?5?9?5not?5conn@
+      processed: '"CVBISurfFilter::Pause - not conn"...'
+      offset: 000005B4
+    - name: ??_C@_0CH@NGIG@m_pInput?9?$DORunToPause?5failed?0?5hr?5@
+      processed: '"m_pInput->RunToPause failed, hr "...'
+      offset: 000005DC
+    - name: ??_C@_0BP@GFCB@Entering?5CVBISurfFilter?3?3Pause?$AA@
+      processed: '"Entering CVBISurfFilter::Pause"'
+      offset: '00000604'
+    - name: ??_C@_0CH@BDDL@Leaving?5CVBISurfFilter?3?3InitDire@
+      processed: '"Leaving CVBISurfFilter::InitDire"...'
+      offset: '00000624'
+    - name: ??_C@_0DE@FEFJ@Function?5InitDirectDraw?0?5SetCoop@
+      processed: '"Function InitDirectDraw, SetCoop"...'
+      offset: 0000064C
+    - name: ??_C@_0CF@IGBL@Device?5does?5not?5support?5a?5Video?5@
+      processed: '"Device does not support a Video "...'
+      offset: '00000680'
+    - name: ??_C@_0CI@EOCH@Function?5InitDirectDraw?0?5GetCaps@
+      processed: '"Function InitDirectDraw, GetCaps"...'
+      offset: 000006A8
+    - name: ??_C@_0CO@DMMK@Function?5InitDirectDraw?0?5GetDire@
+      processed: '"Function InitDirectDraw, GetDire"...'
+      offset: 000006D0
+    - name: ??_C@_0CP@CPPO@Function?5InitDirectDraw?0?5LoadDir@
+      processed: '"Function InitDirectDraw, LoadDir"...'
+      offset: '00000700'
+    - name: ??_C@_0CC@IODK@Establishing?5current?5monitor?5?$DN?5?$CF@
+      processed: '"Establishing current monitor = %"...'
+      offset: '00000730'
+    - name: ??_C@_0CI@CIF@Entering?5CVBISurfFilter?3?3InitDir@
+      processed: '"Entering CVBISurfFilter::InitDir"...'
+      offset: '00000754'
+    - name: ??_C@_0CK@GAEG@Leaving?5CVBISurfFilter?3?3ReleaseD@
+      processed: '"Leaving CVBISurfFilter::ReleaseD"...'
+      offset: 0000077C
+    - name: ??_C@_0CL@HEJN@Entering?5CVBISurfFilter?3?3Release@
+      processed: '"Entering CVBISurfFilter::Release"...'
+      offset: 000007A8
+    - name: ??_C@_0CG@COA@Leaving?5CVBISurfInputPin?3?3Constr@
+      processed: '"Leaving CVBISurfInputPin::Constr"...'
+      offset: 000007D4
+    - name: ??_C@_0DB@GEND@m_pIVPUnknown?9?$DOSetObjectLock?$CI?$CJ?5f@
+      processed: '"m_pIVPUnknown->SetObjectLock() f"...'
+      offset: 000007FC
+    - name: ??_C@_0EC@HDMB@m_pIVPUnknown?9?$DOQueryInterface?$CIII@
+      processed: '"m_pIVPUnknown->QueryInterface(II"...'
+      offset: '00000830'
+    - name: ??_C@_0EC@DEPK@m_pIVPUnknown?9?$DOQueryInterface?$CIII@
+      processed: '"m_pIVPUnknown->QueryInterface(II"...'
+      offset: '00000874'
+    - name: ??_C@_0DG@JBCD@CoCreateInstance?$CICLSID_VPVBIObje@
+      processed: '"CoCreateInstance(CLSID_VPVBIObje"...'
+      offset: 000008B8
+    - name: ??_7CVBISurfInputPin@@6BIVPVBINotify@@@
+      processed: "const CVBISurfInputPin::`vftable'{for `IVPVBINotify'} unused suffix:
+        @"
+      offset: 000008F0
+    - name: ??_7CVBISurfInputPin@@6BCBaseInputPin@@@
+      processed: "const CVBISurfInputPin::`vftable'{for `CBaseInputPin'} unused suffix:
+        @"
+      offset: '00000900'
+    - name: ??_7CVBISurfInputPin@@6BIQualityControl@@@
+      processed: "const CVBISurfInputPin::`vftable'{for `IQualityControl'} unused
+        suffix: @"
+      offset: '00000928'
+    - name: ??_7CVBISurfInputPin@@6BIPin@@@
+      processed: "const CVBISurfInputPin::`vftable'{for `IPin'} unused suffix: @"
+      offset: '00000940'
+    - name: ??_7CVBISurfInputPin@@6BCUnknown@@@
+      processed: "const CVBISurfInputPin::`vftable'{for `CUnknown'} unused suffix:
+        @"
+      offset: '00000988'
+    - name: ??_C@_0CH@LMMI@Entering?5CVBISurfInputPin?3?3Const@
+      processed: '"Entering CVBISurfInputPin::Const"...'
+      offset: 000009C4
+    - name: ??_C@_0CF@NENA@Leaving?5CVBISurfInputPin?3?3Destru@
+      processed: '"Leaving CVBISurfInputPin::Destru"...'
+      offset: 000009EC
+    - name: ??_C@_0CG@PMBA@Entering?5CVBISurfInputPin?3?3Destr@
+      processed: '"Entering CVBISurfInputPin::Destr"...'
+      offset: 00000A14
+    - name: ??_C@_0DN@OBBC@CBaseInputPin?3?3NonDelegatingQuer@
+      processed: '"CBaseInputPin::NonDelegatingQuer"...'
+      offset: 00000A3C
+    - name: ??_C@_0EA@MGNO@m_pIVPUnknown?9?$DOQueryInterface?$CIIK@
+      processed: '"m_pIVPUnknown->QueryInterface(IK"...'
+      offset: 00000A7C
+    - name: ??_C@_0DI@IGBL@m_pIVPUnknown?9?$DOQueryInterface?$CIIK@
+      processed: '"m_pIVPUnknown->QueryInterface(IK"...'
+      offset: 00000ABC
+    - name: ??_C@_0O@DIAM@m_pIVPUnknown?$AA@
+      processed: '"m_pIVPUnknown"'
+      offset: 00000AF4
+    - name: ??_C@_0DD@EMOM@E?3?2ntc?2private?2amovie?2filters?4ks@
+      processed: '"E:\\ntc\\private\\amovie\\filters.ks"...'
+      offset: 00000B04
+    - name: ??_C@_0CO@IEDA@GetInterface?$CIIVPVBINotify?$CK?$CJ?5fail@
+      processed: '"GetInterface(IVPVBINotify*) fail"...'
+      offset: 00000B38
+    - name: ??_C@_0CJ@JLPM@Leaving?5CVBISurfInputPin?3?3CheckM@
+      processed: '"Leaving CVBISurfInputPin::CheckM"...'
+      offset: 00000B68
+    - name: ??_C@_0CK@EAGL@Entering?5CVBISurfInputPin?3?3Check@
+      processed: '"Entering CVBISurfInputPin::Check"...'
+      offset: 00000B94
+    - name: ??_C@_0CH@EKMF@Leaving?5CVBISurfInputPin?3?3GetMed@
+      processed: '"Leaving CVBISurfInputPin::GetMed"...'
+      offset: 00000BC0
+    - name: ??_C@_0CI@FLHL@Entering?5CVBISurfInputPin?3?3GetMe@
+      processed: '"Entering CVBISurfInputPin::GetMe"...'
+      offset: 00000BE8
+    - name: ??_C@_0CH@CDMH@Leaving?5CVBISurfInputPin?3?3SetMed@
+      processed: '"Leaving CVBISurfInputPin::SetMed"...'
+      offset: 00000C10
+    - name: ??_C@_0CO@PANE@CBaseInputPin?3?3SetMediaType?5fail@
+      processed: '"CBaseInputPin::SetMediaType fail"...'
+      offset: 00000C38
+    - name: ??_C@_0CB@NCIF@CheckMediaType?5failed?0?5hr?5?$DN?50x?$CFx@
+      processed: '"CheckMediaType failed, hr = 0x%x"...'
+      offset: 00000C68
+    - name: ??_C@_0CI@DCHJ@Entering?5CVBISurfInputPin?3?3SetMe@
+      processed: '"Entering CVBISurfInputPin::SetMe"...'
+      offset: 00000C8C
+    - name: ??_C@_0CH@IOAP@Leaving?5CVBISurfInputPin?3?3CheckC@
+      processed: '"Leaving CVBISurfInputPin::CheckC"...'
+      offset: 00000CB4
+    - name: ??_C@_0CO@HNOK@CBaseInputPin?3?3CheckConnect?5fail@
+      processed: '"CBaseInputPin::CheckConnect fail"...'
+      offset: 00000CDC
+    - name: ??_C@_0CN@BGKP@m_pIVPObject?9?$DOCheckConnect?5faile@
+      processed: '"m_pIVPObject->CheckConnect faile"...'
+      offset: 00000D0C
+    - name: ??_C@_0CI@JPLB@Entering?5CVBISurfInputPin?3?3Check@
+      processed: '"Entering CVBISurfInputPin::Check"...'
+      offset: 00000D3C
+    - name: ??_C@_0CK@CAOD@Leaving?5CVBISurfInputPin?3?3Comple@
+      processed: '"Leaving CVBISurfInputPin::Comple"...'
+      offset: 00000D64
+    - name: ??_C@_0DB@OKMB@CBaseInputPin?3?3CompleteConnect?5f@
+      processed: '"CBaseInputPin::CompleteConnect f"...'
+      offset: 00000D90
+    - name: ??_C@_0DA@IBPL@m_pIVPObject?9?$DOCompleteConnect?5fa@
+      processed: '"m_pIVPObject->CompleteConnect fa"...'
+      offset: 00000DC4
+    - name: ??_C@_0CL@DEDI@Entering?5CVBISurfInputPin?3?3Compl@
+      processed: '"Entering CVBISurfInputPin::Compl"...'
+      offset: 00000DF4
+    - name: ??_C@_0CH@EOOI@Leaving?5CVBISurfInputPin?3?3BreakC@
+      processed: '"Leaving CVBISurfInputPin::BreakC"...'
+      offset: '00000E20'
+    - name: ??_C@_0CO@KNGP@CBaseInputPin?3?3BreakConnect?5fail@
+      processed: '"CBaseInputPin::BreakConnect fail"...'
+      offset: '00000E48'
+    - name: ??_C@_0CN@MGCK@m_pIVPObject?9?$DOBreakConnect?5faile@
+      processed: '"m_pIVPObject->BreakConnect faile"...'
+      offset: '00000E78'
+    - name: ??_C@_0N@OIEH@m_pIVPObject?$AA@
+      processed: '"m_pIVPObject"'
+      offset: 00000EA8
+    - name: ??_C@_0CI@FPFG@Entering?5CVBISurfInputPin?3?3Break@
+      processed: '"Entering CVBISurfInputPin::Break"...'
+      offset: 00000EB8
+    - name: ??_C@_0CB@LGEH@Leaving?5CVBISurfInputPin?3?3Active@
+      processed: '"Leaving CVBISurfInputPin::Active"...'
+      offset: 00000EE0
+    - name: ??_C@_0CI@BLFP@CBaseInputPin?3?3Active?5failed?0?5hr@
+      processed: '"CBaseInputPin::Active failed, hr"...'
+      offset: 00000F04
+    - name: ??_C@_0CH@KHCN@m_pIVPObject?9?$DOActive?5failed?0?5hr?5@
+      processed: '"m_pIVPObject->Active failed, hr "...'
+      offset: 00000F2C
+    - name: ??_C@_0CC@ONPG@Entering?5CVBISurfInputPin?3?3Activ@
+      processed: '"Entering CVBISurfInputPin::Activ"...'
+      offset: 00000F54
+    - name: ??_C@_0CD@DKPM@Leaving?5CVBISurfInputPin?3?3Inacti@
+      processed: '"Leaving CVBISurfInputPin::Inacti"...'
+      offset: 00000F78
+    - name: ??_C@_0CK@LNKA@CBaseInputPin?3?3Inactive?5failed?0?5@
+      processed: '"CBaseInputPin::Inactive failed, "...'
+      offset: 00000F9C
+    - name: ??_C@_0CJ@DNME@m_pIVPObject?9?$DOInactive?5failed?0?5h@
+      processed: '"m_pIVPObject->Inactive failed, h"...'
+      offset: 00000FC8
+    - name: ??_C@_0CE@IIKE@Entering?5CVBISurfInputPin?3?3Inact@
+      processed: '"Entering CVBISurfInputPin::Inact"...'
+      offset: 00000FF4
+    - name: ??_C@_0BO@HGOK@Leaving?5CVBISurfInputPin?3?3Run?$AA@
+      processed: '"Leaving CVBISurfInputPin::Run"'
+      offset: '00001018'
+    - name: ??_C@_0CF@MKIL@CBaseInputPin?3?3Run?5failed?0?5hr?5?$DN?5@
+      processed: '"CBaseInputPin::Run failed, hr = "...'
+      offset: '00001038'
+    - name: ??_C@_0CG@PFLP@m_pIVPObject?9?$DORun?$CI?$CJ?5failed?0?5hr?5?$DN@
+      processed: '"m_pIVPObject->Run() failed, hr ="...'
+      offset: '00001060'
+    - name: ??_C@_0BP@IAPB@Entering?5CVBISurfInputPin?3?3Run?$AA@
+      processed: '"Entering CVBISurfInputPin::Run"'
+      offset: '00001088'
+    - name: ??_C@_0CF@CEAP@Leaving?5CVBISurfInputPin?3?3RunToP@
+      processed: '"Leaving CVBISurfInputPin::RunToP"...'
+      offset: 000010A8
+    - name: ??_C@_0CN@BMPF@m_pIVPObject?9?$DORunToPause?$CI?$CJ?5faile@
+      processed: '"m_pIVPObject->RunToPause() faile"...'
+      offset: 000010D0
+    - name: ??_C@_0CG@MMP@Entering?5CVBISurfInputPin?3?3RunTo@
+      processed: '"Entering CVBISurfInputPin::RunTo"...'
+      offset: '00001100'
+    - name: ??_C@_0CF@LHKA@Leaving?5CVBISurfInputPin?3?3BeginF@
+      processed: '"Leaving CVBISurfInputPin::BeginF"...'
+      offset: '00001128'
+    - name: ??_C@_0CO@BMHL@CBaseInputPin?3?3BeginFlush?$CI?$CJ?5fail@
+      processed: '"CBaseInputPin::BeginFlush() fail"...'
+      offset: '00001150'
+    - name: ??_C@_0CG@JPGA@Entering?5CVBISurfInputPin?3?3Begin@
+      processed: '"Entering CVBISurfInputPin::Begin"...'
+      offset: '00001180'
+    - name: ??_C@_0CD@CCEP@Leaving?5CVBISurfInputPin?3?3EndFlu@
+      processed: '"Leaving CVBISurfInputPin::EndFlu"...'
+      offset: 000011A8
+    - name: ??_C@_0CM@CMFF@CBaseInputPin?3?3EndFlush?$CI?$CJ?5failed@
+      processed: '"CBaseInputPin::EndFlush() failed"...'
+      offset: 000011CC
+    - name: ??_C@_0CE@JABH@Entering?5CVBISurfInputPin?3?3EndFl@
+      processed: '"Entering CVBISurfInputPin::EndFl"...'
+      offset: 000011F8
+    - name: ??_C@_0CC@DGOG@Leaving?5CVBISurfInputPin?3?3Receiv@
+      processed: '"Leaving CVBISurfInputPin::Receiv"...'
+      offset: 0000121C
+    - name: ??_C@_0CD@GOLN@Entering?5CVBISurfInputPin?3?3Recei@
+      processed: '"Entering CVBISurfInputPin::Recei"...'
+      offset: '00001240'
+    - name: ??_C@_0CG@NOFP@Leaving?5CVBISurfInputPin?3?3EndOfS@
+      processed: '"Leaving CVBISurfInputPin::EndOfS"...'
+      offset: '00001264'
+    - name: ??_C@_0CP@DEB@CBaseInputPin?3?3EndOfStream?$CI?$CJ?5fai@
+      processed: '"CBaseInputPin::EndOfStream() fai"...'
+      offset: 0000128C
+    - name: ??_C@_0CD@PLDD@CheckStreaming?$CI?$CJ?5failed?0?5hr?5?$DN?50x@
+      processed: '"CheckStreaming() failed, hr = 0x"...'
+      offset: 000012BC
+    - name: ??_C@_0CH@GAHH@Entering?5CVBISurfInputPin?3?3EndOf@
+      processed: '"Entering CVBISurfInputPin::EndOf"...'
+      offset: '000012E0'
+    - name: ??_C@_0CH@JGGE@Leaving?5CVBISurfInputPin?3?3GetAll@
+      processed: '"Leaving CVBISurfInputPin::GetAll"...'
+      offset: '00001308'
+    - name: ??_C@_0BE@PBHH@ppAllocator?5is?5NULL?$AA@
+      processed: '"ppAllocator is NULL"'
+      offset: '00001330'
+    - name: ??_C@_0CI@IHNK@Entering?5CVBISurfInputPin?3?3GetAl@
+      processed: '"Entering CVBISurfInputPin::GetAl"...'
+      offset: '00001344'
+    - name: ??_C@_0CK@IDFE@Leaving?5CVBISurfInputPin?3?3Notify@
+      processed: '"Leaving CVBISurfInputPin::Notify"...'
+      offset: 0000136C
+    - name: ??_C@_0CL@JHIP@Entering?5CVBISurfInputPin?3?3Notif@
+      processed: '"Entering CVBISurfInputPin::Notif"...'
+      offset: '00001398'
+    - name: ??_C@_0CI@OOFG@Leaving?5CVBISurfInputPin?3?3SetDir@
+      processed: '"Leaving CVBISurfInputPin::SetDir"...'
+      offset: 000013C4
+    - name: ??_C@_0CO@LEGD@m_pIVPObject?9?$DOSetDirectDraw?5fail@
+      processed: '"m_pIVPObject->SetDirectDraw fail"...'
+      offset: 000013EC
+    - name: ??_C@_0BE@MNJC@pDirectDraw?5is?5NULL?$AA@
+      processed: '"pDirectDraw is NULL"'
+      offset: 0000141C
+    - name: ??_C@_0CJ@HJEH@Entering?5CVBISurfInputPin?3?3SetDi@
+      processed: '"Entering CVBISurfInputPin::SetDi"...'
+      offset: '00001430'
+    - name: ??_C@_0DC@HEO@Leaving?5CVBISurfInputPin?3?3Renego@
+      processed: '"Leaving CVBISurfInputPin::Renego"...'
+      offset: 0000145C
+    - name: ??_C@_0DK@DILP@m_pIVPNotify?9?$DORenegotiateVPParam@
+      processed: '"m_pIVPNotify->RenegotiateVPParam"...'
+      offset: '00001490'
+    - name: ??_C@_0N@DMLM@m_pIVPNotify?$AA@
+      processed: '"m_pIVPNotify"'
+      offset: 000014CC
+    - name: ??_C@_0DD@PIJH@Entering?5CVBISurfInputPin?3?3Reneg@
+      processed: '"Entering CVBISurfInputPin::Reneg"...'
+      offset: 000014DC
+    - name: ??_C@_0CH@HPCE@Leaving?5CVBISurfOutputPin?3?3Const@
+      processed: '"Leaving CVBISurfOutputPin::Const"...'
+      offset: '00001510'
+    - name: ??_7CVBISurfOutputPin@@6BIQualityControl@@@
+      processed: "const CVBISurfOutputPin::`vftable'{for `IQualityControl'} unused
+        suffix: @"
+      offset: '00001538'
+    - name: ??_7CVBISurfOutputPin@@6BIPin@@@
+      processed: "const CVBISurfOutputPin::`vftable'{for `IPin'} unused suffix: @"
+      offset: '00001550'
+    - name: ??_7CVBISurfOutputPin@@6BCUnknown@@@
+      processed: "const CVBISurfOutputPin::`vftable'{for `CUnknown'} unused suffix:
+        @"
+      offset: '00001598'
+    - name: ??_C@_0CI@GOJK@Entering?5CVBISurfOutputPin?3?3Cons@
+      processed: '"Entering CVBISurfOutputPin::Cons"...'
+      offset: 000015D0
+    - name: ??_C@_0CG@BAPO@Leaving?5CVBISurfOutputPin?3?3Destr@
+      processed: '"Leaving CVBISurfOutputPin::Destr"...'
+      offset: 000015F8
+    - name: ??_C@_0CH@KONG@Entering?5CVBISurfOutputPin?3?3Dest@
+      processed: '"Entering CVBISurfOutputPin::Dest"...'
+      offset: '00001620'
+    - name: ??_C@_0CK@GBLD@Leaving?5CVBISurfOutputPin?3?3Check@
+      processed: '"Leaving CVBISurfOutputPin::Check"...'
+      offset: '00001648'
+    - name: ??_C@_0CL@HFGI@Entering?5CVBISurfOutputPin?3?3Chec@
+      processed: '"Entering CVBISurfOutputPin::Chec"...'
+      offset: '00001674'
+    - name: ??_C@_0CI@NPLI@Leaving?5CVBISurfOutputPin?3?3GetMe@
+      processed: '"Leaving CVBISurfOutputPin::GetMe"...'
+      offset: 000016A0
+    - name: ??_C@_0CJ@EIKJ@Entering?5CVBISurfOutputPin?3?3GetM@
+      processed: '"Entering CVBISurfOutputPin::GetM"...'
+      offset: 000016C8
+    - name: ??_C@_0CI@LGLK@Leaving?5CVBISurfOutputPin?3?3SetMe@
+      processed: '"Leaving CVBISurfOutputPin::SetMe"...'
+      offset: 000016F4
+    - name: ??_C@_0CJ@CBKL@Entering?5CVBISurfOutputPin?3?3SetM@
+      processed: '"Entering CVBISurfOutputPin::SetM"...'
+      offset: 0000171C
+    - name: ??_7CSurfaceWatcher@@6B@
+      processed: const CSurfaceWatcher::`vftable'
+      offset: '00001748'
+    - name: ??_C@_0BA@EMFH@pParent?5?$CB?$DN?5NULL?$AA@
+      processed: '"pParent != NULL"'
+      offset: '00001750'
+    - name: ??_C@_0DE@GNPM@E?3?2ntc?2private?2amovie?2filters?4ks@
+      processed: '"E:\\ntc\\private\\amovie\\filters.ks"...'
+      offset: '00001760'
+    - name: ??_C@_0CI@EPNC@CSurfaceWatcher?3?3ThreadProc?5?9?5CM@
+      processed: '"CSurfaceWatcher::ThreadProc - CM"...'
+      offset: '00001794'
+    - name: ??_C@_0DF@HMKN@CSurfaceWatcher?3?3ThreadProc?5?9?5un@
+      processed: '"CSurfaceWatcher::ThreadProc - un"...'
+      offset: 000017BC
+    - name: ??_C@_09EGKB@m_pParent?$AA@
+      processed: '"m_pParent"'
+      offset: 000017F4
+    - name: ??_C@_0CO@CAKJ@CSurfaceWatcher?3?3ThreadProc?5?9?5ba@
+      processed: '"CSurfaceWatcher::ThreadProc - ba"...'
+      offset: '00001800'
+    - name: ??_C@_0CB@HNCA@m_hEvent?5?$CB?$DN?5INVALID_HANDLE_VALUE@
+      processed: '"m_hEvent != INVALID_HANDLE_VALUE"...'
+      offset: '00001830'
+    - name: ??_C@_0CB@NBDH@m_hEvent?5?$DN?$DN?5INVALID_HANDLE_VALUE@
+      processed: '"m_hEvent == INVALID_HANDLE_VALUE"...'
+      offset: '00001854'
+    - name: ??_C@_0CH@FBBL@CSurfaceWatcher?3?3ThreadProc?5?9?5st@
+      processed: '"CSurfaceWatcher::ThreadProc - st"...'
+      offset: '00001878'
+    - name: ??_C@_0CF@ELDG@Leaving?5CAMVideoPort?3?3CreateInst@
+      processed: '"Leaving CAMVideoPort::CreateInst"...'
+      offset: 000018A0
+    - name: ??_C@_0CG@GDPG@Entering?5CAMVideoPort?3?3CreateIns@
+      processed: '"Entering CAMVideoPort::CreateIns"...'
+      offset: 000018C8
+    - name: ??_C@_0CC@OLAJ@Leaving?5CAMVideoPort?3?3Constructo@
+      processed: '"Leaving CAMVideoPort::Constructo"...'
+      offset: 000018F0
+    - name: ??_7CAMVideoPort@@6BIKsPin@@@
+      processed: "const CAMVideoPort::`vftable'{for `IKsPin'} unused suffix: @"
+      offset: '00001918'
+    - name: ??_7CAMVideoPort@@6BIKsPropertySet@@@
+      processed: "const CAMVideoPort::`vftable'{for `IKsPropertySet'} unused suffix:
+        @"
+      offset: '00001958'
+    - name: ??_7CAMVideoPort@@6BIVPVBIObject@@@
+      processed: "const CAMVideoPort::`vftable'{for `IVPVBIObject'} unused suffix:
+        @"
+      offset: '00001970'
+    - name: ??_7CAMVideoPort@@6BIVPVBINotify@@@
+      processed: "const CAMVideoPort::`vftable'{for `IVPVBINotify'} unused suffix:
+        @"
+      offset: 000019B0
+    - name: ??_7CAMVideoPort@@6BCUnknown@@@
+      processed: "const CAMVideoPort::`vftable'{for `CUnknown'} unused suffix: @"
+      offset: 000019C0
+    - name: ??_C@_0CD@LDFC@Entering?5CAMVideoPort?3?3Construct@
+      processed: '"Entering CAMVideoPort::Construct"...'
+      offset: 000019D0
+    - name: ??_C@_09PDNJ@VP?5Object?$AA@
+      processed: '"VP Object"'
+      offset: 000019F4
+    - name: ??_C@_0CB@DNCI@Leaving?5CAMVideoPort?3?3Destructor@
+      processed: '"Leaving CAMVideoPort::Destructor"...'
+      offset: 00001A00
+    - name: ??_C@_0CP@IFLH@Destructor?5called?5without?5callin@
+      processed: '"Destructor called without callin"...'
+      offset: 00001A24
+    - name: ??_C@_0CC@GGJJ@Entering?5CAMVideoPort?3?3Destructo@
+      processed: '"Entering CAMVideoPort::Destructo"...'
+      offset: 00001A54
+    - name: ??_C@_0DC@GMNC@Leaving?5CAMVideoPort?3?3NonDelegat@
+      processed: '"Leaving CAMVideoPort::NonDelegat"...'
+      offset: 00001A78
+    - name: ??_C@_0DI@DLND@CUnknown?3?3NonDelegatingQueryInte@
+      processed: '"CUnknown::NonDelegatingQueryInte"...'
+      offset: 00001AAC
+    - name: ??_C@_0DB@KLCH@CAMVideoPort?3?3NonDelegatingQuery@
+      processed: '"CAMVideoPort::NonDelegatingQuery"...'
+      offset: 00001AE4
+    - name: ??_C@_0DA@NJFG@GetInterface?$CIIKsPropertySet?$CK?$CJ?5fa@
+      processed: '"GetInterface(IKsPropertySet*) fa"...'
+      offset: 00001B18
+    - name: ??_C@_0DO@BPEI@CAMVideoPort?3?3NonDelegatingQuery@
+      processed: '"CAMVideoPort::NonDelegatingQuery"...'
+      offset: 00001B48
+    - name: ??_C@_0CI@OBKF@GetInterface?$CIIKsPin?$CK?$CJ?5failed?0?5hr@
+      processed: '"GetInterface(IKsPin*) failed, hr"...'
+      offset: 00001B88
+    - name: ??_C@_0DG@EJKN@CAMVideoPort?3?3NonDelegatingQuery@
+      processed: '"CAMVideoPort::NonDelegatingQuery"...'
+      offset: 00001BB0
+    - name: ??_C@_0CO@EMHH@GetInterface?$CIIVPVBIObject?$CK?$CJ?5fail@
+      processed: '"GetInterface(IVPVBIObject*) fail"...'
+      offset: 00001BE8
+    - name: ??_C@_0DM@NIBG@CAMVideoPort?3?3NonDelegatingQuery@
+      processed: '"CAMVideoPort::NonDelegatingQuery"...'
+      offset: 00001C18
+    - name: ??_C@_0DM@HMC@CAMVideoPort?3?3NonDelegatingQuery@
+      processed: '"CAMVideoPort::NonDelegatingQuery"...'
+      offset: 00001C54
+    - name: ??_C@_0CE@HEMO@Leaving?5CAMVideoPort?3?3SetDirectD@
+      processed: '"Leaving CAMVideoPort::SetDirectD"...'
+      offset: 00001C90
+    - name: ??_C@_0CF@LEHM@Entering?5CAMVideoPort?3?3SetDirect@
+      processed: '"Entering CAMVideoPort::SetDirect"...'
+      offset: 00001CB4
+    - name: ??_C@_0CE@PGFM@Leaving?5CAMVideoPort?3?3SetObjectL@
+      processed: '"Leaving CAMVideoPort::SetObjectL"...'
+      offset: 00001CDC
+    - name: ??_C@_0BF@CDGI@pMainObjLock?5is?5NULL?$AA@
+      processed: '"pMainObjLock is NULL"'
+      offset: 00001D00
+    - name: ??_C@_0CF@DGOO@Entering?5CAMVideoPort?3?3SetObject@
+      processed: '"Entering CAMVideoPort::SetObject"...'
+      offset: 00001D18
+    - name: ??_C@_0CF@OFGG@Leaving?5CAMVideoPort?3?3CheckMedia@
+      processed: '"Leaving CAMVideoPort::CheckMedia"...'
+      offset: 00001D40
+    - name: ??_C@_0CG@MNKG@Entering?5CAMVideoPort?3?3CheckMedi@
+      processed: '"Entering CAMVideoPort::CheckMedi"...'
+      offset: 00001D68
+    - name: ??_C@_0CE@GAHE@Entering?5CAMVideoPort?3?3GetMediaT@
+      processed: '"Entering CAMVideoPort::GetMediaT"...'
+      offset: 00001D90
+    - name: ??_C@_0CD@BGOG@Leaving?5CAMVideoPort?3?3CheckConne@
+      processed: '"Leaving CAMVideoPort::CheckConne"...'
+      offset: 00001DB4
+    - name: ??_C@_0M@CKJH@pMediumList?$AA@
+      processed: '"pMediumList"'
+      offset: 00001DD8
+    - name: ??_C@_07MGAM@pIKsPin?$AA@
+      processed: '"pIKsPin"'
+      offset: 00001DE4
+    - name: ??_C@_0DD@IBMG@E?3?2ntc?2private?2amovie?2filters?4ks@
+      processed: '"E:\\ntc\\private\\amovie\\filters.ks"...'
+      offset: 00001DEC
+    - name: ??_C@_0CE@KELO@Entering?5CAMVideoPort?3?3CheckConn@
+      processed: '"Entering CAMVideoPort::CheckConn"...'
+      offset: '00001E20'
+    - name: ??_C@_0DB@EKHH@Leaving?5CAMVideoPort?3?3CompleteCo@
+      processed: '"Leaving CAMVideoPort::CompleteCo"...'
+      offset: '00001E44'
+    - name: ??_C@_0CB@MJJ@SetupVideoPort?5failed?0?5hr?5?$DN?50x?$CFx@
+      processed: '"SetupVideoPort failed, hr = 0x%x"...'
+      offset: '00001E78'
+    - name: ??_C@_0CH@LJOE@GetDecoderVPDataInfo?5failed?0?5hr?5@
+      processed: '"GetDecoderVPDataInfo failed, hr "...'
+      offset: 00001E9C
+    - name: ??_C@_0DA@BOGD@NegotiateConnectionParameters?5fa@
+      processed: '"NegotiateConnectionParameters fa"...'
+      offset: 00001EC4
+    - name: ??_C@_0EL@OAAJ@m_pDirectDraw?9?$DOQueryInterface?$CIII@
+      processed: '"m_pDirectDraw->QueryInterface(II"...'
+      offset: 00001EF4
+    - name: ??_C@_0BJ@IAIB@m_pDDVPContainer?5?$DN?$DN?5NULL?$AA@
+      processed: '"m_pDDVPContainer == NULL"'
+      offset: 00001F40
+    - name: ??_C@_0DB@HBMN@m_pddVPOutputVideoFormat?5?$DN?$DN?5NULL@
+      processed: '"m_pddVPOutputVideoFormat == NULL"...'
+      offset: 00001F5C
+    - name: ??_C@_0DA@HLBB@m_pddVPInputVideoFormat?5?$DN?$DN?5NULL?5@
+      processed: '"m_pddVPInputVideoFormat == NULL "...'
+      offset: 00001F90
+    - name: ??_C@_0N@JPOH@m_pIVPConfig?$AA@
+      processed: '"m_pIVPConfig"'
+      offset: 00001FC0
+    - name: ??_C@_0DD@HEKB@QueryInterface?$CIIID_IVPVBIConfig?$CJ@
+      processed: '"QueryInterface(IID_IVPVBIConfig)"...'
+      offset: 00001FD0
+    - name: ??_C@_0BF@JGAA@m_pIVPConfig?5?$DN?$DN?5NULL?$AA@
+      processed: '"m_pIVPConfig == NULL"'
+      offset: '00002004'
+    - name: ??_C@_0BG@JCCP@m_pDirectDraw?5is?5NULL?$AA@
+      processed: '"m_pDirectDraw is NULL"'
+      offset: 0000201C
+    - name: ??_C@_0O@CENG@?$CBm_bConnected?$AA@
+      processed: '"!m_bConnected"'
+      offset: '00002034'
+    - name: ??_C@_0CH@KHLF@Entering?5CAMVideoPort?3?3CompleteC@
+      processed: '"Entering CAMVideoPort::CompleteC"...'
+      offset: '00002044'
+    - name: ??_C@_0CO@CEIO@Leaving?5CAMVideoPort?3?3BreakConne@
+      processed: '"Leaving CAMVideoPort::BreakConne"...'
+      offset: 0000206C
+    - name: ??_C@_0CE@EEKE@TearDownVideoPort?5failed?0?5hr?5?$DN?50@
+      processed: '"TearDownVideoPort failed, hr = 0"...'
+      offset: 0000209C
+    - name: ??_C@_0CM@KPOP@BreakConnect?5called?5while?5videop@
+      processed: '"BreakConnect called while videop"...'
+      offset: 000020C0
+    - name: ??_C@_0BC@CPBN@?$CBm_bFilterRunning?$AA@
+      processed: '"!m_bFilterRunning"'
+      offset: 000020EC
+    - name: ??_C@_0N@FIAG@m_bConnected?$AA@
+      processed: '"m_bConnected"'
+      offset: '00002100'
+    - name: ??_C@_0CE@GEFJ@Entering?5CAMVideoPort?3?3BreakConn@
+      processed: '"Entering CAMVideoPort::BreakConn"...'
+      offset: '00002110'
+    - name: ??_C@_0CI@LBHO@Leaving?5CAMVideoPort?3?3Active?0?5hr@
+      processed: '"Leaving CAMVideoPort::Active, hr"...'
+      offset: '00002134'
+    - name: ??_C@_0CF@NACK@CAMVideoPort?3?3Active?5?9?5not?5conne@
+      processed: '"CAMVideoPort::Active - not conne"...'
+      offset: 0000215C
+    - name: ??_C@_0BO@HHKM@m_VPState?5?$CB?$DN?5VP_STATE_RUNNING?$AA@
+      processed: '"m_VPState != VP_STATE_RUNNING"'
+      offset: '00002184'
+    - name: ??_C@_0BO@HEHG@Entering?5CAMVideoPort?3?3Active?$AA@
+      processed: '"Entering CAMVideoPort::Active"'
+      offset: 000021A4
+    - name: ??_C@_0CK@CEGD@Leaving?5CAMVideoPort?3?3Inactive?0?5@
+      processed: '"Leaving CAMVideoPort::Inactive, "...'
+      offset: 000021C4
+    - name: ??_C@_0BM@CEMH@StopVideo?5failed?0?5hr?5?$DN?50x?$CFx?$AA@
+      processed: '"StopVideo failed, hr = 0x%x"'
+      offset: 000021F0
+    - name: ??_C@_0BB@FPAE@m_bFilterRunning?$AA@
+      processed: '"m_bFilterRunning"'
+      offset: 0000220C
+    - name: ??_C@_0CH@PJGC@CAMVideoPort?3?3Inactive?5?9?5not?5con@
+      processed: '"CAMVideoPort::Inactive - not con"...'
+      offset: '00002220'
+    - name: ??_C@_0CA@NOLC@Entering?5CAMVideoPort?3?3Inactive?$AA@
+      processed: '"Entering CAMVideoPort::Inactive"'
+      offset: '00002248'
+    - name: ??_C@_0CF@ONJ@Leaving?5CAMVideoPort?3?3Run?0?5hr?5?$DN?5@
+      processed: '"Leaving CAMVideoPort::Run, hr = "...'
+      offset: '00002268'
+    - name: ??_C@_0BN@MNPP@StartVideo?5failed?0?5hr?5?$DN?50x?$CFx?$AA@
+      processed: '"StartVideo failed, hr = 0x%x"'
+      offset: '00002290'
+    - name: ??_C@_0DF@EEPI@CAMVideoPort?3?3Run?5?9?5SetupVideoPo@
+      processed: '"CAMVideoPort::Run - SetupVideoPo"...'
+      offset: 000022B0
+    - name: ??_C@_0CC@KJDK@CAMVideoPort?3?3Run?5?9?5not?5connecte@
+      processed: '"CAMVideoPort::Run - not connecte"...'
+      offset: '000022E8'
+    - name: ??_C@_0BL@FGCP@Entering?5CAMVideoPort?3?3Run?$AA@
+      processed: '"Entering CAMVideoPort::Run"'
+      offset: 0000230C
+    - name: ??_C@_0CB@MNPH@Leaving?5CAMVideoPort?3?3RunToPause@
+      processed: '"Leaving CAMVideoPort::RunToPause"...'
+      offset: '00002328'
+    - name: ??_C@_0CJ@CKNI@CAMVideoPort?3?3RunToPause?5?9?5not?5c@
+      processed: '"CAMVideoPort::RunToPause - not c"...'
+      offset: 0000234C
+    - name: ??_C@_0CC@JGEG@Entering?5CAMVideoPort?3?3RunToPaus@
+      processed: '"Entering CAMVideoPort::RunToPaus"...'
+      offset: '00002378'
+    - name: ??_C@_0CE@JLBG@Leaving?5CAMVideoPort?3?3GetVPDataI@
+      processed: '"Leaving CAMVideoPort::GetVPDataI"...'
+      offset: 0000239C
+    - name: ??_C@_0BG@KJAK@pAMVPDataInfo?5is?5NULL?$AA@
+      processed: '"pAMVPDataInfo is NULL"'
+      offset: 000023C0
+    - name: ??_C@_0CM@NGCP@CAMVideoPort?3?3GetVPDataInfo?5?9?5no@
+      processed: '"CAMVideoPort::GetVPDataInfo - no"...'
+      offset: 000023D8
+    - name: ??_C@_0CF@FLKE@Entering?5CAMVideoPort?3?3GetVPData@
+      processed: '"Entering CAMVideoPort::GetVPData"...'
+      offset: '00002404'
+    - name: ??_C@_0DJ@OJAP@Leaving?5CAMVideoPort?3?3Renegotiat@
+      processed: '"Leaving CAMVideoPort::Renegotiat"...'
+      offset: 0000242C
+    - name: ??_C@_0DI@GIBB@StartVideo?5failed?5in?5Renegotiate@
+      processed: '"StartVideo failed in Renegotiate"...'
+      offset: '00002468'
+    - name: ??_C@_0DM@LNNC@SetupVideoPort?5failed?5in?5Renegot@
+      processed: '"SetupVideoPort failed in Renegot"...'
+      offset: 000024A0
+    - name: ??_C@_0DG@HHLK@CAMVideoPort?3?3RenegotiateVPParam@
+      processed: '"CAMVideoPort::RenegotiateVPParam"...'
+      offset: 000024DC
+    - name: ??_C@_0CP@KGOK@Entering?5CAMVideoPort?3?3Renegotia@
+      processed: '"Entering CAMVideoPort::Renegotia"...'
+      offset: '00002514'
+    - name: ??_C@_0BK@IGEK@Leaving?5CAMVideoPort?3?3Get?$AA@
+      processed: '"Leaving CAMVideoPort::Get"'
+      offset: '00002544'
+    - name: __GUID_8c134960_51ad_11cf_878a_94f801c10000
+      processed: ''
+      offset: '00002560'
+    - name: ??_C@_0BL@KPEG@Entering?5CAMVideoPort?3?3Get?$AA@
+      processed: '"Entering CAMVideoPort::Get"'
+      offset: '00002570'
+    - name: ??_C@_0CF@DCMD@Leaving?5CAMVideoPort?3?3QuerySuppo@
+      processed: '"Leaving CAMVideoPort::QuerySuppo"...'
+      offset: 0000258C
+    - name: ??_C@_0CG@BKAD@Entering?5CAMVideoPort?3?3QuerySupp@
+      processed: '"Entering CAMVideoPort::QuerySupp"...'
+      offset: 000025B4
+    - name: ??_C@_0CF@CMKH@Leaving?5CAMVideoPort?3?3KsQueryMed@
+      processed: '"Leaving CAMVideoPort::KsQueryMed"...'
+      offset: 000025DC
+    - name: ??_C@_0CG@EGH@Entering?5CAMVideoPort?3?3KsQueryMe@
+      processed: '"Entering CAMVideoPort::KsQueryMe"...'
+      offset: '00002604'
+    - name: ??_C@_0CI@PMKB@Leaving?5CAMVideoPort?3?3KsQueryInt@
+      processed: '"Leaving CAMVideoPort::KsQueryInt"...'
+      offset: 0000262C
+    - name: __GUID_1a8766a0_62ce_11cf_a5d6_28db04c10000
+      processed: ''
+      offset: '00002658'
+    - name: ??_C@_0CJ@GLLA@Entering?5CAMVideoPort?3?3KsQueryIn@
+      processed: '"Entering CAMVideoPort::KsQueryIn"...'
+      offset: '00002668'
+    - name: ??_C@_0DA@FAKD@Leaving?5CAMVideoPort?3?3KsGetCurre@
+      processed: '"Leaving CAMVideoPort::KsGetCurre"...'
+      offset: '00002694'
+    - name: ??_C@_0DB@PGME@Entering?5CAMVideoPort?3?3KsGetCurr@
+      processed: '"Entering CAMVideoPort::KsGetCurr"...'
+      offset: 000026C4
+    - name: ??_C@_0DL@CHBG@CAMVideoPort?3?3CheckSurfaces?5?9?5St@
+      processed: '"CAMVideoPort::CheckSurfaces - St"...'
+      offset: 000026F8
+    - name: ??_C@_0DP@PKEM@CAMVideoPort?3?3CheckSurfaces?5?9?5Se@
+      processed: '"CAMVideoPort::CheckSurfaces - Se"...'
+      offset: '00002734'
+    - name: ??_C@_0DL@MNH@CAMVideoPort?3?3CheckSurfaces?5?9?5tr@
+      processed: '"CAMVideoPort::CheckSurfaces - tr"...'
+      offset: '00002774'
+    - name: ??_C@_0DO@HENC@CAMVideoPort?3?3CheckSurfaces?5?9?5St@
+      processed: '"CAMVideoPort::CheckSurfaces - St"...'
+      offset: 000027B0
+    - name: ??_C@_0CK@MAAG@CAMVideoPort?3?3CheckSurfaces?5?9?5no@
+      processed: '"CAMVideoPort::CheckSurfaces - no"...'
+      offset: 000027F0
+    - name: ??_C@_0DO@IHGE@CAMVideoPort?3?3CheckSurfaces?5?9?5St@
+      processed: '"CAMVideoPort::CheckSurfaces - St"...'
+      offset: 0000281C
+    - name: ??_C@_0CM@CNDP@CAMVideoPort?3?3CheckSurfaces?5?9?5Su@
+      processed: '"CAMVideoPort::CheckSurfaces - Su"...'
+      offset: 0000285C
+    - name: ??_C@_0DC@NKLJ@Leaving?5CAMVideoPort?3?3GetVideoPo@
+      processed: '"Leaving CAMVideoPort::GetVideoPo"...'
+      offset: '00002888'
+    - name: ??_C@_0DD@MJA@m_pDDVPContainer?9?$DOEnumVideoPorts@
+      processed: '"m_pDDVPContainer->EnumVideoPorts"...'
+      offset: 000028BC
+    - name: ??_C@_0CI@BOG@Entering?5CAMVideoPort?3?3GetVideoP@
+      processed: '"Entering CAMVideoPort::GetVideoP"...'
+      offset: 000028F0
+    - name: ??_C@_0CD@MFA@Leaving?5CAMVideoPort?3?3EnumCallba@
+      processed: '"Leaving CAMVideoPort::EnumCallba"...'
+      offset: '00002918'
+    - name: ??_C@_0DC@GKMF@lpContext?5?$DN?5NULL?0?5THIS?5SHOULD?5NO@
+      processed: '"lpContext = NULL, THIS SHOULD NO"...'
+      offset: 0000293C
+    - name: ??_C@_0DB@KINN@VIDEOPORTCAPS?3?5NumAutoFlip?$DN?$CFd?0?5N@
+      processed: '"VIDEOPORTCAPS: NumAutoFlip=%d, N"...'
+      offset: '00002970'
+    - name: ??_C@_0CE@LOAI@Entering?5CAMVideoPort?3?3EnumCallb@
+      processed: '"Entering CAMVideoPort::EnumCallb"...'
+      offset: 000029A4
+    - name: ??_C@_0CP@BPDF@m_pIVPConfig?9?$DOSetConnectInfo?5fai@
+      processed: '"m_pIVPConfig->SetConnectInfo fai"...'
+      offset: 000029C8
+    - name: ??_C@_0DE@KNAP@Leaving?5CAMVideoPort?3?3NegotiateC@
+      processed: '"Leaving CAMVideoPort::NegotiateC"...'
+      offset: 000029F8
+    - name: ??_C@_0CI@GDPA@lpddVideoPortConnect?$FL?$CFd?$FN?4dwFlags@
+      processed: '"lpddVideoPortConnect[%d].dwFlags"...'
+      offset: 00002A2C
+    - name: ??_C@_0CG@LGPH@lpddCaptureConnect?$FL?$CFd?$FN?4dwFlags?5?$DN@
+      processed: '"lpddCaptureConnect[%d].dwFlags ="...'
+      offset: 00002A54
+    - name: ??_C@_0CO@KLEL@NegotiateConnectionParameters?5?3?5@
+      processed: '"NegotiateConnectionParameters : "...'
+      offset: 00002A7C
+    - name: ??_C@_0BG@JNLA@dwNumVideoPortEntries?$AA@
+      processed: '"dwNumVideoPortEntries"'
+      offset: 00002AAC
+    - name: ??_C@_0DM@GEEC@m_pDDVPContainer?9?$DOGetVideoPortCo@
+      processed: '"m_pDDVPContainer->GetVideoPortCo"...'
+      offset: 00002AC4
+    - name: ??_C@_0CP@JJKF@m_pIVPConfig?9?$DOGetConnectInfo?5fai@
+      processed: '"m_pIVPConfig->GetConnectInfo fai"...'
+      offset: 00002B00
+    - name: ??_C@_0BE@KPIO@dwNumCaptureEntries?$AA@
+      processed: '"dwNumCaptureEntries"'
+      offset: 00002B30
+    - name: ??_C@_0BB@CBN@m_pDDVPContainer?$AA@
+      processed: '"m_pDDVPContainer"'
+      offset: 00002B44
+    - name: ??_C@_0DF@DPH@Entering?5CAMVideoPort?3?3Negotiate@
+      processed: '"Entering CAMVideoPort::Negotiate"...'
+      offset: 00002B58
+    - name: ??_C@_0CL@OIFJ@Leaving?5CAMVideoPort?3?3GetDecoder@
+      processed: '"Leaving CAMVideoPort::GetDecoder"...'
+      offset: 00002B90
+    - name: ??_C@_0DA@JENJ@m_pIVPConfig?9?$DOGetMaxPixelRate?5fa@
+      processed: '"m_pIVPConfig->GetMaxPixelRate fa"...'
+      offset: 00002BBC
+    - name: ??_C@_0CO@LIME@m_pIVPConfig?9?$DOGetVPDataInfo?5fail@
+      processed: '"m_pIVPConfig->GetVPDataInfo fail"...'
+      offset: 00002BEC
+    - name: ??_C@_0CM@FOEN@Entering?5CAMVideoPort?3?3GetDecode@
+      processed: '"Entering CAMVideoPort::GetDecode"...'
+      offset: 00002C1C
+    - name: ??_C@_0CI@IEPI@Leaving?5CAMVideoPort?3?3EqualPixel@
+      processed: '"Leaving CAMVideoPort::EqualPixel"...'
+      offset: 00002C48
+    - name: ??_C@_0CJ@BDOJ@Entering?5CAMVideoPort?3?3EqualPixe@
+      processed: '"Entering CAMVideoPort::EqualPixe"...'
+      offset: 00002C70
+    - name: ??_C@_0CE@NHBG@Leaving?5CAMVideoPort?3?3GetBestFor@
+      processed: '"Leaving CAMVideoPort::GetBestFor"...'
+      offset: 00002C9C
+    - name: ??_C@_0EB@KGFN@failed?5to?5allocate?5memory?5for?5lp@
+      processed: '"failed to allocate memory for lp"...'
+      offset: 00002CC0
+    - name: ??_C@_0DB@DBCI@m_pVideoPort?9?$DOGetOutputFormats?5f@
+      processed: '"m_pVideoPort->GetOutputFormats f"...'
+      offset: 00002D04
+    - name: ??_C@_0CF@BHKE@Entering?5CAMVideoPort?3?3GetBestFo@
+      processed: '"Entering CAMVideoPort::GetBestFo"...'
+      offset: 00002D38
+    - name: ??_C@_0CG@CIFM@Leaving?5CAMVideoPort?3?3CreateVide@
+      processed: '"Leaving CAMVideoPort::CreateVide"...'
+      offset: 00002D60
+    - name: ??_C@_0CL@DJBE@Unable?5to?5create?5the?5video?5port?0@
+      processed: '"Unable to create the video port,"...'
+      offset: 00002D88
+    - name: ??_C@_0BK@PBDA@INVERTPOLARITY?5?$CG?5HALFLINE?$AA@
+      processed: '"INVERTPOLARITY & HALFLINE"'
+      offset: 00002DB4
+    - name: ??_C@_0DF@GMEJ@m_vpConnectInfo?4dwFlags?5?$CG?5DDVPCO@
+      processed: '"m_vpConnectInfo.dwFlags & DDVPCO"...'
+      offset: 00002DD0
+    - name: ??_C@_0CI@NCDD@?$CBm_capVPDataInfo?4bFieldPolarityI@
+      processed: '"!m_capVPDataInfo.bFieldPolarityI"...'
+      offset: '00002E08'
+    - name: ??_C@_0CH@JGHE@Entering?5CAMVideoPort?3?3CreateVid@
+      processed: '"Entering CAMVideoPort::CreateVid"...'
+      offset: '00002E30'
+    - name: ??_C@_0CG@OFP@Leaving?5CAMVideoPort?3?3CreateVPSu@
+      processed: '"Leaving CAMVideoPort::CreateVPSu"...'
+      offset: '00002E58'
+    - name: ??_C@_0CD@PGCP@Unable?5to?5create?5offscreen?5surfa@
+      processed: '"Unable to create offscreen surfa"...'
+      offset: '00002E80'
+    - name: ??_C@_0BC@GGFM@?$CBm_pOffscreenSurf?$AA@
+      processed: '"!m_pOffscreenSurf"'
+      offset: 00002EA4
+    - name: ??_C@_0CI@ILDH@Warning?3?5unable?5to?5allocate?5back@
+      processed: '"Warning: unable to allocate back"...'
+      offset: 00002EB8
+    - name: ??_C@_0BJ@IEIF@allocated?5?$CFd?5backbuffers?$AA@
+      processed: '"allocated %d backbuffers"'
+      offset: 00002EE0
+    - name: ??_C@_0CN@HHGJ@failed?5to?5allocate?5?$CFd?5backbuffer@
+      processed: '"failed to allocate %d backbuffer"...'
+      offset: 00002EFC
+    - name: ??_C@_0CM@OMBH@Surface?5height?5?$CFd?0?5width?5?$CFd?0?5max@
+      processed: '"Surface height %d, width %d, max"...'
+      offset: 00002F2C
+    - name: ??_C@_0O@EOMC@m_pDirectDraw?$AA@
+      processed: '"m_pDirectDraw"'
+      offset: 00002F58
+    - name: ??_C@_0CH@LAHH@Entering?5CAMVideoPort?3?3CreateVPS@
+      processed: '"Entering CAMVideoPort::CreateVPS"...'
+      offset: 00002F68
+    - name: ??_C@_0CM@BBBF@Leaving?5CAMVideoPort?3?3SetDDrawKe@
+      processed: '"Leaving CAMVideoPort::SetDDrawKe"...'
+      offset: 00002F90
+    - name: ??_C@_0DC@JMLE@IVPConfig?3?3SetSurfaceParameters?5@
+      processed: '"IVPConfig::SetSurfaceParameters "...'
+      offset: 00002FBC
+    - name: ??_C@_0BL@HPGM@SetSurfaceParams?$CI?$CFd?0?$CFd?0?$CFd?$CJ?$AA@
+      processed: '"SetSurfaceParams(%d,%d,%d)"'
+      offset: 00002FF0
+    - name: ??_C@_0DH@DHJC@IVPConfig?3?3SetDDSurfaceKernelHan@
+      processed: '"IVPConfig::SetDDSurfaceKernelHan"...'
+      offset: 0000300C
+    - name: ??_C@_0CH@CEFP@EnumAttachedSurfaces?5failed?0?5hr?5@
+      processed: '"EnumAttachedSurfaces failed, hr "...'
+      offset: '00003044'
+    - name: ??_C@_0DG@JMPE@Out?5of?5memory?5while?5retrieving?5s@
+      processed: '"Out of memory while retrieving s"...'
+      offset: 0000306C
+    - name: ??_C@_0CM@FAAI@IVPConfig?3?3SetVideoPortID?5failed@
+      processed: '"IVPConfig::SetVideoPortID failed"...'
+      offset: 000030A4
+    - name: ??_C@_0DH@EKII@IVPConfig?3?3SetDirectDrawKernelHa@
+      processed: '"IVPConfig::SetDirectDrawKernelHa"...'
+      offset: 000030D0
+    - name: ??_C@_0P@EGNM@ddKernelHandle?$AA@
+      processed: '"ddKernelHandle"'
+      offset: '00003108'
+    - name: ??_C@_0DJ@GJKM@GetKernelHandle?5from?5IDirectDraw@
+      processed: '"GetKernelHandle from IDirectDraw"...'
+      offset: '00003118'
+    - name: ??_C@_04JINI@pDDK?$AA@
+      processed: '"pDDK"'
+      offset: '00003154'
+    - name: ??_C@_0DH@MOGL@QueryInterface?5for?5IDirectDrawKe@
+      processed: '"QueryInterface for IDirectDrawKe"...'
+      offset: 0000315C
+    - name: ??_C@_0CN@HDKD@Entering?5CAMVideoPort?3?3SetDDrawK@
+      processed: '"Entering CAMVideoPort::SetDDrawK"...'
+      offset: '00003194'
+    - name: ??_C@_0CP@KOKA@m_pIVPConfig?9?$DOSetVideoFormat?5fai@
+      processed: '"m_pIVPConfig->SetVideoFormat fai"...'
+      offset: 000031C4
+    - name: ??_C@_0CL@BION@Leaving?5CAMVideoPort?3?3NegotiateP@
+      processed: '"Leaving CAMVideoPort::NegotiateP"...'
+      offset: 000031F4
+    - name: ??_C@_0EF@MNIG@EqualPixelFormats?$CIm_pddVPInputVi@
+      processed: '"EqualPixelFormats(m_pddVPInputVi"...'
+      offset: '00003220'
+    - name: ??_C@_0BI@DNOM@i?5?$DM?5dwNumCaptureEntries?$AA@
+      processed: '"i < dwNumCaptureEntries"'
+      offset: '00003268'
+    - name: ??_C@_0CA@NEMO@GetBestFormat?5failed?0?5hr?5?$DN?50x?$CFx?$AA@
+      processed: '"GetBestFormat failed, hr = 0x%x"'
+      offset: '00003280'
+    - name: ??_C@_0BJ@OCE@j?5?$DN?$DN?5dwNumVPInputEntries?$AA@
+      processed: '"j == dwNumVPInputEntries"'
+      offset: 000032A0
+    - name: ??_C@_0BJ@IKCC@i?5?$DN?$DN?5dwNumCaptureEntries?$AA@
+      processed: '"i == dwNumCaptureEntries"'
+      offset: 000032BC
+    - name: ??_C@_0DE@HKMP@dwNumIntersectionEntries?5?$DM?5dwMax@
+      processed: '"dwNumIntersectionEntries < dwMax"...'
+      offset: 000032D8
+    - name: ??_C@_0CF@HBOC@NegotiatePixelFormat?5?3?5Out?5of?5Me@
+      processed: '"NegotiatePixelFormat : Out of Me"...'
+      offset: 0000330C
+    - name: ??_C@_0BE@JMKM@dwNumVPInputEntries?$AA@
+      processed: '"dwNumVPInputEntries"'
+      offset: '00003334'
+    - name: ??_C@_0DA@MJFA@m_pVideoPort?9?$DOGetInputFormats?5fa@
+      processed: '"m_pVideoPort->GetInputFormats fa"...'
+      offset: '00003348'
+    - name: ??_C@_0DA@IJMI@m_pIVPConfig?9?$DOGetVideoFormats?5fa@
+      processed: '"m_pIVPConfig->GetVideoFormats fa"...'
+      offset: '00003378'
+    - name: ??_C@_0CM@KOPJ@Entering?5CAMVideoPort?3?3Negotiate@
+      processed: '"Entering CAMVideoPort::Negotiate"...'
+      offset: 000033A8
+    - name: ??_C@_0CO@JKGL@Leaving?5CAMVideoPort?3?3Initialize@
+      processed: '"Leaving CAMVideoPort::Initialize"...'
+      offset: 000033D4
+    - name: ??_C@_0ED@PKDN@CAMVideoPort?3?3InitializeVideoPor@
+      processed: '"CAMVideoPort::InitializeVideoPor"...'
+      offset: '00003404'
+    - name: ??_C@_0FG@JCAG@CAMVideoPort?3?3InitializeVideoPor@
+      processed: '"CAMVideoPort::InitializeVideoPor"...'
+      offset: '00003448'
+    - name: ??_C@_0DH@BJMJ@m_dwSurfaceOriginY?5?$DO?$DN?5m_capVPDat@
+      processed: '"m_dwSurfaceOriginY >= m_capVPDat"...'
+      offset: 000034A0
+    - name: ??_C@_0CB@HCIF@VideoPort?5discards?5?$CFd?5VREF?5lines@
+      processed: '"VideoPort discards %d VREF lines"...'
+      offset: 000034D8
+    - name: ??_C@_0BH@FKIB@Setting?5up?5for?5AIW?5h?1w?$AA@
+      processed: '"Setting up for AIW h/w"'
+      offset: 000034FC
+    - name: ??_C@_0CP@OMNL@Entering?5CAMVideoPort?3?3Initializ@
+      processed: '"Entering CAMVideoPort::Initializ"...'
+      offset: '00003514'
+    - name: ??_C@_0DA@JIII@Leaving?5CAMVideoPort?3?3SetupVideo@
+      processed: '"Leaving CAMVideoPort::SetupVideo"...'
+      offset: '00003544'
+    - name: ??_C@_0CI@LJLE@SetDDrawKernelHandles?5failed?0?5hr@
+      processed: '"SetDDrawKernelHandles failed, hr"...'
+      offset: '00003574'
+    - name: ??_C@_0DB@KNGE@m_pVideoPort?9?$DOSetTargetSurface?5f@
+      processed: '"m_pVideoPort->SetTargetSurface f"...'
+      offset: 0000359C
+    - name: ??_C@_0CC@HKMI@CreateVPSurface?5FAILED?0?5hr?5?$DN?50x?$CF@
+      processed: '"CreateVPSurface FAILED, hr = 0x%"...'
+      offset: 000035D0
+    - name: ??_C@_0CH@PHG@NegotiatePixelFormat?5Failed?0?5hr?5@
+      processed: '"NegotiatePixelFormat Failed, hr "...'
+      offset: 000035F4
+    - name: ??_C@_0CC@EGCP@CreateVideoPort?5failed?0?5hr?5?$DN?50x?$CF@
+      processed: '"CreateVideoPort failed, hr = 0x%"...'
+      offset: 0000361C
+    - name: ??_C@_0CK@DJOF@InitializeVideoPortInfo?5FAILED?0?5@
+      processed: '"InitializeVideoPortInfo FAILED, "...'
+      offset: '00003640'
+    - name: ??_C@_0CD@PDGN@GetVideoPortCaps?5failed?0?5hr?5?$DN?50x@
+      processed: '"GetVideoPortCaps failed, hr = 0x"...'
+      offset: 0000366C
+    - name: ??_C@_0BM@LHAB@m_VPState?5?$DN?$DN?5VP_STATE_NO_VP?$AA@
+      processed: '"m_VPState == VP_STATE_NO_VP"'
+      offset: '00003690'
+    - name: ??_C@_0CG@HMKN@Entering?5CAMVideoPort?3?3SetupVide@
+      processed: '"Entering CAMVideoPort::SetupVide"...'
+      offset: 000036AC
+    - name: ??_C@_0CI@MKIO@Leaving?5CAMVideoPort?3?3TearDownVi@
+      processed: '"Leaving CAMVideoPort::TearDownVi"...'
+      offset: 000036D4
+    - name: ??_C@_0CJ@FNJP@Entering?5CAMVideoPort?3?3TearDownV@
+      processed: '"Entering CAMVideoPort::TearDownV"...'
+      offset: 000036FC
+    - name: ??_C@_0CB@MABJ@Leaving?5CAMVideoPort?3?3StartVideo@
+      processed: '"Leaving CAMVideoPort::StartVideo"...'
+      offset: '00003728'
+    - name: ??_C@_0DL@MHIJ@GetVideoSignalStatus?$CI?$CJ?5returned?5@
+      processed: '"GetVideoSignalStatus() returned "...'
+      offset: 0000374C
+    - name: ??_C@_0CJ@DCHC@GetVideoSignalStatus?$CI?$CJ?5failed?0?5h@
+      processed: '"GetVideoSignalStatus() failed, h"...'
+      offset: '00003788'
+    - name: ??_C@_0BB@FAM@STARTVIDEO?5DONE?$CB?$AA@
+      processed: '"STARTVIDEO DONE!"'
+      offset: 000037B4
+    - name: ??_C@_0BO@LHJN@m_VPState?5?$DN?$DN?5VP_STATE_STOPPED?$AA@
+      processed: '"m_VPState == VP_STATE_STOPPED"'
+      offset: 000037C8
+    - name: ??_C@_0CC@JLKI@Entering?5CAMVideoPort?3?3StartVide@
+      processed: '"Entering CAMVideoPort::StartVide"...'
+      offset: '000037E8'
+    - name: ??_C@_0CL@EFB@Leaving?5CAMVideoPort?3?3StopVideo?0@
+      processed: '"Leaving CAMVideoPort::StopVideo,"...'
+      offset: 0000380C
+    - name: ??_C@_0CK@LBGL@m_pVideoPort?9?$DOStopVideo?5failed?0?5@
+      processed: '"m_pVideoPort->StopVideo failed, "...'
+      offset: '00003838'
+    - name: ??_C@_0BO@JOAL@m_VPState?5?$DN?$DN?5VP_STATE_RUNNING?$AA@
+      processed: '"m_VPState == VP_STATE_RUNNING"'
+      offset: '00003864'
+    - name: ??_C@_0CB@JLKF@Entering?5CAMVideoPort?3?3StopVideo@
+      processed: '"Entering CAMVideoPort::StopVideo"...'
+      offset: '00003884'
+    - name: ??_C@_0BO@PMIE@Leaving?5?3?3SurfaceKernelHandle?$AA@
+      processed: '"Leaving ::SurfaceKernelHandle"'
+      offset: 000038A8
+    - name: ??_C@_0EA@NGLA@GetKernelHandle?5from?5IDirectDraw@
+      processed: '"GetKernelHandle from IDirectDraw"...'
+      offset: 000038C8
+    - name: ??_C@_05PGKE@pDDSK?$AA@
+      processed: '"pDDSK"'
+      offset: '00003908'
+    - name: ??_C@_0DO@IFLC@QueryInterface?5for?5IDirectDrawSu@
+      processed: '"QueryInterface for IDirectDrawSu"...'
+      offset: '00003910'
+    - name: ??_C@_0BP@KJP@Entering?5?3?3SurfaceKernelHandle?$AA@
+      processed: '"Entering ::SurfaceKernelHandle"'
+      offset: '00003950'
+    - name: ??_7CClassFactory@@6B@
+      processed: const CClassFactory::`vftable'
+      offset: '00003970'
+    - name: ??_C@_0O@NOCA@Class?5Factory?$AA@
+      processed: '"Class Factory"'
+      offset: '00003984'
+    - name: ??_C@_0DG@LKHJ@E?3?2ntc?2private?2genx?2dxmdev?2dshow@
+      processed: '"E:\\ntc\\private\\genx\\dxmdev\\dshow"...'
+      offset: '00003994'
+    - name: ??_C@_03MCDB@?$CKpv?$AA@
+      processed: '"*pv"'
+      offset: 000039CC
+    - name: ??_C@_0DM@OIIA@DLLCanUnloadNow?5called?5?9?5IsLocke@
+      processed: '"DLLCanUnloadNow called - IsLocke"...'
+      offset: 000039D0
+    - name: ??_C@_0CD@HCFH@Module?5?$CFs?0?5?$CFd?5objects?5left?5activ@
+      processed: '"Module %s, %d objects left activ"...'
+      offset: 00003A0C
+    - name: ??_C@_0CB@FEHK@Executable?3?5?$CFs?5?5Pid?5?$CFx?5?5Tid?5?$CFx?4?5@
+      processed: '"Executable: %s  Pid %x  Tid %x. "...'
+      offset: 00003A30
+    - name: ??_C@_0CO@MNDG@Failed?5to?5get?5the?5OS?5platform?0?5a@
+      processed: '"Failed to get the OS platform, a"...'
+      offset: 00003A54
+    - name: _IID_IKsPin
+      processed: ''
+      offset: 00003A88
+    - name: _IID_IDirectDrawSurfaceKernel
+      processed: ''
+      offset: 00003A98
+    - name: _IID_IDirectDrawKernel
+      processed: ''
+      offset: 00003AA8
+    - name: _IID_IDDVideoPortContainer
+      processed: ''
+      offset: 00003AB8
+    - name: _IID_IVPVBINotify
+      processed: ''
+      offset: 00003AC8
+    - name: _IID_IVPVBIConfig
+      processed: ''
+      offset: 00003AD8
+    - name: _IID_IVPVBIObject
+      processed: ''
+      offset: 00003AE8
+    - name: _CLSID_VPVBIObject
+      processed: ''
+      offset: 00003AF8
+    - name: _FORMAT_None
+      processed: ''
+      offset: 00003B08
+    - name: _CLSID_FilterMapper2
+      processed: ''
+      offset: 00003B18
+    - name: _CLSID_VBISurfaces
+      processed: ''
+      offset: 00003B28
+    - name: _CLSID_FilterMapper
+      processed: ''
+      offset: 00003B38
+    - name: _MEDIASUBTYPE_VPVBI
+      processed: ''
+      offset: 00003B48
+    - name: _MEDIASUBTYPE_Overlay
+      processed: ''
+      offset: 00003B58
+    - name: _MEDIASUBTYPE_RGB32
+      processed: ''
+      offset: 00003B68
+    - name: _MEDIASUBTYPE_RGB24
+      processed: ''
+      offset: 00003B78
+    - name: _MEDIASUBTYPE_RGB555
+      processed: ''
+      offset: 00003B88
+    - name: _MEDIASUBTYPE_RGB565
+      processed: ''
+      offset: 00003B98
+    - name: _MEDIASUBTYPE_RGB8
+      processed: ''
+      offset: 00003BA8
+    - name: _MEDIASUBTYPE_RGB4
+      processed: ''
+      offset: 00003BB8
+    - name: _MEDIASUBTYPE_RGB1
+      processed: ''
+      offset: 00003BC8
+    - name: _MEDIATYPE_Video
+      processed: ''
+      offset: 00003BD8
+    - name: ??_C@_0DL@FHAL@lreturn?5?$DN?$DN?5ERROR_SUCCESS?5?$HM?$HM?5lret@
+      processed: '"lreturn == ERROR_SUCCESS || lret"...'
+      offset: 00003BE8
+    - name: ??_C@_0FP@KJEE@lreturn?5?$DN?$DN?5ERROR_SUCCESS?5?$HM?$HM?5lret@
+      processed: '"lreturn == ERROR_SUCCESS || lret"...'
+      offset: 00003C24
+    - name: ??_C@_0DG@MDCD@E?3?2ntc?2private?2genx?2dxmdev?2dshow@
+      processed: '"E:\\ntc\\private\\genx\\dxmdev\\dshow"...'
+      offset: 00003C84
+    - name: ??_C@_0P@CMNN@ThreadingModel?$AA@
+      processed: '"ThreadingModel"'
+      offset: 00003CBC
+    - name: ??_C@_03GJHJ@?$CFls?$AA@
+      processed: '"%ls"'
+      offset: 00003CCC
+    - name: ??_C@_09IPFI@CLSID?2?$CFls?$AA@
+      processed: '"CLSID\\%ls"'
+      offset: 00003CD0
+    - name: ??_C@_0O@HILF@SUCCEEDED?$CIhr?$CJ?$AA@
+      processed: '"SUCCEEDED(hr)"'
+      offset: 00003CDC
+    - name: ??_C@_0BE@NDIF@?$DN?5?$DN?5register?5filter?$AA@
+      processed: '"= = register filter"'
+      offset: 00003CEC
+    - name: ??_C@_0BG@OABI@?$DN?5?$DN?5unregister?5filter?$AA@
+      processed: '"= = unregister filter"'
+      offset: 00003D00
+    - name: ??_C@_0BM@IFND@?$DN?5AMovieSetupRegisterFilter?$AA@
+      processed: '"= AMovieSetupRegisterFilter"'
+      offset: 00003D18
+    - name: ??_C@_19EPG@?$AAB?$AAo?$AAt?$AAh?$AA?$AA@
+      processed: L"Both"
+      offset: 00003D34
+    - name: 
+        ??_C@_1BO@OGKK@?$AAI?$AAn?$AAp?$AAr?$AAo?$AAc?$AAS?$AAe?$AAr?$AAv?$AAe?$AAr?$AA3?$AA2?$AA?$AA@
+      processed: L"InprocServer32"
+      offset: 00003D40
+    - name: ??_C@_0BB@PPOC@?9?5?9?5register?5?$CFls?$AA@
+      processed: '"- - register %ls"'
+      offset: 00003D60
+    - name: ??_C@_0N@CCEN@?9?5return?5?$CF0x?$AA@
+      processed: '"- return %0x"'
+      offset: 00003D74
+    - name: ??_C@_0BD@OOKH@?9?5register?5Filters?$AA@
+      processed: '"- register Filters"'
+      offset: 00003D84
+    - name: ??_C@_0BP@EDMD@?9?5trying?5IFilterMapper?5instead?$AA@
+      processed: '"- trying IFilterMapper instead"'
+      offset: 00003D98
+    - name: ??_C@_0BI@FHMI@?9?5obtain?5IFilterMapper2?$AA@
+      processed: '"- obtain IFilterMapper2"'
+      offset: 00003DB8
+    - name: ??_C@_0P@OKAK@?9?5CoInitialize?$AA@
+      processed: '"- CoInitialize"'
+      offset: 00003DD0
+    - name: ??_C@_0BH@EOKA@?9?5register?5OLE?5Servers?$AA@
+      processed: '"- register OLE Servers"'
+      offset: 00003DE0
+    - name: ??_C@_0N@LGBM@g_hInst?5?$CB?$DN?50?$AA@
+      processed: '"g_hInst != 0"'
+      offset: 00003DF8
+    - name: ??_C@_0BH@JNMG@?9?5get?5module?5file?5name?$AA@
+      processed: '"- get module file name"'
+      offset: '00003E08'
+    - name: ??_C@_0BL@BABK@AMovieDllRegisterServer2?$CI?$CJ?$AA@
+      processed: '"AMovieDllRegisterServer2()"'
+      offset: '00003E20'
+    - name: ??_C@_0DG@DDDL@E?3?2ntc?2private?2genx?2dxmdev?2dshow@
+      processed: '"E:\\ntc\\private\\genx\\dxmdev\\dshow"...'
+      offset: 00003E3C
+    - name: ??_C@_0BB@HACF@m_pGraph?5?$DN?$DN?5NULL?$AA@
+      processed: '"m_pGraph == NULL"'
+      offset: '00003E74'
+    - name: ??_C@_0O@JKOD@pLock?5?$CB?$DN?5NULL?$AA@
+      processed: '"pLock != NULL"'
+      offset: '00003E88'
+    - name: ??_C@_0N@NDNG@pPin?5?$CB?$DN?5NULL?$AA@
+      processed: '"pPin != NULL"'
+      offset: '00003E98'
+    - name: ??_C@_0BA@OPJP@m_pSink?5?$DN?$DN?5NULL?$AA@
+      processed: '"m_pSink == NULL"'
+      offset: 00003EA8
+    - name: ??_C@_0BJ@NILA@m_Position?5?$DM?$DN?5m_PinCount?$AA@
+      processed: '"m_Position <= m_PinCount"'
+      offset: 00003EB8
+    - name: ??_C@_0BA@PPNN@pFilter?5?$CB?$DN?5NULL?$AA@
+      processed: '"pFilter != NULL"'
+      offset: 00003ED4
+    - name: ??_7CEnumPins@@6B@
+      processed: const CEnumPins::`vftable'
+      offset: 00003EE8
+    - name: ??_C@_09CCGI@CEnumPins?$AA@
+      processed: '"CEnumPins"'
+      offset: 00003F08
+    - name: ??_C@_09NPAO@Pin?5Cache?$AA@
+      processed: '"Pin Cache"'
+      offset: 00003F14
+    - name: ??_C@_0M@MGBD@cFetched?$DN?$DN0?$AA@
+      processed: '"cFetched==0"'
+      offset: 00003F20
+    - name: ??_7CEnumMediaTypes@@6B@
+      processed: const CEnumMediaTypes::`vftable'
+      offset: 00003F30
+    - name: ??_C@_0BA@NKLB@CEnumMediaTypes?$AA@
+      processed: '"CEnumMediaTypes"'
+      offset: 00003F50
+    - name: ??_C@_0M@FLPP@m_cRef?5?$DN?$DN?50?$AA@
+      processed: '"m_cRef == 0"'
+      offset: 00003F60
+    - name: ??_C@_0BF@FJGL@m_Connected?5?$DN?$DN?5FALSE?$AA@
+      processed: '"m_Connected == FALSE"'
+      offset: 00003F6C
+    - name: ??_C@_0CC@GHFD@InterlockedIncrement?$CI?$CGm_cRef?$CJ?5?$DO?5@
+      processed: '"InterlockedIncrement(&m_cRef) > "...'
+      offset: 00003F84
+    - name: ??_C@_0CD@HMJL@InterlockedDecrement?$CI?$CGm_cRef?$CJ?5?$DO?$DN@
+      processed: '"InterlockedDecrement(&m_cRef) >="...'
+      offset: 00003FA8
+    - name: ??_C@_09NGBE@?5?5?5?5?$DM?$CFls?$DO?$AA@
+      processed: '"    <%ls>"'
+      offset: 00003FCC
+    - name: ??_C@_0BJ@FFFC@Trying?5to?5connect?5Pins?5?3?$AA@
+      processed: '"Trying to connect Pins :"'
+      offset: 00003FD8
+    - name: ??_C@_1BA@EALC@?$AAB?$AAa?$AAd?$AA?5?$AAP?$AAi?$AAn?$AA?$AA@
+      processed: L"Bad Pin"
+      offset: 00003FF4
+    - name: ??_C@_0BF@FAHE@?5?5?5?5sub?5type?5?5?3?5?5?$CFhs?$AA@
+      processed: '"    sub type  :  %hs"'
+      offset: '00004004'
+    - name: ??_C@_0BF@KDFA@?5?5?5?5major?5type?3?5?5?$CFhs?$AA@
+      processed: '"    major type:  %hs"'
+      offset: 0000401C
+    - name: ??_C@_0BD@MBNL@Trying?5media?5type?3?$AA@
+      processed: '"Trying media type:"'
+      offset: '00004034'
+    - name: ??_C@_0BF@CBPP@Connection?5succeeded?$AA@
+      processed: '"Connection succeeded"'
+      offset: '00004048'
+    - name: ??_C@_0CB@OMBH@?$CI?$CIHRESULT?$CJ?$CIBreakConnect?$CI?$CJ?$CJ?5?$DO?$DN?50?$CJ@
+      processed: '"((HRESULT)(BreakConnect()) >= 0)"...'
+      offset: '00004060'
+    - name: ??_C@_0BF@IKLF@Failed?5to?5agree?5type?$AA@
+      processed: '"Failed to agree type"'
+      offset: '00004084'
+    - name: ??_C@_0BC@KEFC@Already?5connected?$AA@
+      processed: '"Already connected"'
+      offset: 0000409C
+    - name: ??_C@_0BO@IBBG@Failed?5to?5complete?5connection?$AA@
+      processed: '"Failed to complete connection"'
+      offset: 000040B0
+    - name: ??_C@_0BE@LCBH@CheckConnect?5failed?$AA@
+      processed: '"CheckConnect failed"'
+      offset: 000040D0
+    - name: ??_C@_0L@PCM@pMediaType?$AA@
+      processed: '"pMediaType"'
+      offset: '000040E4'
+    - name: ??_C@_0BC@LFEF@ulMediaCount?5?$DN?$DN?51?$AA@
+      processed: '"ulMediaCount == 1"'
+      offset: 000040F0
+    - name: ??_C@_0BA@ODFO@pEnumMediaTypes?$AA@
+      processed: '"pEnumMediaTypes"'
+      offset: '00004104'
+    - name: ??_C@_0M@CNJN@pReceivePin?$AA@
+      processed: '"pReceivePin"'
+      offset: '00004114'
+    - name: ??_C@_0DE@EBIG@?$CIm_dir?5?$DN?$DN?5PINDIR_OUTPUT?$CJ?5?$HM?$HM?5?$CIm_d@
+      processed: '"(m_dir == PINDIR_OUTPUT) || (m_d"...'
+      offset: '00004120'
+    - name: 
+        ??_C@_0CO@BFAC@?$CIpd?5?$DN?$DN?5PINDIR_OUTPUT?$CJ?5?$HM?$HM?5?$CIpd?5?$DN?$DN?5@
+      processed: '"(pd == PINDIR_OUTPUT) || (pd == "...'
+      offset: '00004154'
+    - name: ??_C@_0DM@ODEK@?$CCWARNING?3?5BreakConnect?$CI?$CJ?5failed?5@
+      processed: '"\"WARNING: BreakConnect() failed "...'
+      offset: '00004184'
+    - name: ??_C@_0BF@NDHI@CritCheckIn?$CIm_pLock?$CJ?$AA@
+      processed: '"CritCheckIn(m_pLock)"'
+      offset: 000041C0
+    - name: ??_C@_0EJ@HINE@?$CCIQualityControl?3?3Notify?5not?5ove@
+      processed: '"\"IQualityControl::Notify not ove"...'
+      offset: 000041D8
+    - name: ??_C@_0BD@GFOO@pConnected?5?$CB?$DN?5NULL?$AA@
+      processed: '"pConnected != NULL"'
+      offset: '00004224'
+    - name: ??_C@_0N@NCJE@?$CBm_bFlushing?$AA@
+      processed: '"!m_bFlushing"'
+      offset: '00004238'
+    - name: ??_C@_0M@CCP@m_bFlushing?$AA@
+      processed: '"m_bFlushing"'
+      offset: '00004248'
+    - name: ??_C@_0CK@KKKO@?$CCIQuality?3?3Notify?5called?5on?5an?5i@
+      processed: '"\"IQuality::Notify called on an i"...'
+      offset: '00004254'
+    - name: ??_C@_0O@NDBN@IsConnected?$CI?$CJ?$AA@
+      processed: '"IsConnected()"'
+      offset: '00004280'
+    - name: ??_C@_09FCJN@lRef?5?$DO?$DN?50?$AA@
+      processed: '"lRef >= 0"'
+      offset: '00004290'
+    - name: ??_C@_0BO@HBCB@?$DN?5?$DN?5register?5filter?5pin?5types?$AA@
+      processed: '"= = register filter pin types"'
+      offset: 0000429C
+    - name: ??_C@_0BJ@JAFN@?$DN?5?$DN?5register?5filter?5pins?$AA@
+      processed: '"= = register filter pins"'
+      offset: 000042BC
+    - name: ??_C@_0BD@EOCD@SetEvent?$CIm_hEvent?$CJ?$AA@
+      processed: '"SetEvent(m_hEvent)"'
+      offset: 000042D8
+    - name: ??_C@_0L@FKH@?4?2wxutil?4h?$AA@
+      processed: '".\\wxutil.h"'
+      offset: 000042EC
+    - name: ??_C@_0DF@IEMH@E?3?2ntc?2private?2genx?2dxmdev?2dshow@
+      processed: '"E:\\ntc\\private\\genx\\dxmdev\\dshow"...'
+      offset: '00004308'
+    - name: ??_C@_0BG@MLKE@?5?5?5?5Obj?5?$CFd?5ref?$CL?$CL?5?$DN?5?$CFd?$AA@
+      processed: '"    Obj %d ref++ = %d"'
+      offset: '00004340'
+    - name: ??_C@_08DHFB@lRef?5?$DO?50?$AA@
+      processed: '"lRef > 0"'
+      offset: '00004358'
+    - name: ??_C@_0BJ@KMBD@?5?5?5?5Object?5?$CFd?5ref?9?9?5?$DN?5?$CFd?$AA@
+      processed: '"    Object %d ref-- = %d"'
+      offset: '00004364'
+    - name: ??_C@_00A@?$AA@
+      processed: '""'
+      offset: '00004380'
+    - name: ??_C@_0DG@LGBP@E?3?2ntc?2private?2genx?2dxmdev?2dshow@
+      processed: '"E:\\ntc\\private\\genx\\dxmdev\\dshow"...'
+      offset: '00004384'
+    - name: ??_C@_0BC@FCHB@Unloading?5library?$AA@
+      processed: '"Unloading library"'
+      offset: 000043BC
+    - name: ??_C@_0M@JPBG@No?5instance?$AA@
+      processed: '"No instance"'
+      offset: 000043D0
+    - name: ??_C@_0BD@NLHL@Can?8t?5create?5DDraw?$AA@
+      processed: "\"Can\\'t create DDraw\""
+      offset: 000043DC
+    - name: ??_C@_0BN@PKGE@Creating?5DDraw?5for?5device?5?$CFs?$AA@
+      processed: '"Creating DDraw for device %s"'
+      offset: 000043F0
+    - name: ??_C@_06CENM@?$DMNULL?$DO?$AA@
+      processed: '"<NULL>"'
+      offset: '00004410'
+    - name: ??_C@_0BH@LAMO@DirectDrawEnumerateExA?$AA@
+      processed: '"DirectDrawEnumerateExA"'
+      offset: '00004418'
+    - name: ??_C@_0BF@MNK@DirectDrawEnumerateA?$AA@
+      processed: '"DirectDrawEnumerateA"'
+      offset: '00004430'
+    - name: ??_C@_0BB@DLNE@DirectDrawCreate?$AA@
+      processed: '"DirectDrawCreate"'
+      offset: '00004448'
+    - name: ??_C@_0L@NBAI@No?5library?$AA@
+      processed: '"No library"'
+      offset: 0000445C
+    - name: ??_C@_0BF@DKPG@Can?8t?5load?5DDRAW?4DLL?$AA@
+      processed: "\"Can\\'t load DDRAW.DLL\""
+      offset: '00004468'
+    - name: ??_C@_09LLMO@DDRAW?4DLL?$AA@
+      processed: '"DDRAW.DLL"'
+      offset: '00004480'
+    - name: ??_C@_0P@DCCI@No?5entry?5point?$AA@
+      processed: '"No entry point"'
+      offset: 0000448C
+    - name: ??_C@_0CH@CDGH@Can?8t?5get?5functions?3?5Create?$DN?$CFx?5E@
+      processed: "\"Can\\'t get functions: Create=%x E\"..."
+      offset: 0000449C
+    - name: ??_C@_0O@LCEA@m_hDirectDraw?$AA@
+      processed: '"m_hDirectDraw"'
+      offset: 000044C4
+    - name: ??_C@_0P@PPM@Already?5loaded?$AA@
+      processed: '"Already loaded"'
+      offset: 000044D4
+    - name: ??_C@_0BK@NDBN@Entering?5DoLoadDirectDraw?$AA@
+      processed: '"Entering DoLoadDirectDraw"'
+      offset: '000044E4'
+    - name: ??_C@_0BD@MKI@Releasing?5instance?$AA@
+      processed: '"Releasing instance"'
+      offset: '00004500'
+    - name: ??_C@_0BM@BDEF@Releasing?5DirectDraw?5driver?$AA@
+      processed: '"Releasing DirectDraw driver"'
+      offset: '00004514'
+    - name: ??_C@_0BF@FAAC@Returning?5DirectDraw?$AA@
+      processed: '"Returning DirectDraw"'
+      offset: '00004530'
+    - name: ??_C@_0O@PIDM@No?5DirectDraw?$AA@
+      processed: '"No DirectDraw"'
+      offset: '00004548'
+    - name: ??_C@_0BH@HOPA@Entering?5GetDirectDraw?$AA@
+      processed: '"Entering GetDirectDraw"'
+      offset: '00004558'
+    - name: ??_C@_08GOGB@m_hEvent?$AA@
+      processed: '"m_hEvent"'
+      offset: '00004580'
+    - name: ??_C@_0DE@HDJC@E?3?2ntc?2private?2genx?2dxmdev?2dshow@
+      processed: '"E:\\ntc\\private\\genx\\dxmdev\\dshow"...'
+      offset: 0000458C
+    - name: ??_C@_0BG@LBGK@CloseHandle?$CIm_hEvent?$CJ?$AA@
+      processed: '"CloseHandle(m_hEvent)"'
+      offset: 000045C0
+    - name: ??_C@_0BH@DNAO@CoInitializeEx?5failed?4?$AA@
+      processed: '"CoInitializeEx failed."'
+      offset: 000045D8
+    - name: ??_C@_0BM@KIKF@?$CCcouldn?8t?5locate?5ole32?4dll?$CC?$AA@
+      processed: "\"\\\"couldn\\'t locate ole32.dll\\\"\""
+      offset: 000045F0
+    - name: ??_C@_0P@DOFI@CoInitializeEx?$AA@
+      processed: '"CoInitializeEx"'
+      offset: 0000460C
+    - name: ??_C@_09FFJE@ole32?4dll?$AA@
+      processed: '"ole32.dll"'
+      offset: 0000461C
+    - name: ??_C@_0L@DOFE@iMaxLength?$AA@
+      processed: '"iMaxLength"'
+      offset: '00004628'
+    - name: ??_C@_0BL@HPOG@Thread?5?$CFd?5now?5owns?5lock?5?$CFx?$AA@
+      processed: '"Thread %d now owns lock %x"'
+      offset: '00004634'
+    - name: ??_C@_0DA@IBDJ@Thread?5?$CFd?5about?5to?5wait?5for?5lock@
+      processed: '"Thread %d about to wait for lock"...'
+      offset: '00004650'
+    - name: ??_C@_0BM@PPLL@Thread?5?$CFd?5releasing?5lock?5?$CFx?$AA@
+      processed: '"Thread %d releasing lock %x"'
+      offset: '00004680'
+    - name: ??_C@_0CG@OFOI@CLSID_AudioRendererAdvancedPrope@
+      processed: '"CLSID_AudioRendererAdvancedPrope"...'
+      offset: 0000469C
+    - name: ??_C@_0CE@KFIC@CLSID_VideoStreamConfigPropertyP@
+      processed: '"CLSID_VideoStreamConfigPropertyP"...'
+      offset: 000046C4
+    - name: ??_C@_0CF@OEMG@CLSID_AnalogVideoDecoderProperty@
+      processed: '"CLSID_AnalogVideoDecoderProperty"...'
+      offset: '000046E8'
+    - name: ??_C@_0CA@NMAK@CLSID_CameraControlPropertyPage?$AA@
+      processed: '"CLSID_CameraControlPropertyPage"'
+      offset: '00004710'
+    - name: ??_C@_0BP@EEMF@CLSID_VideoProcAmpPropertyPage?$AA@
+      processed: '"CLSID_VideoProcAmpPropertyPage"'
+      offset: '00004730'
+    - name: ??_C@_0CA@LMOC@CLSID_TVAudioFilterPropertyPage?$AA@
+      processed: '"CLSID_TVAudioFilterPropertyPage"'
+      offset: '00004750'
+    - name: ??_C@_0CB@DFC@CLSID_CrossbarFilterPropertyPage@
+      processed: '"CLSID_CrossbarFilterPropertyPage"...'
+      offset: '00004770'
+    - name: ??_C@_0CA@EINJ@CLSID_TVTunerFilterPropertyPage?$AA@
+      processed: '"CLSID_TVTunerFilterPropertyPage"'
+      offset: '00004794'
+    - name: ??_C@_0BF@MFED@LOOK_DOWNSTREAM_ONLY?$AA@
+      processed: '"LOOK_DOWNSTREAM_ONLY"'
+      offset: 000047B4
+    - name: ??_C@_0BD@HFOJ@LOOK_UPSTREAM_ONLY?$AA@
+      processed: '"LOOK_UPSTREAM_ONLY"'
+      offset: 000047CC
+    - name: ??_C@_0BL@NPMF@PIN_CATEGORY_VIDEOPORT_VBI?$AA@
+      processed: '"PIN_CATEGORY_VIDEOPORT_VBI"'
+      offset: '000047E0'
+    - name: ??_C@_0BG@FHFK@PIN_CATEGORY_TIMECODE?$AA@
+      processed: '"PIN_CATEGORY_TIMECODE"'
+      offset: 000047FC
+    - name: ??_C@_0BD@NPOB@PIN_CATEGORY_STILL?$AA@
+      processed: '"PIN_CATEGORY_STILL"'
+      offset: '00004814'
+    - name: ??_C@_0BA@LDHJ@PIN_CATEGORY_CC?$AA@
+      processed: '"PIN_CATEGORY_CC"'
+      offset: '00004828'
+    - name: ??_C@_0BG@BBLG@PIN_CATEGORY_TELETEXT?$AA@
+      processed: '"PIN_CATEGORY_TELETEXT"'
+      offset: '00004838'
+    - name: ??_C@_0BB@EOJI@PIN_CATEGORY_EDS?$AA@
+      processed: '"PIN_CATEGORY_EDS"'
+      offset: '00004850'
+    - name: ??_C@_0BD@IEL@PIN_CATEGORY_NABTS?$AA@
+      processed: '"PIN_CATEGORY_NABTS"'
+      offset: '00004864'
+    - name: ??_C@_0BH@DNNB@PIN_CATEGORY_VIDEOPORT?$AA@
+      processed: '"PIN_CATEGORY_VIDEOPORT"'
+      offset: '00004878'
+    - name: ??_C@_0BB@EGNA@PIN_CATEGORY_VBI?$AA@
+      processed: '"PIN_CATEGORY_VBI"'
+      offset: '00004890'
+    - name: ??_C@_0BL@EAIJ@PIN_CATEGORY_ANALOGVIDEOIN?$AA@
+      processed: '"PIN_CATEGORY_ANALOGVIDEOIN"'
+      offset: 000048A4
+    - name: ??_C@_0BF@GDDO@PIN_CATEGORY_PREVIEW?$AA@
+      processed: '"PIN_CATEGORY_PREVIEW"'
+      offset: 000048C0
+    - name: ??_C@_0BF@HLFO@PIN_CATEGORY_CAPTURE?$AA@
+      processed: '"PIN_CATEGORY_CAPTURE"'
+      offset: 000048D8
+    - name: ??_C@_0BA@EIFJ@AMPROPSETID_Pin?$AA@
+      processed: '"AMPROPSETID_Pin"'
+      offset: 000048F0
+    - name: ??_C@_0BH@OHCH@TIME_FORMAT_MEDIA_TIME?$AA@
+      processed: '"TIME_FORMAT_MEDIA_TIME"'
+      offset: '00004900'
+    - name: ??_C@_0BC@FMKD@TIME_FORMAT_FIELD?$AA@
+      processed: '"TIME_FORMAT_FIELD"'
+      offset: '00004918'
+    - name: ??_C@_0BD@NBO@TIME_FORMAT_SAMPLE?$AA@
+      processed: '"TIME_FORMAT_SAMPLE"'
+      offset: 0000492C
+    - name: ??_C@_0BB@JJL@TIME_FORMAT_BYTE?$AA@
+      processed: '"TIME_FORMAT_BYTE"'
+      offset: '00004940'
+    - name: ??_C@_0BC@LIID@TIME_FORMAT_FRAME?$AA@
+      processed: '"TIME_FORMAT_FRAME"'
+      offset: '00004954'
+    - name: ??_C@_0BB@IJPG@TIME_FORMAT_NONE?$AA@
+      processed: '"TIME_FORMAT_NONE"'
+      offset: '00004968'
+    - name: ??_C@_0BL@MJBI@AM_INTERFACESETID_Standard?$AA@
+      processed: '"AM_INTERFACESETID_Standard"'
+      offset: 0000497C
+    - name: ??_C@_0BC@MEBM@IID_IKsPinFactory?$AA@
+      processed: '"IID_IKsPinFactory"'
+      offset: '00004998'
+    - name: ??_C@_0P@POAF@IID_IKsControl?$AA@
+      processed: '"IID_IKsControl"'
+      offset: 000049AC
+    - name: ??_C@_0L@MBKC@IID_IKsPin?$AA@
+      processed: '"IID_IKsPin"'
+      offset: 000049BC
+    - name: ??_C@_0BH@MEGK@IID_IKsDataTypeHandler?$AA@
+      processed: '"IID_IKsDataTypeHandler"'
+      offset: 000049C8
+    - name: ??_C@_0BI@LLJG@IID_IKsInterfaceHandler?$AA@
+      processed: '"IID_IKsInterfaceHandler"'
+      offset: '000049E0'
+    - name: ??_C@_0BH@GKJA@AM_KSCATEGORY_SPLITTER?$AA@
+      processed: '"AM_KSCATEGORY_SPLITTER"'
+      offset: 000049F8
+    - name: ??_C@_0BH@GPP@AM_KSCATEGORY_VBICODEC?$AA@
+      processed: '"AM_KSCATEGORY_VBICODEC"'
+      offset: 00004A10
+    - name: ??_C@_0BG@MCGB@AM_KSCATEGORY_TVAUDIO?$AA@
+      processed: '"AM_KSCATEGORY_TVAUDIO"'
+      offset: 00004A28
+    - name: ??_C@_0BH@CFIO@AM_KSCATEGORY_CROSSBAR?$AA@
+      processed: '"AM_KSCATEGORY_CROSSBAR"'
+      offset: 00004A40
+    - name: ??_C@_0BG@MGOB@AM_KSCATEGORY_TVTUNER?$AA@
+      processed: '"AM_KSCATEGORY_TVTUNER"'
+      offset: 00004A58
+    - name: ??_C@_0BE@OMHI@AM_KSCATEGORY_VIDEO?$AA@
+      processed: '"AM_KSCATEGORY_VIDEO"'
+      offset: 00004A70
+    - name: ??_C@_0BE@ILNA@AM_KSCATEGORY_AUDIO?$AA@
+      processed: '"AM_KSCATEGORY_AUDIO"'
+      offset: 00004A84
+    - name: ??_C@_0BN@BEIL@AM_KSCATEGORY_DATACOMPRESSOR?$AA@
+      processed: '"AM_KSCATEGORY_DATACOMPRESSOR"'
+      offset: 00004A98
+    - name: ??_C@_0BF@NEGO@AM_KSCATEGORY_RENDER?$AA@
+      processed: '"AM_KSCATEGORY_RENDER"'
+      offset: 00004AB8
+    - name: ??_C@_0BG@EBHL@AM_KSCATEGORY_CAPTURE?$AA@
+      processed: '"AM_KSCATEGORY_CAPTURE"'
+      offset: 00004AD0
+    - name: ??_C@_0BJ@MBE@AM_KSPROPSETID_FrameStep?$AA@
+      processed: '"AM_KSPROPSETID_FrameStep"'
+      offset: 00004AE8
+    - name: ??_C@_0BK@BLLA@AM_KSPROPSETID_DvdKaraoke?$AA@
+      processed: '"AM_KSPROPSETID_DvdKaraoke"'
+      offset: 00004B04
+    - name: ??_C@_0BO@JBAD@AM_KSPROPSETID_DVD_RateChange?$AA@
+      processed: '"AM_KSPROPSETID_DVD_RateChange"'
+      offset: 00004B20
+    - name: ??_C@_0BM@JHH@AM_KSPROPSETID_TSRateChange?$AA@
+      processed: '"AM_KSPROPSETID_TSRateChange"'
+      offset: 00004B40
+    - name: ??_C@_0BI@NAFB@AM_KSPROPSETID_CopyProt?$AA@
+      processed: '"AM_KSPROPSETID_CopyProt"'
+      offset: 00004B5C
+    - name: ??_C@_0BJ@GJOG@AM_KSPROPSETID_DvdSubPic?$AA@
+      processed: '"AM_KSPROPSETID_DvdSubPic"'
+      offset: 00004B74
+    - name: ??_C@_0BD@BKHD@AM_KSPROPSETID_AC3?$AA@
+      processed: '"AM_KSPROPSETID_AC3"'
+      offset: 00004B90
+    - name: ??_C@_0BF@BCFD@FORMAT_DVD_LPCMAudio?$AA@
+      processed: '"FORMAT_DVD_LPCMAudio"'
+      offset: 00004BA4
+    - name: ??_C@_0BC@BNFD@FORMAT_MPEG2Audio?$AA@
+      processed: '"FORMAT_MPEG2Audio"'
+      offset: 00004BBC
+    - name: ??_C@_0BA@IMNO@FORMAT_DolbyAC3?$AA@
+      processed: '"FORMAT_DolbyAC3"'
+      offset: 00004BD0
+    - name: ??_C@_0BC@HKPL@FORMAT_MPEG2Video?$AA@
+      processed: '"FORMAT_MPEG2Video"'
+      offset: 00004BE0
+    - name: ??_C@_0CF@FEGG@MEDIASUBTYPE_DVD_NAVIGATION_PROV@
+      processed: '"MEDIASUBTYPE_DVD_NAVIGATION_PROV"...'
+      offset: 00004BF4
+    - name: ??_C@_0CA@DAFI@MEDIASUBTYPE_DVD_NAVIGATION_DSI?$AA@
+      processed: '"MEDIASUBTYPE_DVD_NAVIGATION_DSI"'
+      offset: 00004C1C
+    - name: ??_C@_0CA@DDMB@MEDIASUBTYPE_DVD_NAVIGATION_PCI?$AA@
+      processed: '"MEDIASUBTYPE_DVD_NAVIGATION_PCI"'
+      offset: 00004C3C
+    - name: ??_C@_0BJ@NEOJ@MEDIATYPE_DVD_NAVIGATION?$AA@
+      processed: '"MEDIATYPE_DVD_NAVIGATION"'
+      offset: 00004C5C
+    - name: ??_C@_0BN@IAGN@MEDIATYPE_DVD_ENCRYPTED_PACK?$AA@
+      processed: '"MEDIATYPE_DVD_ENCRYPTED_PACK"'
+      offset: 00004C78
+    - name: ??_C@_0BC@OBPE@MEDIASUBTYPE_SDDS?$AA@
+      processed: '"MEDIASUBTYPE_SDDS"'
+      offset: 00004C98
+    - name: ??_C@_0BB@PEND@MEDIASUBTYPE_DTS?$AA@
+      processed: '"MEDIASUBTYPE_DTS"'
+      offset: 00004CAC
+    - name: ??_C@_0BM@OAPH@MEDIASUBTYPE_DVD_LPCM_AUDIO?$AA@
+      processed: '"MEDIASUBTYPE_DVD_LPCM_AUDIO"'
+      offset: 00004CC0
+    - name: ??_C@_0BM@JDMO@MEDIASUBTYPE_DVD_SUBPICTURE?$AA@
+      processed: '"MEDIASUBTYPE_DVD_SUBPICTURE"'
+      offset: 00004CDC
+    - name: ??_C@_0BH@GAK@MEDIASUBTYPE_DOLBY_AC3?$AA@
+      processed: '"MEDIASUBTYPE_DOLBY_AC3"'
+      offset: 00004CF8
+    - name: ??_C@_0BJ@KIJF@MEDIASUBTYPE_MPEG2_AUDIO?$AA@
+      processed: '"MEDIASUBTYPE_MPEG2_AUDIO"'
+      offset: 00004D10
+    - name: ??_C@_0BN@NFNG@MEDIASUBTYPE_MPEG2_TRANSPORT?$AA@
+      processed: '"MEDIASUBTYPE_MPEG2_TRANSPORT"'
+      offset: 00004D2C
+    - name: ??_C@_0BL@GNEA@MEDIASUBTYPE_MPEG2_PROGRAM?$AA@
+      processed: '"MEDIASUBTYPE_MPEG2_PROGRAM"'
+      offset: 00004D4C
+    - name: ??_C@_0BC@KBDK@FORMAT_VIDEOINFO2?$AA@
+      processed: '"FORMAT_VIDEOINFO2"'
+      offset: 00004D68
+    - name: ??_C@_0BD@FHDB@FORMAT_MPEG2_VIDEO?$AA@
+      processed: '"FORMAT_MPEG2_VIDEO"'
+      offset: 00004D7C
+    - name: ??_C@_0BJ@MPDN@MEDIASUBTYPE_MPEG2_VIDEO?$AA@
+      processed: '"MEDIASUBTYPE_MPEG2_VIDEO"'
+      offset: 00004D90
+    - name: ??_C@_0BE@GJHB@MEDIATYPE_MPEG2_PES?$AA@
+      processed: '"MEDIATYPE_MPEG2_PES"'
+      offset: 00004DAC
+    - name: ??_C@_0BF@HEFL@MEDIATYPE_MPEG2_PACK?$AA@
+      processed: '"MEDIATYPE_MPEG2_PACK"'
+      offset: 00004DC0
+    - name: ??_C@_0BG@BMPJ@MEDIATYPE_AnalogAudio?$AA@
+      processed: '"MEDIATYPE_AnalogAudio"'
+      offset: 00004DD8
+    - name: ??_C@_0CB@CNNB@MEDIASUBTYPE_AnalogVideo_SECAM_L@
+      processed: '"MEDIASUBTYPE_AnalogVideo_SECAM_L"...'
+      offset: 00004DF0
+    - name: ??_C@_0CC@PIHP@MEDIASUBTYPE_AnalogVideo_SECAM_K@
+      processed: '"MEDIASUBTYPE_AnalogVideo_SECAM_K"...'
+      offset: '00004E14'
+    - name: ??_C@_0CB@HIDE@MEDIASUBTYPE_AnalogVideo_SECAM_K@
+      processed: '"MEDIASUBTYPE_AnalogVideo_SECAM_K"...'
+      offset: '00004E38'
+    - name: ??_C@_0CB@IHIN@MEDIASUBTYPE_AnalogVideo_SECAM_H@
+      processed: '"MEDIASUBTYPE_AnalogVideo_SECAM_H"...'
+      offset: 00004E5C
+    - name: ??_C@_0CB@IGNA@MEDIASUBTYPE_AnalogVideo_SECAM_G@
+      processed: '"MEDIASUBTYPE_AnalogVideo_SECAM_G"...'
+      offset: '00004E80'
+    - name: ??_C@_0CB@HJGJ@MEDIASUBTYPE_AnalogVideo_SECAM_D@
+      processed: '"MEDIASUBTYPE_AnalogVideo_SECAM_D"...'
+      offset: 00004EA4
+    - name: ??_C@_0CB@IGBL@MEDIASUBTYPE_AnalogVideo_SECAM_B@
+      processed: '"MEDIASUBTYPE_AnalogVideo_SECAM_B"...'
+      offset: 00004EC8
+    - name: ??_C@_0CF@FICO@MEDIASUBTYPE_AnalogVideo_PAL_N_C@
+      processed: '"MEDIASUBTYPE_AnalogVideo_PAL_N_C"...'
+      offset: 00004EEC
+    - name: ??_C@_0BP@NDEB@MEDIASUBTYPE_AnalogVideo_PAL_N?$AA@
+      processed: '"MEDIASUBTYPE_AnalogVideo_PAL_N"'
+      offset: 00004F14
+    - name: ??_C@_0BP@CMPI@MEDIASUBTYPE_AnalogVideo_PAL_M?$AA@
+      processed: '"MEDIASUBTYPE_AnalogVideo_PAL_M"'
+      offset: 00004F34
+    - name: ??_C@_0BP@IGKE@MEDIASUBTYPE_AnalogVideo_PAL_I?$AA@
+      processed: '"MEDIASUBTYPE_AnalogVideo_PAL_I"'
+      offset: 00004F54
+    - name: ??_C@_0BP@CMDD@MEDIASUBTYPE_AnalogVideo_PAL_H?$AA@
+      processed: '"MEDIASUBTYPE_AnalogVideo_PAL_H"'
+      offset: 00004F74
+    - name: ??_C@_0BP@CNGO@MEDIASUBTYPE_AnalogVideo_PAL_G?$AA@
+      processed: '"MEDIASUBTYPE_AnalogVideo_PAL_G"'
+      offset: 00004F94
+    - name: ??_C@_0BP@NCNH@MEDIASUBTYPE_AnalogVideo_PAL_D?$AA@
+      processed: '"MEDIASUBTYPE_AnalogVideo_PAL_D"'
+      offset: 00004FB4
+    - name: ??_C@_0BP@CNKF@MEDIASUBTYPE_AnalogVideo_PAL_B?$AA@
+      processed: '"MEDIASUBTYPE_AnalogVideo_PAL_B"'
+      offset: 00004FD4
+    - name: ??_C@_0CA@CJMP@MEDIASUBTYPE_AnalogVideo_NTSC_M?$AA@
+      processed: '"MEDIASUBTYPE_AnalogVideo_NTSC_M"'
+      offset: 00004FF4
+    - name: ??_C@_0BG@HLFB@MEDIATYPE_AnalogVideo?$AA@
+      processed: '"MEDIATYPE_AnalogVideo"'
+      offset: '00005014'
+    - name: ??_C@_0BD@KPAM@FORMAT_AnalogVideo?$AA@
+      processed: '"FORMAT_AnalogVideo"'
+      offset: 0000502C
+    - name: ??_C@_0BF@EEHB@IID_IAMLine21Decoder?$AA@
+      processed: '"IID_IAMLine21Decoder"'
+      offset: '00005040'
+    - name: ??_C@_0BG@GGGF@IID_IMpegAudioDecoder?$AA@
+      processed: '"IID_IMpegAudioDecoder"'
+      offset: '00005058'
+    - name: ??_C@_0BD@CENL@IID_IAMDirectSound?$AA@
+      processed: '"IID_IAMDirectSound"'
+      offset: '00005070'
+    - name: ??_C@_0BI@CJFO@CLSID_DVMuxPropertyPage?$AA@
+      processed: '"CLSID_DVMuxPropertyPage"'
+      offset: '00005084'
+    - name: ??_C@_0BK@PKGJ@CLSID_DVEncPropertiesPage?$AA@
+      processed: '"CLSID_DVEncPropertiesPage"'
+      offset: 0000509C
+    - name: ??_C@_0BK@GCBK@CLSID_DVDecPropertiesPage?$AA@
+      processed: '"CLSID_DVDecPropertiesPage"'
+      offset: 000050B8
+    - name: ??_C@_0BH@NDPP@IID_IFullScreenVideoEx?$AA@
+      processed: '"IID_IFullScreenVideoEx"'
+      offset: 000050D4
+    - name: ??_C@_0BF@OOIH@IID_IFullScreenVideo?$AA@
+      processed: '"IID_IFullScreenVideo"'
+      offset: 000050EC
+    - name: ??_C@_0BG@DOKI@CLSID_ModexProperties?$AA@
+      processed: '"CLSID_ModexProperties"'
+      offset: '00005104'
+    - name: ??_C@_0BN@GHIA@IID_IDirectDrawSurfaceKernel?$AA@
+      processed: '"IID_IDirectDrawSurfaceKernel"'
+      offset: 0000511C
+    - name: ??_C@_0BG@JCGH@IID_IDirectDrawKernel?$AA@
+      processed: '"IID_IDirectDrawKernel"'
+      offset: 0000513C
+    - name: ??_C@_0BK@LAIG@IID_IDDVideoPortContainer?$AA@
+      processed: '"IID_IDDVideoPortContainer"'
+      offset: '00005154'
+    - name: ??_C@_0BF@CFNH@IID_IMixerPinConfig2?$AA@
+      processed: '"IID_IMixerPinConfig2"'
+      offset: '00005170'
+    - name: ??_C@_0BE@GJNN@IID_IMixerPinConfig?$AA@
+      processed: '"IID_IMixerPinConfig"'
+      offset: '00005188'
+    - name: ??_C@_0BB@NNOI@IID_IVPVBINotify?$AA@
+      processed: '"IID_IVPVBINotify"'
+      offset: 0000519C
+    - name: ??_C@_0BB@HOLD@IID_IVPVBIConfig?$AA@
+      processed: '"IID_IVPVBIConfig"'
+      offset: 000051B0
+    - name: ??_C@_0P@GBOD@IID_IVPNotify2?$AA@
+      processed: '"IID_IVPNotify2"'
+      offset: 000051C4
+    - name: ??_C@_0O@FNDJ@IID_IVPNotify?$AA@
+      processed: '"IID_IVPNotify"'
+      offset: 000051D4
+    - name: ??_C@_0O@POGC@IID_IVPConfig?$AA@
+      processed: '"IID_IVPConfig"'
+      offset: '000051E4'
+    - name: ??_C@_0BB@JBD@IID_IVPVBIObject?$AA@
+      processed: '"IID_IVPVBIObject"'
+      offset: 000051F4
+    - name: ??_C@_0BC@POMB@CLSID_VPVBIObject?$AA@
+      processed: '"CLSID_VPVBIObject"'
+      offset: '00005208'
+    - name: ??_C@_0P@NOAP@IID_IVPControl?$AA@
+      processed: '"IID_IVPControl"'
+      offset: 0000521C
+    - name: ??_C@_0O@IJMC@IID_IVPObject?$AA@
+      processed: '"IID_IVPObject"'
+      offset: 0000522C
+    - name: ??_C@_0P@KMBF@CLSID_VPObject?$AA@
+      processed: '"CLSID_VPObject"'
+      offset: 0000523C
+    - name: ??_C@_0O@NHLC@IID_IQualProp?$AA@
+      processed: '"IID_IQualProp"'
+      offset: 0000524C
+    - name: ??_C@_0BF@HNPB@IID_IDirectDrawVideo?$AA@
+      processed: '"IID_IDirectDrawVideo"'
+      offset: 0000525C
+    - name: ??_C@_0BE@OGOP@IID_IBaseVideoMixer?$AA@
+      processed: '"IID_IBaseVideoMixer"'
+      offset: '00005274'
+    - name: ??_C@_0BI@PILJ@CLSID_QualityProperties?$AA@
+      processed: '"CLSID_QualityProperties"'
+      offset: '00005288'
+    - name: ??_C@_0BM@HMKG@CLSID_PerformanceProperties?$AA@
+      processed: '"CLSID_PerformanceProperties"'
+      offset: 000052A0
+    - name: ??_C@_0BL@PMBH@CLSID_DirectDrawProperties?$AA@
+      processed: '"CLSID_DirectDrawProperties"'
+      offset: 000052BC
+    - name: ??_C@_0O@KPJM@FORMAT_DvInfo?$AA@
+      processed: '"FORMAT_DvInfo"'
+      offset: 000052D8
+    - name: ??_C@_0BD@FND@FORMAT_MPEGStreams?$AA@
+      processed: '"FORMAT_MPEGStreams"'
+      offset: '000052E8'
+    - name: ??_C@_0BB@LJDJ@FORMAT_MPEGVideo?$AA@
+      processed: '"FORMAT_MPEGVideo"'
+      offset: 000052FC
+    - name: ??_C@_0BE@NKCC@FORMAT_WaveFormatEx?$AA@
+      processed: '"FORMAT_WaveFormatEx"'
+      offset: '00005310'
+    - name: ??_C@_0BC@LGJI@FORMAT_VideoInfo2?$AA@
+      processed: '"FORMAT_VideoInfo2"'
+      offset: '00005324'
+    - name: ??_C@_0BB@CGPD@FORMAT_VideoInfo?$AA@
+      processed: '"FORMAT_VideoInfo"'
+      offset: '00005338'
+    - name: ??_C@_0M@GKAB@FORMAT_None?$AA@
+      processed: '"FORMAT_None"'
+      offset: 0000534C
+    - name: ??_C@_0P@JMHN@CLSID_SmartTee?$AA@
+      processed: '"CLSID_SmartTee"'
+      offset: '00005358'
+    - name: ??_C@_0P@MPL@CLSID_DVDState?$AA@
+      processed: '"CLSID_DVDState"'
+      offset: '00005368'
+    - name: ??_C@_0BD@LGFG@CLSID_DVDNavigator?$AA@
+      processed: '"CLSID_DVDNavigator"'
+      offset: '00005378'
+    - name: ??_C@_0BG@NONN@CLSID_DvdGraphBuilder?$AA@
+      processed: '"CLSID_DvdGraphBuilder"'
+      offset: 0000538C
+    - name: ??_C@_0BH@IKBO@CLSID_MediaPropertyBag?$AA@
+      processed: '"CLSID_MediaPropertyBag"'
+      offset: 000053A4
+    - name: ??_C@_0BG@BGHI@CLSID_MemoryAllocator?$AA@
+      processed: '"CLSID_MemoryAllocator"'
+      offset: 000053BC
+    - name: ??_C@_0BE@IKIO@CLSID_FilterMapper2?$AA@
+      processed: '"CLSID_FilterMapper2"'
+      offset: 000053D4
+    - name: ??_C@_0BM@ICCF@CLSID_DVDHWDecodersCategory?$AA@
+      processed: '"CLSID_DVDHWDecodersCategory"'
+      offset: '000053E8'
+    - name: ??_C@_0BM@ENOB@CLSID_ActiveMovieCategories?$AA@
+      processed: '"CLSID_ActiveMovieCategories"'
+      offset: '00005404'
+    - name: ??_C@_0BM@NMNO@CLSID_DeviceControlCategory?$AA@
+      processed: '"CLSID_DeviceControlCategory"'
+      offset: '00005420'
+    - name: ??_C@_0BH@MCHN@CLSID_TransmitCategory?$AA@
+      processed: '"CLSID_TransmitCategory"'
+      offset: 0000543C
+    - name: ??_C@_0BL@CMHD@CLSID_CMidiOutClassManager?$AA@
+      processed: '"CLSID_CMidiOutClassManager"'
+      offset: '00005454'
+    - name: ??_C@_0BL@DHON@CLSID_MidiRendererCategory?$AA@
+      processed: '"CLSID_MidiRendererCategory"'
+      offset: '00005470'
+    - name: ??_C@_0BL@ENEJ@CLSID_CWaveOutClassManager?$AA@
+      processed: '"CLSID_CWaveOutClassManager"'
+      offset: 0000548C
+    - name: ??_C@_0BM@KEDE@CLSID_AudioRendererCategory?$AA@
+      processed: '"CLSID_AudioRendererCategory"'
+      offset: 000054A8
+    - name: ??_C@_0BK@GFOD@CLSID_CWaveinClassManager?$AA@
+      processed: '"CLSID_CWaveinClassManager"'
+      offset: 000054C4
+    - name: ??_C@_0BP@ECNJ@CLSID_AudioInputDeviceCategory?$AA@
+      processed: '"CLSID_AudioInputDeviceCategory"'
+      offset: '000054E0'
+    - name: ??_C@_0BJ@GNED@CLSID_CAcmCoClassManager?$AA@
+      processed: '"CLSID_CAcmCoClassManager"'
+      offset: '00005500'
+    - name: ??_C@_0BO@MACL@CLSID_AudioCompressorCategory?$AA@
+      processed: '"CLSID_AudioCompressorCategory"'
+      offset: 0000551C
+    - name: ??_C@_0BJ@MMEN@CLSID_CIcmCoClassManager?$AA@
+      processed: '"CLSID_CIcmCoClassManager"'
+      offset: 0000553C
+    - name: ??_C@_0BO@FBEI@CLSID_VideoCompressorCategory?$AA@
+      processed: '"CLSID_VideoCompressorCategory"'
+      offset: '00005558'
+    - name: ??_C@_0BM@BHNJ@CLSID_CQzFilterClassManager?$AA@
+      processed: '"CLSID_CQzFilterClassManager"'
+      offset: '00005578'
+    - name: ??_C@_0BN@KNE@CLSID_LegacyAmFilterCategory?$AA@
+      processed: '"CLSID_LegacyAmFilterCategory"'
+      offset: '00005594'
+    - name: ??_C@_0BK@CNCL@CLSID_CVidCapClassManager?$AA@
+      processed: '"CLSID_CVidCapClassManager"'
+      offset: 000055B4
+    - name: ??_C@_0BP@PPEI@CLSID_VideoInputDeviceCategory?$AA@
+      processed: '"CLSID_VideoInputDeviceCategory"'
+      offset: 000055D0
+    - name: ??_C@_0BF@HCPK@CLSID_CDeviceMoniker?$AA@
+      processed: '"CLSID_CDeviceMoniker"'
+      offset: 000055F0
+    - name: ??_C@_0BH@JEGI@CLSID_SystemDeviceEnum?$AA@
+      processed: '"CLSID_SystemDeviceEnum"'
+      offset: '00005608'
+    - name: ??_C@_0BC@NADB@CLSID_VBISurfaces?$AA@
+      processed: '"CLSID_VBISurfaces"'
+      offset: '00005620'
+    - name: ??_C@_0BD@EDEM@CLSID_OverlayMixer?$AA@
+      processed: '"CLSID_OverlayMixer"'
+      offset: '00005634'
+    - name: ??_C@_0BE@LIMD@CLSID_Line21Decoder?$AA@
+      processed: '"CLSID_Line21Decoder"'
+      offset: '00005648'
+    - name: ??_C@_0BG@BLBO@CLSID_SeekingPassThru?$AA@
+      processed: '"CLSID_SeekingPassThru"'
+      offset: 0000565C
+    - name: ??_C@_0M@LMHP@CLSID_DVMux?$AA@
+      processed: '"CLSID_DVMux"'
+      offset: '00005674'
+    - name: ??_C@_0BB@MKGE@CLSID_DVSplitter?$AA@
+      processed: '"CLSID_DVSplitter"'
+      offset: '00005680'
+    - name: ??_C@_0BB@JBIO@CLSID_DVVideoEnc?$AA@
+      processed: '"CLSID_DVVideoEnc"'
+      offset: '00005694'
+    - name: ??_C@_0BD@BHHE@CLSID_DVVideoCodec?$AA@
+      processed: '"CLSID_DVVideoCodec"'
+      offset: 000056A8
+    - name: ??_C@_0BE@CENI@CLSID_AVIMIDIRender?$AA@
+      processed: '"CLSID_AVIMIDIRender"'
+      offset: 000056BC
+    - name: ??_C@_0BI@JPHN@CLSID_AviMuxProptyPage1?$AA@
+      processed: '"CLSID_AviMuxProptyPage1"'
+      offset: 000056D0
+    - name: ??_C@_0BH@HKLL@CLSID_AviMuxProptyPage?$AA@
+      processed: '"CLSID_AviMuxProptyPage"'
+      offset: '000056E8'
+    - name: ??_C@_0N@PKBE@CLSID_AsfMux?$AA@
+      processed: '"CLSID_AsfMux"'
+      offset: '00005700'
+    - name: ??_C@_0O@IOAF@CLSID_AviDest?$AA@
+      processed: '"CLSID_AviDest"'
+      offset: '00005710'
+    - name: ??_C@_0BB@HHJN@CLSID_FileWriter?$AA@
+      processed: '"CLSID_FileWriter"'
+      offset: '00005720'
+    - name: ??_C@_0M@OAAE@CLSID_AVICo?$AA@
+      processed: '"CLSID_AVICo"'
+      offset: '00005734'
+    - name: ??_C@_0N@EPLJ@CLSID_AMovie?$AA@
+      processed: '"CLSID_AMovie"'
+      offset: '00005740'
+    - name: ??_C@_0BI@GCHK@CLSID_PersistMonikerPID?$AA@
+      processed: '"CLSID_PersistMonikerPID"'
+      offset: '00005750'
+    - name: ??_C@_0BA@DNBF@CLSID_URLReader?$AA@
+      processed: '"CLSID_URLReader"'
+      offset: '00005768'
+    - name: ??_C@_0BC@OLCL@CLSID_AsyncReader?$AA@
+      processed: '"CLSID_AsyncReader"'
+      offset: '00005778'
+    - name: ??_C@_0BB@KLJI@CLSID_ACMWrapper?$AA@
+      processed: '"CLSID_ACMWrapper"'
+      offset: 0000578C
+    - name: ??_C@_0O@BJOF@CLSID_AVIDraw?$AA@
+      processed: '"CLSID_AVIDraw"'
+      offset: 000057A0
+    - name: ??_C@_0N@OBJ@CLSID_AVIDec?$AA@
+      processed: '"CLSID_AVIDec"'
+      offset: 000057B0
+    - name: ??_C@_0CA@IPE@CLSID_AudioInputMixerProperties?$AA@
+      processed: '"CLSID_AudioInputMixerProperties"'
+      offset: 000057C0
+    - name: ??_C@_0BC@HBOL@CLSID_AudioRecord?$AA@
+      processed: '"CLSID_AudioRecord"'
+      offset: '000057E0'
+    - name: ??_C@_0BD@MB@CLSID_DSoundRender?$AA@
+      processed: '"CLSID_DSoundRender"'
+      offset: 000057F4
+    - name: ??_C@_0BG@IDLJ@CLSID_AudioProperties?$AA@
+      processed: '"CLSID_AudioProperties"'
+      offset: '00005808'
+    - name: ??_C@_0BC@NABB@CLSID_AudioRender?$AA@
+      processed: '"CLSID_AudioRender"'
+      offset: '00005820'
+    - name: ??_C@_0BE@PEHN@CLSID_ModexRenderer?$AA@
+      processed: '"CLSID_ModexRenderer"'
+      offset: '00005834'
+    - name: ??_C@_0N@FGCC@CLSID_Dither?$AA@
+      processed: '"CLSID_Dither"'
+      offset: '00005848'
+    - name: ??_C@_0N@NFOE@CLSID_Colour?$AA@
+      processed: '"CLSID_Colour"'
+      offset: '00005858'
+    - name: ??_C@_0BE@JNHP@CLSID_VideoRenderer?$AA@
+      processed: '"CLSID_VideoRenderer"'
+      offset: '00005868'
+    - name: ??_C@_0BD@BGKH@CLSID_AVIDocWriter?$AA@
+      processed: '"CLSID_AVIDocWriter"'
+      offset: 0000587C
+    - name: ??_C@_0N@JGBI@CLSID_AVIDoc?$AA@
+      processed: '"CLSID_AVIDoc"'
+      offset: '00005890'
+    - name: ??_C@_0M@HOEF@CLSID_QTDec?$AA@
+      processed: '"CLSID_QTDec"'
+      offset: 000058A0
+    - name: ??_C@_0BG@CFPE@CLSID_QuickTimeParser?$AA@
+      processed: '"CLSID_QuickTimeParser"'
+      offset: 000058AC
+    - name: ??_C@_0BA@GAAD@CLSID_MOVReader?$AA@
+      processed: '"CLSID_MOVReader"'
+      offset: 000058C4
+    - name: ??_C@_0BA@NLII@CLSID_FGControl?$AA@
+      processed: '"CLSID_FGControl"'
+      offset: 000058D4
+    - name: ??_C@_0BI@MEDK@CLSID_CaptureProperties?$AA@
+      processed: '"CLSID_CaptureProperties"'
+      offset: '000058E4'
+    - name: ??_C@_0BB@EBHP@CLSID_VfwCapture?$AA@
+      processed: '"CLSID_VfwCapture"'
+      offset: 000058FC
+    - name: ??_C@_0BA@HDKI@CLSID_AviReader?$AA@
+      processed: '"CLSID_AviReader"'
+      offset: '00005910'
+    - name: ??_C@_0BC@DAHE@CLSID_AviSplitter?$AA@
+      processed: '"CLSID_AviSplitter"'
+      offset: '00005920'
+    - name: ??_C@_0N@LJ@CLSID_InfTee?$AA@
+      processed: '"CLSID_InfTee"'
+      offset: '00005934'
+    - name: ??_C@_0BB@JAJL@CLSID_TextRender?$AA@
+      processed: '"CLSID_TextRender"'
+      offset: '00005944'
+    - name: ??_C@_0BG@NBIO@CLSID_CMpegAudioCodec?$AA@
+      processed: '"CLSID_CMpegAudioCodec"'
+      offset: '00005958'
+    - name: ??_C@_0BG@HDPN@CLSID_CMpegVideoCodec?$AA@
+      processed: '"CLSID_CMpegVideoCodec"'
+      offset: '00005970'
+    - name: ??_C@_0BE@EEJE@CLSID_MPEG1Splitter?$AA@
+      processed: '"CLSID_MPEG1Splitter"'
+      offset: '00005988'
+    - name: ??_C@_0BI@FIED@CLSID_MPEG1PacketPlayer?$AA@
+      processed: '"CLSID_MPEG1PacketPlayer"'
+      offset: 0000599C
+    - name: ??_C@_0BB@IPDG@CLSID_FileSource?$AA@
+      processed: '"CLSID_FileSource"'
+      offset: 000059B4
+    - name: ??_C@_0P@FCMK@CLSID_MPEG1Doc?$AA@
+      processed: '"CLSID_MPEG1Doc"'
+      offset: 000059C8
+    - name: ??_C@_0BK@MAMN@CLSID_FilterGraphNoThread?$AA@
+      processed: '"CLSID_FilterGraphNoThread"'
+      offset: 000059D8
+    - name: ??_C@_0BC@OGFB@CLSID_FilterGraph?$AA@
+      processed: '"CLSID_FilterGraph"'
+      offset: 000059F4
+    - name: ??_C@_0BD@DAME@CLSID_FilterMapper?$AA@
+      processed: '"CLSID_FilterMapper"'
+      offset: 00005A08
+    - name: ??_C@_0BC@GGIE@CLSID_SystemClock?$AA@
+      processed: '"CLSID_SystemClock"'
+      offset: 00005A1C
+    - name: ??_C@_0BH@PIDN@CLSID_ProtoFilterGraph?$AA@
+      processed: '"CLSID_ProtoFilterGraph"'
+      offset: 00005A30
+    - name: ??_C@_0BL@HENC@CLSID_CaptureGraphBuilder2?$AA@
+      processed: '"CLSID_CaptureGraphBuilder2"'
+      offset: 00005A48
+    - name: ??_C@_0BK@GMKF@CLSID_CaptureGraphBuilder?$AA@
+      processed: '"CLSID_CaptureGraphBuilder"'
+      offset: 00005A64
+    - name: ??_C@_0BJ@MOEP@CLSID_CutListCacheMemory?$AA@
+      processed: '"CLSID_CutListCacheMemory"'
+      offset: 00005A80
+    - name: ??_C@_0BE@PPG@CLSID_AudioFileClip?$AA@
+      processed: '"CLSID_AudioFileClip"'
+      offset: 00005A9C
+    - name: ??_C@_0BE@OIGE@CLSID_VideoFileClip?$AA@
+      processed: '"CLSID_VideoFileClip"'
+      offset: 00005AB0
+    - name: ??_C@_0BE@DMKO@CLSID_SimpleCutList?$AA@
+      processed: '"CLSID_SimpleCutList"'
+      offset: 00005AC4
+    - name: ??_C@_0BK@EMLP@CLSID_CutListGraphBuilder?$AA@
+      processed: '"CLSID_CutListGraphBuilder"'
+      offset: 00005AD8
+    - name: ??_C@_0BJ@NDEG@IID_ICutListGraphBuilder?$AA@
+      processed: '"IID_ICutListGraphBuilder"'
+      offset: 00005AF4
+    - name: ??_C@_0O@FFJN@IID_IFileClip?$AA@
+      processed: '"IID_IFileClip"'
+      offset: 00005B10
+    - name: ??_C@_0BF@GENP@IID_IStandardCutList?$AA@
+      processed: '"IID_IStandardCutList"'
+      offset: 00005B20
+    - name: ??_C@_0BE@IAOC@CLSID_CutListSource?$AA@
+      processed: '"CLSID_CutListSource"'
+      offset: 00005B38
+    - name: ??_C@_0BL@GLNG@IID_IAMAudioCutListElement?$AA@
+      processed: '"IID_IAMAudioCutListElement"'
+      offset: 00005B4C
+    - name: ??_C@_0BL@FOMM@IID_IAMVideoCutListElement?$AA@
+      processed: '"IID_IAMVideoCutListElement"'
+      offset: 00005B68
+    - name: ??_C@_0BK@KCMK@IID_IAMFileCutListElement?$AA@
+      processed: '"IID_IAMFileCutListElement"'
+      offset: 00005B84
+    - name: ??_C@_0BG@BFDB@IID_IAMCutListElement?$AA@
+      processed: '"IID_IAMCutListElement"'
+      offset: 00005BA0
+    - name: ??_C@_0BD@PCJD@MEDIASUBTYPE_VPVBI?$AA@
+      processed: '"MEDIASUBTYPE_VPVBI"'
+      offset: 00005BB8
+    - name: ??_C@_0BF@CPOA@MEDIASUBTYPE_VPVideo?$AA@
+      processed: '"MEDIASUBTYPE_VPVideo"'
+      offset: 00005BCC
+    - name: ??_C@_0BG@EBNC@MEDIASUBTYPE_DssAudio?$AA@
+      processed: '"MEDIASUBTYPE_DssAudio"'
+      offset: 00005BE4
+    - name: ??_C@_0BG@CGHK@MEDIASUBTYPE_DssVideo?$AA@
+      processed: '"MEDIASUBTYPE_DssVideo"'
+      offset: 00005BFC
+    - name: ??_C@_0BP@GJHF@MEDIASUBTYPE_Line21_VBIRawData?$AA@
+      processed: '"MEDIASUBTYPE_Line21_VBIRawData"'
+      offset: 00005C14
+    - name: ??_C@_0BO@GDJJ@MEDIASUBTYPE_Line21_GOPPacket?$AA@
+      processed: '"MEDIASUBTYPE_Line21_GOPPacket"'
+      offset: 00005C34
+    - name: ??_C@_0BN@EKLC@MEDIASUBTYPE_Line21_BytePair?$AA@
+      processed: '"MEDIASUBTYPE_Line21_BytePair"'
+      offset: 00005C54
+    - name: ??_C@_0BC@HNI@MEDIASUBTYPE_dvsl?$AA@
+      processed: '"MEDIASUBTYPE_dvsl"'
+      offset: 00005C74
+    - name: ??_C@_0BC@LHGC@MEDIASUBTYPE_dvhd?$AA@
+      processed: '"MEDIASUBTYPE_dvhd"'
+      offset: 00005C88
+    - name: ??_C@_0BC@FDGA@MEDIASUBTYPE_dvsd?$AA@
+      processed: '"MEDIASUBTYPE_dvsd"'
+      offset: 00005C9C
+    - name: ??_C@_0BC@PAGG@MEDIASUBTYPE_AIFF?$AA@
+      processed: '"MEDIASUBTYPE_AIFF"'
+      offset: 00005CB0
+    - name: ??_C@_0BA@DMAO@MEDIASUBTYPE_AU?$AA@
+      processed: '"MEDIASUBTYPE_AU"'
+      offset: 00005CC4
+    - name: ??_C@_0BC@HPAO@MEDIASUBTYPE_WAVE?$AA@
+      processed: '"MEDIASUBTYPE_WAVE"'
+      offset: 00005CD4
+    - name: ??_C@_0BB@JEKF@MEDIASUBTYPE_PCM?$AA@
+      processed: '"MEDIASUBTYPE_PCM"'
+      offset: 00005CE8
+    - name: ??_C@_0BP@DBEE@MEDIASUBTYPE_PCMAudio_Obsolete?$AA@
+      processed: '"MEDIASUBTYPE_PCMAudio_Obsolete"'
+      offset: 00005CFC
+    - name: ??_C@_0BE@LPAF@MEDIASUBTYPE_QTJpeg?$AA@
+      processed: '"MEDIASUBTYPE_QTJpeg"'
+      offset: 00005D1C
+    - name: ??_C@_0BD@PEIG@MEDIASUBTYPE_QTRle?$AA@
+      processed: '"MEDIASUBTYPE_QTRle"'
+      offset: 00005D30
+    - name: ??_C@_0BD@EPEI@MEDIASUBTYPE_QTSmc?$AA@
+      processed: '"MEDIASUBTYPE_QTSmc"'
+      offset: 00005D44
+    - name: ??_C@_0BE@IBGO@MEDIASUBTYPE_QTRpza?$AA@
+      processed: '"MEDIASUBTYPE_QTRpza"'
+      offset: 00005D58
+    - name: ??_C@_0BF@OHFL@MEDIASUBTYPE_QTMovie?$AA@
+      processed: '"MEDIASUBTYPE_QTMovie"'
+      offset: 00005D6C
+    - name: ??_C@_0BB@KBMD@MEDIASUBTYPE_Asf?$AA@
+      processed: '"MEDIASUBTYPE_Asf"'
+      offset: 00005D84
+    - name: ??_C@_0BB@OMJO@MEDIASUBTYPE_Avi?$AA@
+      processed: '"MEDIASUBTYPE_Avi"'
+      offset: 00005D98
+    - name: ??_C@_0BI@KPDH@MEDIASUBTYPE_MPEG1Audio?$AA@
+      processed: '"MEDIASUBTYPE_MPEG1Audio"'
+      offset: 00005DAC
+    - name: ??_C@_0BI@MIJP@MEDIASUBTYPE_MPEG1Video?$AA@
+      processed: '"MEDIASUBTYPE_MPEG1Video"'
+      offset: 00005DC4
+    - name: ??_C@_0BK@FOM@MEDIASUBTYPE_MPEG1VideoCD?$AA@
+      processed: '"MEDIASUBTYPE_MPEG1VideoCD"'
+      offset: 00005DDC
+    - name: ??_C@_0BJ@MAM@MEDIASUBTYPE_MPEG1System?$AA@
+      processed: '"MEDIASUBTYPE_MPEG1System"'
+      offset: 00005DF8
+    - name: ??_C@_0BM@ODBF@MEDIATYPE_MPEG1SystemStream?$AA@
+      processed: '"MEDIATYPE_MPEG1SystemStream"'
+      offset: '00005E14'
+    - name: ??_C@_0BP@BFAD@MEDIASUBTYPE_MPEG1AudioPayload?$AA@
+      processed: '"MEDIASUBTYPE_MPEG1AudioPayload"'
+      offset: '00005E30'
+    - name: ??_C@_0BK@MJHK@MEDIASUBTYPE_MPEG1Payload?$AA@
+      processed: '"MEDIASUBTYPE_MPEG1Payload"'
+      offset: '00005E50'
+    - name: ??_C@_0BJ@LMFD@MEDIASUBTYPE_MPEG1Packet?$AA@
+      processed: '"MEDIASUBTYPE_MPEG1Packet"'
+      offset: 00005E6C
+    - name: ??_C@_0BF@DPIM@MEDIASUBTYPE_Overlay?$AA@
+      processed: '"MEDIASUBTYPE_Overlay"'
+      offset: '00005E88'
+    - name: ??_C@_0BD@ECAM@MEDIASUBTYPE_RGB32?$AA@
+      processed: '"MEDIASUBTYPE_RGB32"'
+      offset: 00005EA0
+    - name: ??_C@_0BD@KLNE@MEDIASUBTYPE_RGB24?$AA@
+      processed: '"MEDIASUBTYPE_RGB24"'
+      offset: 00005EB4
+    - name: ??_C@_0BE@MPDL@MEDIASUBTYPE_RGB555?$AA@
+      processed: '"MEDIASUBTYPE_RGB555"'
+      offset: 00005EC8
+    - name: ??_C@_0BE@PEME@MEDIASUBTYPE_RGB565?$AA@
+      processed: '"MEDIASUBTYPE_RGB565"'
+      offset: 00005EDC
+    - name: ??_C@_0BC@BJED@MEDIASUBTYPE_RGB8?$AA@
+      processed: '"MEDIASUBTYPE_RGB8"'
+      offset: 00005EF0
+    - name: ??_C@_0BC@OHKH@MEDIASUBTYPE_RGB4?$AA@
+      processed: '"MEDIASUBTYPE_RGB4"'
+      offset: 00005F04
+    - name: ??_C@_0BC@OHGM@MEDIASUBTYPE_RGB1?$AA@
+      processed: '"MEDIASUBTYPE_RGB1"'
+      offset: 00005F18
+    - name: ??_C@_0BC@KPOO@MEDIASUBTYPE_MDVF?$AA@
+      processed: '"MEDIASUBTYPE_MDVF"'
+      offset: 00005F2C
+    - name: ??_C@_0BC@DMEF@MEDIASUBTYPE_DVSD?$AA@
+      processed: '"MEDIASUBTYPE_DVSD"'
+      offset: 00005F40
+    - name: ??_C@_0BC@KKHJ@MEDIASUBTYPE_DVCS?$AA@
+      processed: '"MEDIASUBTYPE_DVCS"'
+      offset: 00005F54
+    - name: ??_C@_0BC@KFGJ@MEDIASUBTYPE_Plum?$AA@
+      processed: '"MEDIASUBTYPE_Plum"'
+      offset: 00005F68
+    - name: ??_C@_0BC@JLAM@MEDIASUBTYPE_IJPG?$AA@
+      processed: '"MEDIASUBTYPE_IJPG"'
+      offset: 00005F7C
+    - name: ??_C@_0BC@NINN@MEDIASUBTYPE_CFCC?$AA@
+      processed: '"MEDIASUBTYPE_CFCC"'
+      offset: 00005F90
+    - name: ??_C@_0BC@OMPD@MEDIASUBTYPE_WAKE?$AA@
+      processed: '"MEDIASUBTYPE_WAKE"'
+      offset: 00005FA4
+    - name: ??_C@_0BC@GKKM@MEDIASUBTYPE_TVMJ?$AA@
+      processed: '"MEDIASUBTYPE_TVMJ"'
+      offset: 00005FB8
+    - name: ??_C@_0BC@OEE@MEDIASUBTYPE_MJPG?$AA@
+      processed: '"MEDIASUBTYPE_MJPG"'
+      offset: 00005FCC
+    - name: ??_C@_0BC@JEOP@MEDIASUBTYPE_CPLA?$AA@
+      processed: '"MEDIASUBTYPE_CPLA"'
+      offset: 00005FE0
+    - name: ??_C@_0BC@MJIO@MEDIASUBTYPE_IF09?$AA@
+      processed: '"MEDIASUBTYPE_IF09"'
+      offset: 00005FF4
+    - name: ??_C@_0BC@EMFM@MEDIASUBTYPE_CLJR?$AA@
+      processed: '"MEDIASUBTYPE_CLJR"'
+      offset: '00006008'
+    - name: ??_C@_0BC@GO@MEDIASUBTYPE_YV12?$AA@
+      processed: '"MEDIASUBTYPE_YV12"'
+      offset: 0000601C
+    - name: ??_C@_0BC@HAPC@MEDIASUBTYPE_Y211?$AA@
+      processed: '"MEDIASUBTYPE_Y211"'
+      offset: '00006030'
+    - name: ??_C@_0BC@NDOB@MEDIASUBTYPE_UYVY?$AA@
+      processed: '"MEDIASUBTYPE_UYVY"'
+      offset: '00006044'
+    - name: ??_C@_0BC@GIAI@MEDIASUBTYPE_YVYU?$AA@
+      processed: '"MEDIASUBTYPE_YVYU"'
+      offset: '00006058'
+    - name: ??_C@_0BC@DMPG@MEDIASUBTYPE_YUY2?$AA@
+      processed: '"MEDIASUBTYPE_YUY2"'
+      offset: 0000606C
+    - name: ??_C@_0BC@MBDC@MEDIASUBTYPE_Y41P?$AA@
+      processed: '"MEDIASUBTYPE_Y41P"'
+      offset: '00006080'
+    - name: ??_C@_0BC@JMIF@MEDIASUBTYPE_Y411?$AA@
+      processed: '"MEDIASUBTYPE_Y411"'
+      offset: '00006094'
+    - name: ??_C@_0BC@IODC@MEDIASUBTYPE_YVU9?$AA@
+      processed: '"MEDIASUBTYPE_YVU9"'
+      offset: 000060A8
+    - name: ??_C@_0BF@JOGB@MEDIATYPE_URL_STREAM?$AA@
+      processed: '"MEDIATYPE_URL_STREAM"'
+      offset: 000060BC
+    - name: ??_C@_0P@MKPC@MEDIATYPE_LMRT?$AA@
+      processed: '"MEDIATYPE_LMRT"'
+      offset: 000060D4
+    - name: ??_C@_0BD@DPNK@MEDIATYPE_Timecode?$AA@
+      processed: '"MEDIATYPE_Timecode"'
+      offset: '000060E4'
+    - name: ??_C@_0BI@KFCM@MEDIATYPE_AUXLine21Data?$AA@
+      processed: '"MEDIATYPE_AUXLine21Data"'
+      offset: 000060F8
+    - name: ??_C@_0BI@JFEB@MEDIATYPE_ScriptCommand?$AA@
+      processed: '"MEDIATYPE_ScriptCommand"'
+      offset: '00006110'
+    - name: ??_C@_0P@IMBO@MEDIATYPE_File?$AA@
+      processed: '"MEDIATYPE_File"'
+      offset: '00006128'
+    - name: ??_C@_0BG@DBAM@MEDIATYPE_Interleaved?$AA@
+      processed: '"MEDIATYPE_Interleaved"'
+      offset: '00006138'
+    - name: ??_C@_0BB@DGFP@MEDIATYPE_Stream?$AA@
+      processed: '"MEDIATYPE_Stream"'
+      offset: '00006150'
+    - name: ??_C@_0P@ICMI@MEDIATYPE_Midi?$AA@
+      processed: '"MEDIATYPE_Midi"'
+      offset: '00006164'
+    - name: ??_C@_0P@HIJA@MEDIATYPE_Text?$AA@
+      processed: '"MEDIATYPE_Text"'
+      offset: '00006174'
+    - name: ??_C@_0BA@OCLJ@MEDIATYPE_Audio?$AA@
+      processed: '"MEDIATYPE_Audio"'
+      offset: '00006184'
+    - name: ??_C@_0BA@IFBB@MEDIATYPE_Video?$AA@
+      processed: '"MEDIATYPE_Video"'
+      offset: '00006194'
+    - name: ??_C@_0BC@EDLF@MEDIASUBTYPE_None?$AA@
+      processed: '"MEDIASUBTYPE_None"'
+      offset: 000061A4
+    - name: ?_szEntering@CAutoTrace@@0PBDB
+      processed: 'private: static char const *CAutoTrace::_szEntering'
+      offset: 000061B8
+    - name: ?_szLeaving@CAutoTrace@@0PBDB
+      processed: 'private: static char const *CAutoTrace::_szLeaving'
+      offset: 000061C8
+    - name: ??_C@_07OLAD@TIMEOUT?$AA@
+      processed: '"TIMEOUT"'
+      offset: 0000620C
+    - name: ??_C@_07CNPM@UNKNOWN?$AA@
+      processed: '"UNKNOWN"'
+      offset: '00006214'
+    - name: ??_C@_06EKIF@GLOBAL?$AA@
+      processed: '"GLOBAL"'
+      offset: 0000621C
+    - name: ??_C@_0P@GNBK@SOFTWARE?2Debug?$AA@
+      processed: '"SOFTWARE\\Debug"'
+      offset: '00006224'
+    - name: ??_C@_07FLKL@CUSTOM5?$AA@
+      processed: '"CUSTOM5"'
+      offset: '00006234'
+    - name: ??_C@_07PBDM@CUSTOM4?$AA@
+      processed: '"CUSTOM4"'
+      offset: 0000623C
+    - name: ??_C@_07KENJ@CUSTOM3?$AA@
+      processed: '"CUSTOM3"'
+      offset: '00006244'
+    - name: ??_C@_07OEO@CUSTOM2?$AA@
+      processed: '"CUSTOM2"'
+      offset: 0000624C
+    - name: ??_C@_07PBPH@CUSTOM1?$AA@
+      processed: '"CUSTOM1"'
+      offset: '00006254'
+    - name: ??_C@_05EFDD@ERROR?$AA@
+      processed: '"ERROR"'
+      offset: 0000625C
+    - name: ??_C@_07GBAB@LOCKING?$AA@
+      processed: '"LOCKING"'
+      offset: '00006264'
+    - name: ??_C@_06FFHL@MEMORY?$AA@
+      processed: '"MEMORY"'
+      offset: 0000626C
+    - name: ??_C@_05CDHJ@TRACE?$AA@
+      processed: '"TRACE"'
+      offset: '00006274'
+    - name: ??_C@_06NNPN@TIMING?$AA@
+      processed: '"TIMING"'
+      offset: 0000627C
+    - name: ??_C@_0M@GMNA@BreakOnLoad?$AA@
+      processed: '"BreakOnLoad"'
+      offset: '00006284'
+    - name: ??_C@_0BH@PMHL@CloseHandle?$CIm_hOutput?$CJ?$AA@
+      processed: '"CloseHandle(m_hOutput)"'
+      offset: '00006290'
+    - name: ??_C@_0DF@LDJL@E?3?2ntc?2private?2genx?2dxmdev?2dshow@
+      processed: '"E:\\ntc\\private\\genx\\dxmdev\\dshow"...'
+      offset: 000062A8
+    - name: ??_C@_0BL@MLIC@Could?5not?5create?5subkey?5?$CFs?$AA@
+      processed: '"Could not create subkey %s"'
+      offset: '000062E0'
+    - name: ??_C@_03FMAJ@Deb?$AA@
+      processed: '"Deb"'
+      offset: 000062FC
+    - name: ??_C@_08FFLI@Debugger?$AA@
+      processed: '"Debugger"'
+      offset: '00006300'
+    - name: ??_C@_05FPNF@Debug?$AA@
+      processed: '"Debug"'
+      offset: 0000630C
+    - name: ??_C@_0BF@HOHI@ActiveX?5Debug?5Output?$AA@
+      processed: '"ActiveX Debug Output"'
+      offset: '00006314'
+    - name: ??_C@_07MJOI@Console?$AA@
+      processed: '"Console"'
+      offset: 0000632C
+    - name: ??_C@_0BI@FGKD@CloseHandle?5?$CIm_hOutput?$CJ?$AA@
+      processed: '"CloseHandle (m_hOutput)"'
+      offset: '00006334'
+    - name: ??_C@_0CD@OBJF@Could?5not?5access?5GLOBAL?5module?5k@
+      processed: '"Could not access GLOBAL module k"...'
+      offset: 0000634C
+    - name: ??_C@_05KEJO@?$CFs?2?$CFs?$AA@
+      processed: '"%s\\%s"'
+      offset: '00006370'
+    - name: ??_C@_0BM@FNLN@Could?5not?5access?5module?5key?$AA@
+      processed: '"Could not access module key"'
+      offset: '00006378'
+    - name: ??_C@_0BH@MPMG@Application?5terminated?$AA@
+      processed: '"Application terminated"'
+      offset: '00006394'
+    - name: ??_C@_0O@BNLB@ASSERT?5Failed?$AA@
+      processed: '"ASSERT Failed"'
+      offset: 000063AC
+    - name: ??_C@_0DB@CDHM@?$CFs?5?6At?5line?5?$CFd?5of?5?$CFs?6Continue?$DP?5?$CI@
+      processed: '"%s \nAt line %d of %s\nContinue? ("...'
+      offset: 000063BC
+    - name: ??_C@_0BH@IGBP@Hard?5coded?5break?5point?$AA@
+      processed: '"Hard coded break point"'
+      offset: 000063F0
+    - name: ??_C@_02PIMC@?$AN?6?$AA@
+      processed: '"\r\n"'
+      offset: '00006408'
+    - name: ??_C@_0BA@BIK@?$CItid?5?$CFx?$CJ?5?$CF8d?5?3?5?$AA@
+      processed: '"(tid %x) %8d : "'
+      offset: 0000640C
+    - name: ??_C@_0CM@HMAL@Assertion?5FAILED?5?$CI?$CFs?$CJ?5at?5line?5?$CFd@
+      processed: '"Assertion FAILED (%s) at line %d"...'
+      offset: 0000641C
+    - name: ??_C@_0CE@PDJK@Object?5created?5?5?5?$CFd?5?$CI?$CFhs?$CJ?5?$CFd?5Act@
+      processed: '"Object created   %d (%hs) %d Act"...'
+      offset: '00006448'
+    - name: ??_C@_0CE@LGCN@Object?5created?5?5?5?$CFd?5?$CI?$CFls?$CJ?5?$CFd?5Act@
+      processed: '"Object created   %d (%ls) %d Act"...'
+      offset: 0000646C
+    - name: ??_C@_0N@KGLH@ObjectCookie?$AA@
+      processed: '"ObjectCookie"'
+      offset: '00006490'
+    - name: ??_C@_07NJO@pObject?$AA@
+      processed: '"pObject"'
+      offset: 000064A0
+    - name: ??_C@_0CB@CCEA@?$CB?$CBszObjectName?5?$FO?5?$CB?$CBwszObjectName@
+      processed: '"!!szObjectName ^ !!wszObjectName"...'
+      offset: 000064A8
+    - name: ??_C@_0CE@MFBJ@Object?5destroyed?5?$CFd?5?$CI?$CFhs?$CJ?5?$CFd?5Act@
+      processed: '"Object destroyed %d (%hs) %d Act"...'
+      offset: 000064CC
+    - name: ??_C@_0CE@IAKO@Object?5destroyed?5?$CFd?5?$CI?$CFls?$CJ?5?$CFd?5Act@
+      processed: '"Object destroyed %d (%ls) %d Act"...'
+      offset: 000064F0
+    - name: ??_C@_0CH@NPK@?$CCApparently?5destroying?5a?5bogus?5o@
+      processed: '"\"Apparently destroying a bogus o"...'
+      offset: '00006514'
+    - name: ??_C@_0BH@NIEM@Total?5object?5count?5?$CF5d?$AA@
+      processed: '"Total object count %5d"'
+      offset: 0000653C
+    - name: ??_C@_0BA@EDPP@?$CF5d?5?$CI?$CF8x?$CJ?5?$CF30hs?$AA@
+      processed: '"%5d (%8x) %30hs"'
+      offset: '00006554'
+    - name: ??_C@_0BA@BJFF@?$CF5d?5?$CI?$CF8x?$CJ?5?$CF30ls?$AA@
+      processed: '"%5d (%8x) %30ls"'
+      offset: '00006564'
+    - name: ??_C@_0CF@OJHE@?5?5?5ID?5?5?5?5?5?5?5?5?5?5?5?5?5Object?5Descrip@
+      processed: '"   ID             Object Descrip"...'
+      offset: '00006574'
+    - name: ??_C@_0BC@FBLD@Unknown?5GUID?5Name?$AA@
+      processed: '"Unknown GUID Name"'
+      offset: 0000659C
+    - name: ??_C@_09JGCJ@GUID_NULL?$AA@
+      processed: '"GUID_NULL"'
+      offset: 000065B0
+    - name: _IID_IKsPropertySet
+      processed: ''
+      offset: 000065C0
+    - name: _IID_IMediaEventSink
+      processed: ''
+      offset: 000065D0
+    - name: _IID_IQualityControl
+      processed: ''
+      offset: '000065E0'
+    - name: _IID_IFilterMapper2
+      processed: ''
+      offset: 000065F0
+    - name: _IID_IFilterMapper
+      processed: ''
+      offset: '00006600'
+    - name: _IID_IAMovieSetup
+      processed: ''
+      offset: '00006610'
+    - name: _IID_IMemInputPin
+      processed: ''
+      offset: '00006620'
+    - name: _IID_IMediaSample2
+      processed: ''
+      offset: '00006630'
+    - name: _IID_IBaseFilter
+      processed: ''
+      offset: '00006640'
+    - name: _IID_IMediaFilter
+      processed: ''
+      offset: '00006650'
+    - name: _IID_IEnumMediaTypes
+      processed: ''
+      offset: '00006660'
+    - name: _IID_IEnumPins
+      processed: ''
+      offset: '00006670'
+    - name: _IID_IPin
+      processed: ''
+      offset: '00006680'
+    - name: ??_C@_0DD@EIII@E?3?2ntc?2private?2genx?2dxmdev?2dshow@
+      processed: '"E:\\ntc\\private\\genx\\dxmdev\\dshow"...'
+      offset: '00006690'
+    - name: ??_C@_0BM@DBAN@pmtSource?9?$DOpbFormat?5?$CB?$DN?5NULL?$AA@
+      processed: '"pmtSource->pbFormat != NULL"'
+      offset: 000066C4
+    - name: ??_C@_0BH@DMOI@pmtSource?5?$CB?$DN?5pmtTarget?$AA@
+      processed: '"pmtSource != pmtTarget"'
+      offset: '000066E0'
+    - name: ??_C@_09IHPM@List?5node?$AA@
+      processed: '"List node"'
+      offset: 000066F8
+    - name: ??_C@_0N@KHGJ@m_iUsed?5?$DN?$DN?50?$AA@
+      processed: '"m_iUsed == 0"'
+      offset: '00006704'
+    - name: ??_C@_0N@MIJP@m_iUsed?5?$DO?$DN?50?$AA@
+      processed: '"m_iUsed >= 0"'
+      offset: '00006714'
+    - name: ??_C@_0L@MAAB@?4?2wxlist?4h?$AA@
+      processed: '".\\wxlist.h"'
+      offset: '00006724'
+    - name: ?bits555@@3PBKB
+      processed: unsigned long const *bits555
+      offset: '00006730'
+    - name: ?bits565@@3PBKB
+      processed: unsigned long const *bits565
+      offset: '00006740'
+    - name: ?bits888@@3PBKB
+      processed: unsigned long const *bits888
+      offset: '00006750'
+    - name: ??_C@_1BA@DCBD@?$AAU?$AAN?$AAK?$AAN?$AAO?$AAW?$AAN?$AA?$AA@
+      processed: L"UNKNOWN"
+      offset: 000067F0
+    - name: ??_C@_1BA@IOOM@?$AAO?$AAv?$AAe?$AAr?$AAl?$AAa?$AAy?$AA?$AA@
+      processed: L"Overlay"
+      offset: '00006800'
+    - name: ??_C@_07PJFM@Overlay?$AA@
+      processed: '"Overlay"'
+      offset: '00006810'
+    - name: ??_C@_1O@DMAN@?$AAR?$AAG?$AAB?$AA?5?$AA3?$AA2?$AA?$AA@
+      processed: L"RGB 32"
+      offset: '00006818'
+    - name: ??_C@_06GKL@RGB?532?$AA@
+      processed: '"RGB 32"'
+      offset: '00006828'
+    - name: ??_C@_1O@HAFP@?$AAR?$AAG?$AAB?$AA?5?$AA2?$AA4?$AA?$AA@
+      processed: L"RGB 24"
+      offset: '00006830'
+    - name: ??_C@_06OPHD@RGB?524?$AA@
+      processed: '"RGB 24"'
+      offset: '00006840'
+    - name: 
+        ??_C@_1CC@JJDB@?$AAR?$AAG?$AAB?$AA?5?$AA5?$AA5?$AA5?$AA?5?$AA?$CI?$AA1?$AA6?$AA?5?$AAb?$AAi?$AAt?$AA?$CJ?$AA?$AA@
+      processed: L"RGB 555 (16 bit)"
+      offset: '00006848'
+    - name: ??_C@_0BB@NKKN@RGB?5555?5?$CI16?5bit?$CJ?$AA@
+      processed: '"RGB 555 (16 bit)"'
+      offset: 0000686C
+    - name: 
+        ??_C@_1CC@LNFO@?$AAR?$AAG?$AAB?$AA?5?$AA5?$AA6?$AA5?$AA?5?$AA?$CI?$AA1?$AA6?$AA?5?$AAb?$AAi?$AAt?$AA?$CJ?$AA?$AA@
+      processed: L"RGB 565 (16 bit)"
+      offset: '00006880'
+    - name: ??_C@_0BB@OFDN@RGB?5565?5?$CI16?5bit?$CJ?$AA@
+      processed: '"RGB 565 (16 bit)"'
+      offset: 000068A4
+    - name: ??_C@_1M@MAD@?$AAR?$AAG?$AAB?$AA?5?$AA8?$AA?$AA@
+      processed: L"RGB 8"
+      offset: 000068B8
+    - name: ??_C@_05LOIN@RGB?58?$AA@
+      processed: '"RGB 8"'
+      offset: 000068C4
+    - name: ??_C@_1BA@MAJN@?$AAR?$AAG?$AAB?$AA?5?$AAV?$AAG?$AAA?$AA?$AA@
+      processed: L"RGB VGA"
+      offset: 000068CC
+    - name: ??_C@_07PODM@RGB?5VGA?$AA@
+      processed: '"RGB VGA"'
+      offset: 000068DC
+    - name: 
+        ??_C@_1BO@HBIB@?$AAR?$AAG?$AAB?$AA?5?$AAM?$AAo?$AAn?$AAo?$AAc?$AAh?$AAr?$AAo?$AAm?$AAe?$AA?$AA@
+      processed: L"RGB Monochrome"
+      offset: '000068E4'
+    - name: ??_C@_0P@NGAD@RGB?5Monochrome?$AA@
+      processed: '"RGB Monochrome"'
+      offset: '00006904'
+    - name: _IID_IClassFactory
+      processed: ''
+      offset: '00006918'
+    - name: _IID_IUnknown
+      processed: ''
+      offset: '00006928'
+    - name: _IID_IPersist
+      processed: ''
+      offset: '00006938'
+    - name: _GUID_NULL
+      processed: ''
+      offset: '00006948'
+    - name: _IsPlatformNT@0
+      processed: ''
+      offset: '00006960'
+    - name: _InitMultipleMonitorStubs@0
+      processed: ''
+      offset: 0000699D
+    - name: _xGetSystemMetrics@4
+      processed: ''
+      offset: 00006A9B
+    - name: _xGetMonitorInfo@8
+      processed: ''
+      offset: 00006AEB
+    - name: _xEnumDisplayMonitors@16
+      processed: ''
+      offset: 00006B7E
+    - name: ?OneMonitorCallback@@YGHPAUHMONITOR__@@PAUHDC__@@PAUtagRECT@@J@Z
+      processed: int __stdcall OneMonitorCallback(struct HMONITOR__*, struct HDC__*,
+        struct tagRECT *, long)
+      offset: 00006C6F
+    - name: ?OneMonitorFromWindow@@YGPAUHMONITOR__@@PAUHWND__@@@Z
+      processed: struct HMONITOR__* __stdcall OneMonitorFromWindow(struct HWND__*)
+      offset: 00006C8B
+    - name: _DeviceFromWindow@12
+      processed: ''
+      offset: 00006CEE
+    - name: _DllRegisterServer@0
+      processed: ''
+      offset: 00006DDF
+    - name: _DllUnregisterServer@0
+      processed: ''
+      offset: 00006DE7
+    - name: ?CreateInstance@CVBISurfFilter@@SGPAVCUnknown@@PAUIUnknown@@PAJ@Z
+      processed: 'public: static class CUnknown * __stdcall CVBISurfFilter::CreateInstance(struct
+        IUnknown *, long *)'
+      offset: 00006DEF
+    - name: ??0CVBISurfFilter@@QAE@PADPAUIUnknown@@PAJ@Z
+      processed: 'public: __thiscall CVBISurfFilter::CVBISurfFilter(char *, struct
+        IUnknown *, long *)'
+      offset: '00006E32'
+    - name: ?GetSetupData@CBaseFilter@@UAEPAU_AMOVIESETUP_FILTER@@XZ
+      processed: 'public: virtual struct _AMOVIESETUP_FILTER * __thiscall CBaseFilter::GetSetupData(void)'
+      offset: 00006EA4
+    - name: ?QueryInterface@CVBISurfFilter@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CVBISurfFilter::QueryInterface(struct
+        _GUID const &, void **)'
+      offset: 00006EA7
+    - name: ?QueryInterface@CVBISurfInputPin@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CVBISurfInputPin::QueryInterface(struct
+        _GUID const &, void **)'
+      offset: 00006EA7
+    - name: ?QueryInterface@CVBISurfOutputPin@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CVBISurfOutputPin::QueryInterface(struct
+        _GUID const &, void **)'
+      offset: 00006EA7
+    - name: ?QueryInterface@CAMVideoPort@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::QueryInterface(struct
+        _GUID const &, void **)'
+      offset: 00006EA7
+    - name: ??_ECVBISurfFilter@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CVBISurfFilter::`vector deleting
+        dtor'(unsigned int)"
+      offset: 00006EBF
+    - name: ??_GCVBISurfFilter@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CVBISurfFilter::`scalar deleting
+        dtor'(unsigned int)"
+      offset: 00006EBF
+    - name: ??1CVBISurfFilter@@UAE@XZ
+      processed: 'public: virtual __thiscall CVBISurfFilter::~CVBISurfFilter(void)'
+      offset: 00006EDE
+    - name: ?CreatePins@CVBISurfFilter@@EAEJXZ
+      processed: 'private: virtual long __thiscall CVBISurfFilter::CreatePins(void)'
+      offset: 00006F1D
+    - name: ?DeletePins@CVBISurfFilter@@EAEXXZ
+      processed: 'private: virtual void __thiscall CVBISurfFilter::DeletePins(void)'
+      offset: '00007013'
+    - name: ?NonDelegatingQueryInterface@CVBISurfFilter@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CVBISurfFilter::NonDelegatingQueryInterface(struct
+        _GUID const &, void **)'
+      offset: '00007056'
+    - name: ?GetPinCount@CVBISurfFilter@@UAEHXZ
+      processed: 'public: virtual int __thiscall CVBISurfFilter::GetPinCount(void)'
+      offset: '000070E2'
+    - name: ?GetPin@CVBISurfFilter@@UAEPAVCBasePin@@H@Z
+      processed: 'public: virtual class CBasePin * __thiscall CVBISurfFilter::GetPin(int)'
+      offset: '000070E6'
+    - name: ?Pause@CVBISurfFilter@@UAGJXZ
+      processed: 'public: virtual long __stdcall CVBISurfFilter::Pause(void)'
+      offset: 0000711A
+    - name: ?InitDirectDraw@CVBISurfFilter@@AAEJXZ
+      processed: 'private: long __thiscall CVBISurfFilter::InitDirectDraw(void)'
+      offset: 000071A2
+    - name: ?ReleaseDirectDraw@CVBISurfFilter@@AAEXXZ
+      processed: 'private: void __thiscall CVBISurfFilter::ReleaseDirectDraw(void)'
+      offset: '000072E1'
+    - name: ?AddRef@CVBISurfFilter@@W3AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CVBISurfFilter::AddRef`adjustor{4}'(void)"
+      offset: '00007317'
+    - name: ?AddRef@CAMVideoPort@@W3AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CAMVideoPort::AddRef`adjustor{4}'(void)"
+      offset: '00007317'
+    - name: ?AddRef@CVBISurfOutputPin@@W3AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CVBISurfOutputPin::AddRef`adjustor{4}'(void)"
+      offset: '00007317'
+    - name: ?AddRef@CVBISurfInputPin@@W3AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CVBISurfInputPin::AddRef`adjustor{4}'(void)"
+      offset: '00007317'
+    - name: ?Release@CVBISurfInputPin@@W3AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CVBISurfInputPin::Release`adjustor{4}'(void)"
+      offset: '00007321'
+    - name: ?Release@CVBISurfOutputPin@@W3AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CVBISurfOutputPin::Release`adjustor{4}'(void)"
+      offset: '00007321'
+    - name: ?Release@CVBISurfFilter@@W3AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CVBISurfFilter::Release`adjustor{4}'(void)"
+      offset: '00007321'
+    - name: ?Release@CAMVideoPort@@W3AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CAMVideoPort::Release`adjustor{4}'(void)"
+      offset: '00007321'
+    - name: ??0CVBISurfInputPin@@QAE@PADPAVCVBISurfFilter@@PAVCCritSec@@PAJPBG@Z
+      processed: 'public: __thiscall CVBISurfInputPin::CVBISurfInputPin(char *, class
+        CVBISurfFilter *, class CCritSec *, long *, unsigned short const *)'
+      offset: 0000732B
+    - name: ?QueryInternalConnections@CBasePin@@UAGJPAPAUIPin@@PAK@Z
+      processed: 'public: virtual long __stdcall CBasePin::QueryInternalConnections(struct
+        IPin **, unsigned long *)'
+      offset: 0000745D
+    - name: ?AddRef@CAMVideoPort@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CAMVideoPort::AddRef(void)'
+      offset: '00007469'
+    - name: ?AddRef@CVBISurfInputPin@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CVBISurfInputPin::AddRef(void)'
+      offset: '00007469'
+    - name: ?AddRef@CVBISurfOutputPin@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CVBISurfOutputPin::AddRef(void)'
+      offset: '00007469'
+    - name: ?AddRef@CVBISurfFilter@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CVBISurfFilter::AddRef(void)'
+      offset: '00007469'
+    - name: ??_GCVBISurfInputPin@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CVBISurfInputPin::`scalar deleting
+        dtor'(unsigned int)"
+      offset: 0000747C
+    - name: ??_ECVBISurfInputPin@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CVBISurfInputPin::`vector deleting
+        dtor'(unsigned int)"
+      offset: 0000747C
+    - name: ??1CVBISurfInputPin@@UAE@XZ
+      processed: 'public: virtual __thiscall CVBISurfInputPin::~CVBISurfInputPin(void)'
+      offset: 0000749B
+    - name: ?NonDelegatingQueryInterface@CVBISurfInputPin@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CVBISurfInputPin::NonDelegatingQueryInterface(struct
+        _GUID const &, void **)'
+      offset: '00007521'
+    - name: ?CheckMediaType@CVBISurfInputPin@@UAEJPBVCMediaType@@@Z
+      processed: 'public: virtual long __thiscall CVBISurfInputPin::CheckMediaType(class
+        CMediaType const *)'
+      offset: 0000762D
+    - name: ?GetMediaType@CVBISurfInputPin@@UAEJHPAVCMediaType@@@Z
+      processed: 'public: virtual long __thiscall CVBISurfInputPin::GetMediaType(int,
+        class CMediaType *)'
+      offset: '00007683'
+    - name: ?SetMediaType@CVBISurfInputPin@@UAEJPBVCMediaType@@@Z
+      processed: 'public: virtual long __thiscall CVBISurfInputPin::SetMediaType(class
+        CMediaType const *)'
+      offset: 000076DC
+    - name: ?CheckConnect@CVBISurfInputPin@@UAEJPAUIPin@@@Z
+      processed: 'public: virtual long __thiscall CVBISurfInputPin::CheckConnect(struct
+        IPin *)'
+      offset: 0000775D
+    - name: ?CompleteConnect@CVBISurfInputPin@@UAEJPAUIPin@@@Z
+      processed: 'public: virtual long __thiscall CVBISurfInputPin::CompleteConnect(struct
+        IPin *)'
+      offset: '000077E3'
+    - name: ?BreakConnect@CVBISurfInputPin@@UAEJXZ
+      processed: 'public: virtual long __thiscall CVBISurfInputPin::BreakConnect(void)'
+      offset: '00007894'
+    - name: ?Active@CVBISurfInputPin@@UAEJXZ
+      processed: 'public: virtual long __thiscall CVBISurfInputPin::Active(void)'
+      offset: '00007936'
+    - name: ?Inactive@CVBISurfInputPin@@UAEJXZ
+      processed: 'public: virtual long __thiscall CVBISurfInputPin::Inactive(void)'
+      offset: 000079BA
+    - name: ?Run@CVBISurfInputPin@@UAEJ_J@Z
+      processed: 'public: virtual long __thiscall CVBISurfInputPin::Run(__int64)'
+      offset: 00007A3E
+    - name: ?RunToPause@CVBISurfInputPin@@QAEJXZ
+      processed: 'public: long __thiscall CVBISurfInputPin::RunToPause(void)'
+      offset: 00007AE2
+    - name: ?BeginFlush@CVBISurfInputPin@@UAGJXZ
+      processed: 'public: virtual long __stdcall CVBISurfInputPin::BeginFlush(void)'
+      offset: 00007B45
+    - name: ?EndFlush@CVBISurfInputPin@@UAGJXZ
+      processed: 'public: virtual long __stdcall CVBISurfInputPin::EndFlush(void)'
+      offset: 00007BA9
+    - name: ?Receive@CVBISurfInputPin@@UAGJPAUIMediaSample@@@Z
+      processed: 'public: virtual long __stdcall CVBISurfInputPin::Receive(struct
+        IMediaSample *)'
+      offset: 00007C0D
+    - name: ?EndOfStream@CVBISurfInputPin@@UAGJXZ
+      processed: 'public: virtual long __stdcall CVBISurfInputPin::EndOfStream(void)'
+      offset: 00007C5B
+    - name: ?GetAllocator@CVBISurfInputPin@@UAGJPAPAUIMemAllocator@@@Z
+      processed: 'public: virtual long __stdcall CVBISurfInputPin::GetAllocator(struct
+        IMemAllocator **)'
+      offset: 00007CEF
+    - name: ?NotifyAllocator@CVBISurfInputPin@@UAGJPAUIMemAllocator@@H@Z
+      processed: 'public: virtual long __stdcall CVBISurfInputPin::NotifyAllocator(struct
+        IMemAllocator *, int)'
+      offset: 00007D54
+    - name: ?SetDirectDraw@CVBISurfInputPin@@QAEJPAUIDirectDraw@@@Z
+      processed: 'public: long __thiscall CVBISurfInputPin::SetDirectDraw(struct IDirectDraw
+        *)'
+      offset: 00007DB3
+    - name: ?RenegotiateVPParameters@CVBISurfInputPin@@UAGJXZ
+      processed: 'public: virtual long __stdcall CVBISurfInputPin::RenegotiateVPParameters(void)'
+      offset: '00007E41'
+    - name: ?QueryInterface@CVBISurfInputPin@@WJA@AGJABU_GUID@@PAPAX@Z
+      processed: "[thunk]: public: virtual long __stdcall CVBISurfInputPin::QueryInterface`adjustor{144}'(struct
+        _GUID const &, void **)"
+      offset: 00007EBD
+    - name: ?AddRef@CVBISurfInputPin@@WJA@AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CVBISurfInputPin::AddRef`adjustor{144}'(void)"
+      offset: 00007ECA
+    - name: ?Release@CVBISurfInputPin@@WJA@AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CVBISurfInputPin::Release`adjustor{144}'(void)"
+      offset: 00007ED7
+    - name: ?QueryInterface@CVBISurfInputPin@@WNA@AGJABU_GUID@@PAPAX@Z
+      processed: "[thunk]: public: virtual long __stdcall CVBISurfInputPin::QueryInterface`adjustor{208}'(struct
+        _GUID const &, void **)"
+      offset: 00007EE4
+    - name: ?AddRef@CVBISurfInputPin@@WNA@AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CVBISurfInputPin::AddRef`adjustor{208}'(void)"
+      offset: 00007EF1
+    - name: ?Release@CVBISurfInputPin@@WNA@AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CVBISurfInputPin::Release`adjustor{208}'(void)"
+      offset: 00007EFE
+    - name: ??0CVBISurfOutputPin@@QAE@PADPAVCVBISurfFilter@@PAVCCritSec@@PAJPBG@Z
+      processed: 'public: __thiscall CVBISurfOutputPin::CVBISurfOutputPin(char *,
+        class CVBISurfFilter *, class CCritSec *, long *, unsigned short const *)'
+      offset: 00007F0B
+    - name: ??_ECVBISurfOutputPin@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CVBISurfOutputPin::`vector deleting
+        dtor'(unsigned int)"
+      offset: 00007F64
+    - name: ??_GCVBISurfOutputPin@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CVBISurfOutputPin::`scalar deleting
+        dtor'(unsigned int)"
+      offset: 00007F64
+    - name: ??1CVBISurfOutputPin@@UAE@XZ
+      processed: 'public: virtual __thiscall CVBISurfOutputPin::~CVBISurfOutputPin(void)'
+      offset: 00007F83
+    - name: ?EndFlush@CVBISurfOutputPin@@UAGJXZ
+      processed: 'public: virtual long __stdcall CVBISurfOutputPin::EndFlush(void)'
+      offset: 00007FC5
+    - name: ?BeginFlush@CVBISurfOutputPin@@UAGJXZ
+      processed: 'public: virtual long __stdcall CVBISurfOutputPin::BeginFlush(void)'
+      offset: 00007FC5
+    - name: ?CheckMediaType@CVBISurfOutputPin@@UAEJPBVCMediaType@@@Z
+      processed: 'public: virtual long __thiscall CVBISurfOutputPin::CheckMediaType(class
+        CMediaType const *)'
+      offset: 00007FD1
+    - name: ?GetMediaType@CVBISurfOutputPin@@UAEJHPAVCMediaType@@@Z
+      processed: 'public: virtual long __thiscall CVBISurfOutputPin::GetMediaType(int,
+        class CMediaType *)'
+      offset: 00007FFD
+    - name: ?SetMediaType@CVBISurfOutputPin@@UAEJPBVCMediaType@@@Z
+      processed: 'public: virtual long __thiscall CVBISurfOutputPin::SetMediaType(class
+        CMediaType const *)'
+      offset: 0000803A
+    - name: ??0CSurfaceWatcher@@QAE@XZ
+      processed: 'public: __thiscall CSurfaceWatcher::CSurfaceWatcher(void)'
+      offset: '00008068'
+    - name: ??_ECSurfaceWatcher@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CSurfaceWatcher::`vector deleting
+        dtor'(unsigned int)"
+      offset: '00008082'
+    - name: ??_GCSurfaceWatcher@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CSurfaceWatcher::`scalar deleting
+        dtor'(unsigned int)"
+      offset: '00008082'
+    - name: ??1CSurfaceWatcher@@UAE@XZ
+      processed: 'public: virtual __thiscall CSurfaceWatcher::~CSurfaceWatcher(void)'
+      offset: 000080A1
+    - name: ?Close@CAMThread@@QAEXXZ
+      processed: 'public: void __thiscall CAMThread::Close(void)'
+      offset: 000080C7
+    - name: ?Init@CSurfaceWatcher@@QAEXPAVCAMVideoPort@@@Z
+      processed: 'public: void __thiscall CSurfaceWatcher::Init(class CAMVideoPort
+        *)'
+      offset: 000080EC
+    - name: ?ThreadProc@CSurfaceWatcher@@EAEKXZ
+      processed: 'private: virtual unsigned long __thiscall CSurfaceWatcher::ThreadProc(void)'
+      offset: 0000811B
+    - name: ?CreateInstance@CAMVideoPort@@SGPAVCUnknown@@PAUIUnknown@@PAJ@Z
+      processed: 'public: static class CUnknown * __stdcall CAMVideoPort::CreateInstance(struct
+        IUnknown *, long *)'
+      offset: 0000821D
+    - name: ??0CAMVideoPort@@QAE@PAUIUnknown@@PAJ@Z
+      processed: 'public: __thiscall CAMVideoPort::CAMVideoPort(struct IUnknown *,
+        long *)'
+      offset: '00008286'
+    - name: ?Release@CVBISurfFilter@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CVBISurfFilter::Release(void)'
+      offset: 0000837E
+    - name: ?Release@CVBISurfOutputPin@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CVBISurfOutputPin::Release(void)'
+      offset: 0000837E
+    - name: ?Release@CVBISurfInputPin@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CVBISurfInputPin::Release(void)'
+      offset: 0000837E
+    - name: ?Release@CAMVideoPort@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CAMVideoPort::Release(void)'
+      offset: 0000837E
+    - name: ?Set@CAMVideoPort@@UAGJABU_GUID@@KPAXK1K@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::Set(struct _GUID const
+        &, unsigned long, void *, unsigned long, void *, unsigned long)'
+      offset: '00008391'
+    - name: ?KsDeliver@CAMVideoPort@@UAGJPAUIMediaSample@@K@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsDeliver(struct IMediaSample
+        *, unsigned long)'
+      offset: 0000839D
+    - name: ?KsCreateSinkPinHandle@CAMVideoPort@@UAGJAAUKSIDENTIFIER@@0@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsCreateSinkPinHandle(struct
+        KSIDENTIFIER &, struct KSIDENTIFIER &)'
+      offset: 0000839D
+    - name: ?KsPropagateAcquire@CAMVideoPort@@UAGJXZ
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsPropagateAcquire(void)'
+      offset: 000083A9
+    - name: ?KsPeekAllocator@CAMVideoPort@@UAGPAUIMemAllocator@@W4KSPEEKOPERATION@@@Z
+      processed: 'public: virtual struct IMemAllocator * __stdcall CAMVideoPort::KsPeekAllocator(enum
+        KSPEEKOPERATION)'
+      offset: 000083B2
+    - name: ?KsDecrementPendingIoCount@CAMVideoPort@@UAGJXZ
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsDecrementPendingIoCount(void)'
+      offset: 000083BB
+    - name: ?KsIncrementPendingIoCount@CAMVideoPort@@UAGJXZ
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsIncrementPendingIoCount(void)'
+      offset: 000083BB
+    - name: ?KsRenegotiateAllocator@CAMVideoPort@@UAGJXZ
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsRenegotiateAllocator(void)'
+      offset: 000083BB
+    - name: ?KsQualityNotify@CAMVideoPort@@UAGJK_J@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsQualityNotify(unsigned
+        long, __int64)'
+      offset: 000083C7
+    - name: ?KsReceiveAllocator@CAMVideoPort@@UAGJPAUIMemAllocator@@@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsReceiveAllocator(struct
+        IMemAllocator *)'
+      offset: 000083D3
+    - name: ?KsMediaSamplesCompleted@CAMVideoPort@@UAGJPAU_KSSTREAM_SEGMENT@@@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsMediaSamplesCompleted(struct
+        _KSSTREAM_SEGMENT *)'
+      offset: 000083D3
+    - name: ??_ECAMVideoPort@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CAMVideoPort::`vector deleting
+        dtor'(unsigned int)"
+      offset: 000083DF
+    - name: ??_GCAMVideoPort@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CAMVideoPort::`scalar deleting
+        dtor'(unsigned int)"
+      offset: 000083DF
+    - name: ??1CAMVideoPort@@UAE@XZ
+      processed: 'public: virtual __thiscall CAMVideoPort::~CAMVideoPort(void)'
+      offset: 000083FE
+    - name: ?NonDelegatingQueryInterface@CAMVideoPort@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::NonDelegatingQueryInterface(struct
+        _GUID const &, void **)'
+      offset: '00008480'
+    - name: ?SetDirectDraw@CAMVideoPort@@UAGJPAUIDirectDraw@@@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::SetDirectDraw(struct
+        IDirectDraw *)'
+      offset: '00008601'
+    - name: ?SetObjectLock@CAMVideoPort@@UAGJPAVCCritSec@@@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::SetObjectLock(class
+        CCritSec *)'
+      offset: '00008669'
+    - name: ?CheckMediaType@CAMVideoPort@@UAGJPBVCMediaType@@@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::CheckMediaType(class
+        CMediaType const *)'
+      offset: 000086C8
+    - name: ?GetMediaType@CAMVideoPort@@UAGJHPAVCMediaType@@@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::GetMediaType(int, class
+        CMediaType *)'
+      offset: 0000873D
+    - name: ?CheckConnect@CAMVideoPort@@UAGJPAUIPin@@@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::CheckConnect(struct
+        IPin *)'
+      offset: 000087D8
+    - name: ?CompleteConnect@CAMVideoPort@@UAGJPAUIPin@@@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::CompleteConnect(struct
+        IPin *)'
+      offset: 000088B4
+    - name: ?BreakConnect@CAMVideoPort@@UAGJXZ
+      processed: 'public: virtual long __stdcall CAMVideoPort::BreakConnect(void)'
+      offset: 00008AAE
+    - name: ?Active@CAMVideoPort@@UAGJXZ
+      processed: 'public: virtual long __stdcall CAMVideoPort::Active(void)'
+      offset: 00008BD9
+    - name: ?Inactive@CAMVideoPort@@UAGJXZ
+      processed: 'public: virtual long __stdcall CAMVideoPort::Inactive(void)'
+      offset: 00008C83
+    - name: ?Run@CAMVideoPort@@UAGJ_J@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::Run(__int64)'
+      offset: 00008D47
+    - name: ?RunToPause@CAMVideoPort@@UAGJXZ
+      processed: 'public: virtual long __stdcall CAMVideoPort::RunToPause(void)'
+      offset: '00008E35'
+    - name: ?GetVPDataInfo@CAMVideoPort@@UAGJPAU_AMVPDATAINFO@@@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::GetVPDataInfo(struct
+        _AMVPDATAINFO *)'
+      offset: 00008EF5
+    - name: ?RenegotiateVPParameters@CAMVideoPort@@UAGJXZ
+      processed: 'public: virtual long __stdcall CAMVideoPort::RenegotiateVPParameters(void)'
+      offset: 00008F80
+    - name: ?Get@CAMVideoPort@@UAGJABU_GUID@@KPAXK1KPAK@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::Get(struct _GUID const
+        &, unsigned long, void *, unsigned long, void *, unsigned long, unsigned long
+        *)'
+      offset: '00009058'
+    - name: ?QuerySupported@CAMVideoPort@@UAGJABU_GUID@@KPAK@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::QuerySupported(struct
+        _GUID const &, unsigned long, unsigned long *)'
+      offset: 0000910C
+    - name: ?KsQueryMediums@CAMVideoPort@@UAGJPAPAUKSMULTIPLE_ITEM@@@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsQueryMediums(struct
+        KSMULTIPLE_ITEM **)'
+      offset: '00009177'
+    - name: ?KsQueryInterfaces@CAMVideoPort@@UAGJPAPAUKSMULTIPLE_ITEM@@@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsQueryInterfaces(struct
+        KSMULTIPLE_ITEM **)'
+      offset: 000091CB
+    - name: 
+        ?KsGetCurrentCommunication@CAMVideoPort@@UAGJPAW4KSPIN_COMMUNICATION@@PAUKSIDENTIFIER@@1@Z
+      processed: 'public: virtual long __stdcall CAMVideoPort::KsGetCurrentCommunication(enum
+        KSPIN_COMMUNICATION *, struct KSIDENTIFIER *, struct KSIDENTIFIER *)'
+      offset: '00009239'
+    - name: ?CheckSurfaces@CAMVideoPort@@UAGJXZ
+      processed: 'public: virtual long __stdcall CAMVideoPort::CheckSurfaces(void)'
+      offset: 000092A0
+    - name: ?GetVideoPortCaps@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::GetVideoPortCaps(void)'
+      offset: '00009396'
+    - name: ?EnumCallback@CAMVideoPort@@CGJPAU_DDVIDEOPORTCAPS@@PAX@Z
+      processed: 'private: static long __stdcall CAMVideoPort::EnumCallback(struct
+        _DDVIDEOPORTCAPS *, void *)'
+      offset: 0000941D
+    - name: ?NegotiateConnectionParameters@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::NegotiateConnectionParameters(void)'
+      offset: '00009499'
+    - name: ?GetDecoderVPDataInfo@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::GetDecoderVPDataInfo(void)'
+      offset: 000097C2
+    - name: ?EqualPixelFormats@CAMVideoPort@@AAEHPAU_DDPIXELFORMAT@@0@Z
+      processed: 'private: int __thiscall CAMVideoPort::EqualPixelFormats(struct _DDPIXELFORMAT
+        *, struct _DDPIXELFORMAT *)'
+      offset: '00009868'
+    - name: ?GetBestFormat@CAMVideoPort@@AAEJKPAU_DDPIXELFORMAT@@PAK0@Z
+      processed: 'private: long __thiscall CAMVideoPort::GetBestFormat(unsigned long,
+        struct _DDPIXELFORMAT *, unsigned long *, struct _DDPIXELFORMAT *)'
+      offset: '000098E1'
+    - name: ?CreateVideoPort@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::CreateVideoPort(void)'
+      offset: 00009A73
+    - name: ?CreateVPSurface@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::CreateVPSurface(void)'
+      offset: 00009BCB
+    - name: ?SetDDrawKernelHandles@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::SetDDrawKernelHandles(void)'
+      offset: 00009D51
+    - name: ?NegotiatePixelFormat@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::NegotiatePixelFormat(void)'
+      offset: 00009FEF
+    - name: ?InitializeVideoPortInfo@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::InitializeVideoPortInfo(void)'
+      offset: 0000A3B6
+    - name: ?SetupVideoPort@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::SetupVideoPort(void)'
+      offset: 0000A57E
+    - name: ?TearDownVideoPort@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::TearDownVideoPort(void)'
+      offset: 0000A6A8
+    - name: ?StartVideo@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::StartVideo(void)'
+      offset: 0000A701
+    - name: ?StopVideo@CAMVideoPort@@AAEJXZ
+      processed: 'private: long __thiscall CAMVideoPort::StopVideo(void)'
+      offset: 0000A7BF
+    - name: ?SurfaceCounter@@YGJPAUIDirectDrawSurface@@PAU_DDSURFACEDESC@@PAX@Z
+      processed: long __stdcall SurfaceCounter(struct IDirectDrawSurface *, struct
+        _DDSURFACEDESC *, void *)
+      offset: 0000A832
+    - name: ?SurfaceKernelHandle@@YGJPAUIDirectDrawSurface@@PAU_DDSURFACEDESC@@PAX@Z
+      processed: long __stdcall SurfaceKernelHandle(struct IDirectDrawSurface *, struct
+        _DDSURFACEDESC *, void *)
+      offset: 0000A841
+    - name: ?QueryInterface@CVBISurfFilter@@W3AGJABU_GUID@@PAPAX@Z
+      processed: "[thunk]: public: virtual long __stdcall CVBISurfFilter::QueryInterface`adjustor{4}'(struct
+        _GUID const &, void **)"
+      offset: 0000A8EE
+    - name: ?QueryInterface@CVBISurfInputPin@@W3AGJABU_GUID@@PAPAX@Z
+      processed: "[thunk]: public: virtual long __stdcall CVBISurfInputPin::QueryInterface`adjustor{4}'(struct
+        _GUID const &, void **)"
+      offset: 0000A8EE
+    - name: ?QueryInterface@CVBISurfOutputPin@@W3AGJABU_GUID@@PAPAX@Z
+      processed: "[thunk]: public: virtual long __stdcall CVBISurfOutputPin::QueryInterface`adjustor{4}'(struct
+        _GUID const &, void **)"
+      offset: 0000A8EE
+    - name: ?QueryInterface@CAMVideoPort@@W3AGJABU_GUID@@PAPAX@Z
+      processed: "[thunk]: public: virtual long __stdcall CAMVideoPort::QueryInterface`adjustor{4}'(struct
+        _GUID const &, void **)"
+      offset: 0000A8EE
+    - name: ?QueryInterface@CAMVideoPort@@W7AGJABU_GUID@@PAPAX@Z
+      processed: "[thunk]: public: virtual long __stdcall CAMVideoPort::QueryInterface`adjustor{8}'(struct
+        _GUID const &, void **)"
+      offset: 0000A8F8
+    - name: ?AddRef@CAMVideoPort@@W7AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CAMVideoPort::AddRef`adjustor{8}'(void)"
+      offset: 0000A902
+    - name: ?Release@CAMVideoPort@@W7AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CAMVideoPort::Release`adjustor{8}'(void)"
+      offset: 0000A90C
+    - name: ?QueryInterface@CAMVideoPort@@WM@AGJABU_GUID@@PAPAX@Z
+      processed: "[thunk]: public: virtual long __stdcall CAMVideoPort::QueryInterface`adjustor{12}'(struct
+        _GUID const &, void **)"
+      offset: 0000A916
+    - name: ?AddRef@CAMVideoPort@@WM@AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CAMVideoPort::AddRef`adjustor{12}'(void)"
+      offset: 0000A920
+    - name: ?Release@CAMVideoPort@@WM@AGKXZ
+      processed: "[thunk]: public: virtual unsigned long __stdcall CAMVideoPort::Release`adjustor{12}'(void)"
+      offset: 0000A92A
+    - name: ??0CClassFactory@@QAE@PBVCFactoryTemplate@@@Z
+      processed: 'public: __thiscall CClassFactory::CClassFactory(class CFactoryTemplate
+        const *)'
+      offset: 0000A934
+    - name: ?QueryInterface@CClassFactory@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CClassFactory::QueryInterface(struct
+        _GUID const &, void **)'
+      offset: 0000A95E
+    - name: ?AddRef@CClassFactory@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CClassFactory::AddRef(void)'
+      offset: 0000A9ED
+    - name: ?Release@CClassFactory@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CClassFactory::Release(void)'
+      offset: 0000A9FD
+    - name: ?CreateInstance@CClassFactory@@UAGJPAUIUnknown@@ABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CClassFactory::CreateInstance(struct
+        IUnknown *, struct _GUID const &, void **)'
+      offset: 0000AA26
+    - name: ?LockServer@CClassFactory@@UAGJH@Z
+      processed: 'public: virtual long __stdcall CClassFactory::LockServer(int)'
+      offset: 0000AB1B
+    - name: _DllGetClassObject@12
+      processed: ''
+      offset: 0000AB38
+    - name: ?DllInitClasses@@YGXH@Z
+      processed: void __stdcall DllInitClasses(int)
+      offset: 0000ABD1
+    - name: _DllCanUnloadNow@0
+      processed: ''
+      offset: 0000AC05
+    - name: _DllEntryPoint@12
+      processed: ''
+      offset: 0000AC41
+    - name: _EliminateSubKey@8
+      processed: ''
+      offset: 0000AD83
+    - name: _AMovieSetupRegisterServer@32
+      processed: ''
+      offset: 0000AE55
+    - name: _AMovieSetupUnregisterServer@16
+      processed: ''
+      offset: 0000AFF2
+    - name: _AMovieSetupRegisterFilter2@12
+      processed: ''
+      offset: 0000B069
+    - name: _RegisterAllServers@8
+      processed: ''
+      offset: 0000B108
+    - name: _AMovieDllRegisterServer2@4
+      processed: ''
+      offset: 0000B189
+    - name: ?NonDelegatingQueryInterface@CBaseFilter@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CBaseFilter::NonDelegatingQueryInterface(struct
+        _GUID const &, void **)'
+      offset: 0000B3AF
+    - name: ?NonDelegatingRelease@CBaseFilter@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CBaseFilter::NonDelegatingRelease(void)'
+      offset: 0000B42D
+    - name: ??0CBaseFilter@@QAE@PADPAUIUnknown@@PAVCCritSec@@ABU_GUID@@PAJ@Z
+      processed: 'public: __thiscall CBaseFilter::CBaseFilter(char *, struct IUnknown
+        *, class CCritSec *, struct _GUID const &, long *)'
+      offset: 0000B45F
+    - name: ??1CBaseFilter@@UAE@XZ
+      processed: 'public: virtual __thiscall CBaseFilter::~CBaseFilter(void)'
+      offset: 0000B4C1
+    - name: ?GetClassID@CBaseFilter@@UAGJPAU_GUID@@@Z
+      processed: 'public: virtual long __stdcall CBaseFilter::GetClassID(struct _GUID
+        *)'
+      offset: 0000B4F0
+    - name: ?GetState@CBaseFilter@@UAGJKPAW4_FilterState@@@Z
+      processed: 'public: virtual long __stdcall CBaseFilter::GetState(unsigned long,
+        enum _FilterState *)'
+      offset: 0000B555
+    - name: ?SetSyncSource@CBaseFilter@@UAGJPAUIReferenceClock@@@Z
+      processed: 'public: virtual long __stdcall CBaseFilter::SetSyncSource(struct
+        IReferenceClock *)'
+      offset: 0000B5B8
+    - name: ?GetSyncSource@CBaseFilter@@UAGJPAPAUIReferenceClock@@@Z
+      processed: 'public: virtual long __stdcall CBaseFilter::GetSyncSource(struct
+        IReferenceClock **)'
+      offset: 0000B5F8
+    - name: ?Stop@CBaseFilter@@UAGJXZ
+      processed: 'public: virtual long __stdcall CBaseFilter::Stop(void)'
+      offset: 0000B679
+    - name: ?Pause@CBaseFilter@@UAGJXZ
+      processed: 'public: virtual long __stdcall CBaseFilter::Pause(void)'
+      offset: 0000B6F1
+    - name: ?Run@CBaseFilter@@UAGJ_J@Z
+      processed: 'public: virtual long __stdcall CBaseFilter::Run(__int64)'
+      offset: 0000B767
+    - name: ?StreamTime@CBaseFilter@@UAEJAAVCRefTime@@@Z
+      processed: 'public: virtual long __thiscall CBaseFilter::StreamTime(class CRefTime
+        &)'
+      offset: 0000B816
+    - name: ?EnumPins@CBaseFilter@@UAGJPAPAUIEnumPins@@@Z
+      processed: 'public: virtual long __stdcall CBaseFilter::EnumPins(struct IEnumPins
+        **)'
+      offset: 0000B84C
+    - name: ?FindPin@CBaseFilter@@UAGJPBGPAPAUIPin@@@Z
+      processed: 'public: virtual long __stdcall CBaseFilter::FindPin(unsigned short
+        const *, struct IPin **)'
+      offset: 0000B8D5
+    - name: ?QueryFilterInfo@CBaseFilter@@UAGJPAU_FilterInfo@@@Z
+      processed: 'public: virtual long __stdcall CBaseFilter::QueryFilterInfo(struct
+        _FilterInfo *)'
+      offset: 0000B9CA
+    - name: ?JoinFilterGraph@CBaseFilter@@UAGJPAUIFilterGraph@@PBG@Z
+      processed: 'public: virtual long __stdcall CBaseFilter::JoinFilterGraph(struct
+        IFilterGraph *, unsigned short const *)'
+      offset: 0000BA5D
+    - name: ?NotifyEvent@CBaseFilter@@QAEJJJJ@Z
+      processed: 'public: long __thiscall CBaseFilter::NotifyEvent(long, long, long)'
+      offset: 0000BB0C
+    - name: ?GetPinVersion@CBaseFilter@@UAEJXZ
+      processed: 'public: virtual long __thiscall CBaseFilter::GetPinVersion(void)'
+      offset: 0000BB44
+    - name: ?Register@CBaseFilter@@UAGJXZ
+      processed: 'public: virtual long __stdcall CBaseFilter::Register(void)'
+      offset: 0000BB48
+    - name: ?Unregister@CBaseFilter@@UAGJXZ
+      processed: 'public: virtual long __stdcall CBaseFilter::Unregister(void)'
+      offset: 0000BBC6
+    - name: ??0CEnumPins@@QAE@PAVCBaseFilter@@PAV0@@Z
+      processed: 'public: __thiscall CEnumPins::CEnumPins(class CBaseFilter *, class
+        CEnumPins *)'
+      offset: 0000BC55
+    - name: ??_GCEnumPins@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CEnumPins::`scalar deleting dtor'(unsigned
+        int)"
+      offset: 0000BD1B
+    - name: ??_ECEnumPins@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CEnumPins::`vector deleting dtor'(unsigned
+        int)"
+      offset: 0000BD1B
+    - name: ??1CEnumPins@@UAE@XZ
+      processed: 'public: virtual __thiscall CEnumPins::~CEnumPins(void)'
+      offset: 0000BD3A
+    - name: ?QueryInterface@CEnumPins@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CEnumPins::QueryInterface(struct
+        _GUID const &, void **)'
+      offset: 0000BD61
+    - name: ?AddRef@CEnumPins@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CEnumPins::AddRef(void)'
+      offset: 0000BDAE
+    - name: ?Release@CEnumPins@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CEnumPins::Release(void)'
+      offset: 0000BDC2
+    - name: ?Clone@CEnumPins@@UAGJPAPAUIEnumPins@@@Z
+      processed: 'public: virtual long __stdcall CEnumPins::Clone(struct IEnumPins
+        **)'
+      offset: 0000BDEF
+    - name: ?Next@CEnumPins@@UAGJKPAPAUIPin@@PAK@Z
+      processed: 'public: virtual long __stdcall CEnumPins::Next(unsigned long, struct
+        IPin **, unsigned long *)'
+      offset: 0000BE8D
+    - name: ?Skip@CEnumPins@@UAGJK@Z
+      processed: 'public: virtual long __stdcall CEnumPins::Skip(unsigned long)'
+      offset: 0000BFFA
+    - name: ?Reset@CEnumPins@@UAGJXZ
+      processed: 'public: virtual long __stdcall CEnumPins::Reset(void)'
+      offset: 0000C034
+    - name: ?Refresh@CEnumPins@@AAGJXZ
+      processed: 'private: long __stdcall CEnumPins::Refresh(void)'
+      offset: 0000C064
+    - name: ??0CEnumMediaTypes@@QAE@PAVCBasePin@@PAV0@@Z
+      processed: 'public: __thiscall CEnumMediaTypes::CEnumMediaTypes(class CBasePin
+        *, class CEnumMediaTypes *)'
+      offset: 0000C08C
+    - name: ??_GCEnumMediaTypes@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CEnumMediaTypes::`scalar deleting
+        dtor'(unsigned int)"
+      offset: 0000C102
+    - name: ??_ECEnumMediaTypes@@UAEPAXI@Z
+      processed: "public: virtual void * __thiscall CEnumMediaTypes::`vector deleting
+        dtor'(unsigned int)"
+      offset: 0000C102
+    - name: ??1CEnumMediaTypes@@UAE@XZ
+      processed: 'public: virtual __thiscall CEnumMediaTypes::~CEnumMediaTypes(void)'
+      offset: 0000C121
+    - name: ?QueryInterface@CEnumMediaTypes@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CEnumMediaTypes::QueryInterface(struct
+        _GUID const &, void **)'
+      offset: 0000C141
+    - name: ?AddRef@CEnumMediaTypes@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CEnumMediaTypes::AddRef(void)'
+      offset: 0000C18E
+    - name: ?Release@CEnumMediaTypes@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CEnumMediaTypes::Release(void)'
+      offset: 0000C1A2
+    - name: ?Clone@CEnumMediaTypes@@UAGJPAPAUIEnumMediaTypes@@@Z
+      processed: 'public: virtual long __stdcall CEnumMediaTypes::Clone(struct IEnumMediaTypes
+        **)'
+      offset: 0000C1CF
+    - name: ?Next@CEnumMediaTypes@@UAGJKPAPAU_AMMediaType@@PAK@Z
+      processed: 'public: virtual long __stdcall CEnumMediaTypes::Next(unsigned long,
+        struct _AMMediaType **, unsigned long *)'
+      offset: 0000C26D
+    - name: ?Skip@CEnumMediaTypes@@UAGJK@Z
+      processed: 'public: virtual long __stdcall CEnumMediaTypes::Skip(unsigned long)'
+      offset: 0000C3B4
+    - name: ?Reset@CEnumMediaTypes@@UAGJXZ
+      processed: 'public: virtual long __stdcall CEnumMediaTypes::Reset(void)'
+      offset: 0000C407
+    - name: ??0CBasePin@@QAE@PADPAVCBaseFilter@@PAVCCritSec@@PAJPBGW4_PinDirection@@@Z
+      processed: 'public: __thiscall CBasePin::CBasePin(char *, class CBaseFilter
+        *, class CCritSec *, long *, unsigned short const *, enum _PinDirection)'
+      offset: 0000C424
+    - name: ??1CBasePin@@UAE@XZ
+      processed: 'public: virtual __thiscall CBasePin::~CBasePin(void)'
+      offset: 0000C508
+    - name: ?NonDelegatingQueryInterface@CBasePin@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CBasePin::NonDelegatingQueryInterface(struct
+        _GUID const &, void **)'
+      offset: 0000C564
+    - name: ?NonDelegatingAddRef@CBasePin@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CBasePin::NonDelegatingAddRef(void)'
+      offset: 0000C5C2
+    - name: ?NonDelegatingRelease@CBasePin@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CBasePin::NonDelegatingRelease(void)'
+      offset: 0000C5FF
+    - name: ?AreWeOutOfSync@CEnumPins@@AAEHXZ
+      processed: 'private: int __thiscall CEnumPins::AreWeOutOfSync(void)'
+      offset: 0000C63C
+    - name: ?DisplayPinInfo@CBasePin@@IAEXPAUIPin@@@Z
+      processed: 'protected: void __thiscall CBasePin::DisplayPinInfo(struct IPin
+        *)'
+      offset: 0000C653
+    - name: ?AreWeOutOfSync@CEnumMediaTypes@@AAEHXZ
+      processed: 'private: int __thiscall CEnumMediaTypes::AreWeOutOfSync(void)'
+      offset: 0000C71F
+    - name: ?DisplayTypeInfo@CBasePin@@IAEXPAUIPin@@PBVCMediaType@@@Z
+      processed: 'protected: void __thiscall CBasePin::DisplayTypeInfo(struct IPin
+        *, class CMediaType const *)'
+      offset: 0000C736
+    - name: ?Connect@CBasePin@@UAGJPAUIPin@@PBU_AMMediaType@@@Z
+      processed: 'public: virtual long __stdcall CBasePin::Connect(struct IPin *,
+        struct _AMMediaType const *)'
+      offset: 0000C79E
+    - name: ?AttemptConnection@CBasePin@@IAEJPAUIPin@@PBVCMediaType@@@Z
+      processed: 'protected: long __thiscall CBasePin::AttemptConnection(struct IPin
+        *, class CMediaType const *)'
+      offset: 0000C8A6
+    - name: ?TryMediaTypes@CBasePin@@IAEJPAUIPin@@PBVCMediaType@@PAUIEnumMediaTypes@@@Z
+      processed: 'protected: long __thiscall CBasePin::TryMediaTypes(struct IPin *,
+        class CMediaType const *, struct IEnumMediaTypes *)'
+      offset: 0000C9B6
+    - name: ?AgreeMediaType@CBasePin@@IAEJPAUIPin@@PBVCMediaType@@@Z
+      processed: 'protected: long __thiscall CBasePin::AgreeMediaType(struct IPin
+        *, class CMediaType const *)'
+      offset: 0000CAAE
+    - name: ?SetMediaType@CBasePin@@UAEJPBVCMediaType@@@Z
+      processed: 'public: virtual long __thiscall CBasePin::SetMediaType(class CMediaType
+        const *)'
+      offset: 0000CB97
+    - name: ?CheckConnect@CBasePin@@UAEJPAUIPin@@@Z
+      processed: 'public: virtual long __thiscall CBasePin::CheckConnect(struct IPin
+        *)'
+      offset: 0000CBAB
+    - name: ?ReceiveConnection@CBasePin@@UAGJPAUIPin@@PBU_AMMediaType@@@Z
+      processed: 'public: virtual long __stdcall CBasePin::ReceiveConnection(struct
+        IPin *, struct _AMMediaType const *)'
+      offset: 0000CC13
+    - name: ?Disconnect@CBasePin@@UAGJXZ
+      processed: 'public: virtual long __stdcall CBasePin::Disconnect(void)'
+      offset: 0000CDC1
+    - name: ?DisconnectInternal@CBasePin@@IAGJXZ
+      processed: 'protected: long __stdcall CBasePin::DisconnectInternal(void)'
+      offset: 0000CE04
+    - name: ?ConnectedTo@CBasePin@@UAGJPAPAUIPin@@@Z
+      processed: 'public: virtual long __stdcall CBasePin::ConnectedTo(struct IPin
+        **)'
+      offset: 0000CE70
+    - name: ?ConnectionMediaType@CBasePin@@UAGJPAU_AMMediaType@@@Z
+      processed: 'public: virtual long __stdcall CBasePin::ConnectionMediaType(struct
+        _AMMediaType *)'
+      offset: 0000CEE4
+    - name: ?QueryPinInfo@CBasePin@@UAGJPAU_PinInfo@@@Z
+      processed: 'public: virtual long __stdcall CBasePin::QueryPinInfo(struct _PinInfo
+        *)'
+      offset: 0000CF78
+    - name: ?QueryDirection@CBasePin@@UAGJPAW4_PinDirection@@@Z
+      processed: 'public: virtual long __stdcall CBasePin::QueryDirection(enum _PinDirection
+        *)'
+      offset: 0000D023
+    - name: ?QueryId@CBasePin@@UAGJPAPAG@Z
+      processed: 'public: virtual long __stdcall CBasePin::QueryId(unsigned short
+        **)'
+      offset: 0000D086
+    - name: ?QueryAccept@CBasePin@@UAGJPBU_AMMediaType@@@Z
+      processed: 'public: virtual long __stdcall CBasePin::QueryAccept(struct _AMMediaType
+        const *)'
+      offset: 0000D09B
+    - name: ?EnumMediaTypes@CBasePin@@UAGJPAPAUIEnumMediaTypes@@@Z
+      processed: 'public: virtual long __stdcall CBasePin::EnumMediaTypes(struct IEnumMediaTypes
+        **)'
+      offset: 0000D0E9
+    - name: ?GetMediaTypeVersion@CBasePin@@UAEJXZ
+      processed: 'public: virtual long __thiscall CBasePin::GetMediaTypeVersion(void)'
+      offset: 0000D172
+    - name: ?BreakConnect@CBasePin@@UAEJXZ
+      processed: 'public: virtual long __thiscall CBasePin::BreakConnect(void)'
+      offset: 0000D176
+    - name: ?Active@CBasePin@@UAEJXZ
+      processed: 'public: virtual long __thiscall CBasePin::Active(void)'
+      offset: 0000D176
+    - name: ?Run@CBasePin@@UAEJ_J@Z
+      processed: 'public: virtual long __thiscall CBasePin::Run(__int64)'
+      offset: 0000D179
+    - name: ?Inactive@CBasePin@@UAEJXZ
+      processed: 'public: virtual long __thiscall CBasePin::Inactive(void)'
+      offset: 0000D182
+    - name: ?EndOfStream@CBasePin@@UAGJXZ
+      processed: 'public: virtual long __stdcall CBasePin::EndOfStream(void)'
+      offset: 0000D189
+    - name: ?CompleteConnect@CBasePin@@UAEJPAUIPin@@@Z
+      processed: 'public: virtual long __thiscall CBasePin::CompleteConnect(struct
+        IPin *)'
+      offset: 0000D189
+    - name: ?SetSink@CBasePin@@UAGJPAUIQualityControl@@@Z
+      processed: 'public: virtual long __stdcall CBasePin::SetSink(struct IQualityControl
+        *)'
+      offset: 0000D192
+    - name: ?Notify@CBasePin@@UAGJPAUIBaseFilter@@UtagQuality@@@Z
+      processed: 'public: virtual long __stdcall CBasePin::Notify(struct IBaseFilter
+        *, struct tagQuality)'
+      offset: 0000D1E1
+    - name: ?NewSegment@CBasePin@@UAGJ_J0N@Z
+      processed: 'public: virtual long __stdcall CBasePin::NewSegment(__int64, __int64,
+        double)'
+      offset: 0000D201
+    - name: ??0CBaseInputPin@@QAE@PADPAVCBaseFilter@@PAVCCritSec@@PAJPBG@Z
+      processed: 'public: __thiscall CBaseInputPin::CBaseInputPin(char *, class CBaseFilter
+        *, class CCritSec *, long *, unsigned short const *)'
+      offset: 0000D22E
+    - name: ??1CBaseInputPin@@UAE@XZ
+      processed: 'public: virtual __thiscall CBaseInputPin::~CBaseInputPin(void)'
+      offset: 0000D275
+    - name: ?NonDelegatingQueryInterface@CBaseInputPin@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CBaseInputPin::NonDelegatingQueryInterface(struct
+        _GUID const &, void **)'
+      offset: 0000D29C
+    - name: ?BreakConnect@CBaseInputPin@@UAEJXZ
+      processed: 'public: virtual long __thiscall CBaseInputPin::BreakConnect(void)'
+      offset: 0000D2DE
+    - name: ?Receive@CBaseInputPin@@UAGJPAUIMediaSample@@@Z
+      processed: 'public: virtual long __stdcall CBaseInputPin::Receive(struct IMediaSample
+        *)'
+      offset: 0000D30C
+    - name: ?ReceiveMultiple@CBaseInputPin@@UAGJPAPAUIMediaSample@@JPAJ@Z
+      processed: 'public: virtual long __stdcall CBaseInputPin::ReceiveMultiple(struct
+        IMediaSample **, long, long *)'
+      offset: 0000D463
+    - name: ?ReceiveCanBlock@CBaseInputPin@@UAGJXZ
+      processed: 'public: virtual long __stdcall CBaseInputPin::ReceiveCanBlock(void)'
+      offset: 0000D4D4
+    - name: ?BeginFlush@CBaseInputPin@@UAGJXZ
+      processed: 'public: virtual long __stdcall CBaseInputPin::BeginFlush(void)'
+      offset: 0000D599
+    - name: ?EndFlush@CBaseInputPin@@UAGJXZ
+      processed: 'public: virtual long __stdcall CBaseInputPin::EndFlush(void)'
+      offset: 0000D5DC
+    - name: ?Notify@CBaseInputPin@@UAGJPAUIBaseFilter@@UtagQuality@@@Z
+      processed: 'public: virtual long __stdcall CBaseInputPin::Notify(struct IBaseFilter
+        *, struct tagQuality)'
+      offset: 0000D629
+    - name: ?Inactive@CBaseInputPin@@UAEJXZ
+      processed: 'public: virtual long __thiscall CBaseInputPin::Inactive(void)'
+      offset: 0000D676
+    - name: ?QueryVendorInfo@CBaseFilter@@UAGJPAPAG@Z
+      processed: 'public: virtual long __stdcall CBaseFilter::QueryVendorInfo(unsigned
+        short **)'
+      offset: 0000D698
+    - name: ?GetAllocatorRequirements@CBaseInputPin@@UAGJPAU_AllocatorProperties@@@Z
+      processed: 'public: virtual long __stdcall CBaseInputPin::GetAllocatorRequirements(struct
+        _AllocatorProperties *)'
+      offset: 0000D698
+    - name: ?CheckStreaming@CBaseInputPin@@UAEJXZ
+      processed: 'public: virtual long __thiscall CBaseInputPin::CheckStreaming(void)'
+      offset: 0000D6A4
+    - name: _AMovieSetupRegisterFilter@12
+      processed: ''
+      offset: 0000D6ED
+    - name: ??0CBaseObject@@QAE@PBD@Z
+      processed: 'public: __thiscall CBaseObject::CBaseObject(char const *)'
+      offset: 0000D87F
+    - name: ??1CBaseObject@@QAE@XZ
+      processed: 'public: __thiscall CBaseObject::~CBaseObject(void)'
+      offset: 0000D8A3
+    - name: ??0CUnknown@@QAE@PBDPAUIUnknown@@@Z
+      processed: 'public: __thiscall CUnknown::CUnknown(char const *, struct IUnknown
+        *)'
+      offset: 0000D8D5
+    - name: ?NonDelegatingQueryInterface@CUnknown@@UAGJABU_GUID@@PAPAX@Z
+      processed: 'public: virtual long __stdcall CUnknown::NonDelegatingQueryInterface(struct
+        _GUID const &, void **)'
+      offset: 0000D900
+    - name: ?NonDelegatingAddRef@CUnknown@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CUnknown::NonDelegatingAddRef(void)'
+      offset: 0000D97F
+    - name: ?NonDelegatingRelease@CUnknown@@UAGKXZ
+      processed: 'public: virtual unsigned long __stdcall CUnknown::NonDelegatingRelease(void)'
+      offset: 0000D9D0
+    - name: _GetInterface@8
+      processed: ''
+      offset: 0000DA3F
+    - name: ??0CLoadDirectDraw@@QAE@XZ
+      processed: 'public: __thiscall CLoadDirectDraw::CLoadDirectDraw(void)'
+      offset: 0000DA61
+    - name: ??1CLoadDirectDraw@@QAE@XZ
+      processed: 'public: __thiscall CLoadDirectDraw::~CLoadDirectDraw(void)'
+      offset: 0000DA6B
+    - name: ?LoadDirectDraw@CLoadDirectDraw@@QAEJPAD@Z
+      processed: 'public: long __thiscall CLoadDirectDraw::LoadDirectDraw(char *)'
+      offset: 0000DA95
+    - name: ?ReleaseDirectDraw@CLoadDirectDraw@@QAEXXZ
+      processed: 'public: void __thiscall CLoadDirectDraw::ReleaseDirectDraw(void)'
+      offset: 0000DC08
+    - name: ?GetDirectDraw@CLoadDirectDraw@@QAEPAUIDirectDraw@@XZ
+      processed: 'public: struct IDirectDraw * __thiscall CLoadDirectDraw::GetDirectDraw(void)'
+      offset: 0000DC3F
+    - name: ??0CAMEvent@@QAE@H@Z
+      processed: 'public: __thiscall CAMEvent::CAMEvent(int)'
+      offset: 0000DC8A
+    - name: ??1CAMEvent@@QAE@XZ
+      processed: 'public: __thiscall CAMEvent::~CAMEvent(void)'
+      offset: 0000DCBD
+    - name: ??0CAMThread@@QAE@XZ
+      processed: 'public: __thiscall CAMThread::CAMThread(void)'
+      offset: 0000DCE0
+    - name: ??1CAMThread@@QAE@XZ
+      processed: 'public: __thiscall CAMThread::~CAMThread(void)'
+      offset: 0000DD0F
+    - name: ?InitialThreadProc@CAMThread@@SGKPAX@Z
+      processed: 'public: static unsigned long __stdcall CAMThread::InitialThreadProc(void
+        *)'
+      offset: 0000DD39
+    - name: ?Create@CAMThread@@QAEHXZ
+      processed: 'public: int __thiscall CAMThread::Create(void)'
+      offset: 0000DD75
+    - name: ?CallWorker@CAMThread@@QAEKK@Z
+      processed: 'public: unsigned long __thiscall CAMThread::CallWorker(unsigned
+        long)'
+      offset: 0000DDC5
+    - name: ?CheckRequest@CAMThread@@QAEHPAK@Z
+      processed: 'public: int __thiscall CAMThread::CheckRequest(unsigned long *)'
+      offset: 0000DE2E
+    - name: ?Reply@CAMThread@@QAEXK@Z
+      processed: 'public: void __thiscall CAMThread::Reply(unsigned long)'
+      offset: 0000DE62
+    - name: ?CoInitializeHelper@CAMThread@@SGJXZ
+      processed: 'public: static long __stdcall CAMThread::CoInitializeHelper(void)'
+      offset: 0000DE9D
+    - name: ?lstrcpyWInternal@@YGPAGPAGPBG@Z
+      processed: unsigned short * __stdcall lstrcpyWInternal(unsigned short *, unsigned
+        short const *)
+      offset: 0000DEE4
+    - name: ?lstrcpynWInternal@@YGPAGPAGPBGH@Z
+      processed: unsigned short * __stdcall lstrcpynWInternal(unsigned short *, unsigned
+        short const *, int)
+      offset: 0000DF04
+    - name: ?lstrcmpWInternal@@YGHPBG0@Z
+      processed: int __stdcall lstrcmpWInternal(unsigned short const *, unsigned short
+        const *)
+      offset: 0000DF52
+    - name: ?lstrlenWInternal@@YGHPBG@Z
+      processed: int __stdcall lstrlenWInternal(unsigned short const *)
+      offset: 0000DF8B
+    - name: ??0CCritSec@@QAE@XZ
+      processed: 'public: __thiscall CCritSec::CCritSec(void)'
+      offset: 0000DFA2
+    - name: ??1CCritSec@@QAE@XZ
+      processed: 'public: __thiscall CCritSec::~CCritSec(void)'
+      offset: 0000DFBB
+    - name: ?Lock@CCritSec@@QAEXXZ
+      processed: 'public: void __thiscall CCritSec::Lock(void)'
+      offset: 0000DFC3
+    - name: ?Unlock@CCritSec@@QAEXXZ
+      processed: 'public: void __thiscall CCritSec::Unlock(void)'
+      offset: 0000E03E
+    - name: ?CritCheckIn@@YGHPAVCCritSec@@@Z
+      processed: int __stdcall CritCheckIn(class CCritSec *)
+      offset: 0000E06E
+    - name: _AMGetWideString@8
+      processed: ''
+      offset: '0000E086'
+    - name: ?DbgInitialise@@YGXPAUHINSTANCE__@@@Z
+      processed: void __stdcall DbgInitialise(struct HINSTANCE__*)
+      offset: '0000E116'
+    - name: ?DbgTerminate@@YGXXZ
+      processed: void __stdcall DbgTerminate(void)
+      offset: '0000E174'
+    - name: ?DbgInitKeyLevels@@YGXPAUHKEY__@@_N@Z
+      processed: void __stdcall DbgInitKeyLevels(struct HKEY__*, bool)
+      offset: 0000E1B4
+    - name: ?DbgOutString@@YGXPBD@Z
+      processed: void __stdcall DbgOutString(char const *)
+      offset: 0000E2CD
+    - name: ?DbgInitLogTo@@YGXPAUHKEY__@@@Z
+      processed: void __stdcall DbgInitLogTo(struct HKEY__*)
+      offset: '0000E305'
+    - name: ?DbgInitGlobalSettings@@YGX_N@Z
+      processed: void __stdcall DbgInitGlobalSettings(bool)
+      offset: '0000E476'
+    - name: ?DbgInitModuleSettings@@YGX_N@Z
+      processed: void __stdcall DbgInitModuleSettings(bool)
+      offset: 0000E4F2
+    - name: ?DbgInitModuleName@@YGXXZ
+      processed: void __stdcall DbgInitModuleName(void)
+      offset: '0000E575'
+    - name: ?MsgBoxThread@@YGKPAX@Z
+      processed: unsigned long __stdcall MsgBoxThread(void *)
+      offset: 0000E5C2
+    - name: ?MessageBoxOtherThread@@YGHPAUHWND__@@PAD1K@Z
+      processed: int __stdcall MessageBoxOtherThread(struct HWND__*, char *, char
+        *, unsigned long)
+      offset: 0000E5E4
+    - name: ?DbgAssert@@YGXPBD0H@Z
+      processed: void __stdcall DbgAssert(char const *, char const *, int)
+      offset: 0000E65F
+    - name: ?DbgBreakPoint@@YGXPBD0H@Z
+      processed: void __stdcall DbgBreakPoint(char const *, char const *, int)
+      offset: 0000E6D9
+    - name: ?DbgCheckModuleLevel@@YGHKK@Z
+      processed: int __stdcall DbgCheckModuleLevel(unsigned long, unsigned long)
+      offset: '0000E753'
+    - name: ?DbgSetModuleLevel@@YGXKK@Z
+      processed: void __stdcall DbgSetModuleLevel(unsigned long, unsigned long)
+      offset: 0000E7C3
+    - name: ?DbgLogInfo@@YAXKKPBDZZ
+      processed: void __cdecl DbgLogInfo(unsigned long, unsigned long, char const
+        *, ...)
+      offset: 0000E7EE
+    - name: ?DbgKernelAssert@@YGXPBD0H@Z
+      processed: void __stdcall DbgKernelAssert(char const *, char const *, int)
+      offset: '0000E898'
+    - name: ?DbgRegisterObjectCreation@@YGKPBDPBG@Z
+      processed: unsigned long __stdcall DbgRegisterObjectCreation(char const *, unsigned
+        short const *)
+      offset: 0000E8BF
+    - name: ?DbgRegisterObjectDestruction@@YGHK@Z
+      processed: int __stdcall DbgRegisterObjectDestruction(unsigned long)
+      offset: 0000E9D2
+    - name: ?DbgDumpObjectRegister@@YGXXZ
+      processed: void __stdcall DbgDumpObjectRegister(void)
+      offset: 0000EA80
+    - name: ??ACGuidNameList@@QAEPADABU_GUID@@@Z
+      processed: 'public: char * __thiscall CGuidNameList::operator[](struct _GUID
+        const &)'
+      offset: 0000EB70
+    - name: ??1CMediaType@@QAE@XZ
+      processed: 'public: __thiscall CMediaType::~CMediaType(void)'
+      offset: 0000EBCF
+    - name: ??0CMediaType@@QAE@XZ
+      processed: 'public: __thiscall CMediaType::CMediaType(void)'
+      offset: 0000EBD6
+    - name: ??4CMediaType@@QAEAAV0@ABU_AMMediaType@@@Z
+      processed: 'public: class CMediaType & __thiscall CMediaType::operator=(struct
+        _AMMediaType const &)'
+      offset: 0000EBE2
+    - name: ??4CMediaType@@QAEAAV0@ABV0@@Z
+      processed: 'public: class CMediaType & __thiscall CMediaType::operator=(class
+        CMediaType const &)'
+      offset: 0000EC03
+    - name: ?SetType@CMediaType@@QAEXPBU_GUID@@@Z
+      processed: 'public: void __thiscall CMediaType::SetType(struct _GUID const *)'
+      offset: 0000EC18
+    - name: ?SetSubtype@CMediaType@@QAEXPBU_GUID@@@Z
+      processed: 'public: void __thiscall CMediaType::SetSubtype(struct _GUID const
+        *)'
+      offset: 0000EC2C
+    - name: ?SetSampleSize@CMediaType@@QAEXK@Z
+      processed: 'public: void __thiscall CMediaType::SetSampleSize(unsigned long)'
+      offset: 0000EC41
+    - name: ?SetVariableSize@CMediaType@@QAEXXZ
+      processed: 'public: void __thiscall CMediaType::SetVariableSize(void)'
+      offset: 0000EC60
+    - name: ?SetTemporalCompression@CMediaType@@QAEXH@Z
+      processed: 'public: void __thiscall CMediaType::SetTemporalCompression(int)'
+      offset: 0000EC65
+    - name: ?SetFormatType@CMediaType@@QAEXPBU_GUID@@@Z
+      processed: 'public: void __thiscall CMediaType::SetFormatType(struct _GUID const
+        *)'
+      offset: 0000EC72
+    - name: ?InitMediaType@CMediaType@@QAEXXZ
+      processed: 'public: void __thiscall CMediaType::InitMediaType(void)'
+      offset: 0000EC87
+    - name: ?IsPartiallySpecified@CMediaType@@QBEHXZ
+      processed: 'public: int __thiscall CMediaType::IsPartiallySpecified(void) const'
+      offset: 0000EC9E
+    - name: ?MatchesPartial@CMediaType@@QBEHPBV1@@Z
+      processed: 'public: int __thiscall CMediaType::MatchesPartial(class CMediaType
+        const *) const'
+      offset: 0000ECCA
+    - name: ?DeleteMediaType@@YGXPAU_AMMediaType@@@Z
+      processed: void __stdcall DeleteMediaType(struct _AMMediaType *)
+      offset: 0000ED5D
+    - name: ?CopyMediaType@@YGXPAU_AMMediaType@@PBU1@@Z
+      processed: void __stdcall CopyMediaType(struct _AMMediaType *, struct _AMMediaType
+        const *)
+      offset: 0000ED7B
+    - name: ?FreeMediaType@@YGXAAU_AMMediaType@@@Z
+      processed: void __stdcall FreeMediaType(struct _AMMediaType &)
+      offset: 0000EE0D
+    - name: ??0CBaseList@@QAE@PAD@Z
+      processed: 'public: __thiscall CBaseList::CBaseList(char *)'
+      offset: 0000EE41
+    - name: ??1CBaseList@@QAE@XZ
+      processed: 'public: __thiscall CBaseList::~CBaseList(void)'
+      offset: 0000EE6E
+    - name: ?RemoveAll@CBaseList@@QAEXXZ
+      processed: 'public: void __thiscall CBaseList::RemoveAll(void)'
+      offset: 0000EE87
+    - name: ?GetHeadPositionI@CBaseList@@QBEPAU__POSITION@@XZ
+      processed: 'public: struct __POSITION * __thiscall CBaseList::GetHeadPositionI(void)
+        const'
+      offset: 0000EEBE
+    - name: ?GetNextI@CBaseList@@IBEPAXAAPAU__POSITION@@@Z
+      processed: 'protected: void * __thiscall CBaseList::GetNextI(struct __POSITION
+        *&) const'
+      offset: 0000EEC2
+    - name: ?GetI@CBaseList@@IBEPAXPAU__POSITION@@@Z
+      processed: 'protected: void * __thiscall CBaseList::GetI(struct __POSITION *)
+        const'
+      offset: 0000EEE2
+    - name: ?FindI@CBaseList@@IBEPAU__POSITION@@PAX@Z
+      processed: 'protected: struct __POSITION * __thiscall CBaseList::FindI(void
+        *) const'
+      offset: 0000EEF3
+    - name: ?AddTailI@CBaseList@@IAEPAU__POSITION@@PAX@Z
+      processed: 'protected: struct __POSITION * __thiscall CBaseList::AddTailI(void
+        *)'
+      offset: 0000EF2C
+    - name: ?AddTail@CBaseList@@QAEHPAV1@@Z
+      processed: 'public: int __thiscall CBaseList::AddTail(class CBaseList *)'
+      offset: 0000EF8E
+    - name: ??1CNodeCache@CBaseList@@QAE@XZ
+      processed: 'public: __thiscall CBaseList::CNodeCache::~CNodeCache(void)'
+      offset: 0000EFCE
+    - name: ?RemoveFromCache@CNodeCache@CBaseList@@QAEPAVCNode@2@XZ
+      processed: 'public: class CBaseList::CNode * __thiscall CBaseList::CNodeCache::RemoveFromCache(void)'
+      offset: 0000EFF5
+    - name: ?FindDeviceCallback@@YGHPAU_GUID@@PAD1PAX@Z
+      processed: int __stdcall FindDeviceCallback(struct _GUID *, char *, char *,
+        void *)
+      offset: 0000F037
+    - name: ?FindDeviceCallbackEx@@YGHPAU_GUID@@PAD1PAXPAUHMONITOR__@@@Z
+      processed: int __stdcall FindDeviceCallbackEx(struct _GUID *, char *, char *,
+        void *, struct HMONITOR__*)
+      offset: 0000F07D
+    - name: _DirectDrawCreateFromDevice@12
+      processed: ''
+      offset: 0000F0C3
+    - name: _DirectDrawCreateFromDeviceEx@12
+      processed: ''
+      offset: 0000F11E
+    - name: ??2@YAPAXI@Z
+      processed: void * __cdecl operator new(unsigned int)
+      offset: 0000F17C
+    - name: ??3@YAXPAX@Z
+      processed: void __cdecl operator delete(void *)
+      offset: 0000F182
+    - name: __allshl
+      processed: ''
+      offset: 0000F190
+    - name: __aullrem
+      processed: ''
+      offset: 0000F1B0
+    - name: __aulldiv
+      processed: ''
+      offset: 0000F230
+    - name: __allmul
+      processed: ''
+      offset: 0000F2A0
+    - name: __alldiv
+      processed: ''
+      offset: 0000F2E0
+    - name: __allrem
+      processed: ''
+      offset: 0000F390
+    - name: __IMPORT_DESCRIPTOR_MSVCRT
+      processed: ''
+      offset: 0000F444
+    - name: __IMPORT_DESCRIPTOR_WINMM
+      processed: ''
+      offset: 0000F458
+    - name: __IMPORT_DESCRIPTOR_KERNEL32
+      processed: ''
+      offset: 0000F46C
+    - name: __IMPORT_DESCRIPTOR_ADVAPI32
+      processed: ''
+      offset: 0000F480
+    - name: __IMPORT_DESCRIPTOR_USER32
+      processed: ''
+      offset: 0000F494
+    - name: __IMPORT_DESCRIPTOR_GDI32
+      processed: ''
+      offset: 0000F4A8
+    - name: __IMPORT_DESCRIPTOR_ole32
+      processed: ''
+      offset: 0000F4BC
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000F4D0
+  - num: '2'
+    name: .data
+    offset: '00000000'
+    symbols:
+    - name: ?sudInPinTypes@@3U__MIDL___MIDL_itf_strmif_0128_0001@@A
+      processed: struct __MIDL___MIDL_itf_strmif_0128_0001 sudInPinTypes
+      offset: '00000000'
+    - name: ?sudOutPinTypes@@3U__MIDL___MIDL_itf_strmif_0128_0001@@A
+      processed: struct __MIDL___MIDL_itf_strmif_0128_0001 sudOutPinTypes
+      offset: '00000008'
+    - name: ?psudPins@@3PAU__MIDL___MIDL_itf_strmif_0128_0002@@A
+      processed: struct __MIDL___MIDL_itf_strmif_0128_0002 *psudPins
+      offset: '00000010'
+    - name: ?sudPinCount@@3IA
+      processed: unsigned int sudPinCount
+      offset: '00000058'
+    - name: ?sudVBISurfaces@@3U_AMOVIESETUP_FILTER@@B
+      processed: struct _AMOVIESETUP_FILTER const sudVBISurfaces
+      offset: '00000060'
+    - name: ?g_Templates@@3PAVCFactoryTemplate@@A
+      processed: class CFactoryTemplate *g_Templates
+      offset: '00000078'
+    - name: ?g_cTemplates@@3HA
+      processed: int g_cTemplates
+      offset: 000000A0
+    - name: ?pKeyNames@@3PAPADA
+      processed: char **pKeyNames
+      offset: 000000A8
+    - name: ?m_hOutput@@3PAXA
+      processed: void *m_hOutput
+      offset: 000000D0
+    - name: ?dwWaitTimeout@@3KA
+      processed: unsigned long dwWaitTimeout
+      offset: 000000D4
+    - name: ?pBaseKey@@3PBDB
+      processed: char const *pBaseKey
+      offset: 000000D8
+    - name: ?pGlobalKey@@3PBDB
+      processed: char const *pGlobalKey
+      offset: 000000DC
+    - name: ?TimeoutName@@3PADA
+      processed: char *TimeoutName
+      offset: '000000E4'
+    - name: ?g_GuidNames@@3PAUGUID_STRING_ENTRY@@A
+      processed: struct GUID_STRING_ENTRY *g_GuidNames
+      offset: '000000E8'
+    - name: ?g_cGuidNames@@3HA
+      processed: int g_cGuidNames
+      offset: 0000181C
+    - name: _g_pfnGetSystemMetrics
+      processed: ''
+      offset: '00001820'
+    - name: _g_pfnMonitorFromWindow
+      processed: ''
+      offset: '00001824'
+    - name: _g_pfnMonitorFromRect
+      processed: ''
+      offset: '00001828'
+    - name: _g_pfnMonitorFromPoint
+      processed: ''
+      offset: 0000182C
+    - name: _g_pfnGetMonitorInfo
+      processed: ''
+      offset: '00001830'
+    - name: _g_pfnEnumDisplayMonitors
+      processed: ''
+      offset: '00001834'
+    - name: _g_pfnEnumDisplayDevices
+      processed: ''
+      offset: '00001838'
+    - name: _g_fMultiMonInitDone
+      processed: ''
+      offset: 0000183C
+    - name: _g_fMultimonPlatformNT
+      processed: ''
+      offset: '00001840'
+    - name: ?g_hInst@@3PAUHINSTANCE__@@A
+      processed: struct HINSTANCE__*g_hInst
+      offset: '00001848'
+    - name: ?g_amPlatform@@3KA
+      processed: unsigned long g_amPlatform
+      offset: 0000184C
+    - name: ?g_osInfo@@3U_OSVERSIONINFOA@@A
+      processed: struct _OSVERSIONINFOA g_osInfo
+      offset: '00001850'
+    - name: ?m_cLocked@CClassFactory@@0HA
+      processed: 'private: static int CClassFactory::m_cLocked'
+      offset: '000018E4'
+    - name: ?hlibOLEAut32@@3PAUHINSTANCE__@@A
+      processed: struct HINSTANCE__*hlibOLEAut32
+      offset: '000018E8'
+    - name: ?m_cObjects@CBaseObject@@0JA
+      processed: 'private: static long CBaseObject::m_cObjects'
+      offset: 000018EC
+    - name: ?dwTimeOffset@@3KA
+      processed: unsigned long dwTimeOffset
+      offset: 000018F8
+    - name: ?GuidNames@@3VCGuidNameList@@A
+      processed: class CGuidNameList GuidNames
+      offset: 000018FC
+    - name: ?m_CSDebug@@3U_RTL_CRITICAL_SECTION@@A
+      processed: struct _RTL_CRITICAL_SECTION m_CSDebug
+      offset: '00001900'
+    - name: ?m_ModuleName@@3PADA
+      processed: char *m_ModuleName
+      offset: '00001918'
+    - name: ?m_dwNextCookie@@3KA
+      processed: unsigned long m_dwNextCookie
+      offset: 00001D18
+    - name: ?m_Levels@@3PAKA
+      processed: unsigned long *m_Levels
+      offset: 00001D20
+    - name: ?m_dwObjectCount@@3KA
+      processed: unsigned long m_dwObjectCount
+      offset: 00001D48
+    - name: ?m_hInst@@3PAUHINSTANCE__@@A
+      processed: struct HINSTANCE__*m_hInst
+      offset: 00001D4C
+    - name: ?pListHead@@3PAUtag_ObjectDesc@@A
+      processed: struct tag_ObjectDesc *pListHead
+      offset: 00001D50
+    - name: ?m_bInit@@3HA
+      processed: int m_bInit
+      offset: 00001D54
+    - name: ?g_fUseKASSERT@@3_NA
+      processed: bool g_fUseKASSERT
+      offset: 00001D58
+    - name: ?g_fDbgInDllEntryPoint@@3_NA
+      processed: bool g_fDbgInDllEntryPoint
+      offset: 00001D5C
+    - name: ?g_fAutoRefreshLevels@@3_NA
+      processed: bool g_fAutoRefreshLevels
+      offset: 00001D60
+    - name: ___@@_PchSym_@00@UmgxUkfyorxUhwpUznlervUoryUrDIGUhgivznhOlyq@strmbase
+      processed: ''
+      offset: 00001D68

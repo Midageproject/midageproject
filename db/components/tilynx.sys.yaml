@@ -1,0 +1,2033 @@
+filename: tilynx.sys
+binary: TILYNX
+description: ''
+appearances:
+- version: Windows 98 Retail
+  source_tree:
+  - ../../common/common.c
+  - ../dbg.c
+  - ../i2c.c
+  - ../interrup.c
+  - ../lynxirp.c
+  - ../lynxpnp.c
+  - ../tilynx.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00001870'
+    symbols:
+    - name: _TILynxFormTopologyMap@8
+      processed: ''
+      offset: '00000000'
+    - name: _TILynxCalculateCrc@8
+      processed: ''
+      offset: '00000248'
+    - name: _TILynxCrc16@8
+      processed: ''
+      offset: 0000026C
+    - name: _TILynxGenerateLocalSelfId@8
+      processed: ''
+      offset: 000002A7
+    - name: _TILynxPower@8
+      processed: ''
+      offset: '00000377'
+    - name: _TILynxSetPowerState@16
+      processed: ''
+      offset: 000003EA
+    - name: _TILynxRequestPowerCompletion@20
+      processed: ''
+      offset: 0000055C
+    - name: _TILynxPowerUpCompletionRoutine@12
+      processed: ''
+      offset: 0000057F
+    - name: _TILynxSynchCompletionRoutine@12
+      processed: ''
+      offset: 0000063C
+    - name: _TILynxBusReset@8
+      processed: ''
+      offset: '00000652'
+    - name: _TILynxGetDmaChannel@8
+      processed: ''
+      offset: 0000070A
+    - name: _TILynxReturnDmaChannel@8
+      processed: ''
+      offset: '00000749'
+    - name: _TILynxInsertTailPclInDmaChannel@12
+      processed: ''
+      offset: 0000075F
+    - name: _TILynxRemoveHeadPcl@4
+      processed: ''
+      offset: '00000793'
+    - name: _TILynxIsr@8
+      processed: ''
+      offset: 000007C4
+    - name: _TILynxDpc@16
+      processed: ''
+      offset: 0000085C
+    - name: _TILynxSynchGetIntBits@4
+      processed: ''
+      offset: 00000B50
+    - name: _TILynxHandleAsyncResponse@8
+      processed: ''
+      offset: 00000B79
+    - name: _TILynxHandleAsyncRequest@8
+      processed: ''
+      offset: 00000D05
+    - name: _TILynxTimeOutDpc@16
+      processed: ''
+      offset: '00001089'
+    - name: _TILynxHandleBusReset@4
+      processed: ''
+      offset: '00001110'
+    - name: _TILynxHandleAsyncXmit@4
+      processed: ''
+      offset: '00001301'
+    - name: _TILynxRestartReceivePcl@8
+      processed: ''
+      offset: '00001577'
+    - name: _TILynxCleanupDmaBlockWrite@8
+      processed: ''
+      offset: 000015DB
+    - name: _TILynxAppendWorkerToXmitList@8
+      processed: ''
+      offset: '00001660'
+    - name: _TILynxRetryAsyncRequest@8
+      processed: ''
+      offset: 000016F0
+    - name: _TILynxCleanupPendingRequests@4
+      processed: ''
+      offset: 0000173D
+    - name: _HandleIOCtl@12
+      processed: ''
+      offset: '00001904'
+    - name: _CreatePortObjectAndSymLink@20
+      processed: ''
+      offset: '00001966'
+    - name: _TILynxIOCtl@8
+      processed: ''
+      offset: 00001ACB
+    - name: _TILynxSysCtl@8
+      processed: ''
+      offset: '00002106'
+    - name: _TILynxStartIo@8
+      processed: ''
+      offset: '00002134'
+    - name: _TILynxSetupIsochDma@16
+      processed: ''
+      offset: '000032E8'
+    - name: _TILynxSetupAsyncDma@16
+      processed: ''
+      offset: 0000360F
+    - name: _TILynxGetIsochPclHeap@8
+      processed: ''
+      offset: 000036EF
+    - name: _TILynxReturnIsochPclHeap@8
+      processed: ''
+      offset: 000037B1
+    - name: _TILynxSetupComparatorPcl@28
+      processed: ''
+      offset: '00003891'
+    - name: _TILynxSetupAllocateDma@16
+      processed: ''
+      offset: 000039BF
+    - name: _Debug_Assert@16
+      processed: ''
+      offset: 00003A8B
+    - name: _Bus1394RegisterPortDriver@4
+      processed: ''
+      offset: 00003A8E
+  - num: '2'
+    name: .data
+    offset: 00001F00
+    symbols:
+    - name: ??_C@_0CI@EHCF@IrpStack?9?$DOMajorFunction?5?$DN?$DN?5IRP_M@
+      processed: '"IrpStack->MajorFunction == IRP_M"...'
+      offset: '00000000'
+    - name: ??_C@_0N@POLN@?4?4?2lynxpnp?4c?$AA@
+      processed: '"..\\lynxpnp.c"'
+      offset: '00000028'
+    - name: ??_C@_05LLOB@FALSE?$AA@
+      processed: '"FALSE"'
+      offset: '00000038'
+    - name: ??_C@_0BP@BEJF@DmaRecvIndex?5?$DN?$DN?5GEN_RECV_INDEX?$AA@
+      processed: '"DmaRecvIndex == GEN_RECV_INDEX"'
+      offset: '00000040'
+    - name: ??_C@_0CB@MINB@DmaXmitIndex?5?$DN?$DN?5ASYNC_XMIT_INDEX@
+      processed: '"DmaXmitIndex == ASYNC_XMIT_INDEX"...'
+      offset: '00000060'
+    - name: ??_C@_0BB@NMCK@MaxRegisterReads?$AA@
+      processed: '"MaxRegisterReads"'
+      offset: '00000084'
+    - name: ??_C@_0O@CDAK@RegisterReads?$AA@
+      processed: '"RegisterReads"'
+      offset: '00000098'
+    - name: ??_C@_03OJAM@Pcl?$AA@
+      processed: '"Pcl"'
+      offset: 000000A8
+    - name: 
+        ??_C@_1CA@PCLB@?$AAT?$AAr?$AAa?$AAn?$AAs?$AAm?$AAi?$AAt?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      processed: L"TransmitWorkers"
+      offset: 000000AC
+    - name: 
+        ??_C@_1BO@NBKO@?$AAR?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      processed: L"ReceiveWorkers"
+      offset: 000000CC
+    - name: 
+        ??_C@_1BO@MLPO@?$AAD?$AAi?$AAa?$AAg?$AAn?$AAo?$AAs?$AAt?$AAi?$AAc?$AAM?$AAo?$AAd?$AAe?$AA?$AA@
+      processed: L"DiagnosticMode"
+      offset: 000000EC
+    - name: ??_C@_0CD@LELH@DataLength?5?$DN?$DN?5fullInfo?9?$DODataLeng@
+      processed: '"DataLength == fullInfo->DataLeng"...'
+      offset: 0000010C
+    - name: ??_C@_0BK@DDFD@IsochDescriptor?9?$DOCallback?$AA@
+      processed: '"IsochDescriptor->Callback"'
+      offset: '00000130'
+    - name: ??_C@_0CJ@JBEO@IsochResource?9?$DOTag?5?$DN?$DN?5ISOCH_RESO@
+      processed: '"IsochResource->Tag == ISOCH_RESO"...'
+      offset: 0000014C
+    - name: ??_C@_0O@IPO@IsochResource?$AA@
+      processed: '"IsochResource"'
+      offset: '00000178'
+    - name: ??_C@_0O@PIGB@?4?4?2interrup?4c?$AA@
+      processed: '"..\\interrup.c"'
+      offset: '00000188'
+    - name: ??_C@_0BJ@OGCG@Irp?9?$DOType?5?$DN?$DN?5IO_TYPE_IRP?$AA@
+      processed: '"Irp->Type == IO_TYPE_IRP"'
+      offset: '00000198'
+    - name: ??_C@_0BJ@PJMD@status?5?$DN?$DN?5STATUS_SUCCESS?$AA@
+      processed: '"status == STATUS_SUCCESS"'
+      offset: 000001B4
+    - name: ??_C@_0DK@CILN@AsyncWorker?9?$DOPcl?9?$DOStatus?4Acks?5?$DM?$DN@
+      processed: '"AsyncWorker->Pcl->Status.Acks <="...'
+      offset: 000001D0
+    - name: ??_C@_0CI@INAE@AsyncWorker?9?$DOPcl?9?$DOPclControl?4Cmd@
+      processed: '"AsyncWorker->Pcl->PclControl.Cmd"...'
+      offset: 0000020C
+    - name: 
+        ??_C@_1CI@KDMG@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      processed: L"\\DosDevices\\1394BUS"
+      offset: '00000234'
+    - name: 
+        ??_C@_1CA@MPBH@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      processed: L"\\Device\\1394BUS"
+      offset: 0000025C
+    - name: ??_C@_0GC@CJLB@?$CB?$CIIrb?9?$DOu?4IsochAllocateResources?4@
+      processed: '"!(Irb->u.IsochAllocateResources."...'
+      offset: 0000027C
+    - name: ??_C@_0CL@NIIP@DeviceExtension?9?$DOTag?5?$DN?$DN?5PORT_EXT@
+      processed: '"DeviceExtension->Tag == PORT_EXT"...'
+      offset: '000002E0'
+    - name: ??_C@_0N@LHBO@?4?4?2lynxirp?4c?$AA@
+      processed: '"..\\lynxirp.c"'
+      offset: 0000030C
+    - name: ??_C@_0P@JPMD@AddressMapping?$AA@
+      processed: '"AddressMapping"'
+      offset: 0000031C
+    - name: ??_C@_0N@CAJP@IsochPclHeap?$AA@
+      processed: '"IsochPclHeap"'
+      offset: 0000032C
+  - num: '3'
+    name: .idata$2
+    offset: '00002700'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_1394BUS
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      processed: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: 0000003C
+    - name: __imp__Bus1394RegisterPortDriver@4
+      processed: ''
+      offset: '00000138'
+    - name: \1771394BUS_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000013C
+    - name: __imp_@KfReleaseSpinLock@8
+      processed: ''
+      offset: '00000140'
+    - name: __imp_@KfAcquireSpinLock@4
+      processed: ''
+      offset: '00000144'
+    - name: __imp__KeStallExecutionProcessor@4
+      processed: ''
+      offset: '00000148'
+    - name: \177HAL_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000014C
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: '00000150'
+    - name: __imp__IoDetachDevice@4
+      processed: ''
+      offset: '00000154'
+    - name: __imp__KeInitializeSpinLock@4
+      processed: ''
+      offset: '00000158'
+    - name: __imp__KeInitializeDpc@12
+      processed: ''
+      offset: 0000015C
+    - name: __imp__IoDeleteSymbolicLink@4
+      processed: ''
+      offset: '00000160'
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: '00000164'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000168'
+    - name: __imp__KeInitializeTimer@4
+      processed: ''
+      offset: 0000016C
+    - name: __imp__MmCreateMdl@12
+      processed: ''
+      offset: '00000170'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: '00000174'
+    - name: __imp__IoConnectInterrupt@44
+      processed: ''
+      offset: '00000178'
+    - name: __imp__IoDisconnectInterrupt@4
+      processed: ''
+      offset: 0000017C
+    - name: __imp__MmUnmapIoSpace@8
+      processed: ''
+      offset: '00000180'
+    - name: __imp__IoGetDmaAdapter@12
+      processed: ''
+      offset: '00000184'
+    - name: __imp__MmMapIoSpace@16
+      processed: ''
+      offset: '00000188'
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: 0000018C
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '00000190'
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: '00000194'
+    - name: __imp__PoCallDriver@8
+      processed: ''
+      offset: '00000198'
+    - name: __imp__PoStartNextPowerIrp@4
+      processed: ''
+      offset: 0000019C
+    - name: __imp__WRITE_REGISTER_ULONG@8
+      processed: ''
+      offset: 000001A0
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: 000001A4
+    - name: __imp__PoRequestPowerIrp@24
+      processed: ''
+      offset: 000001A8
+    - name: __imp__RtlCopyUnicodeString@8
+      processed: ''
+      offset: 000001AC
+    - name: __imp__PoSetPowerState@12
+      processed: ''
+      offset: 000001B0
+    - name: __imp__KeInitializeMutex@8
+      processed: ''
+      offset: 000001B4
+    - name: __imp__READ_REGISTER_ULONG@4
+      processed: ''
+      offset: 000001B8
+    - name: __imp__ZwClose@4
+      processed: ''
+      offset: 000001BC
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: 000001C0
+    - name: __imp__ZwQueryValueKey@24
+      processed: ''
+      offset: 000001C4
+    - name: __imp__KeInsertQueueDpc@12
+      processed: ''
+      offset: 000001C8
+    - name: __imp__KeSynchronizeExecution@12
+      processed: ''
+      offset: 000001CC
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      processed: ''
+      offset: 000001D0
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      processed: ''
+      offset: 000001D4
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      processed: ''
+      offset: 000001D8
+    - name: __imp__KeCancelTimer@4
+      processed: ''
+      offset: 000001DC
+    - name: __imp__MmUnmapLockedPages@8
+      processed: ''
+      offset: '000001E0'
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      processed: ''
+      offset: '000001E4'
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      processed: ''
+      offset: '000001E8'
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: 000001EC
+    - name: __imp__RtlIntegerToUnicodeString@12
+      processed: ''
+      offset: 000001F0
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      processed: ''
+      offset: 000001F4
+    - name: __imp__RtlAppendUnicodeToString@8
+      processed: ''
+      offset: 000001F8
+    - name: __imp__IoStartPacket@16
+      processed: ''
+      offset: 000001FC
+    - name: __imp__KeReleaseMutex@8
+      processed: ''
+      offset: '00000200'
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000204'
+    - name: __imp_@InterlockedExchange@8
+      processed: ''
+      offset: '00000208'
+    - name: __imp__IoStartNextPacket@8
+      processed: ''
+      offset: 0000020C
+    - name: __imp__KeSetTimer@16
+      processed: ''
+      offset: '00000210'
+    - name: __imp__MmMapLockedPages@8
+      processed: ''
+      offset: '00000214'
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: '00000218'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000021C
+  - num: '4'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+    - name: _TILynxUnload@4
+      processed: ''
+      offset: '00000046'
+    - name: _TILynxPnPAddDevice@8
+      processed: ''
+      offset: '00000049'
+    - name: _TILynxPnP@8
+      processed: ''
+      offset: 0000029C
+    - name: _TILynxVerifyHw@4
+      processed: ''
+      offset: 0000098D
+    - name: _TILynxInitializeHw@4
+      processed: ''
+      offset: 00000A05
+    - name: _TILynxShutdown@4
+      processed: ''
+      offset: 00000EE2
+    - name: _TILynxInsertHeadPclInDmaChannel@12
+      processed: ''
+      offset: '00001034'
+    - name: _TILynxGetRegistryParameters@16
+      processed: ''
+      offset: 0000107F
+    - name: _TILynxGetRegistryKeyValue@20
+      processed: ''
+      offset: '00001116'
+    - name: _I2CGetDataByte@12
+      processed: ''
+      offset: 000011B6
+    - name: _I2CAddrSlv@8
+      processed: ''
+      offset: 000011F9
+    - name: _I2CScl@8
+      processed: ''
+      offset: 0000124E
+    - name: _I2CSda@8
+      processed: ''
+      offset: 000012A6
+    - name: _I2CRead@4
+      processed: ''
+      offset: 000012F6
+    - name: _I2CWrite@8
+      processed: ''
+      offset: '00001355'
+    - name: _I2CDelay5us@8
+      processed: ''
+      offset: 000013C4
+    - name: _I2CStop@4
+      processed: ''
+      offset: '00001434'
+- version: Windows 98 Debug
+  source_tree:
+  - ../../common/common.c
+  - ../dbg.c
+  - ../i2c.c
+  - ../interrup.c
+  - ../lynxirp.c
+  - ../lynxpnp.c
+  - ../tilynx.c
+  - PclControl.C
+  - ../../../../../wdm10/ddk/inc/wdm.h
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00002000'
+    symbols:
+    - name: _TILynxFormTopologyMap@8
+      demangled: ''
+      offset: '00000000'
+    - name: _TILynxCalculateCrc@8
+      demangled: ''
+      offset: '00000264'
+    - name: _TILynxCrc16@8
+      demangled: ''
+      offset: '00000288'
+    - name: _TILynxGenerateLocalSelfId@8
+      demangled: ''
+      offset: 000002C3
+    - name: _TILynxPower@8
+      demangled: ''
+      offset: '00000393'
+    - name: _TILynxSetPowerState@16
+      demangled: ''
+      offset: '00000458'
+    - name: _TILynxRequestPowerCompletion@20
+      demangled: ''
+      offset: '00000674'
+    - name: _TILynxPowerUpCompletionRoutine@12
+      demangled: ''
+      offset: 000006B6
+    - name: _TILynxSynchCompletionRoutine@12
+      demangled: ''
+      offset: '00000790'
+    - name: _TILynxBusReset@8
+      demangled: ''
+      offset: 000007A6
+    - name: _TILynxGetDmaChannel@8
+      demangled: ''
+      offset: '00000888'
+    - name: _TILynxReturnDmaChannel@8
+      demangled: ''
+      offset: 000008C7
+    - name: _TILynxInsertTailPclInDmaChannel@12
+      demangled: ''
+      offset: 000008DD
+    - name: _TILynxRemoveHeadPcl@4
+      demangled: ''
+      offset: '00000911'
+    - name: _TILynxIsr@8
+      demangled: ''
+      offset: '00000942'
+    - name: _TILynxDpc@16
+      demangled: ''
+      offset: 000009DA
+    - name: _TILynxSynchGetIntBits@4
+      demangled: ''
+      offset: 00000DB1
+    - name: _TILynxHandleAsyncResponse@8
+      demangled: ''
+      offset: 00000DDA
+    - name: _TILynxHandleAsyncRequest@8
+      demangled: ''
+      offset: 00000FB9
+    - name: _TILynxTimeOutDpc@16
+      demangled: ''
+      offset: 0000147D
+    - name: _TILynxHandleBusReset@4
+      demangled: ''
+      offset: '00001542'
+    - name: _TILynxHandleAsyncXmit@4
+      demangled: ''
+      offset: '00001809'
+    - name: _TILynxRestartReceivePcl@8
+      demangled: ''
+      offset: 00001B65
+    - name: _TILynxCleanupDmaBlockWrite@8
+      demangled: ''
+      offset: 00001BC9
+    - name: _TILynxAppendWorkerToXmitList@8
+      demangled: ''
+      offset: 00001CBA
+    - name: _TILynxRetryAsyncRequest@8
+      demangled: ''
+      offset: 00001D4A
+    - name: _TILynxCleanupPendingRequests@4
+      demangled: ''
+      offset: 00001DAD
+    - name: _HandleIOCtl@12
+      demangled: ''
+      offset: '00002008'
+    - name: _CreatePortObjectAndSymLink@20
+      demangled: ''
+      offset: 0000206A
+    - name: _TILynxIOCtl@8
+      demangled: ''
+      offset: 000021CF
+    - name: _TILynxSysCtl@8
+      demangled: ''
+      offset: 0000293E
+    - name: _TILynxStartIo@8
+      demangled: ''
+      offset: 0000296C
+    - name: _TILynxSetupIsochDma@16
+      demangled: ''
+      offset: 00003D69
+    - name: _TILynxSetupAsyncDma@16
+      demangled: ''
+      offset: 000040C0
+    - name: _TILynxGetIsochPclHeap@8
+      demangled: ''
+      offset: 000041C6
+    - name: _TILynxReturnIsochPclHeap@8
+      demangled: ''
+      offset: '00004288'
+    - name: _TILynxSetupComparatorPcl@28
+      demangled: ''
+      offset: '00004368'
+    - name: _TILynxSetupAllocateDma@16
+      demangled: ''
+      offset: '00004496'
+    - name: _Debug_Assert@16
+      demangled: ''
+      offset: '00004590'
+    - name: _Debug_LogEntry@16
+      demangled: ''
+      offset: 000045AA
+    - name: _Debug_LogInit@0
+      demangled: ''
+      offset: 000045FC
+    - name: _Bus1394RegisterPortDriver@4
+      demangled: ''
+      offset: '00004628'
+    - name: _DbgPrint
+      demangled: ''
+      offset: 0000462E
+    - name: _RtlCopyUnicodeString@8
+      demangled: ''
+      offset: '00004634'
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000463A
+    - name: _KeInitializeMutex@8
+      demangled: ''
+      offset: '00004640'
+    - name: _KeInitializeDpc@12
+      demangled: ''
+      offset: '00004646'
+    - name: _KeInitializeSpinLock@4
+      demangled: ''
+      offset: 0000464C
+    - name: _IoDeleteDevice@4
+      demangled: ''
+      offset: '00004652'
+    - name: _IoDetachDevice@4
+      demangled: ''
+      offset: '00004658'
+    - name: _IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 0000465E
+    - name: _IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00004664'
+    - name: _RtlInitUnicodeString@8
+      demangled: ''
+      offset: 0000466A
+    - name: _IoDisconnectInterrupt@4
+      demangled: ''
+      offset: '00004670'
+    - name: _KeInitializeTimer@4
+      demangled: ''
+      offset: '00004676'
+    - name: _MmCreateMdl@12
+      demangled: ''
+      offset: 0000467C
+    - name: _IoConnectInterrupt@44
+      demangled: ''
+      offset: '00004682'
+    - name: '@IofCompleteRequest@8'
+      demangled: ''
+      offset: '00004688'
+    - name: _MmUnmapIoSpace@8
+      demangled: ''
+      offset: 0000468E
+    - name: _IoGetDmaAdapter@12
+      demangled: ''
+      offset: '00004694'
+    - name: _MmMapIoSpace@16
+      demangled: ''
+      offset: 0000469A
+    - name: _KeWaitForSingleObject@20
+      demangled: ''
+      offset: 000046A0
+    - name: '@IofCallDriver@8'
+      demangled: ''
+      offset: 000046A6
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: 000046AC
+    - name: _KeInitializeEvent@12
+      demangled: ''
+      offset: 000046B2
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: 000046B8
+    - name: _PoCallDriver@8
+      demangled: ''
+      offset: 000046BE
+    - name: _PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 000046C4
+    - name: _WRITE_REGISTER_ULONG@8
+      demangled: ''
+      offset: 000046CA
+    - name: _PoSetPowerState@12
+      demangled: ''
+      offset: 000046D0
+    - name: _PoRequestPowerIrp@24
+      demangled: ''
+      offset: 000046D6
+    - name: '@KfReleaseSpinLock@8'
+      demangled: ''
+      offset: 000046DC
+    - name: '@KfAcquireSpinLock@4'
+      demangled: ''
+      offset: '000046E2'
+    - name: _KeSetEvent@12
+      demangled: ''
+      offset: '000046E8'
+    - name: _READ_REGISTER_ULONG@4
+      demangled: ''
+      offset: 000046EE
+    - name: _ZwClose@4
+      demangled: ''
+      offset: 000046F4
+    - name: _IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 000046FA
+    - name: _ZwQueryValueKey@24
+      demangled: ''
+      offset: '00004700'
+    - name: _KeInsertQueueDpc@12
+      demangled: ''
+      offset: '00004706'
+    - name: _KeSynchronizeExecution@12
+      demangled: ''
+      offset: 0000470C
+    - name: '@KefReleaseSpinLockFromDpcLevel@4'
+      demangled: ''
+      offset: '00004712'
+    - name: '@KefAcquireSpinLockAtDpcLevel@4'
+      demangled: ''
+      offset: '00004718'
+    - name: '@ExfInterlockedInsertTailList@12'
+      demangled: ''
+      offset: 0000471E
+    - name: _KeCancelTimer@4
+      demangled: ''
+      offset: '00004724'
+    - name: _MmUnmapLockedPages@8
+      demangled: ''
+      offset: 0000472A
+    - name: '@ExfInterlockedRemoveHeadList@8'
+      demangled: ''
+      offset: '00004730'
+    - name: _IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: '00004736'
+    - name: _IoCreateDevice@28
+      demangled: ''
+      offset: 0000473C
+    - name: _RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: '00004742'
+    - name: _RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: '00004748'
+    - name: _RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: 0000474E
+    - name: _IoStartPacket@16
+      demangled: ''
+      offset: '00004754'
+    - name: _KeReleaseMutex@8
+      demangled: ''
+      offset: 0000475A
+    - name: _KeStallExecutionProcessor@4
+      demangled: ''
+      offset: '00004760'
+    - name: '@InterlockedExchange@8'
+      demangled: ''
+      offset: '00004766'
+    - name: _MmMapLockedPages@8
+      demangled: ''
+      offset: 0000476C
+    - name: _IoStartNextPacket@8
+      demangled: ''
+      offset: '00004772'
+    - name: _KeSetTimer@16
+      demangled: ''
+      offset: '00004778'
+  - num: '3'
+    name: .data
+    offset: 000046A0
+    symbols:
+    - name: _TILynxDebugFlag
+      demangled: ''
+      offset: '00000000'
+    - name: ??_C@_0BL@HOJJ@?8TILynx?5DriverEntry?3?5exit?6?$AA@
+      demangled: "\"\\'TILynx DriverEntry: exit\\n\""
+      offset: '00000004'
+    - name: ??_C@_0BM@MILP@?8TILynx?5DriverEntry?3?5enter?6?$AA@
+      demangled: "\"\\'TILynx DriverEntry: enter\\n\""
+      offset: '00000020'
+    - name: ??_C@_0CF@FPLI@?8TILynxFormTopologyMap?3?5SelfId?5?$DN@
+      demangled: "\"\\'TILynxFormTopologyMap: SelfId =\"..."
+      offset: 0000003C
+    - name: ??_C@_0BL@BNCK@?8TILynxPnPAddDevice?3?5exit?6?$AA@
+      demangled: "\"\\'TILynxPnPAddDevice: exit\\n\""
+      offset: '00000064'
+    - name: ??_C@_0BM@DGNM@?8TILynxPnPAddDevice?3?5enter?6?$AA@
+      demangled: "\"\\'TILynxPnPAddDevice: enter\\n\""
+      offset: '00000080'
+    - name: ??_C@_0DG@HGNB@?8TILynxPnP?3?5Couldn?8t?5translate?5M@
+      demangled: "\"\\'TILynxPnP: Couldn\\'t translate M\"..."
+      offset: 0000009C
+    - name: ??_C@_0DE@MFIE@?8TILynxPnP?3?5Couldn?8t?5initialize?5@
+      demangled: "\"\\'TILynxPnP: Couldn\\'t initialize \"..."
+      offset: 000000D4
+    - name: ??_C@_0BJ@FPNP@freeCommonBuffer?5?$CB?$DN?5NULL?$AA@
+      demangled: '"freeCommonBuffer != NULL"'
+      offset: '00000108'
+    - name: ??_C@_0DP@NPPK@?8TILynxPnP?3?5Couldn?8t?5allocate?5po@
+      demangled: "\"\\'TILynxPnP: Couldn\\'t allocate po\"..."
+      offset: '00000124'
+    - name: ??_C@_0DL@GNBI@?8TILynxPnP?3?5Couldn?8t?5allocate?5co@
+      demangled: "\"\\'TILynxPnP: Couldn\\'t allocate co\"..."
+      offset: '00000164'
+    - name: ??_C@_0BN@IHIP@allocateCommonBuffer?5?$CB?$DN?5NULL?$AA@
+      demangled: '"allocateCommonBuffer != NULL"'
+      offset: 000001A0
+    - name: ??_C@_0CD@PJBI@?4?4?2?4?4?2?4?4?2?4?4?2?4?4?2wdm10?2ddk?2inc?2wdm@
+      demangled: '"..\\..\\..\\..\\..\\wdm10\\ddk\\inc\\wdm"...'
+      offset: 000001C0
+    - name: ??_C@_0DD@OHIN@?8TILynxPnP?3?5allocating?5common?5bu@
+      demangled: "\"\\'TILynxPnP: allocating common bu\"..."
+      offset: '000001E4'
+    - name: ??_C@_0CP@DIFB@?8TILynxPnP?3?5Couldn?8t?5connect?5to?5@
+      demangled: "\"\\'TILynxPnP: Couldn\\'t connect to \"..."
+      offset: '00000218'
+    - name: ??_C@_0DM@FNIB@?8TILynxPnP?3?5Couldn?8t?5verify?5this@
+      demangled: "\"\\'TILynxPnP: Couldn\\'t verify this\"..."
+      offset: '00000248'
+    - name: ??_C@_0DE@FPAH@?8TILynxPnP?3?5We?8ve?5got?5?$CFd?5MapRegi@
+      demangled: "\"\\'TILynxPnP: We\\'ve got %d MapRegi\"..."
+      offset: '00000284'
+    - name: ??_C@_0CO@OFFF@?8TILynxPnP?3?5Couldn?8t?5allocate?5ad@
+      demangled: "\"\\'TILynxPnP: Couldn\\'t allocate ad\"..."
+      offset: 000002B8
+    - name: ??_C@_0DD@PICM@?8TILynxPnP?3?5Successfully?5stored?5@
+      demangled: "\"\\'TILynxPnP: Successfully stored \"..."
+      offset: '000002E8'
+    - name: ??_C@_0DE@GHKO@?8TILynxPnP?3?5Port?5Resources?5Found@
+      demangled: "\"\\'TILynxPnP: Port Resources Found\"..."
+      offset: 0000031C
+    - name: ??_C@_0EA@PAAJ@?8TILynxPnP?3?5Interrupt?5Resources?5@
+      demangled: "\"\\'TILynxPnP: Interrupt Resources \"..."
+      offset: '00000350'
+    - name: ??_C@_0CO@OFHH@?8TILynxPnP?3?5Successfully?5mapped?5@
+      demangled: "\"\\'TILynxPnP: Successfully mapped \"..."
+      offset: '00000390'
+    - name: ??_C@_0DB@MDBG@?8TILynxPnP?3?5Successfully?5transla@
+      demangled: "\"\\'TILynxPnP: Successfully transla\"..."
+      offset: 000003C0
+    - name: ??_C@_0DG@LAGC@?8TILynxPnP?3?5Memory?5Resources?5Fou@
+      demangled: "\"\\'TILynxPnP: Memory Resources Fou\"..."
+      offset: 000003F4
+    - name: ??_C@_0ED@NAJO@?8TILynxPnP?3?5Untranslated?5Memory?5@
+      demangled: "\"\\'TILynxPnP: Untranslated Memory \"..."
+      offset: 0000042C
+    - name: ??_C@_0BN@KBNH@?8TILynxPnP?3?5MN_START_DEVICE?6?$AA@
+      demangled: "\"\\'TILynxPnP: MN_START_DEVICE\\n\""
+      offset: '00000470'
+    - name: 
+        ??_C@_0EA@CIJC@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CITILynxSynchCo@
+      demangled: '"(1) | (1) | (1) ? (TILynxSynchCo"...'
+      offset: '00000490'
+    - name: ??_C@_0N@POLN@?4?4?2lynxpnp?4c?$AA@
+      demangled: '"..\\lynxpnp.c"'
+      offset: 000004D0
+    - name: ??_C@_0BO@NDDF@?8TILynxPnP?3?5MN_REMOVE_DEVICE?6?$AA@
+      demangled: "\"\\'TILynxPnP: MN_REMOVE_DEVICE\\n\""
+      offset: '000004E0'
+    - name: ??_C@_0BM@PJCL@?8TILynxPnP?3?5MN_STOP_DEVICE?6?$AA@
+      demangled: "\"\\'TILynxPnP: MN_STOP_DEVICE\\n\""
+      offset: '00000500'
+    - name: ??_C@_0CF@FBBH@?8TILynxPower?3?5Type?5?$DN?5?$CFd?0?5State?5?$DN@
+      demangled: "\"\\'TILynxPower: Type = %d, State =\"..."
+      offset: 0000051C
+    - name: ??_C@_0DJ@DJLP@?8TILynxPower?3?5Unknown?1Unhandled?5@
+      demangled: "\"\\'TILynxPower: Unknown/Unhandled \"..."
+      offset: '00000544'
+    - name: ??_C@_0CO@FKPL@?8TILynxPower?3?5got?5Power?5IRP?5?$CFx?0?5@
+      demangled: "\"\\'TILynxPower: got Power IRP %x, \"..."
+      offset: '00000580'
+    - name: ??_C@_0CI@EHCF@IrpStack?9?$DOMajorFunction?5?$DN?$DN?5IRP_M@
+      demangled: '"IrpStack->MajorFunction == IRP_M"...'
+      offset: 000005B0
+    - name: ??_C@_0CE@GOEG@?8TILynxSetPower?3?5From?5?$CFd?5to?5?$CFd?5N@
+      demangled: "\"\\'TILynxSetPower: From %d to %d N\"..."
+      offset: 000005D8
+    - name: 
+        ??_C@_0EC@DEGM@?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$HM?5?$CI1?$CJ?5?$DP?5?$CITILynxPowerUp@
+      demangled: '"(1) | (1) | (1) ? (TILynxPowerUp"...'
+      offset: 000005FC
+    - name: ??_C@_0CM@GHIC@?8TILynxSetPower?3?5Powering?5on?4Fro@
+      demangled: "\"\\'TILynxSetPower: Powering on.Fro\"..."
+      offset: '00000640'
+    - name: ??_C@_0CO@NIKM@?8TILynxSetPower?3?5Powering?5off?4?5F@
+      demangled: "\"\\'TILynxSetPower: Powering off. F\"..."
+      offset: 0000066C
+    - name: ??_C@_0DG@FOHC@?8TILynxSetPower?3?5Sending?5D?5Irp?5r@
+      demangled: "\"\\'TILynxSetPower: Sending D Irp r\"..."
+      offset: 0000069C
+    - name: ??_C@_0DI@EGHA@?8TILynxSetPower?3?5System?5power?5ch@
+      demangled: "\"\\'TILynxSetPower: System power ch\"..."
+      offset: 000006D4
+    - name: ??_C@_0EE@GIL@?8TILynxRequestPowerCompletion?3?5I@
+      demangled: "\"\\'TILynxRequestPowerCompletion: I\"..."
+      offset: 0000070C
+    - name: ??_C@_0CN@KMPF@?8TILynxPowerUpCompletion?3?5Irp?5?$CFx@
+      demangled: "\"\\'TILynxPowerUpCompletion: Irp %x\"..."
+      offset: '00000750'
+    - name: ??_C@_0CO@IIOO@?8TILynxVerifyHw?3?5Clear?5all?5PCI?5a@
+      demangled: "\"\\'TILynxVerifyHw: Clear all PCI a\"..."
+      offset: '00000780'
+    - name: ??_C@_0CI@CNEC@?8TILynxVerifyHw?3?5Performing?5Soft@
+      demangled: "\"\\'TILynxVerifyHw: Performing Soft\"..."
+      offset: 000007B0
+    - name: ??_C@_05LLOB@FALSE?$AA@
+      demangled: '"FALSE"'
+      offset: 000007D8
+    - name: ??_C@_0BI@KOII@?8TILynxVerifyHw?3?5Enter?6?$AA@
+      demangled: "\"\\'TILynxVerifyHw: Enter\\n\""
+      offset: '000007E0'
+    - name: ??_C@_0DK@JDBN@?8TILynxInitializeHw?3?5ERROR?5?9?5Cou@
+      demangled: "\"\\'TILynxInitializeHw: ERROR - Cou\"..."
+      offset: 000007F8
+    - name: ??_C@_0CO@FJHK@?8TILynxInitializeHw?3?5Enabling?5PC@
+      demangled: "\"\\'TILynxInitializeHw: Enabling PC\"..."
+      offset: '00000834'
+    - name: ??_C@_0CP@ODDJ@?8TILynxInitializeHw?3?5Enabling?5Li@
+      demangled: "\"\\'TILynxInitializeHw: Enabling Li\"..."
+      offset: '00000864'
+    - name: ??_C@_0EE@FKHF@?8TILynxInitializeHw?3?5Initializin@
+      demangled: "\"\\'TILynxInitializeHw: Initializin\"..."
+      offset: '00000894'
+    - name: ??_C@_0CI@JOHA@?8TILynxInitializeHw?3?5SelfIdBuffe@
+      demangled: "\"\\'TILynxInitializeHw: SelfIdBuffe\"..."
+      offset: 000008D8
+    - name: ??_C@_0CO@JGJM@?8TILynxInitializeHw?3?5Getting?5Sel@
+      demangled: "\"\\'TILynxInitializeHw: Getting Sel\"..."
+      offset: '00000900'
+    - name: ??_C@_0DF@MBGB@?8TILynxInitializeHw?3?5Setting?5ret@
+      demangled: "\"\\'TILynxInitializeHw: Setting ret\"..."
+      offset: '00000930'
+    - name: ??_C@_0DM@LBIJ@?8TILynxInitializeHw?3?5Setting?5mis@
+      demangled: "\"\\'TILynxInitializeHw: Setting mis\"..."
+      offset: '00000968'
+    - name: ??_C@_0CF@JJD@?8TILynxInitializeHw?3?5Lynx?5is?5rev@
+      demangled: "\"\\'TILynxInitializeHw: Lynx is rev\"..."
+      offset: 000009A4
+    - name: ??_C@_0DH@LGDM@?8TILynxInitializeHw?3?5Setting?5con@
+      demangled: "\"\\'TILynxInitializeHw: Setting con\"..."
+      offset: 000009CC
+    - name: ??_C@_0EH@JMJO@?8TILynxInitializeHw?3?5Setting?5com@
+      demangled: "\"\\'TILynxInitializeHw: Setting com\"..."
+      offset: 00000A04
+    - name: ??_C@_0BP@BEJF@DmaRecvIndex?5?$DN?$DN?5GEN_RECV_INDEX?$AA@
+      demangled: '"DmaRecvIndex == GEN_RECV_INDEX"'
+      offset: 00000A4C
+    - name: ??_C@_0EM@EJBO@?8TILynxInitializeHw?3?5Couldn?8t?5ge@
+      demangled: "\"\\'TILynxInitializeHw: Couldn\\'t ge\"..."
+      offset: 00000A6C
+    - name: ??_C@_0EE@PGGI@?8TILynxInitializeHw?3?5Getting?5Dma@
+      demangled: "\"\\'TILynxInitializeHw: Getting Dma\"..."
+      offset: 00000AB8
+    - name: ??_C@_0CB@MINB@DmaXmitIndex?5?$DN?$DN?5ASYNC_XMIT_INDEX@
+      demangled: '"DmaXmitIndex == ASYNC_XMIT_INDEX"...'
+      offset: 00000AFC
+    - name: ??_C@_0EF@MMGF@?8TILynxInitializeHw?3?5Couldn?8t?5ge@
+      demangled: "\"\\'TILynxInitializeHw: Couldn\\'t ge\"..."
+      offset: 00000B20
+    - name: ??_C@_0DJ@DJIF@?8TILynxInitializeHw?3?5Getting?5Dma@
+      demangled: "\"\\'TILynxInitializeHw: Getting Dma\"..."
+      offset: 00000B68
+    - name: ??_C@_0DP@KJDF@?8TILynxInitializeHw?3?5Setting?5com@
+      demangled: "\"\\'TILynxInitializeHw: Setting com\"..."
+      offset: 00000BA4
+    - name: ??_C@_0DP@PEMB@?8TILynxInitializeHw?3?5Couldn?8t?5ge@
+      demangled: "\"\\'TILynxInitializeHw: Couldn\\'t ge\"..."
+      offset: 00000BE4
+    - name: ??_C@_0DH@GPAA@?8TILynxInitializeHw?3?5Getting?5Dma@
+      demangled: "\"\\'TILynxInitializeHw: Getting Dma\"..."
+      offset: 00000C24
+    - name: ??_C@_0DE@NNFL@?8TILynxInitializeHw?3?5Setting?5low@
+      demangled: "\"\\'TILynxInitializeHw: Setting low\"..."
+      offset: 00000C5C
+    - name: ??_C@_0DB@LLDD@?8TILynxInitializeHw?3?5Setting?5ITF@
+      demangled: "\"\\'TILynxInitializeHw: Setting ITF\"..."
+      offset: 00000C90
+    - name: ??_C@_0CL@PCN@?8TILynxInitializeHw?3?5Cache?5Line?5@
+      demangled: "\"\\'TILynxInitializeHw: Cache Line \"..."
+      offset: 00000CC4
+    - name: ??_C@_0CJ@CBHO@?8TILynxInitializeHw?3?5Setting?5FIF@
+      demangled: "\"\\'TILynxInitializeHw: Setting FIF\"..."
+      offset: 00000CF0
+    - name: ??_C@_0DD@GBHP@?8TILynxInitializeHw?3?5Setting?5Nod@
+      demangled: "\"\\'TILynxInitializeHw: Setting Nod\"..."
+      offset: 00000D1C
+    - name: ??_C@_0EA@LPAC@?8TILynxInitializeHw?3?5Serial?5EEPR@
+      demangled: "\"\\'TILynxInitializeHw: Serial EEPR\"..."
+      offset: 00000D50
+    - name: ??_C@_0ED@FOIK@?8TILynxInitializeHw?3?5ERROR?5?9?5Bad@
+      demangled: "\"\\'TILynxInitializeHw: ERROR - Bad\"..."
+      offset: 00000D90
+    - name: ??_C@_0BB@NMCK@MaxRegisterReads?$AA@
+      demangled: '"MaxRegisterReads"'
+      offset: 00000DD4
+    - name: ??_C@_0DG@PFOP@?8TILynxInitializeHw?3?5Physical?5Ad@
+      demangled: "\"\\'TILynxInitializeHw: Physical Ad\"..."
+      offset: 00000DE8
+    - name: ??_C@_0O@CDAK@RegisterReads?$AA@
+      demangled: '"RegisterReads"'
+      offset: '00000E20'
+    - name: ??_C@_0DH@DHDL@?8TILynxInitializeHw?3?5Attempting?5@
+      demangled: "\"\\'TILynxInitializeHw: Attempting \"..."
+      offset: '00000E30'
+    - name: ??_C@_0CL@KJGP@?8TILynxInitializeHw?3?5Disabling?5i@
+      demangled: "\"\\'TILynxInitializeHw: Disabling i\"..."
+      offset: '00000E68'
+    - name: ??_C@_0BM@GOBE@?8TILynxInitializeHw?3?5Enter?6?$AA@
+      demangled: "\"\\'TILynxInitializeHw: Enter\\n\""
+      offset: '00000E94'
+    - name: ??_C@_0CB@LJBE@?8TILynxBusReset?3?5Gap?5Count?5?$DN?5?$CFd?6@
+      demangled: "\"\\'TILynxBusReset: Gap Count = %d\\n\"..."
+      offset: 00000EB0
+    - name: ??_C@_0CJ@IJLG@?8TILynxBusReset?3?5Initiating?5Bus?5@
+      demangled: "\"\\'TILynxBusReset: Initiating Bus \"..."
+      offset: 00000ED4
+    - name: ??_C@_03OJAM@Pcl?$AA@
+      demangled: '"Pcl"'
+      offset: 00000F00
+    - name: ??_C@_0EE@BOJL@?8TILynxGetRegistryParameters?3?5st@
+      demangled: "\"\\'TILynxGetRegistryParameters: st\"..."
+      offset: 00000F04
+    - name: 
+        ??_C@_1CA@PCLB@?$AAT?$AAr?$AAa?$AAn?$AAs?$AAm?$AAi?$AAt?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: L"TransmitWorkers"
+      offset: 00000F48
+    - name: 
+        ??_C@_1BO@NBKO@?$AAR?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: L"ReceiveWorkers"
+      offset: 00000F68
+    - name: 
+        ??_C@_1BO@MLPO@?$AAD?$AAi?$AAa?$AAg?$AAn?$AAo?$AAs?$AAt?$AAi?$AAc?$AAM?$AAo?$AAd?$AAe?$AA?$AA@
+      demangled: L"DiagnosticMode"
+      offset: 00000F88
+    - name: ??_C@_0CD@LELH@DataLength?5?$DN?$DN?5fullInfo?9?$DODataLeng@
+      demangled: '"DataLength == fullInfo->DataLeng"...'
+      offset: 00000FA8
+    - name: ??_C@_0CK@OFCD@?8TILynxGetRegistryKeyValue?5buffe@
+      demangled: "\"\\'TILynxGetRegistryKeyValue buffe\"..."
+      offset: 00000FCC
+    - name: ??_C@_0DE@JPDD@?8TILynxDpc?3?5Doing?5callback?5for?5I@
+      demangled: "\"\\'TILynxDpc: Doing callback for I\"..."
+      offset: 00000FF8
+    - name: ??_C@_0BK@DDFD@IsochDescriptor?9?$DOCallback?$AA@
+      demangled: '"IsochDescriptor->Callback"'
+      offset: 0000102C
+    - name: ??_C@_0CJ@JBEO@IsochResource?9?$DOTag?5?$DN?$DN?5ISOCH_RESO@
+      demangled: '"IsochResource->Tag == ISOCH_RESO"...'
+      offset: '00001048'
+    - name: ??_C@_0O@IPO@IsochResource?$AA@
+      demangled: '"IsochResource"'
+      offset: '00001074'
+    - name: ??_C@_0O@PIGB@?4?4?2interrup?4c?$AA@
+      demangled: '"..\\interrup.c"'
+      offset: '00001084'
+    - name: ??_C@_0CL@MAOB@?8TILynxDpc?3?5Isoch?5channel?5interr@
+      demangled: "\"\\'TILynxDpc: Isoch channel interr\"..."
+      offset: '00001094'
+    - name: ??_C@_0DN@LFIG@?8TILynxDpc?3?5Don?8t?5match?$CB?5writing@
+      demangled: "\"\\'TILynxDpc: Don\\'t match! writing\"..."
+      offset: 000010C0
+    - name: ??_C@_0DK@OBLP@?8TILynxDpc?3?5NodeId?4NodeId?5?$DN?5?$CFx?0?5@
+      demangled: "\"\\'TILynxDpc: NodeId.NodeId = %x, \"..."
+      offset: '00001100'
+    - name: ??_C@_0CL@DPIE@?8TILynxDpc?3?5Recheck?5of?5NodeId?5yi@
+      demangled: "\"\\'TILynxDpc: Recheck of NodeId yi\"..."
+      offset: 0000113C
+    - name: ??_C@_0CN@LOOO@?8TILynxDpc?3?5setting?5phyregs?4AsUC@
+      demangled: "\"\\'TILynxDpc: setting phyregs.AsUC\"..."
+      offset: '00001168'
+    - name: ??_C@_0CG@GJAM@?8TILynxDpc?3?5Phy?5read?5?$EA?50?5yields?5@
+      demangled: "\"\\'TILynxDpc: Phy read @ 0 yields \"..."
+      offset: '00001198'
+    - name: ??_C@_0DP@DMDO@?8TILynxDpc?3?5Dma?5channel?54?5has?5in@
+      demangled: "\"\\'TILynxDpc: Dma channel 4 has in\"..."
+      offset: 000011C0
+    - name: ??_C@_0CF@LEGO@?8TILynxDpc?3?5exiting?5due?5to?5shutd@
+      demangled: "\"\\'TILynxDpc: exiting due to shutd\"..."
+      offset: '00001200'
+    - name: ??_C@_0BJ@OGCG@Irp?9?$DOType?5?$DN?$DN?5IO_TYPE_IRP?$AA@
+      demangled: '"Irp->Type == IO_TYPE_IRP"'
+      offset: '00001228'
+    - name: ??_C@_0DJ@LCNI@?8TILynxHandleAsyncResponse?3?5Erro@
+      demangled: "\"\\'TILynxHandleAsyncResponse: Erro\"..."
+      offset: '00001244'
+    - name: ??_C@_0EH@MIBI@?8TILynxHandleAsyncResponse?3?5Stal@
+      demangled: "\"\\'TILynxHandleAsyncResponse: Stal\"..."
+      offset: '00001280'
+    - name: ??_C@_0EA@CGKK@?8TILynxHandleAsyncResponse?3?5Rece@
+      demangled: "\"\\'TILynxHandleAsyncResponse: Rece\"..."
+      offset: 000012C8
+    - name: ??_C@_0DH@PBCJ@?8TILynxHandleAsyncRequest?3?5Async@
+      demangled: "\"\\'TILynxHandleAsyncRequest: Async\"..."
+      offset: '00001308'
+    - name: ??_C@_0CN@PGMO@?8TILynxHandleAsyncRequest?3?5copyi@
+      demangled: "\"\\'TILynxHandleAsyncRequest: copyi\"..."
+      offset: '00001340'
+    - name: ??_C@_0DH@PEI@?8TILynxHandleAsyncRequest?3?5Using@
+      demangled: "\"\\'TILynxHandleAsyncRequest: Using\"..."
+      offset: '00001370'
+    - name: ??_C@_0CI@KJKA@?8TILynxHandleAsyncRequest?3?5tLabe@
+      demangled: "\"\\'TILynxHandleAsyncRequest: tLabe\"..."
+      offset: 000013A8
+    - name: ??_C@_0ED@EFCE@?8TILynxHandleAsyncRequest?3?5Cooke@
+      demangled: "\"\\'TILynxHandleAsyncRequest: Cooke\"..."
+      offset: 000013D0
+    - name: ??_C@_0BJ@PJMD@status?5?$DN?$DN?5STATUS_SUCCESS?$AA@
+      demangled: '"status == STATUS_SUCCESS"'
+      offset: '00001414'
+    - name: ??_C@_0BP@OCPD@allocateAdapterChannel?5?$CB?$DN?5NULL?$AA@
+      demangled: '"allocateAdapterChannel != NULL"'
+      offset: '00001430'
+    - name: ??_C@_0EA@IFHF@?8TILynxHandleAsyncRequest?3?5Raw?5r@
+      demangled: "\"\\'TILynxHandleAsyncRequest: Raw r\"..."
+      offset: '00001450'
+    - name: ??_C@_0DK@HBIG@?8TILynxHandleAsyncRequest?3?5savin@
+      demangled: "\"\\'TILynxHandleAsyncRequest: savin\"..."
+      offset: '00001490'
+    - name: ??_C@_0DI@DLHN@?8TILynxHandleAsyncRequest?3?5Incom@
+      demangled: "\"\\'TILynxHandleAsyncRequest: Incom\"..."
+      offset: 000014CC
+    - name: ??_C@_0EE@JGC@?8TILynxHandleAsyncRequest?3?5Incom@
+      demangled: "\"\\'TILynxHandleAsyncRequest: Incom\"..."
+      offset: '00001504'
+    - name: ??_C@_0DI@FLK@?8TILynxTimeOutDpc?3?5calling?5handl@
+      demangled: "\"\\'TILynxTimeOutDpc: calling handl\"..."
+      offset: '00001548'
+    - name: ??_C@_0DJ@HKKP@?8TILynxTimeOutDpc?3?5Found?5timed?5o@
+      demangled: "\"\\'TILynxTimeOutDpc: Found timed o\"..."
+      offset: '00001580'
+    - name: ??_C@_0DO@DJKD@?8TILynxHandleBusReset?3?5Calling?5t@
+      demangled: "\"\\'TILynxHandleBusReset: Calling t\"..."
+      offset: 000015BC
+    - name: ??_C@_0DE@EEL@?8TILynxHandleBusReset?3?5Reset?5lin@
+      demangled: "\"\\'TILynxHandleBusReset: Reset lin\"..."
+      offset: 000015FC
+    - name: ??_C@_0DC@PBC@?8TILynxHandleBusReset?3?5Current?5g@
+      demangled: "\"\\'TILynxHandleBusReset: Current g\"..."
+      offset: '00001630'
+    - name: ??_C@_0EA@LMOG@?8TILynxHandleBusReset?3?5Rebuild?5a@
+      demangled: "\"\\'TILynxHandleBusReset: Rebuild a\"..."
+      offset: '00001664'
+    - name: ??_C@_0EK@FLLK@?8TILynxHandleBusReset?3?5updating?5@
+      demangled: "\"\\'TILynxHandleBusReset: updating \"..."
+      offset: 000016A4
+    - name: ??_C@_0CN@DGOO@?8TILynxHandleBusReset?3?5NodeId?5re@
+      demangled: "\"\\'TILynxHandleBusReset: NodeId re\"..."
+      offset: 000016F0
+    - name: ??_C@_0CN@LOJE@?8TILynxHandleBusReset?3?5Phy?5says?5@
+      demangled: "\"\\'TILynxHandleBusReset: Phy says \"..."
+      offset: '00001720'
+    - name: ??_C@_0DD@CBII@?8TILynxHandleBusReset?3?5Phy?5Addre@
+      demangled: "\"\\'TILynxHandleBusReset: Phy Addre\"..."
+      offset: '00001750'
+    - name: ??_C@_0DB@OIBK@?8TILynxHandleBusReset?3?5Phy?5Reset@
+      demangled: "\"\\'TILynxHandleBusReset: Phy Reset\"..."
+      offset: '00001784'
+    - name: ??_C@_0DK@CILN@AsyncWorker?9?$DOPcl?9?$DOStatus?4Acks?5?$DM?$DN@
+      demangled: '"AsyncWorker->Pcl->Status.Acks <="...'
+      offset: 000017B8
+    - name: ??_C@_0DF@HLGK@?8TILynxHandleAsyncXmit?3?5Special?5@
+      demangled: "\"\\'TILynxHandleAsyncXmit: Special \"..."
+      offset: 000017F4
+    - name: ??_C@_0DL@LANP@?8TILynxHandleAsyncXmit?3?5RETRY?5OV@
+      demangled: "\"\\'TILynxHandleAsyncXmit: RETRY OV\"..."
+      offset: 0000182C
+    - name: ??_C@_0DI@NKEF@?8TILynxHandleAsyncXmit?3?5UNDERRUN@
+      demangled: "\"\\'TILynxHandleAsyncXmit: UNDERRUN\"..."
+      offset: '00001868'
+    - name: ??_C@_0DD@KBJA@?8TILynxHandleAsyncXmit?3?5SOFTWARE@
+      demangled: "\"\\'TILynxHandleAsyncXmit: SOFTWARE\"..."
+      offset: 000018A0
+    - name: ??_C@_0DA@GLHF@?8TILynxHandleAsyncXmit?3?5ACK?5CRC?5@
+      demangled: "\"\\'TILynxHandleAsyncXmit: ACK CRC \"..."
+      offset: 000018D4
+    - name: ??_C@_0DB@PIFE@?8TILynxHandleAsyncXmit?3?5ACK?5DATA@
+      demangled: "\"\\'TILynxHandleAsyncXmit: ACK DATA\"..."
+      offset: '00001904'
+    - name: ??_C@_0ED@EDKH@?8TILynxHandleAsyncXmit?3?5Request?5@
+      demangled: "\"\\'TILynxHandleAsyncXmit: Request \"..."
+      offset: '00001938'
+    - name: ??_C@_0CI@INAE@AsyncWorker?9?$DOPcl?9?$DOPclControl?4Cmd@
+      demangled: '"AsyncWorker->Pcl->PclControl.Cmd"...'
+      offset: 0000197C
+    - name: ??_C@_0CN@PPNC@?8TILynxHandleAsyncXmit?3?5PKT?5ERR?5@
+      demangled: "\"\\'TILynxHandleAsyncXmit: PKT ERR \"..."
+      offset: 000019A4
+    - name: ??_C@_0EM@EMMD@?8TILynxHandleAsyncXmit?3?5Response@
+      demangled: "\"\\'TILynxHandleAsyncXmit: Response\"..."
+      offset: 000019D4
+    - name: ??_C@_0BJ@BLDF@freeMapRegisters?5?$CB?$DN?5NULL?$AA@
+      demangled: '"freeMapRegisters != NULL"'
+      offset: 00001A20
+    - name: ??_C@_0BM@MGEC@flushAdapterBuffers?5?$CB?$DN?5NULL?$AA@
+      demangled: '"flushAdapterBuffers != NULL"'
+      offset: 00001A3C
+    - name: ??_C@_0CH@PFPM@?8TILynxRetryAsyncRequest?3?5retryi@
+      demangled: "\"\\'TILynxRetryAsyncRequest: retryi\"..."
+      offset: 00001A58
+    - name: ??_C@_0FK@HPGC@?8TILynxCleanupPendingRequests?3?5F@
+      demangled: "\"\\'TILynxCleanupPendingRequests: F\"..."
+      offset: 00001A80
+    - name: ??_C@_0EA@DEE@?8TILynxCleanupPendingRequests?3?5C@
+      demangled: "\"\\'TILynxCleanupPendingRequests: C\"..."
+      offset: 00001ADC
+    - name: 
+        ??_C@_1CI@KDMG@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      demangled: L"\\DosDevices\\1394BUS"
+      offset: 00001B1C
+    - name: 
+        ??_C@_1CA@MPBH@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      demangled: L"\\Device\\1394BUS"
+      offset: 00001B44
+    - name: ??_C@_0EB@FPAB@?8TILynxIOCtl?3?5Failing?5Phy?5Config@
+      demangled: "\"\\'TILynxIOCtl: Failing Phy Config\"..."
+      offset: 00001B64
+    - name: ??_C@_0EG@PHFB@?8TILynxIOCtl?3?5Failing?5read?1write@
+      demangled: "\"\\'TILynxIOCtl: Failing read/write\"..."
+      offset: 00001BA8
+    - name: ??_C@_0DH@KLIJ@?8TILynxIOCtl?3?5Failing?5Lock?5due?5t@
+      demangled: "\"\\'TILynxIOCtl: Failing Lock due t\"..."
+      offset: 00001BF0
+    - name: ??_C@_0CK@KEJD@?8TILynxIOCtl?3?5Common?5Buffer?5Addr@
+      demangled: "\"\\'TILynxIOCtl: Common Buffer Addr\"..."
+      offset: 00001C28
+    - name: ??_C@_0EE@FFFJ@?8TILynxIOCtl?3?5Couldn?8t?5allocate?5@
+      demangled: "\"\\'TILynxIOCtl: Couldn\\'t allocate \"..."
+      offset: 00001C54
+    - name: ??_C@_0CL@PKMB@?8TILynxIOCtl?3?5Heap?5length?5reques@
+      demangled: "\"\\'TILynxIOCtl: Heap length reques\"..."
+      offset: 00001C98
+    - name: ??_C@_0GC@CJLB@?$CB?$CIIrb?9?$DOu?4IsochAllocateResources?4@
+      demangled: '"!(Irb->u.IsochAllocateResources."...'
+      offset: 00001CC4
+    - name: ??_C@_0CL@NIIP@DeviceExtension?9?$DOTag?5?$DN?$DN?5PORT_EXT@
+      demangled: '"DeviceExtension->Tag == PORT_EXT"...'
+      offset: 00001D28
+    - name: ??_C@_0N@LHBO@?4?4?2lynxirp?4c?$AA@
+      demangled: '"..\\lynxirp.c"'
+      offset: 00001D54
+    - name: ??_C@_0BF@LIBJ@?8TILynxIOCtl?3?5Entry?6?$AA@
+      demangled: "\"\\'TILynxIOCtl: Entry\\n\""
+      offset: 00001D64
+    - name: ??_C@_0CM@FOCI@?8TILynxStartIo?3?5Detaching?5?$CFx?5res@
+      demangled: "\"\\'TILynxStartIo: Detaching %x res\"..."
+      offset: 00001D7C
+    - name: ??_C@_0CG@IHPP@?8TILynxStartIo?3?5Detaching?5?$CFx?5buf@
+      demangled: "\"\\'TILynxStartIo: Detaching %x buf\"..."
+      offset: 00001DA8
+    - name: ??_C@_0P@JPMD@AddressMapping?$AA@
+      demangled: '"AddressMapping"'
+      offset: 00001DD0
+    - name: ??_C@_0EE@FMOJ@?8TILynxStartIo?3?5Failed?5to?5get?5Dm@
+      demangled: "\"\\'TILynxStartIo: Failed to get Dm\"..."
+      offset: 00001DE0
+    - name: ??_C@_0CA@NMJD@?8TILynxStartIo?3?5u?5?$DN?5?$CFx?5u2?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'TILynxStartIo: u = %x u2 = %x\\n\""
+      offset: '00001E24'
+    - name: ??_C@_0N@CAJP@IsochPclHeap?$AA@
+      demangled: '"IsochPclHeap"'
+      offset: '00001E44'
+    - name: ??_C@_0CM@DONH@?8TILynxStartIo?3?5Attaching?5?$CFx?5res@
+      demangled: "\"\\'TILynxStartIo: Attaching %x res\"..."
+      offset: '00001E54'
+    - name: ??_C@_0CG@CKKM@?8TILynxStartIo?3?5Attaching?5?$CFx?5buf@
+      demangled: "\"\\'TILynxStartIo: Attaching %x buf\"..."
+      offset: '00001E80'
+    - name: ??_C@_0BP@GEFO@?8TILynxStartIo?3?5Xmit?5Pcl?5?$DN?5?$CFx?6?$AA@
+      demangled: "\"\\'TILynxStartIo: Xmit Pcl = %x\\n\""
+      offset: 00001EA8
+    - name: ??_C@_0EC@NNDG@?8TILynxStartIo?3?5Send?5Async?5Reque@
+      demangled: "\"\\'TILynxStartIo: Send Async Reque\"..."
+      offset: 00001EC8
+    - name: ??_C@_0CC@GJAB@?8TILynxStartIo?3?5AsyncPacket?5?$DN?5?$CFx@
+      demangled: "\"\\'TILynxStartIo: AsyncPacket = %x\"..."
+      offset: 00001F0C
+    - name: ??_C@_0BE@CIAH@mapTransfer?5?$CB?$DN?5NULL?$AA@
+      demangled: '"mapTransfer != NULL"'
+      offset: 00001F30
+    - name: _LogStart
+      demangled: ''
+      offset: 00001F44
+    - name: _LogPtr
+      demangled: ''
+      offset: 00001F48
+    - name: _LogEnd
+      demangled: ''
+      offset: 00001F4C
+  - num: '4'
+    name: .idata$2
+    offset: 00004ED0
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_1394BUS
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__Bus1394RegisterPortDriver@4
+      demangled: ''
+      offset: '00000140'
+    - name: \1771394BUS_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000144'
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000148'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__KeStallExecutionProcessor@4
+      demangled: ''
+      offset: '00000150'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000154'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: '00000160'
+    - name: __imp__KeInitializeMutex@8
+      demangled: ''
+      offset: '00000164'
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: 0000016C
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: '00000170'
+    - name: __imp__IoDisconnectInterrupt@4
+      demangled: ''
+      offset: '00000174'
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: '00000178'
+    - name: __imp__IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: 0000017C
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__MmUnmapIoSpace@8
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__IoGetDmaAdapter@12
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__MmMapIoSpace@16
+      demangled: ''
+      offset: '00000190'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: '00000194'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: 000001A0
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__RtlCopyUnicodeString@8
+      demangled: ''
+      offset: 000001A8
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 000001AC
+    - name: __imp__WRITE_REGISTER_ULONG@8
+      demangled: ''
+      offset: 000001B0
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: 000001B4
+    - name: __imp__MmCreateMdl@12
+      demangled: ''
+      offset: 000001B8
+    - name: __imp__IoConnectInterrupt@44
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: 000001C0
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__READ_REGISTER_ULONG@4
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: 000001CC
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 000001D0
+    - name: __imp__ZwQueryValueKey@24
+      demangled: ''
+      offset: 000001D4
+    - name: __imp__KeInsertQueueDpc@12
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__KeSynchronizeExecution@12
+      demangled: ''
+      offset: 000001DC
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: 000001EC
+    - name: __imp__MmUnmapLockedPages@8
+      demangled: ''
+      offset: 000001F0
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      demangled: ''
+      offset: 000001F4
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: 000001FC
+    - name: __imp__RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: '00000200'
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: '00000204'
+    - name: __imp__RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: '00000208'
+    - name: __imp__IoStartPacket@16
+      demangled: ''
+      offset: 0000020C
+    - name: __imp__KeReleaseMutex@8
+      demangled: ''
+      offset: '00000210'
+    - name: __imp__PoSetPowerState@12
+      demangled: ''
+      offset: '00000214'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000218'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: 0000021C
+    - name: __imp__IoStartNextPacket@8
+      demangled: ''
+      offset: '00000220'
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: '00000224'
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: '00000228'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000022C
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _TILynxUnload@4
+      demangled: ''
+      offset: 0000006E
+    - name: _TILynxPnPAddDevice@8
+      demangled: ''
+      offset: '00000071'
+    - name: _TILynxPnP@8
+      demangled: ''
+      offset: 000002EC
+    - name: _TILynxVerifyHw@4
+      demangled: ''
+      offset: 00000C67
+    - name: _TILynxInitializeHw@4
+      demangled: ''
+      offset: 00000D1B
+    - name: _TILynxShutdown@4
+      demangled: ''
+      offset: 0000146F
+    - name: _TILynxInsertHeadPclInDmaChannel@12
+      demangled: ''
+      offset: 000015F9
+    - name: _TILynxGetRegistryParameters@16
+      demangled: ''
+      offset: '00001644'
+    - name: _TILynxGetRegistryKeyValue@20
+      demangled: ''
+      offset: '00001701'
+    - name: _I2CGetDataByte@12
+      demangled: ''
+      offset: 000017B7
+    - name: _I2CAddrSlv@8
+      demangled: ''
+      offset: 000017FA
+    - name: _I2CScl@8
+      demangled: ''
+      offset: 0000184F
+    - name: _I2CSda@8
+      demangled: ''
+      offset: 000018A7
+    - name: _I2CRead@4
+      demangled: ''
+      offset: 000018F7
+    - name: _I2CWrite@8
+      demangled: ''
+      offset: '00001956'
+    - name: _I2CDelay5us@8
+      demangled: ''
+      offset: 000019C5
+    - name: _I2CStop@4
+      demangled: ''
+      offset: 00001A35
+- version: Windows 98SE Retail
+  source_tree:
+  - ../../common/common.c
+  - ../dbg.c
+  - ../i2c.c
+  - ../interrup.c
+  - ../lynxirp.c
+  - ../lynxpnp.c
+  - ../tilynx.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00001870'
+    symbols:
+    - name: _TILynxFormTopologyMap@8
+      demangled: ''
+      offset: '00000000'
+    - name: _TILynxCalculateCrc@8
+      demangled: ''
+      offset: '00000248'
+    - name: _TILynxCrc16@8
+      demangled: ''
+      offset: 0000026C
+    - name: _TILynxGenerateLocalSelfId@8
+      demangled: ''
+      offset: 000002A7
+    - name: _TILynxPower@8
+      demangled: ''
+      offset: '00000377'
+    - name: _TILynxSetPowerState@16
+      demangled: ''
+      offset: 000003EA
+    - name: _TILynxRequestPowerCompletion@20
+      demangled: ''
+      offset: 0000055C
+    - name: _TILynxPowerUpCompletionRoutine@12
+      demangled: ''
+      offset: 0000057F
+    - name: _TILynxSynchCompletionRoutine@12
+      demangled: ''
+      offset: 0000063C
+    - name: _TILynxBusReset@8
+      demangled: ''
+      offset: '00000652'
+    - name: _TILynxGetDmaChannel@8
+      demangled: ''
+      offset: 0000070A
+    - name: _TILynxReturnDmaChannel@8
+      demangled: ''
+      offset: '00000749'
+    - name: _TILynxInsertTailPclInDmaChannel@12
+      demangled: ''
+      offset: 0000075F
+    - name: _TILynxRemoveHeadPcl@4
+      demangled: ''
+      offset: '00000793'
+    - name: _TILynxIsr@8
+      demangled: ''
+      offset: 000007C4
+    - name: _TILynxDpc@16
+      demangled: ''
+      offset: 0000085C
+    - name: _TILynxSynchGetIntBits@4
+      demangled: ''
+      offset: 00000B50
+    - name: _TILynxHandleAsyncResponse@8
+      demangled: ''
+      offset: 00000B79
+    - name: _TILynxHandleAsyncRequest@8
+      demangled: ''
+      offset: 00000D05
+    - name: _TILynxTimeOutDpc@16
+      demangled: ''
+      offset: '00001089'
+    - name: _TILynxHandleBusReset@4
+      demangled: ''
+      offset: '00001110'
+    - name: _TILynxHandleAsyncXmit@4
+      demangled: ''
+      offset: '00001301'
+    - name: _TILynxRestartReceivePcl@8
+      demangled: ''
+      offset: '00001577'
+    - name: _TILynxCleanupDmaBlockWrite@8
+      demangled: ''
+      offset: 000015DB
+    - name: _TILynxAppendWorkerToXmitList@8
+      demangled: ''
+      offset: '00001660'
+    - name: _TILynxRetryAsyncRequest@8
+      demangled: ''
+      offset: 000016F0
+    - name: _TILynxCleanupPendingRequests@4
+      demangled: ''
+      offset: 0000173D
+    - name: _HandleIOCtl@12
+      demangled: ''
+      offset: '00001904'
+    - name: _CreatePortObjectAndSymLink@20
+      demangled: ''
+      offset: '00001966'
+    - name: _TILynxIOCtl@8
+      demangled: ''
+      offset: 00001ACB
+    - name: _TILynxSysCtl@8
+      demangled: ''
+      offset: '00002106'
+    - name: _TILynxStartIo@8
+      demangled: ''
+      offset: '00002134'
+    - name: _TILynxSetupIsochDma@16
+      demangled: ''
+      offset: '000032E8'
+    - name: _TILynxSetupAsyncDma@16
+      demangled: ''
+      offset: 0000360F
+    - name: _TILynxGetIsochPclHeap@8
+      demangled: ''
+      offset: 000036EF
+    - name: _TILynxReturnIsochPclHeap@8
+      demangled: ''
+      offset: 000037B1
+    - name: _TILynxSetupComparatorPcl@28
+      demangled: ''
+      offset: '00003891'
+    - name: _TILynxSetupAllocateDma@16
+      demangled: ''
+      offset: 000039BF
+    - name: _Debug_Assert@16
+      demangled: ''
+      offset: 00003A8B
+    - name: _Bus1394RegisterPortDriver@4
+      demangled: ''
+      offset: 00003A8E
+  - num: '2'
+    name: .data
+    offset: 00001F00
+    symbols:
+    - name: ??_C@_0CI@EHCF@IrpStack?9?$DOMajorFunction?5?$DN?$DN?5IRP_M@
+      demangled: '"IrpStack->MajorFunction == IRP_M"...'
+      offset: '00000000'
+    - name: ??_C@_0N@POLN@?4?4?2lynxpnp?4c?$AA@
+      demangled: '"..\\lynxpnp.c"'
+      offset: '00000028'
+    - name: ??_C@_05LLOB@FALSE?$AA@
+      demangled: '"FALSE"'
+      offset: '00000038'
+    - name: ??_C@_0BP@BEJF@DmaRecvIndex?5?$DN?$DN?5GEN_RECV_INDEX?$AA@
+      demangled: '"DmaRecvIndex == GEN_RECV_INDEX"'
+      offset: '00000040'
+    - name: ??_C@_0CB@MINB@DmaXmitIndex?5?$DN?$DN?5ASYNC_XMIT_INDEX@
+      demangled: '"DmaXmitIndex == ASYNC_XMIT_INDEX"...'
+      offset: '00000060'
+    - name: ??_C@_0BB@NMCK@MaxRegisterReads?$AA@
+      demangled: '"MaxRegisterReads"'
+      offset: '00000084'
+    - name: ??_C@_0O@CDAK@RegisterReads?$AA@
+      demangled: '"RegisterReads"'
+      offset: '00000098'
+    - name: ??_C@_03OJAM@Pcl?$AA@
+      demangled: '"Pcl"'
+      offset: 000000A8
+    - name: 
+        ??_C@_1CA@PCLB@?$AAT?$AAr?$AAa?$AAn?$AAs?$AAm?$AAi?$AAt?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: L"TransmitWorkers"
+      offset: 000000AC
+    - name: 
+        ??_C@_1BO@NBKO@?$AAR?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe?$AAW?$AAo?$AAr?$AAk?$AAe?$AAr?$AAs?$AA?$AA@
+      demangled: L"ReceiveWorkers"
+      offset: 000000CC
+    - name: 
+        ??_C@_1BO@MLPO@?$AAD?$AAi?$AAa?$AAg?$AAn?$AAo?$AAs?$AAt?$AAi?$AAc?$AAM?$AAo?$AAd?$AAe?$AA?$AA@
+      demangled: L"DiagnosticMode"
+      offset: 000000EC
+    - name: ??_C@_0CD@LELH@DataLength?5?$DN?$DN?5fullInfo?9?$DODataLeng@
+      demangled: '"DataLength == fullInfo->DataLeng"...'
+      offset: 0000010C
+    - name: ??_C@_0BK@DDFD@IsochDescriptor?9?$DOCallback?$AA@
+      demangled: '"IsochDescriptor->Callback"'
+      offset: '00000130'
+    - name: ??_C@_0CJ@JBEO@IsochResource?9?$DOTag?5?$DN?$DN?5ISOCH_RESO@
+      demangled: '"IsochResource->Tag == ISOCH_RESO"...'
+      offset: 0000014C
+    - name: ??_C@_0O@IPO@IsochResource?$AA@
+      demangled: '"IsochResource"'
+      offset: '00000178'
+    - name: ??_C@_0O@PIGB@?4?4?2interrup?4c?$AA@
+      demangled: '"..\\interrup.c"'
+      offset: '00000188'
+    - name: ??_C@_0BJ@OGCG@Irp?9?$DOType?5?$DN?$DN?5IO_TYPE_IRP?$AA@
+      demangled: '"Irp->Type == IO_TYPE_IRP"'
+      offset: '00000198'
+    - name: ??_C@_0BJ@PJMD@status?5?$DN?$DN?5STATUS_SUCCESS?$AA@
+      demangled: '"status == STATUS_SUCCESS"'
+      offset: 000001B4
+    - name: ??_C@_0DK@CILN@AsyncWorker?9?$DOPcl?9?$DOStatus?4Acks?5?$DM?$DN@
+      demangled: '"AsyncWorker->Pcl->Status.Acks <="...'
+      offset: 000001D0
+    - name: ??_C@_0CI@INAE@AsyncWorker?9?$DOPcl?9?$DOPclControl?4Cmd@
+      demangled: '"AsyncWorker->Pcl->PclControl.Cmd"...'
+      offset: 0000020C
+    - name: 
+        ??_C@_1CI@KDMG@?$AA?2?$AAD?$AAo?$AAs?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAs?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      demangled: L"\\DosDevices\\1394BUS"
+      offset: '00000234'
+    - name: 
+        ??_C@_1CA@MPBH@?$AA?2?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?2?$AA1?$AA3?$AA9?$AA4?$AAB?$AAU?$AAS?$AA?$AA@
+      demangled: L"\\Device\\1394BUS"
+      offset: 0000025C
+    - name: ??_C@_0GC@CJLB@?$CB?$CIIrb?9?$DOu?4IsochAllocateResources?4@
+      demangled: '"!(Irb->u.IsochAllocateResources."...'
+      offset: 0000027C
+    - name: ??_C@_0CL@NIIP@DeviceExtension?9?$DOTag?5?$DN?$DN?5PORT_EXT@
+      demangled: '"DeviceExtension->Tag == PORT_EXT"...'
+      offset: '000002E0'
+    - name: ??_C@_0N@LHBO@?4?4?2lynxirp?4c?$AA@
+      demangled: '"..\\lynxirp.c"'
+      offset: 0000030C
+    - name: ??_C@_0P@JPMD@AddressMapping?$AA@
+      demangled: '"AddressMapping"'
+      offset: 0000031C
+    - name: ??_C@_0N@CAJP@IsochPclHeap?$AA@
+      demangled: '"IsochPclHeap"'
+      offset: 0000032C
+  - num: '3'
+    name: .idata$2
+    offset: '00002700'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_1394BUS
+      demangled: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      demangled: ''
+      offset: '00000014'
+    - name: __IMPORT_DESCRIPTOR_HAL
+      demangled: ''
+      offset: '00000028'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 0000003C
+    - name: __imp__Bus1394RegisterPortDriver@4
+      demangled: ''
+      offset: '00000138'
+    - name: \1771394BUS_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000013C
+    - name: __imp_@KfReleaseSpinLock@8
+      demangled: ''
+      offset: '00000140'
+    - name: __imp_@KfAcquireSpinLock@4
+      demangled: ''
+      offset: '00000144'
+    - name: __imp__KeStallExecutionProcessor@4
+      demangled: ''
+      offset: '00000148'
+    - name: \177HAL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000014C
+    - name: __imp__IoDeleteDevice@4
+      demangled: ''
+      offset: '00000150'
+    - name: __imp__IoDetachDevice@4
+      demangled: ''
+      offset: '00000154'
+    - name: __imp__KeInitializeSpinLock@4
+      demangled: ''
+      offset: '00000158'
+    - name: __imp__KeInitializeDpc@12
+      demangled: ''
+      offset: 0000015C
+    - name: __imp__IoDeleteSymbolicLink@4
+      demangled: ''
+      offset: '00000160'
+    - name: __imp__RtlInitUnicodeString@8
+      demangled: ''
+      offset: '00000164'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: '00000168'
+    - name: __imp__KeInitializeTimer@4
+      demangled: ''
+      offset: 0000016C
+    - name: __imp__MmCreateMdl@12
+      demangled: ''
+      offset: '00000170'
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      demangled: ''
+      offset: '00000174'
+    - name: __imp__IoConnectInterrupt@44
+      demangled: ''
+      offset: '00000178'
+    - name: __imp__IoDisconnectInterrupt@4
+      demangled: ''
+      offset: 0000017C
+    - name: __imp__MmUnmapIoSpace@8
+      demangled: ''
+      offset: '00000180'
+    - name: __imp__IoGetDmaAdapter@12
+      demangled: ''
+      offset: '00000184'
+    - name: __imp__MmMapIoSpace@16
+      demangled: ''
+      offset: '00000188'
+    - name: __imp__KeWaitForSingleObject@20
+      demangled: ''
+      offset: 0000018C
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000190'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000194'
+    - name: __imp__PoCallDriver@8
+      demangled: ''
+      offset: '00000198'
+    - name: __imp__PoStartNextPowerIrp@4
+      demangled: ''
+      offset: 0000019C
+    - name: __imp__WRITE_REGISTER_ULONG@8
+      demangled: ''
+      offset: 000001A0
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: 000001A4
+    - name: __imp__PoRequestPowerIrp@24
+      demangled: ''
+      offset: 000001A8
+    - name: __imp__RtlCopyUnicodeString@8
+      demangled: ''
+      offset: 000001AC
+    - name: __imp__PoSetPowerState@12
+      demangled: ''
+      offset: 000001B0
+    - name: __imp__KeInitializeMutex@8
+      demangled: ''
+      offset: 000001B4
+    - name: __imp__READ_REGISTER_ULONG@4
+      demangled: ''
+      offset: 000001B8
+    - name: __imp__ZwClose@4
+      demangled: ''
+      offset: 000001BC
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      demangled: ''
+      offset: 000001C0
+    - name: __imp__ZwQueryValueKey@24
+      demangled: ''
+      offset: 000001C4
+    - name: __imp__KeInsertQueueDpc@12
+      demangled: ''
+      offset: 000001C8
+    - name: __imp__KeSynchronizeExecution@12
+      demangled: ''
+      offset: 000001CC
+    - name: __imp_@KefReleaseSpinLockFromDpcLevel@4
+      demangled: ''
+      offset: 000001D0
+    - name: __imp_@KefAcquireSpinLockAtDpcLevel@4
+      demangled: ''
+      offset: 000001D4
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      demangled: ''
+      offset: 000001D8
+    - name: __imp__KeCancelTimer@4
+      demangled: ''
+      offset: 000001DC
+    - name: __imp__MmUnmapLockedPages@8
+      demangled: ''
+      offset: '000001E0'
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      demangled: ''
+      offset: '000001E4'
+    - name: __imp__IoCreateUnprotectedSymbolicLink@8
+      demangled: ''
+      offset: '000001E8'
+    - name: __imp__IoCreateDevice@28
+      demangled: ''
+      offset: 000001EC
+    - name: __imp__RtlIntegerToUnicodeString@12
+      demangled: ''
+      offset: 000001F0
+    - name: __imp__RtlAppendUnicodeStringToString@8
+      demangled: ''
+      offset: 000001F4
+    - name: __imp__RtlAppendUnicodeToString@8
+      demangled: ''
+      offset: 000001F8
+    - name: __imp__IoStartPacket@16
+      demangled: ''
+      offset: 000001FC
+    - name: __imp__KeReleaseMutex@8
+      demangled: ''
+      offset: '00000200'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: '00000204'
+    - name: __imp_@InterlockedExchange@8
+      demangled: ''
+      offset: '00000208'
+    - name: __imp__IoStartNextPacket@8
+      demangled: ''
+      offset: 0000020C
+    - name: __imp__KeSetTimer@16
+      demangled: ''
+      offset: '00000210'
+    - name: __imp__MmMapLockedPages@8
+      demangled: ''
+      offset: '00000214'
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000218'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      demangled: ''
+      offset: 0000021C
+  - num: '4'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _TILynxUnload@4
+      demangled: ''
+      offset: '00000046'
+    - name: _TILynxPnPAddDevice@8
+      demangled: ''
+      offset: '00000049'
+    - name: _TILynxPnP@8
+      demangled: ''
+      offset: 0000029C
+    - name: _TILynxVerifyHw@4
+      demangled: ''
+      offset: 0000098D
+    - name: _TILynxInitializeHw@4
+      demangled: ''
+      offset: 00000A05
+    - name: _TILynxShutdown@4
+      demangled: ''
+      offset: 00000EE2
+    - name: _TILynxInsertHeadPclInDmaChannel@12
+      demangled: ''
+      offset: '00001034'
+    - name: _TILynxGetRegistryParameters@16
+      demangled: ''
+      offset: 0000107F
+    - name: _TILynxGetRegistryKeyValue@20
+      demangled: ''
+      offset: '00001116'
+    - name: _I2CGetDataByte@12
+      demangled: ''
+      offset: 000011B6
+    - name: _I2CAddrSlv@8
+      demangled: ''
+      offset: 000011F9
+    - name: _I2CScl@8
+      demangled: ''
+      offset: 0000124E
+    - name: _I2CSda@8
+      demangled: ''
+      offset: 000012A6
+    - name: _I2CRead@4
+      demangled: ''
+      offset: 000012F6
+    - name: _I2CWrite@8
+      demangled: ''
+      offset: '00001355'
+    - name: _I2CDelay5us@8
+      demangled: ''
+      offset: 000013C4
+    - name: _I2CStop@4
+      demangled: ''
+      offset: '00001434'

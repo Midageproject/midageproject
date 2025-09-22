@@ -2,7 +2,7 @@ filename: hid.dll
 binary: HID
 description: ''
 appearances:
-- version: Windows 98 Debug
+- version: Windows 98 Retail
   source_tree: []
   segments:
   - num: '1'
@@ -209,7 +209,7 @@ appearances:
     - name: \177KERNEL32_NULL_THUNK_DATA
       processed: ''
       offset: 0000004C
-- version: Windows 98 Retail
+- version: Windows 98 Debug
   source_tree: []
   segments:
   - num: '1'
@@ -914,3 +914,239 @@ appearances:
     - name: \177KERNEL32_NULL_THUNK_DATA
       demangled: ''
       offset: 0000005C
+- version: Windows ME Debug
+  source_tree:
+  - /ntc/private/ntos/dd/wdm/input/hiddll/hiddll.c
+  - /ntc/private/ntos/dd/wdm/input/hiddll/../hidparse/query.c
+  - /ntc/private/ntos/dd/wdm/input/hiddll/../hidparse/trnslate.c
+  segments:
+  - num: '1'
+    name: .idata$5
+    offset: '00001860'
+    symbols:
+    - name: __imp__LocalAlloc@8
+      demangled: ''
+      offset: '00000000'
+    - name: __imp__DeviceIoControl@32
+      demangled: ''
+      offset: '00000004'
+    - name: __imp__LocalFree@4
+      demangled: ''
+      offset: '00000008'
+    - name: __imp__SetLastError@4
+      demangled: ''
+      offset: 0000000C
+    - name: \177KERNEL32_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000010'
+    - name: _GUID_CLASS_INPUT
+      demangled: ''
+      offset: '00000090'
+    - name: ??_C@_0BE@EGFI@Hello?6I?5hate?5Jello?6?$AA@
+      demangled: '"Hello\nI hate Jello\n"'
+      offset: 000000A0
+    - name: _HidD_Hello@8
+      demangled: ''
+      offset: 000000B4
+    - name: _HidD_GetHidGuid@4
+      demangled: ''
+      offset: 000000EF
+    - name: _HidD_GetPreparsedData@8
+      demangled: ''
+      offset: '00000111'
+    - name: _HidD_GetAttributes@8
+      demangled: ''
+      offset: '00000184'
+    - name: _HidD_FreePreparsedData@4
+      demangled: ''
+      offset: 000001D6
+    - name: _HidD_FlushQueue@4
+      demangled: ''
+      offset: 000001F8
+    - name: _HidD_GetConfiguration@12
+      demangled: ''
+      offset: '00000218'
+    - name: _HidD_SetConfiguration@12
+      demangled: ''
+      offset: 0000024A
+    - name: _Entry32@12
+      demangled: ''
+      offset: '00000282'
+    - name: _HidD_GetNumInputBuffers@8
+      demangled: ''
+      offset: 0000028C
+    - name: _HidD_SetNumInputBuffers@8
+      demangled: ''
+      offset: 000002AF
+    - name: _HidD_GetSerialNumberString@12
+      demangled: ''
+      offset: 000002D3
+    - name: _HidD_GetManufacturerString@12
+      demangled: ''
+      offset: 000002F7
+    - name: _HidD_GetProductString@12
+      demangled: ''
+      offset: 0000031B
+    - name: _HidD_GetIndexedString@16
+      demangled: ''
+      offset: 0000033F
+    - name: _HidD_GetPhysicalDescriptor@12
+      demangled: ''
+      offset: '00000366'
+    - name: _HidD_GetFeature@12
+      demangled: ''
+      offset: 0000038A
+    - name: _HidD_SetFeature@12
+      demangled: ''
+      offset: 000003AE
+    - name: _HidD_GetMsGenreDescriptor@12
+      demangled: ''
+      offset: 000003D2
+    - name: _HidP_ExtractData@16
+      demangled: ''
+      offset: 000003F6
+    - name: _HidP_InsertData@20
+      demangled: ''
+      offset: 000004AE
+    - name: _HidP_DeleteArrayEntry@20
+      demangled: ''
+      offset: '00000585'
+    - name: _HidP_GetCaps@8
+      demangled: ''
+      offset: 0000062D
+    - name: _HidP_GetLinkCollectionNodes@12
+      demangled: ''
+      offset: '00000781'
+    - name: _HidP_GetButtonCaps@16
+      demangled: ''
+      offset: '000007E8'
+    - name: _HidP_GetSpecificButtonCaps@28
+      demangled: ''
+      offset: '00000805'
+    - name: _HidP_GetValueCaps@16
+      demangled: ''
+      offset: 000009BF
+    - name: _HidP_GetSpecificValueCaps@28
+      demangled: ''
+      offset: 000009DC
+    - name: _HidP_GetExtendedAttributes@20
+      demangled: ''
+      offset: 00000BE4
+    - name: _HidP_InitializeReportForID@20
+      demangled: ''
+      offset: 00000CF6
+    - name: _HidP_Index2Usage@8
+      demangled: ''
+      offset: 00000E7D
+    - name: _HidP_Usage2Index@8
+      demangled: ''
+      offset: 00000EE4
+    - name: _HidP_SetUsages@32
+      demangled: ''
+      offset: 00000F5B
+    - name: _HidP_UnsetUsages@32
+      demangled: ''
+      offset: '00001010'
+    - name: _HidP_SetUnsetOneUsage@28
+      demangled: ''
+      offset: 000010C5
+    - name: _HidP_GetUsagesEx@28
+      demangled: ''
+      offset: '00001322'
+    - name: _HidP_GetUsages@32
+      demangled: ''
+      offset: '00001345'
+    - name: _HidP_MaxUsageListLength@12
+      demangled: ''
+      offset: 000015F1
+    - name: _HidP_MaxDataListLength@8
+      demangled: ''
+      offset: 0000166E
+    - name: _HidP_SetUsageValue@32
+      demangled: ''
+      offset: '000016E7'
+    - name: _HidP_SetUsageValueArray@36
+      demangled: ''
+      offset: '00001839'
+    - name: _HidP_SetScaledUsageValue@32
+      demangled: ''
+      offset: 000019F4
+    - name: _HidP_GetUsageValue@32
+      demangled: ''
+      offset: 00001BE8
+    - name: _HidP_GetUsageValueArray@36
+      demangled: ''
+      offset: 00001D31
+    - name: _HidP_GetScaledUsageValue@32
+      demangled: ''
+      offset: 00001EE1
+    - name: _HidP_SetOneData@16
+      demangled: ''
+      offset: 000020CE
+    - name: _HidP_SetData@24
+      demangled: ''
+      offset: '00002342'
+    - name: _HidP_GetData@24
+      demangled: ''
+      offset: 000023D8
+    - name: _HidP_UsageListDifference@20
+      demangled: ''
+      offset: 0000266C
+    - name: _HidP_KbdPutKey@16
+      demangled: ''
+      offset: '00002786'
+    - name: _HidP_TranslateUsagesToI8042ScanCodes@24
+      demangled: ''
+      offset: 000027BC
+    - name: _HidP_TranslateUsage@32
+      demangled: ''
+      offset: 0000280E
+    - name: _HidP_KeyboardKeypadCode@24
+      demangled: ''
+      offset: '00002889'
+    - name: _HidP_ModifierCode@24
+      demangled: ''
+      offset: 000028F8
+    - name: _HidP_VendorBreakCodesAsMakeCodes@24
+      demangled: ''
+      offset: 0000297A
+    - name: _HidP_PrintScreenCode@24
+      demangled: ''
+      offset: 000029AB
+    - name: _HidP_StraightLookup@8
+      demangled: ''
+      offset: 00002A37
+    - name: __IMPORT_DESCRIPTOR_KERNEL32
+      demangled: ''
+      offset: 00002A54
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: 00002A68
+  - num: '2'
+    name: .data
+    offset: '00000000'
+    symbols:
+    - name: _HidP_KeyboardToScanCodeTable
+      demangled: ''
+      offset: '00000000'
+    - name: _HidP_XlateKbdPadCodesSubTable
+      demangled: ''
+      offset: '00000400'
+    - name: _HidP_XlateModifierCodesSubTable
+      demangled: ''
+      offset: '00000428'
+    - name: _HidP_BreakCodesAsMakeCodesTable
+      demangled: ''
+      offset: '00000458'
+    - name: _HidP_XlatePrtScrCodesSubTable
+      demangled: ''
+      offset: '00000460'
+    - name: _HidP_KeyboardSubTables
+      demangled: ''
+      offset: '00000468'
+    - name: _HidP_ConsumerToScanCodeTable
+      demangled: ''
+      offset: '000004E8'
+    - name: _HidP_ConsumerSubTables
+      demangled: ''
+      offset: '00000528'

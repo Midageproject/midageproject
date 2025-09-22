@@ -2,9 +2,8 @@ filename: midimap.drv
 binary: MIDIMAP
 description: ''
 appearances:
-- version: Windows 98 Debug
-  source_tree:
-  - mmsys.c
+- version: Windows 98 Retail
+  source_tree: []
   segments:
   - num: '1'
     name: ''
@@ -20,8 +19,9 @@ appearances:
     - name: modMessage
       processed: ''
       offset: '00000000'
-- version: Windows 98 Retail
-  source_tree: []
+- version: Windows 98 Debug
+  source_tree:
+  - mmsys.c
   segments:
   - num: '1'
     name: ''
@@ -39,6 +39,24 @@ appearances:
       offset: '00000000'
 - version: Windows 98SE Retail
   source_tree: []
+  segments:
+  - num: '1'
+    name: ''
+    offset: '00000050'
+    symbols:
+    - name: DriverProc
+      demangled: ''
+      offset: '00000000'
+  - num: '3'
+    name: ''
+    offset: '00000000'
+    symbols:
+    - name: modMessage
+      demangled: ''
+      offset: '00000000'
+- version: Windows ME Debug
+  source_tree:
+  - mmsys.c
   segments:
   - num: '1'
     name: ''

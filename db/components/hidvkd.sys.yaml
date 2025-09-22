@@ -1,0 +1,473 @@
+filename: hidvkd.sys
+binary: HIDVKD
+description: ''
+appearances:
+- version: Windows ME Retail
+  source_tree:
+  - ../hook.asm
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000310'
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+    - name: _HidVkdAddDevice@8
+      processed: ''
+      offset: 0000006D
+    - name: _HidVkdLoadModule@8
+      processed: ''
+      offset: 000000DB
+    - name: _HidVkdRegisterMiniDriver@4
+      processed: ''
+      offset: 0000012D
+    - name: _HidVkdUnload@4
+      processed: ''
+      offset: 0000019A
+    - name: _HidVkdPnP@8
+      processed: ''
+      offset: 000001A2
+    - name: _HidVkdPower@8
+      processed: ''
+      offset: '00000283'
+    - name: _HidVkdSystemControl@8
+      processed: ''
+      offset: 000002A9
+    - name: _HidVkdStartDevice@4
+      processed: ''
+      offset: 000002BF
+    - name: _HidVkdStartCompletion@12
+      processed: ''
+      offset: 000002D4
+    - name: _HidVkdInitDevice@4
+      processed: ''
+      offset: 0000031B
+    - name: _HidVkdStopDevice@4
+      processed: ''
+      offset: '00000352'
+    - name: _HidVkdAbortPendingRequests@4
+      processed: ''
+      offset: '00000374'
+    - name: _HidVkdStopCompletion@12
+      processed: ''
+      offset: 000003DE
+    - name: _HidVkdQueryIDCompletion@12
+      processed: ''
+      offset: 000003FF
+    - name: _HidVkdRemoveDevice@4
+      processed: ''
+      offset: 0000044B
+    - name: _HidVkdIoctl@8
+      processed: ''
+      offset: '00000474'
+    - name: _HidVkdGetHIDDescriptor@8
+      processed: ''
+      offset: '00000507'
+    - name: _HidVkdGetReportDescriptor@8
+      processed: ''
+      offset: '00000549'
+    - name: _HidVkdGetDeviceAttributes@8
+      processed: ''
+      offset: 0000058B
+    - name: _HidVkdIncrementPendingRequestCount@4
+      processed: ''
+      offset: 000005B1
+    - name: _HidVkdDecrementPendingRequestCount@4
+      processed: ''
+      offset: 000005BB
+    - name: _HidVkdReadReport@8
+      processed: ''
+      offset: 000005DB
+    - name: _HidVkdPostScanCode
+      processed: ''
+      offset: '00000667'
+    - name: _HidVkdReadCompletion@0
+      processed: ''
+      offset: '00000746'
+    - name: _HidVkdGetStringDescriptor@8
+      processed: ''
+      offset: 000007F6
+  - num: '2'
+    name: _LTEXT
+    offset: '00000430'
+    symbols:
+    - name: _HidVkd_Hook@0
+      processed: ''
+      offset: '00000000'
+    - name: _HidVkd_Unhook@0
+      processed: ''
+      offset: 0000001C
+    - name: HidVkd_Hook_Proc
+      processed: ''
+      offset: '00000042'
+    - name: _LCODE__PELDR_GetProcAddress
+      processed: ''
+      offset: '00000060'
+  - num: '3'
+    name: PNP
+    offset: 000004D0
+    symbols:
+    - name: _LoadPEModule
+      processed: ''
+      offset: '00000000'
+    - name: _ArmWakeUp
+      processed: ''
+      offset: '00000024'
+  - num: '5'
+    name: .idata$5
+    offset: '00000660'
+    symbols:
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000000'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '00000004'
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: '00000008'
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: 0000000C
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      processed: ''
+      offset: '00000010'
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '00000014'
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: '00000018'
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      processed: ''
+      offset: 0000001C
+    - name: __imp__ExQueueWorkItem@8
+      processed: ''
+      offset: '00000020'
+    - name: __imp_@ExfInterlockedInsertHeadList@12
+      processed: ''
+      offset: '00000024'
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000028'
+  - num: '6'
+    name: .data
+    offset: '00000830'
+    symbols:
+    - name: ??_C@_0BG@HLNG@HidRegisterMinidriver?$AA@
+      processed: '"HidRegisterMinidriver"'
+      offset: '00000000'
+    - name: ??_C@_0N@PHNJ@hidclass?4sys?$AA@
+      processed: '"hidclass.sys"'
+      offset: '00000018'
+    - name: _MyReportDescriptor
+      processed: ''
+      offset: '00000050'
+    - name: _MyHidDescriptor
+      processed: ''
+      offset: '00000068'
+    - name: _AStringDescriptor
+      processed: ''
+      offset: '00000074'
+    - name: _MyStringDescriptor
+      processed: ''
+      offset: 000000F4
+    - name: _pHidRegisterMinidriver
+      processed: ''
+      offset: 000000F8
+    - name: _OurDriverObject
+      processed: ''
+      offset: 000000FC
+    - name: _OurDeviceObject
+      processed: ''
+      offset: '00000100'
+    - name: _MyPhysicalDescriptor
+      processed: ''
+      offset: '00000104'
+    - name: _IsRunning
+      processed: ''
+      offset: '00000108'
+    - name: _HidVkd_UsageLock
+      processed: ''
+      offset: 0000010C
+    - name: _HidVkd_IrpHead
+      processed: ''
+      offset: '00000110'
+    - name: _HidVkd_UsageHead
+      processed: ''
+      offset: '00000118'
+    - name: _HidVkd_IrpLock
+      processed: ''
+      offset: '00000120'
+    - name: _HidVkddriverRegistration
+      processed: ''
+      offset: '00000140'
+    - name: _AllRequestsCompleteEvent
+      processed: ''
+      offset: '00000160'
+  - num: '7'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      processed: ''
+      offset: '00000000'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000014'
+- version: Windows ME Debug
+  source_tree:
+  - ../hid.c
+  - ../hidvkd.c
+  - ../hook.asm
+  - ../ioctl.c
+  - ../pnp.c
+  - ../../../../dev/ddk/lib/vxdwraps.c
+  segments:
+  - num: '1'
+    name: .text
+    offset: 00000BB0
+    symbols:
+    - name: _DriverEntry@8
+      demangled: ''
+      offset: '00000000'
+    - name: _HidVkdAddDevice@8
+      demangled: ''
+      offset: '000000E0'
+    - name: _HidVkdLoadModule@8
+      demangled: ''
+      offset: '00000190'
+    - name: _HidVkdRegisterMiniDriver@4
+      demangled: ''
+      offset: '00000220'
+    - name: _HidVkdUnload@4
+      demangled: ''
+      offset: '00000330'
+    - name: _HidVkdPnP@8
+      demangled: ''
+      offset: 000003A0
+    - name: _HidVkdPower@8
+      demangled: ''
+      offset: '00000770'
+    - name: _HidVkdSystemControl@8
+      demangled: ''
+      offset: '000007E0'
+    - name: _HidVkdStartDevice@4
+      demangled: ''
+      offset: '00000830'
+    - name: _HidVkdStartCompletion@12
+      demangled: ''
+      offset: 000008A0
+    - name: _HidVkdInitDevice@4
+      demangled: ''
+      offset: '00000980'
+    - name: _HidVkdStopDevice@4
+      demangled: ''
+      offset: 00000A10
+    - name: _HidVkdAbortPendingRequests@4
+      demangled: ''
+      offset: 00000A80
+    - name: _HidVkdStopCompletion@12
+      demangled: ''
+      offset: 00000B00
+    - name: _HidVkdQueryIDCompletion@12
+      demangled: ''
+      offset: 00000BA0
+    - name: _HidVkdRemoveDevice@4
+      demangled: ''
+      offset: 00000C40
+    - name: _HidVkdIoctl@8
+      demangled: ''
+      offset: 00000D00
+    - name: _HidVkdGetHIDDescriptor@8
+      demangled: ''
+      offset: 00000EF0
+    - name: _HidVkdGetReportDescriptor@8
+      demangled: ''
+      offset: 00000FB0
+    - name: _HidVkdGetDeviceAttributes@8
+      demangled: ''
+      offset: '00001080'
+    - name: _HidVkdIncrementPendingRequestCount@4
+      demangled: ''
+      offset: '00001120'
+    - name: _HidVkdDecrementPendingRequestCount@4
+      demangled: ''
+      offset: '00001150'
+    - name: _HidVkdReadReport@8
+      demangled: ''
+      offset: 000011D0
+    - name: _HidVkdPostScanCode
+      demangled: ''
+      offset: 000012F0
+    - name: _HidVkdReadCompletion@0
+      demangled: ''
+      offset: '000014E0'
+    - name: _HidVkdGetStringDescriptor@8
+      demangled: ''
+      offset: '00001620'
+    - name: _DbgPrint
+      demangled: ''
+      offset: '000016E0'
+    - name: _KeInitializeEvent@12
+      demangled: ''
+      offset: '000016E6'
+    - name: _RtlAssert@16
+      demangled: ''
+      offset: 000016EC
+    - name: _ExFreePool@4
+      demangled: ''
+      offset: 000016F2
+    - name: '@IofCompleteRequest@8'
+      demangled: ''
+      offset: 000016F8
+    - name: '@IofCallDriver@8'
+      demangled: ''
+      offset: 000016FE
+    - name: '@ExfInterlockedRemoveHeadList@8'
+      demangled: ''
+      offset: '00001704'
+    - name: _ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000170A
+    - name: _KeSetEvent@12
+      demangled: ''
+      offset: '00001710'
+    - name: '@ExfInterlockedInsertTailList@12'
+      demangled: ''
+      offset: '00001716'
+    - name: _ExQueueWorkItem@8
+      demangled: ''
+      offset: 0000171C
+    - name: '@ExfInterlockedInsertHeadList@12'
+      demangled: ''
+      offset: '00001722'
+  - num: '2'
+    name: _LTEXT
+    offset: 00000CE0
+    symbols:
+    - name: _HidVkd_Hook@0
+      demangled: ''
+      offset: '00000000'
+    - name: _HidVkd_Unhook@0
+      demangled: ''
+      offset: '00000020'
+    - name: HidVkd_Hook_Proc
+      demangled: ''
+      offset: 0000004E
+    - name: _LCODE__PELDR_GetProcAddress
+      demangled: ''
+      offset: 0000006C
+  - num: '3'
+    name: PNP
+    offset: 00000D90
+    symbols:
+    - name: _LoadPEModule
+      demangled: ''
+      offset: '00000000'
+    - name: _ArmWakeUp
+      demangled: ''
+      offset: 0000002C
+  - num: '5'
+    name: .idata$5
+    offset: 00000F50
+    symbols:
+    - name: __imp_@ExfInterlockedRemoveHeadList@8
+      demangled: ''
+      offset: '00000000'
+    - name: __imp__KeInitializeEvent@12
+      demangled: ''
+      offset: '00000004'
+    - name: __imp__RtlAssert@16
+      demangled: ''
+      offset: '00000008'
+    - name: __imp__ExFreePool@4
+      demangled: ''
+      offset: 0000000C
+    - name: __imp_@IofCompleteRequest@8
+      demangled: ''
+      offset: '00000010'
+    - name: __imp_@IofCallDriver@8
+      demangled: ''
+      offset: '00000014'
+    - name: __imp__DbgPrint
+      demangled: ''
+      offset: '00000018'
+    - name: __imp__ExAllocatePoolWithTag@12
+      demangled: ''
+      offset: 0000001C
+    - name: __imp__KeSetEvent@12
+      demangled: ''
+      offset: '00000020'
+    - name: __imp_@ExfInterlockedInsertTailList@12
+      demangled: ''
+      offset: '00000024'
+    - name: __imp__ExQueueWorkItem@8
+      demangled: ''
+      offset: '00000028'
+    - name: __imp_@ExfInterlockedInsertHeadList@12
+      demangled: ''
+      offset: 0000002C
+    - name: \177ntoskrnl_NULL_THUNK_DATA
+      demangled: ''
+      offset: '00000030'
+  - num: '6'
+    name: .data
+    offset: 000010D0
+    symbols:
+    - name: _MyReportDescriptor
+      demangled: ''
+      offset: 00000C50
+    - name: _MyHidDescriptor
+      demangled: ''
+      offset: 00000C68
+    - name: _AStringDescriptor
+      demangled: ''
+      offset: 00000C74
+    - name: _MyStringDescriptor
+      demangled: ''
+      offset: 00000CF4
+    - name: _pHidRegisterMinidriver
+      demangled: ''
+      offset: 0000124C
+    - name: _OurDriverObject
+      demangled: ''
+      offset: '00001250'
+    - name: _OurDeviceObject
+      demangled: ''
+      offset: '00001254'
+    - name: _MyPhysicalDescriptor
+      demangled: ''
+      offset: 0000125C
+    - name: _IsRunning
+      demangled: ''
+      offset: '00001260'
+    - name: _HidVkd_UsageLock
+      demangled: ''
+      offset: '00001264'
+    - name: _HidVkd_IrpHead
+      demangled: ''
+      offset: '00001268'
+    - name: _HidVkd_UsageHead
+      demangled: ''
+      offset: '00001270'
+    - name: _HidVkd_IrpLock
+      demangled: ''
+      offset: '00001278'
+    - name: _HidVkddriverRegistration
+      demangled: ''
+      offset: '00001290'
+    - name: _AllRequestsCompleteEvent
+      demangled: ''
+      offset: 000012B0
+  - num: '7'
+    name: .idata$2
+    offset: '00000000'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_ntoskrnl
+      demangled: ''
+      offset: '00000000'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      demangled: ''
+      offset: '00000014'

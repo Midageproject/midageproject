@@ -1,0 +1,5331 @@
+filename: vredir.vxd
+binary: VREDIR
+description: ''
+appearances:
+- version: Windows 98SE Debug
+  source_tree:
+  - ../core/beacon.c
+  - ../core/close.c
+  - ../core/coredbg.c
+  - ../core/cshsubr.c
+  - ../core/dfs.c
+  - ../core/dossrch.c
+  - ../core/dostrans.c
+  - ../core/dosuser.c
+  - ../core/errmap.c
+  - ../core/lfnsrch.c
+  - ../core/locks.c
+  - ../core/looker.c
+  - ../core/md5c.c
+  - ../core/messngr.c
+  - ../core/miscfunc.c
+  - ../core/namepipe.c
+  - ../core/netecbio.c
+  - ../core/netfunc.c
+  - ../core/netio.c
+  - ../core/netmslot.c
+  - ../core/nib.c
+  - ../core/open.c
+  - ../core/oplock.c
+  - ../core/passthru.c
+  - ../core/read.c
+  - ../core/remapi.c
+  - ../core/resource.c
+  - ../core/seek.c
+  - ../core/service.c
+  - ../core/srchbuf.c
+  - ../core/srvenum.c
+  - ../core/strtstop.c
+  - ../core/transact.c
+  - ../core/user.c
+  - ../core/write.c
+  - ../core/xact.c
+  - ../vxd/md5fast.asm
+  - ../vxd/messages.asm
+  - ../vxd/nmcache.c
+  - ../vxd/scache.asm
+  - ../vxd/vrddbg.c
+  - ../vxd/vrdinit.c
+  - ../vxd/vrdmem.c
+  - ../vxd/vrdnetio.c
+  - ../vxd/vrdpnp.c
+  - ../vxd/vrdsubr.asm
+  - ../vxd/vredir.asm
+  segments:
+  - num: '1'
+    name: .bss
+    offset: 00006B40
+    symbols:
+    - name: _hNameCache
+      processed: ''
+      offset: '00000430'
+    - name: _VRD_devnode_index
+      processed: ''
+      offset: '00000434'
+    - name: _VRD_saved_devnodes
+      processed: ''
+      offset: '00000440'
+    - name: _VRD_stopping_devnodes
+      processed: ''
+      offset: 000004C0
+    - name: _szDomainOverride
+      processed: ''
+      offset: '00000540'
+    - name: _VRD_stopped_devnodes
+      processed: ''
+      offset: '00000560'
+    - name: _NumRcvBufs
+      processed: ''
+      offset: '000005E0'
+    - name: _SecuritySignatureEnabled
+      processed: ''
+      offset: '000005E4'
+    - name: _VRD_Transition_Info
+      processed: ''
+      offset: '000005E8'
+    - name: _NumECBs
+      processed: ''
+      offset: 000005EC
+    - name: _NCBBaseAddr
+      processed: ''
+      offset: 000005F0
+    - name: _ecbs
+      processed: ''
+      offset: 000005F4
+    - name: _SecuritySignatureRequired
+      processed: ''
+      offset: 000005F8
+    - name: _NumBcnBufs
+      processed: ''
+      offset: 000005FC
+    - name: _SendStage
+      processed: ''
+      offset: '00000600'
+    - name: _VRD_Transition_Static_Drive_List
+      processed: ''
+      offset: '00000604'
+    - name: _fAllowPlainTextPasswords
+      processed: ''
+      offset: '00000608'
+    - name: _RcvBufSize
+      processed: ''
+      offset: 0000060C
+    - name: _CacheHeapBase
+      processed: ''
+      offset: '00000610'
+    - name: _fNoFlush
+      processed: ''
+      offset: '00000614'
+    - name: _pDB_Buf
+      processed: ''
+      offset: '00000618'
+    - name: _Dbg_Buf
+      processed: ''
+      offset: '00000620'
+    - name: _CacheActECBs
+      processed: ''
+      offset: '00000820'
+    - name: _CallList
+      processed: ''
+      offset: '00000834'
+    - name: _NextCallID
+      processed: ''
+      offset: '00000838'
+    - name: _WfWPA
+      processed: ''
+      offset: 0000083C
+    - name: _WfWBSize
+      processed: ''
+      offset: '00000840'
+    - name: _LMPL
+      processed: ''
+      offset: '00000844'
+    - name: _WfWBuf
+      processed: ''
+      offset: '00000850'
+    - name: _pRDMSH
+      processed: ''
+      offset: 00000A70
+    - name: _MasterBuf
+      processed: ''
+      offset: 00000A80
+    - name: _LMBSize
+      processed: ''
+      offset: 00000CA0
+    - name: _MasterPA
+      processed: ''
+      offset: 00000CA4
+    - name: _rndseed
+      processed: ''
+      offset: 00000CA8
+    - name: _MasterBSize
+      processed: ''
+      offset: 00000CAC
+    - name: _BeaconSerial
+      processed: ''
+      offset: 00000CB0
+    - name: _BRDBuf
+      processed: ''
+      offset: 00000CC0
+    - name: _MsgSID
+      processed: ''
+      offset: 00000EC0
+    - name: _MsgErrs
+      processed: ''
+      offset: 00000ED0
+    - name: _MBSToken
+      processed: ''
+      offset: 00000F00
+    - name: _SendErr
+      processed: ''
+      offset: 00000F04
+    - name: _BIFBits
+      processed: ''
+      offset: 00000F08
+    - name: _GrabBName
+      processed: ''
+      offset: 00000F0C
+    - name: _BMSHandle
+      processed: ''
+      offset: 00000F10
+    - name: _SvcList
+      processed: ''
+      offset: 00000F14
+    - name: _PCachePtr
+      processed: ''
+      offset: 00000F18
+    - name: _key
+      processed: ''
+      offset: 00000F20
+    - name: _ph
+      processed: ''
+      offset: 00000F28
+    - name: _password
+      processed: ''
+      offset: 00000F30
+    - name: _VRD_ReadyForMailslots
+      processed: ''
+      offset: 00000F40
+    - name: _IORWaiting
+      processed: ''
+      offset: 00000F44
+    - name: _IOReqList
+      processed: ''
+      offset: 00000F48
+    - name: _SendTimeOut
+      processed: ''
+      offset: 00000F4C
+    - name: _PendingAddname
+      processed: ''
+      offset: 00000F4D
+    - name: _NCBCallList
+      processed: ''
+      offset: 00000F50
+    - name: _BcnMasterName
+      processed: ''
+      offset: 00000F60
+    - name: _LanaMap
+      processed: ''
+      offset: 00000F70
+    - name: _MIDincr
+      processed: ''
+      offset: 00000F82
+    - name: _MIDmax
+      processed: ''
+      offset: 00000F84
+    - name: _BcnWkGrpName
+      processed: ''
+      offset: 00000F90
+    - name: _NibTable
+      processed: ''
+      offset: 00000FA0
+    - name: _NetTable
+      processed: ''
+      offset: 000010A0
+    - name: _MIDmask
+      processed: ''
+      offset: '00001120'
+    - name: _PriWkGrpName
+      processed: ''
+      offset: '00001130'
+    - name: _Users
+      processed: ''
+      offset: '00001140'
+    - name: _szComputerName
+      processed: ''
+      offset: '00001150'
+    - name: _CompName
+      processed: ''
+      offset: '00001160'
+    - name: _szPrimaryDomain
+      processed: ''
+      offset: '00001170'
+    - name: _OpLockList
+      processed: ''
+      offset: '00001180'
+    - name: _SessResSerial
+      processed: ''
+      offset: '00001184'
+    - name: _KeepConn
+      processed: ''
+      offset: '00001188'
+    - name: _IsLeadByte
+      processed: ''
+      offset: '00001190'
+    - name: _ResSerialNum
+      processed: ''
+      offset: '00001290'
+    - name: _SessResCtr
+      processed: ''
+      offset: '00001294'
+    - name: _NibFreeList
+      processed: ''
+      offset: '00001298'
+    - name: _WaitingForNib
+      processed: ''
+      offset: 0000129C
+    - name: _SessTicks
+      processed: ''
+      offset: 000012A0
+    - name: _NibNeeded
+      processed: ''
+      offset: 000012A4
+    - name: _AInfo
+      processed: ''
+      offset: 000012B0
+    - name: _CloseTable
+      processed: ''
+      offset: 000012F0
+    - name: _MFTable
+      processed: ''
+      offset: '00001320'
+    - name: _MD5Init
+      processed: ''
+      offset: '000013E0'
+    - name: _MD5Update
+      processed: ''
+      offset: '00001420'
+    - name: _MD5Final
+      processed: ''
+      offset: 000014D0
+    - name: _TransformMD5
+      processed: ''
+      offset: 000015A0
+    - name: _vrdDiscardCacheOnOpen
+      processed: ''
+      offset: 00001C18
+    - name: _NextClose
+      processed: ''
+      offset: 00001C1C
+    - name: _R0Noisy
+      processed: ''
+      offset: 00001C20
+    - name: _FileRouteTable
+      processed: ''
+      offset: 00001C24
+    - name: _PipeRouteTable
+      processed: ''
+      offset: 00001C48
+    - name: _UkwnRouteTable
+      processed: ''
+      offset: 00001C6C
+    - name: _Routers
+      processed: ''
+      offset: 00001C90
+    - name: _Readers
+      processed: ''
+      offset: 00001CA4
+    - name: _Writers
+      processed: ''
+      offset: 00001CF4
+    - name: _NoConflict
+      processed: ''
+      offset: 00001D44
+    - name: _ReadSums
+      processed: ''
+      offset: '00002070'
+    - name: _sumdtype
+      processed: ''
+      offset: '00002074'
+    - name: _sumltype
+      processed: ''
+      offset: '00002084'
+    - name: _sumxtype
+      processed: ''
+      offset: '00002094'
+    - name: _VRdr_CacheID
+      processed: ''
+      offset: 000023CC
+    - name: _CacheEvent
+      processed: ''
+      offset: 000023F4
+    - name: _LazyLockCount
+      processed: ''
+      offset: 000025A0
+    - name: _LazyEventSched
+      processed: ''
+      offset: 000025A4
+    - name: _LazyLockEvent
+      processed: ''
+      offset: 000025A8
+    - name: _StuckSessEvent
+      processed: ''
+      offset: '00002990'
+    - name: _ErrServer
+      processed: ''
+      offset: 00002AC0
+    - name: _ErrNetBIOS
+      processed: ''
+      offset: 00002AE0
+    - name: _ErrNetIPX
+      processed: ''
+      offset: 00002B00
+    - name: _VolSrchPPath
+      processed: ''
+      offset: 00002B0C
+    - name: _NoOpLockEvent
+      processed: ''
+      offset: 00002DA8
+    - name: _OpLockEvent
+      processed: ''
+      offset: 00002DAC
+    - name: _DisconnectEvent
+      processed: ''
+      offset: '00002E68'
+    - name: _UniFlag
+      processed: ''
+      offset: '00002E80'
+    - name: _NativeOSLM
+      processed: ''
+      offset: '00002E84'
+    - name: _ipc
+      processed: ''
+      offset: 00002E9C
+    - name: _Dialects
+      processed: ''
+      offset: 00002EA4
+    - name: _ResTypes
+      processed: ''
+      offset: 00002F1C
+    - name: _FSTypes
+      processed: ''
+      offset: 00002F3C
+    - name: _Slash
+      processed: ''
+      offset: 00002F6C
+    - name: _SlashSlash
+      processed: ''
+      offset: 00002F70
+    - name: _SessChain
+      processed: ''
+      offset: 00002F74
+    - name: _counter
+      processed: ''
+      offset: 00002F78
+    - name: _NetRouteTable
+      processed: ''
+      offset: 00002F7C
+    - name: _DFSRouteTable
+      processed: ''
+      offset: 00002FBC
+    - name: _RdrInfo
+      processed: ''
+      offset: 0000350C
+    - name: _BcnGroupName
+      processed: ''
+      offset: '00003540'
+    - name: _NameTab
+      processed: ''
+      offset: '00003550'
+    - name: _NetChain
+      processed: ''
+      offset: '00003564'
+    - name: _NumNets
+      processed: ''
+      offset: '00003568'
+    - name: _MaxNets
+      processed: ''
+      offset: 0000356C
+    - name: _MaxLana
+      processed: ''
+      offset: '00003570'
+    - name: _stat_NumXacts
+      processed: ''
+      offset: '00003574'
+    - name: _stat_ReadBytes
+      processed: ''
+      offset: '00003578'
+    - name: _stat_WriteBytes
+      processed: ''
+      offset: 0000357C
+    - name: _stat_NumSessions
+      processed: ''
+      offset: '00003580'
+    - name: _stat_NumRes
+      processed: ''
+      offset: '00003584'
+    - name: _stat_NumOpenFiles
+      processed: ''
+      offset: '00003588'
+    - name: _RedirState
+      processed: ''
+      offset: 0000358C
+    - name: _MaxNibs
+      processed: ''
+      offset: '00003590'
+    - name: _NumNibs
+      processed: ''
+      offset: '00003594'
+    - name: _OpLockEnd
+      processed: ''
+      offset: '00003598'
+    - name: _PitchIt
+      processed: ''
+      offset: 0000359C
+    - name: _LastServerFlag
+      processed: ''
+      offset: 00003A0C
+    - name: _NumDGramBufs
+      processed: ''
+      offset: 00003A10
+    - name: _BrowseHookEnabled
+      processed: ''
+      offset: 00003A14
+    - name: _lmname
+      processed: ''
+      offset: 00003A18
+    - name: _lfnNoisy
+      processed: ''
+      offset: 00003DC8
+    - name: _NullPath
+      processed: ''
+      offset: 00003DCC
+    - name: _StarDotStar
+      processed: ''
+      offset: 00003DD4
+    - name: _Star
+      processed: ''
+      offset: 00003DDC
+    - name: _LFNRouteTable
+      processed: ''
+      offset: 00003DE0
+    - name: _Noisy32API
+      processed: ''
+      offset: '000045E4'
+    - name: _IntErrMsg
+      processed: ''
+      offset: 0000497C
+    - name: _LogonNameAdded
+      processed: ''
+      offset: 00004A40
+    - name: _passthruNoisy
+      processed: ''
+      offset: 00004AD0
+    - name: _SecReqChain
+      processed: ''
+      offset: 00004AD4
+    - name: _rnugg
+      processed: ''
+      offset: 00004AD8
+    - name: _rgi0
+      processed: ''
+      offset: 00004AE0
+    - name: _SvcCnt
+      processed: ''
+      offset: 00004EE8
+    - name: _PCacheSize
+      processed: ''
+      offset: 00004EEC
+    - name: _AD_WWkstaGetInfo
+      processed: ''
+      offset: 00004EF0
+    - name: _SESizes
+      processed: ''
+      offset: 00004F00
+    - name: _RemAPITxt
+      processed: ''
+      offset: '00005048'
+    - name: _mse
+      processed: ''
+      offset: 0000504C
+    - name: _msg
+      processed: ''
+      offset: 0000506C
+    - name: _BrowseMSlotPPath
+      processed: ''
+      offset: '00005074'
+    - name: _BrowsePPath
+      processed: ''
+      offset: 0000509C
+    - name: _BrowseOut
+      processed: ''
+      offset: 000050B0
+    - name: _BIToken
+      processed: ''
+      offset: 000050B4
+    - name: _BNThresh
+      processed: ''
+      offset: 000050B8
+    - name: _pBI
+      processed: ''
+      offset: 000050BC
+    - name: _BrowseFlag
+      processed: ''
+      offset: 000050C0
+    - name: _BrowseEvent
+      processed: ''
+      offset: 000050C4
+    - name: _rnse2
+      processed: ''
+      offset: 000050DC
+    - name: _rsi0
+      processed: ''
+      offset: '000050E4'
+    - name: _rsi1
+      processed: ''
+      offset: '000050E8'
+    - name: _ssiz
+      processed: ''
+      offset: 000050F0
+    - name: _MsgCallList
+      processed: ''
+      offset: 000054F4
+    - name: _MssngrMSlotPPath
+      processed: ''
+      offset: 000054F8
+    - name: _MssngrPPath
+      processed: ''
+      offset: '00005520'
+    - name: _MsgUName
+      processed: ''
+      offset: '00005538'
+    - name: _MsgCName
+      processed: ''
+      offset: '00005548'
+    - name: _MsgUNameSet
+      processed: ''
+      offset: '00005558'
+    - name: _MsgCNameSet
+      processed: ''
+      offset: '00005568'
+    - name: _MsgOn
+      processed: ''
+      offset: '00005578'
+    - name: _MsgBufChain
+      processed: ''
+      offset: 0000557C
+    - name: _MsgNoisy
+      processed: ''
+      offset: '00005580'
+    - name: _MsgErrCnt
+      processed: ''
+      offset: '00005584'
+    - name: _InSend
+      processed: ''
+      offset: '00005588'
+    - name: _SendMB
+      processed: ''
+      offset: 0000558C
+    - name: _time_tbl
+      processed: ''
+      offset: '00006054'
+    - name: _BcnNoisy
+      processed: ''
+      offset: '00006064'
+    - name: _BcnDbgFlag
+      processed: ''
+      offset: '00006068'
+    - name: _WfWVersion
+      processed: ''
+      offset: 0000606C
+    - name: _WfWPM
+      processed: ''
+      offset: '00006070'
+    - name: _MasterPM
+      processed: ''
+      offset: '00006074'
+    - name: _LMSlot
+      processed: ''
+      offset: '00006078'
+    - name: _LMPM
+      processed: ''
+      offset: 0000608C
+    - name: _pBMSH
+      processed: ''
+      offset: '00006090'
+    - name: _pBEH
+      processed: ''
+      offset: '00006094'
+    - name: _BCNDisabled
+      processed: ''
+      offset: '00006098'
+    - name: _RDHookList
+      processed: ''
+      offset: 0000609C
+    - name: _BRDFlag
+      processed: ''
+      offset: 000060A0
+    - name: _RNANoisy
+      processed: ''
+      offset: 000066DC
+    - name: _IPXChkSum
+      processed: ''
+      offset: '000066E0'
+    - name: _SlowIpxDelay
+      processed: ''
+      offset: '000066E4'
+    - name: _CacheActECBsptr
+      processed: ''
+      offset: '000066E8'
+    - name: _ECBFreeList
+      processed: ''
+      offset: 000066EC
+    - name: _PitchItIPX
+      processed: ''
+      offset: 000066F0
+    - name: _IpxNoisy
+      processed: ''
+      offset: 000066F4
+    - name: _mrblist
+      processed: ''
+      offset: 000066F8
+    - name: _mrbcnt
+      processed: ''
+      offset: 000066FC
+    - name: _IAmMasterCheck
+      processed: ''
+      offset: '00006700'
+    - name: _ExprMsg
+      processed: ''
+      offset: 00006EC0
+    - name: _VrdNoisy
+      processed: ''
+      offset: 00006ED4
+    - name: VREDIR_DDB
+      processed: ''
+      offset: 000071A0
+    - name: OrigNetFunc
+      processed: ''
+      offset: 000071F0
+    - name: _SysVMHandle
+      processed: ''
+      offset: 000071F4
+    - name: _pVV
+      processed: ''
+      offset: 000071F8
+    - name: _NoOtherNets
+      processed: ''
+      offset: 000071FC
+    - name: _NBPMBits
+      processed: ''
+      offset: 000071FD
+    - name: _NBRMBits
+      processed: ''
+      offset: '00007201'
+    - name: _Exclude
+      processed: ''
+      offset: '00007205'
+    - name: _IPXFlag
+      processed: ''
+      offset: '00007209'
+    - name: _NBNonPnPBits
+      processed: ''
+      offset: 0000720D
+    - name: _DnsFlag
+      processed: ''
+      offset: '00007211'
+    - name: _DFSUnwrapHandle
+      processed: ''
+      offset: '00007215'
+    - name: _LinLockFlags
+      processed: ''
+      offset: '00007219'
+    - name: _LinUnlockFlags
+      processed: ''
+      offset: 0000721D
+    - name: _NetProID
+      processed: ''
+      offset: '00007221'
+    - name: _MSlotProID
+      processed: ''
+      offset: '00007225'
+    - name: _idv
+      processed: ''
+      offset: '00007229'
+    - name: _VRDStrtErr
+      processed: ''
+      offset: '00007230'
+    - name: _VRD_state
+      processed: ''
+      offset: 0000728C
+    - name: _VNBT_Submit_X
+      processed: ''
+      offset: 0000728D
+    - name: _VNBT_LanaMask
+      processed: ''
+      offset: '00007291'
+    - name: _IpxDropSends
+      processed: ''
+      offset: '00007298'
+    - name: _DestroySemList
+      processed: ''
+      offset: 000072A0
+    - name: _DestroySemEventState
+      processed: ''
+      offset: 000072A4
+    - name: _NCBDoneQueue
+      processed: ''
+      offset: 000072A5
+    - name: _initcp
+      processed: ''
+      offset: 000072A9
+    - name: _LastCurTime
+      processed: ''
+      offset: 000072AD
+    - name: _CurrUID
+      processed: ''
+      offset: 000072B1
+    - name: _ComputerName
+      processed: ''
+      offset: 000072B3
+    - name: _LanRoot
+      processed: ''
+      offset: 000072B7
+    - name: _BrowseMSlotStr
+      processed: ''
+      offset: 000072BB
+    - name: _BrowseStr
+      processed: ''
+      offset: 000072C5
+    - name: _MssngrMSlotStr
+      processed: ''
+      offset: 000072CC
+    - name: _MssngrStr
+      processed: ''
+      offset: 000072D6
+    - name: _PrimaryDomain
+      processed: ''
+      offset: 000072DE
+    - name: _LogonDomain
+      processed: ''
+      offset: '000072E2'
+    - name: _LogonServer
+      processed: ''
+      offset: 000072F2
+    - name: _BusyLogged
+      processed: ''
+      offset: '00007304'
+    - name: _CritFlag
+      processed: ''
+      offset: 0000733C
+    - name: _pUnloadingNet
+      processed: ''
+      offset: '00007478'
+    - name: _CacheHeapSize
+      processed: ''
+      offset: 000074F8
+    - name: _NetOrderInit
+      processed: ''
+      offset: 000074FC
+    - name: _TransFlag
+      processed: ''
+      offset: '00007500'
+    - name: _DefaultHandleInfo
+      processed: ''
+      offset: '00007504'
+    - name: _VRedirInited
+      processed: ''
+      offset: 0000750C
+    - name: _PrefNet
+      processed: ''
+      offset: '00007510'
+    - name: _VRDMainMenu
+      processed: ''
+      offset: 00007B20
+    - name: _plct
+      processed: ''
+      offset: 00007B70
+    - name: _QueryDispatch
+      processed: ''
+      offset: 00007B84
+    - name: _DebugQueryCmdStr
+      processed: ''
+      offset: 00007BDC
+    - name: _DebugQueryCmdStrLen
+      processed: ''
+      offset: 00007C44
+    - name: _CmdArg
+      processed: ''
+      offset: 00007C48
+    - name: _BrLog
+      processed: ''
+      offset: 00007C68
+    - name: _RDRLogEnabled
+      processed: ''
+      offset: 00007C6C
+    - name: _pLogStart
+      processed: ''
+      offset: 00007C70
+    - name: _pLogEnd
+      processed: ''
+      offset: 00007C74
+    - name: _pLogCur
+      processed: ''
+      offset: 00007C78
+    - name: _MaxLog
+      processed: ''
+      offset: 00007C7C
+    - name: _RDRLogMask
+      processed: ''
+      offset: 00007C80
+    - name: _DbgTime
+      processed: ''
+      offset: 00007C88
+    - name: _PurgePath
+      processed: ''
+      offset: 00008BB0
+    - name: _ZapMFiles
+      processed: ''
+      offset: 00008D30
+    - name: _CloseSignalRtn
+      processed: ''
+      offset: 00008D90
+    - name: _CloseMaster
+      processed: ''
+      offset: 00008DD0
+    - name: _FreeAnchor
+      processed: ''
+      offset: '000091E0'
+    - name: _CSCInfoFunction
+      processed: ''
+      offset: '00009250'
+    - name: _NetClose
+      processed: ''
+      offset: 000093A0
+    - name: _SetupRange
+      processed: ''
+      offset: '00009420'
+    - name: _UnlinkRange
+      processed: ''
+      offset: '00009504'
+    - name: _FreeRange
+      processed: ''
+      offset: '00009580'
+    - name: _HoldRange
+      processed: ''
+      offset: '000095E0'
+    - name: _UnholdRange
+      processed: ''
+      offset: 000095FC
+    - name: _ReleaseRange
+      processed: ''
+      offset: 0000960C
+    - name: _CacheGetSize
+      processed: ''
+      offset: '00009644'
+    - name: _CacheRead
+      processed: ''
+      offset: 0000964C
+    - name: _CacheWrite
+      processed: ''
+      offset: 00009A08
+    - name: _LastRange
+      processed: ''
+      offset: 00009D70
+    - name: _WriteRange
+      processed: ''
+      offset: 00009DA0
+    - name: _WaitForAsync
+      processed: ''
+      offset: 00009F20
+    - name: _NetFileLocks
+      processed: ''
+      offset: 00009F80
+    - name: _LookAhead
+      processed: ''
+      offset: 0000A2F0
+    - name: _FixupECBs
+      processed: ''
+      offset: 0000B620
+    - name: _LookAheadCheck
+      processed: ''
+      offset: 0000B6A0
+    - name: _AssertNibCount
+      processed: ''
+      offset: 0000B740
+    - name: _SetupNib
+      processed: ''
+      offset: 0000B790
+    - name: _FreeNib
+      processed: ''
+      offset: 0000BBB0
+    - name: _ClearRawLock
+      processed: ''
+      offset: 0000BD00
+    - name: _WaitNib
+      processed: ''
+      offset: 0000BDB0
+    - name: _SignalNib
+      processed: ''
+      offset: 0000BE20
+    - name: _CheckStuckSess
+      processed: ''
+      offset: 0000BEA0
+    - name: _LazyClose
+      processed: ''
+      offset: 0000BF30
+    - name: _RemoveOpList
+      processed: ''
+      offset: 0000BFB0
+    - name: _BreakOpLock
+      processed: ''
+      offset: 0000C020
+    - name: _OpLockSignalRtn
+      processed: ''
+      offset: 0000C150
+    - name: _ReconnectSession
+      processed: ''
+      offset: 0000C1E0
+    - name: _DnsConnectDnsName
+      processed: ''
+      offset: 0000C6B0
+    - name: _ip2dword
+      processed: ''
+      offset: 0000C760
+    - name: _CloseSession
+      processed: ''
+      offset: 0000C830
+    - name: _RdrInitializeSequenceNumber
+      processed: ''
+      offset: 0000CA30
+    - name: _RdrAddSecuritySignatureToSmb
+      processed: ''
+      offset: 0000CA80
+    - name: _RdrCheckSequenceForSmb
+      processed: ''
+      offset: 0000CB20
+    - name: _RdrFreeSequenceNumber
+      processed: ''
+      offset: 0000CBC0
+    - name: _FindSession
+      processed: ''
+      offset: 0000CBE0
+    - name: _TimeoutNB
+      processed: ''
+      offset: 0000CC20
+    - name: _AllocNCB
+      processed: ''
+      offset: 0000CC50
+    - name: _FreeNCB
+      processed: ''
+      offset: 0000CD00
+    - name: _AllocRcvBuf
+      processed: ''
+      offset: 0000CDD0
+    - name: _FreeRcvBuf
+      processed: ''
+      offset: 0000CE10
+    - name: _SetupLockAndX
+      processed: ''
+      offset: 0000CE60
+    - name: _CheckRequestChain
+      processed: ''
+      offset: 0000CF00
+    - name: _VXDConnectServer2
+      processed: ''
+      offset: 0000CF50
+    - name: _VXDConnectServer
+      processed: ''
+      offset: 0000D0C0
+    - name: _VXDDisconnectServer2
+      processed: ''
+      offset: 0000D3F0
+    - name: _VXDDisconnectServer
+      processed: ''
+      offset: 0000D550
+    - name: _WaitForBrowser
+      processed: ''
+      offset: 0000D720
+    - name: _MsgClientEvent
+      processed: ''
+      offset: 0000D790
+    - name: _MsgServerEvent
+      processed: ''
+      offset: 0000D870
+    - name: _MsgSendESR
+      processed: ''
+      offset: 0000D900
+    - name: _MsgCallEvent
+      processed: ''
+      offset: 0000D940
+    - name: _MsgRNamePost
+      processed: ''
+      offset: 0000DA80
+    - name: _MsgSNamePost
+      processed: ''
+      offset: 0000DB00
+    - name: _MsgFNamePost
+      processed: ''
+      offset: 0000DB50
+    - name: _MsgHNamePost
+      processed: ''
+      offset: 0000DB90
+    - name: _MsgIPXPost
+      processed: ''
+      offset: 0000DBE0
+    - name: _MsgReSendPost
+      processed: ''
+      offset: 0000DC70
+    - name: _AllocMsgBuf
+      processed: ''
+      offset: 0000DD00
+    - name: _FreeMsgBuf
+      processed: ''
+      offset: 0000DD80
+    - name: _IPXLookAhead
+      processed: ''
+      offset: 0000DE10
+    - name: _LookPost
+      processed: ''
+      offset: '0000E110'
+    - name: _IpxSendComplete
+      processed: ''
+      offset: 0000E1A0
+    - name: _TimeoutCDP
+      processed: ''
+      offset: '0000E330'
+    - name: _IpxCallESR
+      processed: ''
+      offset: '0000E490'
+    - name: _CallResponse
+      processed: ''
+      offset: 0000E4D0
+    - name: _IpxSendDGESR
+      processed: ''
+      offset: 0000E7D0
+    - name: _SendDatagramCDP
+      processed: ''
+      offset: '0000E860'
+    - name: _MSlotLookAhead
+      processed: ''
+      offset: 0000EB50
+    - name: _MSlotPost
+      processed: ''
+      offset: 0000EDE0
+    - name: _AllocECB
+      processed: ''
+      offset: 0000EF50
+    - name: _FreeECB
+      processed: ''
+      offset: 0000F020
+    - name: _AllocMRB
+      processed: ''
+      offset: 0000F0F0
+    - name: _FreeMRB
+      processed: ''
+      offset: 0000F130
+    - name: _IncCtr
+      processed: ''
+      offset: 0000F150
+    - name: _DecCtr
+      processed: ''
+      offset: 0000F170
+    - name: _AssertResource
+      processed: ''
+      offset: 0000F1A0
+    - name: _CheckResource
+      processed: ''
+      offset: 0000F220
+    - name: _AssertSession
+      processed: ''
+      offset: 0000F260
+    - name: _CheckSession
+      processed: ''
+      offset: 0000F2E0
+    - name: _SessInSessChain
+      processed: ''
+      offset: 0000F340
+    - name: _AssertNet
+      processed: ''
+      offset: 0000F370
+    - name: _AssertParsedPath
+      processed: ''
+      offset: 0000F3C0
+    - name: _AssertString
+      processed: ''
+      offset: 0000F3E0
+    - name: _AssertMFile
+      processed: ''
+      offset: 0000F400
+    - name: _AssertSrchHdr
+      processed: ''
+      offset: 0000F440
+    - name: _AssertSrchHdrCh
+      processed: ''
+      offset: 0000F490
+    - name: _AssertRanges
+      processed: ''
+      offset: 0000F500
+    - name: _AssertFailed
+      processed: ''
+      offset: 0000F510
+    - name: _BUF_PUTC
+      processed: ''
+      offset: 0000F550
+    - name: _BUF_PUTS
+      processed: ''
+      offset: 0000F570
+    - name: _putl
+      processed: ''
+      offset: 0000F5A0
+    - name: _dprintf
+      processed: ''
+      offset: 0000F610
+    - name: VRedirControl
+      processed: ''
+      offset: 0000FAA0
+    - name: VRDDeviceIOControl
+      processed: ''
+      offset: 0000FAD5
+    - name: VRDDumpDebug
+      processed: ''
+      offset: 0000FAFD
+    - name: VRD_TRShutDown
+      processed: ''
+      offset: 0000FB53
+    - name: _badreq
+      processed: ''
+      offset: 0000FB62
+    - name: VRD_NetFunction
+      processed: ''
+      offset: 0000FB64
+    - name: VRedir_Get_Version
+      processed: ''
+      offset: 0000FBA4
+    - name: VRDPnpNewDevNode
+      processed: ''
+      offset: 0000FBB8
+    - name: _NotifyIFS
+      processed: ''
+      offset: 0000FBC8
+    - name: _VRDInitComplete
+      processed: ''
+      offset: 0000FBCF
+    - name: _VRD_IFSMgr_RegisterNet
+      processed: ''
+      offset: 0000FC5A
+    - name: _VRD_IFSMgr_RegisterMailSlot
+      processed: ''
+      offset: 0000FC99
+    - name: _devnode2lana
+      processed: ''
+      offset: 0000FCAA
+    - name: _IsNWLinkDevnode
+      processed: ''
+      offset: 0000FCBC
+    - name: _RdrPostDiskMessage
+      processed: ''
+      offset: 0000FCE6
+    - name: _DoMapFlat
+      processed: ''
+      offset: 0000FD34
+    - name: _LOGENTRY
+      processed: ''
+      offset: 0000FD42
+    - name: _GHS
+      processed: ''
+      offset: 0000FD4C
+    - name: _FGHS
+      processed: ''
+      offset: 0000FD4C
+    - name: _RetHeap
+      processed: ''
+      offset: 0000FD52
+    - name: _PassEncrypt
+      processed: ''
+      offset: 0000FD58
+    - name: _PassEncrypt2
+      processed: ''
+      offset: 0000FD5E
+    - name: _PassEncryptNT
+      processed: ''
+      offset: 0000FD64
+    - name: _AssertHeap
+      processed: ''
+      offset: 0000FD6A
+    - name: _AssertHeapItem
+      processed: ''
+      offset: 0000FD70
+    - name: _DebugMenu
+      processed: ''
+      offset: 0000FD76
+    - name: _VMM_OutDebugString
+      processed: ''
+      offset: 0000FD7C
+    - name: _EndCritSec
+      processed: ''
+      offset: 0000FD9C
+    - name: _GetTimeZoneBias
+      processed: ''
+      offset: 0000FDA4
+    - name: _IFSUpdateTimezoneInfo
+      processed: ''
+      offset: 0000FDAC
+    - name: _NumFreeMapPages
+      processed: ''
+      offset: 0000FDBC
+    - name: _VNBT_GetVer
+      processed: ''
+      offset: 0000FDC8
+    - name: _Vnbt_Submit@20
+      processed: ''
+      offset: 0000FDDE
+    - name: _Vnbt_LanaMask@0
+      processed: ''
+      offset: 0000FDF4
+    - name: _V86MapPages
+      processed: ''
+      offset: 0000FE18
+    - name: _V86FreeMap
+      processed: ''
+      offset: 0000FE3C
+    - name: _LinLock
+      processed: ''
+      offset: 0000FE6C
+    - name: _LinUnlock
+      processed: ''
+      offset: 0000FE72
+    - name: _SetupConnection
+      processed: ''
+      offset: 0000FE78
+    - name: _DerefConnection
+      processed: ''
+      offset: 0000FE7E
+    - name: _DoDelAllUses
+      processed: ''
+      offset: 0000FE84
+    - name: _IFSDelAllUses
+      processed: ''
+      offset: 0000FE8A
+    - name: _VBlock
+      processed: ''
+      offset: 0000FE90
+    - name: _VWakeUp
+      processed: ''
+      offset: 0000FE96
+    - name: _Yield
+      processed: ''
+      offset: 0000FE9C
+    - name: _SchedEvent
+      processed: ''
+      offset: 0000FEA2
+    - name: _QueueEvent
+      processed: ''
+      offset: 0000FEA8
+    - name: _KillEvent
+      processed: ''
+      offset: 0000FEAE
+    - name: _FreeIOReq
+      processed: ''
+      offset: 0000FEB4
+    - name: _CompleteAsync
+      processed: ''
+      offset: 0000FEBA
+    - name: _IFSMakeMailSlot
+      processed: ''
+      offset: 0000FEC0
+    - name: _IFSWriteMSlot
+      processed: ''
+      offset: 0000FEC6
+    - name: _IFSDeleteMailSlot
+      processed: ''
+      offset: 0000FECC
+    - name: _IFSTransMatch
+      processed: ''
+      offset: 0000FED2
+    - name: _IFSMetaMatch
+      processed: ''
+      offset: 0000FED8
+    - name: _IFSBCSToUni
+      processed: ''
+      offset: 0000FEDE
+    - name: _IFSUniToBCSPath
+      processed: ''
+      offset: 0000FEE4
+    - name: _IFSUniToBCS
+      processed: ''
+      offset: 0000FEEA
+    - name: _IFSUniToUpper
+      processed: ''
+      offset: 0000FEF0
+    - name: _IFSInitUseAdd
+      processed: ''
+      offset: 0000FEF6
+    - name: _IFSUseAdd
+      processed: ''
+      offset: 0000FEFC
+    - name: _IFSUseDel
+      processed: ''
+      offset: 0000FF02
+    - name: _NetToDosDate
+      processed: ''
+      offset: 0000FF08
+    - name: _DosToNetDate
+      processed: ''
+      offset: 0000FF0E
+    - name: _IFSDosToWin32Time
+      processed: ''
+      offset: 0000FF14
+    - name: _IFSNetToWin32Time
+      processed: ''
+      offset: 0000FF1A
+    - name: _DFSConnectResource
+      processed: ''
+      offset: 0000FF20
+    - name: _DFSPrefixClaim
+      processed: ''
+      offset: 0000FF26
+    - name: _DFSInstallMapping
+      processed: ''
+      offset: 0000FF2C
+    - name: _DFSNotifyResourceRemoval
+      processed: ''
+      offset: 0000FF32
+    - name: _IFSWin32ToDosTime
+      processed: ''
+      offset: 0000FF38
+    - name: _FillHeapSpare
+      processed: ''
+      offset: 0000FF3E
+    - name: _CreateSem
+      processed: ''
+      offset: 0000FF44
+    - name: _DestroySem
+      processed: ''
+      offset: 0000FF57
+    - name: _DbgEventProc
+      processed: ''
+      offset: '00010000'
+    - name: _SchedDbgCheck
+      processed: ''
+      offset: '00010006'
+    - name: _DestroySemEvent
+      processed: ''
+      offset: '00010024'
+    - name: _DestroySemEvent2
+      processed: ''
+      offset: 0001006E
+    - name: _SignalSem
+      processed: ''
+      offset: '00010094'
+    - name: _WaitSem
+      processed: ''
+      offset: 000100BC
+    - name: _SpecMapFlat
+      processed: ''
+      offset: 0001010E
+    - name: _GetTime
+      processed: ''
+      offset: '00010148'
+    - name: _GetSysTime
+      processed: ''
+      offset: 0001015A
+    - name: _GetSysTimeMS
+      processed: ''
+      offset: 0001016E
+    - name: _SubmitNCB
+      processed: ''
+      offset: '00010178'
+    - name: _GeneralPost
+      processed: ''
+      offset: '00010233'
+    - name: _RDgPost
+      processed: ''
+      offset: 0001023A
+    - name: _CallPost
+      processed: ''
+      offset: '00010241'
+    - name: _MsgCPost
+      processed: ''
+      offset: '00010248'
+    - name: _MsgSPost
+      processed: ''
+      offset: 0001024F
+    - name: _RAPost
+      processed: ''
+      offset: '00010256'
+    - name: _RdrOpenSocket
+      processed: ''
+      offset: '00010384'
+    - name: _RdrGetMaxPacketSize
+      processed: ''
+      offset: 000103B8
+    - name: _MSlotOpenSocket
+      processed: ''
+      offset: '000103E0'
+    - name: _MsgLookEntry
+      processed: ''
+      offset: '00010410'
+    - name: _MsgOpenSocket
+      processed: ''
+      offset: '00010428'
+    - name: _IpxOpenSocket
+      processed: ''
+      offset: '00010458'
+    - name: _IpxCloseSocket
+      processed: ''
+      offset: 0001047C
+    - name: _IpxGetLocalTarget
+      processed: ''
+      offset: '00010492'
+    - name: _IpxDisp1parm
+      processed: ''
+      offset: 000104B6
+    - name: _MsgAdjust
+      processed: ''
+      offset: '00010504'
+    - name: _allocmem
+      processed: ''
+      offset: 0001054A
+    - name: _freemem
+      processed: ''
+      offset: 0001055D
+    - name: _GetFreeLockMemory
+      processed: ''
+      offset: '00010570'
+    - name: _MulZeroIfOverFlow
+      processed: ''
+      offset: '00010580'
+    - name: _FinishNetUnbind
+      processed: ''
+      offset: 000105A0
+    - name: _RDRLogEntry
+      processed: ''
+      offset: '000106E0'
+  - num: '2'
+    name: _IMSG$1
+    offset: 00006C10
+    symbols:
+    - name: '@MSG_IAB'
+      processed: ''
+      offset: '00000000'
+    - name: '@MSG_IDATA'
+      processed: ''
+      offset: '00000040'
+  - num: '3'
+    name: _FIOCODE
+    offset: 00008B80
+    symbols:
+    - name: _NetOpen
+      processed: ''
+      offset: '00000000'
+    - name: _BadRequest
+      processed: ''
+      offset: 000006D0
+    - name: _NopRequest
+      processed: ''
+      offset: 000006F0
+    - name: _FindAnchor
+      processed: ''
+      offset: '00000710'
+    - name: _CheckAnchor
+      processed: ''
+      offset: '00000880'
+    - name: _FindMaster
+      processed: ''
+      offset: '00000920'
+    - name: _GetMaster
+      processed: ''
+      offset: 000009D0
+    - name: _CalcCRC
+      processed: ''
+      offset: 00000B00
+    - name: _NetCommit
+      processed: ''
+      offset: 00000B30
+    - name: _DiskFullErrorMessage
+      processed: ''
+      offset: 00000BC0
+    - name: _LazySignalRtn
+      processed: ''
+      offset: 00000C10
+    - name: _FlushAllFiles
+      processed: ''
+      offset: 00000C60
+    - name: _CacheFlush
+      processed: ''
+      offset: 00000CF0
+    - name: _CacheDiscard
+      processed: ''
+      offset: 00000D70
+    - name: _FlushLazy
+      processed: ''
+      offset: 00000DD0
+    - name: _CloseLocks
+      processed: ''
+      offset: 00000EA0
+    - name: _UnlockRecord
+      processed: ''
+      offset: 00000F20
+    - name: _NetDir
+      processed: ''
+      offset: '00001040'
+    - name: _DuplicateParsedPath
+      processed: ''
+      offset: 000012D0
+    - name: _NetFileAttributes
+      processed: ''
+      offset: '00001360'
+    - name: _NetFileTime
+      processed: ''
+      offset: 000014A0
+    - name: _CoreGetVolumeSN
+      processed: ''
+      offset: '00001620'
+    - name: _NetFileEnum
+      processed: ''
+      offset: '000016E0'
+    - name: _AdjustCoreTimeToNet
+      processed: ''
+      offset: '00001870'
+    - name: _AdjustCoreTimeFromNet
+      processed: ''
+      offset: 000018C0
+    - name: _AdjustNetTimeToNet
+      processed: ''
+      offset: '00001910'
+    - name: _AdjustNetTimeFromNet
+      processed: ''
+      offset: '00001950'
+    - name: _QueryResource
+      processed: ''
+      offset: '00001990'
+    - name: _GetResource
+      processed: ''
+      offset: 00001A90
+    - name: _CleanUpSession
+      processed: ''
+      offset: 00001B20
+    - name: _Transact
+      processed: ''
+      offset: 00001C40
+    - name: _SendAllNets
+      processed: ''
+      offset: '000022E0'
+    - name: _TransactSignalRtn
+      processed: ''
+      offset: 000023D0
+    - name: _TransLooker
+      processed: ''
+      offset: '00002590'
+    - name: _PPathToZStr
+      processed: ''
+      offset: '00002630'
+    - name: _UniToZStr
+      processed: ''
+      offset: '00002660'
+    - name: _IsValidFilename
+      processed: ''
+      offset: 000026B0
+    - name: _CheckMatch
+      processed: ''
+      offset: '00002710'
+    - name: _NetFindOpen
+      processed: ''
+      offset: '00002830'
+    - name: _NetFindNext
+      processed: ''
+      offset: 00002D20
+    - name: _CopyLFNSearch
+      processed: ''
+      offset: 00002FC0
+    - name: _CoreSearch
+      processed: ''
+      offset: '00003520'
+    - name: _AllocLFNSearchKey
+      processed: ''
+      offset: '00003710'
+    - name: _FreeLFNSearchKey
+      processed: ''
+      offset: 000037A0
+    - name: _NetFindClose
+      processed: ''
+      offset: '00003810'
+    - name: _GetVolumeInfo
+      processed: ''
+      offset: '00003870'
+    - name: _GetVolumeLabel
+      processed: ''
+      offset: '000039E0'
+    - name: _GetFSTypeFromName
+      processed: ''
+      offset: 00003BD0
+    - name: _QueryFSInfo
+      processed: ''
+      offset: 00003C40
+    - name: _QueryDirName
+      processed: ''
+      offset: 00003EF0
+    - name: _GetPathName
+      processed: ''
+      offset: '00004180'
+    - name: _HangUpCDP
+      processed: ''
+      offset: 000043D0
+    - name: _SendNetCDP
+      processed: ''
+      offset: 000043F0
+    - name: _SendPacket
+      processed: ''
+      offset: '00004580'
+    - name: _UserToMD
+      processed: ''
+      offset: '00004790'
+    - name: _LockMD
+      processed: ''
+      offset: '00004830'
+    - name: _SysToMD
+      processed: ''
+      offset: 00004AC0
+    - name: _BumpMD
+      processed: ''
+      offset: 00004AF0
+    - name: _FreeMD
+      processed: ''
+      offset: 00004B20
+    - name: _CopyToUser
+      processed: ''
+      offset: 00004BA0
+    - name: _CopyFromUser
+      processed: ''
+      offset: 00004BE0
+    - name: _Xact
+      processed: ''
+      offset: 00004C20
+  - num: '4'
+    name: PNP
+    offset: 0000A020
+    symbols:
+    - name: _ResetNet
+      processed: ''
+      offset: '00000000'
+    - name: _InitNetBIOS
+      processed: ''
+      offset: '00000050'
+    - name: _VRD_SetNames
+      processed: ''
+      offset: '00000140'
+    - name: _StartRedir
+      processed: ''
+      offset: '00000240'
+    - name: _ServiceInit
+      processed: ''
+      offset: 000002C0
+    - name: _InitBrowserMSlot
+      processed: ''
+      offset: '00000390'
+    - name: _StartBrowserMSlot
+      processed: ''
+      offset: '00000450'
+    - name: _StopBrowserMSlot
+      processed: ''
+      offset: '00000490'
+    - name: _MsgInit
+      processed: ''
+      offset: 000004F0
+    - name: _MsgClose
+      processed: ''
+      offset: 000005D0
+    - name: _InitBeacons
+      processed: ''
+      offset: '00000600'
+    - name: _VXDBcnWfWBrowser
+      processed: ''
+      offset: 000009C0
+    - name: _VXDNetInfo
+      processed: ''
+      offset: '000009E0'
+    - name: _VXDBcnSetHook
+      processed: ''
+      offset: 00000AA0
+    - name: _InitIPX
+      processed: ''
+      offset: 00000B30
+    - name: _GetDevnode
+      processed: ''
+      offset: 00000BA0
+    - name: _GetIpxNet
+      processed: ''
+      offset: 00000BF0
+    - name: _BindDevnode
+      processed: ''
+      offset: 00000C10
+    - name: _UnbindDevnode
+      processed: ''
+      offset: 00000C70
+    - name: _SetNetPriorities
+      processed: ''
+      offset: 00000CD0
+    - name: _BindToIPX
+      processed: ''
+      offset: 00000D70
+    - name: _UnbindToIPX
+      processed: ''
+      offset: 00000F30
+    - name: _BindToNetbiosTransport
+      processed: ''
+      offset: 00000FE0
+    - name: _UnbindToNetbiosTransport
+      processed: ''
+      offset: 000011D0
+    - name: _InitRedir
+      processed: ''
+      offset: '00001230'
+    - name: _BindToNet
+      processed: ''
+      offset: '00001390'
+    - name: _BindToNonPnPNets
+      processed: ''
+      offset: '00001620'
+    - name: _StartNetUnbind
+      processed: ''
+      offset: '00001720'
+    - name: _VXDSetIPXError
+      processed: ''
+      offset: 000017C0
+    - name: _MoreTransition
+      processed: ''
+      offset: '00001800'
+    - name: _DoTransition
+      processed: ''
+      offset: '00001820'
+    - name: _GetIniInfo
+      processed: ''
+      offset: 00001B60
+    - name: _CheckEnvironment
+      processed: ''
+      offset: 00001CA0
+    - name: _VRDSetIniErr
+      processed: ''
+      offset: 00001D60
+    - name: _VRDSetIniErrStr
+      processed: ''
+      offset: 00001D70
+    - name: _VRDSetIniErrVars
+      processed: ''
+      offset: 00001DC0
+    - name: _VRDSetIniVersErr
+      processed: ''
+      offset: '00001E00'
+    - name: _IsNetDevnode
+      processed: ''
+      offset: '00001E50'
+    - name: _Yield2
+      processed: ''
+      offset: '00001E80'
+    - name: _ClearSessionVisits
+      processed: ''
+      offset: '00001E90'
+    - name: _VisitSessions
+      processed: ''
+      offset: 00001EA0
+    - name: _ClearResourceVisits
+      processed: ''
+      offset: 00001F10
+    - name: _VisitResources
+      processed: ''
+      offset: 00001F60
+    - name: _VredirApmCountFiles
+      processed: ''
+      offset: 00001FC0
+    - name: _VRD_NotifyEvent
+      processed: ''
+      offset: '00002050'
+    - name: _VRD_devnode_add2list
+      processed: ''
+      offset: '000020E0'
+    - name: _VRD_devnode_isinlist
+      processed: ''
+      offset: '00002110'
+    - name: _VRD_Config_Manager_Handler
+      processed: ''
+      offset: '00002150'
+    - name: _GetLogDriverName
+      processed: ''
+      offset: '00002610'
+    - name: _VRD_IsSlowNet
+      processed: ''
+      offset: 000026B0
+    - name: _VRD_Process_Devnode
+      processed: ''
+      offset: 000027D0
+    - name: _VRD_NotifyNBArrival
+      processed: ''
+      offset: 000028D0
+    - name: _VRD_SetNotifyEvent
+      processed: ''
+      offset: '00002960'
+    - name: _VRD_PNP_New_Devnode
+      processed: ''
+      offset: '00002980'
+    - name: _VRD_Process_Pending_Devnodes
+      processed: ''
+      offset: 00002AA0
+    - name: _VRD_ChkDomainOverride
+      processed: ''
+      offset: 00002AF0
+    - name: _VRD_InitIFSMgr
+      processed: ''
+      offset: 00002BC0
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      processed: ''
+      offset: 00002C30
+    - name: _CCODE__CONFIGMG_Get_Parent
+      processed: ''
+      offset: 00002C38
+    - name: _CCODE__CONFIGMG_Call_At_Appy_Time
+      processed: ''
+      offset: 00002C40
+    - name: _CCODE__CONFIGMG_Register_Device_Driver
+      processed: ''
+      offset: 00002C48
+    - name: _CCODE__RegCloseKey
+      processed: ''
+      offset: 00002C50
+    - name: _CCODE__RegQueryValueEx
+      processed: ''
+      offset: 00002C58
+    - name: _CCODE__RegOpenKey
+      processed: ''
+      offset: 00002C60
+  - num: '5'
+    name: _BRWSCODE
+    offset: 0000AC80
+    symbols:
+    - name: _CheckIdleConnection
+      processed: ''
+      offset: '00000000'
+    - name: _wstrlen
+      processed: ''
+      offset: 000001D0
+    - name: _initIsLeadByte
+      processed: ''
+      offset: '00000200'
+    - name: _AddPathElement
+      processed: ''
+      offset: '00000250'
+    - name: _MakePPath
+      processed: ''
+      offset: '00000300'
+    - name: _DeleteLastElement
+      processed: ''
+      offset: 000003B0
+    - name: _OtherNCBs
+      processed: ''
+      offset: 000003F0
+    - name: _RcvDataGram
+      processed: ''
+      offset: '00000510'
+    - name: _SendDatagramNB
+      processed: ''
+      offset: '00000630'
+    - name: _RDGNCBs
+      processed: ''
+      offset: 000006B0
+    - name: _BrowseTimeOut
+      processed: ''
+      offset: '00000880'
+    - name: _BrowseProc
+      processed: ''
+      offset: '00000930'
+    - name: _NewBackupName
+      processed: ''
+      offset: 00000BF0
+    - name: _SendBrowseMailslot
+      processed: ''
+      offset: 00000D50
+    - name: _QueryWorkgroupBrowsemaster
+      processed: ''
+      offset: 00000DF0
+    - name: _CallBrowseMaster
+      processed: ''
+      offset: 00000F40
+    - name: _CauseElection
+      processed: ''
+      offset: '00001090'
+    - name: _CallDC
+      processed: ''
+      offset: '00001160'
+    - name: _VXDBcnIncWfWCount
+      processed: ''
+      offset: '00001260'
+    - name: _BcnFromLana
+      processed: ''
+      offset: 000012F0
+    - name: _BcnStartTimer
+      processed: ''
+      offset: '00001420'
+    - name: _BDFSetNib
+      processed: ''
+      offset: 000014B0
+    - name: _BDFDoSend
+      processed: ''
+      offset: '00001500'
+    - name: _WfWBDF
+      processed: ''
+      offset: '00001640'
+    - name: _BcnEventFunc
+      processed: ''
+      offset: '00001700'
+    - name: _BcnPulseComplete
+      processed: ''
+      offset: '000017E0'
+    - name: _BcnSignalRtn
+      processed: ''
+      offset: 000018A0
+    - name: _BcnDefMSlotProc
+      processed: ''
+      offset: 000018F0
+    - name: _BcnDefHook
+      processed: ''
+      offset: '00001970'
+    - name: _BcnNewMaster
+      processed: ''
+      offset: 000019A0
+    - name: _BcnMSlotProc
+      processed: ''
+      offset: 00001A20
+    - name: _rnd
+      processed: ''
+      offset: 00001B30
+    - name: _rndtime
+      processed: ''
+      offset: 00001B80
+    - name: _FindRemoteDebug
+      processed: ''
+      offset: 00001BB0
+    - name: _RDMSlotProc
+      processed: ''
+      offset: 00001BF0
+    - name: _PollCDP
+      processed: ''
+      offset: 00001C50
+  - num: '6'
+    name: _PTEXT
+    offset: 00012F40
+    symbols:
+    - name: _ForceClosed
+      processed: ''
+      offset: '00000000'
+    - name: _CloseAllFiles
+      processed: ''
+      offset: '00000050'
+    - name: _FileRead
+      processed: ''
+      offset: '00000090'
+    - name: _DisplaySum
+      processed: ''
+      offset: '00000220'
+    - name: _SetReadAhead
+      processed: ''
+      offset: '00000340'
+    - name: _ReadFromNet
+      processed: ''
+      offset: '00000430'
+    - name: _MuxReadSignalRtn
+      processed: ''
+      offset: 000008B0
+    - name: _FileWrite
+      processed: ''
+      offset: 000008F0
+    - name: _ReadData
+      processed: ''
+      offset: 00000CD0
+    - name: _FillBuffer
+      processed: ''
+      offset: 00000D50
+    - name: _LazyWrite
+      processed: ''
+      offset: 00000F20
+    - name: _FinishWriteRange
+      processed: ''
+      offset: '00001150'
+    - name: _NetSeek
+      processed: ''
+      offset: '00001260'
+    - name: _LockCheck
+      processed: ''
+      offset: '00001340'
+    - name: _LazyLockTimer
+      processed: ''
+      offset: '00001410'
+    - name: _SendNib
+      processed: ''
+      offset: 000014D0
+    - name: _ErrMap
+      processed: ''
+      offset: '00001510'
+    - name: _NetDelete
+      processed: ''
+      offset: '00001540'
+    - name: _NetRename
+      processed: ''
+      offset: 000016F0
+    - name: _NetGetDiskInfo
+      processed: ''
+      offset: 000017D0
+    - name: _GetNameNum
+      processed: ''
+      offset: '00001850'
+    - name: _GetPrtJobID
+      processed: ''
+      offset: '00001890'
+    - name: _GetSrchBuf
+      processed: ''
+      offset: '00001920'
+    - name: _FreeSrchBuf
+      processed: ''
+      offset: '00001980'
+    - name: _FlushResSrch
+      processed: ''
+      offset: 000019B0
+    - name: _CheckSrchCache
+      processed: ''
+      offset: 00001A00
+    - name: _NetSearch
+      processed: ''
+      offset: 00001B10
+    - name: _FixName
+      processed: ''
+      offset: 00001FC0
+    - name: _XlateSearchPath
+      processed: ''
+      offset: 00001FE0
+    - name: _OpLockCheck
+      processed: ''
+      offset: '00002030'
+    - name: _OpLkWorker
+      processed: ''
+      offset: '000020E0'
+    - name: _ConnectResource
+      processed: ''
+      offset: '00002190'
+    - name: _dummy
+      processed: ''
+      offset: 000028C0
+    - name: _SetupTID
+      processed: ''
+      offset: 000028D0
+    - name: _DisconnectResource
+      processed: ''
+      offset: 000029A0
+    - name: _GetVCCount
+      processed: ''
+      offset: 00002A40
+    - name: _GetSession
+      processed: ''
+      offset: 00002AA0
+    - name: _SetupSessX
+      processed: ''
+      offset: 00002D20
+    - name: _SetupSessXNT
+      processed: ''
+      offset: 00002F30
+    - name: _FillTConStruct
+      processed: ''
+      offset: 000033F0
+    - name: _ReconnectResource
+      processed: ''
+      offset: '00003560'
+    - name: _ServerLogoff
+      processed: ''
+      offset: 00003D20
+    - name: _DisconnectSignalRtn
+      processed: ''
+      offset: 00003F50
+    - name: _CloseResource
+      processed: ''
+      offset: 00003FA0
+    - name: _FinishDisconnect
+      processed: ''
+      offset: '00004110'
+    - name: _MakeResourceDfs
+      processed: ''
+      offset: '00004240'
+    - name: _SessCloseRestart
+      processed: ''
+      offset: '00004270'
+    - name: _StopSessRes
+      processed: ''
+      offset: 000042A0
+    - name: _InitSessRes
+      processed: ''
+      offset: 000042B0
+    - name: _DropLSN
+      processed: ''
+      offset: '000042E0'
+    - name: _PollNB
+      processed: ''
+      offset: '00004310'
+    - name: _MaxXmitNB
+      processed: ''
+      offset: '00004320'
+    - name: _RawNib
+      processed: ''
+      offset: '00004350'
+    - name: _RANCBs
+      processed: ''
+      offset: '000043E0'
+    - name: _MIDFromLSN
+      processed: ''
+      offset: 000046D0
+    - name: _FindAndDequeueCallNCB
+      processed: ''
+      offset: '00004740'
+    - name: _CallNCBs
+      processed: ''
+      offset: '00004780'
+    - name: _DeleteNameNB
+      processed: ''
+      offset: 00004B10
+    - name: _CallServerNB
+      processed: ''
+      offset: 00004BA0
+    - name: _CallServerVNBT
+      processed: ''
+      offset: 00004D00
+    - name: _CancelCallServerNB
+      processed: ''
+      offset: '00004E80'
+    - name: _HangUpNB
+      processed: ''
+      offset: 00004EE0
+    - name: _SendNetDbg
+      processed: ''
+      offset: 00004F30
+    - name: _SendNetNB
+      processed: ''
+      offset: 00004F50
+    - name: _ReceiveNetNB
+      processed: ''
+      offset: 000051D0
+    - name: _AllocNCBNoWait
+      processed: ''
+      offset: '00005240'
+    - name: _SpinUpVC
+      processed: ''
+      offset: '00005260'
+    - name: _AddnameWait
+      processed: ''
+      offset: '00005360'
+    - name: _AddNameNB
+      processed: ''
+      offset: '00005380'
+    - name: _StartNetClose
+      processed: ''
+      offset: '00005460'
+    - name: _FinishNetClose
+      processed: ''
+      offset: '00005520'
+    - name: _StopRedir
+      processed: ''
+      offset: '00005550'
+    - name: _MslotAddNet
+      processed: ''
+      offset: 000055C0
+    - name: _MslotDelNet
+      processed: ''
+      offset: '00005600'
+    - name: _MailSlotFunction
+      processed: ''
+      offset: '00005620'
+    - name: _RemoteMailSlotWrite
+      processed: ''
+      offset: '00005700'
+    - name: _VXDRemoteMailSlotWrite
+      processed: ''
+      offset: 000057F0
+    - name: _MakeDGramName
+      processed: ''
+      offset: 000058B0
+    - name: _SimAsyncPipe
+      processed: ''
+      offset: 00005A80
+    - name: _PipeWakeupEvent
+      processed: ''
+      offset: 00005AE0
+    - name: _PipeReadWakeupEvent
+      processed: ''
+      offset: 00005B00
+    - name: _PipeRead
+      processed: ''
+      offset: 00005B40
+    - name: _PipeRead2
+      processed: ''
+      offset: 00005BA0
+    - name: _SendPipeRead
+      processed: ''
+      offset: '00005E40'
+    - name: _PipeReadSignalRtn
+      processed: ''
+      offset: 00005F90
+    - name: _PipeWrite
+      processed: ''
+      offset: '00006080'
+    - name: _SendPipeWrite
+      processed: ''
+      offset: 000061C0
+    - name: _PipeWriteSignalRtn
+      processed: ''
+      offset: 000062F0
+    - name: _HandleInfo
+      processed: ''
+      offset: '000063E0'
+    - name: _SimPipeTransact
+      processed: ''
+      offset: '00006520'
+    - name: _SimCallPipe
+      processed: ''
+      offset: '00006710'
+    - name: _PipeRequest
+      processed: ''
+      offset: '000067E0'
+    - name: _PipeRequest2
+      processed: ''
+      offset: '00006800'
+    - name: _PipeLooker
+      processed: ''
+      offset: 00006B80
+    - name: _LogonUser
+      processed: ''
+      offset: 00006C40
+    - name: _LogoffUser
+      processed: ''
+      offset: '00006E10'
+    - name: _QueryUser
+      processed: ''
+      offset: '00006E90'
+    - name: _ZapUserInfo
+      processed: ''
+      offset: 00006F30
+    - name: _UserCleanUp
+      processed: ''
+      offset: 00006F60
+    - name: _XlateNTSearchPath
+      processed: ''
+      offset: '00007020'
+    - name: _GetSetFileInfo
+      processed: ''
+      offset: '00007240'
+    - name: _GetNTFileInfo
+      processed: ''
+      offset: '00007460'
+    - name: _NetFunction
+      processed: ''
+      offset: '000075E0'
+    - name: _WIN32_IOCtl
+      processed: ''
+      offset: '00007900'
+    - name: _GetFastBindCount
+      processed: ''
+      offset: 00007A90
+    - name: _GetConnectionQOS
+      processed: ''
+      offset: 00007B40
+    - name: _EncryptPassword
+      processed: ''
+      offset: 00007C30
+    - name: _CrackOEMPath
+      processed: ''
+      offset: '00008150'
+    - name: _VRDCaseMapString
+      processed: ''
+      offset: '00008280'
+    - name: _GetPrintQueue
+      processed: ''
+      offset: 000082F0
+    - name: _AddUse
+      processed: ''
+      offset: '00008710'
+    - name: _DelUse
+      processed: ''
+      offset: 000087A0
+    - name: _FillNetInfo
+      processed: ''
+      offset: '000087E0'
+    - name: _GetNetInfo
+      processed: ''
+      offset: '00008830'
+    - name: _SetNetInfo
+      processed: ''
+      offset: 000088B0
+    - name: _GetBrowseMaster
+      processed: ''
+      offset: '00008910'
+    - name: _MapDevnode
+      processed: ''
+      offset: 000089F0
+    - name: _NetTransact
+      processed: ''
+      offset: 00008A70
+    - name: _NBEnum
+      processed: ''
+      offset: 00008D60
+    - name: _NetIRemoteAPI
+      processed: ''
+      offset: '00008E30'
+    - name: _GetArrayLength
+      processed: ''
+      offset: 000090C0
+    - name: _GetFieldSize
+      processed: ''
+      offset: 000091D0
+    - name: _GetStructSize
+      processed: ''
+      offset: 000092A0
+    - name: _set_pointer
+      processed: ''
+      offset: 000092F0
+    - name: _RcvBufferConvert
+      processed: ''
+      offset: '00009320'
+    - name: _PackSendBuf
+      processed: ''
+      offset: '00009450'
+    - name: _RemoteAPIBuilder
+      processed: ''
+      offset: '00009680'
+    - name: _RemoteAPIFinish
+      processed: ''
+      offset: 00009DE0
+    - name: _GetLogonInfo
+      processed: ''
+      offset: 00009FC0
+    - name: _SetLogonInfo
+      processed: ''
+      offset: 0000A090
+    - name: _SetUserName
+      processed: ''
+      offset: 0000A110
+    - name: _VXDValidateUser
+      processed: ''
+      offset: 0000A1E0
+    - name: _SendGroupEnum
+      processed: ''
+      offset: 0000A5C0
+    - name: _VXDUserGetGroups
+      processed: ''
+      offset: 0000A7B0
+    - name: _TestSecurity
+      processed: ''
+      offset: 0000A850
+    - name: _ServiceEnum
+      processed: ''
+      offset: 0000AC20
+    - name: _ServiceControl
+      processed: ''
+      offset: 0000ACF0
+    - name: _ServiceNotify
+      processed: ''
+      offset: 0000ADF0
+    - name: _GetServiceStruct
+      processed: ''
+      offset: 0000AF00
+    - name: _GetEnumInfo
+      processed: ''
+      offset: 0000AF70
+    - name: _WkstaGetInfo
+      processed: ''
+      offset: 0000B1D0
+    - name: _DoWkstaGetInfo
+      processed: ''
+      offset: 0000B250
+    - name: _WWkstaGetInfo
+      processed: ''
+      offset: 0000B340
+    - name: _BuildAPIStruct
+      processed: ''
+      offset: 0000B3D0
+    - name: _ServerEnum
+      processed: ''
+      offset: 0000B710
+    - name: _BrServerEnum
+      processed: ''
+      offset: 0000C090
+    - name: _SendServerEnum
+      processed: ''
+      offset: 0000C130
+    - name: _DbgEnumList
+      processed: ''
+      offset: 0000C330
+    - name: _EnumListMerge
+      processed: ''
+      offset: 0000C390
+    - name: _VxDSrvEnum
+      processed: ''
+      offset: 0000C560
+    - name: _ServerEnumLana
+      processed: ''
+      offset: 0000C590
+    - name: _MsgStartStop
+      processed: ''
+      offset: 0000C8A0
+    - name: _SendMessage
+      processed: ''
+      offset: 0000CA60
+    - name: _MsgWorkGroupName
+      processed: ''
+      offset: 0000CD70
+    - name: _MsgDecNumCalls
+      processed: ''
+      offset: 0000CDC0
+    - name: _MsgSendDone
+      processed: ''
+      offset: 0000CE10
+    - name: _VXDSendMessage
+      processed: ''
+      offset: 0000CE30
+    - name: _GetMsgUserName
+      processed: ''
+      offset: 0000D000
+    - name: _SetupUserSend
+      processed: ''
+      offset: 0000D070
+    - name: _MsgCallUsingNCB
+      processed: ''
+      offset: 0000D130
+    - name: _DoWorkGroupSend
+      processed: ''
+      offset: 0000D1A0
+    - name: _MsgMSlotCreate
+      processed: ''
+      offset: 0000D2A0
+    - name: _MsgErrToMSlot
+      processed: ''
+      offset: 0000D2F0
+    - name: _MsgReportError
+      processed: ''
+      offset: 0000D350
+    - name: _MsgSNCBs
+      processed: ''
+      offset: 0000D3F0
+    - name: _MsgCNCBs
+      processed: ''
+      offset: 0000D690
+    - name: _MsgCCallErr
+      processed: ''
+      offset: 0000D8C0
+    - name: _MsgIPXCallErr
+      processed: ''
+      offset: 0000D920
+    - name: _ShowMsg
+      processed: ''
+      offset: 0000D970
+    - name: _MsgPostHangUp
+      processed: ''
+      offset: 0000D9D0
+    - name: _MsgSPostAddname
+      processed: ''
+      offset: 0000DA80
+    - name: _MsgSPostListen
+      processed: ''
+      offset: 0000DB20
+    - name: _MsgPostReceive
+      processed: ''
+      offset: 0000DBC0
+    - name: _MsgSReceive
+      processed: ''
+      offset: 0000DC70
+    - name: _MsgCleanUp
+      processed: ''
+      offset: 0000DEF0
+    - name: _MsgCleanUpNCB
+      processed: ''
+      offset: 0000E0B0
+    - name: _MsgCPostSend
+      processed: ''
+      offset: 0000E0F0
+    - name: _MsgDoSend
+      processed: ''
+      offset: '0000E230'
+    - name: _MsgStopEvent
+      processed: ''
+      offset: '0000E360'
+    - name: _MsgCReceive
+      processed: ''
+      offset: '0000E390'
+    - name: _MsgShutdown
+      processed: ''
+      offset: 0000E4D0
+    - name: _MsgIPXCall
+      processed: ''
+      offset: '0000E760'
+    - name: _MsgIPXLookup
+      processed: ''
+      offset: 0000E8A0
+    - name: _MsgLookAhead
+      processed: ''
+      offset: 0000E8E0
+    - name: _MsgAllocECB
+      processed: ''
+      offset: 0000EE50
+    - name: _AssertMsgBuf
+      processed: ''
+      offset: 0000EEA0
+    - name: _DispMsgBuf
+      processed: ''
+      offset: 0000EF00
+    - name: _DispThisMsgBuf
+      processed: ''
+      offset: 0000EF30
+    - name: _VXDBcnSetWfWVersion
+      processed: ''
+      offset: 0000F060
+    - name: _VXDBcnSetWfWBits
+      processed: ''
+      offset: 0000F0D0
+    - name: _VXDBcnSetMaster
+      processed: ''
+      offset: 0000F1D0
+    - name: _VXDBcnTriggerPulse
+      processed: ''
+      offset: 0000F2E0
+    - name: _VXDBcnAddPulse
+      processed: ''
+      offset: 0000F350
+    - name: _BcnAddPulse
+      processed: ''
+      offset: 0000F400
+    - name: _BcnDelPulse
+      processed: ''
+      offset: 0000F480
+    - name: _MasterBDF
+      processed: ''
+      offset: 0000F510
+    - name: _LMBDF
+      processed: ''
+      offset: 0000F580
+    - name: _BcnAddName
+      processed: ''
+      offset: 0000F610
+    - name: _BcnAddNameDone
+      processed: ''
+      offset: 0000F6B0
+    - name: _BcnDelNameDone
+      processed: ''
+      offset: 0000F7D0
+    - name: _BcnStopDone
+      processed: ''
+      offset: 0000F860
+    - name: _BcnStopMaster
+      processed: ''
+      offset: 0000F8C0
+    - name: _BcnShutdown
+      processed: ''
+      offset: 0000F9B0
+    - name: _BcnDebug
+      processed: ''
+      offset: 0000FAC0
+    - name: _AssertBeacon
+      processed: ''
+      offset: 0000FB30
+    - name: _CheckPulse
+      processed: ''
+      offset: 0000FBE0
+    - name: _VXDSetRemoteDebug
+      processed: ''
+      offset: 0000FC10
+    - name: _RDRemoteDebug
+      processed: ''
+      offset: 0000FCE0
+    - name: _BcnRemoteDebug
+      processed: ''
+      offset: 0000FD90
+    - name: _BRDComplete
+      processed: ''
+      offset: 0000FEF0
+    - name: _RDputl
+      processed: ''
+      offset: 0000FF00
+    - name: _RDprintf
+      processed: ''
+      offset: 0000FF70
+    - name: _DPrtBytes
+      processed: ''
+      offset: '00010180'
+    - name: _DPrtAddr
+      processed: ''
+      offset: 000101C0
+    - name: _MaxXmitCDP
+      processed: ''
+      offset: '00010220'
+    - name: _DeleteNameCDP
+      processed: ''
+      offset: '00010460'
+    - name: _CallEvent
+      processed: ''
+      offset: '00010480'
+    - name: _CancelCallServerCDP
+      processed: ''
+      offset: 000106C0
+    - name: _CallServerCDP
+      processed: ''
+      offset: 000106D0
+    - name: _AdjustIPXSessTimeout
+      processed: ''
+      offset: '00010960'
+    - name: _GetLocalTarget
+      processed: ''
+      offset: 000109B0
+    - name: _ReceiveNetCDP
+      processed: ''
+      offset: 00010A40
+    - name: _AddNameCDP
+      processed: ''
+      offset: 00010A50
+    - name: _MakeMD
+      processed: ''
+      offset: 00010A80
+    - name: _CopyMemory
+      processed: ''
+      offset: 00010AE0
+    - name: _CopyToMD
+      processed: ''
+      offset: 00010B70
+    - name: _CopyFromMD
+      processed: ''
+      offset: 00010BC0
+    - name: _LockMemory
+      processed: ''
+      offset: 00010C10
+    - name: _UnLockMemory
+      processed: ''
+      offset: 00010C40
+    - name: _WaitForAllNCBs
+      processed: ''
+      offset: 00010C70
+    - name: _XlatePath
+      processed: ''
+      offset: 00010DD0
+    - name: _NMCache_Init
+      processed: ''
+      offset: 00010F20
+    - name: _NMCache_Shutdown
+      processed: ''
+      offset: 00010F70
+    - name: _NMCache_GetName
+      processed: ''
+      offset: 00010FA0
+    - name: _NMCache_SetName
+      processed: ''
+      offset: '00011010'
+    - name: _GetArg
+      processed: ''
+      offset: '00011070'
+    - name: _AtoI
+      processed: ''
+      offset: '00011120'
+    - name: _GetPtr
+      processed: ''
+      offset: 000111F0
+    - name: _CmdDispatch
+      processed: ''
+      offset: '00011230'
+    - name: _NetCmd
+      processed: ''
+      offset: 000112B0
+    - name: _IOReqCmd
+      processed: ''
+      offset: '00011340'
+    - name: _PmdCmd
+      processed: ''
+      offset: '00011370'
+    - name: _SessCmd
+      processed: ''
+      offset: 000113A0
+    - name: _NibCmd
+      processed: ''
+      offset: '000113E0'
+    - name: _EcbCmd
+      processed: ''
+      offset: '00011420'
+    - name: _NCBsCmd
+      processed: ''
+      offset: '00011460'
+    - name: _BcnCmd
+      processed: ''
+      offset: '00011480'
+    - name: _VNSCmd
+      processed: ''
+      offset: 000114A0
+    - name: _VRDDebug
+      processed: ''
+      offset: 000114B0
+    - name: _DispUsrInfo
+      processed: ''
+      offset: '00011590'
+    - name: _DispSess
+      processed: ''
+      offset: 000115A0
+    - name: _DispThisSess
+      processed: ''
+      offset: '000115E0'
+    - name: _DispThisRes
+      processed: ''
+      offset: '00011880'
+    - name: _DispThisNib
+      processed: ''
+      offset: 000119A0
+    - name: _DispNibs
+      processed: ''
+      offset: 00011AA0
+    - name: _BusyNib
+      processed: ''
+      offset: 00011AF0
+    - name: _DispThisEcb
+      processed: ''
+      offset: 00011B20
+    - name: _DispEcbs
+      processed: ''
+      offset: 00011B80
+    - name: _BusyEcb
+      processed: ''
+      offset: 00011BE0
+    - name: _DispAllNCBs
+      processed: ''
+      offset: 00011C10
+    - name: _DispActNCBs
+      processed: ''
+      offset: 00011C50
+    - name: _DispThisNCB
+      processed: ''
+      offset: 00011CA0
+    - name: _DispNetInfo
+      processed: ''
+      offset: 00011D90
+    - name: _DispThisNet
+      processed: ''
+      offset: 00011DC0
+    - name: _DispBeacons
+      processed: ''
+      offset: 00011F30
+    - name: _DispThisBeacon
+      processed: ''
+      offset: 00011F60
+    - name: _DispThisPulse
+      processed: ''
+      offset: 00011FF0
+    - name: _DispEnumInfo
+      processed: ''
+      offset: '00012040'
+    - name: _DispThisEnumInfo
+      processed: ''
+      offset: '00012060'
+    - name: _DispThisIOReq
+      processed: ''
+      offset: '00012100'
+    - name: _DispThisMD
+      processed: ''
+      offset: '00012240'
+    - name: _DispIniInfo
+      processed: ''
+      offset: '00012380'
+    - name: _BrowseLog
+      processed: ''
+      offset: 000124C0
+    - name: _InitRDRLog
+      processed: ''
+      offset: 000126A0
+    - name: _LogCmd
+      processed: ''
+      offset: 000126F0
+    - name: _DbgEvent
+      processed: ''
+      offset: '00012770'
+    - name: _NetGetDfsReferrals
+      processed: ''
+      offset: 000127A0
+  - num: '7'
+    name: _RCODE
+    offset: 000130B0
+    symbols:
+    - name: RealmodeInit
+      processed: ''
+      offset: '00000000'
+    - name: NoVRedir
+      processed: ''
+      offset: '000000E0'
+    - name: NoLoad
+      processed: ''
+      offset: '000000E9'
+    - name: CheckNoLoad
+      processed: ''
+      offset: '00000127'
+  - num: '8'
+    name: _PDATA
+    offset: '000130E0'
+    symbols:
+    - name: _szRegVredirPath
+      processed: ''
+      offset: '00000000'
+  - num: '9'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _InitMaster
+      processed: ''
+      offset: '00000040'
+    - name: _InitCacheMem
+      processed: ''
+      offset: '00000060'
+    - name: _InitNibs
+      processed: ''
+      offset: '00000090'
+    - name: VRDInit2
+      processed: ''
+      offset: '00000140'
+    - name: VRDSysCritInit
+      processed: ''
+      offset: 000001CD
+    - name: RdrEnvStr
+      processed: ''
+      offset: '000002E1'
+    - name: VRDTransition
+      processed: ''
+      offset: '000002E8'
+    - name: VRDDeviceInit
+      processed: ''
+      offset: 0000039F
+    - name: _ServerPresent
+      processed: ''
+      offset: 000006AF
+- version: Windows 98SE Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .bss
+    offset: 00001B20
+    symbols:
+    - name: _hNameCache
+      demangled: ''
+      offset: '00000014'
+    - name: _VRD_devnode_index
+      demangled: ''
+      offset: '00000018'
+    - name: _VRD_saved_devnodes
+      demangled: ''
+      offset: '00000020'
+    - name: _VRD_stopping_devnodes
+      demangled: ''
+      offset: 000000A0
+    - name: _szDomainOverride
+      demangled: ''
+      offset: '00000120'
+    - name: _VRD_stopped_devnodes
+      demangled: ''
+      offset: '00000140'
+    - name: _NumRcvBufs
+      demangled: ''
+      offset: 000001C0
+    - name: _SecuritySignatureEnabled
+      demangled: ''
+      offset: 000001C4
+    - name: _VRD_Transition_Info
+      demangled: ''
+      offset: 000001C8
+    - name: _NumECBs
+      demangled: ''
+      offset: 000001CC
+    - name: _ecbs
+      demangled: ''
+      offset: 000001D0
+    - name: _SecuritySignatureRequired
+      demangled: ''
+      offset: 000001D4
+    - name: _NumBcnBufs
+      demangled: ''
+      offset: 000001D8
+    - name: _VRD_Transition_Static_Drive_List
+      demangled: ''
+      offset: 000001DC
+    - name: _fAllowPlainTextPasswords
+      demangled: ''
+      offset: '000001E0'
+    - name: _RcvBufSize
+      demangled: ''
+      offset: '000001E4'
+    - name: _fNoFlush
+      demangled: ''
+      offset: '000001E8'
+    - name: _CacheActECBs
+      demangled: ''
+      offset: 000001F0
+    - name: _CallList
+      demangled: ''
+      offset: '00000204'
+    - name: _NextCallID
+      demangled: ''
+      offset: '00000208'
+    - name: _WfWPA
+      demangled: ''
+      offset: 0000020C
+    - name: _WfWBSize
+      demangled: ''
+      offset: '00000210'
+    - name: _LMPL
+      demangled: ''
+      offset: '00000214'
+    - name: _WfWBuf
+      demangled: ''
+      offset: '00000220'
+    - name: _pRDMSH
+      demangled: ''
+      offset: '00000440'
+    - name: _MasterBuf
+      demangled: ''
+      offset: '00000450'
+    - name: _LMBSize
+      demangled: ''
+      offset: '00000670'
+    - name: _MasterPA
+      demangled: ''
+      offset: '00000674'
+    - name: _rndseed
+      demangled: ''
+      offset: '00000678'
+    - name: _MasterBSize
+      demangled: ''
+      offset: 0000067C
+    - name: _BeaconSerial
+      demangled: ''
+      offset: '00000680'
+    - name: _BRDBuf
+      demangled: ''
+      offset: '00000690'
+    - name: _MsgSID
+      demangled: ''
+      offset: '00000890'
+    - name: _MsgErrs
+      demangled: ''
+      offset: 000008A0
+    - name: _MBSToken
+      demangled: ''
+      offset: 000008D0
+    - name: _BIFBits
+      demangled: ''
+      offset: 000008D4
+    - name: _GrabBName
+      demangled: ''
+      offset: 000008D8
+    - name: _BMSHandle
+      demangled: ''
+      offset: 000008DC
+    - name: _SvcList
+      demangled: ''
+      offset: '000008E0'
+    - name: _PCachePtr
+      demangled: ''
+      offset: '000008E4'
+    - name: _VRD_ReadyForMailslots
+      demangled: ''
+      offset: '000008E8'
+    - name: _SendTimeOut
+      demangled: ''
+      offset: 000008EC
+    - name: _PendingAddname
+      demangled: ''
+      offset: 000008ED
+    - name: _NCBCallList
+      demangled: ''
+      offset: 000008F0
+    - name: _BcnMasterName
+      demangled: ''
+      offset: '00000900'
+    - name: _LanaMap
+      demangled: ''
+      offset: '00000910'
+    - name: _MIDincr
+      demangled: ''
+      offset: '00000922'
+    - name: _MIDmax
+      demangled: ''
+      offset: '00000924'
+    - name: _BcnWkGrpName
+      demangled: ''
+      offset: '00000930'
+    - name: _NibTable
+      demangled: ''
+      offset: '00000940'
+    - name: _NetTable
+      demangled: ''
+      offset: 00000A40
+    - name: _MIDmask
+      demangled: ''
+      offset: 00000AC0
+    - name: _PriWkGrpName
+      demangled: ''
+      offset: 00000AD0
+    - name: _Users
+      demangled: ''
+      offset: 00000AE0
+    - name: _szComputerName
+      demangled: ''
+      offset: 00000AF0
+    - name: _CompName
+      demangled: ''
+      offset: 00000B00
+    - name: _szPrimaryDomain
+      demangled: ''
+      offset: 00000B10
+    - name: _OpLockList
+      demangled: ''
+      offset: 00000B20
+    - name: _SessResSerial
+      demangled: ''
+      offset: 00000B24
+    - name: _KeepConn
+      demangled: ''
+      offset: 00000B28
+    - name: _IsLeadByte
+      demangled: ''
+      offset: 00000B30
+    - name: _ResSerialNum
+      demangled: ''
+      offset: 00000C30
+    - name: _SessResCtr
+      demangled: ''
+      offset: 00000C34
+    - name: _NibFreeList
+      demangled: ''
+      offset: 00000C38
+    - name: _WaitingForNib
+      demangled: ''
+      offset: 00000C3C
+    - name: _SessTicks
+      demangled: ''
+      offset: 00000C40
+    - name: _NibNeeded
+      demangled: ''
+      offset: 00000C44
+    - name: _AInfo
+      demangled: ''
+      offset: 00000C50
+    - name: _CloseTable
+      demangled: ''
+      offset: 00000C90
+    - name: _MFTable
+      demangled: ''
+      offset: 00000CC0
+    - name: _MD5Init
+      demangled: ''
+      offset: 00000D80
+    - name: _MD5Update
+      demangled: ''
+      offset: 00000DC0
+    - name: _MD5Final
+      demangled: ''
+      offset: '00000E70'
+    - name: _TransformMD5
+      demangled: ''
+      offset: 00000F40
+    - name: _vrdDiscardCacheOnOpen
+      demangled: ''
+      offset: 000015B8
+    - name: _NextClose
+      demangled: ''
+      offset: 000015BC
+    - name: _FileRouteTable
+      demangled: ''
+      offset: 000015C0
+    - name: _PipeRouteTable
+      demangled: ''
+      offset: '000015E4'
+    - name: _UkwnRouteTable
+      demangled: ''
+      offset: '00001608'
+    - name: _Routers
+      demangled: ''
+      offset: 0000162C
+    - name: _Readers
+      demangled: ''
+      offset: '00001640'
+    - name: _Writers
+      demangled: ''
+      offset: '00001690'
+    - name: _NoConflict
+      demangled: ''
+      offset: '000016E0'
+    - name: _VRdr_CacheID
+      demangled: ''
+      offset: 0000176C
+    - name: _CacheEvent
+      demangled: ''
+      offset: '00001770'
+    - name: _LazyLockCount
+      demangled: ''
+      offset: 000017A8
+    - name: _LazyEventSched
+      demangled: ''
+      offset: 000017AC
+    - name: _LazyLockEvent
+      demangled: ''
+      offset: 000017B0
+    - name: _StuckSessEvent
+      demangled: ''
+      offset: '00001800'
+    - name: _ErrServer
+      demangled: ''
+      offset: '00001818'
+    - name: _ErrNetBIOS
+      demangled: ''
+      offset: '00001838'
+    - name: _ErrNetIPX
+      demangled: ''
+      offset: '00001858'
+    - name: _VolSrchPPath
+      demangled: ''
+      offset: '00001864'
+    - name: _NoOpLockEvent
+      demangled: ''
+      offset: 000018CC
+    - name: _OpLockEvent
+      demangled: ''
+      offset: 000018D0
+    - name: _DisconnectEvent
+      demangled: ''
+      offset: 000018F4
+    - name: _UniFlag
+      demangled: ''
+      offset: 0000190C
+    - name: _NativeOSLM
+      demangled: ''
+      offset: '00001910'
+    - name: _ipc
+      demangled: ''
+      offset: '00001928'
+    - name: _Dialects
+      demangled: ''
+      offset: '00001930'
+    - name: _ResTypes
+      demangled: ''
+      offset: 000019A8
+    - name: _FSTypes
+      demangled: ''
+      offset: 000019C8
+    - name: _Slash
+      demangled: ''
+      offset: 000019F8
+    - name: _SlashSlash
+      demangled: ''
+      offset: 000019FC
+    - name: _SessChain
+      demangled: ''
+      offset: 00001A00
+    - name: _counter
+      demangled: ''
+      offset: 00001A04
+    - name: _NetRouteTable
+      demangled: ''
+      offset: 00001A08
+    - name: _DFSRouteTable
+      demangled: ''
+      offset: 00001A48
+    - name: _RdrInfo
+      demangled: ''
+      offset: 00001A88
+    - name: _BcnGroupName
+      demangled: ''
+      offset: 00001ABC
+    - name: _NameTab
+      demangled: ''
+      offset: 00001ACC
+    - name: _NetChain
+      demangled: ''
+      offset: 00001AE0
+    - name: _NumNets
+      demangled: ''
+      offset: 00001AE4
+    - name: _MaxNets
+      demangled: ''
+      offset: 00001AE8
+    - name: _MaxLana
+      demangled: ''
+      offset: 00001AEC
+    - name: _stat_NumXacts
+      demangled: ''
+      offset: 00001AF0
+    - name: _stat_ReadBytes
+      demangled: ''
+      offset: 00001AF4
+    - name: _stat_WriteBytes
+      demangled: ''
+      offset: 00001AF8
+    - name: _stat_NumSessions
+      demangled: ''
+      offset: 00001AFC
+    - name: _stat_NumRes
+      demangled: ''
+      offset: 00001B00
+    - name: _stat_NumOpenFiles
+      demangled: ''
+      offset: 00001B04
+    - name: _RedirState
+      demangled: ''
+      offset: 00001B08
+    - name: _MaxNibs
+      demangled: ''
+      offset: 00001B0C
+    - name: _NumNibs
+      demangled: ''
+      offset: 00001B10
+    - name: _OpLockEnd
+      demangled: ''
+      offset: 00001B14
+    - name: _LastServerFlag
+      demangled: ''
+      offset: 00001B20
+    - name: _NumDGramBufs
+      demangled: ''
+      offset: 00001B24
+    - name: _BrowseHookEnabled
+      demangled: ''
+      offset: 00001B28
+    - name: _lmname
+      demangled: ''
+      offset: 00001B2C
+    - name: _NullPath
+      demangled: ''
+      offset: 00001B9C
+    - name: _StarDotStar
+      demangled: ''
+      offset: 00001BA4
+    - name: _Star
+      demangled: ''
+      offset: 00001BAC
+    - name: _LFNRouteTable
+      demangled: ''
+      offset: 00001BB0
+    - name: _LogonNameAdded
+      demangled: ''
+      offset: 00001C8C
+    - name: _SecReqChain
+      demangled: ''
+      offset: 00001C90
+    - name: _rnugg
+      demangled: ''
+      offset: 00001C94
+    - name: _rgi0
+      demangled: ''
+      offset: 00001C9C
+    - name: _SvcCnt
+      demangled: ''
+      offset: 00001D00
+    - name: _PCacheSize
+      demangled: ''
+      offset: 00001D04
+    - name: _AD_WWkstaGetInfo
+      demangled: ''
+      offset: 00001D08
+    - name: _SESizes
+      demangled: ''
+      offset: 00001D18
+    - name: _RemAPITxt
+      demangled: ''
+      offset: 00001D90
+    - name: _mse
+      demangled: ''
+      offset: 00001D94
+    - name: _msg
+      demangled: ''
+      offset: 00001DB4
+    - name: _BrowseMSlotPPath
+      demangled: ''
+      offset: 00001DBC
+    - name: _BrowsePPath
+      demangled: ''
+      offset: 00001DE4
+    - name: _BIToken
+      demangled: ''
+      offset: 00001DF8
+    - name: _BNThresh
+      demangled: ''
+      offset: 00001DFC
+    - name: _pBI
+      demangled: ''
+      offset: '00001E00'
+    - name: _BrowseFlag
+      demangled: ''
+      offset: '00001E04'
+    - name: _BrowseEvent
+      demangled: ''
+      offset: '00001E08'
+    - name: _rnse2
+      demangled: ''
+      offset: '00001E20'
+    - name: _rsi0
+      demangled: ''
+      offset: '00001E28'
+    - name: _rsi1
+      demangled: ''
+      offset: 00001E2C
+    - name: _ssiz
+      demangled: ''
+      offset: '00001E34'
+    - name: _MsgCallList
+      demangled: ''
+      offset: '00001E64'
+    - name: _MssngrMSlotPPath
+      demangled: ''
+      offset: '00001E68'
+    - name: _MssngrPPath
+      demangled: ''
+      offset: '00001E90'
+    - name: _MsgUName
+      demangled: ''
+      offset: 00001EA8
+    - name: _MsgCName
+      demangled: ''
+      offset: 00001EB8
+    - name: _MsgUNameSet
+      demangled: ''
+      offset: 00001EC8
+    - name: _MsgCNameSet
+      demangled: ''
+      offset: 00001ED8
+    - name: _MsgOn
+      demangled: ''
+      offset: 00001EE8
+    - name: _MsgBufChain
+      demangled: ''
+      offset: 00001EEC
+    - name: _MsgErrCnt
+      demangled: ''
+      offset: 00001EF0
+    - name: _InSend
+      demangled: ''
+      offset: 00001EF4
+    - name: _time_tbl
+      demangled: ''
+      offset: 00001EFC
+    - name: _WfWVersion
+      demangled: ''
+      offset: 00001F0C
+    - name: _WfWPM
+      demangled: ''
+      offset: 00001F10
+    - name: _MasterPM
+      demangled: ''
+      offset: 00001F14
+    - name: _LMSlot
+      demangled: ''
+      offset: 00001F18
+    - name: _LMPM
+      demangled: ''
+      offset: 00001F2C
+    - name: _pBMSH
+      demangled: ''
+      offset: 00001F30
+    - name: _pBEH
+      demangled: ''
+      offset: 00001F34
+    - name: _BCNDisabled
+      demangled: ''
+      offset: 00001F38
+    - name: _RDHookList
+      demangled: ''
+      offset: 00001F3C
+    - name: _BRDFlag
+      demangled: ''
+      offset: 00001F40
+    - name: _SlowIpxDelay
+      demangled: ''
+      offset: '00002050'
+    - name: _CacheActECBsptr
+      demangled: ''
+      offset: '00002054'
+    - name: _ECBFreeList
+      demangled: ''
+      offset: '00002058'
+    - name: _mrblist
+      demangled: ''
+      offset: 0000205C
+    - name: _mrbcnt
+      demangled: ''
+      offset: '00002060'
+    - name: _IAmMasterCheck
+      demangled: ''
+      offset: '00002064'
+    - name: VREDIR_DDB
+      demangled: ''
+      offset: 000020CC
+    - name: OrigNetFunc
+      demangled: ''
+      offset: 0000211C
+    - name: _SysVMHandle
+      demangled: ''
+      offset: '00002120'
+    - name: _pVV
+      demangled: ''
+      offset: '00002124'
+    - name: _NoOtherNets
+      demangled: ''
+      offset: '00002128'
+    - name: _NBPMBits
+      demangled: ''
+      offset: '00002129'
+    - name: _NBRMBits
+      demangled: ''
+      offset: 0000212D
+    - name: _Exclude
+      demangled: ''
+      offset: '00002131'
+    - name: _IPXFlag
+      demangled: ''
+      offset: '00002135'
+    - name: _NBNonPnPBits
+      demangled: ''
+      offset: '00002139'
+    - name: _DnsFlag
+      demangled: ''
+      offset: 0000213D
+    - name: _DFSUnwrapHandle
+      demangled: ''
+      offset: '00002141'
+    - name: _LinLockFlags
+      demangled: ''
+      offset: '00002145'
+    - name: _LinUnlockFlags
+      demangled: ''
+      offset: '00002149'
+    - name: _NetProID
+      demangled: ''
+      offset: 0000214D
+    - name: _MSlotProID
+      demangled: ''
+      offset: '00002151'
+    - name: _VRDStrtErr
+      demangled: ''
+      offset: '00002158'
+    - name: _VRD_state
+      demangled: ''
+      offset: '00002184'
+    - name: _VNBT_Submit_X
+      demangled: ''
+      offset: '00002185'
+    - name: _VNBT_LanaMask
+      demangled: ''
+      offset: '00002189'
+    - name: _DestroySemList
+      demangled: ''
+      offset: '00002190'
+    - name: _DestroySemEventState
+      demangled: ''
+      offset: '00002194'
+    - name: _NCBDoneQueue
+      demangled: ''
+      offset: '00002195'
+    - name: _initcp
+      demangled: ''
+      offset: '00002199'
+    - name: _LastCurTime
+      demangled: ''
+      offset: 0000219D
+    - name: _CurrUID
+      demangled: ''
+      offset: 000021A1
+    - name: _ComputerName
+      demangled: ''
+      offset: 000021A3
+    - name: _LanRoot
+      demangled: ''
+      offset: 000021A7
+    - name: _BrowseMSlotStr
+      demangled: ''
+      offset: 000021AB
+    - name: _BrowseStr
+      demangled: ''
+      offset: 000021B5
+    - name: _MssngrMSlotStr
+      demangled: ''
+      offset: 000021BC
+    - name: _MssngrStr
+      demangled: ''
+      offset: 000021C6
+    - name: _PrimaryDomain
+      demangled: ''
+      offset: 000021CE
+    - name: _LogonDomain
+      demangled: ''
+      offset: 000021D2
+    - name: _LogonServer
+      demangled: ''
+      offset: '000021E2'
+    - name: _CritFlag
+      demangled: ''
+      offset: 000021F4
+    - name: _pUnloadingNet
+      demangled: ''
+      offset: 000021F8
+    - name: _CacheHeapSize
+      demangled: ''
+      offset: 000021FC
+    - name: _NetOrderInit
+      demangled: ''
+      offset: '00002200'
+    - name: _TransFlag
+      demangled: ''
+      offset: '00002204'
+    - name: _DefaultHandleInfo
+      demangled: ''
+      offset: '00002208'
+    - name: _VRedirInited
+      demangled: ''
+      offset: '00002210'
+    - name: _PrefNet
+      demangled: ''
+      offset: '00002214'
+    - name: _PurgePath
+      demangled: ''
+      offset: '00002250'
+    - name: _ZapMFiles
+      demangled: ''
+      offset: 000023A0
+    - name: _CloseSignalRtn
+      demangled: ''
+      offset: '000023E0'
+    - name: _CloseMaster
+      demangled: ''
+      offset: '00002420'
+    - name: _FreeAnchor
+      demangled: ''
+      offset: 000026C0
+    - name: _CSCInfoFunction
+      demangled: ''
+      offset: '00002700'
+    - name: _NetClose
+      demangled: ''
+      offset: 000027D0
+    - name: _SetupRange
+      demangled: ''
+      offset: '00002840'
+    - name: _UnlinkRange
+      demangled: ''
+      offset: 0000286C
+    - name: _FreeRange
+      demangled: ''
+      offset: 000028A0
+    - name: _HoldRange
+      demangled: ''
+      offset: 000028C8
+    - name: _UnholdRange
+      demangled: ''
+      offset: 000028D8
+    - name: _ReleaseRange
+      demangled: ''
+      offset: '000028E8'
+    - name: _CacheGetSize
+      demangled: ''
+      offset: '00002900'
+    - name: _CacheRead
+      demangled: ''
+      offset: '00002908'
+    - name: _CacheWrite
+      demangled: ''
+      offset: 00002C10
+    - name: _LastRange
+      demangled: ''
+      offset: '00002E10'
+    - name: _WriteRange
+      demangled: ''
+      offset: '00002E40'
+    - name: _WaitForAsync
+      demangled: ''
+      offset: 00002F30
+    - name: _NetFileLocks
+      demangled: ''
+      offset: 00002F90
+    - name: _LookAhead
+      demangled: ''
+      offset: '00003230'
+    - name: _FixupECBs
+      demangled: ''
+      offset: '00004350'
+    - name: _LookAheadCheck
+      demangled: ''
+      offset: 000043C0
+    - name: _SetupNib
+      demangled: ''
+      offset: '00004460'
+    - name: _FreeNib
+      demangled: ''
+      offset: '00004780'
+    - name: _ClearRawLock
+      demangled: ''
+      offset: '00004830'
+    - name: _WaitNib
+      demangled: ''
+      offset: '00004870'
+    - name: _SignalNib
+      demangled: ''
+      offset: 000048C0
+    - name: _CheckStuckSess
+      demangled: ''
+      offset: '00004910'
+    - name: _LazyClose
+      demangled: ''
+      offset: '00004980'
+    - name: _RemoveOpList
+      demangled: ''
+      offset: '000049E0'
+    - name: _BreakOpLock
+      demangled: ''
+      offset: 00004A30
+    - name: _OpLockSignalRtn
+      demangled: ''
+      offset: 00004B00
+    - name: _ReconnectSession
+      demangled: ''
+      offset: 00004B30
+    - name: _DnsConnectDnsName
+      demangled: ''
+      offset: 00004F30
+    - name: _ip2dword
+      demangled: ''
+      offset: 00004FE0
+    - name: _CloseSession
+      demangled: ''
+      offset: 000050B0
+    - name: _RdrInitializeSequenceNumber
+      demangled: ''
+      offset: '00005270'
+    - name: _RdrAddSecuritySignatureToSmb
+      demangled: ''
+      offset: 000052C0
+    - name: _RdrCheckSequenceForSmb
+      demangled: ''
+      offset: '00005360'
+    - name: _RdrFreeSequenceNumber
+      demangled: ''
+      offset: 000053F0
+    - name: _FindSession
+      demangled: ''
+      offset: '00005410'
+    - name: _TimeoutNB
+      demangled: ''
+      offset: '00005450'
+    - name: _AllocNCB
+      demangled: ''
+      offset: '00005470'
+    - name: _FreeNCB
+      demangled: ''
+      offset: 000054B0
+    - name: _AllocRcvBuf
+      demangled: ''
+      offset: 000054F0
+    - name: _FreeRcvBuf
+      demangled: ''
+      offset: '00005520'
+    - name: _SetupLockAndX
+      demangled: ''
+      offset: '00005540'
+    - name: _CheckRequestChain
+      demangled: ''
+      offset: 000055C0
+    - name: _VXDConnectServer2
+      demangled: ''
+      offset: '00005610'
+    - name: _VXDConnectServer
+      demangled: ''
+      offset: '00005740'
+    - name: _VXDDisconnectServer2
+      demangled: ''
+      offset: 000059B0
+    - name: _VXDDisconnectServer
+      demangled: ''
+      offset: 00005AC0
+    - name: _WaitForBrowser
+      demangled: ''
+      offset: 00005BC0
+    - name: _MsgClientEvent
+      demangled: ''
+      offset: 00005C10
+    - name: _MsgServerEvent
+      demangled: ''
+      offset: 00005C90
+    - name: _MsgSendESR
+      demangled: ''
+      offset: 00005CF0
+    - name: _MsgCallEvent
+      demangled: ''
+      offset: 00005D30
+    - name: _MsgRNamePost
+      demangled: ''
+      offset: 00005DE0
+    - name: _MsgSNamePost
+      demangled: ''
+      offset: '00005E30'
+    - name: _MsgFNamePost
+      demangled: ''
+      offset: '00005E50'
+    - name: _MsgHNamePost
+      demangled: ''
+      offset: '00005E70'
+    - name: _MsgIPXPost
+      demangled: ''
+      offset: '00005E90'
+    - name: _MsgReSendPost
+      demangled: ''
+      offset: 00005ED0
+    - name: _AllocMsgBuf
+      demangled: ''
+      offset: 00005F00
+    - name: _FreeMsgBuf
+      demangled: ''
+      offset: 00005F60
+    - name: _IPXLookAhead
+      demangled: ''
+      offset: 00005FD0
+    - name: _LookPost
+      demangled: ''
+      offset: 000061B0
+    - name: _IpxSendComplete
+      demangled: ''
+      offset: '000061E0'
+    - name: _TimeoutCDP
+      demangled: ''
+      offset: 000062F0
+    - name: _IpxCallESR
+      demangled: ''
+      offset: '000063E0'
+    - name: _CallResponse
+      demangled: ''
+      offset: '00006420'
+    - name: _IpxSendDGESR
+      demangled: ''
+      offset: '00006650'
+    - name: _SendDatagramCDP
+      demangled: ''
+      offset: 000066D0
+    - name: _MSlotLookAhead
+      demangled: ''
+      offset: 000068F0
+    - name: _MSlotPost
+      demangled: ''
+      offset: 00006B00
+    - name: _AllocECB
+      demangled: ''
+      offset: 00006C10
+    - name: _FreeECB
+      demangled: ''
+      offset: 00006C60
+    - name: _AllocMRB
+      demangled: ''
+      offset: 00006C80
+    - name: _FreeMRB
+      demangled: ''
+      offset: 00006CC0
+    - name: VRedirControl
+      demangled: ''
+      offset: 00006CE0
+    - name: VRDDeviceIOControl
+      demangled: ''
+      offset: 00006D0C
+    - name: VRD_TRShutDown
+      demangled: ''
+      offset: 00006D42
+    - name: _badreq
+      demangled: ''
+      offset: 00006D51
+    - name: VRD_NetFunction
+      demangled: ''
+      offset: 00006D53
+    - name: VRedir_Get_Version
+      demangled: ''
+      offset: 00006D8D
+    - name: VRDPnpNewDevNode
+      demangled: ''
+      offset: 00006D99
+    - name: _NotifyIFS
+      demangled: ''
+      offset: 00006DA9
+    - name: _VRDInitComplete
+      demangled: ''
+      offset: 00006DB0
+    - name: _VRD_IFSMgr_RegisterNet
+      demangled: ''
+      offset: '00006E30'
+    - name: _VRD_IFSMgr_RegisterMailSlot
+      demangled: ''
+      offset: 00006E6F
+    - name: _devnode2lana
+      demangled: ''
+      offset: '00006E80'
+    - name: _IsNWLinkDevnode
+      demangled: ''
+      offset: '00006E92'
+    - name: _RdrPostDiskMessage
+      demangled: ''
+      offset: 00006EBC
+    - name: _DoMapFlat
+      demangled: ''
+      offset: 00006F0C
+    - name: _GHS
+      demangled: ''
+      offset: 00006F1E
+    - name: _FGHS
+      demangled: ''
+      offset: 00006F1E
+    - name: _RetHeap
+      demangled: ''
+      offset: 00006F24
+    - name: _PassEncrypt
+      demangled: ''
+      offset: 00006F2A
+    - name: _PassEncrypt2
+      demangled: ''
+      offset: 00006F30
+    - name: _PassEncryptNT
+      demangled: ''
+      offset: 00006F36
+    - name: _EndCritSec
+      demangled: ''
+      offset: 00006F48
+    - name: _GetTimeZoneBias
+      demangled: ''
+      offset: 00006F50
+    - name: _IFSUpdateTimezoneInfo
+      demangled: ''
+      offset: 00006F58
+    - name: _NumFreeMapPages
+      demangled: ''
+      offset: 00006F68
+    - name: _VNBT_GetVer
+      demangled: ''
+      offset: 00006F74
+    - name: _Vnbt_Submit@20
+      demangled: ''
+      offset: 00006F8A
+    - name: _Vnbt_LanaMask@0
+      demangled: ''
+      offset: 00006FA0
+    - name: _V86MapPages
+      demangled: ''
+      offset: 00006FC4
+    - name: _V86FreeMap
+      demangled: ''
+      offset: 00006FE8
+    - name: _LinLock
+      demangled: ''
+      offset: '00007018'
+    - name: _LinUnlock
+      demangled: ''
+      offset: 0000701E
+    - name: _SetupConnection
+      demangled: ''
+      offset: '00007024'
+    - name: _DerefConnection
+      demangled: ''
+      offset: 0000702A
+    - name: _DoDelAllUses
+      demangled: ''
+      offset: '00007030'
+    - name: _IFSDelAllUses
+      demangled: ''
+      offset: '00007036'
+    - name: _VBlock
+      demangled: ''
+      offset: 0000703C
+    - name: _VWakeUp
+      demangled: ''
+      offset: '00007042'
+    - name: _Yield
+      demangled: ''
+      offset: '00007048'
+    - name: _SchedEvent
+      demangled: ''
+      offset: 0000704E
+    - name: _QueueEvent
+      demangled: ''
+      offset: '00007054'
+    - name: _KillEvent
+      demangled: ''
+      offset: 0000705A
+    - name: _FreeIOReq
+      demangled: ''
+      offset: '00007060'
+    - name: _CompleteAsync
+      demangled: ''
+      offset: '00007066'
+    - name: _IFSMakeMailSlot
+      demangled: ''
+      offset: 0000706C
+    - name: _IFSWriteMSlot
+      demangled: ''
+      offset: '00007072'
+    - name: _IFSDeleteMailSlot
+      demangled: ''
+      offset: '00007078'
+    - name: _IFSTransMatch
+      demangled: ''
+      offset: 0000707E
+    - name: _IFSMetaMatch
+      demangled: ''
+      offset: '00007084'
+    - name: _IFSBCSToUni
+      demangled: ''
+      offset: 0000708A
+    - name: _IFSUniToBCSPath
+      demangled: ''
+      offset: '00007090'
+    - name: _IFSUniToBCS
+      demangled: ''
+      offset: '00007096'
+    - name: _IFSUniToUpper
+      demangled: ''
+      offset: 0000709C
+    - name: _IFSInitUseAdd
+      demangled: ''
+      offset: 000070A2
+    - name: _IFSUseAdd
+      demangled: ''
+      offset: 000070A8
+    - name: _IFSUseDel
+      demangled: ''
+      offset: 000070AE
+    - name: _NetToDosDate
+      demangled: ''
+      offset: 000070B4
+    - name: _DosToNetDate
+      demangled: ''
+      offset: 000070BA
+    - name: _IFSDosToWin32Time
+      demangled: ''
+      offset: 000070C0
+    - name: _IFSNetToWin32Time
+      demangled: ''
+      offset: 000070C6
+    - name: _DFSConnectResource
+      demangled: ''
+      offset: 000070CC
+    - name: _DFSPrefixClaim
+      demangled: ''
+      offset: 000070D2
+    - name: _DFSInstallMapping
+      demangled: ''
+      offset: 000070D8
+    - name: _DFSNotifyResourceRemoval
+      demangled: ''
+      offset: 000070DE
+    - name: _IFSWin32ToDosTime
+      demangled: ''
+      offset: '000070E4'
+    - name: _FillHeapSpare
+      demangled: ''
+      offset: 000070EA
+    - name: _CreateSem
+      demangled: ''
+      offset: 000070F0
+    - name: _DestroySem
+      demangled: ''
+      offset: '00007103'
+    - name: _DestroySemEvent
+      demangled: ''
+      offset: 0000717E
+    - name: _DestroySemEvent2
+      demangled: ''
+      offset: 000071B2
+    - name: _SignalSem
+      demangled: ''
+      offset: 000071C0
+    - name: _WaitSem
+      demangled: ''
+      offset: 000071D0
+    - name: _SpecMapFlat
+      demangled: ''
+      offset: 0000720E
+    - name: _GetTime
+      demangled: ''
+      offset: '00007248'
+    - name: _GetSysTime
+      demangled: ''
+      offset: 0000725A
+    - name: _GetSysTimeMS
+      demangled: ''
+      offset: 0000726E
+    - name: _SubmitNCB
+      demangled: ''
+      offset: '00007278'
+    - name: _GeneralPost
+      demangled: ''
+      offset: 000072AA
+    - name: _RDgPost
+      demangled: ''
+      offset: 000072B1
+    - name: _CallPost
+      demangled: ''
+      offset: 000072B8
+    - name: _MsgCPost
+      demangled: ''
+      offset: 000072BF
+    - name: _MsgSPost
+      demangled: ''
+      offset: 000072C6
+    - name: _RAPost
+      demangled: ''
+      offset: 000072CD
+    - name: _RdrOpenSocket
+      demangled: ''
+      offset: '00007370'
+    - name: _RdrGetMaxPacketSize
+      demangled: ''
+      offset: 000073A4
+    - name: _MSlotOpenSocket
+      demangled: ''
+      offset: 000073CC
+    - name: _MsgLookEntry
+      demangled: ''
+      offset: 000073FC
+    - name: _MsgOpenSocket
+      demangled: ''
+      offset: '00007414'
+    - name: _IpxOpenSocket
+      demangled: ''
+      offset: '00007444'
+    - name: _IpxCloseSocket
+      demangled: ''
+      offset: '00007468'
+    - name: _IpxGetLocalTarget
+      demangled: ''
+      offset: 0000747E
+    - name: _IpxDisp1parm
+      demangled: ''
+      offset: 000074A2
+    - name: _MsgAdjust
+      demangled: ''
+      offset: 000074BC
+    - name: _allocmem
+      demangled: ''
+      offset: '00007502'
+    - name: _freemem
+      demangled: ''
+      offset: '00007515'
+    - name: _GetFreeLockMemory
+      demangled: ''
+      offset: '00007528'
+    - name: _MulZeroIfOverFlow
+      demangled: ''
+      offset: '00007538'
+    - name: _FinishNetUnbind
+      demangled: ''
+      offset: '00007560'
+  - num: '2'
+    name: _IMSG$1
+    offset: 00001B60
+    symbols:
+    - name: '@MSG_IAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_IDATA'
+      demangled: ''
+      offset: '00000040'
+  - num: '3'
+    name: _FIOCODE
+    offset: 00001FB0
+    symbols:
+    - name: _NetOpen
+      demangled: ''
+      offset: '00000000'
+    - name: _BadRequest
+      demangled: ''
+      offset: '00000570'
+    - name: _NopRequest
+      demangled: ''
+      offset: '00000590'
+    - name: _FindAnchor
+      demangled: ''
+      offset: 000005B0
+    - name: _CheckAnchor
+      demangled: ''
+      offset: '00000720'
+    - name: _FindMaster
+      demangled: ''
+      offset: 000007A0
+    - name: _GetMaster
+      demangled: ''
+      offset: '00000830'
+    - name: _CalcCRC
+      demangled: ''
+      offset: '00000960'
+    - name: _NetCommit
+      demangled: ''
+      offset: '00000990'
+    - name: _DiskFullErrorMessage
+      demangled: ''
+      offset: 00000A10
+    - name: _LazySignalRtn
+      demangled: ''
+      offset: 00000A60
+    - name: _FlushAllFiles
+      demangled: ''
+      offset: 00000AA0
+    - name: _CacheFlush
+      demangled: ''
+      offset: 00000B20
+    - name: _CacheDiscard
+      demangled: ''
+      offset: 00000B90
+    - name: _FlushLazy
+      demangled: ''
+      offset: 00000BC0
+    - name: _CloseLocks
+      demangled: ''
+      offset: 00000C60
+    - name: _UnlockRecord
+      demangled: ''
+      offset: 00000CC0
+    - name: _NetDir
+      demangled: ''
+      offset: 00000DD0
+    - name: _DuplicateParsedPath
+      demangled: ''
+      offset: '00001040'
+    - name: _NetFileAttributes
+      demangled: ''
+      offset: 000010D0
+    - name: _NetFileTime
+      demangled: ''
+      offset: 000011C0
+    - name: _CoreGetVolumeSN
+      demangled: ''
+      offset: '00001320'
+    - name: _NetFileEnum
+      demangled: ''
+      offset: 000013D0
+    - name: _AdjustCoreTimeToNet
+      demangled: ''
+      offset: '00001520'
+    - name: _AdjustCoreTimeFromNet
+      demangled: ''
+      offset: '00001570'
+    - name: _AdjustNetTimeToNet
+      demangled: ''
+      offset: 000015C0
+    - name: _AdjustNetTimeFromNet
+      demangled: ''
+      offset: '00001600'
+    - name: _QueryResource
+      demangled: ''
+      offset: '00001640'
+    - name: _GetResource
+      demangled: ''
+      offset: '00001730'
+    - name: _CleanUpSession
+      demangled: ''
+      offset: 000017B0
+    - name: _Transact
+      demangled: ''
+      offset: '00001890'
+    - name: _SendAllNets
+      demangled: ''
+      offset: 00001ED0
+    - name: _TransactSignalRtn
+      demangled: ''
+      offset: 00001FA0
+    - name: _TransLooker
+      demangled: ''
+      offset: '00002160'
+    - name: _IsValidFilename
+      demangled: ''
+      offset: '00002200'
+    - name: _CheckMatch
+      demangled: ''
+      offset: '00002260'
+    - name: _NetFindOpen
+      demangled: ''
+      offset: '00002300'
+    - name: _NetFindNext
+      demangled: ''
+      offset: '00002680'
+    - name: _CopyLFNSearch
+      demangled: ''
+      offset: '00002820'
+    - name: _CoreSearch
+      demangled: ''
+      offset: 00002C20
+    - name: _AllocLFNSearchKey
+      demangled: ''
+      offset: 00002DE0
+    - name: _FreeLFNSearchKey
+      demangled: ''
+      offset: '00002E40'
+    - name: _NetFindClose
+      demangled: ''
+      offset: '00002E90'
+    - name: _GetVolumeInfo
+      demangled: ''
+      offset: 00002EE0
+    - name: _GetVolumeLabel
+      demangled: ''
+      offset: '00003030'
+    - name: _GetFSTypeFromName
+      demangled: ''
+      offset: 000031F0
+    - name: _QueryFSInfo
+      demangled: ''
+      offset: '00003260'
+    - name: _QueryDirName
+      demangled: ''
+      offset: 000034A0
+    - name: _GetPathName
+      demangled: ''
+      offset: '00003680'
+    - name: _HangUpCDP
+      demangled: ''
+      offset: '00003870'
+    - name: _SendNetCDP
+      demangled: ''
+      offset: '00003890'
+    - name: _SendPacket
+      demangled: ''
+      offset: 000039A0
+    - name: _UserToMD
+      demangled: ''
+      offset: 00003B50
+    - name: _LockMD
+      demangled: ''
+      offset: 00003BF0
+    - name: _SysToMD
+      demangled: ''
+      offset: 00003DA0
+    - name: _BumpMD
+      demangled: ''
+      offset: 00003DD0
+    - name: _FreeMD
+      demangled: ''
+      offset: 00003DF0
+    - name: _CopyToUser
+      demangled: ''
+      offset: '00003E40'
+    - name: _CopyFromUser
+      demangled: ''
+      offset: '00003E80'
+    - name: _Xact
+      demangled: ''
+      offset: 00003EC0
+  - num: '4'
+    name: PNP
+    offset: '00002530'
+    symbols:
+    - name: _ResetNet
+      demangled: ''
+      offset: '00000000'
+    - name: _InitNetBIOS
+      demangled: ''
+      offset: '00000050'
+    - name: _VRD_SetNames
+      demangled: ''
+      offset: '00000140'
+    - name: _StartRedir
+      demangled: ''
+      offset: '00000210'
+    - name: _ServiceInit
+      demangled: ''
+      offset: '00000290'
+    - name: _InitBrowserMSlot
+      demangled: ''
+      offset: '00000360'
+    - name: _StartBrowserMSlot
+      demangled: ''
+      offset: '00000420'
+    - name: _StopBrowserMSlot
+      demangled: ''
+      offset: '00000450'
+    - name: _MsgInit
+      demangled: ''
+      offset: 000004A0
+    - name: _MsgClose
+      demangled: ''
+      offset: '00000550'
+    - name: _InitBeacons
+      demangled: ''
+      offset: '00000570'
+    - name: _VXDBcnWfWBrowser
+      demangled: ''
+      offset: '00000930'
+    - name: _VXDNetInfo
+      demangled: ''
+      offset: '00000950'
+    - name: _VXDBcnSetHook
+      demangled: ''
+      offset: '000009E0'
+    - name: _InitIPX
+      demangled: ''
+      offset: 00000A50
+    - name: _GetDevnode
+      demangled: ''
+      offset: 00000AC0
+    - name: _GetIpxNet
+      demangled: ''
+      offset: 00000B10
+    - name: _BindDevnode
+      demangled: ''
+      offset: 00000B30
+    - name: _UnbindDevnode
+      demangled: ''
+      offset: 00000B60
+    - name: _SetNetPriorities
+      demangled: ''
+      offset: 00000BB0
+    - name: _BindToIPX
+      demangled: ''
+      offset: 00000C50
+    - name: _UnbindToIPX
+      demangled: ''
+      offset: 00000DA0
+    - name: _BindToNetbiosTransport
+      demangled: ''
+      offset: '00000E50'
+    - name: _UnbindToNetbiosTransport
+      demangled: ''
+      offset: 00000FF0
+    - name: _InitRedir
+      demangled: ''
+      offset: '00001050'
+    - name: _BindToNet
+      demangled: ''
+      offset: '00001170'
+    - name: _BindToNonPnPNets
+      demangled: ''
+      offset: '00001360'
+    - name: _StartNetUnbind
+      demangled: ''
+      offset: 000013F0
+    - name: _VXDSetIPXError
+      demangled: ''
+      offset: '00001460'
+    - name: _MoreTransition
+      demangled: ''
+      offset: '00001480'
+    - name: _DoTransition
+      demangled: ''
+      offset: 000014A0
+    - name: _GetIniInfo
+      demangled: ''
+      offset: 000016C0
+    - name: _VRDSetIniErr
+      demangled: ''
+      offset: '00001800'
+    - name: _VRDSetIniErrStr
+      demangled: ''
+      offset: '00001810'
+    - name: _VRDSetIniErrVars
+      demangled: ''
+      offset: '00001860'
+    - name: _VRDSetIniVersErr
+      demangled: ''
+      offset: 000018A0
+    - name: _IsNetDevnode
+      demangled: ''
+      offset: 000018F0
+    - name: _Yield2
+      demangled: ''
+      offset: '00001920'
+    - name: _ClearSessionVisits
+      demangled: ''
+      offset: '00001930'
+    - name: _VisitSessions
+      demangled: ''
+      offset: '00001940'
+    - name: _ClearResourceVisits
+      demangled: ''
+      offset: 000019B0
+    - name: _VisitResources
+      demangled: ''
+      offset: 00001A00
+    - name: _VredirApmCountFiles
+      demangled: ''
+      offset: 00001A60
+    - name: _VRD_NotifyEvent
+      demangled: ''
+      offset: 00001AF0
+    - name: _VRD_devnode_add2list
+      demangled: ''
+      offset: 00001B70
+    - name: _VRD_devnode_isinlist
+      demangled: ''
+      offset: 00001BA0
+    - name: _VRD_Config_Manager_Handler
+      demangled: ''
+      offset: 00001BE0
+    - name: _GetLogDriverName
+      demangled: ''
+      offset: '00001E80'
+    - name: _VRD_IsSlowNet
+      demangled: ''
+      offset: 00001F10
+    - name: _VRD_Process_Devnode
+      demangled: ''
+      offset: '00002010'
+    - name: _VRD_NotifyNBArrival
+      demangled: ''
+      offset: 000020D0
+    - name: _VRD_SetNotifyEvent
+      demangled: ''
+      offset: '00002130'
+    - name: _VRD_PNP_New_Devnode
+      demangled: ''
+      offset: '00002150'
+    - name: _VRD_Process_Pending_Devnodes
+      demangled: ''
+      offset: '00002220'
+    - name: _VRD_ChkDomainOverride
+      demangled: ''
+      offset: '00002260'
+    - name: _VRD_InitIFSMgr
+      demangled: ''
+      offset: 000022F0
+    - name: _CCODE__CONFIGMG_Read_Registry_Value
+      demangled: ''
+      offset: '00002360'
+    - name: _CCODE__CONFIGMG_Get_Parent
+      demangled: ''
+      offset: '00002368'
+    - name: _CCODE__CONFIGMG_Call_At_Appy_Time
+      demangled: ''
+      offset: '00002370'
+    - name: _CCODE__CONFIGMG_Register_Device_Driver
+      demangled: ''
+      offset: '00002378'
+    - name: _CCODE__RegCloseKey
+      demangled: ''
+      offset: '00002380'
+    - name: _CCODE__RegQueryValueEx
+      demangled: ''
+      offset: '00002388'
+    - name: _CCODE__RegOpenKey
+      demangled: ''
+      offset: '00002390'
+  - num: '5'
+    name: _BRWSCODE
+    offset: '000027E0'
+    symbols:
+    - name: _CheckIdleConnection
+      demangled: ''
+      offset: '00000000'
+    - name: _wstrlen
+      demangled: ''
+      offset: 000001A0
+    - name: _initIsLeadByte
+      demangled: ''
+      offset: 000001D0
+    - name: _AddPathElement
+      demangled: ''
+      offset: '00000220'
+    - name: _MakePPath
+      demangled: ''
+      offset: 000002D0
+    - name: _DeleteLastElement
+      demangled: ''
+      offset: '00000350'
+    - name: _OtherNCBs
+      demangled: ''
+      offset: '00000390'
+    - name: _RcvDataGram
+      demangled: ''
+      offset: '00000450'
+    - name: _SendDatagramNB
+      demangled: ''
+      offset: '00000540'
+    - name: _RDGNCBs
+      demangled: ''
+      offset: 000005C0
+    - name: _BrowseTimeOut
+      demangled: ''
+      offset: '00000770'
+    - name: _BrowseProc
+      demangled: ''
+      offset: 000007D0
+    - name: _NewBackupName
+      demangled: ''
+      offset: 00000A70
+    - name: _SendBrowseMailslot
+      demangled: ''
+      offset: 00000B30
+    - name: _QueryWorkgroupBrowsemaster
+      demangled: ''
+      offset: 00000BC0
+    - name: _CallBrowseMaster
+      demangled: ''
+      offset: 00000D10
+    - name: _CauseElection
+      demangled: ''
+      offset: 00000DF0
+    - name: _CallDC
+      demangled: ''
+      offset: '00000E80'
+    - name: _VXDBcnIncWfWCount
+      demangled: ''
+      offset: 00000F40
+    - name: _BcnFromLana
+      demangled: ''
+      offset: 00000FA0
+    - name: _BcnStartTimer
+      demangled: ''
+      offset: 000010A0
+    - name: _BDFSetNib
+      demangled: ''
+      offset: '00001110'
+    - name: _BDFDoSend
+      demangled: ''
+      offset: '00001160'
+    - name: _WfWBDF
+      demangled: ''
+      offset: '00001240'
+    - name: _BcnEventFunc
+      demangled: ''
+      offset: 000012F0
+    - name: _BcnPulseComplete
+      demangled: ''
+      offset: 000013A0
+    - name: _BcnSignalRtn
+      demangled: ''
+      offset: 000013F0
+    - name: _BcnDefMSlotProc
+      demangled: ''
+      offset: '00001420'
+    - name: _BcnDefHook
+      demangled: ''
+      offset: '00001430'
+    - name: _BcnNewMaster
+      demangled: ''
+      offset: '00001440'
+    - name: _BcnMSlotProc
+      demangled: ''
+      offset: 000014B0
+    - name: _rnd
+      demangled: ''
+      offset: 000015C0
+    - name: _rndtime
+      demangled: ''
+      offset: 000015F0
+    - name: _FindRemoteDebug
+      demangled: ''
+      offset: '00001620'
+    - name: _RDMSlotProc
+      demangled: ''
+      offset: '00001660'
+    - name: _PollCDP
+      demangled: ''
+      offset: 000016C0
+  - num: '6'
+    name: _PTEXT
+    offset: 000037B0
+    symbols:
+    - name: _ForceClosed
+      demangled: ''
+      offset: '00000000'
+    - name: _CloseAllFiles
+      demangled: ''
+      offset: '00000040'
+    - name: _FileRead
+      demangled: ''
+      offset: '00000070'
+    - name: _SetReadAhead
+      demangled: ''
+      offset: '00000120'
+    - name: _ReadFromNet
+      demangled: ''
+      offset: '000001E0'
+    - name: _MuxReadSignalRtn
+      demangled: ''
+      offset: '00000550'
+    - name: _FileWrite
+      demangled: ''
+      offset: '00000590'
+    - name: _ReadData
+      demangled: ''
+      offset: 000008C0
+    - name: _FillBuffer
+      demangled: ''
+      offset: '00000920'
+    - name: _LazyWrite
+      demangled: ''
+      offset: 00000A70
+    - name: _FinishWriteRange
+      demangled: ''
+      offset: 00000BF0
+    - name: _NetSeek
+      demangled: ''
+      offset: 00000CE0
+    - name: _LockCheck
+      demangled: ''
+      offset: 00000DB0
+    - name: _LazyLockTimer
+      demangled: ''
+      offset: '00000E10'
+    - name: _SendNib
+      demangled: ''
+      offset: 00000EB0
+    - name: _ErrMap
+      demangled: ''
+      offset: 00000EF0
+    - name: _NetDelete
+      demangled: ''
+      offset: 00000F20
+    - name: _NetRename
+      demangled: ''
+      offset: 000010A0
+    - name: _NetGetDiskInfo
+      demangled: ''
+      offset: '00001140'
+    - name: _GetNameNum
+      demangled: ''
+      offset: 000011B0
+    - name: _GetPrtJobID
+      demangled: ''
+      offset: '000011E0'
+    - name: _GetSrchBuf
+      demangled: ''
+      offset: '00001260'
+    - name: _FreeSrchBuf
+      demangled: ''
+      offset: 000012C0
+    - name: _FlushResSrch
+      demangled: ''
+      offset: '000012E0'
+    - name: _CheckSrchCache
+      demangled: ''
+      offset: '00001330'
+    - name: _NetSearch
+      demangled: ''
+      offset: '00001440'
+    - name: _FixName
+      demangled: ''
+      offset: '00001890'
+    - name: _XlateSearchPath
+      demangled: ''
+      offset: 000018B0
+    - name: _OpLockCheck
+      demangled: ''
+      offset: '00001900'
+    - name: _OpLkWorker
+      demangled: ''
+      offset: 000019B0
+    - name: _ConnectResource
+      demangled: ''
+      offset: 00001A30
+    - name: _dummy
+      demangled: ''
+      offset: 000020C0
+    - name: _SetupTID
+      demangled: ''
+      offset: 000020D0
+    - name: _DisconnectResource
+      demangled: ''
+      offset: 000021A0
+    - name: _GetVCCount
+      demangled: ''
+      offset: '00002230'
+    - name: _GetSession
+      demangled: ''
+      offset: '00002290'
+    - name: _SetupSessX
+      demangled: ''
+      offset: '00002510'
+    - name: _SetupSessXNT
+      demangled: ''
+      offset: '00002710'
+    - name: _FillTConStruct
+      demangled: ''
+      offset: 00002B70
+    - name: _ReconnectResource
+      demangled: ''
+      offset: 00002CC0
+    - name: _ServerLogoff
+      demangled: ''
+      offset: '00003440'
+    - name: _DisconnectSignalRtn
+      demangled: ''
+      offset: 000035D0
+    - name: _CloseResource
+      demangled: ''
+      offset: '00003620'
+    - name: _FinishDisconnect
+      demangled: ''
+      offset: '00003720'
+    - name: _MakeResourceDfs
+      demangled: ''
+      offset: '00003810'
+    - name: _SessCloseRestart
+      demangled: ''
+      offset: '00003840'
+    - name: _StopSessRes
+      demangled: ''
+      offset: '00003870'
+    - name: _InitSessRes
+      demangled: ''
+      offset: '00003880'
+    - name: _DropLSN
+      demangled: ''
+      offset: 000038B0
+    - name: _PollNB
+      demangled: ''
+      offset: '000038E0'
+    - name: _MaxXmitNB
+      demangled: ''
+      offset: 000038F0
+    - name: _RawNib
+      demangled: ''
+      offset: '00003920'
+    - name: _RANCBs
+      demangled: ''
+      offset: '00003970'
+    - name: _MIDFromLSN
+      demangled: ''
+      offset: 00003B20
+    - name: _FindAndDequeueCallNCB
+      demangled: ''
+      offset: 00003B90
+    - name: _CallNCBs
+      demangled: ''
+      offset: 00003BD0
+    - name: _DeleteNameNB
+      demangled: ''
+      offset: 00003EF0
+    - name: _CallServerNB
+      demangled: ''
+      offset: 00003F80
+    - name: _CallServerVNBT
+      demangled: ''
+      offset: 000040C0
+    - name: _CancelCallServerNB
+      demangled: ''
+      offset: '00004220'
+    - name: _HangUpNB
+      demangled: ''
+      offset: '00004280'
+    - name: _SendNetNB
+      demangled: ''
+      offset: 000042D0
+    - name: _ReceiveNetNB
+      demangled: ''
+      offset: '00004510'
+    - name: _AllocNCBNoWait
+      demangled: ''
+      offset: '00004580'
+    - name: _SpinUpVC
+      demangled: ''
+      offset: 000045A0
+    - name: _AddnameWait
+      demangled: ''
+      offset: '00004630'
+    - name: _AddNameNB
+      demangled: ''
+      offset: '00004650'
+    - name: _StartNetClose
+      demangled: ''
+      offset: 000046D0
+    - name: _FinishNetClose
+      demangled: ''
+      offset: '00004760'
+    - name: _StopRedir
+      demangled: ''
+      offset: '00004780'
+    - name: _MslotAddNet
+      demangled: ''
+      offset: '000047E0'
+    - name: _MslotDelNet
+      demangled: ''
+      offset: '00004820'
+    - name: _MailSlotFunction
+      demangled: ''
+      offset: '00004840'
+    - name: _RemoteMailSlotWrite
+      demangled: ''
+      offset: 000048F0
+    - name: _VXDRemoteMailSlotWrite
+      demangled: ''
+      offset: '000049E0'
+    - name: _MakeDGramName
+      demangled: ''
+      offset: 00004A80
+    - name: _SimAsyncPipe
+      demangled: ''
+      offset: 00004BE0
+    - name: _PipeWakeupEvent
+      demangled: ''
+      offset: 00004C10
+    - name: _PipeReadWakeupEvent
+      demangled: ''
+      offset: 00004C30
+    - name: _PipeRead
+      demangled: ''
+      offset: 00004C70
+    - name: _PipeRead2
+      demangled: ''
+      offset: 00004CB0
+    - name: _SendPipeRead
+      demangled: ''
+      offset: 00004EE0
+    - name: _PipeReadSignalRtn
+      demangled: ''
+      offset: '00005000'
+    - name: _PipeWrite
+      demangled: ''
+      offset: 000050F0
+    - name: _SendPipeWrite
+      demangled: ''
+      offset: 000051F0
+    - name: _PipeWriteSignalRtn
+      demangled: ''
+      offset: '00005300'
+    - name: _HandleInfo
+      demangled: ''
+      offset: 000053F0
+    - name: _SimPipeTransact
+      demangled: ''
+      offset: '00005500'
+    - name: _SimCallPipe
+      demangled: ''
+      offset: 000056A0
+    - name: _PipeRequest
+      demangled: ''
+      offset: '00005770'
+    - name: _PipeRequest2
+      demangled: ''
+      offset: '00005790'
+    - name: _PipeLooker
+      demangled: ''
+      offset: 00005AB0
+    - name: _LogonUser
+      demangled: ''
+      offset: 00005B70
+    - name: _LogoffUser
+      demangled: ''
+      offset: 00005D10
+    - name: _QueryUser
+      demangled: ''
+      offset: 00005D90
+    - name: _ZapUserInfo
+      demangled: ''
+      offset: '00005E30'
+    - name: _UserCleanUp
+      demangled: ''
+      offset: '00005E60'
+    - name: _XlateNTSearchPath
+      demangled: ''
+      offset: 00005F20
+    - name: _GetSetFileInfo
+      demangled: ''
+      offset: 000060C0
+    - name: _GetNTFileInfo
+      demangled: ''
+      offset: '00006260'
+    - name: _NetFunction
+      demangled: ''
+      offset: 000063B0
+    - name: _WIN32_IOCtl
+      demangled: ''
+      offset: 000066A0
+    - name: _GetFastBindCount
+      demangled: ''
+      offset: 000067A0
+    - name: _GetConnectionQOS
+      demangled: ''
+      offset: '00006810'
+    - name: _EncryptPassword
+      demangled: ''
+      offset: 000068F0
+    - name: _CrackOEMPath
+      demangled: ''
+      offset: 00006D90
+    - name: _VRDCaseMapString
+      demangled: ''
+      offset: '00006E60'
+    - name: _GetPrintQueue
+      demangled: ''
+      offset: 00006ED0
+    - name: _FillNetInfo
+      demangled: ''
+      offset: '00007220'
+    - name: _GetNetInfo
+      demangled: ''
+      offset: '00007260'
+    - name: _SetNetInfo
+      demangled: ''
+      offset: '000072E0'
+    - name: _GetBrowseMaster
+      demangled: ''
+      offset: '00007330'
+    - name: _MapDevnode
+      demangled: ''
+      offset: 000073D0
+    - name: _NetTransact
+      demangled: ''
+      offset: '00007450'
+    - name: _NBEnum
+      demangled: ''
+      offset: '00007710'
+    - name: _NetIRemoteAPI
+      demangled: ''
+      offset: 000077B0
+    - name: _GetArrayLength
+      demangled: ''
+      offset: 00007A40
+    - name: _GetFieldSize
+      demangled: ''
+      offset: 00007B30
+    - name: _GetStructSize
+      demangled: ''
+      offset: 00007BE0
+    - name: _set_pointer
+      demangled: ''
+      offset: 00007C30
+    - name: _RcvBufferConvert
+      demangled: ''
+      offset: 00007C60
+    - name: _PackSendBuf
+      demangled: ''
+      offset: 00007D90
+    - name: _RemoteAPIBuilder
+      demangled: ''
+      offset: 00007FC0
+    - name: _RemoteAPIFinish
+      demangled: ''
+      offset: 000086B0
+    - name: _GetLogonInfo
+      demangled: ''
+      offset: '00008890'
+    - name: _SetLogonInfo
+      demangled: ''
+      offset: '00008950'
+    - name: _SetUserName
+      demangled: ''
+      offset: 000089C0
+    - name: _VXDValidateUser
+      demangled: ''
+      offset: 00008A80
+    - name: _SendGroupEnum
+      demangled: ''
+      offset: 00008D90
+    - name: _VXDUserGetGroups
+      demangled: ''
+      offset: 00008F80
+    - name: _ServiceEnum
+      demangled: ''
+      offset: '00009020'
+    - name: _ServiceControl
+      demangled: ''
+      offset: '000090E0'
+    - name: _ServiceNotify
+      demangled: ''
+      offset: 000091D0
+    - name: _GetServiceStruct
+      demangled: ''
+      offset: 000092D0
+    - name: _GetEnumInfo
+      demangled: ''
+      offset: '00009340'
+    - name: _WkstaGetInfo
+      demangled: ''
+      offset: '00009590'
+    - name: _DoWkstaGetInfo
+      demangled: ''
+      offset: '00009610'
+    - name: _WWkstaGetInfo
+      demangled: ''
+      offset: '000096E0'
+    - name: _BuildAPIStruct
+      demangled: ''
+      offset: '00009770'
+    - name: _ServerEnum
+      demangled: ''
+      offset: 00009A80
+    - name: _BrServerEnum
+      demangled: ''
+      offset: 0000A370
+    - name: _SendServerEnum
+      demangled: ''
+      offset: 0000A410
+    - name: _EnumListMerge
+      demangled: ''
+      offset: 0000A610
+    - name: _VxDSrvEnum
+      demangled: ''
+      offset: 0000A7D0
+    - name: _ServerEnumLana
+      demangled: ''
+      offset: 0000A800
+    - name: _MsgStartStop
+      demangled: ''
+      offset: 0000AAB0
+    - name: _SendMessage
+      demangled: ''
+      offset: 0000AC20
+    - name: _MsgWorkGroupName
+      demangled: ''
+      offset: 0000AF10
+    - name: _MsgDecNumCalls
+      demangled: ''
+      offset: 0000AF60
+    - name: _MsgSendDone
+      demangled: ''
+      offset: 0000AF90
+    - name: _VXDSendMessage
+      demangled: ''
+      offset: 0000AFB0
+    - name: _GetMsgUserName
+      demangled: ''
+      offset: 0000B160
+    - name: _SetupUserSend
+      demangled: ''
+      offset: 0000B1D0
+    - name: _MsgCallUsingNCB
+      demangled: ''
+      offset: 0000B290
+    - name: _DoWorkGroupSend
+      demangled: ''
+      offset: 0000B300
+    - name: _MsgMSlotCreate
+      demangled: ''
+      offset: 0000B400
+    - name: _MsgErrToMSlot
+      demangled: ''
+      offset: 0000B450
+    - name: _MsgReportError
+      demangled: ''
+      offset: 0000B4B0
+    - name: _MsgSNCBs
+      demangled: ''
+      offset: 0000B550
+    - name: _MsgCNCBs
+      demangled: ''
+      offset: 0000B710
+    - name: _MsgCCallErr
+      demangled: ''
+      offset: 0000B820
+    - name: _MsgIPXCallErr
+      demangled: ''
+      offset: 0000B860
+    - name: _MsgPostHangUp
+      demangled: ''
+      offset: 0000B8A0
+    - name: _MsgSPostAddname
+      demangled: ''
+      offset: 0000B900
+    - name: _MsgSPostListen
+      demangled: ''
+      offset: 0000B980
+    - name: _MsgPostReceive
+      demangled: ''
+      offset: 0000BA00
+    - name: _MsgSReceive
+      demangled: ''
+      offset: 0000BA50
+    - name: _MsgCleanUp
+      demangled: ''
+      offset: 0000BC60
+    - name: _MsgCleanUpNCB
+      demangled: ''
+      offset: 0000BDC0
+    - name: _MsgCPostSend
+      demangled: ''
+      offset: 0000BDF0
+    - name: _MsgDoSend
+      demangled: ''
+      offset: 0000BED0
+    - name: _MsgStopEvent
+      demangled: ''
+      offset: 0000BFE0
+    - name: _MsgCReceive
+      demangled: ''
+      offset: 0000C010
+    - name: _MsgShutdown
+      demangled: ''
+      offset: 0000C0C0
+    - name: _MsgIPXCall
+      demangled: ''
+      offset: 0000C2E0
+    - name: _MsgIPXLookup
+      demangled: ''
+      offset: 0000C400
+    - name: _MsgLookAhead
+      demangled: ''
+      offset: 0000C440
+    - name: _MsgAllocECB
+      demangled: ''
+      offset: 0000C850
+    - name: _VXDBcnSetWfWVersion
+      demangled: ''
+      offset: 0000C8A0
+    - name: _VXDBcnSetWfWBits
+      demangled: ''
+      offset: 0000C8F0
+    - name: _VXDBcnSetMaster
+      demangled: ''
+      offset: 0000C9A0
+    - name: _VXDBcnTriggerPulse
+      demangled: ''
+      offset: 0000CAA0
+    - name: _VXDBcnAddPulse
+      demangled: ''
+      offset: 0000CAE0
+    - name: _BcnAddPulse
+      demangled: ''
+      offset: 0000CB60
+    - name: _BcnDelPulse
+      demangled: ''
+      offset: 0000CBC0
+    - name: _MasterBDF
+      demangled: ''
+      offset: 0000CC10
+    - name: _LMBDF
+      demangled: ''
+      offset: 0000CC80
+    - name: _BcnAddName
+      demangled: ''
+      offset: 0000CCF0
+    - name: _BcnAddNameDone
+      demangled: ''
+      offset: 0000CD40
+    - name: _BcnDelNameDone
+      demangled: ''
+      offset: 0000CE30
+    - name: _BcnStopDone
+      demangled: ''
+      offset: 0000CE80
+    - name: _BcnStopMaster
+      demangled: ''
+      offset: 0000CEA0
+    - name: _BcnShutdown
+      demangled: ''
+      offset: 0000CF40
+    - name: _VXDSetRemoteDebug
+      demangled: ''
+      offset: 0000CFF0
+    - name: _RDRemoteDebug
+      demangled: ''
+      offset: 0000D0C0
+    - name: _BcnRemoteDebug
+      demangled: ''
+      offset: 0000D170
+    - name: _BRDComplete
+      demangled: ''
+      offset: 0000D2B0
+    - name: _RDputl
+      demangled: ''
+      offset: 0000D2C0
+    - name: _RDprintf
+      demangled: ''
+      offset: 0000D330
+    - name: _MaxXmitCDP
+      demangled: ''
+      offset: 0000D540
+    - name: _DeleteNameCDP
+      demangled: ''
+      offset: 0000D700
+    - name: _CallEvent
+      demangled: ''
+      offset: 0000D720
+    - name: _CancelCallServerCDP
+      demangled: ''
+      offset: 0000D830
+    - name: _CallServerCDP
+      demangled: ''
+      offset: 0000D840
+    - name: _AdjustIPXSessTimeout
+      demangled: ''
+      offset: 0000DA70
+    - name: _GetLocalTarget
+      demangled: ''
+      offset: 0000DA90
+    - name: _ReceiveNetCDP
+      demangled: ''
+      offset: 0000DAF0
+    - name: _AddNameCDP
+      demangled: ''
+      offset: 0000DB00
+    - name: _MakeMD
+      demangled: ''
+      offset: 0000DB30
+    - name: _CopyMemory
+      demangled: ''
+      offset: 0000DB50
+    - name: _CopyToMD
+      demangled: ''
+      offset: 0000DB80
+    - name: _CopyFromMD
+      demangled: ''
+      offset: 0000DBB0
+    - name: _LockMemory
+      demangled: ''
+      offset: 0000DBE0
+    - name: _UnLockMemory
+      demangled: ''
+      offset: 0000DC10
+    - name: _WaitForAllNCBs
+      demangled: ''
+      offset: 0000DC40
+    - name: _XlatePath
+      demangled: ''
+      offset: 0000DD40
+    - name: _NMCache_Init
+      demangled: ''
+      offset: 0000DE20
+    - name: _NMCache_Shutdown
+      demangled: ''
+      offset: 0000DE70
+    - name: _NMCache_GetName
+      demangled: ''
+      offset: 0000DEA0
+    - name: _NMCache_SetName
+      demangled: ''
+      offset: 0000DF10
+    - name: _NetGetDfsReferrals
+      demangled: ''
+      offset: 0000DF70
+  - num: '7'
+    name: _RCODE
+    offset: '000037E0'
+    symbols:
+    - name: RealmodeInit
+      demangled: ''
+      offset: '00000000'
+  - num: '8'
+    name: _PDATA
+    offset: '00003810'
+    symbols:
+    - name: _szRegVredirPath
+      demangled: ''
+      offset: '00000000'
+  - num: '9'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: _InitMaster
+      demangled: ''
+      offset: '00000010'
+    - name: _InitCacheMem
+      demangled: ''
+      offset: '00000030'
+    - name: _InitNibs
+      demangled: ''
+      offset: '00000060'
+    - name: VRDInit2
+      demangled: ''
+      offset: '00000110'
+    - name: VRDSysCritInit
+      demangled: ''
+      offset: 0000019D
+    - name: RdrEnvStr
+      demangled: ''
+      offset: '00000239'
+    - name: VRDTransition
+      demangled: ''
+      offset: '00000240'
+    - name: VRDDeviceInit
+      demangled: ''
+      offset: 000002F7
+    - name: _ServerPresent
+      demangled: ''
+      offset: '00000607'

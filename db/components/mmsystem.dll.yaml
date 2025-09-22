@@ -2,6 +2,474 @@ filename: mmsystem.dll
 binary: MMSYSTEM
 description: ''
 appearances:
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: FIX
+    offset: '00000100'
+    symbols:
+    - name: MMTASKSIGNAL
+      processed: ''
+      offset: 000000D4
+    - name: MCIDRIVERNOTIFY
+      processed: ''
+      offset: '000000E5'
+    - name: TIMEGETTIME
+      processed: ''
+      offset: 000000FC
+    - name: TIMEGETSYSTEMTIME
+      processed: ''
+      offset: 0000010A
+    - name: TIMESETEVENT
+      processed: ''
+      offset: '00000134'
+    - name: TIMEBEGINPERIOD
+      processed: ''
+      offset: 000001C0
+    - name: TIMEENDPERIOD
+      processed: ''
+      offset: 000001C5
+    - name: TIMEKILLEVENT
+      processed: ''
+      offset: 000001CA
+    - name: STACKENTER
+      processed: ''
+      offset: '000001E0'
+    - name: STACKLEAVE
+      processed: ''
+      offset: '000001E0'
+    - name: DRIVERCALLBACK
+      processed: ''
+      offset: '000001E2'
+  - num: '2'
+    name: FIXMIDI
+    offset: '00000170'
+    symbols:
+    - name: MIDIOUTMESSAGE
+      processed: ''
+      offset: 000000F0
+    - name: MIDIOUTSHORTMSG
+      processed: ''
+      offset: 000001D2
+    - name: MIDIOUTLONGMSG
+      processed: ''
+      offset: 0000022A
+    - name: MIDIOUTRESET
+      processed: ''
+      offset: 000002C4
+  - num: '4'
+    name: WAVE
+    offset: '00000450'
+    symbols:
+    - name: WAVEOUTGETNUMDEVS
+      processed: ''
+      offset: 000013DA
+    - name: WAVEOUTMESSAGE
+      processed: ''
+      offset: 000013EA
+    - name: WAVEOUTGETDEVCAPS
+      processed: ''
+      offset: '00001488'
+    - name: WAVEOUTGETVOLUME
+      processed: ''
+      offset: 0000152E
+    - name: WAVEOUTSETVOLUME
+      processed: ''
+      offset: '00001598'
+    - name: WAVEOUTGETERRORTEXT
+      processed: ''
+      offset: '00001698'
+    - name: WAVEOUTOPEN
+      processed: ''
+      offset: 000016D4
+    - name: WAVEOUTCLOSE
+      processed: ''
+      offset: 000018A0
+    - name: WAVEOUTPREPAREHEADER
+      processed: ''
+      offset: 000018EE
+    - name: WAVEOUTUNPREPAREHEADER
+      processed: ''
+      offset: '00001994'
+    - name: WAVEOUTWRITE
+      processed: ''
+      offset: 00001A3E
+    - name: WAVEOUTPAUSE
+      processed: ''
+      offset: 00001ACE
+    - name: WAVEOUTRESTART
+      processed: ''
+      offset: 00001B00
+    - name: WAVEOUTRESET
+      processed: ''
+      offset: 00001B32
+    - name: WAVEOUTBREAKLOOP
+      processed: ''
+      offset: 00001B64
+    - name: WAVEOUTGETPOSITION
+      processed: ''
+      offset: 00001B96
+    - name: WAVEOUTGETPITCH
+      processed: ''
+      offset: 00001BE4
+    - name: WAVEOUTSETPITCH
+      processed: ''
+      offset: 00001C2A
+    - name: WAVEOUTGETPLAYBACKRATE
+      processed: ''
+      offset: 00001C5C
+    - name: WAVEOUTSETPLAYBACKRATE
+      processed: ''
+      offset: 00001CA2
+    - name: WAVEINGETNUMDEVS
+      processed: ''
+      offset: 00001CD4
+    - name: WAVEINMESSAGE
+      processed: ''
+      offset: 00001CE4
+    - name: WAVEINGETDEVCAPS
+      processed: ''
+      offset: 00001D56
+    - name: WAVEINGETERRORTEXT
+      processed: ''
+      offset: 00001DFC
+    - name: WAVEINOPEN
+      processed: ''
+      offset: '00001E38'
+    - name: WAVEINCLOSE
+      processed: ''
+      offset: 0000200E
+    - name: WAVEINPREPAREHEADER
+      processed: ''
+      offset: '00002058'
+    - name: WAVEINUNPREPAREHEADER
+      processed: ''
+      offset: 000020F8
+    - name: WAVEINADDBUFFER
+      processed: ''
+      offset: 0000219C
+    - name: WAVEINSTART
+      processed: ''
+      offset: '00002230'
+    - name: WAVEINSTOP
+      processed: ''
+      offset: '00002262'
+    - name: WAVEINRESET
+      processed: ''
+      offset: '00002294'
+    - name: WAVEINGETPOSITION
+      processed: ''
+      offset: 000022C6
+    - name: WAVEINGETID
+      processed: ''
+      offset: '00002314'
+    - name: WAVEOUTGETID
+      processed: ''
+      offset: '00002374'
+  - num: '5'
+    name: _TEXT
+    offset: 000004D0
+    symbols:
+    - name: MMTASKYIELD
+      processed: ''
+      offset: 000001BA
+    - name: MMGETCURRENTTASK
+      processed: ''
+      offset: 000001DB
+    - name: MMTASKBLOCK
+      processed: ''
+      offset: '000001E0'
+    - name: PLAYSOUND
+      processed: ''
+      offset: 0000056E
+    - name: SNDPLAYSOUND
+      processed: ''
+      offset: '00000598'
+    - name: MMTASKCREATE
+      processed: ''
+      offset: 000005B6
+  - num: '6'
+    name: MCI
+    offset: '00000620'
+    symbols:
+    - name: MCISENDCOMMAND
+      processed: ''
+      offset: '00000596'
+    - name: MCISENDSTRING
+      processed: ''
+      offset: 000012A4
+    - name: MCIEXECUTE
+      processed: ''
+      offset: 000012DA
+    - name: MCIGETERRORSTRING
+      processed: ''
+      offset: 000013CA
+    - name: MCIGETDEVICEIDFROMELEMENTID
+      processed: ''
+      offset: '00001768'
+    - name: MCIGETDEVICEID
+      processed: ''
+      offset: '00001898'
+    - name: MCIGETCREATORTASK
+      processed: ''
+      offset: 000018B4
+    - name: MCIGETDRIVERDATA
+      processed: ''
+      offset: 00002BA2
+    - name: MCISETDRIVERDATA
+      processed: ''
+      offset: 00002BEA
+    - name: MCIDRIVERYIELD
+      processed: ''
+      offset: 00002C36
+    - name: MCISETYIELDPROC
+      processed: ''
+      offset: 00002C92
+    - name: MCIGETYIELDPROC
+      processed: ''
+      offset: 00002D0E
+    - name: MCILOADCOMMANDRESOURCE
+      processed: ''
+      offset: '00003280'
+    - name: MCIFREECOMMANDRESOURCE
+      processed: ''
+      offset: '000034E8'
+  - num: '7'
+    name: MIDI
+    offset: 000008D0
+    symbols:
+    - name: MIDISTREAMOPEN
+      processed: ''
+      offset: 000001D8
+    - name: MIDISTREAMCLOSE
+      processed: ''
+      offset: 0000059E
+    - name: MIDISTREAMPROPERTY
+      processed: ''
+      offset: 000005F6
+    - name: MIDISTREAMPOSITION
+      processed: ''
+      offset: '00000680'
+    - name: MIDIINGETNUMDEVS
+      processed: ''
+      offset: '00000858'
+    - name: MIDIINMESSAGE
+      processed: ''
+      offset: '00000868'
+    - name: MIDIINGETID
+      processed: ''
+      offset: 000008C8
+    - name: MIDIINGETDEVCAPS
+      processed: ''
+      offset: '00000928'
+    - name: MIDIINGETERRORTEXT
+      processed: ''
+      offset: '000009E2'
+    - name: MIDIINOPEN
+      processed: ''
+      offset: 00000A1E
+    - name: MIDIINCLOSE
+      processed: ''
+      offset: 00000B34
+    - name: MIDIINPREPAREHEADER
+      processed: ''
+      offset: 00000B96
+    - name: MIDIINUNPREPAREHEADER
+      processed: ''
+      offset: 00000C32
+    - name: MIDIINADDBUFFER
+      processed: ''
+      offset: 00000CD4
+    - name: MIDIINSTART
+      processed: ''
+      offset: 00000D46
+    - name: MIDIINSTOP
+      processed: ''
+      offset: 00000D7A
+    - name: MIDIINRESET
+      processed: ''
+      offset: 00000DAE
+    - name: MIDIOUTGETNUMDEVS
+      processed: ''
+      offset: 00000DE2
+    - name: MIDIOUTGETID
+      processed: ''
+      offset: 00000DF2
+    - name: MIDIOUTGETDEVCAPS
+      processed: ''
+      offset: '00000E52'
+    - name: MIDIOUTGETVOLUME
+      processed: ''
+      offset: 00000EEE
+    - name: MIDIOUTSETVOLUME
+      processed: ''
+      offset: 00000F82
+    - name: MIDIOUTGETERRORTEXT
+      processed: ''
+      offset: 00000FF8
+    - name: MIDIOUTOPEN
+      processed: ''
+      offset: '00001034'
+    - name: MIDIOUTCLOSE
+      processed: ''
+      offset: '00001154'
+    - name: MIDIOUTPREPAREHEADER
+      processed: ''
+      offset: 000011B8
+    - name: MIDIOUTUNPREPAREHEADER
+      processed: ''
+      offset: '00001404'
+    - name: MIDISTREAMSTOP
+      processed: ''
+      offset: 0000158A
+    - name: MIDIOUTCACHEPATCHES
+      processed: ''
+      offset: 000015BE
+    - name: MIDIOUTCACHEDRUMPATCHES
+      processed: ''
+      offset: '00001638'
+    - name: MIDISTREAMRESTART
+      processed: ''
+      offset: '000016E6'
+    - name: MIDISTREAMOUT
+      processed: ''
+      offset: 0000179A
+  - num: '8'
+    name: MMIO
+    offset: 00000A00
+    symbols:
+    - name: MMIORENAME
+      processed: ''
+      offset: 0000024A
+    - name: MMIOOPEN
+      processed: ''
+      offset: 000002FC
+    - name: MMIOCLOSE
+      processed: ''
+      offset: 000004C0
+    - name: MMIOREAD
+      processed: ''
+      offset: 0000051A
+    - name: MMIOWRITE
+      processed: ''
+      offset: '00000650'
+    - name: MMIOSEEK
+      processed: ''
+      offset: 000007BA
+    - name: MMIOGETINFO
+      processed: ''
+      offset: 000008F4
+    - name: MMIOSETINFO
+      processed: ''
+      offset: '00000950'
+    - name: MMIOSETBUFFER
+      processed: ''
+      offset: 00000A02
+    - name: MMIOFLUSH
+      processed: ''
+      offset: 00000BFA
+    - name: MMIOADVANCE
+      processed: ''
+      offset: 00000CA2
+    - name: MMIOSTRINGTOFOURCC
+      processed: ''
+      offset: 00000DA4
+    - name: MMIOINSTALLIOPROC
+      processed: ''
+      offset: '00001016'
+    - name: MMIOSENDMESSAGE
+      processed: ''
+      offset: 000010F4
+    - name: MMIODESCEND
+      processed: ''
+      offset: 0000145C
+    - name: MMIOASCEND
+      processed: ''
+      offset: '00001628'
+    - name: MMIOCREATECHUNK
+      processed: ''
+      offset: '00001782'
+  - num: '9'
+    name: MIXER
+    offset: 00000AF0
+    symbols:
+    - name: MIXERGETNUMDEVS
+      processed: ''
+      offset: '000001E6'
+    - name: MIXERGETDEVCAPS
+      processed: ''
+      offset: 000001F6
+    - name: MIXERGETID
+      processed: ''
+      offset: '00000252'
+    - name: MIXEROPEN
+      processed: ''
+      offset: 0000060E
+    - name: MIXERCLOSE
+      processed: ''
+      offset: '00000824'
+    - name: MIXERMESSAGE
+      processed: ''
+      offset: 000008D6
+    - name: MIXERGETLINEINFO
+      processed: ''
+      offset: '00000928'
+    - name: MIXERGETLINECONTROLS
+      processed: ''
+      offset: 00000CB8
+    - name: MIXERGETCONTROLDETAILS
+      processed: ''
+      offset: 00000DF6
+    - name: MIXERSETCONTROLDETAILS
+      processed: ''
+      offset: 00000F6A
+  - num: '10'
+    name: RARE
+    offset: '00000000'
+    symbols:
+    - name: TIMEGETDEVCAPS
+      processed: ''
+      offset: '00000000'
+    - name: MMSYSTEMGETVERSION
+      processed: ''
+      offset: '00000496'
+    - name: JOYGETNUMDEVS
+      processed: ''
+      offset: 0000077E
+    - name: JOYGETDEVCAPS
+      processed: ''
+      offset: '00000796'
+    - name: JOYGETPOS
+      processed: ''
+      offset: '000007E2'
+    - name: JOYGETTHRESHOLD
+      processed: ''
+      offset: 0000085C
+    - name: JOYRELEASECAPTURE
+      processed: ''
+      offset: 000008A0
+    - name: JOYSETCAPTURE
+      processed: ''
+      offset: '00000914'
+    - name: JOYSETTHRESHOLD
+      processed: ''
+      offset: 00000A02
+    - name: AUXOUTMESSAGE
+      processed: ''
+      offset: 00000AFA
+    - name: AUXGETNUMDEVS
+      processed: ''
+      offset: 00000B98
+    - name: AUXGETDEVCAPS
+      processed: ''
+      offset: 00000BA8
+    - name: AUXGETVOLUME
+      processed: ''
+      offset: 00000BEC
+    - name: AUXSETVOLUME
+      processed: ''
+      offset: 00000C24
 - version: Windows 98 Debug
   source_tree:
   - again.H
@@ -16,934 +484,466 @@ appearances:
     offset: '00000100'
     symbols:
     - name: MMTASKSIGNAL
-      processed: ''
+      demangled: ''
       offset: 000001D0
     - name: MCIDRIVERNOTIFY
-      processed: ''
+      demangled: ''
       offset: '000001E1'
     - name: TIMEGETTIME
-      processed: ''
+      demangled: ''
       offset: 000001F8
     - name: TIMEGETSYSTEMTIME
-      processed: ''
+      demangled: ''
       offset: '00000206'
     - name: TIMESETEVENT
-      processed: ''
+      demangled: ''
       offset: '00000230'
     - name: TIMEBEGINPERIOD
-      processed: ''
+      demangled: ''
       offset: 000002BC
     - name: TIMEENDPERIOD
-      processed: ''
+      demangled: ''
       offset: 000002C1
     - name: TIMEKILLEVENT
-      processed: ''
+      demangled: ''
       offset: 000002C6
     - name: STACKLEAVE
-      processed: ''
+      demangled: ''
       offset: '00000552'
     - name: STACKENTER
-      processed: ''
+      demangled: ''
       offset: '00000552'
     - name: DRIVERCALLBACK
-      processed: ''
+      demangled: ''
       offset: '00000554'
   - num: '2'
     name: FIXMIDI
     offset: '00000170'
     symbols:
     - name: MIDIOUTMESSAGE
-      processed: ''
+      demangled: ''
       offset: 000000F0
     - name: MIDIOUTSHORTMSG
-      processed: ''
+      demangled: ''
       offset: 000001D2
     - name: MIDIOUTLONGMSG
-      processed: ''
+      demangled: ''
       offset: 0000022A
     - name: MIDIOUTRESET
-      processed: ''
+      demangled: ''
       offset: 000002C4
   - num: '4'
     name: WAVE
     offset: '00000450'
     symbols:
     - name: WAVEOUTGETNUMDEVS
-      processed: ''
+      demangled: ''
       offset: 0000165E
     - name: WAVEOUTMESSAGE
-      processed: ''
+      demangled: ''
       offset: 0000166E
     - name: WAVEOUTGETDEVCAPS
-      processed: ''
+      demangled: ''
       offset: 0000170C
     - name: WAVEOUTGETVOLUME
-      processed: ''
+      demangled: ''
       offset: 000017B2
     - name: WAVEOUTSETVOLUME
-      processed: ''
+      demangled: ''
       offset: 0000181C
     - name: WAVEOUTGETERRORTEXT
-      processed: ''
+      demangled: ''
       offset: 0000191C
     - name: WAVEOUTOPEN
-      processed: ''
+      demangled: ''
       offset: '00001958'
     - name: WAVEOUTCLOSE
-      processed: ''
+      demangled: ''
       offset: 00001B3C
     - name: WAVEOUTPREPAREHEADER
-      processed: ''
+      demangled: ''
       offset: 00001B8A
     - name: WAVEOUTUNPREPAREHEADER
-      processed: ''
+      demangled: ''
       offset: 00001C3E
     - name: WAVEOUTWRITE
-      processed: ''
+      demangled: ''
       offset: 00001D08
     - name: WAVEOUTPAUSE
-      processed: ''
+      demangled: ''
       offset: 00001DB6
     - name: WAVEOUTRESTART
-      processed: ''
+      demangled: ''
       offset: 00001DE8
     - name: WAVEOUTRESET
-      processed: ''
+      demangled: ''
       offset: 00001E1A
     - name: WAVEOUTBREAKLOOP
-      processed: ''
+      demangled: ''
       offset: 00001E4C
     - name: WAVEOUTGETPOSITION
-      processed: ''
+      demangled: ''
       offset: 00001E7E
     - name: WAVEOUTGETPITCH
-      processed: ''
+      demangled: ''
       offset: 00001ECC
     - name: WAVEOUTSETPITCH
-      processed: ''
+      demangled: ''
       offset: 00001F12
     - name: WAVEOUTGETPLAYBACKRATE
-      processed: ''
+      demangled: ''
       offset: 00001F44
     - name: WAVEOUTSETPLAYBACKRATE
-      processed: ''
+      demangled: ''
       offset: 00001F8A
     - name: WAVEINGETNUMDEVS
-      processed: ''
+      demangled: ''
       offset: 00001FBC
     - name: WAVEINMESSAGE
-      processed: ''
+      demangled: ''
       offset: 00001FCC
     - name: WAVEINGETDEVCAPS
-      processed: ''
+      demangled: ''
       offset: 0000203E
     - name: WAVEINGETERRORTEXT
-      processed: ''
+      demangled: ''
       offset: '000020E4'
     - name: WAVEINOPEN
-      processed: ''
+      demangled: ''
       offset: '00002120'
     - name: WAVEINCLOSE
-      processed: ''
+      demangled: ''
       offset: 0000230A
     - name: WAVEINPREPAREHEADER
-      processed: ''
+      demangled: ''
       offset: '00002354'
     - name: WAVEINUNPREPAREHEADER
-      processed: ''
+      demangled: ''
       offset: '00002402'
     - name: WAVEINADDBUFFER
-      processed: ''
+      demangled: ''
       offset: 000024C6
     - name: WAVEINSTART
-      processed: ''
+      demangled: ''
       offset: '00002578'
     - name: WAVEINSTOP
-      processed: ''
+      demangled: ''
       offset: 000025AA
     - name: WAVEINRESET
-      processed: ''
+      demangled: ''
       offset: 000025DC
     - name: WAVEINGETPOSITION
-      processed: ''
+      demangled: ''
       offset: 0000260E
     - name: WAVEINGETID
-      processed: ''
+      demangled: ''
       offset: 0000265C
     - name: WAVEOUTGETID
-      processed: ''
+      demangled: ''
       offset: 000026BC
   - num: '5'
     name: _TEXT
     offset: 000004D0
     symbols:
     - name: MMTASKYIELD
-      processed: ''
+      demangled: ''
       offset: 0000034C
     - name: MMGETCURRENTTASK
-      processed: ''
+      demangled: ''
       offset: 0000036D
     - name: MMTASKBLOCK
-      processed: ''
+      demangled: ''
       offset: '00000372'
     - name: PLAYSOUND
-      processed: ''
+      demangled: ''
       offset: '00000700'
     - name: SNDPLAYSOUND
-      processed: ''
+      demangled: ''
       offset: 0000072A
     - name: MMTASKCREATE
-      processed: ''
+      demangled: ''
       offset: '00000748'
   - num: '6'
     name: MCI
     offset: '00000620'
     symbols:
     - name: MCISENDCOMMAND
-      processed: ''
+      demangled: ''
       offset: 00000BB8
     - name: MCISENDSTRING
-      processed: ''
+      demangled: ''
       offset: 000018C6
     - name: MCIEXECUTE
-      processed: ''
+      demangled: ''
       offset: 000018FC
     - name: MCIGETERRORSTRING
-      processed: ''
+      demangled: ''
       offset: 000019EC
     - name: MCIGETDEVICEIDFROMELEMENTID
-      processed: ''
+      demangled: ''
       offset: 00001D8A
     - name: MCIGETDEVICEID
-      processed: ''
+      demangled: ''
       offset: 00001EBA
     - name: MCIGETCREATORTASK
-      processed: ''
+      demangled: ''
       offset: 00001ED6
     - name: MCIGETDRIVERDATA
-      processed: ''
+      demangled: ''
       offset: 000031C4
     - name: MCISETDRIVERDATA
-      processed: ''
+      demangled: ''
       offset: 0000320C
     - name: MCIDRIVERYIELD
-      processed: ''
+      demangled: ''
       offset: '00003258'
     - name: MCISETYIELDPROC
-      processed: ''
+      demangled: ''
       offset: 000032B4
     - name: MCIGETYIELDPROC
-      processed: ''
+      demangled: ''
       offset: '00003330'
     - name: MCILOADCOMMANDRESOURCE
-      processed: ''
+      demangled: ''
       offset: 000038A2
     - name: MCIFREECOMMANDRESOURCE
-      processed: ''
+      demangled: ''
       offset: 00003B0A
   - num: '7'
     name: MIDI
     offset: 000008D0
     symbols:
     - name: MIDISTREAMOPEN
-      processed: ''
+      demangled: ''
       offset: 000001D8
     - name: MIDISTREAMCLOSE
-      processed: ''
+      demangled: ''
       offset: 0000059E
     - name: MIDISTREAMPROPERTY
-      processed: ''
+      demangled: ''
       offset: 000005F6
     - name: MIDISTREAMPOSITION
-      processed: ''
+      demangled: ''
       offset: '00000680'
     - name: MIDIINGETNUMDEVS
-      processed: ''
+      demangled: ''
       offset: 000008F0
     - name: MIDIINMESSAGE
-      processed: ''
+      demangled: ''
       offset: '00000900'
     - name: MIDIINGETID
-      processed: ''
+      demangled: ''
       offset: '00000960'
     - name: MIDIINGETDEVCAPS
-      processed: ''
+      demangled: ''
       offset: 000009C0
     - name: MIDIINGETERRORTEXT
-      processed: ''
+      demangled: ''
       offset: 00000A7A
     - name: MIDIINOPEN
-      processed: ''
+      demangled: ''
       offset: 00000AB6
     - name: MIDIINCLOSE
-      processed: ''
+      demangled: ''
       offset: 00000BE0
     - name: MIDIINPREPAREHEADER
-      processed: ''
+      demangled: ''
       offset: 00000C42
     - name: MIDIINUNPREPAREHEADER
-      processed: ''
+      demangled: ''
       offset: 00000CDE
     - name: MIDIINADDBUFFER
-      processed: ''
+      demangled: ''
       offset: 00000D8E
     - name: MIDIINSTART
-      processed: ''
+      demangled: ''
       offset: 00000E1E
     - name: MIDIINSTOP
-      processed: ''
+      demangled: ''
       offset: '00000E52'
     - name: MIDIINRESET
-      processed: ''
+      demangled: ''
       offset: '00000E86'
     - name: MIDIOUTGETNUMDEVS
-      processed: ''
+      demangled: ''
       offset: 00000EBA
     - name: MIDIOUTGETID
-      processed: ''
+      demangled: ''
       offset: 0000103E
     - name: MIDIOUTGETDEVCAPS
-      processed: ''
+      demangled: ''
       offset: 0000109E
     - name: MIDIOUTGETVOLUME
-      processed: ''
+      demangled: ''
       offset: 0000113A
     - name: MIDIOUTSETVOLUME
-      processed: ''
+      demangled: ''
       offset: 000011CE
     - name: MIDIOUTGETERRORTEXT
-      processed: ''
+      demangled: ''
       offset: '00001244'
     - name: MIDIOUTOPEN
-      processed: ''
+      demangled: ''
       offset: '00001280'
     - name: MIDIOUTCLOSE
-      processed: ''
+      demangled: ''
       offset: 000013B6
     - name: MIDIOUTPREPAREHEADER
-      processed: ''
+      demangled: ''
       offset: 0000141A
     - name: MIDIOUTUNPREPAREHEADER
-      processed: ''
+      demangled: ''
       offset: '00001684'
     - name: MIDISTREAMSTOP
-      processed: ''
+      demangled: ''
       offset: '00001856'
     - name: MIDIOUTCACHEPATCHES
-      processed: ''
+      demangled: ''
       offset: 0000188A
     - name: MIDIOUTCACHEDRUMPATCHES
-      processed: ''
+      demangled: ''
       offset: '00001916'
     - name: MIDISTREAMRESTART
-      processed: ''
+      demangled: ''
       offset: 000019D6
     - name: MIDISTREAMOUT
-      processed: ''
+      demangled: ''
       offset: 00001A8A
   - num: '8'
     name: MMIO
     offset: 00000A00
     symbols:
     - name: MMIORENAME
-      processed: ''
+      demangled: ''
       offset: 0000027C
     - name: MMIOOPEN
-      processed: ''
+      demangled: ''
       offset: '00000340'
     - name: MMIOCLOSE
-      processed: ''
+      demangled: ''
       offset: '00000516'
     - name: MMIOREAD
-      processed: ''
+      demangled: ''
       offset: '00000580'
     - name: MMIOWRITE
-      processed: ''
+      demangled: ''
       offset: 000006B6
     - name: MMIOSEEK
-      processed: ''
+      demangled: ''
       offset: '00000820'
     - name: MMIOGETINFO
-      processed: ''
+      demangled: ''
       offset: 0000095A
     - name: MMIOSETINFO
-      processed: ''
+      demangled: ''
       offset: 000009C8
     - name: MMIOSETBUFFER
-      processed: ''
+      demangled: ''
       offset: 00000A8E
     - name: MMIOFLUSH
-      processed: ''
+      demangled: ''
       offset: 00000C9A
     - name: MMIOADVANCE
-      processed: ''
+      demangled: ''
       offset: 00000D54
     - name: MMIOSTRINGTOFOURCC
-      processed: ''
+      demangled: ''
       offset: 00000E6A
     - name: MMIOINSTALLIOPROC
-      processed: ''
+      demangled: ''
       offset: 000010F0
     - name: MMIOSENDMESSAGE
-      processed: ''
+      demangled: ''
       offset: '000011E0'
     - name: MMIODESCEND
-      processed: ''
+      demangled: ''
       offset: 0000156C
     - name: MMIOASCEND
-      processed: ''
+      demangled: ''
       offset: 0000174E
     - name: MMIOCREATECHUNK
-      processed: ''
+      demangled: ''
       offset: 000018BC
   - num: '9'
     name: MIXER
     offset: 00000AF0
     symbols:
     - name: MIXERGETNUMDEVS
-      processed: ''
+      demangled: ''
       offset: 000001F4
     - name: MIXERGETDEVCAPS
-      processed: ''
+      demangled: ''
       offset: '00000204'
     - name: MIXERGETID
-      processed: ''
+      demangled: ''
       offset: '00000260'
     - name: MIXEROPEN
-      processed: ''
+      demangled: ''
       offset: '00000640'
     - name: MIXERCLOSE
-      processed: ''
+      demangled: ''
       offset: '00000868'
     - name: MIXERMESSAGE
-      processed: ''
+      demangled: ''
       offset: 0000091A
     - name: MIXERGETLINEINFO
-      processed: ''
+      demangled: ''
       offset: '00000980'
     - name: MIXERGETLINECONTROLS
-      processed: ''
+      demangled: ''
       offset: 00000D36
     - name: MIXERGETCONTROLDETAILS
-      processed: ''
+      demangled: ''
       offset: 00000EBE
     - name: MIXERSETCONTROLDETAILS
-      processed: ''
+      demangled: ''
       offset: 0000108A
   - num: '10'
     name: RARE
     offset: '00000000'
     symbols:
     - name: TIMEGETDEVCAPS
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: MMSYSTEMGETVERSION
-      processed: ''
+      demangled: ''
       offset: '00000496'
     - name: JOYGETNUMDEVS
-      processed: ''
+      demangled: ''
       offset: 0000077E
     - name: JOYGETDEVCAPS
-      processed: ''
+      demangled: ''
       offset: '00000796'
     - name: JOYGETPOS
-      processed: ''
+      demangled: ''
       offset: '000007E2'
     - name: JOYGETTHRESHOLD
-      processed: ''
+      demangled: ''
       offset: 0000085C
     - name: JOYRELEASECAPTURE
-      processed: ''
+      demangled: ''
       offset: 000008A0
     - name: JOYSETCAPTURE
-      processed: ''
+      demangled: ''
       offset: '00000914'
     - name: JOYSETTHRESHOLD
-      processed: ''
+      demangled: ''
       offset: 00000A12
     - name: AUXOUTMESSAGE
-      processed: ''
+      demangled: ''
       offset: 00000B0A
     - name: AUXGETNUMDEVS
-      processed: ''
+      demangled: ''
       offset: 00000BC0
     - name: AUXGETDEVCAPS
-      processed: ''
+      demangled: ''
       offset: 00000BD0
     - name: AUXGETVOLUME
-      processed: ''
+      demangled: ''
       offset: 00000C14
     - name: AUXSETVOLUME
-      processed: ''
+      demangled: ''
       offset: 00000C4C
-- version: Windows 98 Retail
-  source_tree: []
-  segments:
-  - num: '1'
-    name: FIX
-    offset: '00000100'
-    symbols:
-    - name: MMTASKSIGNAL
-      demangled: ''
-      offset: 000000D4
-    - name: MCIDRIVERNOTIFY
-      demangled: ''
-      offset: '000000E5'
-    - name: TIMEGETTIME
-      demangled: ''
-      offset: 000000FC
-    - name: TIMEGETSYSTEMTIME
-      demangled: ''
-      offset: 0000010A
-    - name: TIMESETEVENT
-      demangled: ''
-      offset: '00000134'
-    - name: TIMEBEGINPERIOD
-      demangled: ''
-      offset: 000001C0
-    - name: TIMEENDPERIOD
-      demangled: ''
-      offset: 000001C5
-    - name: TIMEKILLEVENT
-      demangled: ''
-      offset: 000001CA
-    - name: STACKENTER
-      demangled: ''
-      offset: '000001E0'
-    - name: STACKLEAVE
-      demangled: ''
-      offset: '000001E0'
-    - name: DRIVERCALLBACK
-      demangled: ''
-      offset: '000001E2'
-  - num: '2'
-    name: FIXMIDI
-    offset: '00000170'
-    symbols:
-    - name: MIDIOUTMESSAGE
-      demangled: ''
-      offset: 000000F0
-    - name: MIDIOUTSHORTMSG
-      demangled: ''
-      offset: 000001D2
-    - name: MIDIOUTLONGMSG
-      demangled: ''
-      offset: 0000022A
-    - name: MIDIOUTRESET
-      demangled: ''
-      offset: 000002C4
-  - num: '4'
-    name: WAVE
-    offset: '00000450'
-    symbols:
-    - name: WAVEOUTGETNUMDEVS
-      demangled: ''
-      offset: 000013DA
-    - name: WAVEOUTMESSAGE
-      demangled: ''
-      offset: 000013EA
-    - name: WAVEOUTGETDEVCAPS
-      demangled: ''
-      offset: '00001488'
-    - name: WAVEOUTGETVOLUME
-      demangled: ''
-      offset: 0000152E
-    - name: WAVEOUTSETVOLUME
-      demangled: ''
-      offset: '00001598'
-    - name: WAVEOUTGETERRORTEXT
-      demangled: ''
-      offset: '00001698'
-    - name: WAVEOUTOPEN
-      demangled: ''
-      offset: 000016D4
-    - name: WAVEOUTCLOSE
-      demangled: ''
-      offset: 000018A0
-    - name: WAVEOUTPREPAREHEADER
-      demangled: ''
-      offset: 000018EE
-    - name: WAVEOUTUNPREPAREHEADER
-      demangled: ''
-      offset: '00001994'
-    - name: WAVEOUTWRITE
-      demangled: ''
-      offset: 00001A3E
-    - name: WAVEOUTPAUSE
-      demangled: ''
-      offset: 00001ACE
-    - name: WAVEOUTRESTART
-      demangled: ''
-      offset: 00001B00
-    - name: WAVEOUTRESET
-      demangled: ''
-      offset: 00001B32
-    - name: WAVEOUTBREAKLOOP
-      demangled: ''
-      offset: 00001B64
-    - name: WAVEOUTGETPOSITION
-      demangled: ''
-      offset: 00001B96
-    - name: WAVEOUTGETPITCH
-      demangled: ''
-      offset: 00001BE4
-    - name: WAVEOUTSETPITCH
-      demangled: ''
-      offset: 00001C2A
-    - name: WAVEOUTGETPLAYBACKRATE
-      demangled: ''
-      offset: 00001C5C
-    - name: WAVEOUTSETPLAYBACKRATE
-      demangled: ''
-      offset: 00001CA2
-    - name: WAVEINGETNUMDEVS
-      demangled: ''
-      offset: 00001CD4
-    - name: WAVEINMESSAGE
-      demangled: ''
-      offset: 00001CE4
-    - name: WAVEINGETDEVCAPS
-      demangled: ''
-      offset: 00001D56
-    - name: WAVEINGETERRORTEXT
-      demangled: ''
-      offset: 00001DFC
-    - name: WAVEINOPEN
-      demangled: ''
-      offset: '00001E38'
-    - name: WAVEINCLOSE
-      demangled: ''
-      offset: 0000200E
-    - name: WAVEINPREPAREHEADER
-      demangled: ''
-      offset: '00002058'
-    - name: WAVEINUNPREPAREHEADER
-      demangled: ''
-      offset: 000020F8
-    - name: WAVEINADDBUFFER
-      demangled: ''
-      offset: 0000219C
-    - name: WAVEINSTART
-      demangled: ''
-      offset: '00002230'
-    - name: WAVEINSTOP
-      demangled: ''
-      offset: '00002262'
-    - name: WAVEINRESET
-      demangled: ''
-      offset: '00002294'
-    - name: WAVEINGETPOSITION
-      demangled: ''
-      offset: 000022C6
-    - name: WAVEINGETID
-      demangled: ''
-      offset: '00002314'
-    - name: WAVEOUTGETID
-      demangled: ''
-      offset: '00002374'
-  - num: '5'
-    name: _TEXT
-    offset: 000004D0
-    symbols:
-    - name: MMTASKYIELD
-      demangled: ''
-      offset: 000001BA
-    - name: MMGETCURRENTTASK
-      demangled: ''
-      offset: 000001DB
-    - name: MMTASKBLOCK
-      demangled: ''
-      offset: '000001E0'
-    - name: PLAYSOUND
-      demangled: ''
-      offset: 0000056E
-    - name: SNDPLAYSOUND
-      demangled: ''
-      offset: '00000598'
-    - name: MMTASKCREATE
-      demangled: ''
-      offset: 000005B6
-  - num: '6'
-    name: MCI
-    offset: '00000620'
-    symbols:
-    - name: MCISENDCOMMAND
-      demangled: ''
-      offset: '00000596'
-    - name: MCISENDSTRING
-      demangled: ''
-      offset: 000012A4
-    - name: MCIEXECUTE
-      demangled: ''
-      offset: 000012DA
-    - name: MCIGETERRORSTRING
-      demangled: ''
-      offset: 000013CA
-    - name: MCIGETDEVICEIDFROMELEMENTID
-      demangled: ''
-      offset: '00001768'
-    - name: MCIGETDEVICEID
-      demangled: ''
-      offset: '00001898'
-    - name: MCIGETCREATORTASK
-      demangled: ''
-      offset: 000018B4
-    - name: MCIGETDRIVERDATA
-      demangled: ''
-      offset: 00002BA2
-    - name: MCISETDRIVERDATA
-      demangled: ''
-      offset: 00002BEA
-    - name: MCIDRIVERYIELD
-      demangled: ''
-      offset: 00002C36
-    - name: MCISETYIELDPROC
-      demangled: ''
-      offset: 00002C92
-    - name: MCIGETYIELDPROC
-      demangled: ''
-      offset: 00002D0E
-    - name: MCILOADCOMMANDRESOURCE
-      demangled: ''
-      offset: '00003280'
-    - name: MCIFREECOMMANDRESOURCE
-      demangled: ''
-      offset: '000034E8'
-  - num: '7'
-    name: MIDI
-    offset: 000008D0
-    symbols:
-    - name: MIDISTREAMOPEN
-      demangled: ''
-      offset: 000001D8
-    - name: MIDISTREAMCLOSE
-      demangled: ''
-      offset: 0000059E
-    - name: MIDISTREAMPROPERTY
-      demangled: ''
-      offset: 000005F6
-    - name: MIDISTREAMPOSITION
-      demangled: ''
-      offset: '00000680'
-    - name: MIDIINGETNUMDEVS
-      demangled: ''
-      offset: '00000858'
-    - name: MIDIINMESSAGE
-      demangled: ''
-      offset: '00000868'
-    - name: MIDIINGETID
-      demangled: ''
-      offset: 000008C8
-    - name: MIDIINGETDEVCAPS
-      demangled: ''
-      offset: '00000928'
-    - name: MIDIINGETERRORTEXT
-      demangled: ''
-      offset: '000009E2'
-    - name: MIDIINOPEN
-      demangled: ''
-      offset: 00000A1E
-    - name: MIDIINCLOSE
-      demangled: ''
-      offset: 00000B34
-    - name: MIDIINPREPAREHEADER
-      demangled: ''
-      offset: 00000B96
-    - name: MIDIINUNPREPAREHEADER
-      demangled: ''
-      offset: 00000C32
-    - name: MIDIINADDBUFFER
-      demangled: ''
-      offset: 00000CD4
-    - name: MIDIINSTART
-      demangled: ''
-      offset: 00000D46
-    - name: MIDIINSTOP
-      demangled: ''
-      offset: 00000D7A
-    - name: MIDIINRESET
-      demangled: ''
-      offset: 00000DAE
-    - name: MIDIOUTGETNUMDEVS
-      demangled: ''
-      offset: 00000DE2
-    - name: MIDIOUTGETID
-      demangled: ''
-      offset: 00000DF2
-    - name: MIDIOUTGETDEVCAPS
-      demangled: ''
-      offset: '00000E52'
-    - name: MIDIOUTGETVOLUME
-      demangled: ''
-      offset: 00000EEE
-    - name: MIDIOUTSETVOLUME
-      demangled: ''
-      offset: 00000F82
-    - name: MIDIOUTGETERRORTEXT
-      demangled: ''
-      offset: 00000FF8
-    - name: MIDIOUTOPEN
-      demangled: ''
-      offset: '00001034'
-    - name: MIDIOUTCLOSE
-      demangled: ''
-      offset: '00001154'
-    - name: MIDIOUTPREPAREHEADER
-      demangled: ''
-      offset: 000011B8
-    - name: MIDIOUTUNPREPAREHEADER
-      demangled: ''
-      offset: '00001404'
-    - name: MIDISTREAMSTOP
-      demangled: ''
-      offset: 0000158A
-    - name: MIDIOUTCACHEPATCHES
-      demangled: ''
-      offset: 000015BE
-    - name: MIDIOUTCACHEDRUMPATCHES
-      demangled: ''
-      offset: '00001638'
-    - name: MIDISTREAMRESTART
-      demangled: ''
-      offset: '000016E6'
-    - name: MIDISTREAMOUT
-      demangled: ''
-      offset: 0000179A
-  - num: '8'
-    name: MMIO
-    offset: 00000A00
-    symbols:
-    - name: MMIORENAME
-      demangled: ''
-      offset: 0000024A
-    - name: MMIOOPEN
-      demangled: ''
-      offset: 000002FC
-    - name: MMIOCLOSE
-      demangled: ''
-      offset: 000004C0
-    - name: MMIOREAD
-      demangled: ''
-      offset: 0000051A
-    - name: MMIOWRITE
-      demangled: ''
-      offset: '00000650'
-    - name: MMIOSEEK
-      demangled: ''
-      offset: 000007BA
-    - name: MMIOGETINFO
-      demangled: ''
-      offset: 000008F4
-    - name: MMIOSETINFO
-      demangled: ''
-      offset: '00000950'
-    - name: MMIOSETBUFFER
-      demangled: ''
-      offset: 00000A02
-    - name: MMIOFLUSH
-      demangled: ''
-      offset: 00000BFA
-    - name: MMIOADVANCE
-      demangled: ''
-      offset: 00000CA2
-    - name: MMIOSTRINGTOFOURCC
-      demangled: ''
-      offset: 00000DA4
-    - name: MMIOINSTALLIOPROC
-      demangled: ''
-      offset: '00001016'
-    - name: MMIOSENDMESSAGE
-      demangled: ''
-      offset: 000010F4
-    - name: MMIODESCEND
-      demangled: ''
-      offset: 0000145C
-    - name: MMIOASCEND
-      demangled: ''
-      offset: '00001628'
-    - name: MMIOCREATECHUNK
-      demangled: ''
-      offset: '00001782'
-  - num: '9'
-    name: MIXER
-    offset: 00000AF0
-    symbols:
-    - name: MIXERGETNUMDEVS
-      demangled: ''
-      offset: '000001E6'
-    - name: MIXERGETDEVCAPS
-      demangled: ''
-      offset: 000001F6
-    - name: MIXERGETID
-      demangled: ''
-      offset: '00000252'
-    - name: MIXEROPEN
-      demangled: ''
-      offset: 0000060E
-    - name: MIXERCLOSE
-      demangled: ''
-      offset: '00000824'
-    - name: MIXERMESSAGE
-      demangled: ''
-      offset: 000008D6
-    - name: MIXERGETLINEINFO
-      demangled: ''
-      offset: '00000928'
-    - name: MIXERGETLINECONTROLS
-      demangled: ''
-      offset: 00000CB8
-    - name: MIXERGETCONTROLDETAILS
-      demangled: ''
-      offset: 00000DF6
-    - name: MIXERSETCONTROLDETAILS
-      demangled: ''
-      offset: 00000F6A
-  - num: '10'
-    name: RARE
-    offset: '00000000'
-    symbols:
-    - name: TIMEGETDEVCAPS
-      demangled: ''
-      offset: '00000000'
-    - name: MMSYSTEMGETVERSION
-      demangled: ''
-      offset: '00000496'
-    - name: JOYGETNUMDEVS
-      demangled: ''
-      offset: 0000077E
-    - name: JOYGETDEVCAPS
-      demangled: ''
-      offset: '00000796'
-    - name: JOYGETPOS
-      demangled: ''
-      offset: '000007E2'
-    - name: JOYGETTHRESHOLD
-      demangled: ''
-      offset: 0000085C
-    - name: JOYRELEASECAPTURE
-      demangled: ''
-      offset: 000008A0
-    - name: JOYSETCAPTURE
-      demangled: ''
-      offset: '00000914'
-    - name: JOYSETTHRESHOLD
-      demangled: ''
-      offset: 00000A02
-    - name: AUXOUTMESSAGE
-      demangled: ''
-      offset: 00000AFA
-    - name: AUXGETNUMDEVS
-      demangled: ''
-      offset: 00000B98
-    - name: AUXGETDEVCAPS
-      demangled: ''
-      offset: 00000BA8
-    - name: AUXGETVOLUME
-      demangled: ''
-      offset: 00000BEC
-    - name: AUXSETVOLUME
-      demangled: ''
-      offset: 00000C24
 - version: Windows 98SE Retail
   source_tree: []
   segments:

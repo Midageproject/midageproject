@@ -2,96 +2,70 @@ filename: vxdldr.vxd
 binary: VXDLDR
 description: ''
 appearances:
-- version: Windows 98 Debug
-  source_tree:
-  - ../bootlog.asm
-  - ../../../../../dev/ddk/inc/ntexp.inc
-  - ../fileio.asm
-  - ../peimage.c
-  - ../services.c
-  - ../splitpat.c
-  - ../stricmp.asm
-  - ../strncpy.asm
-  - ../v86bufa.asm
-  - ../v86buf.c
-  - ../vxdldr.asm
+- version: Windows 95
+  source_tree: []
   segments:
   - num: '1'
     name: _LGROUP
-    offset: 000003A0
+    offset: '00000250'
     symbols:
     - name: VXDLDR_Control
       processed: ''
       offset: '00000000'
-    - name: VXDLDR_CheckDeviceList
-      processed: ''
-      offset: '00000044'
-    - name: VXDLDR_PrintDeviceName
-      processed: ''
-      offset: '00000069'
     - name: VXDLDR_GetVersion
       processed: ''
-      offset: '00000095'
+      offset: 0000008C
     - name: VXDLDR_GetDeviceList
       processed: ''
-      offset: 000000A2
+      offset: 000000A1
     - name: _VXDLDR_GetVersion
       processed: ''
-      offset: 000000B0
+      offset: 000000B4
     - name: _VXDLDR_LoadDevice
       processed: ''
-      offset: 000000B4
+      offset: 000000B8
     - name: _VXDLDR_UnloadDevice
       processed: ''
-      offset: 000000B8
+      offset: 000000BC
     - name: _VXDLDR_DevInitSucceeded
       processed: ''
-      offset: 000000BC
+      offset: 000000C0
     - name: _VXDLDR_DevInitFailed
       processed: ''
-      offset: 000000C0
+      offset: 000000C4
     - name: _VXDLDR_GetDeviceList
       processed: ''
-      offset: 000000C4
+      offset: 000000C8
     - name: _VXDLDR_UnloadMe
       processed: ''
-      offset: 000000C8
+      offset: 000000CC
     - name: __PELDR_LoadModule
       processed: ''
-      offset: 000000CC
+      offset: 000000D0
     - name: __PELDR_GetModuleHandle
       processed: ''
-      offset: 000000D0
+      offset: 000000D4
     - name: __PELDR_GetModuleUsage
       processed: ''
-      offset: 000000D4
+      offset: 000000D8
     - name: __PELDR_GetEntryPoint
       processed: ''
-      offset: 000000D8
+      offset: 000000DC
     - name: __PELDR_GetProcAddress
       processed: ''
-      offset: 000000DC
+      offset: '000000E0'
     - name: __PELDR_AddExportTable
       processed: ''
-      offset: '000000E0'
+      offset: '000000E4'
     - name: __PELDR_RemoveExportTable
       processed: ''
-      offset: '000000E4'
+      offset: '000000E8'
     - name: __PELDR_FreeModule
       processed: ''
-      offset: '000000E8'
+      offset: 000000EC
     - name: _VXDLDR_Notify
       processed: ''
-      offset: 000000EC
-    - name: __PELDR_InitCompleted
-      processed: ''
       offset: 000000F0
-    - name: __PELDR_LoadModuleEx
-      processed: ''
-      offset: 000000F4
-    - name: __PELDR_LoadModule2
-      processed: ''
-      offset: 000000F8
     - name: VXDLDR_DDB
       processed: ''
       offset: 000000FC
@@ -101,469 +75,94 @@ appearances:
     - name: _InitCompleted
       processed: ''
       offset: '00000150'
-  - num: '2'
-    name: _LMGROUP
-    offset: '000003E0'
-    symbols:
-    - name: '@MSG_LAB'
-      processed: ''
-      offset: '00000000'
-    - name: '@MSG_LDATA'
-      processed: ''
-      offset: '00000030'
   - num: '3'
     name: _IGROUP
-    offset: 000006F0
+    offset: 000002A0
     symbols:
-    - name: VXDLDR_Sys_Critical_Init
-      processed: ''
-      offset: '00000000'
     - name: VXDLDR_Device_Init
       processed: ''
-      offset: 0000003C
+      offset: '00000000'
     - name: VXDLDR_Init_Complete
       processed: ''
-      offset: 0000005E
-    - name: VXDLDR_set_up_v86_area
-      processed: ''
-      offset: '00000067'
-    - name: VXDLDR_free_v86_area
-      processed: ''
-      offset: 000000B9
-    - name: _SetV86Buffer@8
-      processed: ''
-      offset: 000000F0
-    - name: _ResetV86Buffer@8
-      processed: ''
-      offset: '00000170'
-    - name: ExportNTFunctions
-      processed: ''
-      offset: 000001A0
-    - name: _ICODE__Allocate_Temp_V86_Data_Area
-      processed: ''
-      offset: '000001E8'
-    - name: _ICODE__Free_Temp_V86_Data_Area
-      processed: ''
-      offset: 000001F0
+      offset: '00000044'
   - num: '4'
     name: _PTEXT
-    offset: 00001A90
+    offset: '00000390'
     symbols:
-    - name: _ValidateProcAddress@8
-      processed: ''
-      offset: '00000030'
-    - name: _PELDR_GetModuleHandle
-      processed: ''
-      offset: '00000070'
-    - name: _PELDR_LoadModule2
-      processed: ''
-      offset: 000000A0
-    - name: _PELDR_LoadModuleEx
-      processed: ''
-      offset: '00000640'
     - name: _PELDR_LoadModule
       processed: ''
-      offset: '00000670'
+      offset: '00000250'
+    - name: _PELDR_GetModuleHandle
+      processed: ''
+      offset: 00000AB0
     - name: _PELDR_GetModuleUsage
       processed: ''
-      offset: '00000690'
+      offset: 00000B00
     - name: _PELDR_GetEntryPoint
       processed: ''
-      offset: 000006B0
+      offset: 00000B30
     - name: _PELDR_GetProcAddress
       processed: ''
-      offset: 000006D0
+      offset: 00000B60
     - name: _PELDR_AddExportTable
       processed: ''
-      offset: '00000750'
+      offset: 00000C80
     - name: _PELDR_RemoveExportTable
       processed: ''
-      offset: 000007F0
+      offset: 00000D80
     - name: _PELDR_FreeModule
       processed: ''
-      offset: '00000850'
-    - name: _PELDR_InitCompleted
-      processed: ''
-      offset: '00000890'
-    - name: _StrICmp
-      processed: ''
-      offset: 000008D0
-    - name: _fileOpen
-      processed: ''
-      offset: '00000920'
-    - name: _fileClose
-      processed: ''
-      offset: '00000940'
-    - name: _fileSeek
-      processed: ''
-      offset: '00000962'
-    - name: _fileRead
-      processed: ''
-      offset: 0000099D
-    - name: _StrNCpy
-      processed: ''
-      offset: 000009EC
-    - name: _SplitPath
-      processed: ''
-      offset: 00000A20
-    - name: _V86MMGR_Get_Xlat_Buff_State
-      processed: ''
-      offset: 00000B80
-    - name: _V86MMGR_Set_Xlat_Buff_State
-      processed: ''
-      offset: 00000BA8
-    - name: _PrefixCompare@8
-      processed: ''
-      offset: 00000BD0
-    - name: _SetModuleName@8
-      processed: ''
-      offset: 00000C10
-    - name: _RVAToData@8
-      processed: ''
-      offset: 00000C40
-    - name: _DirectoryEntryToData@12
-      processed: ''
-      offset: 00000D00
-    - name: _LoadPEHeaders@4
-      processed: ''
-      offset: 00000D50
-    - name: _RemoveSectionSymbols@8
-      processed: ''
-      offset: 00000F60
-    - name: _FreeSection@8
-      processed: ''
-      offset: 00000FC0
-    - name: _FreeModule@4
-      processed: ''
-      offset: '00001080'
-    - name: _AddSectionSymbols@8
-      processed: ''
-      offset: '00001140'
-    - name: _LoadPESections@4
-      processed: ''
-      offset: '00001200'
-    - name: _FindExportFunction@24
-      processed: ''
-      offset: '00001410'
-    - name: _ProcessPERelocation@4
-      processed: ''
-      offset: '00001610'
-    - name: _ProcessPEExports@4
-      processed: ''
-      offset: 000017D0
-    - name: _ProcessPEImports@4
-      processed: ''
-      offset: '00001920'
-    - name: _FreeDriverInitialization@4
-      processed: ''
-      offset: 00001AC0
-    - name: _MmLockPagableSectionByHandle@4
-      processed: ''
-      offset: 00001B20
-    - name: _GetPeHdrSection@12
-      processed: ''
-      offset: 00001B80
-    - name: _MmLockPagableDataSection@4
-      processed: ''
-      offset: 00001C00
-    - name: _MmUnlockPagableImageSection@4
-      processed: ''
-      offset: 00001C30
-    - name: _MmResetDriverPaging@4
-      processed: ''
-      offset: 00001C90
-    - name: _MmPageEntireDriver@4
-      processed: ''
-      offset: 00001D00
-    - name: _PCODE__PELDR_AddExportTable
-      processed: ''
-      offset: 00001D80
-    - name: _PCODE__PELDR_RemoveExportTable
-      processed: ''
-      offset: 00001D88
-    - name: _PCODE__HeapAllocate
-      processed: ''
-      offset: 00001D90
-    - name: _PCODE__HeapFree
-      processed: ''
-      offset: 00001D98
-    - name: _PCODE__HeapReAllocate
-      processed: ''
-      offset: 00001DA0
-    - name: _PCODE__HeapGetSize
-      processed: ''
-      offset: 00001DA8
-    - name: _PCODE__Debug_Printf_Service
-      processed: ''
-      offset: 00001DB0
-    - name: _PCODE_Get_Cur_VM_Handle
-      processed: ''
-      offset: 00001DC4
-    - name: _PCODE__LinPageLock
-      processed: ''
-      offset: 00001DD0
-    - name: _PCODE__LinPageUnLock
-      processed: ''
-      offset: 00001DD8
-  - num: '5'
-    name: _PDATA
-    offset: 00001B30
-    symbols:
-    - name: fBootlog
-      processed: ''
-      offset: '00000004'
-    - name: _GlobalExportTableList
-      processed: ''
-      offset: 00000BCC
-    - name: _GlobalModuleList
-      processed: ''
-      offset: 00000BD0
-    - name: _gszExecPath
-      processed: ''
-      offset: 00000BD4
-    - name: _fVerboseDebug
-      processed: ''
-      offset: 00000DD8
-    - name: _fPrintName
-      processed: ''
-      offset: 00000DDC
-    - name: _fPrintRecord
-      processed: ''
-      offset: 00000DE0
+      offset: '00000E50'
   - num: '6'
     name: _DBOGROUP
-    offset: 00001C50
+    offset: 000003D0
     symbols:
     - name: VXDLDR_Debug_Query
       processed: ''
       offset: '00000000'
   - num: '7'
-    name: _RARE
-    offset: 00001CE0
-    symbols:
-    - name: UnExportNTFunctions
-      processed: ''
-      offset: '00000000'
-  - num: '8'
-    name: _VMDESTROY
+    name: PNP
     offset: '00000000'
     symbols:
-    - name: VXDLDR_Sys_VM_Init
-      processed: ''
-      offset: '00000000'
     - name: VXDLDR_LoadDevice
       processed: ''
       offset: '00000016'
     - name: VXDLDR_UnloadDevice
       processed: ''
-      offset: '00000100'
-    - name: ValidateDeviceHandle
-      processed: ''
-      offset: 0000010E
+      offset: 000000FD
     - name: VXDLDR_DevInitSucceeded
       processed: ''
-      offset: 0000012C
+      offset: '00000129'
     - name: VXDLDR_DevInitFailed
       processed: ''
-      offset: 000001D5
-    - name: VXDLDR_Enter_Device_List
-      processed: ''
-      offset: 0000025C
-    - name: VXDLDR_Exit_Device_List
-      processed: ''
-      offset: '00000278'
+      offset: 000001D2
     - name: VXDLDR_UnloadMe
       processed: ''
-      offset: '00000298'
-    - name: _FindDeviceInList@8
-      processed: ''
-      offset: 000002A6
-    - name: _AddDeviceToList@4
-      processed: ''
-      offset: 000002EE
-    - name: DeviceAlreadyInList
-      processed: ''
-      offset: 0000031A
+      offset: '00000292'
     - name: VXDLDR_API_Handler
       processed: ''
-      offset: '00000354'
+      offset: 0000034E
     - name: VXDLDR_API_Get_Version
       processed: ''
-      offset: 0000038A
+      offset: '00000384'
     - name: VXDLDR_API_Load_Device
       processed: ''
-      offset: 0000039A
+      offset: '00000394'
     - name: VXDLDR_API_Unload_Device
       processed: ''
-      offset: 000003B9
+      offset: 000003B3
     - name: VXDLDR_W32API_Handler
       processed: ''
-      offset: 000003D7
-    - name: VXDLDR_W32API_Get_Version
-      processed: ''
-      offset: '00000428'
+      offset: 000003D1
     - name: VXDLDR_W32API_Load_Device
       processed: ''
-      offset: '00000438'
+      offset: '00000432'
     - name: VXDLDR_W32API_Unload_Device
       processed: ''
-      offset: 0000049D
-    - name: LoadDevice
-      processed: ''
-      offset: 000004C7
-    - name: InitLoading
-      processed: ''
-      offset: 0000051F
-    - name: OpenDeviceFile
-      processed: ''
-      offset: '00000557'
-    - name: CloseDeviceFile
-      processed: ''
-      offset: '00000583'
-    - name: ReadLEHeader
-      processed: ''
-      offset: 000005A1
-    - name: ReadLoadSection
-      processed: ''
-      offset: 0000086D
-    - name: CheckForDuplicate
-      processed: ''
-      offset: '00000987'
-    - name: PreScanObjects
-      processed: ''
-      offset: 000009A2
-    - name: GetObjType
-      processed: ''
-      offset: 00000AA1
-    - name: ProcImpModNameTable
-      processed: ''
-      offset: 00000AC8
-    - name: LoadObjects
-      processed: ''
-      offset: 00000AFA
-    - name: ChkForBadVxD
-      processed: ''
-      offset: 00000B9A
-    - name: LoadObject
-      processed: ''
-      offset: 00000BCB
-    - name: ReadObject
-      processed: ''
-      offset: 00000C06
-    - name: FixupObject
-      processed: ''
-      offset: 00000C78
-    - name: ReadContiguousPages
-      processed: ''
-      offset: 00000CB6
-    - name: GetPageNumber
-      processed: ''
-      offset: 00000D57
-    - name: FixupPage
-      processed: ''
-      offset: 00000D6F
-    - name: GetInternalFixupData
-      processed: ''
-      offset: 00000E0A
-    - name: GetImpOrdFixupData
-      processed: ''
-      offset: '00000E27'
-    - name: DoFixup
-      processed: ''
-      offset: '00000E92'
-    - name: FreeMemory
-      processed: ''
-      offset: 00000F40
-    - name: SaveDeviceDetails
-      processed: ''
-      offset: 00000F79
-    - name: AllocateObjInfoMemory
-      processed: ''
-      offset: 000010AE
-    - name: FreeObjInfoMemory
-      processed: ''
-      offset: 000010F0
-    - name: InitDevice
-      processed: ''
-      offset: '00001122'
-    - name: CheckDuplicateOfStatic
-      processed: ''
-      offset: 0000118A
-    - name: UnloadDevice
-      processed: ''
-      offset: 000011AC
-    - name: GetDeviceInfoPtr
-      processed: ''
-      offset: '00001277'
-    - name: CompareID
-      processed: ''
-      offset: 000012D4
-    - name: CompareName
-      processed: ''
-      offset: '000012E1'
-    - name: FreeDeviceMemoryAndDdb
-      processed: ''
-      offset: 000012F5
-    - name: FreeDeviceMemory
-      processed: ''
-      offset: '00001306'
-    - name: FreeDeviceInfo
-      processed: ''
-      offset: '00001381'
-    - name: AllocateObjectMemory
-      processed: ''
-      offset: 000013C7
-    - name: GetObjectAddress
-      processed: ''
-      offset: '00001437'
-    - name: GetDIPtr
-      processed: ''
-      offset: 0000146D
-    - name: DebugLoadObjects
-      processed: ''
-      offset: 000014C0
-    - name: UnloadMe
-      processed: ''
-      offset: '00001545'
-    - name: FreeDeviceMemoryEvent
-      processed: ''
-      offset: 000015B6
-    - name: VXDLDR_V86_API_Dispatcher
-      processed: ''
-      offset: 000015C8
-    - name: VXDLDR_PM_API_Dispatcher
-      processed: ''
-      offset: 0000160E
-    - name: FileOpen
-      processed: ''
-      offset: '00001649'
-    - name: FileRead
-      processed: ''
-      offset: '00001660'
-    - name: FileSeek
-      processed: ''
-      offset: '00001677'
-    - name: FileClose
-      processed: ''
-      offset: '00001694'
+      offset: '00000497'
     - name: VXDLDR_Notify
       processed: ''
-      offset: 000016AD
-    - name: LogPreLoad
-      processed: ''
-      offset: 000016B8
-    - name: LogPostLoad
-      processed: ''
-      offset: 000016F6
-    - name: LogPreInit
-      processed: ''
-      offset: '00001776'
-    - name: LogPostInit
-      processed: ''
-      offset: 000017A6
-    - name: WriteLogString
-      processed: ''
-      offset: '000017E5'
+      offset: '00001670'
 - version: Windows 98 Retail
   source_tree:
   - ../bootlog.asm
@@ -1105,70 +704,96 @@ appearances:
     - name: WriteLogString
       demangled: ''
       offset: 0000111C
-- version: Windows 95
-  source_tree: []
+- version: Windows 98 Debug
+  source_tree:
+  - ../bootlog.asm
+  - ../../../../../dev/ddk/inc/ntexp.inc
+  - ../fileio.asm
+  - ../peimage.c
+  - ../services.c
+  - ../splitpat.c
+  - ../stricmp.asm
+  - ../strncpy.asm
+  - ../v86bufa.asm
+  - ../v86buf.c
+  - ../vxdldr.asm
   segments:
   - num: '1'
     name: _LGROUP
-    offset: '00000250'
+    offset: 000003A0
     symbols:
     - name: VXDLDR_Control
       demangled: ''
       offset: '00000000'
+    - name: VXDLDR_CheckDeviceList
+      demangled: ''
+      offset: '00000044'
+    - name: VXDLDR_PrintDeviceName
+      demangled: ''
+      offset: '00000069'
     - name: VXDLDR_GetVersion
       demangled: ''
-      offset: 0000008C
+      offset: '00000095'
     - name: VXDLDR_GetDeviceList
       demangled: ''
-      offset: 000000A1
+      offset: 000000A2
     - name: _VXDLDR_GetVersion
       demangled: ''
-      offset: 000000B4
+      offset: 000000B0
     - name: _VXDLDR_LoadDevice
       demangled: ''
-      offset: 000000B8
+      offset: 000000B4
     - name: _VXDLDR_UnloadDevice
       demangled: ''
-      offset: 000000BC
+      offset: 000000B8
     - name: _VXDLDR_DevInitSucceeded
       demangled: ''
-      offset: 000000C0
+      offset: 000000BC
     - name: _VXDLDR_DevInitFailed
       demangled: ''
-      offset: 000000C4
+      offset: 000000C0
     - name: _VXDLDR_GetDeviceList
       demangled: ''
-      offset: 000000C8
+      offset: 000000C4
     - name: _VXDLDR_UnloadMe
       demangled: ''
-      offset: 000000CC
+      offset: 000000C8
     - name: __PELDR_LoadModule
       demangled: ''
-      offset: 000000D0
+      offset: 000000CC
     - name: __PELDR_GetModuleHandle
       demangled: ''
-      offset: 000000D4
+      offset: 000000D0
     - name: __PELDR_GetModuleUsage
       demangled: ''
-      offset: 000000D8
+      offset: 000000D4
     - name: __PELDR_GetEntryPoint
       demangled: ''
-      offset: 000000DC
+      offset: 000000D8
     - name: __PELDR_GetProcAddress
       demangled: ''
-      offset: '000000E0'
+      offset: 000000DC
     - name: __PELDR_AddExportTable
       demangled: ''
-      offset: '000000E4'
+      offset: '000000E0'
     - name: __PELDR_RemoveExportTable
       demangled: ''
-      offset: '000000E8'
+      offset: '000000E4'
     - name: __PELDR_FreeModule
       demangled: ''
-      offset: 000000EC
+      offset: '000000E8'
     - name: _VXDLDR_Notify
       demangled: ''
+      offset: 000000EC
+    - name: __PELDR_InitCompleted
+      demangled: ''
       offset: 000000F0
+    - name: __PELDR_LoadModuleEx
+      demangled: ''
+      offset: 000000F4
+    - name: __PELDR_LoadModule2
+      demangled: ''
+      offset: 000000F8
     - name: VXDLDR_DDB
       demangled: ''
       offset: 000000FC
@@ -1178,96 +803,482 @@ appearances:
     - name: _InitCompleted
       demangled: ''
       offset: '00000150'
-  - num: '3'
-    name: _IGROUP
-    offset: 000002A0
+  - num: '2'
+    name: _LMGROUP
+    offset: '000003E0'
     symbols:
-    - name: VXDLDR_Device_Init
+    - name: '@MSG_LAB'
       demangled: ''
       offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000030'
+  - num: '3'
+    name: _IGROUP
+    offset: 000006F0
+    symbols:
+    - name: VXDLDR_Sys_Critical_Init
+      demangled: ''
+      offset: '00000000'
+    - name: VXDLDR_Device_Init
+      demangled: ''
+      offset: 0000003C
     - name: VXDLDR_Init_Complete
       demangled: ''
-      offset: '00000044'
+      offset: 0000005E
+    - name: VXDLDR_set_up_v86_area
+      demangled: ''
+      offset: '00000067'
+    - name: VXDLDR_free_v86_area
+      demangled: ''
+      offset: 000000B9
+    - name: _SetV86Buffer@8
+      demangled: ''
+      offset: 000000F0
+    - name: _ResetV86Buffer@8
+      demangled: ''
+      offset: '00000170'
+    - name: ExportNTFunctions
+      demangled: ''
+      offset: 000001A0
+    - name: _ICODE__Allocate_Temp_V86_Data_Area
+      demangled: ''
+      offset: '000001E8'
+    - name: _ICODE__Free_Temp_V86_Data_Area
+      demangled: ''
+      offset: 000001F0
   - num: '4'
     name: _PTEXT
-    offset: '00000390'
+    offset: 00001A90
     symbols:
-    - name: _PELDR_LoadModule
+    - name: _ValidateProcAddress@8
       demangled: ''
-      offset: '00000250'
+      offset: '00000030'
     - name: _PELDR_GetModuleHandle
       demangled: ''
-      offset: 00000AB0
+      offset: '00000070'
+    - name: _PELDR_LoadModule2
+      demangled: ''
+      offset: 000000A0
+    - name: _PELDR_LoadModuleEx
+      demangled: ''
+      offset: '00000640'
+    - name: _PELDR_LoadModule
+      demangled: ''
+      offset: '00000670'
     - name: _PELDR_GetModuleUsage
       demangled: ''
-      offset: 00000B00
+      offset: '00000690'
     - name: _PELDR_GetEntryPoint
       demangled: ''
-      offset: 00000B30
+      offset: 000006B0
     - name: _PELDR_GetProcAddress
       demangled: ''
-      offset: 00000B60
+      offset: 000006D0
     - name: _PELDR_AddExportTable
       demangled: ''
-      offset: 00000C80
+      offset: '00000750'
     - name: _PELDR_RemoveExportTable
       demangled: ''
-      offset: 00000D80
+      offset: 000007F0
     - name: _PELDR_FreeModule
       demangled: ''
-      offset: '00000E50'
+      offset: '00000850'
+    - name: _PELDR_InitCompleted
+      demangled: ''
+      offset: '00000890'
+    - name: _StrICmp
+      demangled: ''
+      offset: 000008D0
+    - name: _fileOpen
+      demangled: ''
+      offset: '00000920'
+    - name: _fileClose
+      demangled: ''
+      offset: '00000940'
+    - name: _fileSeek
+      demangled: ''
+      offset: '00000962'
+    - name: _fileRead
+      demangled: ''
+      offset: 0000099D
+    - name: _StrNCpy
+      demangled: ''
+      offset: 000009EC
+    - name: _SplitPath
+      demangled: ''
+      offset: 00000A20
+    - name: _V86MMGR_Get_Xlat_Buff_State
+      demangled: ''
+      offset: 00000B80
+    - name: _V86MMGR_Set_Xlat_Buff_State
+      demangled: ''
+      offset: 00000BA8
+    - name: _PrefixCompare@8
+      demangled: ''
+      offset: 00000BD0
+    - name: _SetModuleName@8
+      demangled: ''
+      offset: 00000C10
+    - name: _RVAToData@8
+      demangled: ''
+      offset: 00000C40
+    - name: _DirectoryEntryToData@12
+      demangled: ''
+      offset: 00000D00
+    - name: _LoadPEHeaders@4
+      demangled: ''
+      offset: 00000D50
+    - name: _RemoveSectionSymbols@8
+      demangled: ''
+      offset: 00000F60
+    - name: _FreeSection@8
+      demangled: ''
+      offset: 00000FC0
+    - name: _FreeModule@4
+      demangled: ''
+      offset: '00001080'
+    - name: _AddSectionSymbols@8
+      demangled: ''
+      offset: '00001140'
+    - name: _LoadPESections@4
+      demangled: ''
+      offset: '00001200'
+    - name: _FindExportFunction@24
+      demangled: ''
+      offset: '00001410'
+    - name: _ProcessPERelocation@4
+      demangled: ''
+      offset: '00001610'
+    - name: _ProcessPEExports@4
+      demangled: ''
+      offset: 000017D0
+    - name: _ProcessPEImports@4
+      demangled: ''
+      offset: '00001920'
+    - name: _FreeDriverInitialization@4
+      demangled: ''
+      offset: 00001AC0
+    - name: _MmLockPagableSectionByHandle@4
+      demangled: ''
+      offset: 00001B20
+    - name: _GetPeHdrSection@12
+      demangled: ''
+      offset: 00001B80
+    - name: _MmLockPagableDataSection@4
+      demangled: ''
+      offset: 00001C00
+    - name: _MmUnlockPagableImageSection@4
+      demangled: ''
+      offset: 00001C30
+    - name: _MmResetDriverPaging@4
+      demangled: ''
+      offset: 00001C90
+    - name: _MmPageEntireDriver@4
+      demangled: ''
+      offset: 00001D00
+    - name: _PCODE__PELDR_AddExportTable
+      demangled: ''
+      offset: 00001D80
+    - name: _PCODE__PELDR_RemoveExportTable
+      demangled: ''
+      offset: 00001D88
+    - name: _PCODE__HeapAllocate
+      demangled: ''
+      offset: 00001D90
+    - name: _PCODE__HeapFree
+      demangled: ''
+      offset: 00001D98
+    - name: _PCODE__HeapReAllocate
+      demangled: ''
+      offset: 00001DA0
+    - name: _PCODE__HeapGetSize
+      demangled: ''
+      offset: 00001DA8
+    - name: _PCODE__Debug_Printf_Service
+      demangled: ''
+      offset: 00001DB0
+    - name: _PCODE_Get_Cur_VM_Handle
+      demangled: ''
+      offset: 00001DC4
+    - name: _PCODE__LinPageLock
+      demangled: ''
+      offset: 00001DD0
+    - name: _PCODE__LinPageUnLock
+      demangled: ''
+      offset: 00001DD8
+  - num: '5'
+    name: _PDATA
+    offset: 00001B30
+    symbols:
+    - name: fBootlog
+      demangled: ''
+      offset: '00000004'
+    - name: _GlobalExportTableList
+      demangled: ''
+      offset: 00000BCC
+    - name: _GlobalModuleList
+      demangled: ''
+      offset: 00000BD0
+    - name: _gszExecPath
+      demangled: ''
+      offset: 00000BD4
+    - name: _fVerboseDebug
+      demangled: ''
+      offset: 00000DD8
+    - name: _fPrintName
+      demangled: ''
+      offset: 00000DDC
+    - name: _fPrintRecord
+      demangled: ''
+      offset: 00000DE0
   - num: '6'
     name: _DBOGROUP
-    offset: 000003D0
+    offset: 00001C50
     symbols:
     - name: VXDLDR_Debug_Query
       demangled: ''
       offset: '00000000'
   - num: '7'
-    name: PNP
+    name: _RARE
+    offset: 00001CE0
+    symbols:
+    - name: UnExportNTFunctions
+      demangled: ''
+      offset: '00000000'
+  - num: '8'
+    name: _VMDESTROY
     offset: '00000000'
     symbols:
+    - name: VXDLDR_Sys_VM_Init
+      demangled: ''
+      offset: '00000000'
     - name: VXDLDR_LoadDevice
       demangled: ''
       offset: '00000016'
     - name: VXDLDR_UnloadDevice
       demangled: ''
-      offset: 000000FD
+      offset: '00000100'
+    - name: ValidateDeviceHandle
+      demangled: ''
+      offset: 0000010E
     - name: VXDLDR_DevInitSucceeded
       demangled: ''
-      offset: '00000129'
+      offset: 0000012C
     - name: VXDLDR_DevInitFailed
       demangled: ''
-      offset: 000001D2
+      offset: 000001D5
+    - name: VXDLDR_Enter_Device_List
+      demangled: ''
+      offset: 0000025C
+    - name: VXDLDR_Exit_Device_List
+      demangled: ''
+      offset: '00000278'
     - name: VXDLDR_UnloadMe
       demangled: ''
-      offset: '00000292'
+      offset: '00000298'
+    - name: _FindDeviceInList@8
+      demangled: ''
+      offset: 000002A6
+    - name: _AddDeviceToList@4
+      demangled: ''
+      offset: 000002EE
+    - name: DeviceAlreadyInList
+      demangled: ''
+      offset: 0000031A
     - name: VXDLDR_API_Handler
       demangled: ''
-      offset: 0000034E
+      offset: '00000354'
     - name: VXDLDR_API_Get_Version
       demangled: ''
-      offset: '00000384'
+      offset: 0000038A
     - name: VXDLDR_API_Load_Device
       demangled: ''
-      offset: '00000394'
+      offset: 0000039A
     - name: VXDLDR_API_Unload_Device
       demangled: ''
-      offset: 000003B3
+      offset: 000003B9
     - name: VXDLDR_W32API_Handler
       demangled: ''
-      offset: 000003D1
+      offset: 000003D7
+    - name: VXDLDR_W32API_Get_Version
+      demangled: ''
+      offset: '00000428'
     - name: VXDLDR_W32API_Load_Device
       demangled: ''
-      offset: '00000432'
+      offset: '00000438'
     - name: VXDLDR_W32API_Unload_Device
       demangled: ''
-      offset: '00000497'
+      offset: 0000049D
+    - name: LoadDevice
+      demangled: ''
+      offset: 000004C7
+    - name: InitLoading
+      demangled: ''
+      offset: 0000051F
+    - name: OpenDeviceFile
+      demangled: ''
+      offset: '00000557'
+    - name: CloseDeviceFile
+      demangled: ''
+      offset: '00000583'
+    - name: ReadLEHeader
+      demangled: ''
+      offset: 000005A1
+    - name: ReadLoadSection
+      demangled: ''
+      offset: 0000086D
+    - name: CheckForDuplicate
+      demangled: ''
+      offset: '00000987'
+    - name: PreScanObjects
+      demangled: ''
+      offset: 000009A2
+    - name: GetObjType
+      demangled: ''
+      offset: 00000AA1
+    - name: ProcImpModNameTable
+      demangled: ''
+      offset: 00000AC8
+    - name: LoadObjects
+      demangled: ''
+      offset: 00000AFA
+    - name: ChkForBadVxD
+      demangled: ''
+      offset: 00000B9A
+    - name: LoadObject
+      demangled: ''
+      offset: 00000BCB
+    - name: ReadObject
+      demangled: ''
+      offset: 00000C06
+    - name: FixupObject
+      demangled: ''
+      offset: 00000C78
+    - name: ReadContiguousPages
+      demangled: ''
+      offset: 00000CB6
+    - name: GetPageNumber
+      demangled: ''
+      offset: 00000D57
+    - name: FixupPage
+      demangled: ''
+      offset: 00000D6F
+    - name: GetInternalFixupData
+      demangled: ''
+      offset: 00000E0A
+    - name: GetImpOrdFixupData
+      demangled: ''
+      offset: '00000E27'
+    - name: DoFixup
+      demangled: ''
+      offset: '00000E92'
+    - name: FreeMemory
+      demangled: ''
+      offset: 00000F40
+    - name: SaveDeviceDetails
+      demangled: ''
+      offset: 00000F79
+    - name: AllocateObjInfoMemory
+      demangled: ''
+      offset: 000010AE
+    - name: FreeObjInfoMemory
+      demangled: ''
+      offset: 000010F0
+    - name: InitDevice
+      demangled: ''
+      offset: '00001122'
+    - name: CheckDuplicateOfStatic
+      demangled: ''
+      offset: 0000118A
+    - name: UnloadDevice
+      demangled: ''
+      offset: 000011AC
+    - name: GetDeviceInfoPtr
+      demangled: ''
+      offset: '00001277'
+    - name: CompareID
+      demangled: ''
+      offset: 000012D4
+    - name: CompareName
+      demangled: ''
+      offset: '000012E1'
+    - name: FreeDeviceMemoryAndDdb
+      demangled: ''
+      offset: 000012F5
+    - name: FreeDeviceMemory
+      demangled: ''
+      offset: '00001306'
+    - name: FreeDeviceInfo
+      demangled: ''
+      offset: '00001381'
+    - name: AllocateObjectMemory
+      demangled: ''
+      offset: 000013C7
+    - name: GetObjectAddress
+      demangled: ''
+      offset: '00001437'
+    - name: GetDIPtr
+      demangled: ''
+      offset: 0000146D
+    - name: DebugLoadObjects
+      demangled: ''
+      offset: 000014C0
+    - name: UnloadMe
+      demangled: ''
+      offset: '00001545'
+    - name: FreeDeviceMemoryEvent
+      demangled: ''
+      offset: 000015B6
+    - name: VXDLDR_V86_API_Dispatcher
+      demangled: ''
+      offset: 000015C8
+    - name: VXDLDR_PM_API_Dispatcher
+      demangled: ''
+      offset: 0000160E
+    - name: FileOpen
+      demangled: ''
+      offset: '00001649'
+    - name: FileRead
+      demangled: ''
+      offset: '00001660'
+    - name: FileSeek
+      demangled: ''
+      offset: '00001677'
+    - name: FileClose
+      demangled: ''
+      offset: '00001694'
     - name: VXDLDR_Notify
       demangled: ''
-      offset: '00001670'
+      offset: 000016AD
+    - name: LogPreLoad
+      demangled: ''
+      offset: 000016B8
+    - name: LogPostLoad
+      demangled: ''
+      offset: 000016F6
+    - name: LogPreInit
+      demangled: ''
+      offset: '00001776'
+    - name: LogPostInit
+      demangled: ''
+      offset: 000017A6
+    - name: WriteLogString
+      demangled: ''
+      offset: '000017E5'
 - version: Windows 98SE Debug
-  source_tree: []
+  source_tree:
+  - ../bootlog.asm
+  - ../../../../../dev/ddk/inc/ntexp.inc
+  - ../fileio.asm
+  - ../peimage.c
+  - ../services.c
+  - ../splitpat.c
+  - ../stricmp.asm
+  - ../strncpy.asm
+  - ../v86bufa.asm
+  - ../v86buf.c
+  - ../vxdldr.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -1836,7 +1847,18 @@ appearances:
       demangled: ''
       offset: '00001819'
 - version: Windows 98SE Retail
-  source_tree: []
+  source_tree:
+  - ../bootlog.asm
+  - ../../../../../dev/ddk/inc/ntexp.inc
+  - ../fileio.asm
+  - ../peimage.c
+  - ../services.c
+  - ../splitpat.c
+  - ../stricmp.asm
+  - ../strncpy.asm
+  - ../v86bufa.asm
+  - ../v86buf.c
+  - ../vxdldr.asm
   segments:
   - num: '1'
     name: _LGROUP
@@ -2380,3 +2402,1129 @@ appearances:
     - name: WriteLogString
       demangled: ''
       offset: '00001150'
+- version: Windows ME Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: _LDATA
+    offset: 000002A0
+    symbols:
+    - name: _VXDLDR_GetVersion
+      demangled: ''
+      offset: '00000000'
+    - name: _VXDLDR_LoadDevice
+      demangled: ''
+      offset: '00000004'
+    - name: _VXDLDR_UnloadDevice
+      demangled: ''
+      offset: '00000008'
+    - name: _VXDLDR_DevInitSucceeded
+      demangled: ''
+      offset: 0000000C
+    - name: _VXDLDR_DevInitFailed
+      demangled: ''
+      offset: '00000010'
+    - name: _VXDLDR_GetDeviceList
+      demangled: ''
+      offset: '00000014'
+    - name: _VXDLDR_UnloadMe
+      demangled: ''
+      offset: '00000018'
+    - name: __PELDR_LoadModule
+      demangled: ''
+      offset: 0000001C
+    - name: __PELDR_GetModuleHandle
+      demangled: ''
+      offset: '00000020'
+    - name: __PELDR_GetModuleUsage
+      demangled: ''
+      offset: '00000024'
+    - name: __PELDR_GetEntryPoint
+      demangled: ''
+      offset: '00000028'
+    - name: __PELDR_GetProcAddress
+      demangled: ''
+      offset: 0000002C
+    - name: __PELDR_AddExportTable
+      demangled: ''
+      offset: '00000030'
+    - name: __PELDR_RemoveExportTable
+      demangled: ''
+      offset: '00000034'
+    - name: __PELDR_FreeModule
+      demangled: ''
+      offset: '00000038'
+    - name: _VXDLDR_Notify
+      demangled: ''
+      offset: 0000003C
+    - name: __PELDR_InitCompleted
+      demangled: ''
+      offset: '00000040'
+    - name: __PELDR_LoadModuleEx
+      demangled: ''
+      offset: '00000044'
+    - name: __PELDR_LoadModule2
+      demangled: ''
+      offset: '00000048'
+    - name: __VXDLDR_Preload_Device
+      demangled: ''
+      offset: 0000004C
+    - name: VXDLDR_DDB
+      demangled: ''
+      offset: '00000050'
+    - name: _InitCompleted
+      demangled: ''
+      offset: 000000A4
+    - name: VXDLDR_Control
+      demangled: ''
+      offset: 000000A8
+    - name: VXDLDR_GetVersion
+      demangled: ''
+      offset: 000000EE
+    - name: VXDLDR_GetDeviceList
+      demangled: ''
+      offset: 000000F5
+  - num: '2'
+    name: _LMSG$1
+    offset: '000002E0'
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000030'
+  - num: '3'
+    name: _DB1CODE
+    offset: '00000320'
+    symbols:
+    - name: VXDLDR_Debug_Query
+      demangled: ''
+      offset: '00000003'
+  - num: '4'
+    name: RARE
+    offset: '00000360'
+    symbols:
+    - name: UnExportNTFunctions
+      demangled: ''
+      offset: '00000000'
+  - num: '5'
+    name: PNP
+    offset: '00000950'
+    symbols:
+    - name: VXDLDR_Sys_VM_Init
+      demangled: ''
+      offset: '00000000'
+    - name: VXDLDR_LoadDevice
+      demangled: ''
+      offset: '00000008'
+    - name: VXDLDR_UnloadDevice
+      demangled: ''
+      offset: 000000F5
+    - name: ValidateDeviceHandle
+      demangled: ''
+      offset: 000000FA
+    - name: VXDLDR_DevInitSucceeded
+      demangled: ''
+      offset: 0000010A
+    - name: VXDLDR_DevInitFailed
+      demangled: ''
+      offset: 0000017E
+    - name: VXDLDR_Enter_Device_List
+      demangled: ''
+      offset: 000001AD
+    - name: VXDLDR_Exit_Device_List
+      demangled: ''
+      offset: 000001C1
+    - name: VXDLDR_UnloadMe
+      demangled: ''
+      offset: 000001D3
+    - name: _FindDeviceInList@8
+      demangled: ''
+      offset: 000001D8
+    - name: _AddDeviceToList@4
+      demangled: ''
+      offset: '00000208'
+    - name: DeviceAlreadyInList
+      demangled: ''
+      offset: '00000227'
+    - name: VXDLDR_API_Handler
+      demangled: ''
+      offset: '00000245'
+    - name: VXDLDR_API_Get_Version
+      demangled: ''
+      offset: '00000273'
+    - name: VXDLDR_API_Load_Device
+      demangled: ''
+      offset: 0000027B
+    - name: VXDLDR_API_Unload_Device
+      demangled: ''
+      offset: '00000292'
+    - name: VXDLDR_W32API_Handler
+      demangled: ''
+      offset: 000002A8
+    - name: VXDLDR_W32API_Get_Version
+      demangled: ''
+      offset: 000002F1
+    - name: VXDLDR_W32API_Load_Device
+      demangled: ''
+      offset: 000002F9
+    - name: VXDLDR_W32API_Unload_Device
+      demangled: ''
+      offset: '00000356'
+    - name: LoadDevice
+      demangled: ''
+      offset: '00000378'
+    - name: InitLoading
+      demangled: ''
+      offset: 000003BE
+    - name: OpenDeviceFile
+      demangled: ''
+      offset: 000003DC
+    - name: CloseDeviceFile
+      demangled: ''
+      offset: 000003F3
+    - name: ReadLEHeader
+      demangled: ''
+      offset: '00000409'
+    - name: ReadLoadSection
+      demangled: ''
+      offset: 000005D8
+    - name: CheckForDuplicate
+      demangled: ''
+      offset: 0000068D
+    - name: PreScanObjects
+      demangled: ''
+      offset: 000006A0
+    - name: GetObjType
+      demangled: ''
+      offset: 0000075A
+    - name: ProcImpModNameTable
+      demangled: ''
+      offset: '00000779'
+    - name: LoadObjects
+      demangled: ''
+      offset: 000007A3
+    - name: ChkForBadVxD
+      demangled: ''
+      offset: 0000082D
+    - name: LoadObject
+      demangled: ''
+      offset: '00000856'
+    - name: ReadObject
+      demangled: ''
+      offset: '00000889'
+    - name: FixupObject
+      demangled: ''
+      offset: '000008E6'
+    - name: ReadContiguousPages
+      demangled: ''
+      offset: 0000091C
+    - name: GetPageNumber
+      demangled: ''
+      offset: 0000099B
+    - name: FixupPage
+      demangled: ''
+      offset: 000009AB
+    - name: GetInternalFixupData
+      demangled: ''
+      offset: 00000A2F
+    - name: GetImpOrdFixupData
+      demangled: ''
+      offset: 00000A44
+    - name: DoFixup
+      demangled: ''
+      offset: 00000A8D
+    - name: FreeMemory
+      demangled: ''
+      offset: 00000AF6
+    - name: SaveDeviceDetails
+      demangled: ''
+      offset: 00000B18
+    - name: AllocateObjInfoMemory
+      demangled: ''
+      offset: 00000C25
+    - name: FreeObjInfoMemory
+      demangled: ''
+      offset: 00000C45
+    - name: InitDevice
+      demangled: ''
+      offset: 00000C6F
+    - name: CheckDuplicateOfStatic
+      demangled: ''
+      offset: 00000CCF
+    - name: UnloadDevice
+      demangled: ''
+      offset: 00000CE9
+    - name: GetDeviceInfoPtr
+      demangled: ''
+      offset: 00000D6E
+    - name: CompareID
+      demangled: ''
+      offset: 00000DAF
+    - name: CompareName
+      demangled: ''
+      offset: 00000DB4
+    - name: FreeDeviceMemoryAndDdb
+      demangled: ''
+      offset: 00000DC0
+    - name: FreeDeviceMemory
+      demangled: ''
+      offset: 00000DC9
+    - name: FreeDeviceInfo
+      demangled: ''
+      offset: 00000E2D
+    - name: AllocateObjectMemory
+      demangled: ''
+      offset: 00000E5E
+    - name: GetObjectAddress
+      demangled: ''
+      offset: 00000EB9
+    - name: GetDIPtr
+      demangled: ''
+      offset: 00000EDC
+    - name: DebugLoadObjects
+      demangled: ''
+      offset: 00000F13
+    - name: UnloadMe
+      demangled: ''
+      offset: 00000F90
+    - name: FreeDeviceMemoryEvent
+      demangled: ''
+      offset: 00000FDF
+    - name: VXDLDR_V86_API_Dispatcher
+      demangled: ''
+      offset: 00000FE9
+    - name: VXDLDR_PM_API_Dispatcher
+      demangled: ''
+      offset: '00001006'
+    - name: FileOpen
+      demangled: ''
+      offset: '00001018'
+    - name: FileRead
+      demangled: ''
+      offset: '00001027'
+    - name: FileSeek
+      demangled: ''
+      offset: '00001036'
+    - name: FileClose
+      demangled: ''
+      offset: 0000104B
+    - name: VXDLDR_Notify
+      demangled: ''
+      offset: '00001056'
+    - name: LogPreLoad
+      demangled: ''
+      offset: '00001058'
+    - name: LogPostLoad
+      demangled: ''
+      offset: 0000108E
+    - name: LogPreInit
+      demangled: ''
+      offset: 000010F9
+    - name: LogPostInit
+      demangled: ''
+      offset: '00001121'
+    - name: WriteLogString
+      demangled: ''
+      offset: '00001158'
+  - num: '6'
+    name: _PTEXT
+    offset: '00000E70'
+    symbols:
+    - name: _ValidateProcAddress@8
+      demangled: ''
+      offset: '00000000'
+    - name: _PELDR_GetModuleHandle
+      demangled: ''
+      offset: '00000040'
+    - name: _PELDR_LoadModule2
+      demangled: ''
+      offset: '00000070'
+    - name: _PELDR_LoadModuleEx
+      demangled: ''
+      offset: '00000500'
+    - name: _PELDR_LoadModule
+      demangled: ''
+      offset: '00000530'
+    - name: _PELDR_GetModuleUsage
+      demangled: ''
+      offset: '00000550'
+    - name: _PELDR_GetEntryPoint
+      demangled: ''
+      offset: 000005A0
+    - name: _PELDR_GetProcAddress
+      demangled: ''
+      offset: 000005C0
+    - name: _PELDR_AddExportTable
+      demangled: ''
+      offset: '00000630'
+    - name: _PELDR_RemoveExportTable
+      demangled: ''
+      offset: 000006A0
+    - name: _PELDR_FreeModule
+      demangled: ''
+      offset: 000006F0
+    - name: _PELDR_InitCompleted
+      demangled: ''
+      offset: '00000720'
+    - name: _GetFile@8
+      demangled: ''
+      offset: '00000760'
+    - name: _PreloadPEImage
+      demangled: ''
+      offset: '00000780'
+    - name: _StrICmp
+      demangled: ''
+      offset: '00000790'
+    - name: _fileOpen
+      demangled: ''
+      offset: 000007D8
+    - name: _fileClose
+      demangled: ''
+      offset: 000007F0
+    - name: _fileSeek
+      demangled: ''
+      offset: 0000080A
+    - name: _fileRead
+      demangled: ''
+      offset: 0000083D
+    - name: _StrNCpy
+      demangled: ''
+      offset: '00000884'
+    - name: _SplitPath
+      demangled: ''
+      offset: 000008B0
+    - name: _V86MMGR_Get_Xlat_Buff_State
+      demangled: ''
+      offset: 00000A00
+    - name: _V86MMGR_Set_Xlat_Buff_State
+      demangled: ''
+      offset: 00000A20
+    - name: _PrefixCompare@8
+      demangled: ''
+      offset: 00000A40
+    - name: _SetModuleName@8
+      demangled: ''
+      offset: 00000A80
+    - name: _RVAToData@8
+      demangled: ''
+      offset: 00000AB0
+    - name: _DirectoryEntryToData@12
+      demangled: ''
+      offset: 00000B50
+    - name: _LoadPEHeaders@4
+      demangled: ''
+      offset: 00000BA0
+    - name: _RemoveSectionSymbols@8
+      demangled: ''
+      offset: 00000CE0
+    - name: _FreeSection@8
+      demangled: ''
+      offset: 00000D40
+    - name: _FreeModule@4
+      demangled: ''
+      offset: 00000DF0
+    - name: _AddSectionSymbols@8
+      demangled: ''
+      offset: 00000EA0
+    - name: _LoadPESections@4
+      demangled: ''
+      offset: 00000F60
+    - name: _FindExportFunction@24
+      demangled: ''
+      offset: '00001120'
+    - name: _ProcessPERelocation@4
+      demangled: ''
+      offset: 000012F0
+    - name: _ProcessPEExports@4
+      demangled: ''
+      offset: '00001420'
+    - name: _ProcessPEImports@4
+      demangled: ''
+      offset: '00001540'
+    - name: _FreeDriverInitialization@4
+      demangled: ''
+      offset: '00001630'
+    - name: _MmLockPagableSectionByHandle@4
+      demangled: ''
+      offset: '00001670'
+    - name: _GetPeHdrSection@12
+      demangled: ''
+      offset: 000016A0
+    - name: _MmLockPagableDataSection@4
+      demangled: ''
+      offset: '00001710'
+    - name: _MmUnlockPagableImageSection@4
+      demangled: ''
+      offset: '00001740'
+    - name: _MmResetDriverPaging@4
+      demangled: ''
+      offset: '00001770'
+    - name: _MmPageEntireDriver@4
+      demangled: ''
+      offset: 000017D0
+    - name: _PCODE_Get_Cur_VM_Handle
+      demangled: ''
+      offset: '00001840'
+    - name: _PCODE__HeapFree
+      demangled: ''
+      offset: 0000184C
+    - name: _PCODE__HeapAllocate
+      demangled: ''
+      offset: '00001854'
+    - name: _PCODE__HeapReAllocate
+      demangled: ''
+      offset: 0000185C
+    - name: _PCODE__HeapGetSize
+      demangled: ''
+      offset: '00001864'
+    - name: _PCODE__PELDR_RemoveExportTable
+      demangled: ''
+      offset: 0000186C
+    - name: _PCODE__PELDR_AddExportTable
+      demangled: ''
+      offset: '00001874'
+    - name: _PCODE__LinPageLock
+      demangled: ''
+      offset: 0000187C
+    - name: _PCODE__LinPageUnLock
+      demangled: ''
+      offset: '00001884'
+  - num: '7'
+    name: _PDATA
+    offset: 00000EE0
+    symbols:
+    - name: fBootlog
+      demangled: ''
+      offset: '00000004'
+    - name: _GlobalExportTableList
+      demangled: ''
+      offset: '000000E8'
+    - name: _GlobalModuleList
+      demangled: ''
+      offset: 000000EC
+    - name: _gszExecPath
+      demangled: ''
+      offset: 000000F0
+  - num: '8'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: VXDLDR_Sys_Critical_Init
+      demangled: ''
+      offset: '00000020'
+    - name: VXDLDR_Device_Init
+      demangled: ''
+      offset: '00000074'
+    - name: VXDLDR_Init_Complete
+      demangled: ''
+      offset: '00000089'
+    - name: VXDLDR_set_up_v86_area
+      demangled: ''
+      offset: 000000C8
+    - name: VXDLDR_free_v86_area
+      demangled: ''
+      offset: 0000011A
+    - name: CheckPreload
+      demangled: ''
+      offset: '00000142'
+    - name: _VXDLDR_Preload_Device
+      demangled: ''
+      offset: '00000183'
+    - name: _SetV86Buffer@8
+      demangled: ''
+      offset: '00000250'
+    - name: _ResetV86Buffer@8
+      demangled: ''
+      offset: 000002D0
+    - name: ExportNTFunctions
+      demangled: ''
+      offset: 000002F0
+    - name: _ICODE__Allocate_Temp_V86_Data_Area
+      demangled: ''
+      offset: '00000330'
+    - name: _ICODE__Free_Temp_V86_Data_Area
+      demangled: ''
+      offset: '00000338'
+- version: Windows ME Debug
+  source_tree:
+  - ../bootlog.asm
+  - ../../../../../dev/ddk/inc/ntexp.inc
+  - ../../../../../dev/ddk/inc/VXDLDR.INC
+  - ../fileio.asm
+  - ../peimage.c
+  - ../services.c
+  - ../splitpat.c
+  - ../stricmp.asm
+  - ../strncpy.asm
+  - ../v86bufa.asm
+  - ../v86buf.c
+  - ../vxdldr.asm
+  segments:
+  - num: '1'
+    name: _LDATA
+    offset: '00000410'
+    symbols:
+    - name: _VXDLDR_GetVersion
+      demangled: ''
+      offset: '00000000'
+    - name: _VXDLDR_LoadDevice
+      demangled: ''
+      offset: '00000004'
+    - name: _VXDLDR_UnloadDevice
+      demangled: ''
+      offset: '00000008'
+    - name: _VXDLDR_DevInitSucceeded
+      demangled: ''
+      offset: 0000000C
+    - name: _VXDLDR_DevInitFailed
+      demangled: ''
+      offset: '00000010'
+    - name: _VXDLDR_GetDeviceList
+      demangled: ''
+      offset: '00000014'
+    - name: _VXDLDR_UnloadMe
+      demangled: ''
+      offset: '00000018'
+    - name: __PELDR_LoadModule
+      demangled: ''
+      offset: 0000001C
+    - name: __PELDR_GetModuleHandle
+      demangled: ''
+      offset: '00000020'
+    - name: __PELDR_GetModuleUsage
+      demangled: ''
+      offset: '00000024'
+    - name: __PELDR_GetEntryPoint
+      demangled: ''
+      offset: '00000028'
+    - name: __PELDR_GetProcAddress
+      demangled: ''
+      offset: 0000002C
+    - name: __PELDR_AddExportTable
+      demangled: ''
+      offset: '00000030'
+    - name: __PELDR_RemoveExportTable
+      demangled: ''
+      offset: '00000034'
+    - name: __PELDR_FreeModule
+      demangled: ''
+      offset: '00000038'
+    - name: _VXDLDR_Notify
+      demangled: ''
+      offset: 0000003C
+    - name: __PELDR_InitCompleted
+      demangled: ''
+      offset: '00000040'
+    - name: __PELDR_LoadModuleEx
+      demangled: ''
+      offset: '00000044'
+    - name: __PELDR_LoadModule2
+      demangled: ''
+      offset: '00000048'
+    - name: __VXDLDR_Preload_Device
+      demangled: ''
+      offset: 0000004C
+    - name: VXDLDR_DDB
+      demangled: ''
+      offset: '00000050'
+    - name: DeviceListHead
+      demangled: ''
+      offset: 000000A0
+    - name: _InitCompleted
+      demangled: ''
+      offset: 000000A4
+    - name: VXDLDR_Control
+      demangled: ''
+      offset: 000000EC
+    - name: VXDLDR_CheckDeviceList
+      demangled: ''
+      offset: '00000132'
+    - name: VXDLDR_PrintDeviceName
+      demangled: ''
+      offset: '00000157'
+    - name: VXDLDR_GetVersion
+      demangled: ''
+      offset: '00000183'
+    - name: VXDLDR_GetDeviceList
+      demangled: ''
+      offset: '00000190'
+  - num: '2'
+    name: _LMSG$1
+    offset: '00000450'
+    symbols:
+    - name: '@MSG_LAB'
+      demangled: ''
+      offset: '00000000'
+    - name: '@MSG_LDATA'
+      demangled: ''
+      offset: '00000030'
+  - num: '3'
+    name: _DB1CODE
+    offset: 000005B0
+    symbols:
+    - name: VXDLDR_Debug_Query
+      demangled: ''
+      offset: '00000003'
+  - num: '4'
+    name: RARE
+    offset: '00000640'
+    symbols:
+    - name: UnExportNTFunctions
+      demangled: ''
+      offset: '00000000'
+  - num: '5'
+    name: PNP
+    offset: '00002600'
+    symbols:
+    - name: VXDLDR_Sys_VM_Init
+      demangled: ''
+      offset: '00000000'
+    - name: VXDLDR_LoadDevice
+      demangled: ''
+      offset: '00000016'
+    - name: VXDLDR_UnloadDevice
+      demangled: ''
+      offset: '00000135'
+    - name: ValidateDeviceHandle
+      demangled: ''
+      offset: '00000143'
+    - name: VXDLDR_DevInitSucceeded
+      demangled: ''
+      offset: '00000161'
+    - name: VXDLDR_DevInitFailed
+      demangled: ''
+      offset: 0000020A
+    - name: VXDLDR_Enter_Device_List
+      demangled: ''
+      offset: '00000291'
+    - name: VXDLDR_Exit_Device_List
+      demangled: ''
+      offset: 000002AD
+    - name: VXDLDR_UnloadMe
+      demangled: ''
+      offset: 000002CD
+    - name: _FindDeviceInList@8
+      demangled: ''
+      offset: 000002DB
+    - name: _AddDeviceToList@4
+      demangled: ''
+      offset: '00000323'
+    - name: DeviceAlreadyInList
+      demangled: ''
+      offset: 0000034F
+    - name: VXDLDR_API_Handler
+      demangled: ''
+      offset: '00000389'
+    - name: VXDLDR_API_Get_Version
+      demangled: ''
+      offset: 000003BF
+    - name: VXDLDR_API_Load_Device
+      demangled: ''
+      offset: 000003CF
+    - name: VXDLDR_API_Unload_Device
+      demangled: ''
+      offset: 000003EE
+    - name: VXDLDR_W32API_Handler
+      demangled: ''
+      offset: 0000040C
+    - name: VXDLDR_W32API_Get_Version
+      demangled: ''
+      offset: 0000045D
+    - name: VXDLDR_W32API_Load_Device
+      demangled: ''
+      offset: 0000046D
+    - name: VXDLDR_W32API_Unload_Device
+      demangled: ''
+      offset: 000004D2
+    - name: LoadDevice
+      demangled: ''
+      offset: 000004FC
+    - name: InitLoading
+      demangled: ''
+      offset: '00000554'
+    - name: OpenDeviceFile
+      demangled: ''
+      offset: 0000058C
+    - name: CloseDeviceFile
+      demangled: ''
+      offset: 000005B8
+    - name: ReadLEHeader
+      demangled: ''
+      offset: 000005D6
+    - name: ReadLoadSection
+      demangled: ''
+      offset: 000008A2
+    - name: CheckForDuplicate
+      demangled: ''
+      offset: 000009BC
+    - name: PreScanObjects
+      demangled: ''
+      offset: 000009D7
+    - name: GetObjType
+      demangled: ''
+      offset: 00000AE1
+    - name: ProcImpModNameTable
+      demangled: ''
+      offset: 00000B08
+    - name: LoadObjects
+      demangled: ''
+      offset: 00000B3A
+    - name: ChkForBadVxD
+      demangled: ''
+      offset: 00000BDC
+    - name: LoadObject
+      demangled: ''
+      offset: 00000C0D
+    - name: ReadObject
+      demangled: ''
+      offset: 00000C48
+    - name: FixupObject
+      demangled: ''
+      offset: 00000CBA
+    - name: ReadContiguousPages
+      demangled: ''
+      offset: 00000CF8
+    - name: GetPageNumber
+      demangled: ''
+      offset: 00000D99
+    - name: FixupPage
+      demangled: ''
+      offset: 00000DB1
+    - name: GetInternalFixupData
+      demangled: ''
+      offset: 00000E4C
+    - name: GetImpOrdFixupData
+      demangled: ''
+      offset: '00000E69'
+    - name: DoFixup
+      demangled: ''
+      offset: 00000ED4
+    - name: FreeMemory
+      demangled: ''
+      offset: 00000F82
+    - name: SaveDeviceDetails
+      demangled: ''
+      offset: 00000FBB
+    - name: AllocateObjInfoMemory
+      demangled: ''
+      offset: 000010F0
+    - name: FreeObjInfoMemory
+      demangled: ''
+      offset: '00001132'
+    - name: InitDevice
+      demangled: ''
+      offset: '00001164'
+    - name: CheckDuplicateOfStatic
+      demangled: ''
+      offset: 000011CC
+    - name: UnloadDevice
+      demangled: ''
+      offset: 000011EE
+    - name: GetDeviceInfoPtr
+      demangled: ''
+      offset: 000012B9
+    - name: CompareID
+      demangled: ''
+      offset: '00001316'
+    - name: CompareName
+      demangled: ''
+      offset: '00001323'
+    - name: FreeDeviceMemoryAndDdb
+      demangled: ''
+      offset: '00001337'
+    - name: FreeDeviceMemory
+      demangled: ''
+      offset: '00001348'
+    - name: FreeDeviceInfo
+      demangled: ''
+      offset: 000013C3
+    - name: AllocateObjectMemory
+      demangled: ''
+      offset: '00001409'
+    - name: GetObjectAddress
+      demangled: ''
+      offset: '00001479'
+    - name: GetDIPtr
+      demangled: ''
+      offset: 000014AF
+    - name: DebugLoadObjects
+      demangled: ''
+      offset: '00001502'
+    - name: UnloadMe
+      demangled: ''
+      offset: '00001587'
+    - name: FreeDeviceMemoryEvent
+      demangled: ''
+      offset: 000015F8
+    - name: VXDLDR_V86_API_Dispatcher
+      demangled: ''
+      offset: 0000160A
+    - name: VXDLDR_PM_API_Dispatcher
+      demangled: ''
+      offset: '00001650'
+    - name: FileOpen
+      demangled: ''
+      offset: 0000168B
+    - name: FileRead
+      demangled: ''
+      offset: 000016A2
+    - name: FileSeek
+      demangled: ''
+      offset: 000016B9
+    - name: FileClose
+      demangled: ''
+      offset: 000016D6
+    - name: VXDLDR_Notify
+      demangled: ''
+      offset: 000016EF
+    - name: LogPreLoad
+      demangled: ''
+      offset: 000016F8
+    - name: LogPostLoad
+      demangled: ''
+      offset: '00001736'
+    - name: LogPreInit
+      demangled: ''
+      offset: 000017B6
+    - name: LogPostInit
+      demangled: ''
+      offset: '000017E6'
+    - name: WriteLogString
+      demangled: ''
+      offset: '00001825'
+  - num: '6'
+    name: _PTEXT
+    offset: 000038A0
+    symbols:
+    - name: _ValidateProcAddress@8
+      demangled: ''
+      offset: '00000000'
+    - name: _PELDR_GetModuleHandle
+      demangled: ''
+      offset: '00000040'
+    - name: _PELDR_LoadModule2
+      demangled: ''
+      offset: '00000070'
+    - name: _PELDR_LoadModuleEx
+      demangled: ''
+      offset: '00000560'
+    - name: _PELDR_LoadModule
+      demangled: ''
+      offset: '00000590'
+    - name: _PELDR_GetModuleUsage
+      demangled: ''
+      offset: 000005B0
+    - name: _PELDR_GetEntryPoint
+      demangled: ''
+      offset: '00000600'
+    - name: _PELDR_GetProcAddress
+      demangled: ''
+      offset: '00000620'
+    - name: _PELDR_AddExportTable
+      demangled: ''
+      offset: 000006A0
+    - name: _PELDR_RemoveExportTable
+      demangled: ''
+      offset: '00000730'
+    - name: _PELDR_FreeModule
+      demangled: ''
+      offset: '00000790'
+    - name: _PELDR_InitCompleted
+      demangled: ''
+      offset: 000007D0
+    - name: _GetFile@8
+      demangled: ''
+      offset: '00000810'
+    - name: _PreloadPEImage
+      demangled: ''
+      offset: '00000830'
+    - name: _StrICmp
+      demangled: ''
+      offset: '00000840'
+    - name: _fileOpen
+      demangled: ''
+      offset: '00000890'
+    - name: _fileClose
+      demangled: ''
+      offset: 000008B0
+    - name: _fileSeek
+      demangled: ''
+      offset: 000008D2
+    - name: _fileRead
+      demangled: ''
+      offset: 0000090D
+    - name: _StrNCpy
+      demangled: ''
+      offset: 0000095C
+    - name: _SplitPath
+      demangled: ''
+      offset: '00000990'
+    - name: _V86MMGR_Get_Xlat_Buff_State
+      demangled: ''
+      offset: 00000AE0
+    - name: _V86MMGR_Set_Xlat_Buff_State
+      demangled: ''
+      offset: 00000B08
+    - name: _PrefixCompare@8
+      demangled: ''
+      offset: 00000B30
+    - name: _SetModuleName@8
+      demangled: ''
+      offset: 00000B70
+    - name: _RVAToData@8
+      demangled: ''
+      offset: 00000BA0
+    - name: _DirectoryEntryToData@12
+      demangled: ''
+      offset: 00000C60
+    - name: _LoadPEHeaders@4
+      demangled: ''
+      offset: 00000CB0
+    - name: _RemoveSectionSymbols@8
+      demangled: ''
+      offset: 00000EB0
+    - name: _FreeSection@8
+      demangled: ''
+      offset: 00000F10
+    - name: _FreeModule@4
+      demangled: ''
+      offset: 00000FE0
+    - name: _AddSectionSymbols@8
+      demangled: ''
+      offset: 000010A0
+    - name: _LoadPESections@4
+      demangled: ''
+      offset: '00001160'
+    - name: _FindExportFunction@24
+      demangled: ''
+      offset: '00001370'
+    - name: _ProcessPERelocation@4
+      demangled: ''
+      offset: '00001540'
+    - name: _ProcessPEExports@4
+      demangled: ''
+      offset: '00001710'
+    - name: _ProcessPEImports@4
+      demangled: ''
+      offset: '00001850'
+    - name: _FreeDriverInitialization@4
+      demangled: ''
+      offset: '000019E0'
+    - name: _MmLockPagableSectionByHandle@4
+      demangled: ''
+      offset: 00001A40
+    - name: _GetPeHdrSection@12
+      demangled: ''
+      offset: 00001AA0
+    - name: _MmLockPagableDataSection@4
+      demangled: ''
+      offset: 00001B10
+    - name: _MmUnlockPagableImageSection@4
+      demangled: ''
+      offset: 00001B40
+    - name: _MmResetDriverPaging@4
+      demangled: ''
+      offset: 00001BA0
+    - name: _MmPageEntireDriver@4
+      demangled: ''
+      offset: 00001C00
+    - name: _PCODE_Get_Cur_VM_Handle
+      demangled: ''
+      offset: 00001C70
+    - name: _PCODE__Debug_Printf_Service
+      demangled: ''
+      offset: 00001C7C
+    - name: _PCODE__HeapFree
+      demangled: ''
+      offset: 00001C90
+    - name: _PCODE__HeapAllocate
+      demangled: ''
+      offset: 00001C98
+    - name: _PCODE__HeapReAllocate
+      demangled: ''
+      offset: 00001CA0
+    - name: _PCODE__HeapGetSize
+      demangled: ''
+      offset: 00001CA8
+    - name: _PCODE__PELDR_RemoveExportTable
+      demangled: ''
+      offset: 00001CB0
+    - name: _PCODE__PELDR_AddExportTable
+      demangled: ''
+      offset: 00001CB8
+    - name: _PCODE__LinPageLock
+      demangled: ''
+      offset: 00001CC0
+    - name: _PCODE__LinPageUnLock
+      demangled: ''
+      offset: 00001CC8
+  - num: '7'
+    name: _PDATA
+    offset: '00003940'
+    symbols:
+    - name: fBootlog
+      demangled: ''
+      offset: '00000004'
+    - name: _GlobalExportTableList
+      demangled: ''
+      offset: 00000BCC
+    - name: _GlobalModuleList
+      demangled: ''
+      offset: 00000BD0
+    - name: _gszExecPath
+      demangled: ''
+      offset: 00000BD4
+    - name: _fVerboseDebug
+      demangled: ''
+      offset: 00000E0C
+    - name: _fPrintName
+      demangled: ''
+      offset: '00000E10'
+    - name: _fPrintRecord
+      demangled: ''
+      offset: '00000E14'
+  - num: '8'
+    name: _IDATA
+    offset: '00000000'
+    symbols:
+    - name: PreloadList
+      demangled: ''
+      offset: '00000098'
+    - name: VXDLDR_Sys_Critical_Init
+      demangled: ''
+      offset: 000000B0
+    - name: VXDLDR_Device_Init
+      demangled: ''
+      offset: '00000104'
+    - name: VXDLDR_Init_Complete
+      demangled: ''
+      offset: '00000126'
+    - name: VXDLDR_set_up_v86_area
+      demangled: ''
+      offset: '00000188'
+    - name: VXDLDR_free_v86_area
+      demangled: ''
+      offset: 000001DA
+    - name: CheckPreload
+      demangled: ''
+      offset: '00000202'
+    - name: _VXDLDR_Preload_Device
+      demangled: ''
+      offset: '00000249'
+    - name: _SetV86Buffer@8
+      demangled: ''
+      offset: '00000330'
+    - name: _ResetV86Buffer@8
+      demangled: ''
+      offset: 000003B0
+    - name: ExportNTFunctions
+      demangled: ''
+      offset: 000003D0
+    - name: _ICODE__Allocate_Temp_V86_Data_Area
+      demangled: ''
+      offset: '00000418'
+    - name: _ICODE__Free_Temp_V86_Data_Area
+      demangled: ''
+      offset: '00000420'

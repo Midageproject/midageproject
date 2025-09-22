@@ -2,6 +2,233 @@ filename: usbscan.sys
 binary: USBSCAN
 description: ''
 appearances:
+- version: Windows 98 Retail
+  source_tree: []
+  segments:
+  - num: '1'
+    name: .text
+    offset: '00000160'
+    symbols:
+    - name: _USDeferIrpCompletion@12
+      processed: ''
+      offset: '00000000'
+    - name: _USIncrementIoCount@4
+      processed: ''
+      offset: '00000016'
+    - name: _USDecrementIoCount@4
+      processed: ''
+      offset: '00000029'
+    - name: _USBSCAN_CallUSBD@8
+      processed: ''
+      offset: '00000055'
+    - name: _USFlush@8
+      processed: ''
+      offset: 000000BB
+    - name: _USWrite@8
+      processed: ''
+      offset: '00000107'
+    - name: _USTransfer@24
+      processed: ''
+      offset: 0000017C
+    - name: _USTransferComplete@12
+      processed: ''
+      offset: '00000448'
+    - name: _USPoRequestCompletion@20
+      processed: ''
+      offset: '00000632'
+    - name: _USPowerIrpComplete@12
+      processed: ''
+      offset: '00000685'
+    - name: _USSetDevicePowerState@12
+      processed: ''
+      offset: 000006BC
+    - name: _sprintf
+      processed: ''
+      offset: '00000708'
+  - num: '3'
+    name: .data
+    offset: '00000290'
+    symbols:
+    - name: ??_C@_0BC@HCGB@?2Device?2Usbscan?$CFd?$AA@
+      processed: '"\\Device\\Usbscan%d"'
+      offset: '00000000'
+    - name: ??_C@_0O@LKAB@?2?2?4?2Usbscan?$CFd?$AA@
+      processed: '"\\\\.\\Usbscan%d"'
+      offset: '00000014'
+    - name: 
+        ??_C@_1BO@KHCE@?$AAC?$AAr?$AAe?$AAa?$AAt?$AAe?$AAF?$AAi?$AAl?$AAe?$AAN?$AAa?$AAm?$AAe?$AA?$AA@
+      processed: L"CreateFileName"
+      offset: '00000024'
+    - name: ??_C@_0BG@NJEG@?2DosDevices?2Usbscan?$CFd?$AA@
+      processed: '"\\DosDevices\\Usbscan%d"'
+      offset: '00000044'
+    - name: _NextDeviceInstance
+      processed: ''
+      offset: 0000005C
+  - num: '4'
+    name: .idata$2
+    offset: '00000720'
+    symbols:
+    - name: __IMPORT_DESCRIPTOR_USBD
+      processed: ''
+      offset: '00000000'
+    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
+      processed: ''
+      offset: '00000014'
+    - name: __NULL_IMPORT_DESCRIPTOR
+      processed: ''
+      offset: '00000028'
+    - name: __imp__ZwSetValueKey@24
+      processed: ''
+      offset: 000000BC
+    - name: __imp_@IofCompleteRequest@8
+      processed: ''
+      offset: 000000C0
+    - name: __imp__IoDeleteDevice@4
+      processed: ''
+      offset: 000000C4
+    - name: __imp__IoAttachDeviceToDeviceStack@8
+      processed: ''
+      offset: 000000C8
+    - name: __imp__RtlFreeUnicodeString@4
+      processed: ''
+      offset: 000000CC
+    - name: __imp__IoCreateDevice@28
+      processed: ''
+      offset: 000000D0
+    - name: __imp__RtlAnsiStringToUnicodeString@12
+      processed: ''
+      offset: 000000D4
+    - name: __imp__RtlInitAnsiString@8
+      processed: ''
+      offset: 000000D8
+    - name: __imp__sprintf
+      processed: ''
+      offset: 000000DC
+    - name: __imp__KeInitializeEvent@12
+      processed: ''
+      offset: '000000E0'
+    - name: __imp__IoDetachDevice@4
+      processed: ''
+      offset: '000000E4'
+    - name: __imp__ExFreePool@4
+      processed: ''
+      offset: '000000E8'
+    - name: __imp__KeWaitForSingleObject@20
+      processed: ''
+      offset: 000000EC
+    - name: __imp_@IofCallDriver@8
+      processed: ''
+      offset: 000000F0
+    - name: __imp__PoStartNextPowerIrp@4
+      processed: ''
+      offset: 000000F4
+    - name: __imp__KeSetEvent@12
+      processed: ''
+      offset: 000000F8
+    - name: __imp__RtlInitUnicodeString@8
+      processed: ''
+      offset: 000000FC
+    - name: __imp__IoOpenDeviceRegistryKey@16
+      processed: ''
+      offset: '00000100'
+    - name: __imp__IoCreateSymbolicLink@8
+      processed: ''
+      offset: '00000104'
+    - name: __imp__ZwClose@4
+      processed: ''
+      offset: '00000108'
+    - name: __imp__IoDeleteSymbolicLink@4
+      processed: ''
+      offset: 0000010C
+    - name: __imp__ExAllocatePoolWithTag@12
+      processed: ''
+      offset: '00000110'
+    - name: __imp_@InterlockedIncrement@4
+      processed: ''
+      offset: '00000114'
+    - name: __imp_@InterlockedDecrement@4
+      processed: ''
+      offset: '00000118'
+    - name: __imp__IoBuildDeviceIoControlRequest@36
+      processed: ''
+      offset: 0000011C
+    - name: __imp__MmMapLockedPages@8
+      processed: ''
+      offset: '00000120'
+    - name: __imp__PoRequestPowerIrp@24
+      processed: ''
+      offset: '00000124'
+    - name: __imp__PoCallDriver@8
+      processed: ''
+      offset: '00000128'
+    - name: \177NTOSKRNL_NULL_THUNK_DATA
+      processed: ''
+      offset: 0000012C
+    - name: __imp__USBD_CreateConfigurationRequest@8
+      processed: ''
+      offset: '00000130'
+    - name: __imp__USBD_ParseConfigurationDescriptor@12
+      processed: ''
+      offset: '00000134'
+    - name: \177USBD_NULL_THUNK_DATA
+      processed: ''
+      offset: '00000138'
+  - num: '5'
+    name: PAGE
+    offset: '00000000'
+    symbols:
+    - name: _DriverEntry@8
+      processed: ''
+      offset: '00000000'
+    - name: _USPnpAddDevice@8
+      processed: ''
+      offset: '00000058'
+    - name: _USPnp@8
+      processed: ''
+      offset: '00000114'
+    - name: _USCreateSymbolicLink@4
+      processed: ''
+      offset: 000003A7
+    - name: _USDestroySymbolicLink@4
+      processed: ''
+      offset: 000004B4
+    - name: _USGetUSBDeviceDescriptor@4
+      processed: ''
+      offset: 0000054F
+    - name: _USConfigureDevice@4
+      processed: ''
+      offset: '000005E7'
+    - name: _USUnConfigureDevice@4
+      processed: ''
+      offset: '00000815'
+    - name: _USUnload@4
+      processed: ''
+      offset: '00000862'
+    - name: _USDeviceControl@8
+      processed: ''
+      offset: '00000865'
+    - name: _USReadWriteRegisters@16
+      processed: ''
+      offset: 00000ADA
+    - name: _USCancelPipe@12
+      processed: ''
+      offset: 00000BD5
+    - name: _USAbortResetPipe@12
+      processed: ''
+      offset: 00000C88
+    - name: _USOpen@8
+      processed: ''
+      offset: 00000D2C
+    - name: _USClose@8
+      processed: ''
+      offset: 00000D68
+    - name: _USRead@8
+      processed: ''
+      offset: 00000D93
+    - name: _USPower@8
+      processed: ''
+      offset: '00000E08'
 - version: Windows 98 Debug
   source_tree:
   - ../ioctl.c
@@ -14,556 +241,329 @@ appearances:
     offset: 000009C0
     symbols:
     - name: _USDeferIrpCompletion@12
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: _USIncrementIoCount@4
-      processed: ''
+      demangled: ''
       offset: '00000030'
     - name: _USDecrementIoCount@4
-      processed: ''
+      demangled: ''
       offset: '00000070'
     - name: _USBSCAN_CallUSBD@8
-      processed: ''
+      demangled: ''
       offset: 000000D0
     - name: _USFlush@8
-      processed: ''
+      demangled: ''
       offset: '00000270'
     - name: _USWrite@8
-      processed: ''
+      demangled: ''
       offset: '00000360'
     - name: _USTransfer@24
-      processed: ''
+      demangled: ''
       offset: 000004A0
     - name: _USTransferComplete@12
-      processed: ''
+      demangled: ''
       offset: 00000D80
     - name: _USPoRequestCompletion@20
-      processed: ''
+      demangled: ''
       offset: '00001390'
     - name: _USPowerIrpComplete@12
-      processed: ''
+      demangled: ''
       offset: '00001430'
     - name: _USSetDevicePowerState@12
-      processed: ''
+      demangled: ''
       offset: '00001550'
     - name: _USBD_ParseConfigurationDescriptor@12
-      processed: ''
+      demangled: ''
       offset: 000016B4
     - name: _USBD_CreateConfigurationRequest@8
-      processed: ''
+      demangled: ''
       offset: 000016BA
     - name: _RtlAssert@16
-      processed: ''
+      demangled: ''
       offset: 000016C0
     - name: _DbgPrint
-      processed: ''
+      demangled: ''
       offset: 000016C6
     - name: _KeGetCurrentIrql@0
-      processed: ''
+      demangled: ''
       offset: 000016CC
     - name: _IoDeleteDevice@4
-      processed: ''
+      demangled: ''
       offset: 000016D2
     - name: _IoAttachDeviceToDeviceStack@8
-      processed: ''
+      demangled: ''
       offset: 000016D8
     - name: _RtlFreeUnicodeString@4
-      processed: ''
+      demangled: ''
       offset: 000016DE
     - name: _IoCreateDevice@28
-      processed: ''
+      demangled: ''
       offset: '000016E4'
     - name: _RtlAnsiStringToUnicodeString@12
-      processed: ''
+      demangled: ''
       offset: 000016EA
     - name: _RtlInitAnsiString@8
-      processed: ''
+      demangled: ''
       offset: 000016F0
     - name: _sprintf
-      processed: ''
+      demangled: ''
       offset: 000016F6
     - name: '@IofCompleteRequest@8'
-      processed: ''
+      demangled: ''
       offset: 000016FC
     - name: _IoDetachDevice@4
-      processed: ''
+      demangled: ''
       offset: '00001702'
     - name: _ExFreePool@4
-      processed: ''
+      demangled: ''
       offset: '00001708'
     - name: _KeWaitForSingleObject@20
-      processed: ''
+      demangled: ''
       offset: 0000170E
     - name: _KeInitializeEvent@12
-      processed: ''
+      demangled: ''
       offset: '00001714'
     - name: '@IofCallDriver@8'
-      processed: ''
+      demangled: ''
       offset: 0000171A
     - name: _ZwSetValueKey@24
-      processed: ''
+      demangled: ''
       offset: '00001720'
     - name: _RtlInitUnicodeString@8
-      processed: ''
+      demangled: ''
       offset: '00001726'
     - name: _IoOpenDeviceRegistryKey@16
-      processed: ''
+      demangled: ''
       offset: 0000172C
     - name: _IoCreateSymbolicLink@8
-      processed: ''
+      demangled: ''
       offset: '00001732'
     - name: _ZwClose@4
-      processed: ''
+      demangled: ''
       offset: '00001738'
     - name: _IoDeleteSymbolicLink@4
-      processed: ''
+      demangled: ''
       offset: 0000173E
     - name: _ExAllocatePoolWithTag@12
-      processed: ''
+      demangled: ''
       offset: '00001744'
     - name: _KeSetEvent@12
-      processed: ''
+      demangled: ''
       offset: 0000174A
     - name: '@InterlockedIncrement@4'
-      processed: ''
+      demangled: ''
       offset: '00001750'
     - name: '@InterlockedDecrement@4'
-      processed: ''
+      demangled: ''
       offset: '00001756'
     - name: _IoBuildDeviceIoControlRequest@36
-      processed: ''
+      demangled: ''
       offset: 0000175C
     - name: _MmMapLockedPages@8
-      processed: ''
+      demangled: ''
       offset: '00001762'
     - name: _PoCallDriver@8
-      processed: ''
+      demangled: ''
       offset: '00001768'
     - name: _PoStartNextPowerIrp@4
-      processed: ''
+      demangled: ''
       offset: 0000176E
     - name: _PoRequestPowerIrp@24
-      processed: ''
+      demangled: ''
       offset: '00001774'
   - num: '3'
     name: .data
     offset: 00000A30
     symbols:
     - name: _USBSCAN_DebugTraceLevel
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: _NextDeviceInstance
-      processed: ''
+      demangled: ''
       offset: 00002A30
     - name: _USBSCAN_PnPTest
-      processed: ''
+      demangled: ''
       offset: 00002A34
   - num: '4'
     name: .idata$2
     offset: 00000F40
     symbols:
     - name: __IMPORT_DESCRIPTOR_USBD
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: __IMPORT_DESCRIPTOR_NTOSKRNL
-      processed: ''
+      demangled: ''
       offset: '00000014'
     - name: __IMPORT_DESCRIPTOR_HAL
-      processed: ''
+      demangled: ''
       offset: '00000028'
     - name: __NULL_IMPORT_DESCRIPTOR
-      processed: ''
+      demangled: ''
       offset: 0000003C
     - name: __imp__KeGetCurrentIrql@0
-      processed: ''
+      demangled: ''
       offset: '000000E0'
     - name: \177HAL_NULL_THUNK_DATA
-      processed: ''
+      demangled: ''
       offset: '000000E4'
     - name: __imp_@IofCallDriver@8
-      processed: ''
+      demangled: ''
       offset: '000000E8'
     - name: __imp__RtlAssert@16
-      processed: ''
+      demangled: ''
       offset: 000000EC
     - name: __imp__DbgPrint
-      processed: ''
+      demangled: ''
       offset: 000000F0
     - name: __imp__RtlInitUnicodeString@8
-      processed: ''
+      demangled: ''
       offset: 000000F4
     - name: __imp__IoDeleteDevice@4
-      processed: ''
+      demangled: ''
       offset: 000000F8
     - name: __imp__IoAttachDeviceToDeviceStack@8
-      processed: ''
+      demangled: ''
       offset: 000000FC
     - name: __imp__RtlFreeUnicodeString@4
-      processed: ''
+      demangled: ''
       offset: '00000100'
     - name: __imp__IoCreateDevice@28
-      processed: ''
+      demangled: ''
       offset: '00000104'
     - name: __imp__RtlAnsiStringToUnicodeString@12
-      processed: ''
+      demangled: ''
       offset: '00000108'
     - name: __imp__RtlInitAnsiString@8
-      processed: ''
+      demangled: ''
       offset: 0000010C
     - name: __imp__sprintf
-      processed: ''
+      demangled: ''
       offset: '00000110'
     - name: __imp_@IofCompleteRequest@8
-      processed: ''
+      demangled: ''
       offset: '00000114'
     - name: __imp__IoDetachDevice@4
-      processed: ''
+      demangled: ''
       offset: '00000118'
     - name: __imp__ExFreePool@4
-      processed: ''
+      demangled: ''
       offset: 0000011C
     - name: __imp__KeWaitForSingleObject@20
-      processed: ''
+      demangled: ''
       offset: '00000120'
     - name: __imp__KeInitializeEvent@12
-      processed: ''
+      demangled: ''
       offset: '00000124'
     - name: __imp_@InterlockedIncrement@4
-      processed: ''
+      demangled: ''
       offset: '00000128'
     - name: __imp__ZwSetValueKey@24
-      processed: ''
+      demangled: ''
       offset: 0000012C
     - name: __imp_@InterlockedDecrement@4
-      processed: ''
+      demangled: ''
       offset: '00000130'
     - name: __imp__IoOpenDeviceRegistryKey@16
-      processed: ''
+      demangled: ''
       offset: '00000134'
     - name: __imp__IoCreateSymbolicLink@8
-      processed: ''
+      demangled: ''
       offset: '00000138'
     - name: __imp__ZwClose@4
-      processed: ''
+      demangled: ''
       offset: 0000013C
     - name: __imp__IoDeleteSymbolicLink@4
-      processed: ''
+      demangled: ''
       offset: '00000140'
     - name: __imp__ExAllocatePoolWithTag@12
-      processed: ''
+      demangled: ''
       offset: '00000144'
     - name: __imp__KeSetEvent@12
-      processed: ''
+      demangled: ''
       offset: '00000148'
     - name: __imp__PoCallDriver@8
-      processed: ''
+      demangled: ''
       offset: 0000014C
     - name: __imp__IoBuildDeviceIoControlRequest@36
-      processed: ''
+      demangled: ''
       offset: '00000150'
     - name: __imp__MmMapLockedPages@8
-      processed: ''
+      demangled: ''
       offset: '00000154'
     - name: __imp__PoRequestPowerIrp@24
-      processed: ''
+      demangled: ''
       offset: '00000158'
     - name: __imp__PoStartNextPowerIrp@4
-      processed: ''
+      demangled: ''
       offset: 0000015C
     - name: \177NTOSKRNL_NULL_THUNK_DATA
-      processed: ''
+      demangled: ''
       offset: '00000160'
     - name: __imp__USBD_ParseConfigurationDescriptor@12
-      processed: ''
+      demangled: ''
       offset: '00000164'
     - name: __imp__USBD_CreateConfigurationRequest@8
-      processed: ''
+      demangled: ''
       offset: '00000168'
     - name: \177USBD_NULL_THUNK_DATA
-      processed: ''
+      demangled: ''
       offset: 0000016C
   - num: '5'
     name: PAGE
     offset: '00000000'
     symbols:
     - name: _DriverEntry@8
-      processed: ''
+      demangled: ''
       offset: '00000000'
     - name: _USPnpAddDevice@8
-      processed: ''
+      demangled: ''
       offset: 000000C0
     - name: _USPnp@8
-      processed: ''
+      demangled: ''
       offset: '00000270'
     - name: _USCreateSymbolicLink@4
-      processed: ''
+      demangled: ''
       offset: 000009A0
     - name: _USDestroySymbolicLink@4
-      processed: ''
+      demangled: ''
       offset: 00000B50
     - name: _USGetUSBDeviceDescriptor@4
-      processed: ''
+      demangled: ''
       offset: 00000C50
     - name: _USConfigureDevice@4
-      processed: ''
+      demangled: ''
       offset: '00001120'
     - name: _USUnConfigureDevice@4
-      processed: ''
+      demangled: ''
       offset: '00001910'
     - name: _USUnload@4
-      processed: ''
+      demangled: ''
       offset: 00001A60
     - name: _USDeviceControl@8
-      processed: ''
+      demangled: ''
       offset: 00001AE0
     - name: _USReadWriteRegisters@16
-      processed: ''
+      demangled: ''
       offset: '00002190'
     - name: _USCancelPipe@12
-      processed: ''
+      demangled: ''
       offset: 000024A0
     - name: _USAbortResetPipe@12
-      processed: ''
+      demangled: ''
       offset: '00002790'
     - name: _USOpen@8
-      processed: ''
+      demangled: ''
       offset: 000029B0
     - name: _USClose@8
-      processed: ''
+      demangled: ''
       offset: 00002A80
     - name: _USRead@8
-      processed: ''
+      demangled: ''
       offset: 00002B40
     - name: _USPower@8
-      processed: ''
+      demangled: ''
       offset: 00002C80
-- version: Windows 98 Retail
-  source_tree: []
-  segments:
-  - num: '1'
-    name: .text
-    offset: '00000160'
-    symbols:
-    - name: _USDeferIrpCompletion@12
-      demangled: ''
-      offset: '00000000'
-    - name: _USIncrementIoCount@4
-      demangled: ''
-      offset: '00000016'
-    - name: _USDecrementIoCount@4
-      demangled: ''
-      offset: '00000029'
-    - name: _USBSCAN_CallUSBD@8
-      demangled: ''
-      offset: '00000055'
-    - name: _USFlush@8
-      demangled: ''
-      offset: 000000BB
-    - name: _USWrite@8
-      demangled: ''
-      offset: '00000107'
-    - name: _USTransfer@24
-      demangled: ''
-      offset: 0000017C
-    - name: _USTransferComplete@12
-      demangled: ''
-      offset: '00000448'
-    - name: _USPoRequestCompletion@20
-      demangled: ''
-      offset: '00000632'
-    - name: _USPowerIrpComplete@12
-      demangled: ''
-      offset: '00000685'
-    - name: _USSetDevicePowerState@12
-      demangled: ''
-      offset: 000006BC
-    - name: _sprintf
-      demangled: ''
-      offset: '00000708'
-  - num: '3'
-    name: .data
-    offset: '00000290'
-    symbols:
-    - name: ??_C@_0BC@HCGB@?2Device?2Usbscan?$CFd?$AA@
-      demangled: '"\\Device\\Usbscan%d"'
-      offset: '00000000'
-    - name: ??_C@_0O@LKAB@?2?2?4?2Usbscan?$CFd?$AA@
-      demangled: '"\\\\.\\Usbscan%d"'
-      offset: '00000014'
-    - name: 
-        ??_C@_1BO@KHCE@?$AAC?$AAr?$AAe?$AAa?$AAt?$AAe?$AAF?$AAi?$AAl?$AAe?$AAN?$AAa?$AAm?$AAe?$AA?$AA@
-      demangled: L"CreateFileName"
-      offset: '00000024'
-    - name: ??_C@_0BG@NJEG@?2DosDevices?2Usbscan?$CFd?$AA@
-      demangled: '"\\DosDevices\\Usbscan%d"'
-      offset: '00000044'
-    - name: _NextDeviceInstance
-      demangled: ''
-      offset: 0000005C
-  - num: '4'
-    name: .idata$2
-    offset: '00000720'
-    symbols:
-    - name: __IMPORT_DESCRIPTOR_USBD
-      demangled: ''
-      offset: '00000000'
-    - name: __IMPORT_DESCRIPTOR_NTOSKRNL
-      demangled: ''
-      offset: '00000014'
-    - name: __NULL_IMPORT_DESCRIPTOR
-      demangled: ''
-      offset: '00000028'
-    - name: __imp__ZwSetValueKey@24
-      demangled: ''
-      offset: 000000BC
-    - name: __imp_@IofCompleteRequest@8
-      demangled: ''
-      offset: 000000C0
-    - name: __imp__IoDeleteDevice@4
-      demangled: ''
-      offset: 000000C4
-    - name: __imp__IoAttachDeviceToDeviceStack@8
-      demangled: ''
-      offset: 000000C8
-    - name: __imp__RtlFreeUnicodeString@4
-      demangled: ''
-      offset: 000000CC
-    - name: __imp__IoCreateDevice@28
-      demangled: ''
-      offset: 000000D0
-    - name: __imp__RtlAnsiStringToUnicodeString@12
-      demangled: ''
-      offset: 000000D4
-    - name: __imp__RtlInitAnsiString@8
-      demangled: ''
-      offset: 000000D8
-    - name: __imp__sprintf
-      demangled: ''
-      offset: 000000DC
-    - name: __imp__KeInitializeEvent@12
-      demangled: ''
-      offset: '000000E0'
-    - name: __imp__IoDetachDevice@4
-      demangled: ''
-      offset: '000000E4'
-    - name: __imp__ExFreePool@4
-      demangled: ''
-      offset: '000000E8'
-    - name: __imp__KeWaitForSingleObject@20
-      demangled: ''
-      offset: 000000EC
-    - name: __imp_@IofCallDriver@8
-      demangled: ''
-      offset: 000000F0
-    - name: __imp__PoStartNextPowerIrp@4
-      demangled: ''
-      offset: 000000F4
-    - name: __imp__KeSetEvent@12
-      demangled: ''
-      offset: 000000F8
-    - name: __imp__RtlInitUnicodeString@8
-      demangled: ''
-      offset: 000000FC
-    - name: __imp__IoOpenDeviceRegistryKey@16
-      demangled: ''
-      offset: '00000100'
-    - name: __imp__IoCreateSymbolicLink@8
-      demangled: ''
-      offset: '00000104'
-    - name: __imp__ZwClose@4
-      demangled: ''
-      offset: '00000108'
-    - name: __imp__IoDeleteSymbolicLink@4
-      demangled: ''
-      offset: 0000010C
-    - name: __imp__ExAllocatePoolWithTag@12
-      demangled: ''
-      offset: '00000110'
-    - name: __imp_@InterlockedIncrement@4
-      demangled: ''
-      offset: '00000114'
-    - name: __imp_@InterlockedDecrement@4
-      demangled: ''
-      offset: '00000118'
-    - name: __imp__IoBuildDeviceIoControlRequest@36
-      demangled: ''
-      offset: 0000011C
-    - name: __imp__MmMapLockedPages@8
-      demangled: ''
-      offset: '00000120'
-    - name: __imp__PoRequestPowerIrp@24
-      demangled: ''
-      offset: '00000124'
-    - name: __imp__PoCallDriver@8
-      demangled: ''
-      offset: '00000128'
-    - name: \177NTOSKRNL_NULL_THUNK_DATA
-      demangled: ''
-      offset: 0000012C
-    - name: __imp__USBD_CreateConfigurationRequest@8
-      demangled: ''
-      offset: '00000130'
-    - name: __imp__USBD_ParseConfigurationDescriptor@12
-      demangled: ''
-      offset: '00000134'
-    - name: \177USBD_NULL_THUNK_DATA
-      demangled: ''
-      offset: '00000138'
-  - num: '5'
-    name: PAGE
-    offset: '00000000'
-    symbols:
-    - name: _DriverEntry@8
-      demangled: ''
-      offset: '00000000'
-    - name: _USPnpAddDevice@8
-      demangled: ''
-      offset: '00000058'
-    - name: _USPnp@8
-      demangled: ''
-      offset: '00000114'
-    - name: _USCreateSymbolicLink@4
-      demangled: ''
-      offset: 000003A7
-    - name: _USDestroySymbolicLink@4
-      demangled: ''
-      offset: 000004B4
-    - name: _USGetUSBDeviceDescriptor@4
-      demangled: ''
-      offset: 0000054F
-    - name: _USConfigureDevice@4
-      demangled: ''
-      offset: '000005E7'
-    - name: _USUnConfigureDevice@4
-      demangled: ''
-      offset: '00000815'
-    - name: _USUnload@4
-      demangled: ''
-      offset: '00000862'
-    - name: _USDeviceControl@8
-      demangled: ''
-      offset: '00000865'
-    - name: _USReadWriteRegisters@16
-      demangled: ''
-      offset: 00000ADA
-    - name: _USCancelPipe@12
-      demangled: ''
-      offset: 00000BD5
-    - name: _USAbortResetPipe@12
-      demangled: ''
-      offset: 00000C88
-    - name: _USOpen@8
-      demangled: ''
-      offset: 00000D2C
-    - name: _USClose@8
-      demangled: ''
-      offset: 00000D68
-    - name: _USRead@8
-      demangled: ''
-      offset: 00000D93
-    - name: _USPower@8
-      demangled: ''
-      offset: '00000E08'
 - version: Windows 98SE Retail
   source_tree: []
   segments:
